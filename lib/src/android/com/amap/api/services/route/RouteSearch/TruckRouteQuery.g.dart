@@ -20,7 +20,7 @@ class com_amap_api_services_route_RouteSearch_TruckRouteQuery extends java_lang_
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_route_RouteSearch_TruckRouteQuery> create__com_amap_api_services_route_RouteSearch_FromAndTo__int__java_util_List_com_amap_api_services_core_LatLonPoint___int(com_amap_api_services_route_RouteSearch_FromAndTo var1, int var2, List<com_amap_api_services_core_LatLonPoint> var3, int var4) async {
+  static Future<com_amap_api_services_route_RouteSearch_TruckRouteQuery> create__com_amap_api_services_route_RouteSearch_FromAndTo__int__List_java_util_List_com_amap_api_services_core_LatLonPoint____int(com_amap_api_services_route_RouteSearch_FromAndTo var1, int var2, List<com_amap_api_services_core_LatLonPoint> var3, int var4) async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_services_route_RouteSearch_TruckRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__java_util_List_com_amap_api_services_core_LatLonPoint___int', {"var1": var1.refId, "var2": var2, "var3": var3.map((it) => it.refId).toList(), "var4": var4});
     final object = com_amap_api_services_route_RouteSearch_TruckRouteQuery()..refId = refId..tag__ = 'amap_search_fluttify';
   
@@ -28,7 +28,7 @@ class com_amap_api_services_route_RouteSearch_TruckRouteQuery extends java_lang_
     return object;
   }
   
-  static Future<List<com_amap_api_services_route_RouteSearch_TruckRouteQuery>> create_batch__com_amap_api_services_route_RouteSearch_FromAndTo__int__java_util_List_com_amap_api_services_core_LatLonPoint___int(List<com_amap_api_services_route_RouteSearch_FromAndTo> var1, List<int> var2, List<List<com_amap_api_services_core_LatLonPoint>> var3, List<int> var4) async {
+  static Future<List<com_amap_api_services_route_RouteSearch_TruckRouteQuery>> create_batch__com_amap_api_services_route_RouteSearch_FromAndTo__int__List_java_util_List_com_amap_api_services_core_LatLonPoint____int(List<com_amap_api_services_route_RouteSearch_FromAndTo> var1, List<int> var2, List<List<com_amap_api_services_core_LatLonPoint>> var3, List<int> var4) async {
     if (var1.length != var2.length || var2.length != var3.length || var3.length != var4.length) {
       return Future.error('all args must have same length!');
     }

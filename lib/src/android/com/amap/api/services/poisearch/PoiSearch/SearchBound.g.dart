@@ -47,7 +47,7 @@ class com_amap_api_services_poisearch_PoiSearch_SearchBound extends java_lang_Ob
     return object;
   }
   
-  static Future<com_amap_api_services_poisearch_PoiSearch_SearchBound> create__java_util_List_com_amap_api_services_core_LatLonPoint_(List<com_amap_api_services_core_LatLonPoint> var1) async {
+  static Future<com_amap_api_services_poisearch_PoiSearch_SearchBound> create__List_java_util_List_com_amap_api_services_core_LatLonPoint__(List<com_amap_api_services_core_LatLonPoint> var1) async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch_SearchBound__java_util_List_com_amap_api_services_core_LatLonPoint_', {"var1": var1.map((it) => it.refId).toList()});
     final object = com_amap_api_services_poisearch_PoiSearch_SearchBound()..refId = refId..tag__ = 'amap_search_fluttify';
   
@@ -88,7 +88,7 @@ class com_amap_api_services_poisearch_PoiSearch_SearchBound extends java_lang_Ob
     return typedResult;
   }
   
-  static Future<List<com_amap_api_services_poisearch_PoiSearch_SearchBound>> create_batch__java_util_List_com_amap_api_services_core_LatLonPoint_(List<List<com_amap_api_services_core_LatLonPoint>> var1) async {
+  static Future<List<com_amap_api_services_poisearch_PoiSearch_SearchBound>> create_batch__List_java_util_List_com_amap_api_services_core_LatLonPoint__(List<List<com_amap_api_services_core_LatLonPoint>> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }

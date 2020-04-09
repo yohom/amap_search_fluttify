@@ -20,7 +20,7 @@ class com_amap_api_services_geocoder_GeocodeResult extends java_lang_Object  {
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_geocoder_GeocodeResult> create__com_amap_api_services_geocoder_GeocodeQuery__java_util_List_com_amap_api_services_geocoder_GeocodeAddress_(com_amap_api_services_geocoder_GeocodeQuery var1, List<com_amap_api_services_geocoder_GeocodeAddress> var2) async {
+  static Future<com_amap_api_services_geocoder_GeocodeResult> create__com_amap_api_services_geocoder_GeocodeQuery__List_java_util_List_com_amap_api_services_geocoder_GeocodeAddress__(com_amap_api_services_geocoder_GeocodeQuery var1, List<com_amap_api_services_geocoder_GeocodeAddress> var2) async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_services_geocoder_GeocodeResult__com_amap_api_services_geocoder_GeocodeQuery__java_util_List_com_amap_api_services_geocoder_GeocodeAddress_', {"var1": var1.refId, "var2": var2.map((it) => it.refId).toList()});
     final object = com_amap_api_services_geocoder_GeocodeResult()..refId = refId..tag__ = 'amap_search_fluttify';
   
@@ -28,7 +28,7 @@ class com_amap_api_services_geocoder_GeocodeResult extends java_lang_Object  {
     return object;
   }
   
-  static Future<List<com_amap_api_services_geocoder_GeocodeResult>> create_batch__com_amap_api_services_geocoder_GeocodeQuery__java_util_List_com_amap_api_services_geocoder_GeocodeAddress_(List<com_amap_api_services_geocoder_GeocodeQuery> var1, List<List<com_amap_api_services_geocoder_GeocodeAddress>> var2) async {
+  static Future<List<com_amap_api_services_geocoder_GeocodeResult>> create_batch__com_amap_api_services_geocoder_GeocodeQuery__List_java_util_List_com_amap_api_services_geocoder_GeocodeAddress__(List<com_amap_api_services_geocoder_GeocodeQuery> var1, List<List<com_amap_api_services_geocoder_GeocodeAddress>> var2) async {
     if (var1.length != var2.length) {
       return Future.error('all args must have same length!');
     }

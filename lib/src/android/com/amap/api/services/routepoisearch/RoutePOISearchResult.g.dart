@@ -20,7 +20,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearchResult extends java_lan
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_routepoisearch_RoutePOISearchResult> create__java_util_ArrayList_com_amap_api_services_routepoisearch_RoutePOIItem___com_amap_api_services_routepoisearch_RoutePOISearchQuery(List<com_amap_api_services_routepoisearch_RoutePOIItem> var1, com_amap_api_services_routepoisearch_RoutePOISearchQuery var2) async {
+  static Future<com_amap_api_services_routepoisearch_RoutePOISearchResult> create__List_java_util_ArrayList_com_amap_api_services_routepoisearch_RoutePOIItem____com_amap_api_services_routepoisearch_RoutePOISearchQuery(List<com_amap_api_services_routepoisearch_RoutePOIItem> var1, com_amap_api_services_routepoisearch_RoutePOISearchQuery var2) async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_services_routepoisearch_RoutePOISearchResult__java_util_ArrayList_com_amap_api_services_routepoisearch_RoutePOIItem___com_amap_api_services_routepoisearch_RoutePOISearchQuery', {"var1": var1.map((it) => it.refId).toList(), "var2": var2.refId});
     final object = com_amap_api_services_routepoisearch_RoutePOISearchResult()..refId = refId..tag__ = 'amap_search_fluttify';
   
@@ -28,7 +28,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearchResult extends java_lan
     return object;
   }
   
-  static Future<List<com_amap_api_services_routepoisearch_RoutePOISearchResult>> create_batch__java_util_ArrayList_com_amap_api_services_routepoisearch_RoutePOIItem___com_amap_api_services_routepoisearch_RoutePOISearchQuery(List<List<com_amap_api_services_routepoisearch_RoutePOIItem>> var1, List<com_amap_api_services_routepoisearch_RoutePOISearchQuery> var2) async {
+  static Future<List<com_amap_api_services_routepoisearch_RoutePOISearchResult>> create_batch__List_java_util_ArrayList_com_amap_api_services_routepoisearch_RoutePOIItem____com_amap_api_services_routepoisearch_RoutePOISearchQuery(List<List<com_amap_api_services_routepoisearch_RoutePOIItem>> var1, List<com_amap_api_services_routepoisearch_RoutePOISearchQuery> var2) async {
     if (var1.length != var2.length) {
       return Future.error('all args must have same length!');
     }

@@ -28,7 +28,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearchQuery extends java_lang
     return object;
   }
   
-  static Future<com_amap_api_services_routepoisearch_RoutePOISearchQuery> create__java_util_List_com_amap_api_services_core_LatLonPoint___com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType__int(List<com_amap_api_services_core_LatLonPoint> var1, com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType var2, int var3) async {
+  static Future<com_amap_api_services_routepoisearch_RoutePOISearchQuery> create__List_java_util_List_com_amap_api_services_core_LatLonPoint____com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType__int(List<com_amap_api_services_core_LatLonPoint> var1, com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType var2, int var3) async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_services_routepoisearch_RoutePOISearchQuery__java_util_List_com_amap_api_services_core_LatLonPoint___com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType__int', {"var1": var1.map((it) => it.refId).toList(), "var2": var2.index, "var3": var3});
     final object = com_amap_api_services_routepoisearch_RoutePOISearchQuery()..refId = refId..tag__ = 'amap_search_fluttify';
   
@@ -47,7 +47,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearchQuery extends java_lang
     return typedResult;
   }
   
-  static Future<List<com_amap_api_services_routepoisearch_RoutePOISearchQuery>> create_batch__java_util_List_com_amap_api_services_core_LatLonPoint___com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType__int(List<List<com_amap_api_services_core_LatLonPoint>> var1, List<com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType> var2, List<int> var3) async {
+  static Future<List<com_amap_api_services_routepoisearch_RoutePOISearchQuery>> create_batch__List_java_util_List_com_amap_api_services_core_LatLonPoint____com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType__int(List<List<com_amap_api_services_core_LatLonPoint>> var1, List<com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType> var2, List<int> var3) async {
     if (var1.length != var2.length || var2.length != var3.length) {
       return Future.error('all args must have same length!');
     }

@@ -31,6006 +31,7 @@ public class SubHandler11 {
     public static Map<String, Handler> getSubHandler(BinaryMessenger messenger) {
         return new HashMap<String, Handler>() {{
             // method
-            put("com.amap.api.services.geocoder.GeocodeAddress::getDistrict_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.GeocodeAddress ref = (com.amap.api.services.geocoder.GeocodeAddress) getHEAP().get(refId);
-            
-                    // invoke native method
-                    String result;
-                    try {
-                        result = ref.getDistrict();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.GeocodeAddress::setDistrict_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.GeocodeAddress ref = (com.amap.api.services.geocoder.GeocodeAddress) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setDistrict(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.GeocodeAddress::getTownship_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.GeocodeAddress ref = (com.amap.api.services.geocoder.GeocodeAddress) getHEAP().get(refId);
-            
-                    // invoke native method
-                    String result;
-                    try {
-                        result = ref.getTownship();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.GeocodeAddress::setTownship_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.GeocodeAddress ref = (com.amap.api.services.geocoder.GeocodeAddress) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setTownship(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.GeocodeAddress::getNeighborhood_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.GeocodeAddress ref = (com.amap.api.services.geocoder.GeocodeAddress) getHEAP().get(refId);
-            
-                    // invoke native method
-                    String result;
-                    try {
-                        result = ref.getNeighborhood();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.GeocodeAddress::setNeighborhood_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.GeocodeAddress ref = (com.amap.api.services.geocoder.GeocodeAddress) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setNeighborhood(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.GeocodeAddress::getBuilding_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.GeocodeAddress ref = (com.amap.api.services.geocoder.GeocodeAddress) getHEAP().get(refId);
-            
-                    // invoke native method
-                    String result;
-                    try {
-                        result = ref.getBuilding();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.GeocodeAddress::setBuilding_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.GeocodeAddress ref = (com.amap.api.services.geocoder.GeocodeAddress) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setBuilding(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.GeocodeAddress::getAdcode_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.GeocodeAddress ref = (com.amap.api.services.geocoder.GeocodeAddress) getHEAP().get(refId);
-            
-                    // invoke native method
-                    String result;
-                    try {
-                        result = ref.getAdcode();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.GeocodeAddress::setAdcode_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.GeocodeAddress ref = (com.amap.api.services.geocoder.GeocodeAddress) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setAdcode(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.GeocodeAddress::getLatLonPoint_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.GeocodeAddress ref = (com.amap.api.services.geocoder.GeocodeAddress) getHEAP().get(refId);
-            
-                    // invoke native method
-                    com.amap.api.services.core.LatLonPoint result;
-                    try {
-                        result = ref.getLatLonPoint();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    Integer jsonableResult = null;
-                    if (result != null) {
-                        jsonableResult = System.identityHashCode(result);
-                        getHEAP().put(jsonableResult, result);
-                    }
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.GeocodeAddress::setLatLonPoint_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // ref arg
-                    com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.GeocodeAddress ref = (com.amap.api.services.geocoder.GeocodeAddress) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setLatLonPoint(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.GeocodeAddress::getLevel_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.GeocodeAddress ref = (com.amap.api.services.geocoder.GeocodeAddress) getHEAP().get(refId);
-            
-                    // invoke native method
-                    String result;
-                    try {
-                        result = ref.getLevel();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.GeocodeAddress::setLevel_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.GeocodeAddress ref = (com.amap.api.services.geocoder.GeocodeAddress) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setLevel(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.RegeocodeQuery::getPoint_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.RegeocodeQuery ref = (com.amap.api.services.geocoder.RegeocodeQuery) getHEAP().get(refId);
-            
-                    // invoke native method
-                    com.amap.api.services.core.LatLonPoint result;
-                    try {
-                        result = ref.getPoint();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    Integer jsonableResult = null;
-                    if (result != null) {
-                        jsonableResult = System.identityHashCode(result);
-                        getHEAP().put(jsonableResult, result);
-                    }
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.RegeocodeQuery::setPoint_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // ref arg
-                    com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.RegeocodeQuery ref = (com.amap.api.services.geocoder.RegeocodeQuery) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setPoint(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.RegeocodeQuery::getRadius_batch", (argsBatch, methodResult) -> {
-                List<Float> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.RegeocodeQuery ref = (com.amap.api.services.geocoder.RegeocodeQuery) getHEAP().get(refId);
-            
-                    // invoke native method
-                    float result;
-                    try {
-                        result = ref.getRadius();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    float jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.RegeocodeQuery::setRadius_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    Double var1 = (Double) ((Map<String, Object>) args).get("var1");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.RegeocodeQuery ref = (com.amap.api.services.geocoder.RegeocodeQuery) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setRadius(new Double(var1).floatValue());
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.RegeocodeQuery::getLatLonType_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.RegeocodeQuery ref = (com.amap.api.services.geocoder.RegeocodeQuery) getHEAP().get(refId);
-            
-                    // invoke native method
-                    String result;
-                    try {
-                        result = ref.getLatLonType();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.RegeocodeQuery::setLatLonType_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.RegeocodeQuery ref = (com.amap.api.services.geocoder.RegeocodeQuery) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setLatLonType(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.RegeocodeQuery::getPoiType_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.RegeocodeQuery ref = (com.amap.api.services.geocoder.RegeocodeQuery) getHEAP().get(refId);
-            
-                    // invoke native method
-                    String result;
-                    try {
-                        result = ref.getPoiType();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.RegeocodeQuery::setPoiType_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.RegeocodeQuery ref = (com.amap.api.services.geocoder.RegeocodeQuery) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setPoiType(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.StreetNumber::getStreet_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.StreetNumber ref = (com.amap.api.services.geocoder.StreetNumber) getHEAP().get(refId);
-            
-                    // invoke native method
-                    String result;
-                    try {
-                        result = ref.getStreet();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.StreetNumber::setStreet_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.StreetNumber ref = (com.amap.api.services.geocoder.StreetNumber) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setStreet(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.StreetNumber::getNumber_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.StreetNumber ref = (com.amap.api.services.geocoder.StreetNumber) getHEAP().get(refId);
-            
-                    // invoke native method
-                    String result;
-                    try {
-                        result = ref.getNumber();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.StreetNumber::setNumber_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.StreetNumber ref = (com.amap.api.services.geocoder.StreetNumber) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setNumber(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.StreetNumber::getLatLonPoint_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.StreetNumber ref = (com.amap.api.services.geocoder.StreetNumber) getHEAP().get(refId);
-            
-                    // invoke native method
-                    com.amap.api.services.core.LatLonPoint result;
-                    try {
-                        result = ref.getLatLonPoint();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    Integer jsonableResult = null;
-                    if (result != null) {
-                        jsonableResult = System.identityHashCode(result);
-                        getHEAP().put(jsonableResult, result);
-                    }
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.StreetNumber::setLatLonPoint_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // ref arg
-                    com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.StreetNumber ref = (com.amap.api.services.geocoder.StreetNumber) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setLatLonPoint(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.StreetNumber::getDirection_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.StreetNumber ref = (com.amap.api.services.geocoder.StreetNumber) getHEAP().get(refId);
-            
-                    // invoke native method
-                    String result;
-                    try {
-                        result = ref.getDirection();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.StreetNumber::setDirection_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.StreetNumber ref = (com.amap.api.services.geocoder.StreetNumber) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setDirection(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.StreetNumber::getDistance_batch", (argsBatch, methodResult) -> {
-                List<Float> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.StreetNumber ref = (com.amap.api.services.geocoder.StreetNumber) getHEAP().get(refId);
-            
-                    // invoke native method
-                    float result;
-                    try {
-                        result = ref.getDistance();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    float jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.StreetNumber::setDistance_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    Double var1 = (Double) ((Map<String, Object>) args).get("var1");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.StreetNumber ref = (com.amap.api.services.geocoder.StreetNumber) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setDistance(new Double(var1).floatValue());
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.RegeocodeAddress::getFormatAddress_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
-            
-                    // invoke native method
-                    String result;
-                    try {
-                        result = ref.getFormatAddress();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.RegeocodeAddress::setFormatAddress_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setFormatAddress(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.RegeocodeAddress::getProvince_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
-            
-                    // invoke native method
-                    String result;
-                    try {
-                        result = ref.getProvince();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.RegeocodeAddress::setProvince_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setProvince(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.RegeocodeAddress::getCity_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
-            
-                    // invoke native method
-                    String result;
-                    try {
-                        result = ref.getCity();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.RegeocodeAddress::setCity_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setCity(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.RegeocodeAddress::getCityCode_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
-            
-                    // invoke native method
-                    String result;
-                    try {
-                        result = ref.getCityCode();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.RegeocodeAddress::setCityCode_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setCityCode(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.RegeocodeAddress::getAdCode_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
-            
-                    // invoke native method
-                    String result;
-                    try {
-                        result = ref.getAdCode();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.RegeocodeAddress::setAdCode_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setAdCode(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.RegeocodeAddress::getDistrict_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
-            
-                    // invoke native method
-                    String result;
-                    try {
-                        result = ref.getDistrict();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.RegeocodeAddress::setDistrict_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setDistrict(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.RegeocodeAddress::getTownship_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
-            
-                    // invoke native method
-                    String result;
-                    try {
-                        result = ref.getTownship();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.RegeocodeAddress::setTownship_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setTownship(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.RegeocodeAddress::getNeighborhood_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
-            
-                    // invoke native method
-                    String result;
-                    try {
-                        result = ref.getNeighborhood();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.RegeocodeAddress::setNeighborhood_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setNeighborhood(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.RegeocodeAddress::getBuilding_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
-            
-                    // invoke native method
-                    String result;
-                    try {
-                        result = ref.getBuilding();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.RegeocodeAddress::setBuilding_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setBuilding(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.RegeocodeAddress::getStreetNumber_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
-            
-                    // invoke native method
-                    com.amap.api.services.geocoder.StreetNumber result;
-                    try {
-                        result = ref.getStreetNumber();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    Integer jsonableResult = null;
-                    if (result != null) {
-                        jsonableResult = System.identityHashCode(result);
-                        getHEAP().put(jsonableResult, result);
-                    }
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.RegeocodeAddress::setStreetNumber_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // ref arg
-                    com.amap.api.services.geocoder.StreetNumber var1 = (com.amap.api.services.geocoder.StreetNumber) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setStreetNumber(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.RegeocodeAddress::getRoads_batch", (argsBatch, methodResult) -> {
-                List<List<Integer>> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
-            
-                    // invoke native method
-                    java.util.List<com.amap.api.services.geocoder.RegeocodeRoad> result;
-                    try {
-                        result = ref.getRoads();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    List<Integer> jsonableResult = null;
-                    if (result != null) {
-                        jsonableResult = new ArrayList<>();
-                        for (com.amap.api.services.geocoder.RegeocodeRoad item : result) {
-                            getHEAP().put(System.identityHashCode(item), item);
-                            jsonableResult.add(System.identityHashCode(item));
-                        }
-                    }
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.RegeocodeAddress::setRoads_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // list arg
-                    List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) args).get("var1");
-                    java.util.List<com.amap.api.services.geocoder.RegeocodeRoad> var1 = new ArrayList<>();
-                    for (int refId : var1RefIdList) {
-                        var1.add((com.amap.api.services.geocoder.RegeocodeRoad) getHEAP().get(refId));
-                    }
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setRoads(new ArrayList(var1));
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.RegeocodeAddress::getPois_batch", (argsBatch, methodResult) -> {
-                List<List<Integer>> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
-            
-                    // invoke native method
-                    java.util.List<com.amap.api.services.core.PoiItem> result;
-                    try {
-                        result = ref.getPois();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    List<Integer> jsonableResult = null;
-                    if (result != null) {
-                        jsonableResult = new ArrayList<>();
-                        for (com.amap.api.services.core.PoiItem item : result) {
-                            getHEAP().put(System.identityHashCode(item), item);
-                            jsonableResult.add(System.identityHashCode(item));
-                        }
-                    }
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.RegeocodeAddress::setPois_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // list arg
-                    List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) args).get("var1");
-                    java.util.List<com.amap.api.services.core.PoiItem> var1 = new ArrayList<>();
-                    for (int refId : var1RefIdList) {
-                        var1.add((com.amap.api.services.core.PoiItem) getHEAP().get(refId));
-                    }
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setPois(new ArrayList(var1));
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.RegeocodeAddress::getCrossroads_batch", (argsBatch, methodResult) -> {
-                List<List<Integer>> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
-            
-                    // invoke native method
-                    java.util.List<com.amap.api.services.road.Crossroad> result;
-                    try {
-                        result = ref.getCrossroads();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    List<Integer> jsonableResult = null;
-                    if (result != null) {
-                        jsonableResult = new ArrayList<>();
-                        for (com.amap.api.services.road.Crossroad item : result) {
-                            getHEAP().put(System.identityHashCode(item), item);
-                            jsonableResult.add(System.identityHashCode(item));
-                        }
-                    }
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.RegeocodeAddress::setCrossroads_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // list arg
-                    List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) args).get("var1");
-                    java.util.List<com.amap.api.services.road.Crossroad> var1 = new ArrayList<>();
-                    for (int refId : var1RefIdList) {
-                        var1.add((com.amap.api.services.road.Crossroad) getHEAP().get(refId));
-                    }
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setCrossroads(new ArrayList(var1));
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.RegeocodeAddress::getBusinessAreas_batch", (argsBatch, methodResult) -> {
-                List<List<Integer>> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
-            
-                    // invoke native method
-                    java.util.List<com.amap.api.services.geocoder.BusinessArea> result;
-                    try {
-                        result = ref.getBusinessAreas();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    List<Integer> jsonableResult = null;
-                    if (result != null) {
-                        jsonableResult = new ArrayList<>();
-                        for (com.amap.api.services.geocoder.BusinessArea item : result) {
-                            getHEAP().put(System.identityHashCode(item), item);
-                            jsonableResult.add(System.identityHashCode(item));
-                        }
-                    }
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.RegeocodeAddress::setBusinessAreas_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // list arg
-                    List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) args).get("var1");
-                    java.util.List<com.amap.api.services.geocoder.BusinessArea> var1 = new ArrayList<>();
-                    for (int refId : var1RefIdList) {
-                        var1.add((com.amap.api.services.geocoder.BusinessArea) getHEAP().get(refId));
-                    }
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setBusinessAreas(new ArrayList(var1));
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.RegeocodeAddress::getAois_batch", (argsBatch, methodResult) -> {
-                List<List<Integer>> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
-            
-                    // invoke native method
-                    java.util.List<com.amap.api.services.geocoder.AoiItem> result;
-                    try {
-                        result = ref.getAois();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    List<Integer> jsonableResult = null;
-                    if (result != null) {
-                        jsonableResult = new ArrayList<>();
-                        for (com.amap.api.services.geocoder.AoiItem item : result) {
-                            getHEAP().put(System.identityHashCode(item), item);
-                            jsonableResult.add(System.identityHashCode(item));
-                        }
-                    }
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.RegeocodeAddress::setAois_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // list arg
-                    List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) args).get("var1");
-                    java.util.List<com.amap.api.services.geocoder.AoiItem> var1 = new ArrayList<>();
-                    for (int refId : var1RefIdList) {
-                        var1.add((com.amap.api.services.geocoder.AoiItem) getHEAP().get(refId));
-                    }
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setAois(new ArrayList(var1));
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.RegeocodeAddress::getTowncode_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
-            
-                    // invoke native method
-                    String result;
-                    try {
-                        result = ref.getTowncode();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.RegeocodeAddress::setTowncode_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setTowncode(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.RegeocodeAddress::setCountry_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setCountry(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.geocoder.RegeocodeAddress::getCountry_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
-            
-                    // invoke native method
-                    String result;
-                    try {
-                        result = ref.getCountry();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.district.DistrictSearchQuery::setShowBoundary_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    boolean var1 = (boolean) ((Map<String, Object>) args).get("var1");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.district.DistrictSearchQuery ref = (com.amap.api.services.district.DistrictSearchQuery) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setShowBoundary(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.district.DistrictSearchQuery::isShowBoundary_batch", (argsBatch, methodResult) -> {
-                List<Boolean> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.district.DistrictSearchQuery ref = (com.amap.api.services.district.DistrictSearchQuery) getHEAP().get(refId);
-            
-                    // invoke native method
-                    boolean result;
-                    try {
-                        result = ref.isShowBoundary();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    boolean jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.district.DistrictSearchQuery::getPageNum_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.district.DistrictSearchQuery ref = (com.amap.api.services.district.DistrictSearchQuery) getHEAP().get(refId);
-            
-                    // invoke native method
-                    int result;
-                    try {
-                        result = ref.getPageNum();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    int jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.district.DistrictSearchQuery::setPageNum_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    int var1 = (int) ((Map<String, Object>) args).get("var1");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.district.DistrictSearchQuery ref = (com.amap.api.services.district.DistrictSearchQuery) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setPageNum(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.district.DistrictSearchQuery::getPageSize_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.district.DistrictSearchQuery ref = (com.amap.api.services.district.DistrictSearchQuery) getHEAP().get(refId);
-            
-                    // invoke native method
-                    int result;
-                    try {
-                        result = ref.getPageSize();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    int jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.district.DistrictSearchQuery::setPageSize_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    int var1 = (int) ((Map<String, Object>) args).get("var1");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.district.DistrictSearchQuery ref = (com.amap.api.services.district.DistrictSearchQuery) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setPageSize(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.district.DistrictSearchQuery::getKeywords_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.district.DistrictSearchQuery ref = (com.amap.api.services.district.DistrictSearchQuery) getHEAP().get(refId);
-            
-                    // invoke native method
-                    String result;
-                    try {
-                        result = ref.getKeywords();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.district.DistrictSearchQuery::setKeywords_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.district.DistrictSearchQuery ref = (com.amap.api.services.district.DistrictSearchQuery) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setKeywords(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.district.DistrictSearchQuery::getKeywordsLevel_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.district.DistrictSearchQuery ref = (com.amap.api.services.district.DistrictSearchQuery) getHEAP().get(refId);
-            
-                    // invoke native method
-                    String result;
-                    try {
-                        result = ref.getKeywordsLevel();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.district.DistrictSearchQuery::setKeywordsLevel_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.district.DistrictSearchQuery ref = (com.amap.api.services.district.DistrictSearchQuery) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setKeywordsLevel(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.district.DistrictSearchQuery::isShowChild_batch", (argsBatch, methodResult) -> {
-                List<Boolean> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.district.DistrictSearchQuery ref = (com.amap.api.services.district.DistrictSearchQuery) getHEAP().get(refId);
-            
-                    // invoke native method
-                    boolean result;
-                    try {
-                        result = ref.isShowChild();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    boolean jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.district.DistrictSearchQuery::setShowChild_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    boolean var1 = (boolean) ((Map<String, Object>) args).get("var1");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.district.DistrictSearchQuery ref = (com.amap.api.services.district.DistrictSearchQuery) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setShowChild(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.district.DistrictSearchQuery::isShowBusinessArea_batch", (argsBatch, methodResult) -> {
-                List<Boolean> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.district.DistrictSearchQuery ref = (com.amap.api.services.district.DistrictSearchQuery) getHEAP().get(refId);
-            
-                    // invoke native method
-                    boolean result;
-                    try {
-                        result = ref.isShowBusinessArea();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    boolean jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.district.DistrictSearchQuery::setShowBusinessArea_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    boolean var1 = (boolean) ((Map<String, Object>) args).get("var1");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.district.DistrictSearchQuery ref = (com.amap.api.services.district.DistrictSearchQuery) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setShowBusinessArea(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.district.DistrictSearchQuery::checkLevels_batch", (argsBatch, methodResult) -> {
-                List<Boolean> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.district.DistrictSearchQuery ref = (com.amap.api.services.district.DistrictSearchQuery) getHEAP().get(refId);
-            
-                    // invoke native method
-                    boolean result;
-                    try {
-                        result = ref.checkLevels();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    boolean jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.district.DistrictSearchQuery::checkKeyWords_batch", (argsBatch, methodResult) -> {
-                List<Boolean> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.district.DistrictSearchQuery ref = (com.amap.api.services.district.DistrictSearchQuery) getHEAP().get(refId);
-            
-                    // invoke native method
-                    boolean result;
-                    try {
-                        result = ref.checkKeyWords();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    boolean jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.district.DistrictSearchQuery::weakEquals_batch", (argsBatch, methodResult) -> {
-                List<Boolean> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // ref arg
-                    com.amap.api.services.district.DistrictSearchQuery var1 = (com.amap.api.services.district.DistrictSearchQuery) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.district.DistrictSearchQuery ref = (com.amap.api.services.district.DistrictSearchQuery) getHEAP().get(refId);
-            
-                    // invoke native method
-                    boolean result;
-                    try {
-                        result = ref.weakEquals(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    boolean jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.district.DistrictSearchQuery::clone_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.district.DistrictSearchQuery ref = (com.amap.api.services.district.DistrictSearchQuery) getHEAP().get(refId);
-            
-                    // invoke native method
-                    com.amap.api.services.district.DistrictSearchQuery result;
-                    try {
-                        result = ref.clone();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    Integer jsonableResult = null;
-                    if (result != null) {
-                        jsonableResult = System.identityHashCode(result);
-                        getHEAP().put(jsonableResult, result);
-                    }
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.district.DistrictSearch::getQuery_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.district.DistrictSearch ref = (com.amap.api.services.district.DistrictSearch) getHEAP().get(refId);
-            
-                    // invoke native method
-                    com.amap.api.services.district.DistrictSearchQuery result;
-                    try {
-                        result = ref.getQuery();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    Integer jsonableResult = null;
-                    if (result != null) {
-                        jsonableResult = System.identityHashCode(result);
-                        getHEAP().put(jsonableResult, result);
-                    }
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.district.DistrictSearch::setQuery_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // ref arg
-                    com.amap.api.services.district.DistrictSearchQuery var1 = (com.amap.api.services.district.DistrictSearchQuery) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.district.DistrictSearch ref = (com.amap.api.services.district.DistrictSearch) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setQuery(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.district.DistrictSearch::searchDistrict_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.district.DistrictSearch ref = (com.amap.api.services.district.DistrictSearch) getHEAP().get(refId);
-            
-                    // invoke native method
-                    com.amap.api.services.district.DistrictResult result;
-                    try {
-                        result = ref.searchDistrict();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    Integer jsonableResult = null;
-                    if (result != null) {
-                        jsonableResult = System.identityHashCode(result);
-                        getHEAP().put(jsonableResult, result);
-                    }
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.district.DistrictSearch::searchDistrictAsyn_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.district.DistrictSearch ref = (com.amap.api.services.district.DistrictSearch) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.searchDistrictAsyn();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.district.DistrictSearch::searchDistrictAnsy_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.district.DistrictSearch ref = (com.amap.api.services.district.DistrictSearch) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.searchDistrictAnsy();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.district.DistrictResult::getDistrict_batch", (argsBatch, methodResult) -> {
-                List<List<Integer>> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.district.DistrictResult ref = (com.amap.api.services.district.DistrictResult) getHEAP().get(refId);
-            
-                    // invoke native method
-                    java.util.ArrayList<com.amap.api.services.district.DistrictItem> result;
-                    try {
-                        result = ref.getDistrict();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    List<Integer> jsonableResult = null;
-                    if (result != null) {
-                        jsonableResult = new ArrayList<>();
-                        for (com.amap.api.services.district.DistrictItem item : result) {
-                            getHEAP().put(System.identityHashCode(item), item);
-                            jsonableResult.add(System.identityHashCode(item));
-                        }
-                    }
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.district.DistrictResult::setDistrict_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // list arg
-                    List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) args).get("var1");
-                    java.util.ArrayList<com.amap.api.services.district.DistrictItem> var1 = new ArrayList<>();
-                    for (int refId : var1RefIdList) {
-                        var1.add((com.amap.api.services.district.DistrictItem) getHEAP().get(refId));
-                    }
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.district.DistrictResult ref = (com.amap.api.services.district.DistrictResult) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setDistrict(new ArrayList(var1));
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.district.DistrictResult::getQuery_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.district.DistrictResult ref = (com.amap.api.services.district.DistrictResult) getHEAP().get(refId);
-            
-                    // invoke native method
-                    com.amap.api.services.district.DistrictSearchQuery result;
-                    try {
-                        result = ref.getQuery();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    Integer jsonableResult = null;
-                    if (result != null) {
-                        jsonableResult = System.identityHashCode(result);
-                        getHEAP().put(jsonableResult, result);
-                    }
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.district.DistrictResult::setQuery_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // ref arg
-                    com.amap.api.services.district.DistrictSearchQuery var1 = (com.amap.api.services.district.DistrictSearchQuery) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.district.DistrictResult ref = (com.amap.api.services.district.DistrictResult) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setQuery(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.district.DistrictResult::getPageCount_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.district.DistrictResult ref = (com.amap.api.services.district.DistrictResult) getHEAP().get(refId);
-            
-                    // invoke native method
-                    int result;
-                    try {
-                        result = ref.getPageCount();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    int jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.district.DistrictResult::setPageCount_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    int var1 = (int) ((Map<String, Object>) args).get("var1");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.district.DistrictResult ref = (com.amap.api.services.district.DistrictResult) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setPageCount(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.district.DistrictResult::getAMapException_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.district.DistrictResult ref = (com.amap.api.services.district.DistrictResult) getHEAP().get(refId);
-            
-                    // invoke native method
-                    com.amap.api.services.core.AMapException result;
-                    try {
-                        result = ref.getAMapException();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    Integer jsonableResult = null;
-                    if (result != null) {
-                        jsonableResult = System.identityHashCode(result);
-                        getHEAP().put(jsonableResult, result);
-                    }
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.district.DistrictResult::setAMapException_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // ref arg
-                    com.amap.api.services.core.AMapException var1 = (com.amap.api.services.core.AMapException) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.district.DistrictResult ref = (com.amap.api.services.district.DistrictResult) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setAMapException(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.district.DistrictItem::setDistrictBoundary_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    ArrayList<String> var1 = (ArrayList<String>) ((Map<String, Object>) args).get("var1");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.district.DistrictItem ref = (com.amap.api.services.district.DistrictItem) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setDistrictBoundary(var1.toArray(new String[var1.size()]));
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.district.DistrictItem::districtBoundary_batch", (argsBatch, methodResult) -> {
-                List<List<String>> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.district.DistrictItem ref = (com.amap.api.services.district.DistrictItem) getHEAP().get(refId);
-            
-                    // invoke native method
-                    String[] result;
-                    try {
-                        result = ref.districtBoundary();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    List<String> jsonableResult = new ArrayList<String>(java.util.Arrays.asList(result));
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.district.DistrictItem::getCitycode_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.district.DistrictItem ref = (com.amap.api.services.district.DistrictItem) getHEAP().get(refId);
-            
-                    // invoke native method
-                    String result;
-                    try {
-                        result = ref.getCitycode();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.district.DistrictItem::setCitycode_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.district.DistrictItem ref = (com.amap.api.services.district.DistrictItem) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setCitycode(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.district.DistrictItem::getAdcode_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.district.DistrictItem ref = (com.amap.api.services.district.DistrictItem) getHEAP().get(refId);
-            
-                    // invoke native method
-                    String result;
-                    try {
-                        result = ref.getAdcode();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.district.DistrictItem::setAdcode_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.district.DistrictItem ref = (com.amap.api.services.district.DistrictItem) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setAdcode(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.district.DistrictItem::getName_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.district.DistrictItem ref = (com.amap.api.services.district.DistrictItem) getHEAP().get(refId);
-            
-                    // invoke native method
-                    String result;
-                    try {
-                        result = ref.getName();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.district.DistrictItem::setName_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.district.DistrictItem ref = (com.amap.api.services.district.DistrictItem) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setName(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.district.DistrictItem::getCenter_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.district.DistrictItem ref = (com.amap.api.services.district.DistrictItem) getHEAP().get(refId);
-            
-                    // invoke native method
-                    com.amap.api.services.core.LatLonPoint result;
-                    try {
-                        result = ref.getCenter();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    Integer jsonableResult = null;
-                    if (result != null) {
-                        jsonableResult = System.identityHashCode(result);
-                        getHEAP().put(jsonableResult, result);
-                    }
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.district.DistrictItem::setCenter_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // ref arg
-                    com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.district.DistrictItem ref = (com.amap.api.services.district.DistrictItem) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setCenter(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.district.DistrictItem::getLevel_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.district.DistrictItem ref = (com.amap.api.services.district.DistrictItem) getHEAP().get(refId);
-            
-                    // invoke native method
-                    String result;
-                    try {
-                        result = ref.getLevel();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.district.DistrictItem::setLevel_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.district.DistrictItem ref = (com.amap.api.services.district.DistrictItem) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setLevel(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.district.DistrictItem::getSubDistrict_batch", (argsBatch, methodResult) -> {
-                List<List<Integer>> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.district.DistrictItem ref = (com.amap.api.services.district.DistrictItem) getHEAP().get(refId);
-            
-                    // invoke native method
-                    java.util.List<com.amap.api.services.district.DistrictItem> result;
-                    try {
-                        result = ref.getSubDistrict();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    List<Integer> jsonableResult = null;
-                    if (result != null) {
-                        jsonableResult = new ArrayList<>();
-                        for (com.amap.api.services.district.DistrictItem item : result) {
-                            getHEAP().put(System.identityHashCode(item), item);
-                            jsonableResult.add(System.identityHashCode(item));
-                        }
-                    }
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.district.DistrictItem::setSubDistrict_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // list arg
-                    List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) args).get("var1");
-                    java.util.ArrayList<com.amap.api.services.district.DistrictItem> var1 = new ArrayList<>();
-                    for (int refId : var1RefIdList) {
-                        var1.add((com.amap.api.services.district.DistrictItem) getHEAP().get(refId));
-                    }
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.district.DistrictItem ref = (com.amap.api.services.district.DistrictItem) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setSubDistrict(new ArrayList(var1));
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.district.DistrictSearch.OnDistrictSearchListener::onDistrictSearched_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // ref arg
-                    com.amap.api.services.district.DistrictResult var1 = (com.amap.api.services.district.DistrictResult) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.district.DistrictSearch.OnDistrictSearchListener ref = (com.amap.api.services.district.DistrictSearch.OnDistrictSearchListener) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.onDistrictSearched(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.help.Inputtips.InputtipsListener::onGetInputtips_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // list arg
-                    List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) args).get("var1");
-                    java.util.List<com.amap.api.services.help.Tip> var1 = new ArrayList<>();
-                    for (int refId : var1RefIdList) {
-                        var1.add((com.amap.api.services.help.Tip) getHEAP().get(refId));
-                    }
-                    // jsonable arg
-                    int var2 = (int) ((Map<String, Object>) args).get("var2");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.help.Inputtips.InputtipsListener ref = (com.amap.api.services.help.Inputtips.InputtipsListener) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.onGetInputtips(new ArrayList(var1), var2);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.help.Tip::getPoiID_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.help.Tip ref = (com.amap.api.services.help.Tip) getHEAP().get(refId);
-            
-                    // invoke native method
-                    String result;
-                    try {
-                        result = ref.getPoiID();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.help.Tip::setID_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.help.Tip ref = (com.amap.api.services.help.Tip) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setID(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.help.Tip::getPoint_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.help.Tip ref = (com.amap.api.services.help.Tip) getHEAP().get(refId);
-            
-                    // invoke native method
-                    com.amap.api.services.core.LatLonPoint result;
-                    try {
-                        result = ref.getPoint();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    Integer jsonableResult = null;
-                    if (result != null) {
-                        jsonableResult = System.identityHashCode(result);
-                        getHEAP().put(jsonableResult, result);
-                    }
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.help.Tip::setPostion_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // ref arg
-                    com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.help.Tip ref = (com.amap.api.services.help.Tip) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setPostion(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.help.Tip::getName_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.help.Tip ref = (com.amap.api.services.help.Tip) getHEAP().get(refId);
-            
-                    // invoke native method
-                    String result;
-                    try {
-                        result = ref.getName();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.help.Tip::setName_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.help.Tip ref = (com.amap.api.services.help.Tip) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setName(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.help.Tip::getDistrict_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.help.Tip ref = (com.amap.api.services.help.Tip) getHEAP().get(refId);
-            
-                    // invoke native method
-                    String result;
-                    try {
-                        result = ref.getDistrict();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.help.Tip::setDistrict_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.help.Tip ref = (com.amap.api.services.help.Tip) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setDistrict(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.help.Tip::getAdcode_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.help.Tip ref = (com.amap.api.services.help.Tip) getHEAP().get(refId);
-            
-                    // invoke native method
-                    String result;
-                    try {
-                        result = ref.getAdcode();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.help.Tip::setAdcode_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.help.Tip ref = (com.amap.api.services.help.Tip) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setAdcode(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.help.Tip::getAddress_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.help.Tip ref = (com.amap.api.services.help.Tip) getHEAP().get(refId);
-            
-                    // invoke native method
-                    String result;
-                    try {
-                        result = ref.getAddress();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.help.Tip::setAddress_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.help.Tip ref = (com.amap.api.services.help.Tip) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setAddress(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.help.Tip::setTypeCode_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.help.Tip ref = (com.amap.api.services.help.Tip) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setTypeCode(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.help.Tip::getTypeCode_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.help.Tip ref = (com.amap.api.services.help.Tip) getHEAP().get(refId);
-            
-                    // invoke native method
-                    String result;
-                    try {
-                        result = ref.getTypeCode();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.help.InputtipsQuery::getKeyword_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.help.InputtipsQuery ref = (com.amap.api.services.help.InputtipsQuery) getHEAP().get(refId);
-            
-                    // invoke native method
-                    String result;
-                    try {
-                        result = ref.getKeyword();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.help.InputtipsQuery::getCity_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.help.InputtipsQuery ref = (com.amap.api.services.help.InputtipsQuery) getHEAP().get(refId);
-            
-                    // invoke native method
-                    String result;
-                    try {
-                        result = ref.getCity();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.help.InputtipsQuery::setType_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.help.InputtipsQuery ref = (com.amap.api.services.help.InputtipsQuery) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setType(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.help.InputtipsQuery::getType_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.help.InputtipsQuery ref = (com.amap.api.services.help.InputtipsQuery) getHEAP().get(refId);
-            
-                    // invoke native method
-                    String result;
-                    try {
-                        result = ref.getType();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.help.InputtipsQuery::setCityLimit_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    boolean var1 = (boolean) ((Map<String, Object>) args).get("var1");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.help.InputtipsQuery ref = (com.amap.api.services.help.InputtipsQuery) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setCityLimit(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.help.InputtipsQuery::getCityLimit_batch", (argsBatch, methodResult) -> {
-                List<Boolean> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.help.InputtipsQuery ref = (com.amap.api.services.help.InputtipsQuery) getHEAP().get(refId);
-            
-                    // invoke native method
-                    boolean result;
-                    try {
-                        result = ref.getCityLimit();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    boolean jsonableResult = result;
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.help.InputtipsQuery::setLocation_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // ref arg
-                    com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.help.InputtipsQuery ref = (com.amap.api.services.help.InputtipsQuery) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setLocation(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.help.InputtipsQuery::getLocation_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.help.InputtipsQuery ref = (com.amap.api.services.help.InputtipsQuery) getHEAP().get(refId);
-            
-                    // invoke native method
-                    com.amap.api.services.core.LatLonPoint result;
-                    try {
-                        result = ref.getLocation();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    Integer jsonableResult = null;
-                    if (result != null) {
-                        jsonableResult = System.identityHashCode(result);
-                        getHEAP().put(jsonableResult, result);
-                    }
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.help.Inputtips::getQuery_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.help.Inputtips ref = (com.amap.api.services.help.Inputtips) getHEAP().get(refId);
-            
-                    // invoke native method
-                    com.amap.api.services.help.InputtipsQuery result;
-                    try {
-                        result = ref.getQuery();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    Integer jsonableResult = null;
-                    if (result != null) {
-                        jsonableResult = System.identityHashCode(result);
-                        getHEAP().put(jsonableResult, result);
-                    }
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.help.Inputtips::setQuery_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // ref arg
-                    com.amap.api.services.help.InputtipsQuery var1 = (com.amap.api.services.help.InputtipsQuery) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.help.Inputtips ref = (com.amap.api.services.help.Inputtips) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setQuery(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.help.Inputtips::requestInputtipsAsyn_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.help.Inputtips ref = (com.amap.api.services.help.Inputtips) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.requestInputtipsAsyn();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.help.Inputtips::requestInputtips_batch", (argsBatch, methodResult) -> {
-                List<List<Integer>> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.help.Inputtips ref = (com.amap.api.services.help.Inputtips) getHEAP().get(refId);
-            
-                    // invoke native method
-                    java.util.List<com.amap.api.services.help.Tip> result;
-                    try {
-                        result = ref.requestInputtips();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    List<Integer> jsonableResult = null;
-                    if (result != null) {
-                        jsonableResult = new ArrayList<>();
-                        for (com.amap.api.services.help.Tip item : result) {
-                            getHEAP().put(System.identityHashCode(item), item);
-                            jsonableResult.add(System.identityHashCode(item));
-                        }
-                    }
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.help.Inputtips::requestInputtips__String__String_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
-                    // jsonable arg
-                    String var2 = (String) ((Map<String, Object>) args).get("var2");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.help.Inputtips ref = (com.amap.api.services.help.Inputtips) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.requestInputtips(var1, var2);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.help.Inputtips::requestInputtips__String__String__String_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
-                    // jsonable arg
-                    String var2 = (String) ((Map<String, Object>) args).get("var2");
-                    // jsonable arg
-                    String var3 = (String) ((Map<String, Object>) args).get("var3");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.help.Inputtips ref = (com.amap.api.services.help.Inputtips) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.requestInputtips(var1, var2, var3);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.interfaces.IDistrictSearch::getQuery_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.IDistrictSearch ref = (com.amap.api.services.interfaces.IDistrictSearch) getHEAP().get(refId);
-            
-                    // invoke native method
-                    com.amap.api.services.district.DistrictSearchQuery result;
-                    try {
-                        result = ref.getQuery();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    Integer jsonableResult = null;
-                    if (result != null) {
-                        jsonableResult = System.identityHashCode(result);
-                        getHEAP().put(jsonableResult, result);
-                    }
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.interfaces.IDistrictSearch::setQuery_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // ref arg
-                    com.amap.api.services.district.DistrictSearchQuery var1 = (com.amap.api.services.district.DistrictSearchQuery) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.IDistrictSearch ref = (com.amap.api.services.interfaces.IDistrictSearch) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setQuery(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.interfaces.IDistrictSearch::searchDistrictAsyn_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.IDistrictSearch ref = (com.amap.api.services.interfaces.IDistrictSearch) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.searchDistrictAsyn();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.interfaces.IDistrictSearch::searchDistrictAnsy_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.IDistrictSearch ref = (com.amap.api.services.interfaces.IDistrictSearch) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.searchDistrictAnsy();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.interfaces.IDistrictSearch::searchDistrict_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.IDistrictSearch ref = (com.amap.api.services.interfaces.IDistrictSearch) getHEAP().get(refId);
-            
-                    // invoke native method
-                    com.amap.api.services.district.DistrictResult result;
-                    try {
-                        result = ref.searchDistrict();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    Integer jsonableResult = null;
-                    if (result != null) {
-                        jsonableResult = System.identityHashCode(result);
-                        getHEAP().put(jsonableResult, result);
-                    }
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.interfaces.IBusStationSearch::searchBusStation_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.IBusStationSearch ref = (com.amap.api.services.interfaces.IBusStationSearch) getHEAP().get(refId);
-            
-                    // invoke native method
-                    com.amap.api.services.busline.BusStationResult result;
-                    try {
-                        result = ref.searchBusStation();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    Integer jsonableResult = null;
-                    if (result != null) {
-                        jsonableResult = System.identityHashCode(result);
-                        getHEAP().put(jsonableResult, result);
-                    }
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.interfaces.IBusStationSearch::searchBusStationAsyn_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.IBusStationSearch ref = (com.amap.api.services.interfaces.IBusStationSearch) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.searchBusStationAsyn();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.interfaces.IBusStationSearch::setQuery_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // ref arg
-                    com.amap.api.services.busline.BusStationQuery var1 = (com.amap.api.services.busline.BusStationQuery) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.IBusStationSearch ref = (com.amap.api.services.interfaces.IBusStationSearch) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setQuery(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.interfaces.IBusStationSearch::getQuery_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.IBusStationSearch ref = (com.amap.api.services.interfaces.IBusStationSearch) getHEAP().get(refId);
-            
-                    // invoke native method
-                    com.amap.api.services.busline.BusStationQuery result;
-                    try {
-                        result = ref.getQuery();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    Integer jsonableResult = null;
-                    if (result != null) {
-                        jsonableResult = System.identityHashCode(result);
-                        getHEAP().put(jsonableResult, result);
-                    }
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.interfaces.IRouteSearch::calculateWalkRoute_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // ref arg
-                    com.amap.api.services.route.RouteSearch.WalkRouteQuery var1 = (com.amap.api.services.route.RouteSearch.WalkRouteQuery) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.IRouteSearch ref = (com.amap.api.services.interfaces.IRouteSearch) getHEAP().get(refId);
-            
-                    // invoke native method
-                    com.amap.api.services.route.WalkRouteResult result;
-                    try {
-                        result = ref.calculateWalkRoute(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    Integer jsonableResult = null;
-                    if (result != null) {
-                        jsonableResult = System.identityHashCode(result);
-                        getHEAP().put(jsonableResult, result);
-                    }
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.interfaces.IRouteSearch::calculateWalkRouteAsyn_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // ref arg
-                    com.amap.api.services.route.RouteSearch.WalkRouteQuery var1 = (com.amap.api.services.route.RouteSearch.WalkRouteQuery) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.IRouteSearch ref = (com.amap.api.services.interfaces.IRouteSearch) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.calculateWalkRouteAsyn(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.interfaces.IRouteSearch::calculateBusRoute_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // ref arg
-                    com.amap.api.services.route.RouteSearch.BusRouteQuery var1 = (com.amap.api.services.route.RouteSearch.BusRouteQuery) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.IRouteSearch ref = (com.amap.api.services.interfaces.IRouteSearch) getHEAP().get(refId);
-            
-                    // invoke native method
-                    com.amap.api.services.route.BusRouteResult result;
-                    try {
-                        result = ref.calculateBusRoute(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    Integer jsonableResult = null;
-                    if (result != null) {
-                        jsonableResult = System.identityHashCode(result);
-                        getHEAP().put(jsonableResult, result);
-                    }
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.interfaces.IRouteSearch::calculateBusRouteAsyn_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // ref arg
-                    com.amap.api.services.route.RouteSearch.BusRouteQuery var1 = (com.amap.api.services.route.RouteSearch.BusRouteQuery) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.IRouteSearch ref = (com.amap.api.services.interfaces.IRouteSearch) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.calculateBusRouteAsyn(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.interfaces.IRouteSearch::calculateDriveRoute_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // ref arg
-                    com.amap.api.services.route.RouteSearch.DriveRouteQuery var1 = (com.amap.api.services.route.RouteSearch.DriveRouteQuery) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.IRouteSearch ref = (com.amap.api.services.interfaces.IRouteSearch) getHEAP().get(refId);
-            
-                    // invoke native method
-                    com.amap.api.services.route.DriveRouteResult result;
-                    try {
-                        result = ref.calculateDriveRoute(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    Integer jsonableResult = null;
-                    if (result != null) {
-                        jsonableResult = System.identityHashCode(result);
-                        getHEAP().put(jsonableResult, result);
-                    }
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.interfaces.IRouteSearch::calculateDriveRouteAsyn_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // ref arg
-                    com.amap.api.services.route.RouteSearch.DriveRouteQuery var1 = (com.amap.api.services.route.RouteSearch.DriveRouteQuery) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.IRouteSearch ref = (com.amap.api.services.interfaces.IRouteSearch) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.calculateDriveRouteAsyn(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.interfaces.IRouteSearch::calculateRideRoute_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // ref arg
-                    com.amap.api.services.route.RouteSearch.RideRouteQuery var1 = (com.amap.api.services.route.RouteSearch.RideRouteQuery) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.IRouteSearch ref = (com.amap.api.services.interfaces.IRouteSearch) getHEAP().get(refId);
-            
-                    // invoke native method
-                    com.amap.api.services.route.RideRouteResult result;
-                    try {
-                        result = ref.calculateRideRoute(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    Integer jsonableResult = null;
-                    if (result != null) {
-                        jsonableResult = System.identityHashCode(result);
-                        getHEAP().put(jsonableResult, result);
-                    }
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.interfaces.IRouteSearch::calculateRideRouteAsyn_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // ref arg
-                    com.amap.api.services.route.RouteSearch.RideRouteQuery var1 = (com.amap.api.services.route.RouteSearch.RideRouteQuery) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.IRouteSearch ref = (com.amap.api.services.interfaces.IRouteSearch) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.calculateRideRouteAsyn(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.interfaces.IRouteSearch::calculateTruckRoute_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // ref arg
-                    com.amap.api.services.route.RouteSearch.TruckRouteQuery var1 = (com.amap.api.services.route.RouteSearch.TruckRouteQuery) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.IRouteSearch ref = (com.amap.api.services.interfaces.IRouteSearch) getHEAP().get(refId);
-            
-                    // invoke native method
-                    com.amap.api.services.route.TruckRouteRestult result;
-                    try {
-                        result = ref.calculateTruckRoute(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    Integer jsonableResult = null;
-                    if (result != null) {
-                        jsonableResult = System.identityHashCode(result);
-                        getHEAP().put(jsonableResult, result);
-                    }
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.interfaces.IRouteSearch::calculateTruckRouteAsyn_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // ref arg
-                    com.amap.api.services.route.RouteSearch.TruckRouteQuery var1 = (com.amap.api.services.route.RouteSearch.TruckRouteQuery) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.IRouteSearch ref = (com.amap.api.services.interfaces.IRouteSearch) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.calculateTruckRouteAsyn(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.interfaces.IRouteSearch::calculateDrivePlan_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // ref arg
-                    com.amap.api.services.route.RouteSearch.DrivePlanQuery var1 = (com.amap.api.services.route.RouteSearch.DrivePlanQuery) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.IRouteSearch ref = (com.amap.api.services.interfaces.IRouteSearch) getHEAP().get(refId);
-            
-                    // invoke native method
-                    com.amap.api.services.route.DriveRoutePlanResult result;
-                    try {
-                        result = ref.calculateDrivePlan(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    Integer jsonableResult = null;
-                    if (result != null) {
-                        jsonableResult = System.identityHashCode(result);
-                        getHEAP().put(jsonableResult, result);
-                    }
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.interfaces.IRouteSearch::calculateDrivePlanAsyn_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // ref arg
-                    com.amap.api.services.route.RouteSearch.DrivePlanQuery var1 = (com.amap.api.services.route.RouteSearch.DrivePlanQuery) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.IRouteSearch ref = (com.amap.api.services.interfaces.IRouteSearch) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.calculateDrivePlanAsyn(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.interfaces.IShareSearch::searchPoiShareUrlAsyn_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // ref arg
-                    com.amap.api.services.core.PoiItem var1 = (com.amap.api.services.core.PoiItem) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.IShareSearch ref = (com.amap.api.services.interfaces.IShareSearch) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.searchPoiShareUrlAsyn(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.interfaces.IShareSearch::searchBusRouteShareUrlAsyn_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // ref arg
-                    com.amap.api.services.share.ShareSearch.ShareBusRouteQuery var1 = (com.amap.api.services.share.ShareSearch.ShareBusRouteQuery) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.IShareSearch ref = (com.amap.api.services.interfaces.IShareSearch) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.searchBusRouteShareUrlAsyn(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.interfaces.IShareSearch::searchWalkRouteShareUrlAsyn_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // ref arg
-                    com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery var1 = (com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.IShareSearch ref = (com.amap.api.services.interfaces.IShareSearch) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.searchWalkRouteShareUrlAsyn(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.interfaces.IShareSearch::searchDrivingRouteShareUrlAsyn_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // ref arg
-                    com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery var1 = (com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.IShareSearch ref = (com.amap.api.services.interfaces.IShareSearch) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.searchDrivingRouteShareUrlAsyn(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.interfaces.IShareSearch::searchNaviShareUrlAsyn_batch", (argsBatch, methodResult) -> {
+            put("com.amap.api.services.share.ShareSearch::searchNaviShareUrlAsyn_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
@@ -6042,7 +43,7 @@ public class SubHandler11 {
             
                     // ref
                     int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.IShareSearch ref = (com.amap.api.services.interfaces.IShareSearch) getHEAP().get(refId);
+                    com.amap.api.services.share.ShareSearch ref = (com.amap.api.services.share.ShareSearch) getHEAP().get(refId);
             
                     // invoke native method
                     try {
@@ -6065,7 +66,7 @@ public class SubHandler11 {
                 methodResult.success(resultList);
             });
             // method
-            put("com.amap.api.services.interfaces.IShareSearch::searchLocationShareUrlAsyn_batch", (argsBatch, methodResult) -> {
+            put("com.amap.api.services.share.ShareSearch::searchLocationShareUrlAsyn_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
@@ -6077,7 +78,7 @@ public class SubHandler11 {
             
                     // ref
                     int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.IShareSearch ref = (com.amap.api.services.interfaces.IShareSearch) getHEAP().get(refId);
+                    com.amap.api.services.share.ShareSearch ref = (com.amap.api.services.share.ShareSearch) getHEAP().get(refId);
             
                     // invoke native method
                     try {
@@ -6100,7 +101,7 @@ public class SubHandler11 {
                 methodResult.success(resultList);
             });
             // method
-            put("com.amap.api.services.interfaces.IShareSearch::searchPoiShareUrl_batch", (argsBatch, methodResult) -> {
+            put("com.amap.api.services.share.ShareSearch::searchPoiShareUrl_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
@@ -6112,7 +113,7 @@ public class SubHandler11 {
             
                     // ref
                     int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.IShareSearch ref = (com.amap.api.services.interfaces.IShareSearch) getHEAP().get(refId);
+                    com.amap.api.services.share.ShareSearch ref = (com.amap.api.services.share.ShareSearch) getHEAP().get(refId);
             
                     // invoke native method
                     String result;
@@ -6136,7 +137,7 @@ public class SubHandler11 {
                 methodResult.success(resultList);
             });
             // method
-            put("com.amap.api.services.interfaces.IShareSearch::searchNaviShareUrl_batch", (argsBatch, methodResult) -> {
+            put("com.amap.api.services.share.ShareSearch::searchNaviShareUrl_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
@@ -6148,7 +149,7 @@ public class SubHandler11 {
             
                     // ref
                     int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.IShareSearch ref = (com.amap.api.services.interfaces.IShareSearch) getHEAP().get(refId);
+                    com.amap.api.services.share.ShareSearch ref = (com.amap.api.services.share.ShareSearch) getHEAP().get(refId);
             
                     // invoke native method
                     String result;
@@ -6172,7 +173,7 @@ public class SubHandler11 {
                 methodResult.success(resultList);
             });
             // method
-            put("com.amap.api.services.interfaces.IShareSearch::searchLocationShareUrl_batch", (argsBatch, methodResult) -> {
+            put("com.amap.api.services.share.ShareSearch::searchLocationShareUrl_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
@@ -6184,7 +185,7 @@ public class SubHandler11 {
             
                     // ref
                     int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.IShareSearch ref = (com.amap.api.services.interfaces.IShareSearch) getHEAP().get(refId);
+                    com.amap.api.services.share.ShareSearch ref = (com.amap.api.services.share.ShareSearch) getHEAP().get(refId);
             
                     // invoke native method
                     String result;
@@ -6208,7 +209,7 @@ public class SubHandler11 {
                 methodResult.success(resultList);
             });
             // method
-            put("com.amap.api.services.interfaces.IShareSearch::searchBusRouteShareUrl_batch", (argsBatch, methodResult) -> {
+            put("com.amap.api.services.share.ShareSearch::searchBusRouteShareUrl_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
@@ -6220,7 +221,7 @@ public class SubHandler11 {
             
                     // ref
                     int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.IShareSearch ref = (com.amap.api.services.interfaces.IShareSearch) getHEAP().get(refId);
+                    com.amap.api.services.share.ShareSearch ref = (com.amap.api.services.share.ShareSearch) getHEAP().get(refId);
             
                     // invoke native method
                     String result;
@@ -6244,7 +245,7 @@ public class SubHandler11 {
                 methodResult.success(resultList);
             });
             // method
-            put("com.amap.api.services.interfaces.IShareSearch::searchDrivingRouteShareUrl_batch", (argsBatch, methodResult) -> {
+            put("com.amap.api.services.share.ShareSearch::searchDrivingRouteShareUrl_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
@@ -6256,7 +257,7 @@ public class SubHandler11 {
             
                     // ref
                     int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.IShareSearch ref = (com.amap.api.services.interfaces.IShareSearch) getHEAP().get(refId);
+                    com.amap.api.services.share.ShareSearch ref = (com.amap.api.services.share.ShareSearch) getHEAP().get(refId);
             
                     // invoke native method
                     String result;
@@ -6280,7 +281,7 @@ public class SubHandler11 {
                 methodResult.success(resultList);
             });
             // method
-            put("com.amap.api.services.interfaces.IShareSearch::searchWalkRouteShareUrl_batch", (argsBatch, methodResult) -> {
+            put("com.amap.api.services.share.ShareSearch::searchWalkRouteShareUrl_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
@@ -6292,7 +293,7 @@ public class SubHandler11 {
             
                     // ref
                     int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.IShareSearch ref = (com.amap.api.services.interfaces.IShareSearch) getHEAP().get(refId);
+                    com.amap.api.services.share.ShareSearch ref = (com.amap.api.services.share.ShareSearch) getHEAP().get(refId);
             
                     // invoke native method
                     String result;
@@ -6316,680 +317,7 @@ public class SubHandler11 {
                 methodResult.success(resultList);
             });
             // method
-            put("com.amap.api.services.interfaces.IRoutePOISearch::searchRoutePOIAsyn_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.IRoutePOISearch ref = (com.amap.api.services.interfaces.IRoutePOISearch) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.searchRoutePOIAsyn();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.interfaces.IRoutePOISearch::searchRoutePOI_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.IRoutePOISearch ref = (com.amap.api.services.interfaces.IRoutePOISearch) getHEAP().get(refId);
-            
-                    // invoke native method
-                    com.amap.api.services.routepoisearch.RoutePOISearchResult result;
-                    try {
-                        result = ref.searchRoutePOI();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    Integer jsonableResult = null;
-                    if (result != null) {
-                        jsonableResult = System.identityHashCode(result);
-                        getHEAP().put(jsonableResult, result);
-                    }
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.interfaces.IRoutePOISearch::setQuery_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // ref arg
-                    com.amap.api.services.routepoisearch.RoutePOISearchQuery var1 = (com.amap.api.services.routepoisearch.RoutePOISearchQuery) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.IRoutePOISearch ref = (com.amap.api.services.interfaces.IRoutePOISearch) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setQuery(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.interfaces.IRoutePOISearch::getQuery_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.IRoutePOISearch ref = (com.amap.api.services.interfaces.IRoutePOISearch) getHEAP().get(refId);
-            
-                    // invoke native method
-                    com.amap.api.services.routepoisearch.RoutePOISearchQuery result;
-                    try {
-                        result = ref.getQuery();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    Integer jsonableResult = null;
-                    if (result != null) {
-                        jsonableResult = System.identityHashCode(result);
-                        getHEAP().put(jsonableResult, result);
-                    }
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.interfaces.IInputtipsSearch::getQuery_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.IInputtipsSearch ref = (com.amap.api.services.interfaces.IInputtipsSearch) getHEAP().get(refId);
-            
-                    // invoke native method
-                    com.amap.api.services.help.InputtipsQuery result;
-                    try {
-                        result = ref.getQuery();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    Integer jsonableResult = null;
-                    if (result != null) {
-                        jsonableResult = System.identityHashCode(result);
-                        getHEAP().put(jsonableResult, result);
-                    }
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.interfaces.IInputtipsSearch::setQuery_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // ref arg
-                    com.amap.api.services.help.InputtipsQuery var1 = (com.amap.api.services.help.InputtipsQuery) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.IInputtipsSearch ref = (com.amap.api.services.interfaces.IInputtipsSearch) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setQuery(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.interfaces.IInputtipsSearch::requestInputtipsAsyn_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.IInputtipsSearch ref = (com.amap.api.services.interfaces.IInputtipsSearch) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.requestInputtipsAsyn();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.interfaces.IInputtipsSearch::requestInputtips_batch", (argsBatch, methodResult) -> {
-                List<List<Integer>> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.IInputtipsSearch ref = (com.amap.api.services.interfaces.IInputtipsSearch) getHEAP().get(refId);
-            
-                    // invoke native method
-                    java.util.ArrayList<com.amap.api.services.help.Tip> result;
-                    try {
-                        result = ref.requestInputtips();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    List<Integer> jsonableResult = null;
-                    if (result != null) {
-                        jsonableResult = new ArrayList<>();
-                        for (com.amap.api.services.help.Tip item : result) {
-                            getHEAP().put(System.identityHashCode(item), item);
-                            jsonableResult.add(System.identityHashCode(item));
-                        }
-                    }
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.interfaces.IInputtipsSearch::requestInputtips__String__String_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
-                    // jsonable arg
-                    String var2 = (String) ((Map<String, Object>) args).get("var2");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.IInputtipsSearch ref = (com.amap.api.services.interfaces.IInputtipsSearch) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.requestInputtips(var1, var2);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.interfaces.IInputtipsSearch::requestInputtips__String__String__String_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
-                    // jsonable arg
-                    String var2 = (String) ((Map<String, Object>) args).get("var2");
-                    // jsonable arg
-                    String var3 = (String) ((Map<String, Object>) args).get("var3");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.IInputtipsSearch ref = (com.amap.api.services.interfaces.IInputtipsSearch) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.requestInputtips(var1, var2, var3);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.interfaces.IGeocodeSearch::getFromLocation_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // ref arg
-                    com.amap.api.services.geocoder.RegeocodeQuery var1 = (com.amap.api.services.geocoder.RegeocodeQuery) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.IGeocodeSearch ref = (com.amap.api.services.interfaces.IGeocodeSearch) getHEAP().get(refId);
-            
-                    // invoke native method
-                    com.amap.api.services.geocoder.RegeocodeAddress result;
-                    try {
-                        result = ref.getFromLocation(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    Integer jsonableResult = null;
-                    if (result != null) {
-                        jsonableResult = System.identityHashCode(result);
-                        getHEAP().put(jsonableResult, result);
-                    }
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.interfaces.IGeocodeSearch::getFromLocationName_batch", (argsBatch, methodResult) -> {
-                List<List<Integer>> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // ref arg
-                    com.amap.api.services.geocoder.GeocodeQuery var1 = (com.amap.api.services.geocoder.GeocodeQuery) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.IGeocodeSearch ref = (com.amap.api.services.interfaces.IGeocodeSearch) getHEAP().get(refId);
-            
-                    // invoke native method
-                    java.util.List<com.amap.api.services.geocoder.GeocodeAddress> result;
-                    try {
-                        result = ref.getFromLocationName(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    List<Integer> jsonableResult = null;
-                    if (result != null) {
-                        jsonableResult = new ArrayList<>();
-                        for (com.amap.api.services.geocoder.GeocodeAddress item : result) {
-                            getHEAP().put(System.identityHashCode(item), item);
-                            jsonableResult.add(System.identityHashCode(item));
-                        }
-                    }
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.interfaces.IGeocodeSearch::getFromLocationAsyn_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // ref arg
-                    com.amap.api.services.geocoder.RegeocodeQuery var1 = (com.amap.api.services.geocoder.RegeocodeQuery) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.IGeocodeSearch ref = (com.amap.api.services.interfaces.IGeocodeSearch) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.getFromLocationAsyn(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.interfaces.IGeocodeSearch::getFromLocationNameAsyn_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // ref arg
-                    com.amap.api.services.geocoder.GeocodeQuery var1 = (com.amap.api.services.geocoder.GeocodeQuery) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.IGeocodeSearch ref = (com.amap.api.services.interfaces.IGeocodeSearch) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.getFromLocationNameAsyn(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.interfaces.ICloudSearch::searchCloudAsyn_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // ref arg
-                    com.amap.api.services.cloud.CloudSearch.Query var1 = (com.amap.api.services.cloud.CloudSearch.Query) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.ICloudSearch ref = (com.amap.api.services.interfaces.ICloudSearch) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.searchCloudAsyn(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.interfaces.ICloudSearch::searchCloudDetailAsyn_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
-                    // jsonable arg
-                    String var2 = (String) ((Map<String, Object>) args).get("var2");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.ICloudSearch ref = (com.amap.api.services.interfaces.ICloudSearch) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.searchCloudDetailAsyn(var1, var2);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.interfaces.IDistanceSearch::calculateRouteDistance_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // ref arg
-                    com.amap.api.services.route.DistanceSearch.DistanceQuery var1 = (com.amap.api.services.route.DistanceSearch.DistanceQuery) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.IDistanceSearch ref = (com.amap.api.services.interfaces.IDistanceSearch) getHEAP().get(refId);
-            
-                    // invoke native method
-                    com.amap.api.services.route.DistanceResult result;
-                    try {
-                        result = ref.calculateRouteDistance(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    Integer jsonableResult = null;
-                    if (result != null) {
-                        jsonableResult = System.identityHashCode(result);
-                        getHEAP().put(jsonableResult, result);
-                    }
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.interfaces.IDistanceSearch::calculateRouteDistanceAsyn_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-                    // ref arg
-                    com.amap.api.services.route.DistanceSearch.DistanceQuery var1 = (com.amap.api.services.route.DistanceSearch.DistanceQuery) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.IDistanceSearch ref = (com.amap.api.services.interfaces.IDistanceSearch) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.calculateRouteDistanceAsyn(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.interfaces.IPoiSearch::setLanguage_batch", (argsBatch, methodResult) -> {
+            put("com.amap.api.services.share.ShareSearch.ShareFromAndTo::setFromName_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
@@ -7001,11 +329,11 @@ public class SubHandler11 {
             
                     // ref
                     int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.IPoiSearch ref = (com.amap.api.services.interfaces.IPoiSearch) getHEAP().get(refId);
+                    com.amap.api.services.share.ShareSearch.ShareFromAndTo ref = (com.amap.api.services.share.ShareSearch.ShareFromAndTo) getHEAP().get(refId);
             
                     // invoke native method
                     try {
-                        ref.setLanguage(var1);
+                        ref.setFromName(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -7024,7 +352,120 @@ public class SubHandler11 {
                 methodResult.success(resultList);
             });
             // method
-            put("com.amap.api.services.interfaces.IPoiSearch::getLanguage_batch", (argsBatch, methodResult) -> {
+            put("com.amap.api.services.share.ShareSearch.ShareFromAndTo::setToName_batch", (argsBatch, methodResult) -> {
+                List<String> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+                    // jsonable arg
+                    String var1 = (String) ((Map<String, Object>) args).get("var1");
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.amap.api.services.share.ShareSearch.ShareFromAndTo ref = (com.amap.api.services.share.ShareSearch.ShareFromAndTo) getHEAP().get(refId);
+            
+                    // invoke native method
+                    try {
+                        ref.setToName(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.amap.api.services.share.ShareSearch.ShareFromAndTo::getFrom_batch", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.amap.api.services.share.ShareSearch.ShareFromAndTo ref = (com.amap.api.services.share.ShareSearch.ShareFromAndTo) getHEAP().get(refId);
+            
+                    // invoke native method
+                    com.amap.api.services.core.LatLonPoint result;
+                    try {
+                        result = ref.getFrom();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    Integer jsonableResult = null;
+                    if (result != null) {
+                        jsonableResult = System.identityHashCode(result);
+                        getHEAP().put(jsonableResult, result);
+                    }
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.amap.api.services.share.ShareSearch.ShareFromAndTo::getTo_batch", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.amap.api.services.share.ShareSearch.ShareFromAndTo ref = (com.amap.api.services.share.ShareSearch.ShareFromAndTo) getHEAP().get(refId);
+            
+                    // invoke native method
+                    com.amap.api.services.core.LatLonPoint result;
+                    try {
+                        result = ref.getTo();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    Integer jsonableResult = null;
+                    if (result != null) {
+                        jsonableResult = System.identityHashCode(result);
+                        getHEAP().put(jsonableResult, result);
+                    }
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.amap.api.services.share.ShareSearch.ShareFromAndTo::getFromName_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
@@ -7035,12 +476,12 @@ public class SubHandler11 {
             
                     // ref
                     int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.IPoiSearch ref = (com.amap.api.services.interfaces.IPoiSearch) getHEAP().get(refId);
+                    com.amap.api.services.share.ShareSearch.ShareFromAndTo ref = (com.amap.api.services.share.ShareSearch.ShareFromAndTo) getHEAP().get(refId);
             
                     // invoke native method
                     String result;
                     try {
-                        result = ref.getLanguage();
+                        result = ref.getFromName();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -7059,7 +500,42 @@ public class SubHandler11 {
                 methodResult.success(resultList);
             });
             // method
-            put("com.amap.api.services.interfaces.IPoiSearch::searchPOI_batch", (argsBatch, methodResult) -> {
+            put("com.amap.api.services.share.ShareSearch.ShareFromAndTo::getToName_batch", (argsBatch, methodResult) -> {
+                List<String> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.amap.api.services.share.ShareSearch.ShareFromAndTo ref = (com.amap.api.services.share.ShareSearch.ShareFromAndTo) getHEAP().get(refId);
+            
+                    // invoke native method
+                    String result;
+                    try {
+                        result = ref.getToName();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = result;
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery::getWalkMode_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
@@ -7070,12 +546,47 @@ public class SubHandler11 {
             
                     // ref
                     int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.IPoiSearch ref = (com.amap.api.services.interfaces.IPoiSearch) getHEAP().get(refId);
+                    com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery ref = (com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery) getHEAP().get(refId);
             
                     // invoke native method
-                    com.amap.api.services.poisearch.PoiResult result;
+                    int result;
                     try {
-                        result = ref.searchPOI();
+                        result = ref.getWalkMode();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    int jsonableResult = result;
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery::getShareFromAndTo_batch", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery ref = (com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery) getHEAP().get(refId);
+            
+                    // invoke native method
+                    com.amap.api.services.share.ShareSearch.ShareFromAndTo result;
+                    try {
+                        result = ref.getShareFromAndTo();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -7098,8 +609,8 @@ public class SubHandler11 {
                 methodResult.success(resultList);
             });
             // method
-            put("com.amap.api.services.interfaces.IPoiSearch::searchPOIAsyn_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
+            put("com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery::getDrivingMode_batch", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
                     Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
@@ -7109,11 +620,12 @@ public class SubHandler11 {
             
                     // ref
                     int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.IPoiSearch ref = (com.amap.api.services.interfaces.IPoiSearch) getHEAP().get(refId);
+                    com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery ref = (com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery) getHEAP().get(refId);
             
                     // invoke native method
+                    int result;
                     try {
-                        ref.searchPOIAsyn();
+                        result = ref.getDrivingMode();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -7124,7 +636,7 @@ public class SubHandler11 {
                     }
             
                     // convert result to jsonable result
-                    String jsonableResult = "success";
+                    int jsonableResult = result;
             
                     resultList.add(jsonableResult);
                 }
@@ -7132,24 +644,23 @@ public class SubHandler11 {
                 methodResult.success(resultList);
             });
             // method
-            put("com.amap.api.services.interfaces.IPoiSearch::searchPOIId_batch", (argsBatch, methodResult) -> {
+            put("com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery::getShareFromAndTo_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
                     Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) args).get("var1");
+            
             
                     // ref
                     int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.IPoiSearch ref = (com.amap.api.services.interfaces.IPoiSearch) getHEAP().get(refId);
+                    com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery ref = (com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery) getHEAP().get(refId);
             
                     // invoke native method
-                    com.amap.api.services.core.PoiItem result;
+                    com.amap.api.services.share.ShareSearch.ShareFromAndTo result;
                     try {
-                        result = ref.searchPOIId(var1);
+                        result = ref.getShareFromAndTo();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -7171,107 +682,4772 @@ public class SubHandler11 {
             
                 methodResult.success(resultList);
             });
-            // method
-            put("com.amap.api.services.interfaces.IPoiSearch::searchPOIIdAsyn_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_traffic_TrafficStatusInfo__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_traffic_TrafficStatusInfo__");
+                }
             
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.traffic.TrafficStatusInfo obj = new com.amap.api.services.traffic.TrafficStatusInfo();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_traffic_TrafficStatusResult__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_traffic_TrafficStatusResult__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.traffic.TrafficStatusResult obj = new com.amap.api.services.traffic.TrafficStatusResult();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_traffic_TrafficSearch__android_content_Context", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_traffic_TrafficSearch__android_content_Context");
+                }
+            
+                // args
+                // ref arg
+                android.content.Context var1 = (android.content.Context) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
+            
+                // create target object
+                com.amap.api.services.traffic.TrafficSearch obj = new com.amap.api.services.traffic.TrafficSearch(var1);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_traffic_RoadTrafficQuery__String__String__int", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_traffic_RoadTrafficQuery__String__String__int");
+                }
+            
+                // args
+                // jsonable arg
+                String var1 = (String) ((Map<String, Object>) args).get("var1");
+                // jsonable arg
+                String var2 = (String) ((Map<String, Object>) args).get("var2");
+                // jsonable arg
+                int var3 = (int) ((Map<String, Object>) args).get("var3");
+            
+                // create target object
+                com.amap.api.services.traffic.RoadTrafficQuery obj = new com.amap.api.services.traffic.RoadTrafficQuery(var1, var2, var3);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_traffic_CircleTrafficQuery__com_amap_api_services_core_LatLonPoint__int__int", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_traffic_CircleTrafficQuery__com_amap_api_services_core_LatLonPoint__int__int");
+                }
+            
+                // args
+                // ref arg
+                com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
+                // jsonable arg
+                int var2 = (int) ((Map<String, Object>) args).get("var2");
+                // jsonable arg
+                int var3 = (int) ((Map<String, Object>) args).get("var3");
+            
+                // create target object
+                com.amap.api.services.traffic.CircleTrafficQuery obj = new com.amap.api.services.traffic.CircleTrafficQuery(var1, var2, var3);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_traffic_TrafficStatusEvaluation__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_traffic_TrafficStatusEvaluation__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.traffic.TrafficStatusEvaluation obj = new com.amap.api.services.traffic.TrafficStatusEvaluation();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_busline_BusLineItem__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_busline_BusLineItem__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.busline.BusLineItem obj = new com.amap.api.services.busline.BusLineItem();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_busline_BusStationSearch__android_content_Context__com_amap_api_services_busline_BusStationQuery", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_busline_BusStationSearch__android_content_Context__com_amap_api_services_busline_BusStationQuery");
+                }
+            
+                // args
+                // ref arg
+                android.content.Context var1 = (android.content.Context) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
+                // ref arg
+                com.amap.api.services.busline.BusStationQuery var2 = (com.amap.api.services.busline.BusStationQuery) getHEAP().get((int) ((Map<String, Object>) args).get("var2"));
+            
+                // create target object
+                com.amap.api.services.busline.BusStationSearch obj = new com.amap.api.services.busline.BusStationSearch(var1, var2);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_busline_BusLineSearch__android_content_Context__com_amap_api_services_busline_BusLineQuery", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_busline_BusLineSearch__android_content_Context__com_amap_api_services_busline_BusLineQuery");
+                }
+            
+                // args
+                // ref arg
+                android.content.Context var1 = (android.content.Context) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
+                // ref arg
+                com.amap.api.services.busline.BusLineQuery var2 = (com.amap.api.services.busline.BusLineQuery) getHEAP().get((int) ((Map<String, Object>) args).get("var2"));
+            
+                // create target object
+                com.amap.api.services.busline.BusLineSearch obj = new com.amap.api.services.busline.BusLineSearch(var1, var2);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_busline_BusLineQuery__String__com_amap_api_services_busline_BusLineQuery_SearchType__String", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_busline_BusLineQuery__String__com_amap_api_services_busline_BusLineQuery_SearchType__String");
+                }
+            
+                // args
+                // jsonable arg
+                String var1 = (String) ((Map<String, Object>) args).get("var1");
+                // enum arg
+                com.amap.api.services.busline.BusLineQuery.SearchType var2 = com.amap.api.services.busline.BusLineQuery.SearchType.values()[(int) ((Map<String, Object>) args).get("var2")];
+                // jsonable arg
+                String var3 = (String) ((Map<String, Object>) args).get("var3");
+            
+                // create target object
+                com.amap.api.services.busline.BusLineQuery obj = new com.amap.api.services.busline.BusLineQuery(var1, var2, var3);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_busline_BusStationItem__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_busline_BusStationItem__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.busline.BusStationItem obj = new com.amap.api.services.busline.BusStationItem();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_busline_BusStationQuery__String__String", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_busline_BusStationQuery__String__String");
+                }
+            
+                // args
+                // jsonable arg
+                String var1 = (String) ((Map<String, Object>) args).get("var1");
+                // jsonable arg
+                String var2 = (String) ((Map<String, Object>) args).get("var2");
+            
+                // create target object
+                com.amap.api.services.busline.BusStationQuery obj = new com.amap.api.services.busline.BusStationQuery(var1, var2);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_core_AMapException__String", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_core_AMapException__String");
+                }
+            
+                // args
+                // jsonable arg
+                String var1 = (String) ((Map<String, Object>) args).get("var1");
+            
+                // create target object
+                com.amap.api.services.core.AMapException obj = new com.amap.api.services.core.AMapException(var1);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_core_AMapException__String__int__String", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_core_AMapException__String__int__String");
+                }
+            
+                // args
+                // jsonable arg
+                String var1 = (String) ((Map<String, Object>) args).get("var1");
+                // jsonable arg
+                int var2 = (int) ((Map<String, Object>) args).get("var2");
+                // jsonable arg
+                String var3 = (String) ((Map<String, Object>) args).get("var3");
+            
+                // create target object
+                com.amap.api.services.core.AMapException obj = new com.amap.api.services.core.AMapException(var1, var2, var3);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_core_AMapException__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_core_AMapException__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.core.AMapException obj = new com.amap.api.services.core.AMapException();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_core_SearchUtils__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_core_SearchUtils__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.core.SearchUtils obj = new com.amap.api.services.core.SearchUtils();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_core_LatLonSharePoint__double__double__String", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_core_LatLonSharePoint__double__double__String");
+                }
+            
+                // args
+                // jsonable arg
+                double var1 = (double) ((Map<String, Object>) args).get("var1");
+                // jsonable arg
+                double var3 = (double) ((Map<String, Object>) args).get("var3");
+                // jsonable arg
+                String var5 = (String) ((Map<String, Object>) args).get("var5");
+            
+                // create target object
+                com.amap.api.services.core.LatLonSharePoint obj = new com.amap.api.services.core.LatLonSharePoint(var1, var3, var5);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_core_LatLonPoint__double__double", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_core_LatLonPoint__double__double");
+                }
+            
+                // args
+                // jsonable arg
+                double var1 = (double) ((Map<String, Object>) args).get("var1");
+                // jsonable arg
+                double var3 = (double) ((Map<String, Object>) args).get("var3");
+            
+                // create target object
+                com.amap.api.services.core.LatLonPoint obj = new com.amap.api.services.core.LatLonPoint(var1, var3);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_core_PoiItem__String__com_amap_api_services_core_LatLonPoint__String__String", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_core_PoiItem__String__com_amap_api_services_core_LatLonPoint__String__String");
+                }
+            
+                // args
+                // jsonable arg
+                String var1 = (String) ((Map<String, Object>) args).get("var1");
+                // ref arg
+                com.amap.api.services.core.LatLonPoint var2 = (com.amap.api.services.core.LatLonPoint) getHEAP().get((int) ((Map<String, Object>) args).get("var2"));
+                // jsonable arg
+                String var3 = (String) ((Map<String, Object>) args).get("var3");
+                // jsonable arg
+                String var4 = (String) ((Map<String, Object>) args).get("var4");
+            
+                // create target object
+                com.amap.api.services.core.PoiItem obj = new com.amap.api.services.core.PoiItem(var1, var2, var3, var4);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_core_SuggestionCity__String__String__String__int", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_core_SuggestionCity__String__String__String__int");
+                }
+            
+                // args
+                // jsonable arg
+                String var1 = (String) ((Map<String, Object>) args).get("var1");
+                // jsonable arg
+                String var2 = (String) ((Map<String, Object>) args).get("var2");
+                // jsonable arg
+                String var3 = (String) ((Map<String, Object>) args).get("var3");
+                // jsonable arg
+                int var4 = (int) ((Map<String, Object>) args).get("var4");
+            
+                // create target object
+                com.amap.api.services.core.SuggestionCity obj = new com.amap.api.services.core.SuggestionCity(var1, var2, var3, var4);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_poisearch_Photo__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_Photo__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.poisearch.Photo obj = new com.amap.api.services.poisearch.Photo();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_poisearch_Photo__String__String", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_Photo__String__String");
+                }
+            
+                // args
+                // jsonable arg
+                String var1 = (String) ((Map<String, Object>) args).get("var1");
+                // jsonable arg
+                String var2 = (String) ((Map<String, Object>) args).get("var2");
+            
+                // create target object
+                com.amap.api.services.poisearch.Photo obj = new com.amap.api.services.poisearch.Photo(var1, var2);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_poisearch_SubPoiItem__String__com_amap_api_services_core_LatLonPoint__String__String", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_SubPoiItem__String__com_amap_api_services_core_LatLonPoint__String__String");
+                }
+            
+                // args
+                // jsonable arg
+                String var1 = (String) ((Map<String, Object>) args).get("var1");
+                // ref arg
+                com.amap.api.services.core.LatLonPoint var2 = (com.amap.api.services.core.LatLonPoint) getHEAP().get((int) ((Map<String, Object>) args).get("var2"));
+                // jsonable arg
+                String var3 = (String) ((Map<String, Object>) args).get("var3");
+                // jsonable arg
+                String var4 = (String) ((Map<String, Object>) args).get("var4");
+            
+                // create target object
+                com.amap.api.services.poisearch.SubPoiItem obj = new com.amap.api.services.poisearch.SubPoiItem(var1, var2, var3, var4);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_poisearch_PoiItemExtension__String__String", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_PoiItemExtension__String__String");
+                }
+            
+                // args
+                // jsonable arg
+                String var1 = (String) ((Map<String, Object>) args).get("var1");
+                // jsonable arg
+                String var2 = (String) ((Map<String, Object>) args).get("var2");
+            
+                // create target object
+                com.amap.api.services.poisearch.PoiItemExtension obj = new com.amap.api.services.poisearch.PoiItemExtension(var1, var2);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint__int", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint__int");
+                }
+            
+                // args
+                // ref arg
+                com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
+                // jsonable arg
+                int var2 = (int) ((Map<String, Object>) args).get("var2");
+            
+                // create target object
+                com.amap.api.services.poisearch.PoiSearch.SearchBound obj = new com.amap.api.services.poisearch.PoiSearch.SearchBound(var1, var2);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint__int__boolean", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint__int__boolean");
+                }
+            
+                // args
+                // ref arg
+                com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
+                // jsonable arg
+                int var2 = (int) ((Map<String, Object>) args).get("var2");
+                // jsonable arg
+                boolean var3 = (boolean) ((Map<String, Object>) args).get("var3");
+            
+                // create target object
+                com.amap.api.services.poisearch.PoiSearch.SearchBound obj = new com.amap.api.services.poisearch.PoiSearch.SearchBound(var1, var2, var3);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint");
+                }
+            
+                // args
+                // ref arg
+                com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
+                // ref arg
+                com.amap.api.services.core.LatLonPoint var2 = (com.amap.api.services.core.LatLonPoint) getHEAP().get((int) ((Map<String, Object>) args).get("var2"));
+            
+                // create target object
+                com.amap.api.services.poisearch.PoiSearch.SearchBound obj = new com.amap.api.services.poisearch.PoiSearch.SearchBound(var1, var2);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch_SearchBound__java_util_List_com_amap_api_services_core_LatLonPoint_", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_PoiSearch_SearchBound__java_util_List_com_amap_api_services_core_LatLonPoint_");
+                }
+            
+                // args
+                // list arg
+                List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) args).get("var1");
+                java.util.List<com.amap.api.services.core.LatLonPoint> var1 = new ArrayList<>();
+                for (int refId : var1RefIdList) {
+                    ((ArrayList<com.amap.api.services.core.LatLonPoint>) var1).add((com.amap.api.services.core.LatLonPoint) getHEAP().get(refId));
+                }
+            
+                // create target object
+                com.amap.api.services.poisearch.PoiSearch.SearchBound obj = new com.amap.api.services.poisearch.PoiSearch.SearchBound((ArrayList) var1);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch__android_content_Context__com_amap_api_services_poisearch_PoiSearch_Query", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_PoiSearch__android_content_Context__com_amap_api_services_poisearch_PoiSearch_Query");
+                }
+            
+                // args
+                // ref arg
+                android.content.Context var1 = (android.content.Context) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
+                // ref arg
+                com.amap.api.services.poisearch.PoiSearch.Query var2 = (com.amap.api.services.poisearch.PoiSearch.Query) getHEAP().get((int) ((Map<String, Object>) args).get("var2"));
+            
+                // create target object
+                com.amap.api.services.poisearch.PoiSearch obj = new com.amap.api.services.poisearch.PoiSearch(var1, var2);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch_Query__String__String", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_PoiSearch_Query__String__String");
+                }
+            
+                // args
+                // jsonable arg
+                String var1 = (String) ((Map<String, Object>) args).get("var1");
+                // jsonable arg
+                String var2 = (String) ((Map<String, Object>) args).get("var2");
+            
+                // create target object
+                com.amap.api.services.poisearch.PoiSearch.Query obj = new com.amap.api.services.poisearch.PoiSearch.Query(var1, var2);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch_Query__String__String__String", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_PoiSearch_Query__String__String__String");
+                }
+            
+                // args
+                // jsonable arg
+                String var1 = (String) ((Map<String, Object>) args).get("var1");
+                // jsonable arg
+                String var2 = (String) ((Map<String, Object>) args).get("var2");
+                // jsonable arg
+                String var3 = (String) ((Map<String, Object>) args).get("var3");
+            
+                // create target object
+                com.amap.api.services.poisearch.PoiSearch.Query obj = new com.amap.api.services.poisearch.PoiSearch.Query(var1, var2, var3);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_poisearch_IndoorData__String__int__String", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_IndoorData__String__int__String");
+                }
+            
+                // args
+                // jsonable arg
+                String var1 = (String) ((Map<String, Object>) args).get("var1");
+                // jsonable arg
+                int var2 = (int) ((Map<String, Object>) args).get("var2");
+                // jsonable arg
+                String var3 = (String) ((Map<String, Object>) args).get("var3");
+            
+                // create target object
+                com.amap.api.services.poisearch.IndoorData obj = new com.amap.api.services.poisearch.IndoorData(var1, var2, var3);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_Railway__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_Railway__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.Railway obj = new com.amap.api.services.route.Railway();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_BusPath__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_BusPath__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.BusPath obj = new com.amap.api.services.route.BusPath();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_DriveRoutePlanResult__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_DriveRoutePlanResult__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.DriveRoutePlanResult obj = new com.amap.api.services.route.DriveRoutePlanResult();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_TruckRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__java_util_List_com_amap_api_services_core_LatLonPoint___int", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_TruckRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__java_util_List_com_amap_api_services_core_LatLonPoint___int");
+                }
+            
+                // args
+                // ref arg
+                com.amap.api.services.route.RouteSearch.FromAndTo var1 = (com.amap.api.services.route.RouteSearch.FromAndTo) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
+                // jsonable arg
+                int var2 = (int) ((Map<String, Object>) args).get("var2");
+                // list arg
+                List<Integer> var3RefIdList = (List<Integer>) ((Map<String, Object>) args).get("var3");
+                java.util.List<com.amap.api.services.core.LatLonPoint> var3 = new ArrayList<>();
+                for (int refId : var3RefIdList) {
+                    ((ArrayList<com.amap.api.services.core.LatLonPoint>) var3).add((com.amap.api.services.core.LatLonPoint) getHEAP().get(refId));
+                }
+                // jsonable arg
+                int var4 = (int) ((Map<String, Object>) args).get("var4");
+            
+                // create target object
+                com.amap.api.services.route.RouteSearch.TruckRouteQuery obj = new com.amap.api.services.route.RouteSearch.TruckRouteQuery(var1, var2, (ArrayList) var3, var4);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_TMC__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_TMC__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.TMC obj = new com.amap.api.services.route.TMC();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_RouteBusWalkItem__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteBusWalkItem__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.RouteBusWalkItem obj = new com.amap.api.services.route.RouteBusWalkItem();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_RouteResult__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteResult__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.RouteResult obj = new com.amap.api.services.route.RouteResult();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_RouteSearch__android_content_Context", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch__android_content_Context");
+                }
+            
+                // args
+                // ref arg
+                android.content.Context var1 = (android.content.Context) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
+            
+                // create target object
+                com.amap.api.services.route.RouteSearch obj = new com.amap.api.services.route.RouteSearch(var1);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_BusStep__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_BusStep__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.BusStep obj = new com.amap.api.services.route.BusStep();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_TaxiItem__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_TaxiItem__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.TaxiItem obj = new com.amap.api.services.route.TaxiItem();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_BusRouteResult__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_BusRouteResult__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.BusRouteResult obj = new com.amap.api.services.route.BusRouteResult();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_RoutePlanResult__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RoutePlanResult__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.RoutePlanResult obj = new com.amap.api.services.route.RoutePlanResult();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_RailwaySpace__String__float", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RailwaySpace__String__float");
+                }
+            
+                // args
+                // jsonable arg
+                String var1 = (String) ((Map<String, Object>) args).get("var1");
+                // jsonable arg
+                Double var2 = (Double) ((Map<String, Object>) args).get("var2");
+            
+                // create target object
+                com.amap.api.services.route.RailwaySpace obj = new com.amap.api.services.route.RailwaySpace(var1, new Double(var2).floatValue());
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_TruckRouteRestult__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_TruckRouteRestult__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.TruckRouteRestult obj = new com.amap.api.services.route.TruckRouteRestult();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_RideRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_RideRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int");
+                }
+            
+                // args
+                // ref arg
+                com.amap.api.services.route.RouteSearch.FromAndTo var1 = (com.amap.api.services.route.RouteSearch.FromAndTo) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
+                // jsonable arg
+                int var2 = (int) ((Map<String, Object>) args).get("var2");
+            
+                // create target object
+                com.amap.api.services.route.RouteSearch.RideRouteQuery obj = new com.amap.api.services.route.RouteSearch.RideRouteQuery(var1, var2);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_RideRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_RideRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo");
+                }
+            
+                // args
+                // ref arg
+                com.amap.api.services.route.RouteSearch.FromAndTo var1 = (com.amap.api.services.route.RouteSearch.FromAndTo) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
+            
+                // create target object
+                com.amap.api.services.route.RouteSearch.RideRouteQuery obj = new com.amap.api.services.route.RouteSearch.RideRouteQuery(var1);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_RideRouteQuery__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_RideRouteQuery__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.RouteSearch.RideRouteQuery obj = new com.amap.api.services.route.RouteSearch.RideRouteQuery();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_DriveRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__java_util_List_com_amap_api_services_core_LatLonPoint___java_util_List_java_util_List_com_amap_api_services_core_LatLonPoint____String", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_DriveRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__java_util_List_com_amap_api_services_core_LatLonPoint___java_util_List_java_util_List_com_amap_api_services_core_LatLonPoint____String");
+                }
+            
+                // args
+                // ref arg
+                com.amap.api.services.route.RouteSearch.FromAndTo var1 = (com.amap.api.services.route.RouteSearch.FromAndTo) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
+                // jsonable arg
+                int var2 = (int) ((Map<String, Object>) args).get("var2");
+                // list arg
+                List<Integer> var3RefIdList = (List<Integer>) ((Map<String, Object>) args).get("var3");
+                java.util.List<com.amap.api.services.core.LatLonPoint> var3 = new ArrayList<>();
+                for (int refId : var3RefIdList) {
+                    ((ArrayList<com.amap.api.services.core.LatLonPoint>) var3).add((com.amap.api.services.core.LatLonPoint) getHEAP().get(refId));
+                }
+                java.util.List<java.util.List<com.amap.api.services.core.LatLonPoint>> var4 = new ArrayList<>();
+                // jsonable arg
+                String var5 = (String) ((Map<String, Object>) args).get("var5");
+            
+                // create target object
+                com.amap.api.services.route.RouteSearch.DriveRouteQuery obj = new com.amap.api.services.route.RouteSearch.DriveRouteQuery(var1, var2, (ArrayList) var3, (ArrayList) var4, var5);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_DriveRouteQuery__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_DriveRouteQuery__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.RouteSearch.DriveRouteQuery obj = new com.amap.api.services.route.RouteSearch.DriveRouteQuery();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_RouteRailwayItem__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteRailwayItem__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.RouteRailwayItem obj = new com.amap.api.services.route.RouteRailwayItem();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_WalkStep__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_WalkStep__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.WalkStep obj = new com.amap.api.services.route.WalkStep();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_RailwayStationItem__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RailwayStationItem__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.RailwayStationItem obj = new com.amap.api.services.route.RailwayStationItem();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_RideRouteResult__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RideRouteResult__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.RideRouteResult obj = new com.amap.api.services.route.RideRouteResult();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_FromAndTo__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_FromAndTo__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint");
+                }
+            
+                // args
+                // ref arg
+                com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
+                // ref arg
+                com.amap.api.services.core.LatLonPoint var2 = (com.amap.api.services.core.LatLonPoint) getHEAP().get((int) ((Map<String, Object>) args).get("var2"));
+            
+                // create target object
+                com.amap.api.services.route.RouteSearch.FromAndTo obj = new com.amap.api.services.route.RouteSearch.FromAndTo(var1, var2);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_FromAndTo__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_FromAndTo__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.RouteSearch.FromAndTo obj = new com.amap.api.services.route.RouteSearch.FromAndTo();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_RidePath__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RidePath__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.RidePath obj = new com.amap.api.services.route.RidePath();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_BusRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__String__int", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_BusRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__String__int");
+                }
+            
+                // args
+                // ref arg
+                com.amap.api.services.route.RouteSearch.FromAndTo var1 = (com.amap.api.services.route.RouteSearch.FromAndTo) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
+                // jsonable arg
+                int var2 = (int) ((Map<String, Object>) args).get("var2");
+                // jsonable arg
+                String var3 = (String) ((Map<String, Object>) args).get("var3");
+                // jsonable arg
+                int var4 = (int) ((Map<String, Object>) args).get("var4");
+            
+                // create target object
+                com.amap.api.services.route.RouteSearch.BusRouteQuery obj = new com.amap.api.services.route.RouteSearch.BusRouteQuery(var1, var2, var3, var4);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_BusRouteQuery__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_BusRouteQuery__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.RouteSearch.BusRouteQuery obj = new com.amap.api.services.route.RouteSearch.BusRouteQuery();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_RideStep__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RideStep__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.RideStep obj = new com.amap.api.services.route.RideStep();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_RouteSearchCity__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearchCity__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.RouteSearchCity obj = new com.amap.api.services.route.RouteSearchCity();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_DistanceResult__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_DistanceResult__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.DistanceResult obj = new com.amap.api.services.route.DistanceResult();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_WalkRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_WalkRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int");
+                }
+            
+                // args
+                // ref arg
+                com.amap.api.services.route.RouteSearch.FromAndTo var1 = (com.amap.api.services.route.RouteSearch.FromAndTo) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
+                // jsonable arg
+                int var2 = (int) ((Map<String, Object>) args).get("var2");
+            
+                // create target object
+                com.amap.api.services.route.RouteSearch.WalkRouteQuery obj = new com.amap.api.services.route.RouteSearch.WalkRouteQuery(var1, var2);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_WalkRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_WalkRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo");
+                }
+            
+                // args
+                // ref arg
+                com.amap.api.services.route.RouteSearch.FromAndTo var1 = (com.amap.api.services.route.RouteSearch.FromAndTo) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
+            
+                // create target object
+                com.amap.api.services.route.RouteSearch.WalkRouteQuery obj = new com.amap.api.services.route.RouteSearch.WalkRouteQuery(var1);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_WalkRouteQuery__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_WalkRouteQuery__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.RouteSearch.WalkRouteQuery obj = new com.amap.api.services.route.RouteSearch.WalkRouteQuery();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_District__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_District__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.District obj = new com.amap.api.services.route.District();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_WalkRouteResult__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_WalkRouteResult__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.WalkRouteResult obj = new com.amap.api.services.route.WalkRouteResult();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_DistanceSearch_DistanceQuery__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_DistanceSearch_DistanceQuery__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.DistanceSearch.DistanceQuery obj = new com.amap.api.services.route.DistanceSearch.DistanceQuery();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_SearchCity__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_SearchCity__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.SearchCity obj = new com.amap.api.services.route.SearchCity();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_DistanceSearch__android_content_Context", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_DistanceSearch__android_content_Context");
+                }
+            
+                // args
+                // ref arg
+                android.content.Context var1 = (android.content.Context) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
+            
+                // create target object
+                com.amap.api.services.route.DistanceSearch obj = new com.amap.api.services.route.DistanceSearch(var1);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_WalkPath__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_WalkPath__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.WalkPath obj = new com.amap.api.services.route.WalkPath();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_RouteBusLineItem__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteBusLineItem__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.RouteBusLineItem obj = new com.amap.api.services.route.RouteBusLineItem();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_DrivePlanQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__int__int", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_DrivePlanQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__int__int");
+                }
+            
+                // args
+                // ref arg
+                com.amap.api.services.route.RouteSearch.FromAndTo var1 = (com.amap.api.services.route.RouteSearch.FromAndTo) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
+                // jsonable arg
+                int var2 = (int) ((Map<String, Object>) args).get("var2");
+                // jsonable arg
+                int var3 = (int) ((Map<String, Object>) args).get("var3");
+                // jsonable arg
+                int var4 = (int) ((Map<String, Object>) args).get("var4");
+            
+                // create target object
+                com.amap.api.services.route.RouteSearch.DrivePlanQuery obj = new com.amap.api.services.route.RouteSearch.DrivePlanQuery(var1, var2, var3, var4);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_DrivePlanQuery__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_DrivePlanQuery__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.RouteSearch.DrivePlanQuery obj = new com.amap.api.services.route.RouteSearch.DrivePlanQuery();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_DrivePlanStep__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_DrivePlanStep__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.DrivePlanStep obj = new com.amap.api.services.route.DrivePlanStep();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_TimeInfo__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_TimeInfo__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.TimeInfo obj = new com.amap.api.services.route.TimeInfo();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_DriveStep__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_DriveStep__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.DriveStep obj = new com.amap.api.services.route.DriveStep();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_TruckStep__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_TruckStep__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.TruckStep obj = new com.amap.api.services.route.TruckStep();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_DriveRouteResult__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_DriveRouteResult__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.DriveRouteResult obj = new com.amap.api.services.route.DriveRouteResult();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_DrivePath__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_DrivePath__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.DrivePath obj = new com.amap.api.services.route.DrivePath();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_TruckPath__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_TruckPath__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.TruckPath obj = new com.amap.api.services.route.TruckPath();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_Doorway__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_Doorway__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.Doorway obj = new com.amap.api.services.route.Doorway();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_DrivePlanPath__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_DrivePlanPath__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.DrivePlanPath obj = new com.amap.api.services.route.DrivePlanPath();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_TimeInfosElement__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_TimeInfosElement__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.TimeInfosElement obj = new com.amap.api.services.route.TimeInfosElement();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_DistanceItem__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_DistanceItem__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.DistanceItem obj = new com.amap.api.services.route.DistanceItem();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_Path__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_Path__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.Path obj = new com.amap.api.services.route.Path();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_road_Road__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_road_Road__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.road.Road obj = new com.amap.api.services.road.Road();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_road_Road__String__String", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_road_Road__String__String");
+                }
+            
+                // args
+                // jsonable arg
+                String var1 = (String) ((Map<String, Object>) args).get("var1");
+                // jsonable arg
+                String var2 = (String) ((Map<String, Object>) args).get("var2");
+            
+                // create target object
+                com.amap.api.services.road.Road obj = new com.amap.api.services.road.Road(var1, var2);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_road_Crossroad__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_road_Crossroad__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.road.Crossroad obj = new com.amap.api.services.road.Crossroad();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_nearby_NearbyInfo__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_nearby_NearbyInfo__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.nearby.NearbyInfo obj = new com.amap.api.services.nearby.NearbyInfo();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_nearby_UploadInfo__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_nearby_UploadInfo__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.nearby.UploadInfo obj = new com.amap.api.services.nearby.UploadInfo();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_nearby_NearbySearchResult__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_nearby_NearbySearchResult__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.nearby.NearbySearchResult obj = new com.amap.api.services.nearby.NearbySearchResult();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_nearby_NearbySearch_NearbyQuery__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_nearby_NearbySearch_NearbyQuery__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.nearby.NearbySearch.NearbyQuery obj = new com.amap.api.services.nearby.NearbySearch.NearbyQuery();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_routepoisearch_RoutePOIItem__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_routepoisearch_RoutePOIItem__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.routepoisearch.RoutePOIItem obj = new com.amap.api.services.routepoisearch.RoutePOIItem();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_routepoisearch_RoutePOISearch__android_content_Context__com_amap_api_services_routepoisearch_RoutePOISearchQuery", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_routepoisearch_RoutePOISearch__android_content_Context__com_amap_api_services_routepoisearch_RoutePOISearchQuery");
+                }
+            
+                // args
+                // ref arg
+                android.content.Context var1 = (android.content.Context) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
+                // ref arg
+                com.amap.api.services.routepoisearch.RoutePOISearchQuery var2 = (com.amap.api.services.routepoisearch.RoutePOISearchQuery) getHEAP().get((int) ((Map<String, Object>) args).get("var2"));
+            
+                // create target object
+                com.amap.api.services.routepoisearch.RoutePOISearch obj = new com.amap.api.services.routepoisearch.RoutePOISearch(var1, var2);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_routepoisearch_RoutePOISearchResult__java_util_ArrayList_com_amap_api_services_routepoisearch_RoutePOIItem___com_amap_api_services_routepoisearch_RoutePOISearchQuery", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_routepoisearch_RoutePOISearchResult__java_util_ArrayList_com_amap_api_services_routepoisearch_RoutePOIItem___com_amap_api_services_routepoisearch_RoutePOISearchQuery");
+                }
+            
+                // args
+                // list arg
+                List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) args).get("var1");
+                java.util.ArrayList<com.amap.api.services.routepoisearch.RoutePOIItem> var1 = new ArrayList<>();
+                for (int refId : var1RefIdList) {
+                    ((ArrayList<com.amap.api.services.routepoisearch.RoutePOIItem>) var1).add((com.amap.api.services.routepoisearch.RoutePOIItem) getHEAP().get(refId));
+                }
+                // ref arg
+                com.amap.api.services.routepoisearch.RoutePOISearchQuery var2 = (com.amap.api.services.routepoisearch.RoutePOISearchQuery) getHEAP().get((int) ((Map<String, Object>) args).get("var2"));
+            
+                // create target object
+                com.amap.api.services.routepoisearch.RoutePOISearchResult obj = new com.amap.api.services.routepoisearch.RoutePOISearchResult((ArrayList) var1, var2);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_routepoisearch_RoutePOISearchQuery__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint__int__com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType__int", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_routepoisearch_RoutePOISearchQuery__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint__int__com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType__int");
+                }
+            
+                // args
+                // ref arg
+                com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
+                // ref arg
+                com.amap.api.services.core.LatLonPoint var2 = (com.amap.api.services.core.LatLonPoint) getHEAP().get((int) ((Map<String, Object>) args).get("var2"));
+                // jsonable arg
+                int var3 = (int) ((Map<String, Object>) args).get("var3");
+                // enum arg
+                com.amap.api.services.routepoisearch.RoutePOISearch.RoutePOISearchType var4 = com.amap.api.services.routepoisearch.RoutePOISearch.RoutePOISearchType.values()[(int) ((Map<String, Object>) args).get("var4")];
+                // jsonable arg
+                int var5 = (int) ((Map<String, Object>) args).get("var5");
+            
+                // create target object
+                com.amap.api.services.routepoisearch.RoutePOISearchQuery obj = new com.amap.api.services.routepoisearch.RoutePOISearchQuery(var1, var2, var3, var4, var5);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_routepoisearch_RoutePOISearchQuery__java_util_List_com_amap_api_services_core_LatLonPoint___com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType__int", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_routepoisearch_RoutePOISearchQuery__java_util_List_com_amap_api_services_core_LatLonPoint___com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType__int");
+                }
+            
+                // args
+                // list arg
+                List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) args).get("var1");
+                java.util.List<com.amap.api.services.core.LatLonPoint> var1 = new ArrayList<>();
+                for (int refId : var1RefIdList) {
+                    ((ArrayList<com.amap.api.services.core.LatLonPoint>) var1).add((com.amap.api.services.core.LatLonPoint) getHEAP().get(refId));
+                }
+                // enum arg
+                com.amap.api.services.routepoisearch.RoutePOISearch.RoutePOISearchType var2 = com.amap.api.services.routepoisearch.RoutePOISearch.RoutePOISearchType.values()[(int) ((Map<String, Object>) args).get("var2")];
+                // jsonable arg
+                int var3 = (int) ((Map<String, Object>) args).get("var3");
+            
+                // create target object
+                com.amap.api.services.routepoisearch.RoutePOISearchQuery obj = new com.amap.api.services.routepoisearch.RoutePOISearchQuery((ArrayList) var1, var2, var3);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_cloud_CloudItem__String__com_amap_api_services_core_LatLonPoint__String__String", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_cloud_CloudItem__String__com_amap_api_services_core_LatLonPoint__String__String");
+                }
+            
+                // args
+                // jsonable arg
+                String var1 = (String) ((Map<String, Object>) args).get("var1");
+                // ref arg
+                com.amap.api.services.core.LatLonPoint var2 = (com.amap.api.services.core.LatLonPoint) getHEAP().get((int) ((Map<String, Object>) args).get("var2"));
+                // jsonable arg
+                String var3 = (String) ((Map<String, Object>) args).get("var3");
+                // jsonable arg
+                String var4 = (String) ((Map<String, Object>) args).get("var4");
+            
+                // create target object
+                com.amap.api.services.cloud.CloudItem obj = new com.amap.api.services.cloud.CloudItem(var1, var2, var3, var4);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_Query__String__String__com_amap_api_services_cloud_CloudSearch_SearchBound", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_cloud_CloudSearch_Query__String__String__com_amap_api_services_cloud_CloudSearch_SearchBound");
+                }
+            
+                // args
+                // jsonable arg
+                String var1 = (String) ((Map<String, Object>) args).get("var1");
+                // jsonable arg
+                String var2 = (String) ((Map<String, Object>) args).get("var2");
+                // ref arg
+                com.amap.api.services.cloud.CloudSearch.SearchBound var3 = (com.amap.api.services.cloud.CloudSearch.SearchBound) getHEAP().get((int) ((Map<String, Object>) args).get("var3"));
+            
+                // create target object
+                com.amap.api.services.cloud.CloudSearch.Query obj = new com.amap.api.services.cloud.CloudSearch.Query(var1, var2, var3);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_cloud_CloudSearch__android_content_Context", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_cloud_CloudSearch__android_content_Context");
+                }
+            
+                // args
+                // ref arg
+                android.content.Context var1 = (android.content.Context) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
+            
+                // create target object
+                com.amap.api.services.cloud.CloudSearch obj = new com.amap.api.services.cloud.CloudSearch(var1);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_SearchBound__com_amap_api_services_core_LatLonPoint__int", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_cloud_CloudSearch_SearchBound__com_amap_api_services_core_LatLonPoint__int");
+                }
+            
+                // args
+                // ref arg
+                com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
+                // jsonable arg
+                int var2 = (int) ((Map<String, Object>) args).get("var2");
+            
+                // create target object
+                com.amap.api.services.cloud.CloudSearch.SearchBound obj = new com.amap.api.services.cloud.CloudSearch.SearchBound(var1, var2);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_SearchBound__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_cloud_CloudSearch_SearchBound__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint");
+                }
+            
+                // args
+                // ref arg
+                com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
+                // ref arg
+                com.amap.api.services.core.LatLonPoint var2 = (com.amap.api.services.core.LatLonPoint) getHEAP().get((int) ((Map<String, Object>) args).get("var2"));
+            
+                // create target object
+                com.amap.api.services.cloud.CloudSearch.SearchBound obj = new com.amap.api.services.cloud.CloudSearch.SearchBound(var1, var2);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_SearchBound__java_util_List_com_amap_api_services_core_LatLonPoint_", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_cloud_CloudSearch_SearchBound__java_util_List_com_amap_api_services_core_LatLonPoint_");
+                }
+            
+                // args
+                // list arg
+                List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) args).get("var1");
+                java.util.List<com.amap.api.services.core.LatLonPoint> var1 = new ArrayList<>();
+                for (int refId : var1RefIdList) {
+                    ((ArrayList<com.amap.api.services.core.LatLonPoint>) var1).add((com.amap.api.services.core.LatLonPoint) getHEAP().get(refId));
+                }
+            
+                // create target object
+                com.amap.api.services.cloud.CloudSearch.SearchBound obj = new com.amap.api.services.cloud.CloudSearch.SearchBound((ArrayList) var1);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_SearchBound__String", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_cloud_CloudSearch_SearchBound__String");
+                }
+            
+                // args
+                // jsonable arg
+                String var1 = (String) ((Map<String, Object>) args).get("var1");
+            
+                // create target object
+                com.amap.api.services.cloud.CloudSearch.SearchBound obj = new com.amap.api.services.cloud.CloudSearch.SearchBound(var1);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_cloud_CloudImage__String__String__String", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_cloud_CloudImage__String__String__String");
+                }
+            
+                // args
+                // jsonable arg
+                String var1 = (String) ((Map<String, Object>) args).get("var1");
+                // jsonable arg
+                String var2 = (String) ((Map<String, Object>) args).get("var2");
+                // jsonable arg
+                String var3 = (String) ((Map<String, Object>) args).get("var3");
+            
+                // create target object
+                com.amap.api.services.cloud.CloudImage obj = new com.amap.api.services.cloud.CloudImage(var1, var2, var3);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_Sortingrules__String__boolean", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_cloud_CloudSearch_Sortingrules__String__boolean");
+                }
+            
+                // args
+                // jsonable arg
+                String var1 = (String) ((Map<String, Object>) args).get("var1");
+                // jsonable arg
+                boolean var2 = (boolean) ((Map<String, Object>) args).get("var2");
+            
+                // create target object
+                com.amap.api.services.cloud.CloudSearch.Sortingrules obj = new com.amap.api.services.cloud.CloudSearch.Sortingrules(var1, var2);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_Sortingrules__int", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_cloud_CloudSearch_Sortingrules__int");
+                }
+            
+                // args
+                // jsonable arg
+                int var1 = (int) ((Map<String, Object>) args).get("var1");
+            
+                // create target object
+                com.amap.api.services.cloud.CloudSearch.Sortingrules obj = new com.amap.api.services.cloud.CloudSearch.Sortingrules(var1);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_cloud_CloudItemDetail__String__com_amap_api_services_core_LatLonPoint__String__String", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_cloud_CloudItemDetail__String__com_amap_api_services_core_LatLonPoint__String__String");
+                }
+            
+                // args
+                // jsonable arg
+                String var1 = (String) ((Map<String, Object>) args).get("var1");
+                // ref arg
+                com.amap.api.services.core.LatLonPoint var2 = (com.amap.api.services.core.LatLonPoint) getHEAP().get((int) ((Map<String, Object>) args).get("var2"));
+                // jsonable arg
+                String var3 = (String) ((Map<String, Object>) args).get("var3");
+                // jsonable arg
+                String var4 = (String) ((Map<String, Object>) args).get("var4");
+            
+                // create target object
+                com.amap.api.services.cloud.CloudItemDetail obj = new com.amap.api.services.cloud.CloudItemDetail(var1, var2, var3, var4);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_weather_LocalDayWeatherForecast__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_weather_LocalDayWeatherForecast__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.weather.LocalDayWeatherForecast obj = new com.amap.api.services.weather.LocalDayWeatherForecast();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_weather_WeatherSearchQuery__String__int", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_weather_WeatherSearchQuery__String__int");
+                }
+            
+                // args
+                // jsonable arg
+                String var1 = (String) ((Map<String, Object>) args).get("var1");
+                // jsonable arg
+                int var2 = (int) ((Map<String, Object>) args).get("var2");
+            
+                // create target object
+                com.amap.api.services.weather.WeatherSearchQuery obj = new com.amap.api.services.weather.WeatherSearchQuery(var1, var2);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_weather_WeatherSearchQuery__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_weather_WeatherSearchQuery__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.weather.WeatherSearchQuery obj = new com.amap.api.services.weather.WeatherSearchQuery();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_weather_LocalWeatherForecast__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_weather_LocalWeatherForecast__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.weather.LocalWeatherForecast obj = new com.amap.api.services.weather.LocalWeatherForecast();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_weather_WeatherSearch__android_content_Context", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_weather_WeatherSearch__android_content_Context");
+                }
+            
+                // args
+                // ref arg
+                android.content.Context var1 = (android.content.Context) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
+            
+                // create target object
+                com.amap.api.services.weather.WeatherSearch obj = new com.amap.api.services.weather.WeatherSearch(var1);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_weather_LocalWeatherLive__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_weather_LocalWeatherLive__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.weather.LocalWeatherLive obj = new com.amap.api.services.weather.LocalWeatherLive();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_geocoder_BusinessArea__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_geocoder_BusinessArea__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.geocoder.BusinessArea obj = new com.amap.api.services.geocoder.BusinessArea();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_geocoder_GeocodeQuery__String__String", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_geocoder_GeocodeQuery__String__String");
+                }
+            
+                // args
+                // jsonable arg
+                String var1 = (String) ((Map<String, Object>) args).get("var1");
+                // jsonable arg
+                String var2 = (String) ((Map<String, Object>) args).get("var2");
+            
+                // create target object
+                com.amap.api.services.geocoder.GeocodeQuery obj = new com.amap.api.services.geocoder.GeocodeQuery(var1, var2);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_geocoder_GeocodeSearch__android_content_Context", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_geocoder_GeocodeSearch__android_content_Context");
+                }
+            
+                // args
+                // ref arg
+                android.content.Context var1 = (android.content.Context) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
+            
+                // create target object
+                com.amap.api.services.geocoder.GeocodeSearch obj = new com.amap.api.services.geocoder.GeocodeSearch(var1);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_geocoder_RegeocodeResult__com_amap_api_services_geocoder_RegeocodeQuery__com_amap_api_services_geocoder_RegeocodeAddress", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_geocoder_RegeocodeResult__com_amap_api_services_geocoder_RegeocodeQuery__com_amap_api_services_geocoder_RegeocodeAddress");
+                }
+            
+                // args
+                // ref arg
+                com.amap.api.services.geocoder.RegeocodeQuery var1 = (com.amap.api.services.geocoder.RegeocodeQuery) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
+                // ref arg
+                com.amap.api.services.geocoder.RegeocodeAddress var2 = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get((int) ((Map<String, Object>) args).get("var2"));
+            
+                // create target object
+                com.amap.api.services.geocoder.RegeocodeResult obj = new com.amap.api.services.geocoder.RegeocodeResult(var1, var2);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_geocoder_GeocodeResult__com_amap_api_services_geocoder_GeocodeQuery__java_util_List_com_amap_api_services_geocoder_GeocodeAddress_", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_geocoder_GeocodeResult__com_amap_api_services_geocoder_GeocodeQuery__java_util_List_com_amap_api_services_geocoder_GeocodeAddress_");
+                }
+            
+                // args
+                // ref arg
+                com.amap.api.services.geocoder.GeocodeQuery var1 = (com.amap.api.services.geocoder.GeocodeQuery) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
+                // list arg
+                List<Integer> var2RefIdList = (List<Integer>) ((Map<String, Object>) args).get("var2");
+                java.util.List<com.amap.api.services.geocoder.GeocodeAddress> var2 = new ArrayList<>();
+                for (int refId : var2RefIdList) {
+                    ((ArrayList<com.amap.api.services.geocoder.GeocodeAddress>) var2).add((com.amap.api.services.geocoder.GeocodeAddress) getHEAP().get(refId));
+                }
+            
+                // create target object
+                com.amap.api.services.geocoder.GeocodeResult obj = new com.amap.api.services.geocoder.GeocodeResult(var1, (ArrayList) var2);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_geocoder_AoiItem__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_geocoder_AoiItem__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.geocoder.AoiItem obj = new com.amap.api.services.geocoder.AoiItem();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_geocoder_RegeocodeRoad__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_geocoder_RegeocodeRoad__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.geocoder.RegeocodeRoad obj = new com.amap.api.services.geocoder.RegeocodeRoad();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_geocoder_GeocodeAddress__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_geocoder_GeocodeAddress__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.geocoder.GeocodeAddress obj = new com.amap.api.services.geocoder.GeocodeAddress();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_geocoder_RegeocodeQuery__com_amap_api_services_core_LatLonPoint__float__String", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_geocoder_RegeocodeQuery__com_amap_api_services_core_LatLonPoint__float__String");
+                }
+            
+                // args
+                // ref arg
+                com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
+                // jsonable arg
+                Double var2 = (Double) ((Map<String, Object>) args).get("var2");
+                // jsonable arg
+                String var3 = (String) ((Map<String, Object>) args).get("var3");
+            
+                // create target object
+                com.amap.api.services.geocoder.RegeocodeQuery obj = new com.amap.api.services.geocoder.RegeocodeQuery(var1, new Double(var2).floatValue(), var3);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_geocoder_StreetNumber__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_geocoder_StreetNumber__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.geocoder.StreetNumber obj = new com.amap.api.services.geocoder.StreetNumber();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_geocoder_RegeocodeAddress__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_geocoder_RegeocodeAddress__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.geocoder.RegeocodeAddress obj = new com.amap.api.services.geocoder.RegeocodeAddress();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_district_DistrictSearchQuery__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_district_DistrictSearchQuery__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.district.DistrictSearchQuery obj = new com.amap.api.services.district.DistrictSearchQuery();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_district_DistrictSearchQuery__String__String__int", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_district_DistrictSearchQuery__String__String__int");
+                }
+            
+                // args
+                // jsonable arg
+                String var1 = (String) ((Map<String, Object>) args).get("var1");
+                // jsonable arg
+                String var2 = (String) ((Map<String, Object>) args).get("var2");
+                // jsonable arg
+                int var3 = (int) ((Map<String, Object>) args).get("var3");
+            
+                // create target object
+                com.amap.api.services.district.DistrictSearchQuery obj = new com.amap.api.services.district.DistrictSearchQuery(var1, var2, var3);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_district_DistrictSearchQuery__String__String__int__boolean__int", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_district_DistrictSearchQuery__String__String__int__boolean__int");
+                }
+            
+                // args
+                // jsonable arg
+                String var1 = (String) ((Map<String, Object>) args).get("var1");
+                // jsonable arg
+                String var2 = (String) ((Map<String, Object>) args).get("var2");
+                // jsonable arg
+                int var3 = (int) ((Map<String, Object>) args).get("var3");
+                // jsonable arg
+                boolean var4 = (boolean) ((Map<String, Object>) args).get("var4");
+                // jsonable arg
+                int var5 = (int) ((Map<String, Object>) args).get("var5");
+            
+                // create target object
+                com.amap.api.services.district.DistrictSearchQuery obj = new com.amap.api.services.district.DistrictSearchQuery(var1, var2, var3, var4, var5);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_district_DistrictSearch__android_content_Context", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_district_DistrictSearch__android_content_Context");
+                }
+            
+                // args
+                // ref arg
+                android.content.Context var1 = (android.content.Context) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
+            
+                // create target object
+                com.amap.api.services.district.DistrictSearch obj = new com.amap.api.services.district.DistrictSearch(var1);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_district_DistrictResult__com_amap_api_services_district_DistrictSearchQuery__java_util_ArrayList_com_amap_api_services_district_DistrictItem_", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_district_DistrictResult__com_amap_api_services_district_DistrictSearchQuery__java_util_ArrayList_com_amap_api_services_district_DistrictItem_");
+                }
+            
+                // args
+                // ref arg
+                com.amap.api.services.district.DistrictSearchQuery var1 = (com.amap.api.services.district.DistrictSearchQuery) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
+                // list arg
+                List<Integer> var2RefIdList = (List<Integer>) ((Map<String, Object>) args).get("var2");
+                java.util.ArrayList<com.amap.api.services.district.DistrictItem> var2 = new ArrayList<>();
+                for (int refId : var2RefIdList) {
+                    ((ArrayList<com.amap.api.services.district.DistrictItem>) var2).add((com.amap.api.services.district.DistrictItem) getHEAP().get(refId));
+                }
+            
+                // create target object
+                com.amap.api.services.district.DistrictResult obj = new com.amap.api.services.district.DistrictResult(var1, (ArrayList) var2);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_district_DistrictResult__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_district_DistrictResult__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.district.DistrictResult obj = new com.amap.api.services.district.DistrictResult();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_district_DistrictItem__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_district_DistrictItem__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.district.DistrictItem obj = new com.amap.api.services.district.DistrictItem();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_district_DistrictItem__String__String__String__com_amap_api_services_core_LatLonPoint__String", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_district_DistrictItem__String__String__String__com_amap_api_services_core_LatLonPoint__String");
+                }
+            
+                // args
+                // jsonable arg
+                String var1 = (String) ((Map<String, Object>) args).get("var1");
+                // jsonable arg
+                String var2 = (String) ((Map<String, Object>) args).get("var2");
+                // jsonable arg
+                String var3 = (String) ((Map<String, Object>) args).get("var3");
+                // ref arg
+                com.amap.api.services.core.LatLonPoint var4 = (com.amap.api.services.core.LatLonPoint) getHEAP().get((int) ((Map<String, Object>) args).get("var4"));
+                // jsonable arg
+                String var5 = (String) ((Map<String, Object>) args).get("var5");
+            
+                // create target object
+                com.amap.api.services.district.DistrictItem obj = new com.amap.api.services.district.DistrictItem(var1, var2, var3, var4, var5);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_help_Tip__", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_help_Tip__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.help.Tip obj = new com.amap.api.services.help.Tip();
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_help_InputtipsQuery__String__String", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_help_InputtipsQuery__String__String");
+                }
+            
+                // args
+                // jsonable arg
+                String var1 = (String) ((Map<String, Object>) args).get("var1");
+                // jsonable arg
+                String var2 = (String) ((Map<String, Object>) args).get("var2");
+            
+                // create target object
+                com.amap.api.services.help.InputtipsQuery obj = new com.amap.api.services.help.InputtipsQuery(var1, var2);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_help_Inputtips__android_content_Context__com_amap_api_services_help_InputtipsQuery", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_help_Inputtips__android_content_Context__com_amap_api_services_help_InputtipsQuery");
+                }
+            
+                // args
+                // ref arg
+                android.content.Context var1 = (android.content.Context) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
+                // ref arg
+                com.amap.api.services.help.InputtipsQuery var2 = (com.amap.api.services.help.InputtipsQuery) getHEAP().get((int) ((Map<String, Object>) args).get("var2"));
+            
+                // create target object
+                com.amap.api.services.help.Inputtips obj = new com.amap.api.services.help.Inputtips(var1, var2);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_share_ShareSearch_ShareNaviQuery__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_share_ShareSearch_ShareNaviQuery__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int");
+                }
+            
+                // args
+                // ref arg
+                com.amap.api.services.share.ShareSearch.ShareFromAndTo var1 = (com.amap.api.services.share.ShareSearch.ShareFromAndTo) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
+                // jsonable arg
+                int var2 = (int) ((Map<String, Object>) args).get("var2");
+            
+                // create target object
+                com.amap.api.services.share.ShareSearch.ShareNaviQuery obj = new com.amap.api.services.share.ShareSearch.ShareNaviQuery(var1, var2);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_share_ShareSearch_ShareBusRouteQuery__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_share_ShareSearch_ShareBusRouteQuery__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int");
+                }
+            
+                // args
+                // ref arg
+                com.amap.api.services.share.ShareSearch.ShareFromAndTo var1 = (com.amap.api.services.share.ShareSearch.ShareFromAndTo) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
+                // jsonable arg
+                int var2 = (int) ((Map<String, Object>) args).get("var2");
+            
+                // create target object
+                com.amap.api.services.share.ShareSearch.ShareBusRouteQuery obj = new com.amap.api.services.share.ShareSearch.ShareBusRouteQuery(var1, var2);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_share_ShareSearch__android_content_Context", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_share_ShareSearch__android_content_Context");
+                }
+            
+                // args
+                // ref arg
+                android.content.Context var1 = (android.content.Context) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
+            
+                // create target object
+                com.amap.api.services.share.ShareSearch obj = new com.amap.api.services.share.ShareSearch(var1);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_share_ShareSearch_ShareFromAndTo__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_share_ShareSearch_ShareFromAndTo__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint");
+                }
+            
+                // args
+                // ref arg
+                com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
+                // ref arg
+                com.amap.api.services.core.LatLonPoint var2 = (com.amap.api.services.core.LatLonPoint) getHEAP().get((int) ((Map<String, Object>) args).get("var2"));
+            
+                // create target object
+                com.amap.api.services.share.ShareSearch.ShareFromAndTo obj = new com.amap.api.services.share.ShareSearch.ShareFromAndTo(var1, var2);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_share_ShareSearch_ShareWalkRouteQuery__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_share_ShareSearch_ShareWalkRouteQuery__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int");
+                }
+            
+                // args
+                // ref arg
+                com.amap.api.services.share.ShareSearch.ShareFromAndTo var1 = (com.amap.api.services.share.ShareSearch.ShareFromAndTo) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
+                // jsonable arg
+                int var2 = (int) ((Map<String, Object>) args).get("var2");
+            
+                // create target object
+                com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery obj = new com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery(var1, var2);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int", (args, methodResult) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int");
+                }
+            
+                // args
+                // ref arg
+                com.amap.api.services.share.ShareSearch.ShareFromAndTo var1 = (com.amap.api.services.share.ShareSearch.ShareFromAndTo) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
+                // jsonable arg
+                int var2 = (int) ((Map<String, Object>) args).get("var2");
+            
+                // create target object
+                com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery obj = new com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery(var1, var2);
+                getHEAP().put(System.identityHashCode(obj), obj);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                methodResult.success(System.identityHashCode(obj));
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_amap_api_services_traffic_TrafficStatusInfo__", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
+            
+                int length = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (argsBatch instanceof Map) {
+                    length = (Integer) ((Map<String, Object>) argsBatch).get("length");
+                }
+                // or directly put the arg batch
+                else if (argsBatch instanceof List) {
+                    length = ((List<Map<String, Object>>) argsBatch).size();
+                }
+            
+                for (int __i__ = 0; __i__ < length; __i__++) {
+                    Map<String, Object> args = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (argsBatch instanceof List) {
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    com.amap.api.services.traffic.TrafficStatusInfo obj = new com.amap.api.services.traffic.TrafficStatusInfo();
+                    getHEAP().put(System.identityHashCode(obj), obj);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    resultList.add(System.identityHashCode(obj));
+                }
+            
+                methodResult.success(resultList);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_amap_api_services_traffic_TrafficStatusResult__", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
+            
+                int length = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (argsBatch instanceof Map) {
+                    length = (Integer) ((Map<String, Object>) argsBatch).get("length");
+                }
+                // or directly put the arg batch
+                else if (argsBatch instanceof List) {
+                    length = ((List<Map<String, Object>>) argsBatch).size();
+                }
+            
+                for (int __i__ = 0; __i__ < length; __i__++) {
+                    Map<String, Object> args = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (argsBatch instanceof List) {
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    com.amap.api.services.traffic.TrafficStatusResult obj = new com.amap.api.services.traffic.TrafficStatusResult();
+                    getHEAP().put(System.identityHashCode(obj), obj);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    resultList.add(System.identityHashCode(obj));
+                }
+            
+                methodResult.success(resultList);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_amap_api_services_traffic_TrafficSearch__android_content_Context", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
+            
+                int length = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (argsBatch instanceof Map) {
+                    length = (Integer) ((Map<String, Object>) argsBatch).get("length");
+                }
+                // or directly put the arg batch
+                else if (argsBatch instanceof List) {
+                    length = ((List<Map<String, Object>>) argsBatch).size();
+                }
+            
+                for (int __i__ = 0; __i__ < length; __i__++) {
+                    Map<String, Object> args = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (argsBatch instanceof List) {
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+                    }
+            
+                    // args
+                    // ref arg
+                    android.content.Context var1 = (android.content.Context) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
+            
+                    // create target object
+                    com.amap.api.services.traffic.TrafficSearch obj = new com.amap.api.services.traffic.TrafficSearch(var1);
+                    getHEAP().put(System.identityHashCode(obj), obj);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    resultList.add(System.identityHashCode(obj));
+                }
+            
+                methodResult.success(resultList);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_amap_api_services_traffic_RoadTrafficQuery__String__String__int", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
+            
+                int length = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (argsBatch instanceof Map) {
+                    length = (Integer) ((Map<String, Object>) argsBatch).get("length");
+                }
+                // or directly put the arg batch
+                else if (argsBatch instanceof List) {
+                    length = ((List<Map<String, Object>>) argsBatch).size();
+                }
+            
+                for (int __i__ = 0; __i__ < length; __i__++) {
+                    Map<String, Object> args = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (argsBatch instanceof List) {
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+                    }
+            
+                    // args
+                    // jsonable arg
+                    String var1 = (String) ((Map<String, Object>) args).get("var1");
+                    // jsonable arg
+                    String var2 = (String) ((Map<String, Object>) args).get("var2");
+                    // jsonable arg
+                    int var3 = (int) ((Map<String, Object>) args).get("var3");
+            
+                    // create target object
+                    com.amap.api.services.traffic.RoadTrafficQuery obj = new com.amap.api.services.traffic.RoadTrafficQuery(var1, var2, var3);
+                    getHEAP().put(System.identityHashCode(obj), obj);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    resultList.add(System.identityHashCode(obj));
+                }
+            
+                methodResult.success(resultList);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_amap_api_services_traffic_CircleTrafficQuery__com_amap_api_services_core_LatLonPoint__int__int", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
+            
+                int length = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (argsBatch instanceof Map) {
+                    length = (Integer) ((Map<String, Object>) argsBatch).get("length");
+                }
+                // or directly put the arg batch
+                else if (argsBatch instanceof List) {
+                    length = ((List<Map<String, Object>>) argsBatch).size();
+                }
+            
+                for (int __i__ = 0; __i__ < length; __i__++) {
+                    Map<String, Object> args = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (argsBatch instanceof List) {
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+                    }
+            
+                    // args
+                    // ref arg
+                    com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
+                    // jsonable arg
+                    int var2 = (int) ((Map<String, Object>) args).get("var2");
+                    // jsonable arg
+                    int var3 = (int) ((Map<String, Object>) args).get("var3");
+            
+                    // create target object
+                    com.amap.api.services.traffic.CircleTrafficQuery obj = new com.amap.api.services.traffic.CircleTrafficQuery(var1, var2, var3);
+                    getHEAP().put(System.identityHashCode(obj), obj);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    resultList.add(System.identityHashCode(obj));
+                }
+            
+                methodResult.success(resultList);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_amap_api_services_traffic_TrafficStatusEvaluation__", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
+            
+                int length = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (argsBatch instanceof Map) {
+                    length = (Integer) ((Map<String, Object>) argsBatch).get("length");
+                }
+                // or directly put the arg batch
+                else if (argsBatch instanceof List) {
+                    length = ((List<Map<String, Object>>) argsBatch).size();
+                }
+            
+                for (int __i__ = 0; __i__ < length; __i__++) {
+                    Map<String, Object> args = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (argsBatch instanceof List) {
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    com.amap.api.services.traffic.TrafficStatusEvaluation obj = new com.amap.api.services.traffic.TrafficStatusEvaluation();
+                    getHEAP().put(System.identityHashCode(obj), obj);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    resultList.add(System.identityHashCode(obj));
+                }
+            
+                methodResult.success(resultList);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_amap_api_services_busline_BusLineItem__", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
+            
+                int length = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (argsBatch instanceof Map) {
+                    length = (Integer) ((Map<String, Object>) argsBatch).get("length");
+                }
+                // or directly put the arg batch
+                else if (argsBatch instanceof List) {
+                    length = ((List<Map<String, Object>>) argsBatch).size();
+                }
+            
+                for (int __i__ = 0; __i__ < length; __i__++) {
+                    Map<String, Object> args = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (argsBatch instanceof List) {
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    com.amap.api.services.busline.BusLineItem obj = new com.amap.api.services.busline.BusLineItem();
+                    getHEAP().put(System.identityHashCode(obj), obj);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    resultList.add(System.identityHashCode(obj));
+                }
+            
+                methodResult.success(resultList);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_amap_api_services_busline_BusStationSearch__android_content_Context__com_amap_api_services_busline_BusStationQuery", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
+            
+                int length = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (argsBatch instanceof Map) {
+                    length = (Integer) ((Map<String, Object>) argsBatch).get("length");
+                }
+                // or directly put the arg batch
+                else if (argsBatch instanceof List) {
+                    length = ((List<Map<String, Object>>) argsBatch).size();
+                }
+            
+                for (int __i__ = 0; __i__ < length; __i__++) {
+                    Map<String, Object> args = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (argsBatch instanceof List) {
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+                    }
+            
+                    // args
+                    // ref arg
+                    android.content.Context var1 = (android.content.Context) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
+                    // ref arg
+                    com.amap.api.services.busline.BusStationQuery var2 = (com.amap.api.services.busline.BusStationQuery) getHEAP().get((int) ((Map<String, Object>) args).get("var2"));
+            
+                    // create target object
+                    com.amap.api.services.busline.BusStationSearch obj = new com.amap.api.services.busline.BusStationSearch(var1, var2);
+                    getHEAP().put(System.identityHashCode(obj), obj);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    resultList.add(System.identityHashCode(obj));
+                }
+            
+                methodResult.success(resultList);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_amap_api_services_busline_BusLineSearch__android_content_Context__com_amap_api_services_busline_BusLineQuery", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
+            
+                int length = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (argsBatch instanceof Map) {
+                    length = (Integer) ((Map<String, Object>) argsBatch).get("length");
+                }
+                // or directly put the arg batch
+                else if (argsBatch instanceof List) {
+                    length = ((List<Map<String, Object>>) argsBatch).size();
+                }
+            
+                for (int __i__ = 0; __i__ < length; __i__++) {
+                    Map<String, Object> args = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (argsBatch instanceof List) {
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+                    }
+            
+                    // args
+                    // ref arg
+                    android.content.Context var1 = (android.content.Context) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
+                    // ref arg
+                    com.amap.api.services.busline.BusLineQuery var2 = (com.amap.api.services.busline.BusLineQuery) getHEAP().get((int) ((Map<String, Object>) args).get("var2"));
+            
+                    // create target object
+                    com.amap.api.services.busline.BusLineSearch obj = new com.amap.api.services.busline.BusLineSearch(var1, var2);
+                    getHEAP().put(System.identityHashCode(obj), obj);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    resultList.add(System.identityHashCode(obj));
+                }
+            
+                methodResult.success(resultList);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_amap_api_services_busline_BusLineQuery__String__com_amap_api_services_busline_BusLineQuery_SearchType__String", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
+            
+                int length = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (argsBatch instanceof Map) {
+                    length = (Integer) ((Map<String, Object>) argsBatch).get("length");
+                }
+                // or directly put the arg batch
+                else if (argsBatch instanceof List) {
+                    length = ((List<Map<String, Object>>) argsBatch).size();
+                }
+            
+                for (int __i__ = 0; __i__ < length; __i__++) {
+                    Map<String, Object> args = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (argsBatch instanceof List) {
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+                    }
+            
+                    // args
+                    // jsonable arg
+                    String var1 = (String) ((Map<String, Object>) args).get("var1");
+                    // enum arg
+                    com.amap.api.services.busline.BusLineQuery.SearchType var2 = com.amap.api.services.busline.BusLineQuery.SearchType.values()[(int) ((Map<String, Object>) args).get("var2")];
+                    // jsonable arg
+                    String var3 = (String) ((Map<String, Object>) args).get("var3");
+            
+                    // create target object
+                    com.amap.api.services.busline.BusLineQuery obj = new com.amap.api.services.busline.BusLineQuery(var1, var2, var3);
+                    getHEAP().put(System.identityHashCode(obj), obj);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    resultList.add(System.identityHashCode(obj));
+                }
+            
+                methodResult.success(resultList);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_amap_api_services_busline_BusStationItem__", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
+            
+                int length = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (argsBatch instanceof Map) {
+                    length = (Integer) ((Map<String, Object>) argsBatch).get("length");
+                }
+                // or directly put the arg batch
+                else if (argsBatch instanceof List) {
+                    length = ((List<Map<String, Object>>) argsBatch).size();
+                }
+            
+                for (int __i__ = 0; __i__ < length; __i__++) {
+                    Map<String, Object> args = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (argsBatch instanceof List) {
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    com.amap.api.services.busline.BusStationItem obj = new com.amap.api.services.busline.BusStationItem();
+                    getHEAP().put(System.identityHashCode(obj), obj);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    resultList.add(System.identityHashCode(obj));
+                }
+            
+                methodResult.success(resultList);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_amap_api_services_busline_BusStationQuery__String__String", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
+            
+                int length = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (argsBatch instanceof Map) {
+                    length = (Integer) ((Map<String, Object>) argsBatch).get("length");
+                }
+                // or directly put the arg batch
+                else if (argsBatch instanceof List) {
+                    length = ((List<Map<String, Object>>) argsBatch).size();
+                }
+            
+                for (int __i__ = 0; __i__ < length; __i__++) {
+                    Map<String, Object> args = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (argsBatch instanceof List) {
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+                    }
+            
+                    // args
+                    // jsonable arg
+                    String var1 = (String) ((Map<String, Object>) args).get("var1");
+                    // jsonable arg
+                    String var2 = (String) ((Map<String, Object>) args).get("var2");
+            
+                    // create target object
+                    com.amap.api.services.busline.BusStationQuery obj = new com.amap.api.services.busline.BusStationQuery(var1, var2);
+                    getHEAP().put(System.identityHashCode(obj), obj);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    resultList.add(System.identityHashCode(obj));
+                }
+            
+                methodResult.success(resultList);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_amap_api_services_core_AMapException__String", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
+            
+                int length = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (argsBatch instanceof Map) {
+                    length = (Integer) ((Map<String, Object>) argsBatch).get("length");
+                }
+                // or directly put the arg batch
+                else if (argsBatch instanceof List) {
+                    length = ((List<Map<String, Object>>) argsBatch).size();
+                }
+            
+                for (int __i__ = 0; __i__ < length; __i__++) {
+                    Map<String, Object> args = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (argsBatch instanceof List) {
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+                    }
             
                     // args
                     // jsonable arg
                     String var1 = (String) ((Map<String, Object>) args).get("var1");
             
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.IPoiSearch ref = (com.amap.api.services.interfaces.IPoiSearch) getHEAP().get(refId);
+                    // create target object
+                    com.amap.api.services.core.AMapException obj = new com.amap.api.services.core.AMapException(var1);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
-                    // invoke native method
-                    try {
-                        ref.searchPOIIdAsyn(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
             });
-            // method
-            put("com.amap.api.services.interfaces.IPoiSearch::setQuery_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
+            // factory
+            put("ObjectFactory::create_batchcom_amap_api_services_core_AMapException__String__int__String", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
             
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+                int length = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (argsBatch instanceof Map) {
+                    length = (Integer) ((Map<String, Object>) argsBatch).get("length");
+                }
+                // or directly put the arg batch
+                else if (argsBatch instanceof List) {
+                    length = ((List<Map<String, Object>>) argsBatch).size();
+                }
             
-                    // args
-                    // ref arg
-                    com.amap.api.services.poisearch.PoiSearch.Query var1 = (com.amap.api.services.poisearch.PoiSearch.Query) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.IPoiSearch ref = (com.amap.api.services.interfaces.IPoiSearch) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setQuery(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
+                for (int __i__ = 0; __i__ < length; __i__++) {
+                    Map<String, Object> args = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (argsBatch instanceof List) {
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
+                    // args
+                    // jsonable arg
+                    String var1 = (String) ((Map<String, Object>) args).get("var1");
+                    // jsonable arg
+                    int var2 = (int) ((Map<String, Object>) args).get("var2");
+                    // jsonable arg
+                    String var3 = (String) ((Map<String, Object>) args).get("var3");
             
-                    resultList.add(jsonableResult);
+                    // create target object
+                    com.amap.api.services.core.AMapException obj = new com.amap.api.services.core.AMapException(var1, var2, var3);
+                    getHEAP().put(System.identityHashCode(obj), obj);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
             });
-            // method
-            put("com.amap.api.services.interfaces.IPoiSearch::setBound_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
+            // factory
+            put("ObjectFactory::create_batchcom_amap_api_services_core_AMapException__", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
             
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+                int length = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (argsBatch instanceof Map) {
+                    length = (Integer) ((Map<String, Object>) argsBatch).get("length");
+                }
+                // or directly put the arg batch
+                else if (argsBatch instanceof List) {
+                    length = ((List<Map<String, Object>>) argsBatch).size();
+                }
+            
+                for (int __i__ = 0; __i__ < length; __i__++) {
+                    Map<String, Object> args = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (argsBatch instanceof List) {
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    com.amap.api.services.core.AMapException obj = new com.amap.api.services.core.AMapException();
+                    getHEAP().put(System.identityHashCode(obj), obj);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    resultList.add(System.identityHashCode(obj));
+                }
+            
+                methodResult.success(resultList);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_amap_api_services_core_SearchUtils__", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
+            
+                int length = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (argsBatch instanceof Map) {
+                    length = (Integer) ((Map<String, Object>) argsBatch).get("length");
+                }
+                // or directly put the arg batch
+                else if (argsBatch instanceof List) {
+                    length = ((List<Map<String, Object>>) argsBatch).size();
+                }
+            
+                for (int __i__ = 0; __i__ < length; __i__++) {
+                    Map<String, Object> args = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (argsBatch instanceof List) {
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    com.amap.api.services.core.SearchUtils obj = new com.amap.api.services.core.SearchUtils();
+                    getHEAP().put(System.identityHashCode(obj), obj);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    resultList.add(System.identityHashCode(obj));
+                }
+            
+                methodResult.success(resultList);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_amap_api_services_core_LatLonSharePoint__double__double__String", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
+            
+                int length = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (argsBatch instanceof Map) {
+                    length = (Integer) ((Map<String, Object>) argsBatch).get("length");
+                }
+                // or directly put the arg batch
+                else if (argsBatch instanceof List) {
+                    length = ((List<Map<String, Object>>) argsBatch).size();
+                }
+            
+                for (int __i__ = 0; __i__ < length; __i__++) {
+                    Map<String, Object> args = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (argsBatch instanceof List) {
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+                    }
+            
+                    // args
+                    // jsonable arg
+                    double var1 = (double) ((Map<String, Object>) args).get("var1");
+                    // jsonable arg
+                    double var3 = (double) ((Map<String, Object>) args).get("var3");
+                    // jsonable arg
+                    String var5 = (String) ((Map<String, Object>) args).get("var5");
+            
+                    // create target object
+                    com.amap.api.services.core.LatLonSharePoint obj = new com.amap.api.services.core.LatLonSharePoint(var1, var3, var5);
+                    getHEAP().put(System.identityHashCode(obj), obj);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    resultList.add(System.identityHashCode(obj));
+                }
+            
+                methodResult.success(resultList);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_amap_api_services_core_LatLonPoint__double__double", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
+            
+                int length = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (argsBatch instanceof Map) {
+                    length = (Integer) ((Map<String, Object>) argsBatch).get("length");
+                }
+                // or directly put the arg batch
+                else if (argsBatch instanceof List) {
+                    length = ((List<Map<String, Object>>) argsBatch).size();
+                }
+            
+                for (int __i__ = 0; __i__ < length; __i__++) {
+                    Map<String, Object> args = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (argsBatch instanceof List) {
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+                    }
+            
+                    // args
+                    // jsonable arg
+                    double var1 = (double) ((Map<String, Object>) args).get("var1");
+                    // jsonable arg
+                    double var3 = (double) ((Map<String, Object>) args).get("var3");
+            
+                    // create target object
+                    com.amap.api.services.core.LatLonPoint obj = new com.amap.api.services.core.LatLonPoint(var1, var3);
+                    getHEAP().put(System.identityHashCode(obj), obj);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    resultList.add(System.identityHashCode(obj));
+                }
+            
+                methodResult.success(resultList);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_amap_api_services_core_PoiItem__String__com_amap_api_services_core_LatLonPoint__String__String", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
+            
+                int length = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (argsBatch instanceof Map) {
+                    length = (Integer) ((Map<String, Object>) argsBatch).get("length");
+                }
+                // or directly put the arg batch
+                else if (argsBatch instanceof List) {
+                    length = ((List<Map<String, Object>>) argsBatch).size();
+                }
+            
+                for (int __i__ = 0; __i__ < length; __i__++) {
+                    Map<String, Object> args = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (argsBatch instanceof List) {
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+                    }
+            
+                    // args
+                    // jsonable arg
+                    String var1 = (String) ((Map<String, Object>) args).get("var1");
+                    // ref arg
+                    com.amap.api.services.core.LatLonPoint var2 = (com.amap.api.services.core.LatLonPoint) getHEAP().get((int) ((Map<String, Object>) args).get("var2"));
+                    // jsonable arg
+                    String var3 = (String) ((Map<String, Object>) args).get("var3");
+                    // jsonable arg
+                    String var4 = (String) ((Map<String, Object>) args).get("var4");
+            
+                    // create target object
+                    com.amap.api.services.core.PoiItem obj = new com.amap.api.services.core.PoiItem(var1, var2, var3, var4);
+                    getHEAP().put(System.identityHashCode(obj), obj);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    resultList.add(System.identityHashCode(obj));
+                }
+            
+                methodResult.success(resultList);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_amap_api_services_core_SuggestionCity__String__String__String__int", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
+            
+                int length = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (argsBatch instanceof Map) {
+                    length = (Integer) ((Map<String, Object>) argsBatch).get("length");
+                }
+                // or directly put the arg batch
+                else if (argsBatch instanceof List) {
+                    length = ((List<Map<String, Object>>) argsBatch).size();
+                }
+            
+                for (int __i__ = 0; __i__ < length; __i__++) {
+                    Map<String, Object> args = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (argsBatch instanceof List) {
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+                    }
+            
+                    // args
+                    // jsonable arg
+                    String var1 = (String) ((Map<String, Object>) args).get("var1");
+                    // jsonable arg
+                    String var2 = (String) ((Map<String, Object>) args).get("var2");
+                    // jsonable arg
+                    String var3 = (String) ((Map<String, Object>) args).get("var3");
+                    // jsonable arg
+                    int var4 = (int) ((Map<String, Object>) args).get("var4");
+            
+                    // create target object
+                    com.amap.api.services.core.SuggestionCity obj = new com.amap.api.services.core.SuggestionCity(var1, var2, var3, var4);
+                    getHEAP().put(System.identityHashCode(obj), obj);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    resultList.add(System.identityHashCode(obj));
+                }
+            
+                methodResult.success(resultList);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_amap_api_services_poisearch_Photo__", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
+            
+                int length = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (argsBatch instanceof Map) {
+                    length = (Integer) ((Map<String, Object>) argsBatch).get("length");
+                }
+                // or directly put the arg batch
+                else if (argsBatch instanceof List) {
+                    length = ((List<Map<String, Object>>) argsBatch).size();
+                }
+            
+                for (int __i__ = 0; __i__ < length; __i__++) {
+                    Map<String, Object> args = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (argsBatch instanceof List) {
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    com.amap.api.services.poisearch.Photo obj = new com.amap.api.services.poisearch.Photo();
+                    getHEAP().put(System.identityHashCode(obj), obj);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    resultList.add(System.identityHashCode(obj));
+                }
+            
+                methodResult.success(resultList);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_amap_api_services_poisearch_Photo__String__String", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
+            
+                int length = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (argsBatch instanceof Map) {
+                    length = (Integer) ((Map<String, Object>) argsBatch).get("length");
+                }
+                // or directly put the arg batch
+                else if (argsBatch instanceof List) {
+                    length = ((List<Map<String, Object>>) argsBatch).size();
+                }
+            
+                for (int __i__ = 0; __i__ < length; __i__++) {
+                    Map<String, Object> args = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (argsBatch instanceof List) {
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+                    }
+            
+                    // args
+                    // jsonable arg
+                    String var1 = (String) ((Map<String, Object>) args).get("var1");
+                    // jsonable arg
+                    String var2 = (String) ((Map<String, Object>) args).get("var2");
+            
+                    // create target object
+                    com.amap.api.services.poisearch.Photo obj = new com.amap.api.services.poisearch.Photo(var1, var2);
+                    getHEAP().put(System.identityHashCode(obj), obj);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    resultList.add(System.identityHashCode(obj));
+                }
+            
+                methodResult.success(resultList);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_amap_api_services_poisearch_SubPoiItem__String__com_amap_api_services_core_LatLonPoint__String__String", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
+            
+                int length = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (argsBatch instanceof Map) {
+                    length = (Integer) ((Map<String, Object>) argsBatch).get("length");
+                }
+                // or directly put the arg batch
+                else if (argsBatch instanceof List) {
+                    length = ((List<Map<String, Object>>) argsBatch).size();
+                }
+            
+                for (int __i__ = 0; __i__ < length; __i__++) {
+                    Map<String, Object> args = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (argsBatch instanceof List) {
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+                    }
+            
+                    // args
+                    // jsonable arg
+                    String var1 = (String) ((Map<String, Object>) args).get("var1");
+                    // ref arg
+                    com.amap.api.services.core.LatLonPoint var2 = (com.amap.api.services.core.LatLonPoint) getHEAP().get((int) ((Map<String, Object>) args).get("var2"));
+                    // jsonable arg
+                    String var3 = (String) ((Map<String, Object>) args).get("var3");
+                    // jsonable arg
+                    String var4 = (String) ((Map<String, Object>) args).get("var4");
+            
+                    // create target object
+                    com.amap.api.services.poisearch.SubPoiItem obj = new com.amap.api.services.poisearch.SubPoiItem(var1, var2, var3, var4);
+                    getHEAP().put(System.identityHashCode(obj), obj);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    resultList.add(System.identityHashCode(obj));
+                }
+            
+                methodResult.success(resultList);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_amap_api_services_poisearch_PoiItemExtension__String__String", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
+            
+                int length = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (argsBatch instanceof Map) {
+                    length = (Integer) ((Map<String, Object>) argsBatch).get("length");
+                }
+                // or directly put the arg batch
+                else if (argsBatch instanceof List) {
+                    length = ((List<Map<String, Object>>) argsBatch).size();
+                }
+            
+                for (int __i__ = 0; __i__ < length; __i__++) {
+                    Map<String, Object> args = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (argsBatch instanceof List) {
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+                    }
+            
+                    // args
+                    // jsonable arg
+                    String var1 = (String) ((Map<String, Object>) args).get("var1");
+                    // jsonable arg
+                    String var2 = (String) ((Map<String, Object>) args).get("var2");
+            
+                    // create target object
+                    com.amap.api.services.poisearch.PoiItemExtension obj = new com.amap.api.services.poisearch.PoiItemExtension(var1, var2);
+                    getHEAP().put(System.identityHashCode(obj), obj);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    resultList.add(System.identityHashCode(obj));
+                }
+            
+                methodResult.success(resultList);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint__int", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
+            
+                int length = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (argsBatch instanceof Map) {
+                    length = (Integer) ((Map<String, Object>) argsBatch).get("length");
+                }
+                // or directly put the arg batch
+                else if (argsBatch instanceof List) {
+                    length = ((List<Map<String, Object>>) argsBatch).size();
+                }
+            
+                for (int __i__ = 0; __i__ < length; __i__++) {
+                    Map<String, Object> args = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (argsBatch instanceof List) {
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+                    }
             
                     // args
                     // ref arg
-                    com.amap.api.services.poisearch.PoiSearch.SearchBound var1 = (com.amap.api.services.poisearch.PoiSearch.SearchBound) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
+                    com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
+                    // jsonable arg
+                    int var2 = (int) ((Map<String, Object>) args).get("var2");
             
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.IPoiSearch ref = (com.amap.api.services.interfaces.IPoiSearch) getHEAP().get(refId);
+                    // create target object
+                    com.amap.api.services.poisearch.PoiSearch.SearchBound obj = new com.amap.api.services.poisearch.PoiSearch.SearchBound(var1, var2);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
-                    // invoke native method
-                    try {
-                        ref.setBound(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
+                    resultList.add(System.identityHashCode(obj));
+                }
             
-                    resultList.add(jsonableResult);
+                methodResult.success(resultList);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint__int__boolean", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
+            
+                int length = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (argsBatch instanceof Map) {
+                    length = (Integer) ((Map<String, Object>) argsBatch).get("length");
+                }
+                // or directly put the arg batch
+                else if (argsBatch instanceof List) {
+                    length = ((List<Map<String, Object>>) argsBatch).size();
+                }
+            
+                for (int __i__ = 0; __i__ < length; __i__++) {
+                    Map<String, Object> args = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (argsBatch instanceof List) {
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+                    }
+            
+                    // args
+                    // ref arg
+                    com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
+                    // jsonable arg
+                    int var2 = (int) ((Map<String, Object>) args).get("var2");
+                    // jsonable arg
+                    boolean var3 = (boolean) ((Map<String, Object>) args).get("var3");
+            
+                    // create target object
+                    com.amap.api.services.poisearch.PoiSearch.SearchBound obj = new com.amap.api.services.poisearch.PoiSearch.SearchBound(var1, var2, var3);
+                    getHEAP().put(System.identityHashCode(obj), obj);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    resultList.add(System.identityHashCode(obj));
+                }
+            
+                methodResult.success(resultList);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
+            
+                int length = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (argsBatch instanceof Map) {
+                    length = (Integer) ((Map<String, Object>) argsBatch).get("length");
+                }
+                // or directly put the arg batch
+                else if (argsBatch instanceof List) {
+                    length = ((List<Map<String, Object>>) argsBatch).size();
+                }
+            
+                for (int __i__ = 0; __i__ < length; __i__++) {
+                    Map<String, Object> args = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (argsBatch instanceof List) {
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+                    }
+            
+                    // args
+                    // ref arg
+                    com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
+                    // ref arg
+                    com.amap.api.services.core.LatLonPoint var2 = (com.amap.api.services.core.LatLonPoint) getHEAP().get((int) ((Map<String, Object>) args).get("var2"));
+            
+                    // create target object
+                    com.amap.api.services.poisearch.PoiSearch.SearchBound obj = new com.amap.api.services.poisearch.PoiSearch.SearchBound(var1, var2);
+                    getHEAP().put(System.identityHashCode(obj), obj);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    resultList.add(System.identityHashCode(obj));
+                }
+            
+                methodResult.success(resultList);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_amap_api_services_poisearch_PoiSearch_SearchBound__java_util_List_com_amap_api_services_core_LatLonPoint_", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
+            
+                int length = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (argsBatch instanceof Map) {
+                    length = (Integer) ((Map<String, Object>) argsBatch).get("length");
+                }
+                // or directly put the arg batch
+                else if (argsBatch instanceof List) {
+                    length = ((List<Map<String, Object>>) argsBatch).size();
+                }
+            
+                for (int __i__ = 0; __i__ < length; __i__++) {
+                    Map<String, Object> args = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (argsBatch instanceof List) {
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+                    }
+            
+                    // args
+                    // list arg
+                    List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) args).get("var1");
+                    java.util.List<com.amap.api.services.core.LatLonPoint> var1 = new ArrayList<>();
+                    for (int refId : var1RefIdList) {
+                        ((ArrayList<com.amap.api.services.core.LatLonPoint>) var1).add((com.amap.api.services.core.LatLonPoint) getHEAP().get(refId));
+                    }
+            
+                    // create target object
+                    com.amap.api.services.poisearch.PoiSearch.SearchBound obj = new com.amap.api.services.poisearch.PoiSearch.SearchBound((ArrayList) var1);
+                    getHEAP().put(System.identityHashCode(obj), obj);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    resultList.add(System.identityHashCode(obj));
+                }
+            
+                methodResult.success(resultList);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_amap_api_services_poisearch_PoiSearch__android_content_Context__com_amap_api_services_poisearch_PoiSearch_Query", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
+            
+                int length = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (argsBatch instanceof Map) {
+                    length = (Integer) ((Map<String, Object>) argsBatch).get("length");
+                }
+                // or directly put the arg batch
+                else if (argsBatch instanceof List) {
+                    length = ((List<Map<String, Object>>) argsBatch).size();
+                }
+            
+                for (int __i__ = 0; __i__ < length; __i__++) {
+                    Map<String, Object> args = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (argsBatch instanceof List) {
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+                    }
+            
+                    // args
+                    // ref arg
+                    android.content.Context var1 = (android.content.Context) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
+                    // ref arg
+                    com.amap.api.services.poisearch.PoiSearch.Query var2 = (com.amap.api.services.poisearch.PoiSearch.Query) getHEAP().get((int) ((Map<String, Object>) args).get("var2"));
+            
+                    // create target object
+                    com.amap.api.services.poisearch.PoiSearch obj = new com.amap.api.services.poisearch.PoiSearch(var1, var2);
+                    getHEAP().put(System.identityHashCode(obj), obj);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    resultList.add(System.identityHashCode(obj));
+                }
+            
+                methodResult.success(resultList);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_amap_api_services_poisearch_PoiSearch_Query__String__String", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
+            
+                int length = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (argsBatch instanceof Map) {
+                    length = (Integer) ((Map<String, Object>) argsBatch).get("length");
+                }
+                // or directly put the arg batch
+                else if (argsBatch instanceof List) {
+                    length = ((List<Map<String, Object>>) argsBatch).size();
+                }
+            
+                for (int __i__ = 0; __i__ < length; __i__++) {
+                    Map<String, Object> args = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (argsBatch instanceof List) {
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+                    }
+            
+                    // args
+                    // jsonable arg
+                    String var1 = (String) ((Map<String, Object>) args).get("var1");
+                    // jsonable arg
+                    String var2 = (String) ((Map<String, Object>) args).get("var2");
+            
+                    // create target object
+                    com.amap.api.services.poisearch.PoiSearch.Query obj = new com.amap.api.services.poisearch.PoiSearch.Query(var1, var2);
+                    getHEAP().put(System.identityHashCode(obj), obj);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    resultList.add(System.identityHashCode(obj));
+                }
+            
+                methodResult.success(resultList);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_amap_api_services_poisearch_PoiSearch_Query__String__String__String", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
+            
+                int length = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (argsBatch instanceof Map) {
+                    length = (Integer) ((Map<String, Object>) argsBatch).get("length");
+                }
+                // or directly put the arg batch
+                else if (argsBatch instanceof List) {
+                    length = ((List<Map<String, Object>>) argsBatch).size();
+                }
+            
+                for (int __i__ = 0; __i__ < length; __i__++) {
+                    Map<String, Object> args = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (argsBatch instanceof List) {
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+                    }
+            
+                    // args
+                    // jsonable arg
+                    String var1 = (String) ((Map<String, Object>) args).get("var1");
+                    // jsonable arg
+                    String var2 = (String) ((Map<String, Object>) args).get("var2");
+                    // jsonable arg
+                    String var3 = (String) ((Map<String, Object>) args).get("var3");
+            
+                    // create target object
+                    com.amap.api.services.poisearch.PoiSearch.Query obj = new com.amap.api.services.poisearch.PoiSearch.Query(var1, var2, var3);
+                    getHEAP().put(System.identityHashCode(obj), obj);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    resultList.add(System.identityHashCode(obj));
+                }
+            
+                methodResult.success(resultList);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_amap_api_services_poisearch_IndoorData__String__int__String", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
+            
+                int length = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (argsBatch instanceof Map) {
+                    length = (Integer) ((Map<String, Object>) argsBatch).get("length");
+                }
+                // or directly put the arg batch
+                else if (argsBatch instanceof List) {
+                    length = ((List<Map<String, Object>>) argsBatch).size();
+                }
+            
+                for (int __i__ = 0; __i__ < length; __i__++) {
+                    Map<String, Object> args = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (argsBatch instanceof List) {
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+                    }
+            
+                    // args
+                    // jsonable arg
+                    String var1 = (String) ((Map<String, Object>) args).get("var1");
+                    // jsonable arg
+                    int var2 = (int) ((Map<String, Object>) args).get("var2");
+                    // jsonable arg
+                    String var3 = (String) ((Map<String, Object>) args).get("var3");
+            
+                    // create target object
+                    com.amap.api.services.poisearch.IndoorData obj = new com.amap.api.services.poisearch.IndoorData(var1, var2, var3);
+                    getHEAP().put(System.identityHashCode(obj), obj);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    resultList.add(System.identityHashCode(obj));
+                }
+            
+                methodResult.success(resultList);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_amap_api_services_route_Railway__", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
+            
+                int length = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (argsBatch instanceof Map) {
+                    length = (Integer) ((Map<String, Object>) argsBatch).get("length");
+                }
+                // or directly put the arg batch
+                else if (argsBatch instanceof List) {
+                    length = ((List<Map<String, Object>>) argsBatch).size();
+                }
+            
+                for (int __i__ = 0; __i__ < length; __i__++) {
+                    Map<String, Object> args = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (argsBatch instanceof List) {
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    com.amap.api.services.route.Railway obj = new com.amap.api.services.route.Railway();
+                    getHEAP().put(System.identityHashCode(obj), obj);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    resultList.add(System.identityHashCode(obj));
+                }
+            
+                methodResult.success(resultList);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_amap_api_services_route_BusPath__", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
+            
+                int length = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (argsBatch instanceof Map) {
+                    length = (Integer) ((Map<String, Object>) argsBatch).get("length");
+                }
+                // or directly put the arg batch
+                else if (argsBatch instanceof List) {
+                    length = ((List<Map<String, Object>>) argsBatch).size();
+                }
+            
+                for (int __i__ = 0; __i__ < length; __i__++) {
+                    Map<String, Object> args = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (argsBatch instanceof List) {
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    com.amap.api.services.route.BusPath obj = new com.amap.api.services.route.BusPath();
+                    getHEAP().put(System.identityHashCode(obj), obj);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    resultList.add(System.identityHashCode(obj));
+                }
+            
+                methodResult.success(resultList);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_amap_api_services_route_DriveRoutePlanResult__", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
+            
+                int length = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (argsBatch instanceof Map) {
+                    length = (Integer) ((Map<String, Object>) argsBatch).get("length");
+                }
+                // or directly put the arg batch
+                else if (argsBatch instanceof List) {
+                    length = ((List<Map<String, Object>>) argsBatch).size();
+                }
+            
+                for (int __i__ = 0; __i__ < length; __i__++) {
+                    Map<String, Object> args = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (argsBatch instanceof List) {
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    com.amap.api.services.route.DriveRoutePlanResult obj = new com.amap.api.services.route.DriveRoutePlanResult();
+                    getHEAP().put(System.identityHashCode(obj), obj);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    resultList.add(System.identityHashCode(obj));
+                }
+            
+                methodResult.success(resultList);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_amap_api_services_route_RouteSearch_TruckRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__java_util_List_com_amap_api_services_core_LatLonPoint___int", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
+            
+                int length = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (argsBatch instanceof Map) {
+                    length = (Integer) ((Map<String, Object>) argsBatch).get("length");
+                }
+                // or directly put the arg batch
+                else if (argsBatch instanceof List) {
+                    length = ((List<Map<String, Object>>) argsBatch).size();
+                }
+            
+                for (int __i__ = 0; __i__ < length; __i__++) {
+                    Map<String, Object> args = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (argsBatch instanceof List) {
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+                    }
+            
+                    // args
+                    // ref arg
+                    com.amap.api.services.route.RouteSearch.FromAndTo var1 = (com.amap.api.services.route.RouteSearch.FromAndTo) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
+                    // jsonable arg
+                    int var2 = (int) ((Map<String, Object>) args).get("var2");
+                    // list arg
+                    List<Integer> var3RefIdList = (List<Integer>) ((Map<String, Object>) args).get("var3");
+                    java.util.List<com.amap.api.services.core.LatLonPoint> var3 = new ArrayList<>();
+                    for (int refId : var3RefIdList) {
+                        ((ArrayList<com.amap.api.services.core.LatLonPoint>) var3).add((com.amap.api.services.core.LatLonPoint) getHEAP().get(refId));
+                    }
+                    // jsonable arg
+                    int var4 = (int) ((Map<String, Object>) args).get("var4");
+            
+                    // create target object
+                    com.amap.api.services.route.RouteSearch.TruckRouteQuery obj = new com.amap.api.services.route.RouteSearch.TruckRouteQuery(var1, var2, (ArrayList) var3, var4);
+                    getHEAP().put(System.identityHashCode(obj), obj);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    resultList.add(System.identityHashCode(obj));
+                }
+            
+                methodResult.success(resultList);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_amap_api_services_route_TMC__", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
+            
+                int length = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (argsBatch instanceof Map) {
+                    length = (Integer) ((Map<String, Object>) argsBatch).get("length");
+                }
+                // or directly put the arg batch
+                else if (argsBatch instanceof List) {
+                    length = ((List<Map<String, Object>>) argsBatch).size();
+                }
+            
+                for (int __i__ = 0; __i__ < length; __i__++) {
+                    Map<String, Object> args = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (argsBatch instanceof List) {
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    com.amap.api.services.route.TMC obj = new com.amap.api.services.route.TMC();
+                    getHEAP().put(System.identityHashCode(obj), obj);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    resultList.add(System.identityHashCode(obj));
+                }
+            
+                methodResult.success(resultList);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_amap_api_services_route_RouteBusWalkItem__", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
+            
+                int length = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (argsBatch instanceof Map) {
+                    length = (Integer) ((Map<String, Object>) argsBatch).get("length");
+                }
+                // or directly put the arg batch
+                else if (argsBatch instanceof List) {
+                    length = ((List<Map<String, Object>>) argsBatch).size();
+                }
+            
+                for (int __i__ = 0; __i__ < length; __i__++) {
+                    Map<String, Object> args = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (argsBatch instanceof List) {
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    com.amap.api.services.route.RouteBusWalkItem obj = new com.amap.api.services.route.RouteBusWalkItem();
+                    getHEAP().put(System.identityHashCode(obj), obj);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);

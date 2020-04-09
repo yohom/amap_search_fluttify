@@ -401,7 +401,7 @@ class AmapSearch {
 
         // 创建请求对象
         final query = await com_amap_api_services_route_RouteSearch_DriveRouteQuery
-            .create__com_amap_api_services_route_RouteSearch_FromAndTo__int__java_util_List_com_amap_api_services_core_LatLonPoint___java_util_List_java_util_List_com_amap_api_services_core_LatLonPoint____String(
+            .create__com_amap_api_services_route_RouteSearch_FromAndTo__int__List_java_util_List_com_amap_api_services_core_LatLonPoint____List_List_java_util_List_java_util_List_com_amap_api_services_core_LatLonPoint______String(
           fromAndTo,
           0,
           passby,

@@ -20,7 +20,7 @@ class com_amap_api_services_district_DistrictResult extends java_lang_Object wit
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_district_DistrictResult> create__com_amap_api_services_district_DistrictSearchQuery__java_util_ArrayList_com_amap_api_services_district_DistrictItem_(com_amap_api_services_district_DistrictSearchQuery var1, List<com_amap_api_services_district_DistrictItem> var2) async {
+  static Future<com_amap_api_services_district_DistrictResult> create__com_amap_api_services_district_DistrictSearchQuery__List_java_util_ArrayList_com_amap_api_services_district_DistrictItem__(com_amap_api_services_district_DistrictSearchQuery var1, List<com_amap_api_services_district_DistrictItem> var2) async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_services_district_DistrictResult__com_amap_api_services_district_DistrictSearchQuery__java_util_ArrayList_com_amap_api_services_district_DistrictItem_', {"var1": var1.refId, "var2": var2.map((it) => it.refId).toList()});
     final object = com_amap_api_services_district_DistrictResult()..refId = refId..tag__ = 'amap_search_fluttify';
   
@@ -36,7 +36,7 @@ class com_amap_api_services_district_DistrictResult extends java_lang_Object wit
     return object;
   }
   
-  static Future<List<com_amap_api_services_district_DistrictResult>> create_batch__com_amap_api_services_district_DistrictSearchQuery__java_util_ArrayList_com_amap_api_services_district_DistrictItem_(List<com_amap_api_services_district_DistrictSearchQuery> var1, List<List<com_amap_api_services_district_DistrictItem>> var2) async {
+  static Future<List<com_amap_api_services_district_DistrictResult>> create_batch__com_amap_api_services_district_DistrictSearchQuery__List_java_util_ArrayList_com_amap_api_services_district_DistrictItem__(List<com_amap_api_services_district_DistrictSearchQuery> var1, List<List<com_amap_api_services_district_DistrictItem>> var2) async {
     if (var1.length != var2.length) {
       return Future.error('all args must have same length!');
     }
