@@ -628,7 +628,7 @@ class BusRouteResult with _ToFutureString {
 
   @override
   Future<String> toFutureString() async {
-    return 'WalkRouteResult{walkPathList: ${await _expandToString(busPathList)}';
+    return 'BusRouteResult{busPathList: ${await _expandToString(busPathList)}';
   }
 }
 
@@ -1153,18 +1153,26 @@ class BusWalk with _ToFutureString {
   Future<LatLng> get from {
     return platform(
       android: (pool) async {
-        final origin = await _androidModel.getOrigin();
-        return LatLng(
-          await origin.getLatitude(),
-          await origin.getLongitude(),
-        );
+        final origin = await _androidModel?.getOrigin();
+        if (origin == null) {
+          return null;
+        } else {
+          return LatLng(
+            await origin.getLatitude(),
+            await origin.getLongitude(),
+          );
+        }
       },
       ios: (pool) async {
         final origin = await _iosModel.get_origin();
-        return LatLng(
-          await origin.get_latitude(),
-          await origin.get_longitude(),
-        );
+        if (origin == null) {
+          return null;
+        } else {
+          return LatLng(
+            await origin.get_latitude(),
+            await origin.get_longitude(),
+          );
+        }
       },
     );
   }
@@ -1173,18 +1181,26 @@ class BusWalk with _ToFutureString {
   Future<LatLng> get to {
     return platform(
       android: (pool) async {
-        final origin = await _androidModel.getDestination();
-        return LatLng(
-          await origin.getLatitude(),
-          await origin.getLongitude(),
-        );
+        final origin = await _androidModel?.getDestination();
+        if (origin == null) {
+          return null;
+        } else {
+          return LatLng(
+            await origin.getLatitude(),
+            await origin.getLongitude(),
+          );
+        }
       },
       ios: (pool) async {
         final origin = await _iosModel.get_destination();
-        return LatLng(
-          await origin.get_latitude(),
-          await origin.get_longitude(),
-        );
+        if (origin == null) {
+          return null;
+        } else {
+          return LatLng(
+            await origin.get_latitude(),
+            await origin.get_longitude(),
+          );
+        }
       },
     );
   }

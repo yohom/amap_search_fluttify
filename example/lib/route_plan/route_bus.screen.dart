@@ -22,7 +22,7 @@ class _RouteBusScreenState extends State<RouteBusScreen>
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomPadding: false,
-      appBar: AppBar(title: Text('步行路线规划')),
+      appBar: AppBar(title: Text('公交路线规划')),
       body: DecoratedColumn(
         padding: EdgeInsets.all(kSpaceBig),
         children: <Widget>[
