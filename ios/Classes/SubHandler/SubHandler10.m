@@ -14,504 +14,6 @@ extern BOOL enableLog;
 @implementation AmapSearchFluttifyPlugin (SubHandler10)
 - (NSDictionary<NSString*, Handler>*) getSubHandler10 {
     return @{
-        @"AMapTrafficInfo::set_roads_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // list arg
-                NSArray<NSNumber*>* roadsRefArray = (NSArray<NSNumber*> *) args[@"roads"];
-                NSMutableArray<AMapTrafficRoad*>* roads = [NSMutableArray arrayWithCapacity:roadsRefArray.count];
-                for (int __i__ = 0; __i__ < roadsRefArray.count; __i__++) {
-                    AMapTrafficRoad* item = (AMapTrafficRoad*) HEAP[[roadsRefArray objectAtIndex:__i__]];
-                    [roads addObject:item];
-                }
-        
-                // ref
-                AMapTrafficInfo* ref = (AMapTrafficInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                ref.roads = roads;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapCloudImage::set_uid_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSString* uid = (NSString*) args[@"uid"];
-        
-                // ref
-                AMapCloudImage* ref = (AMapCloudImage*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                ref.uid = uid;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapCloudImage::set_preurl_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSString* preurl = (NSString*) args[@"preurl"];
-        
-                // ref
-                AMapCloudImage* ref = (AMapCloudImage*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                ref.preurl = preurl;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapCloudImage::set_url_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSString* url = (NSString*) args[@"url"];
-        
-                // ref
-                AMapCloudImage* ref = (AMapCloudImage*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                ref.url = url;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapCloudPOI::set_uid_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSInteger uid = [args[@"uid"] longValue];
-        
-                // ref
-                AMapCloudPOI* ref = (AMapCloudPOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                ref.uid = uid;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapCloudPOI::set_name_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSString* name = (NSString*) args[@"name"];
-        
-                // ref
-                AMapCloudPOI* ref = (AMapCloudPOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                ref.name = name;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapCloudPOI::set_location_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // ref arg
-                AMapGeoPoint* location = (AMapGeoPoint*) HEAP[@([args[@"location"] integerValue])];
-        
-                // ref
-                AMapCloudPOI* ref = (AMapCloudPOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                ref.location = location;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapCloudPOI::set_address_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSString* address = (NSString*) args[@"address"];
-        
-                // ref
-                AMapCloudPOI* ref = (AMapCloudPOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                ref.address = address;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapCloudPOI::set_createTime_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSString* createTime = (NSString*) args[@"createTime"];
-        
-                // ref
-                AMapCloudPOI* ref = (AMapCloudPOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                ref.createTime = createTime;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapCloudPOI::set_updateTime_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSString* updateTime = (NSString*) args[@"updateTime"];
-        
-                // ref
-                AMapCloudPOI* ref = (AMapCloudPOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                ref.updateTime = updateTime;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapCloudPOI::set_distance_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSInteger distance = [args[@"distance"] longValue];
-        
-                // ref
-                AMapCloudPOI* ref = (AMapCloudPOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                ref.distance = distance;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapCloudPOI::set_images_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // list arg
-                NSArray<NSNumber*>* imagesRefArray = (NSArray<NSNumber*> *) args[@"images"];
-                NSMutableArray<AMapCloudImage*>* images = [NSMutableArray arrayWithCapacity:imagesRefArray.count];
-                for (int __i__ = 0; __i__ < imagesRefArray.count; __i__++) {
-                    AMapCloudImage* item = (AMapCloudImage*) HEAP[[imagesRefArray objectAtIndex:__i__]];
-                    [images addObject:item];
-                }
-        
-                // ref
-                AMapCloudPOI* ref = (AMapCloudPOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                ref.images = images;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapNearbyUploadInfo::set_userID_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSString* userID = (NSString*) args[@"userID"];
-        
-                // ref
-                AMapNearbyUploadInfo* ref = (AMapNearbyUploadInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                ref.userID = userID;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapNearbyUploadInfo::set_coordinateType_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // enum arg
-                AMapSearchCoordinateType coordinateType = (AMapSearchCoordinateType) [args[@"coordinateType"] integerValue];
-        
-                // ref
-                AMapNearbyUploadInfo* ref = (AMapNearbyUploadInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                ref.coordinateType = coordinateType;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapNearbyUploadInfo::set_coordinate_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // struct arg
-                NSValue* coordinateValue = (NSValue*) HEAP[@([args[@"coordinate"] integerValue])];
-                CLLocationCoordinate2D coordinate;
-                [coordinateValue getValue:&coordinate];
-        
-                // ref
-                AMapNearbyUploadInfo* ref = (AMapNearbyUploadInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                ref.coordinate = coordinate;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapNearbySearchManager::set_uploadTimeInterval_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSTimeInterval uploadTimeInterval = [args[@"uploadTimeInterval"] doubleValue];
-        
-                // ref
-                AMapNearbySearchManager* ref = (AMapNearbySearchManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                ref.uploadTimeInterval = uploadTimeInterval;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapSearchAPI::set_timeout_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSInteger timeout = [args[@"timeout"] longValue];
-        
-                // ref
-                AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                ref.timeout = timeout;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapSearchAPI::set_language_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // enum arg
-                AMapSearchLanguage language = (AMapSearchLanguage) [args[@"language"] integerValue];
-        
-                // ref
-                AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                ref.language = language;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"RefClass::isKindOfAMapPOISearchBaseRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
-        
-            BOOL isTargetType = [ref isKindOfClass:[AMapPOISearchBaseRequest class]];
-            methodResult(@(isTargetType));
-        },
-        
-        @"RefClass::isKindOfAMapPOIIDSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
-        
-            BOOL isTargetType = [ref isKindOfClass:[AMapPOIIDSearchRequest class]];
-            methodResult(@(isTargetType));
-        },
-        
-        @"RefClass::isKindOfAMapPOIKeywordsSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
-        
-            BOOL isTargetType = [ref isKindOfClass:[AMapPOIKeywordsSearchRequest class]];
-            methodResult(@(isTargetType));
-        },
-        
-        @"RefClass::isKindOfAMapPOIAroundSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
-        
-            BOOL isTargetType = [ref isKindOfClass:[AMapPOIAroundSearchRequest class]];
-            methodResult(@(isTargetType));
-        },
-        
-        @"RefClass::isKindOfAMapPOIPolygonSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
-        
-            BOOL isTargetType = [ref isKindOfClass:[AMapPOIPolygonSearchRequest class]];
-            methodResult(@(isTargetType));
-        },
-        
-        @"RefClass::isKindOfAMapPOISearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
-        
-            BOOL isTargetType = [ref isKindOfClass:[AMapPOISearchResponse class]];
-            methodResult(@(isTargetType));
-        },
-        
-        @"RefClass::isKindOfAMapRoutePOISearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
-        
-            BOOL isTargetType = [ref isKindOfClass:[AMapRoutePOISearchRequest class]];
-            methodResult(@(isTargetType));
-        },
-        
-        @"RefClass::isKindOfAMapRoutePOISearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
-        
-            BOOL isTargetType = [ref isKindOfClass:[AMapRoutePOISearchResponse class]];
-            methodResult(@(isTargetType));
-        },
-        
-        @"RefClass::isKindOfAMapInputTipsSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
-        
-            BOOL isTargetType = [ref isKindOfClass:[AMapInputTipsSearchRequest class]];
-            methodResult(@(isTargetType));
-        },
-        
-        @"RefClass::isKindOfAMapInputTipsSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
-        
-            BOOL isTargetType = [ref isKindOfClass:[AMapInputTipsSearchResponse class]];
-            methodResult(@(isTargetType));
-        },
-        
-        @"RefClass::isKindOfAMapGeocodeSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
-        
-            BOOL isTargetType = [ref isKindOfClass:[AMapGeocodeSearchRequest class]];
-            methodResult(@(isTargetType));
-        },
-        
-        @"RefClass::isKindOfAMapGeocodeSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
-        
-            BOOL isTargetType = [ref isKindOfClass:[AMapGeocodeSearchResponse class]];
-            methodResult(@(isTargetType));
-        },
-        
-        @"RefClass::isKindOfAMapReGeocodeSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
-        
-            BOOL isTargetType = [ref isKindOfClass:[AMapReGeocodeSearchRequest class]];
-            methodResult(@(isTargetType));
-        },
-        
-        @"RefClass::isKindOfAMapReGeocodeSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
-        
-            BOOL isTargetType = [ref isKindOfClass:[AMapReGeocodeSearchResponse class]];
-            methodResult(@(isTargetType));
-        },
-        
-        @"RefClass::isKindOfAMapBusStopSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
-        
-            BOOL isTargetType = [ref isKindOfClass:[AMapBusStopSearchRequest class]];
-            methodResult(@(isTargetType));
-        },
-        
-        @"RefClass::isKindOfAMapBusStopSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
-        
-            BOOL isTargetType = [ref isKindOfClass:[AMapBusStopSearchResponse class]];
-            methodResult(@(isTargetType));
-        },
-        
-        @"RefClass::isKindOfAMapBusLineBaseSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
-        
-            BOOL isTargetType = [ref isKindOfClass:[AMapBusLineBaseSearchRequest class]];
-            methodResult(@(isTargetType));
-        },
-        
-        @"RefClass::isKindOfAMapBusLineNameSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
-        
-            BOOL isTargetType = [ref isKindOfClass:[AMapBusLineNameSearchRequest class]];
-            methodResult(@(isTargetType));
-        },
-        
         @"RefClass::isKindOfAMapBusLineIDSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
             NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
@@ -2302,6 +1804,486 @@ extern BOOL enableLog;
             HEAP[refId] = ref;
         
             methodResult(refId);
+        },
+        
+        @"RefClass::asAMapPath": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
+            id ref = HEAP[refId];
+        
+            // 转型
+            ref = (AMapPath *) ref;
+            // 放回HEAP
+            HEAP[refId] = ref;
+        
+            methodResult(refId);
+        },
+        
+        @"RefClass::asAMapFutureTimeInfoElement": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
+            id ref = HEAP[refId];
+        
+            // 转型
+            ref = (AMapFutureTimeInfoElement *) ref;
+            // 放回HEAP
+            HEAP[refId] = ref;
+        
+            methodResult(refId);
+        },
+        
+        @"RefClass::asAMapFutureTimeInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
+            id ref = HEAP[refId];
+        
+            // 转型
+            ref = (AMapFutureTimeInfo *) ref;
+            // 放回HEAP
+            HEAP[refId] = ref;
+        
+            methodResult(refId);
+        },
+        
+        @"RefClass::asAMapWalking": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
+            id ref = HEAP[refId];
+        
+            // 转型
+            ref = (AMapWalking *) ref;
+            // 放回HEAP
+            HEAP[refId] = ref;
+        
+            methodResult(refId);
+        },
+        
+        @"RefClass::asAMapTaxi": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
+            id ref = HEAP[refId];
+        
+            // 转型
+            ref = (AMapTaxi *) ref;
+            // 放回HEAP
+            HEAP[refId] = ref;
+        
+            methodResult(refId);
+        },
+        
+        @"RefClass::asAMapRailwayStation": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
+            id ref = HEAP[refId];
+        
+            // 转型
+            ref = (AMapRailwayStation *) ref;
+            // 放回HEAP
+            HEAP[refId] = ref;
+        
+            methodResult(refId);
+        },
+        
+        @"RefClass::asAMapRailwaySpace": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
+            id ref = HEAP[refId];
+        
+            // 转型
+            ref = (AMapRailwaySpace *) ref;
+            // 放回HEAP
+            HEAP[refId] = ref;
+        
+            methodResult(refId);
+        },
+        
+        @"RefClass::asAMapRailway": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
+            id ref = HEAP[refId];
+        
+            // 转型
+            ref = (AMapRailway *) ref;
+            // 放回HEAP
+            HEAP[refId] = ref;
+        
+            methodResult(refId);
+        },
+        
+        @"RefClass::asAMapSegment": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
+            id ref = HEAP[refId];
+        
+            // 转型
+            ref = (AMapSegment *) ref;
+            // 放回HEAP
+            HEAP[refId] = ref;
+        
+            methodResult(refId);
+        },
+        
+        @"RefClass::asAMapTransit": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
+            id ref = HEAP[refId];
+        
+            // 转型
+            ref = (AMapTransit *) ref;
+            // 放回HEAP
+            HEAP[refId] = ref;
+        
+            methodResult(refId);
+        },
+        
+        @"RefClass::asAMapRoute": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
+            id ref = HEAP[refId];
+        
+            // 转型
+            ref = (AMapRoute *) ref;
+            // 放回HEAP
+            HEAP[refId] = ref;
+        
+            methodResult(refId);
+        },
+        
+        @"RefClass::asAMapDistanceResult": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
+            id ref = HEAP[refId];
+        
+            // 转型
+            ref = (AMapDistanceResult *) ref;
+            // 放回HEAP
+            HEAP[refId] = ref;
+        
+            methodResult(refId);
+        },
+        
+        @"RefClass::asAMapLocalWeatherLive": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
+            id ref = HEAP[refId];
+        
+            // 转型
+            ref = (AMapLocalWeatherLive *) ref;
+            // 放回HEAP
+            HEAP[refId] = ref;
+        
+            methodResult(refId);
+        },
+        
+        @"RefClass::asAMapLocalDayWeatherForecast": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
+            id ref = HEAP[refId];
+        
+            // 转型
+            ref = (AMapLocalDayWeatherForecast *) ref;
+            // 放回HEAP
+            HEAP[refId] = ref;
+        
+            methodResult(refId);
+        },
+        
+        @"RefClass::asAMapLocalWeatherForecast": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
+            id ref = HEAP[refId];
+        
+            // 转型
+            ref = (AMapLocalWeatherForecast *) ref;
+            // 放回HEAP
+            HEAP[refId] = ref;
+        
+            methodResult(refId);
+        },
+        
+        @"RefClass::asAMapNearbyUserInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
+            id ref = HEAP[refId];
+        
+            // 转型
+            ref = (AMapNearbyUserInfo *) ref;
+            // 放回HEAP
+            HEAP[refId] = ref;
+        
+            methodResult(refId);
+        },
+        
+        @"RefClass::asAMapTrafficEvaluation": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
+            id ref = HEAP[refId];
+        
+            // 转型
+            ref = (AMapTrafficEvaluation *) ref;
+            // 放回HEAP
+            HEAP[refId] = ref;
+        
+            methodResult(refId);
+        },
+        
+        @"RefClass::asAMapTrafficRoad": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
+            id ref = HEAP[refId];
+        
+            // 转型
+            ref = (AMapTrafficRoad *) ref;
+            // 放回HEAP
+            HEAP[refId] = ref;
+        
+            methodResult(refId);
+        },
+        
+        @"RefClass::asAMapTrafficInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
+            id ref = HEAP[refId];
+        
+            // 转型
+            ref = (AMapTrafficInfo *) ref;
+            // 放回HEAP
+            HEAP[refId] = ref;
+        
+            methodResult(refId);
+        },
+        
+        @"RefClass::asAMapCloudImage": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
+            id ref = HEAP[refId];
+        
+            // 转型
+            ref = (AMapCloudImage *) ref;
+            // 放回HEAP
+            HEAP[refId] = ref;
+        
+            methodResult(refId);
+        },
+        
+        @"RefClass::asAMapCloudPOI": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
+            id ref = HEAP[refId];
+        
+            // 转型
+            ref = (AMapCloudPOI *) ref;
+            // 放回HEAP
+            HEAP[refId] = ref;
+        
+            methodResult(refId);
+        },
+        
+        @"RefClass::asAMapNearbyUploadInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
+            id ref = HEAP[refId];
+        
+            // 转型
+            ref = (AMapNearbyUploadInfo *) ref;
+            // 放回HEAP
+            HEAP[refId] = ref;
+        
+            methodResult(refId);
+        },
+        
+        @"RefClass::asAMapNearbySearchManager": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
+            id ref = HEAP[refId];
+        
+            // 转型
+            ref = (AMapNearbySearchManager *) ref;
+            // 放回HEAP
+            HEAP[refId] = ref;
+        
+            methodResult(refId);
+        },
+        
+        @"RefClass::asAMapSearchAPI": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
+            id ref = HEAP[refId];
+        
+            // 转型
+            ref = (AMapSearchAPI *) ref;
+            // 放回HEAP
+            HEAP[refId] = ref;
+        
+            methodResult(refId);
+        },
+        
+        @"ObjectFactory::createAMapPOISearchBaseRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapPOISearchBaseRequest");
+            }
+        
+            AMapPOISearchBaseRequest* ref = [[AMapPOISearchBaseRequest alloc] init];
+            HEAP[@(ref.hash)] = ref;
+        
+            methodResult(@(ref.hash));
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapPOIIDSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapPOIIDSearchRequest");
+            }
+        
+            AMapPOIIDSearchRequest* ref = [[AMapPOIIDSearchRequest alloc] init];
+            HEAP[@(ref.hash)] = ref;
+        
+            methodResult(@(ref.hash));
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapPOIKeywordsSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapPOIKeywordsSearchRequest");
+            }
+        
+            AMapPOIKeywordsSearchRequest* ref = [[AMapPOIKeywordsSearchRequest alloc] init];
+            HEAP[@(ref.hash)] = ref;
+        
+            methodResult(@(ref.hash));
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapPOIAroundSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapPOIAroundSearchRequest");
+            }
+        
+            AMapPOIAroundSearchRequest* ref = [[AMapPOIAroundSearchRequest alloc] init];
+            HEAP[@(ref.hash)] = ref;
+        
+            methodResult(@(ref.hash));
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapPOIPolygonSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapPOIPolygonSearchRequest");
+            }
+        
+            AMapPOIPolygonSearchRequest* ref = [[AMapPOIPolygonSearchRequest alloc] init];
+            HEAP[@(ref.hash)] = ref;
+        
+            methodResult(@(ref.hash));
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapPOISearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapPOISearchResponse");
+            }
+        
+            AMapPOISearchResponse* ref = [[AMapPOISearchResponse alloc] init];
+            HEAP[@(ref.hash)] = ref;
+        
+            methodResult(@(ref.hash));
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapRoutePOISearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapRoutePOISearchRequest");
+            }
+        
+            AMapRoutePOISearchRequest* ref = [[AMapRoutePOISearchRequest alloc] init];
+            HEAP[@(ref.hash)] = ref;
+        
+            methodResult(@(ref.hash));
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapRoutePOISearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapRoutePOISearchResponse");
+            }
+        
+            AMapRoutePOISearchResponse* ref = [[AMapRoutePOISearchResponse alloc] init];
+            HEAP[@(ref.hash)] = ref;
+        
+            methodResult(@(ref.hash));
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapInputTipsSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapInputTipsSearchRequest");
+            }
+        
+            AMapInputTipsSearchRequest* ref = [[AMapInputTipsSearchRequest alloc] init];
+            HEAP[@(ref.hash)] = ref;
+        
+            methodResult(@(ref.hash));
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapInputTipsSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapInputTipsSearchResponse");
+            }
+        
+            AMapInputTipsSearchResponse* ref = [[AMapInputTipsSearchResponse alloc] init];
+            HEAP[@(ref.hash)] = ref;
+        
+            methodResult(@(ref.hash));
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapGeocodeSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapGeocodeSearchRequest");
+            }
+        
+            AMapGeocodeSearchRequest* ref = [[AMapGeocodeSearchRequest alloc] init];
+            HEAP[@(ref.hash)] = ref;
+        
+            methodResult(@(ref.hash));
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapGeocodeSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapGeocodeSearchResponse");
+            }
+        
+            AMapGeocodeSearchResponse* ref = [[AMapGeocodeSearchResponse alloc] init];
+            HEAP[@(ref.hash)] = ref;
+        
+            methodResult(@(ref.hash));
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
         
     };

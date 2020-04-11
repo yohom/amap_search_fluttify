@@ -16,7 +16,6 @@
 #import "SubHandler/SubHandler9.h"
 #import "SubHandler/SubHandler10.h"
 #import "SubHandler/SubHandler11.h"
-#import "SubHandler/SubHandler12.h"
 #import "SubHandler/SubHandlerCustom.h"
 
 // Dart端一次方法调用所存在的栈, 只有当MethodChannel传递参数受限时, 再启用这个容器
@@ -49,7 +48,6 @@ extern BOOL enableLog;
     [_handlerMap addEntriesFromDictionary: [self getSubHandler9]];
     [_handlerMap addEntriesFromDictionary: [self getSubHandler10]];
     [_handlerMap addEntriesFromDictionary: [self getSubHandler11]];
-    [_handlerMap addEntriesFromDictionary: [self getSubHandler12]];
     [_handlerMap addEntriesFromDictionary: [self getSubHandlerCustom]];
   }
 

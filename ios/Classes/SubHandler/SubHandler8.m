@@ -14,692 +14,6 @@ extern BOOL enableLog;
 @implementation AmapSearchFluttifyPlugin (SubHandler8)
 - (NSDictionary<NSString*, Handler>*) getSubHandler8 {
     return @{
-        @"AMapBusLineBaseSearchRequest::set_offset_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSInteger offset = [args[@"offset"] longValue];
-        
-                // ref
-                AMapBusLineBaseSearchRequest* ref = (AMapBusLineBaseSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                ref.offset = offset;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapBusLineBaseSearchRequest::set_page_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSInteger page = [args[@"page"] longValue];
-        
-                // ref
-                AMapBusLineBaseSearchRequest* ref = (AMapBusLineBaseSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                ref.page = page;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapBusLineNameSearchRequest::set_keywords_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSString* keywords = (NSString*) args[@"keywords"];
-        
-                // ref
-                AMapBusLineNameSearchRequest* ref = (AMapBusLineNameSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                ref.keywords = keywords;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapBusLineIDSearchRequest::set_uid_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSString* uid = (NSString*) args[@"uid"];
-        
-                // ref
-                AMapBusLineIDSearchRequest* ref = (AMapBusLineIDSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                ref.uid = uid;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapBusLineSearchResponse::set_count_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSInteger count = [args[@"count"] longValue];
-        
-                // ref
-                AMapBusLineSearchResponse* ref = (AMapBusLineSearchResponse*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                ref.count = count;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapBusLineSearchResponse::set_suggestion_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // ref arg
-                AMapSuggestion* suggestion = (AMapSuggestion*) HEAP[@([args[@"suggestion"] integerValue])];
-        
-                // ref
-                AMapBusLineSearchResponse* ref = (AMapBusLineSearchResponse*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                ref.suggestion = suggestion;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapBusLineSearchResponse::set_buslines_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // list arg
-                NSArray<NSNumber*>* buslinesRefArray = (NSArray<NSNumber*> *) args[@"buslines"];
-                NSMutableArray<AMapBusLine*>* buslines = [NSMutableArray arrayWithCapacity:buslinesRefArray.count];
-                for (int __i__ = 0; __i__ < buslinesRefArray.count; __i__++) {
-                    AMapBusLine* item = (AMapBusLine*) HEAP[[buslinesRefArray objectAtIndex:__i__]];
-                    [buslines addObject:item];
-                }
-        
-                // ref
-                AMapBusLineSearchResponse* ref = (AMapBusLineSearchResponse*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                ref.buslines = buslines;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapDistrictSearchRequest::set_keywords_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSString* keywords = (NSString*) args[@"keywords"];
-        
-                // ref
-                AMapDistrictSearchRequest* ref = (AMapDistrictSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                ref.keywords = keywords;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapDistrictSearchRequest::set_requireExtension_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                BOOL requireExtension = [args[@"requireExtension"] boolValue];
-        
-                // ref
-                AMapDistrictSearchRequest* ref = (AMapDistrictSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                ref.requireExtension = requireExtension;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapDistrictSearchRequest::set_showBusinessArea_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                BOOL showBusinessArea = [args[@"showBusinessArea"] boolValue];
-        
-                // ref
-                AMapDistrictSearchRequest* ref = (AMapDistrictSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                ref.showBusinessArea = showBusinessArea;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapDistrictSearchResponse::set_count_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSInteger count = [args[@"count"] longValue];
-        
-                // ref
-                AMapDistrictSearchResponse* ref = (AMapDistrictSearchResponse*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                ref.count = count;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapDistrictSearchResponse::set_districts_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // list arg
-                NSArray<NSNumber*>* districtsRefArray = (NSArray<NSNumber*> *) args[@"districts"];
-                NSMutableArray<AMapDistrict*>* districts = [NSMutableArray arrayWithCapacity:districtsRefArray.count];
-                for (int __i__ = 0; __i__ < districtsRefArray.count; __i__++) {
-                    AMapDistrict* item = (AMapDistrict*) HEAP[[districtsRefArray objectAtIndex:__i__]];
-                    [districts addObject:item];
-                }
-        
-                // ref
-                AMapDistrictSearchResponse* ref = (AMapDistrictSearchResponse*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                ref.districts = districts;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapRouteSearchBaseRequest::set_origin_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // ref arg
-                AMapGeoPoint* origin = (AMapGeoPoint*) HEAP[@([args[@"origin"] integerValue])];
-        
-                // ref
-                AMapRouteSearchBaseRequest* ref = (AMapRouteSearchBaseRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                ref.origin = origin;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapRouteSearchBaseRequest::set_destination_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // ref arg
-                AMapGeoPoint* destination = (AMapGeoPoint*) HEAP[@([args[@"destination"] integerValue])];
-        
-                // ref
-                AMapRouteSearchBaseRequest* ref = (AMapRouteSearchBaseRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                ref.destination = destination;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapDrivingRouteSearchRequest::set_strategy_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSInteger strategy = [args[@"strategy"] longValue];
-        
-                // ref
-                AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                ref.strategy = strategy;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapDrivingRouteSearchRequest::set_waypoints_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // list arg
-                NSArray<NSNumber*>* waypointsRefArray = (NSArray<NSNumber*> *) args[@"waypoints"];
-                NSMutableArray<AMapGeoPoint*>* waypoints = [NSMutableArray arrayWithCapacity:waypointsRefArray.count];
-                for (int __i__ = 0; __i__ < waypointsRefArray.count; __i__++) {
-                    AMapGeoPoint* item = (AMapGeoPoint*) HEAP[[waypointsRefArray objectAtIndex:__i__]];
-                    [waypoints addObject:item];
-                }
-        
-                // ref
-                AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                ref.waypoints = waypoints;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapDrivingRouteSearchRequest::set_avoidpolygons_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // list arg
-                NSArray<NSNumber*>* avoidpolygonsRefArray = (NSArray<NSNumber*> *) args[@"avoidpolygons"];
-                NSMutableArray<AMapGeoPolygon*>* avoidpolygons = [NSMutableArray arrayWithCapacity:avoidpolygonsRefArray.count];
-                for (int __i__ = 0; __i__ < avoidpolygonsRefArray.count; __i__++) {
-                    AMapGeoPolygon* item = (AMapGeoPolygon*) HEAP[[avoidpolygonsRefArray objectAtIndex:__i__]];
-                    [avoidpolygons addObject:item];
-                }
-        
-                // ref
-                AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                ref.avoidpolygons = avoidpolygons;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapDrivingRouteSearchRequest::set_avoidroad_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSString* avoidroad = (NSString*) args[@"avoidroad"];
-        
-                // ref
-                AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                ref.avoidroad = avoidroad;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapDrivingRouteSearchRequest::set_originId_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSString* originId = (NSString*) args[@"originId"];
-        
-                // ref
-                AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                ref.originId = originId;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapDrivingRouteSearchRequest::set_destinationId_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSString* destinationId = (NSString*) args[@"destinationId"];
-        
-                // ref
-                AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                ref.destinationId = destinationId;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapDrivingRouteSearchRequest::set_origintype_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSString* origintype = (NSString*) args[@"origintype"];
-        
-                // ref
-                AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                ref.origintype = origintype;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapDrivingRouteSearchRequest::set_destinationtype_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSString* destinationtype = (NSString*) args[@"destinationtype"];
-        
-                // ref
-                AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                ref.destinationtype = destinationtype;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapDrivingRouteSearchRequest::set_requireExtension_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                BOOL requireExtension = [args[@"requireExtension"] boolValue];
-        
-                // ref
-                AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                ref.requireExtension = requireExtension;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapDrivingRouteSearchRequest::set_plateProvince_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSString* plateProvince = (NSString*) args[@"plateProvince"];
-        
-                // ref
-                AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                ref.plateProvince = plateProvince;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapDrivingRouteSearchRequest::set_plateNumber_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSString* plateNumber = (NSString*) args[@"plateNumber"];
-        
-                // ref
-                AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                ref.plateNumber = plateNumber;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapDrivingRouteSearchRequest::set_ferry_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSInteger ferry = [args[@"ferry"] longValue];
-        
-                // ref
-                AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                ref.ferry = ferry;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapDrivingRouteSearchRequest::set_cartype_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSInteger cartype = [args[@"cartype"] longValue];
-        
-                // ref
-                AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                ref.cartype = cartype;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapWalkingRouteSearchRequest::set_multipath_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSInteger multipath = [args[@"multipath"] longValue];
-        
-                // ref
-                AMapWalkingRouteSearchRequest* ref = (AMapWalkingRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                ref.multipath = multipath;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapTransitRouteSearchRequest::set_strategy_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSInteger strategy = [args[@"strategy"] longValue];
-        
-                // ref
-                AMapTransitRouteSearchRequest* ref = (AMapTransitRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                ref.strategy = strategy;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapTransitRouteSearchRequest::set_city_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSString* city = (NSString*) args[@"city"];
-        
-                // ref
-                AMapTransitRouteSearchRequest* ref = (AMapTransitRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                ref.city = city;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapTransitRouteSearchRequest::set_destinationCity_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSString* destinationCity = (NSString*) args[@"destinationCity"];
-        
-                // ref
-                AMapTransitRouteSearchRequest* ref = (AMapTransitRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                ref.destinationCity = destinationCity;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapTransitRouteSearchRequest::set_nightflag_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                BOOL nightflag = [args[@"nightflag"] boolValue];
-        
-                // ref
-                AMapTransitRouteSearchRequest* ref = (AMapTransitRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                ref.nightflag = nightflag;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapTransitRouteSearchRequest::set_requireExtension_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                BOOL requireExtension = [args[@"requireExtension"] boolValue];
-        
-                // ref
-                AMapTransitRouteSearchRequest* ref = (AMapTransitRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                ref.requireExtension = requireExtension;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapRidingRouteSearchRequest::set_type_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSInteger type = [args[@"type"] longValue];
-        
-                // ref
-                AMapRidingRouteSearchRequest* ref = (AMapRidingRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                ref.type = type;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapRouteSearchResponse::set_count_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSInteger count = [args[@"count"] longValue];
-        
-                // ref
-                AMapRouteSearchResponse* ref = (AMapRouteSearchResponse*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                ref.count = count;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapRouteSearchResponse::set_route_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // ref arg
-                AMapRoute* route = (AMapRoute*) HEAP[@([args[@"route"] integerValue])];
-        
-                // ref
-                AMapRouteSearchResponse* ref = (AMapRouteSearchResponse*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                ref.route = route;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapTruckRouteSearchRequest::set_strategy_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSInteger strategy = [args[@"strategy"] longValue];
-        
-                // ref
-                AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                ref.strategy = strategy;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
         @"AMapTruckRouteSearchRequest::set_waypoints_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
@@ -707,9 +21,9 @@ extern BOOL enableLog;
                 // args
                 // list arg
                 NSArray<NSNumber*>* waypointsRefArray = (NSArray<NSNumber*> *) args[@"waypoints"];
-                NSMutableArray<AMapGeoPoint*>* waypoints = [NSMutableArray arrayWithCapacity:waypointsRefArray.count];
+                NSMutableArray<NSArray<AMapGeoPoint*>*>* waypoints = [NSMutableArray arrayWithCapacity:waypointsRefArray.count];
                 for (int __i__ = 0; __i__ < waypointsRefArray.count; __i__++) {
-                    AMapGeoPoint* item = (AMapGeoPoint*) HEAP[[waypointsRefArray objectAtIndex:__i__]];
+                    NSArray<AMapGeoPoint*>* item = (NSArray<AMapGeoPoint*>*) HEAP[[waypointsRefArray objectAtIndex:__i__]];
                     [waypoints addObject:item];
                 }
         
@@ -946,9 +260,9 @@ extern BOOL enableLog;
                 // args
                 // list arg
                 NSArray<NSNumber*>* originsRefArray = (NSArray<NSNumber*> *) args[@"origins"];
-                NSMutableArray<AMapGeoPoint*>* origins = [NSMutableArray arrayWithCapacity:originsRefArray.count];
+                NSMutableArray<NSArray<AMapGeoPoint*>*>* origins = [NSMutableArray arrayWithCapacity:originsRefArray.count];
                 for (int __i__ = 0; __i__ < originsRefArray.count; __i__++) {
-                    AMapGeoPoint* item = (AMapGeoPoint*) HEAP[[originsRefArray objectAtIndex:__i__]];
+                    NSArray<AMapGeoPoint*>* item = (NSArray<AMapGeoPoint*>*) HEAP[[originsRefArray objectAtIndex:__i__]];
                     [origins addObject:item];
                 }
         
@@ -1005,9 +319,9 @@ extern BOOL enableLog;
                 // args
                 // list arg
                 NSArray<NSNumber*>* resultsRefArray = (NSArray<NSNumber*> *) args[@"results"];
-                NSMutableArray<AMapDistanceResult*>* results = [NSMutableArray arrayWithCapacity:resultsRefArray.count];
+                NSMutableArray<NSArray<AMapDistanceResult*>*>* results = [NSMutableArray arrayWithCapacity:resultsRefArray.count];
                 for (int __i__ = 0; __i__ < resultsRefArray.count; __i__++) {
-                    AMapDistanceResult* item = (AMapDistanceResult*) HEAP[[resultsRefArray objectAtIndex:__i__]];
+                    NSArray<AMapDistanceResult*>* item = (NSArray<AMapDistanceResult*>*) HEAP[[resultsRefArray objectAtIndex:__i__]];
                     [results addObject:item];
                 }
         
@@ -1064,9 +378,9 @@ extern BOOL enableLog;
                 // args
                 // list arg
                 NSArray<NSNumber*>* livesRefArray = (NSArray<NSNumber*> *) args[@"lives"];
-                NSMutableArray<AMapLocalWeatherLive*>* lives = [NSMutableArray arrayWithCapacity:livesRefArray.count];
+                NSMutableArray<NSArray<AMapLocalWeatherLive*>*>* lives = [NSMutableArray arrayWithCapacity:livesRefArray.count];
                 for (int __i__ = 0; __i__ < livesRefArray.count; __i__++) {
-                    AMapLocalWeatherLive* item = (AMapLocalWeatherLive*) HEAP[[livesRefArray objectAtIndex:__i__]];
+                    NSArray<AMapLocalWeatherLive*>* item = (NSArray<AMapLocalWeatherLive*>*) HEAP[[livesRefArray objectAtIndex:__i__]];
                     [lives addObject:item];
                 }
         
@@ -1087,9 +401,9 @@ extern BOOL enableLog;
                 // args
                 // list arg
                 NSArray<NSNumber*>* forecastsRefArray = (NSArray<NSNumber*> *) args[@"forecasts"];
-                NSMutableArray<AMapLocalWeatherForecast*>* forecasts = [NSMutableArray arrayWithCapacity:forecastsRefArray.count];
+                NSMutableArray<NSArray<AMapLocalWeatherForecast*>*>* forecasts = [NSMutableArray arrayWithCapacity:forecastsRefArray.count];
                 for (int __i__ = 0; __i__ < forecastsRefArray.count; __i__++) {
-                    AMapLocalWeatherForecast* item = (AMapLocalWeatherForecast*) HEAP[[forecastsRefArray objectAtIndex:__i__]];
+                    NSArray<AMapLocalWeatherForecast*>* item = (NSArray<AMapLocalWeatherForecast*>*) HEAP[[forecastsRefArray objectAtIndex:__i__]];
                     [forecasts addObject:item];
                 }
         
@@ -1344,9 +658,9 @@ extern BOOL enableLog;
                 // args
                 // list arg
                 NSArray<NSNumber*>* infosRefArray = (NSArray<NSNumber*> *) args[@"infos"];
-                NSMutableArray<AMapNearbyUserInfo*>* infos = [NSMutableArray arrayWithCapacity:infosRefArray.count];
+                NSMutableArray<NSArray<AMapNearbyUserInfo*>*>* infos = [NSMutableArray arrayWithCapacity:infosRefArray.count];
                 for (int __i__ = 0; __i__ < infosRefArray.count; __i__++) {
-                    AMapNearbyUserInfo* item = (AMapNearbyUserInfo*) HEAP[[infosRefArray objectAtIndex:__i__]];
+                    NSArray<AMapNearbyUserInfo*>* item = (NSArray<AMapNearbyUserInfo*>*) HEAP[[infosRefArray objectAtIndex:__i__]];
                     [infos addObject:item];
                 }
         
@@ -1637,9 +951,9 @@ extern BOOL enableLog;
                 // args
                 // list arg
                 NSArray<NSNumber*>* POIsRefArray = (NSArray<NSNumber*> *) args[@"POIs"];
-                NSMutableArray<AMapCloudPOI*>* POIs = [NSMutableArray arrayWithCapacity:POIsRefArray.count];
+                NSMutableArray<NSArray<AMapCloudPOI*>*>* POIs = [NSMutableArray arrayWithCapacity:POIsRefArray.count];
                 for (int __i__ = 0; __i__ < POIsRefArray.count; __i__++) {
-                    AMapCloudPOI* item = (AMapCloudPOI*) HEAP[[POIsRefArray objectAtIndex:__i__]];
+                    NSArray<AMapCloudPOI*>* item = (NSArray<AMapCloudPOI*>*) HEAP[[POIsRefArray objectAtIndex:__i__]];
                     [POIs addObject:item];
                 }
         
@@ -2164,9 +1478,9 @@ extern BOOL enableLog;
                 // args
                 // list arg
                 NSArray<NSNumber*>* pathsRefArray = (NSArray<NSNumber*> *) args[@"paths"];
-                NSMutableArray<AMapPath*>* paths = [NSMutableArray arrayWithCapacity:pathsRefArray.count];
+                NSMutableArray<NSArray<AMapPath*>*>* paths = [NSMutableArray arrayWithCapacity:pathsRefArray.count];
                 for (int __i__ = 0; __i__ < pathsRefArray.count; __i__++) {
-                    AMapPath* item = (AMapPath*) HEAP[[pathsRefArray objectAtIndex:__i__]];
+                    NSArray<AMapPath*>* item = (NSArray<AMapPath*>*) HEAP[[pathsRefArray objectAtIndex:__i__]];
                     [paths addObject:item];
                 }
         
@@ -2187,9 +1501,9 @@ extern BOOL enableLog;
                 // args
                 // list arg
                 NSArray<NSNumber*>* timeInfosRefArray = (NSArray<NSNumber*> *) args[@"timeInfos"];
-                NSMutableArray<AMapFutureTimeInfo*>* timeInfos = [NSMutableArray arrayWithCapacity:timeInfosRefArray.count];
+                NSMutableArray<NSArray<AMapFutureTimeInfo*>*>* timeInfos = [NSMutableArray arrayWithCapacity:timeInfosRefArray.count];
                 for (int __i__ = 0; __i__ < timeInfosRefArray.count; __i__++) {
-                    AMapFutureTimeInfo* item = (AMapFutureTimeInfo*) HEAP[[timeInfosRefArray objectAtIndex:__i__]];
+                    NSArray<AMapFutureTimeInfo*>* item = (NSArray<AMapFutureTimeInfo*>*) HEAP[[timeInfosRefArray objectAtIndex:__i__]];
                     [timeInfos addObject:item];
                 }
         
@@ -2246,9 +1560,9 @@ extern BOOL enableLog;
                 // args
                 // list arg
                 NSArray<NSNumber*>* pointsRefArray = (NSArray<NSNumber*> *) args[@"points"];
-                NSMutableArray<AMapGeoPoint*>* points = [NSMutableArray arrayWithCapacity:pointsRefArray.count];
+                NSMutableArray<NSArray<AMapGeoPoint*>*>* points = [NSMutableArray arrayWithCapacity:pointsRefArray.count];
                 for (int __i__ = 0; __i__ < pointsRefArray.count; __i__++) {
-                    AMapGeoPoint* item = (AMapGeoPoint*) HEAP[[pointsRefArray objectAtIndex:__i__]];
+                    NSArray<AMapGeoPoint*>* item = (NSArray<AMapGeoPoint*>*) HEAP[[pointsRefArray objectAtIndex:__i__]];
                     [points addObject:item];
                 }
         
@@ -2341,9 +1655,9 @@ extern BOOL enableLog;
                 // args
                 // list arg
                 NSArray<NSNumber*>* districtsRefArray = (NSArray<NSNumber*> *) args[@"districts"];
-                NSMutableArray<AMapDistrict*>* districts = [NSMutableArray arrayWithCapacity:districtsRefArray.count];
+                NSMutableArray<NSArray<AMapDistrict*>*>* districts = [NSMutableArray arrayWithCapacity:districtsRefArray.count];
                 for (int __i__ = 0; __i__ < districtsRefArray.count; __i__++) {
-                    AMapDistrict* item = (AMapDistrict*) HEAP[[districtsRefArray objectAtIndex:__i__]];
+                    NSArray<AMapDistrict*>* item = (NSArray<AMapDistrict*>*) HEAP[[districtsRefArray objectAtIndex:__i__]];
                     [districts addObject:item];
                 }
         
@@ -2382,9 +1696,9 @@ extern BOOL enableLog;
                 // args
                 // list arg
                 NSArray<NSNumber*>* citiesRefArray = (NSArray<NSNumber*> *) args[@"cities"];
-                NSMutableArray<AMapCity*>* cities = [NSMutableArray arrayWithCapacity:citiesRefArray.count];
+                NSMutableArray<NSArray<AMapCity*>*>* cities = [NSMutableArray arrayWithCapacity:citiesRefArray.count];
                 for (int __i__ = 0; __i__ < citiesRefArray.count; __i__++) {
-                    AMapCity* item = (AMapCity*) HEAP[[citiesRefArray objectAtIndex:__i__]];
+                    NSArray<AMapCity*>* item = (NSArray<AMapCity*>*) HEAP[[citiesRefArray objectAtIndex:__i__]];
                     [cities addObject:item];
                 }
         
@@ -3359,9 +2673,9 @@ extern BOOL enableLog;
                 // args
                 // list arg
                 NSArray<NSNumber*>* subPOIsRefArray = (NSArray<NSNumber*> *) args[@"subPOIs"];
-                NSMutableArray<AMapSubPOI*>* subPOIs = [NSMutableArray arrayWithCapacity:subPOIsRefArray.count];
+                NSMutableArray<NSArray<AMapSubPOI*>*>* subPOIs = [NSMutableArray arrayWithCapacity:subPOIsRefArray.count];
                 for (int __i__ = 0; __i__ < subPOIsRefArray.count; __i__++) {
-                    AMapSubPOI* item = (AMapSubPOI*) HEAP[[subPOIsRefArray objectAtIndex:__i__]];
+                    NSArray<AMapSubPOI*>* item = (NSArray<AMapSubPOI*>*) HEAP[[subPOIsRefArray objectAtIndex:__i__]];
                     [subPOIs addObject:item];
                 }
         
@@ -3382,9 +2696,9 @@ extern BOOL enableLog;
                 // args
                 // list arg
                 NSArray<NSNumber*>* imagesRefArray = (NSArray<NSNumber*> *) args[@"images"];
-                NSMutableArray<AMapImage*>* images = [NSMutableArray arrayWithCapacity:imagesRefArray.count];
+                NSMutableArray<NSArray<AMapImage*>*>* images = [NSMutableArray arrayWithCapacity:imagesRefArray.count];
                 for (int __i__ = 0; __i__ < imagesRefArray.count; __i__++) {
-                    AMapImage* item = (AMapImage*) HEAP[[imagesRefArray objectAtIndex:__i__]];
+                    NSArray<AMapImage*>* item = (NSArray<AMapImage*>*) HEAP[[imagesRefArray objectAtIndex:__i__]];
                     [images addObject:item];
                 }
         
@@ -3698,6 +3012,697 @@ extern BOOL enableLog;
                 AMapRoadInter* ref = (AMapRoadInter*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
                 ref.secondId = secondId;
+                methodResult(@"success");
+            }
+        
+            methodResult(@"success");
+        },
+        
+        @"AMapRoadInter::set_secondName_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // jsonable arg
+                NSString* secondName = (NSString*) args[@"secondName"];
+        
+                // ref
+                AMapRoadInter* ref = (AMapRoadInter*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+                ref.secondName = secondName;
+                methodResult(@"success");
+            }
+        
+            methodResult(@"success");
+        },
+        
+        @"AMapStreetNumber::set_street_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // jsonable arg
+                NSString* street = (NSString*) args[@"street"];
+        
+                // ref
+                AMapStreetNumber* ref = (AMapStreetNumber*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+                ref.street = street;
+                methodResult(@"success");
+            }
+        
+            methodResult(@"success");
+        },
+        
+        @"AMapStreetNumber::set_number_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // jsonable arg
+                NSString* number = (NSString*) args[@"number"];
+        
+                // ref
+                AMapStreetNumber* ref = (AMapStreetNumber*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+                ref.number = number;
+                methodResult(@"success");
+            }
+        
+            methodResult(@"success");
+        },
+        
+        @"AMapStreetNumber::set_location_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // ref arg
+                AMapGeoPoint* location = (AMapGeoPoint*) HEAP[@([args[@"location"] integerValue])];
+        
+                // ref
+                AMapStreetNumber* ref = (AMapStreetNumber*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+                ref.location = location;
+                methodResult(@"success");
+            }
+        
+            methodResult(@"success");
+        },
+        
+        @"AMapStreetNumber::set_distance_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // jsonable arg
+                NSInteger distance = [args[@"distance"] longValue];
+        
+                // ref
+                AMapStreetNumber* ref = (AMapStreetNumber*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+                ref.distance = distance;
+                methodResult(@"success");
+            }
+        
+            methodResult(@"success");
+        },
+        
+        @"AMapStreetNumber::set_direction_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // jsonable arg
+                NSString* direction = (NSString*) args[@"direction"];
+        
+                // ref
+                AMapStreetNumber* ref = (AMapStreetNumber*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+                ref.direction = direction;
+                methodResult(@"success");
+            }
+        
+            methodResult(@"success");
+        },
+        
+        @"AMapBusinessArea::set_name_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // jsonable arg
+                NSString* name = (NSString*) args[@"name"];
+        
+                // ref
+                AMapBusinessArea* ref = (AMapBusinessArea*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+                ref.name = name;
+                methodResult(@"success");
+            }
+        
+            methodResult(@"success");
+        },
+        
+        @"AMapBusinessArea::set_location_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // ref arg
+                AMapGeoPoint* location = (AMapGeoPoint*) HEAP[@([args[@"location"] integerValue])];
+        
+                // ref
+                AMapBusinessArea* ref = (AMapBusinessArea*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+                ref.location = location;
+                methodResult(@"success");
+            }
+        
+            methodResult(@"success");
+        },
+        
+        @"AMapAddressComponent::set_country_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // jsonable arg
+                NSString* country = (NSString*) args[@"country"];
+        
+                // ref
+                AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+                ref.country = country;
+                methodResult(@"success");
+            }
+        
+            methodResult(@"success");
+        },
+        
+        @"AMapAddressComponent::set_province_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // jsonable arg
+                NSString* province = (NSString*) args[@"province"];
+        
+                // ref
+                AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+                ref.province = province;
+                methodResult(@"success");
+            }
+        
+            methodResult(@"success");
+        },
+        
+        @"AMapAddressComponent::set_city_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // jsonable arg
+                NSString* city = (NSString*) args[@"city"];
+        
+                // ref
+                AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+                ref.city = city;
+                methodResult(@"success");
+            }
+        
+            methodResult(@"success");
+        },
+        
+        @"AMapAddressComponent::set_citycode_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // jsonable arg
+                NSString* citycode = (NSString*) args[@"citycode"];
+        
+                // ref
+                AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+                ref.citycode = citycode;
+                methodResult(@"success");
+            }
+        
+            methodResult(@"success");
+        },
+        
+        @"AMapAddressComponent::set_district_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // jsonable arg
+                NSString* district = (NSString*) args[@"district"];
+        
+                // ref
+                AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+                ref.district = district;
+                methodResult(@"success");
+            }
+        
+            methodResult(@"success");
+        },
+        
+        @"AMapAddressComponent::set_adcode_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // jsonable arg
+                NSString* adcode = (NSString*) args[@"adcode"];
+        
+                // ref
+                AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+                ref.adcode = adcode;
+                methodResult(@"success");
+            }
+        
+            methodResult(@"success");
+        },
+        
+        @"AMapAddressComponent::set_township_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // jsonable arg
+                NSString* township = (NSString*) args[@"township"];
+        
+                // ref
+                AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+                ref.township = township;
+                methodResult(@"success");
+            }
+        
+            methodResult(@"success");
+        },
+        
+        @"AMapAddressComponent::set_towncode_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // jsonable arg
+                NSString* towncode = (NSString*) args[@"towncode"];
+        
+                // ref
+                AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+                ref.towncode = towncode;
+                methodResult(@"success");
+            }
+        
+            methodResult(@"success");
+        },
+        
+        @"AMapAddressComponent::set_neighborhood_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // jsonable arg
+                NSString* neighborhood = (NSString*) args[@"neighborhood"];
+        
+                // ref
+                AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+                ref.neighborhood = neighborhood;
+                methodResult(@"success");
+            }
+        
+            methodResult(@"success");
+        },
+        
+        @"AMapAddressComponent::set_building_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // jsonable arg
+                NSString* building = (NSString*) args[@"building"];
+        
+                // ref
+                AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+                ref.building = building;
+                methodResult(@"success");
+            }
+        
+            methodResult(@"success");
+        },
+        
+        @"AMapAddressComponent::set_streetNumber_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // ref arg
+                AMapStreetNumber* streetNumber = (AMapStreetNumber*) HEAP[@([args[@"streetNumber"] integerValue])];
+        
+                // ref
+                AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+                ref.streetNumber = streetNumber;
+                methodResult(@"success");
+            }
+        
+            methodResult(@"success");
+        },
+        
+        @"AMapAddressComponent::set_businessAreas_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // list arg
+                NSArray<NSNumber*>* businessAreasRefArray = (NSArray<NSNumber*> *) args[@"businessAreas"];
+                NSMutableArray<NSArray<AMapBusinessArea*>*>* businessAreas = [NSMutableArray arrayWithCapacity:businessAreasRefArray.count];
+                for (int __i__ = 0; __i__ < businessAreasRefArray.count; __i__++) {
+                    NSArray<AMapBusinessArea*>* item = (NSArray<AMapBusinessArea*>*) HEAP[[businessAreasRefArray objectAtIndex:__i__]];
+                    [businessAreas addObject:item];
+                }
+        
+                // ref
+                AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+                ref.businessAreas = businessAreas;
+                methodResult(@"success");
+            }
+        
+            methodResult(@"success");
+        },
+        
+        @"AMapReGeocode::set_formattedAddress_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // jsonable arg
+                NSString* formattedAddress = (NSString*) args[@"formattedAddress"];
+        
+                // ref
+                AMapReGeocode* ref = (AMapReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+                ref.formattedAddress = formattedAddress;
+                methodResult(@"success");
+            }
+        
+            methodResult(@"success");
+        },
+        
+        @"AMapReGeocode::set_addressComponent_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // ref arg
+                AMapAddressComponent* addressComponent = (AMapAddressComponent*) HEAP[@([args[@"addressComponent"] integerValue])];
+        
+                // ref
+                AMapReGeocode* ref = (AMapReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+                ref.addressComponent = addressComponent;
+                methodResult(@"success");
+            }
+        
+            methodResult(@"success");
+        },
+        
+        @"AMapReGeocode::set_roads_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // list arg
+                NSArray<NSNumber*>* roadsRefArray = (NSArray<NSNumber*> *) args[@"roads"];
+                NSMutableArray<NSArray<AMapRoad*>*>* roads = [NSMutableArray arrayWithCapacity:roadsRefArray.count];
+                for (int __i__ = 0; __i__ < roadsRefArray.count; __i__++) {
+                    NSArray<AMapRoad*>* item = (NSArray<AMapRoad*>*) HEAP[[roadsRefArray objectAtIndex:__i__]];
+                    [roads addObject:item];
+                }
+        
+                // ref
+                AMapReGeocode* ref = (AMapReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+                ref.roads = roads;
+                methodResult(@"success");
+            }
+        
+            methodResult(@"success");
+        },
+        
+        @"AMapReGeocode::set_roadinters_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // list arg
+                NSArray<NSNumber*>* roadintersRefArray = (NSArray<NSNumber*> *) args[@"roadinters"];
+                NSMutableArray<NSArray<AMapRoadInter*>*>* roadinters = [NSMutableArray arrayWithCapacity:roadintersRefArray.count];
+                for (int __i__ = 0; __i__ < roadintersRefArray.count; __i__++) {
+                    NSArray<AMapRoadInter*>* item = (NSArray<AMapRoadInter*>*) HEAP[[roadintersRefArray objectAtIndex:__i__]];
+                    [roadinters addObject:item];
+                }
+        
+                // ref
+                AMapReGeocode* ref = (AMapReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+                ref.roadinters = roadinters;
+                methodResult(@"success");
+            }
+        
+            methodResult(@"success");
+        },
+        
+        @"AMapReGeocode::set_pois_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // list arg
+                NSArray<NSNumber*>* poisRefArray = (NSArray<NSNumber*> *) args[@"pois"];
+                NSMutableArray<NSArray<AMapPOI*>*>* pois = [NSMutableArray arrayWithCapacity:poisRefArray.count];
+                for (int __i__ = 0; __i__ < poisRefArray.count; __i__++) {
+                    NSArray<AMapPOI*>* item = (NSArray<AMapPOI*>*) HEAP[[poisRefArray objectAtIndex:__i__]];
+                    [pois addObject:item];
+                }
+        
+                // ref
+                AMapReGeocode* ref = (AMapReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+                ref.pois = pois;
+                methodResult(@"success");
+            }
+        
+            methodResult(@"success");
+        },
+        
+        @"AMapReGeocode::set_aois_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // list arg
+                NSArray<NSNumber*>* aoisRefArray = (NSArray<NSNumber*> *) args[@"aois"];
+                NSMutableArray<NSArray<AMapAOI*>*>* aois = [NSMutableArray arrayWithCapacity:aoisRefArray.count];
+                for (int __i__ = 0; __i__ < aoisRefArray.count; __i__++) {
+                    NSArray<AMapAOI*>* item = (NSArray<AMapAOI*>*) HEAP[[aoisRefArray objectAtIndex:__i__]];
+                    [aois addObject:item];
+                }
+        
+                // ref
+                AMapReGeocode* ref = (AMapReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+                ref.aois = aois;
+                methodResult(@"success");
+            }
+        
+            methodResult(@"success");
+        },
+        
+        @"AMapGeocode::set_formattedAddress_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // jsonable arg
+                NSString* formattedAddress = (NSString*) args[@"formattedAddress"];
+        
+                // ref
+                AMapGeocode* ref = (AMapGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+                ref.formattedAddress = formattedAddress;
+                methodResult(@"success");
+            }
+        
+            methodResult(@"success");
+        },
+        
+        @"AMapGeocode::set_province_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // jsonable arg
+                NSString* province = (NSString*) args[@"province"];
+        
+                // ref
+                AMapGeocode* ref = (AMapGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+                ref.province = province;
+                methodResult(@"success");
+            }
+        
+            methodResult(@"success");
+        },
+        
+        @"AMapGeocode::set_city_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // jsonable arg
+                NSString* city = (NSString*) args[@"city"];
+        
+                // ref
+                AMapGeocode* ref = (AMapGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+                ref.city = city;
+                methodResult(@"success");
+            }
+        
+            methodResult(@"success");
+        },
+        
+        @"AMapGeocode::set_citycode_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // jsonable arg
+                NSString* citycode = (NSString*) args[@"citycode"];
+        
+                // ref
+                AMapGeocode* ref = (AMapGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+                ref.citycode = citycode;
+                methodResult(@"success");
+            }
+        
+            methodResult(@"success");
+        },
+        
+        @"AMapGeocode::set_district_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // jsonable arg
+                NSString* district = (NSString*) args[@"district"];
+        
+                // ref
+                AMapGeocode* ref = (AMapGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+                ref.district = district;
+                methodResult(@"success");
+            }
+        
+            methodResult(@"success");
+        },
+        
+        @"AMapGeocode::set_adcode_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // jsonable arg
+                NSString* adcode = (NSString*) args[@"adcode"];
+        
+                // ref
+                AMapGeocode* ref = (AMapGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+                ref.adcode = adcode;
+                methodResult(@"success");
+            }
+        
+            methodResult(@"success");
+        },
+        
+        @"AMapGeocode::set_township_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // jsonable arg
+                NSString* township = (NSString*) args[@"township"];
+        
+                // ref
+                AMapGeocode* ref = (AMapGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+                ref.township = township;
+                methodResult(@"success");
+            }
+        
+            methodResult(@"success");
+        },
+        
+        @"AMapGeocode::set_neighborhood_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // jsonable arg
+                NSString* neighborhood = (NSString*) args[@"neighborhood"];
+        
+                // ref
+                AMapGeocode* ref = (AMapGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+                ref.neighborhood = neighborhood;
+                methodResult(@"success");
+            }
+        
+            methodResult(@"success");
+        },
+        
+        @"AMapGeocode::set_building_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // jsonable arg
+                NSString* building = (NSString*) args[@"building"];
+        
+                // ref
+                AMapGeocode* ref = (AMapGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+                ref.building = building;
+                methodResult(@"success");
+            }
+        
+            methodResult(@"success");
+        },
+        
+        @"AMapGeocode::set_location_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // ref arg
+                AMapGeoPoint* location = (AMapGeoPoint*) HEAP[@([args[@"location"] integerValue])];
+        
+                // ref
+                AMapGeocode* ref = (AMapGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+                ref.location = location;
+                methodResult(@"success");
+            }
+        
+            methodResult(@"success");
+        },
+        
+        @"AMapGeocode::set_level_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // jsonable arg
+                NSString* level = (NSString*) args[@"level"];
+        
+                // ref
+                AMapGeocode* ref = (AMapGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+                ref.level = level;
                 methodResult(@"success");
             }
         

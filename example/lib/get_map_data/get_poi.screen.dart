@@ -72,13 +72,13 @@ class _KeywordPoiScreenState extends State<KeywordPoiScreen>
               Stream.fromIterable(poiList)
                   .asyncMap((it) async =>
                       'title: ' +
-                      (await it.title) +
+                      (it.title) +
                       ', address: ' +
-                      (await it.address) +
+                      (it.address) +
                       ', businessArea: ' +
-                      (await it.businessArea) +
+                      (it.businessArea) +
                       ', ' +
-                      (await it.latLng).toString())
+                      (it.latLng).toString())
                   .toList()
                   .then((it) => setState(() => _poiTitleList = it));
             },
@@ -153,13 +153,13 @@ class _AroundPoiScreenState extends State<AroundPoiScreen>
               Stream.fromIterable(poiList)
                   .asyncMap((it) async =>
                       'title: ' +
-                      (await it.title) +
+                      (it.title) +
                       ', address: ' +
-                      (await it.address) +
+                      (it.address) +
                       ', businessArea: ' +
-                      (await it.businessArea) +
+                      (it.businessArea) +
                       ', ' +
-                      (await it.latLng).toString())
+                      (it.latLng).toString())
                   .toList()
                   .then((it) => setState(() => _poiTitleList = it));
             },

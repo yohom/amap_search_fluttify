@@ -88,73 +88,6 @@ extern BOOL enableLog;
         
             methodResult(jsonableResult);
         },
-        @"AMapNearbySearchManagerDelegate::nearbyInfoForUploading": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-            // ref arg
-            AMapNearbySearchManager* manager = (AMapNearbySearchManager*) HEAP[@([args[@"manager"] integerValue])];
-        
-            // ref
-            id<AMapNearbySearchManagerDelegate> ref = (id<AMapNearbySearchManagerDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: AMapNearbySearchManagerDelegate@%@::nearbyInfoForUploading(%@)", args[@"refId"], args[@"manager"]);
-            }
-        
-            // invoke native method
-            AMapNearbyUploadInfo* result = [ref nearbyInfoForUploading: manager];
-        
-            // result
-            // return a ref
-            HEAP[@((result).hash)] = result;
-            NSNumber* jsonableResult = @((result).hash);
-        
-            methodResult(jsonableResult);
-        },
-        @"AMapNearbySearchManagerDelegate::onNearbyInfoUploadedWithError": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-            // ref arg
-            NSError* error = (NSError*) HEAP[@([args[@"error"] integerValue])];
-        
-            // ref
-            id<AMapNearbySearchManagerDelegate> ref = (id<AMapNearbySearchManagerDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: AMapNearbySearchManagerDelegate@%@::onNearbyInfoUploadedWithError(%@)", args[@"refId"], args[@"error"]);
-            }
-        
-            // invoke native method
-            [ref onNearbyInfoUploadedWithError : error];
-        
-            // result
-            // 无返回值
-            NSString* jsonableResult = @"success";
-        
-            methodResult(jsonableResult);
-        },
-        @"AMapNearbySearchManagerDelegate::onUserInfoClearedWithError": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-            // ref arg
-            NSError* error = (NSError*) HEAP[@([args[@"error"] integerValue])];
-        
-            // ref
-            id<AMapNearbySearchManagerDelegate> ref = (id<AMapNearbySearchManagerDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: AMapNearbySearchManagerDelegate@%@::onUserInfoClearedWithError(%@)", args[@"refId"], args[@"error"]);
-            }
-        
-            // invoke native method
-            [ref onUserInfoClearedWithError : error];
-        
-            // result
-            // 无返回值
-            NSString* jsonableResult = @"success";
-        
-            methodResult(jsonableResult);
-        },
         @"AMapNearbySearchManager::sharedInstance": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
         
@@ -988,414 +921,6 @@ extern BOOL enableLog;
         
             methodResult(jsonableResult);
         },
-        @"AMapSearchDelegate::AMapSearchRequest_didFailWithError": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-            // ref arg
-            id request = (id) HEAP[@([args[@"request"] integerValue])];
-            // ref arg
-            NSError* error = (NSError*) HEAP[@([args[@"error"] integerValue])];
-        
-            // ref
-            id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: AMapSearchDelegate@%@::AMapSearchRequest(%@, %@)", args[@"refId"], args[@"request"], args[@"error"]);
-            }
-        
-            // invoke native method
-            [ref AMapSearchRequest : request didFailWithError: error];
-        
-            // result
-            // 无返回值
-            NSString* jsonableResult = @"success";
-        
-            methodResult(jsonableResult);
-        },
-        @"AMapSearchDelegate::onPOISearchDone_response": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-            // ref arg
-            AMapPOISearchBaseRequest* request = (AMapPOISearchBaseRequest*) HEAP[@([args[@"request"] integerValue])];
-            // ref arg
-            AMapPOISearchResponse* response = (AMapPOISearchResponse*) HEAP[@([args[@"response"] integerValue])];
-        
-            // ref
-            id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onPOISearchDone(%@, %@)", args[@"refId"], args[@"request"], args[@"response"]);
-            }
-        
-            // invoke native method
-            [ref onPOISearchDone : request response: response];
-        
-            // result
-            // 无返回值
-            NSString* jsonableResult = @"success";
-        
-            methodResult(jsonableResult);
-        },
-        @"AMapSearchDelegate::onRoutePOISearchDone_response": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-            // ref arg
-            AMapRoutePOISearchRequest* request = (AMapRoutePOISearchRequest*) HEAP[@([args[@"request"] integerValue])];
-            // ref arg
-            AMapRoutePOISearchResponse* response = (AMapRoutePOISearchResponse*) HEAP[@([args[@"response"] integerValue])];
-        
-            // ref
-            id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onRoutePOISearchDone(%@, %@)", args[@"refId"], args[@"request"], args[@"response"]);
-            }
-        
-            // invoke native method
-            [ref onRoutePOISearchDone : request response: response];
-        
-            // result
-            // 无返回值
-            NSString* jsonableResult = @"success";
-        
-            methodResult(jsonableResult);
-        },
-        @"AMapSearchDelegate::onGeocodeSearchDone_response": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-            // ref arg
-            AMapGeocodeSearchRequest* request = (AMapGeocodeSearchRequest*) HEAP[@([args[@"request"] integerValue])];
-            // ref arg
-            AMapGeocodeSearchResponse* response = (AMapGeocodeSearchResponse*) HEAP[@([args[@"response"] integerValue])];
-        
-            // ref
-            id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onGeocodeSearchDone(%@, %@)", args[@"refId"], args[@"request"], args[@"response"]);
-            }
-        
-            // invoke native method
-            [ref onGeocodeSearchDone : request response: response];
-        
-            // result
-            // 无返回值
-            NSString* jsonableResult = @"success";
-        
-            methodResult(jsonableResult);
-        },
-        @"AMapSearchDelegate::onReGeocodeSearchDone_response": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-            // ref arg
-            AMapReGeocodeSearchRequest* request = (AMapReGeocodeSearchRequest*) HEAP[@([args[@"request"] integerValue])];
-            // ref arg
-            AMapReGeocodeSearchResponse* response = (AMapReGeocodeSearchResponse*) HEAP[@([args[@"response"] integerValue])];
-        
-            // ref
-            id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onReGeocodeSearchDone(%@, %@)", args[@"refId"], args[@"request"], args[@"response"]);
-            }
-        
-            // invoke native method
-            [ref onReGeocodeSearchDone : request response: response];
-        
-            // result
-            // 无返回值
-            NSString* jsonableResult = @"success";
-        
-            methodResult(jsonableResult);
-        },
-        @"AMapSearchDelegate::onInputTipsSearchDone_response": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-            // ref arg
-            AMapInputTipsSearchRequest* request = (AMapInputTipsSearchRequest*) HEAP[@([args[@"request"] integerValue])];
-            // ref arg
-            AMapInputTipsSearchResponse* response = (AMapInputTipsSearchResponse*) HEAP[@([args[@"response"] integerValue])];
-        
-            // ref
-            id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onInputTipsSearchDone(%@, %@)", args[@"refId"], args[@"request"], args[@"response"]);
-            }
-        
-            // invoke native method
-            [ref onInputTipsSearchDone : request response: response];
-        
-            // result
-            // 无返回值
-            NSString* jsonableResult = @"success";
-        
-            methodResult(jsonableResult);
-        },
-        @"AMapSearchDelegate::onBusStopSearchDone_response": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-            // ref arg
-            AMapBusStopSearchRequest* request = (AMapBusStopSearchRequest*) HEAP[@([args[@"request"] integerValue])];
-            // ref arg
-            AMapBusStopSearchResponse* response = (AMapBusStopSearchResponse*) HEAP[@([args[@"response"] integerValue])];
-        
-            // ref
-            id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onBusStopSearchDone(%@, %@)", args[@"refId"], args[@"request"], args[@"response"]);
-            }
-        
-            // invoke native method
-            [ref onBusStopSearchDone : request response: response];
-        
-            // result
-            // 无返回值
-            NSString* jsonableResult = @"success";
-        
-            methodResult(jsonableResult);
-        },
-        @"AMapSearchDelegate::onBusLineSearchDone_response": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-            // ref arg
-            AMapBusLineBaseSearchRequest* request = (AMapBusLineBaseSearchRequest*) HEAP[@([args[@"request"] integerValue])];
-            // ref arg
-            AMapBusLineSearchResponse* response = (AMapBusLineSearchResponse*) HEAP[@([args[@"response"] integerValue])];
-        
-            // ref
-            id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onBusLineSearchDone(%@, %@)", args[@"refId"], args[@"request"], args[@"response"]);
-            }
-        
-            // invoke native method
-            [ref onBusLineSearchDone : request response: response];
-        
-            // result
-            // 无返回值
-            NSString* jsonableResult = @"success";
-        
-            methodResult(jsonableResult);
-        },
-        @"AMapSearchDelegate::onDistrictSearchDone_response": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-            // ref arg
-            AMapDistrictSearchRequest* request = (AMapDistrictSearchRequest*) HEAP[@([args[@"request"] integerValue])];
-            // ref arg
-            AMapDistrictSearchResponse* response = (AMapDistrictSearchResponse*) HEAP[@([args[@"response"] integerValue])];
-        
-            // ref
-            id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onDistrictSearchDone(%@, %@)", args[@"refId"], args[@"request"], args[@"response"]);
-            }
-        
-            // invoke native method
-            [ref onDistrictSearchDone : request response: response];
-        
-            // result
-            // 无返回值
-            NSString* jsonableResult = @"success";
-        
-            methodResult(jsonableResult);
-        },
-        @"AMapSearchDelegate::onRouteSearchDone_response": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-            // ref arg
-            AMapRouteSearchBaseRequest* request = (AMapRouteSearchBaseRequest*) HEAP[@([args[@"request"] integerValue])];
-            // ref arg
-            AMapRouteSearchResponse* response = (AMapRouteSearchResponse*) HEAP[@([args[@"response"] integerValue])];
-        
-            // ref
-            id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onRouteSearchDone(%@, %@)", args[@"refId"], args[@"request"], args[@"response"]);
-            }
-        
-            // invoke native method
-            [ref onRouteSearchDone : request response: response];
-        
-            // result
-            // 无返回值
-            NSString* jsonableResult = @"success";
-        
-            methodResult(jsonableResult);
-        },
-        @"AMapSearchDelegate::onFutureRouteSearchDone_response": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-            // ref arg
-            AMapRouteSearchBaseRequest* request = (AMapRouteSearchBaseRequest*) HEAP[@([args[@"request"] integerValue])];
-            // ref arg
-            AMapFutureRouteSearchResponse* response = (AMapFutureRouteSearchResponse*) HEAP[@([args[@"response"] integerValue])];
-        
-            // ref
-            id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onFutureRouteSearchDone(%@, %@)", args[@"refId"], args[@"request"], args[@"response"]);
-            }
-        
-            // invoke native method
-            [ref onFutureRouteSearchDone : request response: response];
-        
-            // result
-            // 无返回值
-            NSString* jsonableResult = @"success";
-        
-            methodResult(jsonableResult);
-        },
-        @"AMapSearchDelegate::onDistanceSearchDone_response": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-            // ref arg
-            AMapDistanceSearchRequest* request = (AMapDistanceSearchRequest*) HEAP[@([args[@"request"] integerValue])];
-            // ref arg
-            AMapDistanceSearchResponse* response = (AMapDistanceSearchResponse*) HEAP[@([args[@"response"] integerValue])];
-        
-            // ref
-            id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onDistanceSearchDone(%@, %@)", args[@"refId"], args[@"request"], args[@"response"]);
-            }
-        
-            // invoke native method
-            [ref onDistanceSearchDone : request response: response];
-        
-            // result
-            // 无返回值
-            NSString* jsonableResult = @"success";
-        
-            methodResult(jsonableResult);
-        },
-        @"AMapSearchDelegate::onWeatherSearchDone_response": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-            // ref arg
-            AMapWeatherSearchRequest* request = (AMapWeatherSearchRequest*) HEAP[@([args[@"request"] integerValue])];
-            // ref arg
-            AMapWeatherSearchResponse* response = (AMapWeatherSearchResponse*) HEAP[@([args[@"response"] integerValue])];
-        
-            // ref
-            id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onWeatherSearchDone(%@, %@)", args[@"refId"], args[@"request"], args[@"response"]);
-            }
-        
-            // invoke native method
-            [ref onWeatherSearchDone : request response: response];
-        
-            // result
-            // 无返回值
-            NSString* jsonableResult = @"success";
-        
-            methodResult(jsonableResult);
-        },
-        @"AMapSearchDelegate::onRoadTrafficSearchDone_response": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-            // ref arg
-            AMapRoadTrafficSearchBaseRequest* request = (AMapRoadTrafficSearchBaseRequest*) HEAP[@([args[@"request"] integerValue])];
-            // ref arg
-            AMapRoadTrafficSearchResponse* response = (AMapRoadTrafficSearchResponse*) HEAP[@([args[@"response"] integerValue])];
-        
-            // ref
-            id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onRoadTrafficSearchDone(%@, %@)", args[@"refId"], args[@"request"], args[@"response"]);
-            }
-        
-            // invoke native method
-            [ref onRoadTrafficSearchDone : request response: response];
-        
-            // result
-            // 无返回值
-            NSString* jsonableResult = @"success";
-        
-            methodResult(jsonableResult);
-        },
-        @"AMapSearchDelegate::onNearbySearchDone_response": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-            // ref arg
-            AMapNearbySearchRequest* request = (AMapNearbySearchRequest*) HEAP[@([args[@"request"] integerValue])];
-            // ref arg
-            AMapNearbySearchResponse* response = (AMapNearbySearchResponse*) HEAP[@([args[@"response"] integerValue])];
-        
-            // ref
-            id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onNearbySearchDone(%@, %@)", args[@"refId"], args[@"request"], args[@"response"]);
-            }
-        
-            // invoke native method
-            [ref onNearbySearchDone : request response: response];
-        
-            // result
-            // 无返回值
-            NSString* jsonableResult = @"success";
-        
-            methodResult(jsonableResult);
-        },
-        @"AMapSearchDelegate::onCloudSearchDone_response": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-            // ref arg
-            AMapCloudSearchBaseRequest* request = (AMapCloudSearchBaseRequest*) HEAP[@([args[@"request"] integerValue])];
-            // ref arg
-            AMapCloudPOISearchResponse* response = (AMapCloudPOISearchResponse*) HEAP[@([args[@"response"] integerValue])];
-        
-            // ref
-            id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onCloudSearchDone(%@, %@)", args[@"refId"], args[@"request"], args[@"response"]);
-            }
-        
-            // invoke native method
-            [ref onCloudSearchDone : request response: response];
-        
-            // result
-            // 无返回值
-            NSString* jsonableResult = @"success";
-        
-            methodResult(jsonableResult);
-        },
-        @"AMapSearchDelegate::onShareSearchDone_response": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // args
-            // ref arg
-            AMapShareSearchBaseRequest* request = (AMapShareSearchBaseRequest*) HEAP[@([args[@"request"] integerValue])];
-            // ref arg
-            AMapShareSearchResponse* response = (AMapShareSearchResponse*) HEAP[@([args[@"response"] integerValue])];
-        
-            // ref
-            id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-            // print log
-            if (enableLog) {
-                NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onShareSearchDone(%@, %@)", args[@"refId"], args[@"request"], args[@"response"]);
-            }
-        
-            // invoke native method
-            [ref onShareSearchDone : request response: response];
-        
-            // result
-            // 无返回值
-            NSString* jsonableResult = @"success";
-        
-            methodResult(jsonableResult);
-        },
         @"AMapSearchObject::formattedDescription_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
@@ -1473,82 +998,6 @@ extern BOOL enableLog;
                 // return a ref
                 HEAP[@((result).hash)] = result;
                 NSNumber* jsonableResult = @((result).hash);
-        
-                [resultList addObject:jsonableResult];
-            }
-        
-            methodResult(resultList);
-        },
-        @"AMapNearbySearchManagerDelegate::nearbyInfoForUploading_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // ref arg
-                AMapNearbySearchManager* manager = (AMapNearbySearchManager*) HEAP[@([args[@"manager"] integerValue])];
-        
-                // ref
-                id<AMapNearbySearchManagerDelegate> ref = (id<AMapNearbySearchManagerDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                // invoke native method
-                AMapNearbyUploadInfo* result = [ref nearbyInfoForUploading: manager];
-        
-                // result
-                // return a ref
-                HEAP[@((result).hash)] = result;
-                NSNumber* jsonableResult = @((result).hash);
-        
-                [resultList addObject:jsonableResult];
-            }
-        
-            methodResult(resultList);
-        },
-        @"AMapNearbySearchManagerDelegate::onNearbyInfoUploadedWithError_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // ref arg
-                NSError* error = (NSError*) HEAP[@([args[@"error"] integerValue])];
-        
-                // ref
-                id<AMapNearbySearchManagerDelegate> ref = (id<AMapNearbySearchManagerDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                // invoke native method
-                [ref onNearbyInfoUploadedWithError : error];
-        
-                // result
-                // 无返回值
-                NSString* jsonableResult = @"success";
-        
-                [resultList addObject:jsonableResult];
-            }
-        
-            methodResult(resultList);
-        },
-        @"AMapNearbySearchManagerDelegate::onUserInfoClearedWithError_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // ref arg
-                NSError* error = (NSError*) HEAP[@([args[@"error"] integerValue])];
-        
-                // ref
-                id<AMapNearbySearchManagerDelegate> ref = (id<AMapNearbySearchManagerDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                // invoke native method
-                [ref onUserInfoClearedWithError : error];
-        
-                // result
-                // 无返回值
-                NSString* jsonableResult = @"success";
         
                 [resultList addObject:jsonableResult];
             }
@@ -2492,465 +1941,6 @@ extern BOOL enableLog;
         
                 // invoke native method
                 [ref AMapNavigationShareSearch : request];
-        
-                // result
-                // 无返回值
-                NSString* jsonableResult = @"success";
-        
-                [resultList addObject:jsonableResult];
-            }
-        
-            methodResult(resultList);
-        },
-        @"AMapSearchDelegate::AMapSearchRequest_didFailWithError_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // ref arg
-                id request = (id) HEAP[@([args[@"request"] integerValue])];
-                // ref arg
-                NSError* error = (NSError*) HEAP[@([args[@"error"] integerValue])];
-        
-                // ref
-                id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                // invoke native method
-                [ref AMapSearchRequest : request didFailWithError: error];
-        
-                // result
-                // 无返回值
-                NSString* jsonableResult = @"success";
-        
-                [resultList addObject:jsonableResult];
-            }
-        
-            methodResult(resultList);
-        },
-        @"AMapSearchDelegate::onPOISearchDone_response_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // ref arg
-                AMapPOISearchBaseRequest* request = (AMapPOISearchBaseRequest*) HEAP[@([args[@"request"] integerValue])];
-                // ref arg
-                AMapPOISearchResponse* response = (AMapPOISearchResponse*) HEAP[@([args[@"response"] integerValue])];
-        
-                // ref
-                id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                // invoke native method
-                [ref onPOISearchDone : request response: response];
-        
-                // result
-                // 无返回值
-                NSString* jsonableResult = @"success";
-        
-                [resultList addObject:jsonableResult];
-            }
-        
-            methodResult(resultList);
-        },
-        @"AMapSearchDelegate::onRoutePOISearchDone_response_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // ref arg
-                AMapRoutePOISearchRequest* request = (AMapRoutePOISearchRequest*) HEAP[@([args[@"request"] integerValue])];
-                // ref arg
-                AMapRoutePOISearchResponse* response = (AMapRoutePOISearchResponse*) HEAP[@([args[@"response"] integerValue])];
-        
-                // ref
-                id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                // invoke native method
-                [ref onRoutePOISearchDone : request response: response];
-        
-                // result
-                // 无返回值
-                NSString* jsonableResult = @"success";
-        
-                [resultList addObject:jsonableResult];
-            }
-        
-            methodResult(resultList);
-        },
-        @"AMapSearchDelegate::onGeocodeSearchDone_response_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // ref arg
-                AMapGeocodeSearchRequest* request = (AMapGeocodeSearchRequest*) HEAP[@([args[@"request"] integerValue])];
-                // ref arg
-                AMapGeocodeSearchResponse* response = (AMapGeocodeSearchResponse*) HEAP[@([args[@"response"] integerValue])];
-        
-                // ref
-                id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                // invoke native method
-                [ref onGeocodeSearchDone : request response: response];
-        
-                // result
-                // 无返回值
-                NSString* jsonableResult = @"success";
-        
-                [resultList addObject:jsonableResult];
-            }
-        
-            methodResult(resultList);
-        },
-        @"AMapSearchDelegate::onReGeocodeSearchDone_response_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // ref arg
-                AMapReGeocodeSearchRequest* request = (AMapReGeocodeSearchRequest*) HEAP[@([args[@"request"] integerValue])];
-                // ref arg
-                AMapReGeocodeSearchResponse* response = (AMapReGeocodeSearchResponse*) HEAP[@([args[@"response"] integerValue])];
-        
-                // ref
-                id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                // invoke native method
-                [ref onReGeocodeSearchDone : request response: response];
-        
-                // result
-                // 无返回值
-                NSString* jsonableResult = @"success";
-        
-                [resultList addObject:jsonableResult];
-            }
-        
-            methodResult(resultList);
-        },
-        @"AMapSearchDelegate::onInputTipsSearchDone_response_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // ref arg
-                AMapInputTipsSearchRequest* request = (AMapInputTipsSearchRequest*) HEAP[@([args[@"request"] integerValue])];
-                // ref arg
-                AMapInputTipsSearchResponse* response = (AMapInputTipsSearchResponse*) HEAP[@([args[@"response"] integerValue])];
-        
-                // ref
-                id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                // invoke native method
-                [ref onInputTipsSearchDone : request response: response];
-        
-                // result
-                // 无返回值
-                NSString* jsonableResult = @"success";
-        
-                [resultList addObject:jsonableResult];
-            }
-        
-            methodResult(resultList);
-        },
-        @"AMapSearchDelegate::onBusStopSearchDone_response_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // ref arg
-                AMapBusStopSearchRequest* request = (AMapBusStopSearchRequest*) HEAP[@([args[@"request"] integerValue])];
-                // ref arg
-                AMapBusStopSearchResponse* response = (AMapBusStopSearchResponse*) HEAP[@([args[@"response"] integerValue])];
-        
-                // ref
-                id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                // invoke native method
-                [ref onBusStopSearchDone : request response: response];
-        
-                // result
-                // 无返回值
-                NSString* jsonableResult = @"success";
-        
-                [resultList addObject:jsonableResult];
-            }
-        
-            methodResult(resultList);
-        },
-        @"AMapSearchDelegate::onBusLineSearchDone_response_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // ref arg
-                AMapBusLineBaseSearchRequest* request = (AMapBusLineBaseSearchRequest*) HEAP[@([args[@"request"] integerValue])];
-                // ref arg
-                AMapBusLineSearchResponse* response = (AMapBusLineSearchResponse*) HEAP[@([args[@"response"] integerValue])];
-        
-                // ref
-                id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                // invoke native method
-                [ref onBusLineSearchDone : request response: response];
-        
-                // result
-                // 无返回值
-                NSString* jsonableResult = @"success";
-        
-                [resultList addObject:jsonableResult];
-            }
-        
-            methodResult(resultList);
-        },
-        @"AMapSearchDelegate::onDistrictSearchDone_response_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // ref arg
-                AMapDistrictSearchRequest* request = (AMapDistrictSearchRequest*) HEAP[@([args[@"request"] integerValue])];
-                // ref arg
-                AMapDistrictSearchResponse* response = (AMapDistrictSearchResponse*) HEAP[@([args[@"response"] integerValue])];
-        
-                // ref
-                id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                // invoke native method
-                [ref onDistrictSearchDone : request response: response];
-        
-                // result
-                // 无返回值
-                NSString* jsonableResult = @"success";
-        
-                [resultList addObject:jsonableResult];
-            }
-        
-            methodResult(resultList);
-        },
-        @"AMapSearchDelegate::onRouteSearchDone_response_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // ref arg
-                AMapRouteSearchBaseRequest* request = (AMapRouteSearchBaseRequest*) HEAP[@([args[@"request"] integerValue])];
-                // ref arg
-                AMapRouteSearchResponse* response = (AMapRouteSearchResponse*) HEAP[@([args[@"response"] integerValue])];
-        
-                // ref
-                id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                // invoke native method
-                [ref onRouteSearchDone : request response: response];
-        
-                // result
-                // 无返回值
-                NSString* jsonableResult = @"success";
-        
-                [resultList addObject:jsonableResult];
-            }
-        
-            methodResult(resultList);
-        },
-        @"AMapSearchDelegate::onFutureRouteSearchDone_response_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // ref arg
-                AMapRouteSearchBaseRequest* request = (AMapRouteSearchBaseRequest*) HEAP[@([args[@"request"] integerValue])];
-                // ref arg
-                AMapFutureRouteSearchResponse* response = (AMapFutureRouteSearchResponse*) HEAP[@([args[@"response"] integerValue])];
-        
-                // ref
-                id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                // invoke native method
-                [ref onFutureRouteSearchDone : request response: response];
-        
-                // result
-                // 无返回值
-                NSString* jsonableResult = @"success";
-        
-                [resultList addObject:jsonableResult];
-            }
-        
-            methodResult(resultList);
-        },
-        @"AMapSearchDelegate::onDistanceSearchDone_response_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // ref arg
-                AMapDistanceSearchRequest* request = (AMapDistanceSearchRequest*) HEAP[@([args[@"request"] integerValue])];
-                // ref arg
-                AMapDistanceSearchResponse* response = (AMapDistanceSearchResponse*) HEAP[@([args[@"response"] integerValue])];
-        
-                // ref
-                id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                // invoke native method
-                [ref onDistanceSearchDone : request response: response];
-        
-                // result
-                // 无返回值
-                NSString* jsonableResult = @"success";
-        
-                [resultList addObject:jsonableResult];
-            }
-        
-            methodResult(resultList);
-        },
-        @"AMapSearchDelegate::onWeatherSearchDone_response_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // ref arg
-                AMapWeatherSearchRequest* request = (AMapWeatherSearchRequest*) HEAP[@([args[@"request"] integerValue])];
-                // ref arg
-                AMapWeatherSearchResponse* response = (AMapWeatherSearchResponse*) HEAP[@([args[@"response"] integerValue])];
-        
-                // ref
-                id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                // invoke native method
-                [ref onWeatherSearchDone : request response: response];
-        
-                // result
-                // 无返回值
-                NSString* jsonableResult = @"success";
-        
-                [resultList addObject:jsonableResult];
-            }
-        
-            methodResult(resultList);
-        },
-        @"AMapSearchDelegate::onRoadTrafficSearchDone_response_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // ref arg
-                AMapRoadTrafficSearchBaseRequest* request = (AMapRoadTrafficSearchBaseRequest*) HEAP[@([args[@"request"] integerValue])];
-                // ref arg
-                AMapRoadTrafficSearchResponse* response = (AMapRoadTrafficSearchResponse*) HEAP[@([args[@"response"] integerValue])];
-        
-                // ref
-                id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                // invoke native method
-                [ref onRoadTrafficSearchDone : request response: response];
-        
-                // result
-                // 无返回值
-                NSString* jsonableResult = @"success";
-        
-                [resultList addObject:jsonableResult];
-            }
-        
-            methodResult(resultList);
-        },
-        @"AMapSearchDelegate::onNearbySearchDone_response_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // ref arg
-                AMapNearbySearchRequest* request = (AMapNearbySearchRequest*) HEAP[@([args[@"request"] integerValue])];
-                // ref arg
-                AMapNearbySearchResponse* response = (AMapNearbySearchResponse*) HEAP[@([args[@"response"] integerValue])];
-        
-                // ref
-                id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                // invoke native method
-                [ref onNearbySearchDone : request response: response];
-        
-                // result
-                // 无返回值
-                NSString* jsonableResult = @"success";
-        
-                [resultList addObject:jsonableResult];
-            }
-        
-            methodResult(resultList);
-        },
-        @"AMapSearchDelegate::onCloudSearchDone_response_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // ref arg
-                AMapCloudSearchBaseRequest* request = (AMapCloudSearchBaseRequest*) HEAP[@([args[@"request"] integerValue])];
-                // ref arg
-                AMapCloudPOISearchResponse* response = (AMapCloudPOISearchResponse*) HEAP[@([args[@"response"] integerValue])];
-        
-                // ref
-                id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                // invoke native method
-                [ref onCloudSearchDone : request response: response];
-        
-                // result
-                // 无返回值
-                NSString* jsonableResult = @"success";
-        
-                [resultList addObject:jsonableResult];
-            }
-        
-            methodResult(resultList);
-        },
-        @"AMapSearchDelegate::onShareSearchDone_response_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // ref arg
-                AMapShareSearchBaseRequest* request = (AMapShareSearchBaseRequest*) HEAP[@([args[@"request"] integerValue])];
-                // ref arg
-                AMapShareSearchResponse* response = (AMapShareSearchResponse*) HEAP[@([args[@"response"] integerValue])];
-        
-                // ref
-                id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                // invoke native method
-                [ref onShareSearchDone : request response: response];
         
                 // result
                 // 无返回值
@@ -4423,6 +3413,754 @@ extern BOOL enableLog;
         
             // 返回值: Value
             id jsonableResult = @(result);
+        
+            methodResult(jsonableResult);
+        },
+        
+        @"AMapDrivingRouteSearchRequest::get_plateProvince": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapDrivingRouteSearchRequest::get_plateProvince");
+            }
+        
+            // ref object
+            AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            // invoke native method
+            NSString* result = ref.plateProvince;
+        
+            // 返回值: jsonable
+            id jsonableResult = result;
+        
+            methodResult(jsonableResult);
+        },
+        
+        @"AMapDrivingRouteSearchRequest::get_plateNumber": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapDrivingRouteSearchRequest::get_plateNumber");
+            }
+        
+            // ref object
+            AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            // invoke native method
+            NSString* result = ref.plateNumber;
+        
+            // 返回值: jsonable
+            id jsonableResult = result;
+        
+            methodResult(jsonableResult);
+        },
+        
+        @"AMapDrivingRouteSearchRequest::get_ferry": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapDrivingRouteSearchRequest::get_ferry");
+            }
+        
+            // ref object
+            AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            // invoke native method
+            NSInteger result = ref.ferry;
+        
+            // 返回值: Value
+            id jsonableResult = @(result);
+        
+            methodResult(jsonableResult);
+        },
+        
+        @"AMapDrivingRouteSearchRequest::get_cartype": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapDrivingRouteSearchRequest::get_cartype");
+            }
+        
+            // ref object
+            AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            // invoke native method
+            NSInteger result = ref.cartype;
+        
+            // 返回值: Value
+            id jsonableResult = @(result);
+        
+            methodResult(jsonableResult);
+        },
+        
+        @"AMapWalkingRouteSearchRequest::get_multipath": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapWalkingRouteSearchRequest::get_multipath");
+            }
+        
+            // ref object
+            AMapWalkingRouteSearchRequest* ref = (AMapWalkingRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            // invoke native method
+            NSInteger result = ref.multipath;
+        
+            // 返回值: Value
+            id jsonableResult = @(result);
+        
+            methodResult(jsonableResult);
+        },
+        
+        @"AMapTransitRouteSearchRequest::get_strategy": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapTransitRouteSearchRequest::get_strategy");
+            }
+        
+            // ref object
+            AMapTransitRouteSearchRequest* ref = (AMapTransitRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            // invoke native method
+            NSInteger result = ref.strategy;
+        
+            // 返回值: Value
+            id jsonableResult = @(result);
+        
+            methodResult(jsonableResult);
+        },
+        
+        @"AMapTransitRouteSearchRequest::get_city": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapTransitRouteSearchRequest::get_city");
+            }
+        
+            // ref object
+            AMapTransitRouteSearchRequest* ref = (AMapTransitRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            // invoke native method
+            NSString* result = ref.city;
+        
+            // 返回值: jsonable
+            id jsonableResult = result;
+        
+            methodResult(jsonableResult);
+        },
+        
+        @"AMapTransitRouteSearchRequest::get_destinationCity": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapTransitRouteSearchRequest::get_destinationCity");
+            }
+        
+            // ref object
+            AMapTransitRouteSearchRequest* ref = (AMapTransitRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            // invoke native method
+            NSString* result = ref.destinationCity;
+        
+            // 返回值: jsonable
+            id jsonableResult = result;
+        
+            methodResult(jsonableResult);
+        },
+        
+        @"AMapTransitRouteSearchRequest::get_nightflag": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapTransitRouteSearchRequest::get_nightflag");
+            }
+        
+            // ref object
+            AMapTransitRouteSearchRequest* ref = (AMapTransitRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            // invoke native method
+            BOOL result = ref.nightflag;
+        
+            // 返回值: Value
+            id jsonableResult = @(result);
+        
+            methodResult(jsonableResult);
+        },
+        
+        @"AMapTransitRouteSearchRequest::get_requireExtension": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapTransitRouteSearchRequest::get_requireExtension");
+            }
+        
+            // ref object
+            AMapTransitRouteSearchRequest* ref = (AMapTransitRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            // invoke native method
+            BOOL result = ref.requireExtension;
+        
+            // 返回值: Value
+            id jsonableResult = @(result);
+        
+            methodResult(jsonableResult);
+        },
+        
+        @"AMapRidingRouteSearchRequest::get_type": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapRidingRouteSearchRequest::get_type");
+            }
+        
+            // ref object
+            AMapRidingRouteSearchRequest* ref = (AMapRidingRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            // invoke native method
+            NSInteger result = ref.type;
+        
+            // 返回值: Value
+            id jsonableResult = @(result);
+        
+            methodResult(jsonableResult);
+        },
+        
+        @"AMapRouteSearchResponse::get_count": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapRouteSearchResponse::get_count");
+            }
+        
+            // ref object
+            AMapRouteSearchResponse* ref = (AMapRouteSearchResponse*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            // invoke native method
+            NSInteger result = ref.count;
+        
+            // 返回值: Value
+            id jsonableResult = @(result);
+        
+            methodResult(jsonableResult);
+        },
+        
+        @"AMapRouteSearchResponse::get_route": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapRouteSearchResponse::get_route");
+            }
+        
+            // ref object
+            AMapRouteSearchResponse* ref = (AMapRouteSearchResponse*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            // invoke native method
+            AMapRoute* result = ref.route;
+        
+            // return a ref
+            HEAP[@((result).hash)] = result;
+            NSNumber* jsonableResult = @((result).hash);
+        
+            methodResult(jsonableResult);
+        },
+        
+        @"AMapTruckRouteSearchRequest::get_strategy": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapTruckRouteSearchRequest::get_strategy");
+            }
+        
+            // ref object
+            AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            // invoke native method
+            NSInteger result = ref.strategy;
+        
+            // 返回值: Value
+            id jsonableResult = @(result);
+        
+            methodResult(jsonableResult);
+        },
+        
+        @"AMapTruckRouteSearchRequest::get_waypoints": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapTruckRouteSearchRequest::get_waypoints");
+            }
+        
+            // ref object
+            AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            // invoke native method
+            NSArray<AMapGeoPoint*>* result = ref.waypoints;
+        
+            // 返回值: 列表
+            NSMutableArray* jsonableResult = [NSMutableArray array];
+            for (int __i__ = 0; __i__ < result.count; __i__++) {
+                NSObject* object = [result objectAtIndex:__i__];
+                [jsonableResult addObject: @(object.hash)];
+                HEAP[@([object hash])] = object;
+            }
+        
+            methodResult(jsonableResult);
+        },
+        
+        @"AMapTruckRouteSearchRequest::get_originId": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapTruckRouteSearchRequest::get_originId");
+            }
+        
+            // ref object
+            AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            // invoke native method
+            NSString* result = ref.originId;
+        
+            // 返回值: jsonable
+            id jsonableResult = result;
+        
+            methodResult(jsonableResult);
+        },
+        
+        @"AMapTruckRouteSearchRequest::get_destinationId": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapTruckRouteSearchRequest::get_destinationId");
+            }
+        
+            // ref object
+            AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            // invoke native method
+            NSString* result = ref.destinationId;
+        
+            // 返回值: jsonable
+            id jsonableResult = result;
+        
+            methodResult(jsonableResult);
+        },
+        
+        @"AMapTruckRouteSearchRequest::get_origintype": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapTruckRouteSearchRequest::get_origintype");
+            }
+        
+            // ref object
+            AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            // invoke native method
+            NSString* result = ref.origintype;
+        
+            // 返回值: jsonable
+            id jsonableResult = result;
+        
+            methodResult(jsonableResult);
+        },
+        
+        @"AMapTruckRouteSearchRequest::get_destinationtype": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapTruckRouteSearchRequest::get_destinationtype");
+            }
+        
+            // ref object
+            AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            // invoke native method
+            NSString* result = ref.destinationtype;
+        
+            // 返回值: jsonable
+            id jsonableResult = result;
+        
+            methodResult(jsonableResult);
+        },
+        
+        @"AMapTruckRouteSearchRequest::get_plateProvince": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapTruckRouteSearchRequest::get_plateProvince");
+            }
+        
+            // ref object
+            AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            // invoke native method
+            NSString* result = ref.plateProvince;
+        
+            // 返回值: jsonable
+            id jsonableResult = result;
+        
+            methodResult(jsonableResult);
+        },
+        
+        @"AMapTruckRouteSearchRequest::get_plateNumber": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapTruckRouteSearchRequest::get_plateNumber");
+            }
+        
+            // ref object
+            AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            // invoke native method
+            NSString* result = ref.plateNumber;
+        
+            // 返回值: jsonable
+            id jsonableResult = result;
+        
+            methodResult(jsonableResult);
+        },
+        
+        @"AMapTruckRouteSearchRequest::get_size": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapTruckRouteSearchRequest::get_size");
+            }
+        
+            // ref object
+            AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            // invoke native method
+            AMapTruckSizeType result = ref.size;
+        
+            // 返回值: Value
+            id jsonableResult = @(result);
+        
+            methodResult(jsonableResult);
+        },
+        
+        @"AMapTruckRouteSearchRequest::get_height": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapTruckRouteSearchRequest::get_height");
+            }
+        
+            // ref object
+            AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            // invoke native method
+            CGFloat result = ref.height;
+        
+            // 返回值: Value
+            id jsonableResult = @(result);
+        
+            methodResult(jsonableResult);
+        },
+        
+        @"AMapTruckRouteSearchRequest::get_width": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapTruckRouteSearchRequest::get_width");
+            }
+        
+            // ref object
+            AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            // invoke native method
+            CGFloat result = ref.width;
+        
+            // 返回值: Value
+            id jsonableResult = @(result);
+        
+            methodResult(jsonableResult);
+        },
+        
+        @"AMapTruckRouteSearchRequest::get_load": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapTruckRouteSearchRequest::get_load");
+            }
+        
+            // ref object
+            AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            // invoke native method
+            CGFloat result = ref.load;
+        
+            // 返回值: Value
+            id jsonableResult = @(result);
+        
+            methodResult(jsonableResult);
+        },
+        
+        @"AMapTruckRouteSearchRequest::get_weight": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapTruckRouteSearchRequest::get_weight");
+            }
+        
+            // ref object
+            AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            // invoke native method
+            CGFloat result = ref.weight;
+        
+            // 返回值: Value
+            id jsonableResult = @(result);
+        
+            methodResult(jsonableResult);
+        },
+        
+        @"AMapTruckRouteSearchRequest::get_axis": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapTruckRouteSearchRequest::get_axis");
+            }
+        
+            // ref object
+            AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            // invoke native method
+            NSInteger result = ref.axis;
+        
+            // 返回值: Value
+            id jsonableResult = @(result);
+        
+            methodResult(jsonableResult);
+        },
+        
+        @"AMapDistanceSearchRequest::get_origins": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapDistanceSearchRequest::get_origins");
+            }
+        
+            // ref object
+            AMapDistanceSearchRequest* ref = (AMapDistanceSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            // invoke native method
+            NSArray<AMapGeoPoint*>* result = ref.origins;
+        
+            // 返回值: 列表
+            NSMutableArray* jsonableResult = [NSMutableArray array];
+            for (int __i__ = 0; __i__ < result.count; __i__++) {
+                NSObject* object = [result objectAtIndex:__i__];
+                [jsonableResult addObject: @(object.hash)];
+                HEAP[@([object hash])] = object;
+            }
+        
+            methodResult(jsonableResult);
+        },
+        
+        @"AMapDistanceSearchRequest::get_destination": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapDistanceSearchRequest::get_destination");
+            }
+        
+            // ref object
+            AMapDistanceSearchRequest* ref = (AMapDistanceSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            // invoke native method
+            AMapGeoPoint* result = ref.destination;
+        
+            // return a ref
+            HEAP[@((result).hash)] = result;
+            NSNumber* jsonableResult = @((result).hash);
+        
+            methodResult(jsonableResult);
+        },
+        
+        @"AMapDistanceSearchRequest::get_type": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapDistanceSearchRequest::get_type");
+            }
+        
+            // ref object
+            AMapDistanceSearchRequest* ref = (AMapDistanceSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            // invoke native method
+            NSInteger result = ref.type;
+        
+            // 返回值: Value
+            id jsonableResult = @(result);
+        
+            methodResult(jsonableResult);
+        },
+        
+        @"AMapDistanceSearchResponse::get_results": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapDistanceSearchResponse::get_results");
+            }
+        
+            // ref object
+            AMapDistanceSearchResponse* ref = (AMapDistanceSearchResponse*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            // invoke native method
+            NSArray<AMapDistanceResult*>* result = ref.results;
+        
+            // 返回值: 列表
+            NSMutableArray* jsonableResult = [NSMutableArray array];
+            for (int __i__ = 0; __i__ < result.count; __i__++) {
+                NSObject* object = [result objectAtIndex:__i__];
+                [jsonableResult addObject: @(object.hash)];
+                HEAP[@([object hash])] = object;
+            }
+        
+            methodResult(jsonableResult);
+        },
+        
+        @"AMapWeatherSearchRequest::get_city": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapWeatherSearchRequest::get_city");
+            }
+        
+            // ref object
+            AMapWeatherSearchRequest* ref = (AMapWeatherSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            // invoke native method
+            NSString* result = ref.city;
+        
+            // 返回值: jsonable
+            id jsonableResult = result;
+        
+            methodResult(jsonableResult);
+        },
+        
+        @"AMapWeatherSearchRequest::get_type": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapWeatherSearchRequest::get_type");
+            }
+        
+            // ref object
+            AMapWeatherSearchRequest* ref = (AMapWeatherSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            // invoke native method
+            AMapWeatherType result = ref.type;
+        
+            // 返回值: Value
+            id jsonableResult = @(result);
+        
+            methodResult(jsonableResult);
+        },
+        
+        @"AMapWeatherSearchResponse::get_lives": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapWeatherSearchResponse::get_lives");
+            }
+        
+            // ref object
+            AMapWeatherSearchResponse* ref = (AMapWeatherSearchResponse*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            // invoke native method
+            NSArray<AMapLocalWeatherLive*>* result = ref.lives;
+        
+            // 返回值: 列表
+            NSMutableArray* jsonableResult = [NSMutableArray array];
+            for (int __i__ = 0; __i__ < result.count; __i__++) {
+                NSObject* object = [result objectAtIndex:__i__];
+                [jsonableResult addObject: @(object.hash)];
+                HEAP[@([object hash])] = object;
+            }
+        
+            methodResult(jsonableResult);
+        },
+        
+        @"AMapWeatherSearchResponse::get_forecasts": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapWeatherSearchResponse::get_forecasts");
+            }
+        
+            // ref object
+            AMapWeatherSearchResponse* ref = (AMapWeatherSearchResponse*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            // invoke native method
+            NSArray<AMapLocalWeatherForecast*>* result = ref.forecasts;
+        
+            // 返回值: 列表
+            NSMutableArray* jsonableResult = [NSMutableArray array];
+            for (int __i__ = 0; __i__ < result.count; __i__++) {
+                NSObject* object = [result objectAtIndex:__i__];
+                [jsonableResult addObject: @(object.hash)];
+                HEAP[@([object hash])] = object;
+            }
+        
+            methodResult(jsonableResult);
+        },
+        
+        @"AMapRoadTrafficSearchBaseRequest::get_level": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapRoadTrafficSearchBaseRequest::get_level");
+            }
+        
+            // ref object
+            AMapRoadTrafficSearchBaseRequest* ref = (AMapRoadTrafficSearchBaseRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            // invoke native method
+            NSInteger result = ref.level;
+        
+            // 返回值: Value
+            id jsonableResult = @(result);
+        
+            methodResult(jsonableResult);
+        },
+        
+        @"AMapRoadTrafficSearchBaseRequest::get_requireExtension": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapRoadTrafficSearchBaseRequest::get_requireExtension");
+            }
+        
+            // ref object
+            AMapRoadTrafficSearchBaseRequest* ref = (AMapRoadTrafficSearchBaseRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            // invoke native method
+            BOOL result = ref.requireExtension;
+        
+            // 返回值: Value
+            id jsonableResult = @(result);
+        
+            methodResult(jsonableResult);
+        },
+        
+        @"AMapRoadTrafficSearchRequest::get_roadName": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapRoadTrafficSearchRequest::get_roadName");
+            }
+        
+            // ref object
+            AMapRoadTrafficSearchRequest* ref = (AMapRoadTrafficSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            // invoke native method
+            NSString* result = ref.roadName;
+        
+            // 返回值: jsonable
+            id jsonableResult = result;
+        
+            methodResult(jsonableResult);
+        },
+        
+        @"AMapRoadTrafficSearchRequest::get_adcode": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapRoadTrafficSearchRequest::get_adcode");
+            }
+        
+            // ref object
+            AMapRoadTrafficSearchRequest* ref = (AMapRoadTrafficSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            // invoke native method
+            NSString* result = ref.adcode;
+        
+            // 返回值: jsonable
+            id jsonableResult = result;
+        
+            methodResult(jsonableResult);
+        },
+        
+        @"AMapRoadTrafficCircleSearchRequest::get_location": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapRoadTrafficCircleSearchRequest::get_location");
+            }
+        
+            // ref object
+            AMapRoadTrafficCircleSearchRequest* ref = (AMapRoadTrafficCircleSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            // invoke native method
+            AMapGeoPoint* result = ref.location;
+        
+            // return a ref
+            HEAP[@((result).hash)] = result;
+            NSNumber* jsonableResult = @((result).hash);
         
             methodResult(jsonableResult);
         },
