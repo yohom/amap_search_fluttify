@@ -7,133 +7,65 @@ mixin _ToFutureString {
 }
 
 /// 兴趣点 model
-class Poi with _ToFutureString {
-  Poi.android(this._androidModel) : _iosModel = null;
-
-  Poi.ios(this._iosModel) : _androidModel = null;
-
-  final com_amap_api_services_core_PoiItem _androidModel;
-  final AMapPOI _iosModel;
+class Poi {
+  Poi({
+    this.address,
+    this.title,
+    this.latLng,
+    this.cityName,
+    this.cityCode,
+    this.provinceName,
+    this.provinceCode,
+    this.tel,
+    this.poiId,
+    this.businessArea,
+    this.distance,
+    this.adName,
+    this.adCode,
+  });
 
   /// 地址
-  Future<String> get address {
-    return platform(
-      android: (pool) => _androidModel.getSnippet(),
-      ios: (pool) => _iosModel.get_address(),
-    );
-  }
+  String address;
 
   ///标题
-  Future<String> get title {
-    return platform(
-      android: (pool) => _androidModel.getTitle(),
-      ios: (pool) => _iosModel.get_name(),
-    );
-  }
+  String title;
 
   /// 经纬度
-  Future<LatLng> get latLng {
-    return platform(
-      android: (pool) async {
-        final location = await _androidModel.getLatLonPoint();
-        return LatLng(
-          await location.getLatitude(),
-          await location.getLongitude(),
-        );
-      },
-      ios: (pool) async {
-        final location = await _iosModel.get_location();
-        return LatLng(
-          await location.get_latitude(),
-          await location.get_longitude(),
-        );
-      },
-    );
-  }
+  LatLng latLng;
 
   /// 城市名
-  Future<String> get cityName {
-    return platform(
-      android: (pool) => _androidModel.getCityName(),
-      ios: (pool) => _iosModel.get_city(),
-    );
-  }
+  String cityName;
 
   /// 城市编码
-  Future<String> get cityCode {
-    return platform(
-      android: (pool) => _androidModel.getCityCode(),
-      ios: (pool) => _iosModel.get_citycode(),
-    );
-  }
+  String cityCode;
 
   /// 省份名称
-  Future<String> get provinceName {
-    return platform(
-      android: (pool) => _androidModel.getProvinceName(),
-      ios: (pool) => _iosModel.get_province(),
-    );
-  }
+  String provinceName;
 
   /// 省份编码
-  Future<String> get provinceCode {
-    return platform(
-      android: (pool) => _androidModel.getProvinceCode(),
-      ios: (pool) => _iosModel.get_pcode(),
-    );
-  }
+  String provinceCode;
 
   /// 电话
-  Future<String> get tel {
-    return platform(
-      android: (pool) => _androidModel.getTel(),
-      ios: (pool) => _iosModel.get_tel(),
-    );
-  }
+  String tel;
 
   /// 兴趣点id
-  Future<String> get poiId {
-    return platform(
-      android: (pool) => _androidModel.getPoiId(),
-      ios: (pool) => _iosModel.get_uid(),
-    );
-  }
+  String poiId;
 
   /// 商业区
-  Future<String> get businessArea {
-    return platform(
-      android: (pool) => _androidModel.getBusinessArea(),
-      ios: (pool) => _iosModel.get_businessArea(),
-    );
-  }
+  String businessArea;
 
   /// 距离
-  Future<int> get distance {
-    return platform(
-      android: (pool) => _androidModel.getDistance(),
-      ios: (pool) => _iosModel.get_distance(),
-    );
-  }
+  int distance;
 
   /// 行政区划名称
-  Future<String> get adName {
-    return platform(
-      android: (pool) => _androidModel.getAdName(),
-      ios: (pool) => _iosModel.get_district(),
-    );
-  }
+  String adName;
 
   /// 行政区划编号
-  Future<String> get adCode {
-    return platform(
-      android: (pool) => _androidModel.getAdCode(),
-      ios: (pool) => _iosModel.get_adcode(),
-    );
-  }
+  String adCode;
 
   @override
-  Future<String> toFutureString() async {
-    return 'Poi{title: ${await title}, latLng: ${await latLng}, cityName: ${await cityName}, cityCode: ${await cityCode}, provinceName: ${await provinceName}, provinceCode: ${await provinceCode}, tel: ${await tel}, poiId: ${await poiId}, businessArea: ${await businessArea}, distance: ${await distance}, adName: ${await adName}, adCode: ${await adCode}';
+  String toString() {
+    return 'Poi{address: $address, title: $title, latLng: $latLng, cityName: $cityName, cityCode: $cityCode, provinceName: $provinceName, provinceCode: $provinceCode, tel: $tel, poiId: $poiId, businessArea: $businessArea, distance: $distance, adName: $adName, adCode: $adCode}';
   }
 }
 
@@ -363,12 +295,78 @@ class ReGeocode with _ToFutureString {
   Future<List<Poi>> get poiList {
     return platform(
       android: (pool) async {
-        return (await _androidModel.getPois())
-            .map((it) => Poi.android(it))
-            .toList();
+        final pois = await _androidModel.getPois();
+        final addressBatch = await pois.getSnippet_batch();
+        final titleBatch = await pois.getTitle_batch();
+        final latLngBatch = await pois.getLatLonPoint_batch();
+        final latitudeBatch = await latLngBatch.getLatitude_batch();
+        final longitudeBatch = await latLngBatch.getLongitude_batch();
+        final cityNameBatch = await pois.getCityName_batch();
+        final cityCodeBatch = await pois.getCityCode_batch();
+        final provinceNameBatch = await pois.getProvinceName_batch();
+        final provinceCodeBatch = await pois.getProvinceCode_batch();
+        final telBatch = await pois.getTel_batch();
+        final poiIdBatch = await pois.getPoiId_batch();
+        final businessAreaBatch = await pois.getBusinessArea_batch();
+        final distanceBatch = await pois.getDistance_batch();
+        final adNameBatch = await pois.getAdName_batch();
+        final adCodeBatch = await pois.getAdCode_batch();
+
+        return <Poi>[
+          for (int i = 0; i < pois.length; i++)
+            Poi(
+              address: addressBatch[i],
+              title: titleBatch[i],
+              latLng: LatLng(latitudeBatch[i], longitudeBatch[i]),
+              cityName: cityNameBatch[i],
+              cityCode: cityCodeBatch[i],
+              provinceName: provinceNameBatch[i],
+              provinceCode: provinceCodeBatch[i],
+              tel: telBatch[i],
+              poiId: poiIdBatch[i],
+              businessArea: businessAreaBatch[i],
+              distance: distanceBatch[i],
+              adName: adNameBatch[i],
+              adCode: adCodeBatch[i],
+            )
+        ];
       },
       ios: (pool) async {
-        return (await _iosModel.get_pois()).map((it) => Poi.ios(it)).toList();
+        final pois = await _iosModel.get_pois();
+        final addressBatch = await pois.get_address_batch();
+        final titleBatch = await pois.get_name_batch();
+        final latLngBatch = await pois.get_location_batch();
+        final latitudeBatch = await latLngBatch.get_latitude_batch();
+        final longitudeBatch = await latLngBatch.get_longitude_batch();
+        final cityNameBatch = await pois.get_city_batch();
+        final cityCodeBatch = await pois.get_citycode_batch();
+        final provinceNameBatch = await pois.get_province_batch();
+        final provinceCodeBatch = await pois.get_pcode_batch();
+        final telBatch = await pois.get_tel_batch();
+        final poiIdBatch = await pois.get_uid_batch();
+        final businessAreaBatch = await pois.get_businessArea_batch();
+        final distanceBatch = await pois.get_distance_batch();
+        final adNameBatch = await pois.get_district_batch();
+        final adCodeBatch = await pois.get_adcode_batch();
+
+        return <Poi>[
+          for (int i = 0; i < pois.length; i++)
+            Poi(
+              address: addressBatch[i],
+              title: titleBatch[i],
+              latLng: LatLng(latitudeBatch[i], longitudeBatch[i]),
+              cityName: cityNameBatch[i],
+              cityCode: cityCodeBatch[i],
+              provinceName: provinceNameBatch[i],
+              provinceCode: provinceCodeBatch[i],
+              tel: telBatch[i],
+              poiId: poiIdBatch[i],
+              businessArea: businessAreaBatch[i],
+              distance: distanceBatch[i],
+              adName: adNameBatch[i],
+              adCode: adCodeBatch[i],
+            )
+        ];
       },
     );
   }
