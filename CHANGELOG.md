@@ -1,3 +1,7 @@
+## 0.9.0
+- fix: 公交路线空判断
+- enhance: [breaking change] Poi使用同步返回
+
 ## 0.8.2
 - enhance: 增加搜索错误处理
 
