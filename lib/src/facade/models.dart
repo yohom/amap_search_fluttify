@@ -1618,31 +1618,35 @@ class DistrictItem with _ToFutureString {
   }
 
   /// 边界
-  Future<List<LatLng>> get boundary {
+  Future<List<List<LatLng>>> get boundary {
     return platform(
       android: (pool) async {
-        final boundary = await _androidModel.districtBoundary();
-        return boundary
-            .map((String rawLatLng) => rawLatLng.split(';')) // 按`;`切分成单个经纬度
-            .expand((List<String> rawPair) => rawPair) // 处理上一步产生的每一项
-            .map((String pair) => pair.split(',')) // 把第一步的每一项按`,`切分成经度和纬度
-            .map((List<String> pairLatLng) => LatLng(
-                  double.parse(pairLatLng[1]),
-                  double.parse(pairLatLng[0]),
-                )) // 组装成经纬度对象
-            .toList();
+        final rawDistrictList = await _androidModel.districtBoundary();
+        return [
+          for (final rawDistrict in rawDistrictList)
+            for (final rawBoundary in rawDistrict.split('|'))
+              [
+                for (final rawLatLng in rawBoundary.split(';'))
+                  LatLng(
+                    double.parse(rawLatLng.split(',')[1]),
+                    double.parse(rawLatLng.split(',')[0]),
+                  )
+              ]
+        ];
       },
       ios: (pool) async {
-        final boundary = await _iosModel.get_polylines();
-        return boundary
-            .map((String rawLatLng) => rawLatLng.split(';')) // 按`;`切分成单个经纬度
-            .expand((List<String> rawPair) => rawPair) // 处理上一步产生的每一项
-            .map((String pair) => pair.split(',')) // 把第一步的每一项按`,`切分成经度和纬度
-            .map((List<String> pairLatLng) => LatLng(
-                  double.parse(pairLatLng[1]),
-                  double.parse(pairLatLng[0]),
-                )) // 组装成经纬度对象
-            .toList();
+        final rawDistrictList = await _iosModel.get_polylines();
+        return [
+          for (final rawDistrict in rawDistrictList)
+            for (final rawBoundary in rawDistrict.split('|'))
+              [
+                for (final rawLatLng in rawBoundary.split(';'))
+                  LatLng(
+                    double.parse(rawLatLng.split(',')[1]),
+                    double.parse(rawLatLng.split(',')[0]),
+                  )
+              ]
+        ];
       },
     );
   }
