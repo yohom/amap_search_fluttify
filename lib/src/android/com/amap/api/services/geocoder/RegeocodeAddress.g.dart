@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object with android_os_Parcelable {
   //region constants
@@ -50,6 +51,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
   //endregion
 
   //region methods
+  
   Future<String> getFormatAddress() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -67,10 +69,12 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setFormatAddress(String var1) async {
     // print log
@@ -89,10 +93,12 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getProvince() async {
     // print log
@@ -111,10 +117,12 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setProvince(String var1) async {
     // print log
@@ -133,10 +141,12 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getCity() async {
     // print log
@@ -155,10 +165,12 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setCity(String var1) async {
     // print log
@@ -177,10 +189,12 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getCityCode() async {
     // print log
@@ -199,10 +213,12 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setCityCode(String var1) async {
     // print log
@@ -221,10 +237,12 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getAdCode() async {
     // print log
@@ -243,10 +261,12 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setAdCode(String var1) async {
     // print log
@@ -265,10 +285,12 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getDistrict() async {
     // print log
@@ -287,10 +309,12 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setDistrict(String var1) async {
     // print log
@@ -309,10 +333,12 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getTownship() async {
     // print log
@@ -331,10 +357,12 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setTownship(String var1) async {
     // print log
@@ -353,10 +381,12 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getNeighborhood() async {
     // print log
@@ -375,10 +405,12 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setNeighborhood(String var1) async {
     // print log
@@ -397,10 +429,12 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getBuilding() async {
     // print log
@@ -419,10 +453,12 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setBuilding(String var1) async {
     // print log
@@ -441,10 +477,12 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_services_geocoder_StreetNumber> getStreetNumber() async {
     // print log
@@ -463,10 +501,12 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_geocoder_StreetNumber()..refId = __result__..tag__ = 'amap_search_fluttify');
-      return com_amap_api_services_geocoder_StreetNumber()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_geocoder_StreetNumber()..refId = __result__..tag__ = 'amap_search_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<void> setStreetNumber(com_amap_api_services_geocoder_StreetNumber var1) async {
     // print log
@@ -485,10 +525,12 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<List<com_amap_api_services_geocoder_RegeocodeRoad>> getRoads() async {
     // print log
@@ -507,10 +549,12 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => com_amap_api_services_geocoder_RegeocodeRoad()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
-      return (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_geocoder_RegeocodeRoad()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      final __return__ = (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_geocoder_RegeocodeRoad()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      kNativeObjectPool.addAll(__return__);
+      return __return__;
     }
   }
+  
   
   Future<void> setRoads(List<com_amap_api_services_geocoder_RegeocodeRoad> var1) async {
     // print log
@@ -529,10 +573,12 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<List<com_amap_api_services_core_PoiItem>> getPois() async {
     // print log
@@ -551,10 +597,12 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => com_amap_api_services_core_PoiItem()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
-      return (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_core_PoiItem()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      final __return__ = (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_core_PoiItem()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      kNativeObjectPool.addAll(__return__);
+      return __return__;
     }
   }
+  
   
   Future<void> setPois(List<com_amap_api_services_core_PoiItem> var1) async {
     // print log
@@ -573,10 +621,12 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<List<com_amap_api_services_road_Crossroad>> getCrossroads() async {
     // print log
@@ -595,10 +645,12 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => com_amap_api_services_road_Crossroad()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
-      return (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_road_Crossroad()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      final __return__ = (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_road_Crossroad()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      kNativeObjectPool.addAll(__return__);
+      return __return__;
     }
   }
+  
   
   Future<void> setCrossroads(List<com_amap_api_services_road_Crossroad> var1) async {
     // print log
@@ -617,10 +669,12 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<List<com_amap_api_services_geocoder_BusinessArea>> getBusinessAreas() async {
     // print log
@@ -639,10 +693,12 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => com_amap_api_services_geocoder_BusinessArea()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
-      return (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_geocoder_BusinessArea()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      final __return__ = (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_geocoder_BusinessArea()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      kNativeObjectPool.addAll(__return__);
+      return __return__;
     }
   }
+  
   
   Future<void> setBusinessAreas(List<com_amap_api_services_geocoder_BusinessArea> var1) async {
     // print log
@@ -661,10 +717,12 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<List<com_amap_api_services_geocoder_AoiItem>> getAois() async {
     // print log
@@ -683,10 +741,12 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => com_amap_api_services_geocoder_AoiItem()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
-      return (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_geocoder_AoiItem()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      final __return__ = (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_geocoder_AoiItem()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      kNativeObjectPool.addAll(__return__);
+      return __return__;
     }
   }
+  
   
   Future<void> setAois(List<com_amap_api_services_geocoder_AoiItem> var1) async {
     // print log
@@ -705,10 +765,12 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getTowncode() async {
     // print log
@@ -727,10 +789,12 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setTowncode(String var1) async {
     // print log
@@ -749,10 +813,12 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setCountry(String var1) async {
     // print log
@@ -771,10 +837,12 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getCountry() async {
     // print log
@@ -793,8 +861,9 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
   
@@ -811,6 +880,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
   //endregion
 
   //region methods
+  
   Future<List<String>> getFormatAddress_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -830,7 +900,8 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
     }
   }
   
-  Future<void> setFormatAddress_batch(List<String> var1) async {
+  
+  Future<List<void>> setFormatAddress_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -848,6 +919,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getProvince_batch() async {
     if (false) {
@@ -868,7 +940,8 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
     }
   }
   
-  Future<void> setProvince_batch(List<String> var1) async {
+  
+  Future<List<void>> setProvince_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -886,6 +959,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getCity_batch() async {
     if (false) {
@@ -906,7 +980,8 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
     }
   }
   
-  Future<void> setCity_batch(List<String> var1) async {
+  
+  Future<List<void>> setCity_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -924,6 +999,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getCityCode_batch() async {
     if (false) {
@@ -944,7 +1020,8 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
     }
   }
   
-  Future<void> setCityCode_batch(List<String> var1) async {
+  
+  Future<List<void>> setCityCode_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -962,6 +1039,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getAdCode_batch() async {
     if (false) {
@@ -982,7 +1060,8 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
     }
   }
   
-  Future<void> setAdCode_batch(List<String> var1) async {
+  
+  Future<List<void>> setAdCode_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1000,6 +1079,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getDistrict_batch() async {
     if (false) {
@@ -1020,7 +1100,8 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
     }
   }
   
-  Future<void> setDistrict_batch(List<String> var1) async {
+  
+  Future<List<void>> setDistrict_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1038,6 +1119,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getTownship_batch() async {
     if (false) {
@@ -1058,7 +1140,8 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
     }
   }
   
-  Future<void> setTownship_batch(List<String> var1) async {
+  
+  Future<List<void>> setTownship_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1076,6 +1159,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getNeighborhood_batch() async {
     if (false) {
@@ -1096,7 +1180,8 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
     }
   }
   
-  Future<void> setNeighborhood_batch(List<String> var1) async {
+  
+  Future<List<void>> setNeighborhood_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1114,6 +1199,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getBuilding_batch() async {
     if (false) {
@@ -1134,7 +1220,8 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
     }
   }
   
-  Future<void> setBuilding_batch(List<String> var1) async {
+  
+  Future<List<void>> setBuilding_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1152,6 +1239,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
       return typedResult;
     }
   }
+  
   
   Future<List<com_amap_api_services_geocoder_StreetNumber>> getStreetNumber_batch() async {
     if (false) {
@@ -1172,7 +1260,8 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
     }
   }
   
-  Future<void> setStreetNumber_batch(List<com_amap_api_services_geocoder_StreetNumber> var1) async {
+  
+  Future<List<void>> setStreetNumber_batch(List<com_amap_api_services_geocoder_StreetNumber> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1190,6 +1279,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
       return typedResult;
     }
   }
+  
   
   Future<List<List<com_amap_api_services_geocoder_RegeocodeRoad>>> getRoads_batch() async {
     if (false) {
@@ -1210,7 +1300,8 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
     }
   }
   
-  Future<void> setRoads_batch(List<List<com_amap_api_services_geocoder_RegeocodeRoad>> var1) async {
+  
+  Future<List<void>> setRoads_batch(List<List<com_amap_api_services_geocoder_RegeocodeRoad>> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1228,6 +1319,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
       return typedResult;
     }
   }
+  
   
   Future<List<List<com_amap_api_services_core_PoiItem>>> getPois_batch() async {
     if (false) {
@@ -1248,7 +1340,8 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
     }
   }
   
-  Future<void> setPois_batch(List<List<com_amap_api_services_core_PoiItem>> var1) async {
+  
+  Future<List<void>> setPois_batch(List<List<com_amap_api_services_core_PoiItem>> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1266,6 +1359,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
       return typedResult;
     }
   }
+  
   
   Future<List<List<com_amap_api_services_road_Crossroad>>> getCrossroads_batch() async {
     if (false) {
@@ -1286,7 +1380,8 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
     }
   }
   
-  Future<void> setCrossroads_batch(List<List<com_amap_api_services_road_Crossroad>> var1) async {
+  
+  Future<List<void>> setCrossroads_batch(List<List<com_amap_api_services_road_Crossroad>> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1304,6 +1399,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
       return typedResult;
     }
   }
+  
   
   Future<List<List<com_amap_api_services_geocoder_BusinessArea>>> getBusinessAreas_batch() async {
     if (false) {
@@ -1324,7 +1420,8 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
     }
   }
   
-  Future<void> setBusinessAreas_batch(List<List<com_amap_api_services_geocoder_BusinessArea>> var1) async {
+  
+  Future<List<void>> setBusinessAreas_batch(List<List<com_amap_api_services_geocoder_BusinessArea>> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1342,6 +1439,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
       return typedResult;
     }
   }
+  
   
   Future<List<List<com_amap_api_services_geocoder_AoiItem>>> getAois_batch() async {
     if (false) {
@@ -1362,7 +1460,8 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
     }
   }
   
-  Future<void> setAois_batch(List<List<com_amap_api_services_geocoder_AoiItem>> var1) async {
+  
+  Future<List<void>> setAois_batch(List<List<com_amap_api_services_geocoder_AoiItem>> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1380,6 +1479,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getTowncode_batch() async {
     if (false) {
@@ -1400,7 +1500,8 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
     }
   }
   
-  Future<void> setTowncode_batch(List<String> var1) async {
+  
+  Future<List<void>> setTowncode_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1419,7 +1520,8 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
     }
   }
   
-  Future<void> setCountry_batch(List<String> var1) async {
+  
+  Future<List<void>> setCountry_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1437,6 +1539,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getCountry_batch() async {
     if (false) {

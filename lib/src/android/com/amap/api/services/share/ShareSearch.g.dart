@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
   //region constants
@@ -73,6 +74,7 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
   //endregion
 
   //region methods
+  
   Future<void> setOnShareSearchListener(com_amap_api_services_share_ShareSearch_OnShareSearchListener var1) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -94,7 +96,7 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
             case 'Callback::com.amap.api.services.share.ShareSearch.OnShareSearchListener::onPoiShareUrlSearched':
               // print log
               if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onPoiShareUrlSearched([\'var1\':$args[var1], \'var2\':$args[var2]])');
+                print('fluttify-dart-callback: onPoiShareUrlSearched([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
               }
         
               // handle the native call
@@ -103,7 +105,7 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
             case 'Callback::com.amap.api.services.share.ShareSearch.OnShareSearchListener::onLocationShareUrlSearched':
               // print log
               if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onLocationShareUrlSearched([\'var1\':$args[var1], \'var2\':$args[var2]])');
+                print('fluttify-dart-callback: onLocationShareUrlSearched([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
               }
         
               // handle the native call
@@ -112,7 +114,7 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
             case 'Callback::com.amap.api.services.share.ShareSearch.OnShareSearchListener::onNaviShareUrlSearched':
               // print log
               if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onNaviShareUrlSearched([\'var1\':$args[var1], \'var2\':$args[var2]])');
+                print('fluttify-dart-callback: onNaviShareUrlSearched([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
               }
         
               // handle the native call
@@ -121,7 +123,7 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
             case 'Callback::com.amap.api.services.share.ShareSearch.OnShareSearchListener::onBusRouteShareUrlSearched':
               // print log
               if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onBusRouteShareUrlSearched([\'var1\':$args[var1], \'var2\':$args[var2]])');
+                print('fluttify-dart-callback: onBusRouteShareUrlSearched([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
               }
         
               // handle the native call
@@ -130,7 +132,7 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
             case 'Callback::com.amap.api.services.share.ShareSearch.OnShareSearchListener::onWalkRouteShareUrlSearched':
               // print log
               if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onWalkRouteShareUrlSearched([\'var1\':$args[var1], \'var2\':$args[var2]])');
+                print('fluttify-dart-callback: onWalkRouteShareUrlSearched([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
               }
         
               // handle the native call
@@ -139,7 +141,7 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
             case 'Callback::com.amap.api.services.share.ShareSearch.OnShareSearchListener::onDrivingRouteShareUrlSearched':
               // print log
               if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onDrivingRouteShareUrlSearched([\'var1\':$args[var1], \'var2\':$args[var2]])');
+                print('fluttify-dart-callback: onDrivingRouteShareUrlSearched([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
               }
         
               // handle the native call
@@ -154,10 +156,12 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> searchPoiShareUrlAsyn(com_amap_api_services_core_PoiItem var1) async {
     // print log
@@ -176,10 +180,12 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> searchBusRouteShareUrlAsyn(com_amap_api_services_share_ShareSearch_ShareBusRouteQuery var1) async {
     // print log
@@ -198,10 +204,12 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> searchWalkRouteShareUrlAsyn(com_amap_api_services_share_ShareSearch_ShareWalkRouteQuery var1) async {
     // print log
@@ -220,10 +228,12 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> searchDrivingRouteShareUrlAsyn(com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery var1) async {
     // print log
@@ -242,10 +252,12 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> searchNaviShareUrlAsyn(com_amap_api_services_share_ShareSearch_ShareNaviQuery var1) async {
     // print log
@@ -264,10 +276,12 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> searchLocationShareUrlAsyn(com_amap_api_services_core_LatLonSharePoint var1) async {
     // print log
@@ -286,10 +300,12 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> searchPoiShareUrl(com_amap_api_services_core_PoiItem var1) async {
     // print log
@@ -308,10 +324,12 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> searchNaviShareUrl(com_amap_api_services_share_ShareSearch_ShareNaviQuery var1) async {
     // print log
@@ -330,10 +348,12 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> searchLocationShareUrl(com_amap_api_services_core_LatLonSharePoint var1) async {
     // print log
@@ -352,10 +372,12 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> searchBusRouteShareUrl(com_amap_api_services_share_ShareSearch_ShareBusRouteQuery var1) async {
     // print log
@@ -374,10 +396,12 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> searchDrivingRouteShareUrl(com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery var1) async {
     // print log
@@ -396,10 +420,12 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> searchWalkRouteShareUrl(com_amap_api_services_share_ShareSearch_ShareWalkRouteQuery var1) async {
     // print log
@@ -418,8 +444,9 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
   
@@ -436,7 +463,8 @@ extension com_amap_api_services_share_ShareSearch_Batch on List<com_amap_api_ser
   //endregion
 
   //region methods
-  Future<void> searchPoiShareUrlAsyn_batch(List<com_amap_api_services_core_PoiItem> var1) async {
+  
+  Future<List<void>> searchPoiShareUrlAsyn_batch(List<com_amap_api_services_core_PoiItem> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -455,7 +483,8 @@ extension com_amap_api_services_share_ShareSearch_Batch on List<com_amap_api_ser
     }
   }
   
-  Future<void> searchBusRouteShareUrlAsyn_batch(List<com_amap_api_services_share_ShareSearch_ShareBusRouteQuery> var1) async {
+  
+  Future<List<void>> searchBusRouteShareUrlAsyn_batch(List<com_amap_api_services_share_ShareSearch_ShareBusRouteQuery> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -474,7 +503,8 @@ extension com_amap_api_services_share_ShareSearch_Batch on List<com_amap_api_ser
     }
   }
   
-  Future<void> searchWalkRouteShareUrlAsyn_batch(List<com_amap_api_services_share_ShareSearch_ShareWalkRouteQuery> var1) async {
+  
+  Future<List<void>> searchWalkRouteShareUrlAsyn_batch(List<com_amap_api_services_share_ShareSearch_ShareWalkRouteQuery> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -493,7 +523,8 @@ extension com_amap_api_services_share_ShareSearch_Batch on List<com_amap_api_ser
     }
   }
   
-  Future<void> searchDrivingRouteShareUrlAsyn_batch(List<com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery> var1) async {
+  
+  Future<List<void>> searchDrivingRouteShareUrlAsyn_batch(List<com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -512,7 +543,8 @@ extension com_amap_api_services_share_ShareSearch_Batch on List<com_amap_api_ser
     }
   }
   
-  Future<void> searchNaviShareUrlAsyn_batch(List<com_amap_api_services_share_ShareSearch_ShareNaviQuery> var1) async {
+  
+  Future<List<void>> searchNaviShareUrlAsyn_batch(List<com_amap_api_services_share_ShareSearch_ShareNaviQuery> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -531,7 +563,8 @@ extension com_amap_api_services_share_ShareSearch_Batch on List<com_amap_api_ser
     }
   }
   
-  Future<void> searchLocationShareUrlAsyn_batch(List<com_amap_api_services_core_LatLonSharePoint> var1) async {
+  
+  Future<List<void>> searchLocationShareUrlAsyn_batch(List<com_amap_api_services_core_LatLonSharePoint> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -549,6 +582,7 @@ extension com_amap_api_services_share_ShareSearch_Batch on List<com_amap_api_ser
       return typedResult;
     }
   }
+  
   
   Future<List<String>> searchPoiShareUrl_batch(List<com_amap_api_services_core_PoiItem> var1) async {
     if (false) {
@@ -569,6 +603,7 @@ extension com_amap_api_services_share_ShareSearch_Batch on List<com_amap_api_ser
     }
   }
   
+  
   Future<List<String>> searchNaviShareUrl_batch(List<com_amap_api_services_share_ShareSearch_ShareNaviQuery> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -587,6 +622,7 @@ extension com_amap_api_services_share_ShareSearch_Batch on List<com_amap_api_ser
       return typedResult;
     }
   }
+  
   
   Future<List<String>> searchLocationShareUrl_batch(List<com_amap_api_services_core_LatLonSharePoint> var1) async {
     if (false) {
@@ -607,6 +643,7 @@ extension com_amap_api_services_share_ShareSearch_Batch on List<com_amap_api_ser
     }
   }
   
+  
   Future<List<String>> searchBusRouteShareUrl_batch(List<com_amap_api_services_share_ShareSearch_ShareBusRouteQuery> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -626,6 +663,7 @@ extension com_amap_api_services_share_ShareSearch_Batch on List<com_amap_api_ser
     }
   }
   
+  
   Future<List<String>> searchDrivingRouteShareUrl_batch(List<com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -644,6 +682,7 @@ extension com_amap_api_services_share_ShareSearch_Batch on List<com_amap_api_ser
       return typedResult;
     }
   }
+  
   
   Future<List<String>> searchWalkRouteShareUrl_batch(List<com_amap_api_services_share_ShareSearch_ShareWalkRouteQuery> var1) async {
     if (false) {

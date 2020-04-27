@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class AMapGeoPolygon extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
@@ -60,6 +61,7 @@ class AMapGeoPolygon extends AMapSearchObject with NSCoding, NSCopying {
   //endregion
 
   //region methods
+  
   static Future<AMapGeoPolygon> polygonWithPoints(List<NSObject> points) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -77,8 +79,9 @@ class AMapGeoPolygon extends AMapSearchObject with NSCoding, NSCopying {
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(AMapGeoPolygon()..refId = __result__..tag__ = 'amap_search_fluttify');
-      return AMapGeoPolygon()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = AMapGeoPolygon()..refId = __result__..tag__ = 'amap_search_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
   
@@ -106,13 +109,14 @@ extension AMapGeoPolygon_Batch on List<AMapGeoPolygon> {
   //endregion
 
   //region methods
-  Future<List<AMapGeoPolygon>> polygonWithPoints_batch(List<List<NSObject>> points) async {
+  
+  static Future<List<AMapGeoPolygon>> polygonWithPoints_batch(List<List<NSObject>> points) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapGeoPolygon::polygonWithPoints_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"points": points[__i__].map((it) => it.refId).toList(), "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapGeoPolygon::polygonWithPoints_batch', [for (int __i__ = 0; __i__ < points.length; __i__++) {"points": points[__i__].map((it) => it.refId).toList()}]);
   
   
     // convert native result to dart side object

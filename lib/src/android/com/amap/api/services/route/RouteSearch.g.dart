@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
   //region constants
@@ -129,6 +130,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
   //endregion
 
   //region methods
+  
   Future<void> setRouteSearchListener(com_amap_api_services_route_RouteSearch_OnRouteSearchListener var1) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -150,38 +152,38 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
             case 'Callback::com.amap.api.services.route.RouteSearch.OnRouteSearchListener::onBusRouteSearched':
               // print log
               if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onBusRouteSearched([\'var2\':$args[var2]])');
+                print('fluttify-dart-callback: onBusRouteSearched([\'var2\':${args['var2']}])');
               }
         
               // handle the native call
-              var1?.onBusRouteSearched(com_amap_api_services_route_BusRouteResult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify', args['var2']);
+              var1?.onBusRouteSearched((com_amap_api_services_route_BusRouteResult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify'), args['var2']);
               break;
             case 'Callback::com.amap.api.services.route.RouteSearch.OnRouteSearchListener::onDriveRouteSearched':
               // print log
               if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onDriveRouteSearched([\'var2\':$args[var2]])');
+                print('fluttify-dart-callback: onDriveRouteSearched([\'var2\':${args['var2']}])');
               }
         
               // handle the native call
-              var1?.onDriveRouteSearched(com_amap_api_services_route_DriveRouteResult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify', args['var2']);
+              var1?.onDriveRouteSearched((com_amap_api_services_route_DriveRouteResult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify'), args['var2']);
               break;
             case 'Callback::com.amap.api.services.route.RouteSearch.OnRouteSearchListener::onWalkRouteSearched':
               // print log
               if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onWalkRouteSearched([\'var2\':$args[var2]])');
+                print('fluttify-dart-callback: onWalkRouteSearched([\'var2\':${args['var2']}])');
               }
         
               // handle the native call
-              var1?.onWalkRouteSearched(com_amap_api_services_route_WalkRouteResult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify', args['var2']);
+              var1?.onWalkRouteSearched((com_amap_api_services_route_WalkRouteResult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify'), args['var2']);
               break;
             case 'Callback::com.amap.api.services.route.RouteSearch.OnRouteSearchListener::onRideRouteSearched':
               // print log
               if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onRideRouteSearched([\'var2\':$args[var2]])');
+                print('fluttify-dart-callback: onRideRouteSearched([\'var2\':${args['var2']}])');
               }
         
               // handle the native call
-              var1?.onRideRouteSearched(com_amap_api_services_route_RideRouteResult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify', args['var2']);
+              var1?.onRideRouteSearched((com_amap_api_services_route_RideRouteResult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify'), args['var2']);
               break;
             default:
               break;
@@ -192,10 +194,12 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setOnTruckRouteSearchListener(com_amap_api_services_route_RouteSearch_OnTruckRouteSearchListener var1) async {
     // print log
@@ -218,11 +222,11 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
             case 'Callback::com.amap.api.services.route.RouteSearch.OnTruckRouteSearchListener::onTruckRouteSearched':
               // print log
               if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onTruckRouteSearched([\'var2\':$args[var2]])');
+                print('fluttify-dart-callback: onTruckRouteSearched([\'var2\':${args['var2']}])');
               }
         
               // handle the native call
-              var1?.onTruckRouteSearched(com_amap_api_services_route_TruckRouteRestult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify', args['var2']);
+              var1?.onTruckRouteSearched((com_amap_api_services_route_TruckRouteRestult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify'), args['var2']);
               break;
             default:
               break;
@@ -233,10 +237,12 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setOnRoutePlanSearchListener(com_amap_api_services_route_RouteSearch_OnRoutePlanSearchListener var1) async {
     // print log
@@ -259,11 +265,11 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
             case 'Callback::com.amap.api.services.route.RouteSearch.OnRoutePlanSearchListener::onDriveRoutePlanSearched':
               // print log
               if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onDriveRoutePlanSearched([\'var2\':$args[var2]])');
+                print('fluttify-dart-callback: onDriveRoutePlanSearched([\'var2\':${args['var2']}])');
               }
         
               // handle the native call
-              var1?.onDriveRoutePlanSearched(com_amap_api_services_route_DriveRoutePlanResult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify', args['var2']);
+              var1?.onDriveRoutePlanSearched((com_amap_api_services_route_DriveRoutePlanResult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify'), args['var2']);
               break;
             default:
               break;
@@ -274,10 +280,12 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_services_route_WalkRouteResult> calculateWalkRoute(com_amap_api_services_route_RouteSearch_WalkRouteQuery var1) async {
     // print log
@@ -296,10 +304,12 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_route_WalkRouteResult()..refId = __result__..tag__ = 'amap_search_fluttify');
-      return com_amap_api_services_route_WalkRouteResult()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_route_WalkRouteResult()..refId = __result__..tag__ = 'amap_search_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<void> calculateWalkRouteAsyn(com_amap_api_services_route_RouteSearch_WalkRouteQuery var1) async {
     // print log
@@ -318,10 +328,12 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_services_route_BusRouteResult> calculateBusRoute(com_amap_api_services_route_RouteSearch_BusRouteQuery var1) async {
     // print log
@@ -340,10 +352,12 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_route_BusRouteResult()..refId = __result__..tag__ = 'amap_search_fluttify');
-      return com_amap_api_services_route_BusRouteResult()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_route_BusRouteResult()..refId = __result__..tag__ = 'amap_search_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<void> calculateBusRouteAsyn(com_amap_api_services_route_RouteSearch_BusRouteQuery var1) async {
     // print log
@@ -362,10 +376,12 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_services_route_DriveRouteResult> calculateDriveRoute(com_amap_api_services_route_RouteSearch_DriveRouteQuery var1) async {
     // print log
@@ -384,10 +400,12 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_route_DriveRouteResult()..refId = __result__..tag__ = 'amap_search_fluttify');
-      return com_amap_api_services_route_DriveRouteResult()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_route_DriveRouteResult()..refId = __result__..tag__ = 'amap_search_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<void> calculateDriveRouteAsyn(com_amap_api_services_route_RouteSearch_DriveRouteQuery var1) async {
     // print log
@@ -406,10 +424,12 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> calculateRideRouteAsyn(com_amap_api_services_route_RouteSearch_RideRouteQuery var1) async {
     // print log
@@ -428,10 +448,12 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_services_route_RideRouteResult> calculateRideRoute(com_amap_api_services_route_RouteSearch_RideRouteQuery var1) async {
     // print log
@@ -450,10 +472,12 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_route_RideRouteResult()..refId = __result__..tag__ = 'amap_search_fluttify');
-      return com_amap_api_services_route_RideRouteResult()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_route_RideRouteResult()..refId = __result__..tag__ = 'amap_search_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_services_route_TruckRouteRestult> calculateTruckRoute(com_amap_api_services_route_RouteSearch_TruckRouteQuery var1) async {
     // print log
@@ -472,10 +496,12 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_route_TruckRouteRestult()..refId = __result__..tag__ = 'amap_search_fluttify');
-      return com_amap_api_services_route_TruckRouteRestult()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_route_TruckRouteRestult()..refId = __result__..tag__ = 'amap_search_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<void> calculateTruckRouteAsyn(com_amap_api_services_route_RouteSearch_TruckRouteQuery var1) async {
     // print log
@@ -494,10 +520,12 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_services_route_DriveRoutePlanResult> calculateDrivePlan(com_amap_api_services_route_RouteSearch_DrivePlanQuery var1) async {
     // print log
@@ -516,10 +544,12 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_route_DriveRoutePlanResult()..refId = __result__..tag__ = 'amap_search_fluttify');
-      return com_amap_api_services_route_DriveRoutePlanResult()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_route_DriveRoutePlanResult()..refId = __result__..tag__ = 'amap_search_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<void> calculateDrivePlanAsyn(com_amap_api_services_route_RouteSearch_DrivePlanQuery var1) async {
     // print log
@@ -538,8 +568,9 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
   
@@ -556,6 +587,7 @@ extension com_amap_api_services_route_RouteSearch_Batch on List<com_amap_api_ser
   //endregion
 
   //region methods
+  
   Future<List<com_amap_api_services_route_WalkRouteResult>> calculateWalkRoute_batch(List<com_amap_api_services_route_RouteSearch_WalkRouteQuery> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -575,7 +607,8 @@ extension com_amap_api_services_route_RouteSearch_Batch on List<com_amap_api_ser
     }
   }
   
-  Future<void> calculateWalkRouteAsyn_batch(List<com_amap_api_services_route_RouteSearch_WalkRouteQuery> var1) async {
+  
+  Future<List<void>> calculateWalkRouteAsyn_batch(List<com_amap_api_services_route_RouteSearch_WalkRouteQuery> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -593,6 +626,7 @@ extension com_amap_api_services_route_RouteSearch_Batch on List<com_amap_api_ser
       return typedResult;
     }
   }
+  
   
   Future<List<com_amap_api_services_route_BusRouteResult>> calculateBusRoute_batch(List<com_amap_api_services_route_RouteSearch_BusRouteQuery> var1) async {
     if (false) {
@@ -613,7 +647,8 @@ extension com_amap_api_services_route_RouteSearch_Batch on List<com_amap_api_ser
     }
   }
   
-  Future<void> calculateBusRouteAsyn_batch(List<com_amap_api_services_route_RouteSearch_BusRouteQuery> var1) async {
+  
+  Future<List<void>> calculateBusRouteAsyn_batch(List<com_amap_api_services_route_RouteSearch_BusRouteQuery> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -631,6 +666,7 @@ extension com_amap_api_services_route_RouteSearch_Batch on List<com_amap_api_ser
       return typedResult;
     }
   }
+  
   
   Future<List<com_amap_api_services_route_DriveRouteResult>> calculateDriveRoute_batch(List<com_amap_api_services_route_RouteSearch_DriveRouteQuery> var1) async {
     if (false) {
@@ -651,7 +687,8 @@ extension com_amap_api_services_route_RouteSearch_Batch on List<com_amap_api_ser
     }
   }
   
-  Future<void> calculateDriveRouteAsyn_batch(List<com_amap_api_services_route_RouteSearch_DriveRouteQuery> var1) async {
+  
+  Future<List<void>> calculateDriveRouteAsyn_batch(List<com_amap_api_services_route_RouteSearch_DriveRouteQuery> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -670,7 +707,8 @@ extension com_amap_api_services_route_RouteSearch_Batch on List<com_amap_api_ser
     }
   }
   
-  Future<void> calculateRideRouteAsyn_batch(List<com_amap_api_services_route_RouteSearch_RideRouteQuery> var1) async {
+  
+  Future<List<void>> calculateRideRouteAsyn_batch(List<com_amap_api_services_route_RouteSearch_RideRouteQuery> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -688,6 +726,7 @@ extension com_amap_api_services_route_RouteSearch_Batch on List<com_amap_api_ser
       return typedResult;
     }
   }
+  
   
   Future<List<com_amap_api_services_route_RideRouteResult>> calculateRideRoute_batch(List<com_amap_api_services_route_RouteSearch_RideRouteQuery> var1) async {
     if (false) {
@@ -708,6 +747,7 @@ extension com_amap_api_services_route_RouteSearch_Batch on List<com_amap_api_ser
     }
   }
   
+  
   Future<List<com_amap_api_services_route_TruckRouteRestult>> calculateTruckRoute_batch(List<com_amap_api_services_route_RouteSearch_TruckRouteQuery> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -727,7 +767,8 @@ extension com_amap_api_services_route_RouteSearch_Batch on List<com_amap_api_ser
     }
   }
   
-  Future<void> calculateTruckRouteAsyn_batch(List<com_amap_api_services_route_RouteSearch_TruckRouteQuery> var1) async {
+  
+  Future<List<void>> calculateTruckRouteAsyn_batch(List<com_amap_api_services_route_RouteSearch_TruckRouteQuery> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -745,6 +786,7 @@ extension com_amap_api_services_route_RouteSearch_Batch on List<com_amap_api_ser
       return typedResult;
     }
   }
+  
   
   Future<List<com_amap_api_services_route_DriveRoutePlanResult>> calculateDrivePlan_batch(List<com_amap_api_services_route_RouteSearch_DrivePlanQuery> var1) async {
     if (false) {
@@ -765,7 +807,8 @@ extension com_amap_api_services_route_RouteSearch_Batch on List<com_amap_api_ser
     }
   }
   
-  Future<void> calculateDrivePlanAsyn_batch(List<com_amap_api_services_route_RouteSearch_DrivePlanQuery> var1) async {
+  
+  Future<List<void>> calculateDrivePlanAsyn_batch(List<com_amap_api_services_route_RouteSearch_DrivePlanQuery> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }

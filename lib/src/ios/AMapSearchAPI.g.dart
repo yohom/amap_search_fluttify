@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class AMapSearchAPI extends NSObject  {
   //region constants
@@ -74,7 +75,7 @@ class AMapSearchAPI extends NSObject  {
             }
         
             // handle the native call
-            delegate?.AMapSearchRequest_didFailWithError(NSObject()..refId = (args['request'])..tag__ = 'amap_search_fluttify', NSError()..refId = (args['error'])..tag__ = 'amap_search_fluttify');
+            delegate?.AMapSearchRequest_didFailWithError(args["request"] is Ref ? (Ref()..refId = (args['request'])..tag__ = 'amap_search_fluttify') : args['request'], (NSError()..refId = (args['error'])..tag__ = 'amap_search_fluttify'));
             break;
           case 'Callback::AMapSearchDelegate::onPOISearchDone_response':
             // print log
@@ -83,7 +84,7 @@ class AMapSearchAPI extends NSObject  {
             }
         
             // handle the native call
-            delegate?.onPOISearchDone_response(AMapPOISearchBaseRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify', AMapPOISearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify');
+            delegate?.onPOISearchDone_response((AMapPOIIDSearchRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify'), (AMapPOISearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify'));
             break;
           case 'Callback::AMapSearchDelegate::onRoutePOISearchDone_response':
             // print log
@@ -92,7 +93,7 @@ class AMapSearchAPI extends NSObject  {
             }
         
             // handle the native call
-            delegate?.onRoutePOISearchDone_response(AMapRoutePOISearchRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify', AMapRoutePOISearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify');
+            delegate?.onRoutePOISearchDone_response((AMapRoutePOISearchRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify'), (AMapRoutePOISearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify'));
             break;
           case 'Callback::AMapSearchDelegate::onGeocodeSearchDone_response':
             // print log
@@ -101,7 +102,7 @@ class AMapSearchAPI extends NSObject  {
             }
         
             // handle the native call
-            delegate?.onGeocodeSearchDone_response(AMapGeocodeSearchRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify', AMapGeocodeSearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify');
+            delegate?.onGeocodeSearchDone_response((AMapGeocodeSearchRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify'), (AMapGeocodeSearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify'));
             break;
           case 'Callback::AMapSearchDelegate::onReGeocodeSearchDone_response':
             // print log
@@ -110,7 +111,7 @@ class AMapSearchAPI extends NSObject  {
             }
         
             // handle the native call
-            delegate?.onReGeocodeSearchDone_response(AMapReGeocodeSearchRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify', AMapReGeocodeSearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify');
+            delegate?.onReGeocodeSearchDone_response((AMapReGeocodeSearchRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify'), (AMapReGeocodeSearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify'));
             break;
           case 'Callback::AMapSearchDelegate::onInputTipsSearchDone_response':
             // print log
@@ -119,7 +120,7 @@ class AMapSearchAPI extends NSObject  {
             }
         
             // handle the native call
-            delegate?.onInputTipsSearchDone_response(AMapInputTipsSearchRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify', AMapInputTipsSearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify');
+            delegate?.onInputTipsSearchDone_response((AMapInputTipsSearchRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify'), (AMapInputTipsSearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify'));
             break;
           case 'Callback::AMapSearchDelegate::onBusStopSearchDone_response':
             // print log
@@ -128,7 +129,7 @@ class AMapSearchAPI extends NSObject  {
             }
         
             // handle the native call
-            delegate?.onBusStopSearchDone_response(AMapBusStopSearchRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify', AMapBusStopSearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify');
+            delegate?.onBusStopSearchDone_response((AMapBusStopSearchRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify'), (AMapBusStopSearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify'));
             break;
           case 'Callback::AMapSearchDelegate::onBusLineSearchDone_response':
             // print log
@@ -137,7 +138,7 @@ class AMapSearchAPI extends NSObject  {
             }
         
             // handle the native call
-            delegate?.onBusLineSearchDone_response(AMapBusLineBaseSearchRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify', AMapBusLineSearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify');
+            delegate?.onBusLineSearchDone_response((AMapBusLineNameSearchRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify'), (AMapBusLineSearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify'));
             break;
           case 'Callback::AMapSearchDelegate::onDistrictSearchDone_response':
             // print log
@@ -146,7 +147,7 @@ class AMapSearchAPI extends NSObject  {
             }
         
             // handle the native call
-            delegate?.onDistrictSearchDone_response(AMapDistrictSearchRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify', AMapDistrictSearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify');
+            delegate?.onDistrictSearchDone_response((AMapDistrictSearchRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify'), (AMapDistrictSearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify'));
             break;
           case 'Callback::AMapSearchDelegate::onRouteSearchDone_response':
             // print log
@@ -155,7 +156,7 @@ class AMapSearchAPI extends NSObject  {
             }
         
             // handle the native call
-            delegate?.onRouteSearchDone_response(AMapRouteSearchBaseRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify', AMapRouteSearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify');
+            delegate?.onRouteSearchDone_response((AMapDrivingRouteSearchRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify'), (AMapRidingRouteSearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify'));
             break;
           case 'Callback::AMapSearchDelegate::onFutureRouteSearchDone_response':
             // print log
@@ -164,7 +165,7 @@ class AMapSearchAPI extends NSObject  {
             }
         
             // handle the native call
-            delegate?.onFutureRouteSearchDone_response(AMapRouteSearchBaseRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify', AMapFutureRouteSearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify');
+            delegate?.onFutureRouteSearchDone_response((AMapDrivingRouteSearchRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify'), (AMapFutureRouteSearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify'));
             break;
           case 'Callback::AMapSearchDelegate::onDistanceSearchDone_response':
             // print log
@@ -173,7 +174,7 @@ class AMapSearchAPI extends NSObject  {
             }
         
             // handle the native call
-            delegate?.onDistanceSearchDone_response(AMapDistanceSearchRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify', AMapDistanceSearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify');
+            delegate?.onDistanceSearchDone_response((AMapDistanceSearchRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify'), (AMapDistanceSearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify'));
             break;
           case 'Callback::AMapSearchDelegate::onWeatherSearchDone_response':
             // print log
@@ -182,7 +183,7 @@ class AMapSearchAPI extends NSObject  {
             }
         
             // handle the native call
-            delegate?.onWeatherSearchDone_response(AMapWeatherSearchRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify', AMapWeatherSearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify');
+            delegate?.onWeatherSearchDone_response((AMapWeatherSearchRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify'), (AMapWeatherSearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify'));
             break;
           case 'Callback::AMapSearchDelegate::onRoadTrafficSearchDone_response':
             // print log
@@ -191,7 +192,7 @@ class AMapSearchAPI extends NSObject  {
             }
         
             // handle the native call
-            delegate?.onRoadTrafficSearchDone_response(AMapRoadTrafficSearchBaseRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify', AMapRoadTrafficSearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify');
+            delegate?.onRoadTrafficSearchDone_response((AMapRoadTrafficSearchRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify'), (AMapRoadTrafficSearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify'));
             break;
           case 'Callback::AMapSearchDelegate::onNearbySearchDone_response':
             // print log
@@ -200,7 +201,7 @@ class AMapSearchAPI extends NSObject  {
             }
         
             // handle the native call
-            delegate?.onNearbySearchDone_response(AMapNearbySearchRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify', AMapNearbySearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify');
+            delegate?.onNearbySearchDone_response((AMapNearbySearchRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify'), (AMapNearbySearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify'));
             break;
           case 'Callback::AMapSearchDelegate::onCloudSearchDone_response':
             // print log
@@ -209,7 +210,7 @@ class AMapSearchAPI extends NSObject  {
             }
         
             // handle the native call
-            delegate?.onCloudSearchDone_response(AMapCloudSearchBaseRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify', AMapCloudPOISearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify');
+            delegate?.onCloudSearchDone_response((AMapCloudPOIAroundSearchRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify'), (AMapCloudPOISearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify'));
             break;
           case 'Callback::AMapSearchDelegate::onShareSearchDone_response':
             // print log
@@ -218,7 +219,7 @@ class AMapSearchAPI extends NSObject  {
             }
         
             // handle the native call
-            delegate?.onShareSearchDone_response(AMapShareSearchBaseRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify', AMapShareSearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify');
+            delegate?.onShareSearchDone_response((AMapLocationShareSearchRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify'), (AMapShareSearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify'));
             break;
           default:
             break;
@@ -241,6 +242,7 @@ class AMapSearchAPI extends NSObject  {
   //endregion
 
   //region methods
+  
   Future<AMapSearchAPI> init() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -258,10 +260,12 @@ class AMapSearchAPI extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(AMapSearchAPI()..refId = __result__..tag__ = 'amap_search_fluttify');
-      return AMapSearchAPI()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = AMapSearchAPI()..refId = __result__..tag__ = 'amap_search_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<void> cancelAllRequests() async {
     // print log
@@ -280,10 +284,12 @@ class AMapSearchAPI extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> AMapPOIIDSearch(AMapPOIIDSearchRequest request) async {
     // print log
@@ -302,10 +308,12 @@ class AMapSearchAPI extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> AMapPOIKeywordsSearch(AMapPOIKeywordsSearchRequest request) async {
     // print log
@@ -324,10 +332,12 @@ class AMapSearchAPI extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> AMapPOIAroundSearch(AMapPOIAroundSearchRequest request) async {
     // print log
@@ -346,10 +356,12 @@ class AMapSearchAPI extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> AMapPOIPolygonSearch(AMapPOIPolygonSearchRequest request) async {
     // print log
@@ -368,10 +380,12 @@ class AMapSearchAPI extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> AMapRoutePOISearch(AMapRoutePOISearchRequest request) async {
     // print log
@@ -390,10 +404,12 @@ class AMapSearchAPI extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> AMapGeocodeSearch(AMapGeocodeSearchRequest request) async {
     // print log
@@ -412,10 +428,12 @@ class AMapSearchAPI extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> AMapReGoecodeSearch(AMapReGeocodeSearchRequest request) async {
     // print log
@@ -434,10 +452,12 @@ class AMapSearchAPI extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> AMapInputTipsSearch(AMapInputTipsSearchRequest request) async {
     // print log
@@ -456,10 +476,12 @@ class AMapSearchAPI extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> AMapBusStopSearch(AMapBusStopSearchRequest request) async {
     // print log
@@ -478,10 +500,12 @@ class AMapSearchAPI extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> AMapBusLineIDSearch(AMapBusLineIDSearchRequest request) async {
     // print log
@@ -500,10 +524,12 @@ class AMapSearchAPI extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> AMapBusLineNameSearch(AMapBusLineNameSearchRequest request) async {
     // print log
@@ -522,10 +548,12 @@ class AMapSearchAPI extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> AMapDistrictSearch(AMapDistrictSearchRequest request) async {
     // print log
@@ -544,10 +572,12 @@ class AMapSearchAPI extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> AMapDrivingRouteSearch(AMapDrivingRouteSearchRequest request) async {
     // print log
@@ -566,10 +596,12 @@ class AMapSearchAPI extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> AMapWalkingRouteSearch(AMapWalkingRouteSearchRequest request) async {
     // print log
@@ -588,10 +620,12 @@ class AMapSearchAPI extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> AMapTransitRouteSearch(AMapTransitRouteSearchRequest request) async {
     // print log
@@ -610,10 +644,12 @@ class AMapSearchAPI extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> AMapRidingRouteSearch(AMapRidingRouteSearchRequest request) async {
     // print log
@@ -632,10 +668,12 @@ class AMapSearchAPI extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> AMapTruckRouteSearch(AMapTruckRouteSearchRequest request) async {
     // print log
@@ -654,10 +692,12 @@ class AMapSearchAPI extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> AMapFutureRouteSearch(AMapFutureRouteSearchRequest request) async {
     // print log
@@ -676,10 +716,12 @@ class AMapSearchAPI extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> AMapWeatherSearch(AMapWeatherSearchRequest request) async {
     // print log
@@ -698,10 +740,12 @@ class AMapSearchAPI extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> AMapRoadTrafficSearch(AMapRoadTrafficSearchRequest request) async {
     // print log
@@ -720,10 +764,12 @@ class AMapSearchAPI extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> AMapRoadTrafficCircleSearch(AMapRoadTrafficCircleSearchRequest request) async {
     // print log
@@ -742,10 +788,12 @@ class AMapSearchAPI extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> AMapDistanceSearch(AMapDistanceSearchRequest request) async {
     // print log
@@ -764,10 +812,12 @@ class AMapSearchAPI extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> AMapNearbySearch(AMapNearbySearchRequest request) async {
     // print log
@@ -786,10 +836,12 @@ class AMapSearchAPI extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> AMapCloudPOIAroundSearch(AMapCloudPOIAroundSearchRequest request) async {
     // print log
@@ -808,10 +860,12 @@ class AMapSearchAPI extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> AMapCloudPOIPolygonSearch(AMapCloudPOIPolygonSearchRequest request) async {
     // print log
@@ -830,10 +884,12 @@ class AMapSearchAPI extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> AMapCloudPOIIDSearch(AMapCloudPOIIDSearchRequest request) async {
     // print log
@@ -852,10 +908,12 @@ class AMapSearchAPI extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> AMapCloudPOILocalSearch(AMapCloudPOILocalSearchRequest request) async {
     // print log
@@ -874,10 +932,12 @@ class AMapSearchAPI extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> AMapLocationShareSearch(AMapLocationShareSearchRequest request) async {
     // print log
@@ -896,10 +956,12 @@ class AMapSearchAPI extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> AMapPOIShareSearch(AMapPOIShareSearchRequest request) async {
     // print log
@@ -918,10 +980,12 @@ class AMapSearchAPI extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> AMapRouteShareSearch(AMapRouteShareSearchRequest request) async {
     // print log
@@ -940,10 +1004,12 @@ class AMapSearchAPI extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> AMapNavigationShareSearch(AMapNavigationShareSearchRequest request) async {
     // print log
@@ -962,8 +1028,9 @@ class AMapSearchAPI extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
   
@@ -1004,6 +1071,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   //endregion
 
   //region methods
+  
   Future<List<AMapSearchAPI>> init_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -1023,7 +1091,8 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   }
   
-  Future<void> cancelAllRequests_batch() async {
+  
+  Future<List<void>> cancelAllRequests_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1042,7 +1111,8 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   }
   
-  Future<void> AMapPOIIDSearch_batch(List<AMapPOIIDSearchRequest> request) async {
+  
+  Future<List<void>> AMapPOIIDSearch_batch(List<AMapPOIIDSearchRequest> request) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1061,7 +1131,8 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   }
   
-  Future<void> AMapPOIKeywordsSearch_batch(List<AMapPOIKeywordsSearchRequest> request) async {
+  
+  Future<List<void>> AMapPOIKeywordsSearch_batch(List<AMapPOIKeywordsSearchRequest> request) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1080,7 +1151,8 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   }
   
-  Future<void> AMapPOIAroundSearch_batch(List<AMapPOIAroundSearchRequest> request) async {
+  
+  Future<List<void>> AMapPOIAroundSearch_batch(List<AMapPOIAroundSearchRequest> request) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1099,7 +1171,8 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   }
   
-  Future<void> AMapPOIPolygonSearch_batch(List<AMapPOIPolygonSearchRequest> request) async {
+  
+  Future<List<void>> AMapPOIPolygonSearch_batch(List<AMapPOIPolygonSearchRequest> request) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1118,7 +1191,8 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   }
   
-  Future<void> AMapRoutePOISearch_batch(List<AMapRoutePOISearchRequest> request) async {
+  
+  Future<List<void>> AMapRoutePOISearch_batch(List<AMapRoutePOISearchRequest> request) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1137,7 +1211,8 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   }
   
-  Future<void> AMapGeocodeSearch_batch(List<AMapGeocodeSearchRequest> request) async {
+  
+  Future<List<void>> AMapGeocodeSearch_batch(List<AMapGeocodeSearchRequest> request) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1156,7 +1231,8 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   }
   
-  Future<void> AMapReGoecodeSearch_batch(List<AMapReGeocodeSearchRequest> request) async {
+  
+  Future<List<void>> AMapReGoecodeSearch_batch(List<AMapReGeocodeSearchRequest> request) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1175,7 +1251,8 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   }
   
-  Future<void> AMapInputTipsSearch_batch(List<AMapInputTipsSearchRequest> request) async {
+  
+  Future<List<void>> AMapInputTipsSearch_batch(List<AMapInputTipsSearchRequest> request) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1194,7 +1271,8 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   }
   
-  Future<void> AMapBusStopSearch_batch(List<AMapBusStopSearchRequest> request) async {
+  
+  Future<List<void>> AMapBusStopSearch_batch(List<AMapBusStopSearchRequest> request) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1213,7 +1291,8 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   }
   
-  Future<void> AMapBusLineIDSearch_batch(List<AMapBusLineIDSearchRequest> request) async {
+  
+  Future<List<void>> AMapBusLineIDSearch_batch(List<AMapBusLineIDSearchRequest> request) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1232,7 +1311,8 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   }
   
-  Future<void> AMapBusLineNameSearch_batch(List<AMapBusLineNameSearchRequest> request) async {
+  
+  Future<List<void>> AMapBusLineNameSearch_batch(List<AMapBusLineNameSearchRequest> request) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1251,7 +1331,8 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   }
   
-  Future<void> AMapDistrictSearch_batch(List<AMapDistrictSearchRequest> request) async {
+  
+  Future<List<void>> AMapDistrictSearch_batch(List<AMapDistrictSearchRequest> request) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1270,7 +1351,8 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   }
   
-  Future<void> AMapDrivingRouteSearch_batch(List<AMapDrivingRouteSearchRequest> request) async {
+  
+  Future<List<void>> AMapDrivingRouteSearch_batch(List<AMapDrivingRouteSearchRequest> request) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1289,7 +1371,8 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   }
   
-  Future<void> AMapWalkingRouteSearch_batch(List<AMapWalkingRouteSearchRequest> request) async {
+  
+  Future<List<void>> AMapWalkingRouteSearch_batch(List<AMapWalkingRouteSearchRequest> request) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1308,7 +1391,8 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   }
   
-  Future<void> AMapTransitRouteSearch_batch(List<AMapTransitRouteSearchRequest> request) async {
+  
+  Future<List<void>> AMapTransitRouteSearch_batch(List<AMapTransitRouteSearchRequest> request) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1327,7 +1411,8 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   }
   
-  Future<void> AMapRidingRouteSearch_batch(List<AMapRidingRouteSearchRequest> request) async {
+  
+  Future<List<void>> AMapRidingRouteSearch_batch(List<AMapRidingRouteSearchRequest> request) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1346,7 +1431,8 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   }
   
-  Future<void> AMapTruckRouteSearch_batch(List<AMapTruckRouteSearchRequest> request) async {
+  
+  Future<List<void>> AMapTruckRouteSearch_batch(List<AMapTruckRouteSearchRequest> request) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1365,7 +1451,8 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   }
   
-  Future<void> AMapFutureRouteSearch_batch(List<AMapFutureRouteSearchRequest> request) async {
+  
+  Future<List<void>> AMapFutureRouteSearch_batch(List<AMapFutureRouteSearchRequest> request) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1384,7 +1471,8 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   }
   
-  Future<void> AMapWeatherSearch_batch(List<AMapWeatherSearchRequest> request) async {
+  
+  Future<List<void>> AMapWeatherSearch_batch(List<AMapWeatherSearchRequest> request) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1403,7 +1491,8 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   }
   
-  Future<void> AMapRoadTrafficSearch_batch(List<AMapRoadTrafficSearchRequest> request) async {
+  
+  Future<List<void>> AMapRoadTrafficSearch_batch(List<AMapRoadTrafficSearchRequest> request) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1422,7 +1511,8 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   }
   
-  Future<void> AMapRoadTrafficCircleSearch_batch(List<AMapRoadTrafficCircleSearchRequest> request) async {
+  
+  Future<List<void>> AMapRoadTrafficCircleSearch_batch(List<AMapRoadTrafficCircleSearchRequest> request) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1441,7 +1531,8 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   }
   
-  Future<void> AMapDistanceSearch_batch(List<AMapDistanceSearchRequest> request) async {
+  
+  Future<List<void>> AMapDistanceSearch_batch(List<AMapDistanceSearchRequest> request) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1460,7 +1551,8 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   }
   
-  Future<void> AMapNearbySearch_batch(List<AMapNearbySearchRequest> request) async {
+  
+  Future<List<void>> AMapNearbySearch_batch(List<AMapNearbySearchRequest> request) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1479,7 +1571,8 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   }
   
-  Future<void> AMapCloudPOIAroundSearch_batch(List<AMapCloudPOIAroundSearchRequest> request) async {
+  
+  Future<List<void>> AMapCloudPOIAroundSearch_batch(List<AMapCloudPOIAroundSearchRequest> request) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1498,7 +1591,8 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   }
   
-  Future<void> AMapCloudPOIPolygonSearch_batch(List<AMapCloudPOIPolygonSearchRequest> request) async {
+  
+  Future<List<void>> AMapCloudPOIPolygonSearch_batch(List<AMapCloudPOIPolygonSearchRequest> request) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1517,7 +1611,8 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   }
   
-  Future<void> AMapCloudPOIIDSearch_batch(List<AMapCloudPOIIDSearchRequest> request) async {
+  
+  Future<List<void>> AMapCloudPOIIDSearch_batch(List<AMapCloudPOIIDSearchRequest> request) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1536,7 +1631,8 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   }
   
-  Future<void> AMapCloudPOILocalSearch_batch(List<AMapCloudPOILocalSearchRequest> request) async {
+  
+  Future<List<void>> AMapCloudPOILocalSearch_batch(List<AMapCloudPOILocalSearchRequest> request) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1555,7 +1651,8 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   }
   
-  Future<void> AMapLocationShareSearch_batch(List<AMapLocationShareSearchRequest> request) async {
+  
+  Future<List<void>> AMapLocationShareSearch_batch(List<AMapLocationShareSearchRequest> request) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1574,7 +1671,8 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   }
   
-  Future<void> AMapPOIShareSearch_batch(List<AMapPOIShareSearchRequest> request) async {
+  
+  Future<List<void>> AMapPOIShareSearch_batch(List<AMapPOIShareSearchRequest> request) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1593,7 +1691,8 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   }
   
-  Future<void> AMapRouteShareSearch_batch(List<AMapRouteShareSearchRequest> request) async {
+  
+  Future<List<void>> AMapRouteShareSearch_batch(List<AMapRouteShareSearchRequest> request) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1612,7 +1711,8 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   }
   
-  Future<void> AMapNavigationShareSearch_batch(List<AMapNavigationShareSearchRequest> request) async {
+  
+  Future<List<void>> AMapNavigationShareSearch_batch(List<AMapNavigationShareSearchRequest> request) async {
     if (false) {
       return Future.error('all args must have same length!');
     }

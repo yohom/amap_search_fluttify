@@ -14,6 +14,23 @@ extern BOOL enableLog;
 @implementation AmapSearchFluttifyPlugin (SubHandler6)
 - (NSDictionary<NSString*, Handler>*) getSubHandler6 {
     return @{
+        @"AMapFutureRouteSearchRequest::set_parentId": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapFutureRouteSearchRequest::set_parentId");
+            }
+        
+            // args
+            // jsonable arg
+            NSString* parentId = (NSString*) args[@"parentId"];
+        
+            // ref
+            AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            ref.parentId = parentId;
+            methodResult(@"success");
+        },
+        
         @"AMapFutureRouteSearchRequest::set_plateProvince": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // print log
             if (enableLog) {
@@ -3504,23 +3521,6 @@ extern BOOL enableLog;
             AMapTaxi* ref = (AMapTaxi*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
             ref.tname = tname;
-            methodResult(@"success");
-        },
-        
-        @"AMapRailwayStation::set_uid": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapRailwayStation::set_uid");
-            }
-        
-            // args
-            // jsonable arg
-            NSString* uid = (NSString*) args[@"uid"];
-        
-            // ref
-            AMapRailwayStation* ref = (AMapRailwayStation*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-            ref.uid = uid;
             methodResult(@"success");
         },
         

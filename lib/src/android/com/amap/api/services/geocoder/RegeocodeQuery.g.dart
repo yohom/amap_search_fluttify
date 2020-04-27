@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_amap_api_services_geocoder_RegeocodeQuery extends java_lang_Object  {
   //region constants
@@ -50,6 +51,7 @@ class com_amap_api_services_geocoder_RegeocodeQuery extends java_lang_Object  {
   //endregion
 
   //region methods
+  
   Future<com_amap_api_services_core_LatLonPoint> getPoint() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -67,10 +69,12 @@ class com_amap_api_services_geocoder_RegeocodeQuery extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify');
-      return com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_core_LatLonSharePoint()..refId = __result__..tag__ = 'amap_search_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<void> setPoint(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
@@ -89,10 +93,12 @@ class com_amap_api_services_geocoder_RegeocodeQuery extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<double> getRadius() async {
     // print log
@@ -111,10 +117,12 @@ class com_amap_api_services_geocoder_RegeocodeQuery extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setRadius(double var1) async {
     // print log
@@ -133,10 +141,12 @@ class com_amap_api_services_geocoder_RegeocodeQuery extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getLatLonType() async {
     // print log
@@ -155,10 +165,12 @@ class com_amap_api_services_geocoder_RegeocodeQuery extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setLatLonType(String var1) async {
     // print log
@@ -177,10 +189,12 @@ class com_amap_api_services_geocoder_RegeocodeQuery extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getPoiType() async {
     // print log
@@ -199,10 +213,12 @@ class com_amap_api_services_geocoder_RegeocodeQuery extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setPoiType(String var1) async {
     // print log
@@ -221,8 +237,9 @@ class com_amap_api_services_geocoder_RegeocodeQuery extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
   
@@ -239,6 +256,7 @@ extension com_amap_api_services_geocoder_RegeocodeQuery_Batch on List<com_amap_a
   //endregion
 
   //region methods
+  
   Future<List<com_amap_api_services_core_LatLonPoint>> getPoint_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -252,13 +270,14 @@ extension com_amap_api_services_geocoder_RegeocodeQuery_Batch on List<com_amap_a
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_amap_api_services_core_LatLonSharePoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
   }
   
-  Future<void> setPoint_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
+  
+  Future<List<void>> setPoint_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -276,6 +295,7 @@ extension com_amap_api_services_geocoder_RegeocodeQuery_Batch on List<com_amap_a
       return typedResult;
     }
   }
+  
   
   Future<List<double>> getRadius_batch() async {
     if (false) {
@@ -296,7 +316,8 @@ extension com_amap_api_services_geocoder_RegeocodeQuery_Batch on List<com_amap_a
     }
   }
   
-  Future<void> setRadius_batch(List<double> var1) async {
+  
+  Future<List<void>> setRadius_batch(List<double> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -314,6 +335,7 @@ extension com_amap_api_services_geocoder_RegeocodeQuery_Batch on List<com_amap_a
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getLatLonType_batch() async {
     if (false) {
@@ -334,7 +356,8 @@ extension com_amap_api_services_geocoder_RegeocodeQuery_Batch on List<com_amap_a
     }
   }
   
-  Future<void> setLatLonType_batch(List<String> var1) async {
+  
+  Future<List<void>> setLatLonType_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -352,6 +375,7 @@ extension com_amap_api_services_geocoder_RegeocodeQuery_Batch on List<com_amap_a
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getPoiType_batch() async {
     if (false) {
@@ -372,7 +396,8 @@ extension com_amap_api_services_geocoder_RegeocodeQuery_Batch on List<com_amap_a
     }
   }
   
-  Future<void> setPoiType_batch(List<String> var1) async {
+  
+  Future<List<void>> setPoiType_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }

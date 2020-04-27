@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 mixin com_amap_api_services_interfaces_IBusStationSearch on java_lang_Object {
   
@@ -19,48 +20,142 @@ mixin com_amap_api_services_interfaces_IBusStationSearch on java_lang_Object {
 
   
 
-  @mustCallSuper
-  Future<com_amap_api_services_busline_BusStationResult> searchBusStation() {
   
-  
+  Future<com_amap_api_services_busline_BusStationResult> searchBusStation() async {
+    // print log
     if (fluttifyLogEnabled) {
-      debugPrint('searchBusStation::kNativeObjectPool: $kNativeObjectPool');
+      print('fluttify-dart: com.amap.api.services.interfaces.IBusStationSearch@$refId::searchBusStation([])');
+    }
+  
+    // invoke native method
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IBusStationSearch::searchBusStation', {"refId": refId});
+  
+  
+    // handle native call
+  
+  
+    // convert native result to dart side object
+    if (__result__ == null) {
+      return null;
+    } else {
+      final __return__ = com_amap_api_services_busline_BusStationResult()..refId = __result__..tag__ = 'amap_search_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
   
-  @mustCallSuper
-  Future<void> setOnBusStationSearchListener(com_amap_api_services_busline_BusStationSearch_OnBusStationSearchListener var1) {
-    kNativeObjectPool.add(var1);
   
+  Future<void> setOnBusStationSearchListener(com_amap_api_services_busline_BusStationSearch_OnBusStationSearchListener var1) async {
+    // print log
     if (fluttifyLogEnabled) {
-      debugPrint('setOnBusStationSearchListener::kNativeObjectPool: $kNativeObjectPool');
+      print('fluttify-dart: com.amap.api.services.interfaces.IBusStationSearch@$refId::setOnBusStationSearchListener([])');
+    }
+  
+    // invoke native method
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IBusStationSearch::setOnBusStationSearchListener', {"refId": refId});
+  
+  
+    // handle native call
+    MethodChannel('com.amap.api.services.interfaces.IBusStationSearch::setOnBusStationSearchListener::Callback')
+        .setMethodCallHandler((methodCall) async {
+          final args = methodCall.arguments as Map;
+          // final refId = args['callerRefId'] as int;
+          // if (refId != this.refId) return;
+  
+          switch (methodCall.method) {
+            case 'Callback::com.amap.api.services.busline.BusStationSearch.OnBusStationSearchListener::onBusStationSearched':
+              // print log
+              if (fluttifyLogEnabled) {
+                print('fluttify-dart-callback: onBusStationSearched([\'var2\':${args['var2']}])');
+              }
+        
+              // handle the native call
+              var1?.onBusStationSearched((com_amap_api_services_busline_BusStationResult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify'), args['var2']);
+              break;
+            default:
+              break;
+          }
+        });
+  
+    // convert native result to dart side object
+    if (__result__ == null) {
+      return null;
+    } else {
+      final __return__ = __result__;
+    
+      return __return__;
     }
   }
   
-  @mustCallSuper
-  Future<void> searchBusStationAsyn() {
   
-  
+  Future<void> searchBusStationAsyn() async {
+    // print log
     if (fluttifyLogEnabled) {
-      debugPrint('searchBusStationAsyn::kNativeObjectPool: $kNativeObjectPool');
+      print('fluttify-dart: com.amap.api.services.interfaces.IBusStationSearch@$refId::searchBusStationAsyn([])');
+    }
+  
+    // invoke native method
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IBusStationSearch::searchBusStationAsyn', {"refId": refId});
+  
+  
+    // handle native call
+  
+  
+    // convert native result to dart side object
+    if (__result__ == null) {
+      return null;
+    } else {
+      final __return__ = __result__;
+    
+      return __return__;
     }
   }
   
-  @mustCallSuper
-  Future<void> setQuery(com_amap_api_services_busline_BusStationQuery var1) {
-    kNativeObjectPool.add(var1);
   
+  Future<void> setQuery(com_amap_api_services_busline_BusStationQuery var1) async {
+    // print log
     if (fluttifyLogEnabled) {
-      debugPrint('setQuery::kNativeObjectPool: $kNativeObjectPool');
+      print('fluttify-dart: com.amap.api.services.interfaces.IBusStationSearch@$refId::setQuery([])');
+    }
+  
+    // invoke native method
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IBusStationSearch::setQuery', {"var1": var1.refId, "refId": refId});
+  
+  
+    // handle native call
+  
+  
+    // convert native result to dart side object
+    if (__result__ == null) {
+      return null;
+    } else {
+      final __return__ = __result__;
+    
+      return __return__;
     }
   }
   
-  @mustCallSuper
-  Future<com_amap_api_services_busline_BusStationQuery> getQuery() {
   
-  
+  Future<com_amap_api_services_busline_BusStationQuery> getQuery() async {
+    // print log
     if (fluttifyLogEnabled) {
-      debugPrint('getQuery::kNativeObjectPool: $kNativeObjectPool');
+      print('fluttify-dart: com.amap.api.services.interfaces.IBusStationSearch@$refId::getQuery([])');
+    }
+  
+    // invoke native method
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IBusStationSearch::getQuery', {"refId": refId});
+  
+  
+    // handle native call
+  
+  
+    // convert native result to dart side object
+    if (__result__ == null) {
+      return null;
+    } else {
+      final __return__ = com_amap_api_services_busline_BusStationQuery()..refId = __result__..tag__ = 'amap_search_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
   

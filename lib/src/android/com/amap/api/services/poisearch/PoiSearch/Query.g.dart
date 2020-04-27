@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  {
   //region constants
@@ -69,6 +70,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   //endregion
 
   //region methods
+  
   Future<String> getBuilding() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -86,10 +88,12 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setBuilding(String var1) async {
     // print log
@@ -108,10 +112,12 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getQueryString() async {
     // print log
@@ -130,10 +136,12 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setQueryLanguage(String var1) async {
     // print log
@@ -152,10 +160,12 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getCategory() async {
     // print log
@@ -174,10 +184,12 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getCity() async {
     // print log
@@ -196,10 +208,12 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<int> getPageNum() async {
     // print log
@@ -218,10 +232,12 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setPageNum(int var1) async {
     // print log
@@ -240,10 +256,12 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setPageSize(int var1) async {
     // print log
@@ -262,10 +280,12 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<int> getPageSize() async {
     // print log
@@ -284,10 +304,12 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setCityLimit(bool var1) async {
     // print log
@@ -306,10 +328,12 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<bool> getCityLimit() async {
     // print log
@@ -328,10 +352,12 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> requireSubPois(bool var1) async {
     // print log
@@ -350,10 +376,12 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<bool> isRequireSubPois() async {
     // print log
@@ -372,10 +400,12 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<bool> isDistanceSort() async {
     // print log
@@ -394,10 +424,12 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setDistanceSort(bool var1) async {
     // print log
@@ -416,10 +448,12 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_services_core_LatLonPoint> getLocation() async {
     // print log
@@ -438,10 +472,12 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify');
-      return com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_core_LatLonSharePoint()..refId = __result__..tag__ = 'amap_search_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<void> setLocation(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
@@ -460,10 +496,12 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<bool> queryEquals(com_amap_api_services_poisearch_PoiSearch_Query var1) async {
     // print log
@@ -482,10 +520,12 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_services_poisearch_PoiSearch_Query> clone() async {
     // print log
@@ -504,8 +544,9 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_poisearch_PoiSearch_Query()..refId = __result__..tag__ = 'amap_search_fluttify');
-      return com_amap_api_services_poisearch_PoiSearch_Query()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_poisearch_PoiSearch_Query()..refId = __result__..tag__ = 'amap_search_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
   
@@ -522,6 +563,7 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
   //endregion
 
   //region methods
+  
   Future<List<String>> getBuilding_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -541,7 +583,8 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
     }
   }
   
-  Future<void> setBuilding_batch(List<String> var1) async {
+  
+  Future<List<void>> setBuilding_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -559,6 +602,7 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getQueryString_batch() async {
     if (false) {
@@ -579,7 +623,8 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
     }
   }
   
-  Future<void> setQueryLanguage_batch(List<String> var1) async {
+  
+  Future<List<void>> setQueryLanguage_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -597,6 +642,7 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getCategory_batch() async {
     if (false) {
@@ -617,6 +663,7 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
     }
   }
   
+  
   Future<List<String>> getCity_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -635,6 +682,7 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
       return typedResult;
     }
   }
+  
   
   Future<List<int>> getPageNum_batch() async {
     if (false) {
@@ -655,7 +703,8 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
     }
   }
   
-  Future<void> setPageNum_batch(List<int> var1) async {
+  
+  Future<List<void>> setPageNum_batch(List<int> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -674,7 +723,8 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
     }
   }
   
-  Future<void> setPageSize_batch(List<int> var1) async {
+  
+  Future<List<void>> setPageSize_batch(List<int> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -692,6 +742,7 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
       return typedResult;
     }
   }
+  
   
   Future<List<int>> getPageSize_batch() async {
     if (false) {
@@ -712,7 +763,8 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
     }
   }
   
-  Future<void> setCityLimit_batch(List<bool> var1) async {
+  
+  Future<List<void>> setCityLimit_batch(List<bool> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -730,6 +782,7 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
       return typedResult;
     }
   }
+  
   
   Future<List<bool>> getCityLimit_batch() async {
     if (false) {
@@ -750,7 +803,8 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
     }
   }
   
-  Future<void> requireSubPois_batch(List<bool> var1) async {
+  
+  Future<List<void>> requireSubPois_batch(List<bool> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -768,6 +822,7 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
       return typedResult;
     }
   }
+  
   
   Future<List<bool>> isRequireSubPois_batch() async {
     if (false) {
@@ -788,6 +843,7 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
     }
   }
   
+  
   Future<List<bool>> isDistanceSort_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -807,7 +863,8 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
     }
   }
   
-  Future<void> setDistanceSort_batch(List<bool> var1) async {
+  
+  Future<List<void>> setDistanceSort_batch(List<bool> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -826,6 +883,7 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
     }
   }
   
+  
   Future<List<com_amap_api_services_core_LatLonPoint>> getLocation_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -839,13 +897,14 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_amap_api_services_core_LatLonSharePoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
   }
   
-  Future<void> setLocation_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
+  
+  Future<List<void>> setLocation_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -863,6 +922,7 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
       return typedResult;
     }
   }
+  
   
   Future<List<bool>> queryEquals_batch(List<com_amap_api_services_poisearch_PoiSearch_Query> var1) async {
     if (false) {
@@ -882,6 +942,7 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
       return typedResult;
     }
   }
+  
   
   Future<List<com_amap_api_services_poisearch_PoiSearch_Query>> clone_batch() async {
     if (false) {

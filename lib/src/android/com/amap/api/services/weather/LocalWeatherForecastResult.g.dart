@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_amap_api_services_weather_LocalWeatherForecastResult extends java_lang_Object  {
   //region constants
@@ -32,6 +33,7 @@ class com_amap_api_services_weather_LocalWeatherForecastResult extends java_lang
   //endregion
 
   //region methods
+  
   static Future<com_amap_api_services_weather_LocalWeatherForecastResult> createPagedResult(com_amap_api_services_weather_WeatherSearchQuery var0, com_amap_api_services_weather_LocalWeatherForecast var1) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -49,10 +51,12 @@ class com_amap_api_services_weather_LocalWeatherForecastResult extends java_lang
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_weather_LocalWeatherForecastResult()..refId = __result__..tag__ = 'amap_search_fluttify');
-      return com_amap_api_services_weather_LocalWeatherForecastResult()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_weather_LocalWeatherForecastResult()..refId = __result__..tag__ = 'amap_search_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_services_weather_WeatherSearchQuery> getWeatherForecastQuery() async {
     // print log
@@ -71,10 +75,12 @@ class com_amap_api_services_weather_LocalWeatherForecastResult extends java_lang
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_weather_WeatherSearchQuery()..refId = __result__..tag__ = 'amap_search_fluttify');
-      return com_amap_api_services_weather_WeatherSearchQuery()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_weather_WeatherSearchQuery()..refId = __result__..tag__ = 'amap_search_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_services_weather_LocalWeatherForecast> getForecastResult() async {
     // print log
@@ -93,8 +99,9 @@ class com_amap_api_services_weather_LocalWeatherForecastResult extends java_lang
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_weather_LocalWeatherForecast()..refId = __result__..tag__ = 'amap_search_fluttify');
-      return com_amap_api_services_weather_LocalWeatherForecast()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_weather_LocalWeatherForecast()..refId = __result__..tag__ = 'amap_search_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
   
@@ -111,13 +118,14 @@ extension com_amap_api_services_weather_LocalWeatherForecastResult_Batch on List
   //endregion
 
   //region methods
-  Future<List<com_amap_api_services_weather_LocalWeatherForecastResult>> createPagedResult_batch(List<com_amap_api_services_weather_WeatherSearchQuery> var0, List<com_amap_api_services_weather_LocalWeatherForecast> var1) async {
+  
+  static Future<List<com_amap_api_services_weather_LocalWeatherForecastResult>> createPagedResult_batch(List<com_amap_api_services_weather_WeatherSearchQuery> var0, List<com_amap_api_services_weather_LocalWeatherForecast> var1) async {
     if (var0.length != var1.length) {
       return Future.error('all args must have same length!');
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalWeatherForecastResult::createPagedResult_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__].refId, "var1": var1[__i__].refId, "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalWeatherForecastResult::createPagedResult_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__].refId, "var1": var1[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -129,6 +137,7 @@ extension com_amap_api_services_weather_LocalWeatherForecastResult_Batch on List
       return typedResult;
     }
   }
+  
   
   Future<List<com_amap_api_services_weather_WeatherSearchQuery>> getWeatherForecastQuery_batch() async {
     if (false) {
@@ -148,6 +157,7 @@ extension com_amap_api_services_weather_LocalWeatherForecastResult_Batch on List
       return typedResult;
     }
   }
+  
   
   Future<List<com_amap_api_services_weather_LocalWeatherForecast>> getForecastResult_batch() async {
     if (false) {

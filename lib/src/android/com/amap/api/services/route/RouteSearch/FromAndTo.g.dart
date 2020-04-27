@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object with android_os_Parcelable {
   //region constants
@@ -69,6 +70,7 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
   //endregion
 
   //region methods
+  
   Future<com_amap_api_services_core_LatLonPoint> getFrom() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -86,10 +88,12 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify');
-      return com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_core_LatLonSharePoint()..refId = __result__..tag__ = 'amap_search_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_services_core_LatLonPoint> getTo() async {
     // print log
@@ -108,10 +112,12 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify');
-      return com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_core_LatLonSharePoint()..refId = __result__..tag__ = 'amap_search_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<String> getStartPoiID() async {
     // print log
@@ -130,10 +136,12 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setStartPoiID(String var1) async {
     // print log
@@ -152,10 +160,12 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getDestinationPoiID() async {
     // print log
@@ -174,10 +184,12 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setDestinationPoiID(String var1) async {
     // print log
@@ -196,10 +208,12 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getOriginType() async {
     // print log
@@ -218,10 +232,12 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setOriginType(String var1) async {
     // print log
@@ -240,10 +256,12 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getDestinationType() async {
     // print log
@@ -262,10 +280,12 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setDestinationType(String var1) async {
     // print log
@@ -284,10 +304,12 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getPlateProvince() async {
     // print log
@@ -306,10 +328,12 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setPlateProvince(String var1) async {
     // print log
@@ -328,10 +352,12 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getPlateNumber() async {
     // print log
@@ -350,10 +376,12 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setPlateNumber(String var1) async {
     // print log
@@ -372,10 +400,12 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_services_route_RouteSearch_FromAndTo> clone() async {
     // print log
@@ -394,8 +424,9 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_route_RouteSearch_FromAndTo()..refId = __result__..tag__ = 'amap_search_fluttify');
-      return com_amap_api_services_route_RouteSearch_FromAndTo()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_route_RouteSearch_FromAndTo()..refId = __result__..tag__ = 'amap_search_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
   
@@ -412,6 +443,7 @@ extension com_amap_api_services_route_RouteSearch_FromAndTo_Batch on List<com_am
   //endregion
 
   //region methods
+  
   Future<List<com_amap_api_services_core_LatLonPoint>> getFrom_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -425,11 +457,12 @@ extension com_amap_api_services_route_RouteSearch_FromAndTo_Batch on List<com_am
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_amap_api_services_core_LatLonSharePoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
   }
+  
   
   Future<List<com_amap_api_services_core_LatLonPoint>> getTo_batch() async {
     if (false) {
@@ -444,11 +477,12 @@ extension com_amap_api_services_route_RouteSearch_FromAndTo_Batch on List<com_am
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_amap_api_services_core_LatLonSharePoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getStartPoiID_batch() async {
     if (false) {
@@ -469,7 +503,8 @@ extension com_amap_api_services_route_RouteSearch_FromAndTo_Batch on List<com_am
     }
   }
   
-  Future<void> setStartPoiID_batch(List<String> var1) async {
+  
+  Future<List<void>> setStartPoiID_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -487,6 +522,7 @@ extension com_amap_api_services_route_RouteSearch_FromAndTo_Batch on List<com_am
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getDestinationPoiID_batch() async {
     if (false) {
@@ -507,7 +543,8 @@ extension com_amap_api_services_route_RouteSearch_FromAndTo_Batch on List<com_am
     }
   }
   
-  Future<void> setDestinationPoiID_batch(List<String> var1) async {
+  
+  Future<List<void>> setDestinationPoiID_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -525,6 +562,7 @@ extension com_amap_api_services_route_RouteSearch_FromAndTo_Batch on List<com_am
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getOriginType_batch() async {
     if (false) {
@@ -545,7 +583,8 @@ extension com_amap_api_services_route_RouteSearch_FromAndTo_Batch on List<com_am
     }
   }
   
-  Future<void> setOriginType_batch(List<String> var1) async {
+  
+  Future<List<void>> setOriginType_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -563,6 +602,7 @@ extension com_amap_api_services_route_RouteSearch_FromAndTo_Batch on List<com_am
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getDestinationType_batch() async {
     if (false) {
@@ -583,7 +623,8 @@ extension com_amap_api_services_route_RouteSearch_FromAndTo_Batch on List<com_am
     }
   }
   
-  Future<void> setDestinationType_batch(List<String> var1) async {
+  
+  Future<List<void>> setDestinationType_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -601,6 +642,7 @@ extension com_amap_api_services_route_RouteSearch_FromAndTo_Batch on List<com_am
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getPlateProvince_batch() async {
     if (false) {
@@ -621,7 +663,8 @@ extension com_amap_api_services_route_RouteSearch_FromAndTo_Batch on List<com_am
     }
   }
   
-  Future<void> setPlateProvince_batch(List<String> var1) async {
+  
+  Future<List<void>> setPlateProvince_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -639,6 +682,7 @@ extension com_amap_api_services_route_RouteSearch_FromAndTo_Batch on List<com_am
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getPlateNumber_batch() async {
     if (false) {
@@ -659,7 +703,8 @@ extension com_amap_api_services_route_RouteSearch_FromAndTo_Batch on List<com_am
     }
   }
   
-  Future<void> setPlateNumber_batch(List<String> var1) async {
+  
+  Future<List<void>> setPlateNumber_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -677,6 +722,7 @@ extension com_amap_api_services_route_RouteSearch_FromAndTo_Batch on List<com_am
       return typedResult;
     }
   }
+  
   
   Future<List<com_amap_api_services_route_RouteSearch_FromAndTo>> clone_batch() async {
     if (false) {

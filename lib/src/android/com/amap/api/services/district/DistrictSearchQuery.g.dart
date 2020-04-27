@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Object with android_os_Parcelable {
   //region constants
@@ -92,6 +93,7 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
   //endregion
 
   //region methods
+  
   Future<void> setShowBoundary(bool var1) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -109,10 +111,12 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<bool> isShowBoundary() async {
     // print log
@@ -131,10 +135,12 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<int> getPageNum() async {
     // print log
@@ -153,10 +159,12 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setPageNum(int var1) async {
     // print log
@@ -175,10 +183,12 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<int> getPageSize() async {
     // print log
@@ -197,10 +207,12 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setPageSize(int var1) async {
     // print log
@@ -219,10 +231,12 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getKeywords() async {
     // print log
@@ -241,10 +255,12 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setKeywords(String var1) async {
     // print log
@@ -263,10 +279,12 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getKeywordsLevel() async {
     // print log
@@ -285,10 +303,12 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setKeywordsLevel(String var1) async {
     // print log
@@ -307,10 +327,12 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<bool> isShowChild() async {
     // print log
@@ -329,10 +351,12 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setShowChild(bool var1) async {
     // print log
@@ -351,10 +375,12 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<bool> isShowBusinessArea() async {
     // print log
@@ -373,10 +399,12 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setShowBusinessArea(bool var1) async {
     // print log
@@ -395,10 +423,12 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<bool> checkLevels() async {
     // print log
@@ -417,10 +447,12 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<bool> checkKeyWords() async {
     // print log
@@ -439,10 +471,12 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<bool> weakEquals(com_amap_api_services_district_DistrictSearchQuery var1) async {
     // print log
@@ -461,10 +495,12 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_services_district_DistrictSearchQuery> clone() async {
     // print log
@@ -483,8 +519,9 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_district_DistrictSearchQuery()..refId = __result__..tag__ = 'amap_search_fluttify');
-      return com_amap_api_services_district_DistrictSearchQuery()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_district_DistrictSearchQuery()..refId = __result__..tag__ = 'amap_search_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
   
@@ -501,7 +538,8 @@ extension com_amap_api_services_district_DistrictSearchQuery_Batch on List<com_a
   //endregion
 
   //region methods
-  Future<void> setShowBoundary_batch(List<bool> var1) async {
+  
+  Future<List<void>> setShowBoundary_batch(List<bool> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -519,6 +557,7 @@ extension com_amap_api_services_district_DistrictSearchQuery_Batch on List<com_a
       return typedResult;
     }
   }
+  
   
   Future<List<bool>> isShowBoundary_batch() async {
     if (false) {
@@ -539,6 +578,7 @@ extension com_amap_api_services_district_DistrictSearchQuery_Batch on List<com_a
     }
   }
   
+  
   Future<List<int>> getPageNum_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -558,7 +598,8 @@ extension com_amap_api_services_district_DistrictSearchQuery_Batch on List<com_a
     }
   }
   
-  Future<void> setPageNum_batch(List<int> var1) async {
+  
+  Future<List<void>> setPageNum_batch(List<int> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -576,6 +617,7 @@ extension com_amap_api_services_district_DistrictSearchQuery_Batch on List<com_a
       return typedResult;
     }
   }
+  
   
   Future<List<int>> getPageSize_batch() async {
     if (false) {
@@ -596,7 +638,8 @@ extension com_amap_api_services_district_DistrictSearchQuery_Batch on List<com_a
     }
   }
   
-  Future<void> setPageSize_batch(List<int> var1) async {
+  
+  Future<List<void>> setPageSize_batch(List<int> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -614,6 +657,7 @@ extension com_amap_api_services_district_DistrictSearchQuery_Batch on List<com_a
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getKeywords_batch() async {
     if (false) {
@@ -634,7 +678,8 @@ extension com_amap_api_services_district_DistrictSearchQuery_Batch on List<com_a
     }
   }
   
-  Future<void> setKeywords_batch(List<String> var1) async {
+  
+  Future<List<void>> setKeywords_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -652,6 +697,7 @@ extension com_amap_api_services_district_DistrictSearchQuery_Batch on List<com_a
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getKeywordsLevel_batch() async {
     if (false) {
@@ -672,7 +718,8 @@ extension com_amap_api_services_district_DistrictSearchQuery_Batch on List<com_a
     }
   }
   
-  Future<void> setKeywordsLevel_batch(List<String> var1) async {
+  
+  Future<List<void>> setKeywordsLevel_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -690,6 +737,7 @@ extension com_amap_api_services_district_DistrictSearchQuery_Batch on List<com_a
       return typedResult;
     }
   }
+  
   
   Future<List<bool>> isShowChild_batch() async {
     if (false) {
@@ -710,7 +758,8 @@ extension com_amap_api_services_district_DistrictSearchQuery_Batch on List<com_a
     }
   }
   
-  Future<void> setShowChild_batch(List<bool> var1) async {
+  
+  Future<List<void>> setShowChild_batch(List<bool> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -728,6 +777,7 @@ extension com_amap_api_services_district_DistrictSearchQuery_Batch on List<com_a
       return typedResult;
     }
   }
+  
   
   Future<List<bool>> isShowBusinessArea_batch() async {
     if (false) {
@@ -748,7 +798,8 @@ extension com_amap_api_services_district_DistrictSearchQuery_Batch on List<com_a
     }
   }
   
-  Future<void> setShowBusinessArea_batch(List<bool> var1) async {
+  
+  Future<List<void>> setShowBusinessArea_batch(List<bool> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -766,6 +817,7 @@ extension com_amap_api_services_district_DistrictSearchQuery_Batch on List<com_a
       return typedResult;
     }
   }
+  
   
   Future<List<bool>> checkLevels_batch() async {
     if (false) {
@@ -786,6 +838,7 @@ extension com_amap_api_services_district_DistrictSearchQuery_Batch on List<com_a
     }
   }
   
+  
   Future<List<bool>> checkKeyWords_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -805,6 +858,7 @@ extension com_amap_api_services_district_DistrictSearchQuery_Batch on List<com_a
     }
   }
   
+  
   Future<List<bool>> weakEquals_batch(List<com_amap_api_services_district_DistrictSearchQuery> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -823,6 +877,7 @@ extension com_amap_api_services_district_DistrictSearchQuery_Batch on List<com_a
       return typedResult;
     }
   }
+  
   
   Future<List<com_amap_api_services_district_DistrictSearchQuery>> clone_batch() async {
     if (false) {

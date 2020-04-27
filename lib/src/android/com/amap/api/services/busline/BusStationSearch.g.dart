@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_amap_api_services_busline_BusStationSearch extends java_lang_Object  {
   //region constants
@@ -50,6 +51,7 @@ class com_amap_api_services_busline_BusStationSearch extends java_lang_Object  {
   //endregion
 
   //region methods
+  
   Future<com_amap_api_services_busline_BusStationResult> searchBusStation() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -67,10 +69,12 @@ class com_amap_api_services_busline_BusStationSearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_busline_BusStationResult()..refId = __result__..tag__ = 'amap_search_fluttify');
-      return com_amap_api_services_busline_BusStationResult()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_busline_BusStationResult()..refId = __result__..tag__ = 'amap_search_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<void> setOnBusStationSearchListener(com_amap_api_services_busline_BusStationSearch_OnBusStationSearchListener var1) async {
     // print log
@@ -93,11 +97,11 @@ class com_amap_api_services_busline_BusStationSearch extends java_lang_Object  {
             case 'Callback::com.amap.api.services.busline.BusStationSearch.OnBusStationSearchListener::onBusStationSearched':
               // print log
               if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onBusStationSearched([\'var2\':$args[var2]])');
+                print('fluttify-dart-callback: onBusStationSearched([\'var2\':${args['var2']}])');
               }
         
               // handle the native call
-              var1?.onBusStationSearched(com_amap_api_services_busline_BusStationResult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify', args['var2']);
+              var1?.onBusStationSearched((com_amap_api_services_busline_BusStationResult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify'), args['var2']);
               break;
             default:
               break;
@@ -108,10 +112,12 @@ class com_amap_api_services_busline_BusStationSearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> searchBusStationAsyn() async {
     // print log
@@ -130,10 +136,12 @@ class com_amap_api_services_busline_BusStationSearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setQuery(com_amap_api_services_busline_BusStationQuery var1) async {
     // print log
@@ -152,10 +160,12 @@ class com_amap_api_services_busline_BusStationSearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_services_busline_BusStationQuery> getQuery() async {
     // print log
@@ -174,8 +184,9 @@ class com_amap_api_services_busline_BusStationSearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_busline_BusStationQuery()..refId = __result__..tag__ = 'amap_search_fluttify');
-      return com_amap_api_services_busline_BusStationQuery()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_busline_BusStationQuery()..refId = __result__..tag__ = 'amap_search_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
   
@@ -192,6 +203,7 @@ extension com_amap_api_services_busline_BusStationSearch_Batch on List<com_amap_
   //endregion
 
   //region methods
+  
   Future<List<com_amap_api_services_busline_BusStationResult>> searchBusStation_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -211,7 +223,8 @@ extension com_amap_api_services_busline_BusStationSearch_Batch on List<com_amap_
     }
   }
   
-  Future<void> searchBusStationAsyn_batch() async {
+  
+  Future<List<void>> searchBusStationAsyn_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -230,7 +243,8 @@ extension com_amap_api_services_busline_BusStationSearch_Batch on List<com_amap_
     }
   }
   
-  Future<void> setQuery_batch(List<com_amap_api_services_busline_BusStationQuery> var1) async {
+  
+  Future<List<void>> setQuery_batch(List<com_amap_api_services_busline_BusStationQuery> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -248,6 +262,7 @@ extension com_amap_api_services_busline_BusStationSearch_Batch on List<com_amap_
       return typedResult;
     }
   }
+  
   
   Future<List<com_amap_api_services_busline_BusStationQuery>> getQuery_batch() async {
     if (false) {

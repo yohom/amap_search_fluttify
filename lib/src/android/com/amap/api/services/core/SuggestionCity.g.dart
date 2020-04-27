@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_amap_api_services_core_SuggestionCity extends java_lang_Object  {
   //region constants
@@ -50,6 +51,7 @@ class com_amap_api_services_core_SuggestionCity extends java_lang_Object  {
   //endregion
 
   //region methods
+  
   Future<String> getCityName() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -67,10 +69,12 @@ class com_amap_api_services_core_SuggestionCity extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setCityName(String var1) async {
     // print log
@@ -89,10 +93,12 @@ class com_amap_api_services_core_SuggestionCity extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getCityCode() async {
     // print log
@@ -111,10 +117,12 @@ class com_amap_api_services_core_SuggestionCity extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setCityCode(String var1) async {
     // print log
@@ -133,10 +141,12 @@ class com_amap_api_services_core_SuggestionCity extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getAdCode() async {
     // print log
@@ -155,10 +165,12 @@ class com_amap_api_services_core_SuggestionCity extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setAdCode(String var1) async {
     // print log
@@ -177,10 +189,12 @@ class com_amap_api_services_core_SuggestionCity extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<int> getSuggestionNum() async {
     // print log
@@ -199,10 +213,12 @@ class com_amap_api_services_core_SuggestionCity extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setSuggestionNum(int var1) async {
     // print log
@@ -221,8 +237,9 @@ class com_amap_api_services_core_SuggestionCity extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
   
@@ -239,6 +256,7 @@ extension com_amap_api_services_core_SuggestionCity_Batch on List<com_amap_api_s
   //endregion
 
   //region methods
+  
   Future<List<String>> getCityName_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -258,7 +276,8 @@ extension com_amap_api_services_core_SuggestionCity_Batch on List<com_amap_api_s
     }
   }
   
-  Future<void> setCityName_batch(List<String> var1) async {
+  
+  Future<List<void>> setCityName_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -276,6 +295,7 @@ extension com_amap_api_services_core_SuggestionCity_Batch on List<com_amap_api_s
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getCityCode_batch() async {
     if (false) {
@@ -296,7 +316,8 @@ extension com_amap_api_services_core_SuggestionCity_Batch on List<com_amap_api_s
     }
   }
   
-  Future<void> setCityCode_batch(List<String> var1) async {
+  
+  Future<List<void>> setCityCode_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -314,6 +335,7 @@ extension com_amap_api_services_core_SuggestionCity_Batch on List<com_amap_api_s
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getAdCode_batch() async {
     if (false) {
@@ -334,7 +356,8 @@ extension com_amap_api_services_core_SuggestionCity_Batch on List<com_amap_api_s
     }
   }
   
-  Future<void> setAdCode_batch(List<String> var1) async {
+  
+  Future<List<void>> setAdCode_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -352,6 +375,7 @@ extension com_amap_api_services_core_SuggestionCity_Batch on List<com_amap_api_s
       return typedResult;
     }
   }
+  
   
   Future<List<int>> getSuggestionNum_batch() async {
     if (false) {
@@ -372,7 +396,8 @@ extension com_amap_api_services_core_SuggestionCity_Batch on List<com_amap_api_s
     }
   }
   
-  Future<void> setSuggestionNum_batch(List<int> var1) async {
+  
+  Future<List<void>> setSuggestionNum_batch(List<int> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }

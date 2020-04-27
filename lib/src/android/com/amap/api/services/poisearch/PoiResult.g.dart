@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_amap_api_services_poisearch_PoiResult extends java_lang_Object  {
   //region constants
@@ -32,6 +33,7 @@ class com_amap_api_services_poisearch_PoiResult extends java_lang_Object  {
   //endregion
 
   //region methods
+  
   static Future<com_amap_api_services_poisearch_PoiResult> createPagedResult(com_amap_api_services_poisearch_PoiSearch_Query var0, com_amap_api_services_poisearch_PoiSearch_SearchBound var1, List<String> var2, List<com_amap_api_services_core_SuggestionCity> var3, int var4, int var5, List<com_amap_api_services_core_PoiItem> var6) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -49,10 +51,12 @@ class com_amap_api_services_poisearch_PoiResult extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_poisearch_PoiResult()..refId = __result__..tag__ = 'amap_search_fluttify');
-      return com_amap_api_services_poisearch_PoiResult()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_poisearch_PoiResult()..refId = __result__..tag__ = 'amap_search_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<int> getPageCount() async {
     // print log
@@ -71,10 +75,12 @@ class com_amap_api_services_poisearch_PoiResult extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_services_poisearch_PoiSearch_Query> getQuery() async {
     // print log
@@ -93,10 +99,12 @@ class com_amap_api_services_poisearch_PoiResult extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_poisearch_PoiSearch_Query()..refId = __result__..tag__ = 'amap_search_fluttify');
-      return com_amap_api_services_poisearch_PoiSearch_Query()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_poisearch_PoiSearch_Query()..refId = __result__..tag__ = 'amap_search_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_services_poisearch_PoiSearch_SearchBound> getBound() async {
     // print log
@@ -115,10 +123,12 @@ class com_amap_api_services_poisearch_PoiResult extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_poisearch_PoiSearch_SearchBound()..refId = __result__..tag__ = 'amap_search_fluttify');
-      return com_amap_api_services_poisearch_PoiSearch_SearchBound()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_poisearch_PoiSearch_SearchBound()..refId = __result__..tag__ = 'amap_search_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<List<com_amap_api_services_core_PoiItem>> getPois() async {
     // print log
@@ -137,10 +147,12 @@ class com_amap_api_services_poisearch_PoiResult extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => com_amap_api_services_core_PoiItem()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
-      return (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_core_PoiItem()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      final __return__ = (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_core_PoiItem()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      kNativeObjectPool.addAll(__return__);
+      return __return__;
     }
   }
+  
   
   Future<List<String>> getSearchSuggestionKeywords() async {
     // print log
@@ -159,10 +171,12 @@ class com_amap_api_services_poisearch_PoiResult extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = (__result__ as List).cast<String>();
     
-      return (__result__ as List).cast<String>();
+      return __return__;
     }
   }
+  
   
   Future<List<com_amap_api_services_core_SuggestionCity>> getSearchSuggestionCitys() async {
     // print log
@@ -181,8 +195,9 @@ class com_amap_api_services_poisearch_PoiResult extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => com_amap_api_services_core_SuggestionCity()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
-      return (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_core_SuggestionCity()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      final __return__ = (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_core_SuggestionCity()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      kNativeObjectPool.addAll(__return__);
+      return __return__;
     }
   }
   
@@ -199,13 +214,14 @@ extension com_amap_api_services_poisearch_PoiResult_Batch on List<com_amap_api_s
   //endregion
 
   //region methods
-  Future<List<com_amap_api_services_poisearch_PoiResult>> createPagedResult_batch(List<com_amap_api_services_poisearch_PoiSearch_Query> var0, List<com_amap_api_services_poisearch_PoiSearch_SearchBound> var1, List<List<String>> var2, List<List<com_amap_api_services_core_SuggestionCity>> var3, List<int> var4, List<int> var5, List<List<com_amap_api_services_core_PoiItem>> var6) async {
+  
+  static Future<List<com_amap_api_services_poisearch_PoiResult>> createPagedResult_batch(List<com_amap_api_services_poisearch_PoiSearch_Query> var0, List<com_amap_api_services_poisearch_PoiSearch_SearchBound> var1, List<List<String>> var2, List<List<com_amap_api_services_core_SuggestionCity>> var3, List<int> var4, List<int> var5, List<List<com_amap_api_services_core_PoiItem>> var6) async {
     if (var0.length != var1.length || var1.length != var2.length || var2.length != var3.length || var3.length != var4.length || var4.length != var5.length || var5.length != var6.length) {
       return Future.error('all args must have same length!');
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiResult::createPagedResult_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__].refId, "var1": var1[__i__].refId, "var2": var2[__i__], "var3": var3[__i__].map((it) => it.refId).toList(), "var4": var4[__i__], "var5": var5[__i__], "var6": var6[__i__].map((it) => it.refId).toList(), "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiResult::createPagedResult_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__].refId, "var1": var1[__i__].refId, "var2": var2[__i__], "var3": var3[__i__].map((it) => it.refId).toList(), "var4": var4[__i__], "var5": var5[__i__], "var6": var6[__i__].map((it) => it.refId).toList()}]);
   
   
     // convert native result to dart side object
@@ -217,6 +233,7 @@ extension com_amap_api_services_poisearch_PoiResult_Batch on List<com_amap_api_s
       return typedResult;
     }
   }
+  
   
   Future<List<int>> getPageCount_batch() async {
     if (false) {
@@ -237,6 +254,7 @@ extension com_amap_api_services_poisearch_PoiResult_Batch on List<com_amap_api_s
     }
   }
   
+  
   Future<List<com_amap_api_services_poisearch_PoiSearch_Query>> getQuery_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -255,6 +273,7 @@ extension com_amap_api_services_poisearch_PoiResult_Batch on List<com_amap_api_s
       return typedResult;
     }
   }
+  
   
   Future<List<com_amap_api_services_poisearch_PoiSearch_SearchBound>> getBound_batch() async {
     if (false) {
@@ -275,6 +294,7 @@ extension com_amap_api_services_poisearch_PoiResult_Batch on List<com_amap_api_s
     }
   }
   
+  
   Future<List<List<com_amap_api_services_core_PoiItem>>> getPois_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -294,6 +314,7 @@ extension com_amap_api_services_poisearch_PoiResult_Batch on List<com_amap_api_s
     }
   }
   
+  
   Future<List<List<String>>> getSearchSuggestionKeywords_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -312,6 +333,7 @@ extension com_amap_api_services_poisearch_PoiResult_Batch on List<com_amap_api_s
       return typedResult;
     }
   }
+  
   
   Future<List<List<com_amap_api_services_core_SuggestionCity>>> getSearchSuggestionCitys_batch() async {
     if (false) {

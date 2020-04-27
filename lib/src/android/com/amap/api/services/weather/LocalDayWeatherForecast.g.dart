@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Object with android_os_Parcelable {
   //region constants
@@ -50,6 +51,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
   //endregion
 
   //region methods
+  
   Future<String> getDate() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -67,10 +69,12 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setDate(String var1) async {
     // print log
@@ -89,10 +93,12 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getWeek() async {
     // print log
@@ -111,10 +117,12 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setWeek(String var1) async {
     // print log
@@ -133,10 +141,12 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getDayWeather() async {
     // print log
@@ -155,10 +165,12 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setDayWeather(String var1) async {
     // print log
@@ -177,10 +189,12 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getNightWeather() async {
     // print log
@@ -199,10 +213,12 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setNightWeather(String var1) async {
     // print log
@@ -221,10 +237,12 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getDayTemp() async {
     // print log
@@ -243,10 +261,12 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setDayTemp(String var1) async {
     // print log
@@ -265,10 +285,12 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getNightTemp() async {
     // print log
@@ -287,10 +309,12 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setNightTemp(String var1) async {
     // print log
@@ -309,10 +333,12 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getDayWindDirection() async {
     // print log
@@ -331,10 +357,12 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setDayWindDirection(String var1) async {
     // print log
@@ -353,10 +381,12 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getNightWindDirection() async {
     // print log
@@ -375,10 +405,12 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setNightWindDirection(String var1) async {
     // print log
@@ -397,10 +429,12 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getDayWindPower() async {
     // print log
@@ -419,10 +453,12 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setDayWindPower(String var1) async {
     // print log
@@ -441,10 +477,12 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getNightWindPower() async {
     // print log
@@ -463,10 +501,12 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setNightWindPower(String var1) async {
     // print log
@@ -485,8 +525,9 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
   
@@ -503,6 +544,7 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
   //endregion
 
   //region methods
+  
   Future<List<String>> getDate_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -522,7 +564,8 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
     }
   }
   
-  Future<void> setDate_batch(List<String> var1) async {
+  
+  Future<List<void>> setDate_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -540,6 +583,7 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getWeek_batch() async {
     if (false) {
@@ -560,7 +604,8 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
     }
   }
   
-  Future<void> setWeek_batch(List<String> var1) async {
+  
+  Future<List<void>> setWeek_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -578,6 +623,7 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getDayWeather_batch() async {
     if (false) {
@@ -598,7 +644,8 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
     }
   }
   
-  Future<void> setDayWeather_batch(List<String> var1) async {
+  
+  Future<List<void>> setDayWeather_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -616,6 +663,7 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getNightWeather_batch() async {
     if (false) {
@@ -636,7 +684,8 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
     }
   }
   
-  Future<void> setNightWeather_batch(List<String> var1) async {
+  
+  Future<List<void>> setNightWeather_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -654,6 +703,7 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getDayTemp_batch() async {
     if (false) {
@@ -674,7 +724,8 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
     }
   }
   
-  Future<void> setDayTemp_batch(List<String> var1) async {
+  
+  Future<List<void>> setDayTemp_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -692,6 +743,7 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getNightTemp_batch() async {
     if (false) {
@@ -712,7 +764,8 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
     }
   }
   
-  Future<void> setNightTemp_batch(List<String> var1) async {
+  
+  Future<List<void>> setNightTemp_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -730,6 +783,7 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getDayWindDirection_batch() async {
     if (false) {
@@ -750,7 +804,8 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
     }
   }
   
-  Future<void> setDayWindDirection_batch(List<String> var1) async {
+  
+  Future<List<void>> setDayWindDirection_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -768,6 +823,7 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getNightWindDirection_batch() async {
     if (false) {
@@ -788,7 +844,8 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
     }
   }
   
-  Future<void> setNightWindDirection_batch(List<String> var1) async {
+  
+  Future<List<void>> setNightWindDirection_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -806,6 +863,7 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getDayWindPower_batch() async {
     if (false) {
@@ -826,7 +884,8 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
     }
   }
   
-  Future<void> setDayWindPower_batch(List<String> var1) async {
+  
+  Future<List<void>> setDayWindPower_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -844,6 +903,7 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getNightWindPower_batch() async {
     if (false) {
@@ -864,7 +924,8 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
     }
   }
   
-  Future<void> setNightWindPower_batch(List<String> var1) async {
+  
+  Future<List<void>> setNightWindPower_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }

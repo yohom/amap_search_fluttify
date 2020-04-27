@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_amap_api_services_cloud_CloudSearch extends java_lang_Object  {
   //region constants
@@ -50,6 +51,7 @@ class com_amap_api_services_cloud_CloudSearch extends java_lang_Object  {
   //endregion
 
   //region methods
+  
   Future<void> setOnCloudSearchListener(com_amap_api_services_cloud_CloudSearch_OnCloudSearchListener var1) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -71,20 +73,20 @@ class com_amap_api_services_cloud_CloudSearch extends java_lang_Object  {
             case 'Callback::com.amap.api.services.cloud.CloudSearch.OnCloudSearchListener::onCloudSearched':
               // print log
               if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onCloudSearched([\'var2\':$args[var2]])');
+                print('fluttify-dart-callback: onCloudSearched([\'var2\':${args['var2']}])');
               }
         
               // handle the native call
-              var1?.onCloudSearched(com_amap_api_services_cloud_CloudResult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify', args['var2']);
+              var1?.onCloudSearched((com_amap_api_services_cloud_CloudResult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify'), args['var2']);
               break;
             case 'Callback::com.amap.api.services.cloud.CloudSearch.OnCloudSearchListener::onCloudItemDetailSearched':
               // print log
               if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onCloudItemDetailSearched([\'var2\':$args[var2]])');
+                print('fluttify-dart-callback: onCloudItemDetailSearched([\'var2\':${args['var2']}])');
               }
         
               // handle the native call
-              var1?.onCloudItemDetailSearched(com_amap_api_services_cloud_CloudItemDetail()..refId = (args['var1'])..tag__ = 'amap_search_fluttify', args['var2']);
+              var1?.onCloudItemDetailSearched((com_amap_api_services_cloud_CloudItemDetail()..refId = (args['var1'])..tag__ = 'amap_search_fluttify'), args['var2']);
               break;
             default:
               break;
@@ -95,10 +97,12 @@ class com_amap_api_services_cloud_CloudSearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> searchCloudAsyn(com_amap_api_services_cloud_CloudSearch_Query var1) async {
     // print log
@@ -117,10 +121,12 @@ class com_amap_api_services_cloud_CloudSearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> searchCloudDetailAsyn(String var1, String var2) async {
     // print log
@@ -139,8 +145,9 @@ class com_amap_api_services_cloud_CloudSearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
   
@@ -157,7 +164,8 @@ extension com_amap_api_services_cloud_CloudSearch_Batch on List<com_amap_api_ser
   //endregion
 
   //region methods
-  Future<void> searchCloudAsyn_batch(List<com_amap_api_services_cloud_CloudSearch_Query> var1) async {
+  
+  Future<List<void>> searchCloudAsyn_batch(List<com_amap_api_services_cloud_CloudSearch_Query> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -176,7 +184,8 @@ extension com_amap_api_services_cloud_CloudSearch_Batch on List<com_amap_api_ser
     }
   }
   
-  Future<void> searchCloudDetailAsyn_batch(List<String> var1, List<String> var2) async {
+  
+  Future<List<void>> searchCloudDetailAsyn_batch(List<String> var1, List<String> var2) async {
     if (var1.length != var2.length) {
       return Future.error('all args must have same length!');
     }

@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_amap_api_services_routepoisearch_RoutePOISearchQuery extends java_lang_Object  {
   //region constants
@@ -69,6 +70,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearchQuery extends java_lang
   //endregion
 
   //region methods
+  
   Future<com_amap_api_services_core_LatLonPoint> getFrom() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -86,10 +88,12 @@ class com_amap_api_services_routepoisearch_RoutePOISearchQuery extends java_lang
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify');
-      return com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_core_LatLonSharePoint()..refId = __result__..tag__ = 'amap_search_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_services_core_LatLonPoint> getTo() async {
     // print log
@@ -108,10 +112,12 @@ class com_amap_api_services_routepoisearch_RoutePOISearchQuery extends java_lang
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify');
-      return com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_core_LatLonSharePoint()..refId = __result__..tag__ = 'amap_search_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<int> getMode() async {
     // print log
@@ -130,10 +136,12 @@ class com_amap_api_services_routepoisearch_RoutePOISearchQuery extends java_lang
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType> getSearchType() async {
     // print log
@@ -152,10 +160,12 @@ class com_amap_api_services_routepoisearch_RoutePOISearchQuery extends java_lang
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType.values[__result__];
     
-      return com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType.values[__result__];
+      return __return__;
     }
   }
+  
   
   Future<int> getRange() async {
     // print log
@@ -174,10 +184,12 @@ class com_amap_api_services_routepoisearch_RoutePOISearchQuery extends java_lang
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<List<com_amap_api_services_core_LatLonPoint>> getPolylines() async {
     // print log
@@ -196,10 +208,12 @@ class com_amap_api_services_routepoisearch_RoutePOISearchQuery extends java_lang
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => com_amap_api_services_core_LatLonPoint()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
-      return (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_core_LatLonPoint()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      final __return__ = (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_core_LatLonSharePoint()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      kNativeObjectPool.addAll(__return__);
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_services_routepoisearch_RoutePOISearchQuery> clone() async {
     // print log
@@ -218,8 +232,9 @@ class com_amap_api_services_routepoisearch_RoutePOISearchQuery extends java_lang
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_routepoisearch_RoutePOISearchQuery()..refId = __result__..tag__ = 'amap_search_fluttify');
-      return com_amap_api_services_routepoisearch_RoutePOISearchQuery()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_routepoisearch_RoutePOISearchQuery()..refId = __result__..tag__ = 'amap_search_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
   
@@ -236,6 +251,7 @@ extension com_amap_api_services_routepoisearch_RoutePOISearchQuery_Batch on List
   //endregion
 
   //region methods
+  
   Future<List<com_amap_api_services_core_LatLonPoint>> getFrom_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -249,11 +265,12 @@ extension com_amap_api_services_routepoisearch_RoutePOISearchQuery_Batch on List
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_amap_api_services_core_LatLonSharePoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
   }
+  
   
   Future<List<com_amap_api_services_core_LatLonPoint>> getTo_batch() async {
     if (false) {
@@ -268,11 +285,12 @@ extension com_amap_api_services_routepoisearch_RoutePOISearchQuery_Batch on List
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_amap_api_services_core_LatLonSharePoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
   }
+  
   
   Future<List<int>> getMode_batch() async {
     if (false) {
@@ -293,6 +311,7 @@ extension com_amap_api_services_routepoisearch_RoutePOISearchQuery_Batch on List
     }
   }
   
+  
   Future<List<com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType>> getSearchType_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -311,6 +330,7 @@ extension com_amap_api_services_routepoisearch_RoutePOISearchQuery_Batch on List
       return typedResult;
     }
   }
+  
   
   Future<List<int>> getRange_batch() async {
     if (false) {
@@ -331,6 +351,7 @@ extension com_amap_api_services_routepoisearch_RoutePOISearchQuery_Batch on List
     }
   }
   
+  
   Future<List<List<com_amap_api_services_core_LatLonPoint>>> getPolylines_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -344,11 +365,12 @@ extension com_amap_api_services_routepoisearch_RoutePOISearchQuery_Batch on List
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_core_LatLonPoint()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
+      final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_core_LatLonSharePoint()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
       kNativeObjectPool.addAll(typedResult.expand((e) => e));
       return typedResult;
     }
   }
+  
   
   Future<List<com_amap_api_services_routepoisearch_RoutePOISearchQuery>> clone_batch() async {
     if (false) {

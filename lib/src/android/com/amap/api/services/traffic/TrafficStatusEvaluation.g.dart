@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_amap_api_services_traffic_TrafficStatusEvaluation extends java_lang_Object with android_os_Parcelable {
   //region constants
@@ -50,6 +51,7 @@ class com_amap_api_services_traffic_TrafficStatusEvaluation extends java_lang_Ob
   //endregion
 
   //region methods
+  
   Future<String> getExpedite() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -67,10 +69,12 @@ class com_amap_api_services_traffic_TrafficStatusEvaluation extends java_lang_Ob
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setExpedite(String var1) async {
     // print log
@@ -89,10 +93,12 @@ class com_amap_api_services_traffic_TrafficStatusEvaluation extends java_lang_Ob
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getCongested() async {
     // print log
@@ -111,10 +117,12 @@ class com_amap_api_services_traffic_TrafficStatusEvaluation extends java_lang_Ob
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setCongested(String var1) async {
     // print log
@@ -133,10 +141,12 @@ class com_amap_api_services_traffic_TrafficStatusEvaluation extends java_lang_Ob
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getBlocked() async {
     // print log
@@ -155,10 +165,12 @@ class com_amap_api_services_traffic_TrafficStatusEvaluation extends java_lang_Ob
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setBlocked(String var1) async {
     // print log
@@ -177,10 +189,12 @@ class com_amap_api_services_traffic_TrafficStatusEvaluation extends java_lang_Ob
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getUnknown() async {
     // print log
@@ -199,10 +213,12 @@ class com_amap_api_services_traffic_TrafficStatusEvaluation extends java_lang_Ob
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setUnknown(String var1) async {
     // print log
@@ -221,10 +237,12 @@ class com_amap_api_services_traffic_TrafficStatusEvaluation extends java_lang_Ob
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getStatus() async {
     // print log
@@ -243,10 +261,12 @@ class com_amap_api_services_traffic_TrafficStatusEvaluation extends java_lang_Ob
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setStatus(String var1) async {
     // print log
@@ -265,10 +285,12 @@ class com_amap_api_services_traffic_TrafficStatusEvaluation extends java_lang_Ob
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getDescription() async {
     // print log
@@ -287,10 +309,12 @@ class com_amap_api_services_traffic_TrafficStatusEvaluation extends java_lang_Ob
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setDescription(String var1) async {
     // print log
@@ -309,8 +333,9 @@ class com_amap_api_services_traffic_TrafficStatusEvaluation extends java_lang_Ob
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
   
@@ -327,6 +352,7 @@ extension com_amap_api_services_traffic_TrafficStatusEvaluation_Batch on List<co
   //endregion
 
   //region methods
+  
   Future<List<String>> getExpedite_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -346,7 +372,8 @@ extension com_amap_api_services_traffic_TrafficStatusEvaluation_Batch on List<co
     }
   }
   
-  Future<void> setExpedite_batch(List<String> var1) async {
+  
+  Future<List<void>> setExpedite_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -364,6 +391,7 @@ extension com_amap_api_services_traffic_TrafficStatusEvaluation_Batch on List<co
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getCongested_batch() async {
     if (false) {
@@ -384,7 +412,8 @@ extension com_amap_api_services_traffic_TrafficStatusEvaluation_Batch on List<co
     }
   }
   
-  Future<void> setCongested_batch(List<String> var1) async {
+  
+  Future<List<void>> setCongested_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -402,6 +431,7 @@ extension com_amap_api_services_traffic_TrafficStatusEvaluation_Batch on List<co
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getBlocked_batch() async {
     if (false) {
@@ -422,7 +452,8 @@ extension com_amap_api_services_traffic_TrafficStatusEvaluation_Batch on List<co
     }
   }
   
-  Future<void> setBlocked_batch(List<String> var1) async {
+  
+  Future<List<void>> setBlocked_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -440,6 +471,7 @@ extension com_amap_api_services_traffic_TrafficStatusEvaluation_Batch on List<co
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getUnknown_batch() async {
     if (false) {
@@ -460,7 +492,8 @@ extension com_amap_api_services_traffic_TrafficStatusEvaluation_Batch on List<co
     }
   }
   
-  Future<void> setUnknown_batch(List<String> var1) async {
+  
+  Future<List<void>> setUnknown_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -478,6 +511,7 @@ extension com_amap_api_services_traffic_TrafficStatusEvaluation_Batch on List<co
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getStatus_batch() async {
     if (false) {
@@ -498,7 +532,8 @@ extension com_amap_api_services_traffic_TrafficStatusEvaluation_Batch on List<co
     }
   }
   
-  Future<void> setStatus_batch(List<String> var1) async {
+  
+  Future<List<void>> setStatus_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -516,6 +551,7 @@ extension com_amap_api_services_traffic_TrafficStatusEvaluation_Batch on List<co
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getDescription_batch() async {
     if (false) {
@@ -536,7 +572,8 @@ extension com_amap_api_services_traffic_TrafficStatusEvaluation_Batch on List<co
     }
   }
   
-  Future<void> setDescription_batch(List<String> var1) async {
+  
+  Future<List<void>> setDescription_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }

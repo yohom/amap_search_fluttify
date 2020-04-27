@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_amap_api_services_traffic_TrafficSearch extends java_lang_Object  {
   //region constants
@@ -50,6 +51,7 @@ class com_amap_api_services_traffic_TrafficSearch extends java_lang_Object  {
   //endregion
 
   //region methods
+  
   Future<void> setTrafficSearchListener(com_amap_api_services_traffic_TrafficSearch_OnTrafficSearchListener var1) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -71,11 +73,11 @@ class com_amap_api_services_traffic_TrafficSearch extends java_lang_Object  {
             case 'Callback::com.amap.api.services.traffic.TrafficSearch.OnTrafficSearchListener::onRoadTrafficSearched':
               // print log
               if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onRoadTrafficSearched([\'var2\':$args[var2]])');
+                print('fluttify-dart-callback: onRoadTrafficSearched([\'var2\':${args['var2']}])');
               }
         
               // handle the native call
-              var1?.onRoadTrafficSearched(com_amap_api_services_traffic_TrafficStatusResult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify', args['var2']);
+              var1?.onRoadTrafficSearched((com_amap_api_services_traffic_TrafficStatusResult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify'), args['var2']);
               break;
             default:
               break;
@@ -86,8 +88,9 @@ class com_amap_api_services_traffic_TrafficSearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
   

@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_amap_api_services_route_WalkRouteResult extends com_amap_api_services_route_RouteResult with android_os_Parcelable {
   //region constants
@@ -50,6 +51,7 @@ class com_amap_api_services_route_WalkRouteResult extends com_amap_api_services_
   //endregion
 
   //region methods
+  
   Future<List<com_amap_api_services_route_WalkPath>> getPaths() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -67,10 +69,12 @@ class com_amap_api_services_route_WalkRouteResult extends com_amap_api_services_
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => com_amap_api_services_route_WalkPath()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
-      return (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_route_WalkPath()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      final __return__ = (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_route_RouteBusWalkItem()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      kNativeObjectPool.addAll(__return__);
+      return __return__;
     }
   }
+  
   
   Future<void> setPaths(List<com_amap_api_services_route_WalkPath> var1) async {
     // print log
@@ -89,10 +93,12 @@ class com_amap_api_services_route_WalkRouteResult extends com_amap_api_services_
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_services_route_RouteSearch_WalkRouteQuery> getWalkQuery() async {
     // print log
@@ -111,10 +117,12 @@ class com_amap_api_services_route_WalkRouteResult extends com_amap_api_services_
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_route_RouteSearch_WalkRouteQuery()..refId = __result__..tag__ = 'amap_search_fluttify');
-      return com_amap_api_services_route_RouteSearch_WalkRouteQuery()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_route_RouteSearch_WalkRouteQuery()..refId = __result__..tag__ = 'amap_search_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<void> setWalkQuery(com_amap_api_services_route_RouteSearch_WalkRouteQuery var1) async {
     // print log
@@ -133,8 +141,9 @@ class com_amap_api_services_route_WalkRouteResult extends com_amap_api_services_
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
   
@@ -151,6 +160,7 @@ extension com_amap_api_services_route_WalkRouteResult_Batch on List<com_amap_api
   //endregion
 
   //region methods
+  
   Future<List<List<com_amap_api_services_route_WalkPath>>> getPaths_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -164,13 +174,14 @@ extension com_amap_api_services_route_WalkRouteResult_Batch on List<com_amap_api
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_route_WalkPath()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
+      final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_route_RouteBusWalkItem()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
       kNativeObjectPool.addAll(typedResult.expand((e) => e));
       return typedResult;
     }
   }
   
-  Future<void> setPaths_batch(List<List<com_amap_api_services_route_WalkPath>> var1) async {
+  
+  Future<List<void>> setPaths_batch(List<List<com_amap_api_services_route_WalkPath>> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -188,6 +199,7 @@ extension com_amap_api_services_route_WalkRouteResult_Batch on List<com_amap_api
       return typedResult;
     }
   }
+  
   
   Future<List<com_amap_api_services_route_RouteSearch_WalkRouteQuery>> getWalkQuery_batch() async {
     if (false) {
@@ -208,7 +220,8 @@ extension com_amap_api_services_route_WalkRouteResult_Batch on List<com_amap_api
     }
   }
   
-  Future<void> setWalkQuery_batch(List<com_amap_api_services_route_RouteSearch_WalkRouteQuery> var1) async {
+  
+  Future<List<void>> setWalkQuery_batch(List<com_amap_api_services_route_RouteSearch_WalkRouteQuery> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }

@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_amap_api_services_poisearch_Photo extends java_lang_Object with android_os_Parcelable {
   //region constants
@@ -69,6 +70,7 @@ class com_amap_api_services_poisearch_Photo extends java_lang_Object with androi
   //endregion
 
   //region methods
+  
   Future<String> getTitle() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -86,10 +88,12 @@ class com_amap_api_services_poisearch_Photo extends java_lang_Object with androi
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setTitle(String var1) async {
     // print log
@@ -108,10 +112,12 @@ class com_amap_api_services_poisearch_Photo extends java_lang_Object with androi
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getUrl() async {
     // print log
@@ -130,10 +136,12 @@ class com_amap_api_services_poisearch_Photo extends java_lang_Object with androi
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setUrl(String var1) async {
     // print log
@@ -152,8 +160,9 @@ class com_amap_api_services_poisearch_Photo extends java_lang_Object with androi
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
   
@@ -170,6 +179,7 @@ extension com_amap_api_services_poisearch_Photo_Batch on List<com_amap_api_servi
   //endregion
 
   //region methods
+  
   Future<List<String>> getTitle_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -189,7 +199,8 @@ extension com_amap_api_services_poisearch_Photo_Batch on List<com_amap_api_servi
     }
   }
   
-  Future<void> setTitle_batch(List<String> var1) async {
+  
+  Future<List<void>> setTitle_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -207,6 +218,7 @@ extension com_amap_api_services_poisearch_Photo_Batch on List<com_amap_api_servi
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getUrl_batch() async {
     if (false) {
@@ -227,7 +239,8 @@ extension com_amap_api_services_poisearch_Photo_Batch on List<com_amap_api_servi
     }
   }
   
-  Future<void> setUrl_batch(List<String> var1) async {
+  
+  Future<List<void>> setUrl_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
