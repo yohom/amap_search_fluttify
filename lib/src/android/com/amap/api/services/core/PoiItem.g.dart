@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_amap_api_services_core_PoiItem extends java_lang_Object with android_os_Parcelable {
   //region constants
@@ -50,6 +51,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   //endregion
 
   //region methods
+  
   Future<String> getBusinessArea() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -67,10 +69,12 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setBusinessArea(String var1) async {
     // print log
@@ -89,10 +93,12 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getAdName() async {
     // print log
@@ -111,10 +117,12 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setAdName(String var1) async {
     // print log
@@ -133,10 +141,12 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getCityName() async {
     // print log
@@ -155,10 +165,12 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setCityName(String var1) async {
     // print log
@@ -177,10 +189,12 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getProvinceName() async {
     // print log
@@ -199,10 +213,12 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setProvinceName(String var1) async {
     // print log
@@ -221,10 +237,12 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getTypeDes() async {
     // print log
@@ -243,10 +261,12 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setTypeDes(String var1) async {
     // print log
@@ -265,10 +285,12 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getTel() async {
     // print log
@@ -287,10 +309,12 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setTel(String var1) async {
     // print log
@@ -309,10 +333,12 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getAdCode() async {
     // print log
@@ -331,10 +357,12 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setAdCode(String var1) async {
     // print log
@@ -353,10 +381,12 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getPoiId() async {
     // print log
@@ -375,10 +405,12 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<int> getDistance() async {
     // print log
@@ -397,10 +429,12 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setDistance(int var1) async {
     // print log
@@ -419,10 +453,12 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getTitle() async {
     // print log
@@ -441,10 +477,12 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getSnippet() async {
     // print log
@@ -463,10 +501,12 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_services_core_LatLonPoint> getLatLonPoint() async {
     // print log
@@ -485,10 +525,12 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify');
-      return com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_core_LatLonSharePoint()..refId = __result__..tag__ = 'amap_search_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<String> getCityCode() async {
     // print log
@@ -507,10 +549,12 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setCityCode(String var1) async {
     // print log
@@ -529,10 +573,12 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_services_core_LatLonPoint> getEnter() async {
     // print log
@@ -551,10 +597,12 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify');
-      return com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_core_LatLonSharePoint()..refId = __result__..tag__ = 'amap_search_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<void> setEnter(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
@@ -573,10 +621,12 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_services_core_LatLonPoint> getExit() async {
     // print log
@@ -595,10 +645,12 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify');
-      return com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_core_LatLonSharePoint()..refId = __result__..tag__ = 'amap_search_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<void> setExit(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
@@ -617,10 +669,12 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getWebsite() async {
     // print log
@@ -639,10 +693,12 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setWebsite(String var1) async {
     // print log
@@ -661,10 +717,12 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getPostcode() async {
     // print log
@@ -683,10 +741,12 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setPostcode(String var1) async {
     // print log
@@ -705,10 +765,12 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getEmail() async {
     // print log
@@ -727,10 +789,12 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setEmail(String var1) async {
     // print log
@@ -749,10 +813,12 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getDirection() async {
     // print log
@@ -771,10 +837,12 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setDirection(String var1) async {
     // print log
@@ -793,10 +861,12 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setIndoorMap(bool var1) async {
     // print log
@@ -815,10 +885,12 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<bool> isIndoorMap() async {
     // print log
@@ -837,10 +909,12 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setProvinceCode(String var1) async {
     // print log
@@ -859,10 +933,12 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getProvinceCode() async {
     // print log
@@ -881,10 +957,12 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setParkingType(String var1) async {
     // print log
@@ -903,10 +981,12 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getParkingType() async {
     // print log
@@ -925,10 +1005,12 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setSubPois(List<com_amap_api_services_poisearch_SubPoiItem> var1) async {
     // print log
@@ -947,10 +1029,12 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<List<com_amap_api_services_poisearch_SubPoiItem>> getSubPois() async {
     // print log
@@ -969,10 +1053,12 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => com_amap_api_services_poisearch_SubPoiItem()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
-      return (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_poisearch_SubPoiItem()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      final __return__ = (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_poisearch_SubPoiItem()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      kNativeObjectPool.addAll(__return__);
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_services_poisearch_IndoorData> getIndoorData() async {
     // print log
@@ -991,10 +1077,12 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_poisearch_IndoorData()..refId = __result__..tag__ = 'amap_search_fluttify');
-      return com_amap_api_services_poisearch_IndoorData()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_poisearch_IndoorData()..refId = __result__..tag__ = 'amap_search_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<void> setIndoorDate(com_amap_api_services_poisearch_IndoorData var1) async {
     // print log
@@ -1013,10 +1101,12 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<List<com_amap_api_services_poisearch_Photo>> getPhotos() async {
     // print log
@@ -1035,10 +1125,12 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => com_amap_api_services_poisearch_Photo()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
-      return (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_poisearch_Photo()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      final __return__ = (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_poisearch_Photo()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      kNativeObjectPool.addAll(__return__);
+      return __return__;
     }
   }
+  
   
   Future<void> setPhotos(List<com_amap_api_services_poisearch_Photo> var1) async {
     // print log
@@ -1057,10 +1149,12 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_services_poisearch_PoiItemExtension> getPoiExtension() async {
     // print log
@@ -1079,10 +1173,12 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_poisearch_PoiItemExtension()..refId = __result__..tag__ = 'amap_search_fluttify');
-      return com_amap_api_services_poisearch_PoiItemExtension()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_poisearch_PoiItemExtension()..refId = __result__..tag__ = 'amap_search_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<void> setPoiExtension(com_amap_api_services_poisearch_PoiItemExtension var1) async {
     // print log
@@ -1101,10 +1197,12 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getTypeCode() async {
     // print log
@@ -1123,10 +1221,12 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setTypeCode(String var1) async {
     // print log
@@ -1145,10 +1245,12 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getShopID() async {
     // print log
@@ -1167,10 +1269,12 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setShopID(String var1) async {
     // print log
@@ -1189,8 +1293,9 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
   
@@ -1207,6 +1312,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   //endregion
 
   //region methods
+  
   Future<List<String>> getBusinessArea_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -1226,7 +1332,8 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   }
   
-  Future<void> setBusinessArea_batch(List<String> var1) async {
+  
+  Future<List<void>> setBusinessArea_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1244,6 +1351,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getAdName_batch() async {
     if (false) {
@@ -1264,7 +1372,8 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   }
   
-  Future<void> setAdName_batch(List<String> var1) async {
+  
+  Future<List<void>> setAdName_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1282,6 +1391,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getCityName_batch() async {
     if (false) {
@@ -1302,7 +1412,8 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   }
   
-  Future<void> setCityName_batch(List<String> var1) async {
+  
+  Future<List<void>> setCityName_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1320,6 +1431,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getProvinceName_batch() async {
     if (false) {
@@ -1340,7 +1452,8 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   }
   
-  Future<void> setProvinceName_batch(List<String> var1) async {
+  
+  Future<List<void>> setProvinceName_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1358,6 +1471,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getTypeDes_batch() async {
     if (false) {
@@ -1378,7 +1492,8 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   }
   
-  Future<void> setTypeDes_batch(List<String> var1) async {
+  
+  Future<List<void>> setTypeDes_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1396,6 +1511,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getTel_batch() async {
     if (false) {
@@ -1416,7 +1532,8 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   }
   
-  Future<void> setTel_batch(List<String> var1) async {
+  
+  Future<List<void>> setTel_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1434,6 +1551,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getAdCode_batch() async {
     if (false) {
@@ -1454,7 +1572,8 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   }
   
-  Future<void> setAdCode_batch(List<String> var1) async {
+  
+  Future<List<void>> setAdCode_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1472,6 +1591,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getPoiId_batch() async {
     if (false) {
@@ -1492,6 +1612,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   }
   
+  
   Future<List<int>> getDistance_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -1511,7 +1632,8 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   }
   
-  Future<void> setDistance_batch(List<int> var1) async {
+  
+  Future<List<void>> setDistance_batch(List<int> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1529,6 +1651,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getTitle_batch() async {
     if (false) {
@@ -1549,6 +1672,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   }
   
+  
   Future<List<String>> getSnippet_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -1568,6 +1692,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   }
   
+  
   Future<List<com_amap_api_services_core_LatLonPoint>> getLatLonPoint_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -1581,11 +1706,12 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_amap_api_services_core_LatLonSharePoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getCityCode_batch() async {
     if (false) {
@@ -1606,7 +1732,8 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   }
   
-  Future<void> setCityCode_batch(List<String> var1) async {
+  
+  Future<List<void>> setCityCode_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1625,6 +1752,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   }
   
+  
   Future<List<com_amap_api_services_core_LatLonPoint>> getEnter_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -1638,13 +1766,14 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_amap_api_services_core_LatLonSharePoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
   }
   
-  Future<void> setEnter_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
+  
+  Future<List<void>> setEnter_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1663,6 +1792,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   }
   
+  
   Future<List<com_amap_api_services_core_LatLonPoint>> getExit_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -1676,13 +1806,14 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_amap_api_services_core_LatLonSharePoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
   }
   
-  Future<void> setExit_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
+  
+  Future<List<void>> setExit_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1700,6 +1831,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getWebsite_batch() async {
     if (false) {
@@ -1720,7 +1852,8 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   }
   
-  Future<void> setWebsite_batch(List<String> var1) async {
+  
+  Future<List<void>> setWebsite_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1738,6 +1871,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getPostcode_batch() async {
     if (false) {
@@ -1758,7 +1892,8 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   }
   
-  Future<void> setPostcode_batch(List<String> var1) async {
+  
+  Future<List<void>> setPostcode_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1776,6 +1911,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getEmail_batch() async {
     if (false) {
@@ -1796,7 +1932,8 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   }
   
-  Future<void> setEmail_batch(List<String> var1) async {
+  
+  Future<List<void>> setEmail_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1814,6 +1951,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getDirection_batch() async {
     if (false) {
@@ -1834,7 +1972,8 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   }
   
-  Future<void> setDirection_batch(List<String> var1) async {
+  
+  Future<List<void>> setDirection_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1853,7 +1992,8 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   }
   
-  Future<void> setIndoorMap_batch(List<bool> var1) async {
+  
+  Future<List<void>> setIndoorMap_batch(List<bool> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1871,6 +2011,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
       return typedResult;
     }
   }
+  
   
   Future<List<bool>> isIndoorMap_batch() async {
     if (false) {
@@ -1891,7 +2032,8 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   }
   
-  Future<void> setProvinceCode_batch(List<String> var1) async {
+  
+  Future<List<void>> setProvinceCode_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1909,6 +2051,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getProvinceCode_batch() async {
     if (false) {
@@ -1929,7 +2072,8 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   }
   
-  Future<void> setParkingType_batch(List<String> var1) async {
+  
+  Future<List<void>> setParkingType_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1947,6 +2091,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getParkingType_batch() async {
     if (false) {
@@ -1967,7 +2112,8 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   }
   
-  Future<void> setSubPois_batch(List<List<com_amap_api_services_poisearch_SubPoiItem>> var1) async {
+  
+  Future<List<void>> setSubPois_batch(List<List<com_amap_api_services_poisearch_SubPoiItem>> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1985,6 +2131,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
       return typedResult;
     }
   }
+  
   
   Future<List<List<com_amap_api_services_poisearch_SubPoiItem>>> getSubPois_batch() async {
     if (false) {
@@ -2005,6 +2152,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   }
   
+  
   Future<List<com_amap_api_services_poisearch_IndoorData>> getIndoorData_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -2024,7 +2172,8 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   }
   
-  Future<void> setIndoorDate_batch(List<com_amap_api_services_poisearch_IndoorData> var1) async {
+  
+  Future<List<void>> setIndoorDate_batch(List<com_amap_api_services_poisearch_IndoorData> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -2042,6 +2191,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
       return typedResult;
     }
   }
+  
   
   Future<List<List<com_amap_api_services_poisearch_Photo>>> getPhotos_batch() async {
     if (false) {
@@ -2062,7 +2212,8 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   }
   
-  Future<void> setPhotos_batch(List<List<com_amap_api_services_poisearch_Photo>> var1) async {
+  
+  Future<List<void>> setPhotos_batch(List<List<com_amap_api_services_poisearch_Photo>> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -2080,6 +2231,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
       return typedResult;
     }
   }
+  
   
   Future<List<com_amap_api_services_poisearch_PoiItemExtension>> getPoiExtension_batch() async {
     if (false) {
@@ -2100,7 +2252,8 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   }
   
-  Future<void> setPoiExtension_batch(List<com_amap_api_services_poisearch_PoiItemExtension> var1) async {
+  
+  Future<List<void>> setPoiExtension_batch(List<com_amap_api_services_poisearch_PoiItemExtension> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -2118,6 +2271,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getTypeCode_batch() async {
     if (false) {
@@ -2138,7 +2292,8 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   }
   
-  Future<void> setTypeCode_batch(List<String> var1) async {
+  
+  Future<List<void>> setTypeCode_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -2156,6 +2311,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getShopID_batch() async {
     if (false) {
@@ -2176,7 +2332,8 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   }
   
-  Future<void> setShopID_batch(List<String> var1) async {
+  
+  Future<List<void>> setShopID_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }

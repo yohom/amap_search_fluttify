@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_amap_api_services_route_TMC extends java_lang_Object with android_os_Parcelable {
   //region constants
@@ -50,6 +51,7 @@ class com_amap_api_services_route_TMC extends java_lang_Object with android_os_P
   //endregion
 
   //region methods
+  
   Future<int> getDistance() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -67,10 +69,12 @@ class com_amap_api_services_route_TMC extends java_lang_Object with android_os_P
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getStatus() async {
     // print log
@@ -89,10 +93,12 @@ class com_amap_api_services_route_TMC extends java_lang_Object with android_os_P
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setDistance(int var1) async {
     // print log
@@ -111,10 +117,12 @@ class com_amap_api_services_route_TMC extends java_lang_Object with android_os_P
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setStatus(String var1) async {
     // print log
@@ -133,10 +141,12 @@ class com_amap_api_services_route_TMC extends java_lang_Object with android_os_P
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<List<com_amap_api_services_core_LatLonPoint>> getPolyline() async {
     // print log
@@ -155,10 +165,12 @@ class com_amap_api_services_route_TMC extends java_lang_Object with android_os_P
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => com_amap_api_services_core_LatLonPoint()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
-      return (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_core_LatLonPoint()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      final __return__ = (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_core_LatLonSharePoint()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      kNativeObjectPool.addAll(__return__);
+      return __return__;
     }
   }
+  
   
   Future<void> setPolyline(List<com_amap_api_services_core_LatLonPoint> var1) async {
     // print log
@@ -177,8 +189,9 @@ class com_amap_api_services_route_TMC extends java_lang_Object with android_os_P
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
   
@@ -195,6 +208,7 @@ extension com_amap_api_services_route_TMC_Batch on List<com_amap_api_services_ro
   //endregion
 
   //region methods
+  
   Future<List<int>> getDistance_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -213,6 +227,7 @@ extension com_amap_api_services_route_TMC_Batch on List<com_amap_api_services_ro
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getStatus_batch() async {
     if (false) {
@@ -233,7 +248,8 @@ extension com_amap_api_services_route_TMC_Batch on List<com_amap_api_services_ro
     }
   }
   
-  Future<void> setDistance_batch(List<int> var1) async {
+  
+  Future<List<void>> setDistance_batch(List<int> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -252,7 +268,8 @@ extension com_amap_api_services_route_TMC_Batch on List<com_amap_api_services_ro
     }
   }
   
-  Future<void> setStatus_batch(List<String> var1) async {
+  
+  Future<List<void>> setStatus_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -271,6 +288,7 @@ extension com_amap_api_services_route_TMC_Batch on List<com_amap_api_services_ro
     }
   }
   
+  
   Future<List<List<com_amap_api_services_core_LatLonPoint>>> getPolyline_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -284,13 +302,14 @@ extension com_amap_api_services_route_TMC_Batch on List<com_amap_api_services_ro
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_core_LatLonPoint()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
+      final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_core_LatLonSharePoint()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
       kNativeObjectPool.addAll(typedResult.expand((e) => e));
       return typedResult;
     }
   }
   
-  Future<void> setPolyline_batch(List<List<com_amap_api_services_core_LatLonPoint>> var1) async {
+  
+  Future<List<void>> setPolyline_batch(List<List<com_amap_api_services_core_LatLonPoint>> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }

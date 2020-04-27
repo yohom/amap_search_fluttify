@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_amap_api_services_traffic_RoadTrafficQuery extends java_lang_Object with android_os_Parcelable {
   //region constants
@@ -50,6 +51,7 @@ class com_amap_api_services_traffic_RoadTrafficQuery extends java_lang_Object wi
   //endregion
 
   //region methods
+  
   Future<String> getName() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -67,10 +69,12 @@ class com_amap_api_services_traffic_RoadTrafficQuery extends java_lang_Object wi
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setName(String var1) async {
     // print log
@@ -89,10 +93,12 @@ class com_amap_api_services_traffic_RoadTrafficQuery extends java_lang_Object wi
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getAdCode() async {
     // print log
@@ -111,10 +117,12 @@ class com_amap_api_services_traffic_RoadTrafficQuery extends java_lang_Object wi
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setAdCode(String var1) async {
     // print log
@@ -133,10 +141,12 @@ class com_amap_api_services_traffic_RoadTrafficQuery extends java_lang_Object wi
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_services_traffic_RoadTrafficQuery> clone() async {
     // print log
@@ -155,8 +165,9 @@ class com_amap_api_services_traffic_RoadTrafficQuery extends java_lang_Object wi
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_traffic_RoadTrafficQuery()..refId = __result__..tag__ = 'amap_search_fluttify');
-      return com_amap_api_services_traffic_RoadTrafficQuery()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_traffic_RoadTrafficQuery()..refId = __result__..tag__ = 'amap_search_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
   
@@ -173,6 +184,7 @@ extension com_amap_api_services_traffic_RoadTrafficQuery_Batch on List<com_amap_
   //endregion
 
   //region methods
+  
   Future<List<String>> getName_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -192,7 +204,8 @@ extension com_amap_api_services_traffic_RoadTrafficQuery_Batch on List<com_amap_
     }
   }
   
-  Future<void> setName_batch(List<String> var1) async {
+  
+  Future<List<void>> setName_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -210,6 +223,7 @@ extension com_amap_api_services_traffic_RoadTrafficQuery_Batch on List<com_amap_
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getAdCode_batch() async {
     if (false) {
@@ -230,7 +244,8 @@ extension com_amap_api_services_traffic_RoadTrafficQuery_Batch on List<com_amap_
     }
   }
   
-  Future<void> setAdCode_batch(List<String> var1) async {
+  
+  Future<List<void>> setAdCode_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -248,6 +263,7 @@ extension com_amap_api_services_traffic_RoadTrafficQuery_Batch on List<com_amap_
       return typedResult;
     }
   }
+  
   
   Future<List<com_amap_api_services_traffic_RoadTrafficQuery>> clone_batch() async {
     if (false) {

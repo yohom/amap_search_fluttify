@@ -14,6 +14,20 @@ extern BOOL enableLog;
 @implementation AmapSearchFluttifyPlugin (SubHandler11)
 - (NSDictionary<NSString*, Handler>*) getSubHandler11 {
     return @{
+        @"ObjectFactory::createAMapGeocodeSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapGeocodeSearchResponse");
+            }
+        
+            AMapGeocodeSearchResponse* ref = [[AMapGeocodeSearchResponse alloc] init];
+            HEAP[@(ref.hash)] = ref;
+        
+            methodResult(@(ref.hash));
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
         @"ObjectFactory::createAMapReGeocodeSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // print log
             if (enableLog) {

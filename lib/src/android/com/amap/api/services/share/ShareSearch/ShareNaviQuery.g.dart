@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_amap_api_services_share_ShareSearch_ShareNaviQuery extends java_lang_Object  {
   //region constants
@@ -50,6 +51,7 @@ class com_amap_api_services_share_ShareSearch_ShareNaviQuery extends java_lang_O
   //endregion
 
   //region methods
+  
   Future<com_amap_api_services_share_ShareSearch_ShareFromAndTo> getFromAndTo() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -67,10 +69,12 @@ class com_amap_api_services_share_ShareSearch_ShareNaviQuery extends java_lang_O
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_share_ShareSearch_ShareFromAndTo()..refId = __result__..tag__ = 'amap_search_fluttify');
-      return com_amap_api_services_share_ShareSearch_ShareFromAndTo()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_share_ShareSearch_ShareFromAndTo()..refId = __result__..tag__ = 'amap_search_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<int> getNaviMode() async {
     // print log
@@ -89,8 +93,9 @@ class com_amap_api_services_share_ShareSearch_ShareNaviQuery extends java_lang_O
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
   
@@ -107,6 +112,7 @@ extension com_amap_api_services_share_ShareSearch_ShareNaviQuery_Batch on List<c
   //endregion
 
   //region methods
+  
   Future<List<com_amap_api_services_share_ShareSearch_ShareFromAndTo>> getFromAndTo_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -125,6 +131,7 @@ extension com_amap_api_services_share_ShareSearch_ShareNaviQuery_Batch on List<c
       return typedResult;
     }
   }
+  
   
   Future<List<int>> getNaviMode_batch() async {
     if (false) {

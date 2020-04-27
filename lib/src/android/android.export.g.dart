@@ -1,4 +1,5 @@
 export 'type_op.g.dart';
+export 'constants.g.dart';
 export 'com/amap/api/services/traffic/TrafficStatusResult.g.dart';
 export 'com/amap/api/services/traffic/TrafficStatusEvaluation.g.dart';
 export 'com/amap/api/services/traffic/TrafficStatusInfo.g.dart';

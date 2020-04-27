@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class AMapNearbySearchManager extends NSObject  {
   //region constants
@@ -62,7 +63,7 @@ class AMapNearbySearchManager extends NSObject  {
             }
         
             // handle the native call
-            delegate?.nearbyInfoForUploading(AMapNearbySearchManager()..refId = (args['manager'])..tag__ = 'amap_search_fluttify');
+            delegate?.nearbyInfoForUploading((AMapNearbySearchManager()..refId = (args['manager'])..tag__ = 'amap_search_fluttify'));
             break;
           case 'Callback::AMapNearbySearchManagerDelegate::onNearbyInfoUploadedWithError':
             // print log
@@ -71,7 +72,7 @@ class AMapNearbySearchManager extends NSObject  {
             }
         
             // handle the native call
-            delegate?.onNearbyInfoUploadedWithError(NSError()..refId = (args['error'])..tag__ = 'amap_search_fluttify');
+            delegate?.onNearbyInfoUploadedWithError((NSError()..refId = (args['error'])..tag__ = 'amap_search_fluttify'));
             break;
           case 'Callback::AMapNearbySearchManagerDelegate::onUserInfoClearedWithError':
             // print log
@@ -80,7 +81,7 @@ class AMapNearbySearchManager extends NSObject  {
             }
         
             // handle the native call
-            delegate?.onUserInfoClearedWithError(NSError()..refId = (args['error'])..tag__ = 'amap_search_fluttify');
+            delegate?.onUserInfoClearedWithError((NSError()..refId = (args['error'])..tag__ = 'amap_search_fluttify'));
             break;
           default:
             break;
@@ -91,6 +92,7 @@ class AMapNearbySearchManager extends NSObject  {
   //endregion
 
   //region methods
+  
   static Future<AMapNearbySearchManager> sharedInstance() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -108,10 +110,12 @@ class AMapNearbySearchManager extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(AMapNearbySearchManager()..refId = __result__..tag__ = 'amap_search_fluttify');
-      return AMapNearbySearchManager()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = AMapNearbySearchManager()..refId = __result__..tag__ = 'amap_search_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<void> startAutoUploadNearbyInfo() async {
     // print log
@@ -130,10 +134,12 @@ class AMapNearbySearchManager extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> stopAutoUploadNearbyInfo() async {
     // print log
@@ -152,10 +158,12 @@ class AMapNearbySearchManager extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<bool> uploadNearbyInfo(AMapNearbyUploadInfo info) async {
     // print log
@@ -174,10 +182,12 @@ class AMapNearbySearchManager extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<bool> clearUserInfoWithID(String userID) async {
     // print log
@@ -196,8 +206,9 @@ class AMapNearbySearchManager extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
   
@@ -232,13 +243,14 @@ extension AMapNearbySearchManager_Batch on List<AMapNearbySearchManager> {
   //endregion
 
   //region methods
-  Future<List<AMapNearbySearchManager>> sharedInstance_batch() async {
+  
+  static Future<List<AMapNearbySearchManager>> sharedInstance_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbySearchManager::sharedInstance_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbySearchManager::sharedInstance_batch', );
   
   
     // convert native result to dart side object
@@ -251,7 +263,8 @@ extension AMapNearbySearchManager_Batch on List<AMapNearbySearchManager> {
     }
   }
   
-  Future<void> startAutoUploadNearbyInfo_batch() async {
+  
+  Future<List<void>> startAutoUploadNearbyInfo_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -270,7 +283,8 @@ extension AMapNearbySearchManager_Batch on List<AMapNearbySearchManager> {
     }
   }
   
-  Future<void> stopAutoUploadNearbyInfo_batch() async {
+  
+  Future<List<void>> stopAutoUploadNearbyInfo_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -288,6 +302,7 @@ extension AMapNearbySearchManager_Batch on List<AMapNearbySearchManager> {
       return typedResult;
     }
   }
+  
   
   Future<List<bool>> uploadNearbyInfo_batch(List<AMapNearbyUploadInfo> info) async {
     if (false) {
@@ -307,6 +322,7 @@ extension AMapNearbySearchManager_Batch on List<AMapNearbySearchManager> {
       return typedResult;
     }
   }
+  
   
   Future<List<bool>> clearUserInfoWithID_batch(List<String> userID) async {
     if (false) {

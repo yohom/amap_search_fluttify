@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_amap_api_services_weather_WeatherSearch extends java_lang_Object  {
   //region constants
@@ -50,6 +51,7 @@ class com_amap_api_services_weather_WeatherSearch extends java_lang_Object  {
   //endregion
 
   //region methods
+  
   Future<com_amap_api_services_weather_WeatherSearchQuery> getQuery() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -67,10 +69,12 @@ class com_amap_api_services_weather_WeatherSearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_weather_WeatherSearchQuery()..refId = __result__..tag__ = 'amap_search_fluttify');
-      return com_amap_api_services_weather_WeatherSearchQuery()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_weather_WeatherSearchQuery()..refId = __result__..tag__ = 'amap_search_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<void> setQuery(com_amap_api_services_weather_WeatherSearchQuery var1) async {
     // print log
@@ -89,10 +93,12 @@ class com_amap_api_services_weather_WeatherSearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> searchWeatherAsyn() async {
     // print log
@@ -111,10 +117,12 @@ class com_amap_api_services_weather_WeatherSearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setOnWeatherSearchListener(com_amap_api_services_weather_WeatherSearch_OnWeatherSearchListener var1) async {
     // print log
@@ -137,20 +145,20 @@ class com_amap_api_services_weather_WeatherSearch extends java_lang_Object  {
             case 'Callback::com.amap.api.services.weather.WeatherSearch.OnWeatherSearchListener::onWeatherLiveSearched':
               // print log
               if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onWeatherLiveSearched([\'var2\':$args[var2]])');
+                print('fluttify-dart-callback: onWeatherLiveSearched([\'var2\':${args['var2']}])');
               }
         
               // handle the native call
-              var1?.onWeatherLiveSearched(com_amap_api_services_weather_LocalWeatherLiveResult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify', args['var2']);
+              var1?.onWeatherLiveSearched((com_amap_api_services_weather_LocalWeatherLiveResult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify'), args['var2']);
               break;
             case 'Callback::com.amap.api.services.weather.WeatherSearch.OnWeatherSearchListener::onWeatherForecastSearched':
               // print log
               if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onWeatherForecastSearched([\'var2\':$args[var2]])');
+                print('fluttify-dart-callback: onWeatherForecastSearched([\'var2\':${args['var2']}])');
               }
         
               // handle the native call
-              var1?.onWeatherForecastSearched(com_amap_api_services_weather_LocalWeatherForecastResult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify', args['var2']);
+              var1?.onWeatherForecastSearched((com_amap_api_services_weather_LocalWeatherForecastResult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify'), args['var2']);
               break;
             default:
               break;
@@ -161,8 +169,9 @@ class com_amap_api_services_weather_WeatherSearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
   
@@ -179,6 +188,7 @@ extension com_amap_api_services_weather_WeatherSearch_Batch on List<com_amap_api
   //endregion
 
   //region methods
+  
   Future<List<com_amap_api_services_weather_WeatherSearchQuery>> getQuery_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -198,7 +208,8 @@ extension com_amap_api_services_weather_WeatherSearch_Batch on List<com_amap_api
     }
   }
   
-  Future<void> setQuery_batch(List<com_amap_api_services_weather_WeatherSearchQuery> var1) async {
+  
+  Future<List<void>> setQuery_batch(List<com_amap_api_services_weather_WeatherSearchQuery> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -217,7 +228,8 @@ extension com_amap_api_services_weather_WeatherSearch_Batch on List<com_amap_api
     }
   }
   
-  Future<void> searchWeatherAsyn_batch() async {
+  
+  Future<List<void>> searchWeatherAsyn_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
     }

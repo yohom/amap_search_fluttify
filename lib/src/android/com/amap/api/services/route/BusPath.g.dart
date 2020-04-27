@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_amap_api_services_route_BusPath extends com_amap_api_services_route_Path with android_os_Parcelable {
   //region constants
@@ -50,6 +51,7 @@ class com_amap_api_services_route_BusPath extends com_amap_api_services_route_Pa
   //endregion
 
   //region methods
+  
   Future<double> getCost() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -67,10 +69,12 @@ class com_amap_api_services_route_BusPath extends com_amap_api_services_route_Pa
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setCost(double var1) async {
     // print log
@@ -89,10 +93,12 @@ class com_amap_api_services_route_BusPath extends com_amap_api_services_route_Pa
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<bool> isNightBus() async {
     // print log
@@ -111,10 +117,12 @@ class com_amap_api_services_route_BusPath extends com_amap_api_services_route_Pa
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setNightBus(bool var1) async {
     // print log
@@ -133,10 +141,12 @@ class com_amap_api_services_route_BusPath extends com_amap_api_services_route_Pa
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<double> getWalkDistance() async {
     // print log
@@ -155,10 +165,12 @@ class com_amap_api_services_route_BusPath extends com_amap_api_services_route_Pa
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setWalkDistance(double var1) async {
     // print log
@@ -177,10 +189,12 @@ class com_amap_api_services_route_BusPath extends com_amap_api_services_route_Pa
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<double> getBusDistance() async {
     // print log
@@ -199,10 +213,12 @@ class com_amap_api_services_route_BusPath extends com_amap_api_services_route_Pa
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setBusDistance(double var1) async {
     // print log
@@ -221,10 +237,12 @@ class com_amap_api_services_route_BusPath extends com_amap_api_services_route_Pa
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<List<com_amap_api_services_route_BusStep>> getSteps() async {
     // print log
@@ -243,10 +261,12 @@ class com_amap_api_services_route_BusPath extends com_amap_api_services_route_Pa
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => com_amap_api_services_route_BusStep()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
-      return (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_route_BusStep()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      final __return__ = (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_route_BusStep()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      kNativeObjectPool.addAll(__return__);
+      return __return__;
     }
   }
+  
   
   Future<void> setSteps(List<com_amap_api_services_route_BusStep> var1) async {
     // print log
@@ -265,8 +285,9 @@ class com_amap_api_services_route_BusPath extends com_amap_api_services_route_Pa
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
   
@@ -283,6 +304,7 @@ extension com_amap_api_services_route_BusPath_Batch on List<com_amap_api_service
   //endregion
 
   //region methods
+  
   Future<List<double>> getCost_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -302,7 +324,8 @@ extension com_amap_api_services_route_BusPath_Batch on List<com_amap_api_service
     }
   }
   
-  Future<void> setCost_batch(List<double> var1) async {
+  
+  Future<List<void>> setCost_batch(List<double> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -320,6 +343,7 @@ extension com_amap_api_services_route_BusPath_Batch on List<com_amap_api_service
       return typedResult;
     }
   }
+  
   
   Future<List<bool>> isNightBus_batch() async {
     if (false) {
@@ -340,7 +364,8 @@ extension com_amap_api_services_route_BusPath_Batch on List<com_amap_api_service
     }
   }
   
-  Future<void> setNightBus_batch(List<bool> var1) async {
+  
+  Future<List<void>> setNightBus_batch(List<bool> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -358,6 +383,7 @@ extension com_amap_api_services_route_BusPath_Batch on List<com_amap_api_service
       return typedResult;
     }
   }
+  
   
   Future<List<double>> getWalkDistance_batch() async {
     if (false) {
@@ -378,7 +404,8 @@ extension com_amap_api_services_route_BusPath_Batch on List<com_amap_api_service
     }
   }
   
-  Future<void> setWalkDistance_batch(List<double> var1) async {
+  
+  Future<List<void>> setWalkDistance_batch(List<double> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -396,6 +423,7 @@ extension com_amap_api_services_route_BusPath_Batch on List<com_amap_api_service
       return typedResult;
     }
   }
+  
   
   Future<List<double>> getBusDistance_batch() async {
     if (false) {
@@ -416,7 +444,8 @@ extension com_amap_api_services_route_BusPath_Batch on List<com_amap_api_service
     }
   }
   
-  Future<void> setBusDistance_batch(List<double> var1) async {
+  
+  Future<List<void>> setBusDistance_batch(List<double> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -434,6 +463,7 @@ extension com_amap_api_services_route_BusPath_Batch on List<com_amap_api_service
       return typedResult;
     }
   }
+  
   
   Future<List<List<com_amap_api_services_route_BusStep>>> getSteps_batch() async {
     if (false) {
@@ -454,7 +484,8 @@ extension com_amap_api_services_route_BusPath_Batch on List<com_amap_api_service
     }
   }
   
-  Future<void> setSteps_batch(List<List<com_amap_api_services_route_BusStep>> var1) async {
+  
+  Future<List<void>> setSteps_batch(List<List<com_amap_api_services_route_BusStep>> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }

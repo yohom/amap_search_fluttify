@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 mixin com_amap_api_services_interfaces_ITrafficSearch on java_lang_Object {
   
@@ -19,12 +20,46 @@ mixin com_amap_api_services_interfaces_ITrafficSearch on java_lang_Object {
 
   
 
-  @mustCallSuper
-  Future<void> setTrafficSearchListener(com_amap_api_services_traffic_TrafficSearch_OnTrafficSearchListener var1) {
-    kNativeObjectPool.add(var1);
   
+  Future<void> setTrafficSearchListener(com_amap_api_services_traffic_TrafficSearch_OnTrafficSearchListener var1) async {
+    // print log
     if (fluttifyLogEnabled) {
-      debugPrint('setTrafficSearchListener::kNativeObjectPool: $kNativeObjectPool');
+      print('fluttify-dart: com.amap.api.services.interfaces.ITrafficSearch@$refId::setTrafficSearchListener([])');
+    }
+  
+    // invoke native method
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.ITrafficSearch::setTrafficSearchListener', {"refId": refId});
+  
+  
+    // handle native call
+    MethodChannel('com.amap.api.services.interfaces.ITrafficSearch::setTrafficSearchListener::Callback')
+        .setMethodCallHandler((methodCall) async {
+          final args = methodCall.arguments as Map;
+          // final refId = args['callerRefId'] as int;
+          // if (refId != this.refId) return;
+  
+          switch (methodCall.method) {
+            case 'Callback::com.amap.api.services.traffic.TrafficSearch.OnTrafficSearchListener::onRoadTrafficSearched':
+              // print log
+              if (fluttifyLogEnabled) {
+                print('fluttify-dart-callback: onRoadTrafficSearched([\'var2\':${args['var2']}])');
+              }
+        
+              // handle the native call
+              var1?.onRoadTrafficSearched((com_amap_api_services_traffic_TrafficStatusResult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify'), args['var2']);
+              break;
+            default:
+              break;
+          }
+        });
+  
+    // convert native result to dart side object
+    if (__result__ == null) {
+      return null;
+    } else {
+      final __return__ = __result__;
+    
+      return __return__;
     }
   }
   

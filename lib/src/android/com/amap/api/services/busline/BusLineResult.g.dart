@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_amap_api_services_busline_BusLineResult extends java_lang_Object  {
   //region constants
@@ -32,6 +33,7 @@ class com_amap_api_services_busline_BusLineResult extends java_lang_Object  {
   //endregion
 
   //region methods
+  
   static Future<com_amap_api_services_busline_BusLineResult> createPagedResult(com_amap_api_services_busline_BusLineQuery var0, int var1, List<com_amap_api_services_core_SuggestionCity> var2, List<String> var3, List<com_amap_api_services_busline_BusLineItem> var4) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -49,10 +51,12 @@ class com_amap_api_services_busline_BusLineResult extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_busline_BusLineResult()..refId = __result__..tag__ = 'amap_search_fluttify');
-      return com_amap_api_services_busline_BusLineResult()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_busline_BusLineResult()..refId = __result__..tag__ = 'amap_search_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<int> getPageCount() async {
     // print log
@@ -71,10 +75,12 @@ class com_amap_api_services_busline_BusLineResult extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_services_busline_BusLineQuery> getQuery() async {
     // print log
@@ -93,10 +99,12 @@ class com_amap_api_services_busline_BusLineResult extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_busline_BusLineQuery()..refId = __result__..tag__ = 'amap_search_fluttify');
-      return com_amap_api_services_busline_BusLineQuery()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_busline_BusLineQuery()..refId = __result__..tag__ = 'amap_search_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<List<String>> getSearchSuggestionKeywords() async {
     // print log
@@ -115,10 +123,12 @@ class com_amap_api_services_busline_BusLineResult extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = (__result__ as List).cast<String>();
     
-      return (__result__ as List).cast<String>();
+      return __return__;
     }
   }
+  
   
   Future<List<com_amap_api_services_core_SuggestionCity>> getSearchSuggestionCities() async {
     // print log
@@ -137,10 +147,12 @@ class com_amap_api_services_busline_BusLineResult extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => com_amap_api_services_core_SuggestionCity()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
-      return (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_core_SuggestionCity()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      final __return__ = (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_core_SuggestionCity()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      kNativeObjectPool.addAll(__return__);
+      return __return__;
     }
   }
+  
   
   Future<List<com_amap_api_services_busline_BusLineItem>> getBusLines() async {
     // print log
@@ -159,8 +171,9 @@ class com_amap_api_services_busline_BusLineResult extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => com_amap_api_services_busline_BusLineItem()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
-      return (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_busline_BusLineItem()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      final __return__ = (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_route_RouteBusLineItem()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      kNativeObjectPool.addAll(__return__);
+      return __return__;
     }
   }
   
@@ -177,13 +190,14 @@ extension com_amap_api_services_busline_BusLineResult_Batch on List<com_amap_api
   //endregion
 
   //region methods
-  Future<List<com_amap_api_services_busline_BusLineResult>> createPagedResult_batch(List<com_amap_api_services_busline_BusLineQuery> var0, List<int> var1, List<List<com_amap_api_services_core_SuggestionCity>> var2, List<List<String>> var3, List<List<com_amap_api_services_busline_BusLineItem>> var4) async {
+  
+  static Future<List<com_amap_api_services_busline_BusLineResult>> createPagedResult_batch(List<com_amap_api_services_busline_BusLineQuery> var0, List<int> var1, List<List<com_amap_api_services_core_SuggestionCity>> var2, List<List<String>> var3, List<List<com_amap_api_services_busline_BusLineItem>> var4) async {
     if (var0.length != var1.length || var1.length != var2.length || var2.length != var3.length || var3.length != var4.length) {
       return Future.error('all args must have same length!');
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineResult::createPagedResult_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__].refId, "var1": var1[__i__], "var2": var2[__i__].map((it) => it.refId).toList(), "var3": var3[__i__], "var4": var4[__i__].map((it) => it.refId).toList(), "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineResult::createPagedResult_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__].refId, "var1": var1[__i__], "var2": var2[__i__].map((it) => it.refId).toList(), "var3": var3[__i__], "var4": var4[__i__].map((it) => it.refId).toList()}]);
   
   
     // convert native result to dart side object
@@ -195,6 +209,7 @@ extension com_amap_api_services_busline_BusLineResult_Batch on List<com_amap_api
       return typedResult;
     }
   }
+  
   
   Future<List<int>> getPageCount_batch() async {
     if (false) {
@@ -215,6 +230,7 @@ extension com_amap_api_services_busline_BusLineResult_Batch on List<com_amap_api
     }
   }
   
+  
   Future<List<com_amap_api_services_busline_BusLineQuery>> getQuery_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -233,6 +249,7 @@ extension com_amap_api_services_busline_BusLineResult_Batch on List<com_amap_api
       return typedResult;
     }
   }
+  
   
   Future<List<List<String>>> getSearchSuggestionKeywords_batch() async {
     if (false) {
@@ -253,6 +270,7 @@ extension com_amap_api_services_busline_BusLineResult_Batch on List<com_amap_api
     }
   }
   
+  
   Future<List<List<com_amap_api_services_core_SuggestionCity>>> getSearchSuggestionCities_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -272,6 +290,7 @@ extension com_amap_api_services_busline_BusLineResult_Batch on List<com_amap_api
     }
   }
   
+  
   Future<List<List<com_amap_api_services_busline_BusLineItem>>> getBusLines_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -285,7 +304,7 @@ extension com_amap_api_services_busline_BusLineResult_Batch on List<com_amap_api
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_busline_BusLineItem()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
+      final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_route_RouteBusLineItem()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
       kNativeObjectPool.addAll(typedResult.expand((e) => e));
       return typedResult;
     }

@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_amap_api_services_route_RailwaySpace extends java_lang_Object with android_os_Parcelable {
   //region constants
@@ -50,6 +51,7 @@ class com_amap_api_services_route_RailwaySpace extends java_lang_Object with and
   //endregion
 
   //region methods
+  
   Future<String> getCode() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -67,10 +69,12 @@ class com_amap_api_services_route_RailwaySpace extends java_lang_Object with and
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<double> getCost() async {
     // print log
@@ -89,8 +93,9 @@ class com_amap_api_services_route_RailwaySpace extends java_lang_Object with and
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
   
@@ -107,6 +112,7 @@ extension com_amap_api_services_route_RailwaySpace_Batch on List<com_amap_api_se
   //endregion
 
   //region methods
+  
   Future<List<String>> getCode_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -125,6 +131,7 @@ extension com_amap_api_services_route_RailwaySpace_Batch on List<com_amap_api_se
       return typedResult;
     }
   }
+  
   
   Future<List<double>> getCost_batch() async {
     if (false) {

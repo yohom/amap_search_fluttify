@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_amap_api_services_poisearch_SubPoiItem extends java_lang_Object with android_os_Parcelable {
   //region constants
@@ -50,6 +51,7 @@ class com_amap_api_services_poisearch_SubPoiItem extends java_lang_Object with a
   //endregion
 
   //region methods
+  
   Future<String> getPoiId() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -67,10 +69,12 @@ class com_amap_api_services_poisearch_SubPoiItem extends java_lang_Object with a
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setPoiId(String var1) async {
     // print log
@@ -89,10 +93,12 @@ class com_amap_api_services_poisearch_SubPoiItem extends java_lang_Object with a
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getTitle() async {
     // print log
@@ -111,10 +117,12 @@ class com_amap_api_services_poisearch_SubPoiItem extends java_lang_Object with a
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setTitle(String var1) async {
     // print log
@@ -133,10 +141,12 @@ class com_amap_api_services_poisearch_SubPoiItem extends java_lang_Object with a
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getSubName() async {
     // print log
@@ -155,10 +165,12 @@ class com_amap_api_services_poisearch_SubPoiItem extends java_lang_Object with a
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setSubName(String var1) async {
     // print log
@@ -177,10 +189,12 @@ class com_amap_api_services_poisearch_SubPoiItem extends java_lang_Object with a
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<int> getDistance() async {
     // print log
@@ -199,10 +213,12 @@ class com_amap_api_services_poisearch_SubPoiItem extends java_lang_Object with a
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setDistance(int var1) async {
     // print log
@@ -221,10 +237,12 @@ class com_amap_api_services_poisearch_SubPoiItem extends java_lang_Object with a
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_services_core_LatLonPoint> getLatLonPoint() async {
     // print log
@@ -243,10 +261,12 @@ class com_amap_api_services_poisearch_SubPoiItem extends java_lang_Object with a
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify');
-      return com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_core_LatLonSharePoint()..refId = __result__..tag__ = 'amap_search_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<void> setLatLonPoint(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
@@ -265,10 +285,12 @@ class com_amap_api_services_poisearch_SubPoiItem extends java_lang_Object with a
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getSnippet() async {
     // print log
@@ -287,10 +309,12 @@ class com_amap_api_services_poisearch_SubPoiItem extends java_lang_Object with a
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setSnippet(String var1) async {
     // print log
@@ -309,10 +333,12 @@ class com_amap_api_services_poisearch_SubPoiItem extends java_lang_Object with a
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getSubTypeDes() async {
     // print log
@@ -331,10 +357,12 @@ class com_amap_api_services_poisearch_SubPoiItem extends java_lang_Object with a
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setSubTypeDes(String var1) async {
     // print log
@@ -353,8 +381,9 @@ class com_amap_api_services_poisearch_SubPoiItem extends java_lang_Object with a
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
   
@@ -371,6 +400,7 @@ extension com_amap_api_services_poisearch_SubPoiItem_Batch on List<com_amap_api_
   //endregion
 
   //region methods
+  
   Future<List<String>> getPoiId_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -390,7 +420,8 @@ extension com_amap_api_services_poisearch_SubPoiItem_Batch on List<com_amap_api_
     }
   }
   
-  Future<void> setPoiId_batch(List<String> var1) async {
+  
+  Future<List<void>> setPoiId_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -408,6 +439,7 @@ extension com_amap_api_services_poisearch_SubPoiItem_Batch on List<com_amap_api_
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getTitle_batch() async {
     if (false) {
@@ -428,7 +460,8 @@ extension com_amap_api_services_poisearch_SubPoiItem_Batch on List<com_amap_api_
     }
   }
   
-  Future<void> setTitle_batch(List<String> var1) async {
+  
+  Future<List<void>> setTitle_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -446,6 +479,7 @@ extension com_amap_api_services_poisearch_SubPoiItem_Batch on List<com_amap_api_
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getSubName_batch() async {
     if (false) {
@@ -466,7 +500,8 @@ extension com_amap_api_services_poisearch_SubPoiItem_Batch on List<com_amap_api_
     }
   }
   
-  Future<void> setSubName_batch(List<String> var1) async {
+  
+  Future<List<void>> setSubName_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -484,6 +519,7 @@ extension com_amap_api_services_poisearch_SubPoiItem_Batch on List<com_amap_api_
       return typedResult;
     }
   }
+  
   
   Future<List<int>> getDistance_batch() async {
     if (false) {
@@ -504,7 +540,8 @@ extension com_amap_api_services_poisearch_SubPoiItem_Batch on List<com_amap_api_
     }
   }
   
-  Future<void> setDistance_batch(List<int> var1) async {
+  
+  Future<List<void>> setDistance_batch(List<int> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -523,6 +560,7 @@ extension com_amap_api_services_poisearch_SubPoiItem_Batch on List<com_amap_api_
     }
   }
   
+  
   Future<List<com_amap_api_services_core_LatLonPoint>> getLatLonPoint_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -536,13 +574,14 @@ extension com_amap_api_services_poisearch_SubPoiItem_Batch on List<com_amap_api_
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_amap_api_services_core_LatLonSharePoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
   }
   
-  Future<void> setLatLonPoint_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
+  
+  Future<List<void>> setLatLonPoint_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -560,6 +599,7 @@ extension com_amap_api_services_poisearch_SubPoiItem_Batch on List<com_amap_api_
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getSnippet_batch() async {
     if (false) {
@@ -580,7 +620,8 @@ extension com_amap_api_services_poisearch_SubPoiItem_Batch on List<com_amap_api_
     }
   }
   
-  Future<void> setSnippet_batch(List<String> var1) async {
+  
+  Future<List<void>> setSnippet_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -598,6 +639,7 @@ extension com_amap_api_services_poisearch_SubPoiItem_Batch on List<com_amap_api_
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getSubTypeDes_batch() async {
     if (false) {
@@ -618,7 +660,8 @@ extension com_amap_api_services_poisearch_SubPoiItem_Batch on List<com_amap_api_
     }
   }
   
-  Future<void> setSubTypeDes_batch(List<String> var1) async {
+  
+  Future<List<void>> setSubTypeDes_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }

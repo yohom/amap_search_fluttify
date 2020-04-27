@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_amap_api_services_route_DriveRoutePlanResult extends com_amap_api_services_route_RoutePlanResult with android_os_Parcelable {
   //region constants
@@ -50,6 +51,7 @@ class com_amap_api_services_route_DriveRoutePlanResult extends com_amap_api_serv
   //endregion
 
   //region methods
+  
   Future<List<com_amap_api_services_route_DrivePlanPath>> getPaths() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -67,10 +69,12 @@ class com_amap_api_services_route_DriveRoutePlanResult extends com_amap_api_serv
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => com_amap_api_services_route_DrivePlanPath()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
-      return (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_route_DrivePlanPath()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      final __return__ = (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_route_DrivePlanPath()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      kNativeObjectPool.addAll(__return__);
+      return __return__;
     }
   }
+  
   
   Future<void> setPaths(List<com_amap_api_services_route_DrivePlanPath> var1) async {
     // print log
@@ -89,10 +93,12 @@ class com_amap_api_services_route_DriveRoutePlanResult extends com_amap_api_serv
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<List<com_amap_api_services_route_TimeInfo>> getTimeInfos() async {
     // print log
@@ -111,10 +117,12 @@ class com_amap_api_services_route_DriveRoutePlanResult extends com_amap_api_serv
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => com_amap_api_services_route_TimeInfo()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
-      return (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_route_TimeInfo()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      final __return__ = (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_route_TimeInfo()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      kNativeObjectPool.addAll(__return__);
+      return __return__;
     }
   }
+  
   
   Future<void> setTimeInfos(List<com_amap_api_services_route_TimeInfo> var1) async {
     // print log
@@ -133,10 +141,12 @@ class com_amap_api_services_route_DriveRoutePlanResult extends com_amap_api_serv
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setDrivePlanQuery(com_amap_api_services_route_RouteSearch_DrivePlanQuery var1) async {
     // print log
@@ -155,8 +165,9 @@ class com_amap_api_services_route_DriveRoutePlanResult extends com_amap_api_serv
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
   
@@ -173,6 +184,7 @@ extension com_amap_api_services_route_DriveRoutePlanResult_Batch on List<com_ama
   //endregion
 
   //region methods
+  
   Future<List<List<com_amap_api_services_route_DrivePlanPath>>> getPaths_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -192,7 +204,8 @@ extension com_amap_api_services_route_DriveRoutePlanResult_Batch on List<com_ama
     }
   }
   
-  Future<void> setPaths_batch(List<List<com_amap_api_services_route_DrivePlanPath>> var1) async {
+  
+  Future<List<void>> setPaths_batch(List<List<com_amap_api_services_route_DrivePlanPath>> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -210,6 +223,7 @@ extension com_amap_api_services_route_DriveRoutePlanResult_Batch on List<com_ama
       return typedResult;
     }
   }
+  
   
   Future<List<List<com_amap_api_services_route_TimeInfo>>> getTimeInfos_batch() async {
     if (false) {
@@ -230,7 +244,8 @@ extension com_amap_api_services_route_DriveRoutePlanResult_Batch on List<com_ama
     }
   }
   
-  Future<void> setTimeInfos_batch(List<List<com_amap_api_services_route_TimeInfo>> var1) async {
+  
+  Future<List<void>> setTimeInfos_batch(List<List<com_amap_api_services_route_TimeInfo>> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -249,7 +264,8 @@ extension com_amap_api_services_route_DriveRoutePlanResult_Batch on List<com_ama
     }
   }
   
-  Future<void> setDrivePlanQuery_batch(List<com_amap_api_services_route_RouteSearch_DrivePlanQuery> var1) async {
+  
+  Future<List<void>> setDrivePlanQuery_batch(List<com_amap_api_services_route_RouteSearch_DrivePlanQuery> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }

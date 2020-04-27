@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends java_lang_Object with android_os_Parcelable {
   //region constants
@@ -69,6 +70,7 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends java_lang_
   //endregion
 
   //region methods
+  
   Future<com_amap_api_services_route_RouteSearch_FromAndTo> getFromAndTo() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -86,10 +88,12 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends java_lang_
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_route_RouteSearch_FromAndTo()..refId = __result__..tag__ = 'amap_search_fluttify');
-      return com_amap_api_services_route_RouteSearch_FromAndTo()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_route_RouteSearch_FromAndTo()..refId = __result__..tag__ = 'amap_search_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<int> getMode() async {
     // print log
@@ -108,10 +112,12 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends java_lang_
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<int> getCarType() async {
     // print log
@@ -130,10 +136,12 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends java_lang_
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<List<com_amap_api_services_core_LatLonPoint>> getPassedByPoints() async {
     // print log
@@ -152,10 +160,12 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends java_lang_
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => com_amap_api_services_core_LatLonPoint()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
-      return (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_core_LatLonPoint()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      final __return__ = (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_core_LatLonSharePoint()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      kNativeObjectPool.addAll(__return__);
+      return __return__;
     }
   }
+  
   
   Future<String> getAvoidRoad() async {
     // print log
@@ -174,10 +184,12 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends java_lang_
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getPassedPointStr() async {
     // print log
@@ -196,10 +208,12 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends java_lang_
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<bool> hasPassPoint() async {
     // print log
@@ -218,10 +232,12 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends java_lang_
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getAvoidpolygonsStr() async {
     // print log
@@ -240,10 +256,12 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends java_lang_
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<bool> hasAvoidpolygons() async {
     // print log
@@ -262,10 +280,12 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends java_lang_
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<bool> hasAvoidRoad() async {
     // print log
@@ -284,10 +304,12 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends java_lang_
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_services_route_RouteSearch_DriveRouteQuery> clone() async {
     // print log
@@ -306,10 +328,12 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends java_lang_
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_route_RouteSearch_DriveRouteQuery()..refId = __result__..tag__ = 'amap_search_fluttify');
-      return com_amap_api_services_route_RouteSearch_DriveRouteQuery()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_route_RouteSearch_DriveRouteQuery()..refId = __result__..tag__ = 'amap_search_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<bool> isUseFerry() async {
     // print log
@@ -328,10 +352,12 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends java_lang_
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setUseFerry(bool var1) async {
     // print log
@@ -350,10 +376,12 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends java_lang_
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setCarType(int var1) async {
     // print log
@@ -372,8 +400,9 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends java_lang_
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
   
@@ -390,6 +419,7 @@ extension com_amap_api_services_route_RouteSearch_DriveRouteQuery_Batch on List<
   //endregion
 
   //region methods
+  
   Future<List<com_amap_api_services_route_RouteSearch_FromAndTo>> getFromAndTo_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -408,6 +438,7 @@ extension com_amap_api_services_route_RouteSearch_DriveRouteQuery_Batch on List<
       return typedResult;
     }
   }
+  
   
   Future<List<int>> getMode_batch() async {
     if (false) {
@@ -428,6 +459,7 @@ extension com_amap_api_services_route_RouteSearch_DriveRouteQuery_Batch on List<
     }
   }
   
+  
   Future<List<int>> getCarType_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -447,6 +479,7 @@ extension com_amap_api_services_route_RouteSearch_DriveRouteQuery_Batch on List<
     }
   }
   
+  
   Future<List<List<com_amap_api_services_core_LatLonPoint>>> getPassedByPoints_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -460,11 +493,12 @@ extension com_amap_api_services_route_RouteSearch_DriveRouteQuery_Batch on List<
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_core_LatLonPoint()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
+      final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_core_LatLonSharePoint()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
       kNativeObjectPool.addAll(typedResult.expand((e) => e));
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getAvoidRoad_batch() async {
     if (false) {
@@ -485,6 +519,7 @@ extension com_amap_api_services_route_RouteSearch_DriveRouteQuery_Batch on List<
     }
   }
   
+  
   Future<List<String>> getPassedPointStr_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -503,6 +538,7 @@ extension com_amap_api_services_route_RouteSearch_DriveRouteQuery_Batch on List<
       return typedResult;
     }
   }
+  
   
   Future<List<bool>> hasPassPoint_batch() async {
     if (false) {
@@ -523,6 +559,7 @@ extension com_amap_api_services_route_RouteSearch_DriveRouteQuery_Batch on List<
     }
   }
   
+  
   Future<List<String>> getAvoidpolygonsStr_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -541,6 +578,7 @@ extension com_amap_api_services_route_RouteSearch_DriveRouteQuery_Batch on List<
       return typedResult;
     }
   }
+  
   
   Future<List<bool>> hasAvoidpolygons_batch() async {
     if (false) {
@@ -561,6 +599,7 @@ extension com_amap_api_services_route_RouteSearch_DriveRouteQuery_Batch on List<
     }
   }
   
+  
   Future<List<bool>> hasAvoidRoad_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -579,6 +618,7 @@ extension com_amap_api_services_route_RouteSearch_DriveRouteQuery_Batch on List<
       return typedResult;
     }
   }
+  
   
   Future<List<com_amap_api_services_route_RouteSearch_DriveRouteQuery>> clone_batch() async {
     if (false) {
@@ -599,6 +639,7 @@ extension com_amap_api_services_route_RouteSearch_DriveRouteQuery_Batch on List<
     }
   }
   
+  
   Future<List<bool>> isUseFerry_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -618,7 +659,8 @@ extension com_amap_api_services_route_RouteSearch_DriveRouteQuery_Batch on List<
     }
   }
   
-  Future<void> setUseFerry_batch(List<bool> var1) async {
+  
+  Future<List<void>> setUseFerry_batch(List<bool> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -637,7 +679,8 @@ extension com_amap_api_services_route_RouteSearch_DriveRouteQuery_Batch on List<
     }
   }
   
-  Future<void> setCarType_batch(List<int> var1) async {
+  
+  Future<List<void>> setCarType_batch(List<int> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }

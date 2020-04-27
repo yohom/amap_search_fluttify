@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_amap_api_services_nearby_NearbySearch_NearbyQuery extends java_lang_Object  {
   //region constants
@@ -50,6 +51,7 @@ class com_amap_api_services_nearby_NearbySearch_NearbyQuery extends java_lang_Ob
   //endregion
 
   //region methods
+  
   Future<void> setCenterPoint(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -67,10 +69,12 @@ class com_amap_api_services_nearby_NearbySearch_NearbyQuery extends java_lang_Ob
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_services_core_LatLonPoint> getCenterPoint() async {
     // print log
@@ -89,10 +93,12 @@ class com_amap_api_services_nearby_NearbySearch_NearbyQuery extends java_lang_Ob
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify');
-      return com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_core_LatLonSharePoint()..refId = __result__..tag__ = 'amap_search_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<int> getRadius() async {
     // print log
@@ -111,10 +117,12 @@ class com_amap_api_services_nearby_NearbySearch_NearbyQuery extends java_lang_Ob
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setRadius(int var1) async {
     // print log
@@ -133,10 +141,12 @@ class com_amap_api_services_nearby_NearbySearch_NearbyQuery extends java_lang_Ob
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setType(com_amap_api_services_nearby_NearbySearchFunctionType var1) async {
     // print log
@@ -155,10 +165,12 @@ class com_amap_api_services_nearby_NearbySearch_NearbyQuery extends java_lang_Ob
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<int> getType() async {
     // print log
@@ -177,10 +189,12 @@ class com_amap_api_services_nearby_NearbySearch_NearbyQuery extends java_lang_Ob
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setCoordType(int var1) async {
     // print log
@@ -199,10 +213,12 @@ class com_amap_api_services_nearby_NearbySearch_NearbyQuery extends java_lang_Ob
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<int> getCoordType() async {
     // print log
@@ -221,10 +237,12 @@ class com_amap_api_services_nearby_NearbySearch_NearbyQuery extends java_lang_Ob
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setTimeRange(int var1) async {
     // print log
@@ -243,10 +261,12 @@ class com_amap_api_services_nearby_NearbySearch_NearbyQuery extends java_lang_Ob
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<int> getTimeRange() async {
     // print log
@@ -265,8 +285,9 @@ class com_amap_api_services_nearby_NearbySearch_NearbyQuery extends java_lang_Ob
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
   
@@ -283,7 +304,8 @@ extension com_amap_api_services_nearby_NearbySearch_NearbyQuery_Batch on List<co
   //endregion
 
   //region methods
-  Future<void> setCenterPoint_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
+  
+  Future<List<void>> setCenterPoint_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -302,6 +324,7 @@ extension com_amap_api_services_nearby_NearbySearch_NearbyQuery_Batch on List<co
     }
   }
   
+  
   Future<List<com_amap_api_services_core_LatLonPoint>> getCenterPoint_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -315,11 +338,12 @@ extension com_amap_api_services_nearby_NearbySearch_NearbyQuery_Batch on List<co
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_amap_api_services_core_LatLonSharePoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
   }
+  
   
   Future<List<int>> getRadius_batch() async {
     if (false) {
@@ -340,7 +364,8 @@ extension com_amap_api_services_nearby_NearbySearch_NearbyQuery_Batch on List<co
     }
   }
   
-  Future<void> setRadius_batch(List<int> var1) async {
+  
+  Future<List<void>> setRadius_batch(List<int> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -359,7 +384,8 @@ extension com_amap_api_services_nearby_NearbySearch_NearbyQuery_Batch on List<co
     }
   }
   
-  Future<void> setType_batch(List<com_amap_api_services_nearby_NearbySearchFunctionType> var1) async {
+  
+  Future<List<void>> setType_batch(List<com_amap_api_services_nearby_NearbySearchFunctionType> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -377,6 +403,7 @@ extension com_amap_api_services_nearby_NearbySearch_NearbyQuery_Batch on List<co
       return typedResult;
     }
   }
+  
   
   Future<List<int>> getType_batch() async {
     if (false) {
@@ -397,7 +424,8 @@ extension com_amap_api_services_nearby_NearbySearch_NearbyQuery_Batch on List<co
     }
   }
   
-  Future<void> setCoordType_batch(List<int> var1) async {
+  
+  Future<List<void>> setCoordType_batch(List<int> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -415,6 +443,7 @@ extension com_amap_api_services_nearby_NearbySearch_NearbyQuery_Batch on List<co
       return typedResult;
     }
   }
+  
   
   Future<List<int>> getCoordType_batch() async {
     if (false) {
@@ -435,7 +464,8 @@ extension com_amap_api_services_nearby_NearbySearch_NearbyQuery_Batch on List<co
     }
   }
   
-  Future<void> setTimeRange_batch(List<int> var1) async {
+  
+  Future<List<void>> setTimeRange_batch(List<int> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -453,6 +483,7 @@ extension com_amap_api_services_nearby_NearbySearch_NearbyQuery_Batch on List<co
       return typedResult;
     }
   }
+  
   
   Future<List<int>> getTimeRange_batch() async {
     if (false) {

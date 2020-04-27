@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_amap_api_services_road_Crossroad extends com_amap_api_services_road_Road with android_os_Parcelable {
   //region constants
@@ -50,6 +51,7 @@ class com_amap_api_services_road_Crossroad extends com_amap_api_services_road_Ro
   //endregion
 
   //region methods
+  
   Future<double> getDistance() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -67,10 +69,12 @@ class com_amap_api_services_road_Crossroad extends com_amap_api_services_road_Ro
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setDistance(double var1) async {
     // print log
@@ -89,10 +93,12 @@ class com_amap_api_services_road_Crossroad extends com_amap_api_services_road_Ro
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getDirection() async {
     // print log
@@ -111,10 +117,12 @@ class com_amap_api_services_road_Crossroad extends com_amap_api_services_road_Ro
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setDirection(String var1) async {
     // print log
@@ -133,10 +141,12 @@ class com_amap_api_services_road_Crossroad extends com_amap_api_services_road_Ro
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getFirstRoadId() async {
     // print log
@@ -155,10 +165,12 @@ class com_amap_api_services_road_Crossroad extends com_amap_api_services_road_Ro
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setFirstRoadId(String var1) async {
     // print log
@@ -177,10 +189,12 @@ class com_amap_api_services_road_Crossroad extends com_amap_api_services_road_Ro
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getFirstRoadName() async {
     // print log
@@ -199,10 +213,12 @@ class com_amap_api_services_road_Crossroad extends com_amap_api_services_road_Ro
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setFirstRoadName(String var1) async {
     // print log
@@ -221,10 +237,12 @@ class com_amap_api_services_road_Crossroad extends com_amap_api_services_road_Ro
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getSecondRoadId() async {
     // print log
@@ -243,10 +261,12 @@ class com_amap_api_services_road_Crossroad extends com_amap_api_services_road_Ro
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setSecondRoadId(String var1) async {
     // print log
@@ -265,10 +285,12 @@ class com_amap_api_services_road_Crossroad extends com_amap_api_services_road_Ro
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getSecondRoadName() async {
     // print log
@@ -287,10 +309,12 @@ class com_amap_api_services_road_Crossroad extends com_amap_api_services_road_Ro
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setSecondRoadName(String var1) async {
     // print log
@@ -309,8 +333,9 @@ class com_amap_api_services_road_Crossroad extends com_amap_api_services_road_Ro
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
   
@@ -327,6 +352,7 @@ extension com_amap_api_services_road_Crossroad_Batch on List<com_amap_api_servic
   //endregion
 
   //region methods
+  
   Future<List<double>> getDistance_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -346,7 +372,8 @@ extension com_amap_api_services_road_Crossroad_Batch on List<com_amap_api_servic
     }
   }
   
-  Future<void> setDistance_batch(List<double> var1) async {
+  
+  Future<List<void>> setDistance_batch(List<double> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -364,6 +391,7 @@ extension com_amap_api_services_road_Crossroad_Batch on List<com_amap_api_servic
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getDirection_batch() async {
     if (false) {
@@ -384,7 +412,8 @@ extension com_amap_api_services_road_Crossroad_Batch on List<com_amap_api_servic
     }
   }
   
-  Future<void> setDirection_batch(List<String> var1) async {
+  
+  Future<List<void>> setDirection_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -402,6 +431,7 @@ extension com_amap_api_services_road_Crossroad_Batch on List<com_amap_api_servic
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getFirstRoadId_batch() async {
     if (false) {
@@ -422,7 +452,8 @@ extension com_amap_api_services_road_Crossroad_Batch on List<com_amap_api_servic
     }
   }
   
-  Future<void> setFirstRoadId_batch(List<String> var1) async {
+  
+  Future<List<void>> setFirstRoadId_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -440,6 +471,7 @@ extension com_amap_api_services_road_Crossroad_Batch on List<com_amap_api_servic
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getFirstRoadName_batch() async {
     if (false) {
@@ -460,7 +492,8 @@ extension com_amap_api_services_road_Crossroad_Batch on List<com_amap_api_servic
     }
   }
   
-  Future<void> setFirstRoadName_batch(List<String> var1) async {
+  
+  Future<List<void>> setFirstRoadName_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -478,6 +511,7 @@ extension com_amap_api_services_road_Crossroad_Batch on List<com_amap_api_servic
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getSecondRoadId_batch() async {
     if (false) {
@@ -498,7 +532,8 @@ extension com_amap_api_services_road_Crossroad_Batch on List<com_amap_api_servic
     }
   }
   
-  Future<void> setSecondRoadId_batch(List<String> var1) async {
+  
+  Future<List<void>> setSecondRoadId_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -516,6 +551,7 @@ extension com_amap_api_services_road_Crossroad_Batch on List<com_amap_api_servic
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getSecondRoadName_batch() async {
     if (false) {
@@ -536,7 +572,8 @@ extension com_amap_api_services_road_Crossroad_Batch on List<com_amap_api_servic
     }
   }
   
-  Future<void> setSecondRoadName_batch(List<String> var1) async {
+  
+  Future<List<void>> setSecondRoadName_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }

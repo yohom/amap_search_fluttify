@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_amap_api_services_route_DistanceItem extends java_lang_Object with android_os_Parcelable {
   //region constants
@@ -67,6 +68,7 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
   //endregion
 
   //region methods
+  
   Future<int> getOriginId() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -84,10 +86,12 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<int> getDestId() async {
     // print log
@@ -106,10 +110,12 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<double> getDistance() async {
     // print log
@@ -128,10 +134,12 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<double> getDuration() async {
     // print log
@@ -150,10 +158,12 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getErrorInfo() async {
     // print log
@@ -172,10 +182,12 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<int> getErrorCode() async {
     // print log
@@ -194,10 +206,12 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setOriginId(int var1) async {
     // print log
@@ -216,10 +230,12 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setDestId(int var1) async {
     // print log
@@ -238,10 +254,12 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setDistance(double var1) async {
     // print log
@@ -260,10 +278,12 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setDuration(double var1) async {
     // print log
@@ -282,10 +302,12 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setErrorInfo(String var1) async {
     // print log
@@ -304,10 +326,12 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setErrorCode(int var1) async {
     // print log
@@ -326,8 +350,9 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
   
@@ -364,6 +389,7 @@ extension com_amap_api_services_route_DistanceItem_Batch on List<com_amap_api_se
   //endregion
 
   //region methods
+  
   Future<List<int>> getOriginId_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -382,6 +408,7 @@ extension com_amap_api_services_route_DistanceItem_Batch on List<com_amap_api_se
       return typedResult;
     }
   }
+  
   
   Future<List<int>> getDestId_batch() async {
     if (false) {
@@ -402,6 +429,7 @@ extension com_amap_api_services_route_DistanceItem_Batch on List<com_amap_api_se
     }
   }
   
+  
   Future<List<double>> getDistance_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -420,6 +448,7 @@ extension com_amap_api_services_route_DistanceItem_Batch on List<com_amap_api_se
       return typedResult;
     }
   }
+  
   
   Future<List<double>> getDuration_batch() async {
     if (false) {
@@ -440,6 +469,7 @@ extension com_amap_api_services_route_DistanceItem_Batch on List<com_amap_api_se
     }
   }
   
+  
   Future<List<String>> getErrorInfo_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -458,6 +488,7 @@ extension com_amap_api_services_route_DistanceItem_Batch on List<com_amap_api_se
       return typedResult;
     }
   }
+  
   
   Future<List<int>> getErrorCode_batch() async {
     if (false) {
@@ -478,7 +509,8 @@ extension com_amap_api_services_route_DistanceItem_Batch on List<com_amap_api_se
     }
   }
   
-  Future<void> setOriginId_batch(List<int> var1) async {
+  
+  Future<List<void>> setOriginId_batch(List<int> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -497,7 +529,8 @@ extension com_amap_api_services_route_DistanceItem_Batch on List<com_amap_api_se
     }
   }
   
-  Future<void> setDestId_batch(List<int> var1) async {
+  
+  Future<List<void>> setDestId_batch(List<int> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -516,7 +549,8 @@ extension com_amap_api_services_route_DistanceItem_Batch on List<com_amap_api_se
     }
   }
   
-  Future<void> setDistance_batch(List<double> var1) async {
+  
+  Future<List<void>> setDistance_batch(List<double> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -535,7 +569,8 @@ extension com_amap_api_services_route_DistanceItem_Batch on List<com_amap_api_se
     }
   }
   
-  Future<void> setDuration_batch(List<double> var1) async {
+  
+  Future<List<void>> setDuration_batch(List<double> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -554,7 +589,8 @@ extension com_amap_api_services_route_DistanceItem_Batch on List<com_amap_api_se
     }
   }
   
-  Future<void> setErrorInfo_batch(List<String> var1) async {
+  
+  Future<List<void>> setErrorInfo_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -573,7 +609,8 @@ extension com_amap_api_services_route_DistanceItem_Batch on List<com_amap_api_se
     }
   }
   
-  Future<void> setErrorCode_batch(List<int> var1) async {
+  
+  Future<List<void>> setErrorCode_batch(List<int> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }

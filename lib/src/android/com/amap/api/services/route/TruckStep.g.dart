@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_amap_api_services_route_TruckStep extends java_lang_Object with android_os_Parcelable {
   //region constants
@@ -50,6 +51,7 @@ class com_amap_api_services_route_TruckStep extends java_lang_Object with androi
   //endregion
 
   //region methods
+  
   Future<void> setInstruction(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -67,10 +69,12 @@ class com_amap_api_services_route_TruckStep extends java_lang_Object with androi
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setOrientation(String var1) async {
     // print log
@@ -89,10 +93,12 @@ class com_amap_api_services_route_TruckStep extends java_lang_Object with androi
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setRoad(String var1) async {
     // print log
@@ -111,10 +117,12 @@ class com_amap_api_services_route_TruckStep extends java_lang_Object with androi
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setTolls(double var1) async {
     // print log
@@ -133,10 +141,12 @@ class com_amap_api_services_route_TruckStep extends java_lang_Object with androi
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setDistance(double var1) async {
     // print log
@@ -155,10 +165,12 @@ class com_amap_api_services_route_TruckStep extends java_lang_Object with androi
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setTollDistance(double var1) async {
     // print log
@@ -177,10 +189,12 @@ class com_amap_api_services_route_TruckStep extends java_lang_Object with androi
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setTollRoad(String var1) async {
     // print log
@@ -199,10 +213,12 @@ class com_amap_api_services_route_TruckStep extends java_lang_Object with androi
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setDuration(double var1) async {
     // print log
@@ -221,10 +237,12 @@ class com_amap_api_services_route_TruckStep extends java_lang_Object with androi
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setPolyline(List<com_amap_api_services_core_LatLonPoint> var1) async {
     // print log
@@ -243,10 +261,12 @@ class com_amap_api_services_route_TruckStep extends java_lang_Object with androi
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setAction(String var1) async {
     // print log
@@ -265,10 +285,12 @@ class com_amap_api_services_route_TruckStep extends java_lang_Object with androi
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setAssistantAction(String var1) async {
     // print log
@@ -287,10 +309,12 @@ class com_amap_api_services_route_TruckStep extends java_lang_Object with androi
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setRouteSearchCityList(List<com_amap_api_services_route_RouteSearchCity> var1) async {
     // print log
@@ -309,10 +333,12 @@ class com_amap_api_services_route_TruckStep extends java_lang_Object with androi
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setTMCs(List<com_amap_api_services_route_TMC> var1) async {
     // print log
@@ -331,10 +357,12 @@ class com_amap_api_services_route_TruckStep extends java_lang_Object with androi
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getInstruction() async {
     // print log
@@ -353,10 +381,12 @@ class com_amap_api_services_route_TruckStep extends java_lang_Object with androi
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getOrientation() async {
     // print log
@@ -375,10 +405,12 @@ class com_amap_api_services_route_TruckStep extends java_lang_Object with androi
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getRoad() async {
     // print log
@@ -397,10 +429,12 @@ class com_amap_api_services_route_TruckStep extends java_lang_Object with androi
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<double> getTolls() async {
     // print log
@@ -419,10 +453,12 @@ class com_amap_api_services_route_TruckStep extends java_lang_Object with androi
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<double> getDistance() async {
     // print log
@@ -441,10 +477,12 @@ class com_amap_api_services_route_TruckStep extends java_lang_Object with androi
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<double> getTollDistance() async {
     // print log
@@ -463,10 +501,12 @@ class com_amap_api_services_route_TruckStep extends java_lang_Object with androi
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getTollRoad() async {
     // print log
@@ -485,10 +525,12 @@ class com_amap_api_services_route_TruckStep extends java_lang_Object with androi
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<double> getDuration() async {
     // print log
@@ -507,10 +549,12 @@ class com_amap_api_services_route_TruckStep extends java_lang_Object with androi
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<List<com_amap_api_services_core_LatLonPoint>> getPolyline() async {
     // print log
@@ -529,10 +573,12 @@ class com_amap_api_services_route_TruckStep extends java_lang_Object with androi
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => com_amap_api_services_core_LatLonPoint()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
-      return (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_core_LatLonPoint()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      final __return__ = (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_core_LatLonSharePoint()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      kNativeObjectPool.addAll(__return__);
+      return __return__;
     }
   }
+  
   
   Future<String> getAction() async {
     // print log
@@ -551,10 +597,12 @@ class com_amap_api_services_route_TruckStep extends java_lang_Object with androi
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getAssistantAction() async {
     // print log
@@ -573,10 +621,12 @@ class com_amap_api_services_route_TruckStep extends java_lang_Object with androi
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<List<com_amap_api_services_route_RouteSearchCity>> getRouteSearchCityList() async {
     // print log
@@ -595,10 +645,12 @@ class com_amap_api_services_route_TruckStep extends java_lang_Object with androi
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => com_amap_api_services_route_RouteSearchCity()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
-      return (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_route_RouteSearchCity()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      final __return__ = (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_route_RouteSearchCity()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      kNativeObjectPool.addAll(__return__);
+      return __return__;
     }
   }
+  
   
   Future<List<com_amap_api_services_route_TMC>> getTMCs() async {
     // print log
@@ -617,8 +669,9 @@ class com_amap_api_services_route_TruckStep extends java_lang_Object with androi
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => com_amap_api_services_route_TMC()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
-      return (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_route_TMC()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      final __return__ = (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_route_TMC()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      kNativeObjectPool.addAll(__return__);
+      return __return__;
     }
   }
   
@@ -635,7 +688,8 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
   //endregion
 
   //region methods
-  Future<void> setInstruction_batch(List<String> var1) async {
+  
+  Future<List<void>> setInstruction_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -654,7 +708,8 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
     }
   }
   
-  Future<void> setOrientation_batch(List<String> var1) async {
+  
+  Future<List<void>> setOrientation_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -673,7 +728,8 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
     }
   }
   
-  Future<void> setRoad_batch(List<String> var1) async {
+  
+  Future<List<void>> setRoad_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -692,7 +748,8 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
     }
   }
   
-  Future<void> setTolls_batch(List<double> var1) async {
+  
+  Future<List<void>> setTolls_batch(List<double> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -711,7 +768,8 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
     }
   }
   
-  Future<void> setDistance_batch(List<double> var1) async {
+  
+  Future<List<void>> setDistance_batch(List<double> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -730,7 +788,8 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
     }
   }
   
-  Future<void> setTollDistance_batch(List<double> var1) async {
+  
+  Future<List<void>> setTollDistance_batch(List<double> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -749,7 +808,8 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
     }
   }
   
-  Future<void> setTollRoad_batch(List<String> var1) async {
+  
+  Future<List<void>> setTollRoad_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -768,7 +828,8 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
     }
   }
   
-  Future<void> setDuration_batch(List<double> var1) async {
+  
+  Future<List<void>> setDuration_batch(List<double> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -787,7 +848,8 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
     }
   }
   
-  Future<void> setPolyline_batch(List<List<com_amap_api_services_core_LatLonPoint>> var1) async {
+  
+  Future<List<void>> setPolyline_batch(List<List<com_amap_api_services_core_LatLonPoint>> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -806,7 +868,8 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
     }
   }
   
-  Future<void> setAction_batch(List<String> var1) async {
+  
+  Future<List<void>> setAction_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -825,7 +888,8 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
     }
   }
   
-  Future<void> setAssistantAction_batch(List<String> var1) async {
+  
+  Future<List<void>> setAssistantAction_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -844,7 +908,8 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
     }
   }
   
-  Future<void> setRouteSearchCityList_batch(List<List<com_amap_api_services_route_RouteSearchCity>> var1) async {
+  
+  Future<List<void>> setRouteSearchCityList_batch(List<List<com_amap_api_services_route_RouteSearchCity>> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -863,7 +928,8 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
     }
   }
   
-  Future<void> setTMCs_batch(List<List<com_amap_api_services_route_TMC>> var1) async {
+  
+  Future<List<void>> setTMCs_batch(List<List<com_amap_api_services_route_TMC>> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -881,6 +947,7 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getInstruction_batch() async {
     if (false) {
@@ -901,6 +968,7 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
     }
   }
   
+  
   Future<List<String>> getOrientation_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -919,6 +987,7 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getRoad_batch() async {
     if (false) {
@@ -939,6 +1008,7 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
     }
   }
   
+  
   Future<List<double>> getTolls_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -957,6 +1027,7 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
       return typedResult;
     }
   }
+  
   
   Future<List<double>> getDistance_batch() async {
     if (false) {
@@ -977,6 +1048,7 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
     }
   }
   
+  
   Future<List<double>> getTollDistance_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -995,6 +1067,7 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getTollRoad_batch() async {
     if (false) {
@@ -1015,6 +1088,7 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
     }
   }
   
+  
   Future<List<double>> getDuration_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -1034,6 +1108,7 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
     }
   }
   
+  
   Future<List<List<com_amap_api_services_core_LatLonPoint>>> getPolyline_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -1047,11 +1122,12 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_core_LatLonPoint()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
+      final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_core_LatLonSharePoint()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
       kNativeObjectPool.addAll(typedResult.expand((e) => e));
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getAction_batch() async {
     if (false) {
@@ -1072,6 +1148,7 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
     }
   }
   
+  
   Future<List<String>> getAssistantAction_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -1091,6 +1168,7 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
     }
   }
   
+  
   Future<List<List<com_amap_api_services_route_RouteSearchCity>>> getRouteSearchCityList_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -1109,6 +1187,7 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
       return typedResult;
     }
   }
+  
   
   Future<List<List<com_amap_api_services_route_TMC>>> getTMCs_batch() async {
     if (false) {

@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_amap_api_services_busline_BusLineItem extends java_lang_Object with android_os_Parcelable {
   //region constants
@@ -50,6 +51,7 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
   //endregion
 
   //region methods
+  
   Future<double> getDistance() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -67,10 +69,12 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setDistance(double var1) async {
     // print log
@@ -89,10 +93,12 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getBusLineName() async {
     // print log
@@ -111,10 +117,12 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setBusLineName(String var1) async {
     // print log
@@ -133,10 +141,12 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getBusLineType() async {
     // print log
@@ -155,10 +165,12 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setBusLineType(String var1) async {
     // print log
@@ -177,10 +189,12 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getCityCode() async {
     // print log
@@ -199,10 +213,12 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setCityCode(String var1) async {
     // print log
@@ -221,10 +237,12 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<List<com_amap_api_services_core_LatLonPoint>> getDirectionsCoordinates() async {
     // print log
@@ -243,10 +261,12 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => com_amap_api_services_core_LatLonPoint()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
-      return (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_core_LatLonPoint()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      final __return__ = (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_core_LatLonSharePoint()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      kNativeObjectPool.addAll(__return__);
+      return __return__;
     }
   }
+  
   
   Future<void> setDirectionsCoordinates(List<com_amap_api_services_core_LatLonPoint> var1) async {
     // print log
@@ -265,10 +285,12 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<List<com_amap_api_services_core_LatLonPoint>> getBounds() async {
     // print log
@@ -287,10 +309,12 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => com_amap_api_services_core_LatLonPoint()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
-      return (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_core_LatLonPoint()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      final __return__ = (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_core_LatLonSharePoint()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      kNativeObjectPool.addAll(__return__);
+      return __return__;
     }
   }
+  
   
   Future<void> setBounds(List<com_amap_api_services_core_LatLonPoint> var1) async {
     // print log
@@ -309,10 +333,12 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getBusLineId() async {
     // print log
@@ -331,10 +357,12 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setBusLineId(String var1) async {
     // print log
@@ -353,10 +381,12 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getOriginatingStation() async {
     // print log
@@ -375,10 +405,12 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setOriginatingStation(String var1) async {
     // print log
@@ -397,10 +429,12 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getTerminalStation() async {
     // print log
@@ -419,10 +453,12 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setTerminalStation(String var1) async {
     // print log
@@ -441,10 +477,12 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getBusCompany() async {
     // print log
@@ -463,10 +501,12 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setBusCompany(String var1) async {
     // print log
@@ -485,10 +525,12 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<double> getBasicPrice() async {
     // print log
@@ -507,10 +549,12 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setBasicPrice(double var1) async {
     // print log
@@ -529,10 +573,12 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<double> getTotalPrice() async {
     // print log
@@ -551,10 +597,12 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setTotalPrice(double var1) async {
     // print log
@@ -573,10 +621,12 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<List<com_amap_api_services_busline_BusStationItem>> getBusStations() async {
     // print log
@@ -595,10 +645,12 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => com_amap_api_services_busline_BusStationItem()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
-      return (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_busline_BusStationItem()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      final __return__ = (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_busline_BusStationItem()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      kNativeObjectPool.addAll(__return__);
+      return __return__;
     }
   }
+  
   
   Future<void> setBusStations(List<com_amap_api_services_busline_BusStationItem> var1) async {
     // print log
@@ -617,8 +669,9 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
   
@@ -635,6 +688,7 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
   //endregion
 
   //region methods
+  
   Future<List<double>> getDistance_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -654,7 +708,8 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
     }
   }
   
-  Future<void> setDistance_batch(List<double> var1) async {
+  
+  Future<List<void>> setDistance_batch(List<double> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -672,6 +727,7 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getBusLineName_batch() async {
     if (false) {
@@ -692,7 +748,8 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
     }
   }
   
-  Future<void> setBusLineName_batch(List<String> var1) async {
+  
+  Future<List<void>> setBusLineName_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -710,6 +767,7 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getBusLineType_batch() async {
     if (false) {
@@ -730,7 +788,8 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
     }
   }
   
-  Future<void> setBusLineType_batch(List<String> var1) async {
+  
+  Future<List<void>> setBusLineType_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -748,6 +807,7 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getCityCode_batch() async {
     if (false) {
@@ -768,7 +828,8 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
     }
   }
   
-  Future<void> setCityCode_batch(List<String> var1) async {
+  
+  Future<List<void>> setCityCode_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -787,6 +848,7 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
     }
   }
   
+  
   Future<List<List<com_amap_api_services_core_LatLonPoint>>> getDirectionsCoordinates_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -800,13 +862,14 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_core_LatLonPoint()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
+      final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_core_LatLonSharePoint()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
       kNativeObjectPool.addAll(typedResult.expand((e) => e));
       return typedResult;
     }
   }
   
-  Future<void> setDirectionsCoordinates_batch(List<List<com_amap_api_services_core_LatLonPoint>> var1) async {
+  
+  Future<List<void>> setDirectionsCoordinates_batch(List<List<com_amap_api_services_core_LatLonPoint>> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -825,6 +888,7 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
     }
   }
   
+  
   Future<List<List<com_amap_api_services_core_LatLonPoint>>> getBounds_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -838,13 +902,14 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_core_LatLonPoint()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
+      final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_core_LatLonSharePoint()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
       kNativeObjectPool.addAll(typedResult.expand((e) => e));
       return typedResult;
     }
   }
   
-  Future<void> setBounds_batch(List<List<com_amap_api_services_core_LatLonPoint>> var1) async {
+  
+  Future<List<void>> setBounds_batch(List<List<com_amap_api_services_core_LatLonPoint>> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -862,6 +927,7 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getBusLineId_batch() async {
     if (false) {
@@ -882,7 +948,8 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
     }
   }
   
-  Future<void> setBusLineId_batch(List<String> var1) async {
+  
+  Future<List<void>> setBusLineId_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -900,6 +967,7 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getOriginatingStation_batch() async {
     if (false) {
@@ -920,7 +988,8 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
     }
   }
   
-  Future<void> setOriginatingStation_batch(List<String> var1) async {
+  
+  Future<List<void>> setOriginatingStation_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -938,6 +1007,7 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getTerminalStation_batch() async {
     if (false) {
@@ -958,7 +1028,8 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
     }
   }
   
-  Future<void> setTerminalStation_batch(List<String> var1) async {
+  
+  Future<List<void>> setTerminalStation_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -976,6 +1047,7 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getBusCompany_batch() async {
     if (false) {
@@ -996,7 +1068,8 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
     }
   }
   
-  Future<void> setBusCompany_batch(List<String> var1) async {
+  
+  Future<List<void>> setBusCompany_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1014,6 +1087,7 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
       return typedResult;
     }
   }
+  
   
   Future<List<double>> getBasicPrice_batch() async {
     if (false) {
@@ -1034,7 +1108,8 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
     }
   }
   
-  Future<void> setBasicPrice_batch(List<double> var1) async {
+  
+  Future<List<void>> setBasicPrice_batch(List<double> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1052,6 +1127,7 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
       return typedResult;
     }
   }
+  
   
   Future<List<double>> getTotalPrice_batch() async {
     if (false) {
@@ -1072,7 +1148,8 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
     }
   }
   
-  Future<void> setTotalPrice_batch(List<double> var1) async {
+  
+  Future<List<void>> setTotalPrice_batch(List<double> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -1090,6 +1167,7 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
       return typedResult;
     }
   }
+  
   
   Future<List<List<com_amap_api_services_busline_BusStationItem>>> getBusStations_batch() async {
     if (false) {
@@ -1110,7 +1188,8 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
     }
   }
   
-  Future<void> setBusStations_batch(List<List<com_amap_api_services_busline_BusStationItem>> var1) async {
+  
+  Future<List<void>> setBusStations_batch(List<List<com_amap_api_services_busline_BusStationItem>> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }

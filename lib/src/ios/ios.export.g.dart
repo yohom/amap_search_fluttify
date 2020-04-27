@@ -39,6 +39,7 @@ export 'AMapNearbyUserInfo.g.dart';
 export 'AMapLocalDayWeatherForecast.g.dart';
 export 'AMapPOIPolygonSearchRequest.g.dart';
 export 'AMapSearchErrorCode.g.dart';
+export 'constants.g.dart';
 export 'AMapCloudImage.g.dart';
 export 'AMapCloudPOIAroundSearchRequest.g.dart';
 export 'AMapLocationShareSearchRequest.g.dart';

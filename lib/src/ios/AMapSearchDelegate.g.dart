@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 mixin AMapSearchDelegate on NSObject {
   
@@ -20,7 +21,7 @@ mixin AMapSearchDelegate on NSObject {
   
 
   @mustCallSuper
-  Future<void> AMapSearchRequest_didFailWithError(NSObject request, NSError error) {
+  Future<void> AMapSearchRequest_didFailWithError(dynamic request, NSError error) {
     kNativeObjectPool.add(request);
     kNativeObjectPool.add(error);
   

@@ -14,6 +14,15 @@ extern BOOL enableLog;
 @implementation AmapSearchFluttifyPlugin (SubHandler10)
 - (NSDictionary<NSString*, Handler>*) getSubHandler10 {
     return @{
+        @"RefClass::isKindOfAMapBusLineNameSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
+            id ref = HEAP[refId];
+        
+            BOOL isTargetType = [ref isKindOfClass:[AMapBusLineNameSearchRequest class]];
+            methodResult(@(isTargetType));
+        },
+        
         @"RefClass::isKindOfAMapBusLineIDSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
             NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
@@ -2265,20 +2274,6 @@ extern BOOL enableLog;
             }
         
             AMapGeocodeSearchRequest* ref = [[AMapGeocodeSearchRequest alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapGeocodeSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapGeocodeSearchResponse");
-            }
-        
-            AMapGeocodeSearchResponse* ref = [[AMapGeocodeSearchResponse alloc] init];
             HEAP[@(ref.hash)] = ref;
         
             methodResult(@(ref.hash));

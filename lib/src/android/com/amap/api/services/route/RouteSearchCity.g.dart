@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_amap_api_services_route_RouteSearchCity extends com_amap_api_services_route_SearchCity with android_os_Parcelable {
   //region constants
@@ -50,6 +51,7 @@ class com_amap_api_services_route_RouteSearchCity extends com_amap_api_services_
   //endregion
 
   //region methods
+  
   Future<List<com_amap_api_services_route_District>> getDistricts() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -67,10 +69,12 @@ class com_amap_api_services_route_RouteSearchCity extends com_amap_api_services_
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => com_amap_api_services_route_District()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
-      return (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_route_District()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      final __return__ = (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_route_District()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      kNativeObjectPool.addAll(__return__);
+      return __return__;
     }
   }
+  
   
   Future<void> setDistricts(List<com_amap_api_services_route_District> var1) async {
     // print log
@@ -89,8 +93,9 @@ class com_amap_api_services_route_RouteSearchCity extends com_amap_api_services_
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
   
@@ -107,6 +112,7 @@ extension com_amap_api_services_route_RouteSearchCity_Batch on List<com_amap_api
   //endregion
 
   //region methods
+  
   Future<List<List<com_amap_api_services_route_District>>> getDistricts_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -126,7 +132,8 @@ extension com_amap_api_services_route_RouteSearchCity_Batch on List<com_amap_api
     }
   }
   
-  Future<void> setDistricts_batch(List<List<com_amap_api_services_route_District>> var1) async {
+  
+  Future<List<void>> setDistricts_batch(List<List<com_amap_api_services_route_District>> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
