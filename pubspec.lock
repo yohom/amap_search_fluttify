@@ -58,7 +58,7 @@ packages:
     source: hosted
     version: "2.1.1"
   core_location_fluttify:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: core_location_fluttify
       url: "https://pub.dartlang.org"
