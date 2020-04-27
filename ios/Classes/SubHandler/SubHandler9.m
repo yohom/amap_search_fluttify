@@ -14,6 +14,24 @@ extern BOOL enableLog;
 @implementation AmapSearchFluttifyPlugin (SubHandler9)
 - (NSDictionary<NSString*, Handler>*) getSubHandler9 {
     return @{
+        @"AMapGeocode::set_level_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // jsonable arg
+                NSString* level = (NSString*) args[@"level"];
+        
+                // ref
+                AMapGeocode* ref = (AMapGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+                ref.level = level;
+                methodResult(@"success");
+            }
+        
+            methodResult(@"success");
+        },
+        
         @"AMapBusStop::set_uid_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
@@ -3542,15 +3560,6 @@ extern BOOL enableLog;
             id ref = HEAP[refId];
         
             BOOL isTargetType = [ref isKindOfClass:[AMapBusLineBaseSearchRequest class]];
-            methodResult(@(isTargetType));
-        },
-        
-        @"RefClass::isKindOfAMapBusLineNameSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
-        
-            BOOL isTargetType = [ref isKindOfClass:[AMapBusLineNameSearchRequest class]];
             methodResult(@(isTargetType));
         },
         

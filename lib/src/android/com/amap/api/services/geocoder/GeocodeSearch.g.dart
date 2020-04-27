@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_amap_api_services_geocoder_GeocodeSearch extends java_lang_Object  {
   //region constants
@@ -51,6 +52,7 @@ class com_amap_api_services_geocoder_GeocodeSearch extends java_lang_Object  {
   //endregion
 
   //region methods
+  
   Future<com_amap_api_services_geocoder_RegeocodeAddress> getFromLocation(com_amap_api_services_geocoder_RegeocodeQuery var1) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -68,10 +70,12 @@ class com_amap_api_services_geocoder_GeocodeSearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_geocoder_RegeocodeAddress()..refId = __result__..tag__ = 'amap_search_fluttify');
-      return com_amap_api_services_geocoder_RegeocodeAddress()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_geocoder_RegeocodeAddress()..refId = __result__..tag__ = 'amap_search_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<List<com_amap_api_services_geocoder_GeocodeAddress>> getFromLocationName(com_amap_api_services_geocoder_GeocodeQuery var1) async {
     // print log
@@ -90,10 +94,12 @@ class com_amap_api_services_geocoder_GeocodeSearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => com_amap_api_services_geocoder_GeocodeAddress()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
-      return (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_geocoder_GeocodeAddress()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      final __return__ = (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_geocoder_GeocodeAddress()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      kNativeObjectPool.addAll(__return__);
+      return __return__;
     }
   }
+  
   
   Future<void> setOnGeocodeSearchListener(com_amap_api_services_geocoder_GeocodeSearch_OnGeocodeSearchListener var1) async {
     // print log
@@ -116,20 +122,20 @@ class com_amap_api_services_geocoder_GeocodeSearch extends java_lang_Object  {
             case 'Callback::com.amap.api.services.geocoder.GeocodeSearch.OnGeocodeSearchListener::onRegeocodeSearched':
               // print log
               if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onRegeocodeSearched([\'var2\':$args[var2]])');
+                print('fluttify-dart-callback: onRegeocodeSearched([\'var2\':${args['var2']}])');
               }
         
               // handle the native call
-              var1?.onRegeocodeSearched(com_amap_api_services_geocoder_RegeocodeResult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify', args['var2']);
+              var1?.onRegeocodeSearched((com_amap_api_services_geocoder_RegeocodeResult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify'), args['var2']);
               break;
             case 'Callback::com.amap.api.services.geocoder.GeocodeSearch.OnGeocodeSearchListener::onGeocodeSearched':
               // print log
               if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onGeocodeSearched([\'var2\':$args[var2]])');
+                print('fluttify-dart-callback: onGeocodeSearched([\'var2\':${args['var2']}])');
               }
         
               // handle the native call
-              var1?.onGeocodeSearched(com_amap_api_services_geocoder_GeocodeResult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify', args['var2']);
+              var1?.onGeocodeSearched((com_amap_api_services_geocoder_GeocodeResult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify'), args['var2']);
               break;
             default:
               break;
@@ -140,10 +146,12 @@ class com_amap_api_services_geocoder_GeocodeSearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> getFromLocationAsyn(com_amap_api_services_geocoder_RegeocodeQuery var1) async {
     // print log
@@ -162,10 +170,12 @@ class com_amap_api_services_geocoder_GeocodeSearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> getFromLocationNameAsyn(com_amap_api_services_geocoder_GeocodeQuery var1) async {
     // print log
@@ -184,8 +194,9 @@ class com_amap_api_services_geocoder_GeocodeSearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
   
@@ -202,6 +213,7 @@ extension com_amap_api_services_geocoder_GeocodeSearch_Batch on List<com_amap_ap
   //endregion
 
   //region methods
+  
   Future<List<com_amap_api_services_geocoder_RegeocodeAddress>> getFromLocation_batch(List<com_amap_api_services_geocoder_RegeocodeQuery> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -220,6 +232,7 @@ extension com_amap_api_services_geocoder_GeocodeSearch_Batch on List<com_amap_ap
       return typedResult;
     }
   }
+  
   
   Future<List<List<com_amap_api_services_geocoder_GeocodeAddress>>> getFromLocationName_batch(List<com_amap_api_services_geocoder_GeocodeQuery> var1) async {
     if (false) {
@@ -240,7 +253,8 @@ extension com_amap_api_services_geocoder_GeocodeSearch_Batch on List<com_amap_ap
     }
   }
   
-  Future<void> getFromLocationAsyn_batch(List<com_amap_api_services_geocoder_RegeocodeQuery> var1) async {
+  
+  Future<List<void>> getFromLocationAsyn_batch(List<com_amap_api_services_geocoder_RegeocodeQuery> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -259,7 +273,8 @@ extension com_amap_api_services_geocoder_GeocodeSearch_Batch on List<com_amap_ap
     }
   }
   
-  Future<void> getFromLocationNameAsyn_batch(List<com_amap_api_services_geocoder_GeocodeQuery> var1) async {
+  
+  Future<List<void>> getFromLocationNameAsyn_batch(List<com_amap_api_services_geocoder_GeocodeQuery> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }

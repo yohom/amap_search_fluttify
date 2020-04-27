@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_amap_api_services_route_Railway extends java_lang_Object with android_os_Parcelable {
   //region constants
@@ -50,6 +51,7 @@ class com_amap_api_services_route_Railway extends java_lang_Object with android_
   //endregion
 
   //region methods
+  
   Future<String> getID() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -67,10 +69,12 @@ class com_amap_api_services_route_Railway extends java_lang_Object with android_
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getName() async {
     // print log
@@ -89,10 +93,12 @@ class com_amap_api_services_route_Railway extends java_lang_Object with android_
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setID(String var1) async {
     // print log
@@ -111,10 +117,12 @@ class com_amap_api_services_route_Railway extends java_lang_Object with android_
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setName(String var1) async {
     // print log
@@ -133,8 +141,9 @@ class com_amap_api_services_route_Railway extends java_lang_Object with android_
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
   
@@ -151,6 +160,7 @@ extension com_amap_api_services_route_Railway_Batch on List<com_amap_api_service
   //endregion
 
   //region methods
+  
   Future<List<String>> getID_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -169,6 +179,7 @@ extension com_amap_api_services_route_Railway_Batch on List<com_amap_api_service
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getName_batch() async {
     if (false) {
@@ -189,7 +200,8 @@ extension com_amap_api_services_route_Railway_Batch on List<com_amap_api_service
     }
   }
   
-  Future<void> setID_batch(List<String> var1) async {
+  
+  Future<List<void>> setID_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -208,7 +220,8 @@ extension com_amap_api_services_route_Railway_Batch on List<com_amap_api_service
     }
   }
   
-  Future<void> setName_batch(List<String> var1) async {
+  
+  Future<List<void>> setName_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }

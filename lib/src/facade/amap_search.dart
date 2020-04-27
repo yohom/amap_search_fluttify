@@ -1304,7 +1304,7 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
 
   @override
   Future<void> AMapSearchRequest_didFailWithError(
-    NSObject request,
+    dynamic request,
     NSError error,
   ) async {
     super.AMapSearchRequest_didFailWithError(request, error);

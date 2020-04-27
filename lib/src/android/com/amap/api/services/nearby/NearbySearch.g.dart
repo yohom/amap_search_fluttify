@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
   //region constants
@@ -33,6 +34,7 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
   //endregion
 
   //region methods
+  
   static Future<com_amap_api_services_nearby_NearbySearch> getInstance(android_content_Context var0) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -50,10 +52,12 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_nearby_NearbySearch()..refId = __result__..tag__ = 'amap_search_fluttify');
-      return com_amap_api_services_nearby_NearbySearch()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_nearby_NearbySearch()..refId = __result__..tag__ = 'amap_search_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<void> addNearbyListener(com_amap_api_services_nearby_NearbySearch_NearbyListener var1) async {
     // print log
@@ -76,7 +80,7 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
             case 'Callback::com.amap.api.services.nearby.NearbySearch.NearbyListener::onUserInfoCleared':
               // print log
               if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onUserInfoCleared([\'var1\':$args[var1]])');
+                print('fluttify-dart-callback: onUserInfoCleared([\'var1\':${args['var1']}])');
               }
         
               // handle the native call
@@ -85,16 +89,16 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
             case 'Callback::com.amap.api.services.nearby.NearbySearch.NearbyListener::onNearbyInfoSearched':
               // print log
               if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onNearbyInfoSearched([\'var2\':$args[var2]])');
+                print('fluttify-dart-callback: onNearbyInfoSearched([\'var2\':${args['var2']}])');
               }
         
               // handle the native call
-              var1?.onNearbyInfoSearched(com_amap_api_services_nearby_NearbySearchResult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify', args['var2']);
+              var1?.onNearbyInfoSearched((com_amap_api_services_nearby_NearbySearchResult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify'), args['var2']);
               break;
             case 'Callback::com.amap.api.services.nearby.NearbySearch.NearbyListener::onNearbyInfoUploaded':
               // print log
               if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onNearbyInfoUploaded([\'var1\':$args[var1]])');
+                print('fluttify-dart-callback: onNearbyInfoUploaded([\'var1\':${args['var1']}])');
               }
         
               // handle the native call
@@ -109,10 +113,12 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> removeNearbyListener(com_amap_api_services_nearby_NearbySearch_NearbyListener var1) async {
     // print log
@@ -135,7 +141,7 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
             case 'Callback::com.amap.api.services.nearby.NearbySearch.NearbyListener::onUserInfoCleared':
               // print log
               if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onUserInfoCleared([\'var1\':$args[var1]])');
+                print('fluttify-dart-callback: onUserInfoCleared([\'var1\':${args['var1']}])');
               }
         
               // handle the native call
@@ -144,16 +150,16 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
             case 'Callback::com.amap.api.services.nearby.NearbySearch.NearbyListener::onNearbyInfoSearched':
               // print log
               if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onNearbyInfoSearched([\'var2\':$args[var2]])');
+                print('fluttify-dart-callback: onNearbyInfoSearched([\'var2\':${args['var2']}])');
               }
         
               // handle the native call
-              var1?.onNearbyInfoSearched(com_amap_api_services_nearby_NearbySearchResult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify', args['var2']);
+              var1?.onNearbyInfoSearched((com_amap_api_services_nearby_NearbySearchResult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify'), args['var2']);
               break;
             case 'Callback::com.amap.api.services.nearby.NearbySearch.NearbyListener::onNearbyInfoUploaded':
               // print log
               if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onNearbyInfoUploaded([\'var1\':$args[var1]])');
+                print('fluttify-dart-callback: onNearbyInfoUploaded([\'var1\':${args['var1']}])');
               }
         
               // handle the native call
@@ -168,10 +174,12 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> clearUserInfoAsyn() async {
     // print log
@@ -190,10 +198,12 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setUserID(String var1) async {
     // print log
@@ -212,10 +222,12 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> startUploadNearbyInfoAuto(com_amap_api_services_nearby_UploadInfoCallback var1, int var2) async {
     // print log
@@ -253,10 +265,12 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> stopUploadNearbyInfoAuto() async {
     // print log
@@ -275,10 +289,12 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> uploadNearbyInfoAsyn(com_amap_api_services_nearby_UploadInfo var1) async {
     // print log
@@ -297,10 +313,12 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> searchNearbyInfoAsyn(com_amap_api_services_nearby_NearbySearch_NearbyQuery var1) async {
     // print log
@@ -319,10 +337,12 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_services_nearby_NearbySearchResult> searchNearbyInfo(com_amap_api_services_nearby_NearbySearch_NearbyQuery var1) async {
     // print log
@@ -341,10 +361,12 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_nearby_NearbySearchResult()..refId = __result__..tag__ = 'amap_search_fluttify');
-      return com_amap_api_services_nearby_NearbySearchResult()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_nearby_NearbySearchResult()..refId = __result__..tag__ = 'amap_search_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   static Future<void> destroy() async {
     // print log
@@ -363,8 +385,9 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
   
@@ -381,13 +404,14 @@ extension com_amap_api_services_nearby_NearbySearch_Batch on List<com_amap_api_s
   //endregion
 
   //region methods
-  Future<List<com_amap_api_services_nearby_NearbySearch>> getInstance_batch(List<android_content_Context> var0) async {
+  
+  static Future<List<com_amap_api_services_nearby_NearbySearch>> getInstance_batch(List<android_content_Context> var0) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.nearby.NearbySearch::getInstance_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__].refId, "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.nearby.NearbySearch::getInstance_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__].refId}]);
   
   
     // convert native result to dart side object
@@ -400,7 +424,8 @@ extension com_amap_api_services_nearby_NearbySearch_Batch on List<com_amap_api_s
     }
   }
   
-  Future<void> clearUserInfoAsyn_batch() async {
+  
+  Future<List<void>> clearUserInfoAsyn_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -419,7 +444,8 @@ extension com_amap_api_services_nearby_NearbySearch_Batch on List<com_amap_api_s
     }
   }
   
-  Future<void> setUserID_batch(List<String> var1) async {
+  
+  Future<List<void>> setUserID_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -438,7 +464,8 @@ extension com_amap_api_services_nearby_NearbySearch_Batch on List<com_amap_api_s
     }
   }
   
-  Future<void> stopUploadNearbyInfoAuto_batch() async {
+  
+  Future<List<void>> stopUploadNearbyInfoAuto_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -457,7 +484,8 @@ extension com_amap_api_services_nearby_NearbySearch_Batch on List<com_amap_api_s
     }
   }
   
-  Future<void> uploadNearbyInfoAsyn_batch(List<com_amap_api_services_nearby_UploadInfo> var1) async {
+  
+  Future<List<void>> uploadNearbyInfoAsyn_batch(List<com_amap_api_services_nearby_UploadInfo> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -476,7 +504,8 @@ extension com_amap_api_services_nearby_NearbySearch_Batch on List<com_amap_api_s
     }
   }
   
-  Future<void> searchNearbyInfoAsyn_batch(List<com_amap_api_services_nearby_NearbySearch_NearbyQuery> var1) async {
+  
+  Future<List<void>> searchNearbyInfoAsyn_batch(List<com_amap_api_services_nearby_NearbySearch_NearbyQuery> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -494,6 +523,7 @@ extension com_amap_api_services_nearby_NearbySearch_Batch on List<com_amap_api_s
       return typedResult;
     }
   }
+  
   
   Future<List<com_amap_api_services_nearby_NearbySearchResult>> searchNearbyInfo_batch(List<com_amap_api_services_nearby_NearbySearch_NearbyQuery> var1) async {
     if (false) {
@@ -514,13 +544,14 @@ extension com_amap_api_services_nearby_NearbySearch_Batch on List<com_amap_api_s
     }
   }
   
-  Future<void> destroy_batch() async {
+  
+  static Future<List<void>> destroy_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.nearby.NearbySearch::destroy_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.nearby.NearbySearch::destroy_batch', );
   
   
     // convert native result to dart side object

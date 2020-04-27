@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_amap_api_services_busline_BusStationQuery extends java_lang_Object  {
   //region constants
@@ -50,6 +51,7 @@ class com_amap_api_services_busline_BusStationQuery extends java_lang_Object  {
   //endregion
 
   //region methods
+  
   Future<String> getQueryString() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -67,10 +69,12 @@ class com_amap_api_services_busline_BusStationQuery extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getCity() async {
     // print log
@@ -89,10 +93,12 @@ class com_amap_api_services_busline_BusStationQuery extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<int> getPageSize() async {
     // print log
@@ -111,10 +117,12 @@ class com_amap_api_services_busline_BusStationQuery extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<int> getPageNumber() async {
     // print log
@@ -133,10 +141,12 @@ class com_amap_api_services_busline_BusStationQuery extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setQueryString(String var1) async {
     // print log
@@ -155,10 +165,12 @@ class com_amap_api_services_busline_BusStationQuery extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setCity(String var1) async {
     // print log
@@ -177,10 +189,12 @@ class com_amap_api_services_busline_BusStationQuery extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setPageSize(int var1) async {
     // print log
@@ -199,10 +213,12 @@ class com_amap_api_services_busline_BusStationQuery extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setPageNumber(int var1) async {
     // print log
@@ -221,10 +237,12 @@ class com_amap_api_services_busline_BusStationQuery extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_services_busline_BusStationQuery> clone() async {
     // print log
@@ -243,10 +261,12 @@ class com_amap_api_services_busline_BusStationQuery extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_busline_BusStationQuery()..refId = __result__..tag__ = 'amap_search_fluttify');
-      return com_amap_api_services_busline_BusStationQuery()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_busline_BusStationQuery()..refId = __result__..tag__ = 'amap_search_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<bool> weakEquals(com_amap_api_services_busline_BusStationQuery var1) async {
     // print log
@@ -265,8 +285,9 @@ class com_amap_api_services_busline_BusStationQuery extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
   
@@ -283,6 +304,7 @@ extension com_amap_api_services_busline_BusStationQuery_Batch on List<com_amap_a
   //endregion
 
   //region methods
+  
   Future<List<String>> getQueryString_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -301,6 +323,7 @@ extension com_amap_api_services_busline_BusStationQuery_Batch on List<com_amap_a
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getCity_batch() async {
     if (false) {
@@ -321,6 +344,7 @@ extension com_amap_api_services_busline_BusStationQuery_Batch on List<com_amap_a
     }
   }
   
+  
   Future<List<int>> getPageSize_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -339,6 +363,7 @@ extension com_amap_api_services_busline_BusStationQuery_Batch on List<com_amap_a
       return typedResult;
     }
   }
+  
   
   Future<List<int>> getPageNumber_batch() async {
     if (false) {
@@ -359,7 +384,8 @@ extension com_amap_api_services_busline_BusStationQuery_Batch on List<com_amap_a
     }
   }
   
-  Future<void> setQueryString_batch(List<String> var1) async {
+  
+  Future<List<void>> setQueryString_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -378,7 +404,8 @@ extension com_amap_api_services_busline_BusStationQuery_Batch on List<com_amap_a
     }
   }
   
-  Future<void> setCity_batch(List<String> var1) async {
+  
+  Future<List<void>> setCity_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -397,7 +424,8 @@ extension com_amap_api_services_busline_BusStationQuery_Batch on List<com_amap_a
     }
   }
   
-  Future<void> setPageSize_batch(List<int> var1) async {
+  
+  Future<List<void>> setPageSize_batch(List<int> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -416,7 +444,8 @@ extension com_amap_api_services_busline_BusStationQuery_Batch on List<com_amap_a
     }
   }
   
-  Future<void> setPageNumber_batch(List<int> var1) async {
+  
+  Future<List<void>> setPageNumber_batch(List<int> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -434,6 +463,7 @@ extension com_amap_api_services_busline_BusStationQuery_Batch on List<com_amap_a
       return typedResult;
     }
   }
+  
   
   Future<List<com_amap_api_services_busline_BusStationQuery>> clone_batch() async {
     if (false) {
@@ -453,6 +483,7 @@ extension com_amap_api_services_busline_BusStationQuery_Batch on List<com_amap_a
       return typedResult;
     }
   }
+  
   
   Future<List<bool>> weakEquals_batch(List<com_amap_api_services_busline_BusStationQuery> var1) async {
     if (false) {

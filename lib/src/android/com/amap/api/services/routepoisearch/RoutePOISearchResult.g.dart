@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_amap_api_services_routepoisearch_RoutePOISearchResult extends java_lang_Object  {
   //region constants
@@ -50,6 +51,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearchResult extends java_lan
   //endregion
 
   //region methods
+  
   Future<List<com_amap_api_services_routepoisearch_RoutePOIItem>> getRoutePois() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -67,10 +69,12 @@ class com_amap_api_services_routepoisearch_RoutePOISearchResult extends java_lan
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => com_amap_api_services_routepoisearch_RoutePOIItem()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
-      return (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_routepoisearch_RoutePOIItem()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      final __return__ = (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_routepoisearch_RoutePOIItem()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      kNativeObjectPool.addAll(__return__);
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_services_routepoisearch_RoutePOISearchQuery> getQuery() async {
     // print log
@@ -89,8 +93,9 @@ class com_amap_api_services_routepoisearch_RoutePOISearchResult extends java_lan
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_routepoisearch_RoutePOISearchQuery()..refId = __result__..tag__ = 'amap_search_fluttify');
-      return com_amap_api_services_routepoisearch_RoutePOISearchQuery()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_routepoisearch_RoutePOISearchQuery()..refId = __result__..tag__ = 'amap_search_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
   
@@ -107,6 +112,7 @@ extension com_amap_api_services_routepoisearch_RoutePOISearchResult_Batch on Lis
   //endregion
 
   //region methods
+  
   Future<List<List<com_amap_api_services_routepoisearch_RoutePOIItem>>> getRoutePois_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -125,6 +131,7 @@ extension com_amap_api_services_routepoisearch_RoutePOISearchResult_Batch on Lis
       return typedResult;
     }
   }
+  
   
   Future<List<com_amap_api_services_routepoisearch_RoutePOISearchQuery>> getQuery_batch() async {
     if (false) {

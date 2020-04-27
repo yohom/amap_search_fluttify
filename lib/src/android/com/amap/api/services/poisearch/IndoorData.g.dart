@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_amap_api_services_poisearch_IndoorData extends java_lang_Object with android_os_Parcelable {
   //region constants
@@ -50,6 +51,7 @@ class com_amap_api_services_poisearch_IndoorData extends java_lang_Object with a
   //endregion
 
   //region methods
+  
   Future<String> getPoiId() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -67,10 +69,12 @@ class com_amap_api_services_poisearch_IndoorData extends java_lang_Object with a
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setPoiId(String var1) async {
     // print log
@@ -89,10 +93,12 @@ class com_amap_api_services_poisearch_IndoorData extends java_lang_Object with a
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<int> getFloor() async {
     // print log
@@ -111,10 +117,12 @@ class com_amap_api_services_poisearch_IndoorData extends java_lang_Object with a
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setFloor(int var1) async {
     // print log
@@ -133,10 +141,12 @@ class com_amap_api_services_poisearch_IndoorData extends java_lang_Object with a
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getFloorName() async {
     // print log
@@ -155,10 +165,12 @@ class com_amap_api_services_poisearch_IndoorData extends java_lang_Object with a
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setFloorName(String var1) async {
     // print log
@@ -177,8 +189,9 @@ class com_amap_api_services_poisearch_IndoorData extends java_lang_Object with a
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
   
@@ -195,6 +208,7 @@ extension com_amap_api_services_poisearch_IndoorData_Batch on List<com_amap_api_
   //endregion
 
   //region methods
+  
   Future<List<String>> getPoiId_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -214,7 +228,8 @@ extension com_amap_api_services_poisearch_IndoorData_Batch on List<com_amap_api_
     }
   }
   
-  Future<void> setPoiId_batch(List<String> var1) async {
+  
+  Future<List<void>> setPoiId_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -232,6 +247,7 @@ extension com_amap_api_services_poisearch_IndoorData_Batch on List<com_amap_api_
       return typedResult;
     }
   }
+  
   
   Future<List<int>> getFloor_batch() async {
     if (false) {
@@ -252,7 +268,8 @@ extension com_amap_api_services_poisearch_IndoorData_Batch on List<com_amap_api_
     }
   }
   
-  Future<void> setFloor_batch(List<int> var1) async {
+  
+  Future<List<void>> setFloor_batch(List<int> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -270,6 +287,7 @@ extension com_amap_api_services_poisearch_IndoorData_Batch on List<com_amap_api_
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getFloorName_batch() async {
     if (false) {
@@ -290,7 +308,8 @@ extension com_amap_api_services_poisearch_IndoorData_Batch on List<com_amap_api_
     }
   }
   
-  Future<void> setFloorName_batch(List<String> var1) async {
+  
+  Future<List<void>> setFloorName_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }

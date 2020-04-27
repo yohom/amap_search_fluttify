@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_amap_api_services_district_DistrictSearch extends java_lang_Object  {
   //region constants
@@ -50,6 +51,7 @@ class com_amap_api_services_district_DistrictSearch extends java_lang_Object  {
   //endregion
 
   //region methods
+  
   Future<com_amap_api_services_district_DistrictSearchQuery> getQuery() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -67,10 +69,12 @@ class com_amap_api_services_district_DistrictSearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_district_DistrictSearchQuery()..refId = __result__..tag__ = 'amap_search_fluttify');
-      return com_amap_api_services_district_DistrictSearchQuery()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_district_DistrictSearchQuery()..refId = __result__..tag__ = 'amap_search_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<void> setQuery(com_amap_api_services_district_DistrictSearchQuery var1) async {
     // print log
@@ -89,10 +93,12 @@ class com_amap_api_services_district_DistrictSearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_services_district_DistrictResult> searchDistrict() async {
     // print log
@@ -111,10 +117,12 @@ class com_amap_api_services_district_DistrictSearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_district_DistrictResult()..refId = __result__..tag__ = 'amap_search_fluttify');
-      return com_amap_api_services_district_DistrictResult()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_district_DistrictResult()..refId = __result__..tag__ = 'amap_search_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<void> searchDistrictAsyn() async {
     // print log
@@ -133,10 +141,12 @@ class com_amap_api_services_district_DistrictSearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> searchDistrictAnsy() async {
     // print log
@@ -155,10 +165,12 @@ class com_amap_api_services_district_DistrictSearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setOnDistrictSearchListener(com_amap_api_services_district_DistrictSearch_OnDistrictSearchListener var1) async {
     // print log
@@ -185,7 +197,7 @@ class com_amap_api_services_district_DistrictSearch extends java_lang_Object  {
               }
         
               // handle the native call
-              var1?.onDistrictSearched(com_amap_api_services_district_DistrictResult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify');
+              var1?.onDistrictSearched((com_amap_api_services_district_DistrictResult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify'));
               break;
             default:
               break;
@@ -196,8 +208,9 @@ class com_amap_api_services_district_DistrictSearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
   
@@ -214,6 +227,7 @@ extension com_amap_api_services_district_DistrictSearch_Batch on List<com_amap_a
   //endregion
 
   //region methods
+  
   Future<List<com_amap_api_services_district_DistrictSearchQuery>> getQuery_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -233,7 +247,8 @@ extension com_amap_api_services_district_DistrictSearch_Batch on List<com_amap_a
     }
   }
   
-  Future<void> setQuery_batch(List<com_amap_api_services_district_DistrictSearchQuery> var1) async {
+  
+  Future<List<void>> setQuery_batch(List<com_amap_api_services_district_DistrictSearchQuery> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -251,6 +266,7 @@ extension com_amap_api_services_district_DistrictSearch_Batch on List<com_amap_a
       return typedResult;
     }
   }
+  
   
   Future<List<com_amap_api_services_district_DistrictResult>> searchDistrict_batch() async {
     if (false) {
@@ -271,7 +287,8 @@ extension com_amap_api_services_district_DistrictSearch_Batch on List<com_amap_a
     }
   }
   
-  Future<void> searchDistrictAsyn_batch() async {
+  
+  Future<List<void>> searchDistrictAsyn_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -290,7 +307,8 @@ extension com_amap_api_services_district_DistrictSearch_Batch on List<com_amap_a
     }
   }
   
-  Future<void> searchDistrictAnsy_batch() async {
+  
+  Future<List<void>> searchDistrictAnsy_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
     }

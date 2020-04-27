@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_amap_api_services_traffic_TrafficStatusInfo extends java_lang_Object with android_os_Parcelable {
   //region constants
@@ -50,6 +51,7 @@ class com_amap_api_services_traffic_TrafficStatusInfo extends java_lang_Object w
   //endregion
 
   //region methods
+  
   Future<String> getName() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -67,10 +69,12 @@ class com_amap_api_services_traffic_TrafficStatusInfo extends java_lang_Object w
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setName(String var1) async {
     // print log
@@ -89,10 +93,12 @@ class com_amap_api_services_traffic_TrafficStatusInfo extends java_lang_Object w
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getStatus() async {
     // print log
@@ -111,10 +117,12 @@ class com_amap_api_services_traffic_TrafficStatusInfo extends java_lang_Object w
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setStatus(String var1) async {
     // print log
@@ -133,10 +141,12 @@ class com_amap_api_services_traffic_TrafficStatusInfo extends java_lang_Object w
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getDirection() async {
     // print log
@@ -155,10 +165,12 @@ class com_amap_api_services_traffic_TrafficStatusInfo extends java_lang_Object w
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setDirection(String var1) async {
     // print log
@@ -177,10 +189,12 @@ class com_amap_api_services_traffic_TrafficStatusInfo extends java_lang_Object w
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<int> getAngle() async {
     // print log
@@ -199,10 +213,12 @@ class com_amap_api_services_traffic_TrafficStatusInfo extends java_lang_Object w
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setAngle(int var1) async {
     // print log
@@ -221,10 +237,12 @@ class com_amap_api_services_traffic_TrafficStatusInfo extends java_lang_Object w
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<double> getSpeed() async {
     // print log
@@ -243,10 +261,12 @@ class com_amap_api_services_traffic_TrafficStatusInfo extends java_lang_Object w
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setSpeed(double var1) async {
     // print log
@@ -265,10 +285,12 @@ class com_amap_api_services_traffic_TrafficStatusInfo extends java_lang_Object w
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getLcodes() async {
     // print log
@@ -287,10 +309,12 @@ class com_amap_api_services_traffic_TrafficStatusInfo extends java_lang_Object w
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setLcodes(String var1) async {
     // print log
@@ -309,10 +333,12 @@ class com_amap_api_services_traffic_TrafficStatusInfo extends java_lang_Object w
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<List<com_amap_api_services_core_LatLonPoint>> getCoordinates() async {
     // print log
@@ -331,10 +357,12 @@ class com_amap_api_services_traffic_TrafficStatusInfo extends java_lang_Object w
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => com_amap_api_services_core_LatLonPoint()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
-      return (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_core_LatLonPoint()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      final __return__ = (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_core_LatLonSharePoint()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      kNativeObjectPool.addAll(__return__);
+      return __return__;
     }
   }
+  
   
   Future<void> setCoordinates(List<com_amap_api_services_core_LatLonPoint> var1) async {
     // print log
@@ -353,8 +381,9 @@ class com_amap_api_services_traffic_TrafficStatusInfo extends java_lang_Object w
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
   
@@ -371,6 +400,7 @@ extension com_amap_api_services_traffic_TrafficStatusInfo_Batch on List<com_amap
   //endregion
 
   //region methods
+  
   Future<List<String>> getName_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -390,7 +420,8 @@ extension com_amap_api_services_traffic_TrafficStatusInfo_Batch on List<com_amap
     }
   }
   
-  Future<void> setName_batch(List<String> var1) async {
+  
+  Future<List<void>> setName_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -408,6 +439,7 @@ extension com_amap_api_services_traffic_TrafficStatusInfo_Batch on List<com_amap
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getStatus_batch() async {
     if (false) {
@@ -428,7 +460,8 @@ extension com_amap_api_services_traffic_TrafficStatusInfo_Batch on List<com_amap
     }
   }
   
-  Future<void> setStatus_batch(List<String> var1) async {
+  
+  Future<List<void>> setStatus_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -446,6 +479,7 @@ extension com_amap_api_services_traffic_TrafficStatusInfo_Batch on List<com_amap
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getDirection_batch() async {
     if (false) {
@@ -466,7 +500,8 @@ extension com_amap_api_services_traffic_TrafficStatusInfo_Batch on List<com_amap
     }
   }
   
-  Future<void> setDirection_batch(List<String> var1) async {
+  
+  Future<List<void>> setDirection_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -484,6 +519,7 @@ extension com_amap_api_services_traffic_TrafficStatusInfo_Batch on List<com_amap
       return typedResult;
     }
   }
+  
   
   Future<List<int>> getAngle_batch() async {
     if (false) {
@@ -504,7 +540,8 @@ extension com_amap_api_services_traffic_TrafficStatusInfo_Batch on List<com_amap
     }
   }
   
-  Future<void> setAngle_batch(List<int> var1) async {
+  
+  Future<List<void>> setAngle_batch(List<int> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -522,6 +559,7 @@ extension com_amap_api_services_traffic_TrafficStatusInfo_Batch on List<com_amap
       return typedResult;
     }
   }
+  
   
   Future<List<double>> getSpeed_batch() async {
     if (false) {
@@ -542,7 +580,8 @@ extension com_amap_api_services_traffic_TrafficStatusInfo_Batch on List<com_amap
     }
   }
   
-  Future<void> setSpeed_batch(List<double> var1) async {
+  
+  Future<List<void>> setSpeed_batch(List<double> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -560,6 +599,7 @@ extension com_amap_api_services_traffic_TrafficStatusInfo_Batch on List<com_amap
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getLcodes_batch() async {
     if (false) {
@@ -580,7 +620,8 @@ extension com_amap_api_services_traffic_TrafficStatusInfo_Batch on List<com_amap
     }
   }
   
-  Future<void> setLcodes_batch(List<String> var1) async {
+  
+  Future<List<void>> setLcodes_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -599,6 +640,7 @@ extension com_amap_api_services_traffic_TrafficStatusInfo_Batch on List<com_amap
     }
   }
   
+  
   Future<List<List<com_amap_api_services_core_LatLonPoint>>> getCoordinates_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -612,13 +654,14 @@ extension com_amap_api_services_traffic_TrafficStatusInfo_Batch on List<com_amap
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_core_LatLonPoint()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
+      final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_core_LatLonSharePoint()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
       kNativeObjectPool.addAll(typedResult.expand((e) => e));
       return typedResult;
     }
   }
   
-  Future<void> setCoordinates_batch(List<List<com_amap_api_services_core_LatLonPoint>> var1) async {
+  
+  Future<List<void>> setCoordinates_batch(List<List<com_amap_api_services_core_LatLonPoint>> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }

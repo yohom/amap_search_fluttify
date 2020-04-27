@@ -14,6 +14,27 @@ extern BOOL enableLog;
 @implementation AmapSearchFluttifyPlugin (SubHandler3)
 - (NSDictionary<NSString*, Handler>*) getSubHandler3 {
     return @{
+        @"AMapReGeocodeSearchRequest::get_location_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                AMapReGeocodeSearchRequest* ref = (AMapReGeocodeSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+                AMapGeoPoint* result = ref.location;
+        
+                // return a ref
+                HEAP[@((result).hash)] = result;
+                NSNumber* jsonableResult = @((result).hash);
+        
+                [resultList addObject:jsonableResult];
+            }
+        
+            methodResult(resultList);
+        },
+        
         @"AMapReGeocodeSearchRequest::get_radius_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
@@ -4108,27 +4129,6 @@ extern BOOL enableLog;
         
                 // 返回值: jsonable
                 id jsonableResult = result;
-        
-                [resultList addObject:jsonableResult];
-            }
-        
-            methodResult(resultList);
-        },
-        
-        @"AMapAOI::get_location_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // ref object
-                AMapAOI* ref = (AMapAOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                AMapGeoPoint* result = ref.location;
-        
-                // return a ref
-                HEAP[@((result).hash)] = result;
-                NSNumber* jsonableResult = @((result).hash);
         
                 [resultList addObject:jsonableResult];
             }

@@ -14,6 +14,23 @@ extern BOOL enableLog;
 @implementation AmapSearchFluttifyPlugin (SubHandler7)
 - (NSDictionary<NSString*, Handler>*) getSubHandler7 {
     return @{
+        @"AMapRailwayStation::set_uid": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapRailwayStation::set_uid");
+            }
+        
+            // args
+            // jsonable arg
+            NSString* uid = (NSString*) args[@"uid"];
+        
+            // ref
+            AMapRailwayStation* ref = (AMapRailwayStation*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            ref.uid = uid;
+            methodResult(@"success");
+        },
+        
         @"AMapRailwayStation::set_name": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // print log
             if (enableLog) {
@@ -3582,24 +3599,6 @@ extern BOOL enableLog;
                 AMapRouteSearchResponse* ref = (AMapRouteSearchResponse*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
                 ref.route = route;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapTruckRouteSearchRequest::set_strategy_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSInteger strategy = [args[@"strategy"] longValue];
-        
-                // ref
-                AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                ref.strategy = strategy;
                 methodResult(@"success");
             }
         

@@ -14,6 +14,29 @@ extern BOOL enableLog;
 @implementation AmapSearchFluttifyPlugin (SubHandler2)
 - (NSDictionary<NSString*, Handler>*) getSubHandler2 {
     return @{
+        @"AMapBusLine::get_viaBusStops": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapBusLine::get_viaBusStops");
+            }
+        
+            // ref object
+            AMapBusLine* ref = (AMapBusLine*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            // invoke native method
+            NSArray<AMapBusStop*>* result = ref.viaBusStops;
+        
+            // 返回值: 列表
+            NSMutableArray* jsonableResult = [NSMutableArray array];
+            for (int __i__ = 0; __i__ < result.count; __i__++) {
+                NSObject* object = [result objectAtIndex:__i__];
+                [jsonableResult addObject: @(object.hash)];
+                HEAP[@([object hash])] = object;
+            }
+        
+            methodResult(jsonableResult);
+        },
+        
         @"AMapBusLine::get_duration": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // print log
             if (enableLog) {
@@ -3809,27 +3832,6 @@ extern BOOL enableLog;
         
                 // 返回值: Value
                 id jsonableResult = @(result);
-        
-                [resultList addObject:jsonableResult];
-            }
-        
-            methodResult(resultList);
-        },
-        
-        @"AMapReGeocodeSearchRequest::get_location_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // ref object
-                AMapReGeocodeSearchRequest* ref = (AMapReGeocodeSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                AMapGeoPoint* result = ref.location;
-        
-                // return a ref
-                HEAP[@((result).hash)] = result;
-                NSNumber* jsonableResult = @((result).hash);
         
                 [resultList addObject:jsonableResult];
             }

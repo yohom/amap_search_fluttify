@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
   //region constants
@@ -35,6 +36,7 @@ class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
   //endregion
 
   //region methods
+  
   Future<int> getConnectionTimeOut() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -52,10 +54,12 @@ class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<int> getSoTimeOut() async {
     // print log
@@ -74,10 +78,12 @@ class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setConnectionTimeOut(int var1) async {
     // print log
@@ -96,10 +102,12 @@ class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setSoTimeOut(int var1) async {
     // print log
@@ -118,10 +126,12 @@ class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   static Future<com_amap_api_services_core_ServiceSettings> getInstance() async {
     // print log
@@ -140,10 +150,12 @@ class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_core_ServiceSettings()..refId = __result__..tag__ = 'amap_search_fluttify');
-      return com_amap_api_services_core_ServiceSettings()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_core_ServiceSettings()..refId = __result__..tag__ = 'amap_search_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<void> setLanguage(String var1) async {
     // print log
@@ -162,10 +174,12 @@ class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setProtocol(int var1) async {
     // print log
@@ -184,10 +198,12 @@ class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getLanguage() async {
     // print log
@@ -206,10 +222,12 @@ class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<int> getProtocol() async {
     // print log
@@ -228,10 +246,12 @@ class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setApiKey(String var1) async {
     // print log
@@ -250,10 +270,12 @@ class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> destroyInnerAsynThreadPool() async {
     // print log
@@ -272,8 +294,9 @@ class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
   
@@ -290,6 +313,7 @@ extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_
   //endregion
 
   //region methods
+  
   Future<List<int>> getConnectionTimeOut_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -308,6 +332,7 @@ extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_
       return typedResult;
     }
   }
+  
   
   Future<List<int>> getSoTimeOut_batch() async {
     if (false) {
@@ -328,7 +353,8 @@ extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_
     }
   }
   
-  Future<void> setConnectionTimeOut_batch(List<int> var1) async {
+  
+  Future<List<void>> setConnectionTimeOut_batch(List<int> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -347,7 +373,8 @@ extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_
     }
   }
   
-  Future<void> setSoTimeOut_batch(List<int> var1) async {
+  
+  Future<List<void>> setSoTimeOut_batch(List<int> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -366,13 +393,14 @@ extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_
     }
   }
   
-  Future<List<com_amap_api_services_core_ServiceSettings>> getInstance_batch() async {
+  
+  static Future<List<com_amap_api_services_core_ServiceSettings>> getInstance_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.ServiceSettings::getInstance_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.ServiceSettings::getInstance_batch', );
   
   
     // convert native result to dart side object
@@ -385,7 +413,8 @@ extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_
     }
   }
   
-  Future<void> setLanguage_batch(List<String> var1) async {
+  
+  Future<List<void>> setLanguage_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -404,7 +433,8 @@ extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_
     }
   }
   
-  Future<void> setProtocol_batch(List<int> var1) async {
+  
+  Future<List<void>> setProtocol_batch(List<int> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -422,6 +452,7 @@ extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getLanguage_batch() async {
     if (false) {
@@ -442,6 +473,7 @@ extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_
     }
   }
   
+  
   Future<List<int>> getProtocol_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -461,7 +493,8 @@ extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_
     }
   }
   
-  Future<void> setApiKey_batch(List<String> var1) async {
+  
+  Future<List<void>> setApiKey_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -480,7 +513,8 @@ extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_
     }
   }
   
-  Future<void> destroyInnerAsynThreadPool_batch() async {
+  
+  Future<List<void>> destroyInnerAsynThreadPool_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
     }

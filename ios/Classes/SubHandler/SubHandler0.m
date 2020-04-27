@@ -1951,6 +1951,10 @@ extern BOOL enableLog;
         
             methodResult(resultList);
         },
+        // top constant
+        @"getAMapSearchErrorDomain": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            methodResult(AMapSearchErrorDomain);
+        },
         @"AMapPOISearchBaseRequest::get_types": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // print log
             if (enableLog) {
@@ -4142,25 +4146,6 @@ extern BOOL enableLog;
         
             // 返回值: jsonable
             id jsonableResult = result;
-        
-            methodResult(jsonableResult);
-        },
-        
-        @"AMapRoadTrafficCircleSearchRequest::get_location": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapRoadTrafficCircleSearchRequest::get_location");
-            }
-        
-            // ref object
-            AMapRoadTrafficCircleSearchRequest* ref = (AMapRoadTrafficCircleSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-            // invoke native method
-            AMapGeoPoint* result = ref.location;
-        
-            // return a ref
-            HEAP[@((result).hash)] = result;
-            NSNumber* jsonableResult = @((result).hash);
         
             methodResult(jsonableResult);
         },

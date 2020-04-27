@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
   //region constants
@@ -50,6 +51,7 @@ class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
   //endregion
 
   //region methods
+  
   Future<String> getQueryString() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -67,10 +69,12 @@ class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setTableID(String var1) async {
     // print log
@@ -89,10 +93,12 @@ class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getTableID() async {
     // print log
@@ -111,10 +117,12 @@ class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<int> getPageNum() async {
     // print log
@@ -133,10 +141,12 @@ class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setPageNum(int var1) async {
     // print log
@@ -155,10 +165,12 @@ class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setPageSize(int var1) async {
     // print log
@@ -177,10 +189,12 @@ class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<int> getPageSize() async {
     // print log
@@ -199,10 +213,12 @@ class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setBound(com_amap_api_services_cloud_CloudSearch_SearchBound var1) async {
     // print log
@@ -221,10 +237,12 @@ class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_services_cloud_CloudSearch_SearchBound> getBound() async {
     // print log
@@ -243,10 +261,12 @@ class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_cloud_CloudSearch_SearchBound()..refId = __result__..tag__ = 'amap_search_fluttify');
-      return com_amap_api_services_cloud_CloudSearch_SearchBound()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_cloud_CloudSearch_SearchBound()..refId = __result__..tag__ = 'amap_search_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<void> addFilterString(String var1, String var2) async {
     // print log
@@ -265,10 +285,12 @@ class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getFilterString() async {
     // print log
@@ -287,10 +309,12 @@ class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> addFilterNum(String var1, String var2, String var3) async {
     // print log
@@ -309,10 +333,12 @@ class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getFilterNumString() async {
     // print log
@@ -331,10 +357,12 @@ class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setSortingrules(com_amap_api_services_cloud_CloudSearch_Sortingrules var1) async {
     // print log
@@ -353,10 +381,12 @@ class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_services_cloud_CloudSearch_Sortingrules> getSortingrules() async {
     // print log
@@ -375,10 +405,12 @@ class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_cloud_CloudSearch_Sortingrules()..refId = __result__..tag__ = 'amap_search_fluttify');
-      return com_amap_api_services_cloud_CloudSearch_Sortingrules()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_cloud_CloudSearch_Sortingrules()..refId = __result__..tag__ = 'amap_search_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<bool> queryEquals(com_amap_api_services_cloud_CloudSearch_Query var1) async {
     // print log
@@ -397,10 +429,12 @@ class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_services_cloud_CloudSearch_Query> clone() async {
     // print log
@@ -419,8 +453,9 @@ class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_cloud_CloudSearch_Query()..refId = __result__..tag__ = 'amap_search_fluttify');
-      return com_amap_api_services_cloud_CloudSearch_Query()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_cloud_CloudSearch_Query()..refId = __result__..tag__ = 'amap_search_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
   
@@ -437,6 +472,7 @@ extension com_amap_api_services_cloud_CloudSearch_Query_Batch on List<com_amap_a
   //endregion
 
   //region methods
+  
   Future<List<String>> getQueryString_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -456,7 +492,8 @@ extension com_amap_api_services_cloud_CloudSearch_Query_Batch on List<com_amap_a
     }
   }
   
-  Future<void> setTableID_batch(List<String> var1) async {
+  
+  Future<List<void>> setTableID_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -474,6 +511,7 @@ extension com_amap_api_services_cloud_CloudSearch_Query_Batch on List<com_amap_a
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getTableID_batch() async {
     if (false) {
@@ -494,6 +532,7 @@ extension com_amap_api_services_cloud_CloudSearch_Query_Batch on List<com_amap_a
     }
   }
   
+  
   Future<List<int>> getPageNum_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -513,7 +552,8 @@ extension com_amap_api_services_cloud_CloudSearch_Query_Batch on List<com_amap_a
     }
   }
   
-  Future<void> setPageNum_batch(List<int> var1) async {
+  
+  Future<List<void>> setPageNum_batch(List<int> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -532,7 +572,8 @@ extension com_amap_api_services_cloud_CloudSearch_Query_Batch on List<com_amap_a
     }
   }
   
-  Future<void> setPageSize_batch(List<int> var1) async {
+  
+  Future<List<void>> setPageSize_batch(List<int> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -550,6 +591,7 @@ extension com_amap_api_services_cloud_CloudSearch_Query_Batch on List<com_amap_a
       return typedResult;
     }
   }
+  
   
   Future<List<int>> getPageSize_batch() async {
     if (false) {
@@ -570,7 +612,8 @@ extension com_amap_api_services_cloud_CloudSearch_Query_Batch on List<com_amap_a
     }
   }
   
-  Future<void> setBound_batch(List<com_amap_api_services_cloud_CloudSearch_SearchBound> var1) async {
+  
+  Future<List<void>> setBound_batch(List<com_amap_api_services_cloud_CloudSearch_SearchBound> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -588,6 +631,7 @@ extension com_amap_api_services_cloud_CloudSearch_Query_Batch on List<com_amap_a
       return typedResult;
     }
   }
+  
   
   Future<List<com_amap_api_services_cloud_CloudSearch_SearchBound>> getBound_batch() async {
     if (false) {
@@ -608,7 +652,8 @@ extension com_amap_api_services_cloud_CloudSearch_Query_Batch on List<com_amap_a
     }
   }
   
-  Future<void> addFilterString_batch(List<String> var1, List<String> var2) async {
+  
+  Future<List<void>> addFilterString_batch(List<String> var1, List<String> var2) async {
     if (var1.length != var2.length) {
       return Future.error('all args must have same length!');
     }
@@ -626,6 +671,7 @@ extension com_amap_api_services_cloud_CloudSearch_Query_Batch on List<com_amap_a
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getFilterString_batch() async {
     if (false) {
@@ -646,7 +692,8 @@ extension com_amap_api_services_cloud_CloudSearch_Query_Batch on List<com_amap_a
     }
   }
   
-  Future<void> addFilterNum_batch(List<String> var1, List<String> var2, List<String> var3) async {
+  
+  Future<List<void>> addFilterNum_batch(List<String> var1, List<String> var2, List<String> var3) async {
     if (var1.length != var2.length || var2.length != var3.length) {
       return Future.error('all args must have same length!');
     }
@@ -664,6 +711,7 @@ extension com_amap_api_services_cloud_CloudSearch_Query_Batch on List<com_amap_a
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getFilterNumString_batch() async {
     if (false) {
@@ -684,7 +732,8 @@ extension com_amap_api_services_cloud_CloudSearch_Query_Batch on List<com_amap_a
     }
   }
   
-  Future<void> setSortingrules_batch(List<com_amap_api_services_cloud_CloudSearch_Sortingrules> var1) async {
+  
+  Future<List<void>> setSortingrules_batch(List<com_amap_api_services_cloud_CloudSearch_Sortingrules> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -702,6 +751,7 @@ extension com_amap_api_services_cloud_CloudSearch_Query_Batch on List<com_amap_a
       return typedResult;
     }
   }
+  
   
   Future<List<com_amap_api_services_cloud_CloudSearch_Sortingrules>> getSortingrules_batch() async {
     if (false) {
@@ -722,6 +772,7 @@ extension com_amap_api_services_cloud_CloudSearch_Query_Batch on List<com_amap_a
     }
   }
   
+  
   Future<List<bool>> queryEquals_batch(List<com_amap_api_services_cloud_CloudSearch_Query> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -740,6 +791,7 @@ extension com_amap_api_services_cloud_CloudSearch_Query_Batch on List<com_amap_a
       return typedResult;
     }
   }
+  
   
   Future<List<com_amap_api_services_cloud_CloudSearch_Query>> clone_batch() async {
     if (false) {

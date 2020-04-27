@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_amap_api_services_district_DistrictItem extends java_lang_Object with android_os_Parcelable {
   //region constants
@@ -69,6 +70,7 @@ class com_amap_api_services_district_DistrictItem extends java_lang_Object with 
   //endregion
 
   //region methods
+  
   Future<void> setDistrictBoundary(List<String> var1) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -86,10 +88,12 @@ class com_amap_api_services_district_DistrictItem extends java_lang_Object with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<List<String>> districtBoundary() async {
     // print log
@@ -108,10 +112,12 @@ class com_amap_api_services_district_DistrictItem extends java_lang_Object with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = (__result__ as List).cast<String>();
     
-      return (__result__ as List).cast<String>();
+      return __return__;
     }
   }
+  
   
   Future<String> getCitycode() async {
     // print log
@@ -130,10 +136,12 @@ class com_amap_api_services_district_DistrictItem extends java_lang_Object with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setCitycode(String var1) async {
     // print log
@@ -152,10 +160,12 @@ class com_amap_api_services_district_DistrictItem extends java_lang_Object with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getAdcode() async {
     // print log
@@ -174,10 +184,12 @@ class com_amap_api_services_district_DistrictItem extends java_lang_Object with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setAdcode(String var1) async {
     // print log
@@ -196,10 +208,12 @@ class com_amap_api_services_district_DistrictItem extends java_lang_Object with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getName() async {
     // print log
@@ -218,10 +232,12 @@ class com_amap_api_services_district_DistrictItem extends java_lang_Object with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setName(String var1) async {
     // print log
@@ -240,10 +256,12 @@ class com_amap_api_services_district_DistrictItem extends java_lang_Object with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_services_core_LatLonPoint> getCenter() async {
     // print log
@@ -262,10 +280,12 @@ class com_amap_api_services_district_DistrictItem extends java_lang_Object with 
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify');
-      return com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_core_LatLonSharePoint()..refId = __result__..tag__ = 'amap_search_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<void> setCenter(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
@@ -284,10 +304,12 @@ class com_amap_api_services_district_DistrictItem extends java_lang_Object with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getLevel() async {
     // print log
@@ -306,10 +328,12 @@ class com_amap_api_services_district_DistrictItem extends java_lang_Object with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setLevel(String var1) async {
     // print log
@@ -328,10 +352,12 @@ class com_amap_api_services_district_DistrictItem extends java_lang_Object with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<List<com_amap_api_services_district_DistrictItem>> getSubDistrict() async {
     // print log
@@ -350,10 +376,12 @@ class com_amap_api_services_district_DistrictItem extends java_lang_Object with 
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => com_amap_api_services_district_DistrictItem()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
-      return (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_district_DistrictItem()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      final __return__ = (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_district_DistrictItem()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      kNativeObjectPool.addAll(__return__);
+      return __return__;
     }
   }
+  
   
   Future<void> setSubDistrict(List<com_amap_api_services_district_DistrictItem> var1) async {
     // print log
@@ -372,8 +400,9 @@ class com_amap_api_services_district_DistrictItem extends java_lang_Object with 
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
   
@@ -390,7 +419,8 @@ extension com_amap_api_services_district_DistrictItem_Batch on List<com_amap_api
   //endregion
 
   //region methods
-  Future<void> setDistrictBoundary_batch(List<List<String>> var1) async {
+  
+  Future<List<void>> setDistrictBoundary_batch(List<List<String>> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -408,6 +438,7 @@ extension com_amap_api_services_district_DistrictItem_Batch on List<com_amap_api
       return typedResult;
     }
   }
+  
   
   Future<List<List<String>>> districtBoundary_batch() async {
     if (false) {
@@ -428,6 +459,7 @@ extension com_amap_api_services_district_DistrictItem_Batch on List<com_amap_api
     }
   }
   
+  
   Future<List<String>> getCitycode_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -447,7 +479,8 @@ extension com_amap_api_services_district_DistrictItem_Batch on List<com_amap_api
     }
   }
   
-  Future<void> setCitycode_batch(List<String> var1) async {
+  
+  Future<List<void>> setCitycode_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -465,6 +498,7 @@ extension com_amap_api_services_district_DistrictItem_Batch on List<com_amap_api
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getAdcode_batch() async {
     if (false) {
@@ -485,7 +519,8 @@ extension com_amap_api_services_district_DistrictItem_Batch on List<com_amap_api
     }
   }
   
-  Future<void> setAdcode_batch(List<String> var1) async {
+  
+  Future<List<void>> setAdcode_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -503,6 +538,7 @@ extension com_amap_api_services_district_DistrictItem_Batch on List<com_amap_api
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getName_batch() async {
     if (false) {
@@ -523,7 +559,8 @@ extension com_amap_api_services_district_DistrictItem_Batch on List<com_amap_api
     }
   }
   
-  Future<void> setName_batch(List<String> var1) async {
+  
+  Future<List<void>> setName_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -542,6 +579,7 @@ extension com_amap_api_services_district_DistrictItem_Batch on List<com_amap_api
     }
   }
   
+  
   Future<List<com_amap_api_services_core_LatLonPoint>> getCenter_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -555,13 +593,14 @@ extension com_amap_api_services_district_DistrictItem_Batch on List<com_amap_api
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_amap_api_services_core_LatLonSharePoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
   }
   
-  Future<void> setCenter_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
+  
+  Future<List<void>> setCenter_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -579,6 +618,7 @@ extension com_amap_api_services_district_DistrictItem_Batch on List<com_amap_api
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getLevel_batch() async {
     if (false) {
@@ -599,7 +639,8 @@ extension com_amap_api_services_district_DistrictItem_Batch on List<com_amap_api
     }
   }
   
-  Future<void> setLevel_batch(List<String> var1) async {
+  
+  Future<List<void>> setLevel_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -617,6 +658,7 @@ extension com_amap_api_services_district_DistrictItem_Batch on List<com_amap_api
       return typedResult;
     }
   }
+  
   
   Future<List<List<com_amap_api_services_district_DistrictItem>>> getSubDistrict_batch() async {
     if (false) {
@@ -637,7 +679,8 @@ extension com_amap_api_services_district_DistrictItem_Batch on List<com_amap_api
     }
   }
   
-  Future<void> setSubDistrict_batch(List<List<com_amap_api_services_district_DistrictItem>> var1) async {
+  
+  Future<List<void>> setSubDistrict_batch(List<List<com_amap_api_services_district_DistrictItem>> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }

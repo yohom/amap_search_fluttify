@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services_route_Railway with android_os_Parcelable {
   //region constants
@@ -50,6 +51,7 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
   //endregion
 
   //region methods
+  
   Future<String> getTime() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -67,10 +69,12 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getTrip() async {
     // print log
@@ -89,10 +93,12 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<double> getDistance() async {
     // print log
@@ -111,10 +117,12 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getType() async {
     // print log
@@ -133,10 +141,12 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_services_route_RailwayStationItem> getDeparturestop() async {
     // print log
@@ -155,10 +165,12 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_route_RailwayStationItem()..refId = __result__..tag__ = 'amap_search_fluttify');
-      return com_amap_api_services_route_RailwayStationItem()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_route_RailwayStationItem()..refId = __result__..tag__ = 'amap_search_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_services_route_RailwayStationItem> getArrivalstop() async {
     // print log
@@ -177,10 +189,12 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_route_RailwayStationItem()..refId = __result__..tag__ = 'amap_search_fluttify');
-      return com_amap_api_services_route_RailwayStationItem()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_route_RailwayStationItem()..refId = __result__..tag__ = 'amap_search_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<List<com_amap_api_services_route_RailwayStationItem>> getViastops() async {
     // print log
@@ -199,10 +213,12 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => com_amap_api_services_route_RailwayStationItem()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
-      return (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_route_RailwayStationItem()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      final __return__ = (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_route_RailwayStationItem()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      kNativeObjectPool.addAll(__return__);
+      return __return__;
     }
   }
+  
   
   Future<List<com_amap_api_services_route_Railway>> getAlters() async {
     // print log
@@ -221,10 +237,12 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => com_amap_api_services_route_Railway()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
-      return (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_route_Railway()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      final __return__ = (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_route_RouteRailwayItem()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      kNativeObjectPool.addAll(__return__);
+      return __return__;
     }
   }
+  
   
   Future<List<com_amap_api_services_route_RailwaySpace>> getSpaces() async {
     // print log
@@ -243,10 +261,12 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => com_amap_api_services_route_RailwaySpace()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
-      return (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_route_RailwaySpace()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      final __return__ = (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_route_RailwaySpace()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      kNativeObjectPool.addAll(__return__);
+      return __return__;
     }
   }
+  
   
   Future<void> setTime(String var1) async {
     // print log
@@ -265,10 +285,12 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setTrip(String var1) async {
     // print log
@@ -287,10 +309,12 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setDistance(double var1) async {
     // print log
@@ -309,10 +333,12 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setType(String var1) async {
     // print log
@@ -331,10 +357,12 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setDeparturestop(com_amap_api_services_route_RailwayStationItem var1) async {
     // print log
@@ -353,10 +381,12 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setArrivalstop(com_amap_api_services_route_RailwayStationItem var1) async {
     // print log
@@ -375,10 +405,12 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setViastops(List<com_amap_api_services_route_RailwayStationItem> var1) async {
     // print log
@@ -397,10 +429,12 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setAlters(List<com_amap_api_services_route_Railway> var1) async {
     // print log
@@ -419,10 +453,12 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setSpaces(List<com_amap_api_services_route_RailwaySpace> var1) async {
     // print log
@@ -441,8 +477,9 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
   
@@ -459,6 +496,7 @@ extension com_amap_api_services_route_RouteRailwayItem_Batch on List<com_amap_ap
   //endregion
 
   //region methods
+  
   Future<List<String>> getTime_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -477,6 +515,7 @@ extension com_amap_api_services_route_RouteRailwayItem_Batch on List<com_amap_ap
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getTrip_batch() async {
     if (false) {
@@ -497,6 +536,7 @@ extension com_amap_api_services_route_RouteRailwayItem_Batch on List<com_amap_ap
     }
   }
   
+  
   Future<List<double>> getDistance_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -515,6 +555,7 @@ extension com_amap_api_services_route_RouteRailwayItem_Batch on List<com_amap_ap
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getType_batch() async {
     if (false) {
@@ -535,6 +576,7 @@ extension com_amap_api_services_route_RouteRailwayItem_Batch on List<com_amap_ap
     }
   }
   
+  
   Future<List<com_amap_api_services_route_RailwayStationItem>> getDeparturestop_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -553,6 +595,7 @@ extension com_amap_api_services_route_RouteRailwayItem_Batch on List<com_amap_ap
       return typedResult;
     }
   }
+  
   
   Future<List<com_amap_api_services_route_RailwayStationItem>> getArrivalstop_batch() async {
     if (false) {
@@ -573,6 +616,7 @@ extension com_amap_api_services_route_RouteRailwayItem_Batch on List<com_amap_ap
     }
   }
   
+  
   Future<List<List<com_amap_api_services_route_RailwayStationItem>>> getViastops_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -592,6 +636,7 @@ extension com_amap_api_services_route_RouteRailwayItem_Batch on List<com_amap_ap
     }
   }
   
+  
   Future<List<List<com_amap_api_services_route_Railway>>> getAlters_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -605,11 +650,12 @@ extension com_amap_api_services_route_RouteRailwayItem_Batch on List<com_amap_ap
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_route_Railway()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
+      final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_route_RouteRailwayItem()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
       kNativeObjectPool.addAll(typedResult.expand((e) => e));
       return typedResult;
     }
   }
+  
   
   Future<List<List<com_amap_api_services_route_RailwaySpace>>> getSpaces_batch() async {
     if (false) {
@@ -630,7 +676,8 @@ extension com_amap_api_services_route_RouteRailwayItem_Batch on List<com_amap_ap
     }
   }
   
-  Future<void> setTime_batch(List<String> var1) async {
+  
+  Future<List<void>> setTime_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -649,7 +696,8 @@ extension com_amap_api_services_route_RouteRailwayItem_Batch on List<com_amap_ap
     }
   }
   
-  Future<void> setTrip_batch(List<String> var1) async {
+  
+  Future<List<void>> setTrip_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -668,7 +716,8 @@ extension com_amap_api_services_route_RouteRailwayItem_Batch on List<com_amap_ap
     }
   }
   
-  Future<void> setDistance_batch(List<double> var1) async {
+  
+  Future<List<void>> setDistance_batch(List<double> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -687,7 +736,8 @@ extension com_amap_api_services_route_RouteRailwayItem_Batch on List<com_amap_ap
     }
   }
   
-  Future<void> setType_batch(List<String> var1) async {
+  
+  Future<List<void>> setType_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -706,7 +756,8 @@ extension com_amap_api_services_route_RouteRailwayItem_Batch on List<com_amap_ap
     }
   }
   
-  Future<void> setDeparturestop_batch(List<com_amap_api_services_route_RailwayStationItem> var1) async {
+  
+  Future<List<void>> setDeparturestop_batch(List<com_amap_api_services_route_RailwayStationItem> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -725,7 +776,8 @@ extension com_amap_api_services_route_RouteRailwayItem_Batch on List<com_amap_ap
     }
   }
   
-  Future<void> setArrivalstop_batch(List<com_amap_api_services_route_RailwayStationItem> var1) async {
+  
+  Future<List<void>> setArrivalstop_batch(List<com_amap_api_services_route_RailwayStationItem> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -744,7 +796,8 @@ extension com_amap_api_services_route_RouteRailwayItem_Batch on List<com_amap_ap
     }
   }
   
-  Future<void> setViastops_batch(List<List<com_amap_api_services_route_RailwayStationItem>> var1) async {
+  
+  Future<List<void>> setViastops_batch(List<List<com_amap_api_services_route_RailwayStationItem>> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -763,7 +816,8 @@ extension com_amap_api_services_route_RouteRailwayItem_Batch on List<com_amap_ap
     }
   }
   
-  Future<void> setAlters_batch(List<List<com_amap_api_services_route_Railway>> var1) async {
+  
+  Future<List<void>> setAlters_batch(List<List<com_amap_api_services_route_Railway>> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -782,7 +836,8 @@ extension com_amap_api_services_route_RouteRailwayItem_Batch on List<com_amap_ap
     }
   }
   
-  Future<void> setSpaces_batch(List<List<com_amap_api_services_route_RailwaySpace>> var1) async {
+  
+  Future<List<void>> setSpaces_batch(List<List<com_amap_api_services_route_RailwaySpace>> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }

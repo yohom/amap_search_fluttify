@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_amap_api_services_route_District extends java_lang_Object with android_os_Parcelable {
   //region constants
@@ -50,6 +51,7 @@ class com_amap_api_services_route_District extends java_lang_Object with android
   //endregion
 
   //region methods
+  
   Future<String> getDistrictName() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -67,10 +69,12 @@ class com_amap_api_services_route_District extends java_lang_Object with android
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setDistrictName(String var1) async {
     // print log
@@ -89,10 +93,12 @@ class com_amap_api_services_route_District extends java_lang_Object with android
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<String> getDistrictAdcode() async {
     // print log
@@ -111,10 +117,12 @@ class com_amap_api_services_route_District extends java_lang_Object with android
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setDistrictAdcode(String var1) async {
     // print log
@@ -133,8 +141,9 @@ class com_amap_api_services_route_District extends java_lang_Object with android
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
   
@@ -151,6 +160,7 @@ extension com_amap_api_services_route_District_Batch on List<com_amap_api_servic
   //endregion
 
   //region methods
+  
   Future<List<String>> getDistrictName_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -170,7 +180,8 @@ extension com_amap_api_services_route_District_Batch on List<com_amap_api_servic
     }
   }
   
-  Future<void> setDistrictName_batch(List<String> var1) async {
+  
+  Future<List<void>> setDistrictName_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -188,6 +199,7 @@ extension com_amap_api_services_route_District_Batch on List<com_amap_api_servic
       return typedResult;
     }
   }
+  
   
   Future<List<String>> getDistrictAdcode_batch() async {
     if (false) {
@@ -208,7 +220,8 @@ extension com_amap_api_services_route_District_Batch on List<com_amap_api_servic
     }
   }
   
-  Future<void> setDistrictAdcode_batch(List<String> var1) async {
+  
+  Future<List<void>> setDistrictAdcode_batch(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }

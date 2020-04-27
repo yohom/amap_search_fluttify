@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_amap_api_services_route_DistanceSearch extends java_lang_Object  {
   //region constants
@@ -51,6 +52,7 @@ class com_amap_api_services_route_DistanceSearch extends java_lang_Object  {
   //endregion
 
   //region methods
+  
   Future<void> setDistanceSearchListener(com_amap_api_services_route_DistanceSearch_OnDistanceSearchListener var1) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -72,11 +74,11 @@ class com_amap_api_services_route_DistanceSearch extends java_lang_Object  {
             case 'Callback::com.amap.api.services.route.DistanceSearch.OnDistanceSearchListener::onDistanceSearched':
               // print log
               if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onDistanceSearched([\'var2\':$args[var2]])');
+                print('fluttify-dart-callback: onDistanceSearched([\'var2\':${args['var2']}])');
               }
         
               // handle the native call
-              var1?.onDistanceSearched(com_amap_api_services_route_DistanceResult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify', args['var2']);
+              var1?.onDistanceSearched((com_amap_api_services_route_DistanceResult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify'), args['var2']);
               break;
             default:
               break;
@@ -87,10 +89,12 @@ class com_amap_api_services_route_DistanceSearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<com_amap_api_services_route_DistanceResult> calculateRouteDistance(com_amap_api_services_route_DistanceSearch_DistanceQuery var1) async {
     // print log
@@ -109,10 +113,12 @@ class com_amap_api_services_route_DistanceSearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_route_DistanceResult()..refId = __result__..tag__ = 'amap_search_fluttify');
-      return com_amap_api_services_route_DistanceResult()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_route_DistanceResult()..refId = __result__..tag__ = 'amap_search_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<void> calculateRouteDistanceAsyn(com_amap_api_services_route_DistanceSearch_DistanceQuery var1) async {
     // print log
@@ -131,8 +137,9 @@ class com_amap_api_services_route_DistanceSearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
   
@@ -149,6 +156,7 @@ extension com_amap_api_services_route_DistanceSearch_Batch on List<com_amap_api_
   //endregion
 
   //region methods
+  
   Future<List<com_amap_api_services_route_DistanceResult>> calculateRouteDistance_batch(List<com_amap_api_services_route_DistanceSearch_DistanceQuery> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -168,7 +176,8 @@ extension com_amap_api_services_route_DistanceSearch_Batch on List<com_amap_api_
     }
   }
   
-  Future<void> calculateRouteDistanceAsyn_batch(List<com_amap_api_services_route_DistanceSearch_DistanceQuery> var1) async {
+  
+  Future<List<void>> calculateRouteDistanceAsyn_batch(List<com_amap_api_services_route_DistanceSearch_DistanceQuery> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }

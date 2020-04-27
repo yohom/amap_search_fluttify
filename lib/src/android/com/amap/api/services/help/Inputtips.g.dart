@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 class com_amap_api_services_help_Inputtips extends java_lang_Object  {
   //region constants
@@ -50,6 +51,7 @@ class com_amap_api_services_help_Inputtips extends java_lang_Object  {
   //endregion
 
   //region methods
+  
   Future<com_amap_api_services_help_InputtipsQuery> getQuery() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -67,10 +69,12 @@ class com_amap_api_services_help_Inputtips extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_help_InputtipsQuery()..refId = __result__..tag__ = 'amap_search_fluttify');
-      return com_amap_api_services_help_InputtipsQuery()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_help_InputtipsQuery()..refId = __result__..tag__ = 'amap_search_fluttify';
+      kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
+  
   
   Future<void> setQuery(com_amap_api_services_help_InputtipsQuery var1) async {
     // print log
@@ -89,10 +93,12 @@ class com_amap_api_services_help_Inputtips extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> setInputtipsListener(com_amap_api_services_help_Inputtips_InputtipsListener var1) async {
     // print log
@@ -115,7 +121,7 @@ class com_amap_api_services_help_Inputtips extends java_lang_Object  {
             case 'Callback::com.amap.api.services.help.Inputtips.InputtipsListener::onGetInputtips':
               // print log
               if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onGetInputtips([\'var2\':$args[var2]])');
+                print('fluttify-dart-callback: onGetInputtips([\'var2\':${args['var2']}])');
               }
         
               // handle the native call
@@ -130,10 +136,12 @@ class com_amap_api_services_help_Inputtips extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> requestInputtipsAsyn() async {
     // print log
@@ -152,10 +160,12 @@ class com_amap_api_services_help_Inputtips extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<List<com_amap_api_services_help_Tip>> requestInputtips() async {
     // print log
@@ -174,10 +184,12 @@ class com_amap_api_services_help_Inputtips extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => com_amap_api_services_help_Tip()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
-      return (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_help_Tip()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      final __return__ = (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_help_Tip()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      kNativeObjectPool.addAll(__return__);
+      return __return__;
     }
   }
+  
   
   Future<void> requestInputtips__String__String(String var1, String var2) async {
     // print log
@@ -196,10 +208,12 @@ class com_amap_api_services_help_Inputtips extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
+  
   
   Future<void> requestInputtips__String__String__String(String var1, String var2, String var3) async {
     // print log
@@ -218,8 +232,9 @@ class com_amap_api_services_help_Inputtips extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
+      final __return__ = __result__;
     
-      return __result__;
+      return __return__;
     }
   }
   
@@ -236,6 +251,7 @@ extension com_amap_api_services_help_Inputtips_Batch on List<com_amap_api_servic
   //endregion
 
   //region methods
+  
   Future<List<com_amap_api_services_help_InputtipsQuery>> getQuery_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
@@ -255,7 +271,8 @@ extension com_amap_api_services_help_Inputtips_Batch on List<com_amap_api_servic
     }
   }
   
-  Future<void> setQuery_batch(List<com_amap_api_services_help_InputtipsQuery> var1) async {
+  
+  Future<List<void>> setQuery_batch(List<com_amap_api_services_help_InputtipsQuery> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -274,7 +291,8 @@ extension com_amap_api_services_help_Inputtips_Batch on List<com_amap_api_servic
     }
   }
   
-  Future<void> requestInputtipsAsyn_batch() async {
+  
+  Future<List<void>> requestInputtipsAsyn_batch() async {
     if (false) {
       return Future.error('all args must have same length!');
     }
@@ -292,6 +310,7 @@ extension com_amap_api_services_help_Inputtips_Batch on List<com_amap_api_servic
       return typedResult;
     }
   }
+  
   
   Future<List<List<com_amap_api_services_help_Tip>>> requestInputtips_batch() async {
     if (false) {
@@ -312,7 +331,8 @@ extension com_amap_api_services_help_Inputtips_Batch on List<com_amap_api_servic
     }
   }
   
-  Future<void> requestInputtips__String__String_batch(List<String> var1, List<String> var2) async {
+  
+  Future<List<void>> requestInputtips__String__String_batch(List<String> var1, List<String> var2) async {
     if (var1.length != var2.length) {
       return Future.error('all args must have same length!');
     }
@@ -331,7 +351,8 @@ extension com_amap_api_services_help_Inputtips_Batch on List<com_amap_api_servic
     }
   }
   
-  Future<void> requestInputtips__String__String__String_batch(List<String> var1, List<String> var2, List<String> var3) async {
+  
+  Future<List<void>> requestInputtips__String__String__String_batch(List<String> var1, List<String> var2, List<String> var3) async {
     if (var1.length != var2.length || var2.length != var3.length) {
       return Future.error('all args must have same length!');
     }
