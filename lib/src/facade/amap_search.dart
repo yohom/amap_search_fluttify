@@ -33,8 +33,15 @@ class AmapSearch {
 
   /// 关键字搜索poi
   ///
-  /// 在城市[city]搜索关键字[keyword]的poi
-  static Future<List<Poi>> searchKeyword(String keyword, {String city = ''}) {
+  /// 在城市[city]搜索关键字[keyword]的poi, 可以设置每页数量[pageSize](1-50)和第[page](1-100)页
+  static Future<List<Poi>> searchKeyword(
+    String keyword, {
+    String city = '',
+    int pageSize = 20,
+    int page = 1,
+  }) {
+    assert(page > 0 && page < 100, '页数范围为1-100');
+    assert(pageSize > 0 && pageSize < 50, '每页大小范围为1-50');
     // 会在listener中关闭
     // ignore: close_sinks
     final _controller = StreamController<List<Poi>>(sync: true);
@@ -44,6 +51,9 @@ class AmapSearch {
         // 创建查询对象
         final query = await com_amap_api_services_poisearch_PoiSearch_Query
             .create__String__String__String(keyword, '', city);
+        // 设置分页信息
+        await query.setPageSize(pageSize);
+        await query.setPageNum(page);
 
         // 获取android上下文
         final context = await android_app_Activity.get();
@@ -75,6 +85,9 @@ class AmapSearch {
         await request.set_keywords(keyword);
         // 设置城市
         await request.set_city(city);
+        // 设置分页信息
+        await request.set_page(page);
+        await request.set_offset(pageSize);
 
         // 开始搜索
         await _iosSearch.AMapPOIKeywordsSearch(request);
@@ -88,14 +101,18 @@ class AmapSearch {
 
   /// 周边搜索poi
   ///
-  /// 在中心点[center]周边搜索关键字[keyword]和城市[city]的poi
+  /// 在中心点[center]周边搜索关键字[keyword]和城市[city]的poi, 可以设置每页数量[pageSize](1-50)和第[page](1-100)页
   static Future<List<Poi>> searchAround(
     LatLng center, {
     String keyword = '',
     String city = '',
     String type = '',
+    int pageSize = 20,
+    int page = 1,
     int radius = 1000,
   }) {
+    assert(page > 0 && page < 100, '页数范围为1-100');
+    assert(pageSize > 0 && pageSize < 50, '每页大小范围为1-50');
     // 会在listener中关闭
     // ignore: close_sinks
     final _controller = StreamController<List<Poi>>(sync: true);
@@ -105,6 +122,9 @@ class AmapSearch {
         // 创建查询对象
         final query = await com_amap_api_services_poisearch_PoiSearch_Query
             .create__String__String__String(keyword, type, city);
+        // 设置分页信息
+        await query.setPageSize(pageSize);
+        await query.setPageNum(page);
 
         // 获取android上下文
         final context = await android_app_Activity.get();
@@ -156,6 +176,9 @@ class AmapSearch {
         await request.set_location(location);
         // 设置半径
         await request.set_radius(radius);
+        // 设置分页信息
+        await request.set_page(page);
+        await request.set_offset(pageSize);
 
         // 开始搜索
         await _iosSearch.AMapPOIAroundSearch(request);

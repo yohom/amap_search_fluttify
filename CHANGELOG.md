@@ -2,6 +2,7 @@
 - fix: 公交路线空判断
 - enhance: [breaking change] Poi使用同步返回
 - fix: 地图边界可能存在多个多边形
+- enhance: 关键字搜索和附近搜索 增加分页参数
 
 ## 0.8.2
 - enhance: 增加搜索错误处理
