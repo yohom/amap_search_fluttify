@@ -105,28 +105,21 @@ packages:
       name: decorated_flutter
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.10.0"
+    version: "0.12.9"
   dio:
     dependency: transitive
     description:
       name: dio
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "3.0.7"
+    version: "3.0.9"
   encrypt:
     dependency: transitive
     description:
       name: encrypt
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "3.3.1"
-  flushbar:
-    dependency: transitive
-    description:
-      name: flushbar
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.9.1"
+    version: "4.0.0"
   flutter:
     dependency: "direct main"
     description: flutter
@@ -138,7 +131,7 @@ packages:
       name: flutter_advanced_networkimage
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.6.2"
+    version: "0.7.0"
   flutter_localizations:
     dependency: transitive
     description: flutter
@@ -150,7 +143,7 @@ packages:
       name: flutter_svg
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.15.0"
+    version: "0.17.4"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -218,7 +211,7 @@ packages:
       name: oktoast
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.2.1"
+    version: "2.3.2"
   path:
     dependency: transitive
     description:
@@ -246,7 +239,21 @@ packages:
       name: path_provider
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.5.1"
+    version: "1.6.7"
+  path_provider_macos:
+    dependency: transitive
+    description:
+      name: path_provider_macos
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.0.4+1"
+  path_provider_platform_interface:
+    dependency: transitive
+    description:
+      name: path_provider_platform_interface
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.1"
   pedantic:
     dependency: transitive
     description:
@@ -275,6 +282,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.2.1"
+  plugin_platform_interface:
+    dependency: transitive
+    description:
+      name: plugin_platform_interface
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.2"
   pointycastle:
     dependency: transitive
     description:
@@ -295,7 +309,7 @@ packages:
       name: rxdart
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.23.1"
+    version: "0.24.0"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -366,4 +380,4 @@ packages:
     version: "3.5.0"
 sdks:
   dart: ">=2.6.0 <3.0.0"
-  flutter: ">=1.12.13 <2.0.0"
+  flutter: ">=1.12.13+hotfix.5 <2.0.0"

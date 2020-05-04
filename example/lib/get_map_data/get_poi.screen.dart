@@ -43,6 +43,7 @@ class _KeywordPoiScreenState extends State<KeywordPoiScreen>
     with AmapSearchDisposeMixin {
   final _keywordController = TextEditingController(text: '肯德基');
   final _cityController = TextEditingController(text: '杭州');
+  int _page = 1;
 
   List<String> _poiTitleList = [];
 
@@ -69,20 +70,31 @@ class _KeywordPoiScreenState extends State<KeywordPoiScreen>
                 city: _cityController.text,
               );
 
-              Stream.fromIterable(poiList)
-                  .asyncMap((it) async =>
-                      'title: ' +
-                      (it.title) +
-                      ', address: ' +
-                      (it.address) +
-                      ', businessArea: ' +
-                      (it.businessArea) +
-                      ', ' +
-                      (it.latLng).toString())
-                  .toList()
-                  .then((it) => setState(() => _poiTitleList = it));
+              setState(() {
+                _poiTitleList = poiList
+                    .map((it) =>
+                        'title: ${it.title}, address: ${it.address}, businessArea: ${it.businessArea}, ${it.latLng}')
+                    .toList();
+              });
             },
             child: Text('搜索'),
+          ),
+          RaisedButton(
+            onPressed: () async {
+              final poiList = await AmapSearch.searchKeyword(
+                _keywordController.text,
+                city: _cityController.text,
+                page: ++_page,
+              );
+
+              setState(() {
+                _poiTitleList = poiList
+                    .map((it) =>
+                        'title: ${it.title}, address: ${it.address}, businessArea: ${it.businessArea}, ${it.latLng}')
+                    .toList();
+              });
+            },
+            child: Text('下一页'),
           ),
           Expanded(child: ScrollableText(_poiTitleList.join("\n"))),
         ],
@@ -103,6 +115,7 @@ class _AroundPoiScreenState extends State<AroundPoiScreen>
   final _typeController = TextEditingController();
   final _latController = TextEditingController(text: '29.08');
   final _lngController = TextEditingController(text: '119.65');
+  int _page = 1;
 
   List<String> _poiTitleList = [];
 
@@ -150,20 +163,35 @@ class _AroundPoiScreenState extends State<AroundPoiScreen>
                 type: _typeController.text,
               );
 
-              Stream.fromIterable(poiList)
-                  .asyncMap((it) async =>
-                      'title: ' +
-                      (it.title) +
-                      ', address: ' +
-                      (it.address) +
-                      ', businessArea: ' +
-                      (it.businessArea) +
-                      ', ' +
-                      (it.latLng).toString())
-                  .toList()
-                  .then((it) => setState(() => _poiTitleList = it));
+              setState(() {
+                _poiTitleList = poiList
+                    .map((it) =>
+                        'title: ${it.title}, address: ${it.address}, businessArea: ${it.businessArea}, ${it.latLng}')
+                    .toList();
+              });
             },
             child: Text('搜索'),
+          ),
+          RaisedButton(
+            onPressed: () async {
+              final poiList = await AmapSearch.searchAround(
+                LatLng(
+                  double.tryParse(_latController.text) ?? 29.08,
+                  double.tryParse(_lngController.text) ?? 119.65,
+                ),
+                keyword: _keywordController.text,
+                type: _typeController.text,
+                page: ++_page,
+              );
+
+              setState(() {
+                _poiTitleList = poiList
+                    .map((it) =>
+                        'title: ${it.title}, address: ${it.address}, businessArea: ${it.businessArea}, ${it.latLng}')
+                    .toList();
+              });
+            },
+            child: Text('下一页'),
           ),
           Expanded(child: ScrollableText(_poiTitleList.join("\n"))),
         ],
