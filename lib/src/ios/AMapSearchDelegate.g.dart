@@ -22,7 +22,7 @@ mixin AMapSearchDelegate on NSObject {
 
   @mustCallSuper
   Future<void> AMapSearchRequest_didFailWithError(dynamic request, NSError error) {
-    kNativeObjectPool.add(request);
+    if (request is Ref) kNativeObjectPool.add(request);
     kNativeObjectPool.add(error);
   
     if (fluttifyLogEnabled) {
