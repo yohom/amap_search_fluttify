@@ -74,7 +74,7 @@ class com_amap_api_services_district_DistrictResult extends java_lang_Object wit
   Future<List<com_amap_api_services_district_DistrictItem>> getDistrict() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.district.DistrictResult@$refId::getDistrict([])');
+      debugPrint('fluttify-dart: com.amap.api.services.district.DistrictResult@$refId::getDistrict([])');
     }
   
     // invoke native method
@@ -98,7 +98,7 @@ class com_amap_api_services_district_DistrictResult extends java_lang_Object wit
   Future<void> setDistrict(List<com_amap_api_services_district_DistrictItem> var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.district.DistrictResult@$refId::setDistrict([])');
+      debugPrint('fluttify-dart: com.amap.api.services.district.DistrictResult@$refId::setDistrict([])');
     }
   
     // invoke native method
@@ -122,7 +122,7 @@ class com_amap_api_services_district_DistrictResult extends java_lang_Object wit
   Future<com_amap_api_services_district_DistrictSearchQuery> getQuery() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.district.DistrictResult@$refId::getQuery([])');
+      debugPrint('fluttify-dart: com.amap.api.services.district.DistrictResult@$refId::getQuery([])');
     }
   
     // invoke native method
@@ -146,7 +146,7 @@ class com_amap_api_services_district_DistrictResult extends java_lang_Object wit
   Future<void> setQuery(com_amap_api_services_district_DistrictSearchQuery var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.district.DistrictResult@$refId::setQuery([])');
+      debugPrint('fluttify-dart: com.amap.api.services.district.DistrictResult@$refId::setQuery([])');
     }
   
     // invoke native method
@@ -170,7 +170,7 @@ class com_amap_api_services_district_DistrictResult extends java_lang_Object wit
   Future<int> getPageCount() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.district.DistrictResult@$refId::getPageCount([])');
+      debugPrint('fluttify-dart: com.amap.api.services.district.DistrictResult@$refId::getPageCount([])');
     }
   
     // invoke native method
@@ -194,7 +194,7 @@ class com_amap_api_services_district_DistrictResult extends java_lang_Object wit
   Future<void> setPageCount(int var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.district.DistrictResult@$refId::setPageCount([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.district.DistrictResult@$refId::setPageCount([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -218,7 +218,7 @@ class com_amap_api_services_district_DistrictResult extends java_lang_Object wit
   Future<com_amap_api_services_core_AMapException> getAMapException() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.district.DistrictResult@$refId::getAMapException([])');
+      debugPrint('fluttify-dart: com.amap.api.services.district.DistrictResult@$refId::getAMapException([])');
     }
   
     // invoke native method
@@ -242,7 +242,7 @@ class com_amap_api_services_district_DistrictResult extends java_lang_Object wit
   Future<void> setAMapException(com_amap_api_services_core_AMapException var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.district.DistrictResult@$refId::setAMapException([])');
+      debugPrint('fluttify-dart: com.amap.api.services.district.DistrictResult@$refId::setAMapException([])');
     }
   
     // invoke native method

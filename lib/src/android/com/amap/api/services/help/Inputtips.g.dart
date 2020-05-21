@@ -55,7 +55,7 @@ class com_amap_api_services_help_Inputtips extends java_lang_Object  {
   Future<com_amap_api_services_help_InputtipsQuery> getQuery() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.help.Inputtips@$refId::getQuery([])');
+      debugPrint('fluttify-dart: com.amap.api.services.help.Inputtips@$refId::getQuery([])');
     }
   
     // invoke native method
@@ -79,7 +79,7 @@ class com_amap_api_services_help_Inputtips extends java_lang_Object  {
   Future<void> setQuery(com_amap_api_services_help_InputtipsQuery var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.help.Inputtips@$refId::setQuery([])');
+      debugPrint('fluttify-dart: com.amap.api.services.help.Inputtips@$refId::setQuery([])');
     }
   
     // invoke native method
@@ -103,7 +103,7 @@ class com_amap_api_services_help_Inputtips extends java_lang_Object  {
   Future<void> setInputtipsListener(com_amap_api_services_help_Inputtips_InputtipsListener var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.help.Inputtips@$refId::setInputtipsListener([])');
+      debugPrint('fluttify-dart: com.amap.api.services.help.Inputtips@$refId::setInputtipsListener([])');
     }
   
     // invoke native method
@@ -121,7 +121,7 @@ class com_amap_api_services_help_Inputtips extends java_lang_Object  {
             case 'Callback::com.amap.api.services.help.Inputtips.InputtipsListener::onGetInputtips':
               // print log
               if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onGetInputtips([\'var2\':${args['var2']}])');
+                debugPrint('fluttify-dart-callback: onGetInputtips([\'var2\':${args['var2']}])');
               }
         
               // handle the native call
@@ -146,7 +146,7 @@ class com_amap_api_services_help_Inputtips extends java_lang_Object  {
   Future<void> requestInputtipsAsyn() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.help.Inputtips@$refId::requestInputtipsAsyn([])');
+      debugPrint('fluttify-dart: com.amap.api.services.help.Inputtips@$refId::requestInputtipsAsyn([])');
     }
   
     // invoke native method
@@ -170,7 +170,7 @@ class com_amap_api_services_help_Inputtips extends java_lang_Object  {
   Future<List<com_amap_api_services_help_Tip>> requestInputtips() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.help.Inputtips@$refId::requestInputtips([])');
+      debugPrint('fluttify-dart: com.amap.api.services.help.Inputtips@$refId::requestInputtips([])');
     }
   
     // invoke native method
@@ -194,7 +194,7 @@ class com_amap_api_services_help_Inputtips extends java_lang_Object  {
   Future<void> requestInputtips__String__String(String var1, String var2) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.help.Inputtips@$refId::requestInputtips([\'var1\':$var1, \'var2\':$var2])');
+      debugPrint('fluttify-dart: com.amap.api.services.help.Inputtips@$refId::requestInputtips([\'var1\':$var1, \'var2\':$var2])');
     }
   
     // invoke native method
@@ -218,7 +218,7 @@ class com_amap_api_services_help_Inputtips extends java_lang_Object  {
   Future<void> requestInputtips__String__String__String(String var1, String var2, String var3) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.help.Inputtips@$refId::requestInputtips([\'var1\':$var1, \'var2\':$var2, \'var3\':$var3])');
+      debugPrint('fluttify-dart: com.amap.api.services.help.Inputtips@$refId::requestInputtips([\'var1\':$var1, \'var2\':$var2, \'var3\':$var3])');
     }
   
     // invoke native method

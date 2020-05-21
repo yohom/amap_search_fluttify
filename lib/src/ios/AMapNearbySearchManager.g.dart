@@ -59,7 +59,7 @@ class AMapNearbySearchManager extends NSObject  {
           case 'Callback::AMapNearbySearchManagerDelegate::nearbyInfoForUploading':
             // print log
             if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: nearbyInfoForUploading([])');
+              debugPrint('fluttify-dart-callback: nearbyInfoForUploading([])');
             }
         
             // handle the native call
@@ -68,7 +68,7 @@ class AMapNearbySearchManager extends NSObject  {
           case 'Callback::AMapNearbySearchManagerDelegate::onNearbyInfoUploadedWithError':
             // print log
             if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: onNearbyInfoUploadedWithError([])');
+              debugPrint('fluttify-dart-callback: onNearbyInfoUploadedWithError([])');
             }
         
             // handle the native call
@@ -77,7 +77,7 @@ class AMapNearbySearchManager extends NSObject  {
           case 'Callback::AMapNearbySearchManagerDelegate::onUserInfoClearedWithError':
             // print log
             if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: onUserInfoClearedWithError([])');
+              debugPrint('fluttify-dart-callback: onUserInfoClearedWithError([])');
             }
         
             // handle the native call
@@ -96,7 +96,7 @@ class AMapNearbySearchManager extends NSObject  {
   static Future<AMapNearbySearchManager> sharedInstance() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapNearbySearchManager::sharedInstance([])');
+      debugPrint('fluttify-dart: AMapNearbySearchManager::sharedInstance([])');
     }
   
     // invoke native method
@@ -120,7 +120,7 @@ class AMapNearbySearchManager extends NSObject  {
   Future<void> startAutoUploadNearbyInfo() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapNearbySearchManager@$refId::startAutoUploadNearbyInfo([])');
+      debugPrint('fluttify-dart: AMapNearbySearchManager@$refId::startAutoUploadNearbyInfo([])');
     }
   
     // invoke native method
@@ -144,7 +144,7 @@ class AMapNearbySearchManager extends NSObject  {
   Future<void> stopAutoUploadNearbyInfo() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapNearbySearchManager@$refId::stopAutoUploadNearbyInfo([])');
+      debugPrint('fluttify-dart: AMapNearbySearchManager@$refId::stopAutoUploadNearbyInfo([])');
     }
   
     // invoke native method
@@ -168,7 +168,7 @@ class AMapNearbySearchManager extends NSObject  {
   Future<bool> uploadNearbyInfo(AMapNearbyUploadInfo info) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapNearbySearchManager@$refId::uploadNearbyInfo([])');
+      debugPrint('fluttify-dart: AMapNearbySearchManager@$refId::uploadNearbyInfo([])');
     }
   
     // invoke native method
@@ -192,7 +192,7 @@ class AMapNearbySearchManager extends NSObject  {
   Future<bool> clearUserInfoWithID(String userID) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapNearbySearchManager@$refId::clearUserInfoWithID([\'userID\':$userID])');
+      debugPrint('fluttify-dart: AMapNearbySearchManager@$refId::clearUserInfoWithID([\'userID\':$userID])');
     }
   
     // invoke native method

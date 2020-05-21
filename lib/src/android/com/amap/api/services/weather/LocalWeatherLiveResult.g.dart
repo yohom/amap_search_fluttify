@@ -37,7 +37,7 @@ class com_amap_api_services_weather_LocalWeatherLiveResult extends java_lang_Obj
   static Future<com_amap_api_services_weather_LocalWeatherLiveResult> createPagedResult(com_amap_api_services_weather_WeatherSearchQuery var0, com_amap_api_services_weather_LocalWeatherLive var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLiveResult::createPagedResult([])');
+      debugPrint('fluttify-dart: com.amap.api.services.weather.LocalWeatherLiveResult::createPagedResult([])');
     }
   
     // invoke native method
@@ -61,7 +61,7 @@ class com_amap_api_services_weather_LocalWeatherLiveResult extends java_lang_Obj
   Future<com_amap_api_services_weather_WeatherSearchQuery> getWeatherLiveQuery() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLiveResult@$refId::getWeatherLiveQuery([])');
+      debugPrint('fluttify-dart: com.amap.api.services.weather.LocalWeatherLiveResult@$refId::getWeatherLiveQuery([])');
     }
   
     // invoke native method
@@ -85,7 +85,7 @@ class com_amap_api_services_weather_LocalWeatherLiveResult extends java_lang_Obj
   Future<com_amap_api_services_weather_LocalWeatherLive> getLiveResult() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLiveResult@$refId::getLiveResult([])');
+      debugPrint('fluttify-dart: com.amap.api.services.weather.LocalWeatherLiveResult@$refId::getLiveResult([])');
     }
   
     // invoke native method

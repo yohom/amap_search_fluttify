@@ -55,7 +55,7 @@ class com_amap_api_services_traffic_TrafficSearch extends java_lang_Object  {
   Future<void> setTrafficSearchListener(com_amap_api_services_traffic_TrafficSearch_OnTrafficSearchListener var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.traffic.TrafficSearch@$refId::setTrafficSearchListener([])');
+      debugPrint('fluttify-dart: com.amap.api.services.traffic.TrafficSearch@$refId::setTrafficSearchListener([])');
     }
   
     // invoke native method
@@ -73,7 +73,7 @@ class com_amap_api_services_traffic_TrafficSearch extends java_lang_Object  {
             case 'Callback::com.amap.api.services.traffic.TrafficSearch.OnTrafficSearchListener::onRoadTrafficSearched':
               // print log
               if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onRoadTrafficSearched([\'var2\':${args['var2']}])');
+                debugPrint('fluttify-dart-callback: onRoadTrafficSearched([\'var2\':${args['var2']}])');
               }
         
               // handle the native call

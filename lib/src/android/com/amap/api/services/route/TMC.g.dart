@@ -55,7 +55,7 @@ class com_amap_api_services_route_TMC extends java_lang_Object with android_os_P
   Future<int> getDistance() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.TMC@$refId::getDistance([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.TMC@$refId::getDistance([])');
     }
   
     // invoke native method
@@ -79,7 +79,7 @@ class com_amap_api_services_route_TMC extends java_lang_Object with android_os_P
   Future<String> getStatus() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.TMC@$refId::getStatus([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.TMC@$refId::getStatus([])');
     }
   
     // invoke native method
@@ -103,7 +103,7 @@ class com_amap_api_services_route_TMC extends java_lang_Object with android_os_P
   Future<void> setDistance(int var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.TMC@$refId::setDistance([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.TMC@$refId::setDistance([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -127,7 +127,7 @@ class com_amap_api_services_route_TMC extends java_lang_Object with android_os_P
   Future<void> setStatus(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.TMC@$refId::setStatus([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.TMC@$refId::setStatus([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -151,7 +151,7 @@ class com_amap_api_services_route_TMC extends java_lang_Object with android_os_P
   Future<List<com_amap_api_services_core_LatLonPoint>> getPolyline() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.TMC@$refId::getPolyline([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.TMC@$refId::getPolyline([])');
     }
   
     // invoke native method
@@ -175,7 +175,7 @@ class com_amap_api_services_route_TMC extends java_lang_Object with android_os_P
   Future<void> setPolyline(List<com_amap_api_services_core_LatLonPoint> var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.TMC@$refId::setPolyline([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.TMC@$refId::setPolyline([])');
     }
   
     // invoke native method

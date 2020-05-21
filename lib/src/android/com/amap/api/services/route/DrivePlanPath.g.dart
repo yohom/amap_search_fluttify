@@ -55,7 +55,7 @@ class com_amap_api_services_route_DrivePlanPath extends java_lang_Object with an
   Future<double> getDistance() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DrivePlanPath@$refId::getDistance([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DrivePlanPath@$refId::getDistance([])');
     }
   
     // invoke native method
@@ -79,7 +79,7 @@ class com_amap_api_services_route_DrivePlanPath extends java_lang_Object with an
   Future<void> setDistance(double var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DrivePlanPath@$refId::setDistance([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DrivePlanPath@$refId::setDistance([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -103,7 +103,7 @@ class com_amap_api_services_route_DrivePlanPath extends java_lang_Object with an
   Future<double> getTrafficLights() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DrivePlanPath@$refId::getTrafficLights([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DrivePlanPath@$refId::getTrafficLights([])');
     }
   
     // invoke native method
@@ -127,7 +127,7 @@ class com_amap_api_services_route_DrivePlanPath extends java_lang_Object with an
   Future<void> setTrafficLights(int var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DrivePlanPath@$refId::setTrafficLights([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DrivePlanPath@$refId::setTrafficLights([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -151,7 +151,7 @@ class com_amap_api_services_route_DrivePlanPath extends java_lang_Object with an
   Future<List<com_amap_api_services_route_DrivePlanStep>> getSteps() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DrivePlanPath@$refId::getSteps([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DrivePlanPath@$refId::getSteps([])');
     }
   
     // invoke native method
@@ -175,7 +175,7 @@ class com_amap_api_services_route_DrivePlanPath extends java_lang_Object with an
   Future<void> setSteps(List<com_amap_api_services_route_DrivePlanStep> var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DrivePlanPath@$refId::setSteps([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DrivePlanPath@$refId::setSteps([])');
     }
   
     // invoke native method

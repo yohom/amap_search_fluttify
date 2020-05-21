@@ -55,7 +55,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
   Future<String> getDate() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::getDate([])');
+      debugPrint('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::getDate([])');
     }
   
     // invoke native method
@@ -79,7 +79,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
   Future<void> setDate(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::setDate([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::setDate([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -103,7 +103,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
   Future<String> getWeek() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::getWeek([])');
+      debugPrint('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::getWeek([])');
     }
   
     // invoke native method
@@ -127,7 +127,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
   Future<void> setWeek(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::setWeek([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::setWeek([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -151,7 +151,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
   Future<String> getDayWeather() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::getDayWeather([])');
+      debugPrint('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::getDayWeather([])');
     }
   
     // invoke native method
@@ -175,7 +175,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
   Future<void> setDayWeather(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::setDayWeather([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::setDayWeather([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -199,7 +199,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
   Future<String> getNightWeather() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::getNightWeather([])');
+      debugPrint('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::getNightWeather([])');
     }
   
     // invoke native method
@@ -223,7 +223,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
   Future<void> setNightWeather(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::setNightWeather([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::setNightWeather([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -247,7 +247,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
   Future<String> getDayTemp() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::getDayTemp([])');
+      debugPrint('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::getDayTemp([])');
     }
   
     // invoke native method
@@ -271,7 +271,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
   Future<void> setDayTemp(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::setDayTemp([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::setDayTemp([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -295,7 +295,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
   Future<String> getNightTemp() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::getNightTemp([])');
+      debugPrint('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::getNightTemp([])');
     }
   
     // invoke native method
@@ -319,7 +319,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
   Future<void> setNightTemp(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::setNightTemp([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::setNightTemp([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -343,7 +343,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
   Future<String> getDayWindDirection() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::getDayWindDirection([])');
+      debugPrint('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::getDayWindDirection([])');
     }
   
     // invoke native method
@@ -367,7 +367,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
   Future<void> setDayWindDirection(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::setDayWindDirection([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::setDayWindDirection([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -391,7 +391,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
   Future<String> getNightWindDirection() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::getNightWindDirection([])');
+      debugPrint('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::getNightWindDirection([])');
     }
   
     // invoke native method
@@ -415,7 +415,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
   Future<void> setNightWindDirection(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::setNightWindDirection([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::setNightWindDirection([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -439,7 +439,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
   Future<String> getDayWindPower() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::getDayWindPower([])');
+      debugPrint('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::getDayWindPower([])');
     }
   
     // invoke native method
@@ -463,7 +463,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
   Future<void> setDayWindPower(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::setDayWindPower([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::setDayWindPower([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -487,7 +487,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
   Future<String> getNightWindPower() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::getNightWindPower([])');
+      debugPrint('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::getNightWindPower([])');
     }
   
     // invoke native method
@@ -511,7 +511,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
   Future<void> setNightWindPower(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::setNightWindPower([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::setNightWindPower([\'var1\':$var1])');
     }
   
     // invoke native method

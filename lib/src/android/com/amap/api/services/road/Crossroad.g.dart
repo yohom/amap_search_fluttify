@@ -55,7 +55,7 @@ class com_amap_api_services_road_Crossroad extends com_amap_api_services_road_Ro
   Future<double> getDistance() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::getDistance([])');
+      debugPrint('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::getDistance([])');
     }
   
     // invoke native method
@@ -79,7 +79,7 @@ class com_amap_api_services_road_Crossroad extends com_amap_api_services_road_Ro
   Future<void> setDistance(double var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::setDistance([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::setDistance([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -103,7 +103,7 @@ class com_amap_api_services_road_Crossroad extends com_amap_api_services_road_Ro
   Future<String> getDirection() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::getDirection([])');
+      debugPrint('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::getDirection([])');
     }
   
     // invoke native method
@@ -127,7 +127,7 @@ class com_amap_api_services_road_Crossroad extends com_amap_api_services_road_Ro
   Future<void> setDirection(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::setDirection([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::setDirection([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -151,7 +151,7 @@ class com_amap_api_services_road_Crossroad extends com_amap_api_services_road_Ro
   Future<String> getFirstRoadId() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::getFirstRoadId([])');
+      debugPrint('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::getFirstRoadId([])');
     }
   
     // invoke native method
@@ -175,7 +175,7 @@ class com_amap_api_services_road_Crossroad extends com_amap_api_services_road_Ro
   Future<void> setFirstRoadId(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::setFirstRoadId([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::setFirstRoadId([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -199,7 +199,7 @@ class com_amap_api_services_road_Crossroad extends com_amap_api_services_road_Ro
   Future<String> getFirstRoadName() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::getFirstRoadName([])');
+      debugPrint('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::getFirstRoadName([])');
     }
   
     // invoke native method
@@ -223,7 +223,7 @@ class com_amap_api_services_road_Crossroad extends com_amap_api_services_road_Ro
   Future<void> setFirstRoadName(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::setFirstRoadName([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::setFirstRoadName([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -247,7 +247,7 @@ class com_amap_api_services_road_Crossroad extends com_amap_api_services_road_Ro
   Future<String> getSecondRoadId() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::getSecondRoadId([])');
+      debugPrint('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::getSecondRoadId([])');
     }
   
     // invoke native method
@@ -271,7 +271,7 @@ class com_amap_api_services_road_Crossroad extends com_amap_api_services_road_Ro
   Future<void> setSecondRoadId(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::setSecondRoadId([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::setSecondRoadId([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -295,7 +295,7 @@ class com_amap_api_services_road_Crossroad extends com_amap_api_services_road_Ro
   Future<String> getSecondRoadName() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::getSecondRoadName([])');
+      debugPrint('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::getSecondRoadName([])');
     }
   
     // invoke native method
@@ -319,7 +319,7 @@ class com_amap_api_services_road_Crossroad extends com_amap_api_services_road_Ro
   Future<void> setSecondRoadName(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::setSecondRoadName([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::setSecondRoadName([\'var1\':$var1])');
     }
   
     // invoke native method

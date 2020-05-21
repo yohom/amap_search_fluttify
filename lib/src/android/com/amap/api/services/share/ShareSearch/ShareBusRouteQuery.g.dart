@@ -55,7 +55,7 @@ class com_amap_api_services_share_ShareSearch_ShareBusRouteQuery extends java_la
   Future<int> getBusMode() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.share.ShareSearch.ShareBusRouteQuery@$refId::getBusMode([])');
+      debugPrint('fluttify-dart: com.amap.api.services.share.ShareSearch.ShareBusRouteQuery@$refId::getBusMode([])');
     }
   
     // invoke native method
@@ -79,7 +79,7 @@ class com_amap_api_services_share_ShareSearch_ShareBusRouteQuery extends java_la
   Future<com_amap_api_services_share_ShareSearch_ShareFromAndTo> getShareFromAndTo() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.share.ShareSearch.ShareBusRouteQuery@$refId::getShareFromAndTo([])');
+      debugPrint('fluttify-dart: com.amap.api.services.share.ShareSearch.ShareBusRouteQuery@$refId::getShareFromAndTo([])');
     }
   
     // invoke native method

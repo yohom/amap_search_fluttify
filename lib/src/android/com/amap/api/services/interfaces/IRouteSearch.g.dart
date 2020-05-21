@@ -20,447 +20,138 @@ mixin com_amap_api_services_interfaces_IRouteSearch on java_lang_Object {
 
   
 
+  @mustCallSuper
+  Future<void> setRouteSearchListener(com_amap_api_services_route_RouteSearch_OnRouteSearchListener var1) {
+    kNativeObjectPool.add(var1);
   
-  Future<void> setRouteSearchListener(com_amap_api_services_route_RouteSearch_OnRouteSearchListener var1) async {
-    // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.interfaces.IRouteSearch@$refId::setRouteSearchListener([])');
-    }
-  
-    // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IRouteSearch::setRouteSearchListener', {"refId": refId});
-  
-  
-    // handle native call
-    MethodChannel('com.amap.api.services.interfaces.IRouteSearch::setRouteSearchListener::Callback')
-        .setMethodCallHandler((methodCall) async {
-          final args = methodCall.arguments as Map;
-          // final refId = args['callerRefId'] as int;
-          // if (refId != this.refId) return;
-  
-          switch (methodCall.method) {
-            case 'Callback::com.amap.api.services.route.RouteSearch.OnRouteSearchListener::onBusRouteSearched':
-              // print log
-              if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onBusRouteSearched([\'var2\':${args['var2']}])');
-              }
-        
-              // handle the native call
-              var1?.onBusRouteSearched((com_amap_api_services_route_BusRouteResult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify'), args['var2']);
-              break;
-            case 'Callback::com.amap.api.services.route.RouteSearch.OnRouteSearchListener::onDriveRouteSearched':
-              // print log
-              if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onDriveRouteSearched([\'var2\':${args['var2']}])');
-              }
-        
-              // handle the native call
-              var1?.onDriveRouteSearched((com_amap_api_services_route_DriveRouteResult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify'), args['var2']);
-              break;
-            case 'Callback::com.amap.api.services.route.RouteSearch.OnRouteSearchListener::onWalkRouteSearched':
-              // print log
-              if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onWalkRouteSearched([\'var2\':${args['var2']}])');
-              }
-        
-              // handle the native call
-              var1?.onWalkRouteSearched((com_amap_api_services_route_WalkRouteResult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify'), args['var2']);
-              break;
-            case 'Callback::com.amap.api.services.route.RouteSearch.OnRouteSearchListener::onRideRouteSearched':
-              // print log
-              if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onRideRouteSearched([\'var2\':${args['var2']}])');
-              }
-        
-              // handle the native call
-              var1?.onRideRouteSearched((com_amap_api_services_route_RideRouteResult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify'), args['var2']);
-              break;
-            default:
-              break;
-          }
-        });
-  
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-    
-      return __return__;
+      debugPrint('setRouteSearchListener::kNativeObjectPool: $kNativeObjectPool');
     }
   }
   
+  @mustCallSuper
+  Future<void> setOnTruckRouteSearchListener(com_amap_api_services_route_RouteSearch_OnTruckRouteSearchListener var1) {
+    kNativeObjectPool.add(var1);
   
-  Future<void> setOnTruckRouteSearchListener(com_amap_api_services_route_RouteSearch_OnTruckRouteSearchListener var1) async {
-    // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.interfaces.IRouteSearch@$refId::setOnTruckRouteSearchListener([])');
-    }
-  
-    // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IRouteSearch::setOnTruckRouteSearchListener', {"refId": refId});
-  
-  
-    // handle native call
-    MethodChannel('com.amap.api.services.interfaces.IRouteSearch::setOnTruckRouteSearchListener::Callback')
-        .setMethodCallHandler((methodCall) async {
-          final args = methodCall.arguments as Map;
-          // final refId = args['callerRefId'] as int;
-          // if (refId != this.refId) return;
-  
-          switch (methodCall.method) {
-            case 'Callback::com.amap.api.services.route.RouteSearch.OnTruckRouteSearchListener::onTruckRouteSearched':
-              // print log
-              if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onTruckRouteSearched([\'var2\':${args['var2']}])');
-              }
-        
-              // handle the native call
-              var1?.onTruckRouteSearched((com_amap_api_services_route_TruckRouteRestult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify'), args['var2']);
-              break;
-            default:
-              break;
-          }
-        });
-  
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-    
-      return __return__;
+      debugPrint('setOnTruckRouteSearchListener::kNativeObjectPool: $kNativeObjectPool');
     }
   }
   
+  @mustCallSuper
+  Future<void> setOnRoutePlanSearchListener(com_amap_api_services_route_RouteSearch_OnRoutePlanSearchListener var1) {
+    kNativeObjectPool.add(var1);
   
-  Future<void> setOnRoutePlanSearchListener(com_amap_api_services_route_RouteSearch_OnRoutePlanSearchListener var1) async {
-    // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.interfaces.IRouteSearch@$refId::setOnRoutePlanSearchListener([])');
-    }
-  
-    // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IRouteSearch::setOnRoutePlanSearchListener', {"refId": refId});
-  
-  
-    // handle native call
-    MethodChannel('com.amap.api.services.interfaces.IRouteSearch::setOnRoutePlanSearchListener::Callback')
-        .setMethodCallHandler((methodCall) async {
-          final args = methodCall.arguments as Map;
-          // final refId = args['callerRefId'] as int;
-          // if (refId != this.refId) return;
-  
-          switch (methodCall.method) {
-            case 'Callback::com.amap.api.services.route.RouteSearch.OnRoutePlanSearchListener::onDriveRoutePlanSearched':
-              // print log
-              if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onDriveRoutePlanSearched([\'var2\':${args['var2']}])');
-              }
-        
-              // handle the native call
-              var1?.onDriveRoutePlanSearched((com_amap_api_services_route_DriveRoutePlanResult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify'), args['var2']);
-              break;
-            default:
-              break;
-          }
-        });
-  
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-    
-      return __return__;
+      debugPrint('setOnRoutePlanSearchListener::kNativeObjectPool: $kNativeObjectPool');
     }
   }
   
+  @mustCallSuper
+  Future<com_amap_api_services_route_WalkRouteResult> calculateWalkRoute(com_amap_api_services_route_RouteSearch_WalkRouteQuery var1) {
+    kNativeObjectPool.add(var1);
   
-  Future<com_amap_api_services_route_WalkRouteResult> calculateWalkRoute(com_amap_api_services_route_RouteSearch_WalkRouteQuery var1) async {
-    // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.interfaces.IRouteSearch@$refId::calculateWalkRoute([])');
-    }
-  
-    // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IRouteSearch::calculateWalkRoute', {"var1": var1.refId, "refId": refId});
-  
-  
-    // handle native call
-  
-  
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = com_amap_api_services_route_WalkRouteResult()..refId = __result__..tag__ = 'amap_search_fluttify';
-      kNativeObjectPool.add(__return__);
-      return __return__;
+      debugPrint('calculateWalkRoute::kNativeObjectPool: $kNativeObjectPool');
     }
   }
   
+  @mustCallSuper
+  Future<void> calculateWalkRouteAsyn(com_amap_api_services_route_RouteSearch_WalkRouteQuery var1) {
+    kNativeObjectPool.add(var1);
   
-  Future<void> calculateWalkRouteAsyn(com_amap_api_services_route_RouteSearch_WalkRouteQuery var1) async {
-    // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.interfaces.IRouteSearch@$refId::calculateWalkRouteAsyn([])');
-    }
-  
-    // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IRouteSearch::calculateWalkRouteAsyn', {"var1": var1.refId, "refId": refId});
-  
-  
-    // handle native call
-  
-  
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-    
-      return __return__;
+      debugPrint('calculateWalkRouteAsyn::kNativeObjectPool: $kNativeObjectPool');
     }
   }
   
+  @mustCallSuper
+  Future<com_amap_api_services_route_BusRouteResult> calculateBusRoute(com_amap_api_services_route_RouteSearch_BusRouteQuery var1) {
+    kNativeObjectPool.add(var1);
   
-  Future<com_amap_api_services_route_BusRouteResult> calculateBusRoute(com_amap_api_services_route_RouteSearch_BusRouteQuery var1) async {
-    // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.interfaces.IRouteSearch@$refId::calculateBusRoute([])');
-    }
-  
-    // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IRouteSearch::calculateBusRoute', {"var1": var1.refId, "refId": refId});
-  
-  
-    // handle native call
-  
-  
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = com_amap_api_services_route_BusRouteResult()..refId = __result__..tag__ = 'amap_search_fluttify';
-      kNativeObjectPool.add(__return__);
-      return __return__;
+      debugPrint('calculateBusRoute::kNativeObjectPool: $kNativeObjectPool');
     }
   }
   
+  @mustCallSuper
+  Future<void> calculateBusRouteAsyn(com_amap_api_services_route_RouteSearch_BusRouteQuery var1) {
+    kNativeObjectPool.add(var1);
   
-  Future<void> calculateBusRouteAsyn(com_amap_api_services_route_RouteSearch_BusRouteQuery var1) async {
-    // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.interfaces.IRouteSearch@$refId::calculateBusRouteAsyn([])');
-    }
-  
-    // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IRouteSearch::calculateBusRouteAsyn', {"var1": var1.refId, "refId": refId});
-  
-  
-    // handle native call
-  
-  
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-    
-      return __return__;
+      debugPrint('calculateBusRouteAsyn::kNativeObjectPool: $kNativeObjectPool');
     }
   }
   
+  @mustCallSuper
+  Future<com_amap_api_services_route_DriveRouteResult> calculateDriveRoute(com_amap_api_services_route_RouteSearch_DriveRouteQuery var1) {
+    kNativeObjectPool.add(var1);
   
-  Future<com_amap_api_services_route_DriveRouteResult> calculateDriveRoute(com_amap_api_services_route_RouteSearch_DriveRouteQuery var1) async {
-    // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.interfaces.IRouteSearch@$refId::calculateDriveRoute([])');
-    }
-  
-    // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IRouteSearch::calculateDriveRoute', {"var1": var1.refId, "refId": refId});
-  
-  
-    // handle native call
-  
-  
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = com_amap_api_services_route_DriveRouteResult()..refId = __result__..tag__ = 'amap_search_fluttify';
-      kNativeObjectPool.add(__return__);
-      return __return__;
+      debugPrint('calculateDriveRoute::kNativeObjectPool: $kNativeObjectPool');
     }
   }
   
+  @mustCallSuper
+  Future<void> calculateDriveRouteAsyn(com_amap_api_services_route_RouteSearch_DriveRouteQuery var1) {
+    kNativeObjectPool.add(var1);
   
-  Future<void> calculateDriveRouteAsyn(com_amap_api_services_route_RouteSearch_DriveRouteQuery var1) async {
-    // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.interfaces.IRouteSearch@$refId::calculateDriveRouteAsyn([])');
-    }
-  
-    // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IRouteSearch::calculateDriveRouteAsyn', {"var1": var1.refId, "refId": refId});
-  
-  
-    // handle native call
-  
-  
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-    
-      return __return__;
+      debugPrint('calculateDriveRouteAsyn::kNativeObjectPool: $kNativeObjectPool');
     }
   }
   
+  @mustCallSuper
+  Future<com_amap_api_services_route_RideRouteResult> calculateRideRoute(com_amap_api_services_route_RouteSearch_RideRouteQuery var1) {
+    kNativeObjectPool.add(var1);
   
-  Future<com_amap_api_services_route_RideRouteResult> calculateRideRoute(com_amap_api_services_route_RouteSearch_RideRouteQuery var1) async {
-    // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.interfaces.IRouteSearch@$refId::calculateRideRoute([])');
-    }
-  
-    // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IRouteSearch::calculateRideRoute', {"var1": var1.refId, "refId": refId});
-  
-  
-    // handle native call
-  
-  
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = com_amap_api_services_route_RideRouteResult()..refId = __result__..tag__ = 'amap_search_fluttify';
-      kNativeObjectPool.add(__return__);
-      return __return__;
+      debugPrint('calculateRideRoute::kNativeObjectPool: $kNativeObjectPool');
     }
   }
   
+  @mustCallSuper
+  Future<void> calculateRideRouteAsyn(com_amap_api_services_route_RouteSearch_RideRouteQuery var1) {
+    kNativeObjectPool.add(var1);
   
-  Future<void> calculateRideRouteAsyn(com_amap_api_services_route_RouteSearch_RideRouteQuery var1) async {
-    // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.interfaces.IRouteSearch@$refId::calculateRideRouteAsyn([])');
-    }
-  
-    // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IRouteSearch::calculateRideRouteAsyn', {"var1": var1.refId, "refId": refId});
-  
-  
-    // handle native call
-  
-  
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-    
-      return __return__;
+      debugPrint('calculateRideRouteAsyn::kNativeObjectPool: $kNativeObjectPool');
     }
   }
   
+  @mustCallSuper
+  Future<com_amap_api_services_route_TruckRouteRestult> calculateTruckRoute(com_amap_api_services_route_RouteSearch_TruckRouteQuery var1) {
+    kNativeObjectPool.add(var1);
   
-  Future<com_amap_api_services_route_TruckRouteRestult> calculateTruckRoute(com_amap_api_services_route_RouteSearch_TruckRouteQuery var1) async {
-    // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.interfaces.IRouteSearch@$refId::calculateTruckRoute([])');
-    }
-  
-    // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IRouteSearch::calculateTruckRoute', {"var1": var1.refId, "refId": refId});
-  
-  
-    // handle native call
-  
-  
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = com_amap_api_services_route_TruckRouteRestult()..refId = __result__..tag__ = 'amap_search_fluttify';
-      kNativeObjectPool.add(__return__);
-      return __return__;
+      debugPrint('calculateTruckRoute::kNativeObjectPool: $kNativeObjectPool');
     }
   }
   
+  @mustCallSuper
+  Future<void> calculateTruckRouteAsyn(com_amap_api_services_route_RouteSearch_TruckRouteQuery var1) {
+    kNativeObjectPool.add(var1);
   
-  Future<void> calculateTruckRouteAsyn(com_amap_api_services_route_RouteSearch_TruckRouteQuery var1) async {
-    // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.interfaces.IRouteSearch@$refId::calculateTruckRouteAsyn([])');
-    }
-  
-    // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IRouteSearch::calculateTruckRouteAsyn', {"var1": var1.refId, "refId": refId});
-  
-  
-    // handle native call
-  
-  
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-    
-      return __return__;
+      debugPrint('calculateTruckRouteAsyn::kNativeObjectPool: $kNativeObjectPool');
     }
   }
   
+  @mustCallSuper
+  Future<com_amap_api_services_route_DriveRoutePlanResult> calculateDrivePlan(com_amap_api_services_route_RouteSearch_DrivePlanQuery var1) {
+    kNativeObjectPool.add(var1);
   
-  Future<com_amap_api_services_route_DriveRoutePlanResult> calculateDrivePlan(com_amap_api_services_route_RouteSearch_DrivePlanQuery var1) async {
-    // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.interfaces.IRouteSearch@$refId::calculateDrivePlan([])');
-    }
-  
-    // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IRouteSearch::calculateDrivePlan', {"var1": var1.refId, "refId": refId});
-  
-  
-    // handle native call
-  
-  
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = com_amap_api_services_route_DriveRoutePlanResult()..refId = __result__..tag__ = 'amap_search_fluttify';
-      kNativeObjectPool.add(__return__);
-      return __return__;
+      debugPrint('calculateDrivePlan::kNativeObjectPool: $kNativeObjectPool');
     }
   }
   
+  @mustCallSuper
+  Future<void> calculateDrivePlanAsyn(com_amap_api_services_route_RouteSearch_DrivePlanQuery var1) {
+    kNativeObjectPool.add(var1);
   
-  Future<void> calculateDrivePlanAsyn(com_amap_api_services_route_RouteSearch_DrivePlanQuery var1) async {
-    // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.interfaces.IRouteSearch@$refId::calculateDrivePlanAsyn([])');
-    }
-  
-    // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IRouteSearch::calculateDrivePlanAsyn', {"var1": var1.refId, "refId": refId});
-  
-  
-    // handle native call
-  
-  
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-    
-      return __return__;
+      debugPrint('calculateDrivePlanAsyn::kNativeObjectPool: $kNativeObjectPool');
     }
   }
   

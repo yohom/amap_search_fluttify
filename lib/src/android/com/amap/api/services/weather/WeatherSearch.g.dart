@@ -55,7 +55,7 @@ class com_amap_api_services_weather_WeatherSearch extends java_lang_Object  {
   Future<com_amap_api_services_weather_WeatherSearchQuery> getQuery() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.weather.WeatherSearch@$refId::getQuery([])');
+      debugPrint('fluttify-dart: com.amap.api.services.weather.WeatherSearch@$refId::getQuery([])');
     }
   
     // invoke native method
@@ -79,7 +79,7 @@ class com_amap_api_services_weather_WeatherSearch extends java_lang_Object  {
   Future<void> setQuery(com_amap_api_services_weather_WeatherSearchQuery var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.weather.WeatherSearch@$refId::setQuery([])');
+      debugPrint('fluttify-dart: com.amap.api.services.weather.WeatherSearch@$refId::setQuery([])');
     }
   
     // invoke native method
@@ -103,7 +103,7 @@ class com_amap_api_services_weather_WeatherSearch extends java_lang_Object  {
   Future<void> searchWeatherAsyn() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.weather.WeatherSearch@$refId::searchWeatherAsyn([])');
+      debugPrint('fluttify-dart: com.amap.api.services.weather.WeatherSearch@$refId::searchWeatherAsyn([])');
     }
   
     // invoke native method
@@ -127,7 +127,7 @@ class com_amap_api_services_weather_WeatherSearch extends java_lang_Object  {
   Future<void> setOnWeatherSearchListener(com_amap_api_services_weather_WeatherSearch_OnWeatherSearchListener var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.weather.WeatherSearch@$refId::setOnWeatherSearchListener([])');
+      debugPrint('fluttify-dart: com.amap.api.services.weather.WeatherSearch@$refId::setOnWeatherSearchListener([])');
     }
   
     // invoke native method
@@ -145,7 +145,7 @@ class com_amap_api_services_weather_WeatherSearch extends java_lang_Object  {
             case 'Callback::com.amap.api.services.weather.WeatherSearch.OnWeatherSearchListener::onWeatherLiveSearched':
               // print log
               if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onWeatherLiveSearched([\'var2\':${args['var2']}])');
+                debugPrint('fluttify-dart-callback: onWeatherLiveSearched([\'var2\':${args['var2']}])');
               }
         
               // handle the native call
@@ -154,7 +154,7 @@ class com_amap_api_services_weather_WeatherSearch extends java_lang_Object  {
             case 'Callback::com.amap.api.services.weather.WeatherSearch.OnWeatherSearchListener::onWeatherForecastSearched':
               // print log
               if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onWeatherForecastSearched([\'var2\':${args['var2']}])');
+                debugPrint('fluttify-dart-callback: onWeatherForecastSearched([\'var2\':${args['var2']}])');
               }
         
               // handle the native call

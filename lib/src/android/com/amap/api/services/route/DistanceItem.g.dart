@@ -72,7 +72,7 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
   Future<int> getOriginId() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DistanceItem@$refId::getOriginId([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DistanceItem@$refId::getOriginId([])');
     }
   
     // invoke native method
@@ -96,7 +96,7 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
   Future<int> getDestId() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DistanceItem@$refId::getDestId([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DistanceItem@$refId::getDestId([])');
     }
   
     // invoke native method
@@ -120,7 +120,7 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
   Future<double> getDistance() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DistanceItem@$refId::getDistance([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DistanceItem@$refId::getDistance([])');
     }
   
     // invoke native method
@@ -144,7 +144,7 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
   Future<double> getDuration() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DistanceItem@$refId::getDuration([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DistanceItem@$refId::getDuration([])');
     }
   
     // invoke native method
@@ -168,7 +168,7 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
   Future<String> getErrorInfo() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DistanceItem@$refId::getErrorInfo([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DistanceItem@$refId::getErrorInfo([])');
     }
   
     // invoke native method
@@ -192,7 +192,7 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
   Future<int> getErrorCode() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DistanceItem@$refId::getErrorCode([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DistanceItem@$refId::getErrorCode([])');
     }
   
     // invoke native method
@@ -216,7 +216,7 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
   Future<void> setOriginId(int var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DistanceItem@$refId::setOriginId([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DistanceItem@$refId::setOriginId([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -240,7 +240,7 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
   Future<void> setDestId(int var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DistanceItem@$refId::setDestId([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DistanceItem@$refId::setDestId([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -264,7 +264,7 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
   Future<void> setDistance(double var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DistanceItem@$refId::setDistance([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DistanceItem@$refId::setDistance([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -288,7 +288,7 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
   Future<void> setDuration(double var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DistanceItem@$refId::setDuration([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DistanceItem@$refId::setDuration([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -312,7 +312,7 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
   Future<void> setErrorInfo(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DistanceItem@$refId::setErrorInfo([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DistanceItem@$refId::setErrorInfo([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -336,7 +336,7 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
   Future<void> setErrorCode(int var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DistanceItem@$refId::setErrorCode([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DistanceItem@$refId::setErrorCode([\'var1\':$var1])');
     }
   
     // invoke native method

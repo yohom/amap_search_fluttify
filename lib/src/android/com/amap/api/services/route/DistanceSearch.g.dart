@@ -56,7 +56,7 @@ class com_amap_api_services_route_DistanceSearch extends java_lang_Object  {
   Future<void> setDistanceSearchListener(com_amap_api_services_route_DistanceSearch_OnDistanceSearchListener var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DistanceSearch@$refId::setDistanceSearchListener([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DistanceSearch@$refId::setDistanceSearchListener([])');
     }
   
     // invoke native method
@@ -74,7 +74,7 @@ class com_amap_api_services_route_DistanceSearch extends java_lang_Object  {
             case 'Callback::com.amap.api.services.route.DistanceSearch.OnDistanceSearchListener::onDistanceSearched':
               // print log
               if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onDistanceSearched([\'var2\':${args['var2']}])');
+                debugPrint('fluttify-dart-callback: onDistanceSearched([\'var2\':${args['var2']}])');
               }
         
               // handle the native call
@@ -99,7 +99,7 @@ class com_amap_api_services_route_DistanceSearch extends java_lang_Object  {
   Future<com_amap_api_services_route_DistanceResult> calculateRouteDistance(com_amap_api_services_route_DistanceSearch_DistanceQuery var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DistanceSearch@$refId::calculateRouteDistance([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DistanceSearch@$refId::calculateRouteDistance([])');
     }
   
     // invoke native method
@@ -123,7 +123,7 @@ class com_amap_api_services_route_DistanceSearch extends java_lang_Object  {
   Future<void> calculateRouteDistanceAsyn(com_amap_api_services_route_DistanceSearch_DistanceQuery var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DistanceSearch@$refId::calculateRouteDistanceAsyn([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DistanceSearch@$refId::calculateRouteDistanceAsyn([])');
     }
   
     // invoke native method

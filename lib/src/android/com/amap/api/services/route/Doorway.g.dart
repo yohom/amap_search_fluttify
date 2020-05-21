@@ -55,7 +55,7 @@ class com_amap_api_services_route_Doorway extends java_lang_Object with android_
   Future<String> getName() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.Doorway@$refId::getName([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.Doorway@$refId::getName([])');
     }
   
     // invoke native method
@@ -79,7 +79,7 @@ class com_amap_api_services_route_Doorway extends java_lang_Object with android_
   Future<void> setName(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.Doorway@$refId::setName([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.Doorway@$refId::setName([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -103,7 +103,7 @@ class com_amap_api_services_route_Doorway extends java_lang_Object with android_
   Future<com_amap_api_services_core_LatLonPoint> getLatLonPoint() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.Doorway@$refId::getLatLonPoint([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.Doorway@$refId::getLatLonPoint([])');
     }
   
     // invoke native method
@@ -127,7 +127,7 @@ class com_amap_api_services_route_Doorway extends java_lang_Object with android_
   Future<void> setLatLonPoint(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.Doorway@$refId::setLatLonPoint([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.Doorway@$refId::setLatLonPoint([])');
     }
   
     // invoke native method

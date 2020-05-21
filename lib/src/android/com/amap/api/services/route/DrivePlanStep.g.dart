@@ -55,7 +55,7 @@ class com_amap_api_services_route_DrivePlanStep extends java_lang_Object with an
   Future<String> getRoad() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DrivePlanStep@$refId::getRoad([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DrivePlanStep@$refId::getRoad([])');
     }
   
     // invoke native method
@@ -79,7 +79,7 @@ class com_amap_api_services_route_DrivePlanStep extends java_lang_Object with an
   Future<void> setAdCode(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DrivePlanStep@$refId::setAdCode([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DrivePlanStep@$refId::setAdCode([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -103,7 +103,7 @@ class com_amap_api_services_route_DrivePlanStep extends java_lang_Object with an
   Future<String> getAdCode() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DrivePlanStep@$refId::getAdCode([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DrivePlanStep@$refId::getAdCode([])');
     }
   
     // invoke native method
@@ -127,7 +127,7 @@ class com_amap_api_services_route_DrivePlanStep extends java_lang_Object with an
   Future<void> setRoad(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DrivePlanStep@$refId::setRoad([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DrivePlanStep@$refId::setRoad([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -151,7 +151,7 @@ class com_amap_api_services_route_DrivePlanStep extends java_lang_Object with an
   Future<double> getDistance() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DrivePlanStep@$refId::getDistance([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DrivePlanStep@$refId::getDistance([])');
     }
   
     // invoke native method
@@ -175,7 +175,7 @@ class com_amap_api_services_route_DrivePlanStep extends java_lang_Object with an
   Future<void> setDistance(double var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DrivePlanStep@$refId::setDistance([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DrivePlanStep@$refId::setDistance([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -199,7 +199,7 @@ class com_amap_api_services_route_DrivePlanStep extends java_lang_Object with an
   Future<bool> getToll() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DrivePlanStep@$refId::getToll([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DrivePlanStep@$refId::getToll([])');
     }
   
     // invoke native method
@@ -223,7 +223,7 @@ class com_amap_api_services_route_DrivePlanStep extends java_lang_Object with an
   Future<void> setToll(bool var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DrivePlanStep@$refId::setToll([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DrivePlanStep@$refId::setToll([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -247,7 +247,7 @@ class com_amap_api_services_route_DrivePlanStep extends java_lang_Object with an
   Future<List<com_amap_api_services_core_LatLonPoint>> getPolyline() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DrivePlanStep@$refId::getPolyline([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DrivePlanStep@$refId::getPolyline([])');
     }
   
     // invoke native method
@@ -271,7 +271,7 @@ class com_amap_api_services_route_DrivePlanStep extends java_lang_Object with an
   Future<void> setPolyline(List<com_amap_api_services_core_LatLonPoint> var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DrivePlanStep@$refId::setPolyline([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DrivePlanStep@$refId::setPolyline([])');
     }
   
     // invoke native method

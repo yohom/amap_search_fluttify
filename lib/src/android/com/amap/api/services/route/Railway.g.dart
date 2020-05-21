@@ -55,7 +55,7 @@ class com_amap_api_services_route_Railway extends java_lang_Object with android_
   Future<String> getID() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.Railway@$refId::getID([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.Railway@$refId::getID([])');
     }
   
     // invoke native method
@@ -79,7 +79,7 @@ class com_amap_api_services_route_Railway extends java_lang_Object with android_
   Future<String> getName() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.Railway@$refId::getName([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.Railway@$refId::getName([])');
     }
   
     // invoke native method
@@ -103,7 +103,7 @@ class com_amap_api_services_route_Railway extends java_lang_Object with android_
   Future<void> setID(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.Railway@$refId::setID([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.Railway@$refId::setID([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -127,7 +127,7 @@ class com_amap_api_services_route_Railway extends java_lang_Object with android_
   Future<void> setName(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.Railway@$refId::setName([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.Railway@$refId::setName([\'var1\':$var1])');
     }
   
     // invoke native method

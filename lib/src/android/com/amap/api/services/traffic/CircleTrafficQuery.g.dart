@@ -55,7 +55,7 @@ class com_amap_api_services_traffic_CircleTrafficQuery extends java_lang_Object 
   Future<com_amap_api_services_core_LatLonPoint> getCenterPoint() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.traffic.CircleTrafficQuery@$refId::getCenterPoint([])');
+      debugPrint('fluttify-dart: com.amap.api.services.traffic.CircleTrafficQuery@$refId::getCenterPoint([])');
     }
   
     // invoke native method
@@ -79,7 +79,7 @@ class com_amap_api_services_traffic_CircleTrafficQuery extends java_lang_Object 
   Future<void> setCenterPoint(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.traffic.CircleTrafficQuery@$refId::setCenterPoint([])');
+      debugPrint('fluttify-dart: com.amap.api.services.traffic.CircleTrafficQuery@$refId::setCenterPoint([])');
     }
   
     // invoke native method
@@ -103,7 +103,7 @@ class com_amap_api_services_traffic_CircleTrafficQuery extends java_lang_Object 
   Future<int> getRadius() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.traffic.CircleTrafficQuery@$refId::getRadius([])');
+      debugPrint('fluttify-dart: com.amap.api.services.traffic.CircleTrafficQuery@$refId::getRadius([])');
     }
   
     // invoke native method
@@ -127,7 +127,7 @@ class com_amap_api_services_traffic_CircleTrafficQuery extends java_lang_Object 
   Future<void> setRadius(int var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.traffic.CircleTrafficQuery@$refId::setRadius([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.traffic.CircleTrafficQuery@$refId::setRadius([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -151,7 +151,7 @@ class com_amap_api_services_traffic_CircleTrafficQuery extends java_lang_Object 
   Future<com_amap_api_services_traffic_CircleTrafficQuery> clone() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.traffic.CircleTrafficQuery@$refId::clone([])');
+      debugPrint('fluttify-dart: com.amap.api.services.traffic.CircleTrafficQuery@$refId::clone([])');
     }
   
     // invoke native method

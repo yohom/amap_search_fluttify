@@ -55,7 +55,7 @@ class com_amap_api_services_geocoder_GeocodeResult extends java_lang_Object  {
   Future<com_amap_api_services_geocoder_GeocodeQuery> getGeocodeQuery() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.geocoder.GeocodeResult@$refId::getGeocodeQuery([])');
+      debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeResult@$refId::getGeocodeQuery([])');
     }
   
     // invoke native method
@@ -79,7 +79,7 @@ class com_amap_api_services_geocoder_GeocodeResult extends java_lang_Object  {
   Future<void> setGeocodeQuery(com_amap_api_services_geocoder_GeocodeQuery var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.geocoder.GeocodeResult@$refId::setGeocodeQuery([])');
+      debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeResult@$refId::setGeocodeQuery([])');
     }
   
     // invoke native method
@@ -103,7 +103,7 @@ class com_amap_api_services_geocoder_GeocodeResult extends java_lang_Object  {
   Future<List<com_amap_api_services_geocoder_GeocodeAddress>> getGeocodeAddressList() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.geocoder.GeocodeResult@$refId::getGeocodeAddressList([])');
+      debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeResult@$refId::getGeocodeAddressList([])');
     }
   
     // invoke native method
@@ -127,7 +127,7 @@ class com_amap_api_services_geocoder_GeocodeResult extends java_lang_Object  {
   Future<void> setGeocodeAddressList(List<com_amap_api_services_geocoder_GeocodeAddress> var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.geocoder.GeocodeResult@$refId::setGeocodeAddressList([])');
+      debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeResult@$refId::setGeocodeAddressList([])');
     }
   
     // invoke native method

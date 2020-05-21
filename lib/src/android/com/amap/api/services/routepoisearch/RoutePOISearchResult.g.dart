@@ -55,7 +55,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearchResult extends java_lan
   Future<List<com_amap_api_services_routepoisearch_RoutePOIItem>> getRoutePois() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOISearchResult@$refId::getRoutePois([])');
+      debugPrint('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOISearchResult@$refId::getRoutePois([])');
     }
   
     // invoke native method
@@ -79,7 +79,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearchResult extends java_lan
   Future<com_amap_api_services_routepoisearch_RoutePOISearchQuery> getQuery() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOISearchResult@$refId::getQuery([])');
+      debugPrint('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOISearchResult@$refId::getQuery([])');
     }
   
     // invoke native method

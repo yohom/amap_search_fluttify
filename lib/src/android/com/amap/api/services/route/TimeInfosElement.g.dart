@@ -55,7 +55,7 @@ class com_amap_api_services_route_TimeInfosElement extends java_lang_Object with
   Future<int> getPathindex() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.TimeInfosElement@$refId::getPathindex([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.TimeInfosElement@$refId::getPathindex([])');
     }
   
     // invoke native method
@@ -79,7 +79,7 @@ class com_amap_api_services_route_TimeInfosElement extends java_lang_Object with
   Future<void> setPathindex(int var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.TimeInfosElement@$refId::setPathindex([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.TimeInfosElement@$refId::setPathindex([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -103,7 +103,7 @@ class com_amap_api_services_route_TimeInfosElement extends java_lang_Object with
   Future<double> getDuration() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.TimeInfosElement@$refId::getDuration([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.TimeInfosElement@$refId::getDuration([])');
     }
   
     // invoke native method
@@ -127,7 +127,7 @@ class com_amap_api_services_route_TimeInfosElement extends java_lang_Object with
   Future<void> setDuration(double var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.TimeInfosElement@$refId::setDuration([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.TimeInfosElement@$refId::setDuration([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -151,7 +151,7 @@ class com_amap_api_services_route_TimeInfosElement extends java_lang_Object with
   Future<double> getTolls() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.TimeInfosElement@$refId::getTolls([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.TimeInfosElement@$refId::getTolls([])');
     }
   
     // invoke native method
@@ -175,7 +175,7 @@ class com_amap_api_services_route_TimeInfosElement extends java_lang_Object with
   Future<void> setTolls(double var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.TimeInfosElement@$refId::setTolls([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.TimeInfosElement@$refId::setTolls([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -199,7 +199,7 @@ class com_amap_api_services_route_TimeInfosElement extends java_lang_Object with
   Future<int> getRestriction() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.TimeInfosElement@$refId::getRestriction([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.TimeInfosElement@$refId::getRestriction([])');
     }
   
     // invoke native method
@@ -223,7 +223,7 @@ class com_amap_api_services_route_TimeInfosElement extends java_lang_Object with
   Future<void> setRestriction(int var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.TimeInfosElement@$refId::setRestriction([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.TimeInfosElement@$refId::setRestriction([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -247,7 +247,7 @@ class com_amap_api_services_route_TimeInfosElement extends java_lang_Object with
   Future<void> setTMCs(List<com_amap_api_services_route_TMC> var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.TimeInfosElement@$refId::setTMCs([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.TimeInfosElement@$refId::setTMCs([])');
     }
   
     // invoke native method
@@ -271,7 +271,7 @@ class com_amap_api_services_route_TimeInfosElement extends java_lang_Object with
   Future<List<com_amap_api_services_route_TMC>> getTMCs() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.TimeInfosElement@$refId::getTMCs([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.TimeInfosElement@$refId::getTMCs([])');
     }
   
     // invoke native method

@@ -55,7 +55,7 @@ class com_amap_api_services_route_RouteSearchCity extends com_amap_api_services_
   Future<List<com_amap_api_services_route_District>> getDistricts() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RouteSearchCity@$refId::getDistricts([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearchCity@$refId::getDistricts([])');
     }
   
     // invoke native method
@@ -79,7 +79,7 @@ class com_amap_api_services_route_RouteSearchCity extends com_amap_api_services_
   Future<void> setDistricts(List<com_amap_api_services_route_District> var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RouteSearchCity@$refId::setDistricts([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearchCity@$refId::setDistricts([])');
     }
   
     // invoke native method

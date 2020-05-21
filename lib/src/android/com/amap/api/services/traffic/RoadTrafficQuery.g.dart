@@ -55,7 +55,7 @@ class com_amap_api_services_traffic_RoadTrafficQuery extends java_lang_Object wi
   Future<String> getName() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.traffic.RoadTrafficQuery@$refId::getName([])');
+      debugPrint('fluttify-dart: com.amap.api.services.traffic.RoadTrafficQuery@$refId::getName([])');
     }
   
     // invoke native method
@@ -79,7 +79,7 @@ class com_amap_api_services_traffic_RoadTrafficQuery extends java_lang_Object wi
   Future<void> setName(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.traffic.RoadTrafficQuery@$refId::setName([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.traffic.RoadTrafficQuery@$refId::setName([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -103,7 +103,7 @@ class com_amap_api_services_traffic_RoadTrafficQuery extends java_lang_Object wi
   Future<String> getAdCode() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.traffic.RoadTrafficQuery@$refId::getAdCode([])');
+      debugPrint('fluttify-dart: com.amap.api.services.traffic.RoadTrafficQuery@$refId::getAdCode([])');
     }
   
     // invoke native method
@@ -127,7 +127,7 @@ class com_amap_api_services_traffic_RoadTrafficQuery extends java_lang_Object wi
   Future<void> setAdCode(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.traffic.RoadTrafficQuery@$refId::setAdCode([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.traffic.RoadTrafficQuery@$refId::setAdCode([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -151,7 +151,7 @@ class com_amap_api_services_traffic_RoadTrafficQuery extends java_lang_Object wi
   Future<com_amap_api_services_traffic_RoadTrafficQuery> clone() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.traffic.RoadTrafficQuery@$refId::clone([])');
+      debugPrint('fluttify-dart: com.amap.api.services.traffic.RoadTrafficQuery@$refId::clone([])');
     }
   
     // invoke native method

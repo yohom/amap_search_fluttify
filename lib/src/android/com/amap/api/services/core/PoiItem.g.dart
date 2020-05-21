@@ -55,7 +55,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   Future<String> getBusinessArea() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getBusinessArea([])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getBusinessArea([])');
     }
   
     // invoke native method
@@ -79,7 +79,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   Future<void> setBusinessArea(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setBusinessArea([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setBusinessArea([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -103,7 +103,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   Future<String> getAdName() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getAdName([])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getAdName([])');
     }
   
     // invoke native method
@@ -127,7 +127,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   Future<void> setAdName(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setAdName([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setAdName([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -151,7 +151,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   Future<String> getCityName() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getCityName([])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getCityName([])');
     }
   
     // invoke native method
@@ -175,7 +175,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   Future<void> setCityName(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setCityName([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setCityName([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -199,7 +199,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   Future<String> getProvinceName() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getProvinceName([])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getProvinceName([])');
     }
   
     // invoke native method
@@ -223,7 +223,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   Future<void> setProvinceName(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setProvinceName([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setProvinceName([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -247,7 +247,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   Future<String> getTypeDes() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getTypeDes([])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getTypeDes([])');
     }
   
     // invoke native method
@@ -271,7 +271,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   Future<void> setTypeDes(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setTypeDes([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setTypeDes([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -295,7 +295,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   Future<String> getTel() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getTel([])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getTel([])');
     }
   
     // invoke native method
@@ -319,7 +319,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   Future<void> setTel(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setTel([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setTel([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -343,7 +343,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   Future<String> getAdCode() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getAdCode([])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getAdCode([])');
     }
   
     // invoke native method
@@ -367,7 +367,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   Future<void> setAdCode(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setAdCode([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setAdCode([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -391,7 +391,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   Future<String> getPoiId() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getPoiId([])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getPoiId([])');
     }
   
     // invoke native method
@@ -415,7 +415,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   Future<int> getDistance() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getDistance([])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getDistance([])');
     }
   
     // invoke native method
@@ -439,7 +439,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   Future<void> setDistance(int var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setDistance([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setDistance([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -463,7 +463,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   Future<String> getTitle() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getTitle([])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getTitle([])');
     }
   
     // invoke native method
@@ -487,7 +487,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   Future<String> getSnippet() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getSnippet([])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getSnippet([])');
     }
   
     // invoke native method
@@ -511,7 +511,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   Future<com_amap_api_services_core_LatLonPoint> getLatLonPoint() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getLatLonPoint([])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getLatLonPoint([])');
     }
   
     // invoke native method
@@ -535,7 +535,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   Future<String> getCityCode() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getCityCode([])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getCityCode([])');
     }
   
     // invoke native method
@@ -559,7 +559,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   Future<void> setCityCode(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setCityCode([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setCityCode([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -583,7 +583,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   Future<com_amap_api_services_core_LatLonPoint> getEnter() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getEnter([])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getEnter([])');
     }
   
     // invoke native method
@@ -607,7 +607,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   Future<void> setEnter(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setEnter([])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setEnter([])');
     }
   
     // invoke native method
@@ -631,7 +631,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   Future<com_amap_api_services_core_LatLonPoint> getExit() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getExit([])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getExit([])');
     }
   
     // invoke native method
@@ -655,7 +655,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   Future<void> setExit(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setExit([])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setExit([])');
     }
   
     // invoke native method
@@ -679,7 +679,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   Future<String> getWebsite() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getWebsite([])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getWebsite([])');
     }
   
     // invoke native method
@@ -703,7 +703,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   Future<void> setWebsite(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setWebsite([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setWebsite([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -727,7 +727,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   Future<String> getPostcode() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getPostcode([])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getPostcode([])');
     }
   
     // invoke native method
@@ -751,7 +751,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   Future<void> setPostcode(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setPostcode([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setPostcode([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -775,7 +775,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   Future<String> getEmail() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getEmail([])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getEmail([])');
     }
   
     // invoke native method
@@ -799,7 +799,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   Future<void> setEmail(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setEmail([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setEmail([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -823,7 +823,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   Future<String> getDirection() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getDirection([])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getDirection([])');
     }
   
     // invoke native method
@@ -847,7 +847,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   Future<void> setDirection(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setDirection([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setDirection([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -871,7 +871,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   Future<void> setIndoorMap(bool var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setIndoorMap([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setIndoorMap([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -895,7 +895,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   Future<bool> isIndoorMap() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::isIndoorMap([])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::isIndoorMap([])');
     }
   
     // invoke native method
@@ -919,7 +919,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   Future<void> setProvinceCode(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setProvinceCode([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setProvinceCode([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -943,7 +943,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   Future<String> getProvinceCode() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getProvinceCode([])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getProvinceCode([])');
     }
   
     // invoke native method
@@ -967,7 +967,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   Future<void> setParkingType(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setParkingType([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setParkingType([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -991,7 +991,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   Future<String> getParkingType() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getParkingType([])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getParkingType([])');
     }
   
     // invoke native method
@@ -1015,7 +1015,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   Future<void> setSubPois(List<com_amap_api_services_poisearch_SubPoiItem> var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setSubPois([])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setSubPois([])');
     }
   
     // invoke native method
@@ -1039,7 +1039,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   Future<List<com_amap_api_services_poisearch_SubPoiItem>> getSubPois() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getSubPois([])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getSubPois([])');
     }
   
     // invoke native method
@@ -1063,7 +1063,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   Future<com_amap_api_services_poisearch_IndoorData> getIndoorData() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getIndoorData([])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getIndoorData([])');
     }
   
     // invoke native method
@@ -1087,7 +1087,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   Future<void> setIndoorDate(com_amap_api_services_poisearch_IndoorData var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setIndoorDate([])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setIndoorDate([])');
     }
   
     // invoke native method
@@ -1111,7 +1111,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   Future<List<com_amap_api_services_poisearch_Photo>> getPhotos() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getPhotos([])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getPhotos([])');
     }
   
     // invoke native method
@@ -1135,7 +1135,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   Future<void> setPhotos(List<com_amap_api_services_poisearch_Photo> var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setPhotos([])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setPhotos([])');
     }
   
     // invoke native method
@@ -1159,7 +1159,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   Future<com_amap_api_services_poisearch_PoiItemExtension> getPoiExtension() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getPoiExtension([])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getPoiExtension([])');
     }
   
     // invoke native method
@@ -1183,7 +1183,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   Future<void> setPoiExtension(com_amap_api_services_poisearch_PoiItemExtension var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setPoiExtension([])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setPoiExtension([])');
     }
   
     // invoke native method
@@ -1207,7 +1207,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   Future<String> getTypeCode() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getTypeCode([])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getTypeCode([])');
     }
   
     // invoke native method
@@ -1231,7 +1231,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   Future<void> setTypeCode(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setTypeCode([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setTypeCode([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -1255,7 +1255,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   Future<String> getShopID() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getShopID([])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getShopID([])');
     }
   
     // invoke native method
@@ -1279,7 +1279,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   Future<void> setShopID(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setShopID([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setShopID([\'var1\':$var1])');
     }
   
     // invoke native method

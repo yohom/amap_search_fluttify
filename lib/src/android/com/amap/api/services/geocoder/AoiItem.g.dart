@@ -55,7 +55,7 @@ class com_amap_api_services_geocoder_AoiItem extends java_lang_Object with andro
   Future<String> getAoiId() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.geocoder.AoiItem@$refId::getAoiId([])');
+      debugPrint('fluttify-dart: com.amap.api.services.geocoder.AoiItem@$refId::getAoiId([])');
     }
   
     // invoke native method
@@ -79,7 +79,7 @@ class com_amap_api_services_geocoder_AoiItem extends java_lang_Object with andro
   Future<String> getAoiName() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.geocoder.AoiItem@$refId::getAoiName([])');
+      debugPrint('fluttify-dart: com.amap.api.services.geocoder.AoiItem@$refId::getAoiName([])');
     }
   
     // invoke native method
@@ -103,7 +103,7 @@ class com_amap_api_services_geocoder_AoiItem extends java_lang_Object with andro
   Future<String> getAdCode() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.geocoder.AoiItem@$refId::getAdCode([])');
+      debugPrint('fluttify-dart: com.amap.api.services.geocoder.AoiItem@$refId::getAdCode([])');
     }
   
     // invoke native method
@@ -127,7 +127,7 @@ class com_amap_api_services_geocoder_AoiItem extends java_lang_Object with andro
   Future<com_amap_api_services_core_LatLonPoint> getAoiCenterPoint() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.geocoder.AoiItem@$refId::getAoiCenterPoint([])');
+      debugPrint('fluttify-dart: com.amap.api.services.geocoder.AoiItem@$refId::getAoiCenterPoint([])');
     }
   
     // invoke native method
@@ -151,7 +151,7 @@ class com_amap_api_services_geocoder_AoiItem extends java_lang_Object with andro
   Future<double> getAoiArea() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.geocoder.AoiItem@$refId::getAoiArea([])');
+      debugPrint('fluttify-dart: com.amap.api.services.geocoder.AoiItem@$refId::getAoiArea([])');
     }
   
     // invoke native method
@@ -175,7 +175,7 @@ class com_amap_api_services_geocoder_AoiItem extends java_lang_Object with andro
   Future<void> setId(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.geocoder.AoiItem@$refId::setId([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.geocoder.AoiItem@$refId::setId([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -199,7 +199,7 @@ class com_amap_api_services_geocoder_AoiItem extends java_lang_Object with andro
   Future<void> setName(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.geocoder.AoiItem@$refId::setName([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.geocoder.AoiItem@$refId::setName([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -223,7 +223,7 @@ class com_amap_api_services_geocoder_AoiItem extends java_lang_Object with andro
   Future<void> setAdcode(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.geocoder.AoiItem@$refId::setAdcode([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.geocoder.AoiItem@$refId::setAdcode([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -247,7 +247,7 @@ class com_amap_api_services_geocoder_AoiItem extends java_lang_Object with andro
   Future<void> setLocation(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.geocoder.AoiItem@$refId::setLocation([])');
+      debugPrint('fluttify-dart: com.amap.api.services.geocoder.AoiItem@$refId::setLocation([])');
     }
   
     // invoke native method
@@ -271,7 +271,7 @@ class com_amap_api_services_geocoder_AoiItem extends java_lang_Object with andro
   Future<void> setArea(double var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.geocoder.AoiItem@$refId::setArea([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.geocoder.AoiItem@$refId::setArea([\'var1\':$var1])');
     }
   
     // invoke native method

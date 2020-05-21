@@ -37,7 +37,7 @@ class com_amap_api_services_cloud_CloudResult extends java_lang_Object  {
   static Future<com_amap_api_services_cloud_CloudResult> createPagedResult(com_amap_api_services_cloud_CloudSearch_Query var0, int var1, com_amap_api_services_cloud_CloudSearch_SearchBound var2, int var3, List<com_amap_api_services_cloud_CloudItem> var4) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.cloud.CloudResult::createPagedResult([\'var1\':$var1, \'var3\':$var3])');
+      debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudResult::createPagedResult([\'var1\':$var1, \'var3\':$var3])');
     }
   
     // invoke native method
@@ -61,7 +61,7 @@ class com_amap_api_services_cloud_CloudResult extends java_lang_Object  {
   Future<int> getPageCount() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.cloud.CloudResult@$refId::getPageCount([])');
+      debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudResult@$refId::getPageCount([])');
     }
   
     // invoke native method
@@ -85,7 +85,7 @@ class com_amap_api_services_cloud_CloudResult extends java_lang_Object  {
   Future<com_amap_api_services_cloud_CloudSearch_Query> getQuery() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.cloud.CloudResult@$refId::getQuery([])');
+      debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudResult@$refId::getQuery([])');
     }
   
     // invoke native method
@@ -109,7 +109,7 @@ class com_amap_api_services_cloud_CloudResult extends java_lang_Object  {
   Future<com_amap_api_services_cloud_CloudSearch_SearchBound> getBound() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.cloud.CloudResult@$refId::getBound([])');
+      debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudResult@$refId::getBound([])');
     }
   
     // invoke native method
@@ -133,7 +133,7 @@ class com_amap_api_services_cloud_CloudResult extends java_lang_Object  {
   Future<List<com_amap_api_services_cloud_CloudItem>> getClouds() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.cloud.CloudResult@$refId::getClouds([])');
+      debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudResult@$refId::getClouds([])');
     }
   
     // invoke native method
@@ -157,7 +157,7 @@ class com_amap_api_services_cloud_CloudResult extends java_lang_Object  {
   Future<int> getTotalCount() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.cloud.CloudResult@$refId::getTotalCount([])');
+      debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudResult@$refId::getTotalCount([])');
     }
   
     // invoke native method

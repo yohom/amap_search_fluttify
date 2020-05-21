@@ -55,7 +55,7 @@ class com_amap_api_services_route_DriveStep extends java_lang_Object with androi
   Future<String> getInstruction() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::getInstruction([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::getInstruction([])');
     }
   
     // invoke native method
@@ -79,7 +79,7 @@ class com_amap_api_services_route_DriveStep extends java_lang_Object with androi
   Future<void> setInstruction(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::setInstruction([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::setInstruction([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -103,7 +103,7 @@ class com_amap_api_services_route_DriveStep extends java_lang_Object with androi
   Future<String> getOrientation() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::getOrientation([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::getOrientation([])');
     }
   
     // invoke native method
@@ -127,7 +127,7 @@ class com_amap_api_services_route_DriveStep extends java_lang_Object with androi
   Future<void> setOrientation(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::setOrientation([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::setOrientation([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -151,7 +151,7 @@ class com_amap_api_services_route_DriveStep extends java_lang_Object with androi
   Future<String> getRoad() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::getRoad([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::getRoad([])');
     }
   
     // invoke native method
@@ -175,7 +175,7 @@ class com_amap_api_services_route_DriveStep extends java_lang_Object with androi
   Future<void> setRoad(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::setRoad([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::setRoad([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -199,7 +199,7 @@ class com_amap_api_services_route_DriveStep extends java_lang_Object with androi
   Future<double> getDistance() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::getDistance([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::getDistance([])');
     }
   
     // invoke native method
@@ -223,7 +223,7 @@ class com_amap_api_services_route_DriveStep extends java_lang_Object with androi
   Future<void> setDistance(double var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::setDistance([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::setDistance([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -247,7 +247,7 @@ class com_amap_api_services_route_DriveStep extends java_lang_Object with androi
   Future<double> getTolls() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::getTolls([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::getTolls([])');
     }
   
     // invoke native method
@@ -271,7 +271,7 @@ class com_amap_api_services_route_DriveStep extends java_lang_Object with androi
   Future<void> setTolls(double var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::setTolls([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::setTolls([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -295,7 +295,7 @@ class com_amap_api_services_route_DriveStep extends java_lang_Object with androi
   Future<double> getTollDistance() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::getTollDistance([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::getTollDistance([])');
     }
   
     // invoke native method
@@ -319,7 +319,7 @@ class com_amap_api_services_route_DriveStep extends java_lang_Object with androi
   Future<void> setTollDistance(double var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::setTollDistance([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::setTollDistance([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -343,7 +343,7 @@ class com_amap_api_services_route_DriveStep extends java_lang_Object with androi
   Future<String> getTollRoad() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::getTollRoad([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::getTollRoad([])');
     }
   
     // invoke native method
@@ -367,7 +367,7 @@ class com_amap_api_services_route_DriveStep extends java_lang_Object with androi
   Future<void> setTollRoad(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::setTollRoad([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::setTollRoad([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -391,7 +391,7 @@ class com_amap_api_services_route_DriveStep extends java_lang_Object with androi
   Future<double> getDuration() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::getDuration([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::getDuration([])');
     }
   
     // invoke native method
@@ -415,7 +415,7 @@ class com_amap_api_services_route_DriveStep extends java_lang_Object with androi
   Future<void> setDuration(double var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::setDuration([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::setDuration([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -439,7 +439,7 @@ class com_amap_api_services_route_DriveStep extends java_lang_Object with androi
   Future<List<com_amap_api_services_core_LatLonPoint>> getPolyline() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::getPolyline([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::getPolyline([])');
     }
   
     // invoke native method
@@ -463,7 +463,7 @@ class com_amap_api_services_route_DriveStep extends java_lang_Object with androi
   Future<void> setPolyline(List<com_amap_api_services_core_LatLonPoint> var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::setPolyline([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::setPolyline([])');
     }
   
     // invoke native method
@@ -487,7 +487,7 @@ class com_amap_api_services_route_DriveStep extends java_lang_Object with androi
   Future<String> getAction() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::getAction([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::getAction([])');
     }
   
     // invoke native method
@@ -511,7 +511,7 @@ class com_amap_api_services_route_DriveStep extends java_lang_Object with androi
   Future<void> setAction(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::setAction([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::setAction([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -535,7 +535,7 @@ class com_amap_api_services_route_DriveStep extends java_lang_Object with androi
   Future<String> getAssistantAction() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::getAssistantAction([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::getAssistantAction([])');
     }
   
     // invoke native method
@@ -559,7 +559,7 @@ class com_amap_api_services_route_DriveStep extends java_lang_Object with androi
   Future<void> setAssistantAction(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::setAssistantAction([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::setAssistantAction([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -583,7 +583,7 @@ class com_amap_api_services_route_DriveStep extends java_lang_Object with androi
   Future<List<com_amap_api_services_route_RouteSearchCity>> getRouteSearchCityList() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::getRouteSearchCityList([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::getRouteSearchCityList([])');
     }
   
     // invoke native method
@@ -607,7 +607,7 @@ class com_amap_api_services_route_DriveStep extends java_lang_Object with androi
   Future<void> setRouteSearchCityList(List<com_amap_api_services_route_RouteSearchCity> var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::setRouteSearchCityList([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::setRouteSearchCityList([])');
     }
   
     // invoke native method
@@ -631,7 +631,7 @@ class com_amap_api_services_route_DriveStep extends java_lang_Object with androi
   Future<List<com_amap_api_services_route_TMC>> getTMCs() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::getTMCs([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::getTMCs([])');
     }
   
     // invoke native method
@@ -655,7 +655,7 @@ class com_amap_api_services_route_DriveStep extends java_lang_Object with androi
   Future<void> setTMCs(List<com_amap_api_services_route_TMC> var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::setTMCs([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::setTMCs([])');
     }
   
     // invoke native method

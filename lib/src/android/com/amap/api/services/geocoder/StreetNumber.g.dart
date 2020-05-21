@@ -55,7 +55,7 @@ class com_amap_api_services_geocoder_StreetNumber extends java_lang_Object with 
   Future<String> getStreet() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.geocoder.StreetNumber@$refId::getStreet([])');
+      debugPrint('fluttify-dart: com.amap.api.services.geocoder.StreetNumber@$refId::getStreet([])');
     }
   
     // invoke native method
@@ -79,7 +79,7 @@ class com_amap_api_services_geocoder_StreetNumber extends java_lang_Object with 
   Future<void> setStreet(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.geocoder.StreetNumber@$refId::setStreet([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.geocoder.StreetNumber@$refId::setStreet([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -103,7 +103,7 @@ class com_amap_api_services_geocoder_StreetNumber extends java_lang_Object with 
   Future<String> getNumber() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.geocoder.StreetNumber@$refId::getNumber([])');
+      debugPrint('fluttify-dart: com.amap.api.services.geocoder.StreetNumber@$refId::getNumber([])');
     }
   
     // invoke native method
@@ -127,7 +127,7 @@ class com_amap_api_services_geocoder_StreetNumber extends java_lang_Object with 
   Future<void> setNumber(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.geocoder.StreetNumber@$refId::setNumber([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.geocoder.StreetNumber@$refId::setNumber([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -151,7 +151,7 @@ class com_amap_api_services_geocoder_StreetNumber extends java_lang_Object with 
   Future<com_amap_api_services_core_LatLonPoint> getLatLonPoint() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.geocoder.StreetNumber@$refId::getLatLonPoint([])');
+      debugPrint('fluttify-dart: com.amap.api.services.geocoder.StreetNumber@$refId::getLatLonPoint([])');
     }
   
     // invoke native method
@@ -175,7 +175,7 @@ class com_amap_api_services_geocoder_StreetNumber extends java_lang_Object with 
   Future<void> setLatLonPoint(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.geocoder.StreetNumber@$refId::setLatLonPoint([])');
+      debugPrint('fluttify-dart: com.amap.api.services.geocoder.StreetNumber@$refId::setLatLonPoint([])');
     }
   
     // invoke native method
@@ -199,7 +199,7 @@ class com_amap_api_services_geocoder_StreetNumber extends java_lang_Object with 
   Future<String> getDirection() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.geocoder.StreetNumber@$refId::getDirection([])');
+      debugPrint('fluttify-dart: com.amap.api.services.geocoder.StreetNumber@$refId::getDirection([])');
     }
   
     // invoke native method
@@ -223,7 +223,7 @@ class com_amap_api_services_geocoder_StreetNumber extends java_lang_Object with 
   Future<void> setDirection(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.geocoder.StreetNumber@$refId::setDirection([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.geocoder.StreetNumber@$refId::setDirection([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -247,7 +247,7 @@ class com_amap_api_services_geocoder_StreetNumber extends java_lang_Object with 
   Future<double> getDistance() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.geocoder.StreetNumber@$refId::getDistance([])');
+      debugPrint('fluttify-dart: com.amap.api.services.geocoder.StreetNumber@$refId::getDistance([])');
     }
   
     // invoke native method
@@ -271,7 +271,7 @@ class com_amap_api_services_geocoder_StreetNumber extends java_lang_Object with 
   Future<void> setDistance(double var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.geocoder.StreetNumber@$refId::setDistance([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.geocoder.StreetNumber@$refId::setDistance([\'var1\':$var1])');
     }
   
     // invoke native method

@@ -74,7 +74,7 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
   Future<com_amap_api_services_core_LatLonPoint> getFrom() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::getFrom([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::getFrom([])');
     }
   
     // invoke native method
@@ -98,7 +98,7 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
   Future<com_amap_api_services_core_LatLonPoint> getTo() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::getTo([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::getTo([])');
     }
   
     // invoke native method
@@ -122,7 +122,7 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
   Future<String> getStartPoiID() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::getStartPoiID([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::getStartPoiID([])');
     }
   
     // invoke native method
@@ -146,7 +146,7 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
   Future<void> setStartPoiID(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::setStartPoiID([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::setStartPoiID([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -170,7 +170,7 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
   Future<String> getDestinationPoiID() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::getDestinationPoiID([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::getDestinationPoiID([])');
     }
   
     // invoke native method
@@ -194,7 +194,7 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
   Future<void> setDestinationPoiID(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::setDestinationPoiID([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::setDestinationPoiID([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -218,7 +218,7 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
   Future<String> getOriginType() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::getOriginType([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::getOriginType([])');
     }
   
     // invoke native method
@@ -242,7 +242,7 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
   Future<void> setOriginType(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::setOriginType([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::setOriginType([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -266,7 +266,7 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
   Future<String> getDestinationType() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::getDestinationType([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::getDestinationType([])');
     }
   
     // invoke native method
@@ -290,7 +290,7 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
   Future<void> setDestinationType(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::setDestinationType([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::setDestinationType([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -314,7 +314,7 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
   Future<String> getPlateProvince() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::getPlateProvince([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::getPlateProvince([])');
     }
   
     // invoke native method
@@ -338,7 +338,7 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
   Future<void> setPlateProvince(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::setPlateProvince([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::setPlateProvince([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -362,7 +362,7 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
   Future<String> getPlateNumber() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::getPlateNumber([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::getPlateNumber([])');
     }
   
     // invoke native method
@@ -386,7 +386,7 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
   Future<void> setPlateNumber(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::setPlateNumber([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::setPlateNumber([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -410,7 +410,7 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
   Future<com_amap_api_services_route_RouteSearch_FromAndTo> clone() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::clone([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::clone([])');
     }
   
     // invoke native method

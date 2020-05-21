@@ -115,7 +115,7 @@ class com_amap_api_services_poisearch_PoiSearch_SearchBound extends java_lang_Ob
   Future<com_amap_api_services_core_LatLonPoint> getLowerLeft() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.SearchBound@$refId::getLowerLeft([])');
+      debugPrint('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.SearchBound@$refId::getLowerLeft([])');
     }
   
     // invoke native method
@@ -139,7 +139,7 @@ class com_amap_api_services_poisearch_PoiSearch_SearchBound extends java_lang_Ob
   Future<com_amap_api_services_core_LatLonPoint> getUpperRight() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.SearchBound@$refId::getUpperRight([])');
+      debugPrint('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.SearchBound@$refId::getUpperRight([])');
     }
   
     // invoke native method
@@ -163,7 +163,7 @@ class com_amap_api_services_poisearch_PoiSearch_SearchBound extends java_lang_Ob
   Future<com_amap_api_services_core_LatLonPoint> getCenter() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.SearchBound@$refId::getCenter([])');
+      debugPrint('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.SearchBound@$refId::getCenter([])');
     }
   
     // invoke native method
@@ -187,7 +187,7 @@ class com_amap_api_services_poisearch_PoiSearch_SearchBound extends java_lang_Ob
   Future<int> getRange() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.SearchBound@$refId::getRange([])');
+      debugPrint('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.SearchBound@$refId::getRange([])');
     }
   
     // invoke native method
@@ -211,7 +211,7 @@ class com_amap_api_services_poisearch_PoiSearch_SearchBound extends java_lang_Ob
   Future<String> getShape() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.SearchBound@$refId::getShape([])');
+      debugPrint('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.SearchBound@$refId::getShape([])');
     }
   
     // invoke native method
@@ -235,7 +235,7 @@ class com_amap_api_services_poisearch_PoiSearch_SearchBound extends java_lang_Ob
   Future<bool> isDistanceSort() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.SearchBound@$refId::isDistanceSort([])');
+      debugPrint('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.SearchBound@$refId::isDistanceSort([])');
     }
   
     // invoke native method
@@ -259,7 +259,7 @@ class com_amap_api_services_poisearch_PoiSearch_SearchBound extends java_lang_Ob
   Future<List<com_amap_api_services_core_LatLonPoint>> getPolyGonList() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.SearchBound@$refId::getPolyGonList([])');
+      debugPrint('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.SearchBound@$refId::getPolyGonList([])');
     }
   
     // invoke native method
@@ -283,7 +283,7 @@ class com_amap_api_services_poisearch_PoiSearch_SearchBound extends java_lang_Ob
   Future<com_amap_api_services_poisearch_PoiSearch_SearchBound> clone() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.SearchBound@$refId::clone([])');
+      debugPrint('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.SearchBound@$refId::clone([])');
     }
   
     // invoke native method

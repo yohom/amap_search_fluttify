@@ -55,7 +55,7 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
   Future<String> getTime() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RouteRailwayItem@$refId::getTime([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RouteRailwayItem@$refId::getTime([])');
     }
   
     // invoke native method
@@ -79,7 +79,7 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
   Future<String> getTrip() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RouteRailwayItem@$refId::getTrip([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RouteRailwayItem@$refId::getTrip([])');
     }
   
     // invoke native method
@@ -103,7 +103,7 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
   Future<double> getDistance() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RouteRailwayItem@$refId::getDistance([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RouteRailwayItem@$refId::getDistance([])');
     }
   
     // invoke native method
@@ -127,7 +127,7 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
   Future<String> getType() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RouteRailwayItem@$refId::getType([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RouteRailwayItem@$refId::getType([])');
     }
   
     // invoke native method
@@ -151,7 +151,7 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
   Future<com_amap_api_services_route_RailwayStationItem> getDeparturestop() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RouteRailwayItem@$refId::getDeparturestop([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RouteRailwayItem@$refId::getDeparturestop([])');
     }
   
     // invoke native method
@@ -175,7 +175,7 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
   Future<com_amap_api_services_route_RailwayStationItem> getArrivalstop() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RouteRailwayItem@$refId::getArrivalstop([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RouteRailwayItem@$refId::getArrivalstop([])');
     }
   
     // invoke native method
@@ -199,7 +199,7 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
   Future<List<com_amap_api_services_route_RailwayStationItem>> getViastops() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RouteRailwayItem@$refId::getViastops([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RouteRailwayItem@$refId::getViastops([])');
     }
   
     // invoke native method
@@ -223,7 +223,7 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
   Future<List<com_amap_api_services_route_Railway>> getAlters() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RouteRailwayItem@$refId::getAlters([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RouteRailwayItem@$refId::getAlters([])');
     }
   
     // invoke native method
@@ -247,7 +247,7 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
   Future<List<com_amap_api_services_route_RailwaySpace>> getSpaces() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RouteRailwayItem@$refId::getSpaces([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RouteRailwayItem@$refId::getSpaces([])');
     }
   
     // invoke native method
@@ -271,7 +271,7 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
   Future<void> setTime(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RouteRailwayItem@$refId::setTime([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RouteRailwayItem@$refId::setTime([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -295,7 +295,7 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
   Future<void> setTrip(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RouteRailwayItem@$refId::setTrip([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RouteRailwayItem@$refId::setTrip([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -319,7 +319,7 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
   Future<void> setDistance(double var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RouteRailwayItem@$refId::setDistance([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RouteRailwayItem@$refId::setDistance([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -343,7 +343,7 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
   Future<void> setType(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RouteRailwayItem@$refId::setType([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RouteRailwayItem@$refId::setType([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -367,7 +367,7 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
   Future<void> setDeparturestop(com_amap_api_services_route_RailwayStationItem var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RouteRailwayItem@$refId::setDeparturestop([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RouteRailwayItem@$refId::setDeparturestop([])');
     }
   
     // invoke native method
@@ -391,7 +391,7 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
   Future<void> setArrivalstop(com_amap_api_services_route_RailwayStationItem var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RouteRailwayItem@$refId::setArrivalstop([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RouteRailwayItem@$refId::setArrivalstop([])');
     }
   
     // invoke native method
@@ -415,7 +415,7 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
   Future<void> setViastops(List<com_amap_api_services_route_RailwayStationItem> var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RouteRailwayItem@$refId::setViastops([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RouteRailwayItem@$refId::setViastops([])');
     }
   
     // invoke native method
@@ -439,7 +439,7 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
   Future<void> setAlters(List<com_amap_api_services_route_Railway> var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RouteRailwayItem@$refId::setAlters([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RouteRailwayItem@$refId::setAlters([])');
     }
   
     // invoke native method
@@ -463,7 +463,7 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
   Future<void> setSpaces(List<com_amap_api_services_route_RailwaySpace> var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RouteRailwayItem@$refId::setSpaces([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RouteRailwayItem@$refId::setSpaces([])');
     }
   
     // invoke native method

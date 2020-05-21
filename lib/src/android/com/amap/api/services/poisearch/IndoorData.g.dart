@@ -55,7 +55,7 @@ class com_amap_api_services_poisearch_IndoorData extends java_lang_Object with a
   Future<String> getPoiId() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.poisearch.IndoorData@$refId::getPoiId([])');
+      debugPrint('fluttify-dart: com.amap.api.services.poisearch.IndoorData@$refId::getPoiId([])');
     }
   
     // invoke native method
@@ -79,7 +79,7 @@ class com_amap_api_services_poisearch_IndoorData extends java_lang_Object with a
   Future<void> setPoiId(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.poisearch.IndoorData@$refId::setPoiId([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.poisearch.IndoorData@$refId::setPoiId([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -103,7 +103,7 @@ class com_amap_api_services_poisearch_IndoorData extends java_lang_Object with a
   Future<int> getFloor() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.poisearch.IndoorData@$refId::getFloor([])');
+      debugPrint('fluttify-dart: com.amap.api.services.poisearch.IndoorData@$refId::getFloor([])');
     }
   
     // invoke native method
@@ -127,7 +127,7 @@ class com_amap_api_services_poisearch_IndoorData extends java_lang_Object with a
   Future<void> setFloor(int var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.poisearch.IndoorData@$refId::setFloor([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.poisearch.IndoorData@$refId::setFloor([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -151,7 +151,7 @@ class com_amap_api_services_poisearch_IndoorData extends java_lang_Object with a
   Future<String> getFloorName() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.poisearch.IndoorData@$refId::getFloorName([])');
+      debugPrint('fluttify-dart: com.amap.api.services.poisearch.IndoorData@$refId::getFloorName([])');
     }
   
     // invoke native method
@@ -175,7 +175,7 @@ class com_amap_api_services_poisearch_IndoorData extends java_lang_Object with a
   Future<void> setFloorName(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.poisearch.IndoorData@$refId::setFloorName([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.poisearch.IndoorData@$refId::setFloorName([\'var1\':$var1])');
     }
   
     // invoke native method

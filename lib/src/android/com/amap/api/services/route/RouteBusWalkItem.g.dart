@@ -55,7 +55,7 @@ class com_amap_api_services_route_RouteBusWalkItem extends com_amap_api_services
   Future<com_amap_api_services_core_LatLonPoint> getOrigin() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RouteBusWalkItem@$refId::getOrigin([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RouteBusWalkItem@$refId::getOrigin([])');
     }
   
     // invoke native method
@@ -79,7 +79,7 @@ class com_amap_api_services_route_RouteBusWalkItem extends com_amap_api_services
   Future<void> setOrigin(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RouteBusWalkItem@$refId::setOrigin([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RouteBusWalkItem@$refId::setOrigin([])');
     }
   
     // invoke native method
@@ -103,7 +103,7 @@ class com_amap_api_services_route_RouteBusWalkItem extends com_amap_api_services
   Future<com_amap_api_services_core_LatLonPoint> getDestination() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RouteBusWalkItem@$refId::getDestination([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RouteBusWalkItem@$refId::getDestination([])');
     }
   
     // invoke native method
@@ -127,7 +127,7 @@ class com_amap_api_services_route_RouteBusWalkItem extends com_amap_api_services
   Future<void> setDestination(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RouteBusWalkItem@$refId::setDestination([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RouteBusWalkItem@$refId::setDestination([])');
     }
   
     // invoke native method

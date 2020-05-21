@@ -55,7 +55,7 @@ class com_amap_api_services_route_WalkStep extends java_lang_Object with android
   Future<String> getInstruction() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.WalkStep@$refId::getInstruction([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.WalkStep@$refId::getInstruction([])');
     }
   
     // invoke native method
@@ -79,7 +79,7 @@ class com_amap_api_services_route_WalkStep extends java_lang_Object with android
   Future<void> setInstruction(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.WalkStep@$refId::setInstruction([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.WalkStep@$refId::setInstruction([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -103,7 +103,7 @@ class com_amap_api_services_route_WalkStep extends java_lang_Object with android
   Future<String> getOrientation() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.WalkStep@$refId::getOrientation([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.WalkStep@$refId::getOrientation([])');
     }
   
     // invoke native method
@@ -127,7 +127,7 @@ class com_amap_api_services_route_WalkStep extends java_lang_Object with android
   Future<void> setOrientation(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.WalkStep@$refId::setOrientation([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.WalkStep@$refId::setOrientation([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -151,7 +151,7 @@ class com_amap_api_services_route_WalkStep extends java_lang_Object with android
   Future<String> getRoad() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.WalkStep@$refId::getRoad([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.WalkStep@$refId::getRoad([])');
     }
   
     // invoke native method
@@ -175,7 +175,7 @@ class com_amap_api_services_route_WalkStep extends java_lang_Object with android
   Future<void> setRoad(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.WalkStep@$refId::setRoad([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.WalkStep@$refId::setRoad([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -199,7 +199,7 @@ class com_amap_api_services_route_WalkStep extends java_lang_Object with android
   Future<double> getDistance() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.WalkStep@$refId::getDistance([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.WalkStep@$refId::getDistance([])');
     }
   
     // invoke native method
@@ -223,7 +223,7 @@ class com_amap_api_services_route_WalkStep extends java_lang_Object with android
   Future<void> setDistance(double var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.WalkStep@$refId::setDistance([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.WalkStep@$refId::setDistance([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -247,7 +247,7 @@ class com_amap_api_services_route_WalkStep extends java_lang_Object with android
   Future<double> getDuration() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.WalkStep@$refId::getDuration([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.WalkStep@$refId::getDuration([])');
     }
   
     // invoke native method
@@ -271,7 +271,7 @@ class com_amap_api_services_route_WalkStep extends java_lang_Object with android
   Future<void> setDuration(double var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.WalkStep@$refId::setDuration([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.WalkStep@$refId::setDuration([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -295,7 +295,7 @@ class com_amap_api_services_route_WalkStep extends java_lang_Object with android
   Future<List<com_amap_api_services_core_LatLonPoint>> getPolyline() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.WalkStep@$refId::getPolyline([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.WalkStep@$refId::getPolyline([])');
     }
   
     // invoke native method
@@ -319,7 +319,7 @@ class com_amap_api_services_route_WalkStep extends java_lang_Object with android
   Future<void> setPolyline(List<com_amap_api_services_core_LatLonPoint> var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.WalkStep@$refId::setPolyline([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.WalkStep@$refId::setPolyline([])');
     }
   
     // invoke native method
@@ -343,7 +343,7 @@ class com_amap_api_services_route_WalkStep extends java_lang_Object with android
   Future<String> getAction() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.WalkStep@$refId::getAction([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.WalkStep@$refId::getAction([])');
     }
   
     // invoke native method
@@ -367,7 +367,7 @@ class com_amap_api_services_route_WalkStep extends java_lang_Object with android
   Future<void> setAction(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.WalkStep@$refId::setAction([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.WalkStep@$refId::setAction([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -391,7 +391,7 @@ class com_amap_api_services_route_WalkStep extends java_lang_Object with android
   Future<String> getAssistantAction() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.WalkStep@$refId::getAssistantAction([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.WalkStep@$refId::getAssistantAction([])');
     }
   
     // invoke native method
@@ -415,7 +415,7 @@ class com_amap_api_services_route_WalkStep extends java_lang_Object with android
   Future<void> setAssistantAction(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.WalkStep@$refId::setAssistantAction([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.WalkStep@$refId::setAssistantAction([\'var1\':$var1])');
     }
   
     // invoke native method

@@ -20,142 +20,48 @@ mixin com_amap_api_services_interfaces_IBusLineSearch on java_lang_Object {
 
   
 
+  @mustCallSuper
+  Future<com_amap_api_services_busline_BusLineResult> searchBusLine() {
   
-  Future<com_amap_api_services_busline_BusLineResult> searchBusLine() async {
-    // print log
+  
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.interfaces.IBusLineSearch@$refId::searchBusLine([])');
-    }
-  
-    // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IBusLineSearch::searchBusLine', {"refId": refId});
-  
-  
-    // handle native call
-  
-  
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = com_amap_api_services_busline_BusLineResult()..refId = __result__..tag__ = 'amap_search_fluttify';
-      kNativeObjectPool.add(__return__);
-      return __return__;
+      debugPrint('searchBusLine::kNativeObjectPool: $kNativeObjectPool');
     }
   }
   
+  @mustCallSuper
+  Future<void> setOnBusLineSearchListener(com_amap_api_services_busline_BusLineSearch_OnBusLineSearchListener var1) {
+    kNativeObjectPool.add(var1);
   
-  Future<void> setOnBusLineSearchListener(com_amap_api_services_busline_BusLineSearch_OnBusLineSearchListener var1) async {
-    // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.interfaces.IBusLineSearch@$refId::setOnBusLineSearchListener([])');
-    }
-  
-    // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IBusLineSearch::setOnBusLineSearchListener', {"refId": refId});
-  
-  
-    // handle native call
-    MethodChannel('com.amap.api.services.interfaces.IBusLineSearch::setOnBusLineSearchListener::Callback')
-        .setMethodCallHandler((methodCall) async {
-          final args = methodCall.arguments as Map;
-          // final refId = args['callerRefId'] as int;
-          // if (refId != this.refId) return;
-  
-          switch (methodCall.method) {
-            case 'Callback::com.amap.api.services.busline.BusLineSearch.OnBusLineSearchListener::onBusLineSearched':
-              // print log
-              if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onBusLineSearched([\'var2\':${args['var2']}])');
-              }
-        
-              // handle the native call
-              var1?.onBusLineSearched((com_amap_api_services_busline_BusLineResult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify'), args['var2']);
-              break;
-            default:
-              break;
-          }
-        });
-  
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-    
-      return __return__;
+      debugPrint('setOnBusLineSearchListener::kNativeObjectPool: $kNativeObjectPool');
     }
   }
   
+  @mustCallSuper
+  Future<void> searchBusLineAsyn() {
   
-  Future<void> searchBusLineAsyn() async {
-    // print log
+  
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.interfaces.IBusLineSearch@$refId::searchBusLineAsyn([])');
-    }
-  
-    // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IBusLineSearch::searchBusLineAsyn', {"refId": refId});
-  
-  
-    // handle native call
-  
-  
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-    
-      return __return__;
+      debugPrint('searchBusLineAsyn::kNativeObjectPool: $kNativeObjectPool');
     }
   }
   
+  @mustCallSuper
+  Future<void> setQuery(com_amap_api_services_busline_BusLineQuery var1) {
+    kNativeObjectPool.add(var1);
   
-  Future<void> setQuery(com_amap_api_services_busline_BusLineQuery var1) async {
-    // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.interfaces.IBusLineSearch@$refId::setQuery([])');
-    }
-  
-    // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IBusLineSearch::setQuery', {"var1": var1.refId, "refId": refId});
-  
-  
-    // handle native call
-  
-  
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-    
-      return __return__;
+      debugPrint('setQuery::kNativeObjectPool: $kNativeObjectPool');
     }
   }
   
+  @mustCallSuper
+  Future<com_amap_api_services_busline_BusLineQuery> getQuery() {
   
-  Future<com_amap_api_services_busline_BusLineQuery> getQuery() async {
-    // print log
+  
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.interfaces.IBusLineSearch@$refId::getQuery([])');
-    }
-  
-    // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IBusLineSearch::getQuery', {"refId": refId});
-  
-  
-    // handle native call
-  
-  
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = com_amap_api_services_busline_BusLineQuery()..refId = __result__..tag__ = 'amap_search_fluttify';
-      kNativeObjectPool.add(__return__);
-      return __return__;
+      debugPrint('getQuery::kNativeObjectPool: $kNativeObjectPool');
     }
   }
   

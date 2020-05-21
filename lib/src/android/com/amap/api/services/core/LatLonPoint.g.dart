@@ -55,7 +55,7 @@ class com_amap_api_services_core_LatLonPoint extends java_lang_Object with andro
   Future<double> getLongitude() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.LatLonPoint@$refId::getLongitude([])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.LatLonPoint@$refId::getLongitude([])');
     }
   
     // invoke native method
@@ -79,7 +79,7 @@ class com_amap_api_services_core_LatLonPoint extends java_lang_Object with andro
   Future<void> setLongitude(double var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.LatLonPoint@$refId::setLongitude([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.LatLonPoint@$refId::setLongitude([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -103,7 +103,7 @@ class com_amap_api_services_core_LatLonPoint extends java_lang_Object with andro
   Future<double> getLatitude() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.LatLonPoint@$refId::getLatitude([])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.LatLonPoint@$refId::getLatitude([])');
     }
   
     // invoke native method
@@ -127,7 +127,7 @@ class com_amap_api_services_core_LatLonPoint extends java_lang_Object with andro
   Future<void> setLatitude(double var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.LatLonPoint@$refId::setLatitude([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.LatLonPoint@$refId::setLatitude([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -151,7 +151,7 @@ class com_amap_api_services_core_LatLonPoint extends java_lang_Object with andro
   Future<com_amap_api_services_core_LatLonPoint> copy() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.LatLonPoint@$refId::copy([])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.LatLonPoint@$refId::copy([])');
     }
   
     // invoke native method

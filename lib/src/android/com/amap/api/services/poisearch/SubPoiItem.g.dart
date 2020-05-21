@@ -55,7 +55,7 @@ class com_amap_api_services_poisearch_SubPoiItem extends java_lang_Object with a
   Future<String> getPoiId() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.poisearch.SubPoiItem@$refId::getPoiId([])');
+      debugPrint('fluttify-dart: com.amap.api.services.poisearch.SubPoiItem@$refId::getPoiId([])');
     }
   
     // invoke native method
@@ -79,7 +79,7 @@ class com_amap_api_services_poisearch_SubPoiItem extends java_lang_Object with a
   Future<void> setPoiId(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.poisearch.SubPoiItem@$refId::setPoiId([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.poisearch.SubPoiItem@$refId::setPoiId([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -103,7 +103,7 @@ class com_amap_api_services_poisearch_SubPoiItem extends java_lang_Object with a
   Future<String> getTitle() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.poisearch.SubPoiItem@$refId::getTitle([])');
+      debugPrint('fluttify-dart: com.amap.api.services.poisearch.SubPoiItem@$refId::getTitle([])');
     }
   
     // invoke native method
@@ -127,7 +127,7 @@ class com_amap_api_services_poisearch_SubPoiItem extends java_lang_Object with a
   Future<void> setTitle(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.poisearch.SubPoiItem@$refId::setTitle([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.poisearch.SubPoiItem@$refId::setTitle([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -151,7 +151,7 @@ class com_amap_api_services_poisearch_SubPoiItem extends java_lang_Object with a
   Future<String> getSubName() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.poisearch.SubPoiItem@$refId::getSubName([])');
+      debugPrint('fluttify-dart: com.amap.api.services.poisearch.SubPoiItem@$refId::getSubName([])');
     }
   
     // invoke native method
@@ -175,7 +175,7 @@ class com_amap_api_services_poisearch_SubPoiItem extends java_lang_Object with a
   Future<void> setSubName(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.poisearch.SubPoiItem@$refId::setSubName([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.poisearch.SubPoiItem@$refId::setSubName([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -199,7 +199,7 @@ class com_amap_api_services_poisearch_SubPoiItem extends java_lang_Object with a
   Future<int> getDistance() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.poisearch.SubPoiItem@$refId::getDistance([])');
+      debugPrint('fluttify-dart: com.amap.api.services.poisearch.SubPoiItem@$refId::getDistance([])');
     }
   
     // invoke native method
@@ -223,7 +223,7 @@ class com_amap_api_services_poisearch_SubPoiItem extends java_lang_Object with a
   Future<void> setDistance(int var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.poisearch.SubPoiItem@$refId::setDistance([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.poisearch.SubPoiItem@$refId::setDistance([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -247,7 +247,7 @@ class com_amap_api_services_poisearch_SubPoiItem extends java_lang_Object with a
   Future<com_amap_api_services_core_LatLonPoint> getLatLonPoint() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.poisearch.SubPoiItem@$refId::getLatLonPoint([])');
+      debugPrint('fluttify-dart: com.amap.api.services.poisearch.SubPoiItem@$refId::getLatLonPoint([])');
     }
   
     // invoke native method
@@ -271,7 +271,7 @@ class com_amap_api_services_poisearch_SubPoiItem extends java_lang_Object with a
   Future<void> setLatLonPoint(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.poisearch.SubPoiItem@$refId::setLatLonPoint([])');
+      debugPrint('fluttify-dart: com.amap.api.services.poisearch.SubPoiItem@$refId::setLatLonPoint([])');
     }
   
     // invoke native method
@@ -295,7 +295,7 @@ class com_amap_api_services_poisearch_SubPoiItem extends java_lang_Object with a
   Future<String> getSnippet() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.poisearch.SubPoiItem@$refId::getSnippet([])');
+      debugPrint('fluttify-dart: com.amap.api.services.poisearch.SubPoiItem@$refId::getSnippet([])');
     }
   
     // invoke native method
@@ -319,7 +319,7 @@ class com_amap_api_services_poisearch_SubPoiItem extends java_lang_Object with a
   Future<void> setSnippet(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.poisearch.SubPoiItem@$refId::setSnippet([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.poisearch.SubPoiItem@$refId::setSnippet([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -343,7 +343,7 @@ class com_amap_api_services_poisearch_SubPoiItem extends java_lang_Object with a
   Future<String> getSubTypeDes() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.poisearch.SubPoiItem@$refId::getSubTypeDes([])');
+      debugPrint('fluttify-dart: com.amap.api.services.poisearch.SubPoiItem@$refId::getSubTypeDes([])');
     }
   
     // invoke native method
@@ -367,7 +367,7 @@ class com_amap_api_services_poisearch_SubPoiItem extends java_lang_Object with a
   Future<void> setSubTypeDes(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.poisearch.SubPoiItem@$refId::setSubTypeDes([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.poisearch.SubPoiItem@$refId::setSubTypeDes([\'var1\':$var1])');
     }
   
     // invoke native method
