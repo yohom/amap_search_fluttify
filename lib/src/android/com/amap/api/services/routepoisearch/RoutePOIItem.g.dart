@@ -55,7 +55,7 @@ class com_amap_api_services_routepoisearch_RoutePOIItem extends java_lang_Object
   Future<String> getID() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOIItem@$refId::getID([])');
+      debugPrint('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOIItem@$refId::getID([])');
     }
   
     // invoke native method
@@ -79,7 +79,7 @@ class com_amap_api_services_routepoisearch_RoutePOIItem extends java_lang_Object
   Future<void> setID(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOIItem@$refId::setID([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOIItem@$refId::setID([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -103,7 +103,7 @@ class com_amap_api_services_routepoisearch_RoutePOIItem extends java_lang_Object
   Future<String> getTitle() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOIItem@$refId::getTitle([])');
+      debugPrint('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOIItem@$refId::getTitle([])');
     }
   
     // invoke native method
@@ -127,7 +127,7 @@ class com_amap_api_services_routepoisearch_RoutePOIItem extends java_lang_Object
   Future<void> setTitle(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOIItem@$refId::setTitle([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOIItem@$refId::setTitle([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -151,7 +151,7 @@ class com_amap_api_services_routepoisearch_RoutePOIItem extends java_lang_Object
   Future<com_amap_api_services_core_LatLonPoint> getPoint() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOIItem@$refId::getPoint([])');
+      debugPrint('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOIItem@$refId::getPoint([])');
     }
   
     // invoke native method
@@ -175,7 +175,7 @@ class com_amap_api_services_routepoisearch_RoutePOIItem extends java_lang_Object
   Future<void> setPoint(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOIItem@$refId::setPoint([])');
+      debugPrint('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOIItem@$refId::setPoint([])');
     }
   
     // invoke native method
@@ -199,7 +199,7 @@ class com_amap_api_services_routepoisearch_RoutePOIItem extends java_lang_Object
   Future<double> getDistance() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOIItem@$refId::getDistance([])');
+      debugPrint('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOIItem@$refId::getDistance([])');
     }
   
     // invoke native method
@@ -223,7 +223,7 @@ class com_amap_api_services_routepoisearch_RoutePOIItem extends java_lang_Object
   Future<void> setDistance(double var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOIItem@$refId::setDistance([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOIItem@$refId::setDistance([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -247,7 +247,7 @@ class com_amap_api_services_routepoisearch_RoutePOIItem extends java_lang_Object
   Future<double> getDuration() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOIItem@$refId::getDuration([])');
+      debugPrint('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOIItem@$refId::getDuration([])');
     }
   
     // invoke native method
@@ -271,7 +271,7 @@ class com_amap_api_services_routepoisearch_RoutePOIItem extends java_lang_Object
   Future<void> setDuration(double var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOIItem@$refId::setDuration([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOIItem@$refId::setDuration([\'var1\':$var1])');
     }
   
     // invoke native method

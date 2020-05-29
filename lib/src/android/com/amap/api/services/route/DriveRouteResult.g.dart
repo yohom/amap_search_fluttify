@@ -55,7 +55,7 @@ class com_amap_api_services_route_DriveRouteResult extends com_amap_api_services
   Future<double> getTaxiCost() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DriveRouteResult@$refId::getTaxiCost([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DriveRouteResult@$refId::getTaxiCost([])');
     }
   
     // invoke native method
@@ -79,7 +79,7 @@ class com_amap_api_services_route_DriveRouteResult extends com_amap_api_services
   Future<void> setTaxiCost(double var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DriveRouteResult@$refId::setTaxiCost([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DriveRouteResult@$refId::setTaxiCost([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -103,7 +103,7 @@ class com_amap_api_services_route_DriveRouteResult extends com_amap_api_services
   Future<List<com_amap_api_services_route_DrivePath>> getPaths() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DriveRouteResult@$refId::getPaths([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DriveRouteResult@$refId::getPaths([])');
     }
   
     // invoke native method
@@ -127,7 +127,7 @@ class com_amap_api_services_route_DriveRouteResult extends com_amap_api_services
   Future<void> setPaths(List<com_amap_api_services_route_DrivePath> var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DriveRouteResult@$refId::setPaths([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DriveRouteResult@$refId::setPaths([])');
     }
   
     // invoke native method
@@ -151,7 +151,7 @@ class com_amap_api_services_route_DriveRouteResult extends com_amap_api_services
   Future<com_amap_api_services_route_RouteSearch_DriveRouteQuery> getDriveQuery() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DriveRouteResult@$refId::getDriveQuery([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DriveRouteResult@$refId::getDriveQuery([])');
     }
   
     // invoke native method
@@ -175,7 +175,7 @@ class com_amap_api_services_route_DriveRouteResult extends com_amap_api_services
   Future<void> setDriveQuery(com_amap_api_services_route_RouteSearch_DriveRouteQuery var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DriveRouteResult@$refId::setDriveQuery([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DriveRouteResult@$refId::setDriveQuery([])');
     }
   
     // invoke native method

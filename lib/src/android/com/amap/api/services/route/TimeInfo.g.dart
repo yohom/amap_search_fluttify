@@ -55,7 +55,7 @@ class com_amap_api_services_route_TimeInfo extends java_lang_Object with android
   Future<int> getStartTime() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.TimeInfo@$refId::getStartTime([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.TimeInfo@$refId::getStartTime([])');
     }
   
     // invoke native method
@@ -79,7 +79,7 @@ class com_amap_api_services_route_TimeInfo extends java_lang_Object with android
   Future<void> setStartTime(int var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.TimeInfo@$refId::setStartTime([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.TimeInfo@$refId::setStartTime([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -103,7 +103,7 @@ class com_amap_api_services_route_TimeInfo extends java_lang_Object with android
   Future<List<com_amap_api_services_route_TimeInfosElement>> getElements() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.TimeInfo@$refId::getElements([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.TimeInfo@$refId::getElements([])');
     }
   
     // invoke native method
@@ -127,7 +127,7 @@ class com_amap_api_services_route_TimeInfo extends java_lang_Object with android
   Future<void> setElements(List<com_amap_api_services_route_TimeInfosElement> var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.TimeInfo@$refId::setElements([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.TimeInfo@$refId::setElements([])');
     }
   
     // invoke native method

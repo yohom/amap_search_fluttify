@@ -55,7 +55,7 @@ class com_amap_api_services_cloud_CloudSearch extends java_lang_Object  {
   Future<void> setOnCloudSearchListener(com_amap_api_services_cloud_CloudSearch_OnCloudSearchListener var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.cloud.CloudSearch@$refId::setOnCloudSearchListener([])');
+      debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudSearch@$refId::setOnCloudSearchListener([])');
     }
   
     // invoke native method
@@ -73,7 +73,7 @@ class com_amap_api_services_cloud_CloudSearch extends java_lang_Object  {
             case 'Callback::com.amap.api.services.cloud.CloudSearch.OnCloudSearchListener::onCloudSearched':
               // print log
               if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onCloudSearched([\'var2\':${args['var2']}])');
+                debugPrint('fluttify-dart-callback: onCloudSearched([\'var2\':${args['var2']}])');
               }
         
               // handle the native call
@@ -82,7 +82,7 @@ class com_amap_api_services_cloud_CloudSearch extends java_lang_Object  {
             case 'Callback::com.amap.api.services.cloud.CloudSearch.OnCloudSearchListener::onCloudItemDetailSearched':
               // print log
               if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onCloudItemDetailSearched([\'var2\':${args['var2']}])');
+                debugPrint('fluttify-dart-callback: onCloudItemDetailSearched([\'var2\':${args['var2']}])');
               }
         
               // handle the native call
@@ -107,7 +107,7 @@ class com_amap_api_services_cloud_CloudSearch extends java_lang_Object  {
   Future<void> searchCloudAsyn(com_amap_api_services_cloud_CloudSearch_Query var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.cloud.CloudSearch@$refId::searchCloudAsyn([])');
+      debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudSearch@$refId::searchCloudAsyn([])');
     }
   
     // invoke native method
@@ -131,7 +131,7 @@ class com_amap_api_services_cloud_CloudSearch extends java_lang_Object  {
   Future<void> searchCloudDetailAsyn(String var1, String var2) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.cloud.CloudSearch@$refId::searchCloudDetailAsyn([\'var1\':$var1, \'var2\':$var2])');
+      debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudSearch@$refId::searchCloudDetailAsyn([\'var1\':$var1, \'var2\':$var2])');
     }
   
     // invoke native method

@@ -55,7 +55,7 @@ class com_amap_api_services_route_RidePath extends com_amap_api_services_route_P
   Future<List<com_amap_api_services_route_RideStep>> getSteps() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RidePath@$refId::getSteps([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RidePath@$refId::getSteps([])');
     }
   
     // invoke native method
@@ -79,7 +79,7 @@ class com_amap_api_services_route_RidePath extends com_amap_api_services_route_P
   Future<void> setSteps(List<com_amap_api_services_route_RideStep> var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RidePath@$refId::setSteps([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RidePath@$refId::setSteps([])');
     }
   
     // invoke native method

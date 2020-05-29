@@ -55,7 +55,7 @@ class com_amap_api_services_route_WalkRouteResult extends com_amap_api_services_
   Future<List<com_amap_api_services_route_WalkPath>> getPaths() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.WalkRouteResult@$refId::getPaths([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.WalkRouteResult@$refId::getPaths([])');
     }
   
     // invoke native method
@@ -79,7 +79,7 @@ class com_amap_api_services_route_WalkRouteResult extends com_amap_api_services_
   Future<void> setPaths(List<com_amap_api_services_route_WalkPath> var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.WalkRouteResult@$refId::setPaths([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.WalkRouteResult@$refId::setPaths([])');
     }
   
     // invoke native method
@@ -103,7 +103,7 @@ class com_amap_api_services_route_WalkRouteResult extends com_amap_api_services_
   Future<com_amap_api_services_route_RouteSearch_WalkRouteQuery> getWalkQuery() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.WalkRouteResult@$refId::getWalkQuery([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.WalkRouteResult@$refId::getWalkQuery([])');
     }
   
     // invoke native method
@@ -127,7 +127,7 @@ class com_amap_api_services_route_WalkRouteResult extends com_amap_api_services_
   Future<void> setWalkQuery(com_amap_api_services_route_RouteSearch_WalkRouteQuery var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.WalkRouteResult@$refId::setWalkQuery([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.WalkRouteResult@$refId::setWalkQuery([])');
     }
   
     // invoke native method

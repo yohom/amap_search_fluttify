@@ -55,7 +55,7 @@ class com_amap_api_services_busline_BusStationItem extends java_lang_Object with
   Future<String> getBusStationId() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.busline.BusStationItem@$refId::getBusStationId([])');
+      debugPrint('fluttify-dart: com.amap.api.services.busline.BusStationItem@$refId::getBusStationId([])');
     }
   
     // invoke native method
@@ -79,7 +79,7 @@ class com_amap_api_services_busline_BusStationItem extends java_lang_Object with
   Future<void> setBusStationId(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.busline.BusStationItem@$refId::setBusStationId([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.busline.BusStationItem@$refId::setBusStationId([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -103,7 +103,7 @@ class com_amap_api_services_busline_BusStationItem extends java_lang_Object with
   Future<String> getBusStationName() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.busline.BusStationItem@$refId::getBusStationName([])');
+      debugPrint('fluttify-dart: com.amap.api.services.busline.BusStationItem@$refId::getBusStationName([])');
     }
   
     // invoke native method
@@ -127,7 +127,7 @@ class com_amap_api_services_busline_BusStationItem extends java_lang_Object with
   Future<void> setBusStationName(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.busline.BusStationItem@$refId::setBusStationName([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.busline.BusStationItem@$refId::setBusStationName([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -151,7 +151,7 @@ class com_amap_api_services_busline_BusStationItem extends java_lang_Object with
   Future<com_amap_api_services_core_LatLonPoint> getLatLonPoint() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.busline.BusStationItem@$refId::getLatLonPoint([])');
+      debugPrint('fluttify-dart: com.amap.api.services.busline.BusStationItem@$refId::getLatLonPoint([])');
     }
   
     // invoke native method
@@ -175,7 +175,7 @@ class com_amap_api_services_busline_BusStationItem extends java_lang_Object with
   Future<void> setLatLonPoint(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.busline.BusStationItem@$refId::setLatLonPoint([])');
+      debugPrint('fluttify-dart: com.amap.api.services.busline.BusStationItem@$refId::setLatLonPoint([])');
     }
   
     // invoke native method
@@ -199,7 +199,7 @@ class com_amap_api_services_busline_BusStationItem extends java_lang_Object with
   Future<String> getCityCode() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.busline.BusStationItem@$refId::getCityCode([])');
+      debugPrint('fluttify-dart: com.amap.api.services.busline.BusStationItem@$refId::getCityCode([])');
     }
   
     // invoke native method
@@ -223,7 +223,7 @@ class com_amap_api_services_busline_BusStationItem extends java_lang_Object with
   Future<void> setCityCode(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.busline.BusStationItem@$refId::setCityCode([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.busline.BusStationItem@$refId::setCityCode([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -247,7 +247,7 @@ class com_amap_api_services_busline_BusStationItem extends java_lang_Object with
   Future<String> getAdCode() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.busline.BusStationItem@$refId::getAdCode([])');
+      debugPrint('fluttify-dart: com.amap.api.services.busline.BusStationItem@$refId::getAdCode([])');
     }
   
     // invoke native method
@@ -271,7 +271,7 @@ class com_amap_api_services_busline_BusStationItem extends java_lang_Object with
   Future<void> setAdCode(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.busline.BusStationItem@$refId::setAdCode([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.busline.BusStationItem@$refId::setAdCode([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -295,7 +295,7 @@ class com_amap_api_services_busline_BusStationItem extends java_lang_Object with
   Future<List<com_amap_api_services_busline_BusLineItem>> getBusLineItems() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.busline.BusStationItem@$refId::getBusLineItems([])');
+      debugPrint('fluttify-dart: com.amap.api.services.busline.BusStationItem@$refId::getBusLineItems([])');
     }
   
     // invoke native method
@@ -319,7 +319,7 @@ class com_amap_api_services_busline_BusStationItem extends java_lang_Object with
   Future<void> setBusLineItems(List<com_amap_api_services_busline_BusLineItem> var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.busline.BusStationItem@$refId::setBusLineItems([])');
+      debugPrint('fluttify-dart: com.amap.api.services.busline.BusStationItem@$refId::setBusLineItems([])');
     }
   
     // invoke native method

@@ -55,7 +55,7 @@ class com_amap_api_services_busline_BusLineSearch extends java_lang_Object  {
   Future<com_amap_api_services_busline_BusLineResult> searchBusLine() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.busline.BusLineSearch@$refId::searchBusLine([])');
+      debugPrint('fluttify-dart: com.amap.api.services.busline.BusLineSearch@$refId::searchBusLine([])');
     }
   
     // invoke native method
@@ -79,7 +79,7 @@ class com_amap_api_services_busline_BusLineSearch extends java_lang_Object  {
   Future<void> setOnBusLineSearchListener(com_amap_api_services_busline_BusLineSearch_OnBusLineSearchListener var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.busline.BusLineSearch@$refId::setOnBusLineSearchListener([])');
+      debugPrint('fluttify-dart: com.amap.api.services.busline.BusLineSearch@$refId::setOnBusLineSearchListener([])');
     }
   
     // invoke native method
@@ -97,7 +97,7 @@ class com_amap_api_services_busline_BusLineSearch extends java_lang_Object  {
             case 'Callback::com.amap.api.services.busline.BusLineSearch.OnBusLineSearchListener::onBusLineSearched':
               // print log
               if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onBusLineSearched([\'var2\':${args['var2']}])');
+                debugPrint('fluttify-dart-callback: onBusLineSearched([\'var2\':${args['var2']}])');
               }
         
               // handle the native call
@@ -122,7 +122,7 @@ class com_amap_api_services_busline_BusLineSearch extends java_lang_Object  {
   Future<void> searchBusLineAsyn() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.busline.BusLineSearch@$refId::searchBusLineAsyn([])');
+      debugPrint('fluttify-dart: com.amap.api.services.busline.BusLineSearch@$refId::searchBusLineAsyn([])');
     }
   
     // invoke native method
@@ -146,7 +146,7 @@ class com_amap_api_services_busline_BusLineSearch extends java_lang_Object  {
   Future<void> setQuery(com_amap_api_services_busline_BusLineQuery var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.busline.BusLineSearch@$refId::setQuery([])');
+      debugPrint('fluttify-dart: com.amap.api.services.busline.BusLineSearch@$refId::setQuery([])');
     }
   
     // invoke native method
@@ -170,7 +170,7 @@ class com_amap_api_services_busline_BusLineSearch extends java_lang_Object  {
   Future<com_amap_api_services_busline_BusLineQuery> getQuery() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.busline.BusLineSearch@$refId::getQuery([])');
+      debugPrint('fluttify-dart: com.amap.api.services.busline.BusLineSearch@$refId::getQuery([])');
     }
   
     // invoke native method

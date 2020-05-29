@@ -55,7 +55,7 @@ class com_amap_api_services_route_RouteResult extends java_lang_Object with andr
   Future<com_amap_api_services_core_LatLonPoint> getStartPos() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RouteResult@$refId::getStartPos([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RouteResult@$refId::getStartPos([])');
     }
   
     // invoke native method
@@ -79,7 +79,7 @@ class com_amap_api_services_route_RouteResult extends java_lang_Object with andr
   Future<void> setStartPos(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RouteResult@$refId::setStartPos([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RouteResult@$refId::setStartPos([])');
     }
   
     // invoke native method
@@ -103,7 +103,7 @@ class com_amap_api_services_route_RouteResult extends java_lang_Object with andr
   Future<com_amap_api_services_core_LatLonPoint> getTargetPos() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RouteResult@$refId::getTargetPos([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RouteResult@$refId::getTargetPos([])');
     }
   
     // invoke native method
@@ -127,7 +127,7 @@ class com_amap_api_services_route_RouteResult extends java_lang_Object with andr
   Future<void> setTargetPos(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RouteResult@$refId::setTargetPos([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RouteResult@$refId::setTargetPos([])');
     }
   
     // invoke native method

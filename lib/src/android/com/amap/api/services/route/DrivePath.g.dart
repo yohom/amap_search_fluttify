@@ -55,7 +55,7 @@ class com_amap_api_services_route_DrivePath extends com_amap_api_services_route_
   Future<String> getStrategy() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DrivePath@$refId::getStrategy([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DrivePath@$refId::getStrategy([])');
     }
   
     // invoke native method
@@ -79,7 +79,7 @@ class com_amap_api_services_route_DrivePath extends com_amap_api_services_route_
   Future<void> setStrategy(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DrivePath@$refId::setStrategy([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DrivePath@$refId::setStrategy([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -103,7 +103,7 @@ class com_amap_api_services_route_DrivePath extends com_amap_api_services_route_
   Future<double> getTolls() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DrivePath@$refId::getTolls([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DrivePath@$refId::getTolls([])');
     }
   
     // invoke native method
@@ -127,7 +127,7 @@ class com_amap_api_services_route_DrivePath extends com_amap_api_services_route_
   Future<void> setTolls(double var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DrivePath@$refId::setTolls([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DrivePath@$refId::setTolls([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -151,7 +151,7 @@ class com_amap_api_services_route_DrivePath extends com_amap_api_services_route_
   Future<double> getTollDistance() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DrivePath@$refId::getTollDistance([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DrivePath@$refId::getTollDistance([])');
     }
   
     // invoke native method
@@ -175,7 +175,7 @@ class com_amap_api_services_route_DrivePath extends com_amap_api_services_route_
   Future<void> setTollDistance(double var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DrivePath@$refId::setTollDistance([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DrivePath@$refId::setTollDistance([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -199,7 +199,7 @@ class com_amap_api_services_route_DrivePath extends com_amap_api_services_route_
   Future<int> getTotalTrafficlights() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DrivePath@$refId::getTotalTrafficlights([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DrivePath@$refId::getTotalTrafficlights([])');
     }
   
     // invoke native method
@@ -223,7 +223,7 @@ class com_amap_api_services_route_DrivePath extends com_amap_api_services_route_
   Future<void> setTotalTrafficlights(int var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DrivePath@$refId::setTotalTrafficlights([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DrivePath@$refId::setTotalTrafficlights([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -247,7 +247,7 @@ class com_amap_api_services_route_DrivePath extends com_amap_api_services_route_
   Future<List<com_amap_api_services_route_DriveStep>> getSteps() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DrivePath@$refId::getSteps([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DrivePath@$refId::getSteps([])');
     }
   
     // invoke native method
@@ -271,7 +271,7 @@ class com_amap_api_services_route_DrivePath extends com_amap_api_services_route_
   Future<void> setSteps(List<com_amap_api_services_route_DriveStep> var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DrivePath@$refId::setSteps([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DrivePath@$refId::setSteps([])');
     }
   
     // invoke native method
@@ -295,7 +295,7 @@ class com_amap_api_services_route_DrivePath extends com_amap_api_services_route_
   Future<int> getRestriction() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DrivePath@$refId::getRestriction([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DrivePath@$refId::getRestriction([])');
     }
   
     // invoke native method
@@ -319,7 +319,7 @@ class com_amap_api_services_route_DrivePath extends com_amap_api_services_route_
   Future<void> setRestriction(int var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.DrivePath@$refId::setRestriction([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.DrivePath@$refId::setRestriction([\'var1\':$var1])');
     }
   
     // invoke native method

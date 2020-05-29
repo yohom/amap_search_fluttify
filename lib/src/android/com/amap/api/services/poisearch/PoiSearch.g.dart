@@ -56,7 +56,7 @@ class com_amap_api_services_poisearch_PoiSearch extends java_lang_Object  {
   Future<void> setOnPoiSearchListener(com_amap_api_services_poisearch_PoiSearch_OnPoiSearchListener var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch@$refId::setOnPoiSearchListener([])');
+      debugPrint('fluttify-dart: com.amap.api.services.poisearch.PoiSearch@$refId::setOnPoiSearchListener([])');
     }
   
     // invoke native method
@@ -74,7 +74,7 @@ class com_amap_api_services_poisearch_PoiSearch extends java_lang_Object  {
             case 'Callback::com.amap.api.services.poisearch.PoiSearch.OnPoiSearchListener::onPoiSearched':
               // print log
               if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onPoiSearched([\'var2\':${args['var2']}])');
+                debugPrint('fluttify-dart-callback: onPoiSearched([\'var2\':${args['var2']}])');
               }
         
               // handle the native call
@@ -83,7 +83,7 @@ class com_amap_api_services_poisearch_PoiSearch extends java_lang_Object  {
             case 'Callback::com.amap.api.services.poisearch.PoiSearch.OnPoiSearchListener::onPoiItemSearched':
               // print log
               if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onPoiItemSearched([\'var2\':${args['var2']}])');
+                debugPrint('fluttify-dart-callback: onPoiItemSearched([\'var2\':${args['var2']}])');
               }
         
               // handle the native call
@@ -108,7 +108,7 @@ class com_amap_api_services_poisearch_PoiSearch extends java_lang_Object  {
   Future<void> setLanguage(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch@$refId::setLanguage([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.poisearch.PoiSearch@$refId::setLanguage([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -132,7 +132,7 @@ class com_amap_api_services_poisearch_PoiSearch extends java_lang_Object  {
   Future<String> getLanguage() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch@$refId::getLanguage([])');
+      debugPrint('fluttify-dart: com.amap.api.services.poisearch.PoiSearch@$refId::getLanguage([])');
     }
   
     // invoke native method
@@ -156,7 +156,7 @@ class com_amap_api_services_poisearch_PoiSearch extends java_lang_Object  {
   Future<com_amap_api_services_poisearch_PoiResult> searchPOI() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch@$refId::searchPOI([])');
+      debugPrint('fluttify-dart: com.amap.api.services.poisearch.PoiSearch@$refId::searchPOI([])');
     }
   
     // invoke native method
@@ -180,7 +180,7 @@ class com_amap_api_services_poisearch_PoiSearch extends java_lang_Object  {
   Future<void> searchPOIAsyn() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch@$refId::searchPOIAsyn([])');
+      debugPrint('fluttify-dart: com.amap.api.services.poisearch.PoiSearch@$refId::searchPOIAsyn([])');
     }
   
     // invoke native method
@@ -204,7 +204,7 @@ class com_amap_api_services_poisearch_PoiSearch extends java_lang_Object  {
   Future<com_amap_api_services_core_PoiItem> searchPOIId(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch@$refId::searchPOIId([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.poisearch.PoiSearch@$refId::searchPOIId([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -228,7 +228,7 @@ class com_amap_api_services_poisearch_PoiSearch extends java_lang_Object  {
   Future<void> searchPOIIdAsyn(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch@$refId::searchPOIIdAsyn([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.poisearch.PoiSearch@$refId::searchPOIIdAsyn([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -252,7 +252,7 @@ class com_amap_api_services_poisearch_PoiSearch extends java_lang_Object  {
   Future<void> setQuery(com_amap_api_services_poisearch_PoiSearch_Query var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch@$refId::setQuery([])');
+      debugPrint('fluttify-dart: com.amap.api.services.poisearch.PoiSearch@$refId::setQuery([])');
     }
   
     // invoke native method
@@ -276,7 +276,7 @@ class com_amap_api_services_poisearch_PoiSearch extends java_lang_Object  {
   Future<void> setBound(com_amap_api_services_poisearch_PoiSearch_SearchBound var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch@$refId::setBound([])');
+      debugPrint('fluttify-dart: com.amap.api.services.poisearch.PoiSearch@$refId::setBound([])');
     }
   
     // invoke native method
@@ -300,7 +300,7 @@ class com_amap_api_services_poisearch_PoiSearch extends java_lang_Object  {
   Future<com_amap_api_services_poisearch_PoiSearch_Query> getQuery() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch@$refId::getQuery([])');
+      debugPrint('fluttify-dart: com.amap.api.services.poisearch.PoiSearch@$refId::getQuery([])');
     }
   
     // invoke native method
@@ -324,7 +324,7 @@ class com_amap_api_services_poisearch_PoiSearch extends java_lang_Object  {
   Future<com_amap_api_services_poisearch_PoiSearch_SearchBound> getBound() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch@$refId::getBound([])');
+      debugPrint('fluttify-dart: com.amap.api.services.poisearch.PoiSearch@$refId::getBound([])');
     }
   
     // invoke native method

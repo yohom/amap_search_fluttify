@@ -77,7 +77,7 @@ class AMapGeoPoint extends AMapSearchObject with NSCoding, NSCopying {
   static Future<AMapGeoPoint> locationWithLatitude_longitude(double lat, double lon) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapGeoPoint::locationWithLatitude([\'lat\':$lat, \'lon\':$lon])');
+      debugPrint('fluttify-dart: AMapGeoPoint::locationWithLatitude([\'lat\':$lat, \'lon\':$lon])');
     }
   
     // invoke native method

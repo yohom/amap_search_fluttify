@@ -55,7 +55,7 @@ class com_amap_api_services_core_LatLonSharePoint extends com_amap_api_services_
   Future<String> getSharePointName() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.LatLonSharePoint@$refId::getSharePointName([])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.LatLonSharePoint@$refId::getSharePointName([])');
     }
   
     // invoke native method
@@ -79,7 +79,7 @@ class com_amap_api_services_core_LatLonSharePoint extends com_amap_api_services_
   Future<void> setSharePointName(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.LatLonSharePoint@$refId::setSharePointName([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.LatLonSharePoint@$refId::setSharePointName([\'var1\':$var1])');
     }
   
     // invoke native method

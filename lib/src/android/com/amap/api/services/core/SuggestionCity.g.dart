@@ -55,7 +55,7 @@ class com_amap_api_services_core_SuggestionCity extends java_lang_Object  {
   Future<String> getCityName() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.SuggestionCity@$refId::getCityName([])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.SuggestionCity@$refId::getCityName([])');
     }
   
     // invoke native method
@@ -79,7 +79,7 @@ class com_amap_api_services_core_SuggestionCity extends java_lang_Object  {
   Future<void> setCityName(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.SuggestionCity@$refId::setCityName([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.SuggestionCity@$refId::setCityName([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -103,7 +103,7 @@ class com_amap_api_services_core_SuggestionCity extends java_lang_Object  {
   Future<String> getCityCode() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.SuggestionCity@$refId::getCityCode([])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.SuggestionCity@$refId::getCityCode([])');
     }
   
     // invoke native method
@@ -127,7 +127,7 @@ class com_amap_api_services_core_SuggestionCity extends java_lang_Object  {
   Future<void> setCityCode(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.SuggestionCity@$refId::setCityCode([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.SuggestionCity@$refId::setCityCode([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -151,7 +151,7 @@ class com_amap_api_services_core_SuggestionCity extends java_lang_Object  {
   Future<String> getAdCode() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.SuggestionCity@$refId::getAdCode([])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.SuggestionCity@$refId::getAdCode([])');
     }
   
     // invoke native method
@@ -175,7 +175,7 @@ class com_amap_api_services_core_SuggestionCity extends java_lang_Object  {
   Future<void> setAdCode(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.SuggestionCity@$refId::setAdCode([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.SuggestionCity@$refId::setAdCode([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -199,7 +199,7 @@ class com_amap_api_services_core_SuggestionCity extends java_lang_Object  {
   Future<int> getSuggestionNum() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.SuggestionCity@$refId::getSuggestionNum([])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.SuggestionCity@$refId::getSuggestionNum([])');
     }
   
     // invoke native method
@@ -223,7 +223,7 @@ class com_amap_api_services_core_SuggestionCity extends java_lang_Object  {
   Future<void> setSuggestionNum(int var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.core.SuggestionCity@$refId::setSuggestionNum([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.core.SuggestionCity@$refId::setSuggestionNum([\'var1\':$var1])');
     }
   
     // invoke native method

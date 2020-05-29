@@ -55,7 +55,7 @@ class com_amap_api_services_route_BusRouteResult extends com_amap_api_services_r
   Future<double> getTaxiCost() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.BusRouteResult@$refId::getTaxiCost([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.BusRouteResult@$refId::getTaxiCost([])');
     }
   
     // invoke native method
@@ -79,7 +79,7 @@ class com_amap_api_services_route_BusRouteResult extends com_amap_api_services_r
   Future<void> setTaxiCost(double var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.BusRouteResult@$refId::setTaxiCost([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.BusRouteResult@$refId::setTaxiCost([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -103,7 +103,7 @@ class com_amap_api_services_route_BusRouteResult extends com_amap_api_services_r
   Future<List<com_amap_api_services_route_BusPath>> getPaths() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.BusRouteResult@$refId::getPaths([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.BusRouteResult@$refId::getPaths([])');
     }
   
     // invoke native method
@@ -127,7 +127,7 @@ class com_amap_api_services_route_BusRouteResult extends com_amap_api_services_r
   Future<void> setPaths(List<com_amap_api_services_route_BusPath> var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.BusRouteResult@$refId::setPaths([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.BusRouteResult@$refId::setPaths([])');
     }
   
     // invoke native method
@@ -151,7 +151,7 @@ class com_amap_api_services_route_BusRouteResult extends com_amap_api_services_r
   Future<com_amap_api_services_route_RouteSearch_BusRouteQuery> getBusQuery() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.BusRouteResult@$refId::getBusQuery([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.BusRouteResult@$refId::getBusQuery([])');
     }
   
     // invoke native method
@@ -175,7 +175,7 @@ class com_amap_api_services_route_BusRouteResult extends com_amap_api_services_r
   Future<void> setBusQuery(com_amap_api_services_route_RouteSearch_BusRouteQuery var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.BusRouteResult@$refId::setBusQuery([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.BusRouteResult@$refId::setBusQuery([])');
     }
   
     // invoke native method

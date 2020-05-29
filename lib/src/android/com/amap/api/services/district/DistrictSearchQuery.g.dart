@@ -97,7 +97,7 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
   Future<void> setShowBoundary(bool var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::setShowBoundary([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::setShowBoundary([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -121,7 +121,7 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
   Future<bool> isShowBoundary() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::isShowBoundary([])');
+      debugPrint('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::isShowBoundary([])');
     }
   
     // invoke native method
@@ -145,7 +145,7 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
   Future<int> getPageNum() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::getPageNum([])');
+      debugPrint('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::getPageNum([])');
     }
   
     // invoke native method
@@ -169,7 +169,7 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
   Future<void> setPageNum(int var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::setPageNum([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::setPageNum([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -193,7 +193,7 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
   Future<int> getPageSize() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::getPageSize([])');
+      debugPrint('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::getPageSize([])');
     }
   
     // invoke native method
@@ -217,7 +217,7 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
   Future<void> setPageSize(int var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::setPageSize([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::setPageSize([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -241,7 +241,7 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
   Future<String> getKeywords() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::getKeywords([])');
+      debugPrint('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::getKeywords([])');
     }
   
     // invoke native method
@@ -265,7 +265,7 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
   Future<void> setKeywords(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::setKeywords([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::setKeywords([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -289,7 +289,7 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
   Future<String> getKeywordsLevel() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::getKeywordsLevel([])');
+      debugPrint('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::getKeywordsLevel([])');
     }
   
     // invoke native method
@@ -313,7 +313,7 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
   Future<void> setKeywordsLevel(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::setKeywordsLevel([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::setKeywordsLevel([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -337,7 +337,7 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
   Future<bool> isShowChild() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::isShowChild([])');
+      debugPrint('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::isShowChild([])');
     }
   
     // invoke native method
@@ -361,7 +361,7 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
   Future<void> setShowChild(bool var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::setShowChild([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::setShowChild([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -385,7 +385,7 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
   Future<bool> isShowBusinessArea() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::isShowBusinessArea([])');
+      debugPrint('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::isShowBusinessArea([])');
     }
   
     // invoke native method
@@ -409,7 +409,7 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
   Future<void> setShowBusinessArea(bool var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::setShowBusinessArea([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::setShowBusinessArea([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -433,7 +433,7 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
   Future<bool> checkLevels() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::checkLevels([])');
+      debugPrint('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::checkLevels([])');
     }
   
     // invoke native method
@@ -457,7 +457,7 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
   Future<bool> checkKeyWords() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::checkKeyWords([])');
+      debugPrint('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::checkKeyWords([])');
     }
   
     // invoke native method
@@ -481,7 +481,7 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
   Future<bool> weakEquals(com_amap_api_services_district_DistrictSearchQuery var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::weakEquals([])');
+      debugPrint('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::weakEquals([])');
     }
   
     // invoke native method
@@ -505,7 +505,7 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
   Future<com_amap_api_services_district_DistrictSearchQuery> clone() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::clone([])');
+      debugPrint('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::clone([])');
     }
   
     // invoke native method

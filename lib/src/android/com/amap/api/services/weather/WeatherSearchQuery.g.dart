@@ -75,7 +75,7 @@ class com_amap_api_services_weather_WeatherSearchQuery extends java_lang_Object 
   Future<String> getCity() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.weather.WeatherSearchQuery@$refId::getCity([])');
+      debugPrint('fluttify-dart: com.amap.api.services.weather.WeatherSearchQuery@$refId::getCity([])');
     }
   
     // invoke native method
@@ -99,7 +99,7 @@ class com_amap_api_services_weather_WeatherSearchQuery extends java_lang_Object 
   Future<int> getType() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.weather.WeatherSearchQuery@$refId::getType([])');
+      debugPrint('fluttify-dart: com.amap.api.services.weather.WeatherSearchQuery@$refId::getType([])');
     }
   
     // invoke native method
@@ -123,7 +123,7 @@ class com_amap_api_services_weather_WeatherSearchQuery extends java_lang_Object 
   Future<com_amap_api_services_weather_WeatherSearchQuery> clone() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.weather.WeatherSearchQuery@$refId::clone([])');
+      debugPrint('fluttify-dart: com.amap.api.services.weather.WeatherSearchQuery@$refId::clone([])');
     }
   
     // invoke native method

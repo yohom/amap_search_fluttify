@@ -55,7 +55,7 @@ class com_amap_api_services_share_ShareSearch_ShareWalkRouteQuery extends java_l
   Future<int> getWalkMode() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery@$refId::getWalkMode([])');
+      debugPrint('fluttify-dart: com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery@$refId::getWalkMode([])');
     }
   
     // invoke native method
@@ -79,7 +79,7 @@ class com_amap_api_services_share_ShareSearch_ShareWalkRouteQuery extends java_l
   Future<com_amap_api_services_share_ShareSearch_ShareFromAndTo> getShareFromAndTo() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery@$refId::getShareFromAndTo([])');
+      debugPrint('fluttify-dart: com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery@$refId::getShareFromAndTo([])');
     }
   
     // invoke native method

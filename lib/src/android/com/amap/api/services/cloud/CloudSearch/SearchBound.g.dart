@@ -115,7 +115,7 @@ class com_amap_api_services_cloud_CloudSearch_SearchBound extends java_lang_Obje
   Future<com_amap_api_services_core_LatLonPoint> getLowerLeft() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.cloud.CloudSearch.SearchBound@$refId::getLowerLeft([])');
+      debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudSearch.SearchBound@$refId::getLowerLeft([])');
     }
   
     // invoke native method
@@ -139,7 +139,7 @@ class com_amap_api_services_cloud_CloudSearch_SearchBound extends java_lang_Obje
   Future<com_amap_api_services_core_LatLonPoint> getUpperRight() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.cloud.CloudSearch.SearchBound@$refId::getUpperRight([])');
+      debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudSearch.SearchBound@$refId::getUpperRight([])');
     }
   
     // invoke native method
@@ -163,7 +163,7 @@ class com_amap_api_services_cloud_CloudSearch_SearchBound extends java_lang_Obje
   Future<com_amap_api_services_core_LatLonPoint> getCenter() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.cloud.CloudSearch.SearchBound@$refId::getCenter([])');
+      debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudSearch.SearchBound@$refId::getCenter([])');
     }
   
     // invoke native method
@@ -187,7 +187,7 @@ class com_amap_api_services_cloud_CloudSearch_SearchBound extends java_lang_Obje
   Future<int> getRange() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.cloud.CloudSearch.SearchBound@$refId::getRange([])');
+      debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudSearch.SearchBound@$refId::getRange([])');
     }
   
     // invoke native method
@@ -211,7 +211,7 @@ class com_amap_api_services_cloud_CloudSearch_SearchBound extends java_lang_Obje
   Future<String> getShape() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.cloud.CloudSearch.SearchBound@$refId::getShape([])');
+      debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudSearch.SearchBound@$refId::getShape([])');
     }
   
     // invoke native method
@@ -235,7 +235,7 @@ class com_amap_api_services_cloud_CloudSearch_SearchBound extends java_lang_Obje
   Future<String> getCity() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.cloud.CloudSearch.SearchBound@$refId::getCity([])');
+      debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudSearch.SearchBound@$refId::getCity([])');
     }
   
     // invoke native method
@@ -259,7 +259,7 @@ class com_amap_api_services_cloud_CloudSearch_SearchBound extends java_lang_Obje
   Future<List<com_amap_api_services_core_LatLonPoint>> getPolyGonList() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.cloud.CloudSearch.SearchBound@$refId::getPolyGonList([])');
+      debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudSearch.SearchBound@$refId::getPolyGonList([])');
     }
   
     // invoke native method
@@ -283,7 +283,7 @@ class com_amap_api_services_cloud_CloudSearch_SearchBound extends java_lang_Obje
   Future<com_amap_api_services_cloud_CloudSearch_SearchBound> clone() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.cloud.CloudSearch.SearchBound@$refId::clone([])');
+      debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudSearch.SearchBound@$refId::clone([])');
     }
   
     // invoke native method

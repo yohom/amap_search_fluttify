@@ -74,7 +74,7 @@ class com_amap_api_services_route_RouteSearch_DrivePlanQuery extends java_lang_O
   Future<com_amap_api_services_route_RouteSearch_FromAndTo> getFromAndTo() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::getFromAndTo([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::getFromAndTo([])');
     }
   
     // invoke native method
@@ -98,7 +98,7 @@ class com_amap_api_services_route_RouteSearch_DrivePlanQuery extends java_lang_O
   Future<String> getDestParentPoiID() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::getDestParentPoiID([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::getDestParentPoiID([])');
     }
   
     // invoke native method
@@ -122,7 +122,7 @@ class com_amap_api_services_route_RouteSearch_DrivePlanQuery extends java_lang_O
   Future<int> getMode() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::getMode([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::getMode([])');
     }
   
     // invoke native method
@@ -146,7 +146,7 @@ class com_amap_api_services_route_RouteSearch_DrivePlanQuery extends java_lang_O
   Future<int> getCarType() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::getCarType([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::getCarType([])');
     }
   
     // invoke native method
@@ -170,7 +170,7 @@ class com_amap_api_services_route_RouteSearch_DrivePlanQuery extends java_lang_O
   Future<int> getFirstTime() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::getFirstTime([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::getFirstTime([])');
     }
   
     // invoke native method
@@ -194,7 +194,7 @@ class com_amap_api_services_route_RouteSearch_DrivePlanQuery extends java_lang_O
   Future<int> getInterval() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::getInterval([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::getInterval([])');
     }
   
     // invoke native method
@@ -218,7 +218,7 @@ class com_amap_api_services_route_RouteSearch_DrivePlanQuery extends java_lang_O
   Future<int> getCount() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::getCount([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::getCount([])');
     }
   
     // invoke native method
@@ -242,7 +242,7 @@ class com_amap_api_services_route_RouteSearch_DrivePlanQuery extends java_lang_O
   Future<com_amap_api_services_route_RouteSearch_DrivePlanQuery> clone() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::clone([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::clone([])');
     }
   
     // invoke native method
@@ -266,7 +266,7 @@ class com_amap_api_services_route_RouteSearch_DrivePlanQuery extends java_lang_O
   Future<void> setDestParentPoiID(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::setDestParentPoiID([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::setDestParentPoiID([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -290,7 +290,7 @@ class com_amap_api_services_route_RouteSearch_DrivePlanQuery extends java_lang_O
   Future<void> setMode(int var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::setMode([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::setMode([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -314,7 +314,7 @@ class com_amap_api_services_route_RouteSearch_DrivePlanQuery extends java_lang_O
   Future<void> setCarType(int var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::setCarType([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::setCarType([\'var1\':$var1])');
     }
   
     // invoke native method

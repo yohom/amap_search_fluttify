@@ -55,7 +55,7 @@ class com_amap_api_services_route_RideRouteResult extends com_amap_api_services_
   Future<List<com_amap_api_services_route_RidePath>> getPaths() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RideRouteResult@$refId::getPaths([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RideRouteResult@$refId::getPaths([])');
     }
   
     // invoke native method
@@ -79,7 +79,7 @@ class com_amap_api_services_route_RideRouteResult extends com_amap_api_services_
   Future<void> setPaths(List<com_amap_api_services_route_RidePath> var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RideRouteResult@$refId::setPaths([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RideRouteResult@$refId::setPaths([])');
     }
   
     // invoke native method
@@ -103,7 +103,7 @@ class com_amap_api_services_route_RideRouteResult extends com_amap_api_services_
   Future<com_amap_api_services_route_RouteSearch_RideRouteQuery> getRideQuery() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RideRouteResult@$refId::getRideQuery([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RideRouteResult@$refId::getRideQuery([])');
     }
   
     // invoke native method
@@ -127,7 +127,7 @@ class com_amap_api_services_route_RideRouteResult extends com_amap_api_services_
   Future<void> setRideQuery(com_amap_api_services_route_RouteSearch_RideRouteQuery var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RideRouteResult@$refId::setRideQuery([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RideRouteResult@$refId::setRideQuery([])');
     }
   
     // invoke native method

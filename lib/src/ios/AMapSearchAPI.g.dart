@@ -71,7 +71,7 @@ class AMapSearchAPI extends NSObject  {
           case 'Callback::AMapSearchDelegate::AMapSearchRequest_didFailWithError':
             // print log
             if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: AMapSearchRequest_didFailWithError([])');
+              debugPrint('fluttify-dart-callback: AMapSearchRequest_didFailWithError([])');
             }
         
             // handle the native call
@@ -80,7 +80,7 @@ class AMapSearchAPI extends NSObject  {
           case 'Callback::AMapSearchDelegate::onPOISearchDone_response':
             // print log
             if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: onPOISearchDone_response([])');
+              debugPrint('fluttify-dart-callback: onPOISearchDone_response([])');
             }
         
             // handle the native call
@@ -89,7 +89,7 @@ class AMapSearchAPI extends NSObject  {
           case 'Callback::AMapSearchDelegate::onRoutePOISearchDone_response':
             // print log
             if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: onRoutePOISearchDone_response([])');
+              debugPrint('fluttify-dart-callback: onRoutePOISearchDone_response([])');
             }
         
             // handle the native call
@@ -98,7 +98,7 @@ class AMapSearchAPI extends NSObject  {
           case 'Callback::AMapSearchDelegate::onGeocodeSearchDone_response':
             // print log
             if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: onGeocodeSearchDone_response([])');
+              debugPrint('fluttify-dart-callback: onGeocodeSearchDone_response([])');
             }
         
             // handle the native call
@@ -107,7 +107,7 @@ class AMapSearchAPI extends NSObject  {
           case 'Callback::AMapSearchDelegate::onReGeocodeSearchDone_response':
             // print log
             if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: onReGeocodeSearchDone_response([])');
+              debugPrint('fluttify-dart-callback: onReGeocodeSearchDone_response([])');
             }
         
             // handle the native call
@@ -116,7 +116,7 @@ class AMapSearchAPI extends NSObject  {
           case 'Callback::AMapSearchDelegate::onInputTipsSearchDone_response':
             // print log
             if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: onInputTipsSearchDone_response([])');
+              debugPrint('fluttify-dart-callback: onInputTipsSearchDone_response([])');
             }
         
             // handle the native call
@@ -125,7 +125,7 @@ class AMapSearchAPI extends NSObject  {
           case 'Callback::AMapSearchDelegate::onBusStopSearchDone_response':
             // print log
             if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: onBusStopSearchDone_response([])');
+              debugPrint('fluttify-dart-callback: onBusStopSearchDone_response([])');
             }
         
             // handle the native call
@@ -134,7 +134,7 @@ class AMapSearchAPI extends NSObject  {
           case 'Callback::AMapSearchDelegate::onBusLineSearchDone_response':
             // print log
             if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: onBusLineSearchDone_response([])');
+              debugPrint('fluttify-dart-callback: onBusLineSearchDone_response([])');
             }
         
             // handle the native call
@@ -143,7 +143,7 @@ class AMapSearchAPI extends NSObject  {
           case 'Callback::AMapSearchDelegate::onDistrictSearchDone_response':
             // print log
             if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: onDistrictSearchDone_response([])');
+              debugPrint('fluttify-dart-callback: onDistrictSearchDone_response([])');
             }
         
             // handle the native call
@@ -152,7 +152,7 @@ class AMapSearchAPI extends NSObject  {
           case 'Callback::AMapSearchDelegate::onRouteSearchDone_response':
             // print log
             if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: onRouteSearchDone_response([])');
+              debugPrint('fluttify-dart-callback: onRouteSearchDone_response([])');
             }
         
             // handle the native call
@@ -161,7 +161,7 @@ class AMapSearchAPI extends NSObject  {
           case 'Callback::AMapSearchDelegate::onFutureRouteSearchDone_response':
             // print log
             if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: onFutureRouteSearchDone_response([])');
+              debugPrint('fluttify-dart-callback: onFutureRouteSearchDone_response([])');
             }
         
             // handle the native call
@@ -170,7 +170,7 @@ class AMapSearchAPI extends NSObject  {
           case 'Callback::AMapSearchDelegate::onDistanceSearchDone_response':
             // print log
             if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: onDistanceSearchDone_response([])');
+              debugPrint('fluttify-dart-callback: onDistanceSearchDone_response([])');
             }
         
             // handle the native call
@@ -179,7 +179,7 @@ class AMapSearchAPI extends NSObject  {
           case 'Callback::AMapSearchDelegate::onWeatherSearchDone_response':
             // print log
             if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: onWeatherSearchDone_response([])');
+              debugPrint('fluttify-dart-callback: onWeatherSearchDone_response([])');
             }
         
             // handle the native call
@@ -188,7 +188,7 @@ class AMapSearchAPI extends NSObject  {
           case 'Callback::AMapSearchDelegate::onRoadTrafficSearchDone_response':
             // print log
             if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: onRoadTrafficSearchDone_response([])');
+              debugPrint('fluttify-dart-callback: onRoadTrafficSearchDone_response([])');
             }
         
             // handle the native call
@@ -197,7 +197,7 @@ class AMapSearchAPI extends NSObject  {
           case 'Callback::AMapSearchDelegate::onNearbySearchDone_response':
             // print log
             if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: onNearbySearchDone_response([])');
+              debugPrint('fluttify-dart-callback: onNearbySearchDone_response([])');
             }
         
             // handle the native call
@@ -206,7 +206,7 @@ class AMapSearchAPI extends NSObject  {
           case 'Callback::AMapSearchDelegate::onCloudSearchDone_response':
             // print log
             if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: onCloudSearchDone_response([])');
+              debugPrint('fluttify-dart-callback: onCloudSearchDone_response([])');
             }
         
             // handle the native call
@@ -215,7 +215,7 @@ class AMapSearchAPI extends NSObject  {
           case 'Callback::AMapSearchDelegate::onShareSearchDone_response':
             // print log
             if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: onShareSearchDone_response([])');
+              debugPrint('fluttify-dart-callback: onShareSearchDone_response([])');
             }
         
             // handle the native call
@@ -246,7 +246,7 @@ class AMapSearchAPI extends NSObject  {
   Future<AMapSearchAPI> init() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapSearchAPI@$refId::init([])');
+      debugPrint('fluttify-dart: AMapSearchAPI@$refId::init([])');
     }
   
     // invoke native method
@@ -270,7 +270,7 @@ class AMapSearchAPI extends NSObject  {
   Future<void> cancelAllRequests() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapSearchAPI@$refId::cancelAllRequests([])');
+      debugPrint('fluttify-dart: AMapSearchAPI@$refId::cancelAllRequests([])');
     }
   
     // invoke native method
@@ -294,7 +294,7 @@ class AMapSearchAPI extends NSObject  {
   Future<void> AMapPOIIDSearch(AMapPOIIDSearchRequest request) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapSearchAPI@$refId::AMapPOIIDSearch([])');
+      debugPrint('fluttify-dart: AMapSearchAPI@$refId::AMapPOIIDSearch([])');
     }
   
     // invoke native method
@@ -318,7 +318,7 @@ class AMapSearchAPI extends NSObject  {
   Future<void> AMapPOIKeywordsSearch(AMapPOIKeywordsSearchRequest request) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapSearchAPI@$refId::AMapPOIKeywordsSearch([])');
+      debugPrint('fluttify-dart: AMapSearchAPI@$refId::AMapPOIKeywordsSearch([])');
     }
   
     // invoke native method
@@ -342,7 +342,7 @@ class AMapSearchAPI extends NSObject  {
   Future<void> AMapPOIAroundSearch(AMapPOIAroundSearchRequest request) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapSearchAPI@$refId::AMapPOIAroundSearch([])');
+      debugPrint('fluttify-dart: AMapSearchAPI@$refId::AMapPOIAroundSearch([])');
     }
   
     // invoke native method
@@ -366,7 +366,7 @@ class AMapSearchAPI extends NSObject  {
   Future<void> AMapPOIPolygonSearch(AMapPOIPolygonSearchRequest request) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapSearchAPI@$refId::AMapPOIPolygonSearch([])');
+      debugPrint('fluttify-dart: AMapSearchAPI@$refId::AMapPOIPolygonSearch([])');
     }
   
     // invoke native method
@@ -390,7 +390,7 @@ class AMapSearchAPI extends NSObject  {
   Future<void> AMapRoutePOISearch(AMapRoutePOISearchRequest request) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapSearchAPI@$refId::AMapRoutePOISearch([])');
+      debugPrint('fluttify-dart: AMapSearchAPI@$refId::AMapRoutePOISearch([])');
     }
   
     // invoke native method
@@ -414,7 +414,7 @@ class AMapSearchAPI extends NSObject  {
   Future<void> AMapGeocodeSearch(AMapGeocodeSearchRequest request) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapSearchAPI@$refId::AMapGeocodeSearch([])');
+      debugPrint('fluttify-dart: AMapSearchAPI@$refId::AMapGeocodeSearch([])');
     }
   
     // invoke native method
@@ -438,7 +438,7 @@ class AMapSearchAPI extends NSObject  {
   Future<void> AMapReGoecodeSearch(AMapReGeocodeSearchRequest request) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapSearchAPI@$refId::AMapReGoecodeSearch([])');
+      debugPrint('fluttify-dart: AMapSearchAPI@$refId::AMapReGoecodeSearch([])');
     }
   
     // invoke native method
@@ -462,7 +462,7 @@ class AMapSearchAPI extends NSObject  {
   Future<void> AMapInputTipsSearch(AMapInputTipsSearchRequest request) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapSearchAPI@$refId::AMapInputTipsSearch([])');
+      debugPrint('fluttify-dart: AMapSearchAPI@$refId::AMapInputTipsSearch([])');
     }
   
     // invoke native method
@@ -486,7 +486,7 @@ class AMapSearchAPI extends NSObject  {
   Future<void> AMapBusStopSearch(AMapBusStopSearchRequest request) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapSearchAPI@$refId::AMapBusStopSearch([])');
+      debugPrint('fluttify-dart: AMapSearchAPI@$refId::AMapBusStopSearch([])');
     }
   
     // invoke native method
@@ -510,7 +510,7 @@ class AMapSearchAPI extends NSObject  {
   Future<void> AMapBusLineIDSearch(AMapBusLineIDSearchRequest request) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapSearchAPI@$refId::AMapBusLineIDSearch([])');
+      debugPrint('fluttify-dart: AMapSearchAPI@$refId::AMapBusLineIDSearch([])');
     }
   
     // invoke native method
@@ -534,7 +534,7 @@ class AMapSearchAPI extends NSObject  {
   Future<void> AMapBusLineNameSearch(AMapBusLineNameSearchRequest request) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapSearchAPI@$refId::AMapBusLineNameSearch([])');
+      debugPrint('fluttify-dart: AMapSearchAPI@$refId::AMapBusLineNameSearch([])');
     }
   
     // invoke native method
@@ -558,7 +558,7 @@ class AMapSearchAPI extends NSObject  {
   Future<void> AMapDistrictSearch(AMapDistrictSearchRequest request) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapSearchAPI@$refId::AMapDistrictSearch([])');
+      debugPrint('fluttify-dart: AMapSearchAPI@$refId::AMapDistrictSearch([])');
     }
   
     // invoke native method
@@ -582,7 +582,7 @@ class AMapSearchAPI extends NSObject  {
   Future<void> AMapDrivingRouteSearch(AMapDrivingRouteSearchRequest request) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapSearchAPI@$refId::AMapDrivingRouteSearch([])');
+      debugPrint('fluttify-dart: AMapSearchAPI@$refId::AMapDrivingRouteSearch([])');
     }
   
     // invoke native method
@@ -606,7 +606,7 @@ class AMapSearchAPI extends NSObject  {
   Future<void> AMapWalkingRouteSearch(AMapWalkingRouteSearchRequest request) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapSearchAPI@$refId::AMapWalkingRouteSearch([])');
+      debugPrint('fluttify-dart: AMapSearchAPI@$refId::AMapWalkingRouteSearch([])');
     }
   
     // invoke native method
@@ -630,7 +630,7 @@ class AMapSearchAPI extends NSObject  {
   Future<void> AMapTransitRouteSearch(AMapTransitRouteSearchRequest request) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapSearchAPI@$refId::AMapTransitRouteSearch([])');
+      debugPrint('fluttify-dart: AMapSearchAPI@$refId::AMapTransitRouteSearch([])');
     }
   
     // invoke native method
@@ -654,7 +654,7 @@ class AMapSearchAPI extends NSObject  {
   Future<void> AMapRidingRouteSearch(AMapRidingRouteSearchRequest request) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapSearchAPI@$refId::AMapRidingRouteSearch([])');
+      debugPrint('fluttify-dart: AMapSearchAPI@$refId::AMapRidingRouteSearch([])');
     }
   
     // invoke native method
@@ -678,7 +678,7 @@ class AMapSearchAPI extends NSObject  {
   Future<void> AMapTruckRouteSearch(AMapTruckRouteSearchRequest request) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapSearchAPI@$refId::AMapTruckRouteSearch([])');
+      debugPrint('fluttify-dart: AMapSearchAPI@$refId::AMapTruckRouteSearch([])');
     }
   
     // invoke native method
@@ -702,7 +702,7 @@ class AMapSearchAPI extends NSObject  {
   Future<void> AMapFutureRouteSearch(AMapFutureRouteSearchRequest request) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapSearchAPI@$refId::AMapFutureRouteSearch([])');
+      debugPrint('fluttify-dart: AMapSearchAPI@$refId::AMapFutureRouteSearch([])');
     }
   
     // invoke native method
@@ -726,7 +726,7 @@ class AMapSearchAPI extends NSObject  {
   Future<void> AMapWeatherSearch(AMapWeatherSearchRequest request) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapSearchAPI@$refId::AMapWeatherSearch([])');
+      debugPrint('fluttify-dart: AMapSearchAPI@$refId::AMapWeatherSearch([])');
     }
   
     // invoke native method
@@ -750,7 +750,7 @@ class AMapSearchAPI extends NSObject  {
   Future<void> AMapRoadTrafficSearch(AMapRoadTrafficSearchRequest request) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapSearchAPI@$refId::AMapRoadTrafficSearch([])');
+      debugPrint('fluttify-dart: AMapSearchAPI@$refId::AMapRoadTrafficSearch([])');
     }
   
     // invoke native method
@@ -774,7 +774,7 @@ class AMapSearchAPI extends NSObject  {
   Future<void> AMapRoadTrafficCircleSearch(AMapRoadTrafficCircleSearchRequest request) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapSearchAPI@$refId::AMapRoadTrafficCircleSearch([])');
+      debugPrint('fluttify-dart: AMapSearchAPI@$refId::AMapRoadTrafficCircleSearch([])');
     }
   
     // invoke native method
@@ -798,7 +798,7 @@ class AMapSearchAPI extends NSObject  {
   Future<void> AMapDistanceSearch(AMapDistanceSearchRequest request) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapSearchAPI@$refId::AMapDistanceSearch([])');
+      debugPrint('fluttify-dart: AMapSearchAPI@$refId::AMapDistanceSearch([])');
     }
   
     // invoke native method
@@ -822,7 +822,7 @@ class AMapSearchAPI extends NSObject  {
   Future<void> AMapNearbySearch(AMapNearbySearchRequest request) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapSearchAPI@$refId::AMapNearbySearch([])');
+      debugPrint('fluttify-dart: AMapSearchAPI@$refId::AMapNearbySearch([])');
     }
   
     // invoke native method
@@ -846,7 +846,7 @@ class AMapSearchAPI extends NSObject  {
   Future<void> AMapCloudPOIAroundSearch(AMapCloudPOIAroundSearchRequest request) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapSearchAPI@$refId::AMapCloudPOIAroundSearch([])');
+      debugPrint('fluttify-dart: AMapSearchAPI@$refId::AMapCloudPOIAroundSearch([])');
     }
   
     // invoke native method
@@ -870,7 +870,7 @@ class AMapSearchAPI extends NSObject  {
   Future<void> AMapCloudPOIPolygonSearch(AMapCloudPOIPolygonSearchRequest request) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapSearchAPI@$refId::AMapCloudPOIPolygonSearch([])');
+      debugPrint('fluttify-dart: AMapSearchAPI@$refId::AMapCloudPOIPolygonSearch([])');
     }
   
     // invoke native method
@@ -894,7 +894,7 @@ class AMapSearchAPI extends NSObject  {
   Future<void> AMapCloudPOIIDSearch(AMapCloudPOIIDSearchRequest request) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapSearchAPI@$refId::AMapCloudPOIIDSearch([])');
+      debugPrint('fluttify-dart: AMapSearchAPI@$refId::AMapCloudPOIIDSearch([])');
     }
   
     // invoke native method
@@ -918,7 +918,7 @@ class AMapSearchAPI extends NSObject  {
   Future<void> AMapCloudPOILocalSearch(AMapCloudPOILocalSearchRequest request) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapSearchAPI@$refId::AMapCloudPOILocalSearch([])');
+      debugPrint('fluttify-dart: AMapSearchAPI@$refId::AMapCloudPOILocalSearch([])');
     }
   
     // invoke native method
@@ -942,7 +942,7 @@ class AMapSearchAPI extends NSObject  {
   Future<void> AMapLocationShareSearch(AMapLocationShareSearchRequest request) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapSearchAPI@$refId::AMapLocationShareSearch([])');
+      debugPrint('fluttify-dart: AMapSearchAPI@$refId::AMapLocationShareSearch([])');
     }
   
     // invoke native method
@@ -966,7 +966,7 @@ class AMapSearchAPI extends NSObject  {
   Future<void> AMapPOIShareSearch(AMapPOIShareSearchRequest request) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapSearchAPI@$refId::AMapPOIShareSearch([])');
+      debugPrint('fluttify-dart: AMapSearchAPI@$refId::AMapPOIShareSearch([])');
     }
   
     // invoke native method
@@ -990,7 +990,7 @@ class AMapSearchAPI extends NSObject  {
   Future<void> AMapRouteShareSearch(AMapRouteShareSearchRequest request) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapSearchAPI@$refId::AMapRouteShareSearch([])');
+      debugPrint('fluttify-dart: AMapSearchAPI@$refId::AMapRouteShareSearch([])');
     }
   
     // invoke native method
@@ -1014,7 +1014,7 @@ class AMapSearchAPI extends NSObject  {
   Future<void> AMapNavigationShareSearch(AMapNavigationShareSearchRequest request) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: AMapSearchAPI@$refId::AMapNavigationShareSearch([])');
+      debugPrint('fluttify-dart: AMapSearchAPI@$refId::AMapNavigationShareSearch([])');
     }
   
     // invoke native method

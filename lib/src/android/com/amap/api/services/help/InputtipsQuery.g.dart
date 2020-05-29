@@ -55,7 +55,7 @@ class com_amap_api_services_help_InputtipsQuery extends java_lang_Object  {
   Future<String> getKeyword() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.help.InputtipsQuery@$refId::getKeyword([])');
+      debugPrint('fluttify-dart: com.amap.api.services.help.InputtipsQuery@$refId::getKeyword([])');
     }
   
     // invoke native method
@@ -79,7 +79,7 @@ class com_amap_api_services_help_InputtipsQuery extends java_lang_Object  {
   Future<String> getCity() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.help.InputtipsQuery@$refId::getCity([])');
+      debugPrint('fluttify-dart: com.amap.api.services.help.InputtipsQuery@$refId::getCity([])');
     }
   
     // invoke native method
@@ -103,7 +103,7 @@ class com_amap_api_services_help_InputtipsQuery extends java_lang_Object  {
   Future<void> setType(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.help.InputtipsQuery@$refId::setType([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.help.InputtipsQuery@$refId::setType([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -127,7 +127,7 @@ class com_amap_api_services_help_InputtipsQuery extends java_lang_Object  {
   Future<String> getType() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.help.InputtipsQuery@$refId::getType([])');
+      debugPrint('fluttify-dart: com.amap.api.services.help.InputtipsQuery@$refId::getType([])');
     }
   
     // invoke native method
@@ -151,7 +151,7 @@ class com_amap_api_services_help_InputtipsQuery extends java_lang_Object  {
   Future<void> setCityLimit(bool var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.help.InputtipsQuery@$refId::setCityLimit([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.help.InputtipsQuery@$refId::setCityLimit([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -175,7 +175,7 @@ class com_amap_api_services_help_InputtipsQuery extends java_lang_Object  {
   Future<bool> getCityLimit() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.help.InputtipsQuery@$refId::getCityLimit([])');
+      debugPrint('fluttify-dart: com.amap.api.services.help.InputtipsQuery@$refId::getCityLimit([])');
     }
   
     // invoke native method
@@ -199,7 +199,7 @@ class com_amap_api_services_help_InputtipsQuery extends java_lang_Object  {
   Future<void> setLocation(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.help.InputtipsQuery@$refId::setLocation([])');
+      debugPrint('fluttify-dart: com.amap.api.services.help.InputtipsQuery@$refId::setLocation([])');
     }
   
     // invoke native method
@@ -223,7 +223,7 @@ class com_amap_api_services_help_InputtipsQuery extends java_lang_Object  {
   Future<com_amap_api_services_core_LatLonPoint> getLocation() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.help.InputtipsQuery@$refId::getLocation([])');
+      debugPrint('fluttify-dart: com.amap.api.services.help.InputtipsQuery@$refId::getLocation([])');
     }
   
     // invoke native method

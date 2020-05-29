@@ -37,7 +37,7 @@ class com_amap_api_services_busline_BusLineResult extends java_lang_Object  {
   static Future<com_amap_api_services_busline_BusLineResult> createPagedResult(com_amap_api_services_busline_BusLineQuery var0, int var1, List<com_amap_api_services_core_SuggestionCity> var2, List<String> var3, List<com_amap_api_services_busline_BusLineItem> var4) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.busline.BusLineResult::createPagedResult([\'var1\':$var1, \'var3\':$var3])');
+      debugPrint('fluttify-dart: com.amap.api.services.busline.BusLineResult::createPagedResult([\'var1\':$var1, \'var3\':$var3])');
     }
   
     // invoke native method
@@ -61,7 +61,7 @@ class com_amap_api_services_busline_BusLineResult extends java_lang_Object  {
   Future<int> getPageCount() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.busline.BusLineResult@$refId::getPageCount([])');
+      debugPrint('fluttify-dart: com.amap.api.services.busline.BusLineResult@$refId::getPageCount([])');
     }
   
     // invoke native method
@@ -85,7 +85,7 @@ class com_amap_api_services_busline_BusLineResult extends java_lang_Object  {
   Future<com_amap_api_services_busline_BusLineQuery> getQuery() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.busline.BusLineResult@$refId::getQuery([])');
+      debugPrint('fluttify-dart: com.amap.api.services.busline.BusLineResult@$refId::getQuery([])');
     }
   
     // invoke native method
@@ -109,7 +109,7 @@ class com_amap_api_services_busline_BusLineResult extends java_lang_Object  {
   Future<List<String>> getSearchSuggestionKeywords() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.busline.BusLineResult@$refId::getSearchSuggestionKeywords([])');
+      debugPrint('fluttify-dart: com.amap.api.services.busline.BusLineResult@$refId::getSearchSuggestionKeywords([])');
     }
   
     // invoke native method
@@ -133,7 +133,7 @@ class com_amap_api_services_busline_BusLineResult extends java_lang_Object  {
   Future<List<com_amap_api_services_core_SuggestionCity>> getSearchSuggestionCities() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.busline.BusLineResult@$refId::getSearchSuggestionCities([])');
+      debugPrint('fluttify-dart: com.amap.api.services.busline.BusLineResult@$refId::getSearchSuggestionCities([])');
     }
   
     // invoke native method
@@ -157,7 +157,7 @@ class com_amap_api_services_busline_BusLineResult extends java_lang_Object  {
   Future<List<com_amap_api_services_busline_BusLineItem>> getBusLines() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.busline.BusLineResult@$refId::getBusLines([])');
+      debugPrint('fluttify-dart: com.amap.api.services.busline.BusLineResult@$refId::getBusLines([])');
     }
   
     // invoke native method

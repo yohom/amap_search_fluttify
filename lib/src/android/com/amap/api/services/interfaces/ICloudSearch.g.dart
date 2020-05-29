@@ -20,103 +20,30 @@ mixin com_amap_api_services_interfaces_ICloudSearch on java_lang_Object {
 
   
 
+  @mustCallSuper
+  Future<void> setOnCloudSearchListener(com_amap_api_services_cloud_CloudSearch_OnCloudSearchListener var1) {
+    kNativeObjectPool.add(var1);
   
-  Future<void> setOnCloudSearchListener(com_amap_api_services_cloud_CloudSearch_OnCloudSearchListener var1) async {
-    // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.interfaces.ICloudSearch@$refId::setOnCloudSearchListener([])');
-    }
-  
-    // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.ICloudSearch::setOnCloudSearchListener', {"refId": refId});
-  
-  
-    // handle native call
-    MethodChannel('com.amap.api.services.interfaces.ICloudSearch::setOnCloudSearchListener::Callback')
-        .setMethodCallHandler((methodCall) async {
-          final args = methodCall.arguments as Map;
-          // final refId = args['callerRefId'] as int;
-          // if (refId != this.refId) return;
-  
-          switch (methodCall.method) {
-            case 'Callback::com.amap.api.services.cloud.CloudSearch.OnCloudSearchListener::onCloudSearched':
-              // print log
-              if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onCloudSearched([\'var2\':${args['var2']}])');
-              }
-        
-              // handle the native call
-              var1?.onCloudSearched((com_amap_api_services_cloud_CloudResult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify'), args['var2']);
-              break;
-            case 'Callback::com.amap.api.services.cloud.CloudSearch.OnCloudSearchListener::onCloudItemDetailSearched':
-              // print log
-              if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onCloudItemDetailSearched([\'var2\':${args['var2']}])');
-              }
-        
-              // handle the native call
-              var1?.onCloudItemDetailSearched((com_amap_api_services_cloud_CloudItemDetail()..refId = (args['var1'])..tag__ = 'amap_search_fluttify'), args['var2']);
-              break;
-            default:
-              break;
-          }
-        });
-  
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-    
-      return __return__;
+      debugPrint('setOnCloudSearchListener::kNativeObjectPool: $kNativeObjectPool');
     }
   }
   
+  @mustCallSuper
+  Future<void> searchCloudAsyn(com_amap_api_services_cloud_CloudSearch_Query var1) {
+    kNativeObjectPool.add(var1);
   
-  Future<void> searchCloudAsyn(com_amap_api_services_cloud_CloudSearch_Query var1) async {
-    // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.interfaces.ICloudSearch@$refId::searchCloudAsyn([])');
-    }
-  
-    // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.ICloudSearch::searchCloudAsyn', {"var1": var1.refId, "refId": refId});
-  
-  
-    // handle native call
-  
-  
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-    
-      return __return__;
+      debugPrint('searchCloudAsyn::kNativeObjectPool: $kNativeObjectPool');
     }
   }
   
+  @mustCallSuper
+  Future<void> searchCloudDetailAsyn(String var1, String var2) {
   
-  Future<void> searchCloudDetailAsyn(String var1, String var2) async {
-    // print log
+  
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.interfaces.ICloudSearch@$refId::searchCloudDetailAsyn([\'var1\':$var1, \'var2\':$var2])');
-    }
-  
-    // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.ICloudSearch::searchCloudDetailAsyn', {"var1": var1, "var2": var2, "refId": refId});
-  
-  
-    // handle native call
-  
-  
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-    
-      return __return__;
+      debugPrint('searchCloudDetailAsyn::kNativeObjectPool: $kNativeObjectPool');
     }
   }
   

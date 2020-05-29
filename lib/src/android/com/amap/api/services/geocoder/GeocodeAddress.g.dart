@@ -55,7 +55,7 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
   Future<String> getFormatAddress() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::getFormatAddress([])');
+      debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::getFormatAddress([])');
     }
   
     // invoke native method
@@ -79,7 +79,7 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
   Future<void> setFormatAddress(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::setFormatAddress([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::setFormatAddress([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -103,7 +103,7 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
   Future<String> getProvince() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::getProvince([])');
+      debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::getProvince([])');
     }
   
     // invoke native method
@@ -127,7 +127,7 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
   Future<void> setProvince(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::setProvince([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::setProvince([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -151,7 +151,7 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
   Future<String> getCity() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::getCity([])');
+      debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::getCity([])');
     }
   
     // invoke native method
@@ -175,7 +175,7 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
   Future<void> setCity(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::setCity([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::setCity([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -199,7 +199,7 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
   Future<String> getDistrict() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::getDistrict([])');
+      debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::getDistrict([])');
     }
   
     // invoke native method
@@ -223,7 +223,7 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
   Future<void> setDistrict(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::setDistrict([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::setDistrict([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -247,7 +247,7 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
   Future<String> getTownship() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::getTownship([])');
+      debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::getTownship([])');
     }
   
     // invoke native method
@@ -271,7 +271,7 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
   Future<void> setTownship(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::setTownship([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::setTownship([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -295,7 +295,7 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
   Future<String> getNeighborhood() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::getNeighborhood([])');
+      debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::getNeighborhood([])');
     }
   
     // invoke native method
@@ -319,7 +319,7 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
   Future<void> setNeighborhood(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::setNeighborhood([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::setNeighborhood([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -343,7 +343,7 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
   Future<String> getBuilding() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::getBuilding([])');
+      debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::getBuilding([])');
     }
   
     // invoke native method
@@ -367,7 +367,7 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
   Future<void> setBuilding(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::setBuilding([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::setBuilding([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -391,7 +391,7 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
   Future<String> getAdcode() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::getAdcode([])');
+      debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::getAdcode([])');
     }
   
     // invoke native method
@@ -415,7 +415,7 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
   Future<void> setAdcode(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::setAdcode([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::setAdcode([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -439,7 +439,7 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
   Future<com_amap_api_services_core_LatLonPoint> getLatLonPoint() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::getLatLonPoint([])');
+      debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::getLatLonPoint([])');
     }
   
     // invoke native method
@@ -463,7 +463,7 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
   Future<void> setLatLonPoint(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::setLatLonPoint([])');
+      debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::setLatLonPoint([])');
     }
   
     // invoke native method
@@ -487,7 +487,7 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
   Future<String> getLevel() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::getLevel([])');
+      debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::getLevel([])');
     }
   
     // invoke native method
@@ -511,7 +511,7 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
   Future<void> setLevel(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::setLevel([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::setLevel([\'var1\':$var1])');
     }
   
     // invoke native method

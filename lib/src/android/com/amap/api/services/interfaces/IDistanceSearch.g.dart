@@ -20,94 +20,30 @@ mixin com_amap_api_services_interfaces_IDistanceSearch on java_lang_Object {
 
   
 
+  @mustCallSuper
+  Future<com_amap_api_services_route_DistanceResult> calculateRouteDistance(com_amap_api_services_route_DistanceSearch_DistanceQuery var1) {
+    kNativeObjectPool.add(var1);
   
-  Future<com_amap_api_services_route_DistanceResult> calculateRouteDistance(com_amap_api_services_route_DistanceSearch_DistanceQuery var1) async {
-    // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.interfaces.IDistanceSearch@$refId::calculateRouteDistance([])');
-    }
-  
-    // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IDistanceSearch::calculateRouteDistance', {"var1": var1.refId, "refId": refId});
-  
-  
-    // handle native call
-  
-  
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = com_amap_api_services_route_DistanceResult()..refId = __result__..tag__ = 'amap_search_fluttify';
-      kNativeObjectPool.add(__return__);
-      return __return__;
+      debugPrint('calculateRouteDistance::kNativeObjectPool: $kNativeObjectPool');
     }
   }
   
+  @mustCallSuper
+  Future<void> calculateRouteDistanceAsyn(com_amap_api_services_route_DistanceSearch_DistanceQuery var1) {
+    kNativeObjectPool.add(var1);
   
-  Future<void> calculateRouteDistanceAsyn(com_amap_api_services_route_DistanceSearch_DistanceQuery var1) async {
-    // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.interfaces.IDistanceSearch@$refId::calculateRouteDistanceAsyn([])');
-    }
-  
-    // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IDistanceSearch::calculateRouteDistanceAsyn', {"var1": var1.refId, "refId": refId});
-  
-  
-    // handle native call
-  
-  
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-    
-      return __return__;
+      debugPrint('calculateRouteDistanceAsyn::kNativeObjectPool: $kNativeObjectPool');
     }
   }
   
+  @mustCallSuper
+  Future<void> setDistanceSearchListener(com_amap_api_services_route_DistanceSearch_OnDistanceSearchListener var1) {
+    kNativeObjectPool.add(var1);
   
-  Future<void> setDistanceSearchListener(com_amap_api_services_route_DistanceSearch_OnDistanceSearchListener var1) async {
-    // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.interfaces.IDistanceSearch@$refId::setDistanceSearchListener([])');
-    }
-  
-    // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IDistanceSearch::setDistanceSearchListener', {"refId": refId});
-  
-  
-    // handle native call
-    MethodChannel('com.amap.api.services.interfaces.IDistanceSearch::setDistanceSearchListener::Callback')
-        .setMethodCallHandler((methodCall) async {
-          final args = methodCall.arguments as Map;
-          // final refId = args['callerRefId'] as int;
-          // if (refId != this.refId) return;
-  
-          switch (methodCall.method) {
-            case 'Callback::com.amap.api.services.route.DistanceSearch.OnDistanceSearchListener::onDistanceSearched':
-              // print log
-              if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onDistanceSearched([\'var2\':${args['var2']}])');
-              }
-        
-              // handle the native call
-              var1?.onDistanceSearched((com_amap_api_services_route_DistanceResult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify'), args['var2']);
-              break;
-            default:
-              break;
-          }
-        });
-  
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-    
-      return __return__;
+      debugPrint('setDistanceSearchListener::kNativeObjectPool: $kNativeObjectPool');
     }
   }
   

@@ -55,7 +55,7 @@ class com_amap_api_services_poisearch_PoiItemExtension extends java_lang_Object 
   Future<String> getOpentime() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.poisearch.PoiItemExtension@$refId::getOpentime([])');
+      debugPrint('fluttify-dart: com.amap.api.services.poisearch.PoiItemExtension@$refId::getOpentime([])');
     }
   
     // invoke native method
@@ -79,7 +79,7 @@ class com_amap_api_services_poisearch_PoiItemExtension extends java_lang_Object 
   Future<String> getmRating() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.poisearch.PoiItemExtension@$refId::getmRating([])');
+      debugPrint('fluttify-dart: com.amap.api.services.poisearch.PoiItemExtension@$refId::getmRating([])');
     }
   
     // invoke native method

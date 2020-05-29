@@ -55,7 +55,7 @@ class com_amap_api_services_cloud_CloudItem extends java_lang_Object with androi
   Future<String> getID() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::getID([])');
+      debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::getID([])');
     }
   
     // invoke native method
@@ -79,7 +79,7 @@ class com_amap_api_services_cloud_CloudItem extends java_lang_Object with androi
   Future<int> getDistance() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::getDistance([])');
+      debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::getDistance([])');
     }
   
     // invoke native method
@@ -103,7 +103,7 @@ class com_amap_api_services_cloud_CloudItem extends java_lang_Object with androi
   Future<void> setDistance(int var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::setDistance([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::setDistance([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -127,7 +127,7 @@ class com_amap_api_services_cloud_CloudItem extends java_lang_Object with androi
   Future<String> getTitle() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::getTitle([])');
+      debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::getTitle([])');
     }
   
     // invoke native method
@@ -151,7 +151,7 @@ class com_amap_api_services_cloud_CloudItem extends java_lang_Object with androi
   Future<String> getSnippet() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::getSnippet([])');
+      debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::getSnippet([])');
     }
   
     // invoke native method
@@ -175,7 +175,7 @@ class com_amap_api_services_cloud_CloudItem extends java_lang_Object with androi
   Future<com_amap_api_services_core_LatLonPoint> getLatLonPoint() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::getLatLonPoint([])');
+      debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::getLatLonPoint([])');
     }
   
     // invoke native method
@@ -199,7 +199,7 @@ class com_amap_api_services_cloud_CloudItem extends java_lang_Object with androi
   Future<String> getCreatetime() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::getCreatetime([])');
+      debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::getCreatetime([])');
     }
   
     // invoke native method
@@ -223,7 +223,7 @@ class com_amap_api_services_cloud_CloudItem extends java_lang_Object with androi
   Future<void> setCreatetime(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::setCreatetime([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::setCreatetime([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -247,7 +247,7 @@ class com_amap_api_services_cloud_CloudItem extends java_lang_Object with androi
   Future<String> getUpdatetime() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::getUpdatetime([])');
+      debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::getUpdatetime([])');
     }
   
     // invoke native method
@@ -271,7 +271,7 @@ class com_amap_api_services_cloud_CloudItem extends java_lang_Object with androi
   Future<void> setUpdatetime(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::setUpdatetime([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::setUpdatetime([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -295,7 +295,7 @@ class com_amap_api_services_cloud_CloudItem extends java_lang_Object with androi
   Future<Map<String,String>> getCustomfield() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::getCustomfield([])');
+      debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::getCustomfield([])');
     }
   
     // invoke native method
@@ -319,7 +319,7 @@ class com_amap_api_services_cloud_CloudItem extends java_lang_Object with androi
   Future<void> setCustomfield(Map<String,String> var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::setCustomfield([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::setCustomfield([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -343,7 +343,7 @@ class com_amap_api_services_cloud_CloudItem extends java_lang_Object with androi
   Future<List<com_amap_api_services_cloud_CloudImage>> getCloudImage() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::getCloudImage([])');
+      debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::getCloudImage([])');
     }
   
     // invoke native method
@@ -367,7 +367,7 @@ class com_amap_api_services_cloud_CloudItem extends java_lang_Object with androi
   Future<void> setmCloudImage(List<com_amap_api_services_cloud_CloudImage> var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::setmCloudImage([])');
+      debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::setmCloudImage([])');
     }
   
     // invoke native method

@@ -93,7 +93,7 @@ class com_amap_api_services_route_RouteSearch_WalkRouteQuery extends java_lang_O
   Future<com_amap_api_services_route_RouteSearch_FromAndTo> getFromAndTo() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RouteSearch.WalkRouteQuery@$refId::getFromAndTo([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.WalkRouteQuery@$refId::getFromAndTo([])');
     }
   
     // invoke native method
@@ -117,7 +117,7 @@ class com_amap_api_services_route_RouteSearch_WalkRouteQuery extends java_lang_O
   Future<int> getMode() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RouteSearch.WalkRouteQuery@$refId::getMode([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.WalkRouteQuery@$refId::getMode([])');
     }
   
     // invoke native method
@@ -141,7 +141,7 @@ class com_amap_api_services_route_RouteSearch_WalkRouteQuery extends java_lang_O
   Future<com_amap_api_services_route_RouteSearch_WalkRouteQuery> clone() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RouteSearch.WalkRouteQuery@$refId::clone([])');
+      debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.WalkRouteQuery@$refId::clone([])');
     }
   
     // invoke native method

@@ -55,7 +55,7 @@ class com_amap_api_services_traffic_TrafficStatusResult extends java_lang_Object
   Future<String> getDescription() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusResult@$refId::getDescription([])');
+      debugPrint('fluttify-dart: com.amap.api.services.traffic.TrafficStatusResult@$refId::getDescription([])');
     }
   
     // invoke native method
@@ -79,7 +79,7 @@ class com_amap_api_services_traffic_TrafficStatusResult extends java_lang_Object
   Future<void> setDescription(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusResult@$refId::setDescription([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.traffic.TrafficStatusResult@$refId::setDescription([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -103,7 +103,7 @@ class com_amap_api_services_traffic_TrafficStatusResult extends java_lang_Object
   Future<com_amap_api_services_traffic_TrafficStatusEvaluation> getEvaluation() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusResult@$refId::getEvaluation([])');
+      debugPrint('fluttify-dart: com.amap.api.services.traffic.TrafficStatusResult@$refId::getEvaluation([])');
     }
   
     // invoke native method
@@ -127,7 +127,7 @@ class com_amap_api_services_traffic_TrafficStatusResult extends java_lang_Object
   Future<void> setEvaluation(com_amap_api_services_traffic_TrafficStatusEvaluation var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusResult@$refId::setEvaluation([])');
+      debugPrint('fluttify-dart: com.amap.api.services.traffic.TrafficStatusResult@$refId::setEvaluation([])');
     }
   
     // invoke native method
@@ -151,7 +151,7 @@ class com_amap_api_services_traffic_TrafficStatusResult extends java_lang_Object
   Future<List<com_amap_api_services_traffic_TrafficStatusInfo>> getRoads() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusResult@$refId::getRoads([])');
+      debugPrint('fluttify-dart: com.amap.api.services.traffic.TrafficStatusResult@$refId::getRoads([])');
     }
   
     // invoke native method
@@ -175,7 +175,7 @@ class com_amap_api_services_traffic_TrafficStatusResult extends java_lang_Object
   Future<void> setRoads(List<com_amap_api_services_traffic_TrafficStatusInfo> var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusResult@$refId::setRoads([])');
+      debugPrint('fluttify-dart: com.amap.api.services.traffic.TrafficStatusResult@$refId::setRoads([])');
     }
   
     // invoke native method

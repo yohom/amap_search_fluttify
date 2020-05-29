@@ -55,7 +55,7 @@ class com_amap_api_services_district_DistrictSearch extends java_lang_Object  {
   Future<com_amap_api_services_district_DistrictSearchQuery> getQuery() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.district.DistrictSearch@$refId::getQuery([])');
+      debugPrint('fluttify-dart: com.amap.api.services.district.DistrictSearch@$refId::getQuery([])');
     }
   
     // invoke native method
@@ -79,7 +79,7 @@ class com_amap_api_services_district_DistrictSearch extends java_lang_Object  {
   Future<void> setQuery(com_amap_api_services_district_DistrictSearchQuery var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.district.DistrictSearch@$refId::setQuery([])');
+      debugPrint('fluttify-dart: com.amap.api.services.district.DistrictSearch@$refId::setQuery([])');
     }
   
     // invoke native method
@@ -103,7 +103,7 @@ class com_amap_api_services_district_DistrictSearch extends java_lang_Object  {
   Future<com_amap_api_services_district_DistrictResult> searchDistrict() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.district.DistrictSearch@$refId::searchDistrict([])');
+      debugPrint('fluttify-dart: com.amap.api.services.district.DistrictSearch@$refId::searchDistrict([])');
     }
   
     // invoke native method
@@ -127,7 +127,7 @@ class com_amap_api_services_district_DistrictSearch extends java_lang_Object  {
   Future<void> searchDistrictAsyn() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.district.DistrictSearch@$refId::searchDistrictAsyn([])');
+      debugPrint('fluttify-dart: com.amap.api.services.district.DistrictSearch@$refId::searchDistrictAsyn([])');
     }
   
     // invoke native method
@@ -151,7 +151,7 @@ class com_amap_api_services_district_DistrictSearch extends java_lang_Object  {
   Future<void> searchDistrictAnsy() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.district.DistrictSearch@$refId::searchDistrictAnsy([])');
+      debugPrint('fluttify-dart: com.amap.api.services.district.DistrictSearch@$refId::searchDistrictAnsy([])');
     }
   
     // invoke native method
@@ -175,7 +175,7 @@ class com_amap_api_services_district_DistrictSearch extends java_lang_Object  {
   Future<void> setOnDistrictSearchListener(com_amap_api_services_district_DistrictSearch_OnDistrictSearchListener var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.district.DistrictSearch@$refId::setOnDistrictSearchListener([])');
+      debugPrint('fluttify-dart: com.amap.api.services.district.DistrictSearch@$refId::setOnDistrictSearchListener([])');
     }
   
     // invoke native method
@@ -193,7 +193,7 @@ class com_amap_api_services_district_DistrictSearch extends java_lang_Object  {
             case 'Callback::com.amap.api.services.district.DistrictSearch.OnDistrictSearchListener::onDistrictSearched':
               // print log
               if (fluttifyLogEnabled) {
-                print('fluttify-dart-callback: onDistrictSearched([])');
+                debugPrint('fluttify-dart-callback: onDistrictSearched([])');
               }
         
               // handle the native call

@@ -74,7 +74,7 @@ class com_amap_api_services_poisearch_Photo extends java_lang_Object with androi
   Future<String> getTitle() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.poisearch.Photo@$refId::getTitle([])');
+      debugPrint('fluttify-dart: com.amap.api.services.poisearch.Photo@$refId::getTitle([])');
     }
   
     // invoke native method
@@ -98,7 +98,7 @@ class com_amap_api_services_poisearch_Photo extends java_lang_Object with androi
   Future<void> setTitle(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.poisearch.Photo@$refId::setTitle([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.poisearch.Photo@$refId::setTitle([\'var1\':$var1])');
     }
   
     // invoke native method
@@ -122,7 +122,7 @@ class com_amap_api_services_poisearch_Photo extends java_lang_Object with androi
   Future<String> getUrl() async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.poisearch.Photo@$refId::getUrl([])');
+      debugPrint('fluttify-dart: com.amap.api.services.poisearch.Photo@$refId::getUrl([])');
     }
   
     // invoke native method
@@ -146,7 +146,7 @@ class com_amap_api_services_poisearch_Photo extends java_lang_Object with androi
   Future<void> setUrl(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.poisearch.Photo@$refId::setUrl([\'var1\':$var1])');
+      debugPrint('fluttify-dart: com.amap.api.services.poisearch.Photo@$refId::setUrl([\'var1\':$var1])');
     }
   
     // invoke native method
