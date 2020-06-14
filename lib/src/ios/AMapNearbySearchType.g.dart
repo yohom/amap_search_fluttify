@@ -4,6 +4,6 @@
 //////////////////////////////////////////////////////////
 
 enum AMapNearbySearchType {
-  AMapNearbySearchTypeLiner,
-  AMapNearbySearchTypeDriving
+  AMapNearbySearchTypeLiner /* 0 */,
+  AMapNearbySearchTypeDriving /* 1 */
 }

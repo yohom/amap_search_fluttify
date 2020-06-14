@@ -6,7 +6,6 @@
 import 'dart:typed_data';
 
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
-import 'package:amap_search_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
@@ -75,7 +74,7 @@ class AMapSearchAPI extends NSObject  {
             }
         
             // handle the native call
-            delegate?.AMapSearchRequest_didFailWithError(args["request"] is Ref ? (Ref()..refId = (args['request'])..tag__ = 'amap_search_fluttify') : args['request'], (NSError()..refId = (args['error'])..tag__ = 'amap_search_fluttify'));
+            delegate?.AMapSearchRequest_didFailWithError((args['request'] as Object).as__<dynamic>(), (args['error'] as Object).as__<NSError>());
             break;
           case 'Callback::AMapSearchDelegate::onPOISearchDone_response':
             // print log
@@ -84,7 +83,7 @@ class AMapSearchAPI extends NSObject  {
             }
         
             // handle the native call
-            delegate?.onPOISearchDone_response((AMapPOIIDSearchRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify'), (AMapPOISearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify'));
+            delegate?.onPOISearchDone_response((args['request'] as Object).as__<AMapPOISearchBaseRequest>(), (args['response'] as Object).as__<AMapPOISearchResponse>());
             break;
           case 'Callback::AMapSearchDelegate::onRoutePOISearchDone_response':
             // print log
@@ -93,7 +92,7 @@ class AMapSearchAPI extends NSObject  {
             }
         
             // handle the native call
-            delegate?.onRoutePOISearchDone_response((AMapRoutePOISearchRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify'), (AMapRoutePOISearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify'));
+            delegate?.onRoutePOISearchDone_response((args['request'] as Object).as__<AMapRoutePOISearchRequest>(), (args['response'] as Object).as__<AMapRoutePOISearchResponse>());
             break;
           case 'Callback::AMapSearchDelegate::onGeocodeSearchDone_response':
             // print log
@@ -102,7 +101,7 @@ class AMapSearchAPI extends NSObject  {
             }
         
             // handle the native call
-            delegate?.onGeocodeSearchDone_response((AMapGeocodeSearchRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify'), (AMapGeocodeSearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify'));
+            delegate?.onGeocodeSearchDone_response((args['request'] as Object).as__<AMapGeocodeSearchRequest>(), (args['response'] as Object).as__<AMapGeocodeSearchResponse>());
             break;
           case 'Callback::AMapSearchDelegate::onReGeocodeSearchDone_response':
             // print log
@@ -111,7 +110,7 @@ class AMapSearchAPI extends NSObject  {
             }
         
             // handle the native call
-            delegate?.onReGeocodeSearchDone_response((AMapReGeocodeSearchRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify'), (AMapReGeocodeSearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify'));
+            delegate?.onReGeocodeSearchDone_response((args['request'] as Object).as__<AMapReGeocodeSearchRequest>(), (args['response'] as Object).as__<AMapReGeocodeSearchResponse>());
             break;
           case 'Callback::AMapSearchDelegate::onInputTipsSearchDone_response':
             // print log
@@ -120,7 +119,7 @@ class AMapSearchAPI extends NSObject  {
             }
         
             // handle the native call
-            delegate?.onInputTipsSearchDone_response((AMapInputTipsSearchRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify'), (AMapInputTipsSearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify'));
+            delegate?.onInputTipsSearchDone_response((args['request'] as Object).as__<AMapInputTipsSearchRequest>(), (args['response'] as Object).as__<AMapInputTipsSearchResponse>());
             break;
           case 'Callback::AMapSearchDelegate::onBusStopSearchDone_response':
             // print log
@@ -129,7 +128,7 @@ class AMapSearchAPI extends NSObject  {
             }
         
             // handle the native call
-            delegate?.onBusStopSearchDone_response((AMapBusStopSearchRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify'), (AMapBusStopSearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify'));
+            delegate?.onBusStopSearchDone_response((args['request'] as Object).as__<AMapBusStopSearchRequest>(), (args['response'] as Object).as__<AMapBusStopSearchResponse>());
             break;
           case 'Callback::AMapSearchDelegate::onBusLineSearchDone_response':
             // print log
@@ -138,7 +137,7 @@ class AMapSearchAPI extends NSObject  {
             }
         
             // handle the native call
-            delegate?.onBusLineSearchDone_response((AMapBusLineNameSearchRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify'), (AMapBusLineSearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify'));
+            delegate?.onBusLineSearchDone_response((args['request'] as Object).as__<AMapBusLineBaseSearchRequest>(), (args['response'] as Object).as__<AMapBusLineSearchResponse>());
             break;
           case 'Callback::AMapSearchDelegate::onDistrictSearchDone_response':
             // print log
@@ -147,7 +146,7 @@ class AMapSearchAPI extends NSObject  {
             }
         
             // handle the native call
-            delegate?.onDistrictSearchDone_response((AMapDistrictSearchRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify'), (AMapDistrictSearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify'));
+            delegate?.onDistrictSearchDone_response((args['request'] as Object).as__<AMapDistrictSearchRequest>(), (args['response'] as Object).as__<AMapDistrictSearchResponse>());
             break;
           case 'Callback::AMapSearchDelegate::onRouteSearchDone_response':
             // print log
@@ -156,7 +155,7 @@ class AMapSearchAPI extends NSObject  {
             }
         
             // handle the native call
-            delegate?.onRouteSearchDone_response((AMapDrivingRouteSearchRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify'), (AMapRidingRouteSearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify'));
+            delegate?.onRouteSearchDone_response((args['request'] as Object).as__<AMapRouteSearchBaseRequest>(), (args['response'] as Object).as__<AMapRouteSearchResponse>());
             break;
           case 'Callback::AMapSearchDelegate::onFutureRouteSearchDone_response':
             // print log
@@ -165,7 +164,7 @@ class AMapSearchAPI extends NSObject  {
             }
         
             // handle the native call
-            delegate?.onFutureRouteSearchDone_response((AMapDrivingRouteSearchRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify'), (AMapFutureRouteSearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify'));
+            delegate?.onFutureRouteSearchDone_response((args['request'] as Object).as__<AMapRouteSearchBaseRequest>(), (args['response'] as Object).as__<AMapFutureRouteSearchResponse>());
             break;
           case 'Callback::AMapSearchDelegate::onDistanceSearchDone_response':
             // print log
@@ -174,7 +173,7 @@ class AMapSearchAPI extends NSObject  {
             }
         
             // handle the native call
-            delegate?.onDistanceSearchDone_response((AMapDistanceSearchRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify'), (AMapDistanceSearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify'));
+            delegate?.onDistanceSearchDone_response((args['request'] as Object).as__<AMapDistanceSearchRequest>(), (args['response'] as Object).as__<AMapDistanceSearchResponse>());
             break;
           case 'Callback::AMapSearchDelegate::onWeatherSearchDone_response':
             // print log
@@ -183,7 +182,7 @@ class AMapSearchAPI extends NSObject  {
             }
         
             // handle the native call
-            delegate?.onWeatherSearchDone_response((AMapWeatherSearchRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify'), (AMapWeatherSearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify'));
+            delegate?.onWeatherSearchDone_response((args['request'] as Object).as__<AMapWeatherSearchRequest>(), (args['response'] as Object).as__<AMapWeatherSearchResponse>());
             break;
           case 'Callback::AMapSearchDelegate::onRoadTrafficSearchDone_response':
             // print log
@@ -192,7 +191,7 @@ class AMapSearchAPI extends NSObject  {
             }
         
             // handle the native call
-            delegate?.onRoadTrafficSearchDone_response((AMapRoadTrafficSearchRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify'), (AMapRoadTrafficSearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify'));
+            delegate?.onRoadTrafficSearchDone_response((args['request'] as Object).as__<AMapRoadTrafficSearchBaseRequest>(), (args['response'] as Object).as__<AMapRoadTrafficSearchResponse>());
             break;
           case 'Callback::AMapSearchDelegate::onNearbySearchDone_response':
             // print log
@@ -201,7 +200,7 @@ class AMapSearchAPI extends NSObject  {
             }
         
             // handle the native call
-            delegate?.onNearbySearchDone_response((AMapNearbySearchRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify'), (AMapNearbySearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify'));
+            delegate?.onNearbySearchDone_response((args['request'] as Object).as__<AMapNearbySearchRequest>(), (args['response'] as Object).as__<AMapNearbySearchResponse>());
             break;
           case 'Callback::AMapSearchDelegate::onCloudSearchDone_response':
             // print log
@@ -210,7 +209,7 @@ class AMapSearchAPI extends NSObject  {
             }
         
             // handle the native call
-            delegate?.onCloudSearchDone_response((AMapCloudPOIAroundSearchRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify'), (AMapCloudPOISearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify'));
+            delegate?.onCloudSearchDone_response((args['request'] as Object).as__<AMapCloudSearchBaseRequest>(), (args['response'] as Object).as__<AMapCloudPOISearchResponse>());
             break;
           case 'Callback::AMapSearchDelegate::onShareSearchDone_response':
             // print log
@@ -219,7 +218,7 @@ class AMapSearchAPI extends NSObject  {
             }
         
             // handle the native call
-            delegate?.onShareSearchDone_response((AMapLocationShareSearchRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify'), (AMapShareSearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify'));
+            delegate?.onShareSearchDone_response((args['request'] as Object).as__<AMapShareSearchBaseRequest>(), (args['response'] as Object).as__<AMapShareSearchResponse>());
             break;
           default:
             break;
@@ -261,7 +260,7 @@ class AMapSearchAPI extends NSObject  {
       return null;
     } else {
       final __return__ = AMapSearchAPI()..refId = __result__..tag__ = 'amap_search_fluttify';
-      kNativeObjectPool.add(__return__);
+      if (__result__ is Ref) kNativeObjectPool.add(__return__ as Ref);
       return __return__;
     }
   }

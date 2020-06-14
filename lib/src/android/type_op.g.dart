@@ -8,1282 +8,1370 @@ import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
-import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
-extension TypeOpAmapSearchFluttifyAndroid on Ref {
-  Future<bool> iscom_amap_api_services_traffic_TrafficStatusInfo() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_traffic_TrafficStatusInfo', {'refId': refId});
-    return result;
+extension TypeOpAmapSearchFluttifyAndroid on Object {
+  // type check
+  Future<bool> is__<T>() async {
+    final typeName = T.toString();
+    if (RegExp('(List<)?(String|int|double)(>)?|(Map<String,(String|int|double)>)').hasMatch(typeName)) {
+      return this is T;
+    }
+    else if (T == com_amap_api_services_traffic_TrafficStatusInfo) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_traffic_TrafficStatusInfo', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_traffic_TrafficStatusResult) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_traffic_TrafficStatusResult', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_traffic_TrafficSearch) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_traffic_TrafficSearch', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_traffic_RoadTrafficQuery) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_traffic_RoadTrafficQuery', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_traffic_CircleTrafficQuery) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_traffic_CircleTrafficQuery', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_traffic_TrafficStatusEvaluation) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_traffic_TrafficStatusEvaluation', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_busline_BusLineItem) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_busline_BusLineItem', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_busline_BusStationResult) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_busline_BusStationResult', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_busline_BusStationSearch) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_busline_BusStationSearch', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_busline_BusLineSearch) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_busline_BusLineSearch', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_busline_BusLineQuery) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_busline_BusLineQuery', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_busline_BusLineResult) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_busline_BusLineResult', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_busline_BusStationItem) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_busline_BusStationItem', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_busline_BusStationQuery) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_busline_BusStationQuery', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_core_AMapException) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_core_AMapException', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_core_ServiceSettings) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_core_ServiceSettings', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_core_SearchUtils) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_core_SearchUtils', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_core_LatLonSharePoint) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_core_LatLonSharePoint', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_core_LatLonPoint) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_core_LatLonPoint', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_core_PoiItem) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_core_PoiItem', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_core_SuggestionCity) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_core_SuggestionCity', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_poisearch_Photo) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_poisearch_Photo', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_poisearch_SubPoiItem) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_poisearch_SubPoiItem', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_poisearch_PoiItemExtension) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_poisearch_PoiItemExtension', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_poisearch_PoiSearch_SearchBound) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_poisearch_PoiSearch_SearchBound', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_poisearch_PoiResult) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_poisearch_PoiResult', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_poisearch_PoiSearch) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_poisearch_PoiSearch', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_poisearch_PoiSearch_Query) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_poisearch_PoiSearch_Query', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_poisearch_IndoorData) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_poisearch_IndoorData', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_route_Railway) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_Railway', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_route_BusPath) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_BusPath', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_route_DriveRoutePlanResult) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_DriveRoutePlanResult', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_route_RouteSearch_TruckRouteQuery) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RouteSearch_TruckRouteQuery', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_route_TMC) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_TMC', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_route_RouteBusWalkItem) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RouteBusWalkItem', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_route_RouteResult) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RouteResult', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_route_RouteSearch) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RouteSearch', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_route_BusStep) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_BusStep', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_route_TaxiItem) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_TaxiItem', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_route_BusRouteResult) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_BusRouteResult', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_route_RoutePlanResult) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RoutePlanResult', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_route_RailwaySpace) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RailwaySpace', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_route_TruckRouteRestult) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_TruckRouteRestult', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_route_RouteSearch_RideRouteQuery) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RouteSearch_RideRouteQuery', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_route_RouteSearch_DriveRouteQuery) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RouteSearch_DriveRouteQuery', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_route_RouteRailwayItem) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RouteRailwayItem', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_route_WalkStep) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_WalkStep', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_route_RailwayStationItem) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RailwayStationItem', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_route_RideRouteResult) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RideRouteResult', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_route_RouteSearch_FromAndTo) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RouteSearch_FromAndTo', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_route_RidePath) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RidePath', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_route_RouteSearch_BusRouteQuery) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RouteSearch_BusRouteQuery', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_route_RideStep) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RideStep', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_route_RouteSearchCity) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RouteSearchCity', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_route_DistanceResult) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_DistanceResult', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_route_RouteSearch_WalkRouteQuery) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RouteSearch_WalkRouteQuery', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_route_District) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_District', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_route_WalkRouteResult) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_WalkRouteResult', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_route_DistanceSearch_DistanceQuery) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_DistanceSearch_DistanceQuery', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_route_SearchCity) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_SearchCity', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_route_DistanceSearch) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_DistanceSearch', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_route_WalkPath) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_WalkPath', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_route_RouteBusLineItem) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RouteBusLineItem', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_route_RouteSearch_DrivePlanQuery) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RouteSearch_DrivePlanQuery', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_route_DrivePlanStep) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_DrivePlanStep', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_route_TimeInfo) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_TimeInfo', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_route_DriveStep) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_DriveStep', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_route_TruckStep) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_TruckStep', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_route_DriveRouteResult) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_DriveRouteResult', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_route_DrivePath) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_DrivePath', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_route_TruckPath) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_TruckPath', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_route_Doorway) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_Doorway', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_route_DrivePlanPath) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_DrivePlanPath', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_route_TimeInfosElement) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_TimeInfosElement', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_route_DistanceItem) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_DistanceItem', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_route_Path) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_Path', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_road_Road) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_road_Road', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_road_Crossroad) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_road_Crossroad', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_nearby_NearbyInfo) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_nearby_NearbyInfo', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_nearby_UploadInfo) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_nearby_UploadInfo', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_nearby_NearbySearch) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_nearby_NearbySearch', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_nearby_NearbySearchResult) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_nearby_NearbySearchResult', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_nearby_NearbySearch_NearbyQuery) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_nearby_NearbySearch_NearbyQuery', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_a_) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_a_', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_routepoisearch_RoutePOIItem) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_routepoisearch_RoutePOIItem', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_routepoisearch_RoutePOISearch) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_routepoisearch_RoutePOISearch', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_routepoisearch_RoutePOISearchResult) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_routepoisearch_RoutePOISearchResult', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_routepoisearch_RoutePOISearchQuery) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_routepoisearch_RoutePOISearchQuery', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_cloud_CloudItem) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_cloud_CloudItem', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_cloud_CloudSearch_Query) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_cloud_CloudSearch_Query', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_cloud_CloudResult) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_cloud_CloudResult', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_cloud_CloudSearch) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_cloud_CloudSearch', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_cloud_CloudSearch_SearchBound) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_cloud_CloudSearch_SearchBound', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_cloud_CloudImage) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_cloud_CloudImage', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_cloud_CloudSearch_Sortingrules) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_cloud_CloudSearch_Sortingrules', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_cloud_CloudItemDetail) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_cloud_CloudItemDetail', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_weather_LocalDayWeatherForecast) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_weather_LocalDayWeatherForecast', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_weather_WeatherSearchQuery) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_weather_WeatherSearchQuery', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_weather_LocalWeatherForecastResult) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_weather_LocalWeatherForecastResult', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_weather_LocalWeatherForecast) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_weather_LocalWeatherForecast', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_weather_WeatherSearch) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_weather_WeatherSearch', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_weather_LocalWeatherLive) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_weather_LocalWeatherLive', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_weather_LocalWeatherLiveResult) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_weather_LocalWeatherLiveResult', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_geocoder_BusinessArea) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_geocoder_BusinessArea', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_geocoder_GeocodeQuery) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_geocoder_GeocodeQuery', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_geocoder_GeocodeSearch) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_geocoder_GeocodeSearch', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_geocoder_RegeocodeResult) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_geocoder_RegeocodeResult', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_geocoder_GeocodeResult) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_geocoder_GeocodeResult', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_geocoder_AoiItem) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_geocoder_AoiItem', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_geocoder_RegeocodeRoad) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_geocoder_RegeocodeRoad', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_geocoder_GeocodeAddress) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_geocoder_GeocodeAddress', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_geocoder_RegeocodeQuery) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_geocoder_RegeocodeQuery', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_geocoder_StreetNumber) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_geocoder_StreetNumber', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_geocoder_RegeocodeAddress) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_geocoder_RegeocodeAddress', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_district_DistrictSearchQuery) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_district_DistrictSearchQuery', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_district_DistrictSearch) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_district_DistrictSearch', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_district_DistrictResult) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_district_DistrictResult', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_district_DistrictItem) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_district_DistrictItem', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_help_Tip) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_help_Tip', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_help_InputtipsQuery) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_help_InputtipsQuery', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_help_Inputtips) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_help_Inputtips', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_interfaces_IDistrictSearch) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_interfaces_IDistrictSearch', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_interfaces_IBusStationSearch) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_interfaces_IBusStationSearch', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_interfaces_IRouteSearch) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_interfaces_IRouteSearch', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_interfaces_IShareSearch) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_interfaces_IShareSearch', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_interfaces_IRoutePOISearch) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_interfaces_IRoutePOISearch', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_interfaces_ITrafficSearch) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_interfaces_ITrafficSearch', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_interfaces_IInputtipsSearch) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_interfaces_IInputtipsSearch', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_interfaces_IGeocodeSearch) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_interfaces_IGeocodeSearch', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_interfaces_ICloudSearch) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_interfaces_ICloudSearch', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_interfaces_IDistanceSearch) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_interfaces_IDistanceSearch', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_interfaces_IPoiSearch) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_interfaces_IPoiSearch', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_interfaces_IWeatherSearch) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_interfaces_IWeatherSearch', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_interfaces_INearbySearch) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_interfaces_INearbySearch', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_interfaces_IBusLineSearch) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_interfaces_IBusLineSearch', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_share_ShareSearch_ShareNaviQuery) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_share_ShareSearch_ShareNaviQuery', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_share_ShareSearch_ShareBusRouteQuery) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_share_ShareSearch_ShareBusRouteQuery', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_share_ShareSearch) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_share_ShareSearch', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_share_ShareSearch_ShareFromAndTo) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_share_ShareSearch_ShareFromAndTo', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_share_ShareSearch_ShareWalkRouteQuery) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_share_ShareSearch_ShareWalkRouteQuery', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == android_content_Context) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfandroid_content_Context', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == android_content_Intent) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfandroid_content_Intent', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == android_content_ContentProvider) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfandroid_content_ContentProvider', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == android_app_Application) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfandroid_app_Application', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == android_app_Notification) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfandroid_app_Notification', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == android_app_Activity) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfandroid_app_Activity', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == android_app_PendingIntent) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfandroid_app_PendingIntent', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == android_os_Bundle) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfandroid_os_Bundle', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == android_os_Binder) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfandroid_os_Binder', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == android_view_View) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfandroid_view_View', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == android_view_SurfaceView) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfandroid_view_SurfaceView', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == android_view_ViewGroup) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfandroid_view_ViewGroup', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == android_graphics_Point) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfandroid_graphics_Point', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == android_graphics_PointF) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfandroid_graphics_PointF', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == android_graphics_Bitmap) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfandroid_graphics_Bitmap', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == android_widget_ImageView) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfandroid_widget_ImageView', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == java_io_Closeable) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfjava_io_Closeable', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == java_io_File) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfjava_io_File', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == android_location_Location) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfandroid_location_Location', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == android_view_MotionEvent) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfandroid_view_MotionEvent', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == android_graphics_drawable_Drawable) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfandroid_graphics_drawable_Drawable', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == android_widget_FrameLayout) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfandroid_widget_FrameLayout', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == android_widget_TextView) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfandroid_widget_TextView', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == android_widget_LinearLayout) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfandroid_widget_LinearLayout', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == android_widget_RelativeLayout) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfandroid_widget_RelativeLayout', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == android_os_Parcelable) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfandroid_os_Parcelable', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == android_util_Pair) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfandroid_util_Pair', {'refId': (this as Ref).refId});
+      return result;
+    }
   }
-  
-  Future<bool> iscom_amap_api_services_traffic_TrafficStatusResult() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_traffic_TrafficStatusResult', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_traffic_TrafficSearch() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_traffic_TrafficSearch', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_traffic_RoadTrafficQuery() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_traffic_RoadTrafficQuery', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_traffic_CircleTrafficQuery() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_traffic_CircleTrafficQuery', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_traffic_TrafficStatusEvaluation() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_traffic_TrafficStatusEvaluation', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_busline_BusLineItem() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_busline_BusLineItem', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_busline_BusStationResult() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_busline_BusStationResult', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_busline_BusStationSearch() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_busline_BusStationSearch', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_busline_BusLineSearch() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_busline_BusLineSearch', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_busline_BusLineQuery() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_busline_BusLineQuery', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_busline_BusLineResult() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_busline_BusLineResult', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_busline_BusStationItem() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_busline_BusStationItem', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_busline_BusStationQuery() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_busline_BusStationQuery', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_core_AMapException() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_core_AMapException', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_core_ServiceSettings() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_core_ServiceSettings', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_core_SearchUtils() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_core_SearchUtils', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_core_LatLonSharePoint() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_core_LatLonSharePoint', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_core_LatLonPoint() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_core_LatLonPoint', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_core_PoiItem() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_core_PoiItem', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_core_SuggestionCity() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_core_SuggestionCity', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_poisearch_Photo() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_poisearch_Photo', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_poisearch_SubPoiItem() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_poisearch_SubPoiItem', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_poisearch_PoiItemExtension() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_poisearch_PoiItemExtension', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_poisearch_PoiSearch_SearchBound() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_poisearch_PoiSearch_SearchBound', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_poisearch_PoiResult() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_poisearch_PoiResult', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_poisearch_PoiSearch() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_poisearch_PoiSearch', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_poisearch_PoiSearch_Query() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_poisearch_PoiSearch_Query', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_poisearch_IndoorData() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_poisearch_IndoorData', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_route_Railway() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_Railway', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_route_BusPath() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_BusPath', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_route_DriveRoutePlanResult() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_DriveRoutePlanResult', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_route_RouteSearch_TruckRouteQuery() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RouteSearch_TruckRouteQuery', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_route_TMC() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_TMC', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_route_RouteBusWalkItem() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RouteBusWalkItem', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_route_RouteResult() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RouteResult', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_route_RouteSearch() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RouteSearch', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_route_BusStep() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_BusStep', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_route_TaxiItem() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_TaxiItem', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_route_BusRouteResult() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_BusRouteResult', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_route_RoutePlanResult() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RoutePlanResult', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_route_RailwaySpace() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RailwaySpace', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_route_TruckRouteRestult() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_TruckRouteRestult', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_route_RouteSearch_RideRouteQuery() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RouteSearch_RideRouteQuery', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_route_RouteSearch_DriveRouteQuery() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RouteSearch_DriveRouteQuery', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_route_RouteRailwayItem() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RouteRailwayItem', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_route_WalkStep() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_WalkStep', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_route_RailwayStationItem() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RailwayStationItem', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_route_RideRouteResult() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RideRouteResult', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_route_RouteSearch_FromAndTo() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RouteSearch_FromAndTo', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_route_RidePath() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RidePath', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_route_RouteSearch_BusRouteQuery() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RouteSearch_BusRouteQuery', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_route_RideStep() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RideStep', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_route_RouteSearchCity() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RouteSearchCity', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_route_DistanceResult() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_DistanceResult', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_route_RouteSearch_WalkRouteQuery() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RouteSearch_WalkRouteQuery', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_route_District() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_District', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_route_WalkRouteResult() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_WalkRouteResult', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_route_DistanceSearch_DistanceQuery() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_DistanceSearch_DistanceQuery', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_route_SearchCity() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_SearchCity', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_route_DistanceSearch() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_DistanceSearch', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_route_WalkPath() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_WalkPath', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_route_RouteBusLineItem() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RouteBusLineItem', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_route_RouteSearch_DrivePlanQuery() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RouteSearch_DrivePlanQuery', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_route_DrivePlanStep() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_DrivePlanStep', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_route_TimeInfo() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_TimeInfo', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_route_DriveStep() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_DriveStep', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_route_TruckStep() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_TruckStep', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_route_DriveRouteResult() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_DriveRouteResult', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_route_DrivePath() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_DrivePath', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_route_TruckPath() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_TruckPath', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_route_Doorway() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_Doorway', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_route_DrivePlanPath() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_DrivePlanPath', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_route_TimeInfosElement() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_TimeInfosElement', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_route_DistanceItem() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_DistanceItem', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_route_Path() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_route_Path', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_road_Road() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_road_Road', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_road_Crossroad() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_road_Crossroad', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_nearby_NearbyInfo() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_nearby_NearbyInfo', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_nearby_UploadInfo() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_nearby_UploadInfo', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_nearby_NearbySearch() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_nearby_NearbySearch', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_nearby_NearbySearchResult() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_nearby_NearbySearchResult', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_nearby_NearbySearch_NearbyQuery() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_nearby_NearbySearch_NearbyQuery', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_a_() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_a_', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_routepoisearch_RoutePOIItem() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_routepoisearch_RoutePOIItem', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_routepoisearch_RoutePOISearch() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_routepoisearch_RoutePOISearch', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_routepoisearch_RoutePOISearchResult() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_routepoisearch_RoutePOISearchResult', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_routepoisearch_RoutePOISearchQuery() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_routepoisearch_RoutePOISearchQuery', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_cloud_CloudItem() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_cloud_CloudItem', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_cloud_CloudSearch_Query() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_cloud_CloudSearch_Query', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_cloud_CloudResult() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_cloud_CloudResult', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_cloud_CloudSearch() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_cloud_CloudSearch', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_cloud_CloudSearch_SearchBound() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_cloud_CloudSearch_SearchBound', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_cloud_CloudImage() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_cloud_CloudImage', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_cloud_CloudSearch_Sortingrules() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_cloud_CloudSearch_Sortingrules', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_cloud_CloudItemDetail() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_cloud_CloudItemDetail', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_weather_LocalDayWeatherForecast() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_weather_LocalDayWeatherForecast', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_weather_WeatherSearchQuery() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_weather_WeatherSearchQuery', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_weather_LocalWeatherForecastResult() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_weather_LocalWeatherForecastResult', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_weather_LocalWeatherForecast() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_weather_LocalWeatherForecast', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_weather_WeatherSearch() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_weather_WeatherSearch', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_weather_LocalWeatherLive() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_weather_LocalWeatherLive', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_weather_LocalWeatherLiveResult() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_weather_LocalWeatherLiveResult', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_geocoder_BusinessArea() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_geocoder_BusinessArea', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_geocoder_GeocodeQuery() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_geocoder_GeocodeQuery', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_geocoder_GeocodeSearch() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_geocoder_GeocodeSearch', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_geocoder_RegeocodeResult() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_geocoder_RegeocodeResult', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_geocoder_GeocodeResult() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_geocoder_GeocodeResult', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_geocoder_AoiItem() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_geocoder_AoiItem', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_geocoder_RegeocodeRoad() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_geocoder_RegeocodeRoad', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_geocoder_GeocodeAddress() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_geocoder_GeocodeAddress', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_geocoder_RegeocodeQuery() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_geocoder_RegeocodeQuery', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_geocoder_StreetNumber() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_geocoder_StreetNumber', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_geocoder_RegeocodeAddress() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_geocoder_RegeocodeAddress', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_district_DistrictSearchQuery() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_district_DistrictSearchQuery', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_district_DistrictSearch() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_district_DistrictSearch', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_district_DistrictResult() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_district_DistrictResult', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_district_DistrictItem() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_district_DistrictItem', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_help_Tip() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_help_Tip', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_help_InputtipsQuery() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_help_InputtipsQuery', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_help_Inputtips() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_help_Inputtips', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_share_ShareSearch_ShareNaviQuery() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_share_ShareSearch_ShareNaviQuery', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_share_ShareSearch_ShareBusRouteQuery() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_share_ShareSearch_ShareBusRouteQuery', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_share_ShareSearch() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_share_ShareSearch', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_share_ShareSearch_ShareFromAndTo() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_share_ShareSearch_ShareFromAndTo', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_share_ShareSearch_ShareWalkRouteQuery() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_share_ShareSearch_ShareWalkRouteQuery', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> iscom_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery', {'refId': refId});
-    return result;
-  }
-  
 
-  Future<com_amap_api_services_traffic_TrafficStatusInfo> ascom_amap_api_services_traffic_TrafficStatusInfo() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_traffic_TrafficStatusInfo', {'refId': refId});
-    return com_amap_api_services_traffic_TrafficStatusInfo()..refId = result;
+  // type cast
+  T as__<T>() {
+    final typeName = T.toString();
+    // jsonable 直接造型 返回
+    if (RegExp('(List<)?(String|int|double)(>)?|(Map<String,(String|int|double)>)').hasMatch(typeName)) {
+      return this as T;
+    }
+    else if (T == com_amap_api_services_traffic_TrafficStatusInfo) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_traffic_TrafficStatusInfo()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_traffic_TrafficStatusResult) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_traffic_TrafficStatusResult()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_traffic_TrafficSearch) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_traffic_TrafficSearch()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_traffic_RoadTrafficQuery) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_traffic_RoadTrafficQuery()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_traffic_CircleTrafficQuery) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_traffic_CircleTrafficQuery()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_traffic_TrafficStatusEvaluation) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_traffic_TrafficStatusEvaluation()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_busline_BusLineItem) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_busline_BusLineItem()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_busline_BusStationResult) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_busline_BusStationResult()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_busline_BusStationSearch) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_busline_BusStationSearch()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_busline_BusLineSearch) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_busline_BusLineSearch()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_busline_BusLineQuery) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_busline_BusLineQuery()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_busline_BusLineResult) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_busline_BusLineResult()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_busline_BusStationItem) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_busline_BusStationItem()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_busline_BusStationQuery) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_busline_BusStationQuery()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_core_AMapException) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_core_AMapException()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_core_ServiceSettings) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_core_ServiceSettings()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_core_SearchUtils) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_core_SearchUtils()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_core_LatLonSharePoint) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_core_LatLonSharePoint()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_core_LatLonPoint) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_core_LatLonPoint()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_core_PoiItem) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_core_PoiItem()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_core_SuggestionCity) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_core_SuggestionCity()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_poisearch_Photo) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_poisearch_Photo()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_poisearch_SubPoiItem) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_poisearch_SubPoiItem()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_poisearch_PoiItemExtension) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_poisearch_PoiItemExtension()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_poisearch_PoiSearch_SearchBound) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_poisearch_PoiSearch_SearchBound()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_poisearch_PoiResult) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_poisearch_PoiResult()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_poisearch_PoiSearch) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_poisearch_PoiSearch()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_poisearch_PoiSearch_Query) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_poisearch_PoiSearch_Query()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_poisearch_IndoorData) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_poisearch_IndoorData()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_route_Railway) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_route_Railway()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_route_BusPath) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_route_BusPath()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_route_DriveRoutePlanResult) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_route_DriveRoutePlanResult()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_route_RouteSearch_TruckRouteQuery) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_route_RouteSearch_TruckRouteQuery()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_route_TMC) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_route_TMC()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_route_RouteBusWalkItem) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_route_RouteBusWalkItem()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_route_RouteResult) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_route_RouteResult()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_route_RouteSearch) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_route_RouteSearch()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_route_BusStep) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_route_BusStep()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_route_TaxiItem) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_route_TaxiItem()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_route_BusRouteResult) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_route_BusRouteResult()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_route_RoutePlanResult) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_route_RoutePlanResult()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_route_RailwaySpace) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_route_RailwaySpace()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_route_TruckRouteRestult) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_route_TruckRouteRestult()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_route_RouteSearch_RideRouteQuery) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_route_RouteSearch_RideRouteQuery()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_route_RouteSearch_DriveRouteQuery) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_route_RouteSearch_DriveRouteQuery()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_route_RouteRailwayItem) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_route_RouteRailwayItem()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_route_WalkStep) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_route_WalkStep()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_route_RailwayStationItem) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_route_RailwayStationItem()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_route_RideRouteResult) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_route_RideRouteResult()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_route_RouteSearch_FromAndTo) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_route_RouteSearch_FromAndTo()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_route_RidePath) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_route_RidePath()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_route_RouteSearch_BusRouteQuery) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_route_RouteSearch_BusRouteQuery()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_route_RideStep) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_route_RideStep()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_route_RouteSearchCity) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_route_RouteSearchCity()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_route_DistanceResult) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_route_DistanceResult()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_route_RouteSearch_WalkRouteQuery) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_route_RouteSearch_WalkRouteQuery()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_route_District) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_route_District()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_route_WalkRouteResult) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_route_WalkRouteResult()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_route_DistanceSearch_DistanceQuery) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_route_DistanceSearch_DistanceQuery()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_route_SearchCity) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_route_SearchCity()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_route_DistanceSearch) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_route_DistanceSearch()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_route_WalkPath) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_route_WalkPath()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_route_RouteBusLineItem) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_route_RouteBusLineItem()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_route_RouteSearch_DrivePlanQuery) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_route_RouteSearch_DrivePlanQuery()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_route_DrivePlanStep) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_route_DrivePlanStep()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_route_TimeInfo) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_route_TimeInfo()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_route_DriveStep) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_route_DriveStep()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_route_TruckStep) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_route_TruckStep()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_route_DriveRouteResult) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_route_DriveRouteResult()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_route_DrivePath) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_route_DrivePath()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_route_TruckPath) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_route_TruckPath()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_route_Doorway) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_route_Doorway()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_route_DrivePlanPath) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_route_DrivePlanPath()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_route_TimeInfosElement) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_route_TimeInfosElement()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_route_DistanceItem) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_route_DistanceItem()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_route_Path) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_route_Path()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_road_Road) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_road_Road()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_road_Crossroad) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_road_Crossroad()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_nearby_NearbyInfo) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_nearby_NearbyInfo()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_nearby_UploadInfo) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_nearby_UploadInfo()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_nearby_NearbySearch) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_nearby_NearbySearch()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_nearby_NearbySearchResult) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_nearby_NearbySearchResult()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_nearby_NearbySearch_NearbyQuery) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_nearby_NearbySearch_NearbyQuery()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_a_) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_a_()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_routepoisearch_RoutePOIItem) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_routepoisearch_RoutePOIItem()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_routepoisearch_RoutePOISearch) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_routepoisearch_RoutePOISearch()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_routepoisearch_RoutePOISearchResult) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_routepoisearch_RoutePOISearchResult()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_routepoisearch_RoutePOISearchQuery) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_routepoisearch_RoutePOISearchQuery()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_cloud_CloudItem) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_cloud_CloudItem()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_cloud_CloudSearch_Query) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_cloud_CloudSearch_Query()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_cloud_CloudResult) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_cloud_CloudResult()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_cloud_CloudSearch) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_cloud_CloudSearch()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_cloud_CloudSearch_SearchBound) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_cloud_CloudSearch_SearchBound()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_cloud_CloudImage) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_cloud_CloudImage()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_cloud_CloudSearch_Sortingrules) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_cloud_CloudSearch_Sortingrules()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_cloud_CloudItemDetail) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_cloud_CloudItemDetail()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_weather_LocalDayWeatherForecast) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_weather_LocalDayWeatherForecast()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_weather_WeatherSearchQuery) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_weather_WeatherSearchQuery()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_weather_LocalWeatherForecastResult) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_weather_LocalWeatherForecastResult()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_weather_LocalWeatherForecast) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_weather_LocalWeatherForecast()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_weather_WeatherSearch) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_weather_WeatherSearch()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_weather_LocalWeatherLive) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_weather_LocalWeatherLive()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_weather_LocalWeatherLiveResult) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_weather_LocalWeatherLiveResult()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_geocoder_BusinessArea) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_geocoder_BusinessArea()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_geocoder_GeocodeQuery) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_geocoder_GeocodeQuery()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_geocoder_GeocodeSearch) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_geocoder_GeocodeSearch()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_geocoder_RegeocodeResult) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_geocoder_RegeocodeResult()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_geocoder_GeocodeResult) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_geocoder_GeocodeResult()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_geocoder_AoiItem) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_geocoder_AoiItem()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_geocoder_RegeocodeRoad) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_geocoder_RegeocodeRoad()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_geocoder_GeocodeAddress) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_geocoder_GeocodeAddress()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_geocoder_RegeocodeQuery) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_geocoder_RegeocodeQuery()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_geocoder_StreetNumber) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_geocoder_StreetNumber()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_geocoder_RegeocodeAddress) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_geocoder_RegeocodeAddress()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_district_DistrictSearchQuery) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_district_DistrictSearchQuery()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_district_DistrictSearch) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_district_DistrictSearch()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_district_DistrictResult) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_district_DistrictResult()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_district_DistrictItem) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_district_DistrictItem()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_help_Tip) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_help_Tip()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_help_InputtipsQuery) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_help_InputtipsQuery()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_help_Inputtips) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_help_Inputtips()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_interfaces_IDistrictSearch) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_interfaces_IDistrictSearch.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_interfaces_IBusStationSearch) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_interfaces_IBusStationSearch.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_interfaces_IRouteSearch) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_interfaces_IRouteSearch.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_interfaces_IShareSearch) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_interfaces_IShareSearch.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_interfaces_IRoutePOISearch) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_interfaces_IRoutePOISearch.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_interfaces_ITrafficSearch) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_interfaces_ITrafficSearch.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_interfaces_IInputtipsSearch) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_interfaces_IInputtipsSearch.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_interfaces_IGeocodeSearch) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_interfaces_IGeocodeSearch.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_interfaces_ICloudSearch) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_interfaces_ICloudSearch.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_interfaces_IDistanceSearch) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_interfaces_IDistanceSearch.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_interfaces_IPoiSearch) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_interfaces_IPoiSearch.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_interfaces_IWeatherSearch) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_interfaces_IWeatherSearch.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_interfaces_INearbySearch) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_interfaces_INearbySearch.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_interfaces_IBusLineSearch) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_interfaces_IBusLineSearch.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_share_ShareSearch_ShareNaviQuery) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_share_ShareSearch_ShareNaviQuery()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_share_ShareSearch_ShareBusRouteQuery) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_share_ShareSearch_ShareBusRouteQuery()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_share_ShareSearch) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_share_ShareSearch()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_share_ShareSearch_ShareFromAndTo) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_share_ShareSearch_ShareFromAndTo()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_share_ShareSearch_ShareWalkRouteQuery) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_share_ShareSearch_ShareWalkRouteQuery()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == android_content_Context) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (android_content_Context()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == android_content_Intent) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (android_content_Intent()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == android_content_ContentProvider) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (android_content_ContentProvider()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == android_app_Application) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (android_app_Application()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == android_app_Notification) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (android_app_Notification()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == android_app_Activity) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (android_app_Activity()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == android_app_PendingIntent) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (android_app_PendingIntent()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == android_os_Bundle) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (android_os_Bundle()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == android_os_Binder) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (android_os_Binder()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == android_view_View) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (android_view_View()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == android_view_SurfaceView) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (android_view_SurfaceView()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == android_view_ViewGroup) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (android_view_ViewGroup()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == android_graphics_Point) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (android_graphics_Point()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == android_graphics_PointF) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (android_graphics_PointF()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == android_graphics_Bitmap) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (android_graphics_Bitmap()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == android_widget_ImageView) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (android_widget_ImageView()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == java_io_Closeable) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (java_io_Closeable.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == java_io_File) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (java_io_File()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == android_location_Location) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (android_location_Location()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == android_view_MotionEvent) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (android_view_MotionEvent()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == android_graphics_drawable_Drawable) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (android_graphics_drawable_Drawable()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == android_widget_FrameLayout) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (android_widget_FrameLayout()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == android_widget_TextView) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (android_widget_TextView()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == android_widget_LinearLayout) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (android_widget_LinearLayout()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == android_widget_RelativeLayout) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (android_widget_RelativeLayout()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == android_os_Parcelable) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (android_os_Parcelable.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == android_util_Pair) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (android_util_Pair()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
   }
-  
-  Future<com_amap_api_services_traffic_TrafficStatusResult> ascom_amap_api_services_traffic_TrafficStatusResult() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_traffic_TrafficStatusResult', {'refId': refId});
-    return com_amap_api_services_traffic_TrafficStatusResult()..refId = result;
-  }
-  
-  Future<com_amap_api_services_traffic_TrafficSearch> ascom_amap_api_services_traffic_TrafficSearch() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_traffic_TrafficSearch', {'refId': refId});
-    return com_amap_api_services_traffic_TrafficSearch()..refId = result;
-  }
-  
-  Future<com_amap_api_services_traffic_RoadTrafficQuery> ascom_amap_api_services_traffic_RoadTrafficQuery() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_traffic_RoadTrafficQuery', {'refId': refId});
-    return com_amap_api_services_traffic_RoadTrafficQuery()..refId = result;
-  }
-  
-  Future<com_amap_api_services_traffic_CircleTrafficQuery> ascom_amap_api_services_traffic_CircleTrafficQuery() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_traffic_CircleTrafficQuery', {'refId': refId});
-    return com_amap_api_services_traffic_CircleTrafficQuery()..refId = result;
-  }
-  
-  Future<com_amap_api_services_traffic_TrafficStatusEvaluation> ascom_amap_api_services_traffic_TrafficStatusEvaluation() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_traffic_TrafficStatusEvaluation', {'refId': refId});
-    return com_amap_api_services_traffic_TrafficStatusEvaluation()..refId = result;
-  }
-  
-  Future<com_amap_api_services_busline_BusLineItem> ascom_amap_api_services_busline_BusLineItem() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_busline_BusLineItem', {'refId': refId});
-    return com_amap_api_services_busline_BusLineItem()..refId = result;
-  }
-  
-  Future<com_amap_api_services_busline_BusStationResult> ascom_amap_api_services_busline_BusStationResult() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_busline_BusStationResult', {'refId': refId});
-    return com_amap_api_services_busline_BusStationResult()..refId = result;
-  }
-  
-  Future<com_amap_api_services_busline_BusStationSearch> ascom_amap_api_services_busline_BusStationSearch() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_busline_BusStationSearch', {'refId': refId});
-    return com_amap_api_services_busline_BusStationSearch()..refId = result;
-  }
-  
-  Future<com_amap_api_services_busline_BusLineSearch> ascom_amap_api_services_busline_BusLineSearch() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_busline_BusLineSearch', {'refId': refId});
-    return com_amap_api_services_busline_BusLineSearch()..refId = result;
-  }
-  
-  Future<com_amap_api_services_busline_BusLineQuery> ascom_amap_api_services_busline_BusLineQuery() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_busline_BusLineQuery', {'refId': refId});
-    return com_amap_api_services_busline_BusLineQuery()..refId = result;
-  }
-  
-  Future<com_amap_api_services_busline_BusLineResult> ascom_amap_api_services_busline_BusLineResult() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_busline_BusLineResult', {'refId': refId});
-    return com_amap_api_services_busline_BusLineResult()..refId = result;
-  }
-  
-  Future<com_amap_api_services_busline_BusStationItem> ascom_amap_api_services_busline_BusStationItem() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_busline_BusStationItem', {'refId': refId});
-    return com_amap_api_services_busline_BusStationItem()..refId = result;
-  }
-  
-  Future<com_amap_api_services_busline_BusStationQuery> ascom_amap_api_services_busline_BusStationQuery() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_busline_BusStationQuery', {'refId': refId});
-    return com_amap_api_services_busline_BusStationQuery()..refId = result;
-  }
-  
-  Future<com_amap_api_services_core_AMapException> ascom_amap_api_services_core_AMapException() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_core_AMapException', {'refId': refId});
-    return com_amap_api_services_core_AMapException()..refId = result;
-  }
-  
-  Future<com_amap_api_services_core_ServiceSettings> ascom_amap_api_services_core_ServiceSettings() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_core_ServiceSettings', {'refId': refId});
-    return com_amap_api_services_core_ServiceSettings()..refId = result;
-  }
-  
-  Future<com_amap_api_services_core_SearchUtils> ascom_amap_api_services_core_SearchUtils() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_core_SearchUtils', {'refId': refId});
-    return com_amap_api_services_core_SearchUtils()..refId = result;
-  }
-  
-  Future<com_amap_api_services_core_LatLonSharePoint> ascom_amap_api_services_core_LatLonSharePoint() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_core_LatLonSharePoint', {'refId': refId});
-    return com_amap_api_services_core_LatLonSharePoint()..refId = result;
-  }
-  
-  Future<com_amap_api_services_core_LatLonPoint> ascom_amap_api_services_core_LatLonPoint() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_core_LatLonPoint', {'refId': refId});
-    return com_amap_api_services_core_LatLonPoint()..refId = result;
-  }
-  
-  Future<com_amap_api_services_core_PoiItem> ascom_amap_api_services_core_PoiItem() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_core_PoiItem', {'refId': refId});
-    return com_amap_api_services_core_PoiItem()..refId = result;
-  }
-  
-  Future<com_amap_api_services_core_SuggestionCity> ascom_amap_api_services_core_SuggestionCity() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_core_SuggestionCity', {'refId': refId});
-    return com_amap_api_services_core_SuggestionCity()..refId = result;
-  }
-  
-  Future<com_amap_api_services_poisearch_Photo> ascom_amap_api_services_poisearch_Photo() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_poisearch_Photo', {'refId': refId});
-    return com_amap_api_services_poisearch_Photo()..refId = result;
-  }
-  
-  Future<com_amap_api_services_poisearch_SubPoiItem> ascom_amap_api_services_poisearch_SubPoiItem() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_poisearch_SubPoiItem', {'refId': refId});
-    return com_amap_api_services_poisearch_SubPoiItem()..refId = result;
-  }
-  
-  Future<com_amap_api_services_poisearch_PoiItemExtension> ascom_amap_api_services_poisearch_PoiItemExtension() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_poisearch_PoiItemExtension', {'refId': refId});
-    return com_amap_api_services_poisearch_PoiItemExtension()..refId = result;
-  }
-  
-  Future<com_amap_api_services_poisearch_PoiSearch_SearchBound> ascom_amap_api_services_poisearch_PoiSearch_SearchBound() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_poisearch_PoiSearch_SearchBound', {'refId': refId});
-    return com_amap_api_services_poisearch_PoiSearch_SearchBound()..refId = result;
-  }
-  
-  Future<com_amap_api_services_poisearch_PoiResult> ascom_amap_api_services_poisearch_PoiResult() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_poisearch_PoiResult', {'refId': refId});
-    return com_amap_api_services_poisearch_PoiResult()..refId = result;
-  }
-  
-  Future<com_amap_api_services_poisearch_PoiSearch> ascom_amap_api_services_poisearch_PoiSearch() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_poisearch_PoiSearch', {'refId': refId});
-    return com_amap_api_services_poisearch_PoiSearch()..refId = result;
-  }
-  
-  Future<com_amap_api_services_poisearch_PoiSearch_Query> ascom_amap_api_services_poisearch_PoiSearch_Query() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_poisearch_PoiSearch_Query', {'refId': refId});
-    return com_amap_api_services_poisearch_PoiSearch_Query()..refId = result;
-  }
-  
-  Future<com_amap_api_services_poisearch_IndoorData> ascom_amap_api_services_poisearch_IndoorData() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_poisearch_IndoorData', {'refId': refId});
-    return com_amap_api_services_poisearch_IndoorData()..refId = result;
-  }
-  
-  Future<com_amap_api_services_route_Railway> ascom_amap_api_services_route_Railway() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_route_Railway', {'refId': refId});
-    return com_amap_api_services_route_Railway()..refId = result;
-  }
-  
-  Future<com_amap_api_services_route_BusPath> ascom_amap_api_services_route_BusPath() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_route_BusPath', {'refId': refId});
-    return com_amap_api_services_route_BusPath()..refId = result;
-  }
-  
-  Future<com_amap_api_services_route_DriveRoutePlanResult> ascom_amap_api_services_route_DriveRoutePlanResult() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_route_DriveRoutePlanResult', {'refId': refId});
-    return com_amap_api_services_route_DriveRoutePlanResult()..refId = result;
-  }
-  
-  Future<com_amap_api_services_route_RouteSearch_TruckRouteQuery> ascom_amap_api_services_route_RouteSearch_TruckRouteQuery() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_route_RouteSearch_TruckRouteQuery', {'refId': refId});
-    return com_amap_api_services_route_RouteSearch_TruckRouteQuery()..refId = result;
-  }
-  
-  Future<com_amap_api_services_route_TMC> ascom_amap_api_services_route_TMC() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_route_TMC', {'refId': refId});
-    return com_amap_api_services_route_TMC()..refId = result;
-  }
-  
-  Future<com_amap_api_services_route_RouteBusWalkItem> ascom_amap_api_services_route_RouteBusWalkItem() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_route_RouteBusWalkItem', {'refId': refId});
-    return com_amap_api_services_route_RouteBusWalkItem()..refId = result;
-  }
-  
-  Future<com_amap_api_services_route_RouteResult> ascom_amap_api_services_route_RouteResult() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_route_RouteResult', {'refId': refId});
-    return com_amap_api_services_route_RouteResult()..refId = result;
-  }
-  
-  Future<com_amap_api_services_route_RouteSearch> ascom_amap_api_services_route_RouteSearch() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_route_RouteSearch', {'refId': refId});
-    return com_amap_api_services_route_RouteSearch()..refId = result;
-  }
-  
-  Future<com_amap_api_services_route_BusStep> ascom_amap_api_services_route_BusStep() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_route_BusStep', {'refId': refId});
-    return com_amap_api_services_route_BusStep()..refId = result;
-  }
-  
-  Future<com_amap_api_services_route_TaxiItem> ascom_amap_api_services_route_TaxiItem() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_route_TaxiItem', {'refId': refId});
-    return com_amap_api_services_route_TaxiItem()..refId = result;
-  }
-  
-  Future<com_amap_api_services_route_BusRouteResult> ascom_amap_api_services_route_BusRouteResult() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_route_BusRouteResult', {'refId': refId});
-    return com_amap_api_services_route_BusRouteResult()..refId = result;
-  }
-  
-  Future<com_amap_api_services_route_RoutePlanResult> ascom_amap_api_services_route_RoutePlanResult() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_route_RoutePlanResult', {'refId': refId});
-    return com_amap_api_services_route_RoutePlanResult()..refId = result;
-  }
-  
-  Future<com_amap_api_services_route_RailwaySpace> ascom_amap_api_services_route_RailwaySpace() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_route_RailwaySpace', {'refId': refId});
-    return com_amap_api_services_route_RailwaySpace()..refId = result;
-  }
-  
-  Future<com_amap_api_services_route_TruckRouteRestult> ascom_amap_api_services_route_TruckRouteRestult() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_route_TruckRouteRestult', {'refId': refId});
-    return com_amap_api_services_route_TruckRouteRestult()..refId = result;
-  }
-  
-  Future<com_amap_api_services_route_RouteSearch_RideRouteQuery> ascom_amap_api_services_route_RouteSearch_RideRouteQuery() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_route_RouteSearch_RideRouteQuery', {'refId': refId});
-    return com_amap_api_services_route_RouteSearch_RideRouteQuery()..refId = result;
-  }
-  
-  Future<com_amap_api_services_route_RouteSearch_DriveRouteQuery> ascom_amap_api_services_route_RouteSearch_DriveRouteQuery() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_route_RouteSearch_DriveRouteQuery', {'refId': refId});
-    return com_amap_api_services_route_RouteSearch_DriveRouteQuery()..refId = result;
-  }
-  
-  Future<com_amap_api_services_route_RouteRailwayItem> ascom_amap_api_services_route_RouteRailwayItem() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_route_RouteRailwayItem', {'refId': refId});
-    return com_amap_api_services_route_RouteRailwayItem()..refId = result;
-  }
-  
-  Future<com_amap_api_services_route_WalkStep> ascom_amap_api_services_route_WalkStep() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_route_WalkStep', {'refId': refId});
-    return com_amap_api_services_route_WalkStep()..refId = result;
-  }
-  
-  Future<com_amap_api_services_route_RailwayStationItem> ascom_amap_api_services_route_RailwayStationItem() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_route_RailwayStationItem', {'refId': refId});
-    return com_amap_api_services_route_RailwayStationItem()..refId = result;
-  }
-  
-  Future<com_amap_api_services_route_RideRouteResult> ascom_amap_api_services_route_RideRouteResult() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_route_RideRouteResult', {'refId': refId});
-    return com_amap_api_services_route_RideRouteResult()..refId = result;
-  }
-  
-  Future<com_amap_api_services_route_RouteSearch_FromAndTo> ascom_amap_api_services_route_RouteSearch_FromAndTo() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_route_RouteSearch_FromAndTo', {'refId': refId});
-    return com_amap_api_services_route_RouteSearch_FromAndTo()..refId = result;
-  }
-  
-  Future<com_amap_api_services_route_RidePath> ascom_amap_api_services_route_RidePath() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_route_RidePath', {'refId': refId});
-    return com_amap_api_services_route_RidePath()..refId = result;
-  }
-  
-  Future<com_amap_api_services_route_RouteSearch_BusRouteQuery> ascom_amap_api_services_route_RouteSearch_BusRouteQuery() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_route_RouteSearch_BusRouteQuery', {'refId': refId});
-    return com_amap_api_services_route_RouteSearch_BusRouteQuery()..refId = result;
-  }
-  
-  Future<com_amap_api_services_route_RideStep> ascom_amap_api_services_route_RideStep() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_route_RideStep', {'refId': refId});
-    return com_amap_api_services_route_RideStep()..refId = result;
-  }
-  
-  Future<com_amap_api_services_route_RouteSearchCity> ascom_amap_api_services_route_RouteSearchCity() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_route_RouteSearchCity', {'refId': refId});
-    return com_amap_api_services_route_RouteSearchCity()..refId = result;
-  }
-  
-  Future<com_amap_api_services_route_DistanceResult> ascom_amap_api_services_route_DistanceResult() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_route_DistanceResult', {'refId': refId});
-    return com_amap_api_services_route_DistanceResult()..refId = result;
-  }
-  
-  Future<com_amap_api_services_route_RouteSearch_WalkRouteQuery> ascom_amap_api_services_route_RouteSearch_WalkRouteQuery() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_route_RouteSearch_WalkRouteQuery', {'refId': refId});
-    return com_amap_api_services_route_RouteSearch_WalkRouteQuery()..refId = result;
-  }
-  
-  Future<com_amap_api_services_route_District> ascom_amap_api_services_route_District() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_route_District', {'refId': refId});
-    return com_amap_api_services_route_District()..refId = result;
-  }
-  
-  Future<com_amap_api_services_route_WalkRouteResult> ascom_amap_api_services_route_WalkRouteResult() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_route_WalkRouteResult', {'refId': refId});
-    return com_amap_api_services_route_WalkRouteResult()..refId = result;
-  }
-  
-  Future<com_amap_api_services_route_DistanceSearch_DistanceQuery> ascom_amap_api_services_route_DistanceSearch_DistanceQuery() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_route_DistanceSearch_DistanceQuery', {'refId': refId});
-    return com_amap_api_services_route_DistanceSearch_DistanceQuery()..refId = result;
-  }
-  
-  Future<com_amap_api_services_route_SearchCity> ascom_amap_api_services_route_SearchCity() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_route_SearchCity', {'refId': refId});
-    return com_amap_api_services_route_SearchCity()..refId = result;
-  }
-  
-  Future<com_amap_api_services_route_DistanceSearch> ascom_amap_api_services_route_DistanceSearch() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_route_DistanceSearch', {'refId': refId});
-    return com_amap_api_services_route_DistanceSearch()..refId = result;
-  }
-  
-  Future<com_amap_api_services_route_WalkPath> ascom_amap_api_services_route_WalkPath() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_route_WalkPath', {'refId': refId});
-    return com_amap_api_services_route_WalkPath()..refId = result;
-  }
-  
-  Future<com_amap_api_services_route_RouteBusLineItem> ascom_amap_api_services_route_RouteBusLineItem() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_route_RouteBusLineItem', {'refId': refId});
-    return com_amap_api_services_route_RouteBusLineItem()..refId = result;
-  }
-  
-  Future<com_amap_api_services_route_RouteSearch_DrivePlanQuery> ascom_amap_api_services_route_RouteSearch_DrivePlanQuery() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_route_RouteSearch_DrivePlanQuery', {'refId': refId});
-    return com_amap_api_services_route_RouteSearch_DrivePlanQuery()..refId = result;
-  }
-  
-  Future<com_amap_api_services_route_DrivePlanStep> ascom_amap_api_services_route_DrivePlanStep() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_route_DrivePlanStep', {'refId': refId});
-    return com_amap_api_services_route_DrivePlanStep()..refId = result;
-  }
-  
-  Future<com_amap_api_services_route_TimeInfo> ascom_amap_api_services_route_TimeInfo() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_route_TimeInfo', {'refId': refId});
-    return com_amap_api_services_route_TimeInfo()..refId = result;
-  }
-  
-  Future<com_amap_api_services_route_DriveStep> ascom_amap_api_services_route_DriveStep() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_route_DriveStep', {'refId': refId});
-    return com_amap_api_services_route_DriveStep()..refId = result;
-  }
-  
-  Future<com_amap_api_services_route_TruckStep> ascom_amap_api_services_route_TruckStep() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_route_TruckStep', {'refId': refId});
-    return com_amap_api_services_route_TruckStep()..refId = result;
-  }
-  
-  Future<com_amap_api_services_route_DriveRouteResult> ascom_amap_api_services_route_DriveRouteResult() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_route_DriveRouteResult', {'refId': refId});
-    return com_amap_api_services_route_DriveRouteResult()..refId = result;
-  }
-  
-  Future<com_amap_api_services_route_DrivePath> ascom_amap_api_services_route_DrivePath() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_route_DrivePath', {'refId': refId});
-    return com_amap_api_services_route_DrivePath()..refId = result;
-  }
-  
-  Future<com_amap_api_services_route_TruckPath> ascom_amap_api_services_route_TruckPath() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_route_TruckPath', {'refId': refId});
-    return com_amap_api_services_route_TruckPath()..refId = result;
-  }
-  
-  Future<com_amap_api_services_route_Doorway> ascom_amap_api_services_route_Doorway() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_route_Doorway', {'refId': refId});
-    return com_amap_api_services_route_Doorway()..refId = result;
-  }
-  
-  Future<com_amap_api_services_route_DrivePlanPath> ascom_amap_api_services_route_DrivePlanPath() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_route_DrivePlanPath', {'refId': refId});
-    return com_amap_api_services_route_DrivePlanPath()..refId = result;
-  }
-  
-  Future<com_amap_api_services_route_TimeInfosElement> ascom_amap_api_services_route_TimeInfosElement() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_route_TimeInfosElement', {'refId': refId});
-    return com_amap_api_services_route_TimeInfosElement()..refId = result;
-  }
-  
-  Future<com_amap_api_services_route_DistanceItem> ascom_amap_api_services_route_DistanceItem() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_route_DistanceItem', {'refId': refId});
-    return com_amap_api_services_route_DistanceItem()..refId = result;
-  }
-  
-  Future<com_amap_api_services_route_Path> ascom_amap_api_services_route_Path() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_route_Path', {'refId': refId});
-    return com_amap_api_services_route_Path()..refId = result;
-  }
-  
-  Future<com_amap_api_services_road_Road> ascom_amap_api_services_road_Road() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_road_Road', {'refId': refId});
-    return com_amap_api_services_road_Road()..refId = result;
-  }
-  
-  Future<com_amap_api_services_road_Crossroad> ascom_amap_api_services_road_Crossroad() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_road_Crossroad', {'refId': refId});
-    return com_amap_api_services_road_Crossroad()..refId = result;
-  }
-  
-  Future<com_amap_api_services_nearby_NearbyInfo> ascom_amap_api_services_nearby_NearbyInfo() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_nearby_NearbyInfo', {'refId': refId});
-    return com_amap_api_services_nearby_NearbyInfo()..refId = result;
-  }
-  
-  Future<com_amap_api_services_nearby_UploadInfo> ascom_amap_api_services_nearby_UploadInfo() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_nearby_UploadInfo', {'refId': refId});
-    return com_amap_api_services_nearby_UploadInfo()..refId = result;
-  }
-  
-  Future<com_amap_api_services_nearby_NearbySearch> ascom_amap_api_services_nearby_NearbySearch() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_nearby_NearbySearch', {'refId': refId});
-    return com_amap_api_services_nearby_NearbySearch()..refId = result;
-  }
-  
-  Future<com_amap_api_services_nearby_NearbySearchResult> ascom_amap_api_services_nearby_NearbySearchResult() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_nearby_NearbySearchResult', {'refId': refId});
-    return com_amap_api_services_nearby_NearbySearchResult()..refId = result;
-  }
-  
-  Future<com_amap_api_services_nearby_NearbySearch_NearbyQuery> ascom_amap_api_services_nearby_NearbySearch_NearbyQuery() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_nearby_NearbySearch_NearbyQuery', {'refId': refId});
-    return com_amap_api_services_nearby_NearbySearch_NearbyQuery()..refId = result;
-  }
-  
-  Future<com_amap_api_services_a_> ascom_amap_api_services_a_() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_a_', {'refId': refId});
-    return com_amap_api_services_a_()..refId = result;
-  }
-  
-  Future<com_amap_api_services_routepoisearch_RoutePOIItem> ascom_amap_api_services_routepoisearch_RoutePOIItem() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_routepoisearch_RoutePOIItem', {'refId': refId});
-    return com_amap_api_services_routepoisearch_RoutePOIItem()..refId = result;
-  }
-  
-  Future<com_amap_api_services_routepoisearch_RoutePOISearch> ascom_amap_api_services_routepoisearch_RoutePOISearch() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_routepoisearch_RoutePOISearch', {'refId': refId});
-    return com_amap_api_services_routepoisearch_RoutePOISearch()..refId = result;
-  }
-  
-  Future<com_amap_api_services_routepoisearch_RoutePOISearchResult> ascom_amap_api_services_routepoisearch_RoutePOISearchResult() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_routepoisearch_RoutePOISearchResult', {'refId': refId});
-    return com_amap_api_services_routepoisearch_RoutePOISearchResult()..refId = result;
-  }
-  
-  Future<com_amap_api_services_routepoisearch_RoutePOISearchQuery> ascom_amap_api_services_routepoisearch_RoutePOISearchQuery() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_routepoisearch_RoutePOISearchQuery', {'refId': refId});
-    return com_amap_api_services_routepoisearch_RoutePOISearchQuery()..refId = result;
-  }
-  
-  Future<com_amap_api_services_cloud_CloudItem> ascom_amap_api_services_cloud_CloudItem() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_cloud_CloudItem', {'refId': refId});
-    return com_amap_api_services_cloud_CloudItem()..refId = result;
-  }
-  
-  Future<com_amap_api_services_cloud_CloudSearch_Query> ascom_amap_api_services_cloud_CloudSearch_Query() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_cloud_CloudSearch_Query', {'refId': refId});
-    return com_amap_api_services_cloud_CloudSearch_Query()..refId = result;
-  }
-  
-  Future<com_amap_api_services_cloud_CloudResult> ascom_amap_api_services_cloud_CloudResult() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_cloud_CloudResult', {'refId': refId});
-    return com_amap_api_services_cloud_CloudResult()..refId = result;
-  }
-  
-  Future<com_amap_api_services_cloud_CloudSearch> ascom_amap_api_services_cloud_CloudSearch() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_cloud_CloudSearch', {'refId': refId});
-    return com_amap_api_services_cloud_CloudSearch()..refId = result;
-  }
-  
-  Future<com_amap_api_services_cloud_CloudSearch_SearchBound> ascom_amap_api_services_cloud_CloudSearch_SearchBound() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_cloud_CloudSearch_SearchBound', {'refId': refId});
-    return com_amap_api_services_cloud_CloudSearch_SearchBound()..refId = result;
-  }
-  
-  Future<com_amap_api_services_cloud_CloudImage> ascom_amap_api_services_cloud_CloudImage() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_cloud_CloudImage', {'refId': refId});
-    return com_amap_api_services_cloud_CloudImage()..refId = result;
-  }
-  
-  Future<com_amap_api_services_cloud_CloudSearch_Sortingrules> ascom_amap_api_services_cloud_CloudSearch_Sortingrules() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_cloud_CloudSearch_Sortingrules', {'refId': refId});
-    return com_amap_api_services_cloud_CloudSearch_Sortingrules()..refId = result;
-  }
-  
-  Future<com_amap_api_services_cloud_CloudItemDetail> ascom_amap_api_services_cloud_CloudItemDetail() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_cloud_CloudItemDetail', {'refId': refId});
-    return com_amap_api_services_cloud_CloudItemDetail()..refId = result;
-  }
-  
-  Future<com_amap_api_services_weather_LocalDayWeatherForecast> ascom_amap_api_services_weather_LocalDayWeatherForecast() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_weather_LocalDayWeatherForecast', {'refId': refId});
-    return com_amap_api_services_weather_LocalDayWeatherForecast()..refId = result;
-  }
-  
-  Future<com_amap_api_services_weather_WeatherSearchQuery> ascom_amap_api_services_weather_WeatherSearchQuery() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_weather_WeatherSearchQuery', {'refId': refId});
-    return com_amap_api_services_weather_WeatherSearchQuery()..refId = result;
-  }
-  
-  Future<com_amap_api_services_weather_LocalWeatherForecastResult> ascom_amap_api_services_weather_LocalWeatherForecastResult() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_weather_LocalWeatherForecastResult', {'refId': refId});
-    return com_amap_api_services_weather_LocalWeatherForecastResult()..refId = result;
-  }
-  
-  Future<com_amap_api_services_weather_LocalWeatherForecast> ascom_amap_api_services_weather_LocalWeatherForecast() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_weather_LocalWeatherForecast', {'refId': refId});
-    return com_amap_api_services_weather_LocalWeatherForecast()..refId = result;
-  }
-  
-  Future<com_amap_api_services_weather_WeatherSearch> ascom_amap_api_services_weather_WeatherSearch() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_weather_WeatherSearch', {'refId': refId});
-    return com_amap_api_services_weather_WeatherSearch()..refId = result;
-  }
-  
-  Future<com_amap_api_services_weather_LocalWeatherLive> ascom_amap_api_services_weather_LocalWeatherLive() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_weather_LocalWeatherLive', {'refId': refId});
-    return com_amap_api_services_weather_LocalWeatherLive()..refId = result;
-  }
-  
-  Future<com_amap_api_services_weather_LocalWeatherLiveResult> ascom_amap_api_services_weather_LocalWeatherLiveResult() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_weather_LocalWeatherLiveResult', {'refId': refId});
-    return com_amap_api_services_weather_LocalWeatherLiveResult()..refId = result;
-  }
-  
-  Future<com_amap_api_services_geocoder_BusinessArea> ascom_amap_api_services_geocoder_BusinessArea() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_geocoder_BusinessArea', {'refId': refId});
-    return com_amap_api_services_geocoder_BusinessArea()..refId = result;
-  }
-  
-  Future<com_amap_api_services_geocoder_GeocodeQuery> ascom_amap_api_services_geocoder_GeocodeQuery() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_geocoder_GeocodeQuery', {'refId': refId});
-    return com_amap_api_services_geocoder_GeocodeQuery()..refId = result;
-  }
-  
-  Future<com_amap_api_services_geocoder_GeocodeSearch> ascom_amap_api_services_geocoder_GeocodeSearch() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_geocoder_GeocodeSearch', {'refId': refId});
-    return com_amap_api_services_geocoder_GeocodeSearch()..refId = result;
-  }
-  
-  Future<com_amap_api_services_geocoder_RegeocodeResult> ascom_amap_api_services_geocoder_RegeocodeResult() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_geocoder_RegeocodeResult', {'refId': refId});
-    return com_amap_api_services_geocoder_RegeocodeResult()..refId = result;
-  }
-  
-  Future<com_amap_api_services_geocoder_GeocodeResult> ascom_amap_api_services_geocoder_GeocodeResult() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_geocoder_GeocodeResult', {'refId': refId});
-    return com_amap_api_services_geocoder_GeocodeResult()..refId = result;
-  }
-  
-  Future<com_amap_api_services_geocoder_AoiItem> ascom_amap_api_services_geocoder_AoiItem() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_geocoder_AoiItem', {'refId': refId});
-    return com_amap_api_services_geocoder_AoiItem()..refId = result;
-  }
-  
-  Future<com_amap_api_services_geocoder_RegeocodeRoad> ascom_amap_api_services_geocoder_RegeocodeRoad() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_geocoder_RegeocodeRoad', {'refId': refId});
-    return com_amap_api_services_geocoder_RegeocodeRoad()..refId = result;
-  }
-  
-  Future<com_amap_api_services_geocoder_GeocodeAddress> ascom_amap_api_services_geocoder_GeocodeAddress() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_geocoder_GeocodeAddress', {'refId': refId});
-    return com_amap_api_services_geocoder_GeocodeAddress()..refId = result;
-  }
-  
-  Future<com_amap_api_services_geocoder_RegeocodeQuery> ascom_amap_api_services_geocoder_RegeocodeQuery() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_geocoder_RegeocodeQuery', {'refId': refId});
-    return com_amap_api_services_geocoder_RegeocodeQuery()..refId = result;
-  }
-  
-  Future<com_amap_api_services_geocoder_StreetNumber> ascom_amap_api_services_geocoder_StreetNumber() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_geocoder_StreetNumber', {'refId': refId});
-    return com_amap_api_services_geocoder_StreetNumber()..refId = result;
-  }
-  
-  Future<com_amap_api_services_geocoder_RegeocodeAddress> ascom_amap_api_services_geocoder_RegeocodeAddress() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_geocoder_RegeocodeAddress', {'refId': refId});
-    return com_amap_api_services_geocoder_RegeocodeAddress()..refId = result;
-  }
-  
-  Future<com_amap_api_services_district_DistrictSearchQuery> ascom_amap_api_services_district_DistrictSearchQuery() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_district_DistrictSearchQuery', {'refId': refId});
-    return com_amap_api_services_district_DistrictSearchQuery()..refId = result;
-  }
-  
-  Future<com_amap_api_services_district_DistrictSearch> ascom_amap_api_services_district_DistrictSearch() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_district_DistrictSearch', {'refId': refId});
-    return com_amap_api_services_district_DistrictSearch()..refId = result;
-  }
-  
-  Future<com_amap_api_services_district_DistrictResult> ascom_amap_api_services_district_DistrictResult() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_district_DistrictResult', {'refId': refId});
-    return com_amap_api_services_district_DistrictResult()..refId = result;
-  }
-  
-  Future<com_amap_api_services_district_DistrictItem> ascom_amap_api_services_district_DistrictItem() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_district_DistrictItem', {'refId': refId});
-    return com_amap_api_services_district_DistrictItem()..refId = result;
-  }
-  
-  Future<com_amap_api_services_help_Tip> ascom_amap_api_services_help_Tip() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_help_Tip', {'refId': refId});
-    return com_amap_api_services_help_Tip()..refId = result;
-  }
-  
-  Future<com_amap_api_services_help_InputtipsQuery> ascom_amap_api_services_help_InputtipsQuery() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_help_InputtipsQuery', {'refId': refId});
-    return com_amap_api_services_help_InputtipsQuery()..refId = result;
-  }
-  
-  Future<com_amap_api_services_help_Inputtips> ascom_amap_api_services_help_Inputtips() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_help_Inputtips', {'refId': refId});
-    return com_amap_api_services_help_Inputtips()..refId = result;
-  }
-  
-  Future<com_amap_api_services_share_ShareSearch_ShareNaviQuery> ascom_amap_api_services_share_ShareSearch_ShareNaviQuery() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_share_ShareSearch_ShareNaviQuery', {'refId': refId});
-    return com_amap_api_services_share_ShareSearch_ShareNaviQuery()..refId = result;
-  }
-  
-  Future<com_amap_api_services_share_ShareSearch_ShareBusRouteQuery> ascom_amap_api_services_share_ShareSearch_ShareBusRouteQuery() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_share_ShareSearch_ShareBusRouteQuery', {'refId': refId});
-    return com_amap_api_services_share_ShareSearch_ShareBusRouteQuery()..refId = result;
-  }
-  
-  Future<com_amap_api_services_share_ShareSearch> ascom_amap_api_services_share_ShareSearch() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_share_ShareSearch', {'refId': refId});
-    return com_amap_api_services_share_ShareSearch()..refId = result;
-  }
-  
-  Future<com_amap_api_services_share_ShareSearch_ShareFromAndTo> ascom_amap_api_services_share_ShareSearch_ShareFromAndTo() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_share_ShareSearch_ShareFromAndTo', {'refId': refId});
-    return com_amap_api_services_share_ShareSearch_ShareFromAndTo()..refId = result;
-  }
-  
-  Future<com_amap_api_services_share_ShareSearch_ShareWalkRouteQuery> ascom_amap_api_services_share_ShareSearch_ShareWalkRouteQuery() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_share_ShareSearch_ShareWalkRouteQuery', {'refId': refId});
-    return com_amap_api_services_share_ShareSearch_ShareWalkRouteQuery()..refId = result;
-  }
-  
-  Future<com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery> ascom_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery', {'refId': refId});
-    return com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery()..refId = result;
-  }
-  
 }

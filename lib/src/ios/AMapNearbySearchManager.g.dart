@@ -6,7 +6,6 @@
 import 'dart:typed_data';
 
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
-import 'package:amap_search_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
@@ -63,7 +62,7 @@ class AMapNearbySearchManager extends NSObject  {
             }
         
             // handle the native call
-            delegate?.nearbyInfoForUploading((AMapNearbySearchManager()..refId = (args['manager'])..tag__ = 'amap_search_fluttify'));
+            delegate?.nearbyInfoForUploading((args['manager'] as Object).as__<AMapNearbySearchManager>());
             break;
           case 'Callback::AMapNearbySearchManagerDelegate::onNearbyInfoUploadedWithError':
             // print log
@@ -72,7 +71,7 @@ class AMapNearbySearchManager extends NSObject  {
             }
         
             // handle the native call
-            delegate?.onNearbyInfoUploadedWithError((NSError()..refId = (args['error'])..tag__ = 'amap_search_fluttify'));
+            delegate?.onNearbyInfoUploadedWithError((args['error'] as Object).as__<NSError>());
             break;
           case 'Callback::AMapNearbySearchManagerDelegate::onUserInfoClearedWithError':
             // print log
@@ -81,7 +80,7 @@ class AMapNearbySearchManager extends NSObject  {
             }
         
             // handle the native call
-            delegate?.onUserInfoClearedWithError((NSError()..refId = (args['error'])..tag__ = 'amap_search_fluttify'));
+            delegate?.onUserInfoClearedWithError((args['error'] as Object).as__<NSError>());
             break;
           default:
             break;
@@ -111,7 +110,7 @@ class AMapNearbySearchManager extends NSObject  {
       return null;
     } else {
       final __return__ = AMapNearbySearchManager()..refId = __result__..tag__ = 'amap_search_fluttify';
-      kNativeObjectPool.add(__return__);
+      if (__result__ is Ref) kNativeObjectPool.add(__return__ as Ref);
       return __return__;
     }
   }

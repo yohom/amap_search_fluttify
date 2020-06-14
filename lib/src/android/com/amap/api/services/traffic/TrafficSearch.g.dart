@@ -5,7 +5,6 @@
 
 import 'dart:typed_data';
 
-import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
@@ -77,7 +76,7 @@ class com_amap_api_services_traffic_TrafficSearch extends java_lang_Object  {
               }
         
               // handle the native call
-              var1?.onRoadTrafficSearched((com_amap_api_services_traffic_TrafficStatusResult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify'), args['var2']);
+              var1?.onRoadTrafficSearched((args['var1'] as Object).as__<com_amap_api_services_traffic_TrafficStatusResult>(), args['var2']);
               break;
             default:
               break;

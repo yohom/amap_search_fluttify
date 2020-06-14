@@ -4,6 +4,6 @@
 //////////////////////////////////////////////////////////
 
 enum AMapCloudSortType {
-  AMapCloudSortTypeDESC,
-  AMapCloudSortTypeASC
+  AMapCloudSortTypeDESC /* 0 */,
+  AMapCloudSortTypeASC /* 1 */
 }

@@ -7,1043 +7,995 @@ import 'dart:io';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
-import 'package:amap_search_fluttify/src/android/android.export.g.dart';
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
-extension TypeOpAmapSearchFluttifyIOS on Ref {
-  Future<bool> isAMapPOISearchBaseRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapPOISearchBaseRequest', {'refId': refId});
-    return result;
+extension TypeOpAmapSearchFluttifyIOS on Object {
+  // type check
+  Future<bool> is__<T>() async {
+    final typeName = T.toString();
+    if (RegExp('(List<)?(String|int|double)(>)?|(Map<String,(String|int|double)>)').hasMatch(typeName)) {
+      return this is T;
+    }
+    else if (T == AMapPOISearchBaseRequest) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapPOISearchBaseRequest', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapPOIIDSearchRequest) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapPOIIDSearchRequest', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapPOIKeywordsSearchRequest) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapPOIKeywordsSearchRequest', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapPOIAroundSearchRequest) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapPOIAroundSearchRequest', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapPOIPolygonSearchRequest) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapPOIPolygonSearchRequest', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapPOISearchResponse) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapPOISearchResponse', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapRoutePOISearchRequest) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRoutePOISearchRequest', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapRoutePOISearchResponse) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRoutePOISearchResponse', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapInputTipsSearchRequest) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapInputTipsSearchRequest', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapInputTipsSearchResponse) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapInputTipsSearchResponse', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapGeocodeSearchRequest) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapGeocodeSearchRequest', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapGeocodeSearchResponse) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapGeocodeSearchResponse', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapReGeocodeSearchRequest) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapReGeocodeSearchRequest', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapReGeocodeSearchResponse) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapReGeocodeSearchResponse', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapBusStopSearchRequest) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapBusStopSearchRequest', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapBusStopSearchResponse) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapBusStopSearchResponse', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapBusLineBaseSearchRequest) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapBusLineBaseSearchRequest', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapBusLineNameSearchRequest) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapBusLineNameSearchRequest', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapBusLineIDSearchRequest) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapBusLineIDSearchRequest', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapBusLineSearchResponse) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapBusLineSearchResponse', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapDistrictSearchRequest) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapDistrictSearchRequest', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapDistrictSearchResponse) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapDistrictSearchResponse', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapRouteSearchBaseRequest) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRouteSearchBaseRequest', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapDrivingRouteSearchRequest) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapDrivingRouteSearchRequest', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapWalkingRouteSearchRequest) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapWalkingRouteSearchRequest', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapTransitRouteSearchRequest) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapTransitRouteSearchRequest', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapRidingRouteSearchRequest) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRidingRouteSearchRequest', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapRouteSearchResponse) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRouteSearchResponse', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapRidingRouteSearchResponse) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRidingRouteSearchResponse', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapTruckRouteSearchRequest) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapTruckRouteSearchRequest', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapDistanceSearchRequest) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapDistanceSearchRequest', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapDistanceSearchResponse) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapDistanceSearchResponse', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapWeatherSearchRequest) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapWeatherSearchRequest', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapWeatherSearchResponse) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapWeatherSearchResponse', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapRoadTrafficSearchBaseRequest) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRoadTrafficSearchBaseRequest', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapRoadTrafficSearchRequest) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRoadTrafficSearchRequest', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapRoadTrafficCircleSearchRequest) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRoadTrafficCircleSearchRequest', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapRoadTrafficSearchResponse) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRoadTrafficSearchResponse', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapNearbySearchRequest) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapNearbySearchRequest', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapNearbySearchResponse) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapNearbySearchResponse', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapCloudSearchBaseRequest) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapCloudSearchBaseRequest', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapCloudPOIAroundSearchRequest) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapCloudPOIAroundSearchRequest', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapCloudPOIPolygonSearchRequest) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapCloudPOIPolygonSearchRequest', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapCloudPOIIDSearchRequest) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapCloudPOIIDSearchRequest', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapCloudPOILocalSearchRequest) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapCloudPOILocalSearchRequest', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapCloudPOISearchResponse) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapCloudPOISearchResponse', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapShareSearchBaseRequest) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapShareSearchBaseRequest', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapLocationShareSearchRequest) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapLocationShareSearchRequest', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapPOIShareSearchRequest) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapPOIShareSearchRequest', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapRouteShareSearchRequest) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRouteShareSearchRequest', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapNavigationShareSearchRequest) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapNavigationShareSearchRequest', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapShareSearchResponse) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapShareSearchResponse', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapFutureRouteSearchRequest) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapFutureRouteSearchRequest', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapFutureRouteSearchResponse) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapFutureRouteSearchResponse', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapSearchObject) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapSearchObject', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapGeoPoint) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapGeoPoint', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapGeoPolygon) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapGeoPolygon', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapCity) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapCity', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapSuggestion) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapSuggestion', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapTip) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapTip', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapImage) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapImage', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapPOIExtension) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapPOIExtension', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapIndoorData) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapIndoorData', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapSubPOI) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapSubPOI', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapRoutePOI) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRoutePOI', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapPOI) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapPOI', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapAOI) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapAOI', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapRoad) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRoad', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapRoadInter) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRoadInter', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapStreetNumber) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapStreetNumber', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapBusinessArea) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapBusinessArea', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapAddressComponent) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapAddressComponent', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapReGeocode) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapReGeocode', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapGeocode) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapGeocode', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapBusStop) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapBusStop', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapBusLine) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapBusLine', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapDistrict) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapDistrict', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapTMC) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapTMC', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapStep) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapStep', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapPath) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapPath', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapFutureTimeInfoElement) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapFutureTimeInfoElement', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapFutureTimeInfo) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapFutureTimeInfo', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapWalking) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapWalking', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapTaxi) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapTaxi', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapRailwayStation) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRailwayStation', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapRailwaySpace) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRailwaySpace', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapRailway) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRailway', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapSegment) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapSegment', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapTransit) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapTransit', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapRoute) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRoute', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapDistanceResult) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapDistanceResult', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapLocalWeatherLive) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapLocalWeatherLive', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapLocalDayWeatherForecast) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapLocalDayWeatherForecast', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapLocalWeatherForecast) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapLocalWeatherForecast', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapNearbyUserInfo) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapNearbyUserInfo', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapTrafficEvaluation) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapTrafficEvaluation', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapTrafficRoad) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapTrafficRoad', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapTrafficInfo) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapTrafficInfo', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapCloudImage) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapCloudImage', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapCloudPOI) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapCloudPOI', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapNearbyUploadInfo) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapNearbyUploadInfo', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapNearbySearchManager) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapNearbySearchManager', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == AMapSearchAPI) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapSearchAPI', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == CLLocation) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfCLLocation', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == CLHeading) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfCLHeading', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == CGRect) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfCGRect', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == CGPoint) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfCGPoint', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == CGSize) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfCGSize', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == UIEdgeInsets) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfUIEdgeInsets', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == CLLocationCoordinate2D) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfCLLocationCoordinate2D', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == CLLocationManager) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfCLLocationManager', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == NSError) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfNSError', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == NSCoding) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfNSCoding', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == NSCopying) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfNSCopying', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == UIView) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfUIView', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == UIViewController) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfUIViewController', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == UIControl) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfUIControl', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == UIImage) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfUIImage', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == UIColor) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfUIColor', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == NSData) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfNSData', {'refId': (this as Ref).refId});
+      return result;
+    }
+    else if (T == NSOperation) {
+      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfNSOperation', {'refId': (this as Ref).refId});
+      return result;
+    }
   }
-  
-  Future<bool> isAMapPOIIDSearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapPOIIDSearchRequest', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapPOIKeywordsSearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapPOIKeywordsSearchRequest', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapPOIAroundSearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapPOIAroundSearchRequest', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapPOIPolygonSearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapPOIPolygonSearchRequest', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapPOISearchResponse() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapPOISearchResponse', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapRoutePOISearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRoutePOISearchRequest', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapRoutePOISearchResponse() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRoutePOISearchResponse', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapInputTipsSearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapInputTipsSearchRequest', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapInputTipsSearchResponse() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapInputTipsSearchResponse', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapGeocodeSearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapGeocodeSearchRequest', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapGeocodeSearchResponse() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapGeocodeSearchResponse', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapReGeocodeSearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapReGeocodeSearchRequest', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapReGeocodeSearchResponse() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapReGeocodeSearchResponse', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapBusStopSearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapBusStopSearchRequest', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapBusStopSearchResponse() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapBusStopSearchResponse', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapBusLineBaseSearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapBusLineBaseSearchRequest', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapBusLineNameSearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapBusLineNameSearchRequest', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapBusLineIDSearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapBusLineIDSearchRequest', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapBusLineSearchResponse() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapBusLineSearchResponse', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapDistrictSearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapDistrictSearchRequest', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapDistrictSearchResponse() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapDistrictSearchResponse', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapRouteSearchBaseRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRouteSearchBaseRequest', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapDrivingRouteSearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapDrivingRouteSearchRequest', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapWalkingRouteSearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapWalkingRouteSearchRequest', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapTransitRouteSearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapTransitRouteSearchRequest', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapRidingRouteSearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRidingRouteSearchRequest', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapRouteSearchResponse() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRouteSearchResponse', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapRidingRouteSearchResponse() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRidingRouteSearchResponse', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapTruckRouteSearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapTruckRouteSearchRequest', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapDistanceSearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapDistanceSearchRequest', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapDistanceSearchResponse() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapDistanceSearchResponse', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapWeatherSearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapWeatherSearchRequest', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapWeatherSearchResponse() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapWeatherSearchResponse', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapRoadTrafficSearchBaseRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRoadTrafficSearchBaseRequest', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapRoadTrafficSearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRoadTrafficSearchRequest', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapRoadTrafficCircleSearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRoadTrafficCircleSearchRequest', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapRoadTrafficSearchResponse() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRoadTrafficSearchResponse', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapNearbySearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapNearbySearchRequest', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapNearbySearchResponse() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapNearbySearchResponse', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapCloudSearchBaseRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapCloudSearchBaseRequest', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapCloudPOIAroundSearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapCloudPOIAroundSearchRequest', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapCloudPOIPolygonSearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapCloudPOIPolygonSearchRequest', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapCloudPOIIDSearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapCloudPOIIDSearchRequest', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapCloudPOILocalSearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapCloudPOILocalSearchRequest', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapCloudPOISearchResponse() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapCloudPOISearchResponse', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapShareSearchBaseRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapShareSearchBaseRequest', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapLocationShareSearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapLocationShareSearchRequest', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapPOIShareSearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapPOIShareSearchRequest', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapRouteShareSearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRouteShareSearchRequest', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapNavigationShareSearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapNavigationShareSearchRequest', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapShareSearchResponse() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapShareSearchResponse', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapFutureRouteSearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapFutureRouteSearchRequest', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapFutureRouteSearchResponse() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapFutureRouteSearchResponse', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapSearchObject() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapSearchObject', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapGeoPoint() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapGeoPoint', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapGeoPolygon() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapGeoPolygon', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapCity() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapCity', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapSuggestion() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapSuggestion', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapTip() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapTip', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapImage() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapImage', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapPOIExtension() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapPOIExtension', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapIndoorData() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapIndoorData', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapSubPOI() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapSubPOI', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapRoutePOI() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRoutePOI', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapPOI() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapPOI', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapAOI() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapAOI', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapRoad() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRoad', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapRoadInter() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRoadInter', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapStreetNumber() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapStreetNumber', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapBusinessArea() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapBusinessArea', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapAddressComponent() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapAddressComponent', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapReGeocode() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapReGeocode', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapGeocode() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapGeocode', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapBusStop() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapBusStop', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapBusLine() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapBusLine', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapDistrict() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapDistrict', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapTMC() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapTMC', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapStep() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapStep', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapPath() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapPath', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapFutureTimeInfoElement() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapFutureTimeInfoElement', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapFutureTimeInfo() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapFutureTimeInfo', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapWalking() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapWalking', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapTaxi() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapTaxi', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapRailwayStation() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRailwayStation', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapRailwaySpace() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRailwaySpace', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapRailway() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRailway', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapSegment() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapSegment', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapTransit() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapTransit', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapRoute() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRoute', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapDistanceResult() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapDistanceResult', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapLocalWeatherLive() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapLocalWeatherLive', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapLocalDayWeatherForecast() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapLocalDayWeatherForecast', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapLocalWeatherForecast() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapLocalWeatherForecast', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapNearbyUserInfo() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapNearbyUserInfo', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapTrafficEvaluation() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapTrafficEvaluation', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapTrafficRoad() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapTrafficRoad', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapTrafficInfo() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapTrafficInfo', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapCloudImage() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapCloudImage', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapCloudPOI() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapCloudPOI', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapNearbyUploadInfo() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapNearbyUploadInfo', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapNearbySearchManager() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapNearbySearchManager', {'refId': refId});
-    return result;
-  }
-  
-  Future<bool> isAMapSearchAPI() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapSearchAPI', {'refId': refId});
-    return result;
-  }
-  
 
-  Future<AMapPOISearchBaseRequest> asAMapPOISearchBaseRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapPOISearchBaseRequest', {'refId': refId});
-    return AMapPOISearchBaseRequest()..refId = result;
+  // type cast
+  T as__<T>() {
+    final typeName = T.toString();
+    // jsonable 直接造型 返回
+    if (RegExp('(List<)?(String|int|double)(>)?|(Map<String,(String|int|double)>)').hasMatch(typeName)) {
+      return this as T;
+    }
+    else if (T == AMapPOISearchBaseRequest) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapPOISearchBaseRequest()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapPOIIDSearchRequest) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapPOIIDSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapPOIKeywordsSearchRequest) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapPOIKeywordsSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapPOIAroundSearchRequest) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapPOIAroundSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapPOIPolygonSearchRequest) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapPOIPolygonSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapPOISearchResponse) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapPOISearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapRoutePOISearchRequest) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapRoutePOISearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapRoutePOISearchResponse) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapRoutePOISearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapInputTipsSearchRequest) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapInputTipsSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapInputTipsSearchResponse) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapInputTipsSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapGeocodeSearchRequest) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapGeocodeSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapGeocodeSearchResponse) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapGeocodeSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapReGeocodeSearchRequest) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapReGeocodeSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapReGeocodeSearchResponse) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapReGeocodeSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapBusStopSearchRequest) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapBusStopSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapBusStopSearchResponse) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapBusStopSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapBusLineBaseSearchRequest) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapBusLineBaseSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapBusLineNameSearchRequest) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapBusLineNameSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapBusLineIDSearchRequest) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapBusLineIDSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapBusLineSearchResponse) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapBusLineSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapDistrictSearchRequest) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapDistrictSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapDistrictSearchResponse) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapDistrictSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapRouteSearchBaseRequest) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapRouteSearchBaseRequest()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapDrivingRouteSearchRequest) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapDrivingRouteSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapWalkingRouteSearchRequest) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapWalkingRouteSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapTransitRouteSearchRequest) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapTransitRouteSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapRidingRouteSearchRequest) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapRidingRouteSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapRouteSearchResponse) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapRouteSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapRidingRouteSearchResponse) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapRidingRouteSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapTruckRouteSearchRequest) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapTruckRouteSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapDistanceSearchRequest) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapDistanceSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapDistanceSearchResponse) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapDistanceSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapWeatherSearchRequest) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapWeatherSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapWeatherSearchResponse) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapWeatherSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapRoadTrafficSearchBaseRequest) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapRoadTrafficSearchBaseRequest()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapRoadTrafficSearchRequest) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapRoadTrafficSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapRoadTrafficCircleSearchRequest) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapRoadTrafficCircleSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapRoadTrafficSearchResponse) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapRoadTrafficSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapNearbySearchRequest) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapNearbySearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapNearbySearchResponse) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapNearbySearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapCloudSearchBaseRequest) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapCloudSearchBaseRequest()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapCloudPOIAroundSearchRequest) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapCloudPOIAroundSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapCloudPOIPolygonSearchRequest) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapCloudPOIPolygonSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapCloudPOIIDSearchRequest) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapCloudPOIIDSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapCloudPOILocalSearchRequest) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapCloudPOILocalSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapCloudPOISearchResponse) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapCloudPOISearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapShareSearchBaseRequest) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapShareSearchBaseRequest()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapLocationShareSearchRequest) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapLocationShareSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapPOIShareSearchRequest) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapPOIShareSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapRouteShareSearchRequest) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapRouteShareSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapNavigationShareSearchRequest) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapNavigationShareSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapShareSearchResponse) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapShareSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapFutureRouteSearchRequest) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapFutureRouteSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapFutureRouteSearchResponse) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapFutureRouteSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapSearchObject) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapSearchObject()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapGeoPoint) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapGeoPoint()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapGeoPolygon) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapGeoPolygon()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapCity) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapCity()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapSuggestion) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapSuggestion()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapTip) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapTip()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapImage) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapImage()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapPOIExtension) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapPOIExtension()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapIndoorData) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapIndoorData()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapSubPOI) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapSubPOI()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapRoutePOI) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapRoutePOI()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapPOI) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapPOI()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapAOI) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapAOI()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapRoad) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapRoad()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapRoadInter) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapRoadInter()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapStreetNumber) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapStreetNumber()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapBusinessArea) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapBusinessArea()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapAddressComponent) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapAddressComponent()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapReGeocode) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapReGeocode()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapGeocode) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapGeocode()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapBusStop) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapBusStop()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapBusLine) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapBusLine()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapDistrict) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapDistrict()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapTMC) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapTMC()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapStep) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapStep()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapPath) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapPath()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapFutureTimeInfoElement) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapFutureTimeInfoElement()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapFutureTimeInfo) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapFutureTimeInfo()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapWalking) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapWalking()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapTaxi) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapTaxi()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapRailwayStation) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapRailwayStation()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapRailwaySpace) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapRailwaySpace()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapRailway) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapRailway()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapSegment) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapSegment()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapTransit) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapTransit()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapRoute) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapRoute()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapDistanceResult) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapDistanceResult()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapLocalWeatherLive) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapLocalWeatherLive()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapLocalDayWeatherForecast) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapLocalDayWeatherForecast()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapLocalWeatherForecast) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapLocalWeatherForecast()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapNearbyUserInfo) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapNearbyUserInfo()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapTrafficEvaluation) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapTrafficEvaluation()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapTrafficRoad) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapTrafficRoad()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapTrafficInfo) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapTrafficInfo()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapCloudImage) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapCloudImage()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapCloudPOI) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapCloudPOI()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapNearbyUploadInfo) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapNearbyUploadInfo()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapNearbySearchManager) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapNearbySearchManager()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == AMapSearchAPI) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (AMapSearchAPI()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == CLLocation) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (CLLocation()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == CLHeading) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (CLHeading()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == CGRect) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (CGRect()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == CGPoint) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (CGPoint()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == CGSize) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (CGSize()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == UIEdgeInsets) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (UIEdgeInsets()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == CLLocationCoordinate2D) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (CLLocationCoordinate2D()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == CLLocationManager) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (CLLocationManager()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == NSError) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (NSError()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == NSCoding) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (NSCoding.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == NSCopying) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (NSCopying.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == UIView) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (UIView()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == UIViewController) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (UIViewController()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == UIControl) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (UIControl()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == UIImage) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (UIImage()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == UIColor) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (UIColor()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == NSData) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (NSData()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
+    else if (T == NSOperation) {
+      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
+      return (NSOperation()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
+    }
   }
-  
-  Future<AMapPOIIDSearchRequest> asAMapPOIIDSearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapPOIIDSearchRequest', {'refId': refId});
-    return AMapPOIIDSearchRequest()..refId = result;
-  }
-  
-  Future<AMapPOIKeywordsSearchRequest> asAMapPOIKeywordsSearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapPOIKeywordsSearchRequest', {'refId': refId});
-    return AMapPOIKeywordsSearchRequest()..refId = result;
-  }
-  
-  Future<AMapPOIAroundSearchRequest> asAMapPOIAroundSearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapPOIAroundSearchRequest', {'refId': refId});
-    return AMapPOIAroundSearchRequest()..refId = result;
-  }
-  
-  Future<AMapPOIPolygonSearchRequest> asAMapPOIPolygonSearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapPOIPolygonSearchRequest', {'refId': refId});
-    return AMapPOIPolygonSearchRequest()..refId = result;
-  }
-  
-  Future<AMapPOISearchResponse> asAMapPOISearchResponse() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapPOISearchResponse', {'refId': refId});
-    return AMapPOISearchResponse()..refId = result;
-  }
-  
-  Future<AMapRoutePOISearchRequest> asAMapRoutePOISearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapRoutePOISearchRequest', {'refId': refId});
-    return AMapRoutePOISearchRequest()..refId = result;
-  }
-  
-  Future<AMapRoutePOISearchResponse> asAMapRoutePOISearchResponse() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapRoutePOISearchResponse', {'refId': refId});
-    return AMapRoutePOISearchResponse()..refId = result;
-  }
-  
-  Future<AMapInputTipsSearchRequest> asAMapInputTipsSearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapInputTipsSearchRequest', {'refId': refId});
-    return AMapInputTipsSearchRequest()..refId = result;
-  }
-  
-  Future<AMapInputTipsSearchResponse> asAMapInputTipsSearchResponse() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapInputTipsSearchResponse', {'refId': refId});
-    return AMapInputTipsSearchResponse()..refId = result;
-  }
-  
-  Future<AMapGeocodeSearchRequest> asAMapGeocodeSearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapGeocodeSearchRequest', {'refId': refId});
-    return AMapGeocodeSearchRequest()..refId = result;
-  }
-  
-  Future<AMapGeocodeSearchResponse> asAMapGeocodeSearchResponse() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapGeocodeSearchResponse', {'refId': refId});
-    return AMapGeocodeSearchResponse()..refId = result;
-  }
-  
-  Future<AMapReGeocodeSearchRequest> asAMapReGeocodeSearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapReGeocodeSearchRequest', {'refId': refId});
-    return AMapReGeocodeSearchRequest()..refId = result;
-  }
-  
-  Future<AMapReGeocodeSearchResponse> asAMapReGeocodeSearchResponse() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapReGeocodeSearchResponse', {'refId': refId});
-    return AMapReGeocodeSearchResponse()..refId = result;
-  }
-  
-  Future<AMapBusStopSearchRequest> asAMapBusStopSearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapBusStopSearchRequest', {'refId': refId});
-    return AMapBusStopSearchRequest()..refId = result;
-  }
-  
-  Future<AMapBusStopSearchResponse> asAMapBusStopSearchResponse() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapBusStopSearchResponse', {'refId': refId});
-    return AMapBusStopSearchResponse()..refId = result;
-  }
-  
-  Future<AMapBusLineBaseSearchRequest> asAMapBusLineBaseSearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapBusLineBaseSearchRequest', {'refId': refId});
-    return AMapBusLineBaseSearchRequest()..refId = result;
-  }
-  
-  Future<AMapBusLineNameSearchRequest> asAMapBusLineNameSearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapBusLineNameSearchRequest', {'refId': refId});
-    return AMapBusLineNameSearchRequest()..refId = result;
-  }
-  
-  Future<AMapBusLineIDSearchRequest> asAMapBusLineIDSearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapBusLineIDSearchRequest', {'refId': refId});
-    return AMapBusLineIDSearchRequest()..refId = result;
-  }
-  
-  Future<AMapBusLineSearchResponse> asAMapBusLineSearchResponse() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapBusLineSearchResponse', {'refId': refId});
-    return AMapBusLineSearchResponse()..refId = result;
-  }
-  
-  Future<AMapDistrictSearchRequest> asAMapDistrictSearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapDistrictSearchRequest', {'refId': refId});
-    return AMapDistrictSearchRequest()..refId = result;
-  }
-  
-  Future<AMapDistrictSearchResponse> asAMapDistrictSearchResponse() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapDistrictSearchResponse', {'refId': refId});
-    return AMapDistrictSearchResponse()..refId = result;
-  }
-  
-  Future<AMapRouteSearchBaseRequest> asAMapRouteSearchBaseRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapRouteSearchBaseRequest', {'refId': refId});
-    return AMapRouteSearchBaseRequest()..refId = result;
-  }
-  
-  Future<AMapDrivingRouteSearchRequest> asAMapDrivingRouteSearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapDrivingRouteSearchRequest', {'refId': refId});
-    return AMapDrivingRouteSearchRequest()..refId = result;
-  }
-  
-  Future<AMapWalkingRouteSearchRequest> asAMapWalkingRouteSearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapWalkingRouteSearchRequest', {'refId': refId});
-    return AMapWalkingRouteSearchRequest()..refId = result;
-  }
-  
-  Future<AMapTransitRouteSearchRequest> asAMapTransitRouteSearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapTransitRouteSearchRequest', {'refId': refId});
-    return AMapTransitRouteSearchRequest()..refId = result;
-  }
-  
-  Future<AMapRidingRouteSearchRequest> asAMapRidingRouteSearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapRidingRouteSearchRequest', {'refId': refId});
-    return AMapRidingRouteSearchRequest()..refId = result;
-  }
-  
-  Future<AMapRouteSearchResponse> asAMapRouteSearchResponse() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapRouteSearchResponse', {'refId': refId});
-    return AMapRouteSearchResponse()..refId = result;
-  }
-  
-  Future<AMapRidingRouteSearchResponse> asAMapRidingRouteSearchResponse() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapRidingRouteSearchResponse', {'refId': refId});
-    return AMapRidingRouteSearchResponse()..refId = result;
-  }
-  
-  Future<AMapTruckRouteSearchRequest> asAMapTruckRouteSearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapTruckRouteSearchRequest', {'refId': refId});
-    return AMapTruckRouteSearchRequest()..refId = result;
-  }
-  
-  Future<AMapDistanceSearchRequest> asAMapDistanceSearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapDistanceSearchRequest', {'refId': refId});
-    return AMapDistanceSearchRequest()..refId = result;
-  }
-  
-  Future<AMapDistanceSearchResponse> asAMapDistanceSearchResponse() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapDistanceSearchResponse', {'refId': refId});
-    return AMapDistanceSearchResponse()..refId = result;
-  }
-  
-  Future<AMapWeatherSearchRequest> asAMapWeatherSearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapWeatherSearchRequest', {'refId': refId});
-    return AMapWeatherSearchRequest()..refId = result;
-  }
-  
-  Future<AMapWeatherSearchResponse> asAMapWeatherSearchResponse() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapWeatherSearchResponse', {'refId': refId});
-    return AMapWeatherSearchResponse()..refId = result;
-  }
-  
-  Future<AMapRoadTrafficSearchBaseRequest> asAMapRoadTrafficSearchBaseRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapRoadTrafficSearchBaseRequest', {'refId': refId});
-    return AMapRoadTrafficSearchBaseRequest()..refId = result;
-  }
-  
-  Future<AMapRoadTrafficSearchRequest> asAMapRoadTrafficSearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapRoadTrafficSearchRequest', {'refId': refId});
-    return AMapRoadTrafficSearchRequest()..refId = result;
-  }
-  
-  Future<AMapRoadTrafficCircleSearchRequest> asAMapRoadTrafficCircleSearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapRoadTrafficCircleSearchRequest', {'refId': refId});
-    return AMapRoadTrafficCircleSearchRequest()..refId = result;
-  }
-  
-  Future<AMapRoadTrafficSearchResponse> asAMapRoadTrafficSearchResponse() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapRoadTrafficSearchResponse', {'refId': refId});
-    return AMapRoadTrafficSearchResponse()..refId = result;
-  }
-  
-  Future<AMapNearbySearchRequest> asAMapNearbySearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapNearbySearchRequest', {'refId': refId});
-    return AMapNearbySearchRequest()..refId = result;
-  }
-  
-  Future<AMapNearbySearchResponse> asAMapNearbySearchResponse() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapNearbySearchResponse', {'refId': refId});
-    return AMapNearbySearchResponse()..refId = result;
-  }
-  
-  Future<AMapCloudSearchBaseRequest> asAMapCloudSearchBaseRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapCloudSearchBaseRequest', {'refId': refId});
-    return AMapCloudSearchBaseRequest()..refId = result;
-  }
-  
-  Future<AMapCloudPOIAroundSearchRequest> asAMapCloudPOIAroundSearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapCloudPOIAroundSearchRequest', {'refId': refId});
-    return AMapCloudPOIAroundSearchRequest()..refId = result;
-  }
-  
-  Future<AMapCloudPOIPolygonSearchRequest> asAMapCloudPOIPolygonSearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapCloudPOIPolygonSearchRequest', {'refId': refId});
-    return AMapCloudPOIPolygonSearchRequest()..refId = result;
-  }
-  
-  Future<AMapCloudPOIIDSearchRequest> asAMapCloudPOIIDSearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapCloudPOIIDSearchRequest', {'refId': refId});
-    return AMapCloudPOIIDSearchRequest()..refId = result;
-  }
-  
-  Future<AMapCloudPOILocalSearchRequest> asAMapCloudPOILocalSearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapCloudPOILocalSearchRequest', {'refId': refId});
-    return AMapCloudPOILocalSearchRequest()..refId = result;
-  }
-  
-  Future<AMapCloudPOISearchResponse> asAMapCloudPOISearchResponse() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapCloudPOISearchResponse', {'refId': refId});
-    return AMapCloudPOISearchResponse()..refId = result;
-  }
-  
-  Future<AMapShareSearchBaseRequest> asAMapShareSearchBaseRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapShareSearchBaseRequest', {'refId': refId});
-    return AMapShareSearchBaseRequest()..refId = result;
-  }
-  
-  Future<AMapLocationShareSearchRequest> asAMapLocationShareSearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapLocationShareSearchRequest', {'refId': refId});
-    return AMapLocationShareSearchRequest()..refId = result;
-  }
-  
-  Future<AMapPOIShareSearchRequest> asAMapPOIShareSearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapPOIShareSearchRequest', {'refId': refId});
-    return AMapPOIShareSearchRequest()..refId = result;
-  }
-  
-  Future<AMapRouteShareSearchRequest> asAMapRouteShareSearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapRouteShareSearchRequest', {'refId': refId});
-    return AMapRouteShareSearchRequest()..refId = result;
-  }
-  
-  Future<AMapNavigationShareSearchRequest> asAMapNavigationShareSearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapNavigationShareSearchRequest', {'refId': refId});
-    return AMapNavigationShareSearchRequest()..refId = result;
-  }
-  
-  Future<AMapShareSearchResponse> asAMapShareSearchResponse() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapShareSearchResponse', {'refId': refId});
-    return AMapShareSearchResponse()..refId = result;
-  }
-  
-  Future<AMapFutureRouteSearchRequest> asAMapFutureRouteSearchRequest() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapFutureRouteSearchRequest', {'refId': refId});
-    return AMapFutureRouteSearchRequest()..refId = result;
-  }
-  
-  Future<AMapFutureRouteSearchResponse> asAMapFutureRouteSearchResponse() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapFutureRouteSearchResponse', {'refId': refId});
-    return AMapFutureRouteSearchResponse()..refId = result;
-  }
-  
-  Future<AMapSearchObject> asAMapSearchObject() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapSearchObject', {'refId': refId});
-    return AMapSearchObject()..refId = result;
-  }
-  
-  Future<AMapGeoPoint> asAMapGeoPoint() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapGeoPoint', {'refId': refId});
-    return AMapGeoPoint()..refId = result;
-  }
-  
-  Future<AMapGeoPolygon> asAMapGeoPolygon() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapGeoPolygon', {'refId': refId});
-    return AMapGeoPolygon()..refId = result;
-  }
-  
-  Future<AMapCity> asAMapCity() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapCity', {'refId': refId});
-    return AMapCity()..refId = result;
-  }
-  
-  Future<AMapSuggestion> asAMapSuggestion() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapSuggestion', {'refId': refId});
-    return AMapSuggestion()..refId = result;
-  }
-  
-  Future<AMapTip> asAMapTip() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapTip', {'refId': refId});
-    return AMapTip()..refId = result;
-  }
-  
-  Future<AMapImage> asAMapImage() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapImage', {'refId': refId});
-    return AMapImage()..refId = result;
-  }
-  
-  Future<AMapPOIExtension> asAMapPOIExtension() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapPOIExtension', {'refId': refId});
-    return AMapPOIExtension()..refId = result;
-  }
-  
-  Future<AMapIndoorData> asAMapIndoorData() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapIndoorData', {'refId': refId});
-    return AMapIndoorData()..refId = result;
-  }
-  
-  Future<AMapSubPOI> asAMapSubPOI() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapSubPOI', {'refId': refId});
-    return AMapSubPOI()..refId = result;
-  }
-  
-  Future<AMapRoutePOI> asAMapRoutePOI() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapRoutePOI', {'refId': refId});
-    return AMapRoutePOI()..refId = result;
-  }
-  
-  Future<AMapPOI> asAMapPOI() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapPOI', {'refId': refId});
-    return AMapPOI()..refId = result;
-  }
-  
-  Future<AMapAOI> asAMapAOI() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapAOI', {'refId': refId});
-    return AMapAOI()..refId = result;
-  }
-  
-  Future<AMapRoad> asAMapRoad() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapRoad', {'refId': refId});
-    return AMapRoad()..refId = result;
-  }
-  
-  Future<AMapRoadInter> asAMapRoadInter() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapRoadInter', {'refId': refId});
-    return AMapRoadInter()..refId = result;
-  }
-  
-  Future<AMapStreetNumber> asAMapStreetNumber() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapStreetNumber', {'refId': refId});
-    return AMapStreetNumber()..refId = result;
-  }
-  
-  Future<AMapBusinessArea> asAMapBusinessArea() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapBusinessArea', {'refId': refId});
-    return AMapBusinessArea()..refId = result;
-  }
-  
-  Future<AMapAddressComponent> asAMapAddressComponent() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapAddressComponent', {'refId': refId});
-    return AMapAddressComponent()..refId = result;
-  }
-  
-  Future<AMapReGeocode> asAMapReGeocode() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapReGeocode', {'refId': refId});
-    return AMapReGeocode()..refId = result;
-  }
-  
-  Future<AMapGeocode> asAMapGeocode() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapGeocode', {'refId': refId});
-    return AMapGeocode()..refId = result;
-  }
-  
-  Future<AMapBusStop> asAMapBusStop() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapBusStop', {'refId': refId});
-    return AMapBusStop()..refId = result;
-  }
-  
-  Future<AMapBusLine> asAMapBusLine() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapBusLine', {'refId': refId});
-    return AMapBusLine()..refId = result;
-  }
-  
-  Future<AMapDistrict> asAMapDistrict() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapDistrict', {'refId': refId});
-    return AMapDistrict()..refId = result;
-  }
-  
-  Future<AMapTMC> asAMapTMC() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapTMC', {'refId': refId});
-    return AMapTMC()..refId = result;
-  }
-  
-  Future<AMapStep> asAMapStep() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapStep', {'refId': refId});
-    return AMapStep()..refId = result;
-  }
-  
-  Future<AMapPath> asAMapPath() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapPath', {'refId': refId});
-    return AMapPath()..refId = result;
-  }
-  
-  Future<AMapFutureTimeInfoElement> asAMapFutureTimeInfoElement() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapFutureTimeInfoElement', {'refId': refId});
-    return AMapFutureTimeInfoElement()..refId = result;
-  }
-  
-  Future<AMapFutureTimeInfo> asAMapFutureTimeInfo() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapFutureTimeInfo', {'refId': refId});
-    return AMapFutureTimeInfo()..refId = result;
-  }
-  
-  Future<AMapWalking> asAMapWalking() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapWalking', {'refId': refId});
-    return AMapWalking()..refId = result;
-  }
-  
-  Future<AMapTaxi> asAMapTaxi() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapTaxi', {'refId': refId});
-    return AMapTaxi()..refId = result;
-  }
-  
-  Future<AMapRailwayStation> asAMapRailwayStation() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapRailwayStation', {'refId': refId});
-    return AMapRailwayStation()..refId = result;
-  }
-  
-  Future<AMapRailwaySpace> asAMapRailwaySpace() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapRailwaySpace', {'refId': refId});
-    return AMapRailwaySpace()..refId = result;
-  }
-  
-  Future<AMapRailway> asAMapRailway() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapRailway', {'refId': refId});
-    return AMapRailway()..refId = result;
-  }
-  
-  Future<AMapSegment> asAMapSegment() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapSegment', {'refId': refId});
-    return AMapSegment()..refId = result;
-  }
-  
-  Future<AMapTransit> asAMapTransit() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapTransit', {'refId': refId});
-    return AMapTransit()..refId = result;
-  }
-  
-  Future<AMapRoute> asAMapRoute() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapRoute', {'refId': refId});
-    return AMapRoute()..refId = result;
-  }
-  
-  Future<AMapDistanceResult> asAMapDistanceResult() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapDistanceResult', {'refId': refId});
-    return AMapDistanceResult()..refId = result;
-  }
-  
-  Future<AMapLocalWeatherLive> asAMapLocalWeatherLive() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapLocalWeatherLive', {'refId': refId});
-    return AMapLocalWeatherLive()..refId = result;
-  }
-  
-  Future<AMapLocalDayWeatherForecast> asAMapLocalDayWeatherForecast() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapLocalDayWeatherForecast', {'refId': refId});
-    return AMapLocalDayWeatherForecast()..refId = result;
-  }
-  
-  Future<AMapLocalWeatherForecast> asAMapLocalWeatherForecast() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapLocalWeatherForecast', {'refId': refId});
-    return AMapLocalWeatherForecast()..refId = result;
-  }
-  
-  Future<AMapNearbyUserInfo> asAMapNearbyUserInfo() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapNearbyUserInfo', {'refId': refId});
-    return AMapNearbyUserInfo()..refId = result;
-  }
-  
-  Future<AMapTrafficEvaluation> asAMapTrafficEvaluation() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapTrafficEvaluation', {'refId': refId});
-    return AMapTrafficEvaluation()..refId = result;
-  }
-  
-  Future<AMapTrafficRoad> asAMapTrafficRoad() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapTrafficRoad', {'refId': refId});
-    return AMapTrafficRoad()..refId = result;
-  }
-  
-  Future<AMapTrafficInfo> asAMapTrafficInfo() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapTrafficInfo', {'refId': refId});
-    return AMapTrafficInfo()..refId = result;
-  }
-  
-  Future<AMapCloudImage> asAMapCloudImage() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapCloudImage', {'refId': refId});
-    return AMapCloudImage()..refId = result;
-  }
-  
-  Future<AMapCloudPOI> asAMapCloudPOI() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapCloudPOI', {'refId': refId});
-    return AMapCloudPOI()..refId = result;
-  }
-  
-  Future<AMapNearbyUploadInfo> asAMapNearbyUploadInfo() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapNearbyUploadInfo', {'refId': refId});
-    return AMapNearbyUploadInfo()..refId = result;
-  }
-  
-  Future<AMapNearbySearchManager> asAMapNearbySearchManager() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapNearbySearchManager', {'refId': refId});
-    return AMapNearbySearchManager()..refId = result;
-  }
-  
-  Future<AMapSearchAPI> asAMapSearchAPI() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapSearchAPI', {'refId': refId});
-    return AMapSearchAPI()..refId = result;
-  }
-  
 }

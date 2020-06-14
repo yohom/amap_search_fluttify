@@ -6,14 +6,17 @@
 import 'dart:typed_data';
 
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
-import 'package:amap_search_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
 
+
+
 mixin AMapSearchDelegate on NSObject {
+  
+
   
 
   
@@ -191,3 +194,4 @@ mixin AMapSearchDelegate on NSObject {
   }
   
 }
+

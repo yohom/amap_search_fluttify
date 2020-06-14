@@ -4,8 +4,8 @@
 //////////////////////////////////////////////////////////
 
 enum AMapTruckSizeType {
-  AMapTruckSizeTypeMini,
-  AMapTruckSizeTypeLight,
-  AMapTruckSizeTypeMedium,
-  AMapTruckSizeTypeHeavy
+  AMapTruckSizeTypeMini /* 1 */,
+  AMapTruckSizeTypeLight /* 2 */,
+  AMapTruckSizeTypeMedium /* 3 */,
+  AMapTruckSizeTypeHeavy /* 4 */
 }

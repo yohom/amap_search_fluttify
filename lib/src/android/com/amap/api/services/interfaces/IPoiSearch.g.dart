@@ -5,7 +5,6 @@
 
 import 'dart:typed_data';
 
-import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
@@ -13,110 +12,512 @@ import 'package:flutter/services.dart';
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
 
+class _com_amap_api_services_interfaces_IPoiSearch_SUB extends java_lang_Object with com_amap_api_services_interfaces_IPoiSearch {}
+
 mixin com_amap_api_services_interfaces_IPoiSearch on java_lang_Object {
   
 
-  
+  static com_amap_api_services_interfaces_IPoiSearch subInstance() => _com_amap_api_services_interfaces_IPoiSearch_SUB();
 
   
 
-  @mustCallSuper
-  Future<void> setOnPoiSearchListener(com_amap_api_services_poisearch_PoiSearch_OnPoiSearchListener var1) {
-    kNativeObjectPool.add(var1);
   
+
+  
+  Future<void> setOnPoiSearchListener(com_amap_api_services_poisearch_PoiSearch_OnPoiSearchListener var1) async {
+    // print log
     if (fluttifyLogEnabled) {
-      debugPrint('setOnPoiSearchListener::kNativeObjectPool: $kNativeObjectPool');
+      debugPrint('fluttify-dart: com.amap.api.services.interfaces.IPoiSearch@$refId::setOnPoiSearchListener([])');
+    }
+  
+    // invoke native method
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IPoiSearch::setOnPoiSearchListener', {"refId": refId});
+  
+  
+    // handle native call
+    MethodChannel('com.amap.api.services.interfaces.IPoiSearch::setOnPoiSearchListener::Callback')
+        .setMethodCallHandler((methodCall) async {
+          final args = methodCall.arguments as Map;
+          // final refId = args['callerRefId'] as int;
+          // if (refId != this.refId) return;
+  
+          switch (methodCall.method) {
+            case 'Callback::com.amap.api.services.poisearch.PoiSearch.OnPoiSearchListener::onPoiSearched':
+              // print log
+              if (fluttifyLogEnabled) {
+                debugPrint('fluttify-dart-callback: onPoiSearched([\'var2\':${args['var2']}])');
+              }
+        
+              // handle the native call
+              var1?.onPoiSearched((args['var1'] as Object).as__<com_amap_api_services_poisearch_PoiResult>(), args['var2']);
+              break;
+            case 'Callback::com.amap.api.services.poisearch.PoiSearch.OnPoiSearchListener::onPoiItemSearched':
+              // print log
+              if (fluttifyLogEnabled) {
+                debugPrint('fluttify-dart-callback: onPoiItemSearched([\'var2\':${args['var2']}])');
+              }
+        
+              // handle the native call
+              var1?.onPoiItemSearched((args['var1'] as Object).as__<com_amap_api_services_core_PoiItem>(), args['var2']);
+              break;
+            default:
+              break;
+          }
+        });
+  
+    // convert native result to dart side object
+    if (__result__ == null) {
+      return null;
+    } else {
+      final __return__ = __result__;
+    
+      return __return__;
     }
   }
   
-  @mustCallSuper
-  Future<void> setLanguage(String var1) {
   
-  
+  Future<void> setLanguage(String var1) async {
+    // print log
     if (fluttifyLogEnabled) {
-      debugPrint('setLanguage::kNativeObjectPool: $kNativeObjectPool');
+      debugPrint('fluttify-dart: com.amap.api.services.interfaces.IPoiSearch@$refId::setLanguage([\'var1\':$var1])');
+    }
+  
+    // invoke native method
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IPoiSearch::setLanguage', {"var1": var1, "refId": refId});
+  
+  
+    // handle native call
+  
+  
+    // convert native result to dart side object
+    if (__result__ == null) {
+      return null;
+    } else {
+      final __return__ = __result__;
+    
+      return __return__;
     }
   }
   
-  @mustCallSuper
-  Future<String> getLanguage() {
   
-  
+  Future<String> getLanguage() async {
+    // print log
     if (fluttifyLogEnabled) {
-      debugPrint('getLanguage::kNativeObjectPool: $kNativeObjectPool');
+      debugPrint('fluttify-dart: com.amap.api.services.interfaces.IPoiSearch@$refId::getLanguage([])');
+    }
+  
+    // invoke native method
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IPoiSearch::getLanguage', {"refId": refId});
+  
+  
+    // handle native call
+  
+  
+    // convert native result to dart side object
+    if (__result__ == null) {
+      return null;
+    } else {
+      final __return__ = __result__;
+    
+      return __return__;
     }
   }
   
-  @mustCallSuper
-  Future<com_amap_api_services_poisearch_PoiResult> searchPOI() {
   
-  
+  Future<com_amap_api_services_poisearch_PoiResult> searchPOI() async {
+    // print log
     if (fluttifyLogEnabled) {
-      debugPrint('searchPOI::kNativeObjectPool: $kNativeObjectPool');
+      debugPrint('fluttify-dart: com.amap.api.services.interfaces.IPoiSearch@$refId::searchPOI([])');
+    }
+  
+    // invoke native method
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IPoiSearch::searchPOI', {"refId": refId});
+  
+  
+    // handle native call
+  
+  
+    // convert native result to dart side object
+    if (__result__ == null) {
+      return null;
+    } else {
+      final __return__ = com_amap_api_services_poisearch_PoiResult()..refId = __result__..tag__ = 'amap_search_fluttify';
+      if (__result__ is Ref) kNativeObjectPool.add(__return__ as Ref);
+      return __return__;
     }
   }
   
-  @mustCallSuper
-  Future<void> searchPOIAsyn() {
   
-  
+  Future<void> searchPOIAsyn() async {
+    // print log
     if (fluttifyLogEnabled) {
-      debugPrint('searchPOIAsyn::kNativeObjectPool: $kNativeObjectPool');
+      debugPrint('fluttify-dart: com.amap.api.services.interfaces.IPoiSearch@$refId::searchPOIAsyn([])');
+    }
+  
+    // invoke native method
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IPoiSearch::searchPOIAsyn', {"refId": refId});
+  
+  
+    // handle native call
+  
+  
+    // convert native result to dart side object
+    if (__result__ == null) {
+      return null;
+    } else {
+      final __return__ = __result__;
+    
+      return __return__;
     }
   }
   
-  @mustCallSuper
-  Future<com_amap_api_services_core_PoiItem> searchPOIId(String var1) {
   
-  
+  Future<com_amap_api_services_core_PoiItem> searchPOIId(String var1) async {
+    // print log
     if (fluttifyLogEnabled) {
-      debugPrint('searchPOIId::kNativeObjectPool: $kNativeObjectPool');
+      debugPrint('fluttify-dart: com.amap.api.services.interfaces.IPoiSearch@$refId::searchPOIId([\'var1\':$var1])');
+    }
+  
+    // invoke native method
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IPoiSearch::searchPOIId', {"var1": var1, "refId": refId});
+  
+  
+    // handle native call
+  
+  
+    // convert native result to dart side object
+    if (__result__ == null) {
+      return null;
+    } else {
+      final __return__ = com_amap_api_services_core_PoiItem()..refId = __result__..tag__ = 'amap_search_fluttify';
+      if (__result__ is Ref) kNativeObjectPool.add(__return__ as Ref);
+      return __return__;
     }
   }
   
-  @mustCallSuper
-  Future<void> searchPOIIdAsyn(String var1) {
   
-  
+  Future<void> searchPOIIdAsyn(String var1) async {
+    // print log
     if (fluttifyLogEnabled) {
-      debugPrint('searchPOIIdAsyn::kNativeObjectPool: $kNativeObjectPool');
+      debugPrint('fluttify-dart: com.amap.api.services.interfaces.IPoiSearch@$refId::searchPOIIdAsyn([\'var1\':$var1])');
+    }
+  
+    // invoke native method
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IPoiSearch::searchPOIIdAsyn', {"var1": var1, "refId": refId});
+  
+  
+    // handle native call
+  
+  
+    // convert native result to dart side object
+    if (__result__ == null) {
+      return null;
+    } else {
+      final __return__ = __result__;
+    
+      return __return__;
     }
   }
   
-  @mustCallSuper
-  Future<void> setQuery(com_amap_api_services_poisearch_PoiSearch_Query var1) {
-    kNativeObjectPool.add(var1);
   
+  Future<void> setQuery(com_amap_api_services_poisearch_PoiSearch_Query var1) async {
+    // print log
     if (fluttifyLogEnabled) {
-      debugPrint('setQuery::kNativeObjectPool: $kNativeObjectPool');
+      debugPrint('fluttify-dart: com.amap.api.services.interfaces.IPoiSearch@$refId::setQuery([])');
+    }
+  
+    // invoke native method
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IPoiSearch::setQuery', {"var1": var1.refId, "refId": refId});
+  
+  
+    // handle native call
+  
+  
+    // convert native result to dart side object
+    if (__result__ == null) {
+      return null;
+    } else {
+      final __return__ = __result__;
+    
+      return __return__;
     }
   }
   
-  @mustCallSuper
-  Future<void> setBound(com_amap_api_services_poisearch_PoiSearch_SearchBound var1) {
-    kNativeObjectPool.add(var1);
   
+  Future<void> setBound(com_amap_api_services_poisearch_PoiSearch_SearchBound var1) async {
+    // print log
     if (fluttifyLogEnabled) {
-      debugPrint('setBound::kNativeObjectPool: $kNativeObjectPool');
+      debugPrint('fluttify-dart: com.amap.api.services.interfaces.IPoiSearch@$refId::setBound([])');
+    }
+  
+    // invoke native method
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IPoiSearch::setBound', {"var1": var1.refId, "refId": refId});
+  
+  
+    // handle native call
+  
+  
+    // convert native result to dart side object
+    if (__result__ == null) {
+      return null;
+    } else {
+      final __return__ = __result__;
+    
+      return __return__;
     }
   }
   
-  @mustCallSuper
-  Future<com_amap_api_services_poisearch_PoiSearch_Query> getQuery() {
   
-  
+  Future<com_amap_api_services_poisearch_PoiSearch_Query> getQuery() async {
+    // print log
     if (fluttifyLogEnabled) {
-      debugPrint('getQuery::kNativeObjectPool: $kNativeObjectPool');
+      debugPrint('fluttify-dart: com.amap.api.services.interfaces.IPoiSearch@$refId::getQuery([])');
+    }
+  
+    // invoke native method
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IPoiSearch::getQuery', {"refId": refId});
+  
+  
+    // handle native call
+  
+  
+    // convert native result to dart side object
+    if (__result__ == null) {
+      return null;
+    } else {
+      final __return__ = com_amap_api_services_poisearch_PoiSearch_Query()..refId = __result__..tag__ = 'amap_search_fluttify';
+      if (__result__ is Ref) kNativeObjectPool.add(__return__ as Ref);
+      return __return__;
     }
   }
   
-  @mustCallSuper
-  Future<com_amap_api_services_poisearch_PoiSearch_SearchBound> getBound() {
   
-  
+  Future<com_amap_api_services_poisearch_PoiSearch_SearchBound> getBound() async {
+    // print log
     if (fluttifyLogEnabled) {
-      debugPrint('getBound::kNativeObjectPool: $kNativeObjectPool');
+      debugPrint('fluttify-dart: com.amap.api.services.interfaces.IPoiSearch@$refId::getBound([])');
+    }
+  
+    // invoke native method
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IPoiSearch::getBound', {"refId": refId});
+  
+  
+    // handle native call
+  
+  
+    // convert native result to dart side object
+    if (__result__ == null) {
+      return null;
+    } else {
+      final __return__ = com_amap_api_services_poisearch_PoiSearch_SearchBound()..refId = __result__..tag__ = 'amap_search_fluttify';
+      if (__result__ is Ref) kNativeObjectPool.add(__return__ as Ref);
+      return __return__;
     }
   }
   
+}
+
+extension com_amap_api_services_interfaces_IPoiSearch_Batch on List<com_amap_api_services_interfaces_IPoiSearch> {
+  //region methods
+  
+  Future<List<void>> setLanguage_batch(List<String> var1) async {
+    if (false) {
+      return Future.error('all args must have same length!');
+    }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IPoiSearch::setLanguage_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+    
+      return typedResult;
+    }
+  }
+  
+  
+  Future<List<String>> getLanguage_batch() async {
+    if (false) {
+      return Future.error('all args must have same length!');
+    }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IPoiSearch::getLanguage_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+    
+      return typedResult;
+    }
+  }
+  
+  
+  Future<List<com_amap_api_services_poisearch_PoiResult>> searchPOI_batch() async {
+    if (false) {
+      return Future.error('all args must have same length!');
+    }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IPoiSearch::searchPOI_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_amap_api_services_poisearch_PoiResult()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      kNativeObjectPool.addAll(typedResult);
+      return typedResult;
+    }
+  }
+  
+  
+  Future<List<void>> searchPOIAsyn_batch() async {
+    if (false) {
+      return Future.error('all args must have same length!');
+    }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IPoiSearch::searchPOIAsyn_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+    
+      return typedResult;
+    }
+  }
+  
+  
+  Future<List<com_amap_api_services_core_PoiItem>> searchPOIId_batch(List<String> var1) async {
+    if (false) {
+      return Future.error('all args must have same length!');
+    }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IPoiSearch::searchPOIId_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_amap_api_services_core_PoiItem()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      kNativeObjectPool.addAll(typedResult);
+      return typedResult;
+    }
+  }
+  
+  
+  Future<List<void>> searchPOIIdAsyn_batch(List<String> var1) async {
+    if (false) {
+      return Future.error('all args must have same length!');
+    }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IPoiSearch::searchPOIIdAsyn_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+    
+      return typedResult;
+    }
+  }
+  
+  
+  Future<List<void>> setQuery_batch(List<com_amap_api_services_poisearch_PoiSearch_Query> var1) async {
+    if (false) {
+      return Future.error('all args must have same length!');
+    }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IPoiSearch::setQuery_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__].refId, "refId": this[__i__].refId}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+    
+      return typedResult;
+    }
+  }
+  
+  
+  Future<List<void>> setBound_batch(List<com_amap_api_services_poisearch_PoiSearch_SearchBound> var1) async {
+    if (false) {
+      return Future.error('all args must have same length!');
+    }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IPoiSearch::setBound_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__].refId, "refId": this[__i__].refId}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+    
+      return typedResult;
+    }
+  }
+  
+  
+  Future<List<com_amap_api_services_poisearch_PoiSearch_Query>> getQuery_batch() async {
+    if (false) {
+      return Future.error('all args must have same length!');
+    }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IPoiSearch::getQuery_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_amap_api_services_poisearch_PoiSearch_Query()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      kNativeObjectPool.addAll(typedResult);
+      return typedResult;
+    }
+  }
+  
+  
+  Future<List<com_amap_api_services_poisearch_PoiSearch_SearchBound>> getBound_batch() async {
+    if (false) {
+      return Future.error('all args must have same length!');
+    }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IPoiSearch::getBound_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_amap_api_services_poisearch_PoiSearch_SearchBound()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      kNativeObjectPool.addAll(typedResult);
+      return typedResult;
+    }
+  }
+  
+  //endregion
 }

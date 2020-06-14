@@ -5,7 +5,6 @@
 
 import 'dart:typed_data';
 
-import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
@@ -70,7 +69,7 @@ class com_amap_api_services_weather_WeatherSearch extends java_lang_Object  {
       return null;
     } else {
       final __return__ = com_amap_api_services_weather_WeatherSearchQuery()..refId = __result__..tag__ = 'amap_search_fluttify';
-      kNativeObjectPool.add(__return__);
+      if (__result__ is Ref) kNativeObjectPool.add(__return__ as Ref);
       return __return__;
     }
   }
@@ -149,7 +148,7 @@ class com_amap_api_services_weather_WeatherSearch extends java_lang_Object  {
               }
         
               // handle the native call
-              var1?.onWeatherLiveSearched((com_amap_api_services_weather_LocalWeatherLiveResult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify'), args['var2']);
+              var1?.onWeatherLiveSearched((args['var1'] as Object).as__<com_amap_api_services_weather_LocalWeatherLiveResult>(), args['var2']);
               break;
             case 'Callback::com.amap.api.services.weather.WeatherSearch.OnWeatherSearchListener::onWeatherForecastSearched':
               // print log
@@ -158,7 +157,7 @@ class com_amap_api_services_weather_WeatherSearch extends java_lang_Object  {
               }
         
               // handle the native call
-              var1?.onWeatherForecastSearched((com_amap_api_services_weather_LocalWeatherForecastResult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify'), args['var2']);
+              var1?.onWeatherForecastSearched((args['var1'] as Object).as__<com_amap_api_services_weather_LocalWeatherForecastResult>(), args['var2']);
               break;
             default:
               break;

@@ -5,7 +5,6 @@
 
 import 'dart:typed_data';
 
-import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
@@ -156,7 +155,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
               }
         
               // handle the native call
-              var1?.onBusRouteSearched((com_amap_api_services_route_BusRouteResult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify'), args['var2']);
+              var1?.onBusRouteSearched((args['var1'] as Object).as__<com_amap_api_services_route_BusRouteResult>(), args['var2']);
               break;
             case 'Callback::com.amap.api.services.route.RouteSearch.OnRouteSearchListener::onDriveRouteSearched':
               // print log
@@ -165,7 +164,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
               }
         
               // handle the native call
-              var1?.onDriveRouteSearched((com_amap_api_services_route_DriveRouteResult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify'), args['var2']);
+              var1?.onDriveRouteSearched((args['var1'] as Object).as__<com_amap_api_services_route_DriveRouteResult>(), args['var2']);
               break;
             case 'Callback::com.amap.api.services.route.RouteSearch.OnRouteSearchListener::onWalkRouteSearched':
               // print log
@@ -174,7 +173,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
               }
         
               // handle the native call
-              var1?.onWalkRouteSearched((com_amap_api_services_route_WalkRouteResult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify'), args['var2']);
+              var1?.onWalkRouteSearched((args['var1'] as Object).as__<com_amap_api_services_route_WalkRouteResult>(), args['var2']);
               break;
             case 'Callback::com.amap.api.services.route.RouteSearch.OnRouteSearchListener::onRideRouteSearched':
               // print log
@@ -183,7 +182,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
               }
         
               // handle the native call
-              var1?.onRideRouteSearched((com_amap_api_services_route_RideRouteResult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify'), args['var2']);
+              var1?.onRideRouteSearched((args['var1'] as Object).as__<com_amap_api_services_route_RideRouteResult>(), args['var2']);
               break;
             default:
               break;
@@ -226,7 +225,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
               }
         
               // handle the native call
-              var1?.onTruckRouteSearched((com_amap_api_services_route_TruckRouteRestult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify'), args['var2']);
+              var1?.onTruckRouteSearched((args['var1'] as Object).as__<com_amap_api_services_route_TruckRouteRestult>(), args['var2']);
               break;
             default:
               break;
@@ -269,7 +268,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
               }
         
               // handle the native call
-              var1?.onDriveRoutePlanSearched((com_amap_api_services_route_DriveRoutePlanResult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify'), args['var2']);
+              var1?.onDriveRoutePlanSearched((args['var1'] as Object).as__<com_amap_api_services_route_DriveRoutePlanResult>(), args['var2']);
               break;
             default:
               break;
@@ -305,7 +304,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
       return null;
     } else {
       final __return__ = com_amap_api_services_route_WalkRouteResult()..refId = __result__..tag__ = 'amap_search_fluttify';
-      kNativeObjectPool.add(__return__);
+      if (__result__ is Ref) kNativeObjectPool.add(__return__ as Ref);
       return __return__;
     }
   }
@@ -353,7 +352,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
       return null;
     } else {
       final __return__ = com_amap_api_services_route_BusRouteResult()..refId = __result__..tag__ = 'amap_search_fluttify';
-      kNativeObjectPool.add(__return__);
+      if (__result__ is Ref) kNativeObjectPool.add(__return__ as Ref);
       return __return__;
     }
   }
@@ -401,7 +400,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
       return null;
     } else {
       final __return__ = com_amap_api_services_route_DriveRouteResult()..refId = __result__..tag__ = 'amap_search_fluttify';
-      kNativeObjectPool.add(__return__);
+      if (__result__ is Ref) kNativeObjectPool.add(__return__ as Ref);
       return __return__;
     }
   }
@@ -473,7 +472,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
       return null;
     } else {
       final __return__ = com_amap_api_services_route_RideRouteResult()..refId = __result__..tag__ = 'amap_search_fluttify';
-      kNativeObjectPool.add(__return__);
+      if (__result__ is Ref) kNativeObjectPool.add(__return__ as Ref);
       return __return__;
     }
   }
@@ -497,7 +496,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
       return null;
     } else {
       final __return__ = com_amap_api_services_route_TruckRouteRestult()..refId = __result__..tag__ = 'amap_search_fluttify';
-      kNativeObjectPool.add(__return__);
+      if (__result__ is Ref) kNativeObjectPool.add(__return__ as Ref);
       return __return__;
     }
   }
@@ -545,7 +544,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
       return null;
     } else {
       final __return__ = com_amap_api_services_route_DriveRoutePlanResult()..refId = __result__..tag__ = 'amap_search_fluttify';
-      kNativeObjectPool.add(__return__);
+      if (__result__ is Ref) kNativeObjectPool.add(__return__ as Ref);
       return __return__;
     }
   }

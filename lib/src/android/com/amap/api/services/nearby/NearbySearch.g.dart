@@ -5,7 +5,6 @@
 
 import 'dart:typed_data';
 
-import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
@@ -53,7 +52,7 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
       return null;
     } else {
       final __return__ = com_amap_api_services_nearby_NearbySearch()..refId = __result__..tag__ = 'amap_search_fluttify';
-      kNativeObjectPool.add(__return__);
+      if (__result__ is Ref) kNativeObjectPool.add(__return__ as Ref);
       return __return__;
     }
   }
@@ -93,7 +92,7 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
               }
         
               // handle the native call
-              var1?.onNearbyInfoSearched((com_amap_api_services_nearby_NearbySearchResult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify'), args['var2']);
+              var1?.onNearbyInfoSearched((args['var1'] as Object).as__<com_amap_api_services_nearby_NearbySearchResult>(), args['var2']);
               break;
             case 'Callback::com.amap.api.services.nearby.NearbySearch.NearbyListener::onNearbyInfoUploaded':
               // print log
@@ -154,7 +153,7 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
               }
         
               // handle the native call
-              var1?.onNearbyInfoSearched((com_amap_api_services_nearby_NearbySearchResult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify'), args['var2']);
+              var1?.onNearbyInfoSearched((args['var1'] as Object).as__<com_amap_api_services_nearby_NearbySearchResult>(), args['var2']);
               break;
             case 'Callback::com.amap.api.services.nearby.NearbySearch.NearbyListener::onNearbyInfoUploaded':
               // print log
@@ -362,7 +361,7 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
       return null;
     } else {
       final __return__ = com_amap_api_services_nearby_NearbySearchResult()..refId = __result__..tag__ = 'amap_search_fluttify';
-      kNativeObjectPool.add(__return__);
+      if (__result__ is Ref) kNativeObjectPool.add(__return__ as Ref);
       return __return__;
     }
   }

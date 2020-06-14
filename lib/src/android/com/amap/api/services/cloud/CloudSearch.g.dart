@@ -5,7 +5,6 @@
 
 import 'dart:typed_data';
 
-import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
@@ -77,7 +76,7 @@ class com_amap_api_services_cloud_CloudSearch extends java_lang_Object  {
               }
         
               // handle the native call
-              var1?.onCloudSearched((com_amap_api_services_cloud_CloudResult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify'), args['var2']);
+              var1?.onCloudSearched((args['var1'] as Object).as__<com_amap_api_services_cloud_CloudResult>(), args['var2']);
               break;
             case 'Callback::com.amap.api.services.cloud.CloudSearch.OnCloudSearchListener::onCloudItemDetailSearched':
               // print log
@@ -86,7 +85,7 @@ class com_amap_api_services_cloud_CloudSearch extends java_lang_Object  {
               }
         
               // handle the native call
-              var1?.onCloudItemDetailSearched((com_amap_api_services_cloud_CloudItemDetail()..refId = (args['var1'])..tag__ = 'amap_search_fluttify'), args['var2']);
+              var1?.onCloudItemDetailSearched((args['var1'] as Object).as__<com_amap_api_services_cloud_CloudItemDetail>(), args['var2']);
               break;
             default:
               break;
