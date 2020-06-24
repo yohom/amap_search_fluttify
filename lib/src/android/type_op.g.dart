@@ -352,10 +352,6 @@ extension TypeOpAmapSearchFluttifyAndroid on Object {
       final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_nearby_NearbySearch_NearbyQuery', {'refId': (this as Ref).refId});
       return result;
     }
-    else if (T == com_amap_api_services_a_) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_a_', {'refId': (this as Ref).refId});
-      return result;
-    }
     else if (T == com_amap_api_services_routepoisearch_RoutePOIItem) {
       final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_routepoisearch_RoutePOIItem', {'refId': (this as Ref).refId});
       return result;
@@ -701,676 +697,506 @@ extension TypeOpAmapSearchFluttifyAndroid on Object {
     if (RegExp('(List<)?(String|int|double)(>)?|(Map<String,(String|int|double)>)').hasMatch(typeName)) {
       return this as T;
     }
+    // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
     else if (T == com_amap_api_services_traffic_TrafficStatusInfo) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_traffic_TrafficStatusInfo()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_traffic_TrafficStatusResult) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_traffic_TrafficStatusResult()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_traffic_TrafficSearch) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_traffic_TrafficSearch()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_traffic_RoadTrafficQuery) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_traffic_RoadTrafficQuery()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_traffic_CircleTrafficQuery) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_traffic_CircleTrafficQuery()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_traffic_TrafficStatusEvaluation) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_traffic_TrafficStatusEvaluation()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_busline_BusLineItem) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_busline_BusLineItem()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_busline_BusStationResult) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_busline_BusStationResult()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_busline_BusStationSearch) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_busline_BusStationSearch()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_busline_BusLineSearch) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_busline_BusLineSearch()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_busline_BusLineQuery) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_busline_BusLineQuery()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_busline_BusLineResult) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_busline_BusLineResult()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_busline_BusStationItem) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_busline_BusStationItem()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_busline_BusStationQuery) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_busline_BusStationQuery()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_core_AMapException) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_core_AMapException()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_core_ServiceSettings) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_core_ServiceSettings()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_core_SearchUtils) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_core_SearchUtils()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_core_LatLonSharePoint) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_core_LatLonSharePoint()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_core_LatLonPoint) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_core_LatLonPoint()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_core_PoiItem) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_core_PoiItem()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_core_SuggestionCity) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_core_SuggestionCity()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_poisearch_Photo) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_poisearch_Photo()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_poisearch_SubPoiItem) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_poisearch_SubPoiItem()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_poisearch_PoiItemExtension) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_poisearch_PoiItemExtension()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_poisearch_PoiSearch_SearchBound) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_poisearch_PoiSearch_SearchBound()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_poisearch_PoiResult) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_poisearch_PoiResult()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_poisearch_PoiSearch) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_poisearch_PoiSearch()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_poisearch_PoiSearch_Query) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_poisearch_PoiSearch_Query()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_poisearch_IndoorData) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_poisearch_IndoorData()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_route_Railway) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_route_Railway()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_route_BusPath) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_route_BusPath()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_route_DriveRoutePlanResult) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_route_DriveRoutePlanResult()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_route_RouteSearch_TruckRouteQuery) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_route_RouteSearch_TruckRouteQuery()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_route_TMC) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_route_TMC()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_route_RouteBusWalkItem) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_route_RouteBusWalkItem()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_route_RouteResult) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_route_RouteResult()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_route_RouteSearch) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_route_RouteSearch()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_route_BusStep) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_route_BusStep()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_route_TaxiItem) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_route_TaxiItem()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_route_BusRouteResult) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_route_BusRouteResult()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_route_RoutePlanResult) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_route_RoutePlanResult()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_route_RailwaySpace) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_route_RailwaySpace()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_route_TruckRouteRestult) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_route_TruckRouteRestult()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_route_RouteSearch_RideRouteQuery) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_route_RouteSearch_RideRouteQuery()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_route_RouteSearch_DriveRouteQuery) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_route_RouteSearch_DriveRouteQuery()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_route_RouteRailwayItem) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_route_RouteRailwayItem()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_route_WalkStep) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_route_WalkStep()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_route_RailwayStationItem) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_route_RailwayStationItem()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_route_RideRouteResult) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_route_RideRouteResult()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_route_RouteSearch_FromAndTo) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_route_RouteSearch_FromAndTo()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_route_RidePath) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_route_RidePath()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_route_RouteSearch_BusRouteQuery) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_route_RouteSearch_BusRouteQuery()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_route_RideStep) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_route_RideStep()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_route_RouteSearchCity) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_route_RouteSearchCity()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_route_DistanceResult) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_route_DistanceResult()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_route_RouteSearch_WalkRouteQuery) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_route_RouteSearch_WalkRouteQuery()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_route_District) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_route_District()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_route_WalkRouteResult) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_route_WalkRouteResult()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_route_DistanceSearch_DistanceQuery) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_route_DistanceSearch_DistanceQuery()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_route_SearchCity) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_route_SearchCity()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_route_DistanceSearch) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_route_DistanceSearch()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_route_WalkPath) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_route_WalkPath()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_route_RouteBusLineItem) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_route_RouteBusLineItem()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_route_RouteSearch_DrivePlanQuery) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_route_RouteSearch_DrivePlanQuery()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_route_DrivePlanStep) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_route_DrivePlanStep()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_route_TimeInfo) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_route_TimeInfo()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_route_DriveStep) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_route_DriveStep()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_route_TruckStep) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_route_TruckStep()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_route_DriveRouteResult) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_route_DriveRouteResult()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_route_DrivePath) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_route_DrivePath()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_route_TruckPath) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_route_TruckPath()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_route_Doorway) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_route_Doorway()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_route_DrivePlanPath) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_route_DrivePlanPath()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_route_TimeInfosElement) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_route_TimeInfosElement()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_route_DistanceItem) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_route_DistanceItem()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_route_Path) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_route_Path()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_road_Road) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_road_Road()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_road_Crossroad) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_road_Crossroad()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_nearby_NearbyInfo) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_nearby_NearbyInfo()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_nearby_UploadInfo) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_nearby_UploadInfo()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_nearby_NearbySearch) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_nearby_NearbySearch()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_nearby_NearbySearchResult) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_nearby_NearbySearchResult()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_nearby_NearbySearch_NearbyQuery) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_nearby_NearbySearch_NearbyQuery()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
-    else if (T == com_amap_api_services_a_) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
-      return (com_amap_api_services_a_()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
-    }
     else if (T == com_amap_api_services_routepoisearch_RoutePOIItem) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_routepoisearch_RoutePOIItem()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_routepoisearch_RoutePOISearch) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_routepoisearch_RoutePOISearch()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_routepoisearch_RoutePOISearchResult) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_routepoisearch_RoutePOISearchResult()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_routepoisearch_RoutePOISearchQuery) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_routepoisearch_RoutePOISearchQuery()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_cloud_CloudItem) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_cloud_CloudItem()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_cloud_CloudSearch_Query) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_cloud_CloudSearch_Query()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_cloud_CloudResult) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_cloud_CloudResult()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_cloud_CloudSearch) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_cloud_CloudSearch()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_cloud_CloudSearch_SearchBound) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_cloud_CloudSearch_SearchBound()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_cloud_CloudImage) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_cloud_CloudImage()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_cloud_CloudSearch_Sortingrules) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_cloud_CloudSearch_Sortingrules()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_cloud_CloudItemDetail) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_cloud_CloudItemDetail()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_weather_LocalDayWeatherForecast) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_weather_LocalDayWeatherForecast()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_weather_WeatherSearchQuery) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_weather_WeatherSearchQuery()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_weather_LocalWeatherForecastResult) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_weather_LocalWeatherForecastResult()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_weather_LocalWeatherForecast) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_weather_LocalWeatherForecast()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_weather_WeatherSearch) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_weather_WeatherSearch()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_weather_LocalWeatherLive) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_weather_LocalWeatherLive()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_weather_LocalWeatherLiveResult) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_weather_LocalWeatherLiveResult()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_geocoder_BusinessArea) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_geocoder_BusinessArea()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_geocoder_GeocodeQuery) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_geocoder_GeocodeQuery()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_geocoder_GeocodeSearch) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_geocoder_GeocodeSearch()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_geocoder_RegeocodeResult) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_geocoder_RegeocodeResult()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_geocoder_GeocodeResult) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_geocoder_GeocodeResult()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_geocoder_AoiItem) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_geocoder_AoiItem()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_geocoder_RegeocodeRoad) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_geocoder_RegeocodeRoad()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_geocoder_GeocodeAddress) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_geocoder_GeocodeAddress()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_geocoder_RegeocodeQuery) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_geocoder_RegeocodeQuery()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_geocoder_StreetNumber) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_geocoder_StreetNumber()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_geocoder_RegeocodeAddress) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_geocoder_RegeocodeAddress()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_district_DistrictSearchQuery) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_district_DistrictSearchQuery()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_district_DistrictSearch) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_district_DistrictSearch()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_district_DistrictResult) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_district_DistrictResult()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_district_DistrictItem) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_district_DistrictItem()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_help_Tip) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_help_Tip()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_help_InputtipsQuery) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_help_InputtipsQuery()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_help_Inputtips) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_help_Inputtips()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_interfaces_IDistrictSearch) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_interfaces_IDistrictSearch.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_interfaces_IBusStationSearch) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_interfaces_IBusStationSearch.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_interfaces_IRouteSearch) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_interfaces_IRouteSearch.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_interfaces_IShareSearch) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_interfaces_IShareSearch.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_interfaces_IRoutePOISearch) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_interfaces_IRoutePOISearch.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_interfaces_ITrafficSearch) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_interfaces_ITrafficSearch.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_interfaces_IInputtipsSearch) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_interfaces_IInputtipsSearch.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_interfaces_IGeocodeSearch) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_interfaces_IGeocodeSearch.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_interfaces_ICloudSearch) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_interfaces_ICloudSearch.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_interfaces_IDistanceSearch) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_interfaces_IDistanceSearch.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_interfaces_IPoiSearch) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_interfaces_IPoiSearch.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_interfaces_IWeatherSearch) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_interfaces_IWeatherSearch.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_interfaces_INearbySearch) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_interfaces_INearbySearch.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_interfaces_IBusLineSearch) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_interfaces_IBusLineSearch.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_share_ShareSearch_ShareNaviQuery) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_share_ShareSearch_ShareNaviQuery()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_share_ShareSearch_ShareBusRouteQuery) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_share_ShareSearch_ShareBusRouteQuery()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_share_ShareSearch) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_share_ShareSearch()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_share_ShareSearch_ShareFromAndTo) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_share_ShareSearch_ShareFromAndTo()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_share_ShareSearch_ShareWalkRouteQuery) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_share_ShareSearch_ShareWalkRouteQuery()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == android_content_Context) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (android_content_Context()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == android_content_Intent) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (android_content_Intent()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == android_content_ContentProvider) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (android_content_ContentProvider()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == android_app_Application) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (android_app_Application()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == android_app_Notification) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (android_app_Notification()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == android_app_Activity) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (android_app_Activity()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == android_app_PendingIntent) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (android_app_PendingIntent()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == android_os_Bundle) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (android_os_Bundle()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == android_os_Binder) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (android_os_Binder()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == android_view_View) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (android_view_View()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == android_view_SurfaceView) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (android_view_SurfaceView()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == android_view_ViewGroup) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (android_view_ViewGroup()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == android_graphics_Point) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (android_graphics_Point()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == android_graphics_PointF) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (android_graphics_PointF()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == android_graphics_Bitmap) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (android_graphics_Bitmap()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == android_widget_ImageView) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (android_widget_ImageView()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == java_io_Closeable) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (java_io_Closeable.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == java_io_File) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (java_io_File()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == android_location_Location) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (android_location_Location()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == android_view_MotionEvent) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (android_view_MotionEvent()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == android_graphics_drawable_Drawable) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (android_graphics_drawable_Drawable()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == android_widget_FrameLayout) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (android_widget_FrameLayout()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == android_widget_TextView) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (android_widget_TextView()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == android_widget_LinearLayout) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (android_widget_LinearLayout()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == android_widget_RelativeLayout) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (android_widget_RelativeLayout()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == android_os_Parcelable) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (android_os_Parcelable.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == android_util_Pair) {
-      // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
       return (android_util_Pair()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
   }

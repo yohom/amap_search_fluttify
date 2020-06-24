@@ -266,8 +266,8 @@ extern BOOL enableLog;
                 AMapTrafficEvaluation* result = ref.evaluation;
         
                 // return a ref
-                HEAP[@((result).hash)] = result;
-                NSNumber* jsonableResult = @((result).hash);
+                HEAP[[NSNumber numberWithLong: (result).hash]] = result;
+                NSNumber* jsonableResult = [NSNumber numberWithLong: (result).hash];
         
                 [resultList addObject:jsonableResult];
             }
@@ -290,8 +290,8 @@ extern BOOL enableLog;
                 NSMutableArray* jsonableResult = [NSMutableArray array];
                 for (int __i__ = 0; __i__ < result.count; __i__++) {
                     NSObject* object = [result objectAtIndex:__i__];
-                    [jsonableResult addObject: @(object.hash)];
-                    HEAP[@([object hash])] = object;
+                    [jsonableResult addObject: [NSNumber numberWithLong: object.hash]];
+                    HEAP[[NSNumber numberWithLong: object.hash]] = object;
                 }
         
                 [resultList addObject:jsonableResult];
@@ -412,8 +412,8 @@ extern BOOL enableLog;
                 AMapGeoPoint* result = ref.location;
         
                 // return a ref
-                HEAP[@((result).hash)] = result;
-                NSNumber* jsonableResult = @((result).hash);
+                HEAP[[NSNumber numberWithLong: (result).hash]] = result;
+                NSNumber* jsonableResult = [NSNumber numberWithLong: (result).hash];
         
                 [resultList addObject:jsonableResult];
             }
@@ -536,8 +536,8 @@ extern BOOL enableLog;
                 NSMutableArray* jsonableResult = [NSMutableArray array];
                 for (int __i__ = 0; __i__ < result.count; __i__++) {
                     NSObject* object = [result objectAtIndex:__i__];
-                    [jsonableResult addObject: @(object.hash)];
-                    HEAP[@([object hash])] = object;
+                    [jsonableResult addObject: [NSNumber numberWithLong: object.hash]];
+                    HEAP[[NSNumber numberWithLong: object.hash]] = object;
                 }
         
                 [resultList addObject:jsonableResult];
@@ -599,8 +599,8 @@ extern BOOL enableLog;
         
                 // 返回值: 结构体
                 NSValue* resultValue = [NSValue value:&result withObjCType:@encode(CLLocationCoordinate2D)];
-                HEAP[@(resultValue.hash)] = resultValue;
-                NSNumber* jsonableResult = @(resultValue.hash);
+                HEAP[[NSNumber numberWithLong: resultValue.hash]] = resultValue;
+                NSNumber* jsonableResult = [NSNumber numberWithLong: resultValue.hash];
         
                 [resultList addObject:jsonableResult];
             }
@@ -883,7 +883,7 @@ extern BOOL enableLog;
         
             // args
             // ref arg
-            AMapGeoPoint* location = (AMapGeoPoint*) HEAP[@([args[@"location"] integerValue])];
+            AMapGeoPoint* location = (AMapGeoPoint*) HEAP[args[@"location"]];
         
             // ref
             AMapPOIKeywordsSearchRequest* ref = (AMapPOIKeywordsSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -917,7 +917,7 @@ extern BOOL enableLog;
         
             // args
             // ref arg
-            AMapGeoPoint* location = (AMapGeoPoint*) HEAP[@([args[@"location"] integerValue])];
+            AMapGeoPoint* location = (AMapGeoPoint*) HEAP[args[@"location"]];
         
             // ref
             AMapPOIAroundSearchRequest* ref = (AMapPOIAroundSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -985,7 +985,7 @@ extern BOOL enableLog;
         
             // args
             // ref arg
-            AMapGeoPolygon* polygon = (AMapGeoPolygon*) HEAP[@([args[@"polygon"] integerValue])];
+            AMapGeoPolygon* polygon = (AMapGeoPolygon*) HEAP[args[@"polygon"]];
         
             // ref
             AMapPOIPolygonSearchRequest* ref = (AMapPOIPolygonSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -1019,7 +1019,7 @@ extern BOOL enableLog;
         
             // args
             // ref arg
-            AMapSuggestion* suggestion = (AMapSuggestion*) HEAP[@([args[@"suggestion"] integerValue])];
+            AMapSuggestion* suggestion = (AMapSuggestion*) HEAP[args[@"suggestion"]];
         
             // ref
             AMapPOISearchResponse* ref = (AMapPOISearchResponse*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -1058,7 +1058,7 @@ extern BOOL enableLog;
         
             // args
             // ref arg
-            AMapGeoPoint* origin = (AMapGeoPoint*) HEAP[@([args[@"origin"] integerValue])];
+            AMapGeoPoint* origin = (AMapGeoPoint*) HEAP[args[@"origin"]];
         
             // ref
             AMapRoutePOISearchRequest* ref = (AMapRoutePOISearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -1075,7 +1075,7 @@ extern BOOL enableLog;
         
             // args
             // ref arg
-            AMapGeoPoint* destination = (AMapGeoPoint*) HEAP[@([args[@"destination"] integerValue])];
+            AMapGeoPoint* destination = (AMapGeoPoint*) HEAP[args[@"destination"]];
         
             // ref
             AMapRoutePOISearchRequest* ref = (AMapRoutePOISearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -1435,7 +1435,7 @@ extern BOOL enableLog;
         
             // args
             // ref arg
-            AMapGeoPoint* location = (AMapGeoPoint*) HEAP[@([args[@"location"] integerValue])];
+            AMapGeoPoint* location = (AMapGeoPoint*) HEAP[args[@"location"]];
         
             // ref
             AMapReGeocodeSearchRequest* ref = (AMapReGeocodeSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -1486,7 +1486,7 @@ extern BOOL enableLog;
         
             // args
             // ref arg
-            AMapReGeocode* regeocode = (AMapReGeocode*) HEAP[@([args[@"regeocode"] integerValue])];
+            AMapReGeocode* regeocode = (AMapReGeocode*) HEAP[args[@"regeocode"]];
         
             // ref
             AMapReGeocodeSearchResponse* ref = (AMapReGeocodeSearchResponse*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -1588,7 +1588,7 @@ extern BOOL enableLog;
         
             // args
             // ref arg
-            AMapSuggestion* suggestion = (AMapSuggestion*) HEAP[@([args[@"suggestion"] integerValue])];
+            AMapSuggestion* suggestion = (AMapSuggestion*) HEAP[args[@"suggestion"]];
         
             // ref
             AMapBusStopSearchResponse* ref = (AMapBusStopSearchResponse*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -1746,7 +1746,7 @@ extern BOOL enableLog;
         
             // args
             // ref arg
-            AMapSuggestion* suggestion = (AMapSuggestion*) HEAP[@([args[@"suggestion"] integerValue])];
+            AMapSuggestion* suggestion = (AMapSuggestion*) HEAP[args[@"suggestion"]];
         
             // ref
             AMapBusLineSearchResponse* ref = (AMapBusLineSearchResponse*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -1875,7 +1875,7 @@ extern BOOL enableLog;
         
             // args
             // ref arg
-            AMapGeoPoint* origin = (AMapGeoPoint*) HEAP[@([args[@"origin"] integerValue])];
+            AMapGeoPoint* origin = (AMapGeoPoint*) HEAP[args[@"origin"]];
         
             // ref
             AMapRouteSearchBaseRequest* ref = (AMapRouteSearchBaseRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -1892,7 +1892,7 @@ extern BOOL enableLog;
         
             // args
             // ref arg
-            AMapGeoPoint* destination = (AMapGeoPoint*) HEAP[@([args[@"destination"] integerValue])];
+            AMapGeoPoint* destination = (AMapGeoPoint*) HEAP[args[@"destination"]];
         
             // ref
             AMapRouteSearchBaseRequest* ref = (AMapRouteSearchBaseRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -2276,7 +2276,7 @@ extern BOOL enableLog;
         
             // args
             // ref arg
-            AMapRoute* route = (AMapRoute*) HEAP[@([args[@"route"] integerValue])];
+            AMapRoute* route = (AMapRoute*) HEAP[args[@"route"]];
         
             // ref
             AMapRouteSearchResponse* ref = (AMapRouteSearchResponse*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -2558,7 +2558,7 @@ extern BOOL enableLog;
         
             // args
             // ref arg
-            AMapGeoPoint* destination = (AMapGeoPoint*) HEAP[@([args[@"destination"] integerValue])];
+            AMapGeoPoint* destination = (AMapGeoPoint*) HEAP[args[@"destination"]];
         
             // ref
             AMapDistanceSearchRequest* ref = (AMapDistanceSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -2760,7 +2760,7 @@ extern BOOL enableLog;
         
             // args
             // ref arg
-            AMapGeoPoint* location = (AMapGeoPoint*) HEAP[@([args[@"location"] integerValue])];
+            AMapGeoPoint* location = (AMapGeoPoint*) HEAP[args[@"location"]];
         
             // ref
             AMapRoadTrafficCircleSearchRequest* ref = (AMapRoadTrafficCircleSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -2794,7 +2794,7 @@ extern BOOL enableLog;
         
             // args
             // ref arg
-            AMapTrafficInfo* trafficInfo = (AMapTrafficInfo*) HEAP[@([args[@"trafficInfo"] integerValue])];
+            AMapTrafficInfo* trafficInfo = (AMapTrafficInfo*) HEAP[args[@"trafficInfo"]];
         
             // ref
             AMapRoadTrafficSearchResponse* ref = (AMapRoadTrafficSearchResponse*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -2811,7 +2811,7 @@ extern BOOL enableLog;
         
             // args
             // ref arg
-            AMapGeoPoint* center = (AMapGeoPoint*) HEAP[@([args[@"center"] integerValue])];
+            AMapGeoPoint* center = (AMapGeoPoint*) HEAP[args[@"center"]];
         
             // ref
             AMapNearbySearchRequest* ref = (AMapNearbySearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -3037,7 +3037,7 @@ extern BOOL enableLog;
         
             // args
             // ref arg
-            AMapGeoPoint* center = (AMapGeoPoint*) HEAP[@([args[@"center"] integerValue])];
+            AMapGeoPoint* center = (AMapGeoPoint*) HEAP[args[@"center"]];
         
             // ref
             AMapCloudPOIAroundSearchRequest* ref = (AMapCloudPOIAroundSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -3088,7 +3088,7 @@ extern BOOL enableLog;
         
             // args
             // ref arg
-            AMapGeoPolygon* polygon = (AMapGeoPolygon*) HEAP[@([args[@"polygon"] integerValue])];
+            AMapGeoPolygon* polygon = (AMapGeoPolygon*) HEAP[args[@"polygon"]];
         
             // ref
             AMapCloudPOIPolygonSearchRequest* ref = (AMapCloudPOIPolygonSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -3212,7 +3212,7 @@ extern BOOL enableLog;
         
             // args
             // ref arg
-            AMapGeoPoint* location = (AMapGeoPoint*) HEAP[@([args[@"location"] integerValue])];
+            AMapGeoPoint* location = (AMapGeoPoint*) HEAP[args[@"location"]];
         
             // ref
             AMapLocationShareSearchRequest* ref = (AMapLocationShareSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -3263,7 +3263,7 @@ extern BOOL enableLog;
         
             // args
             // ref arg
-            AMapGeoPoint* location = (AMapGeoPoint*) HEAP[@([args[@"location"] integerValue])];
+            AMapGeoPoint* location = (AMapGeoPoint*) HEAP[args[@"location"]];
         
             // ref
             AMapPOIShareSearchRequest* ref = (AMapPOIShareSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -3348,7 +3348,7 @@ extern BOOL enableLog;
         
             // args
             // ref arg
-            AMapGeoPoint* startCoordinate = (AMapGeoPoint*) HEAP[@([args[@"startCoordinate"] integerValue])];
+            AMapGeoPoint* startCoordinate = (AMapGeoPoint*) HEAP[args[@"startCoordinate"]];
         
             // ref
             AMapRouteShareSearchRequest* ref = (AMapRouteShareSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -3365,7 +3365,7 @@ extern BOOL enableLog;
         
             // args
             // ref arg
-            AMapGeoPoint* destinationCoordinate = (AMapGeoPoint*) HEAP[@([args[@"destinationCoordinate"] integerValue])];
+            AMapGeoPoint* destinationCoordinate = (AMapGeoPoint*) HEAP[args[@"destinationCoordinate"]];
         
             // ref
             AMapRouteShareSearchRequest* ref = (AMapRouteShareSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -3433,7 +3433,7 @@ extern BOOL enableLog;
         
             // args
             // ref arg
-            AMapGeoPoint* startCoordinate = (AMapGeoPoint*) HEAP[@([args[@"startCoordinate"] integerValue])];
+            AMapGeoPoint* startCoordinate = (AMapGeoPoint*) HEAP[args[@"startCoordinate"]];
         
             // ref
             AMapNavigationShareSearchRequest* ref = (AMapNavigationShareSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -3450,7 +3450,7 @@ extern BOOL enableLog;
         
             // args
             // ref arg
-            AMapGeoPoint* destinationCoordinate = (AMapGeoPoint*) HEAP[@([args[@"destinationCoordinate"] integerValue])];
+            AMapGeoPoint* destinationCoordinate = (AMapGeoPoint*) HEAP[args[@"destinationCoordinate"]];
         
             // ref
             AMapNavigationShareSearchRequest* ref = (AMapNavigationShareSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];

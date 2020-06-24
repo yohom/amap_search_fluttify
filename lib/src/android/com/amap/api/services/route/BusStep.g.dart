@@ -69,7 +69,7 @@ class com_amap_api_services_route_BusStep extends java_lang_Object with android_
       return null;
     } else {
       final __return__ = com_amap_api_services_route_RouteBusWalkItem()..refId = __result__..tag__ = 'amap_search_fluttify';
-      if (__result__ is Ref) kNativeObjectPool.add(__return__ as Ref);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -82,7 +82,7 @@ class com_amap_api_services_route_BusStep extends java_lang_Object with android_
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.BusStep::setWalk', {"var1": var1.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.BusStep::setWalk', {"var1": var1?.refId, "refId": refId});
   
   
     // handle native call
@@ -117,7 +117,7 @@ class com_amap_api_services_route_BusStep extends java_lang_Object with android_
       return null;
     } else {
       final __return__ = com_amap_api_services_route_RouteBusLineItem()..refId = __result__..tag__ = 'amap_search_fluttify';
-      if (__result__ is Ref) kNativeObjectPool.add(__return__ as Ref);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -154,7 +154,7 @@ class com_amap_api_services_route_BusStep extends java_lang_Object with android_
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.BusStep::setBusLine', {"var1": var1.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.BusStep::setBusLine', {"var1": var1?.refId, "refId": refId});
   
   
     // handle native call
@@ -178,7 +178,7 @@ class com_amap_api_services_route_BusStep extends java_lang_Object with android_
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.BusStep::setBusLines', {"var1": var1.map((__it__) => __it__.refId).toList(), "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.BusStep::setBusLines', {"var1": var1.map((__it__) => __it__?.refId).toList(), "refId": refId});
   
   
     // handle native call
@@ -213,7 +213,7 @@ class com_amap_api_services_route_BusStep extends java_lang_Object with android_
       return null;
     } else {
       final __return__ = com_amap_api_services_route_Doorway()..refId = __result__..tag__ = 'amap_search_fluttify';
-      if (__result__ is Ref) kNativeObjectPool.add(__return__ as Ref);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -226,7 +226,7 @@ class com_amap_api_services_route_BusStep extends java_lang_Object with android_
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.BusStep::setEntrance', {"var1": var1.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.BusStep::setEntrance', {"var1": var1?.refId, "refId": refId});
   
   
     // handle native call
@@ -261,7 +261,7 @@ class com_amap_api_services_route_BusStep extends java_lang_Object with android_
       return null;
     } else {
       final __return__ = com_amap_api_services_route_Doorway()..refId = __result__..tag__ = 'amap_search_fluttify';
-      if (__result__ is Ref) kNativeObjectPool.add(__return__ as Ref);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -274,7 +274,7 @@ class com_amap_api_services_route_BusStep extends java_lang_Object with android_
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.BusStep::setExit', {"var1": var1.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.BusStep::setExit', {"var1": var1?.refId, "refId": refId});
   
   
     // handle native call
@@ -309,7 +309,7 @@ class com_amap_api_services_route_BusStep extends java_lang_Object with android_
       return null;
     } else {
       final __return__ = com_amap_api_services_route_RouteRailwayItem()..refId = __result__..tag__ = 'amap_search_fluttify';
-      if (__result__ is Ref) kNativeObjectPool.add(__return__ as Ref);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -322,7 +322,7 @@ class com_amap_api_services_route_BusStep extends java_lang_Object with android_
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.BusStep::setRailway', {"var1": var1.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.BusStep::setRailway', {"var1": var1?.refId, "refId": refId});
   
   
     // handle native call
@@ -357,7 +357,7 @@ class com_amap_api_services_route_BusStep extends java_lang_Object with android_
       return null;
     } else {
       final __return__ = com_amap_api_services_route_TaxiItem()..refId = __result__..tag__ = 'amap_search_fluttify';
-      if (__result__ is Ref) kNativeObjectPool.add(__return__ as Ref);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -370,7 +370,7 @@ class com_amap_api_services_route_BusStep extends java_lang_Object with android_
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.BusStep::setTaxi', {"var1": var1.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.BusStep::setTaxi', {"var1": var1?.refId, "refId": refId});
   
   
     // handle native call

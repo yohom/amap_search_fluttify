@@ -40,7 +40,7 @@ class com_amap_api_services_cloud_CloudResult extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.cloud.CloudResult::createPagedResult', {"var0": var0.refId, "var1": var1, "var2": var2.refId, "var3": var3, "var4": var4.map((__it__) => __it__.refId).toList()});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.cloud.CloudResult::createPagedResult', {"var0": var0?.refId, "var1": var1, "var2": var2?.refId, "var3": var3, "var4": var4.map((__it__) => __it__?.refId).toList()});
   
   
     // handle native call
@@ -51,7 +51,7 @@ class com_amap_api_services_cloud_CloudResult extends java_lang_Object  {
       return null;
     } else {
       final __return__ = com_amap_api_services_cloud_CloudResult()..refId = __result__..tag__ = 'amap_search_fluttify';
-      if (__result__ is Ref) kNativeObjectPool.add(__return__ as Ref);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -99,7 +99,7 @@ class com_amap_api_services_cloud_CloudResult extends java_lang_Object  {
       return null;
     } else {
       final __return__ = com_amap_api_services_cloud_CloudSearch_Query()..refId = __result__..tag__ = 'amap_search_fluttify';
-      if (__result__ is Ref) kNativeObjectPool.add(__return__ as Ref);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -123,7 +123,7 @@ class com_amap_api_services_cloud_CloudResult extends java_lang_Object  {
       return null;
     } else {
       final __return__ = com_amap_api_services_cloud_CloudSearch_SearchBound()..refId = __result__..tag__ = 'amap_search_fluttify';
-      if (__result__ is Ref) kNativeObjectPool.add(__return__ as Ref);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }

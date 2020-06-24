@@ -40,7 +40,7 @@ class com_amap_api_services_weather_LocalWeatherForecastResult extends java_lang
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalWeatherForecastResult::createPagedResult', {"var0": var0.refId, "var1": var1.refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalWeatherForecastResult::createPagedResult', {"var0": var0?.refId, "var1": var1?.refId});
   
   
     // handle native call
@@ -51,7 +51,7 @@ class com_amap_api_services_weather_LocalWeatherForecastResult extends java_lang
       return null;
     } else {
       final __return__ = com_amap_api_services_weather_LocalWeatherForecastResult()..refId = __result__..tag__ = 'amap_search_fluttify';
-      if (__result__ is Ref) kNativeObjectPool.add(__return__ as Ref);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -75,7 +75,7 @@ class com_amap_api_services_weather_LocalWeatherForecastResult extends java_lang
       return null;
     } else {
       final __return__ = com_amap_api_services_weather_WeatherSearchQuery()..refId = __result__..tag__ = 'amap_search_fluttify';
-      if (__result__ is Ref) kNativeObjectPool.add(__return__ as Ref);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -99,7 +99,7 @@ class com_amap_api_services_weather_LocalWeatherForecastResult extends java_lang
       return null;
     } else {
       final __return__ = com_amap_api_services_weather_LocalWeatherForecast()..refId = __result__..tag__ = 'amap_search_fluttify';
-      if (__result__ is Ref) kNativeObjectPool.add(__return__ as Ref);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }

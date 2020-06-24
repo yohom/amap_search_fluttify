@@ -34,7 +34,7 @@ mixin com_amap_api_services_nearby_NearbySearch_NearbyListener on java_lang_Obje
   
   @mustCallSuper
   Future<void> onNearbyInfoSearched(com_amap_api_services_nearby_NearbySearchResult var1, int var2) {
-    kNativeObjectPool.add(var1);
+    if (var1 is Ref) kNativeObjectPool.add(var1);
   
     if (fluttifyLogEnabled) {
       debugPrint('onNearbyInfoSearched::kNativeObjectPool: $kNativeObjectPool');

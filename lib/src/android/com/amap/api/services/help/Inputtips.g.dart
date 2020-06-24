@@ -69,7 +69,7 @@ class com_amap_api_services_help_Inputtips extends java_lang_Object  {
       return null;
     } else {
       final __return__ = com_amap_api_services_help_InputtipsQuery()..refId = __result__..tag__ = 'amap_search_fluttify';
-      if (__result__ is Ref) kNativeObjectPool.add(__return__ as Ref);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -82,7 +82,7 @@ class com_amap_api_services_help_Inputtips extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.help.Inputtips::setQuery', {"var1": var1.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.help.Inputtips::setQuery', {"var1": var1?.refId, "refId": refId});
   
   
     // handle native call
@@ -110,21 +110,18 @@ class com_amap_api_services_help_Inputtips extends java_lang_Object  {
   
   
     // handle native call
-    MethodChannel('com.amap.api.services.help.Inputtips::setInputtipsListener::Callback')
+    MethodChannel('com.amap.api.services.help.Inputtips.InputtipsListener::Callback')
         .setMethodCallHandler((methodCall) async {
           final args = methodCall.arguments as Map;
-          // final refId = args['callerRefId'] as int;
-          // if (refId != this.refId) return;
-  
           switch (methodCall.method) {
             case 'Callback::com.amap.api.services.help.Inputtips.InputtipsListener::onGetInputtips':
               // print log
               if (fluttifyLogEnabled) {
-                debugPrint('fluttify-dart-callback: onGetInputtips([\'var2\':${args['var2']}])');
+                debugPrint('fluttify-dart-callback: onGetInputtips([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
               }
         
               // handle the native call
-              var1?.onGetInputtips((args['var1'] as List).cast<int>().map((it) => com_amap_api_services_help_Tip()..refId = it..tag__ = 'amap_search_fluttify').toList(), args['var2']);
+              var1?.onGetInputtips((args['var1'] as List).cast<int>().map((__it__) => TypeOpAmapSearchFluttifyAndroid(__it__).as__<com_amap_api_services_help_Tip>()).toList(), args['var2']);
               break;
             default:
               break;

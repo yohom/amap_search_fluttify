@@ -40,7 +40,7 @@ class com_amap_api_services_busline_BusLineResult extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineResult::createPagedResult', {"var0": var0.refId, "var1": var1, "var2": var2.map((__it__) => __it__.refId).toList(), "var3": var3, "var4": var4.map((__it__) => __it__.refId).toList()});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineResult::createPagedResult', {"var0": var0?.refId, "var1": var1, "var2": var2.map((__it__) => __it__?.refId).toList(), "var3": var3, "var4": var4.map((__it__) => __it__?.refId).toList()});
   
   
     // handle native call
@@ -51,7 +51,7 @@ class com_amap_api_services_busline_BusLineResult extends java_lang_Object  {
       return null;
     } else {
       final __return__ = com_amap_api_services_busline_BusLineResult()..refId = __result__..tag__ = 'amap_search_fluttify';
-      if (__result__ is Ref) kNativeObjectPool.add(__return__ as Ref);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -99,7 +99,7 @@ class com_amap_api_services_busline_BusLineResult extends java_lang_Object  {
       return null;
     } else {
       final __return__ = com_amap_api_services_busline_BusLineQuery()..refId = __result__..tag__ = 'amap_search_fluttify';
-      if (__result__ is Ref) kNativeObjectPool.add(__return__ as Ref);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
