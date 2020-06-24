@@ -25,7 +25,7 @@ mixin com_amap_api_services_weather_WeatherSearch_OnWeatherSearchListener on jav
 
   @mustCallSuper
   Future<void> onWeatherLiveSearched(com_amap_api_services_weather_LocalWeatherLiveResult var1, int var2) {
-    kNativeObjectPool.add(var1);
+    if (var1 is Ref) kNativeObjectPool.add(var1);
   
     if (fluttifyLogEnabled) {
       debugPrint('onWeatherLiveSearched::kNativeObjectPool: $kNativeObjectPool');
@@ -34,7 +34,7 @@ mixin com_amap_api_services_weather_WeatherSearch_OnWeatherSearchListener on jav
   
   @mustCallSuper
   Future<void> onWeatherForecastSearched(com_amap_api_services_weather_LocalWeatherForecastResult var1, int var2) {
-    kNativeObjectPool.add(var1);
+    if (var1 is Ref) kNativeObjectPool.add(var1);
   
     if (fluttifyLogEnabled) {
       debugPrint('onWeatherForecastSearched::kNativeObjectPool: $kNativeObjectPool');

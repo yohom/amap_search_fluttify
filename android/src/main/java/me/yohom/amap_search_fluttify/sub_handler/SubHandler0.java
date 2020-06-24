@@ -686,7 +686,8 @@ public class SubHandler0 {
             put("com.amap.api.services.traffic.TrafficStatusResult::setEvaluation", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                com.amap.api.services.traffic.TrafficStatusEvaluation var1 = (com.amap.api.services.traffic.TrafficStatusEvaluation) getHEAP().get((int) ((Map<String, Object>) __args__).get("var1"));
+                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.traffic.TrafficStatusEvaluation var1 = __var1__ != null ? (com.amap.api.services.traffic.TrafficStatusEvaluation) getHEAP().get(__var1__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -807,7 +808,7 @@ public class SubHandler0 {
                 try {
                     ref.setTrafficSearchListener(new com.amap.api.services.traffic.TrafficSearch.OnTrafficSearchListener() {
                         // method channel
-                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.traffic.TrafficSearch::setTrafficSearchListener::Callback");
+                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.traffic.TrafficSearch.OnTrafficSearchListener::Callback");
                         android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
             
                         // call dart method
@@ -1067,7 +1068,8 @@ public class SubHandler0 {
             put("com.amap.api.services.traffic.CircleTrafficQuery::setCenterPoint", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) getHEAP().get((int) ((Map<String, Object>) __args__).get("var1"));
+                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.core.LatLonPoint var1 = __var1__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -2448,7 +2450,8 @@ public class SubHandler0 {
             put("com.amap.api.services.busline.BusStationResult::createPagedResult", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                com.amap.api.services.busline.BusStationQuery var0 = (com.amap.api.services.busline.BusStationQuery) getHEAP().get((int) ((Map<String, Object>) __args__).get("var0"));
+                Integer __var0__ = (Integer) ((Map<String, Object>) __args__).get("var0");
+                com.amap.api.services.busline.BusStationQuery var0 = __var0__ != null ? (com.amap.api.services.busline.BusStationQuery) getHEAP().get(__var0__) : null;
                 // jsonable arg
                 int var1 = (int) ((Map<String, Object>) __args__).get("var1");
                 // list arg
@@ -2728,7 +2731,7 @@ public class SubHandler0 {
                 try {
                     ref.setOnBusStationSearchListener(new com.amap.api.services.busline.BusStationSearch.OnBusStationSearchListener() {
                         // method channel
-                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.busline.BusStationSearch::setOnBusStationSearchListener::Callback");
+                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.busline.BusStationSearch.OnBusStationSearchListener::Callback");
                         android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
             
                         // call dart method
@@ -2819,7 +2822,8 @@ public class SubHandler0 {
             put("com.amap.api.services.busline.BusStationSearch::setQuery", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                com.amap.api.services.busline.BusStationQuery var1 = (com.amap.api.services.busline.BusStationQuery) getHEAP().get((int) ((Map<String, Object>) __args__).get("var1"));
+                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.busline.BusStationQuery var1 = __var1__ != null ? (com.amap.api.services.busline.BusStationQuery) getHEAP().get(__var1__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -2937,7 +2941,7 @@ public class SubHandler0 {
                 try {
                     ref.setOnBusLineSearchListener(new com.amap.api.services.busline.BusLineSearch.OnBusLineSearchListener() {
                         // method channel
-                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.busline.BusLineSearch::setOnBusLineSearchListener::Callback");
+                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.busline.BusLineSearch.OnBusLineSearchListener::Callback");
                         android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
             
                         // call dart method
@@ -3028,7 +3032,8 @@ public class SubHandler0 {
             put("com.amap.api.services.busline.BusLineSearch::setQuery", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                com.amap.api.services.busline.BusLineQuery var1 = (com.amap.api.services.busline.BusLineQuery) getHEAP().get((int) ((Map<String, Object>) __args__).get("var1"));
+                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.busline.BusLineQuery var1 = __var1__ != null ? (com.amap.api.services.busline.BusLineQuery) getHEAP().get(__var1__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -3122,8 +3127,7 @@ public class SubHandler0 {
                 // convert result to jsonable result
                 Integer jsonableResult = null;
                 if (__result__ != null) {
-                    jsonableResult = System.identityHashCode(__result__);
-                    getHEAP().put(jsonableResult, __result__);
+                    jsonableResult = __result__.ordinal();
                 }
             
                 __methodResult__.success(jsonableResult);
@@ -3456,7 +3460,8 @@ public class SubHandler0 {
             put("com.amap.api.services.busline.BusLineQuery::weakEquals", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                com.amap.api.services.busline.BusLineQuery var1 = (com.amap.api.services.busline.BusLineQuery) getHEAP().get((int) ((Map<String, Object>) __args__).get("var1"));
+                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.busline.BusLineQuery var1 = __var1__ != null ? (com.amap.api.services.busline.BusLineQuery) getHEAP().get(__var1__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -3489,7 +3494,8 @@ public class SubHandler0 {
             put("com.amap.api.services.busline.BusLineResult::createPagedResult", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                com.amap.api.services.busline.BusLineQuery var0 = (com.amap.api.services.busline.BusLineQuery) getHEAP().get((int) ((Map<String, Object>) __args__).get("var0"));
+                Integer __var0__ = (Integer) ((Map<String, Object>) __args__).get("var0");
+                com.amap.api.services.busline.BusLineQuery var0 = __var0__ != null ? (com.amap.api.services.busline.BusLineQuery) getHEAP().get(__var0__) : null;
                 // jsonable arg
                 int var1 = (int) ((Map<String, Object>) __args__).get("var1");
                 // list arg
@@ -3883,7 +3889,8 @@ public class SubHandler0 {
             put("com.amap.api.services.busline.BusStationItem::setLatLonPoint", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) getHEAP().get((int) ((Map<String, Object>) __args__).get("var1"));
+                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.core.LatLonPoint var1 = __var1__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -4410,7 +4417,8 @@ public class SubHandler0 {
             put("com.amap.api.services.busline.BusStationQuery::weakEquals", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                com.amap.api.services.busline.BusStationQuery var1 = (com.amap.api.services.busline.BusStationQuery) getHEAP().get((int) ((Map<String, Object>) __args__).get("var1"));
+                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.busline.BusStationQuery var1 = __var1__ != null ? (com.amap.api.services.busline.BusStationQuery) getHEAP().get(__var1__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -4925,7 +4933,8 @@ public class SubHandler0 {
             put("com.amap.api.services.core.SearchUtils::getSHA1", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                android.content.Context var0 = (android.content.Context) getHEAP().get((int) ((Map<String, Object>) __args__).get("var0"));
+                Integer __var0__ = (Integer) ((Map<String, Object>) __args__).get("var0");
+                android.content.Context var0 = __var0__ != null ? (android.content.Context) getHEAP().get(__var0__) : null;
             
                 // ref
             
@@ -4957,7 +4966,8 @@ public class SubHandler0 {
             put("com.amap.api.services.core.SearchUtils::getPkgName", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                android.content.Context var0 = (android.content.Context) getHEAP().get((int) ((Map<String, Object>) __args__).get("var0"));
+                Integer __var0__ = (Integer) ((Map<String, Object>) __args__).get("var0");
+                android.content.Context var0 = __var0__ != null ? (android.content.Context) getHEAP().get(__var0__) : null;
             
                 // ref
             
@@ -5992,7 +6002,8 @@ public class SubHandler0 {
             put("com.amap.api.services.core.PoiItem::setEnter", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) getHEAP().get((int) ((Map<String, Object>) __args__).get("var1"));
+                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.core.LatLonPoint var1 = __var1__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -6060,7 +6071,8 @@ public class SubHandler0 {
             put("com.amap.api.services.core.PoiItem::setExit", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) getHEAP().get((int) ((Map<String, Object>) __args__).get("var1"));
+                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.core.LatLonPoint var1 = __var1__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -6651,7 +6663,8 @@ public class SubHandler0 {
             put("com.amap.api.services.core.PoiItem::setIndoorDate", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                com.amap.api.services.poisearch.IndoorData var1 = (com.amap.api.services.poisearch.IndoorData) getHEAP().get((int) ((Map<String, Object>) __args__).get("var1"));
+                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.poisearch.IndoorData var1 = __var1__ != null ? (com.amap.api.services.poisearch.IndoorData) getHEAP().get(__var1__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");

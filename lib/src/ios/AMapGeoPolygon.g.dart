@@ -68,7 +68,7 @@ class AMapGeoPolygon extends AMapSearchObject with NSCoding, NSCopying {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapGeoPolygon::polygonWithPoints', {"points": points.map((__it__) => __it__.refId).toList()});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapGeoPolygon::polygonWithPoints', {"points": points.map((__it__) => __it__?.refId).toList()});
   
   
     // handle native call
@@ -79,7 +79,7 @@ class AMapGeoPolygon extends AMapSearchObject with NSCoding, NSCopying {
       return null;
     } else {
       final __return__ = AMapGeoPolygon()..refId = __result__..tag__ = 'amap_search_fluttify';
-      if (__result__ is Ref) kNativeObjectPool.add(__return__ as Ref);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }

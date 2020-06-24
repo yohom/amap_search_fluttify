@@ -472,7 +472,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
       return null;
     } else {
       final __return__ = com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify';
-      if (__result__ is Ref) kNativeObjectPool.add(__return__ as Ref);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -485,7 +485,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::setLocation', {"var1": var1.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::setLocation', {"var1": var1?.refId, "refId": refId});
   
   
     // handle native call
@@ -509,7 +509,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::queryEquals', {"var1": var1.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::queryEquals', {"var1": var1?.refId, "refId": refId});
   
   
     // handle native call
@@ -544,7 +544,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
       return null;
     } else {
       final __return__ = com_amap_api_services_poisearch_PoiSearch_Query()..refId = __result__..tag__ = 'amap_search_fluttify';
-      if (__result__ is Ref) kNativeObjectPool.add(__return__ as Ref);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }

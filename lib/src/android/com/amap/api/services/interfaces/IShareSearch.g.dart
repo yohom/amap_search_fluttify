@@ -35,12 +35,9 @@ mixin com_amap_api_services_interfaces_IShareSearch on java_lang_Object {
   
   
     // handle native call
-    MethodChannel('com.amap.api.services.interfaces.IShareSearch::setOnShareSearchListener::Callback')
+    MethodChannel('com.amap.api.services.share.ShareSearch.OnShareSearchListener::Callback')
         .setMethodCallHandler((methodCall) async {
           final args = methodCall.arguments as Map;
-          // final refId = args['callerRefId'] as int;
-          // if (refId != this.refId) return;
-  
           switch (methodCall.method) {
             case 'Callback::com.amap.api.services.share.ShareSearch.OnShareSearchListener::onPoiShareUrlSearched':
               // print log
@@ -119,7 +116,7 @@ mixin com_amap_api_services_interfaces_IShareSearch on java_lang_Object {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IShareSearch::searchPoiShareUrlAsyn', {"var1": var1.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IShareSearch::searchPoiShareUrlAsyn', {"var1": var1?.refId, "refId": refId});
   
   
     // handle native call
@@ -143,7 +140,7 @@ mixin com_amap_api_services_interfaces_IShareSearch on java_lang_Object {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IShareSearch::searchBusRouteShareUrlAsyn', {"var1": var1.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IShareSearch::searchBusRouteShareUrlAsyn', {"var1": var1?.refId, "refId": refId});
   
   
     // handle native call
@@ -167,7 +164,7 @@ mixin com_amap_api_services_interfaces_IShareSearch on java_lang_Object {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IShareSearch::searchWalkRouteShareUrlAsyn', {"var1": var1.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IShareSearch::searchWalkRouteShareUrlAsyn', {"var1": var1?.refId, "refId": refId});
   
   
     // handle native call
@@ -191,7 +188,7 @@ mixin com_amap_api_services_interfaces_IShareSearch on java_lang_Object {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IShareSearch::searchDrivingRouteShareUrlAsyn', {"var1": var1.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IShareSearch::searchDrivingRouteShareUrlAsyn', {"var1": var1?.refId, "refId": refId});
   
   
     // handle native call
@@ -215,7 +212,7 @@ mixin com_amap_api_services_interfaces_IShareSearch on java_lang_Object {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IShareSearch::searchNaviShareUrlAsyn', {"var1": var1.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IShareSearch::searchNaviShareUrlAsyn', {"var1": var1?.refId, "refId": refId});
   
   
     // handle native call
@@ -239,7 +236,7 @@ mixin com_amap_api_services_interfaces_IShareSearch on java_lang_Object {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IShareSearch::searchLocationShareUrlAsyn', {"var1": var1.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IShareSearch::searchLocationShareUrlAsyn', {"var1": var1?.refId, "refId": refId});
   
   
     // handle native call
@@ -263,7 +260,7 @@ mixin com_amap_api_services_interfaces_IShareSearch on java_lang_Object {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IShareSearch::searchPoiShareUrl', {"var1": var1.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IShareSearch::searchPoiShareUrl', {"var1": var1?.refId, "refId": refId});
   
   
     // handle native call
@@ -287,7 +284,7 @@ mixin com_amap_api_services_interfaces_IShareSearch on java_lang_Object {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IShareSearch::searchNaviShareUrl', {"var1": var1.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IShareSearch::searchNaviShareUrl', {"var1": var1?.refId, "refId": refId});
   
   
     // handle native call
@@ -311,7 +308,7 @@ mixin com_amap_api_services_interfaces_IShareSearch on java_lang_Object {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IShareSearch::searchLocationShareUrl', {"var1": var1.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IShareSearch::searchLocationShareUrl', {"var1": var1?.refId, "refId": refId});
   
   
     // handle native call
@@ -335,7 +332,7 @@ mixin com_amap_api_services_interfaces_IShareSearch on java_lang_Object {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IShareSearch::searchBusRouteShareUrl', {"var1": var1.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IShareSearch::searchBusRouteShareUrl', {"var1": var1?.refId, "refId": refId});
   
   
     // handle native call
@@ -359,7 +356,7 @@ mixin com_amap_api_services_interfaces_IShareSearch on java_lang_Object {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IShareSearch::searchDrivingRouteShareUrl', {"var1": var1.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IShareSearch::searchDrivingRouteShareUrl', {"var1": var1?.refId, "refId": refId});
   
   
     // handle native call
@@ -383,7 +380,7 @@ mixin com_amap_api_services_interfaces_IShareSearch on java_lang_Object {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IShareSearch::searchWalkRouteShareUrl', {"var1": var1.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IShareSearch::searchWalkRouteShareUrl', {"var1": var1?.refId, "refId": refId});
   
   
     // handle native call

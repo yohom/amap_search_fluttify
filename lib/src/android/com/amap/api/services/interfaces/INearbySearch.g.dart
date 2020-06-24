@@ -35,12 +35,9 @@ mixin com_amap_api_services_interfaces_INearbySearch on java_lang_Object {
   
   
     // handle native call
-    MethodChannel('com.amap.api.services.interfaces.INearbySearch::addNearbyListener::Callback')
+    MethodChannel('com.amap.api.services.nearby.NearbySearch.NearbyListener::Callback')
         .setMethodCallHandler((methodCall) async {
           final args = methodCall.arguments as Map;
-          // final refId = args['callerRefId'] as int;
-          // if (refId != this.refId) return;
-  
           switch (methodCall.method) {
             case 'Callback::com.amap.api.services.nearby.NearbySearch.NearbyListener::onUserInfoCleared':
               // print log
@@ -54,11 +51,11 @@ mixin com_amap_api_services_interfaces_INearbySearch on java_lang_Object {
             case 'Callback::com.amap.api.services.nearby.NearbySearch.NearbyListener::onNearbyInfoSearched':
               // print log
               if (fluttifyLogEnabled) {
-                debugPrint('fluttify-dart-callback: onNearbyInfoSearched([\'var2\':${args['var2']}])');
+                debugPrint('fluttify-dart-callback: onNearbyInfoSearched([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
               }
         
               // handle the native call
-              var1?.onNearbyInfoSearched((args['var1'] as Object).as__<com_amap_api_services_nearby_NearbySearchResult>(), args['var2']);
+              var1?.onNearbyInfoSearched(TypeOpAmapSearchFluttifyAndroid((args['var1'] as Object))?.as__<com_amap_api_services_nearby_NearbySearchResult>(), args['var2']);
               break;
             case 'Callback::com.amap.api.services.nearby.NearbySearch.NearbyListener::onNearbyInfoUploaded':
               // print log
@@ -96,12 +93,9 @@ mixin com_amap_api_services_interfaces_INearbySearch on java_lang_Object {
   
   
     // handle native call
-    MethodChannel('com.amap.api.services.interfaces.INearbySearch::removeNearbyListener::Callback')
+    MethodChannel('com.amap.api.services.nearby.NearbySearch.NearbyListener::Callback')
         .setMethodCallHandler((methodCall) async {
           final args = methodCall.arguments as Map;
-          // final refId = args['callerRefId'] as int;
-          // if (refId != this.refId) return;
-  
           switch (methodCall.method) {
             case 'Callback::com.amap.api.services.nearby.NearbySearch.NearbyListener::onUserInfoCleared':
               // print log
@@ -115,11 +109,11 @@ mixin com_amap_api_services_interfaces_INearbySearch on java_lang_Object {
             case 'Callback::com.amap.api.services.nearby.NearbySearch.NearbyListener::onNearbyInfoSearched':
               // print log
               if (fluttifyLogEnabled) {
-                debugPrint('fluttify-dart-callback: onNearbyInfoSearched([\'var2\':${args['var2']}])');
+                debugPrint('fluttify-dart-callback: onNearbyInfoSearched([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
               }
         
               // handle the native call
-              var1?.onNearbyInfoSearched((args['var1'] as Object).as__<com_amap_api_services_nearby_NearbySearchResult>(), args['var2']);
+              var1?.onNearbyInfoSearched(TypeOpAmapSearchFluttifyAndroid((args['var1'] as Object))?.as__<com_amap_api_services_nearby_NearbySearchResult>(), args['var2']);
               break;
             case 'Callback::com.amap.api.services.nearby.NearbySearch.NearbyListener::onNearbyInfoUploaded':
               // print log
@@ -205,12 +199,9 @@ mixin com_amap_api_services_interfaces_INearbySearch on java_lang_Object {
   
   
     // handle native call
-    MethodChannel('com.amap.api.services.interfaces.INearbySearch::startUploadNearbyInfoAuto::Callback')
+    MethodChannel('com.amap.api.services.nearby.UploadInfoCallback::Callback')
         .setMethodCallHandler((methodCall) async {
           final args = methodCall.arguments as Map;
-          // final refId = args['callerRefId'] as int;
-          // if (refId != this.refId) return;
-  
           switch (methodCall.method) {
             case 'Callback::com.amap.api.services.nearby.UploadInfoCallback::OnUploadInfoCallback':
               // print log
@@ -268,7 +259,7 @@ mixin com_amap_api_services_interfaces_INearbySearch on java_lang_Object {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.INearbySearch::uploadNearbyInfoAsyn', {"var1": var1.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.INearbySearch::uploadNearbyInfoAsyn', {"var1": var1?.refId, "refId": refId});
   
   
     // handle native call
@@ -292,7 +283,7 @@ mixin com_amap_api_services_interfaces_INearbySearch on java_lang_Object {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.INearbySearch::searchNearbyInfoAsyn', {"var1": var1.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.INearbySearch::searchNearbyInfoAsyn', {"var1": var1?.refId, "refId": refId});
   
   
     // handle native call
@@ -316,7 +307,7 @@ mixin com_amap_api_services_interfaces_INearbySearch on java_lang_Object {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.INearbySearch::searchNearbyInfo', {"var1": var1.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.INearbySearch::searchNearbyInfo', {"var1": var1?.refId, "refId": refId});
   
   
     // handle native call
@@ -327,7 +318,7 @@ mixin com_amap_api_services_interfaces_INearbySearch on java_lang_Object {
       return null;
     } else {
       final __return__ = com_amap_api_services_nearby_NearbySearchResult()..refId = __result__..tag__ = 'amap_search_fluttify';
-      if (__result__ is Ref) kNativeObjectPool.add(__return__ as Ref);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }

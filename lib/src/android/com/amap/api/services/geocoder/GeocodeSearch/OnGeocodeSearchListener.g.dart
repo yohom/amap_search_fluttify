@@ -25,7 +25,7 @@ mixin com_amap_api_services_geocoder_GeocodeSearch_OnGeocodeSearchListener on ja
 
   @mustCallSuper
   Future<void> onRegeocodeSearched(com_amap_api_services_geocoder_RegeocodeResult var1, int var2) {
-    kNativeObjectPool.add(var1);
+    if (var1 is Ref) kNativeObjectPool.add(var1);
   
     if (fluttifyLogEnabled) {
       debugPrint('onRegeocodeSearched::kNativeObjectPool: $kNativeObjectPool');
@@ -34,7 +34,7 @@ mixin com_amap_api_services_geocoder_GeocodeSearch_OnGeocodeSearchListener on ja
   
   @mustCallSuper
   Future<void> onGeocodeSearched(com_amap_api_services_geocoder_GeocodeResult var1, int var2) {
-    kNativeObjectPool.add(var1);
+    if (var1 is Ref) kNativeObjectPool.add(var1);
   
     if (fluttifyLogEnabled) {
       debugPrint('onGeocodeSearched::kNativeObjectPool: $kNativeObjectPool');

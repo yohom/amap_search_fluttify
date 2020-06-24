@@ -63,162 +63,159 @@ class AMapSearchAPI extends NSObject  {
     MethodChannel('AMapSearchDelegate::Callback')
       .setMethodCallHandler((methodCall) async {
         final args = methodCall.arguments as Map;
-        // final refId = args['callerRefId'] as int;
-        // if (refId != this.refId) return;
-  
         switch (methodCall.method) {
           case 'Callback::AMapSearchDelegate::AMapSearchRequest_didFailWithError':
             // print log
             if (fluttifyLogEnabled) {
-              debugPrint('fluttify-dart-callback: AMapSearchRequest_didFailWithError([])');
+              debugPrint('fluttify-dart-callback: AMapSearchRequest_didFailWithError([\'request\':${args['request']}, \'error\':${args['error']}])');
             }
         
             // handle the native call
-            delegate?.AMapSearchRequest_didFailWithError((args['request'] as Object).as__<dynamic>(), (args['error'] as Object).as__<NSError>());
+            delegate?.AMapSearchRequest_didFailWithError(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<dynamic>(), TypeOpAmapSearchFluttifyIOS((args['error'] as Object))?.as__<NSError>());
             break;
           case 'Callback::AMapSearchDelegate::onPOISearchDone_response':
             // print log
             if (fluttifyLogEnabled) {
-              debugPrint('fluttify-dart-callback: onPOISearchDone_response([])');
+              debugPrint('fluttify-dart-callback: onPOISearchDone_response([\'request\':${args['request']}, \'response\':${args['response']}])');
             }
         
             // handle the native call
-            delegate?.onPOISearchDone_response((args['request'] as Object).as__<AMapPOISearchBaseRequest>(), (args['response'] as Object).as__<AMapPOISearchResponse>());
+            delegate?.onPOISearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapPOISearchBaseRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapPOISearchResponse>());
             break;
           case 'Callback::AMapSearchDelegate::onRoutePOISearchDone_response':
             // print log
             if (fluttifyLogEnabled) {
-              debugPrint('fluttify-dart-callback: onRoutePOISearchDone_response([])');
+              debugPrint('fluttify-dart-callback: onRoutePOISearchDone_response([\'request\':${args['request']}, \'response\':${args['response']}])');
             }
         
             // handle the native call
-            delegate?.onRoutePOISearchDone_response((args['request'] as Object).as__<AMapRoutePOISearchRequest>(), (args['response'] as Object).as__<AMapRoutePOISearchResponse>());
+            delegate?.onRoutePOISearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapRoutePOISearchRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapRoutePOISearchResponse>());
             break;
           case 'Callback::AMapSearchDelegate::onGeocodeSearchDone_response':
             // print log
             if (fluttifyLogEnabled) {
-              debugPrint('fluttify-dart-callback: onGeocodeSearchDone_response([])');
+              debugPrint('fluttify-dart-callback: onGeocodeSearchDone_response([\'request\':${args['request']}, \'response\':${args['response']}])');
             }
         
             // handle the native call
-            delegate?.onGeocodeSearchDone_response((args['request'] as Object).as__<AMapGeocodeSearchRequest>(), (args['response'] as Object).as__<AMapGeocodeSearchResponse>());
+            delegate?.onGeocodeSearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapGeocodeSearchRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapGeocodeSearchResponse>());
             break;
           case 'Callback::AMapSearchDelegate::onReGeocodeSearchDone_response':
             // print log
             if (fluttifyLogEnabled) {
-              debugPrint('fluttify-dart-callback: onReGeocodeSearchDone_response([])');
+              debugPrint('fluttify-dart-callback: onReGeocodeSearchDone_response([\'request\':${args['request']}, \'response\':${args['response']}])');
             }
         
             // handle the native call
-            delegate?.onReGeocodeSearchDone_response((args['request'] as Object).as__<AMapReGeocodeSearchRequest>(), (args['response'] as Object).as__<AMapReGeocodeSearchResponse>());
+            delegate?.onReGeocodeSearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapReGeocodeSearchRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapReGeocodeSearchResponse>());
             break;
           case 'Callback::AMapSearchDelegate::onInputTipsSearchDone_response':
             // print log
             if (fluttifyLogEnabled) {
-              debugPrint('fluttify-dart-callback: onInputTipsSearchDone_response([])');
+              debugPrint('fluttify-dart-callback: onInputTipsSearchDone_response([\'request\':${args['request']}, \'response\':${args['response']}])');
             }
         
             // handle the native call
-            delegate?.onInputTipsSearchDone_response((args['request'] as Object).as__<AMapInputTipsSearchRequest>(), (args['response'] as Object).as__<AMapInputTipsSearchResponse>());
+            delegate?.onInputTipsSearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapInputTipsSearchRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapInputTipsSearchResponse>());
             break;
           case 'Callback::AMapSearchDelegate::onBusStopSearchDone_response':
             // print log
             if (fluttifyLogEnabled) {
-              debugPrint('fluttify-dart-callback: onBusStopSearchDone_response([])');
+              debugPrint('fluttify-dart-callback: onBusStopSearchDone_response([\'request\':${args['request']}, \'response\':${args['response']}])');
             }
         
             // handle the native call
-            delegate?.onBusStopSearchDone_response((args['request'] as Object).as__<AMapBusStopSearchRequest>(), (args['response'] as Object).as__<AMapBusStopSearchResponse>());
+            delegate?.onBusStopSearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapBusStopSearchRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapBusStopSearchResponse>());
             break;
           case 'Callback::AMapSearchDelegate::onBusLineSearchDone_response':
             // print log
             if (fluttifyLogEnabled) {
-              debugPrint('fluttify-dart-callback: onBusLineSearchDone_response([])');
+              debugPrint('fluttify-dart-callback: onBusLineSearchDone_response([\'request\':${args['request']}, \'response\':${args['response']}])');
             }
         
             // handle the native call
-            delegate?.onBusLineSearchDone_response((args['request'] as Object).as__<AMapBusLineBaseSearchRequest>(), (args['response'] as Object).as__<AMapBusLineSearchResponse>());
+            delegate?.onBusLineSearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapBusLineBaseSearchRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapBusLineSearchResponse>());
             break;
           case 'Callback::AMapSearchDelegate::onDistrictSearchDone_response':
             // print log
             if (fluttifyLogEnabled) {
-              debugPrint('fluttify-dart-callback: onDistrictSearchDone_response([])');
+              debugPrint('fluttify-dart-callback: onDistrictSearchDone_response([\'request\':${args['request']}, \'response\':${args['response']}])');
             }
         
             // handle the native call
-            delegate?.onDistrictSearchDone_response((args['request'] as Object).as__<AMapDistrictSearchRequest>(), (args['response'] as Object).as__<AMapDistrictSearchResponse>());
+            delegate?.onDistrictSearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapDistrictSearchRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapDistrictSearchResponse>());
             break;
           case 'Callback::AMapSearchDelegate::onRouteSearchDone_response':
             // print log
             if (fluttifyLogEnabled) {
-              debugPrint('fluttify-dart-callback: onRouteSearchDone_response([])');
+              debugPrint('fluttify-dart-callback: onRouteSearchDone_response([\'request\':${args['request']}, \'response\':${args['response']}])');
             }
         
             // handle the native call
-            delegate?.onRouteSearchDone_response((args['request'] as Object).as__<AMapRouteSearchBaseRequest>(), (args['response'] as Object).as__<AMapRouteSearchResponse>());
+            delegate?.onRouteSearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapRouteSearchBaseRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapRouteSearchResponse>());
             break;
           case 'Callback::AMapSearchDelegate::onFutureRouteSearchDone_response':
             // print log
             if (fluttifyLogEnabled) {
-              debugPrint('fluttify-dart-callback: onFutureRouteSearchDone_response([])');
+              debugPrint('fluttify-dart-callback: onFutureRouteSearchDone_response([\'request\':${args['request']}, \'response\':${args['response']}])');
             }
         
             // handle the native call
-            delegate?.onFutureRouteSearchDone_response((args['request'] as Object).as__<AMapRouteSearchBaseRequest>(), (args['response'] as Object).as__<AMapFutureRouteSearchResponse>());
+            delegate?.onFutureRouteSearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapRouteSearchBaseRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapFutureRouteSearchResponse>());
             break;
           case 'Callback::AMapSearchDelegate::onDistanceSearchDone_response':
             // print log
             if (fluttifyLogEnabled) {
-              debugPrint('fluttify-dart-callback: onDistanceSearchDone_response([])');
+              debugPrint('fluttify-dart-callback: onDistanceSearchDone_response([\'request\':${args['request']}, \'response\':${args['response']}])');
             }
         
             // handle the native call
-            delegate?.onDistanceSearchDone_response((args['request'] as Object).as__<AMapDistanceSearchRequest>(), (args['response'] as Object).as__<AMapDistanceSearchResponse>());
+            delegate?.onDistanceSearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapDistanceSearchRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapDistanceSearchResponse>());
             break;
           case 'Callback::AMapSearchDelegate::onWeatherSearchDone_response':
             // print log
             if (fluttifyLogEnabled) {
-              debugPrint('fluttify-dart-callback: onWeatherSearchDone_response([])');
+              debugPrint('fluttify-dart-callback: onWeatherSearchDone_response([\'request\':${args['request']}, \'response\':${args['response']}])');
             }
         
             // handle the native call
-            delegate?.onWeatherSearchDone_response((args['request'] as Object).as__<AMapWeatherSearchRequest>(), (args['response'] as Object).as__<AMapWeatherSearchResponse>());
+            delegate?.onWeatherSearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapWeatherSearchRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapWeatherSearchResponse>());
             break;
           case 'Callback::AMapSearchDelegate::onRoadTrafficSearchDone_response':
             // print log
             if (fluttifyLogEnabled) {
-              debugPrint('fluttify-dart-callback: onRoadTrafficSearchDone_response([])');
+              debugPrint('fluttify-dart-callback: onRoadTrafficSearchDone_response([\'request\':${args['request']}, \'response\':${args['response']}])');
             }
         
             // handle the native call
-            delegate?.onRoadTrafficSearchDone_response((args['request'] as Object).as__<AMapRoadTrafficSearchBaseRequest>(), (args['response'] as Object).as__<AMapRoadTrafficSearchResponse>());
+            delegate?.onRoadTrafficSearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapRoadTrafficSearchBaseRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapRoadTrafficSearchResponse>());
             break;
           case 'Callback::AMapSearchDelegate::onNearbySearchDone_response':
             // print log
             if (fluttifyLogEnabled) {
-              debugPrint('fluttify-dart-callback: onNearbySearchDone_response([])');
+              debugPrint('fluttify-dart-callback: onNearbySearchDone_response([\'request\':${args['request']}, \'response\':${args['response']}])');
             }
         
             // handle the native call
-            delegate?.onNearbySearchDone_response((args['request'] as Object).as__<AMapNearbySearchRequest>(), (args['response'] as Object).as__<AMapNearbySearchResponse>());
+            delegate?.onNearbySearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapNearbySearchRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapNearbySearchResponse>());
             break;
           case 'Callback::AMapSearchDelegate::onCloudSearchDone_response':
             // print log
             if (fluttifyLogEnabled) {
-              debugPrint('fluttify-dart-callback: onCloudSearchDone_response([])');
+              debugPrint('fluttify-dart-callback: onCloudSearchDone_response([\'request\':${args['request']}, \'response\':${args['response']}])');
             }
         
             // handle the native call
-            delegate?.onCloudSearchDone_response((args['request'] as Object).as__<AMapCloudSearchBaseRequest>(), (args['response'] as Object).as__<AMapCloudPOISearchResponse>());
+            delegate?.onCloudSearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapCloudSearchBaseRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapCloudPOISearchResponse>());
             break;
           case 'Callback::AMapSearchDelegate::onShareSearchDone_response':
             // print log
             if (fluttifyLogEnabled) {
-              debugPrint('fluttify-dart-callback: onShareSearchDone_response([])');
+              debugPrint('fluttify-dart-callback: onShareSearchDone_response([\'request\':${args['request']}, \'response\':${args['response']}])');
             }
         
             // handle the native call
-            delegate?.onShareSearchDone_response((args['request'] as Object).as__<AMapShareSearchBaseRequest>(), (args['response'] as Object).as__<AMapShareSearchResponse>());
+            delegate?.onShareSearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapShareSearchBaseRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapShareSearchResponse>());
             break;
           default:
             break;
@@ -260,7 +257,7 @@ class AMapSearchAPI extends NSObject  {
       return null;
     } else {
       final __return__ = AMapSearchAPI()..refId = __result__..tag__ = 'amap_search_fluttify';
-      if (__result__ is Ref) kNativeObjectPool.add(__return__ as Ref);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -297,7 +294,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapPOIIDSearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapPOIIDSearch', {"request": request?.refId, "refId": refId});
   
   
     // handle native call
@@ -321,7 +318,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapPOIKeywordsSearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapPOIKeywordsSearch', {"request": request?.refId, "refId": refId});
   
   
     // handle native call
@@ -345,7 +342,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapPOIAroundSearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapPOIAroundSearch', {"request": request?.refId, "refId": refId});
   
   
     // handle native call
@@ -369,7 +366,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapPOIPolygonSearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapPOIPolygonSearch', {"request": request?.refId, "refId": refId});
   
   
     // handle native call
@@ -393,7 +390,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapRoutePOISearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapRoutePOISearch', {"request": request?.refId, "refId": refId});
   
   
     // handle native call
@@ -417,7 +414,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapGeocodeSearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapGeocodeSearch', {"request": request?.refId, "refId": refId});
   
   
     // handle native call
@@ -441,7 +438,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapReGoecodeSearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapReGoecodeSearch', {"request": request?.refId, "refId": refId});
   
   
     // handle native call
@@ -465,7 +462,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapInputTipsSearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapInputTipsSearch', {"request": request?.refId, "refId": refId});
   
   
     // handle native call
@@ -489,7 +486,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapBusStopSearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapBusStopSearch', {"request": request?.refId, "refId": refId});
   
   
     // handle native call
@@ -513,7 +510,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapBusLineIDSearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapBusLineIDSearch', {"request": request?.refId, "refId": refId});
   
   
     // handle native call
@@ -537,7 +534,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapBusLineNameSearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapBusLineNameSearch', {"request": request?.refId, "refId": refId});
   
   
     // handle native call
@@ -561,7 +558,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapDistrictSearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapDistrictSearch', {"request": request?.refId, "refId": refId});
   
   
     // handle native call
@@ -585,7 +582,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapDrivingRouteSearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapDrivingRouteSearch', {"request": request?.refId, "refId": refId});
   
   
     // handle native call
@@ -609,7 +606,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapWalkingRouteSearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapWalkingRouteSearch', {"request": request?.refId, "refId": refId});
   
   
     // handle native call
@@ -633,7 +630,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapTransitRouteSearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapTransitRouteSearch', {"request": request?.refId, "refId": refId});
   
   
     // handle native call
@@ -657,7 +654,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapRidingRouteSearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapRidingRouteSearch', {"request": request?.refId, "refId": refId});
   
   
     // handle native call
@@ -681,7 +678,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapTruckRouteSearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapTruckRouteSearch', {"request": request?.refId, "refId": refId});
   
   
     // handle native call
@@ -705,7 +702,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapFutureRouteSearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapFutureRouteSearch', {"request": request?.refId, "refId": refId});
   
   
     // handle native call
@@ -729,7 +726,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapWeatherSearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapWeatherSearch', {"request": request?.refId, "refId": refId});
   
   
     // handle native call
@@ -753,7 +750,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapRoadTrafficSearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapRoadTrafficSearch', {"request": request?.refId, "refId": refId});
   
   
     // handle native call
@@ -777,7 +774,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapRoadTrafficCircleSearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapRoadTrafficCircleSearch', {"request": request?.refId, "refId": refId});
   
   
     // handle native call
@@ -801,7 +798,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapDistanceSearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapDistanceSearch', {"request": request?.refId, "refId": refId});
   
   
     // handle native call
@@ -825,7 +822,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapNearbySearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapNearbySearch', {"request": request?.refId, "refId": refId});
   
   
     // handle native call
@@ -849,7 +846,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapCloudPOIAroundSearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapCloudPOIAroundSearch', {"request": request?.refId, "refId": refId});
   
   
     // handle native call
@@ -873,7 +870,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapCloudPOIPolygonSearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapCloudPOIPolygonSearch', {"request": request?.refId, "refId": refId});
   
   
     // handle native call
@@ -897,7 +894,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapCloudPOIIDSearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapCloudPOIIDSearch', {"request": request?.refId, "refId": refId});
   
   
     // handle native call
@@ -921,7 +918,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapCloudPOILocalSearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapCloudPOILocalSearch', {"request": request?.refId, "refId": refId});
   
   
     // handle native call
@@ -945,7 +942,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapLocationShareSearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapLocationShareSearch', {"request": request?.refId, "refId": refId});
   
   
     // handle native call
@@ -969,7 +966,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapPOIShareSearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapPOIShareSearch', {"request": request?.refId, "refId": refId});
   
   
     // handle native call
@@ -993,7 +990,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapRouteShareSearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapRouteShareSearch', {"request": request?.refId, "refId": refId});
   
   
     // handle native call
@@ -1017,7 +1014,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapNavigationShareSearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapNavigationShareSearch', {"request": request?.refId, "refId": refId});
   
   
     // handle native call

@@ -25,7 +25,7 @@ mixin com_amap_api_services_district_DistrictSearch_OnDistrictSearchListener on 
 
   @mustCallSuper
   Future<void> onDistrictSearched(com_amap_api_services_district_DistrictResult var1) {
-    kNativeObjectPool.add(var1);
+    if (var1 is Ref) kNativeObjectPool.add(var1);
   
     if (fluttifyLogEnabled) {
       debugPrint('onDistrictSearched::kNativeObjectPool: $kNativeObjectPool');

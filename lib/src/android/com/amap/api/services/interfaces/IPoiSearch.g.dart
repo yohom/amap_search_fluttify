@@ -35,30 +35,27 @@ mixin com_amap_api_services_interfaces_IPoiSearch on java_lang_Object {
   
   
     // handle native call
-    MethodChannel('com.amap.api.services.interfaces.IPoiSearch::setOnPoiSearchListener::Callback')
+    MethodChannel('com.amap.api.services.poisearch.PoiSearch.OnPoiSearchListener::Callback')
         .setMethodCallHandler((methodCall) async {
           final args = methodCall.arguments as Map;
-          // final refId = args['callerRefId'] as int;
-          // if (refId != this.refId) return;
-  
           switch (methodCall.method) {
             case 'Callback::com.amap.api.services.poisearch.PoiSearch.OnPoiSearchListener::onPoiSearched':
               // print log
               if (fluttifyLogEnabled) {
-                debugPrint('fluttify-dart-callback: onPoiSearched([\'var2\':${args['var2']}])');
+                debugPrint('fluttify-dart-callback: onPoiSearched([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
               }
         
               // handle the native call
-              var1?.onPoiSearched((args['var1'] as Object).as__<com_amap_api_services_poisearch_PoiResult>(), args['var2']);
+              var1?.onPoiSearched(TypeOpAmapSearchFluttifyAndroid((args['var1'] as Object))?.as__<com_amap_api_services_poisearch_PoiResult>(), args['var2']);
               break;
             case 'Callback::com.amap.api.services.poisearch.PoiSearch.OnPoiSearchListener::onPoiItemSearched':
               // print log
               if (fluttifyLogEnabled) {
-                debugPrint('fluttify-dart-callback: onPoiItemSearched([\'var2\':${args['var2']}])');
+                debugPrint('fluttify-dart-callback: onPoiItemSearched([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
               }
         
               // handle the native call
-              var1?.onPoiItemSearched((args['var1'] as Object).as__<com_amap_api_services_core_PoiItem>(), args['var2']);
+              var1?.onPoiItemSearched(TypeOpAmapSearchFluttifyAndroid((args['var1'] as Object))?.as__<com_amap_api_services_core_PoiItem>(), args['var2']);
               break;
             default:
               break;
@@ -142,7 +139,7 @@ mixin com_amap_api_services_interfaces_IPoiSearch on java_lang_Object {
       return null;
     } else {
       final __return__ = com_amap_api_services_poisearch_PoiResult()..refId = __result__..tag__ = 'amap_search_fluttify';
-      if (__result__ is Ref) kNativeObjectPool.add(__return__ as Ref);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -190,7 +187,7 @@ mixin com_amap_api_services_interfaces_IPoiSearch on java_lang_Object {
       return null;
     } else {
       final __return__ = com_amap_api_services_core_PoiItem()..refId = __result__..tag__ = 'amap_search_fluttify';
-      if (__result__ is Ref) kNativeObjectPool.add(__return__ as Ref);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -227,7 +224,7 @@ mixin com_amap_api_services_interfaces_IPoiSearch on java_lang_Object {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IPoiSearch::setQuery', {"var1": var1.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IPoiSearch::setQuery', {"var1": var1?.refId, "refId": refId});
   
   
     // handle native call
@@ -251,7 +248,7 @@ mixin com_amap_api_services_interfaces_IPoiSearch on java_lang_Object {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IPoiSearch::setBound', {"var1": var1.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IPoiSearch::setBound', {"var1": var1?.refId, "refId": refId});
   
   
     // handle native call
@@ -286,7 +283,7 @@ mixin com_amap_api_services_interfaces_IPoiSearch on java_lang_Object {
       return null;
     } else {
       final __return__ = com_amap_api_services_poisearch_PoiSearch_Query()..refId = __result__..tag__ = 'amap_search_fluttify';
-      if (__result__ is Ref) kNativeObjectPool.add(__return__ as Ref);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -310,7 +307,7 @@ mixin com_amap_api_services_interfaces_IPoiSearch on java_lang_Object {
       return null;
     } else {
       final __return__ = com_amap_api_services_poisearch_PoiSearch_SearchBound()..refId = __result__..tag__ = 'amap_search_fluttify';
-      if (__result__ is Ref) kNativeObjectPool.add(__return__ as Ref);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }

@@ -51,36 +51,33 @@ class AMapNearbySearchManager extends NSObject  {
     MethodChannel('AMapNearbySearchManagerDelegate::Callback')
       .setMethodCallHandler((methodCall) async {
         final args = methodCall.arguments as Map;
-        // final refId = args['callerRefId'] as int;
-        // if (refId != this.refId) return;
-  
         switch (methodCall.method) {
           case 'Callback::AMapNearbySearchManagerDelegate::nearbyInfoForUploading':
             // print log
             if (fluttifyLogEnabled) {
-              debugPrint('fluttify-dart-callback: nearbyInfoForUploading([])');
+              debugPrint('fluttify-dart-callback: nearbyInfoForUploading([\'manager\':${args['manager']}])');
             }
         
             // handle the native call
-            delegate?.nearbyInfoForUploading((args['manager'] as Object).as__<AMapNearbySearchManager>());
+            delegate?.nearbyInfoForUploading(TypeOpAmapSearchFluttifyIOS((args['manager'] as Object))?.as__<AMapNearbySearchManager>());
             break;
           case 'Callback::AMapNearbySearchManagerDelegate::onNearbyInfoUploadedWithError':
             // print log
             if (fluttifyLogEnabled) {
-              debugPrint('fluttify-dart-callback: onNearbyInfoUploadedWithError([])');
+              debugPrint('fluttify-dart-callback: onNearbyInfoUploadedWithError([\'error\':${args['error']}])');
             }
         
             // handle the native call
-            delegate?.onNearbyInfoUploadedWithError((args['error'] as Object).as__<NSError>());
+            delegate?.onNearbyInfoUploadedWithError(TypeOpAmapSearchFluttifyIOS((args['error'] as Object))?.as__<NSError>());
             break;
           case 'Callback::AMapNearbySearchManagerDelegate::onUserInfoClearedWithError':
             // print log
             if (fluttifyLogEnabled) {
-              debugPrint('fluttify-dart-callback: onUserInfoClearedWithError([])');
+              debugPrint('fluttify-dart-callback: onUserInfoClearedWithError([\'error\':${args['error']}])');
             }
         
             // handle the native call
-            delegate?.onUserInfoClearedWithError((args['error'] as Object).as__<NSError>());
+            delegate?.onUserInfoClearedWithError(TypeOpAmapSearchFluttifyIOS((args['error'] as Object))?.as__<NSError>());
             break;
           default:
             break;
@@ -110,7 +107,7 @@ class AMapNearbySearchManager extends NSObject  {
       return null;
     } else {
       final __return__ = AMapNearbySearchManager()..refId = __result__..tag__ = 'amap_search_fluttify';
-      if (__result__ is Ref) kNativeObjectPool.add(__return__ as Ref);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -171,7 +168,7 @@ class AMapNearbySearchManager extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbySearchManager::uploadNearbyInfo', {"info": info.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbySearchManager::uploadNearbyInfo', {"info": info?.refId, "refId": refId});
   
   
     // handle native call

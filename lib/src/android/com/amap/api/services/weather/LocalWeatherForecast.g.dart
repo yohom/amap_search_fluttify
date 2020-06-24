@@ -274,7 +274,7 @@ class com_amap_api_services_weather_LocalWeatherForecast extends java_lang_Objec
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalWeatherForecast::setWeatherForecast', {"var1": var1.map((__it__) => __it__.refId).toList(), "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalWeatherForecast::setWeatherForecast', {"var1": var1.map((__it__) => __it__?.refId).toList(), "refId": refId});
   
   
     // handle native call

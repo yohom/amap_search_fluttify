@@ -165,7 +165,7 @@ class com_amap_api_services_core_LatLonPoint extends java_lang_Object with andro
       return null;
     } else {
       final __return__ = com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify';
-      if (__result__ is Ref) kNativeObjectPool.add(__return__ as Ref);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }

@@ -1427,7 +1427,8 @@ public class SubHandler3 {
             put("com.amap.api.services.route.DriveRouteResult::setDriveQuery", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                com.amap.api.services.route.RouteSearch.DriveRouteQuery var1 = (com.amap.api.services.route.RouteSearch.DriveRouteQuery) getHEAP().get((int) ((Map<String, Object>) __args__).get("var1"));
+                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.route.RouteSearch.DriveRouteQuery var1 = __var1__ != null ? (com.amap.api.services.route.RouteSearch.DriveRouteQuery) getHEAP().get(__var1__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -2477,7 +2478,8 @@ public class SubHandler3 {
             put("com.amap.api.services.route.Doorway::setLatLonPoint", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) getHEAP().get((int) ((Map<String, Object>) __args__).get("var1"));
+                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.core.LatLonPoint var1 = __var1__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -3847,7 +3849,8 @@ public class SubHandler3 {
             put("com.amap.api.services.road.Road::setCenterPoint", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) getHEAP().get((int) ((Map<String, Object>) __args__).get("var1"));
+                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.core.LatLonPoint var1 = __var1__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -4427,7 +4430,8 @@ public class SubHandler3 {
             put("com.amap.api.services.nearby.NearbyInfo::setPoint", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) getHEAP().get((int) ((Map<String, Object>) __args__).get("var1"));
+                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.core.LatLonPoint var1 = __var1__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -4651,7 +4655,8 @@ public class SubHandler3 {
             put("com.amap.api.services.nearby.UploadInfo::setPoint", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) getHEAP().get((int) ((Map<String, Object>) __args__).get("var1"));
+                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.core.LatLonPoint var1 = __var1__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -4847,7 +4852,8 @@ public class SubHandler3 {
             put("com.amap.api.services.nearby.NearbySearch::getInstance", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                android.content.Context var0 = (android.content.Context) getHEAP().get((int) ((Map<String, Object>) __args__).get("var0"));
+                Integer __var0__ = (Integer) ((Map<String, Object>) __args__).get("var0");
+                android.content.Context var0 = __var0__ != null ? (android.content.Context) getHEAP().get(__var0__) : null;
             
                 // ref
             
@@ -4897,7 +4903,7 @@ public class SubHandler3 {
                 try {
                     ref.addNearbyListener(new com.amap.api.services.nearby.NearbySearch.NearbyListener() {
                         // method channel
-                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.nearby.NearbySearch::addNearbyListener::Callback");
+                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.nearby.NearbySearch.NearbyListener::Callback");
                         android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
             
                         // call dart method
@@ -5027,7 +5033,7 @@ public class SubHandler3 {
                 try {
                     ref.removeNearbyListener(new com.amap.api.services.nearby.NearbySearch.NearbyListener() {
                         // method channel
-                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.nearby.NearbySearch::removeNearbyListener::Callback");
+                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.nearby.NearbySearch.NearbyListener::Callback");
                         android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
             
                         // call dart method
@@ -5221,7 +5227,7 @@ public class SubHandler3 {
                 try {
                     ref.startUploadNearbyInfoAuto(new com.amap.api.services.nearby.UploadInfoCallback() {
                         // method channel
-                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.nearby.NearbySearch::startUploadNearbyInfoAuto::Callback");
+                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.nearby.UploadInfoCallback::Callback");
                         android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
             
                         // call dart method
@@ -5302,7 +5308,8 @@ public class SubHandler3 {
             put("com.amap.api.services.nearby.NearbySearch::uploadNearbyInfoAsyn", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                com.amap.api.services.nearby.UploadInfo var1 = (com.amap.api.services.nearby.UploadInfo) getHEAP().get((int) ((Map<String, Object>) __args__).get("var1"));
+                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.nearby.UploadInfo var1 = __var1__ != null ? (com.amap.api.services.nearby.UploadInfo) getHEAP().get(__var1__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -5334,7 +5341,8 @@ public class SubHandler3 {
             put("com.amap.api.services.nearby.NearbySearch::searchNearbyInfoAsyn", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                com.amap.api.services.nearby.NearbySearch.NearbyQuery var1 = (com.amap.api.services.nearby.NearbySearch.NearbyQuery) getHEAP().get((int) ((Map<String, Object>) __args__).get("var1"));
+                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.nearby.NearbySearch.NearbyQuery var1 = __var1__ != null ? (com.amap.api.services.nearby.NearbySearch.NearbyQuery) getHEAP().get(__var1__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -5366,7 +5374,8 @@ public class SubHandler3 {
             put("com.amap.api.services.nearby.NearbySearch::searchNearbyInfo", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                com.amap.api.services.nearby.NearbySearch.NearbyQuery var1 = (com.amap.api.services.nearby.NearbySearch.NearbyQuery) getHEAP().get((int) ((Map<String, Object>) __args__).get("var1"));
+                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.nearby.NearbySearch.NearbyQuery var1 = __var1__ != null ? (com.amap.api.services.nearby.NearbySearch.NearbyQuery) getHEAP().get(__var1__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -5540,7 +5549,8 @@ public class SubHandler3 {
             put("com.amap.api.services.nearby.NearbySearch.NearbyQuery::setCenterPoint", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) getHEAP().get((int) ((Map<String, Object>) __args__).get("var1"));
+                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.core.LatLonPoint var1 = __var1__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -6028,7 +6038,8 @@ public class SubHandler3 {
             put("com.amap.api.services.routepoisearch.RoutePOIItem::setPoint", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) getHEAP().get((int) ((Map<String, Object>) __args__).get("var1"));
+                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.core.LatLonPoint var1 = __var1__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -6202,7 +6213,7 @@ public class SubHandler3 {
                 try {
                     ref.setPoiSearchListener(new com.amap.api.services.routepoisearch.RoutePOISearch.OnRoutePOISearchListener() {
                         // method channel
-                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.routepoisearch.RoutePOISearch::setPoiSearchListener::Callback");
+                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.routepoisearch.RoutePOISearch.OnRoutePOISearchListener::Callback");
                         android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
             
                         // call dart method
@@ -6262,7 +6273,8 @@ public class SubHandler3 {
             put("com.amap.api.services.routepoisearch.RoutePOISearch::setQuery", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                com.amap.api.services.routepoisearch.RoutePOISearchQuery var1 = (com.amap.api.services.routepoisearch.RoutePOISearchQuery) getHEAP().get((int) ((Map<String, Object>) __args__).get("var1"));
+                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.routepoisearch.RoutePOISearchQuery var1 = __var1__ != null ? (com.amap.api.services.routepoisearch.RoutePOISearchQuery) getHEAP().get(__var1__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -6566,8 +6578,7 @@ public class SubHandler3 {
                 // convert result to jsonable result
                 Integer jsonableResult = null;
                 if (__result__ != null) {
-                    jsonableResult = System.identityHashCode(__result__);
-                    getHEAP().put(jsonableResult, __result__);
+                    jsonableResult = __result__.ordinal();
                 }
             
                 __methodResult__.success(jsonableResult);

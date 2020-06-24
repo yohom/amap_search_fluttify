@@ -55,8 +55,8 @@ extern BOOL enableLog;
         
             // result
             // return a ref
-            HEAP[@((result).hash)] = result;
-            NSNumber* jsonableResult = @((result).hash);
+            HEAP[[NSNumber numberWithLong: (result).hash]] = result;
+            NSNumber* jsonableResult = [NSNumber numberWithLong: (result).hash];
         
             methodResult(jsonableResult);
         },
@@ -83,8 +83,8 @@ extern BOOL enableLog;
         
             // result
             // return a ref
-            HEAP[@((result).hash)] = result;
-            NSNumber* jsonableResult = @((result).hash);
+            HEAP[[NSNumber numberWithLong: (result).hash]] = result;
+            NSNumber* jsonableResult = [NSNumber numberWithLong: (result).hash];
         
             methodResult(jsonableResult);
         },
@@ -105,8 +105,8 @@ extern BOOL enableLog;
         
             // result
             // return a ref
-            HEAP[@((result).hash)] = result;
-            NSNumber* jsonableResult = @((result).hash);
+            HEAP[[NSNumber numberWithLong: (result).hash]] = result;
+            NSNumber* jsonableResult = [NSNumber numberWithLong: (result).hash];
         
             methodResult(jsonableResult);
         },
@@ -155,7 +155,7 @@ extern BOOL enableLog;
         @"AMapNearbySearchManager::uploadNearbyInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapNearbyUploadInfo* info = (AMapNearbyUploadInfo*) HEAP[@([args[@"info"] integerValue])];
+            AMapNearbyUploadInfo* info = (AMapNearbyUploadInfo*) HEAP[args[@"info"]];
         
             // ref
             AMapNearbySearchManager* ref = (AMapNearbySearchManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -213,8 +213,8 @@ extern BOOL enableLog;
         
             // result
             // return a ref
-            HEAP[@((result).hash)] = result;
-            NSNumber* jsonableResult = @((result).hash);
+            HEAP[[NSNumber numberWithLong: (result).hash]] = result;
+            NSNumber* jsonableResult = [NSNumber numberWithLong: (result).hash];
         
             methodResult(jsonableResult);
         },
@@ -242,7 +242,7 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapPOIIDSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapPOIIDSearchRequest* request = (AMapPOIIDSearchRequest*) HEAP[@([args[@"request"] integerValue])];
+            AMapPOIIDSearchRequest* request = (AMapPOIIDSearchRequest*) HEAP[args[@"request"]];
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -264,7 +264,7 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapPOIKeywordsSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapPOIKeywordsSearchRequest* request = (AMapPOIKeywordsSearchRequest*) HEAP[@([args[@"request"] integerValue])];
+            AMapPOIKeywordsSearchRequest* request = (AMapPOIKeywordsSearchRequest*) HEAP[args[@"request"]];
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -286,7 +286,7 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapPOIAroundSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapPOIAroundSearchRequest* request = (AMapPOIAroundSearchRequest*) HEAP[@([args[@"request"] integerValue])];
+            AMapPOIAroundSearchRequest* request = (AMapPOIAroundSearchRequest*) HEAP[args[@"request"]];
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -308,7 +308,7 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapPOIPolygonSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapPOIPolygonSearchRequest* request = (AMapPOIPolygonSearchRequest*) HEAP[@([args[@"request"] integerValue])];
+            AMapPOIPolygonSearchRequest* request = (AMapPOIPolygonSearchRequest*) HEAP[args[@"request"]];
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -330,7 +330,7 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapRoutePOISearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapRoutePOISearchRequest* request = (AMapRoutePOISearchRequest*) HEAP[@([args[@"request"] integerValue])];
+            AMapRoutePOISearchRequest* request = (AMapRoutePOISearchRequest*) HEAP[args[@"request"]];
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -352,7 +352,7 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapGeocodeSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapGeocodeSearchRequest* request = (AMapGeocodeSearchRequest*) HEAP[@([args[@"request"] integerValue])];
+            AMapGeocodeSearchRequest* request = (AMapGeocodeSearchRequest*) HEAP[args[@"request"]];
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -374,7 +374,7 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapReGoecodeSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapReGeocodeSearchRequest* request = (AMapReGeocodeSearchRequest*) HEAP[@([args[@"request"] integerValue])];
+            AMapReGeocodeSearchRequest* request = (AMapReGeocodeSearchRequest*) HEAP[args[@"request"]];
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -396,7 +396,7 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapInputTipsSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapInputTipsSearchRequest* request = (AMapInputTipsSearchRequest*) HEAP[@([args[@"request"] integerValue])];
+            AMapInputTipsSearchRequest* request = (AMapInputTipsSearchRequest*) HEAP[args[@"request"]];
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -418,7 +418,7 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapBusStopSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapBusStopSearchRequest* request = (AMapBusStopSearchRequest*) HEAP[@([args[@"request"] integerValue])];
+            AMapBusStopSearchRequest* request = (AMapBusStopSearchRequest*) HEAP[args[@"request"]];
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -440,7 +440,7 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapBusLineIDSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapBusLineIDSearchRequest* request = (AMapBusLineIDSearchRequest*) HEAP[@([args[@"request"] integerValue])];
+            AMapBusLineIDSearchRequest* request = (AMapBusLineIDSearchRequest*) HEAP[args[@"request"]];
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -462,7 +462,7 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapBusLineNameSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapBusLineNameSearchRequest* request = (AMapBusLineNameSearchRequest*) HEAP[@([args[@"request"] integerValue])];
+            AMapBusLineNameSearchRequest* request = (AMapBusLineNameSearchRequest*) HEAP[args[@"request"]];
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -484,7 +484,7 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapDistrictSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapDistrictSearchRequest* request = (AMapDistrictSearchRequest*) HEAP[@([args[@"request"] integerValue])];
+            AMapDistrictSearchRequest* request = (AMapDistrictSearchRequest*) HEAP[args[@"request"]];
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -506,7 +506,7 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapDrivingRouteSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapDrivingRouteSearchRequest* request = (AMapDrivingRouteSearchRequest*) HEAP[@([args[@"request"] integerValue])];
+            AMapDrivingRouteSearchRequest* request = (AMapDrivingRouteSearchRequest*) HEAP[args[@"request"]];
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -528,7 +528,7 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapWalkingRouteSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapWalkingRouteSearchRequest* request = (AMapWalkingRouteSearchRequest*) HEAP[@([args[@"request"] integerValue])];
+            AMapWalkingRouteSearchRequest* request = (AMapWalkingRouteSearchRequest*) HEAP[args[@"request"]];
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -550,7 +550,7 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapTransitRouteSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapTransitRouteSearchRequest* request = (AMapTransitRouteSearchRequest*) HEAP[@([args[@"request"] integerValue])];
+            AMapTransitRouteSearchRequest* request = (AMapTransitRouteSearchRequest*) HEAP[args[@"request"]];
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -572,7 +572,7 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapRidingRouteSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapRidingRouteSearchRequest* request = (AMapRidingRouteSearchRequest*) HEAP[@([args[@"request"] integerValue])];
+            AMapRidingRouteSearchRequest* request = (AMapRidingRouteSearchRequest*) HEAP[args[@"request"]];
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -594,7 +594,7 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapTruckRouteSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapTruckRouteSearchRequest* request = (AMapTruckRouteSearchRequest*) HEAP[@([args[@"request"] integerValue])];
+            AMapTruckRouteSearchRequest* request = (AMapTruckRouteSearchRequest*) HEAP[args[@"request"]];
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -616,7 +616,7 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapFutureRouteSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapFutureRouteSearchRequest* request = (AMapFutureRouteSearchRequest*) HEAP[@([args[@"request"] integerValue])];
+            AMapFutureRouteSearchRequest* request = (AMapFutureRouteSearchRequest*) HEAP[args[@"request"]];
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -638,7 +638,7 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapWeatherSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapWeatherSearchRequest* request = (AMapWeatherSearchRequest*) HEAP[@([args[@"request"] integerValue])];
+            AMapWeatherSearchRequest* request = (AMapWeatherSearchRequest*) HEAP[args[@"request"]];
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -660,7 +660,7 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapRoadTrafficSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapRoadTrafficSearchRequest* request = (AMapRoadTrafficSearchRequest*) HEAP[@([args[@"request"] integerValue])];
+            AMapRoadTrafficSearchRequest* request = (AMapRoadTrafficSearchRequest*) HEAP[args[@"request"]];
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -682,7 +682,7 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapRoadTrafficCircleSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapRoadTrafficCircleSearchRequest* request = (AMapRoadTrafficCircleSearchRequest*) HEAP[@([args[@"request"] integerValue])];
+            AMapRoadTrafficCircleSearchRequest* request = (AMapRoadTrafficCircleSearchRequest*) HEAP[args[@"request"]];
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -704,7 +704,7 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapDistanceSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapDistanceSearchRequest* request = (AMapDistanceSearchRequest*) HEAP[@([args[@"request"] integerValue])];
+            AMapDistanceSearchRequest* request = (AMapDistanceSearchRequest*) HEAP[args[@"request"]];
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -726,7 +726,7 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapNearbySearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapNearbySearchRequest* request = (AMapNearbySearchRequest*) HEAP[@([args[@"request"] integerValue])];
+            AMapNearbySearchRequest* request = (AMapNearbySearchRequest*) HEAP[args[@"request"]];
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -748,7 +748,7 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapCloudPOIAroundSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapCloudPOIAroundSearchRequest* request = (AMapCloudPOIAroundSearchRequest*) HEAP[@([args[@"request"] integerValue])];
+            AMapCloudPOIAroundSearchRequest* request = (AMapCloudPOIAroundSearchRequest*) HEAP[args[@"request"]];
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -770,7 +770,7 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapCloudPOIPolygonSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapCloudPOIPolygonSearchRequest* request = (AMapCloudPOIPolygonSearchRequest*) HEAP[@([args[@"request"] integerValue])];
+            AMapCloudPOIPolygonSearchRequest* request = (AMapCloudPOIPolygonSearchRequest*) HEAP[args[@"request"]];
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -792,7 +792,7 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapCloudPOIIDSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapCloudPOIIDSearchRequest* request = (AMapCloudPOIIDSearchRequest*) HEAP[@([args[@"request"] integerValue])];
+            AMapCloudPOIIDSearchRequest* request = (AMapCloudPOIIDSearchRequest*) HEAP[args[@"request"]];
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -814,7 +814,7 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapCloudPOILocalSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapCloudPOILocalSearchRequest* request = (AMapCloudPOILocalSearchRequest*) HEAP[@([args[@"request"] integerValue])];
+            AMapCloudPOILocalSearchRequest* request = (AMapCloudPOILocalSearchRequest*) HEAP[args[@"request"]];
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -836,7 +836,7 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapLocationShareSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapLocationShareSearchRequest* request = (AMapLocationShareSearchRequest*) HEAP[@([args[@"request"] integerValue])];
+            AMapLocationShareSearchRequest* request = (AMapLocationShareSearchRequest*) HEAP[args[@"request"]];
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -858,7 +858,7 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapPOIShareSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapPOIShareSearchRequest* request = (AMapPOIShareSearchRequest*) HEAP[@([args[@"request"] integerValue])];
+            AMapPOIShareSearchRequest* request = (AMapPOIShareSearchRequest*) HEAP[args[@"request"]];
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -880,7 +880,7 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapRouteShareSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapRouteShareSearchRequest* request = (AMapRouteShareSearchRequest*) HEAP[@([args[@"request"] integerValue])];
+            AMapRouteShareSearchRequest* request = (AMapRouteShareSearchRequest*) HEAP[args[@"request"]];
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -902,7 +902,7 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapNavigationShareSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapNavigationShareSearchRequest* request = (AMapNavigationShareSearchRequest*) HEAP[@([args[@"request"] integerValue])];
+            AMapNavigationShareSearchRequest* request = (AMapNavigationShareSearchRequest*) HEAP[args[@"request"]];
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -965,8 +965,8 @@ extern BOOL enableLog;
         
                 // result
                 // return a ref
-                HEAP[@((result).hash)] = result;
-                NSNumber* jsonableResult = @((result).hash);
+                HEAP[[NSNumber numberWithLong: (result).hash]] = result;
+                NSNumber* jsonableResult = [NSNumber numberWithLong: (result).hash];
         
                 [resultList addObject:jsonableResult];
             }
@@ -996,8 +996,8 @@ extern BOOL enableLog;
         
                 // result
                 // return a ref
-                HEAP[@((result).hash)] = result;
-                NSNumber* jsonableResult = @((result).hash);
+                HEAP[[NSNumber numberWithLong: (result).hash]] = result;
+                NSNumber* jsonableResult = [NSNumber numberWithLong: (result).hash];
         
                 [resultList addObject:jsonableResult];
             }
@@ -1021,8 +1021,8 @@ extern BOOL enableLog;
         
                 // result
                 // return a ref
-                HEAP[@((result).hash)] = result;
-                NSNumber* jsonableResult = @((result).hash);
+                HEAP[[NSNumber numberWithLong: (result).hash]] = result;
+                NSNumber* jsonableResult = [NSNumber numberWithLong: (result).hash];
         
                 [resultList addObject:jsonableResult];
             }
@@ -1085,7 +1085,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapNearbyUploadInfo* info = (AMapNearbyUploadInfo*) HEAP[@([args[@"info"] integerValue])];
+                AMapNearbyUploadInfo* info = (AMapNearbyUploadInfo*) HEAP[args[@"info"]];
         
                 // ref
                 AMapNearbySearchManager* ref = (AMapNearbySearchManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -1144,8 +1144,8 @@ extern BOOL enableLog;
         
                 // result
                 // return a ref
-                HEAP[@((result).hash)] = result;
-                NSNumber* jsonableResult = @((result).hash);
+                HEAP[[NSNumber numberWithLong: (result).hash]] = result;
+                NSNumber* jsonableResult = [NSNumber numberWithLong: (result).hash];
         
                 [resultList addObject:jsonableResult];
             }
@@ -1184,7 +1184,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapPOIIDSearchRequest* request = (AMapPOIIDSearchRequest*) HEAP[@([args[@"request"] integerValue])];
+                AMapPOIIDSearchRequest* request = (AMapPOIIDSearchRequest*) HEAP[args[@"request"]];
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -1209,7 +1209,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapPOIKeywordsSearchRequest* request = (AMapPOIKeywordsSearchRequest*) HEAP[@([args[@"request"] integerValue])];
+                AMapPOIKeywordsSearchRequest* request = (AMapPOIKeywordsSearchRequest*) HEAP[args[@"request"]];
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -1234,7 +1234,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapPOIAroundSearchRequest* request = (AMapPOIAroundSearchRequest*) HEAP[@([args[@"request"] integerValue])];
+                AMapPOIAroundSearchRequest* request = (AMapPOIAroundSearchRequest*) HEAP[args[@"request"]];
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -1259,7 +1259,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapPOIPolygonSearchRequest* request = (AMapPOIPolygonSearchRequest*) HEAP[@([args[@"request"] integerValue])];
+                AMapPOIPolygonSearchRequest* request = (AMapPOIPolygonSearchRequest*) HEAP[args[@"request"]];
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -1284,7 +1284,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapRoutePOISearchRequest* request = (AMapRoutePOISearchRequest*) HEAP[@([args[@"request"] integerValue])];
+                AMapRoutePOISearchRequest* request = (AMapRoutePOISearchRequest*) HEAP[args[@"request"]];
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -1309,7 +1309,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeocodeSearchRequest* request = (AMapGeocodeSearchRequest*) HEAP[@([args[@"request"] integerValue])];
+                AMapGeocodeSearchRequest* request = (AMapGeocodeSearchRequest*) HEAP[args[@"request"]];
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -1334,7 +1334,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapReGeocodeSearchRequest* request = (AMapReGeocodeSearchRequest*) HEAP[@([args[@"request"] integerValue])];
+                AMapReGeocodeSearchRequest* request = (AMapReGeocodeSearchRequest*) HEAP[args[@"request"]];
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -1359,7 +1359,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapInputTipsSearchRequest* request = (AMapInputTipsSearchRequest*) HEAP[@([args[@"request"] integerValue])];
+                AMapInputTipsSearchRequest* request = (AMapInputTipsSearchRequest*) HEAP[args[@"request"]];
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -1384,7 +1384,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapBusStopSearchRequest* request = (AMapBusStopSearchRequest*) HEAP[@([args[@"request"] integerValue])];
+                AMapBusStopSearchRequest* request = (AMapBusStopSearchRequest*) HEAP[args[@"request"]];
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -1409,7 +1409,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapBusLineIDSearchRequest* request = (AMapBusLineIDSearchRequest*) HEAP[@([args[@"request"] integerValue])];
+                AMapBusLineIDSearchRequest* request = (AMapBusLineIDSearchRequest*) HEAP[args[@"request"]];
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -1434,7 +1434,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapBusLineNameSearchRequest* request = (AMapBusLineNameSearchRequest*) HEAP[@([args[@"request"] integerValue])];
+                AMapBusLineNameSearchRequest* request = (AMapBusLineNameSearchRequest*) HEAP[args[@"request"]];
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -1459,7 +1459,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapDistrictSearchRequest* request = (AMapDistrictSearchRequest*) HEAP[@([args[@"request"] integerValue])];
+                AMapDistrictSearchRequest* request = (AMapDistrictSearchRequest*) HEAP[args[@"request"]];
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -1484,7 +1484,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapDrivingRouteSearchRequest* request = (AMapDrivingRouteSearchRequest*) HEAP[@([args[@"request"] integerValue])];
+                AMapDrivingRouteSearchRequest* request = (AMapDrivingRouteSearchRequest*) HEAP[args[@"request"]];
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -1509,7 +1509,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapWalkingRouteSearchRequest* request = (AMapWalkingRouteSearchRequest*) HEAP[@([args[@"request"] integerValue])];
+                AMapWalkingRouteSearchRequest* request = (AMapWalkingRouteSearchRequest*) HEAP[args[@"request"]];
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -1534,7 +1534,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapTransitRouteSearchRequest* request = (AMapTransitRouteSearchRequest*) HEAP[@([args[@"request"] integerValue])];
+                AMapTransitRouteSearchRequest* request = (AMapTransitRouteSearchRequest*) HEAP[args[@"request"]];
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -1559,7 +1559,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapRidingRouteSearchRequest* request = (AMapRidingRouteSearchRequest*) HEAP[@([args[@"request"] integerValue])];
+                AMapRidingRouteSearchRequest* request = (AMapRidingRouteSearchRequest*) HEAP[args[@"request"]];
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -1584,7 +1584,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapTruckRouteSearchRequest* request = (AMapTruckRouteSearchRequest*) HEAP[@([args[@"request"] integerValue])];
+                AMapTruckRouteSearchRequest* request = (AMapTruckRouteSearchRequest*) HEAP[args[@"request"]];
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -1609,7 +1609,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapFutureRouteSearchRequest* request = (AMapFutureRouteSearchRequest*) HEAP[@([args[@"request"] integerValue])];
+                AMapFutureRouteSearchRequest* request = (AMapFutureRouteSearchRequest*) HEAP[args[@"request"]];
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -1634,7 +1634,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapWeatherSearchRequest* request = (AMapWeatherSearchRequest*) HEAP[@([args[@"request"] integerValue])];
+                AMapWeatherSearchRequest* request = (AMapWeatherSearchRequest*) HEAP[args[@"request"]];
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -1659,7 +1659,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapRoadTrafficSearchRequest* request = (AMapRoadTrafficSearchRequest*) HEAP[@([args[@"request"] integerValue])];
+                AMapRoadTrafficSearchRequest* request = (AMapRoadTrafficSearchRequest*) HEAP[args[@"request"]];
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -1684,7 +1684,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapRoadTrafficCircleSearchRequest* request = (AMapRoadTrafficCircleSearchRequest*) HEAP[@([args[@"request"] integerValue])];
+                AMapRoadTrafficCircleSearchRequest* request = (AMapRoadTrafficCircleSearchRequest*) HEAP[args[@"request"]];
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -1709,7 +1709,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapDistanceSearchRequest* request = (AMapDistanceSearchRequest*) HEAP[@([args[@"request"] integerValue])];
+                AMapDistanceSearchRequest* request = (AMapDistanceSearchRequest*) HEAP[args[@"request"]];
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -1734,7 +1734,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapNearbySearchRequest* request = (AMapNearbySearchRequest*) HEAP[@([args[@"request"] integerValue])];
+                AMapNearbySearchRequest* request = (AMapNearbySearchRequest*) HEAP[args[@"request"]];
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -1759,7 +1759,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapCloudPOIAroundSearchRequest* request = (AMapCloudPOIAroundSearchRequest*) HEAP[@([args[@"request"] integerValue])];
+                AMapCloudPOIAroundSearchRequest* request = (AMapCloudPOIAroundSearchRequest*) HEAP[args[@"request"]];
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -1784,7 +1784,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapCloudPOIPolygonSearchRequest* request = (AMapCloudPOIPolygonSearchRequest*) HEAP[@([args[@"request"] integerValue])];
+                AMapCloudPOIPolygonSearchRequest* request = (AMapCloudPOIPolygonSearchRequest*) HEAP[args[@"request"]];
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -1809,7 +1809,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapCloudPOIIDSearchRequest* request = (AMapCloudPOIIDSearchRequest*) HEAP[@([args[@"request"] integerValue])];
+                AMapCloudPOIIDSearchRequest* request = (AMapCloudPOIIDSearchRequest*) HEAP[args[@"request"]];
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -1834,7 +1834,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapCloudPOILocalSearchRequest* request = (AMapCloudPOILocalSearchRequest*) HEAP[@([args[@"request"] integerValue])];
+                AMapCloudPOILocalSearchRequest* request = (AMapCloudPOILocalSearchRequest*) HEAP[args[@"request"]];
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -1859,7 +1859,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapLocationShareSearchRequest* request = (AMapLocationShareSearchRequest*) HEAP[@([args[@"request"] integerValue])];
+                AMapLocationShareSearchRequest* request = (AMapLocationShareSearchRequest*) HEAP[args[@"request"]];
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -1884,7 +1884,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapPOIShareSearchRequest* request = (AMapPOIShareSearchRequest*) HEAP[@([args[@"request"] integerValue])];
+                AMapPOIShareSearchRequest* request = (AMapPOIShareSearchRequest*) HEAP[args[@"request"]];
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -1909,7 +1909,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapRouteShareSearchRequest* request = (AMapRouteShareSearchRequest*) HEAP[@([args[@"request"] integerValue])];
+                AMapRouteShareSearchRequest* request = (AMapRouteShareSearchRequest*) HEAP[args[@"request"]];
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -1934,7 +1934,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapNavigationShareSearchRequest* request = (AMapNavigationShareSearchRequest*) HEAP[@([args[@"request"] integerValue])];
+                AMapNavigationShareSearchRequest* request = (AMapNavigationShareSearchRequest*) HEAP[args[@"request"]];
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -2166,8 +2166,8 @@ extern BOOL enableLog;
             AMapGeoPoint* result = ref.location;
         
             // return a ref
-            HEAP[@((result).hash)] = result;
-            NSNumber* jsonableResult = @((result).hash);
+            HEAP[[NSNumber numberWithLong: (result).hash]] = result;
+            NSNumber* jsonableResult = [NSNumber numberWithLong: (result).hash];
         
             methodResult(jsonableResult);
         },
@@ -2203,8 +2203,8 @@ extern BOOL enableLog;
             AMapGeoPoint* result = ref.location;
         
             // return a ref
-            HEAP[@((result).hash)] = result;
-            NSNumber* jsonableResult = @((result).hash);
+            HEAP[[NSNumber numberWithLong: (result).hash]] = result;
+            NSNumber* jsonableResult = [NSNumber numberWithLong: (result).hash];
         
             methodResult(jsonableResult);
         },
@@ -2276,8 +2276,8 @@ extern BOOL enableLog;
             AMapGeoPolygon* result = ref.polygon;
         
             // return a ref
-            HEAP[@((result).hash)] = result;
-            NSNumber* jsonableResult = @((result).hash);
+            HEAP[[NSNumber numberWithLong: (result).hash]] = result;
+            NSNumber* jsonableResult = [NSNumber numberWithLong: (result).hash];
         
             methodResult(jsonableResult);
         },
@@ -2313,8 +2313,8 @@ extern BOOL enableLog;
             AMapSuggestion* result = ref.suggestion;
         
             // return a ref
-            HEAP[@((result).hash)] = result;
-            NSNumber* jsonableResult = @((result).hash);
+            HEAP[[NSNumber numberWithLong: (result).hash]] = result;
+            NSNumber* jsonableResult = [NSNumber numberWithLong: (result).hash];
         
             methodResult(jsonableResult);
         },
@@ -2335,8 +2335,8 @@ extern BOOL enableLog;
             NSMutableArray* jsonableResult = [NSMutableArray array];
             for (int __i__ = 0; __i__ < result.count; __i__++) {
                 NSObject* object = [result objectAtIndex:__i__];
-                [jsonableResult addObject: @(object.hash)];
-                HEAP[@([object hash])] = object;
+                [jsonableResult addObject: [NSNumber numberWithLong: object.hash]];
+                HEAP[[NSNumber numberWithLong: object.hash]] = object;
             }
         
             methodResult(jsonableResult);
@@ -2355,8 +2355,8 @@ extern BOOL enableLog;
             AMapGeoPoint* result = ref.origin;
         
             // return a ref
-            HEAP[@((result).hash)] = result;
-            NSNumber* jsonableResult = @((result).hash);
+            HEAP[[NSNumber numberWithLong: (result).hash]] = result;
+            NSNumber* jsonableResult = [NSNumber numberWithLong: (result).hash];
         
             methodResult(jsonableResult);
         },
@@ -2374,8 +2374,8 @@ extern BOOL enableLog;
             AMapGeoPoint* result = ref.destination;
         
             // return a ref
-            HEAP[@((result).hash)] = result;
-            NSNumber* jsonableResult = @((result).hash);
+            HEAP[[NSNumber numberWithLong: (result).hash]] = result;
+            NSNumber* jsonableResult = [NSNumber numberWithLong: (result).hash];
         
             methodResult(jsonableResult);
         },
@@ -2468,8 +2468,8 @@ extern BOOL enableLog;
             NSMutableArray* jsonableResult = [NSMutableArray array];
             for (int __i__ = 0; __i__ < result.count; __i__++) {
                 NSObject* object = [result objectAtIndex:__i__];
-                [jsonableResult addObject: @(object.hash)];
-                HEAP[@([object hash])] = object;
+                [jsonableResult addObject: [NSNumber numberWithLong: object.hash]];
+                HEAP[[NSNumber numberWithLong: object.hash]] = object;
             }
         
             methodResult(jsonableResult);
@@ -2509,8 +2509,8 @@ extern BOOL enableLog;
             NSMutableArray* jsonableResult = [NSMutableArray array];
             for (int __i__ = 0; __i__ < result.count; __i__++) {
                 NSObject* object = [result objectAtIndex:__i__];
-                [jsonableResult addObject: @(object.hash)];
-                HEAP[@([object hash])] = object;
+                [jsonableResult addObject: [NSNumber numberWithLong: object.hash]];
+                HEAP[[NSNumber numberWithLong: object.hash]] = object;
             }
         
             methodResult(jsonableResult);
@@ -2640,8 +2640,8 @@ extern BOOL enableLog;
             NSMutableArray* jsonableResult = [NSMutableArray array];
             for (int __i__ = 0; __i__ < result.count; __i__++) {
                 NSObject* object = [result objectAtIndex:__i__];
-                [jsonableResult addObject: @(object.hash)];
-                HEAP[@([object hash])] = object;
+                [jsonableResult addObject: [NSNumber numberWithLong: object.hash]];
+                HEAP[[NSNumber numberWithLong: object.hash]] = object;
             }
         
             methodResult(jsonableResult);
@@ -2717,8 +2717,8 @@ extern BOOL enableLog;
             NSMutableArray* jsonableResult = [NSMutableArray array];
             for (int __i__ = 0; __i__ < result.count; __i__++) {
                 NSObject* object = [result objectAtIndex:__i__];
-                [jsonableResult addObject: @(object.hash)];
-                HEAP[@([object hash])] = object;
+                [jsonableResult addObject: [NSNumber numberWithLong: object.hash]];
+                HEAP[[NSNumber numberWithLong: object.hash]] = object;
             }
         
             methodResult(jsonableResult);
@@ -2755,8 +2755,8 @@ extern BOOL enableLog;
             AMapGeoPoint* result = ref.location;
         
             // return a ref
-            HEAP[@((result).hash)] = result;
-            NSNumber* jsonableResult = @((result).hash);
+            HEAP[[NSNumber numberWithLong: (result).hash]] = result;
+            NSNumber* jsonableResult = [NSNumber numberWithLong: (result).hash];
         
             methodResult(jsonableResult);
         },
@@ -2810,8 +2810,8 @@ extern BOOL enableLog;
             AMapReGeocode* result = ref.regeocode;
         
             // return a ref
-            HEAP[@((result).hash)] = result;
-            NSNumber* jsonableResult = @((result).hash);
+            HEAP[[NSNumber numberWithLong: (result).hash]] = result;
+            NSNumber* jsonableResult = [NSNumber numberWithLong: (result).hash];
         
             methodResult(jsonableResult);
         },
@@ -2919,8 +2919,8 @@ extern BOOL enableLog;
             AMapSuggestion* result = ref.suggestion;
         
             // return a ref
-            HEAP[@((result).hash)] = result;
-            NSNumber* jsonableResult = @((result).hash);
+            HEAP[[NSNumber numberWithLong: (result).hash]] = result;
+            NSNumber* jsonableResult = [NSNumber numberWithLong: (result).hash];
         
             methodResult(jsonableResult);
         },
@@ -2941,8 +2941,8 @@ extern BOOL enableLog;
             NSMutableArray* jsonableResult = [NSMutableArray array];
             for (int __i__ = 0; __i__ < result.count; __i__++) {
                 NSObject* object = [result objectAtIndex:__i__];
-                [jsonableResult addObject: @(object.hash)];
-                HEAP[@([object hash])] = object;
+                [jsonableResult addObject: [NSNumber numberWithLong: object.hash]];
+                HEAP[[NSNumber numberWithLong: object.hash]] = object;
             }
         
             methodResult(jsonableResult);
@@ -3087,8 +3087,8 @@ extern BOOL enableLog;
             AMapSuggestion* result = ref.suggestion;
         
             // return a ref
-            HEAP[@((result).hash)] = result;
-            NSNumber* jsonableResult = @((result).hash);
+            HEAP[[NSNumber numberWithLong: (result).hash]] = result;
+            NSNumber* jsonableResult = [NSNumber numberWithLong: (result).hash];
         
             methodResult(jsonableResult);
         },
@@ -3109,8 +3109,8 @@ extern BOOL enableLog;
             NSMutableArray* jsonableResult = [NSMutableArray array];
             for (int __i__ = 0; __i__ < result.count; __i__++) {
                 NSObject* object = [result objectAtIndex:__i__];
-                [jsonableResult addObject: @(object.hash)];
-                HEAP[@([object hash])] = object;
+                [jsonableResult addObject: [NSNumber numberWithLong: object.hash]];
+                HEAP[[NSNumber numberWithLong: object.hash]] = object;
             }
         
             methodResult(jsonableResult);
@@ -3204,8 +3204,8 @@ extern BOOL enableLog;
             NSMutableArray* jsonableResult = [NSMutableArray array];
             for (int __i__ = 0; __i__ < result.count; __i__++) {
                 NSObject* object = [result objectAtIndex:__i__];
-                [jsonableResult addObject: @(object.hash)];
-                HEAP[@([object hash])] = object;
+                [jsonableResult addObject: [NSNumber numberWithLong: object.hash]];
+                HEAP[[NSNumber numberWithLong: object.hash]] = object;
             }
         
             methodResult(jsonableResult);
@@ -3224,8 +3224,8 @@ extern BOOL enableLog;
             AMapGeoPoint* result = ref.origin;
         
             // return a ref
-            HEAP[@((result).hash)] = result;
-            NSNumber* jsonableResult = @((result).hash);
+            HEAP[[NSNumber numberWithLong: (result).hash]] = result;
+            NSNumber* jsonableResult = [NSNumber numberWithLong: (result).hash];
         
             methodResult(jsonableResult);
         },
@@ -3243,8 +3243,8 @@ extern BOOL enableLog;
             AMapGeoPoint* result = ref.destination;
         
             // return a ref
-            HEAP[@((result).hash)] = result;
-            NSNumber* jsonableResult = @((result).hash);
+            HEAP[[NSNumber numberWithLong: (result).hash]] = result;
+            NSNumber* jsonableResult = [NSNumber numberWithLong: (result).hash];
         
             methodResult(jsonableResult);
         },
@@ -3283,8 +3283,8 @@ extern BOOL enableLog;
             NSMutableArray* jsonableResult = [NSMutableArray array];
             for (int __i__ = 0; __i__ < result.count; __i__++) {
                 NSObject* object = [result objectAtIndex:__i__];
-                [jsonableResult addObject: @(object.hash)];
-                HEAP[@([object hash])] = object;
+                [jsonableResult addObject: [NSNumber numberWithLong: object.hash]];
+                HEAP[[NSNumber numberWithLong: object.hash]] = object;
             }
         
             methodResult(jsonableResult);
@@ -3306,8 +3306,8 @@ extern BOOL enableLog;
             NSMutableArray* jsonableResult = [NSMutableArray array];
             for (int __i__ = 0; __i__ < result.count; __i__++) {
                 NSObject* object = [result objectAtIndex:__i__];
-                [jsonableResult addObject: @(object.hash)];
-                HEAP[@([object hash])] = object;
+                [jsonableResult addObject: [NSNumber numberWithLong: object.hash]];
+                HEAP[[NSNumber numberWithLong: object.hash]] = object;
             }
         
             methodResult(jsonableResult);
@@ -3650,8 +3650,8 @@ extern BOOL enableLog;
             AMapRoute* result = ref.route;
         
             // return a ref
-            HEAP[@((result).hash)] = result;
-            NSNumber* jsonableResult = @((result).hash);
+            HEAP[[NSNumber numberWithLong: (result).hash]] = result;
+            NSNumber* jsonableResult = [NSNumber numberWithLong: (result).hash];
         
             methodResult(jsonableResult);
         },
@@ -3690,8 +3690,8 @@ extern BOOL enableLog;
             NSMutableArray* jsonableResult = [NSMutableArray array];
             for (int __i__ = 0; __i__ < result.count; __i__++) {
                 NSObject* object = [result objectAtIndex:__i__];
-                [jsonableResult addObject: @(object.hash)];
-                HEAP[@([object hash])] = object;
+                [jsonableResult addObject: [NSNumber numberWithLong: object.hash]];
+                HEAP[[NSNumber numberWithLong: object.hash]] = object;
             }
         
             methodResult(jsonableResult);
@@ -3929,8 +3929,8 @@ extern BOOL enableLog;
             NSMutableArray* jsonableResult = [NSMutableArray array];
             for (int __i__ = 0; __i__ < result.count; __i__++) {
                 NSObject* object = [result objectAtIndex:__i__];
-                [jsonableResult addObject: @(object.hash)];
-                HEAP[@([object hash])] = object;
+                [jsonableResult addObject: [NSNumber numberWithLong: object.hash]];
+                HEAP[[NSNumber numberWithLong: object.hash]] = object;
             }
         
             methodResult(jsonableResult);
@@ -3949,8 +3949,8 @@ extern BOOL enableLog;
             AMapGeoPoint* result = ref.destination;
         
             // return a ref
-            HEAP[@((result).hash)] = result;
-            NSNumber* jsonableResult = @((result).hash);
+            HEAP[[NSNumber numberWithLong: (result).hash]] = result;
+            NSNumber* jsonableResult = [NSNumber numberWithLong: (result).hash];
         
             methodResult(jsonableResult);
         },
@@ -3989,8 +3989,8 @@ extern BOOL enableLog;
             NSMutableArray* jsonableResult = [NSMutableArray array];
             for (int __i__ = 0; __i__ < result.count; __i__++) {
                 NSObject* object = [result objectAtIndex:__i__];
-                [jsonableResult addObject: @(object.hash)];
-                HEAP[@([object hash])] = object;
+                [jsonableResult addObject: [NSNumber numberWithLong: object.hash]];
+                HEAP[[NSNumber numberWithLong: object.hash]] = object;
             }
         
             methodResult(jsonableResult);
@@ -4048,8 +4048,8 @@ extern BOOL enableLog;
             NSMutableArray* jsonableResult = [NSMutableArray array];
             for (int __i__ = 0; __i__ < result.count; __i__++) {
                 NSObject* object = [result objectAtIndex:__i__];
-                [jsonableResult addObject: @(object.hash)];
-                HEAP[@([object hash])] = object;
+                [jsonableResult addObject: [NSNumber numberWithLong: object.hash]];
+                HEAP[[NSNumber numberWithLong: object.hash]] = object;
             }
         
             methodResult(jsonableResult);
@@ -4071,8 +4071,8 @@ extern BOOL enableLog;
             NSMutableArray* jsonableResult = [NSMutableArray array];
             for (int __i__ = 0; __i__ < result.count; __i__++) {
                 NSObject* object = [result objectAtIndex:__i__];
-                [jsonableResult addObject: @(object.hash)];
-                HEAP[@([object hash])] = object;
+                [jsonableResult addObject: [NSNumber numberWithLong: object.hash]];
+                HEAP[[NSNumber numberWithLong: object.hash]] = object;
             }
         
             methodResult(jsonableResult);

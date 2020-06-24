@@ -88,7 +88,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearchQuery extends java_lang
       return null;
     } else {
       final __return__ = com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify';
-      if (__result__ is Ref) kNativeObjectPool.add(__return__ as Ref);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -112,7 +112,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearchQuery extends java_lang
       return null;
     } else {
       final __return__ = com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify';
-      if (__result__ is Ref) kNativeObjectPool.add(__return__ as Ref);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -232,7 +232,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearchQuery extends java_lang
       return null;
     } else {
       final __return__ = com_amap_api_services_routepoisearch_RoutePOISearchQuery()..refId = __result__..tag__ = 'amap_search_fluttify';
-      if (__result__ is Ref) kNativeObjectPool.add(__return__ as Ref);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }

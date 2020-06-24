@@ -16,7 +16,7 @@
 #import "SubHandler/SubHandler9.h"
 #import "SubHandler/SubHandler10.h"
 #import "SubHandler/SubHandler11.h"
-#import "SubHandler/SubHandlerCustom.h"
+#import "SubHandler/Custom/SubHandlerCustom.h"
 
 // Dart端一次方法调用所存在的栈, 只有当MethodChannel传递参数受限时, 再启用这个容器
 extern NSMutableDictionary<NSString*, NSObject*>* STACK;
@@ -88,12 +88,18 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSNumber* argmanager = @(manager.hash);
-  HEAP[argmanager] = manager;
+  NSNumber* argmanager = [NSNull null];
+  if (manager != nil) {
+      argmanager = [NSNumber numberWithLong: manager.hash];
+      HEAP[argmanager] = manager;
+  }
+  
 
-  [channel invokeMethod:@"Callback::AMapNearbySearchManagerDelegate::nearbyInfoForUploading"
-              arguments:@{}
-                 result:^(id result) {}]; // 由于结果是异步返回, 这里用不上, 所以就不生成代码了
+  dispatch_async(dispatch_get_main_queue(), ^{
+      [channel invokeMethod:@"Callback::AMapNearbySearchManagerDelegate::nearbyInfoForUploading"
+                  arguments:@{}
+                     result:^(id result) {}]; // 由于结果是异步返回, 这里用不上, 所以就不生成代码了
+  });
   
   // 由于flutter无法同步调用method channel, 所以暂不支持有返回值的回调方法
   // 相关issue https://github.com/flutter/flutter/issues/28310
@@ -118,10 +124,16 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSNumber* argerror = @(error.hash);
-  HEAP[argerror] = error;
+  NSNumber* argerror = [NSNull null];
+  if (error != nil) {
+      argerror = [NSNumber numberWithLong: error.hash];
+      HEAP[argerror] = error;
+  }
+  
 
-  [channel invokeMethod:@"Callback::AMapNearbySearchManagerDelegate::onNearbyInfoUploadedWithError" arguments:@{@"error": argerror}];
+  dispatch_async(dispatch_get_main_queue(), ^{
+      [channel invokeMethod:@"Callback::AMapNearbySearchManagerDelegate::onNearbyInfoUploadedWithError" arguments:@{@"error": argerror}];
+  });
   
 }
 
@@ -137,10 +149,16 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSNumber* argerror = @(error.hash);
-  HEAP[argerror] = error;
+  NSNumber* argerror = [NSNull null];
+  if (error != nil) {
+      argerror = [NSNumber numberWithLong: error.hash];
+      HEAP[argerror] = error;
+  }
+  
 
-  [channel invokeMethod:@"Callback::AMapNearbySearchManagerDelegate::onUserInfoClearedWithError" arguments:@{@"error": argerror}];
+  dispatch_async(dispatch_get_main_queue(), ^{
+      [channel invokeMethod:@"Callback::AMapNearbySearchManagerDelegate::onUserInfoClearedWithError" arguments:@{@"error": argerror}];
+  });
   
 }
 
@@ -156,13 +174,23 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSNumber* argrequest = @(((NSObject*) request).hash);
-  HEAP[argrequest] = ((NSObject*) request);
+  NSNumber* argrequest = [NSNull null];
+  if (((NSObject*) request) != nil) {
+      argrequest = [NSNumber numberWithLong: ((NSObject*) request).hash];
+      HEAP[argrequest] = ((NSObject*) request);
+  }
+  
   // ref callback arg
-  NSNumber* argerror = @(error.hash);
-  HEAP[argerror] = error;
+  NSNumber* argerror = [NSNull null];
+  if (error != nil) {
+      argerror = [NSNumber numberWithLong: error.hash];
+      HEAP[argerror] = error;
+  }
+  
 
-  [channel invokeMethod:@"Callback::AMapSearchDelegate::AMapSearchRequest_didFailWithError" arguments:@{@"request": argrequest, @"error": argerror}];
+  dispatch_async(dispatch_get_main_queue(), ^{
+      [channel invokeMethod:@"Callback::AMapSearchDelegate::AMapSearchRequest_didFailWithError" arguments:@{@"request": argrequest, @"error": argerror}];
+  });
   
 }
 
@@ -178,13 +206,23 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSNumber* argrequest = @(request.hash);
-  HEAP[argrequest] = request;
+  NSNumber* argrequest = [NSNull null];
+  if (request != nil) {
+      argrequest = [NSNumber numberWithLong: request.hash];
+      HEAP[argrequest] = request;
+  }
+  
   // ref callback arg
-  NSNumber* argresponse = @(response.hash);
-  HEAP[argresponse] = response;
+  NSNumber* argresponse = [NSNull null];
+  if (response != nil) {
+      argresponse = [NSNumber numberWithLong: response.hash];
+      HEAP[argresponse] = response;
+  }
+  
 
-  [channel invokeMethod:@"Callback::AMapSearchDelegate::onPOISearchDone_response" arguments:@{@"request": argrequest, @"response": argresponse}];
+  dispatch_async(dispatch_get_main_queue(), ^{
+      [channel invokeMethod:@"Callback::AMapSearchDelegate::onPOISearchDone_response" arguments:@{@"request": argrequest, @"response": argresponse}];
+  });
   
 }
 
@@ -200,13 +238,23 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSNumber* argrequest = @(request.hash);
-  HEAP[argrequest] = request;
+  NSNumber* argrequest = [NSNull null];
+  if (request != nil) {
+      argrequest = [NSNumber numberWithLong: request.hash];
+      HEAP[argrequest] = request;
+  }
+  
   // ref callback arg
-  NSNumber* argresponse = @(response.hash);
-  HEAP[argresponse] = response;
+  NSNumber* argresponse = [NSNull null];
+  if (response != nil) {
+      argresponse = [NSNumber numberWithLong: response.hash];
+      HEAP[argresponse] = response;
+  }
+  
 
-  [channel invokeMethod:@"Callback::AMapSearchDelegate::onRoutePOISearchDone_response" arguments:@{@"request": argrequest, @"response": argresponse}];
+  dispatch_async(dispatch_get_main_queue(), ^{
+      [channel invokeMethod:@"Callback::AMapSearchDelegate::onRoutePOISearchDone_response" arguments:@{@"request": argrequest, @"response": argresponse}];
+  });
   
 }
 
@@ -222,13 +270,23 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSNumber* argrequest = @(request.hash);
-  HEAP[argrequest] = request;
+  NSNumber* argrequest = [NSNull null];
+  if (request != nil) {
+      argrequest = [NSNumber numberWithLong: request.hash];
+      HEAP[argrequest] = request;
+  }
+  
   // ref callback arg
-  NSNumber* argresponse = @(response.hash);
-  HEAP[argresponse] = response;
+  NSNumber* argresponse = [NSNull null];
+  if (response != nil) {
+      argresponse = [NSNumber numberWithLong: response.hash];
+      HEAP[argresponse] = response;
+  }
+  
 
-  [channel invokeMethod:@"Callback::AMapSearchDelegate::onGeocodeSearchDone_response" arguments:@{@"request": argrequest, @"response": argresponse}];
+  dispatch_async(dispatch_get_main_queue(), ^{
+      [channel invokeMethod:@"Callback::AMapSearchDelegate::onGeocodeSearchDone_response" arguments:@{@"request": argrequest, @"response": argresponse}];
+  });
   
 }
 
@@ -244,13 +302,23 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSNumber* argrequest = @(request.hash);
-  HEAP[argrequest] = request;
+  NSNumber* argrequest = [NSNull null];
+  if (request != nil) {
+      argrequest = [NSNumber numberWithLong: request.hash];
+      HEAP[argrequest] = request;
+  }
+  
   // ref callback arg
-  NSNumber* argresponse = @(response.hash);
-  HEAP[argresponse] = response;
+  NSNumber* argresponse = [NSNull null];
+  if (response != nil) {
+      argresponse = [NSNumber numberWithLong: response.hash];
+      HEAP[argresponse] = response;
+  }
+  
 
-  [channel invokeMethod:@"Callback::AMapSearchDelegate::onReGeocodeSearchDone_response" arguments:@{@"request": argrequest, @"response": argresponse}];
+  dispatch_async(dispatch_get_main_queue(), ^{
+      [channel invokeMethod:@"Callback::AMapSearchDelegate::onReGeocodeSearchDone_response" arguments:@{@"request": argrequest, @"response": argresponse}];
+  });
   
 }
 
@@ -266,13 +334,23 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSNumber* argrequest = @(request.hash);
-  HEAP[argrequest] = request;
+  NSNumber* argrequest = [NSNull null];
+  if (request != nil) {
+      argrequest = [NSNumber numberWithLong: request.hash];
+      HEAP[argrequest] = request;
+  }
+  
   // ref callback arg
-  NSNumber* argresponse = @(response.hash);
-  HEAP[argresponse] = response;
+  NSNumber* argresponse = [NSNull null];
+  if (response != nil) {
+      argresponse = [NSNumber numberWithLong: response.hash];
+      HEAP[argresponse] = response;
+  }
+  
 
-  [channel invokeMethod:@"Callback::AMapSearchDelegate::onInputTipsSearchDone_response" arguments:@{@"request": argrequest, @"response": argresponse}];
+  dispatch_async(dispatch_get_main_queue(), ^{
+      [channel invokeMethod:@"Callback::AMapSearchDelegate::onInputTipsSearchDone_response" arguments:@{@"request": argrequest, @"response": argresponse}];
+  });
   
 }
 
@@ -288,13 +366,23 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSNumber* argrequest = @(request.hash);
-  HEAP[argrequest] = request;
+  NSNumber* argrequest = [NSNull null];
+  if (request != nil) {
+      argrequest = [NSNumber numberWithLong: request.hash];
+      HEAP[argrequest] = request;
+  }
+  
   // ref callback arg
-  NSNumber* argresponse = @(response.hash);
-  HEAP[argresponse] = response;
+  NSNumber* argresponse = [NSNull null];
+  if (response != nil) {
+      argresponse = [NSNumber numberWithLong: response.hash];
+      HEAP[argresponse] = response;
+  }
+  
 
-  [channel invokeMethod:@"Callback::AMapSearchDelegate::onBusStopSearchDone_response" arguments:@{@"request": argrequest, @"response": argresponse}];
+  dispatch_async(dispatch_get_main_queue(), ^{
+      [channel invokeMethod:@"Callback::AMapSearchDelegate::onBusStopSearchDone_response" arguments:@{@"request": argrequest, @"response": argresponse}];
+  });
   
 }
 
@@ -310,13 +398,23 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSNumber* argrequest = @(request.hash);
-  HEAP[argrequest] = request;
+  NSNumber* argrequest = [NSNull null];
+  if (request != nil) {
+      argrequest = [NSNumber numberWithLong: request.hash];
+      HEAP[argrequest] = request;
+  }
+  
   // ref callback arg
-  NSNumber* argresponse = @(response.hash);
-  HEAP[argresponse] = response;
+  NSNumber* argresponse = [NSNull null];
+  if (response != nil) {
+      argresponse = [NSNumber numberWithLong: response.hash];
+      HEAP[argresponse] = response;
+  }
+  
 
-  [channel invokeMethod:@"Callback::AMapSearchDelegate::onBusLineSearchDone_response" arguments:@{@"request": argrequest, @"response": argresponse}];
+  dispatch_async(dispatch_get_main_queue(), ^{
+      [channel invokeMethod:@"Callback::AMapSearchDelegate::onBusLineSearchDone_response" arguments:@{@"request": argrequest, @"response": argresponse}];
+  });
   
 }
 
@@ -332,13 +430,23 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSNumber* argrequest = @(request.hash);
-  HEAP[argrequest] = request;
+  NSNumber* argrequest = [NSNull null];
+  if (request != nil) {
+      argrequest = [NSNumber numberWithLong: request.hash];
+      HEAP[argrequest] = request;
+  }
+  
   // ref callback arg
-  NSNumber* argresponse = @(response.hash);
-  HEAP[argresponse] = response;
+  NSNumber* argresponse = [NSNull null];
+  if (response != nil) {
+      argresponse = [NSNumber numberWithLong: response.hash];
+      HEAP[argresponse] = response;
+  }
+  
 
-  [channel invokeMethod:@"Callback::AMapSearchDelegate::onDistrictSearchDone_response" arguments:@{@"request": argrequest, @"response": argresponse}];
+  dispatch_async(dispatch_get_main_queue(), ^{
+      [channel invokeMethod:@"Callback::AMapSearchDelegate::onDistrictSearchDone_response" arguments:@{@"request": argrequest, @"response": argresponse}];
+  });
   
 }
 
@@ -354,13 +462,23 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSNumber* argrequest = @(request.hash);
-  HEAP[argrequest] = request;
+  NSNumber* argrequest = [NSNull null];
+  if (request != nil) {
+      argrequest = [NSNumber numberWithLong: request.hash];
+      HEAP[argrequest] = request;
+  }
+  
   // ref callback arg
-  NSNumber* argresponse = @(response.hash);
-  HEAP[argresponse] = response;
+  NSNumber* argresponse = [NSNull null];
+  if (response != nil) {
+      argresponse = [NSNumber numberWithLong: response.hash];
+      HEAP[argresponse] = response;
+  }
+  
 
-  [channel invokeMethod:@"Callback::AMapSearchDelegate::onRouteSearchDone_response" arguments:@{@"request": argrequest, @"response": argresponse}];
+  dispatch_async(dispatch_get_main_queue(), ^{
+      [channel invokeMethod:@"Callback::AMapSearchDelegate::onRouteSearchDone_response" arguments:@{@"request": argrequest, @"response": argresponse}];
+  });
   
 }
 
@@ -376,13 +494,23 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSNumber* argrequest = @(request.hash);
-  HEAP[argrequest] = request;
+  NSNumber* argrequest = [NSNull null];
+  if (request != nil) {
+      argrequest = [NSNumber numberWithLong: request.hash];
+      HEAP[argrequest] = request;
+  }
+  
   // ref callback arg
-  NSNumber* argresponse = @(response.hash);
-  HEAP[argresponse] = response;
+  NSNumber* argresponse = [NSNull null];
+  if (response != nil) {
+      argresponse = [NSNumber numberWithLong: response.hash];
+      HEAP[argresponse] = response;
+  }
+  
 
-  [channel invokeMethod:@"Callback::AMapSearchDelegate::onFutureRouteSearchDone_response" arguments:@{@"request": argrequest, @"response": argresponse}];
+  dispatch_async(dispatch_get_main_queue(), ^{
+      [channel invokeMethod:@"Callback::AMapSearchDelegate::onFutureRouteSearchDone_response" arguments:@{@"request": argrequest, @"response": argresponse}];
+  });
   
 }
 
@@ -398,13 +526,23 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSNumber* argrequest = @(request.hash);
-  HEAP[argrequest] = request;
+  NSNumber* argrequest = [NSNull null];
+  if (request != nil) {
+      argrequest = [NSNumber numberWithLong: request.hash];
+      HEAP[argrequest] = request;
+  }
+  
   // ref callback arg
-  NSNumber* argresponse = @(response.hash);
-  HEAP[argresponse] = response;
+  NSNumber* argresponse = [NSNull null];
+  if (response != nil) {
+      argresponse = [NSNumber numberWithLong: response.hash];
+      HEAP[argresponse] = response;
+  }
+  
 
-  [channel invokeMethod:@"Callback::AMapSearchDelegate::onDistanceSearchDone_response" arguments:@{@"request": argrequest, @"response": argresponse}];
+  dispatch_async(dispatch_get_main_queue(), ^{
+      [channel invokeMethod:@"Callback::AMapSearchDelegate::onDistanceSearchDone_response" arguments:@{@"request": argrequest, @"response": argresponse}];
+  });
   
 }
 
@@ -420,13 +558,23 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSNumber* argrequest = @(request.hash);
-  HEAP[argrequest] = request;
+  NSNumber* argrequest = [NSNull null];
+  if (request != nil) {
+      argrequest = [NSNumber numberWithLong: request.hash];
+      HEAP[argrequest] = request;
+  }
+  
   // ref callback arg
-  NSNumber* argresponse = @(response.hash);
-  HEAP[argresponse] = response;
+  NSNumber* argresponse = [NSNull null];
+  if (response != nil) {
+      argresponse = [NSNumber numberWithLong: response.hash];
+      HEAP[argresponse] = response;
+  }
+  
 
-  [channel invokeMethod:@"Callback::AMapSearchDelegate::onWeatherSearchDone_response" arguments:@{@"request": argrequest, @"response": argresponse}];
+  dispatch_async(dispatch_get_main_queue(), ^{
+      [channel invokeMethod:@"Callback::AMapSearchDelegate::onWeatherSearchDone_response" arguments:@{@"request": argrequest, @"response": argresponse}];
+  });
   
 }
 
@@ -442,13 +590,23 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSNumber* argrequest = @(request.hash);
-  HEAP[argrequest] = request;
+  NSNumber* argrequest = [NSNull null];
+  if (request != nil) {
+      argrequest = [NSNumber numberWithLong: request.hash];
+      HEAP[argrequest] = request;
+  }
+  
   // ref callback arg
-  NSNumber* argresponse = @(response.hash);
-  HEAP[argresponse] = response;
+  NSNumber* argresponse = [NSNull null];
+  if (response != nil) {
+      argresponse = [NSNumber numberWithLong: response.hash];
+      HEAP[argresponse] = response;
+  }
+  
 
-  [channel invokeMethod:@"Callback::AMapSearchDelegate::onRoadTrafficSearchDone_response" arguments:@{@"request": argrequest, @"response": argresponse}];
+  dispatch_async(dispatch_get_main_queue(), ^{
+      [channel invokeMethod:@"Callback::AMapSearchDelegate::onRoadTrafficSearchDone_response" arguments:@{@"request": argrequest, @"response": argresponse}];
+  });
   
 }
 
@@ -464,13 +622,23 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSNumber* argrequest = @(request.hash);
-  HEAP[argrequest] = request;
+  NSNumber* argrequest = [NSNull null];
+  if (request != nil) {
+      argrequest = [NSNumber numberWithLong: request.hash];
+      HEAP[argrequest] = request;
+  }
+  
   // ref callback arg
-  NSNumber* argresponse = @(response.hash);
-  HEAP[argresponse] = response;
+  NSNumber* argresponse = [NSNull null];
+  if (response != nil) {
+      argresponse = [NSNumber numberWithLong: response.hash];
+      HEAP[argresponse] = response;
+  }
+  
 
-  [channel invokeMethod:@"Callback::AMapSearchDelegate::onNearbySearchDone_response" arguments:@{@"request": argrequest, @"response": argresponse}];
+  dispatch_async(dispatch_get_main_queue(), ^{
+      [channel invokeMethod:@"Callback::AMapSearchDelegate::onNearbySearchDone_response" arguments:@{@"request": argrequest, @"response": argresponse}];
+  });
   
 }
 
@@ -486,13 +654,23 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSNumber* argrequest = @(request.hash);
-  HEAP[argrequest] = request;
+  NSNumber* argrequest = [NSNull null];
+  if (request != nil) {
+      argrequest = [NSNumber numberWithLong: request.hash];
+      HEAP[argrequest] = request;
+  }
+  
   // ref callback arg
-  NSNumber* argresponse = @(response.hash);
-  HEAP[argresponse] = response;
+  NSNumber* argresponse = [NSNull null];
+  if (response != nil) {
+      argresponse = [NSNumber numberWithLong: response.hash];
+      HEAP[argresponse] = response;
+  }
+  
 
-  [channel invokeMethod:@"Callback::AMapSearchDelegate::onCloudSearchDone_response" arguments:@{@"request": argrequest, @"response": argresponse}];
+  dispatch_async(dispatch_get_main_queue(), ^{
+      [channel invokeMethod:@"Callback::AMapSearchDelegate::onCloudSearchDone_response" arguments:@{@"request": argrequest, @"response": argresponse}];
+  });
   
 }
 
@@ -508,13 +686,23 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSNumber* argrequest = @(request.hash);
-  HEAP[argrequest] = request;
+  NSNumber* argrequest = [NSNull null];
+  if (request != nil) {
+      argrequest = [NSNumber numberWithLong: request.hash];
+      HEAP[argrequest] = request;
+  }
+  
   // ref callback arg
-  NSNumber* argresponse = @(response.hash);
-  HEAP[argresponse] = response;
+  NSNumber* argresponse = [NSNull null];
+  if (response != nil) {
+      argresponse = [NSNumber numberWithLong: response.hash];
+      HEAP[argresponse] = response;
+  }
+  
 
-  [channel invokeMethod:@"Callback::AMapSearchDelegate::onShareSearchDone_response" arguments:@{@"request": argrequest, @"response": argresponse}];
+  dispatch_async(dispatch_get_main_queue(), ^{
+      [channel invokeMethod:@"Callback::AMapSearchDelegate::onShareSearchDone_response" arguments:@{@"request": argrequest, @"response": argresponse}];
+  });
   
 }
 

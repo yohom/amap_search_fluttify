@@ -14,1468 +14,14 @@ extern BOOL enableLog;
 @implementation AmapSearchFluttifyPlugin (SubHandler11)
 - (NSDictionary<NSString*, Handler>*) getSubHandler11 {
     return @{
-        @"ObjectFactory::createAMapGeocodeSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapGeocodeSearchResponse");
-            }
-        
-            AMapGeocodeSearchResponse* ref = [[AMapGeocodeSearchResponse alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapReGeocodeSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapReGeocodeSearchRequest");
-            }
-        
-            AMapReGeocodeSearchRequest* ref = [[AMapReGeocodeSearchRequest alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapReGeocodeSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapReGeocodeSearchResponse");
-            }
-        
-            AMapReGeocodeSearchResponse* ref = [[AMapReGeocodeSearchResponse alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapBusStopSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapBusStopSearchRequest");
-            }
-        
-            AMapBusStopSearchRequest* ref = [[AMapBusStopSearchRequest alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapBusStopSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapBusStopSearchResponse");
-            }
-        
-            AMapBusStopSearchResponse* ref = [[AMapBusStopSearchResponse alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapBusLineBaseSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapBusLineBaseSearchRequest");
-            }
-        
-            AMapBusLineBaseSearchRequest* ref = [[AMapBusLineBaseSearchRequest alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapBusLineNameSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapBusLineNameSearchRequest");
-            }
-        
-            AMapBusLineNameSearchRequest* ref = [[AMapBusLineNameSearchRequest alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapBusLineIDSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapBusLineIDSearchRequest");
-            }
-        
-            AMapBusLineIDSearchRequest* ref = [[AMapBusLineIDSearchRequest alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapBusLineSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapBusLineSearchResponse");
-            }
-        
-            AMapBusLineSearchResponse* ref = [[AMapBusLineSearchResponse alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapDistrictSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapDistrictSearchRequest");
-            }
-        
-            AMapDistrictSearchRequest* ref = [[AMapDistrictSearchRequest alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapDistrictSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapDistrictSearchResponse");
-            }
-        
-            AMapDistrictSearchResponse* ref = [[AMapDistrictSearchResponse alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapRouteSearchBaseRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapRouteSearchBaseRequest");
-            }
-        
-            AMapRouteSearchBaseRequest* ref = [[AMapRouteSearchBaseRequest alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapDrivingRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapDrivingRouteSearchRequest");
-            }
-        
-            AMapDrivingRouteSearchRequest* ref = [[AMapDrivingRouteSearchRequest alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapWalkingRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapWalkingRouteSearchRequest");
-            }
-        
-            AMapWalkingRouteSearchRequest* ref = [[AMapWalkingRouteSearchRequest alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapTransitRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapTransitRouteSearchRequest");
-            }
-        
-            AMapTransitRouteSearchRequest* ref = [[AMapTransitRouteSearchRequest alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapRidingRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapRidingRouteSearchRequest");
-            }
-        
-            AMapRidingRouteSearchRequest* ref = [[AMapRidingRouteSearchRequest alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapRouteSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapRouteSearchResponse");
-            }
-        
-            AMapRouteSearchResponse* ref = [[AMapRouteSearchResponse alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapRidingRouteSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapRidingRouteSearchResponse");
-            }
-        
-            AMapRidingRouteSearchResponse* ref = [[AMapRidingRouteSearchResponse alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapTruckRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapTruckRouteSearchRequest");
-            }
-        
-            AMapTruckRouteSearchRequest* ref = [[AMapTruckRouteSearchRequest alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapDistanceSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapDistanceSearchRequest");
-            }
-        
-            AMapDistanceSearchRequest* ref = [[AMapDistanceSearchRequest alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapDistanceSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapDistanceSearchResponse");
-            }
-        
-            AMapDistanceSearchResponse* ref = [[AMapDistanceSearchResponse alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapWeatherSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapWeatherSearchRequest");
-            }
-        
-            AMapWeatherSearchRequest* ref = [[AMapWeatherSearchRequest alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapWeatherSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapWeatherSearchResponse");
-            }
-        
-            AMapWeatherSearchResponse* ref = [[AMapWeatherSearchResponse alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapRoadTrafficSearchBaseRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapRoadTrafficSearchBaseRequest");
-            }
-        
-            AMapRoadTrafficSearchBaseRequest* ref = [[AMapRoadTrafficSearchBaseRequest alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapRoadTrafficSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapRoadTrafficSearchRequest");
-            }
-        
-            AMapRoadTrafficSearchRequest* ref = [[AMapRoadTrafficSearchRequest alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapRoadTrafficCircleSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapRoadTrafficCircleSearchRequest");
-            }
-        
-            AMapRoadTrafficCircleSearchRequest* ref = [[AMapRoadTrafficCircleSearchRequest alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapRoadTrafficSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapRoadTrafficSearchResponse");
-            }
-        
-            AMapRoadTrafficSearchResponse* ref = [[AMapRoadTrafficSearchResponse alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapNearbySearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapNearbySearchRequest");
-            }
-        
-            AMapNearbySearchRequest* ref = [[AMapNearbySearchRequest alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapNearbySearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapNearbySearchResponse");
-            }
-        
-            AMapNearbySearchResponse* ref = [[AMapNearbySearchResponse alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapCloudSearchBaseRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapCloudSearchBaseRequest");
-            }
-        
-            AMapCloudSearchBaseRequest* ref = [[AMapCloudSearchBaseRequest alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapCloudPOIAroundSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapCloudPOIAroundSearchRequest");
-            }
-        
-            AMapCloudPOIAroundSearchRequest* ref = [[AMapCloudPOIAroundSearchRequest alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapCloudPOIPolygonSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapCloudPOIPolygonSearchRequest");
-            }
-        
-            AMapCloudPOIPolygonSearchRequest* ref = [[AMapCloudPOIPolygonSearchRequest alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapCloudPOIIDSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapCloudPOIIDSearchRequest");
-            }
-        
-            AMapCloudPOIIDSearchRequest* ref = [[AMapCloudPOIIDSearchRequest alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapCloudPOILocalSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapCloudPOILocalSearchRequest");
-            }
-        
-            AMapCloudPOILocalSearchRequest* ref = [[AMapCloudPOILocalSearchRequest alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapCloudPOISearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapCloudPOISearchResponse");
-            }
-        
-            AMapCloudPOISearchResponse* ref = [[AMapCloudPOISearchResponse alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapShareSearchBaseRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapShareSearchBaseRequest");
-            }
-        
-            AMapShareSearchBaseRequest* ref = [[AMapShareSearchBaseRequest alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapLocationShareSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapLocationShareSearchRequest");
-            }
-        
-            AMapLocationShareSearchRequest* ref = [[AMapLocationShareSearchRequest alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapPOIShareSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapPOIShareSearchRequest");
-            }
-        
-            AMapPOIShareSearchRequest* ref = [[AMapPOIShareSearchRequest alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapRouteShareSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapRouteShareSearchRequest");
-            }
-        
-            AMapRouteShareSearchRequest* ref = [[AMapRouteShareSearchRequest alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapNavigationShareSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapNavigationShareSearchRequest");
-            }
-        
-            AMapNavigationShareSearchRequest* ref = [[AMapNavigationShareSearchRequest alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapShareSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapShareSearchResponse");
-            }
-        
-            AMapShareSearchResponse* ref = [[AMapShareSearchResponse alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapFutureRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapFutureRouteSearchRequest");
-            }
-        
-            AMapFutureRouteSearchRequest* ref = [[AMapFutureRouteSearchRequest alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapFutureRouteSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapFutureRouteSearchResponse");
-            }
-        
-            AMapFutureRouteSearchResponse* ref = [[AMapFutureRouteSearchResponse alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapSearchObject": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapSearchObject");
-            }
-        
-            AMapSearchObject* ref = [[AMapSearchObject alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapGeoPoint": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapGeoPoint");
-            }
-        
-            AMapGeoPoint* ref = [[AMapGeoPoint alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapGeoPolygon": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapGeoPolygon");
-            }
-        
-            AMapGeoPolygon* ref = [[AMapGeoPolygon alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapCity": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapCity");
-            }
-        
-            AMapCity* ref = [[AMapCity alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapSuggestion": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapSuggestion");
-            }
-        
-            AMapSuggestion* ref = [[AMapSuggestion alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapTip": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapTip");
-            }
-        
-            AMapTip* ref = [[AMapTip alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapImage": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapImage");
-            }
-        
-            AMapImage* ref = [[AMapImage alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapPOIExtension": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapPOIExtension");
-            }
-        
-            AMapPOIExtension* ref = [[AMapPOIExtension alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapIndoorData": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapIndoorData");
-            }
-        
-            AMapIndoorData* ref = [[AMapIndoorData alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapSubPOI": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapSubPOI");
-            }
-        
-            AMapSubPOI* ref = [[AMapSubPOI alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapRoutePOI": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapRoutePOI");
-            }
-        
-            AMapRoutePOI* ref = [[AMapRoutePOI alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapPOI": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapPOI");
-            }
-        
-            AMapPOI* ref = [[AMapPOI alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapAOI": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapAOI");
-            }
-        
-            AMapAOI* ref = [[AMapAOI alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapRoad": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapRoad");
-            }
-        
-            AMapRoad* ref = [[AMapRoad alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapRoadInter": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapRoadInter");
-            }
-        
-            AMapRoadInter* ref = [[AMapRoadInter alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapStreetNumber": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapStreetNumber");
-            }
-        
-            AMapStreetNumber* ref = [[AMapStreetNumber alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapBusinessArea": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapBusinessArea");
-            }
-        
-            AMapBusinessArea* ref = [[AMapBusinessArea alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapAddressComponent": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapAddressComponent");
-            }
-        
-            AMapAddressComponent* ref = [[AMapAddressComponent alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapReGeocode": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapReGeocode");
-            }
-        
-            AMapReGeocode* ref = [[AMapReGeocode alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapGeocode": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapGeocode");
-            }
-        
-            AMapGeocode* ref = [[AMapGeocode alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapBusStop": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapBusStop");
-            }
-        
-            AMapBusStop* ref = [[AMapBusStop alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapBusLine": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapBusLine");
-            }
-        
-            AMapBusLine* ref = [[AMapBusLine alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapDistrict": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapDistrict");
-            }
-        
-            AMapDistrict* ref = [[AMapDistrict alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapTMC": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapTMC");
-            }
-        
-            AMapTMC* ref = [[AMapTMC alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapStep": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapStep");
-            }
-        
-            AMapStep* ref = [[AMapStep alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapPath": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapPath");
-            }
-        
-            AMapPath* ref = [[AMapPath alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapFutureTimeInfoElement": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapFutureTimeInfoElement");
-            }
-        
-            AMapFutureTimeInfoElement* ref = [[AMapFutureTimeInfoElement alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapFutureTimeInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapFutureTimeInfo");
-            }
-        
-            AMapFutureTimeInfo* ref = [[AMapFutureTimeInfo alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapWalking": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapWalking");
-            }
-        
-            AMapWalking* ref = [[AMapWalking alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapTaxi": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapTaxi");
-            }
-        
-            AMapTaxi* ref = [[AMapTaxi alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapRailwayStation": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapRailwayStation");
-            }
-        
-            AMapRailwayStation* ref = [[AMapRailwayStation alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapRailwaySpace": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapRailwaySpace");
-            }
-        
-            AMapRailwaySpace* ref = [[AMapRailwaySpace alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapRailway": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapRailway");
-            }
-        
-            AMapRailway* ref = [[AMapRailway alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapSegment": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapSegment");
-            }
-        
-            AMapSegment* ref = [[AMapSegment alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapTransit": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapTransit");
-            }
-        
-            AMapTransit* ref = [[AMapTransit alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapRoute": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapRoute");
-            }
-        
-            AMapRoute* ref = [[AMapRoute alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapDistanceResult": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapDistanceResult");
-            }
-        
-            AMapDistanceResult* ref = [[AMapDistanceResult alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapLocalWeatherLive": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapLocalWeatherLive");
-            }
-        
-            AMapLocalWeatherLive* ref = [[AMapLocalWeatherLive alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapLocalDayWeatherForecast": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapLocalDayWeatherForecast");
-            }
-        
-            AMapLocalDayWeatherForecast* ref = [[AMapLocalDayWeatherForecast alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapLocalWeatherForecast": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapLocalWeatherForecast");
-            }
-        
-            AMapLocalWeatherForecast* ref = [[AMapLocalWeatherForecast alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapNearbyUserInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapNearbyUserInfo");
-            }
-        
-            AMapNearbyUserInfo* ref = [[AMapNearbyUserInfo alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapTrafficEvaluation": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapTrafficEvaluation");
-            }
-        
-            AMapTrafficEvaluation* ref = [[AMapTrafficEvaluation alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapTrafficRoad": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapTrafficRoad");
-            }
-        
-            AMapTrafficRoad* ref = [[AMapTrafficRoad alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapTrafficInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapTrafficInfo");
-            }
-        
-            AMapTrafficInfo* ref = [[AMapTrafficInfo alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapCloudImage": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapCloudImage");
-            }
-        
-            AMapCloudImage* ref = [[AMapCloudImage alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapCloudPOI": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapCloudPOI");
-            }
-        
-            AMapCloudPOI* ref = [[AMapCloudPOI alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapNearbyUploadInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapNearbyUploadInfo");
-            }
-        
-            AMapNearbyUploadInfo* ref = [[AMapNearbyUploadInfo alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapSearchAPI": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapSearchAPI");
-            }
-        
-            AMapSearchAPI* ref = [[AMapSearchAPI alloc] init];
-            HEAP[@(ref.hash)] = ref;
-        
-            methodResult(@(ref.hash));
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::create_batchAMapPOISearchBaseRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
-        
-            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
-                AMapPOISearchBaseRequest* ref = [[AMapPOISearchBaseRequest alloc] init];
-                HEAP[@(ref.hash)] = ref;
-        
-                [resultList addObject:@(ref.hash)];
-            }
-        
-            methodResult(resultList);
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::create_batchAMapPOIIDSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
-        
-            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
-                AMapPOIIDSearchRequest* ref = [[AMapPOIIDSearchRequest alloc] init];
-                HEAP[@(ref.hash)] = ref;
-        
-                [resultList addObject:@(ref.hash)];
-            }
-        
-            methodResult(resultList);
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::create_batchAMapPOIKeywordsSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
-        
-            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
-                AMapPOIKeywordsSearchRequest* ref = [[AMapPOIKeywordsSearchRequest alloc] init];
-                HEAP[@(ref.hash)] = ref;
-        
-                [resultList addObject:@(ref.hash)];
-            }
-        
-            methodResult(resultList);
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::create_batchAMapPOIAroundSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
-        
-            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
-                AMapPOIAroundSearchRequest* ref = [[AMapPOIAroundSearchRequest alloc] init];
-                HEAP[@(ref.hash)] = ref;
-        
-                [resultList addObject:@(ref.hash)];
-            }
-        
-            methodResult(resultList);
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::create_batchAMapPOIPolygonSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
-        
-            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
-                AMapPOIPolygonSearchRequest* ref = [[AMapPOIPolygonSearchRequest alloc] init];
-                HEAP[@(ref.hash)] = ref;
-        
-                [resultList addObject:@(ref.hash)];
-            }
-        
-            methodResult(resultList);
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::create_batchAMapPOISearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
-        
-            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
-                AMapPOISearchResponse* ref = [[AMapPOISearchResponse alloc] init];
-                HEAP[@(ref.hash)] = ref;
-        
-                [resultList addObject:@(ref.hash)];
-            }
-        
-            methodResult(resultList);
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::create_batchAMapRoutePOISearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
-        
-            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
-                AMapRoutePOISearchRequest* ref = [[AMapRoutePOISearchRequest alloc] init];
-                HEAP[@(ref.hash)] = ref;
-        
-                [resultList addObject:@(ref.hash)];
-            }
-        
-            methodResult(resultList);
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::create_batchAMapRoutePOISearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
-        
-            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
-                AMapRoutePOISearchResponse* ref = [[AMapRoutePOISearchResponse alloc] init];
-                HEAP[@(ref.hash)] = ref;
-        
-                [resultList addObject:@(ref.hash)];
-            }
-        
-            methodResult(resultList);
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::create_batchAMapInputTipsSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
-        
-            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
-                AMapInputTipsSearchRequest* ref = [[AMapInputTipsSearchRequest alloc] init];
-                HEAP[@(ref.hash)] = ref;
-        
-                [resultList addObject:@(ref.hash)];
-            }
-        
-            methodResult(resultList);
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::create_batchAMapInputTipsSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
-        
-            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
-                AMapInputTipsSearchResponse* ref = [[AMapInputTipsSearchResponse alloc] init];
-                HEAP[@(ref.hash)] = ref;
-        
-                [resultList addObject:@(ref.hash)];
-            }
-        
-            methodResult(resultList);
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::create_batchAMapGeocodeSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
-        
-            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
-                AMapGeocodeSearchRequest* ref = [[AMapGeocodeSearchRequest alloc] init];
-                HEAP[@(ref.hash)] = ref;
-        
-                [resultList addObject:@(ref.hash)];
-            }
-        
-            methodResult(resultList);
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::create_batchAMapGeocodeSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
-        
-            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
-                AMapGeocodeSearchResponse* ref = [[AMapGeocodeSearchResponse alloc] init];
-                HEAP[@(ref.hash)] = ref;
-        
-                [resultList addObject:@(ref.hash)];
-            }
-        
-            methodResult(resultList);
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
         @"ObjectFactory::create_batchAMapReGeocodeSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapReGeocodeSearchRequest* ref = [[AMapReGeocodeSearchRequest alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -1488,9 +34,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapReGeocodeSearchResponse* ref = [[AMapReGeocodeSearchResponse alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -1503,9 +49,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapBusStopSearchRequest* ref = [[AMapBusStopSearchRequest alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -1518,9 +64,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapBusStopSearchResponse* ref = [[AMapBusStopSearchResponse alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -1533,9 +79,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapBusLineBaseSearchRequest* ref = [[AMapBusLineBaseSearchRequest alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -1548,9 +94,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapBusLineNameSearchRequest* ref = [[AMapBusLineNameSearchRequest alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -1563,9 +109,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapBusLineIDSearchRequest* ref = [[AMapBusLineIDSearchRequest alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -1578,9 +124,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapBusLineSearchResponse* ref = [[AMapBusLineSearchResponse alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -1593,9 +139,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapDistrictSearchRequest* ref = [[AMapDistrictSearchRequest alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -1608,9 +154,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapDistrictSearchResponse* ref = [[AMapDistrictSearchResponse alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -1623,9 +169,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapRouteSearchBaseRequest* ref = [[AMapRouteSearchBaseRequest alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -1638,9 +184,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapDrivingRouteSearchRequest* ref = [[AMapDrivingRouteSearchRequest alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -1653,9 +199,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapWalkingRouteSearchRequest* ref = [[AMapWalkingRouteSearchRequest alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -1668,9 +214,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapTransitRouteSearchRequest* ref = [[AMapTransitRouteSearchRequest alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -1683,9 +229,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapRidingRouteSearchRequest* ref = [[AMapRidingRouteSearchRequest alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -1698,9 +244,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapRouteSearchResponse* ref = [[AMapRouteSearchResponse alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -1713,9 +259,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapRidingRouteSearchResponse* ref = [[AMapRidingRouteSearchResponse alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -1728,9 +274,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapTruckRouteSearchRequest* ref = [[AMapTruckRouteSearchRequest alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -1743,9 +289,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapDistanceSearchRequest* ref = [[AMapDistanceSearchRequest alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -1758,9 +304,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapDistanceSearchResponse* ref = [[AMapDistanceSearchResponse alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -1773,9 +319,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapWeatherSearchRequest* ref = [[AMapWeatherSearchRequest alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -1788,9 +334,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapWeatherSearchResponse* ref = [[AMapWeatherSearchResponse alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -1803,9 +349,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapRoadTrafficSearchBaseRequest* ref = [[AMapRoadTrafficSearchBaseRequest alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -1818,9 +364,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapRoadTrafficSearchRequest* ref = [[AMapRoadTrafficSearchRequest alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -1833,9 +379,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapRoadTrafficCircleSearchRequest* ref = [[AMapRoadTrafficCircleSearchRequest alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -1848,9 +394,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapRoadTrafficSearchResponse* ref = [[AMapRoadTrafficSearchResponse alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -1863,9 +409,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapNearbySearchRequest* ref = [[AMapNearbySearchRequest alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -1878,9 +424,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapNearbySearchResponse* ref = [[AMapNearbySearchResponse alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -1893,9 +439,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapCloudSearchBaseRequest* ref = [[AMapCloudSearchBaseRequest alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -1908,9 +454,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapCloudPOIAroundSearchRequest* ref = [[AMapCloudPOIAroundSearchRequest alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -1923,9 +469,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapCloudPOIPolygonSearchRequest* ref = [[AMapCloudPOIPolygonSearchRequest alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -1938,9 +484,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapCloudPOIIDSearchRequest* ref = [[AMapCloudPOIIDSearchRequest alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -1953,9 +499,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapCloudPOILocalSearchRequest* ref = [[AMapCloudPOILocalSearchRequest alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -1968,9 +514,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapCloudPOISearchResponse* ref = [[AMapCloudPOISearchResponse alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -1983,9 +529,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapShareSearchBaseRequest* ref = [[AMapShareSearchBaseRequest alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -1998,9 +544,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapLocationShareSearchRequest* ref = [[AMapLocationShareSearchRequest alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -2013,9 +559,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapPOIShareSearchRequest* ref = [[AMapPOIShareSearchRequest alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -2028,9 +574,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapRouteShareSearchRequest* ref = [[AMapRouteShareSearchRequest alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -2043,9 +589,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapNavigationShareSearchRequest* ref = [[AMapNavigationShareSearchRequest alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -2058,9 +604,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapShareSearchResponse* ref = [[AMapShareSearchResponse alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -2073,9 +619,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapFutureRouteSearchRequest* ref = [[AMapFutureRouteSearchRequest alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -2088,9 +634,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapFutureRouteSearchResponse* ref = [[AMapFutureRouteSearchResponse alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -2103,9 +649,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapSearchObject* ref = [[AMapSearchObject alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -2118,9 +664,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapGeoPoint* ref = [[AMapGeoPoint alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -2133,9 +679,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapGeoPolygon* ref = [[AMapGeoPolygon alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -2148,9 +694,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapCity* ref = [[AMapCity alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -2163,9 +709,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapSuggestion* ref = [[AMapSuggestion alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -2178,9 +724,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapTip* ref = [[AMapTip alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -2193,9 +739,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapImage* ref = [[AMapImage alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -2208,9 +754,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapPOIExtension* ref = [[AMapPOIExtension alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -2223,9 +769,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapIndoorData* ref = [[AMapIndoorData alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -2238,9 +784,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapSubPOI* ref = [[AMapSubPOI alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -2253,9 +799,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapRoutePOI* ref = [[AMapRoutePOI alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -2268,9 +814,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapPOI* ref = [[AMapPOI alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -2283,9 +829,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapAOI* ref = [[AMapAOI alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -2298,9 +844,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapRoad* ref = [[AMapRoad alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -2313,9 +859,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapRoadInter* ref = [[AMapRoadInter alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -2328,9 +874,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapStreetNumber* ref = [[AMapStreetNumber alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -2343,9 +889,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapBusinessArea* ref = [[AMapBusinessArea alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -2358,9 +904,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapAddressComponent* ref = [[AMapAddressComponent alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -2373,9 +919,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapReGeocode* ref = [[AMapReGeocode alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -2388,9 +934,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapGeocode* ref = [[AMapGeocode alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -2403,9 +949,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapBusStop* ref = [[AMapBusStop alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -2418,9 +964,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapBusLine* ref = [[AMapBusLine alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -2433,9 +979,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapDistrict* ref = [[AMapDistrict alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -2448,9 +994,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapTMC* ref = [[AMapTMC alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -2463,9 +1009,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapStep* ref = [[AMapStep alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -2478,9 +1024,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapPath* ref = [[AMapPath alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -2493,9 +1039,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapFutureTimeInfoElement* ref = [[AMapFutureTimeInfoElement alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -2508,9 +1054,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapFutureTimeInfo* ref = [[AMapFutureTimeInfo alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -2523,9 +1069,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapWalking* ref = [[AMapWalking alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -2538,9 +1084,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapTaxi* ref = [[AMapTaxi alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -2553,9 +1099,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapRailwayStation* ref = [[AMapRailwayStation alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -2568,9 +1114,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapRailwaySpace* ref = [[AMapRailwaySpace alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -2583,9 +1129,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapRailway* ref = [[AMapRailway alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -2598,9 +1144,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapSegment* ref = [[AMapSegment alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -2613,9 +1159,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapTransit* ref = [[AMapTransit alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -2628,9 +1174,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapRoute* ref = [[AMapRoute alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -2643,9 +1189,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapDistanceResult* ref = [[AMapDistanceResult alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -2658,9 +1204,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapLocalWeatherLive* ref = [[AMapLocalWeatherLive alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -2673,9 +1219,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapLocalDayWeatherForecast* ref = [[AMapLocalDayWeatherForecast alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -2688,9 +1234,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapLocalWeatherForecast* ref = [[AMapLocalWeatherForecast alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -2703,9 +1249,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapNearbyUserInfo* ref = [[AMapNearbyUserInfo alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -2718,9 +1264,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapTrafficEvaluation* ref = [[AMapTrafficEvaluation alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -2733,9 +1279,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapTrafficRoad* ref = [[AMapTrafficRoad alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -2748,9 +1294,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapTrafficInfo* ref = [[AMapTrafficInfo alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -2763,9 +1309,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapCloudImage* ref = [[AMapCloudImage alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -2778,9 +1324,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapCloudPOI* ref = [[AMapCloudPOI alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -2793,9 +1339,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapNearbyUploadInfo* ref = [[AMapNearbyUploadInfo alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);
@@ -2808,9 +1354,9 @@ extern BOOL enableLog;
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapSearchAPI* ref = [[AMapSearchAPI alloc] init];
-                HEAP[@(ref.hash)] = ref;
+                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-                [resultList addObject:@(ref.hash)];
+                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
             }
         
             methodResult(resultList);

@@ -25,6 +25,7 @@ import io.flutter.plugin.common.PluginRegistry.Registrar;
 import io.flutter.plugin.platform.PlatformViewRegistry;
 
 import me.yohom.amap_search_fluttify.sub_handler.*;
+import me.yohom.amap_search_fluttify.sub_handler.custom.SubHandlerCustom;
 
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getEnableLog;
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getHEAP;
@@ -62,6 +63,7 @@ public class AmapSearchFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
         handlerMapList.add(SubHandler11.getSubHandler(messenger));
         handlerMapList.add(SubHandler12.getSubHandler(messenger));
         handlerMapList.add(SubHandler13.getSubHandler(messenger));
+        handlerMapList.add(SubHandler14.getSubHandler(messenger));
         handlerMapList.add(SubHandlerCustom.getSubHandler(messenger));
 
         channel.setMethodCallHandler(plugin);
@@ -100,6 +102,7 @@ public class AmapSearchFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
         handlerMapList.add(SubHandler11.getSubHandler(messenger));
         handlerMapList.add(SubHandler12.getSubHandler(messenger));
         handlerMapList.add(SubHandler13.getSubHandler(messenger));
+        handlerMapList.add(SubHandler14.getSubHandler(messenger));
         handlerMapList.add(SubHandlerCustom.getSubHandler(messenger));
 
         channel.setMethodCallHandler(this);
