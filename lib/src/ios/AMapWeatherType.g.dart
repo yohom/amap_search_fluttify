@@ -4,6 +4,6 @@
 //////////////////////////////////////////////////////////
 
 enum AMapWeatherType {
-  AMapWeatherTypeLive,
-  AMapWeatherTypeForecast
+  AMapWeatherTypeLive /* 1 */,
+  AMapWeatherTypeForecast /* 0 */
 }

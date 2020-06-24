@@ -4,6 +4,6 @@
 //////////////////////////////////////////////////////////
 
 enum AMapSearchCoordinateType {
-  AMapSearchCoordinateTypeGPS,
-  AMapSearchCoordinateTypeAMap
+  AMapSearchCoordinateTypeGPS /* 1 */,
+  AMapSearchCoordinateTypeAMap /* 2 */
 }

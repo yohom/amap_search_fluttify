@@ -4,6 +4,6 @@
 //////////////////////////////////////////////////////////
 
 enum com_amap_api_services_nearby_NearbySearchFunctionType {
-  DISTANCE_SEARCH,
-  DRIVING_DISTANCE_SEARCH
+  DISTANCE_SEARCH /* 0 */,
+  DRIVING_DISTANCE_SEARCH /* 0 */
 }

@@ -5,7 +5,6 @@
 
 import 'dart:typed_data';
 
-import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
@@ -70,7 +69,7 @@ class com_amap_api_services_weather_WeatherSearch extends java_lang_Object  {
       return null;
     } else {
       final __return__ = com_amap_api_services_weather_WeatherSearchQuery()..refId = __result__..tag__ = 'amap_search_fluttify';
-      kNativeObjectPool.add(__return__);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -83,7 +82,7 @@ class com_amap_api_services_weather_WeatherSearch extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.WeatherSearch::setQuery', {"var1": var1.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.WeatherSearch::setQuery', {"var1": var1?.refId, "refId": refId});
   
   
     // handle native call
@@ -135,30 +134,27 @@ class com_amap_api_services_weather_WeatherSearch extends java_lang_Object  {
   
   
     // handle native call
-    MethodChannel('com.amap.api.services.weather.WeatherSearch::setOnWeatherSearchListener::Callback')
+    MethodChannel('com.amap.api.services.weather.WeatherSearch.OnWeatherSearchListener::Callback')
         .setMethodCallHandler((methodCall) async {
           final args = methodCall.arguments as Map;
-          // final refId = args['callerRefId'] as int;
-          // if (refId != this.refId) return;
-  
           switch (methodCall.method) {
             case 'Callback::com.amap.api.services.weather.WeatherSearch.OnWeatherSearchListener::onWeatherLiveSearched':
               // print log
               if (fluttifyLogEnabled) {
-                debugPrint('fluttify-dart-callback: onWeatherLiveSearched([\'var2\':${args['var2']}])');
+                debugPrint('fluttify-dart-callback: onWeatherLiveSearched([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
               }
         
               // handle the native call
-              var1?.onWeatherLiveSearched((com_amap_api_services_weather_LocalWeatherLiveResult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify'), args['var2']);
+              var1?.onWeatherLiveSearched(TypeOpAmapSearchFluttifyAndroid((args['var1'] as Object))?.as__<com_amap_api_services_weather_LocalWeatherLiveResult>(), args['var2']);
               break;
             case 'Callback::com.amap.api.services.weather.WeatherSearch.OnWeatherSearchListener::onWeatherForecastSearched':
               // print log
               if (fluttifyLogEnabled) {
-                debugPrint('fluttify-dart-callback: onWeatherForecastSearched([\'var2\':${args['var2']}])');
+                debugPrint('fluttify-dart-callback: onWeatherForecastSearched([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
               }
         
               // handle the native call
-              var1?.onWeatherForecastSearched((com_amap_api_services_weather_LocalWeatherForecastResult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify'), args['var2']);
+              var1?.onWeatherForecastSearched(TypeOpAmapSearchFluttifyAndroid((args['var1'] as Object))?.as__<com_amap_api_services_weather_LocalWeatherForecastResult>(), args['var2']);
               break;
             default:
               break;

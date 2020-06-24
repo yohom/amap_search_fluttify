@@ -4,10 +4,10 @@
 //////////////////////////////////////////////////////////
 
 enum AMapRoutePOISearchType {
-  AMapRoutePOISearchTypeGasStation,
-  AMapRoutePOISearchTypeMaintenanceStation,
-  AMapRoutePOISearchTypeATM,
-  AMapRoutePOISearchTypeToilet,
-  AMapRoutePOISearchTypeGasAirStation,
-  AMapRoutePOISearchTypeParkStation
+  AMapRoutePOISearchTypeGasStation /* 0 */,
+  AMapRoutePOISearchTypeMaintenanceStation /* 1 */,
+  AMapRoutePOISearchTypeATM /* 2 */,
+  AMapRoutePOISearchTypeToilet /* 3 */,
+  AMapRoutePOISearchTypeGasAirStation /* 4 */,
+  AMapRoutePOISearchTypeParkStation /* 5 */
 }

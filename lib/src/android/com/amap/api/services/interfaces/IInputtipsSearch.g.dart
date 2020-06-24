@@ -5,7 +5,6 @@
 
 import 'dart:typed_data';
 
-import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
@@ -13,74 +12,324 @@ import 'package:flutter/services.dart';
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
 
+class _com_amap_api_services_interfaces_IInputtipsSearch_SUB extends java_lang_Object with com_amap_api_services_interfaces_IInputtipsSearch {}
+
 mixin com_amap_api_services_interfaces_IInputtipsSearch on java_lang_Object {
   
 
-  
+  static com_amap_api_services_interfaces_IInputtipsSearch subInstance() => _com_amap_api_services_interfaces_IInputtipsSearch_SUB();
 
   
 
-  @mustCallSuper
-  Future<com_amap_api_services_help_InputtipsQuery> getQuery() {
   
+
   
+  Future<com_amap_api_services_help_InputtipsQuery> getQuery() async {
+    // print log
     if (fluttifyLogEnabled) {
-      debugPrint('getQuery::kNativeObjectPool: $kNativeObjectPool');
+      debugPrint('fluttify-dart: com.amap.api.services.interfaces.IInputtipsSearch@$refId::getQuery([])');
+    }
+  
+    // invoke native method
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IInputtipsSearch::getQuery', {"refId": refId});
+  
+  
+    // handle native call
+  
+  
+    // convert native result to dart side object
+    if (__result__ == null) {
+      return null;
+    } else {
+      final __return__ = com_amap_api_services_help_InputtipsQuery()..refId = __result__..tag__ = 'amap_search_fluttify';
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
+      return __return__;
     }
   }
   
-  @mustCallSuper
-  Future<void> setQuery(com_amap_api_services_help_InputtipsQuery var1) {
-    kNativeObjectPool.add(var1);
   
+  Future<void> setQuery(com_amap_api_services_help_InputtipsQuery var1) async {
+    // print log
     if (fluttifyLogEnabled) {
-      debugPrint('setQuery::kNativeObjectPool: $kNativeObjectPool');
+      debugPrint('fluttify-dart: com.amap.api.services.interfaces.IInputtipsSearch@$refId::setQuery([])');
+    }
+  
+    // invoke native method
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IInputtipsSearch::setQuery', {"var1": var1?.refId, "refId": refId});
+  
+  
+    // handle native call
+  
+  
+    // convert native result to dart side object
+    if (__result__ == null) {
+      return null;
+    } else {
+      final __return__ = __result__;
+    
+      return __return__;
     }
   }
   
-  @mustCallSuper
-  Future<void> setInputtipsListener(com_amap_api_services_help_Inputtips_InputtipsListener var1) {
-    kNativeObjectPool.add(var1);
   
+  Future<void> setInputtipsListener(com_amap_api_services_help_Inputtips_InputtipsListener var1) async {
+    // print log
     if (fluttifyLogEnabled) {
-      debugPrint('setInputtipsListener::kNativeObjectPool: $kNativeObjectPool');
+      debugPrint('fluttify-dart: com.amap.api.services.interfaces.IInputtipsSearch@$refId::setInputtipsListener([])');
+    }
+  
+    // invoke native method
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IInputtipsSearch::setInputtipsListener', {"refId": refId});
+  
+  
+    // handle native call
+    MethodChannel('com.amap.api.services.help.Inputtips.InputtipsListener::Callback')
+        .setMethodCallHandler((methodCall) async {
+          final args = methodCall.arguments as Map;
+          switch (methodCall.method) {
+            case 'Callback::com.amap.api.services.help.Inputtips.InputtipsListener::onGetInputtips':
+              // print log
+              if (fluttifyLogEnabled) {
+                debugPrint('fluttify-dart-callback: onGetInputtips([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
+              }
+        
+              // handle the native call
+              var1?.onGetInputtips((args['var1'] as List).cast<int>().map((__it__) => TypeOpAmapSearchFluttifyAndroid(__it__).as__<com_amap_api_services_help_Tip>()).toList(), args['var2']);
+              break;
+            default:
+              break;
+          }
+        });
+  
+    // convert native result to dart side object
+    if (__result__ == null) {
+      return null;
+    } else {
+      final __return__ = __result__;
+    
+      return __return__;
     }
   }
   
-  @mustCallSuper
-  Future<void> requestInputtipsAsyn() {
   
-  
+  Future<void> requestInputtipsAsyn() async {
+    // print log
     if (fluttifyLogEnabled) {
-      debugPrint('requestInputtipsAsyn::kNativeObjectPool: $kNativeObjectPool');
+      debugPrint('fluttify-dart: com.amap.api.services.interfaces.IInputtipsSearch@$refId::requestInputtipsAsyn([])');
+    }
+  
+    // invoke native method
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IInputtipsSearch::requestInputtipsAsyn', {"refId": refId});
+  
+  
+    // handle native call
+  
+  
+    // convert native result to dart side object
+    if (__result__ == null) {
+      return null;
+    } else {
+      final __return__ = __result__;
+    
+      return __return__;
     }
   }
   
-  @mustCallSuper
-  Future<List<com_amap_api_services_help_Tip>> requestInputtips() {
   
-  
+  Future<List<com_amap_api_services_help_Tip>> requestInputtips() async {
+    // print log
     if (fluttifyLogEnabled) {
-      debugPrint('requestInputtips::kNativeObjectPool: $kNativeObjectPool');
+      debugPrint('fluttify-dart: com.amap.api.services.interfaces.IInputtipsSearch@$refId::requestInputtips([])');
+    }
+  
+    // invoke native method
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IInputtipsSearch::requestInputtips', {"refId": refId});
+  
+  
+    // handle native call
+  
+  
+    // convert native result to dart side object
+    if (__result__ == null) {
+      return null;
+    } else {
+      final __return__ = (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_help_Tip()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      kNativeObjectPool.addAll(__return__);
+      return __return__;
     }
   }
   
-  @mustCallSuper
-  Future<void> requestInputtips__String__String(String var1, String var2) {
   
-  
+  Future<void> requestInputtips__String__String(String var1, String var2) async {
+    // print log
     if (fluttifyLogEnabled) {
-      debugPrint('requestInputtips__String__String::kNativeObjectPool: $kNativeObjectPool');
+      debugPrint('fluttify-dart: com.amap.api.services.interfaces.IInputtipsSearch@$refId::requestInputtips([\'var1\':$var1, \'var2\':$var2])');
+    }
+  
+    // invoke native method
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IInputtipsSearch::requestInputtips__String__String', {"var1": var1, "var2": var2, "refId": refId});
+  
+  
+    // handle native call
+  
+  
+    // convert native result to dart side object
+    if (__result__ == null) {
+      return null;
+    } else {
+      final __return__ = __result__;
+    
+      return __return__;
     }
   }
   
-  @mustCallSuper
-  Future<void> requestInputtips__String__String__String(String var1, String var2, String var3) {
   
-  
+  Future<void> requestInputtips__String__String__String(String var1, String var2, String var3) async {
+    // print log
     if (fluttifyLogEnabled) {
-      debugPrint('requestInputtips__String__String__String::kNativeObjectPool: $kNativeObjectPool');
+      debugPrint('fluttify-dart: com.amap.api.services.interfaces.IInputtipsSearch@$refId::requestInputtips([\'var1\':$var1, \'var2\':$var2, \'var3\':$var3])');
+    }
+  
+    // invoke native method
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IInputtipsSearch::requestInputtips__String__String__String', {"var1": var1, "var2": var2, "var3": var3, "refId": refId});
+  
+  
+    // handle native call
+  
+  
+    // convert native result to dart side object
+    if (__result__ == null) {
+      return null;
+    } else {
+      final __return__ = __result__;
+    
+      return __return__;
     }
   }
   
+}
+
+extension com_amap_api_services_interfaces_IInputtipsSearch_Batch on List<com_amap_api_services_interfaces_IInputtipsSearch> {
+  //region methods
+  
+  Future<List<com_amap_api_services_help_InputtipsQuery>> getQuery_batch() async {
+    if (false) {
+      return Future.error('all args must have same length!');
+    }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IInputtipsSearch::getQuery_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_amap_api_services_help_InputtipsQuery()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      kNativeObjectPool.addAll(typedResult);
+      return typedResult;
+    }
+  }
+  
+  
+  Future<List<void>> setQuery_batch(List<com_amap_api_services_help_InputtipsQuery> var1) async {
+    if (false) {
+      return Future.error('all args must have same length!');
+    }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IInputtipsSearch::setQuery_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__].refId, "refId": this[__i__].refId}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+    
+      return typedResult;
+    }
+  }
+  
+  
+  Future<List<void>> requestInputtipsAsyn_batch() async {
+    if (false) {
+      return Future.error('all args must have same length!');
+    }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IInputtipsSearch::requestInputtipsAsyn_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+    
+      return typedResult;
+    }
+  }
+  
+  
+  Future<List<List<com_amap_api_services_help_Tip>>> requestInputtips_batch() async {
+    if (false) {
+      return Future.error('all args must have same length!');
+    }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IInputtipsSearch::requestInputtips_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_help_Tip()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
+      kNativeObjectPool.addAll(typedResult.expand((e) => e));
+      return typedResult;
+    }
+  }
+  
+  
+  Future<List<void>> requestInputtips__String__String_batch(List<String> var1, List<String> var2) async {
+    if (var1.length != var2.length) {
+      return Future.error('all args must have same length!');
+    }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IInputtipsSearch::requestInputtips__String__String_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "refId": this[__i__].refId}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+    
+      return typedResult;
+    }
+  }
+  
+  
+  Future<List<void>> requestInputtips__String__String__String_batch(List<String> var1, List<String> var2, List<String> var3) async {
+    if (var1.length != var2.length || var2.length != var3.length) {
+      return Future.error('all args must have same length!');
+    }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.IInputtipsSearch::requestInputtips__String__String__String_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "refId": this[__i__].refId}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+    
+      return typedResult;
+    }
+  }
+  
+  //endregion
 }

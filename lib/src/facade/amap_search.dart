@@ -88,6 +88,7 @@ class AmapSearch {
         // 设置分页信息
         await request.set_page(page);
         await request.set_offset(pageSize);
+        await request.set_requireExtension(true);
 
         // 开始搜索
         await _iosSearch.AMapPOIKeywordsSearch(request);
@@ -179,6 +180,7 @@ class AmapSearch {
         // 设置分页信息
         await request.set_page(page);
         await request.set_offset(pageSize);
+        await request.set_requireExtension(true);
 
         // 开始搜索
         await _iosSearch.AMapPOIAroundSearch(request);
@@ -1372,13 +1374,17 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
   ) async {
     super.onRouteSearchDone_response(request, response);
     dynamic route;
-    if (await request.isAMapDrivingRouteSearchRequest()) {
+    if (await TypeOpAmapSearchFluttifyIOS(request)
+        .is__<AMapDrivingRouteSearchRequest>()) {
       route = DriveRouteResult.ios(await response.get_route());
-    } else if (await request.isAMapWalkingRouteSearchRequest()) {
+    } else if (await TypeOpAmapSearchFluttifyIOS(request)
+        .is__<AMapWalkingRouteSearchRequest>()) {
       route = WalkRouteResult.ios(await response.get_route());
-    } else if (await request.isAMapBusLineBaseSearchRequest()) {
+    } else if (await TypeOpAmapSearchFluttifyIOS(request)
+        .is__<AMapBusLineBaseSearchRequest>()) {
       route = BusRouteResult.ios(await response.get_route());
-    } else if (await request.isAMapRidingRouteSearchRequest()) {
+    } else if (await TypeOpAmapSearchFluttifyIOS(request)
+        .is__<AMapRidingRouteSearchRequest>()) {
       route = RideRouteResult.ios(await response.get_route());
     }
     if (_streamController?.isClosed == false) {

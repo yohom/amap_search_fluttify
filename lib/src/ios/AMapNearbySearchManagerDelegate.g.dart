@@ -6,12 +6,13 @@
 import 'dart:typed_data';
 
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
-import 'package:amap_search_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
+
+
 
 mixin AMapNearbySearchManagerDelegate on NSObject {
   
@@ -20,9 +21,11 @@ mixin AMapNearbySearchManagerDelegate on NSObject {
 
   
 
+  
+
   @mustCallSuper
   Future<AMapNearbyUploadInfo> nearbyInfoForUploading(AMapNearbySearchManager manager) {
-    kNativeObjectPool.add(manager);
+    if (manager is Ref) kNativeObjectPool.add(manager);
   
     if (fluttifyLogEnabled) {
       debugPrint('nearbyInfoForUploading::kNativeObjectPool: $kNativeObjectPool');
@@ -31,7 +34,7 @@ mixin AMapNearbySearchManagerDelegate on NSObject {
   
   @mustCallSuper
   Future<void> onNearbyInfoUploadedWithError(NSError error) {
-    kNativeObjectPool.add(error);
+    if (error is Ref) kNativeObjectPool.add(error);
   
     if (fluttifyLogEnabled) {
       debugPrint('onNearbyInfoUploadedWithError::kNativeObjectPool: $kNativeObjectPool');
@@ -40,7 +43,7 @@ mixin AMapNearbySearchManagerDelegate on NSObject {
   
   @mustCallSuper
   Future<void> onUserInfoClearedWithError(NSError error) {
-    kNativeObjectPool.add(error);
+    if (error is Ref) kNativeObjectPool.add(error);
   
     if (fluttifyLogEnabled) {
       debugPrint('onUserInfoClearedWithError::kNativeObjectPool: $kNativeObjectPool');
@@ -48,3 +51,4 @@ mixin AMapNearbySearchManagerDelegate on NSObject {
   }
   
 }
+

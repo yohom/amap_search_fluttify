@@ -6,7 +6,6 @@
 import 'dart:typed_data';
 
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
-import 'package:amap_search_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
@@ -69,7 +68,7 @@ class AMapGeoPolygon extends AMapSearchObject with NSCoding, NSCopying {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapGeoPolygon::polygonWithPoints', {"points": points.map((__it__) => __it__.refId).toList()});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapGeoPolygon::polygonWithPoints', {"points": points.map((__it__) => __it__?.refId).toList()});
   
   
     // handle native call
@@ -80,7 +79,7 @@ class AMapGeoPolygon extends AMapSearchObject with NSCoding, NSCopying {
       return null;
     } else {
       final __return__ = AMapGeoPolygon()..refId = __result__..tag__ = 'amap_search_fluttify';
-      kNativeObjectPool.add(__return__);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }

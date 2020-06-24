@@ -5,7 +5,6 @@
 
 import 'dart:typed_data';
 
-import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
@@ -63,21 +62,18 @@ class com_amap_api_services_traffic_TrafficSearch extends java_lang_Object  {
   
   
     // handle native call
-    MethodChannel('com.amap.api.services.traffic.TrafficSearch::setTrafficSearchListener::Callback')
+    MethodChannel('com.amap.api.services.traffic.TrafficSearch.OnTrafficSearchListener::Callback')
         .setMethodCallHandler((methodCall) async {
           final args = methodCall.arguments as Map;
-          // final refId = args['callerRefId'] as int;
-          // if (refId != this.refId) return;
-  
           switch (methodCall.method) {
             case 'Callback::com.amap.api.services.traffic.TrafficSearch.OnTrafficSearchListener::onRoadTrafficSearched':
               // print log
               if (fluttifyLogEnabled) {
-                debugPrint('fluttify-dart-callback: onRoadTrafficSearched([\'var2\':${args['var2']}])');
+                debugPrint('fluttify-dart-callback: onRoadTrafficSearched([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
               }
         
               // handle the native call
-              var1?.onRoadTrafficSearched((com_amap_api_services_traffic_TrafficStatusResult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify'), args['var2']);
+              var1?.onRoadTrafficSearched(TypeOpAmapSearchFluttifyAndroid((args['var1'] as Object))?.as__<com_amap_api_services_traffic_TrafficStatusResult>(), args['var2']);
               break;
             default:
               break;

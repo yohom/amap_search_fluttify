@@ -5,13 +5,14 @@
 
 import 'dart:typed_data';
 
-import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
+
+
 
 mixin com_amap_api_services_weather_WeatherSearch_OnWeatherSearchListener on java_lang_Object {
   
@@ -20,9 +21,11 @@ mixin com_amap_api_services_weather_WeatherSearch_OnWeatherSearchListener on jav
 
   
 
+  
+
   @mustCallSuper
   Future<void> onWeatherLiveSearched(com_amap_api_services_weather_LocalWeatherLiveResult var1, int var2) {
-    kNativeObjectPool.add(var1);
+    if (var1 is Ref) kNativeObjectPool.add(var1);
   
     if (fluttifyLogEnabled) {
       debugPrint('onWeatherLiveSearched::kNativeObjectPool: $kNativeObjectPool');
@@ -31,7 +34,7 @@ mixin com_amap_api_services_weather_WeatherSearch_OnWeatherSearchListener on jav
   
   @mustCallSuper
   Future<void> onWeatherForecastSearched(com_amap_api_services_weather_LocalWeatherForecastResult var1, int var2) {
-    kNativeObjectPool.add(var1);
+    if (var1 is Ref) kNativeObjectPool.add(var1);
   
     if (fluttifyLogEnabled) {
       debugPrint('onWeatherForecastSearched::kNativeObjectPool: $kNativeObjectPool');
@@ -39,3 +42,4 @@ mixin com_amap_api_services_weather_WeatherSearch_OnWeatherSearchListener on jav
   }
   
 }
+

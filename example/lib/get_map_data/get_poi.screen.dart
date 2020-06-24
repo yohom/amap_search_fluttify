@@ -71,10 +71,7 @@ class _KeywordPoiScreenState extends State<KeywordPoiScreen>
               );
 
               setState(() {
-                _poiTitleList = poiList
-                    .map((it) =>
-                        'title: ${it.title}, address: ${it.address}, businessArea: ${it.businessArea}, ${it.latLng}')
-                    .toList();
+                _poiTitleList = poiList.map((it) => it.toString()).toList();
               });
             },
             child: Text('搜索'),
@@ -88,10 +85,7 @@ class _KeywordPoiScreenState extends State<KeywordPoiScreen>
               );
 
               setState(() {
-                _poiTitleList = poiList
-                    .map((it) =>
-                        'title: ${it.title}, address: ${it.address}, businessArea: ${it.businessArea}, ${it.latLng}')
-                    .toList();
+                _poiTitleList = poiList.map((it) => it.toString()).toList();
               });
             },
             child: Text('下一页'),
@@ -164,10 +158,7 @@ class _AroundPoiScreenState extends State<AroundPoiScreen>
               );
 
               setState(() {
-                _poiTitleList = poiList
-                    .map((it) =>
-                        'title: ${it.title}, address: ${it.address}, businessArea: ${it.businessArea}, ${it.latLng}')
-                    .toList();
+                _poiTitleList = poiList.map((it) => it.toString()).toList();
               });
             },
             child: Text('搜索'),
@@ -185,10 +176,7 @@ class _AroundPoiScreenState extends State<AroundPoiScreen>
               );
 
               setState(() {
-                _poiTitleList = poiList
-                    .map((it) =>
-                        'title: ${it.title}, address: ${it.address}, businessArea: ${it.businessArea}, ${it.latLng}')
-                    .toList();
+                _poiTitleList = poiList.map((it) => it.toString()).toList();
               });
             },
             child: Text('下一页'),

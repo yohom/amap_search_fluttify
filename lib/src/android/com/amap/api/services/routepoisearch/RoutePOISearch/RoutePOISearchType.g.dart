@@ -4,10 +4,10 @@
 //////////////////////////////////////////////////////////
 
 enum com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType {
-  TypeGasStation,
-  TypeMaintenanceStation,
-  TypeATM,
-  TypeToilet,
-  TypeFillingStation,
-  TypeServiceArea
+  TypeGasStation /* 0 */,
+  TypeMaintenanceStation /* 0 */,
+  TypeATM /* 0 */,
+  TypeToilet /* 0 */,
+  TypeFillingStation /* 0 */,
+  TypeServiceArea /* 0 */
 }

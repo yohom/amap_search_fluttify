@@ -1046,7 +1046,8 @@ public class SubHandler2 {
             put("com.amap.api.services.route.RouteRailwayItem::setDeparturestop", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                com.amap.api.services.route.RailwayStationItem var1 = (com.amap.api.services.route.RailwayStationItem) getHEAP().get((int) ((Map<String, Object>) __args__).get("var1"));
+                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.route.RailwayStationItem var1 = __var1__ != null ? (com.amap.api.services.route.RailwayStationItem) getHEAP().get(__var1__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -1078,7 +1079,8 @@ public class SubHandler2 {
             put("com.amap.api.services.route.RouteRailwayItem::setArrivalstop", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                com.amap.api.services.route.RailwayStationItem var1 = (com.amap.api.services.route.RailwayStationItem) getHEAP().get((int) ((Map<String, Object>) __args__).get("var1"));
+                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.route.RailwayStationItem var1 = __var1__ != null ? (com.amap.api.services.route.RailwayStationItem) getHEAP().get(__var1__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -2065,7 +2067,8 @@ public class SubHandler2 {
             put("com.amap.api.services.route.RailwayStationItem::setLocation", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) getHEAP().get((int) ((Map<String, Object>) __args__).get("var1"));
+                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.core.LatLonPoint var1 = __var1__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -2368,7 +2371,8 @@ public class SubHandler2 {
             put("com.amap.api.services.route.RideRouteResult::setRideQuery", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                com.amap.api.services.route.RouteSearch.RideRouteQuery var1 = (com.amap.api.services.route.RouteSearch.RideRouteQuery) getHEAP().get((int) ((Map<String, Object>) __args__).get("var1"));
+                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.route.RouteSearch.RideRouteQuery var1 = __var1__ != null ? (com.amap.api.services.route.RouteSearch.RideRouteQuery) getHEAP().get(__var1__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -3797,7 +3801,8 @@ public class SubHandler2 {
             put("com.amap.api.services.route.DistanceResult::setDistanceQuery", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                com.amap.api.services.route.DistanceSearch.DistanceQuery var1 = (com.amap.api.services.route.DistanceSearch.DistanceQuery) getHEAP().get((int) ((Map<String, Object>) __args__).get("var1"));
+                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.route.DistanceSearch.DistanceQuery var1 = __var1__ != null ? (com.amap.api.services.route.DistanceSearch.DistanceQuery) getHEAP().get(__var1__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -4283,7 +4288,8 @@ public class SubHandler2 {
             put("com.amap.api.services.route.WalkRouteResult::setWalkQuery", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                com.amap.api.services.route.RouteSearch.WalkRouteQuery var1 = (com.amap.api.services.route.RouteSearch.WalkRouteQuery) getHEAP().get((int) ((Map<String, Object>) __args__).get("var1"));
+                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.route.RouteSearch.WalkRouteQuery var1 = __var1__ != null ? (com.amap.api.services.route.RouteSearch.WalkRouteQuery) getHEAP().get(__var1__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -4526,7 +4532,8 @@ public class SubHandler2 {
             put("com.amap.api.services.route.DistanceSearch.DistanceQuery::addOrigins", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) getHEAP().get((int) ((Map<String, Object>) __args__).get("var1"));
+                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.core.LatLonPoint var1 = __var1__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -4558,7 +4565,8 @@ public class SubHandler2 {
             put("com.amap.api.services.route.DistanceSearch.DistanceQuery::setDestination", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) getHEAP().get((int) ((Map<String, Object>) __args__).get("var1"));
+                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.core.LatLonPoint var1 = __var1__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -4795,41 +4803,47 @@ public class SubHandler2 {
                 // invoke native method
                 try {
                     ref.setDistanceSearchListener(new com.amap.api.services.route.DistanceSearch.OnDistanceSearchListener() {
-                    // method channel
-                    MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.route.DistanceSearch::setDistanceSearchListener::Callback");
-            
-                    // call dart method
-                    @Override
-                    public void onDistanceSearched(com.amap.api.services.route.DistanceResult var1, int var2) {
-                        // print log
-                        if (getEnableLog()) {
-                            Log.d("java-callback", "fluttify-java-callback: onDistanceSearched(" + var1 + var2 + ")");
-                        }
-            
-                        // convert to jsonable data
-                        // ref arg
-                        final Integer argvar1;
-                        if (var1 != null) {
-                            argvar1 = System.identityHashCode(var1);
-                            getHEAP().put(argvar1, var1);
-                        } else {
-                            argvar1 = null;
-                        }
-                        // jsonable arg
-                        int argvar2 = var2;
+                        // method channel
+                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.route.DistanceSearch.OnDistanceSearchListener::Callback");
+                        android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
             
                         // call dart method
-                        callbackChannel.invokeMethod(
-                                "Callback::com.amap.api.services.route.DistanceSearch.OnDistanceSearchListener::onDistanceSearched",
-                                new HashMap<String, Object>() {{
-                                    put("var1", argvar1);
-                                    put("var2", argvar2);
-                                }}
-                        );
+                        @Override
+                        public void onDistanceSearched(com.amap.api.services.route.DistanceResult var1, int var2) {
+                            // print log
+                            if (getEnableLog()) {
+                                Log.d("java-callback", "fluttify-java-callback: onDistanceSearched(" + var1 + var2 + ")");
+                            }
             
-                        // method result
+                            // convert to jsonable data
+                            // ref arg
+                            final Integer argvar1;
+                            if (var1 != null) {
+                                argvar1 = System.identityHashCode(var1);
+                                getHEAP().put(argvar1, var1);
+                            } else {
+                                argvar1 = null;
+                            }
+                            // jsonable arg
+                            int argvar2 = var2;
             
-                    }
+                            // call dart method
+                            handler.post(new Runnable() {
+                                @Override
+                                public void run() {
+                                    callbackChannel.invokeMethod(
+                                        "Callback::com.amap.api.services.route.DistanceSearch.OnDistanceSearchListener::onDistanceSearched",
+                                        new HashMap<String, Object>() {{
+                                            put("var1", argvar1);
+                                            put("var2", argvar2);
+                                        }}
+                                    );
+                                }
+                            });
+            
+                            // method result
+            
+                        }
             
                 });
                 } catch (Throwable throwable) {
@@ -4850,7 +4864,8 @@ public class SubHandler2 {
             put("com.amap.api.services.route.DistanceSearch::calculateRouteDistance", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                com.amap.api.services.route.DistanceSearch.DistanceQuery var1 = (com.amap.api.services.route.DistanceSearch.DistanceQuery) getHEAP().get((int) ((Map<String, Object>) __args__).get("var1"));
+                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.route.DistanceSearch.DistanceQuery var1 = __var1__ != null ? (com.amap.api.services.route.DistanceSearch.DistanceQuery) getHEAP().get(__var1__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -4887,7 +4902,8 @@ public class SubHandler2 {
             put("com.amap.api.services.route.DistanceSearch::calculateRouteDistanceAsyn", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                com.amap.api.services.route.DistanceSearch.DistanceQuery var1 = (com.amap.api.services.route.DistanceSearch.DistanceQuery) getHEAP().get((int) ((Map<String, Object>) __args__).get("var1"));
+                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.route.DistanceSearch.DistanceQuery var1 = __var1__ != null ? (com.amap.api.services.route.DistanceSearch.DistanceQuery) getHEAP().get(__var1__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -5030,7 +5046,8 @@ public class SubHandler2 {
             put("com.amap.api.services.route.RouteBusLineItem::setDepartureBusStation", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                com.amap.api.services.busline.BusStationItem var1 = (com.amap.api.services.busline.BusStationItem) getHEAP().get((int) ((Map<String, Object>) __args__).get("var1"));
+                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.busline.BusStationItem var1 = __var1__ != null ? (com.amap.api.services.busline.BusStationItem) getHEAP().get(__var1__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -5098,7 +5115,8 @@ public class SubHandler2 {
             put("com.amap.api.services.route.RouteBusLineItem::setArrivalBusStation", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                com.amap.api.services.busline.BusStationItem var1 = (com.amap.api.services.busline.BusStationItem) getHEAP().get((int) ((Map<String, Object>) __args__).get("var1"));
+                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.busline.BusStationItem var1 = __var1__ != null ? (com.amap.api.services.busline.BusStationItem) getHEAP().get(__var1__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");

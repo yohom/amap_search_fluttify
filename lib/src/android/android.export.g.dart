@@ -95,7 +95,6 @@ export 'com/amap/api/services/nearby/UploadInfo.g.dart';
 export 'com/amap/api/services/nearby/NearbySearch/NearbyQuery.g.dart';
 export 'com/amap/api/services/nearby/NearbySearch/NearbyListener.g.dart';
 export 'com/amap/api/services/nearby/NearbySearch.g.dart';
-export 'com/amap/api/services/a/.g.dart';
 export 'com/amap/api/services/routepoisearch/RoutePOIItem.g.dart';
 export 'com/amap/api/services/routepoisearch/RoutePOISearchResult.g.dart';
 export 'com/amap/api/services/routepoisearch/RoutePOISearch.g.dart';

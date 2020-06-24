@@ -3,14 +3,7 @@
 //////////////////////////////////////////////////////////
 
 #import <Flutter/Flutter.h>
-#import <AMapSearchKit/AMapSearchObj.h>
-#import <AMapSearchKit/AMapCommonObj.h>
-#import <AMapSearchKit/AMapSearchVersion.h>
-#import <AMapSearchKit/AMapSearchError.h>
 #import <AMapSearchKit/AMapSearchKit.h>
-#import <AMapSearchKit/AMapNearbyUploadInfo.h>
-#import <AMapSearchKit/AMapNearbySearchManager.h>
-#import <AMapSearchKit/AMapSearchAPI.h>
 
 typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, id, FlutterResult);
 

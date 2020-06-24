@@ -5,7 +5,6 @@
 
 import 'dart:typed_data';
 
-import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
@@ -41,7 +40,7 @@ class com_amap_api_services_poisearch_PoiResult extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiResult::createPagedResult', {"var0": var0.refId, "var1": var1.refId, "var2": var2, "var3": var3.map((__it__) => __it__.refId).toList(), "var4": var4, "var5": var5, "var6": var6.map((__it__) => __it__.refId).toList()});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiResult::createPagedResult', {"var0": var0?.refId, "var1": var1?.refId, "var2": var2, "var3": var3.map((__it__) => __it__?.refId).toList(), "var4": var4, "var5": var5, "var6": var6.map((__it__) => __it__?.refId).toList()});
   
   
     // handle native call
@@ -52,7 +51,7 @@ class com_amap_api_services_poisearch_PoiResult extends java_lang_Object  {
       return null;
     } else {
       final __return__ = com_amap_api_services_poisearch_PoiResult()..refId = __result__..tag__ = 'amap_search_fluttify';
-      kNativeObjectPool.add(__return__);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -100,7 +99,7 @@ class com_amap_api_services_poisearch_PoiResult extends java_lang_Object  {
       return null;
     } else {
       final __return__ = com_amap_api_services_poisearch_PoiSearch_Query()..refId = __result__..tag__ = 'amap_search_fluttify';
-      kNativeObjectPool.add(__return__);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -124,7 +123,7 @@ class com_amap_api_services_poisearch_PoiResult extends java_lang_Object  {
       return null;
     } else {
       final __return__ = com_amap_api_services_poisearch_PoiSearch_SearchBound()..refId = __result__..tag__ = 'amap_search_fluttify';
-      kNativeObjectPool.add(__return__);
+      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }

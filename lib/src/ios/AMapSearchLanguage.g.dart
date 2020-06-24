@@ -4,6 +4,6 @@
 //////////////////////////////////////////////////////////
 
 enum AMapSearchLanguage {
-  AMapSearchLanguageZhCN,
-  AMapSearchLanguageEn
+  AMapSearchLanguageZhCN /* 0 */,
+  AMapSearchLanguageEn /* 1 */
 }

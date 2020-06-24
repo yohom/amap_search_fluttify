@@ -5,13 +5,14 @@
 
 import 'dart:typed_data';
 
-import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
+
+
 
 mixin com_amap_api_services_district_DistrictSearch_OnDistrictSearchListener on java_lang_Object {
   
@@ -20,9 +21,11 @@ mixin com_amap_api_services_district_DistrictSearch_OnDistrictSearchListener on 
 
   
 
+  
+
   @mustCallSuper
   Future<void> onDistrictSearched(com_amap_api_services_district_DistrictResult var1) {
-    kNativeObjectPool.add(var1);
+    if (var1 is Ref) kNativeObjectPool.add(var1);
   
     if (fluttifyLogEnabled) {
       debugPrint('onDistrictSearched::kNativeObjectPool: $kNativeObjectPool');
@@ -30,3 +33,4 @@ mixin com_amap_api_services_district_DistrictSearch_OnDistrictSearchListener on 
   }
   
 }
+
