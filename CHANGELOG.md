@@ -1,3 +1,6 @@
+## 0.10.1
+- enhance: 缺失的城市信息
+
 ## 0.9.0
 - fix: 公交路线空判断
 - enhance: [breaking change] Poi使用同步返回
