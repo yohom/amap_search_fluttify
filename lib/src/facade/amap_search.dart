@@ -88,6 +88,7 @@ class AmapSearch {
         // 设置分页信息
         await request.set_page(page);
         await request.set_offset(pageSize);
+        await request.set_requireExtension(true);
 
         // 开始搜索
         await _iosSearch.AMapPOIKeywordsSearch(request);
@@ -179,6 +180,7 @@ class AmapSearch {
         // 设置分页信息
         await request.set_page(page);
         await request.set_offset(pageSize);
+        await request.set_requireExtension(true);
 
         // 开始搜索
         await _iosSearch.AMapPOIAroundSearch(request);
