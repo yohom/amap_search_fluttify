@@ -201,6 +201,15 @@ class ReGeocode with _ToFutureString {
     );
   }
 
+  /// 邮政
+  Future<String> get adCode {
+    return platform(
+      android: (pool) => _androidModel.getAdCode(),
+      ios: (pool) =>
+          _iosModel.get_addressComponent().then((it) => it.get_adcode()),
+    );
+  }
+
   /// 区域名称
   Future<String> get districtName {
     return platform(
