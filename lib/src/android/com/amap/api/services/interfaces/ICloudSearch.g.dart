@@ -35,7 +35,7 @@ mixin com_amap_api_services_interfaces_ICloudSearch on java_lang_Object {
   
   
     // handle native call
-    MethodChannel('com.amap.api.services.cloud.CloudSearch.OnCloudSearchListener::Callback')
+    MethodChannel('com.amap.api.services.interfaces.ICloudSearch::setOnCloudSearchListener::Callback')
         .setMethodCallHandler((methodCall) async {
           final args = methodCall.arguments as Map;
           switch (methodCall.method) {

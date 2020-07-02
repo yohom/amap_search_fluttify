@@ -57,7 +57,7 @@ class AMapNearbySearchRequest extends AMapSearchObject with NSCoding, NSCopying 
   Future<AMapNearbySearchType> get_searchType() async {
     final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapNearbySearchRequest::get_searchType", {'refId': refId});
   
-    return AMapNearbySearchType.values[__result__];
+    return (__result__ as int).toAMapNearbySearchType();
   }
   
   Future<int> get_timeRange() async {
@@ -130,7 +130,7 @@ extension AMapNearbySearchRequest_Batch on List<AMapNearbySearchRequest> {
   
   Future<List<AMapNearbySearchType>> get_searchType_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapNearbySearchRequest::get_searchType_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => AMapNearbySearchType.values[__result__]).toList();
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as int).toAMapNearbySearchType()).toList();
   
     return typedResult;
   }

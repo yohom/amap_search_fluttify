@@ -68,7 +68,7 @@ class com_amap_api_services_busline_BusLineQuery extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_services_busline_BusLineQuery_SearchType.values[__result__];
+      final __return__ = (__result__ as int).tocom_amap_api_services_busline_BusLineQuery_SearchType();
     
       return __return__;
     }
@@ -274,7 +274,7 @@ class com_amap_api_services_busline_BusLineQuery extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineQuery::setCategory', {"var1": var1.index + 0, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineQuery::setCategory', {"var1": var1.toValue(), "refId": refId});
   
   
     // handle native call
@@ -365,7 +365,7 @@ extension com_amap_api_services_busline_BusLineQuery_Batch on List<com_amap_api_
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_amap_api_services_busline_BusLineQuery_SearchType.values[__result__]).toList();
+      final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as int).tocom_amap_api_services_busline_BusLineQuery_SearchType()).toList();
     
       return typedResult;
     }
@@ -538,7 +538,7 @@ extension com_amap_api_services_busline_BusLineQuery_Batch on List<com_amap_api_
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineQuery::setCategory_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__].index, "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineQuery::setCategory_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__].toValue(), "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object

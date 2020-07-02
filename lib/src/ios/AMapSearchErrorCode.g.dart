@@ -47,3 +47,102 @@ enum AMapSearchErrorCode {
   AMapSearchErrorShareLicenseExpired /* 4000 */,
   AMapSearchErrorShareFailed /* 4001 */
 }
+
+extension AMapSearchErrorCodeToX on AMapSearchErrorCode {
+  int toValue() {
+    switch (this) {
+      case AMapSearchErrorCode.AMapSearchErrorOK: return 1000;
+      case AMapSearchErrorCode.AMapSearchErrorInvalidSignature: return 1001;
+      case AMapSearchErrorCode.AMapSearchErrorInvalidUserKey: return 1002;
+      case AMapSearchErrorCode.AMapSearchErrorServiceNotAvailable: return 1003;
+      case AMapSearchErrorCode.AMapSearchErrorDailyQueryOverLimit: return 1004;
+      case AMapSearchErrorCode.AMapSearchErrorTooFrequently: return 1005;
+      case AMapSearchErrorCode.AMapSearchErrorInvalidUserIP: return 1006;
+      case AMapSearchErrorCode.AMapSearchErrorInvalidUserDomain: return 1007;
+      case AMapSearchErrorCode.AMapSearchErrorInvalidUserSCode: return 1008;
+      case AMapSearchErrorCode.AMapSearchErrorUserKeyNotMatch: return 1009;
+      case AMapSearchErrorCode.AMapSearchErrorIPQueryOverLimit: return 1010;
+      case AMapSearchErrorCode.AMapSearchErrorNotSupportHttps: return 1011;
+      case AMapSearchErrorCode.AMapSearchErrorInsufficientPrivileges: return 1012;
+      case AMapSearchErrorCode.AMapSearchErrorUserKeyRecycled: return 1013;
+      case AMapSearchErrorCode.AMapSearchErrorInvalidResponse: return 1100;
+      case AMapSearchErrorCode.AMapSearchErrorInvalidEngineData: return 1101;
+      case AMapSearchErrorCode.AMapSearchErrorConnectTimeout: return 1102;
+      case AMapSearchErrorCode.AMapSearchErrorReturnTimeout: return 1103;
+      case AMapSearchErrorCode.AMapSearchErrorInvalidParams: return 1200;
+      case AMapSearchErrorCode.AMapSearchErrorMissingRequiredParams: return 1201;
+      case AMapSearchErrorCode.AMapSearchErrorIllegalRequest: return 1202;
+      case AMapSearchErrorCode.AMapSearchErrorServiceUnknown: return 1203;
+      case AMapSearchErrorCode.AMapSearchErrorClientUnknown: return 1800;
+      case AMapSearchErrorCode.AMapSearchErrorInvalidProtocol: return 1801;
+      case AMapSearchErrorCode.AMapSearchErrorTimeOut: return 1802;
+      case AMapSearchErrorCode.AMapSearchErrorBadURL: return 1803;
+      case AMapSearchErrorCode.AMapSearchErrorCannotFindHost: return 1804;
+      case AMapSearchErrorCode.AMapSearchErrorCannotConnectToHost: return 1805;
+      case AMapSearchErrorCode.AMapSearchErrorNotConnectedToInternet: return 1806;
+      case AMapSearchErrorCode.AMapSearchErrorCancelled: return 1807;
+      case AMapSearchErrorCode.AMapSearchErrorTableIDNotExist: return 2000;
+      case AMapSearchErrorCode.AMapSearchErrorIDNotExist: return 2001;
+      case AMapSearchErrorCode.AMapSearchErrorServiceMaintenance: return 2002;
+      case AMapSearchErrorCode.AMapSearchErrorEngineTableIDNotExist: return 2003;
+      case AMapSearchErrorCode.AMapSearchErrorInvalidNearbyUserID: return 2100;
+      case AMapSearchErrorCode.AMapSearchErrorNearbyKeyNotBind: return 2101;
+      case AMapSearchErrorCode.AMapSearchErrorOutOfService: return 3000;
+      case AMapSearchErrorCode.AMapSearchErrorNoRoadsNearby: return 3001;
+      case AMapSearchErrorCode.AMapSearchErrorRouteFailed: return 3002;
+      case AMapSearchErrorCode.AMapSearchErrorOverDirectionRange: return 3003;
+      case AMapSearchErrorCode.AMapSearchErrorShareLicenseExpired: return 4000;
+      case AMapSearchErrorCode.AMapSearchErrorShareFailed: return 4001;
+    }
+  }
+}
+
+extension AMapSearchErrorCodeFromX on int {
+  AMapSearchErrorCode toAMapSearchErrorCode() {
+    switch (this) {
+      case 1000: return AMapSearchErrorCode.AMapSearchErrorOK;
+      case 1001: return AMapSearchErrorCode.AMapSearchErrorInvalidSignature;
+      case 1002: return AMapSearchErrorCode.AMapSearchErrorInvalidUserKey;
+      case 1003: return AMapSearchErrorCode.AMapSearchErrorServiceNotAvailable;
+      case 1004: return AMapSearchErrorCode.AMapSearchErrorDailyQueryOverLimit;
+      case 1005: return AMapSearchErrorCode.AMapSearchErrorTooFrequently;
+      case 1006: return AMapSearchErrorCode.AMapSearchErrorInvalidUserIP;
+      case 1007: return AMapSearchErrorCode.AMapSearchErrorInvalidUserDomain;
+      case 1008: return AMapSearchErrorCode.AMapSearchErrorInvalidUserSCode;
+      case 1009: return AMapSearchErrorCode.AMapSearchErrorUserKeyNotMatch;
+      case 1010: return AMapSearchErrorCode.AMapSearchErrorIPQueryOverLimit;
+      case 1011: return AMapSearchErrorCode.AMapSearchErrorNotSupportHttps;
+      case 1012: return AMapSearchErrorCode.AMapSearchErrorInsufficientPrivileges;
+      case 1013: return AMapSearchErrorCode.AMapSearchErrorUserKeyRecycled;
+      case 1100: return AMapSearchErrorCode.AMapSearchErrorInvalidResponse;
+      case 1101: return AMapSearchErrorCode.AMapSearchErrorInvalidEngineData;
+      case 1102: return AMapSearchErrorCode.AMapSearchErrorConnectTimeout;
+      case 1103: return AMapSearchErrorCode.AMapSearchErrorReturnTimeout;
+      case 1200: return AMapSearchErrorCode.AMapSearchErrorInvalidParams;
+      case 1201: return AMapSearchErrorCode.AMapSearchErrorMissingRequiredParams;
+      case 1202: return AMapSearchErrorCode.AMapSearchErrorIllegalRequest;
+      case 1203: return AMapSearchErrorCode.AMapSearchErrorServiceUnknown;
+      case 1800: return AMapSearchErrorCode.AMapSearchErrorClientUnknown;
+      case 1801: return AMapSearchErrorCode.AMapSearchErrorInvalidProtocol;
+      case 1802: return AMapSearchErrorCode.AMapSearchErrorTimeOut;
+      case 1803: return AMapSearchErrorCode.AMapSearchErrorBadURL;
+      case 1804: return AMapSearchErrorCode.AMapSearchErrorCannotFindHost;
+      case 1805: return AMapSearchErrorCode.AMapSearchErrorCannotConnectToHost;
+      case 1806: return AMapSearchErrorCode.AMapSearchErrorNotConnectedToInternet;
+      case 1807: return AMapSearchErrorCode.AMapSearchErrorCancelled;
+      case 2000: return AMapSearchErrorCode.AMapSearchErrorTableIDNotExist;
+      case 2001: return AMapSearchErrorCode.AMapSearchErrorIDNotExist;
+      case 2002: return AMapSearchErrorCode.AMapSearchErrorServiceMaintenance;
+      case 2003: return AMapSearchErrorCode.AMapSearchErrorEngineTableIDNotExist;
+      case 2100: return AMapSearchErrorCode.AMapSearchErrorInvalidNearbyUserID;
+      case 2101: return AMapSearchErrorCode.AMapSearchErrorNearbyKeyNotBind;
+      case 3000: return AMapSearchErrorCode.AMapSearchErrorOutOfService;
+      case 3001: return AMapSearchErrorCode.AMapSearchErrorNoRoadsNearby;
+      case 3002: return AMapSearchErrorCode.AMapSearchErrorRouteFailed;
+      case 3003: return AMapSearchErrorCode.AMapSearchErrorOverDirectionRange;
+      case 4000: return AMapSearchErrorCode.AMapSearchErrorShareLicenseExpired;
+      case 4001: return AMapSearchErrorCode.AMapSearchErrorShareFailed;
+      default: return AMapSearchErrorCode.values[this + 1000];
+    }
+  }
+}

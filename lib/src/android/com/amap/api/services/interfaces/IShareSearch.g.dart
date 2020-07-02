@@ -35,7 +35,7 @@ mixin com_amap_api_services_interfaces_IShareSearch on java_lang_Object {
   
   
     // handle native call
-    MethodChannel('com.amap.api.services.share.ShareSearch.OnShareSearchListener::Callback')
+    MethodChannel('com.amap.api.services.interfaces.IShareSearch::setOnShareSearchListener::Callback')
         .setMethodCallHandler((methodCall) async {
           final args = methodCall.arguments as Map;
           switch (methodCall.method) {

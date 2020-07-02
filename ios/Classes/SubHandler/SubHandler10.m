@@ -13,6 +13,7 @@ extern BOOL enableLog;
 
 @implementation AmapSearchFluttifyPlugin (SubHandler10)
 - (NSDictionary<NSString*, Handler>*) getSubHandler10 {
+    __weak __typeof(self)weakSelf = self;
     return @{
         @"RefClass::isKindOfAMapBusLineNameSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象

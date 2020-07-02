@@ -31,40 +31,43 @@ public class SubHandler0 {
     public static Map<String, Handler> getSubHandler(BinaryMessenger messenger) {
         return new HashMap<String, Handler>() {{
             // getter
-            put("com.amap.api.services.route.DistanceItem::get_ERROR_CODE_NO_DRIVE", (__args__, __methodResult__) -> {
-                // ref object
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.DistanceItem ref = (com.amap.api.services.route.DistanceItem) getHEAP().get(refId);
+            put("com.amap.api.services.route.DistanceItem::get_ERROR_CODE_NO_DRIVE", (__rawArgs__, __methodResult__) -> {
+               Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
             
-                int result = ref.ERROR_CODE_NO_DRIVE;
+               // ref object
+               com.amap.api.services.route.DistanceItem ref = (com.amap.api.services.route.DistanceItem) getHEAP().get((int) __args__.get("refId"));
             
+               int __result__ = ref.ERROR_CODE_NO_DRIVE;
             
+               int jsonableResult = __result__;
             
-                __methodResult__.success(result);
+                __methodResult__.success(jsonableResult);
             });
             // getter
-            put("com.amap.api.services.route.DistanceItem::get_ERROR_CODE_TOO_FAR", (__args__, __methodResult__) -> {
-                // ref object
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.DistanceItem ref = (com.amap.api.services.route.DistanceItem) getHEAP().get(refId);
+            put("com.amap.api.services.route.DistanceItem::get_ERROR_CODE_TOO_FAR", (__rawArgs__, __methodResult__) -> {
+               Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
             
-                int result = ref.ERROR_CODE_TOO_FAR;
+               // ref object
+               com.amap.api.services.route.DistanceItem ref = (com.amap.api.services.route.DistanceItem) getHEAP().get((int) __args__.get("refId"));
             
+               int __result__ = ref.ERROR_CODE_TOO_FAR;
             
+               int jsonableResult = __result__;
             
-                __methodResult__.success(result);
+                __methodResult__.success(jsonableResult);
             });
             // getter
-            put("com.amap.api.services.route.DistanceItem::get_ERROR_CODE_NOT_IN_CHINA", (__args__, __methodResult__) -> {
-                // ref object
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.DistanceItem ref = (com.amap.api.services.route.DistanceItem) getHEAP().get(refId);
+            put("com.amap.api.services.route.DistanceItem::get_ERROR_CODE_NOT_IN_CHINA", (__rawArgs__, __methodResult__) -> {
+               Map<String, Object> __args__ = (Map<String, Object>) __rawArgs__;
             
-                int result = ref.ERROR_CODE_NOT_IN_CHINA;
+               // ref object
+               com.amap.api.services.route.DistanceItem ref = (com.amap.api.services.route.DistanceItem) getHEAP().get((int) __args__.get("refId"));
             
+               int __result__ = ref.ERROR_CODE_NOT_IN_CHINA;
             
+               int jsonableResult = __result__;
             
-                __methodResult__.success(result);
+                __methodResult__.success(jsonableResult);
             });
             // getter
             put("com.amap.api.services.route.DistanceItem::get_ERROR_CODE_NO_DRIVE_batch", (__argsBatch__, __methodResult__) -> {
@@ -808,7 +811,7 @@ public class SubHandler0 {
                 try {
                     ref.setTrafficSearchListener(new com.amap.api.services.traffic.TrafficSearch.OnTrafficSearchListener() {
                         // method channel
-                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.traffic.TrafficSearch.OnTrafficSearchListener::Callback");
+                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.traffic.TrafficSearch::setTrafficSearchListener::Callback");
                         android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
             
                         // call dart method
@@ -2731,7 +2734,7 @@ public class SubHandler0 {
                 try {
                     ref.setOnBusStationSearchListener(new com.amap.api.services.busline.BusStationSearch.OnBusStationSearchListener() {
                         // method channel
-                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.busline.BusStationSearch.OnBusStationSearchListener::Callback");
+                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.busline.BusStationSearch::setOnBusStationSearchListener::Callback");
                         android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
             
                         // call dart method
@@ -2941,7 +2944,7 @@ public class SubHandler0 {
                 try {
                     ref.setOnBusLineSearchListener(new com.amap.api.services.busline.BusLineSearch.OnBusLineSearchListener() {
                         // method channel
-                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.busline.BusLineSearch.OnBusLineSearchListener::Callback");
+                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.busline.BusLineSearch::setOnBusLineSearchListener::Callback");
                         android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
             
                         // call dart method

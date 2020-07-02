@@ -35,7 +35,7 @@ mixin com_amap_api_services_interfaces_INearbySearch on java_lang_Object {
   
   
     // handle native call
-    MethodChannel('com.amap.api.services.nearby.NearbySearch.NearbyListener::Callback')
+    MethodChannel('com.amap.api.services.interfaces.INearbySearch::addNearbyListener::Callback')
         .setMethodCallHandler((methodCall) async {
           final args = methodCall.arguments as Map;
           switch (methodCall.method) {
@@ -93,7 +93,7 @@ mixin com_amap_api_services_interfaces_INearbySearch on java_lang_Object {
   
   
     // handle native call
-    MethodChannel('com.amap.api.services.nearby.NearbySearch.NearbyListener::Callback')
+    MethodChannel('com.amap.api.services.interfaces.INearbySearch::removeNearbyListener::Callback')
         .setMethodCallHandler((methodCall) async {
           final args = methodCall.arguments as Map;
           switch (methodCall.method) {
@@ -199,7 +199,7 @@ mixin com_amap_api_services_interfaces_INearbySearch on java_lang_Object {
   
   
     // handle native call
-    MethodChannel('com.amap.api.services.nearby.UploadInfoCallback::Callback')
+    MethodChannel('com.amap.api.services.interfaces.INearbySearch::startUploadNearbyInfoAuto::Callback')
         .setMethodCallHandler((methodCall) async {
           final args = methodCall.arguments as Map;
           switch (methodCall.method) {

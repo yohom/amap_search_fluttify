@@ -63,7 +63,7 @@ class com_amap_api_services_route_DistanceSearch extends java_lang_Object  {
   
   
     // handle native call
-    MethodChannel('com.amap.api.services.route.DistanceSearch.OnDistanceSearchListener::Callback')
+    MethodChannel('com.amap.api.services.route.DistanceSearch::setDistanceSearchListener::Callback')
         .setMethodCallHandler((methodCall) async {
           final args = methodCall.arguments as Map;
           switch (methodCall.method) {

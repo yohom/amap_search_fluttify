@@ -83,7 +83,7 @@ mixin com_amap_api_services_interfaces_IGeocodeSearch on java_lang_Object {
   
   
     // handle native call
-    MethodChannel('com.amap.api.services.geocoder.GeocodeSearch.OnGeocodeSearchListener::Callback')
+    MethodChannel('com.amap.api.services.interfaces.IGeocodeSearch::setOnGeocodeSearchListener::Callback')
         .setMethodCallHandler((methodCall) async {
           final args = methodCall.arguments as Map;
           switch (methodCall.method) {

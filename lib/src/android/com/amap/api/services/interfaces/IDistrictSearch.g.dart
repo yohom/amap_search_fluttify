@@ -131,7 +131,7 @@ mixin com_amap_api_services_interfaces_IDistrictSearch on java_lang_Object {
   
   
     // handle native call
-    MethodChannel('com.amap.api.services.district.DistrictSearch.OnDistrictSearchListener::Callback')
+    MethodChannel('com.amap.api.services.interfaces.IDistrictSearch::setOnDistrictSearchListener::Callback')
         .setMethodCallHandler((methodCall) async {
           final args = methodCall.arguments as Map;
           switch (methodCall.method) {

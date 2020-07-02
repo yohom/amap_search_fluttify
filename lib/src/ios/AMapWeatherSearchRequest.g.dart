@@ -51,7 +51,7 @@ class AMapWeatherSearchRequest extends AMapSearchObject with NSCoding, NSCopying
   Future<AMapWeatherType> get_type() async {
     final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapWeatherSearchRequest::get_type", {'refId': refId});
   
-    return AMapWeatherType.values[__result__];
+    return (__result__ as int).toAMapWeatherType();
   }
   
   //endregion
@@ -87,7 +87,7 @@ extension AMapWeatherSearchRequest_Batch on List<AMapWeatherSearchRequest> {
   
   Future<List<AMapWeatherType>> get_type_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapWeatherSearchRequest::get_type_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => AMapWeatherType.values[__result__]).toList();
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as int).toAMapWeatherType()).toList();
   
     return typedResult;
   }

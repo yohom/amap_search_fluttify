@@ -111,7 +111,7 @@ class com_amap_api_services_geocoder_GeocodeSearch extends java_lang_Object  {
   
   
     // handle native call
-    MethodChannel('com.amap.api.services.geocoder.GeocodeSearch.OnGeocodeSearchListener::Callback')
+    MethodChannel('com.amap.api.services.geocoder.GeocodeSearch::setOnGeocodeSearchListener::Callback')
         .setMethodCallHandler((methodCall) async {
           final args = methodCall.arguments as Map;
           switch (methodCall.method) {

@@ -62,7 +62,7 @@ class com_amap_api_services_traffic_TrafficSearch extends java_lang_Object  {
   
   
     // handle native call
-    MethodChannel('com.amap.api.services.traffic.TrafficSearch.OnTrafficSearchListener::Callback')
+    MethodChannel('com.amap.api.services.traffic.TrafficSearch::setTrafficSearchListener::Callback')
         .setMethodCallHandler((methodCall) async {
           final args = methodCall.arguments as Map;
           switch (methodCall.method) {

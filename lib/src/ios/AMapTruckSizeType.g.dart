@@ -9,3 +9,26 @@ enum AMapTruckSizeType {
   AMapTruckSizeTypeMedium /* 3 */,
   AMapTruckSizeTypeHeavy /* 4 */
 }
+
+extension AMapTruckSizeTypeToX on AMapTruckSizeType {
+  int toValue() {
+    switch (this) {
+      case AMapTruckSizeType.AMapTruckSizeTypeMini: return 1;
+      case AMapTruckSizeType.AMapTruckSizeTypeLight: return 2;
+      case AMapTruckSizeType.AMapTruckSizeTypeMedium: return 3;
+      case AMapTruckSizeType.AMapTruckSizeTypeHeavy: return 4;
+    }
+  }
+}
+
+extension AMapTruckSizeTypeFromX on int {
+  AMapTruckSizeType toAMapTruckSizeType() {
+    switch (this) {
+      case 1: return AMapTruckSizeType.AMapTruckSizeTypeMini;
+      case 2: return AMapTruckSizeType.AMapTruckSizeTypeLight;
+      case 3: return AMapTruckSizeType.AMapTruckSizeTypeMedium;
+      case 4: return AMapTruckSizeType.AMapTruckSizeTypeHeavy;
+      default: return AMapTruckSizeType.values[this + 1];
+    }
+  }
+}

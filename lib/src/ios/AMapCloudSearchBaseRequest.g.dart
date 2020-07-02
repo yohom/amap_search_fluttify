@@ -63,7 +63,7 @@ class AMapCloudSearchBaseRequest extends AMapSearchObject with NSCoding, NSCopyi
   Future<AMapCloudSortType> get_sortType() async {
     final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudSearchBaseRequest::get_sortType", {'refId': refId});
   
-    return AMapCloudSortType.values[__result__];
+    return (__result__ as int).toAMapCloudSortType();
   }
   
   Future<int> get_offset() async {
@@ -149,7 +149,7 @@ extension AMapCloudSearchBaseRequest_Batch on List<AMapCloudSearchBaseRequest> {
   
   Future<List<AMapCloudSortType>> get_sortType_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudSearchBaseRequest::get_sortType_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => AMapCloudSortType.values[__result__]).toList();
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as int).toAMapCloudSortType()).toList();
   
     return typedResult;
   }
