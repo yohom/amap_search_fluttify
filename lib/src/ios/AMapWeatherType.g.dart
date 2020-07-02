@@ -5,5 +5,23 @@
 
 enum AMapWeatherType {
   AMapWeatherTypeLive /* 1 */,
-  AMapWeatherTypeForecast /* 0 */
+  AMapWeatherTypeForecast /* null */
+}
+
+extension AMapWeatherTypeToX on AMapWeatherType {
+  int toValue() {
+    switch (this) {
+      case AMapWeatherType.AMapWeatherTypeLive: return 1;
+      case AMapWeatherType.AMapWeatherTypeForecast: return AMapWeatherType.AMapWeatherTypeForecast.index + 1;
+    }
+  }
+}
+
+extension AMapWeatherTypeFromX on int {
+  AMapWeatherType toAMapWeatherType() {
+    switch (this) {
+      case 1: return AMapWeatherType.AMapWeatherTypeLive;
+      default: return AMapWeatherType.values[this + 1];
+    }
+  }
 }

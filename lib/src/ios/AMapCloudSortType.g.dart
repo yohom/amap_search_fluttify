@@ -7,3 +7,22 @@ enum AMapCloudSortType {
   AMapCloudSortTypeDESC /* 0 */,
   AMapCloudSortTypeASC /* 1 */
 }
+
+extension AMapCloudSortTypeToX on AMapCloudSortType {
+  int toValue() {
+    switch (this) {
+      case AMapCloudSortType.AMapCloudSortTypeDESC: return 0;
+      case AMapCloudSortType.AMapCloudSortTypeASC: return 1;
+    }
+  }
+}
+
+extension AMapCloudSortTypeFromX on int {
+  AMapCloudSortType toAMapCloudSortType() {
+    switch (this) {
+      case 0: return AMapCloudSortType.AMapCloudSortTypeDESC;
+      case 1: return AMapCloudSortType.AMapCloudSortTypeASC;
+      default: return AMapCloudSortType.values[this + 0];
+    }
+  }
+}

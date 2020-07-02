@@ -70,7 +70,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearch extends java_lang_Obje
   
   
     // handle native call
-    MethodChannel('com.amap.api.services.routepoisearch.RoutePOISearch.OnRoutePOISearchListener::Callback')
+    MethodChannel('com.amap.api.services.routepoisearch.RoutePOISearch::setPoiSearchListener::Callback')
         .setMethodCallHandler((methodCall) async {
           final args = methodCall.arguments as Map;
           switch (methodCall.method) {

@@ -107,7 +107,7 @@ mixin com_amap_api_services_interfaces_IWeatherSearch on java_lang_Object {
   
   
     // handle native call
-    MethodChannel('com.amap.api.services.weather.WeatherSearch.OnWeatherSearchListener::Callback')
+    MethodChannel('com.amap.api.services.interfaces.IWeatherSearch::setOnWeatherSearchListener::Callback')
         .setMethodCallHandler((methodCall) async {
           final args = methodCall.arguments as Map;
           switch (methodCall.method) {

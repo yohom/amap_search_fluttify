@@ -141,7 +141,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
   
   
     // handle native call
-    MethodChannel('com.amap.api.services.route.RouteSearch.OnRouteSearchListener::Callback')
+    MethodChannel('com.amap.api.services.route.RouteSearch::setRouteSearchListener::Callback')
         .setMethodCallHandler((methodCall) async {
           final args = methodCall.arguments as Map;
           switch (methodCall.method) {
@@ -208,7 +208,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
   
   
     // handle native call
-    MethodChannel('com.amap.api.services.route.RouteSearch.OnTruckRouteSearchListener::Callback')
+    MethodChannel('com.amap.api.services.route.RouteSearch::setOnTruckRouteSearchListener::Callback')
         .setMethodCallHandler((methodCall) async {
           final args = methodCall.arguments as Map;
           switch (methodCall.method) {
@@ -248,7 +248,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
   
   
     // handle native call
-    MethodChannel('com.amap.api.services.route.RouteSearch.OnRoutePlanSearchListener::Callback')
+    MethodChannel('com.amap.api.services.route.RouteSearch::setOnRoutePlanSearchListener::Callback')
         .setMethodCallHandler((methodCall) async {
           final args = methodCall.arguments as Map;
           switch (methodCall.method) {

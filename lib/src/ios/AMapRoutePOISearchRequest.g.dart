@@ -57,7 +57,7 @@ class AMapRoutePOISearchRequest extends AMapSearchObject with NSCoding, NSCopyin
   Future<AMapRoutePOISearchType> get_searchType() async {
     final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoutePOISearchRequest::get_searchType", {'refId': refId});
   
-    return AMapRoutePOISearchType.values[__result__];
+    return (__result__ as int).toAMapRoutePOISearchType();
   }
   
   Future<int> get_strategy() async {
@@ -154,7 +154,7 @@ extension AMapRoutePOISearchRequest_Batch on List<AMapRoutePOISearchRequest> {
   
   Future<List<AMapRoutePOISearchType>> get_searchType_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoutePOISearchRequest::get_searchType_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => AMapRoutePOISearchType.values[__result__]).toList();
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as int).toAMapRoutePOISearchType()).toList();
   
     return typedResult;
   }

@@ -13,6 +13,7 @@ extern BOOL enableLog;
 
 @implementation AmapSearchFluttifyPlugin (SubHandler9)
 - (NSDictionary<NSString*, Handler>*) getSubHandler9 {
+    __weak __typeof(self)weakSelf = self;
     return @{
         @"AMapGeocode::set_level_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {

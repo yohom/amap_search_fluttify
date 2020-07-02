@@ -7,3 +7,22 @@ enum AMapSearchLanguage {
   AMapSearchLanguageZhCN /* 0 */,
   AMapSearchLanguageEn /* 1 */
 }
+
+extension AMapSearchLanguageToX on AMapSearchLanguage {
+  int toValue() {
+    switch (this) {
+      case AMapSearchLanguage.AMapSearchLanguageZhCN: return 0;
+      case AMapSearchLanguage.AMapSearchLanguageEn: return 1;
+    }
+  }
+}
+
+extension AMapSearchLanguageFromX on int {
+  AMapSearchLanguage toAMapSearchLanguage() {
+    switch (this) {
+      case 0: return AMapSearchLanguage.AMapSearchLanguageZhCN;
+      case 1: return AMapSearchLanguage.AMapSearchLanguageEn;
+      default: return AMapSearchLanguage.values[this + 0];
+    }
+  }
+}

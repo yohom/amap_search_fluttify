@@ -83,7 +83,7 @@ mixin com_amap_api_services_interfaces_IDistanceSearch on java_lang_Object {
   
   
     // handle native call
-    MethodChannel('com.amap.api.services.route.DistanceSearch.OnDistanceSearchListener::Callback')
+    MethodChannel('com.amap.api.services.interfaces.IDistanceSearch::setDistanceSearchListener::Callback')
         .setMethodCallHandler((methodCall) async {
           final args = methodCall.arguments as Map;
           switch (methodCall.method) {

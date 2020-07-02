@@ -63,7 +63,7 @@ class com_amap_api_services_poisearch_PoiSearch extends java_lang_Object  {
   
   
     // handle native call
-    MethodChannel('com.amap.api.services.poisearch.PoiSearch.OnPoiSearchListener::Callback')
+    MethodChannel('com.amap.api.services.poisearch.PoiSearch::setOnPoiSearchListener::Callback')
         .setMethodCallHandler((methodCall) async {
           final args = methodCall.arguments as Map;
           switch (methodCall.method) {

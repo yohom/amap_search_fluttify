@@ -13,6 +13,7 @@ extern BOOL enableLog;
 
 @implementation AmapSearchFluttifyPlugin (SubHandler6)
 - (NSDictionary<NSString*, Handler>*) getSubHandler6 {
+    __weak __typeof(self)weakSelf = self;
     return @{
         @"AMapFutureRouteSearchRequest::set_parentId": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // print log

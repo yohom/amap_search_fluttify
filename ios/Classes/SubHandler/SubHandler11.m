@@ -13,6 +13,7 @@ extern BOOL enableLog;
 
 @implementation AmapSearchFluttifyPlugin (SubHandler11)
 - (NSDictionary<NSString*, Handler>*) getSubHandler11 {
+    __weak __typeof(self)weakSelf = self;
     return @{
         @"ObjectFactory::create_batchAMapReGeocodeSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];

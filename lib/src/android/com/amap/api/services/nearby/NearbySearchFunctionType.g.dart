@@ -4,6 +4,24 @@
 //////////////////////////////////////////////////////////
 
 enum com_amap_api_services_nearby_NearbySearchFunctionType {
-  DISTANCE_SEARCH /* 0 */,
-  DRIVING_DISTANCE_SEARCH /* 0 */
+  DISTANCE_SEARCH /* null */,
+  DRIVING_DISTANCE_SEARCH /* null */
+}
+
+extension com_amap_api_services_nearby_NearbySearchFunctionTypeToX on com_amap_api_services_nearby_NearbySearchFunctionType {
+  int toValue() {
+    switch (this) {
+      case com_amap_api_services_nearby_NearbySearchFunctionType.DISTANCE_SEARCH: return com_amap_api_services_nearby_NearbySearchFunctionType.DISTANCE_SEARCH.index + 0;
+      case com_amap_api_services_nearby_NearbySearchFunctionType.DRIVING_DISTANCE_SEARCH: return com_amap_api_services_nearby_NearbySearchFunctionType.DRIVING_DISTANCE_SEARCH.index + 0;
+    }
+  }
+}
+
+extension com_amap_api_services_nearby_NearbySearchFunctionTypeFromX on int {
+  com_amap_api_services_nearby_NearbySearchFunctionType tocom_amap_api_services_nearby_NearbySearchFunctionType() {
+    switch (this) {
+      
+      default: return com_amap_api_services_nearby_NearbySearchFunctionType.values[this + 0];
+    }
+  }
 }

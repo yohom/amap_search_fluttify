@@ -13,6 +13,7 @@ extern BOOL enableLog;
 
 @implementation AmapSearchFluttifyPlugin (SubHandler1)
 - (NSDictionary<NSString*, Handler>*) getSubHandler1 {
+    __weak __typeof(self)weakSelf = self;
     return @{
         @"AMapRoadTrafficCircleSearchRequest::get_location": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // print log

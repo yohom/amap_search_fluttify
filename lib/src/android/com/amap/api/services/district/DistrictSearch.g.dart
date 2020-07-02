@@ -182,7 +182,7 @@ class com_amap_api_services_district_DistrictSearch extends java_lang_Object  {
   
   
     // handle native call
-    MethodChannel('com.amap.api.services.district.DistrictSearch.OnDistrictSearchListener::Callback')
+    MethodChannel('com.amap.api.services.district.DistrictSearch::setOnDistrictSearchListener::Callback')
         .setMethodCallHandler((methodCall) async {
           final args = methodCall.arguments as Map;
           switch (methodCall.method) {

@@ -35,7 +35,7 @@ mixin com_amap_api_services_interfaces_IRoutePOISearch on java_lang_Object {
   
   
     // handle native call
-    MethodChannel('com.amap.api.services.routepoisearch.RoutePOISearch.OnRoutePOISearchListener::Callback')
+    MethodChannel('com.amap.api.services.interfaces.IRoutePOISearch::setRoutePOISearchListener::Callback')
         .setMethodCallHandler((methodCall) async {
           final args = methodCall.arguments as Map;
           switch (methodCall.method) {

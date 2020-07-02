@@ -59,7 +59,7 @@ mixin com_amap_api_services_interfaces_IBusLineSearch on java_lang_Object {
   
   
     // handle native call
-    MethodChannel('com.amap.api.services.busline.BusLineSearch.OnBusLineSearchListener::Callback')
+    MethodChannel('com.amap.api.services.interfaces.IBusLineSearch::setOnBusLineSearchListener::Callback')
         .setMethodCallHandler((methodCall) async {
           final args = methodCall.arguments as Map;
           switch (methodCall.method) {

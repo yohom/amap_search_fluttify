@@ -7,3 +7,22 @@ enum AMapSearchCoordinateType {
   AMapSearchCoordinateTypeGPS /* 1 */,
   AMapSearchCoordinateTypeAMap /* 2 */
 }
+
+extension AMapSearchCoordinateTypeToX on AMapSearchCoordinateType {
+  int toValue() {
+    switch (this) {
+      case AMapSearchCoordinateType.AMapSearchCoordinateTypeGPS: return 1;
+      case AMapSearchCoordinateType.AMapSearchCoordinateTypeAMap: return 2;
+    }
+  }
+}
+
+extension AMapSearchCoordinateTypeFromX on int {
+  AMapSearchCoordinateType toAMapSearchCoordinateType() {
+    switch (this) {
+      case 1: return AMapSearchCoordinateType.AMapSearchCoordinateTypeGPS;
+      case 2: return AMapSearchCoordinateType.AMapSearchCoordinateTypeAMap;
+      default: return AMapSearchCoordinateType.values[this + 1];
+    }
+  }
+}

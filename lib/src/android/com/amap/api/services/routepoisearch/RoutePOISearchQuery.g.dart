@@ -159,7 +159,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearchQuery extends java_lang
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType.values[__result__];
+      final __return__ = (__result__ as int).tocom_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType();
     
       return __return__;
     }
@@ -324,7 +324,7 @@ extension com_amap_api_services_routepoisearch_RoutePOISearchQuery_Batch on List
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType.values[__result__]).toList();
+      final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as int).tocom_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType()).toList();
     
       return typedResult;
     }

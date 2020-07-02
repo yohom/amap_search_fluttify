@@ -110,7 +110,7 @@ class com_amap_api_services_help_Inputtips extends java_lang_Object  {
   
   
     // handle native call
-    MethodChannel('com.amap.api.services.help.Inputtips.InputtipsListener::Callback')
+    MethodChannel('com.amap.api.services.help.Inputtips::setInputtipsListener::Callback')
         .setMethodCallHandler((methodCall) async {
           final args = methodCall.arguments as Map;
           switch (methodCall.method) {

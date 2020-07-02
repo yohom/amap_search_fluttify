@@ -85,7 +85,7 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
   
   
     // handle native call
-    MethodChannel('com.amap.api.services.share.ShareSearch.OnShareSearchListener::Callback')
+    MethodChannel('com.amap.api.services.share.ShareSearch::setOnShareSearchListener::Callback')
         .setMethodCallHandler((methodCall) async {
           final args = methodCall.arguments as Map;
           switch (methodCall.method) {

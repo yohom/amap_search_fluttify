@@ -11,3 +11,30 @@ enum AMapRoutePOISearchType {
   AMapRoutePOISearchTypeGasAirStation /* 4 */,
   AMapRoutePOISearchTypeParkStation /* 5 */
 }
+
+extension AMapRoutePOISearchTypeToX on AMapRoutePOISearchType {
+  int toValue() {
+    switch (this) {
+      case AMapRoutePOISearchType.AMapRoutePOISearchTypeGasStation: return 0;
+      case AMapRoutePOISearchType.AMapRoutePOISearchTypeMaintenanceStation: return 1;
+      case AMapRoutePOISearchType.AMapRoutePOISearchTypeATM: return 2;
+      case AMapRoutePOISearchType.AMapRoutePOISearchTypeToilet: return 3;
+      case AMapRoutePOISearchType.AMapRoutePOISearchTypeGasAirStation: return 4;
+      case AMapRoutePOISearchType.AMapRoutePOISearchTypeParkStation: return 5;
+    }
+  }
+}
+
+extension AMapRoutePOISearchTypeFromX on int {
+  AMapRoutePOISearchType toAMapRoutePOISearchType() {
+    switch (this) {
+      case 0: return AMapRoutePOISearchType.AMapRoutePOISearchTypeGasStation;
+      case 1: return AMapRoutePOISearchType.AMapRoutePOISearchTypeMaintenanceStation;
+      case 2: return AMapRoutePOISearchType.AMapRoutePOISearchTypeATM;
+      case 3: return AMapRoutePOISearchType.AMapRoutePOISearchTypeToilet;
+      case 4: return AMapRoutePOISearchType.AMapRoutePOISearchTypeGasAirStation;
+      case 5: return AMapRoutePOISearchType.AMapRoutePOISearchTypeParkStation;
+      default: return AMapRoutePOISearchType.values[this + 0];
+    }
+  }
+}

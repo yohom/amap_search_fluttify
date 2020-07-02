@@ -86,7 +86,7 @@ class com_amap_api_services_busline_BusLineSearch extends java_lang_Object  {
   
   
     // handle native call
-    MethodChannel('com.amap.api.services.busline.BusLineSearch.OnBusLineSearchListener::Callback')
+    MethodChannel('com.amap.api.services.busline.BusLineSearch::setOnBusLineSearchListener::Callback')
         .setMethodCallHandler((methodCall) async {
           final args = methodCall.arguments as Map;
           switch (methodCall.method) {
