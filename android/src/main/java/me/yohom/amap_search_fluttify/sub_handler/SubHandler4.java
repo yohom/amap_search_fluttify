@@ -31,6 +31,341 @@ public class SubHandler4 {
     public static Map<String, Handler> getSubHandler(BinaryMessenger messenger) {
         return new HashMap<String, Handler>() {{
             // method
+            put("com.amap.api.services.routepoisearch.RoutePOISearchQuery::getRange", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                com.amap.api.services.routepoisearch.RoutePOISearchQuery ref = (com.amap.api.services.routepoisearch.RoutePOISearchQuery) getHEAP().get(refId);
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.routepoisearch.RoutePOISearchQuery@" + refId + "::getRange(" + "" + ")");
+                }
+            
+                // invoke native method
+                int __result__;
+                try {
+                    __result__ = ref.getRange();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                int jsonableResult = __result__;
+            
+                __methodResult__.success(jsonableResult);
+            });
+            // method
+            put("com.amap.api.services.routepoisearch.RoutePOISearchQuery::getPolylines", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                com.amap.api.services.routepoisearch.RoutePOISearchQuery ref = (com.amap.api.services.routepoisearch.RoutePOISearchQuery) getHEAP().get(refId);
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.routepoisearch.RoutePOISearchQuery@" + refId + "::getPolylines(" + "" + ")");
+                }
+            
+                // invoke native method
+                java.util.List<com.amap.api.services.core.LatLonPoint> __result__;
+                try {
+                    __result__ = ref.getPolylines();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                List<Integer> jsonableResult = null;
+                if (__result__ != null) {
+                    jsonableResult = new ArrayList<>();
+                    for (com.amap.api.services.core.LatLonPoint item : __result__) {
+                        getHEAP().put(System.identityHashCode(item), item);
+                        jsonableResult.add(System.identityHashCode(item));
+                    }
+                }
+            
+                __methodResult__.success(jsonableResult);
+            });
+            // method
+            put("com.amap.api.services.routepoisearch.RoutePOISearchQuery::clone", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                com.amap.api.services.routepoisearch.RoutePOISearchQuery ref = (com.amap.api.services.routepoisearch.RoutePOISearchQuery) getHEAP().get(refId);
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.routepoisearch.RoutePOISearchQuery@" + refId + "::clone(" + "" + ")");
+                }
+            
+                // invoke native method
+                com.amap.api.services.routepoisearch.RoutePOISearchQuery __result__;
+                try {
+                    __result__ = ref.clone();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                Integer jsonableResult = null;
+                if (__result__ != null) {
+                    jsonableResult = System.identityHashCode(__result__);
+                    getHEAP().put(jsonableResult, __result__);
+                }
+            
+                __methodResult__.success(jsonableResult);
+            });
+            // method
+            put("com.amap.api.services.cloud.CloudItem::getID", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                com.amap.api.services.cloud.CloudItem ref = (com.amap.api.services.cloud.CloudItem) getHEAP().get(refId);
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudItem@" + refId + "::getID(" + "" + ")");
+                }
+            
+                // invoke native method
+                String __result__;
+                try {
+                    __result__ = ref.getID();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                String jsonableResult = __result__;
+            
+                __methodResult__.success(jsonableResult);
+            });
+            // method
+            put("com.amap.api.services.cloud.CloudItem::getDistance", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                com.amap.api.services.cloud.CloudItem ref = (com.amap.api.services.cloud.CloudItem) getHEAP().get(refId);
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudItem@" + refId + "::getDistance(" + "" + ")");
+                }
+            
+                // invoke native method
+                int __result__;
+                try {
+                    __result__ = ref.getDistance();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                int jsonableResult = __result__;
+            
+                __methodResult__.success(jsonableResult);
+            });
+            // method
+            put("com.amap.api.services.cloud.CloudItem::setDistance", (__args__, __methodResult__) -> {
+                // args
+                // jsonable arg
+                int var1 = (int) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+                int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                com.amap.api.services.cloud.CloudItem ref = (com.amap.api.services.cloud.CloudItem) getHEAP().get(refId);
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudItem@" + refId + "::setDistance(" + var1 + ")");
+                }
+            
+                // invoke native method
+                try {
+                    ref.setDistance(var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                String jsonableResult = "success";
+            
+                __methodResult__.success(jsonableResult);
+            });
+            // method
+            put("com.amap.api.services.cloud.CloudItem::getTitle", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                com.amap.api.services.cloud.CloudItem ref = (com.amap.api.services.cloud.CloudItem) getHEAP().get(refId);
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudItem@" + refId + "::getTitle(" + "" + ")");
+                }
+            
+                // invoke native method
+                String __result__;
+                try {
+                    __result__ = ref.getTitle();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                String jsonableResult = __result__;
+            
+                __methodResult__.success(jsonableResult);
+            });
+            // method
+            put("com.amap.api.services.cloud.CloudItem::getSnippet", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                com.amap.api.services.cloud.CloudItem ref = (com.amap.api.services.cloud.CloudItem) getHEAP().get(refId);
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudItem@" + refId + "::getSnippet(" + "" + ")");
+                }
+            
+                // invoke native method
+                String __result__;
+                try {
+                    __result__ = ref.getSnippet();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                String jsonableResult = __result__;
+            
+                __methodResult__.success(jsonableResult);
+            });
+            // method
+            put("com.amap.api.services.cloud.CloudItem::getLatLonPoint", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                com.amap.api.services.cloud.CloudItem ref = (com.amap.api.services.cloud.CloudItem) getHEAP().get(refId);
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudItem@" + refId + "::getLatLonPoint(" + "" + ")");
+                }
+            
+                // invoke native method
+                com.amap.api.services.core.LatLonPoint __result__;
+                try {
+                    __result__ = ref.getLatLonPoint();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                Integer jsonableResult = null;
+                if (__result__ != null) {
+                    jsonableResult = System.identityHashCode(__result__);
+                    getHEAP().put(jsonableResult, __result__);
+                }
+            
+                __methodResult__.success(jsonableResult);
+            });
+            // method
+            put("com.amap.api.services.cloud.CloudItem::getCreatetime", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                com.amap.api.services.cloud.CloudItem ref = (com.amap.api.services.cloud.CloudItem) getHEAP().get(refId);
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudItem@" + refId + "::getCreatetime(" + "" + ")");
+                }
+            
+                // invoke native method
+                String __result__;
+                try {
+                    __result__ = ref.getCreatetime();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                String jsonableResult = __result__;
+            
+                __methodResult__.success(jsonableResult);
+            });
+            // method
             put("com.amap.api.services.cloud.CloudItem::setCreatetime", (__args__, __methodResult__) -> {
                 // args
                 // jsonable arg
@@ -493,8 +828,8 @@ public class SubHandler4 {
             put("com.amap.api.services.cloud.CloudSearch.Query::setBound", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.cloud.CloudSearch.SearchBound var1 = __var1__ != null ? (com.amap.api.services.cloud.CloudSearch.SearchBound) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.cloud.CloudSearch.SearchBound var1 = __var1RefId__ != null ? (com.amap.api.services.cloud.CloudSearch.SearchBound) getHEAP().get(__var1RefId__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -696,8 +1031,8 @@ public class SubHandler4 {
             put("com.amap.api.services.cloud.CloudSearch.Query::setSortingrules", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.cloud.CloudSearch.Sortingrules var1 = __var1__ != null ? (com.amap.api.services.cloud.CloudSearch.Sortingrules) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.cloud.CloudSearch.Sortingrules var1 = __var1RefId__ != null ? (com.amap.api.services.cloud.CloudSearch.Sortingrules) getHEAP().get(__var1RefId__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -765,8 +1100,8 @@ public class SubHandler4 {
             put("com.amap.api.services.cloud.CloudSearch.Query::queryEquals", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.cloud.CloudSearch.Query var1 = __var1__ != null ? (com.amap.api.services.cloud.CloudSearch.Query) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.cloud.CloudSearch.Query var1 = __var1RefId__ != null ? (com.amap.api.services.cloud.CloudSearch.Query) getHEAP().get(__var1RefId__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -835,13 +1170,13 @@ public class SubHandler4 {
             put("com.amap.api.services.cloud.CloudResult::createPagedResult", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var0__ = (Integer) ((Map<String, Object>) __args__).get("var0");
-                com.amap.api.services.cloud.CloudSearch.Query var0 = __var0__ != null ? (com.amap.api.services.cloud.CloudSearch.Query) getHEAP().get(__var0__) : null;
+                Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
+                com.amap.api.services.cloud.CloudSearch.Query var0 = __var0RefId__ != null ? (com.amap.api.services.cloud.CloudSearch.Query) getHEAP().get(__var0RefId__) : null;
                 // jsonable arg
                 int var1 = (int) ((Map<String, Object>) __args__).get("var1");
                 // ref arg
-                Integer __var2__ = (Integer) ((Map<String, Object>) __args__).get("var2");
-                com.amap.api.services.cloud.CloudSearch.SearchBound var2 = __var2__ != null ? (com.amap.api.services.cloud.CloudSearch.SearchBound) getHEAP().get(__var2__) : null;
+                Integer __var2RefId__ = (Integer) ((Map<String, Object>) __args__).get("var2");
+                com.amap.api.services.cloud.CloudSearch.SearchBound var2 = __var2RefId__ != null ? (com.amap.api.services.cloud.CloudSearch.SearchBound) getHEAP().get(__var2RefId__) : null;
                 // jsonable arg
                 int var3 = (int) ((Map<String, Object>) __args__).get("var3");
                 // list arg
@@ -1171,8 +1506,8 @@ public class SubHandler4 {
             put("com.amap.api.services.cloud.CloudSearch::searchCloudAsyn", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.cloud.CloudSearch.Query var1 = __var1__ != null ? (com.amap.api.services.cloud.CloudSearch.Query) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.cloud.CloudSearch.Query var1 = __var1RefId__ != null ? (com.amap.api.services.cloud.CloudSearch.Query) getHEAP().get(__var1RefId__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -2449,11 +2784,11 @@ public class SubHandler4 {
             put("com.amap.api.services.weather.LocalWeatherForecastResult::createPagedResult", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var0__ = (Integer) ((Map<String, Object>) __args__).get("var0");
-                com.amap.api.services.weather.WeatherSearchQuery var0 = __var0__ != null ? (com.amap.api.services.weather.WeatherSearchQuery) getHEAP().get(__var0__) : null;
+                Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
+                com.amap.api.services.weather.WeatherSearchQuery var0 = __var0RefId__ != null ? (com.amap.api.services.weather.WeatherSearchQuery) getHEAP().get(__var0RefId__) : null;
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.weather.LocalWeatherForecast var1 = __var1__ != null ? (com.amap.api.services.weather.LocalWeatherForecast) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.weather.LocalWeatherForecast var1 = __var1RefId__ != null ? (com.amap.api.services.weather.LocalWeatherForecast) getHEAP().get(__var1RefId__) : null;
             
                 // ref
             
@@ -2928,8 +3263,8 @@ public class SubHandler4 {
             put("com.amap.api.services.weather.WeatherSearch::setQuery", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.weather.WeatherSearchQuery var1 = __var1__ != null ? (com.amap.api.services.weather.WeatherSearchQuery) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.weather.WeatherSearchQuery var1 = __var1RefId__ != null ? (com.amap.api.services.weather.WeatherSearchQuery) getHEAP().get(__var1RefId__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -3679,11 +4014,11 @@ public class SubHandler4 {
             put("com.amap.api.services.weather.LocalWeatherLiveResult::createPagedResult", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var0__ = (Integer) ((Map<String, Object>) __args__).get("var0");
-                com.amap.api.services.weather.WeatherSearchQuery var0 = __var0__ != null ? (com.amap.api.services.weather.WeatherSearchQuery) getHEAP().get(__var0__) : null;
+                Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
+                com.amap.api.services.weather.WeatherSearchQuery var0 = __var0RefId__ != null ? (com.amap.api.services.weather.WeatherSearchQuery) getHEAP().get(__var0RefId__) : null;
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.weather.LocalWeatherLive var1 = __var1__ != null ? (com.amap.api.services.weather.LocalWeatherLive) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.weather.LocalWeatherLive var1 = __var1RefId__ != null ? (com.amap.api.services.weather.LocalWeatherLive) getHEAP().get(__var1RefId__) : null;
             
                 // ref
             
@@ -3827,8 +4162,8 @@ public class SubHandler4 {
             put("com.amap.api.services.geocoder.BusinessArea::setCenterPoint", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.core.LatLonPoint var1 = __var1__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.core.LatLonPoint var1 = __var1RefId__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1RefId__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -4052,8 +4387,8 @@ public class SubHandler4 {
             put("com.amap.api.services.geocoder.GeocodeSearch::getFromLocation", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.geocoder.RegeocodeQuery var1 = __var1__ != null ? (com.amap.api.services.geocoder.RegeocodeQuery) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.geocoder.RegeocodeQuery var1 = __var1RefId__ != null ? (com.amap.api.services.geocoder.RegeocodeQuery) getHEAP().get(__var1RefId__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -4090,8 +4425,8 @@ public class SubHandler4 {
             put("com.amap.api.services.geocoder.GeocodeSearch::getFromLocationName", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.geocoder.GeocodeQuery var1 = __var1__ != null ? (com.amap.api.services.geocoder.GeocodeQuery) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.geocoder.GeocodeQuery var1 = __var1RefId__ != null ? (com.amap.api.services.geocoder.GeocodeQuery) getHEAP().get(__var1RefId__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -4242,8 +4577,8 @@ public class SubHandler4 {
             put("com.amap.api.services.geocoder.GeocodeSearch::getFromLocationAsyn", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.geocoder.RegeocodeQuery var1 = __var1__ != null ? (com.amap.api.services.geocoder.RegeocodeQuery) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.geocoder.RegeocodeQuery var1 = __var1RefId__ != null ? (com.amap.api.services.geocoder.RegeocodeQuery) getHEAP().get(__var1RefId__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -4275,8 +4610,8 @@ public class SubHandler4 {
             put("com.amap.api.services.geocoder.GeocodeSearch::getFromLocationNameAsyn", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.geocoder.GeocodeQuery var1 = __var1__ != null ? (com.amap.api.services.geocoder.GeocodeQuery) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.geocoder.GeocodeQuery var1 = __var1RefId__ != null ? (com.amap.api.services.geocoder.GeocodeQuery) getHEAP().get(__var1RefId__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -4344,8 +4679,8 @@ public class SubHandler4 {
             put("com.amap.api.services.geocoder.RegeocodeResult::setRegeocodeQuery", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.geocoder.RegeocodeQuery var1 = __var1__ != null ? (com.amap.api.services.geocoder.RegeocodeQuery) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.geocoder.RegeocodeQuery var1 = __var1RefId__ != null ? (com.amap.api.services.geocoder.RegeocodeQuery) getHEAP().get(__var1RefId__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -4413,8 +4748,8 @@ public class SubHandler4 {
             put("com.amap.api.services.geocoder.RegeocodeResult::setRegeocodeAddress", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.geocoder.RegeocodeAddress var1 = __var1__ != null ? (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.geocoder.RegeocodeAddress var1 = __var1RefId__ != null ? (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(__var1RefId__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -4482,8 +4817,8 @@ public class SubHandler4 {
             put("com.amap.api.services.geocoder.GeocodeResult::setGeocodeQuery", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.geocoder.GeocodeQuery var1 = __var1__ != null ? (com.amap.api.services.geocoder.GeocodeQuery) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.geocoder.GeocodeQuery var1 = __var1RefId__ != null ? (com.amap.api.services.geocoder.GeocodeQuery) getHEAP().get(__var1RefId__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -4850,8 +5185,8 @@ public class SubHandler4 {
             put("com.amap.api.services.geocoder.AoiItem::setLocation", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.core.LatLonPoint var1 = __var1__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.core.LatLonPoint var1 = __var1RefId__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1RefId__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -5207,8 +5542,8 @@ public class SubHandler4 {
             put("com.amap.api.services.geocoder.RegeocodeRoad::setLatLngPoint", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.core.LatLonPoint var1 = __var1__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.core.LatLonPoint var1 = __var1RefId__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1RefId__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -5788,8 +6123,8 @@ public class SubHandler4 {
             put("com.amap.api.services.geocoder.GeocodeAddress::setLatLonPoint", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.core.LatLonPoint var1 = __var1__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.core.LatLonPoint var1 = __var1RefId__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1RefId__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -5921,8 +6256,8 @@ public class SubHandler4 {
             put("com.amap.api.services.geocoder.RegeocodeQuery::setPoint", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.core.LatLonPoint var1 = __var1__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.core.LatLonPoint var1 = __var1RefId__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1RefId__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -6310,8 +6645,8 @@ public class SubHandler4 {
             put("com.amap.api.services.geocoder.StreetNumber::setLatLonPoint", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.core.LatLonPoint var1 = __var1__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.core.LatLonPoint var1 = __var1RefId__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1RefId__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -6549,326 +6884,6 @@ public class SubHandler4 {
                 String __result__;
                 try {
                     __result__ = ref.getProvince();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
-            });
-            // method
-            put("com.amap.api.services.geocoder.RegeocodeAddress::setProvince", (__args__, __methodResult__) -> {
-                // args
-                // jsonable arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::setProvince(" + var1 + ")");
-                }
-            
-                // invoke native method
-                try {
-                    ref.setProvince(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
-            });
-            // method
-            put("com.amap.api.services.geocoder.RegeocodeAddress::getCity", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::getCity(" + "" + ")");
-                }
-            
-                // invoke native method
-                String __result__;
-                try {
-                    __result__ = ref.getCity();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
-            });
-            // method
-            put("com.amap.api.services.geocoder.RegeocodeAddress::setCity", (__args__, __methodResult__) -> {
-                // args
-                // jsonable arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::setCity(" + var1 + ")");
-                }
-            
-                // invoke native method
-                try {
-                    ref.setCity(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
-            });
-            // method
-            put("com.amap.api.services.geocoder.RegeocodeAddress::getCityCode", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::getCityCode(" + "" + ")");
-                }
-            
-                // invoke native method
-                String __result__;
-                try {
-                    __result__ = ref.getCityCode();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
-            });
-            // method
-            put("com.amap.api.services.geocoder.RegeocodeAddress::setCityCode", (__args__, __methodResult__) -> {
-                // args
-                // jsonable arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::setCityCode(" + var1 + ")");
-                }
-            
-                // invoke native method
-                try {
-                    ref.setCityCode(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
-            });
-            // method
-            put("com.amap.api.services.geocoder.RegeocodeAddress::getAdCode", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::getAdCode(" + "" + ")");
-                }
-            
-                // invoke native method
-                String __result__;
-                try {
-                    __result__ = ref.getAdCode();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
-            });
-            // method
-            put("com.amap.api.services.geocoder.RegeocodeAddress::setAdCode", (__args__, __methodResult__) -> {
-                // args
-                // jsonable arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::setAdCode(" + var1 + ")");
-                }
-            
-                // invoke native method
-                try {
-                    ref.setAdCode(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
-            });
-            // method
-            put("com.amap.api.services.geocoder.RegeocodeAddress::getDistrict", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::getDistrict(" + "" + ")");
-                }
-            
-                // invoke native method
-                String __result__;
-                try {
-                    __result__ = ref.getDistrict();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
-            });
-            // method
-            put("com.amap.api.services.geocoder.RegeocodeAddress::setDistrict", (__args__, __methodResult__) -> {
-                // args
-                // jsonable arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::setDistrict(" + var1 + ")");
-                }
-            
-                // invoke native method
-                try {
-                    ref.setDistrict(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
-            });
-            // method
-            put("com.amap.api.services.geocoder.RegeocodeAddress::getTownship", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::getTownship(" + "" + ")");
-                }
-            
-                // invoke native method
-                String __result__;
-                try {
-                    __result__ = ref.getTownship();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {

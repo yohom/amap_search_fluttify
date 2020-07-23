@@ -500,62 +500,6 @@ extension TypeOpAmapSearchFluttifyAndroid on Object {
       final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_help_Inputtips', {'refId': (this as Ref).refId});
       return result;
     }
-    else if (T == com_amap_api_services_interfaces_IDistrictSearch) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_interfaces_IDistrictSearch', {'refId': (this as Ref).refId});
-      return result;
-    }
-    else if (T == com_amap_api_services_interfaces_IBusStationSearch) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_interfaces_IBusStationSearch', {'refId': (this as Ref).refId});
-      return result;
-    }
-    else if (T == com_amap_api_services_interfaces_IRouteSearch) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_interfaces_IRouteSearch', {'refId': (this as Ref).refId});
-      return result;
-    }
-    else if (T == com_amap_api_services_interfaces_IShareSearch) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_interfaces_IShareSearch', {'refId': (this as Ref).refId});
-      return result;
-    }
-    else if (T == com_amap_api_services_interfaces_IRoutePOISearch) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_interfaces_IRoutePOISearch', {'refId': (this as Ref).refId});
-      return result;
-    }
-    else if (T == com_amap_api_services_interfaces_ITrafficSearch) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_interfaces_ITrafficSearch', {'refId': (this as Ref).refId});
-      return result;
-    }
-    else if (T == com_amap_api_services_interfaces_IInputtipsSearch) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_interfaces_IInputtipsSearch', {'refId': (this as Ref).refId});
-      return result;
-    }
-    else if (T == com_amap_api_services_interfaces_IGeocodeSearch) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_interfaces_IGeocodeSearch', {'refId': (this as Ref).refId});
-      return result;
-    }
-    else if (T == com_amap_api_services_interfaces_ICloudSearch) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_interfaces_ICloudSearch', {'refId': (this as Ref).refId});
-      return result;
-    }
-    else if (T == com_amap_api_services_interfaces_IDistanceSearch) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_interfaces_IDistanceSearch', {'refId': (this as Ref).refId});
-      return result;
-    }
-    else if (T == com_amap_api_services_interfaces_IPoiSearch) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_interfaces_IPoiSearch', {'refId': (this as Ref).refId});
-      return result;
-    }
-    else if (T == com_amap_api_services_interfaces_IWeatherSearch) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_interfaces_IWeatherSearch', {'refId': (this as Ref).refId});
-      return result;
-    }
-    else if (T == com_amap_api_services_interfaces_INearbySearch) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_interfaces_INearbySearch', {'refId': (this as Ref).refId});
-      return result;
-    }
-    else if (T == com_amap_api_services_interfaces_IBusLineSearch) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_interfaces_IBusLineSearch', {'refId': (this as Ref).refId});
-      return result;
-    }
     else if (T == com_amap_api_services_share_ShareSearch_ShareNaviQuery) {
       final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_share_ShareSearch_ShareNaviQuery', {'refId': (this as Ref).refId});
       return result;
@@ -642,10 +586,6 @@ extension TypeOpAmapSearchFluttifyAndroid on Object {
     }
     else if (T == android_widget_ImageView) {
       final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfandroid_widget_ImageView', {'refId': (this as Ref).refId});
-      return result;
-    }
-    else if (T == java_io_Closeable) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfjava_io_Closeable', {'refId': (this as Ref).refId});
       return result;
     }
     else if (T == java_io_File) {
@@ -1058,48 +998,6 @@ extension TypeOpAmapSearchFluttifyAndroid on Object {
     else if (T == com_amap_api_services_help_Inputtips) {
       return (com_amap_api_services_help_Inputtips()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
-    else if (T == com_amap_api_services_interfaces_IDistrictSearch) {
-      return (com_amap_api_services_interfaces_IDistrictSearch.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
-    }
-    else if (T == com_amap_api_services_interfaces_IBusStationSearch) {
-      return (com_amap_api_services_interfaces_IBusStationSearch.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
-    }
-    else if (T == com_amap_api_services_interfaces_IRouteSearch) {
-      return (com_amap_api_services_interfaces_IRouteSearch.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
-    }
-    else if (T == com_amap_api_services_interfaces_IShareSearch) {
-      return (com_amap_api_services_interfaces_IShareSearch.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
-    }
-    else if (T == com_amap_api_services_interfaces_IRoutePOISearch) {
-      return (com_amap_api_services_interfaces_IRoutePOISearch.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
-    }
-    else if (T == com_amap_api_services_interfaces_ITrafficSearch) {
-      return (com_amap_api_services_interfaces_ITrafficSearch.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
-    }
-    else if (T == com_amap_api_services_interfaces_IInputtipsSearch) {
-      return (com_amap_api_services_interfaces_IInputtipsSearch.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
-    }
-    else if (T == com_amap_api_services_interfaces_IGeocodeSearch) {
-      return (com_amap_api_services_interfaces_IGeocodeSearch.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
-    }
-    else if (T == com_amap_api_services_interfaces_ICloudSearch) {
-      return (com_amap_api_services_interfaces_ICloudSearch.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
-    }
-    else if (T == com_amap_api_services_interfaces_IDistanceSearch) {
-      return (com_amap_api_services_interfaces_IDistanceSearch.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
-    }
-    else if (T == com_amap_api_services_interfaces_IPoiSearch) {
-      return (com_amap_api_services_interfaces_IPoiSearch.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
-    }
-    else if (T == com_amap_api_services_interfaces_IWeatherSearch) {
-      return (com_amap_api_services_interfaces_IWeatherSearch.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
-    }
-    else if (T == com_amap_api_services_interfaces_INearbySearch) {
-      return (com_amap_api_services_interfaces_INearbySearch.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
-    }
-    else if (T == com_amap_api_services_interfaces_IBusLineSearch) {
-      return (com_amap_api_services_interfaces_IBusLineSearch.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
-    }
     else if (T == com_amap_api_services_share_ShareSearch_ShareNaviQuery) {
       return (com_amap_api_services_share_ShareSearch_ShareNaviQuery()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
@@ -1165,9 +1063,6 @@ extension TypeOpAmapSearchFluttifyAndroid on Object {
     }
     else if (T == android_widget_ImageView) {
       return (android_widget_ImageView()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
-    }
-    else if (T == java_io_Closeable) {
-      return (java_io_Closeable.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == java_io_File) {
       return (java_io_File()..refId = (this is Ref ? (this as Ref).refId : this as int)..tag__ = 'amap_search_fluttify') as T;

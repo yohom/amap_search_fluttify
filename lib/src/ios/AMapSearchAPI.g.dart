@@ -230,7 +230,7 @@ class AMapSearchAPI extends NSObject  {
   }
   
   Future<void> set_language(AMapSearchLanguage language) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::set_language', {'refId': refId, "language": language.index});
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::set_language', {'refId': refId, "language": language.toValue()});
   
   
   }
@@ -294,7 +294,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapPOIIDSearch', {"request": request?.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapPOIIDSearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
   
   
     // handle native call
@@ -318,7 +318,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapPOIKeywordsSearch', {"request": request?.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapPOIKeywordsSearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
   
   
     // handle native call
@@ -342,7 +342,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapPOIAroundSearch', {"request": request?.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapPOIAroundSearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
   
   
     // handle native call
@@ -366,7 +366,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapPOIPolygonSearch', {"request": request?.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapPOIPolygonSearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
   
   
     // handle native call
@@ -390,7 +390,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapRoutePOISearch', {"request": request?.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapRoutePOISearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
   
   
     // handle native call
@@ -414,7 +414,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapGeocodeSearch', {"request": request?.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapGeocodeSearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
   
   
     // handle native call
@@ -438,7 +438,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapReGoecodeSearch', {"request": request?.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapReGoecodeSearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
   
   
     // handle native call
@@ -462,7 +462,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapInputTipsSearch', {"request": request?.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapInputTipsSearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
   
   
     // handle native call
@@ -486,7 +486,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapBusStopSearch', {"request": request?.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapBusStopSearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
   
   
     // handle native call
@@ -510,7 +510,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapBusLineIDSearch', {"request": request?.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapBusLineIDSearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
   
   
     // handle native call
@@ -534,7 +534,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapBusLineNameSearch', {"request": request?.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapBusLineNameSearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
   
   
     // handle native call
@@ -558,7 +558,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapDistrictSearch', {"request": request?.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapDistrictSearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
   
   
     // handle native call
@@ -582,7 +582,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapDrivingRouteSearch', {"request": request?.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapDrivingRouteSearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
   
   
     // handle native call
@@ -606,7 +606,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapWalkingRouteSearch', {"request": request?.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapWalkingRouteSearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
   
   
     // handle native call
@@ -630,7 +630,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapTransitRouteSearch', {"request": request?.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapTransitRouteSearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
   
   
     // handle native call
@@ -654,7 +654,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapRidingRouteSearch', {"request": request?.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapRidingRouteSearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
   
   
     // handle native call
@@ -678,7 +678,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapTruckRouteSearch', {"request": request?.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapTruckRouteSearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
   
   
     // handle native call
@@ -702,7 +702,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapFutureRouteSearch', {"request": request?.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapFutureRouteSearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
   
   
     // handle native call
@@ -726,7 +726,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapWeatherSearch', {"request": request?.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapWeatherSearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
   
   
     // handle native call
@@ -750,7 +750,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapRoadTrafficSearch', {"request": request?.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapRoadTrafficSearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
   
   
     // handle native call
@@ -774,7 +774,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapRoadTrafficCircleSearch', {"request": request?.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapRoadTrafficCircleSearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
   
   
     // handle native call
@@ -798,7 +798,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapDistanceSearch', {"request": request?.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapDistanceSearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
   
   
     // handle native call
@@ -822,7 +822,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapNearbySearch', {"request": request?.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapNearbySearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
   
   
     // handle native call
@@ -846,7 +846,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapCloudPOIAroundSearch', {"request": request?.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapCloudPOIAroundSearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
   
   
     // handle native call
@@ -870,7 +870,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapCloudPOIPolygonSearch', {"request": request?.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapCloudPOIPolygonSearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
   
   
     // handle native call
@@ -894,7 +894,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapCloudPOIIDSearch', {"request": request?.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapCloudPOIIDSearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
   
   
     // handle native call
@@ -918,7 +918,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapCloudPOILocalSearch', {"request": request?.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapCloudPOILocalSearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
   
   
     // handle native call
@@ -942,7 +942,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapLocationShareSearch', {"request": request?.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapLocationShareSearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
   
   
     // handle native call
@@ -966,7 +966,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapPOIShareSearch', {"request": request?.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapPOIShareSearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
   
   
     // handle native call
@@ -990,7 +990,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapRouteShareSearch', {"request": request?.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapRouteShareSearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
   
   
     // handle native call
@@ -1014,7 +1014,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapNavigationShareSearch', {"request": request?.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapNavigationShareSearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
   
   
     // handle native call
@@ -1059,7 +1059,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   Future<void> set_language_batch(List<AMapSearchLanguage> language) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::set_language_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "language": language[__i__].index}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::set_language_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "language": language[__i__].toValue()}]);
   
   
   }

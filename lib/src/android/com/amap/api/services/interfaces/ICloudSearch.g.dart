@@ -12,157 +12,43 @@ import 'package:flutter/services.dart';
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
 
-class _com_amap_api_services_interfaces_ICloudSearch_SUB extends java_lang_Object with com_amap_api_services_interfaces_ICloudSearch {}
+
 
 mixin com_amap_api_services_interfaces_ICloudSearch on java_lang_Object {
   
 
-  static com_amap_api_services_interfaces_ICloudSearch subInstance() => _com_amap_api_services_interfaces_ICloudSearch_SUB();
-
   
 
   
 
   
-  Future<void> setOnCloudSearchListener(com_amap_api_services_cloud_CloudSearch_OnCloudSearchListener var1) async {
-    // print log
+
+  @mustCallSuper
+  Future<void> setOnCloudSearchListener(com_amap_api_services_cloud_CloudSearch_OnCloudSearchListener var1) {
+    if (var1 is Ref) kNativeObjectPool.add(var1);
+  
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.services.interfaces.ICloudSearch@$refId::setOnCloudSearchListener([])');
-    }
-  
-    // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.ICloudSearch::setOnCloudSearchListener', {"refId": refId});
-  
-  
-    // handle native call
-    MethodChannel('com.amap.api.services.interfaces.ICloudSearch::setOnCloudSearchListener::Callback')
-        .setMethodCallHandler((methodCall) async {
-          final args = methodCall.arguments as Map;
-          switch (methodCall.method) {
-            case 'Callback::com.amap.api.services.cloud.CloudSearch.OnCloudSearchListener::onCloudSearched':
-              // print log
-              if (fluttifyLogEnabled) {
-                debugPrint('fluttify-dart-callback: onCloudSearched([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
-              }
-        
-              // handle the native call
-              var1?.onCloudSearched(TypeOpAmapSearchFluttifyAndroid((args['var1'] as Object))?.as__<com_amap_api_services_cloud_CloudResult>(), args['var2']);
-              break;
-            case 'Callback::com.amap.api.services.cloud.CloudSearch.OnCloudSearchListener::onCloudItemDetailSearched':
-              // print log
-              if (fluttifyLogEnabled) {
-                debugPrint('fluttify-dart-callback: onCloudItemDetailSearched([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
-              }
-        
-              // handle the native call
-              var1?.onCloudItemDetailSearched(TypeOpAmapSearchFluttifyAndroid((args['var1'] as Object))?.as__<com_amap_api_services_cloud_CloudItemDetail>(), args['var2']);
-              break;
-            default:
-              break;
-          }
-        });
-  
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-    
-      return __return__;
+      debugPrint('setOnCloudSearchListener::kNativeObjectPool: $kNativeObjectPool');
     }
   }
   
+  @mustCallSuper
+  Future<void> searchCloudAsyn(com_amap_api_services_cloud_CloudSearch_Query var1) {
+    if (var1 is Ref) kNativeObjectPool.add(var1);
   
-  Future<void> searchCloudAsyn(com_amap_api_services_cloud_CloudSearch_Query var1) async {
-    // print log
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.services.interfaces.ICloudSearch@$refId::searchCloudAsyn([])');
-    }
-  
-    // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.ICloudSearch::searchCloudAsyn', {"var1": var1?.refId, "refId": refId});
-  
-  
-    // handle native call
-  
-  
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-    
-      return __return__;
+      debugPrint('searchCloudAsyn::kNativeObjectPool: $kNativeObjectPool');
     }
   }
   
+  @mustCallSuper
+  Future<void> searchCloudDetailAsyn(String var1, String var2) {
   
-  Future<void> searchCloudDetailAsyn(String var1, String var2) async {
-    // print log
+  
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.services.interfaces.ICloudSearch@$refId::searchCloudDetailAsyn([\'var1\':$var1, \'var2\':$var2])');
-    }
-  
-    // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.ICloudSearch::searchCloudDetailAsyn', {"var1": var1, "var2": var2, "refId": refId});
-  
-  
-    // handle native call
-  
-  
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-    
-      return __return__;
+      debugPrint('searchCloudDetailAsyn::kNativeObjectPool: $kNativeObjectPool');
     }
   }
   
 }
 
-extension com_amap_api_services_interfaces_ICloudSearch_Batch on List<com_amap_api_services_interfaces_ICloudSearch> {
-  //region methods
-  
-  Future<List<void>> searchCloudAsyn_batch(List<com_amap_api_services_cloud_CloudSearch_Query> var1) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
-  
-    // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.ICloudSearch::searchCloudAsyn_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__].refId, "refId": this[__i__].refId}]);
-  
-  
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
-      return typedResult;
-    }
-  }
-  
-  
-  Future<List<void>> searchCloudDetailAsyn_batch(List<String> var1, List<String> var2) async {
-    if (var1.length != var2.length) {
-      return Future.error('all args must have same length!');
-    }
-  
-    // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.ICloudSearch::searchCloudDetailAsyn_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "refId": this[__i__].refId}]);
-  
-  
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
-      return typedResult;
-    }
-  }
-  
-  //endregion
-}

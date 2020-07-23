@@ -31,6 +31,342 @@ public class SubHandler1 {
     public static Map<String, Handler> getSubHandler(BinaryMessenger messenger) {
         return new HashMap<String, Handler>() {{
             // method
+            put("com.amap.api.services.core.PoiItem::setIndoorMap", (__args__, __methodResult__) -> {
+                // args
+                // jsonable arg
+                boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+                int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                com.amap.api.services.core.PoiItem ref = (com.amap.api.services.core.PoiItem) getHEAP().get(refId);
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::setIndoorMap(" + var1 + ")");
+                }
+            
+                // invoke native method
+                try {
+                    ref.setIndoorMap(var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                String jsonableResult = "success";
+            
+                __methodResult__.success(jsonableResult);
+            });
+            // method
+            put("com.amap.api.services.core.PoiItem::isIndoorMap", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                com.amap.api.services.core.PoiItem ref = (com.amap.api.services.core.PoiItem) getHEAP().get(refId);
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::isIndoorMap(" + "" + ")");
+                }
+            
+                // invoke native method
+                boolean __result__;
+                try {
+                    __result__ = ref.isIndoorMap();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                boolean jsonableResult = __result__;
+            
+                __methodResult__.success(jsonableResult);
+            });
+            // method
+            put("com.amap.api.services.core.PoiItem::setProvinceCode", (__args__, __methodResult__) -> {
+                // args
+                // jsonable arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+                int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                com.amap.api.services.core.PoiItem ref = (com.amap.api.services.core.PoiItem) getHEAP().get(refId);
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::setProvinceCode(" + var1 + ")");
+                }
+            
+                // invoke native method
+                try {
+                    ref.setProvinceCode(var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                String jsonableResult = "success";
+            
+                __methodResult__.success(jsonableResult);
+            });
+            // method
+            put("com.amap.api.services.core.PoiItem::getProvinceCode", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                com.amap.api.services.core.PoiItem ref = (com.amap.api.services.core.PoiItem) getHEAP().get(refId);
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::getProvinceCode(" + "" + ")");
+                }
+            
+                // invoke native method
+                String __result__;
+                try {
+                    __result__ = ref.getProvinceCode();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                String jsonableResult = __result__;
+            
+                __methodResult__.success(jsonableResult);
+            });
+            // method
+            put("com.amap.api.services.core.PoiItem::setParkingType", (__args__, __methodResult__) -> {
+                // args
+                // jsonable arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+                int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                com.amap.api.services.core.PoiItem ref = (com.amap.api.services.core.PoiItem) getHEAP().get(refId);
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::setParkingType(" + var1 + ")");
+                }
+            
+                // invoke native method
+                try {
+                    ref.setParkingType(var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                String jsonableResult = "success";
+            
+                __methodResult__.success(jsonableResult);
+            });
+            // method
+            put("com.amap.api.services.core.PoiItem::getParkingType", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                com.amap.api.services.core.PoiItem ref = (com.amap.api.services.core.PoiItem) getHEAP().get(refId);
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::getParkingType(" + "" + ")");
+                }
+            
+                // invoke native method
+                String __result__;
+                try {
+                    __result__ = ref.getParkingType();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                String jsonableResult = __result__;
+            
+                __methodResult__.success(jsonableResult);
+            });
+            // method
+            put("com.amap.api.services.core.PoiItem::setSubPois", (__args__, __methodResult__) -> {
+                // args
+                // list arg
+                List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) __args__).get("var1");
+                java.util.List<com.amap.api.services.poisearch.SubPoiItem> var1 = new ArrayList<>();
+                for (int refId : var1RefIdList) {
+                    ((ArrayList<com.amap.api.services.poisearch.SubPoiItem>) var1).add((com.amap.api.services.poisearch.SubPoiItem) getHEAP().get(refId));
+                }
+            
+                // ref
+                int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                com.amap.api.services.core.PoiItem ref = (com.amap.api.services.core.PoiItem) getHEAP().get(refId);
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::setSubPois(" + var1 + ")");
+                }
+            
+                // invoke native method
+                try {
+                    ref.setSubPois((ArrayList) var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                String jsonableResult = "success";
+            
+                __methodResult__.success(jsonableResult);
+            });
+            // method
+            put("com.amap.api.services.core.PoiItem::getSubPois", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                com.amap.api.services.core.PoiItem ref = (com.amap.api.services.core.PoiItem) getHEAP().get(refId);
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::getSubPois(" + "" + ")");
+                }
+            
+                // invoke native method
+                java.util.List<com.amap.api.services.poisearch.SubPoiItem> __result__;
+                try {
+                    __result__ = ref.getSubPois();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                List<Integer> jsonableResult = null;
+                if (__result__ != null) {
+                    jsonableResult = new ArrayList<>();
+                    for (com.amap.api.services.poisearch.SubPoiItem item : __result__) {
+                        getHEAP().put(System.identityHashCode(item), item);
+                        jsonableResult.add(System.identityHashCode(item));
+                    }
+                }
+            
+                __methodResult__.success(jsonableResult);
+            });
+            // method
+            put("com.amap.api.services.core.PoiItem::getIndoorData", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                com.amap.api.services.core.PoiItem ref = (com.amap.api.services.core.PoiItem) getHEAP().get(refId);
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::getIndoorData(" + "" + ")");
+                }
+            
+                // invoke native method
+                com.amap.api.services.poisearch.IndoorData __result__;
+                try {
+                    __result__ = ref.getIndoorData();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                Integer jsonableResult = null;
+                if (__result__ != null) {
+                    jsonableResult = System.identityHashCode(__result__);
+                    getHEAP().put(jsonableResult, __result__);
+                }
+            
+                __methodResult__.success(jsonableResult);
+            });
+            // method
+            put("com.amap.api.services.core.PoiItem::setIndoorDate", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.poisearch.IndoorData var1 = __var1RefId__ != null ? (com.amap.api.services.poisearch.IndoorData) getHEAP().get(__var1RefId__) : null;
+            
+                // ref
+                int refId = (int) ((Map<String, Object>) __args__).get("refId");
+                com.amap.api.services.core.PoiItem ref = (com.amap.api.services.core.PoiItem) getHEAP().get(refId);
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::setIndoorDate(" + var1 + ")");
+                }
+            
+                // invoke native method
+                try {
+                    ref.setIndoorDate(var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                String jsonableResult = "success";
+            
+                __methodResult__.success(jsonableResult);
+            });
+            // method
             put("com.amap.api.services.core.PoiItem::getPhotos", (__args__, __methodResult__) -> {
                 // args
             
@@ -145,8 +481,8 @@ public class SubHandler1 {
             put("com.amap.api.services.core.PoiItem::setPoiExtension", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.poisearch.PoiItemExtension var1 = __var1__ != null ? (com.amap.api.services.poisearch.PoiItemExtension) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.poisearch.PoiItemExtension var1 = __var1RefId__ != null ? (com.amap.api.services.poisearch.PoiItemExtension) getHEAP().get(__var1RefId__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -982,8 +1318,8 @@ public class SubHandler1 {
             put("com.amap.api.services.poisearch.SubPoiItem::setLatLonPoint", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.core.LatLonPoint var1 = __var1__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.core.LatLonPoint var1 = __var1RefId__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1RefId__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -1486,11 +1822,11 @@ public class SubHandler1 {
             put("com.amap.api.services.poisearch.PoiResult::createPagedResult", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var0__ = (Integer) ((Map<String, Object>) __args__).get("var0");
-                com.amap.api.services.poisearch.PoiSearch.Query var0 = __var0__ != null ? (com.amap.api.services.poisearch.PoiSearch.Query) getHEAP().get(__var0__) : null;
+                Integer __var0RefId__ = (Integer) ((Map<String, Object>) __args__).get("var0");
+                com.amap.api.services.poisearch.PoiSearch.Query var0 = __var0RefId__ != null ? (com.amap.api.services.poisearch.PoiSearch.Query) getHEAP().get(__var0RefId__) : null;
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.poisearch.PoiSearch.SearchBound var1 = __var1__ != null ? (com.amap.api.services.poisearch.PoiSearch.SearchBound) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.poisearch.PoiSearch.SearchBound var1 = __var1RefId__ != null ? (com.amap.api.services.poisearch.PoiSearch.SearchBound) getHEAP().get(__var1RefId__) : null;
                 // jsonable arg
                 java.util.List<String> var2 = (java.util.List<String>) ((Map<String, Object>) __args__).get("var2");
                 // list arg
@@ -2069,8 +2405,8 @@ public class SubHandler1 {
             put("com.amap.api.services.poisearch.PoiSearch::setQuery", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.poisearch.PoiSearch.Query var1 = __var1__ != null ? (com.amap.api.services.poisearch.PoiSearch.Query) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.poisearch.PoiSearch.Query var1 = __var1RefId__ != null ? (com.amap.api.services.poisearch.PoiSearch.Query) getHEAP().get(__var1RefId__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -2102,8 +2438,8 @@ public class SubHandler1 {
             put("com.amap.api.services.poisearch.PoiSearch::setBound", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.poisearch.PoiSearch.SearchBound var1 = __var1__ != null ? (com.amap.api.services.poisearch.PoiSearch.SearchBound) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.poisearch.PoiSearch.SearchBound var1 = __var1RefId__ != null ? (com.amap.api.services.poisearch.PoiSearch.SearchBound) getHEAP().get(__var1RefId__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -2755,8 +3091,8 @@ public class SubHandler1 {
             put("com.amap.api.services.poisearch.PoiSearch.Query::setLocation", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.core.LatLonPoint var1 = __var1__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.core.LatLonPoint var1 = __var1RefId__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1RefId__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -2788,8 +3124,8 @@ public class SubHandler1 {
             put("com.amap.api.services.poisearch.PoiSearch.Query::queryEquals", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.poisearch.PoiSearch.Query var1 = __var1__ != null ? (com.amap.api.services.poisearch.PoiSearch.Query) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.poisearch.PoiSearch.Query var1 = __var1RefId__ != null ? (com.amap.api.services.poisearch.PoiSearch.Query) getHEAP().get(__var1RefId__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -3659,8 +3995,8 @@ public class SubHandler1 {
             put("com.amap.api.services.route.DriveRoutePlanResult::setDrivePlanQuery", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.route.RouteSearch.DrivePlanQuery var1 = __var1__ != null ? (com.amap.api.services.route.RouteSearch.DrivePlanQuery) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.route.RouteSearch.DrivePlanQuery var1 = __var1RefId__ != null ? (com.amap.api.services.route.RouteSearch.DrivePlanQuery) getHEAP().get(__var1RefId__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -4515,8 +4851,8 @@ public class SubHandler1 {
             put("com.amap.api.services.route.RouteBusWalkItem::setOrigin", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.core.LatLonPoint var1 = __var1__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.core.LatLonPoint var1 = __var1RefId__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1RefId__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -4584,8 +4920,8 @@ public class SubHandler1 {
             put("com.amap.api.services.route.RouteBusWalkItem::setDestination", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.core.LatLonPoint var1 = __var1__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.core.LatLonPoint var1 = __var1RefId__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1RefId__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -4653,8 +4989,8 @@ public class SubHandler1 {
             put("com.amap.api.services.route.RouteResult::setStartPos", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.core.LatLonPoint var1 = __var1__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.core.LatLonPoint var1 = __var1RefId__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1RefId__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -4722,8 +5058,8 @@ public class SubHandler1 {
             put("com.amap.api.services.route.RouteResult::setTargetPos", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.core.LatLonPoint var1 = __var1__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.core.LatLonPoint var1 = __var1RefId__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1RefId__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -5088,8 +5424,8 @@ public class SubHandler1 {
             put("com.amap.api.services.route.RouteSearch::calculateWalkRoute", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.route.RouteSearch.WalkRouteQuery var1 = __var1__ != null ? (com.amap.api.services.route.RouteSearch.WalkRouteQuery) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.route.RouteSearch.WalkRouteQuery var1 = __var1RefId__ != null ? (com.amap.api.services.route.RouteSearch.WalkRouteQuery) getHEAP().get(__var1RefId__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -5126,8 +5462,8 @@ public class SubHandler1 {
             put("com.amap.api.services.route.RouteSearch::calculateWalkRouteAsyn", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.route.RouteSearch.WalkRouteQuery var1 = __var1__ != null ? (com.amap.api.services.route.RouteSearch.WalkRouteQuery) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.route.RouteSearch.WalkRouteQuery var1 = __var1RefId__ != null ? (com.amap.api.services.route.RouteSearch.WalkRouteQuery) getHEAP().get(__var1RefId__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -5159,8 +5495,8 @@ public class SubHandler1 {
             put("com.amap.api.services.route.RouteSearch::calculateBusRoute", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.route.RouteSearch.BusRouteQuery var1 = __var1__ != null ? (com.amap.api.services.route.RouteSearch.BusRouteQuery) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.route.RouteSearch.BusRouteQuery var1 = __var1RefId__ != null ? (com.amap.api.services.route.RouteSearch.BusRouteQuery) getHEAP().get(__var1RefId__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -5197,8 +5533,8 @@ public class SubHandler1 {
             put("com.amap.api.services.route.RouteSearch::calculateBusRouteAsyn", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.route.RouteSearch.BusRouteQuery var1 = __var1__ != null ? (com.amap.api.services.route.RouteSearch.BusRouteQuery) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.route.RouteSearch.BusRouteQuery var1 = __var1RefId__ != null ? (com.amap.api.services.route.RouteSearch.BusRouteQuery) getHEAP().get(__var1RefId__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -5230,8 +5566,8 @@ public class SubHandler1 {
             put("com.amap.api.services.route.RouteSearch::calculateDriveRoute", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.route.RouteSearch.DriveRouteQuery var1 = __var1__ != null ? (com.amap.api.services.route.RouteSearch.DriveRouteQuery) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.route.RouteSearch.DriveRouteQuery var1 = __var1RefId__ != null ? (com.amap.api.services.route.RouteSearch.DriveRouteQuery) getHEAP().get(__var1RefId__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -5268,8 +5604,8 @@ public class SubHandler1 {
             put("com.amap.api.services.route.RouteSearch::calculateDriveRouteAsyn", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.route.RouteSearch.DriveRouteQuery var1 = __var1__ != null ? (com.amap.api.services.route.RouteSearch.DriveRouteQuery) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.route.RouteSearch.DriveRouteQuery var1 = __var1RefId__ != null ? (com.amap.api.services.route.RouteSearch.DriveRouteQuery) getHEAP().get(__var1RefId__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -5301,8 +5637,8 @@ public class SubHandler1 {
             put("com.amap.api.services.route.RouteSearch::calculateRideRouteAsyn", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.route.RouteSearch.RideRouteQuery var1 = __var1__ != null ? (com.amap.api.services.route.RouteSearch.RideRouteQuery) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.route.RouteSearch.RideRouteQuery var1 = __var1RefId__ != null ? (com.amap.api.services.route.RouteSearch.RideRouteQuery) getHEAP().get(__var1RefId__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -5334,8 +5670,8 @@ public class SubHandler1 {
             put("com.amap.api.services.route.RouteSearch::calculateRideRoute", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.route.RouteSearch.RideRouteQuery var1 = __var1__ != null ? (com.amap.api.services.route.RouteSearch.RideRouteQuery) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.route.RouteSearch.RideRouteQuery var1 = __var1RefId__ != null ? (com.amap.api.services.route.RouteSearch.RideRouteQuery) getHEAP().get(__var1RefId__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -5372,8 +5708,8 @@ public class SubHandler1 {
             put("com.amap.api.services.route.RouteSearch::calculateTruckRoute", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.route.RouteSearch.TruckRouteQuery var1 = __var1__ != null ? (com.amap.api.services.route.RouteSearch.TruckRouteQuery) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.route.RouteSearch.TruckRouteQuery var1 = __var1RefId__ != null ? (com.amap.api.services.route.RouteSearch.TruckRouteQuery) getHEAP().get(__var1RefId__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -5410,8 +5746,8 @@ public class SubHandler1 {
             put("com.amap.api.services.route.RouteSearch::calculateTruckRouteAsyn", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.route.RouteSearch.TruckRouteQuery var1 = __var1__ != null ? (com.amap.api.services.route.RouteSearch.TruckRouteQuery) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.route.RouteSearch.TruckRouteQuery var1 = __var1RefId__ != null ? (com.amap.api.services.route.RouteSearch.TruckRouteQuery) getHEAP().get(__var1RefId__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -5443,8 +5779,8 @@ public class SubHandler1 {
             put("com.amap.api.services.route.RouteSearch::calculateDrivePlan", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.route.RouteSearch.DrivePlanQuery var1 = __var1__ != null ? (com.amap.api.services.route.RouteSearch.DrivePlanQuery) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.route.RouteSearch.DrivePlanQuery var1 = __var1RefId__ != null ? (com.amap.api.services.route.RouteSearch.DrivePlanQuery) getHEAP().get(__var1RefId__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -5481,8 +5817,8 @@ public class SubHandler1 {
             put("com.amap.api.services.route.RouteSearch::calculateDrivePlanAsyn", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.route.RouteSearch.DrivePlanQuery var1 = __var1__ != null ? (com.amap.api.services.route.RouteSearch.DrivePlanQuery) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.route.RouteSearch.DrivePlanQuery var1 = __var1RefId__ != null ? (com.amap.api.services.route.RouteSearch.DrivePlanQuery) getHEAP().get(__var1RefId__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -5550,8 +5886,8 @@ public class SubHandler1 {
             put("com.amap.api.services.route.BusStep::setWalk", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.route.RouteBusWalkItem var1 = __var1__ != null ? (com.amap.api.services.route.RouteBusWalkItem) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.route.RouteBusWalkItem var1 = __var1RefId__ != null ? (com.amap.api.services.route.RouteBusWalkItem) getHEAP().get(__var1RefId__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -5658,8 +5994,8 @@ public class SubHandler1 {
             put("com.amap.api.services.route.BusStep::setBusLine", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.route.RouteBusLineItem var1 = __var1__ != null ? (com.amap.api.services.route.RouteBusLineItem) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.route.RouteBusLineItem var1 = __var1RefId__ != null ? (com.amap.api.services.route.RouteBusLineItem) getHEAP().get(__var1RefId__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -5763,8 +6099,8 @@ public class SubHandler1 {
             put("com.amap.api.services.route.BusStep::setEntrance", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.route.Doorway var1 = __var1__ != null ? (com.amap.api.services.route.Doorway) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.route.Doorway var1 = __var1RefId__ != null ? (com.amap.api.services.route.Doorway) getHEAP().get(__var1RefId__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -5832,8 +6168,8 @@ public class SubHandler1 {
             put("com.amap.api.services.route.BusStep::setExit", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.route.Doorway var1 = __var1__ != null ? (com.amap.api.services.route.Doorway) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.route.Doorway var1 = __var1RefId__ != null ? (com.amap.api.services.route.Doorway) getHEAP().get(__var1RefId__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -5901,8 +6237,8 @@ public class SubHandler1 {
             put("com.amap.api.services.route.BusStep::setRailway", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.route.RouteRailwayItem var1 = __var1__ != null ? (com.amap.api.services.route.RouteRailwayItem) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.route.RouteRailwayItem var1 = __var1RefId__ != null ? (com.amap.api.services.route.RouteRailwayItem) getHEAP().get(__var1RefId__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -5970,8 +6306,8 @@ public class SubHandler1 {
             put("com.amap.api.services.route.BusStep::setTaxi", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.route.TaxiItem var1 = __var1__ != null ? (com.amap.api.services.route.TaxiItem) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.route.TaxiItem var1 = __var1RefId__ != null ? (com.amap.api.services.route.TaxiItem) getHEAP().get(__var1RefId__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -6203,8 +6539,8 @@ public class SubHandler1 {
             put("com.amap.api.services.route.TaxiItem::setOrigin", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.core.LatLonPoint var1 = __var1__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.core.LatLonPoint var1 = __var1RefId__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1RefId__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -6236,8 +6572,8 @@ public class SubHandler1 {
             put("com.amap.api.services.route.TaxiItem::setDestination", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.core.LatLonPoint var1 = __var1__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.core.LatLonPoint var1 = __var1RefId__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1RefId__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -6572,8 +6908,8 @@ public class SubHandler1 {
             put("com.amap.api.services.route.BusRouteResult::setBusQuery", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.route.RouteSearch.BusRouteQuery var1 = __var1__ != null ? (com.amap.api.services.route.RouteSearch.BusRouteQuery) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.route.RouteSearch.BusRouteQuery var1 = __var1RefId__ != null ? (com.amap.api.services.route.RouteSearch.BusRouteQuery) getHEAP().get(__var1RefId__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -6641,8 +6977,8 @@ public class SubHandler1 {
             put("com.amap.api.services.route.RoutePlanResult::setStartPos", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.core.LatLonPoint var1 = __var1__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.core.LatLonPoint var1 = __var1RefId__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1RefId__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -6710,8 +7046,8 @@ public class SubHandler1 {
             put("com.amap.api.services.route.RoutePlanResult::setTargetPos", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.core.LatLonPoint var1 = __var1__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1__) : null;
+                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
+                com.amap.api.services.core.LatLonPoint var1 = __var1RefId__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1RefId__) : null;
             
                 // ref
                 int refId = (int) ((Map<String, Object>) __args__).get("refId");
@@ -6736,352 +7072,6 @@ public class SubHandler1 {
             
                 // convert result to jsonable result
                 String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
-            });
-            // method
-            put("com.amap.api.services.route.RailwaySpace::getCode", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RailwaySpace ref = (com.amap.api.services.route.RailwaySpace) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RailwaySpace@" + refId + "::getCode(" + "" + ")");
-                }
-            
-                // invoke native method
-                String __result__;
-                try {
-                    __result__ = ref.getCode();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
-            });
-            // method
-            put("com.amap.api.services.route.RailwaySpace::getCost", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RailwaySpace ref = (com.amap.api.services.route.RailwaySpace) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RailwaySpace@" + refId + "::getCost(" + "" + ")");
-                }
-            
-                // invoke native method
-                float __result__;
-                try {
-                    __result__ = ref.getCost();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                float jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
-            });
-            // method
-            put("com.amap.api.services.route.TruckRouteRestult::setTruckQuery", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.route.RouteSearch.TruckRouteQuery var1 = __var1__ != null ? (com.amap.api.services.route.RouteSearch.TruckRouteQuery) getHEAP().get(__var1__) : null;
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.TruckRouteRestult ref = (com.amap.api.services.route.TruckRouteRestult) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckRouteRestult@" + refId + "::setTruckQuery(" + var1 + ")");
-                }
-            
-                // invoke native method
-                try {
-                    ref.setTruckQuery(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
-            });
-            // method
-            put("com.amap.api.services.route.TruckRouteRestult::setPaths", (__args__, __methodResult__) -> {
-                // args
-                // list arg
-                List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) __args__).get("var1");
-                java.util.List<com.amap.api.services.route.TruckPath> var1 = new ArrayList<>();
-                for (int refId : var1RefIdList) {
-                    ((ArrayList<com.amap.api.services.route.TruckPath>) var1).add((com.amap.api.services.route.TruckPath) getHEAP().get(refId));
-                }
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.TruckRouteRestult ref = (com.amap.api.services.route.TruckRouteRestult) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckRouteRestult@" + refId + "::setPaths(" + var1 + ")");
-                }
-            
-                // invoke native method
-                try {
-                    ref.setPaths((ArrayList) var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
-            });
-            // method
-            put("com.amap.api.services.route.TruckRouteRestult::setStartPos", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.core.LatLonPoint var1 = __var1__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1__) : null;
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.TruckRouteRestult ref = (com.amap.api.services.route.TruckRouteRestult) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckRouteRestult@" + refId + "::setStartPos(" + var1 + ")");
-                }
-            
-                // invoke native method
-                try {
-                    ref.setStartPos(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
-            });
-            // method
-            put("com.amap.api.services.route.TruckRouteRestult::setTargetPos", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                Integer __var1__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.core.LatLonPoint var1 = __var1__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1__) : null;
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.TruckRouteRestult ref = (com.amap.api.services.route.TruckRouteRestult) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckRouteRestult@" + refId + "::setTargetPos(" + var1 + ")");
-                }
-            
-                // invoke native method
-                try {
-                    ref.setTargetPos(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
-            });
-            // method
-            put("com.amap.api.services.route.TruckRouteRestult::getTruckQuery", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.TruckRouteRestult ref = (com.amap.api.services.route.TruckRouteRestult) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckRouteRestult@" + refId + "::getTruckQuery(" + "" + ")");
-                }
-            
-                // invoke native method
-                com.amap.api.services.route.RouteSearch.TruckRouteQuery __result__;
-                try {
-                    __result__ = ref.getTruckQuery();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                Integer jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = System.identityHashCode(__result__);
-                    getHEAP().put(jsonableResult, __result__);
-                }
-            
-                __methodResult__.success(jsonableResult);
-            });
-            // method
-            put("com.amap.api.services.route.TruckRouteRestult::getPaths", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.TruckRouteRestult ref = (com.amap.api.services.route.TruckRouteRestult) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckRouteRestult@" + refId + "::getPaths(" + "" + ")");
-                }
-            
-                // invoke native method
-                java.util.List<com.amap.api.services.route.TruckPath> __result__;
-                try {
-                    __result__ = ref.getPaths();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                List<Integer> jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = new ArrayList<>();
-                    for (com.amap.api.services.route.TruckPath item : __result__) {
-                        getHEAP().put(System.identityHashCode(item), item);
-                        jsonableResult.add(System.identityHashCode(item));
-                    }
-                }
-            
-                __methodResult__.success(jsonableResult);
-            });
-            // method
-            put("com.amap.api.services.route.TruckRouteRestult::getStartPos", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.TruckRouteRestult ref = (com.amap.api.services.route.TruckRouteRestult) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckRouteRestult@" + refId + "::getStartPos(" + "" + ")");
-                }
-            
-                // invoke native method
-                com.amap.api.services.core.LatLonPoint __result__;
-                try {
-                    __result__ = ref.getStartPos();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                Integer jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = System.identityHashCode(__result__);
-                    getHEAP().put(jsonableResult, __result__);
-                }
-            
-                __methodResult__.success(jsonableResult);
-            });
-            // method
-            put("com.amap.api.services.route.TruckRouteRestult::getTargetPos", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.TruckRouteRestult ref = (com.amap.api.services.route.TruckRouteRestult) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckRouteRestult@" + refId + "::getTargetPos(" + "" + ")");
-                }
-            
-                // invoke native method
-                com.amap.api.services.core.LatLonPoint __result__;
-                try {
-                    __result__ = ref.getTargetPos();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                Integer jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = System.identityHashCode(__result__);
-                    getHEAP().put(jsonableResult, __result__);
-                }
             
                 __methodResult__.success(jsonableResult);
             });

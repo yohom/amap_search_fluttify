@@ -56,6 +56,11 @@ android {
         merge 'classes.jar'
         merge 'proguard.txt'
     }
+    buildTypes {
+        release {
+            consumerProguardFiles "proguard-rules.pro"
+        }
+    }
 }
 
 dependencies {
@@ -66,5 +71,5 @@ dependencies {
     // flutter plugin dependency
     compileOnly rootProject.findProject(":amap_core_fluttify")
     // sdk dependency
-    api 'com.amap.api:search:6.9.2'
+    api 'com.amap.api:search:7.3.0'
 }

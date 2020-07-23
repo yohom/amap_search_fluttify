@@ -88,7 +88,7 @@ class AMapNearbySearchRequest extends AMapSearchObject with NSCoding, NSCopying 
   }
   
   Future<void> set_searchType(AMapNearbySearchType searchType) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbySearchRequest::set_searchType', {'refId': refId, "searchType": searchType.index});
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbySearchRequest::set_searchType', {'refId': refId, "searchType": searchType.toValue()});
   
   
   }
@@ -165,7 +165,7 @@ extension AMapNearbySearchRequest_Batch on List<AMapNearbySearchRequest> {
   }
   
   Future<void> set_searchType_batch(List<AMapNearbySearchType> searchType) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbySearchRequest::set_searchType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "searchType": searchType[__i__].index}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbySearchRequest::set_searchType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "searchType": searchType[__i__].toValue()}]);
   
   
   }

@@ -64,7 +64,7 @@ class AMapWeatherSearchRequest extends AMapSearchObject with NSCoding, NSCopying
   }
   
   Future<void> set_type(AMapWeatherType type) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapWeatherSearchRequest::set_type', {'refId': refId, "type": type.index});
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapWeatherSearchRequest::set_type', {'refId': refId, "type": type.toValue()});
   
   
   }
@@ -102,7 +102,7 @@ extension AMapWeatherSearchRequest_Batch on List<AMapWeatherSearchRequest> {
   }
   
   Future<void> set_type_batch(List<AMapWeatherType> type) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapWeatherSearchRequest::set_type_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "type": type[__i__].index}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapWeatherSearchRequest::set_type_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "type": type[__i__].toValue()}]);
   
   
   }

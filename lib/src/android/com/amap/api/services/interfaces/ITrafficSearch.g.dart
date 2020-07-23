@@ -12,61 +12,25 @@ import 'package:flutter/services.dart';
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
 
-class _com_amap_api_services_interfaces_ITrafficSearch_SUB extends java_lang_Object with com_amap_api_services_interfaces_ITrafficSearch {}
+
 
 mixin com_amap_api_services_interfaces_ITrafficSearch on java_lang_Object {
   
 
-  static com_amap_api_services_interfaces_ITrafficSearch subInstance() => _com_amap_api_services_interfaces_ITrafficSearch_SUB();
-
   
 
   
 
   
-  Future<void> setTrafficSearchListener(com_amap_api_services_traffic_TrafficSearch_OnTrafficSearchListener var1) async {
-    // print log
+
+  @mustCallSuper
+  Future<void> setTrafficSearchListener(com_amap_api_services_traffic_TrafficSearch_OnTrafficSearchListener var1) {
+    if (var1 is Ref) kNativeObjectPool.add(var1);
+  
     if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.services.interfaces.ITrafficSearch@$refId::setTrafficSearchListener([])');
-    }
-  
-    // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.interfaces.ITrafficSearch::setTrafficSearchListener', {"refId": refId});
-  
-  
-    // handle native call
-    MethodChannel('com.amap.api.services.interfaces.ITrafficSearch::setTrafficSearchListener::Callback')
-        .setMethodCallHandler((methodCall) async {
-          final args = methodCall.arguments as Map;
-          switch (methodCall.method) {
-            case 'Callback::com.amap.api.services.traffic.TrafficSearch.OnTrafficSearchListener::onRoadTrafficSearched':
-              // print log
-              if (fluttifyLogEnabled) {
-                debugPrint('fluttify-dart-callback: onRoadTrafficSearched([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
-              }
-        
-              // handle the native call
-              var1?.onRoadTrafficSearched(TypeOpAmapSearchFluttifyAndroid((args['var1'] as Object))?.as__<com_amap_api_services_traffic_TrafficStatusResult>(), args['var2']);
-              break;
-            default:
-              break;
-          }
-        });
-  
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-    
-      return __return__;
+      debugPrint('setTrafficSearchListener::kNativeObjectPool: $kNativeObjectPool');
     }
   }
   
 }
 
-extension com_amap_api_services_interfaces_ITrafficSearch_Batch on List<com_amap_api_services_interfaces_ITrafficSearch> {
-  //region methods
-  
-  //endregion
-}

@@ -20,24 +20,6 @@ class com_amap_api_services_traffic_RoadTrafficQuery extends java_lang_Object wi
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_traffic_RoadTrafficQuery> create__String__String__int(String var1, String var2, int var3) async {
-    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_services_traffic_RoadTrafficQuery__String__String__int', {"var1": var1, "var2": var2, "var3": var3});
-    final object = com_amap_api_services_traffic_RoadTrafficQuery()..refId = refId..tag__ = 'amap_search_fluttify';
-  
-    kNativeObjectPool.add(object);
-    return object;
-  }
-  
-  static Future<List<com_amap_api_services_traffic_RoadTrafficQuery>> create_batch__String__String__int(List<String> var1, List<String> var2, List<int> var3) async {
-    if (var1.length != var2.length || var2.length != var3.length) {
-      return Future.error('all args must have same length!');
-    }
-    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_services_traffic_RoadTrafficQuery__String__String__int', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__]}]);
-  
-    final List<com_amap_api_services_traffic_RoadTrafficQuery> typedResult = resultBatch.map((result) => com_amap_api_services_traffic_RoadTrafficQuery()..refId = result..tag__ = 'amap_search_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
-    return typedResult;
-  }
   
   //endregion
 
@@ -146,30 +128,6 @@ class com_amap_api_services_traffic_RoadTrafficQuery extends java_lang_Object wi
     }
   }
   
-  
-  Future<com_amap_api_services_traffic_RoadTrafficQuery> clone() async {
-    // print log
-    if (fluttifyLogEnabled) {
-      debugPrint('fluttify-dart: com.amap.api.services.traffic.RoadTrafficQuery@$refId::clone([])');
-    }
-  
-    // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.traffic.RoadTrafficQuery::clone', {"refId": refId});
-  
-  
-    // handle native call
-  
-  
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = com_amap_api_services_traffic_RoadTrafficQuery()..refId = __result__..tag__ = 'amap_search_fluttify';
-      if (__return__ is Ref) kNativeObjectPool.add(__return__);
-      return __return__;
-    }
-  }
-  
   //endregion
 }
 
@@ -259,26 +217,6 @@ extension com_amap_api_services_traffic_RoadTrafficQuery_Batch on List<com_amap_
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     
-      return typedResult;
-    }
-  }
-  
-  
-  Future<List<com_amap_api_services_traffic_RoadTrafficQuery>> clone_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
-  
-    // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.traffic.RoadTrafficQuery::clone_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
-  
-  
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_amap_api_services_traffic_RoadTrafficQuery()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
-      kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
   }
