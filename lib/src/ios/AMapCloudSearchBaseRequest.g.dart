@@ -100,7 +100,7 @@ class AMapCloudSearchBaseRequest extends AMapSearchObject with NSCoding, NSCopyi
   }
   
   Future<void> set_sortType(AMapCloudSortType sortType) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudSearchBaseRequest::set_sortType', {'refId': refId, "sortType": sortType.index});
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudSearchBaseRequest::set_sortType', {'refId': refId, "sortType": sortType.toValue()});
   
   
   }
@@ -190,7 +190,7 @@ extension AMapCloudSearchBaseRequest_Batch on List<AMapCloudSearchBaseRequest> {
   }
   
   Future<void> set_sortType_batch(List<AMapCloudSortType> sortType) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudSearchBaseRequest::set_sortType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "sortType": sortType[__i__].index}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudSearchBaseRequest::set_sortType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "sortType": sortType[__i__].toValue()}]);
   
   
   }

@@ -48,7 +48,7 @@ extern BOOL enableLog;
                 NSInteger result = ref.radius;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -149,7 +149,7 @@ extern BOOL enableLog;
                 NSInteger result = ref.offset;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -169,7 +169,7 @@ extern BOOL enableLog;
                 NSInteger result = ref.page;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -189,7 +189,7 @@ extern BOOL enableLog;
                 NSInteger result = ref.count;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -275,7 +275,7 @@ extern BOOL enableLog;
                 BOOL result = ref.requireExtension;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -295,7 +295,7 @@ extern BOOL enableLog;
                 NSInteger result = ref.offset;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -315,7 +315,7 @@ extern BOOL enableLog;
                 NSInteger result = ref.page;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -375,7 +375,7 @@ extern BOOL enableLog;
                 NSInteger result = ref.count;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -461,7 +461,7 @@ extern BOOL enableLog;
                 BOOL result = ref.requireExtension;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -481,7 +481,7 @@ extern BOOL enableLog;
                 BOOL result = ref.showBusinessArea;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -501,7 +501,7 @@ extern BOOL enableLog;
                 NSInteger result = ref.count;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -588,7 +588,7 @@ extern BOOL enableLog;
                 NSInteger result = ref.strategy;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -758,7 +758,7 @@ extern BOOL enableLog;
                 BOOL result = ref.requireExtension;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -818,7 +818,7 @@ extern BOOL enableLog;
                 NSInteger result = ref.ferry;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -838,7 +838,7 @@ extern BOOL enableLog;
                 NSInteger result = ref.cartype;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -858,7 +858,7 @@ extern BOOL enableLog;
                 NSInteger result = ref.multipath;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -878,7 +878,7 @@ extern BOOL enableLog;
                 NSInteger result = ref.strategy;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -938,7 +938,7 @@ extern BOOL enableLog;
                 BOOL result = ref.nightflag;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -958,7 +958,7 @@ extern BOOL enableLog;
                 BOOL result = ref.requireExtension;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -978,7 +978,7 @@ extern BOOL enableLog;
                 NSInteger result = ref.type;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -998,7 +998,7 @@ extern BOOL enableLog;
                 NSInteger result = ref.count;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -1039,7 +1039,7 @@ extern BOOL enableLog;
                 NSInteger result = ref.strategy;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -1204,7 +1204,7 @@ extern BOOL enableLog;
                 AMapTruckSizeType result = ref.size;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -1224,7 +1224,7 @@ extern BOOL enableLog;
                 CGFloat result = ref.height;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -1244,7 +1244,7 @@ extern BOOL enableLog;
                 CGFloat result = ref.width;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -1264,7 +1264,7 @@ extern BOOL enableLog;
                 CGFloat result = ref.load;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -1284,7 +1284,7 @@ extern BOOL enableLog;
                 CGFloat result = ref.weight;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -1304,7 +1304,7 @@ extern BOOL enableLog;
                 NSInteger result = ref.axis;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -1370,7 +1370,7 @@ extern BOOL enableLog;
                 NSInteger result = ref.type;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -1435,7 +1435,7 @@ extern BOOL enableLog;
                 AMapWeatherType result = ref.type;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -1505,7 +1505,7 @@ extern BOOL enableLog;
                 NSInteger result = ref.level;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -1525,7 +1525,7 @@ extern BOOL enableLog;
                 BOOL result = ref.requireExtension;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -1606,7 +1606,7 @@ extern BOOL enableLog;
                 NSInteger result = ref.radius;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -1668,7 +1668,7 @@ extern BOOL enableLog;
                 NSInteger result = ref.radius;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -1688,7 +1688,7 @@ extern BOOL enableLog;
                 AMapNearbySearchType result = ref.searchType;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -1708,7 +1708,7 @@ extern BOOL enableLog;
                 NSInteger result = ref.timeRange;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -1728,7 +1728,7 @@ extern BOOL enableLog;
                 NSInteger result = ref.limit;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -1748,7 +1748,7 @@ extern BOOL enableLog;
                 NSInteger result = ref.count;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -1853,7 +1853,7 @@ extern BOOL enableLog;
                 AMapCloudSortType result = ref.sortType;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -1873,7 +1873,7 @@ extern BOOL enableLog;
                 NSInteger result = ref.offset;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -1893,7 +1893,7 @@ extern BOOL enableLog;
                 NSInteger result = ref.page;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -1934,7 +1934,7 @@ extern BOOL enableLog;
                 NSInteger result = ref.radius;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -2015,7 +2015,7 @@ extern BOOL enableLog;
                 NSInteger result = ref.uid;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -2075,7 +2075,7 @@ extern BOOL enableLog;
                 NSInteger result = ref.count;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -2242,7 +2242,7 @@ extern BOOL enableLog;
                 NSInteger result = ref.strategy;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -2262,7 +2262,7 @@ extern BOOL enableLog;
                 NSInteger result = ref.type;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -2364,7 +2364,7 @@ extern BOOL enableLog;
                 NSInteger result = ref.strategy;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -2466,7 +2466,7 @@ extern BOOL enableLog;
                 NSInteger result = ref.interval;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -2486,7 +2486,7 @@ extern BOOL enableLog;
                 NSInteger result = ref.timeCount;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -2506,7 +2506,7 @@ extern BOOL enableLog;
                 NSInteger result = ref.strategy;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -2666,7 +2666,7 @@ extern BOOL enableLog;
                 NSInteger result = ref.cartype;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -2736,7 +2736,7 @@ extern BOOL enableLog;
                 CGFloat result = ref.latitude;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -2756,7 +2756,7 @@ extern BOOL enableLog;
                 CGFloat result = ref.longitude;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -2861,7 +2861,7 @@ extern BOOL enableLog;
                 NSInteger result = ref.num;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -3132,7 +3132,7 @@ extern BOOL enableLog;
                 CGFloat result = ref.rating;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -3152,7 +3152,7 @@ extern BOOL enableLog;
                 CGFloat result = ref.cost;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -3192,7 +3192,7 @@ extern BOOL enableLog;
                 NSInteger result = ref.floor;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -3353,7 +3353,7 @@ extern BOOL enableLog;
                 NSInteger result = ref.distance;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -3454,7 +3454,7 @@ extern BOOL enableLog;
                 NSInteger result = ref.distance;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -3474,7 +3474,7 @@ extern BOOL enableLog;
                 NSInteger result = ref.duration;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -3635,7 +3635,7 @@ extern BOOL enableLog;
                 NSInteger result = ref.distance;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }
@@ -3957,7 +3957,7 @@ extern BOOL enableLog;
                 BOOL result = ref.hasIndoorMap;
         
                 // 返回值: Value
-                id jsonableResult = @(result);
+                NSObject* jsonableResult = @(result);
         
                 [resultList addObject:jsonableResult];
             }

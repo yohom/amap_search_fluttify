@@ -40,7 +40,7 @@ class com_amap_api_services_busline_BusStationResult extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusStationResult::createPagedResult', {"var0": var0?.refId, "var1": var1, "var2": var2.map((__it__) => __it__?.refId).toList(), "var3": var3, "var4": var4.map((__it__) => __it__?.refId).toList()});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusStationResult::createPagedResult', {"var0": var0 is Ref ? (var0 as Ref)?.refId : var0, "var1": var1, "var2": var2.map((__it__) => __it__?.refId).toList(), "var3": var3, "var4": var4.map((__it__) => __it__?.refId).toList()});
   
   
     // handle native call

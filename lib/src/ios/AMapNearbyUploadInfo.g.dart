@@ -70,7 +70,7 @@ class AMapNearbyUploadInfo extends NSObject with NSCopying {
   }
   
   Future<void> set_coordinateType(AMapSearchCoordinateType coordinateType) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbyUploadInfo::set_coordinateType', {'refId': refId, "coordinateType": coordinateType.index});
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbyUploadInfo::set_coordinateType', {'refId': refId, "coordinateType": coordinateType.toValue()});
   
   
   }
@@ -121,7 +121,7 @@ extension AMapNearbyUploadInfo_Batch on List<AMapNearbyUploadInfo> {
   }
   
   Future<void> set_coordinateType_batch(List<AMapSearchCoordinateType> coordinateType) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbyUploadInfo::set_coordinateType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "coordinateType": coordinateType[__i__].index}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbyUploadInfo::set_coordinateType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "coordinateType": coordinateType[__i__].toValue()}]);
   
   
   }

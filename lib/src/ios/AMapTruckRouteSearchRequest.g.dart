@@ -178,7 +178,7 @@ class AMapTruckRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCodi
   }
   
   Future<void> set_size(AMapTruckSizeType size) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTruckRouteSearchRequest::set_size', {'refId': refId, "size": size.index});
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTruckRouteSearchRequest::set_size', {'refId': refId, "size": size.toValue()});
   
   
   }
@@ -372,7 +372,7 @@ extension AMapTruckRouteSearchRequest_Batch on List<AMapTruckRouteSearchRequest>
   }
   
   Future<void> set_size_batch(List<AMapTruckSizeType> size) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTruckRouteSearchRequest::set_size_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "size": size[__i__].index}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTruckRouteSearchRequest::set_size_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "size": size[__i__].toValue()}]);
   
   
   }

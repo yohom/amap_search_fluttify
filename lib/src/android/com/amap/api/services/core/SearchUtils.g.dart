@@ -58,7 +58,7 @@ class com_amap_api_services_core_SearchUtils extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.SearchUtils::getSHA1', {"var0": var0?.refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.SearchUtils::getSHA1', {"var0": var0 is Ref ? (var0 as Ref)?.refId : var0});
   
   
     // handle native call
@@ -82,7 +82,7 @@ class com_amap_api_services_core_SearchUtils extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.SearchUtils::getPkgName', {"var0": var0?.refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.SearchUtils::getPkgName', {"var0": var0 is Ref ? (var0 as Ref)?.refId : var0});
   
   
     // handle native call
