@@ -34,7 +34,7 @@ class _GetBusInfoScreenState extends State<GetBusInfoScreen>
           ),
           RaisedButton(
             onPressed: () async {
-              final busStation = await AmapSearch.searchBusStation(
+              final busStation = await AmapSearch.instance.searchBusStation(
                 stationName: _keywordController.text,
                 city: _cityController.text,
               );

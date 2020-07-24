@@ -28,8 +28,8 @@ class _GetWeatherInfoScreenState extends State<GetWeatherInfoScreen>
           ),
           RaisedButton(
             onPressed: () async {
-              final district =
-                  await AmapSearch.searchDistrict(_keywordController.text);
+              final district = await AmapSearch.instance
+                  .searchDistrict(_keywordController.text);
               _district = await district.toFutureString();
               setState(() {});
             },

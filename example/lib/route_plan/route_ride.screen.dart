@@ -68,7 +68,7 @@ class _RouteRideScreenState extends State<RouteRideScreen>
           ),
           RaisedButton(
             onPressed: () async {
-              final routeResult = await AmapSearch.searchRideRoute(
+              final routeResult = await AmapSearch.instance.searchRideRoute(
                 from: LatLng(
                   double.parse(_fromLatController.text),
                   double.parse(_fromLngController.text),
