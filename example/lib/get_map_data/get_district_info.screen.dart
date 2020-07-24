@@ -28,7 +28,7 @@ class _GetDistrictInfoScreenState extends State<GetDistrictInfoScreen>
           ),
           RaisedButton(
             onPressed: () async {
-              final district = await AmapSearch.searchDistrict(
+              final district = await AmapSearch.instance.searchDistrict(
                 _keywordController.text,
                 showBoundary: true,
               );

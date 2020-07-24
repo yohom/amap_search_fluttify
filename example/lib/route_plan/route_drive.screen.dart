@@ -69,7 +69,7 @@ class _RouteDriveScreenState extends State<RouteDriveScreen>
           RaisedButton(
             onPressed: () async {
               try {
-                final routeResult = await AmapSearch.searchDriveRoute(
+                final routeResult = await AmapSearch.instance.searchDriveRoute(
                   from: LatLng(
                     double.parse(_fromLatController.text),
                     double.parse(_fromLngController.text),

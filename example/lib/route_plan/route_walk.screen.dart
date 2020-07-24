@@ -68,7 +68,7 @@ class _RouteWalkScreenState extends State<RouteWalkScreen>
           ),
           RaisedButton(
             onPressed: () async {
-              final routeResult = await AmapSearch.searchWalkRoute(
+              final routeResult = await AmapSearch.instance.searchWalkRoute(
                 from: LatLng(
                   double.parse(_fromLatController.text),
                   double.parse(_fromLngController.text),

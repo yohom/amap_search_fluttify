@@ -59,7 +59,7 @@ class _AddressEncodeScreenState extends State<AddressEncodeScreen>
           ),
           RaisedButton(
             onPressed: () async {
-              final geocodeList = await AmapSearch.searchGeocode(
+              final geocodeList = await AmapSearch.instance.searchGeocode(
                 _keywordController.text,
                 city: _cityController.text,
               );
@@ -121,7 +121,7 @@ class _AddressDecodeScreenState extends State<AddressDecodeScreen>
           ),
           RaisedButton(
             onPressed: () async {
-              final reGeocodeList = await AmapSearch.searchReGeocode(
+              final reGeocodeList = await AmapSearch.instance.searchReGeocode(
                 LatLng(
                   double.parse(_latController.text),
                   double.parse(_lngController.text),

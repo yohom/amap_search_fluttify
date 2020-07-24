@@ -65,7 +65,7 @@ class _KeywordPoiScreenState extends State<KeywordPoiScreen>
           ),
           RaisedButton(
             onPressed: () async {
-              final poiList = await AmapSearch.searchKeyword(
+              final poiList = await AmapSearch.instance.searchKeyword(
                 _keywordController.text,
                 city: _cityController.text,
               );
@@ -78,7 +78,7 @@ class _KeywordPoiScreenState extends State<KeywordPoiScreen>
           ),
           RaisedButton(
             onPressed: () async {
-              final poiList = await AmapSearch.searchKeyword(
+              final poiList = await AmapSearch.instance.searchKeyword(
                 _keywordController.text,
                 city: _cityController.text,
                 page: ++_page,
@@ -148,7 +148,7 @@ class _AroundPoiScreenState extends State<AroundPoiScreen>
           ),
           RaisedButton(
             onPressed: () async {
-              final poiList = await AmapSearch.searchAround(
+              final poiList = await AmapSearch.instance.searchAround(
                 LatLng(
                   double.tryParse(_latController.text) ?? 29.08,
                   double.tryParse(_lngController.text) ?? 119.65,
@@ -165,7 +165,7 @@ class _AroundPoiScreenState extends State<AroundPoiScreen>
           ),
           RaisedButton(
             onPressed: () async {
-              final poiList = await AmapSearch.searchAround(
+              final poiList = await AmapSearch.instance.searchAround(
                 LatLng(
                   double.tryParse(_latController.text) ?? 29.08,
                   double.tryParse(_lngController.text) ?? 119.65,
@@ -219,7 +219,7 @@ class _InputTipScreenState extends State<InputTipScreen>
           ),
           RaisedButton(
             onPressed: () async {
-              final inputTipList = await AmapSearch.fetchInputTips(
+              final inputTipList = await AmapSearch.instance.fetchInputTips(
                 _keywordController.text,
                 city: _cityController.text,
               );
