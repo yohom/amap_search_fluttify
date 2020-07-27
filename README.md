@@ -50,13 +50,13 @@ await AmapCore.init('ios key');
 class _KeywordPoiScreenState extends State<KeywordPoiScreen> with AmapSearchDisposeMixin {}
 
 /// 搜索关键字poi
-final poiList = await AmapSearch.searchKeyword(
+final poiList = await AmapSearch.instance.searchKeyword(
                 _keywordController.text,
                 city: _cityController.text,
               );
 
 /// 搜索周边poi
-final poiList = await AmapSearch.searchAround(
+final poiList = await AmapSearch.instance.searchAround(
                 LatLng(
                   double.tryParse(_latController.text) ?? 29.08,
                   double.tryParse(_lngController.text) ?? 119.65,
@@ -65,19 +65,19 @@ final poiList = await AmapSearch.searchAround(
               );
 
 /// 输入提示
-final inputTipList = await AmapSearch.fetchInputTips(
+final inputTipList = await AmapSearch.instance.fetchInputTips(
                 _keywordController.text,
                 city: _cityController.text,
               );
 
 /// 地理编码（地址转坐标）
-final geocodeList = await AmapSearch.searchGeocode(
+final geocodeList = await AmapSearch.instance.searchGeocode(
                 _keywordController.text,
                 city: _cityController.text,
               );
 
 /// 逆地理编码（坐标转地址）
-final reGeocodeList = await AmapSearch.searchReGeocode(
+final reGeocodeList = await AmapSearch.instance.searchReGeocode(
                 LatLng(
                   double.parse(_latController.text),
                   double.parse(_lngController.text),
@@ -86,13 +86,13 @@ final reGeocodeList = await AmapSearch.searchReGeocode(
               );
 
 /// 获取行政区划数据
-final district = await AmapSearch.searchDistrict(_keywordController.text);
+final district = await AmapSearch.instance.searchDistrict(_keywordController.text);
 
 /// 获取天气数据
-final district = await AmapSearch.searchDistrict(_keywordController.text);
+final district = await AmapSearch.instance.searchDistrict(_keywordController.text);
 
 /// 公交路径规划(未完成)
-final routeResult = await AmapSearch.searchBusRoute(
+final routeResult = await AmapSearch.instance.searchBusRoute(
                 from: LatLng(
                   double.parse(_fromLatController.text),
                   double.parse(_fromLngController.text),
@@ -105,7 +105,7 @@ final routeResult = await AmapSearch.searchBusRoute(
               );
 
 /// 驾车路径规划
-final routeResult = await AmapSearch.searchDriveRoute(
+final routeResult = await AmapSearch.instance.searchDriveRoute(
                 from: LatLng(
                   double.parse(_fromLatController.text),
                   double.parse(_fromLngController.text),
@@ -117,7 +117,7 @@ final routeResult = await AmapSearch.searchDriveRoute(
               );
 
 /// 骑行路径规划
-final routeResult = await AmapSearch.searchRideRoute(
+final routeResult = await AmapSearch.instance.searchRideRoute(
                 from: LatLng(
                   double.parse(_fromLatController.text),
                   double.parse(_fromLngController.text),
@@ -129,7 +129,7 @@ final routeResult = await AmapSearch.searchRideRoute(
               );
 
 /// 步行路径规划
-final routeResult = await AmapSearch.searchWalkRoute(
+final routeResult = await AmapSearch.instance.searchWalkRoute(
                 from: LatLng(
                   double.parse(_fromLatController.text),
                   double.parse(_fromLngController.text),
