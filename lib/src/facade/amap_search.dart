@@ -51,7 +51,7 @@ mixin _Community on _Holder {
     assert(pageSize > 0 && pageSize < 50, '每页大小范围为1-50');
     // 会在listener中关闭
     // ignore: close_sinks
-    final _controller = StreamController<List<Poi>>(sync: true);
+    final _controller = Completer<List<Poi>>.sync();
 
     platform(
       android: (pool) async {
@@ -104,7 +104,7 @@ mixin _Community on _Holder {
         pool..add(request);
       },
     );
-    return _controller.stream.first;
+    return _controller.future;
   }
 
   /// 周边搜索poi
@@ -123,7 +123,7 @@ mixin _Community on _Holder {
     assert(pageSize > 0 && pageSize < 50, '每页大小范围为1-50');
     // 会在listener中关闭
     // ignore: close_sinks
-    final _controller = StreamController<List<Poi>>(sync: true);
+    final _controller = Completer<List<Poi>>.sync();
 
     platform(
       android: (pool) async {
@@ -196,7 +196,7 @@ mixin _Community on _Holder {
         pool..add(request)..add(location);
       },
     );
-    return _controller.stream.first;
+    return _controller.future;
   }
 
   /// 输入内容自动提示
@@ -208,7 +208,7 @@ mixin _Community on _Holder {
   }) async {
     // 会在listener中关闭
     // ignore: close_sinks
-    final _controller = StreamController<List<InputTip>>(sync: true);
+    final _controller = Completer<List<InputTip>>.sync();
 
     platform(
       android: (pool) async {
@@ -256,7 +256,7 @@ mixin _Community on _Holder {
         pool..add(request);
       },
     );
-    return _controller.stream.first;
+    return _controller.future;
   }
 
   /// 地理编码（地址转坐标）
@@ -268,7 +268,7 @@ mixin _Community on _Holder {
   }) async {
     // 会在listener中关闭
     // ignore: close_sinks
-    final _controller = StreamController<List<Geocode>>();
+    final _controller = Completer<List<Geocode>>.sync();
 
     platform(
       android: (pool) async {
@@ -314,7 +314,7 @@ mixin _Community on _Holder {
         pool..add(request);
       },
     );
-    return _controller.stream.first;
+    return _controller.future;
   }
 
   /// 逆地理编码（坐标转地址）
@@ -326,7 +326,7 @@ mixin _Community on _Holder {
   }) async {
     // 会在listener中关闭
     // ignore: close_sinks
-    final _controller = StreamController<ReGeocode>(sync: true);
+    final _controller = Completer<ReGeocode>();
 
     platform(
       android: (pool) async {
@@ -385,7 +385,7 @@ mixin _Community on _Holder {
         pool..add(amapLocation)..add(request);
       },
     );
-    return _controller.stream.first;
+    return _controller.future;
   }
 
   /// 驾车出行路线规划
@@ -399,7 +399,7 @@ mixin _Community on _Holder {
   }) async {
     // 会在listener中关闭
     // ignore: close_sinks
-    final _controller = StreamController<DriveRouteResult>(sync: true);
+    final _controller = Completer<DriveRouteResult>();
 
     platform(
       android: (pool) async {
@@ -513,7 +513,7 @@ mixin _Community on _Holder {
           ..add(request);
       },
     );
-    return _controller.stream.first;
+    return _controller.future;
   }
 
   /// 公交出行路线规划
@@ -529,7 +529,7 @@ mixin _Community on _Holder {
   }) async {
     // 会在listener中关闭
     // ignore: close_sinks
-    final _controller = StreamController<BusRouteResult>(sync: true);
+    final _controller = Completer<BusRouteResult>();
 
     platform(
       android: (pool) async {
@@ -592,6 +592,7 @@ mixin _Community on _Holder {
         // 设置回调
         await _iosSearch.set_delegate(_IOSSearchListener(_controller));
 
+        // FIXME ios端的公交路线没有经纬度参数, 无法和android端统一
         // 创建搜索请求
         final request = await AMapWalkingRouteSearchRequest.create__();
         // 设置起点
@@ -606,7 +607,7 @@ mixin _Community on _Holder {
         pool..add(fromLatLng)..add(toLatLng)..add(request);
       },
     );
-    return _controller.stream.first;
+    return _controller.future;
   }
 
   /// 步行路线规划
@@ -619,7 +620,7 @@ mixin _Community on _Holder {
   }) async {
     // 会在listener中关闭
     // ignore: close_sinks
-    final _controller = StreamController<WalkRouteResult>(sync: true);
+    final _controller = Completer<WalkRouteResult>();
 
     platform(
       android: (pool) async {
@@ -695,7 +696,7 @@ mixin _Community on _Holder {
         pool..add(fromLatLng)..add(toLatLng)..add(request);
       },
     );
-    return _controller.stream.first;
+    return _controller.future;
   }
 
   /// 骑行路径规划
@@ -706,7 +707,7 @@ mixin _Community on _Holder {
   }) async {
     // 会在listener中关闭
     // ignore: close_sinks
-    final _controller = StreamController<RideRouteResult>(sync: true);
+    final _controller = Completer<RideRouteResult>();
 
     platform(
       android: (pool) async {
@@ -784,7 +785,7 @@ mixin _Community on _Holder {
         pool..add(fromLatLng)..add(toLatLng)..add(request);
       },
     );
-    return _controller.stream.first;
+    return _controller.future;
   }
 
   /// 获取公交信息
@@ -794,7 +795,7 @@ mixin _Community on _Holder {
   }) async {
     // 会在listener中关闭
     // ignore: close_sinks
-    final _controller = StreamController<BusStation>(sync: true);
+    final _controller = Completer<BusStation>();
 
     platform(
       android: (pool) async {
@@ -846,7 +847,7 @@ mixin _Community on _Holder {
         pool..add(request);
       },
     );
-    return _controller.stream.first;
+    return _controller.future;
   }
 
   /// 获取行政区划数据
@@ -858,7 +859,7 @@ mixin _Community on _Holder {
   }) async {
     // 会在listener中关闭
     // ignore: close_sinks
-    final _controller = StreamController<District>(sync: true);
+    final _controller = Completer<District>();
 
     platform(
       android: (pool) async {
@@ -911,14 +912,14 @@ mixin _Community on _Holder {
         pool..add(request);
       },
     );
-    return _controller.stream.first;
+    return _controller.future;
   }
 
   /// todo 获取天气数据
   Future<Weather> searchWeather(String city, {int mode = 0}) async {
     // 会在listener中关闭
     // ignore: close_sinks
-    final _controller = StreamController<Weather>(sync: true);
+    final _controller = Completer<Weather>();
 
     platform(
       android: (pool) async {
@@ -969,7 +970,7 @@ mixin _Community on _Holder {
         pool..add(request);
       },
     );
-    return _controller.stream.first;
+    return _controller.future;
   }
 
   /// 搜索云图
@@ -986,7 +987,7 @@ mixin _Community on _Holder {
 
     // 会在listener中关闭
     // ignore: close_sinks
-    final _controller = StreamController<Cloud>(sync: true);
+    final _controller = Completer<Cloud>();
 
     platform(
       android: (pool) async {
@@ -1042,7 +1043,7 @@ mixin _Community on _Holder {
         pool..add(request)..add(centerPoint);
       },
     );
-    return _controller.stream.first;
+    return _controller.future;
   }
 
   /// 释放原生端对应的资源, 除了[AMapServices]

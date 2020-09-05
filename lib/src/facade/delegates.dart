@@ -12,9 +12,9 @@ class _AndroidSearchListener extends java_lang_Object
         com_amap_api_services_district_DistrictSearch_OnDistrictSearchListener,
         com_amap_api_services_weather_WeatherSearch_OnWeatherSearchListener,
         com_amap_api_services_cloud_CloudSearch_OnCloudSearchListener {
-  _AndroidSearchListener(this._streamController);
+  _AndroidSearchListener(this._completer);
 
-  final StreamController _streamController;
+  final Completer _completer;
 
   @override
   Future<void> onPoiSearched(
@@ -57,10 +57,7 @@ class _AndroidSearchListener extends java_lang_Object
           adCode: adCodeBatch[i],
         )
     ];
-    if (_streamController?.isClosed == false) {
-      _streamController?.add(poiList);
-      _streamController?.close();
-    }
+    _completer?.complete(poiList);
   }
 
   @override
@@ -70,10 +67,7 @@ class _AndroidSearchListener extends java_lang_Object
   ) async {
     super.onGetInputtips(var1, var2);
     final inputTipList = [for (final item in var1) InputTip.android(item)];
-    if (_streamController?.isClosed == false) {
-      _streamController?.add(inputTipList);
-      _streamController?.close();
-    }
+    _completer?.complete(inputTipList);
   }
 
   @override
@@ -86,10 +80,7 @@ class _AndroidSearchListener extends java_lang_Object
       for (final item in (await var1.getGeocodeAddressList()))
         Geocode.android(item)
     ];
-    if (_streamController?.isClosed == false) {
-      _streamController?.add(geocode);
-      _streamController?.close();
-    }
+    _completer?.complete(geocode);
   }
 
   @override
@@ -97,10 +88,7 @@ class _AndroidSearchListener extends java_lang_Object
       com_amap_api_services_geocoder_RegeocodeResult var1, int var2) async {
     super.onRegeocodeSearched(var1, var2);
     final result = await var1.getRegeocodeAddress();
-    if (_streamController?.isClosed == false) {
-      _streamController?.add(ReGeocode.android(result));
-      _streamController?.close();
-    }
+    _completer?.complete(ReGeocode.android(result));
   }
 
   @override
@@ -109,10 +97,7 @@ class _AndroidSearchListener extends java_lang_Object
     int var2,
   ) async {
     super.onDriveRouteSearched(var1, var2);
-    if (_streamController?.isClosed == false) {
-      _streamController?.add(DriveRouteResult.android(var1));
-      _streamController?.close();
-    }
+    _completer?.complete(DriveRouteResult.android(var1));
   }
 
   @override
@@ -121,10 +106,7 @@ class _AndroidSearchListener extends java_lang_Object
     int var2,
   ) async {
     super.onRideRouteSearched(var1, var2);
-    if (_streamController?.isClosed == false) {
-      _streamController?.add(RideRouteResult.android(var1));
-      _streamController?.close();
-    }
+    _completer?.complete(RideRouteResult.android(var1));
   }
 
   @override
@@ -133,10 +115,7 @@ class _AndroidSearchListener extends java_lang_Object
     int var2,
   ) async {
     super.onWalkRouteSearched(var1, var2);
-    if (_streamController?.isClosed == false) {
-      _streamController?.add(WalkRouteResult.android(var1));
-      _streamController?.close();
-    }
+    _completer?.complete(WalkRouteResult.android(var1));
   }
 
   @override
@@ -145,30 +124,21 @@ class _AndroidSearchListener extends java_lang_Object
     int var2,
   ) async {
     super.onBusRouteSearched(var1, var2);
-    if (_streamController?.isClosed == false) {
-      _streamController?.add(BusRouteResult.android(var1));
-      _streamController?.close();
-    }
+    _completer?.complete(BusRouteResult.android(var1));
   }
 
   @override
   Future<void> onBusStationSearched(
       com_amap_api_services_busline_BusStationResult var1, int var2) async {
     super.onBusStationSearched(var1, var2);
-    if (_streamController?.isClosed == false) {
-      _streamController?.add(BusStation.android(var1));
-      _streamController?.close();
-    }
+    _completer?.complete(BusStation.android(var1));
   }
 
   @override
   Future<void> onDistrictSearched(
       com_amap_api_services_district_DistrictResult var1) async {
     super.onDistrictSearched(var1);
-    if (_streamController?.isClosed == false) {
-      _streamController?.add(District.android(var1));
-      _streamController?.close();
-    }
+    _completer?.complete(District.android(var1));
   }
 
   @override
@@ -186,10 +156,7 @@ class _AndroidSearchListener extends java_lang_Object
     int var2,
   ) async {
     super.onWeatherForecastSearched(var1, var2);
-    if (_streamController?.isClosed == false) {
-      _streamController?.add(Weather.android(var1));
-      _streamController?.close();
-    }
+    _completer?.complete(Weather.android(var1));
   }
 
   @override
@@ -198,18 +165,15 @@ class _AndroidSearchListener extends java_lang_Object
     int var2,
   ) async {
     super.onCloudSearched(var1, var2);
-    if (_streamController?.isClosed == false) {
-      _streamController?.add(Cloud.android(var1));
-      _streamController?.close();
-    }
+    _completer?.complete(Cloud.android(var1));
   }
 }
 
 /// ios: 搜索监听
 class _IOSSearchListener extends NSObject with AMapSearchDelegate {
-  _IOSSearchListener(this._streamController);
+  _IOSSearchListener(this._completer);
 
-  final StreamController _streamController;
+  final Completer _completer;
 
   @override
   Future<void> onPOISearchDone_response(
@@ -252,10 +216,7 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
           adCode: adCodeBatch[i],
         )
     ];
-    if (_streamController?.isClosed == false) {
-      _streamController?.add(poiList);
-      _streamController?.close();
-    }
+    _completer?.complete(poiList);
   }
 
   @override
@@ -267,10 +228,7 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
     final inputTipList = [
       for (final item in (await response.get_tips())) InputTip.ios(item)
     ];
-    if (_streamController?.isClosed == false) {
-      _streamController?.add(inputTipList);
-      _streamController?.close();
-    }
+    _completer?.complete(inputTipList);
   }
 
   @override
@@ -279,10 +237,7 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
     NSError error,
   ) async {
     super.AMapSearchRequest_didFailWithError(request, error);
-    if (_streamController?.isClosed == false) {
-      _streamController?.addError(Exception(await error.description));
-      _streamController?.close();
-    }
+    _completer?.completeError(Exception(await error.description));
   }
 
   @override
@@ -294,10 +249,7 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
     final geocode = [
       for (final item in (await response.get_geocodes())) Geocode.ios(item)
     ];
-    if (_streamController?.isClosed == false) {
-      _streamController?.add(geocode);
-      _streamController?.close();
-    }
+    _completer?.complete(geocode);
   }
 
   @override
@@ -307,10 +259,7 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
   ) async {
     super.onReGeocodeSearchDone_response(request, response);
     final reGeocode = ReGeocode.ios(await response.get_regeocode());
-    if (_streamController?.isClosed == false) {
-      _streamController?.add(reGeocode);
-      _streamController?.close();
-    }
+    _completer?.complete(reGeocode);
   }
 
   @override
@@ -333,10 +282,7 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
         .is__<AMapRidingRouteSearchRequest>()) {
       route = RideRouteResult.ios(await response.get_route());
     }
-    if (_streamController?.isClosed == false) {
-      _streamController?.add(route);
-      _streamController?.close();
-    }
+    _completer?.complete(route);
   }
 
   @override
@@ -345,10 +291,7 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
     AMapBusStopSearchResponse response,
   ) async {
     super.onBusStopSearchDone_response(request, response);
-    if (_streamController?.isClosed == false) {
-      _streamController?.add(BusStation.ios(response));
-      _streamController?.close();
-    }
+    _completer?.complete(BusStation.ios(response));
   }
 
   @override
@@ -357,10 +300,7 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
     AMapDistrictSearchResponse response,
   ) async {
     super.onDistrictSearchDone_response(request, response);
-    if (_streamController?.isClosed == false) {
-      _streamController?.add(District.ios(response));
-      _streamController?.close();
-    }
+    _completer?.complete(District.ios(response));
   }
 
   @override
@@ -369,9 +309,6 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
     AMapCloudPOISearchResponse response,
   ) async {
     super.onCloudSearchDone_response(request, response);
-    if (_streamController?.isClosed == false) {
-      _streamController?.add(Cloud.ios(response));
-      _streamController?.close();
-    }
+    _completer?.complete(Cloud.ios(response));
   }
 }
