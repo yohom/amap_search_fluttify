@@ -25,9 +25,6 @@ mixin AMapSearchDelegate on NSObject {
 
   @mustCallSuper
   Future<void> AMapSearchRequest_didFailWithError(dynamic request, NSError error) {
-    if (request is Ref) kNativeObjectPool.add(request);
-    if (error is Ref) kNativeObjectPool.add(error);
-  
     if (fluttifyLogEnabled) {
       debugPrint('AMapSearchRequest_didFailWithError::kNativeObjectPool: $kNativeObjectPool');
     }
@@ -35,9 +32,6 @@ mixin AMapSearchDelegate on NSObject {
   
   @mustCallSuper
   Future<void> onPOISearchDone_response(AMapPOISearchBaseRequest request, AMapPOISearchResponse response) {
-    if (request is Ref) kNativeObjectPool.add(request);
-    if (response is Ref) kNativeObjectPool.add(response);
-  
     if (fluttifyLogEnabled) {
       debugPrint('onPOISearchDone_response::kNativeObjectPool: $kNativeObjectPool');
     }
@@ -45,9 +39,6 @@ mixin AMapSearchDelegate on NSObject {
   
   @mustCallSuper
   Future<void> onRoutePOISearchDone_response(AMapRoutePOISearchRequest request, AMapRoutePOISearchResponse response) {
-    if (request is Ref) kNativeObjectPool.add(request);
-    if (response is Ref) kNativeObjectPool.add(response);
-  
     if (fluttifyLogEnabled) {
       debugPrint('onRoutePOISearchDone_response::kNativeObjectPool: $kNativeObjectPool');
     }
@@ -55,9 +46,6 @@ mixin AMapSearchDelegate on NSObject {
   
   @mustCallSuper
   Future<void> onGeocodeSearchDone_response(AMapGeocodeSearchRequest request, AMapGeocodeSearchResponse response) {
-    if (request is Ref) kNativeObjectPool.add(request);
-    if (response is Ref) kNativeObjectPool.add(response);
-  
     if (fluttifyLogEnabled) {
       debugPrint('onGeocodeSearchDone_response::kNativeObjectPool: $kNativeObjectPool');
     }
@@ -65,9 +53,6 @@ mixin AMapSearchDelegate on NSObject {
   
   @mustCallSuper
   Future<void> onReGeocodeSearchDone_response(AMapReGeocodeSearchRequest request, AMapReGeocodeSearchResponse response) {
-    if (request is Ref) kNativeObjectPool.add(request);
-    if (response is Ref) kNativeObjectPool.add(response);
-  
     if (fluttifyLogEnabled) {
       debugPrint('onReGeocodeSearchDone_response::kNativeObjectPool: $kNativeObjectPool');
     }
@@ -75,9 +60,6 @@ mixin AMapSearchDelegate on NSObject {
   
   @mustCallSuper
   Future<void> onInputTipsSearchDone_response(AMapInputTipsSearchRequest request, AMapInputTipsSearchResponse response) {
-    if (request is Ref) kNativeObjectPool.add(request);
-    if (response is Ref) kNativeObjectPool.add(response);
-  
     if (fluttifyLogEnabled) {
       debugPrint('onInputTipsSearchDone_response::kNativeObjectPool: $kNativeObjectPool');
     }
@@ -85,9 +67,6 @@ mixin AMapSearchDelegate on NSObject {
   
   @mustCallSuper
   Future<void> onBusStopSearchDone_response(AMapBusStopSearchRequest request, AMapBusStopSearchResponse response) {
-    if (request is Ref) kNativeObjectPool.add(request);
-    if (response is Ref) kNativeObjectPool.add(response);
-  
     if (fluttifyLogEnabled) {
       debugPrint('onBusStopSearchDone_response::kNativeObjectPool: $kNativeObjectPool');
     }
@@ -95,9 +74,6 @@ mixin AMapSearchDelegate on NSObject {
   
   @mustCallSuper
   Future<void> onBusLineSearchDone_response(AMapBusLineBaseSearchRequest request, AMapBusLineSearchResponse response) {
-    if (request is Ref) kNativeObjectPool.add(request);
-    if (response is Ref) kNativeObjectPool.add(response);
-  
     if (fluttifyLogEnabled) {
       debugPrint('onBusLineSearchDone_response::kNativeObjectPool: $kNativeObjectPool');
     }
@@ -105,9 +81,6 @@ mixin AMapSearchDelegate on NSObject {
   
   @mustCallSuper
   Future<void> onDistrictSearchDone_response(AMapDistrictSearchRequest request, AMapDistrictSearchResponse response) {
-    if (request is Ref) kNativeObjectPool.add(request);
-    if (response is Ref) kNativeObjectPool.add(response);
-  
     if (fluttifyLogEnabled) {
       debugPrint('onDistrictSearchDone_response::kNativeObjectPool: $kNativeObjectPool');
     }
@@ -115,9 +88,6 @@ mixin AMapSearchDelegate on NSObject {
   
   @mustCallSuper
   Future<void> onRouteSearchDone_response(AMapRouteSearchBaseRequest request, AMapRouteSearchResponse response) {
-    if (request is Ref) kNativeObjectPool.add(request);
-    if (response is Ref) kNativeObjectPool.add(response);
-  
     if (fluttifyLogEnabled) {
       debugPrint('onRouteSearchDone_response::kNativeObjectPool: $kNativeObjectPool');
     }
@@ -125,9 +95,6 @@ mixin AMapSearchDelegate on NSObject {
   
   @mustCallSuper
   Future<void> onFutureRouteSearchDone_response(AMapRouteSearchBaseRequest request, AMapFutureRouteSearchResponse response) {
-    if (request is Ref) kNativeObjectPool.add(request);
-    if (response is Ref) kNativeObjectPool.add(response);
-  
     if (fluttifyLogEnabled) {
       debugPrint('onFutureRouteSearchDone_response::kNativeObjectPool: $kNativeObjectPool');
     }
@@ -135,9 +102,6 @@ mixin AMapSearchDelegate on NSObject {
   
   @mustCallSuper
   Future<void> onDistanceSearchDone_response(AMapDistanceSearchRequest request, AMapDistanceSearchResponse response) {
-    if (request is Ref) kNativeObjectPool.add(request);
-    if (response is Ref) kNativeObjectPool.add(response);
-  
     if (fluttifyLogEnabled) {
       debugPrint('onDistanceSearchDone_response::kNativeObjectPool: $kNativeObjectPool');
     }
@@ -145,9 +109,6 @@ mixin AMapSearchDelegate on NSObject {
   
   @mustCallSuper
   Future<void> onWeatherSearchDone_response(AMapWeatherSearchRequest request, AMapWeatherSearchResponse response) {
-    if (request is Ref) kNativeObjectPool.add(request);
-    if (response is Ref) kNativeObjectPool.add(response);
-  
     if (fluttifyLogEnabled) {
       debugPrint('onWeatherSearchDone_response::kNativeObjectPool: $kNativeObjectPool');
     }
@@ -155,9 +116,6 @@ mixin AMapSearchDelegate on NSObject {
   
   @mustCallSuper
   Future<void> onRoadTrafficSearchDone_response(AMapRoadTrafficSearchBaseRequest request, AMapRoadTrafficSearchResponse response) {
-    if (request is Ref) kNativeObjectPool.add(request);
-    if (response is Ref) kNativeObjectPool.add(response);
-  
     if (fluttifyLogEnabled) {
       debugPrint('onRoadTrafficSearchDone_response::kNativeObjectPool: $kNativeObjectPool');
     }
@@ -165,9 +123,6 @@ mixin AMapSearchDelegate on NSObject {
   
   @mustCallSuper
   Future<void> onNearbySearchDone_response(AMapNearbySearchRequest request, AMapNearbySearchResponse response) {
-    if (request is Ref) kNativeObjectPool.add(request);
-    if (response is Ref) kNativeObjectPool.add(response);
-  
     if (fluttifyLogEnabled) {
       debugPrint('onNearbySearchDone_response::kNativeObjectPool: $kNativeObjectPool');
     }
@@ -175,9 +130,6 @@ mixin AMapSearchDelegate on NSObject {
   
   @mustCallSuper
   Future<void> onCloudSearchDone_response(AMapCloudSearchBaseRequest request, AMapCloudPOISearchResponse response) {
-    if (request is Ref) kNativeObjectPool.add(request);
-    if (response is Ref) kNativeObjectPool.add(response);
-  
     if (fluttifyLogEnabled) {
       debugPrint('onCloudSearchDone_response::kNativeObjectPool: $kNativeObjectPool');
     }
@@ -185,9 +137,6 @@ mixin AMapSearchDelegate on NSObject {
   
   @mustCallSuper
   Future<void> onShareSearchDone_response(AMapShareSearchBaseRequest request, AMapShareSearchResponse response) {
-    if (request is Ref) kNativeObjectPool.add(request);
-    if (response is Ref) kNativeObjectPool.add(response);
-  
     if (fluttifyLogEnabled) {
       debugPrint('onShareSearchDone_response::kNativeObjectPool: $kNativeObjectPool');
     }

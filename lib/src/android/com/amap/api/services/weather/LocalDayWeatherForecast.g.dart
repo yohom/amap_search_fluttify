@@ -21,10 +21,8 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
 
   //region creators
   static Future<com_amap_api_services_weather_LocalDayWeatherForecast> create__() async {
-    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_services_weather_LocalDayWeatherForecast__');
+    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createcom_amap_api_services_weather_LocalDayWeatherForecast__');
     final object = com_amap_api_services_weather_LocalDayWeatherForecast()..refId = refId..tag__ = 'amap_search_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
@@ -32,10 +30,9 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_services_weather_LocalDayWeatherForecast__', {'length': length});
+    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchcom_amap_api_services_weather_LocalDayWeatherForecast__', {'length': length});
   
     final List<com_amap_api_services_weather_LocalDayWeatherForecast> typedResult = resultBatch.map((result) => com_amap_api_services_weather_LocalDayWeatherForecast()..refId = result..tag__ = 'amap_search_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -58,7 +55,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::getDate', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::getDate', {"__this__": this});
   
   
     // handle native call
@@ -69,7 +66,6 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -82,7 +78,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::setDate', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::setDate', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -93,7 +89,6 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -106,7 +101,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::getWeek', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::getWeek', {"__this__": this});
   
   
     // handle native call
@@ -117,7 +112,6 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -130,7 +124,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::setWeek', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::setWeek', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -141,7 +135,6 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -154,7 +147,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::getDayWeather', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::getDayWeather', {"__this__": this});
   
   
     // handle native call
@@ -165,7 +158,6 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -178,7 +170,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::setDayWeather', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::setDayWeather', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -189,7 +181,6 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -202,7 +193,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::getNightWeather', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::getNightWeather', {"__this__": this});
   
   
     // handle native call
@@ -213,7 +204,6 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -226,7 +216,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::setNightWeather', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::setNightWeather', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -237,7 +227,6 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -250,7 +239,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::getDayTemp', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::getDayTemp', {"__this__": this});
   
   
     // handle native call
@@ -261,7 +250,6 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -274,7 +262,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::setDayTemp', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::setDayTemp', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -285,7 +273,6 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -298,7 +285,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::getNightTemp', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::getNightTemp', {"__this__": this});
   
   
     // handle native call
@@ -309,7 +296,6 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -322,7 +308,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::setNightTemp', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::setNightTemp', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -333,7 +319,6 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -346,7 +331,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::getDayWindDirection', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::getDayWindDirection', {"__this__": this});
   
   
     // handle native call
@@ -357,7 +342,6 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -370,7 +354,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::setDayWindDirection', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::setDayWindDirection', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -381,7 +365,6 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -394,7 +377,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::getNightWindDirection', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::getNightWindDirection', {"__this__": this});
   
   
     // handle native call
@@ -405,7 +388,6 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -418,7 +400,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::setNightWindDirection', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::setNightWindDirection', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -429,7 +411,6 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -442,7 +423,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::getDayWindPower', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::getDayWindPower', {"__this__": this});
   
   
     // handle native call
@@ -453,7 +434,6 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -466,7 +446,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::setDayWindPower', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::setDayWindPower', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -477,7 +457,6 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -490,7 +469,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::getNightWindPower', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::getNightWindPower', {"__this__": this});
   
   
     // handle native call
@@ -501,7 +480,6 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -514,7 +492,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::setNightWindPower', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::setNightWindPower', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -525,7 +503,6 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -550,7 +527,7 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::getDate_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::getDate_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -558,7 +535,6 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -570,7 +546,7 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::setDate_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::setDate_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -578,7 +554,6 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -590,7 +565,7 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::getWeek_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::getWeek_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -598,7 +573,6 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -610,7 +584,7 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::setWeek_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::setWeek_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -618,7 +592,6 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -630,7 +603,7 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::getDayWeather_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::getDayWeather_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -638,7 +611,6 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -650,7 +622,7 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::setDayWeather_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::setDayWeather_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -658,7 +630,6 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -670,7 +641,7 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::getNightWeather_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::getNightWeather_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -678,7 +649,6 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -690,7 +660,7 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::setNightWeather_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::setNightWeather_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -698,7 +668,6 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -710,7 +679,7 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::getDayTemp_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::getDayTemp_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -718,7 +687,6 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -730,7 +698,7 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::setDayTemp_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::setDayTemp_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -738,7 +706,6 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -750,7 +717,7 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::getNightTemp_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::getNightTemp_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -758,7 +725,6 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -770,7 +736,7 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::setNightTemp_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::setNightTemp_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -778,7 +744,6 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -790,7 +755,7 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::getDayWindDirection_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::getDayWindDirection_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -798,7 +763,6 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -810,7 +774,7 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::setDayWindDirection_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::setDayWindDirection_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -818,7 +782,6 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -830,7 +793,7 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::getNightWindDirection_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::getNightWindDirection_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -838,7 +801,6 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -850,7 +812,7 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::setNightWindDirection_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::setNightWindDirection_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -858,7 +820,6 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -870,7 +831,7 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::getDayWindPower_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::getDayWindPower_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -878,7 +839,6 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -890,7 +850,7 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::setDayWindPower_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::setDayWindPower_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -898,7 +858,6 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -910,7 +869,7 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::getNightWindPower_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::getNightWindPower_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -918,7 +877,6 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -930,7 +888,7 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::setNightWindPower_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.weather.LocalDayWeatherForecast::setNightWindPower_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -938,7 +896,6 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }

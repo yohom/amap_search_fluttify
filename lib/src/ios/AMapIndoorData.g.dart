@@ -21,10 +21,8 @@ class AMapIndoorData extends AMapSearchObject with NSCoding, NSCopying {
 
   //region creators
   static Future<AMapIndoorData> create__() async {
-    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapIndoorData');
+    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createAMapIndoorData');
     final object = AMapIndoorData()..refId = refId..tag__ = 'amap_search_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
@@ -32,10 +30,9 @@ class AMapIndoorData extends AMapSearchObject with NSCoding, NSCopying {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapIndoorData', {'length': length});
+    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchAMapIndoorData', {'length': length});
   
     final List<AMapIndoorData> typedResult = resultBatch.map((result) => AMapIndoorData()..refId = result..tag__ = 'amap_search_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -43,40 +40,40 @@ class AMapIndoorData extends AMapSearchObject with NSCoding, NSCopying {
 
   //region getters
   Future<int> get_floor() async {
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapIndoorData::get_floor", {'refId': refId});
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapIndoorData::get_floor", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   Future<String> get_floorName() async {
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapIndoorData::get_floorName", {'refId': refId});
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapIndoorData::get_floorName", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   Future<String> get_pid() async {
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapIndoorData::get_pid", {'refId': refId});
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapIndoorData::get_pid", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   //endregion
 
   //region setters
   Future<void> set_floor(int floor) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapIndoorData::set_floor', {'refId': refId, "floor": floor});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
+        .invokeMethod('AMapIndoorData::set_floor', <String, dynamic>{'__this__': this, "floor": floor});
   
   
   }
   
   Future<void> set_floorName(String floorName) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapIndoorData::set_floorName', {'refId': refId, "floorName": floorName});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
+        .invokeMethod('AMapIndoorData::set_floorName', <String, dynamic>{'__this__': this, "floorName": floorName});
   
   
   }
   
   Future<void> set_pid(String pid) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapIndoorData::set_pid', {'refId': refId, "pid": pid});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
+        .invokeMethod('AMapIndoorData::set_pid', <String, dynamic>{'__this__': this, "pid": pid});
   
   
   }
@@ -91,23 +88,23 @@ class AMapIndoorData extends AMapSearchObject with NSCoding, NSCopying {
 extension AMapIndoorData_Batch on List<AMapIndoorData> {
   //region getters
   Future<List<int>> get_floor_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapIndoorData::get_floor_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapIndoorData::get_floor_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<String>> get_floorName_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapIndoorData::get_floorName_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapIndoorData::get_floorName_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<String>> get_pid_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapIndoorData::get_pid_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapIndoorData::get_pid_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
@@ -115,19 +112,19 @@ extension AMapIndoorData_Batch on List<AMapIndoorData> {
 
   //region setters
   Future<void> set_floor_batch(List<int> floor) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapIndoorData::set_floor_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "floor": floor[__i__]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapIndoorData::set_floor_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "floor": floor[__i__]}]);
   
   
   }
   
   Future<void> set_floorName_batch(List<String> floorName) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapIndoorData::set_floorName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "floorName": floorName[__i__]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapIndoorData::set_floorName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "floorName": floorName[__i__]}]);
   
   
   }
   
   Future<void> set_pid_batch(List<String> pid) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapIndoorData::set_pid_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "pid": pid[__i__]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapIndoorData::set_pid_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "pid": pid[__i__]}]);
   
   
   }

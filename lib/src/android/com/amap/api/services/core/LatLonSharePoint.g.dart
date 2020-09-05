@@ -21,10 +21,8 @@ class com_amap_api_services_core_LatLonSharePoint extends com_amap_api_services_
 
   //region creators
   static Future<com_amap_api_services_core_LatLonSharePoint> create__double__double__String(double var1, double var3, String var5) async {
-    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_services_core_LatLonSharePoint__double__double__String', {"var1": var1, "var3": var3, "var5": var5});
+    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createcom_amap_api_services_core_LatLonSharePoint__double__double__String', {"var1": var1, "var3": var3, "var5": var5});
     final object = com_amap_api_services_core_LatLonSharePoint()..refId = refId..tag__ = 'amap_search_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
@@ -32,10 +30,9 @@ class com_amap_api_services_core_LatLonSharePoint extends com_amap_api_services_
     if (var1.length != var3.length || var3.length != var5.length) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_services_core_LatLonSharePoint__double__double__String', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var3": var3[__i__], "var5": var5[__i__]}]);
+    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchcom_amap_api_services_core_LatLonSharePoint__double__double__String', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var3": var3[__i__], "var5": var5[__i__]}]);
   
     final List<com_amap_api_services_core_LatLonSharePoint> typedResult = resultBatch.map((result) => com_amap_api_services_core_LatLonSharePoint()..refId = result..tag__ = 'amap_search_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -58,7 +55,7 @@ class com_amap_api_services_core_LatLonSharePoint extends com_amap_api_services_
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.LatLonSharePoint::getSharePointName', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.core.LatLonSharePoint::getSharePointName', {"__this__": this});
   
   
     // handle native call
@@ -69,7 +66,6 @@ class com_amap_api_services_core_LatLonSharePoint extends com_amap_api_services_
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -82,7 +78,7 @@ class com_amap_api_services_core_LatLonSharePoint extends com_amap_api_services_
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.LatLonSharePoint::setSharePointName', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.core.LatLonSharePoint::setSharePointName', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -93,7 +89,6 @@ class com_amap_api_services_core_LatLonSharePoint extends com_amap_api_services_
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -118,7 +113,7 @@ extension com_amap_api_services_core_LatLonSharePoint_Batch on List<com_amap_api
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.LatLonSharePoint::getSharePointName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.core.LatLonSharePoint::getSharePointName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -126,7 +121,6 @@ extension com_amap_api_services_core_LatLonSharePoint_Batch on List<com_amap_api
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -138,7 +132,7 @@ extension com_amap_api_services_core_LatLonSharePoint_Batch on List<com_amap_api
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.LatLonSharePoint::setSharePointName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.core.LatLonSharePoint::setSharePointName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -146,7 +140,6 @@ extension com_amap_api_services_core_LatLonSharePoint_Batch on List<com_amap_api
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }

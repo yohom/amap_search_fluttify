@@ -21,10 +21,8 @@ class AMapSuggestion extends AMapSearchObject with NSCoding, NSCopying {
 
   //region creators
   static Future<AMapSuggestion> create__() async {
-    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapSuggestion');
+    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createAMapSuggestion');
     final object = AMapSuggestion()..refId = refId..tag__ = 'amap_search_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
@@ -32,10 +30,9 @@ class AMapSuggestion extends AMapSearchObject with NSCoding, NSCopying {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapSuggestion', {'length': length});
+    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchAMapSuggestion', {'length': length});
   
     final List<AMapSuggestion> typedResult = resultBatch.map((result) => AMapSuggestion()..refId = result..tag__ = 'amap_search_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -43,28 +40,28 @@ class AMapSuggestion extends AMapSearchObject with NSCoding, NSCopying {
 
   //region getters
   Future<List<String>> get_keywords() async {
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapSuggestion::get_keywords", {'refId': refId});
-  
-    return (__result__ as List).cast<String>();
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapSuggestion::get_keywords", {'__this__': this});
+    return __result__ == null ? null : ((__result__ as List).cast<String>());
   }
   
   Future<List<AMapCity>> get_cities() async {
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapSuggestion::get_cities", {'refId': refId});
-    kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => AMapCity()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
-    return (__result__ as List).cast<int>().map((__it__) => AMapCity()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapSuggestion::get_cities", {'__this__': this});
+    return __result__ == null ? null : ((__result__ as List).cast<String>().map((__it__) => AMapCity()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
   }
   
   //endregion
 
   //region setters
   Future<void> set_keywords(List<String> keywords) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSuggestion::set_keywords', {'refId': refId, "keywords": keywords});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
+        .invokeMethod('AMapSuggestion::set_keywords', <String, dynamic>{'__this__': this, "keywords": keywords});
   
   
   }
   
   Future<void> set_cities(List<AMapCity> cities) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSuggestion::set_cities', {'refId': refId, "cities": cities.map((it) => it.refId).toList()});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
+        .invokeMethod('AMapSuggestion::set_cities', <String, dynamic>{'__this__': this, "cities": cities});
   
   
   }
@@ -79,16 +76,16 @@ class AMapSuggestion extends AMapSearchObject with NSCoding, NSCopying {
 extension AMapSuggestion_Batch on List<AMapSuggestion> {
   //region getters
   Future<List<List<String>>> get_keywords_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapSuggestion::get_keywords_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<List<String>>().map((__result__) => (__result__ as List).cast<String>()).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapSuggestion::get_keywords_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<List<String>>().map((__result__) => (__result__ as List).cast<String>()).toList();
     return typedResult;
   }
   
   Future<List<List<AMapCity>>> get_cities_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapSuggestion::get_cities_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as List).cast<int>().map((__it__) => AMapCity()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
-    kNativeObjectPool.addAll(typedResult.expand((e) => e));
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapSuggestion::get_cities_batch", [for (final __item__ in this) {'__this__': __item__}]);
+  
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => AMapCity()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
     return typedResult;
   }
   
@@ -96,13 +93,13 @@ extension AMapSuggestion_Batch on List<AMapSuggestion> {
 
   //region setters
   Future<void> set_keywords_batch(List<List<String>> keywords) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSuggestion::set_keywords_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "keywords": keywords[__i__]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSuggestion::set_keywords_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "keywords": keywords[__i__]}]);
   
   
   }
   
   Future<void> set_cities_batch(List<List<AMapCity>> cities) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSuggestion::set_cities_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "cities": cities[__i__].map((it) => it.refId).toList()}]);
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSuggestion::set_cities_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "cities": cities[__i__].map((it) => it.refId).toList()}]);
   
   
   }

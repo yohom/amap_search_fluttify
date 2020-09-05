@@ -19,9 +19,11 @@ import io.flutter.plugin.common.BinaryMessenger;
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.PluginRegistry.Registrar;
+import io.flutter.plugin.common.StandardMethodCodec;
 import io.flutter.plugin.platform.PlatformViewRegistry;
 
 import me.yohom.amap_search_fluttify.AmapSearchFluttifyPlugin.Handler;
+import me.yohom.foundation_fluttify.FluttifyMessageCodec;
 
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getEnableLog;
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getHEAP;
@@ -32,7 +34,7 @@ public class SubHandler13 {
         return new HashMap<String, Handler>() {{
             // factory
             put("ObjectFactory::create_batchcom_amap_api_services_cloud_CloudSearch_Query__String__String__com_amap_api_services_cloud_CloudSearch_SearchBound", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.services.cloud.CloudSearch.Query> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -58,26 +60,24 @@ public class SubHandler13 {
                     // jsonable arg
                     String var2 = (String) ((Map<String, Object>) __args__).get("var2");
                     // ref arg
-                    Integer __var3RefId__ = (Integer) ((Map<String, Object>) __args__).get("var3");
-                    com.amap.api.services.cloud.CloudSearch.SearchBound var3 = __var3RefId__ != null ? (com.amap.api.services.cloud.CloudSearch.SearchBound) getHEAP().get(__var3RefId__) : null;
+                    com.amap.api.services.cloud.CloudSearch.SearchBound var3 = (com.amap.api.services.cloud.CloudSearch.SearchBound) ((Map<String, Object>) __args__).get("var3");
             
                     // create target object
                     com.amap.api.services.cloud.CloudSearch.Query __obj__ = new com.amap.api.services.cloud.CloudSearch.Query(var1, var2, var3);
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcom_amap_api_services_cloud_CloudSearch__android_content_Context", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.services.cloud.CloudSearch> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -99,26 +99,24 @@ public class SubHandler13 {
             
                     // args
                     // ref arg
-                    Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                    android.content.Context var1 = __var1RefId__ != null ? (android.content.Context) getHEAP().get(__var1RefId__) : null;
+                    android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
             
                     // create target object
                     com.amap.api.services.cloud.CloudSearch __obj__ = new com.amap.api.services.cloud.CloudSearch(var1);
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcom_amap_api_services_cloud_CloudSearch_SearchBound__com_amap_api_services_core_LatLonPoint__int", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.services.cloud.CloudSearch.SearchBound> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -140,28 +138,26 @@ public class SubHandler13 {
             
                     // args
                     // ref arg
-                    Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                    com.amap.api.services.core.LatLonPoint var1 = __var1RefId__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1RefId__) : null;
+                    com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) ((Map<String, Object>) __args__).get("var1");
                     // jsonable arg
                     int var2 = (int) ((Map<String, Object>) __args__).get("var2");
             
                     // create target object
                     com.amap.api.services.cloud.CloudSearch.SearchBound __obj__ = new com.amap.api.services.cloud.CloudSearch.SearchBound(var1, var2);
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcom_amap_api_services_cloud_CloudSearch_SearchBound__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.services.cloud.CloudSearch.SearchBound> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -183,29 +179,26 @@ public class SubHandler13 {
             
                     // args
                     // ref arg
-                    Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                    com.amap.api.services.core.LatLonPoint var1 = __var1RefId__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1RefId__) : null;
+                    com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) ((Map<String, Object>) __args__).get("var1");
                     // ref arg
-                    Integer __var2RefId__ = (Integer) ((Map<String, Object>) __args__).get("var2");
-                    com.amap.api.services.core.LatLonPoint var2 = __var2RefId__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var2RefId__) : null;
+                    com.amap.api.services.core.LatLonPoint var2 = (com.amap.api.services.core.LatLonPoint) ((Map<String, Object>) __args__).get("var2");
             
                     // create target object
                     com.amap.api.services.cloud.CloudSearch.SearchBound __obj__ = new com.amap.api.services.cloud.CloudSearch.SearchBound(var1, var2);
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcom_amap_api_services_cloud_CloudSearch_SearchBound__java_util_List_com_amap_api_services_core_LatLonPoint_", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.services.cloud.CloudSearch.SearchBound> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -235,21 +228,20 @@ public class SubHandler13 {
             
                     // create target object
                     com.amap.api.services.cloud.CloudSearch.SearchBound __obj__ = new com.amap.api.services.cloud.CloudSearch.SearchBound((ArrayList) var1);
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcom_amap_api_services_cloud_CloudSearch_SearchBound__String", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.services.cloud.CloudSearch.SearchBound> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -275,21 +267,20 @@ public class SubHandler13 {
             
                     // create target object
                     com.amap.api.services.cloud.CloudSearch.SearchBound __obj__ = new com.amap.api.services.cloud.CloudSearch.SearchBound(var1);
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcom_amap_api_services_cloud_CloudImage__String__String__String", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.services.cloud.CloudImage> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -319,21 +310,20 @@ public class SubHandler13 {
             
                     // create target object
                     com.amap.api.services.cloud.CloudImage __obj__ = new com.amap.api.services.cloud.CloudImage(var1, var2, var3);
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcom_amap_api_services_cloud_CloudSearch_Sortingrules__String__boolean", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.services.cloud.CloudSearch.Sortingrules> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -361,21 +351,20 @@ public class SubHandler13 {
             
                     // create target object
                     com.amap.api.services.cloud.CloudSearch.Sortingrules __obj__ = new com.amap.api.services.cloud.CloudSearch.Sortingrules(var1, var2);
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcom_amap_api_services_cloud_CloudSearch_Sortingrules__int", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.services.cloud.CloudSearch.Sortingrules> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -401,21 +390,20 @@ public class SubHandler13 {
             
                     // create target object
                     com.amap.api.services.cloud.CloudSearch.Sortingrules __obj__ = new com.amap.api.services.cloud.CloudSearch.Sortingrules(var1);
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcom_amap_api_services_cloud_CloudItemDetail__String__com_amap_api_services_core_LatLonPoint__String__String", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.services.cloud.CloudItemDetail> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -439,8 +427,7 @@ public class SubHandler13 {
                     // jsonable arg
                     String var1 = (String) ((Map<String, Object>) __args__).get("var1");
                     // ref arg
-                    Integer __var2RefId__ = (Integer) ((Map<String, Object>) __args__).get("var2");
-                    com.amap.api.services.core.LatLonPoint var2 = __var2RefId__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var2RefId__) : null;
+                    com.amap.api.services.core.LatLonPoint var2 = (com.amap.api.services.core.LatLonPoint) ((Map<String, Object>) __args__).get("var2");
                     // jsonable arg
                     String var3 = (String) ((Map<String, Object>) __args__).get("var3");
                     // jsonable arg
@@ -448,21 +435,20 @@ public class SubHandler13 {
             
                     // create target object
                     com.amap.api.services.cloud.CloudItemDetail __obj__ = new com.amap.api.services.cloud.CloudItemDetail(var1, var2, var3, var4);
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcom_amap_api_services_weather_LocalDayWeatherForecast__", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.services.weather.LocalDayWeatherForecast> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -487,21 +473,20 @@ public class SubHandler13 {
             
                     // create target object
                     com.amap.api.services.weather.LocalDayWeatherForecast __obj__ = new com.amap.api.services.weather.LocalDayWeatherForecast();
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcom_amap_api_services_weather_WeatherSearchQuery__String__int", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.services.weather.WeatherSearchQuery> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -529,21 +514,20 @@ public class SubHandler13 {
             
                     // create target object
                     com.amap.api.services.weather.WeatherSearchQuery __obj__ = new com.amap.api.services.weather.WeatherSearchQuery(var1, var2);
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcom_amap_api_services_weather_WeatherSearchQuery__", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.services.weather.WeatherSearchQuery> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -568,21 +552,20 @@ public class SubHandler13 {
             
                     // create target object
                     com.amap.api.services.weather.WeatherSearchQuery __obj__ = new com.amap.api.services.weather.WeatherSearchQuery();
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcom_amap_api_services_weather_LocalWeatherForecast__", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.services.weather.LocalWeatherForecast> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -607,21 +590,20 @@ public class SubHandler13 {
             
                     // create target object
                     com.amap.api.services.weather.LocalWeatherForecast __obj__ = new com.amap.api.services.weather.LocalWeatherForecast();
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcom_amap_api_services_weather_WeatherSearch__android_content_Context", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.services.weather.WeatherSearch> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -643,26 +625,24 @@ public class SubHandler13 {
             
                     // args
                     // ref arg
-                    Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                    android.content.Context var1 = __var1RefId__ != null ? (android.content.Context) getHEAP().get(__var1RefId__) : null;
+                    android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
             
                     // create target object
                     com.amap.api.services.weather.WeatherSearch __obj__ = new com.amap.api.services.weather.WeatherSearch(var1);
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcom_amap_api_services_weather_LocalWeatherLive__", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.services.weather.LocalWeatherLive> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -687,21 +667,20 @@ public class SubHandler13 {
             
                     // create target object
                     com.amap.api.services.weather.LocalWeatherLive __obj__ = new com.amap.api.services.weather.LocalWeatherLive();
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcom_amap_api_services_geocoder_BusinessArea__", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.services.geocoder.BusinessArea> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -726,21 +705,20 @@ public class SubHandler13 {
             
                     // create target object
                     com.amap.api.services.geocoder.BusinessArea __obj__ = new com.amap.api.services.geocoder.BusinessArea();
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcom_amap_api_services_geocoder_GeocodeQuery__String__String", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.services.geocoder.GeocodeQuery> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -768,21 +746,20 @@ public class SubHandler13 {
             
                     // create target object
                     com.amap.api.services.geocoder.GeocodeQuery __obj__ = new com.amap.api.services.geocoder.GeocodeQuery(var1, var2);
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcom_amap_api_services_geocoder_GeocodeSearch__android_content_Context", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.services.geocoder.GeocodeSearch> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -804,26 +781,24 @@ public class SubHandler13 {
             
                     // args
                     // ref arg
-                    Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                    android.content.Context var1 = __var1RefId__ != null ? (android.content.Context) getHEAP().get(__var1RefId__) : null;
+                    android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
             
                     // create target object
                     com.amap.api.services.geocoder.GeocodeSearch __obj__ = new com.amap.api.services.geocoder.GeocodeSearch(var1);
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcom_amap_api_services_geocoder_RegeocodeResult__com_amap_api_services_geocoder_RegeocodeQuery__com_amap_api_services_geocoder_RegeocodeAddress", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.services.geocoder.RegeocodeResult> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -845,29 +820,26 @@ public class SubHandler13 {
             
                     // args
                     // ref arg
-                    Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                    com.amap.api.services.geocoder.RegeocodeQuery var1 = __var1RefId__ != null ? (com.amap.api.services.geocoder.RegeocodeQuery) getHEAP().get(__var1RefId__) : null;
+                    com.amap.api.services.geocoder.RegeocodeQuery var1 = (com.amap.api.services.geocoder.RegeocodeQuery) ((Map<String, Object>) __args__).get("var1");
                     // ref arg
-                    Integer __var2RefId__ = (Integer) ((Map<String, Object>) __args__).get("var2");
-                    com.amap.api.services.geocoder.RegeocodeAddress var2 = __var2RefId__ != null ? (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(__var2RefId__) : null;
+                    com.amap.api.services.geocoder.RegeocodeAddress var2 = (com.amap.api.services.geocoder.RegeocodeAddress) ((Map<String, Object>) __args__).get("var2");
             
                     // create target object
                     com.amap.api.services.geocoder.RegeocodeResult __obj__ = new com.amap.api.services.geocoder.RegeocodeResult(var1, var2);
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcom_amap_api_services_geocoder_GeocodeResult__com_amap_api_services_geocoder_GeocodeQuery__java_util_List_com_amap_api_services_geocoder_GeocodeAddress_", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.services.geocoder.GeocodeResult> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -889,8 +861,7 @@ public class SubHandler13 {
             
                     // args
                     // ref arg
-                    Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                    com.amap.api.services.geocoder.GeocodeQuery var1 = __var1RefId__ != null ? (com.amap.api.services.geocoder.GeocodeQuery) getHEAP().get(__var1RefId__) : null;
+                    com.amap.api.services.geocoder.GeocodeQuery var1 = (com.amap.api.services.geocoder.GeocodeQuery) ((Map<String, Object>) __args__).get("var1");
                     // list arg
                     List<Integer> var2RefIdList = (List<Integer>) ((Map<String, Object>) __args__).get("var2");
                     java.util.List<com.amap.api.services.geocoder.GeocodeAddress> var2 = new ArrayList<>();
@@ -900,21 +871,20 @@ public class SubHandler13 {
             
                     // create target object
                     com.amap.api.services.geocoder.GeocodeResult __obj__ = new com.amap.api.services.geocoder.GeocodeResult(var1, (ArrayList) var2);
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcom_amap_api_services_geocoder_AoiItem__", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.services.geocoder.AoiItem> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -939,21 +909,20 @@ public class SubHandler13 {
             
                     // create target object
                     com.amap.api.services.geocoder.AoiItem __obj__ = new com.amap.api.services.geocoder.AoiItem();
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcom_amap_api_services_geocoder_RegeocodeRoad__", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.services.geocoder.RegeocodeRoad> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -978,21 +947,20 @@ public class SubHandler13 {
             
                     // create target object
                     com.amap.api.services.geocoder.RegeocodeRoad __obj__ = new com.amap.api.services.geocoder.RegeocodeRoad();
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcom_amap_api_services_geocoder_GeocodeAddress__", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.services.geocoder.GeocodeAddress> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -1017,21 +985,20 @@ public class SubHandler13 {
             
                     // create target object
                     com.amap.api.services.geocoder.GeocodeAddress __obj__ = new com.amap.api.services.geocoder.GeocodeAddress();
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcom_amap_api_services_geocoder_RegeocodeQuery__com_amap_api_services_core_LatLonPoint__float__String", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.services.geocoder.RegeocodeQuery> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -1053,8 +1020,7 @@ public class SubHandler13 {
             
                     // args
                     // ref arg
-                    Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                    com.amap.api.services.core.LatLonPoint var1 = __var1RefId__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1RefId__) : null;
+                    com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) ((Map<String, Object>) __args__).get("var1");
                     // jsonable arg
                     Double var2 = (Double) ((Map<String, Object>) __args__).get("var2");
                     // jsonable arg
@@ -1062,21 +1028,20 @@ public class SubHandler13 {
             
                     // create target object
                     com.amap.api.services.geocoder.RegeocodeQuery __obj__ = new com.amap.api.services.geocoder.RegeocodeQuery(var1, new Double(var2).floatValue(), var3);
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcom_amap_api_services_geocoder_StreetNumber__", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.services.geocoder.StreetNumber> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -1101,21 +1066,20 @@ public class SubHandler13 {
             
                     // create target object
                     com.amap.api.services.geocoder.StreetNumber __obj__ = new com.amap.api.services.geocoder.StreetNumber();
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcom_amap_api_services_geocoder_RegeocodeAddress__", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.services.geocoder.RegeocodeAddress> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -1140,21 +1104,20 @@ public class SubHandler13 {
             
                     // create target object
                     com.amap.api.services.geocoder.RegeocodeAddress __obj__ = new com.amap.api.services.geocoder.RegeocodeAddress();
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcom_amap_api_services_district_DistrictSearchQuery__", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.services.district.DistrictSearchQuery> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -1179,21 +1142,20 @@ public class SubHandler13 {
             
                     // create target object
                     com.amap.api.services.district.DistrictSearchQuery __obj__ = new com.amap.api.services.district.DistrictSearchQuery();
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcom_amap_api_services_district_DistrictSearchQuery__String__String__int", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.services.district.DistrictSearchQuery> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -1223,21 +1185,20 @@ public class SubHandler13 {
             
                     // create target object
                     com.amap.api.services.district.DistrictSearchQuery __obj__ = new com.amap.api.services.district.DistrictSearchQuery(var1, var2, var3);
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcom_amap_api_services_district_DistrictSearchQuery__String__String__int__boolean__int", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.services.district.DistrictSearchQuery> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -1271,21 +1232,20 @@ public class SubHandler13 {
             
                     // create target object
                     com.amap.api.services.district.DistrictSearchQuery __obj__ = new com.amap.api.services.district.DistrictSearchQuery(var1, var2, var3, var4, var5);
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcom_amap_api_services_district_DistrictSearch__android_content_Context", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.services.district.DistrictSearch> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -1307,26 +1267,24 @@ public class SubHandler13 {
             
                     // args
                     // ref arg
-                    Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                    android.content.Context var1 = __var1RefId__ != null ? (android.content.Context) getHEAP().get(__var1RefId__) : null;
+                    android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
             
                     // create target object
                     com.amap.api.services.district.DistrictSearch __obj__ = new com.amap.api.services.district.DistrictSearch(var1);
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcom_amap_api_services_district_DistrictResult__com_amap_api_services_district_DistrictSearchQuery__java_util_ArrayList_com_amap_api_services_district_DistrictItem_", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.services.district.DistrictResult> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -1348,8 +1306,7 @@ public class SubHandler13 {
             
                     // args
                     // ref arg
-                    Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                    com.amap.api.services.district.DistrictSearchQuery var1 = __var1RefId__ != null ? (com.amap.api.services.district.DistrictSearchQuery) getHEAP().get(__var1RefId__) : null;
+                    com.amap.api.services.district.DistrictSearchQuery var1 = (com.amap.api.services.district.DistrictSearchQuery) ((Map<String, Object>) __args__).get("var1");
                     // list arg
                     List<Integer> var2RefIdList = (List<Integer>) ((Map<String, Object>) __args__).get("var2");
                     java.util.ArrayList<com.amap.api.services.district.DistrictItem> var2 = new ArrayList<>();
@@ -1359,21 +1316,20 @@ public class SubHandler13 {
             
                     // create target object
                     com.amap.api.services.district.DistrictResult __obj__ = new com.amap.api.services.district.DistrictResult(var1, (ArrayList) var2);
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcom_amap_api_services_district_DistrictResult__", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.services.district.DistrictResult> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -1398,21 +1354,20 @@ public class SubHandler13 {
             
                     // create target object
                     com.amap.api.services.district.DistrictResult __obj__ = new com.amap.api.services.district.DistrictResult();
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcom_amap_api_services_district_DistrictItem__", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.services.district.DistrictItem> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -1437,21 +1392,20 @@ public class SubHandler13 {
             
                     // create target object
                     com.amap.api.services.district.DistrictItem __obj__ = new com.amap.api.services.district.DistrictItem();
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcom_amap_api_services_district_DistrictItem__String__String__String__com_amap_api_services_core_LatLonPoint__String", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.services.district.DistrictItem> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -1479,28 +1433,26 @@ public class SubHandler13 {
                     // jsonable arg
                     String var3 = (String) ((Map<String, Object>) __args__).get("var3");
                     // ref arg
-                    Integer __var4RefId__ = (Integer) ((Map<String, Object>) __args__).get("var4");
-                    com.amap.api.services.core.LatLonPoint var4 = __var4RefId__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var4RefId__) : null;
+                    com.amap.api.services.core.LatLonPoint var4 = (com.amap.api.services.core.LatLonPoint) ((Map<String, Object>) __args__).get("var4");
                     // jsonable arg
                     String var5 = (String) ((Map<String, Object>) __args__).get("var5");
             
                     // create target object
                     com.amap.api.services.district.DistrictItem __obj__ = new com.amap.api.services.district.DistrictItem(var1, var2, var3, var4, var5);
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcom_amap_api_services_help_Tip__", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.services.help.Tip> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -1525,21 +1477,20 @@ public class SubHandler13 {
             
                     // create target object
                     com.amap.api.services.help.Tip __obj__ = new com.amap.api.services.help.Tip();
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcom_amap_api_services_help_InputtipsQuery__String__String", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.services.help.InputtipsQuery> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -1567,21 +1518,20 @@ public class SubHandler13 {
             
                     // create target object
                     com.amap.api.services.help.InputtipsQuery __obj__ = new com.amap.api.services.help.InputtipsQuery(var1, var2);
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcom_amap_api_services_help_Inputtips__android_content_Context__com_amap_api_services_help_InputtipsQuery", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.services.help.Inputtips> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -1603,29 +1553,26 @@ public class SubHandler13 {
             
                     // args
                     // ref arg
-                    Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                    android.content.Context var1 = __var1RefId__ != null ? (android.content.Context) getHEAP().get(__var1RefId__) : null;
+                    android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
                     // ref arg
-                    Integer __var2RefId__ = (Integer) ((Map<String, Object>) __args__).get("var2");
-                    com.amap.api.services.help.InputtipsQuery var2 = __var2RefId__ != null ? (com.amap.api.services.help.InputtipsQuery) getHEAP().get(__var2RefId__) : null;
+                    com.amap.api.services.help.InputtipsQuery var2 = (com.amap.api.services.help.InputtipsQuery) ((Map<String, Object>) __args__).get("var2");
             
                     // create target object
                     com.amap.api.services.help.Inputtips __obj__ = new com.amap.api.services.help.Inputtips(var1, var2);
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcom_amap_api_services_share_ShareSearch_ShareNaviQuery__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.services.share.ShareSearch.ShareNaviQuery> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -1647,28 +1594,26 @@ public class SubHandler13 {
             
                     // args
                     // ref arg
-                    Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                    com.amap.api.services.share.ShareSearch.ShareFromAndTo var1 = __var1RefId__ != null ? (com.amap.api.services.share.ShareSearch.ShareFromAndTo) getHEAP().get(__var1RefId__) : null;
+                    com.amap.api.services.share.ShareSearch.ShareFromAndTo var1 = (com.amap.api.services.share.ShareSearch.ShareFromAndTo) ((Map<String, Object>) __args__).get("var1");
                     // jsonable arg
                     int var2 = (int) ((Map<String, Object>) __args__).get("var2");
             
                     // create target object
                     com.amap.api.services.share.ShareSearch.ShareNaviQuery __obj__ = new com.amap.api.services.share.ShareSearch.ShareNaviQuery(var1, var2);
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcom_amap_api_services_share_ShareSearch_ShareBusRouteQuery__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.services.share.ShareSearch.ShareBusRouteQuery> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -1690,28 +1635,26 @@ public class SubHandler13 {
             
                     // args
                     // ref arg
-                    Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                    com.amap.api.services.share.ShareSearch.ShareFromAndTo var1 = __var1RefId__ != null ? (com.amap.api.services.share.ShareSearch.ShareFromAndTo) getHEAP().get(__var1RefId__) : null;
+                    com.amap.api.services.share.ShareSearch.ShareFromAndTo var1 = (com.amap.api.services.share.ShareSearch.ShareFromAndTo) ((Map<String, Object>) __args__).get("var1");
                     // jsonable arg
                     int var2 = (int) ((Map<String, Object>) __args__).get("var2");
             
                     // create target object
                     com.amap.api.services.share.ShareSearch.ShareBusRouteQuery __obj__ = new com.amap.api.services.share.ShareSearch.ShareBusRouteQuery(var1, var2);
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcom_amap_api_services_share_ShareSearch__android_content_Context", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.services.share.ShareSearch> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -1733,26 +1676,24 @@ public class SubHandler13 {
             
                     // args
                     // ref arg
-                    Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                    android.content.Context var1 = __var1RefId__ != null ? (android.content.Context) getHEAP().get(__var1RefId__) : null;
+                    android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
             
                     // create target object
                     com.amap.api.services.share.ShareSearch __obj__ = new com.amap.api.services.share.ShareSearch(var1);
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcom_amap_api_services_share_ShareSearch_ShareFromAndTo__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.services.share.ShareSearch.ShareFromAndTo> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -1774,29 +1715,26 @@ public class SubHandler13 {
             
                     // args
                     // ref arg
-                    Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                    com.amap.api.services.core.LatLonPoint var1 = __var1RefId__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1RefId__) : null;
+                    com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) ((Map<String, Object>) __args__).get("var1");
                     // ref arg
-                    Integer __var2RefId__ = (Integer) ((Map<String, Object>) __args__).get("var2");
-                    com.amap.api.services.core.LatLonPoint var2 = __var2RefId__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var2RefId__) : null;
+                    com.amap.api.services.core.LatLonPoint var2 = (com.amap.api.services.core.LatLonPoint) ((Map<String, Object>) __args__).get("var2");
             
                     // create target object
                     com.amap.api.services.share.ShareSearch.ShareFromAndTo __obj__ = new com.amap.api.services.share.ShareSearch.ShareFromAndTo(var1, var2);
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcom_amap_api_services_share_ShareSearch_ShareWalkRouteQuery__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -1818,28 +1756,26 @@ public class SubHandler13 {
             
                     // args
                     // ref arg
-                    Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                    com.amap.api.services.share.ShareSearch.ShareFromAndTo var1 = __var1RefId__ != null ? (com.amap.api.services.share.ShareSearch.ShareFromAndTo) getHEAP().get(__var1RefId__) : null;
+                    com.amap.api.services.share.ShareSearch.ShareFromAndTo var1 = (com.amap.api.services.share.ShareSearch.ShareFromAndTo) ((Map<String, Object>) __args__).get("var1");
                     // jsonable arg
                     int var2 = (int) ((Map<String, Object>) __args__).get("var2");
             
                     // create target object
                     com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery __obj__ = new com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery(var1, var2);
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // factory
             put("ObjectFactory::create_batchcom_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery> __resultList__ = new ArrayList<>();
             
                 int __length__ = 0;
                 // when batch size is 0, dart side will put a map with key 'length' to indicate the length
@@ -1861,21 +1797,19 @@ public class SubHandler13 {
             
                     // args
                     // ref arg
-                    Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                    com.amap.api.services.share.ShareSearch.ShareFromAndTo var1 = __var1RefId__ != null ? (com.amap.api.services.share.ShareSearch.ShareFromAndTo) getHEAP().get(__var1RefId__) : null;
+                    com.amap.api.services.share.ShareSearch.ShareFromAndTo var1 = (com.amap.api.services.share.ShareSearch.ShareFromAndTo) ((Map<String, Object>) __args__).get("var1");
                     // jsonable arg
                     int var2 = (int) ((Map<String, Object>) __args__).get("var2");
             
                     // create target object
                     com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery __obj__ = new com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery(var1, var2);
-                    getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    __resultList__.add(System.identityHashCode(__obj__));
+                    __resultList__.add(__obj__);
                 }
             
                 __methodResult__.success(__resultList__);

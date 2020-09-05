@@ -25,8 +25,6 @@ mixin com_amap_api_services_interfaces_IInputtipsSearch on java_lang_Object {
 
   @mustCallSuper
   Future<com_amap_api_services_help_InputtipsQuery> getQuery() {
-  
-  
     if (fluttifyLogEnabled) {
       debugPrint('getQuery::kNativeObjectPool: $kNativeObjectPool');
     }
@@ -34,8 +32,6 @@ mixin com_amap_api_services_interfaces_IInputtipsSearch on java_lang_Object {
   
   @mustCallSuper
   Future<void> setQuery(com_amap_api_services_help_InputtipsQuery var1) {
-    if (var1 is Ref) kNativeObjectPool.add(var1);
-  
     if (fluttifyLogEnabled) {
       debugPrint('setQuery::kNativeObjectPool: $kNativeObjectPool');
     }
@@ -43,8 +39,6 @@ mixin com_amap_api_services_interfaces_IInputtipsSearch on java_lang_Object {
   
   @mustCallSuper
   Future<void> setInputtipsListener(com_amap_api_services_help_Inputtips_InputtipsListener var1) {
-    if (var1 is Ref) kNativeObjectPool.add(var1);
-  
     if (fluttifyLogEnabled) {
       debugPrint('setInputtipsListener::kNativeObjectPool: $kNativeObjectPool');
     }
@@ -52,8 +46,6 @@ mixin com_amap_api_services_interfaces_IInputtipsSearch on java_lang_Object {
   
   @mustCallSuper
   Future<void> requestInputtipsAsyn() {
-  
-  
     if (fluttifyLogEnabled) {
       debugPrint('requestInputtipsAsyn::kNativeObjectPool: $kNativeObjectPool');
     }
@@ -61,8 +53,6 @@ mixin com_amap_api_services_interfaces_IInputtipsSearch on java_lang_Object {
   
   @mustCallSuper
   Future<List<com_amap_api_services_help_Tip>> requestInputtips() {
-  
-  
     if (fluttifyLogEnabled) {
       debugPrint('requestInputtips::kNativeObjectPool: $kNativeObjectPool');
     }
@@ -70,8 +60,6 @@ mixin com_amap_api_services_interfaces_IInputtipsSearch on java_lang_Object {
   
   @mustCallSuper
   Future<void> requestInputtips__String__String(String var1, String var2) {
-  
-  
     if (fluttifyLogEnabled) {
       debugPrint('requestInputtips__String__String::kNativeObjectPool: $kNativeObjectPool');
     }
@@ -79,8 +67,6 @@ mixin com_amap_api_services_interfaces_IInputtipsSearch on java_lang_Object {
   
   @mustCallSuper
   Future<void> requestInputtips__String__String__String(String var1, String var2, String var3) {
-  
-  
     if (fluttifyLogEnabled) {
       debugPrint('requestInputtips__String__String__String::kNativeObjectPool: $kNativeObjectPool');
     }

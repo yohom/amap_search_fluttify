@@ -25,8 +25,6 @@ mixin com_amap_api_services_routepoisearch_RoutePOISearch_OnRoutePOISearchListen
 
   @mustCallSuper
   Future<void> onRoutePoiSearched(com_amap_api_services_routepoisearch_RoutePOISearchResult var1, int var2) {
-    if (var1 is Ref) kNativeObjectPool.add(var1);
-  
     if (fluttifyLogEnabled) {
       debugPrint('onRoutePoiSearched::kNativeObjectPool: $kNativeObjectPool');
     }

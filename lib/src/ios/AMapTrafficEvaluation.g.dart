@@ -21,10 +21,8 @@ class AMapTrafficEvaluation extends AMapSearchObject with NSCoding, NSCopying {
 
   //region creators
   static Future<AMapTrafficEvaluation> create__() async {
-    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapTrafficEvaluation');
+    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createAMapTrafficEvaluation');
     final object = AMapTrafficEvaluation()..refId = refId..tag__ = 'amap_search_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
@@ -32,10 +30,9 @@ class AMapTrafficEvaluation extends AMapSearchObject with NSCoding, NSCopying {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapTrafficEvaluation', {'length': length});
+    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchAMapTrafficEvaluation', {'length': length});
   
     final List<AMapTrafficEvaluation> typedResult = resultBatch.map((result) => AMapTrafficEvaluation()..refId = result..tag__ = 'amap_search_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -43,76 +40,76 @@ class AMapTrafficEvaluation extends AMapSearchObject with NSCoding, NSCopying {
 
   //region getters
   Future<String> get_evaluationDescription() async {
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTrafficEvaluation::get_evaluationDescription", {'refId': refId});
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapTrafficEvaluation::get_evaluationDescription", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   Future<int> get_status() async {
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTrafficEvaluation::get_status", {'refId': refId});
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapTrafficEvaluation::get_status", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   Future<String> get_expedite() async {
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTrafficEvaluation::get_expedite", {'refId': refId});
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapTrafficEvaluation::get_expedite", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   Future<String> get_congested() async {
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTrafficEvaluation::get_congested", {'refId': refId});
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapTrafficEvaluation::get_congested", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   Future<String> get_blocked() async {
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTrafficEvaluation::get_blocked", {'refId': refId});
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapTrafficEvaluation::get_blocked", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   Future<String> get_unknown() async {
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTrafficEvaluation::get_unknown", {'refId': refId});
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapTrafficEvaluation::get_unknown", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   //endregion
 
   //region setters
   Future<void> set_evaluationDescription(String evaluationDescription) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficEvaluation::set_evaluationDescription', {'refId': refId, "evaluationDescription": evaluationDescription});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
+        .invokeMethod('AMapTrafficEvaluation::set_evaluationDescription', <String, dynamic>{'__this__': this, "evaluationDescription": evaluationDescription});
   
   
   }
   
   Future<void> set_status(int status) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficEvaluation::set_status', {'refId': refId, "status": status});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
+        .invokeMethod('AMapTrafficEvaluation::set_status', <String, dynamic>{'__this__': this, "status": status});
   
   
   }
   
   Future<void> set_expedite(String expedite) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficEvaluation::set_expedite', {'refId': refId, "expedite": expedite});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
+        .invokeMethod('AMapTrafficEvaluation::set_expedite', <String, dynamic>{'__this__': this, "expedite": expedite});
   
   
   }
   
   Future<void> set_congested(String congested) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficEvaluation::set_congested', {'refId': refId, "congested": congested});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
+        .invokeMethod('AMapTrafficEvaluation::set_congested', <String, dynamic>{'__this__': this, "congested": congested});
   
   
   }
   
   Future<void> set_blocked(String blocked) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficEvaluation::set_blocked', {'refId': refId, "blocked": blocked});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
+        .invokeMethod('AMapTrafficEvaluation::set_blocked', <String, dynamic>{'__this__': this, "blocked": blocked});
   
   
   }
   
   Future<void> set_unknown(String unknown) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficEvaluation::set_unknown', {'refId': refId, "unknown": unknown});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
+        .invokeMethod('AMapTrafficEvaluation::set_unknown', <String, dynamic>{'__this__': this, "unknown": unknown});
   
   
   }
@@ -127,44 +124,44 @@ class AMapTrafficEvaluation extends AMapSearchObject with NSCoding, NSCopying {
 extension AMapTrafficEvaluation_Batch on List<AMapTrafficEvaluation> {
   //region getters
   Future<List<String>> get_evaluationDescription_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTrafficEvaluation::get_evaluationDescription_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapTrafficEvaluation::get_evaluationDescription_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<int>> get_status_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTrafficEvaluation::get_status_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapTrafficEvaluation::get_status_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<String>> get_expedite_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTrafficEvaluation::get_expedite_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapTrafficEvaluation::get_expedite_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<String>> get_congested_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTrafficEvaluation::get_congested_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapTrafficEvaluation::get_congested_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<String>> get_blocked_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTrafficEvaluation::get_blocked_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapTrafficEvaluation::get_blocked_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<String>> get_unknown_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTrafficEvaluation::get_unknown_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapTrafficEvaluation::get_unknown_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
@@ -172,37 +169,37 @@ extension AMapTrafficEvaluation_Batch on List<AMapTrafficEvaluation> {
 
   //region setters
   Future<void> set_evaluationDescription_batch(List<String> evaluationDescription) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficEvaluation::set_evaluationDescription_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "evaluationDescription": evaluationDescription[__i__]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapTrafficEvaluation::set_evaluationDescription_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "evaluationDescription": evaluationDescription[__i__]}]);
   
   
   }
   
   Future<void> set_status_batch(List<int> status) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficEvaluation::set_status_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "status": status[__i__]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapTrafficEvaluation::set_status_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "status": status[__i__]}]);
   
   
   }
   
   Future<void> set_expedite_batch(List<String> expedite) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficEvaluation::set_expedite_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "expedite": expedite[__i__]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapTrafficEvaluation::set_expedite_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "expedite": expedite[__i__]}]);
   
   
   }
   
   Future<void> set_congested_batch(List<String> congested) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficEvaluation::set_congested_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "congested": congested[__i__]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapTrafficEvaluation::set_congested_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "congested": congested[__i__]}]);
   
   
   }
   
   Future<void> set_blocked_batch(List<String> blocked) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficEvaluation::set_blocked_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "blocked": blocked[__i__]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapTrafficEvaluation::set_blocked_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "blocked": blocked[__i__]}]);
   
   
   }
   
   Future<void> set_unknown_batch(List<String> unknown) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficEvaluation::set_unknown_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "unknown": unknown[__i__]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapTrafficEvaluation::set_unknown_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "unknown": unknown[__i__]}]);
   
   
   }

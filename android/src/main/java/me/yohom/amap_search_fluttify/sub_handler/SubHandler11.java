@@ -19,9 +19,11 @@ import io.flutter.plugin.common.BinaryMessenger;
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.PluginRegistry.Registrar;
+import io.flutter.plugin.common.StandardMethodCodec;
 import io.flutter.plugin.platform.PlatformViewRegistry;
 
 import me.yohom.amap_search_fluttify.AmapSearchFluttifyPlugin.Handler;
+import me.yohom.foundation_fluttify.FluttifyMessageCodec;
 
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getEnableLog;
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getHEAP;
@@ -32,23 +34,22 @@ public class SubHandler11 {
         return new HashMap<String, Handler>() {{
             // method
             put("com.amap.api.services.help.InputtipsQuery::setLocation_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
                     // ref arg
-                    Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                    com.amap.api.services.core.LatLonPoint var1 = __var1RefId__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1RefId__) : null;
+                    com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.help.InputtipsQuery ref = (com.amap.api.services.help.InputtipsQuery) getHEAP().get(refId);
+                    com.amap.api.services.help.InputtipsQuery __this__ = (com.amap.api.services.help.InputtipsQuery) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
+                    Void __result__ = null;
                     try {
-                        ref.setLocation(var1);
+                        __this__.setLocation(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -58,17 +59,14 @@ public class SubHandler11 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("com.amap.api.services.help.InputtipsQuery::getLocation_batch", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.services.core.LatLonPoint> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
@@ -77,13 +75,12 @@ public class SubHandler11 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.help.InputtipsQuery ref = (com.amap.api.services.help.InputtipsQuery) getHEAP().get(refId);
+                    com.amap.api.services.help.InputtipsQuery __this__ = (com.amap.api.services.help.InputtipsQuery) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    com.amap.api.services.core.LatLonPoint __result__;
+                    com.amap.api.services.core.LatLonPoint __result__ = null;
                     try {
-                        __result__ = ref.getLocation();
+                        __result__ = __this__.getLocation();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -93,21 +90,14 @@ public class SubHandler11 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    Integer jsonableResult = null;
-                    if (__result__ != null) {
-                        jsonableResult = System.identityHashCode(__result__);
-                        getHEAP().put(jsonableResult, __result__);
-                    }
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("com.amap.api.services.help.Inputtips::getQuery_batch", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.services.help.InputtipsQuery> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
@@ -116,13 +106,12 @@ public class SubHandler11 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.help.Inputtips ref = (com.amap.api.services.help.Inputtips) getHEAP().get(refId);
+                    com.amap.api.services.help.Inputtips __this__ = (com.amap.api.services.help.Inputtips) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    com.amap.api.services.help.InputtipsQuery __result__;
+                    com.amap.api.services.help.InputtipsQuery __result__ = null;
                     try {
-                        __result__ = ref.getQuery();
+                        __result__ = __this__.getQuery();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -132,37 +121,29 @@ public class SubHandler11 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    Integer jsonableResult = null;
-                    if (__result__ != null) {
-                        jsonableResult = System.identityHashCode(__result__);
-                        getHEAP().put(jsonableResult, __result__);
-                    }
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("com.amap.api.services.help.Inputtips::setQuery_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
                     // ref arg
-                    Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                    com.amap.api.services.help.InputtipsQuery var1 = __var1RefId__ != null ? (com.amap.api.services.help.InputtipsQuery) getHEAP().get(__var1RefId__) : null;
+                    com.amap.api.services.help.InputtipsQuery var1 = (com.amap.api.services.help.InputtipsQuery) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.help.Inputtips ref = (com.amap.api.services.help.Inputtips) getHEAP().get(refId);
+                    com.amap.api.services.help.Inputtips __this__ = (com.amap.api.services.help.Inputtips) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
+                    Void __result__ = null;
                     try {
-                        ref.setQuery(var1);
+                        __this__.setQuery(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -172,17 +153,14 @@ public class SubHandler11 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("com.amap.api.services.help.Inputtips::requestInputtipsAsyn_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
@@ -191,12 +169,12 @@ public class SubHandler11 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.help.Inputtips ref = (com.amap.api.services.help.Inputtips) getHEAP().get(refId);
+                    com.amap.api.services.help.Inputtips __this__ = (com.amap.api.services.help.Inputtips) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
+                    Void __result__ = null;
                     try {
-                        ref.requestInputtipsAsyn();
+                        __this__.requestInputtipsAsyn();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -206,17 +184,14 @@ public class SubHandler11 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("com.amap.api.services.help.Inputtips::requestInputtips_batch", (__argsBatch__, __methodResult__) -> {
-                List<List<Integer>> __resultList__ = new ArrayList<>();
+                List<java.util.List<com.amap.api.services.help.Tip>> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
@@ -225,13 +200,12 @@ public class SubHandler11 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.help.Inputtips ref = (com.amap.api.services.help.Inputtips) getHEAP().get(refId);
+                    com.amap.api.services.help.Inputtips __this__ = (com.amap.api.services.help.Inputtips) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    java.util.List<com.amap.api.services.help.Tip> __result__;
+                    java.util.List<com.amap.api.services.help.Tip> __result__ = null;
                     try {
-                        __result__ = ref.requestInputtips();
+                        __result__ = __this__.requestInputtips();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -241,41 +215,31 @@ public class SubHandler11 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    List<Integer> jsonableResult = null;
-                    if (__result__ != null) {
-                        jsonableResult = new ArrayList<>();
-                        for (com.amap.api.services.help.Tip item : __result__) {
-                            getHEAP().put(System.identityHashCode(item), item);
-                            jsonableResult.add(System.identityHashCode(item));
-                        }
-                    }
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("com.amap.api.services.help.Inputtips::requestInputtips__String__String_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                    // jsonable arg
+                    // ref arg
                     String var2 = (String) ((Map<String, Object>) __args__).get("var2");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.help.Inputtips ref = (com.amap.api.services.help.Inputtips) getHEAP().get(refId);
+                    com.amap.api.services.help.Inputtips __this__ = (com.amap.api.services.help.Inputtips) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
+                    Void __result__ = null;
                     try {
-                        ref.requestInputtips(var1, var2);
+                        __this__.requestInputtips(var1, var2);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -285,36 +249,33 @@ public class SubHandler11 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("com.amap.api.services.help.Inputtips::requestInputtips__String__String__String_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                    // jsonable arg
+                    // ref arg
                     String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-                    // jsonable arg
+                    // ref arg
                     String var3 = (String) ((Map<String, Object>) __args__).get("var3");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.help.Inputtips ref = (com.amap.api.services.help.Inputtips) getHEAP().get(refId);
+                    com.amap.api.services.help.Inputtips __this__ = (com.amap.api.services.help.Inputtips) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
+                    Void __result__ = null;
                     try {
-                        ref.requestInputtips(var1, var2, var3);
+                        __this__.requestInputtips(var1, var2, var3);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -324,17 +285,14 @@ public class SubHandler11 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("com.amap.api.services.share.ShareSearch.ShareNaviQuery::getFromAndTo_batch", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.services.share.ShareSearch.ShareFromAndTo> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
@@ -343,13 +301,12 @@ public class SubHandler11 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.share.ShareSearch.ShareNaviQuery ref = (com.amap.api.services.share.ShareSearch.ShareNaviQuery) getHEAP().get(refId);
+                    com.amap.api.services.share.ShareSearch.ShareNaviQuery __this__ = (com.amap.api.services.share.ShareSearch.ShareNaviQuery) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    com.amap.api.services.share.ShareSearch.ShareFromAndTo __result__;
+                    com.amap.api.services.share.ShareSearch.ShareFromAndTo __result__ = null;
                     try {
-                        __result__ = ref.getFromAndTo();
+                        __result__ = __this__.getFromAndTo();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -359,14 +316,7 @@ public class SubHandler11 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    Integer jsonableResult = null;
-                    if (__result__ != null) {
-                        jsonableResult = System.identityHashCode(__result__);
-                        getHEAP().put(jsonableResult, __result__);
-                    }
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -382,13 +332,12 @@ public class SubHandler11 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.share.ShareSearch.ShareNaviQuery ref = (com.amap.api.services.share.ShareSearch.ShareNaviQuery) getHEAP().get(refId);
+                    com.amap.api.services.share.ShareSearch.ShareNaviQuery __this__ = (com.amap.api.services.share.ShareSearch.ShareNaviQuery) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    int __result__;
+                    Integer __result__ = null;
                     try {
-                        __result__ = ref.getNaviMode();
+                        __result__ = __this__.getNaviMode();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -398,10 +347,7 @@ public class SubHandler11 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    int jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -417,13 +363,12 @@ public class SubHandler11 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.share.ShareSearch.ShareBusRouteQuery ref = (com.amap.api.services.share.ShareSearch.ShareBusRouteQuery) getHEAP().get(refId);
+                    com.amap.api.services.share.ShareSearch.ShareBusRouteQuery __this__ = (com.amap.api.services.share.ShareSearch.ShareBusRouteQuery) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    int __result__;
+                    Integer __result__ = null;
                     try {
-                        __result__ = ref.getBusMode();
+                        __result__ = __this__.getBusMode();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -433,17 +378,14 @@ public class SubHandler11 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    int jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("com.amap.api.services.share.ShareSearch.ShareBusRouteQuery::getShareFromAndTo_batch", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.services.share.ShareSearch.ShareFromAndTo> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
@@ -452,13 +394,12 @@ public class SubHandler11 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.share.ShareSearch.ShareBusRouteQuery ref = (com.amap.api.services.share.ShareSearch.ShareBusRouteQuery) getHEAP().get(refId);
+                    com.amap.api.services.share.ShareSearch.ShareBusRouteQuery __this__ = (com.amap.api.services.share.ShareSearch.ShareBusRouteQuery) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    com.amap.api.services.share.ShareSearch.ShareFromAndTo __result__;
+                    com.amap.api.services.share.ShareSearch.ShareFromAndTo __result__ = null;
                     try {
-                        __result__ = ref.getShareFromAndTo();
+                        __result__ = __this__.getShareFromAndTo();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -468,37 +409,29 @@ public class SubHandler11 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    Integer jsonableResult = null;
-                    if (__result__ != null) {
-                        jsonableResult = System.identityHashCode(__result__);
-                        getHEAP().put(jsonableResult, __result__);
-                    }
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("com.amap.api.services.share.ShareSearch::searchPoiShareUrlAsyn_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
                     // ref arg
-                    Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                    com.amap.api.services.core.PoiItem var1 = __var1RefId__ != null ? (com.amap.api.services.core.PoiItem) getHEAP().get(__var1RefId__) : null;
+                    com.amap.api.services.core.PoiItem var1 = (com.amap.api.services.core.PoiItem) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.share.ShareSearch ref = (com.amap.api.services.share.ShareSearch) getHEAP().get(refId);
+                    com.amap.api.services.share.ShareSearch __this__ = (com.amap.api.services.share.ShareSearch) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
+                    Void __result__ = null;
                     try {
-                        ref.searchPoiShareUrlAsyn(var1);
+                        __this__.searchPoiShareUrlAsyn(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -508,33 +441,29 @@ public class SubHandler11 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("com.amap.api.services.share.ShareSearch::searchBusRouteShareUrlAsyn_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
                     // ref arg
-                    Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                    com.amap.api.services.share.ShareSearch.ShareBusRouteQuery var1 = __var1RefId__ != null ? (com.amap.api.services.share.ShareSearch.ShareBusRouteQuery) getHEAP().get(__var1RefId__) : null;
+                    com.amap.api.services.share.ShareSearch.ShareBusRouteQuery var1 = (com.amap.api.services.share.ShareSearch.ShareBusRouteQuery) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.share.ShareSearch ref = (com.amap.api.services.share.ShareSearch) getHEAP().get(refId);
+                    com.amap.api.services.share.ShareSearch __this__ = (com.amap.api.services.share.ShareSearch) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
+                    Void __result__ = null;
                     try {
-                        ref.searchBusRouteShareUrlAsyn(var1);
+                        __this__.searchBusRouteShareUrlAsyn(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -544,33 +473,29 @@ public class SubHandler11 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("com.amap.api.services.share.ShareSearch::searchWalkRouteShareUrlAsyn_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
                     // ref arg
-                    Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                    com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery var1 = __var1RefId__ != null ? (com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery) getHEAP().get(__var1RefId__) : null;
+                    com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery var1 = (com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.share.ShareSearch ref = (com.amap.api.services.share.ShareSearch) getHEAP().get(refId);
+                    com.amap.api.services.share.ShareSearch __this__ = (com.amap.api.services.share.ShareSearch) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
+                    Void __result__ = null;
                     try {
-                        ref.searchWalkRouteShareUrlAsyn(var1);
+                        __this__.searchWalkRouteShareUrlAsyn(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -580,33 +505,29 @@ public class SubHandler11 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("com.amap.api.services.share.ShareSearch::searchDrivingRouteShareUrlAsyn_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
                     // ref arg
-                    Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                    com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery var1 = __var1RefId__ != null ? (com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery) getHEAP().get(__var1RefId__) : null;
+                    com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery var1 = (com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.share.ShareSearch ref = (com.amap.api.services.share.ShareSearch) getHEAP().get(refId);
+                    com.amap.api.services.share.ShareSearch __this__ = (com.amap.api.services.share.ShareSearch) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
+                    Void __result__ = null;
                     try {
-                        ref.searchDrivingRouteShareUrlAsyn(var1);
+                        __this__.searchDrivingRouteShareUrlAsyn(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -616,33 +537,29 @@ public class SubHandler11 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("com.amap.api.services.share.ShareSearch::searchNaviShareUrlAsyn_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
                     // ref arg
-                    Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                    com.amap.api.services.share.ShareSearch.ShareNaviQuery var1 = __var1RefId__ != null ? (com.amap.api.services.share.ShareSearch.ShareNaviQuery) getHEAP().get(__var1RefId__) : null;
+                    com.amap.api.services.share.ShareSearch.ShareNaviQuery var1 = (com.amap.api.services.share.ShareSearch.ShareNaviQuery) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.share.ShareSearch ref = (com.amap.api.services.share.ShareSearch) getHEAP().get(refId);
+                    com.amap.api.services.share.ShareSearch __this__ = (com.amap.api.services.share.ShareSearch) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
+                    Void __result__ = null;
                     try {
-                        ref.searchNaviShareUrlAsyn(var1);
+                        __this__.searchNaviShareUrlAsyn(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -652,33 +569,29 @@ public class SubHandler11 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("com.amap.api.services.share.ShareSearch::searchLocationShareUrlAsyn_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
                     // ref arg
-                    Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                    com.amap.api.services.core.LatLonSharePoint var1 = __var1RefId__ != null ? (com.amap.api.services.core.LatLonSharePoint) getHEAP().get(__var1RefId__) : null;
+                    com.amap.api.services.core.LatLonSharePoint var1 = (com.amap.api.services.core.LatLonSharePoint) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.share.ShareSearch ref = (com.amap.api.services.share.ShareSearch) getHEAP().get(refId);
+                    com.amap.api.services.share.ShareSearch __this__ = (com.amap.api.services.share.ShareSearch) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
+                    Void __result__ = null;
                     try {
-                        ref.searchLocationShareUrlAsyn(var1);
+                        __this__.searchLocationShareUrlAsyn(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -688,10 +601,7 @@ public class SubHandler11 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -705,17 +615,15 @@ public class SubHandler11 {
             
                     // args
                     // ref arg
-                    Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                    com.amap.api.services.core.PoiItem var1 = __var1RefId__ != null ? (com.amap.api.services.core.PoiItem) getHEAP().get(__var1RefId__) : null;
+                    com.amap.api.services.core.PoiItem var1 = (com.amap.api.services.core.PoiItem) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.share.ShareSearch ref = (com.amap.api.services.share.ShareSearch) getHEAP().get(refId);
+                    com.amap.api.services.share.ShareSearch __this__ = (com.amap.api.services.share.ShareSearch) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    String __result__;
+                    String __result__ = null;
                     try {
-                        __result__ = ref.searchPoiShareUrl(var1);
+                        __result__ = __this__.searchPoiShareUrl(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -725,10 +633,7 @@ public class SubHandler11 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -742,17 +647,15 @@ public class SubHandler11 {
             
                     // args
                     // ref arg
-                    Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                    com.amap.api.services.share.ShareSearch.ShareNaviQuery var1 = __var1RefId__ != null ? (com.amap.api.services.share.ShareSearch.ShareNaviQuery) getHEAP().get(__var1RefId__) : null;
+                    com.amap.api.services.share.ShareSearch.ShareNaviQuery var1 = (com.amap.api.services.share.ShareSearch.ShareNaviQuery) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.share.ShareSearch ref = (com.amap.api.services.share.ShareSearch) getHEAP().get(refId);
+                    com.amap.api.services.share.ShareSearch __this__ = (com.amap.api.services.share.ShareSearch) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    String __result__;
+                    String __result__ = null;
                     try {
-                        __result__ = ref.searchNaviShareUrl(var1);
+                        __result__ = __this__.searchNaviShareUrl(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -762,10 +665,7 @@ public class SubHandler11 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -779,17 +679,15 @@ public class SubHandler11 {
             
                     // args
                     // ref arg
-                    Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                    com.amap.api.services.core.LatLonSharePoint var1 = __var1RefId__ != null ? (com.amap.api.services.core.LatLonSharePoint) getHEAP().get(__var1RefId__) : null;
+                    com.amap.api.services.core.LatLonSharePoint var1 = (com.amap.api.services.core.LatLonSharePoint) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.share.ShareSearch ref = (com.amap.api.services.share.ShareSearch) getHEAP().get(refId);
+                    com.amap.api.services.share.ShareSearch __this__ = (com.amap.api.services.share.ShareSearch) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    String __result__;
+                    String __result__ = null;
                     try {
-                        __result__ = ref.searchLocationShareUrl(var1);
+                        __result__ = __this__.searchLocationShareUrl(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -799,10 +697,7 @@ public class SubHandler11 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -816,17 +711,15 @@ public class SubHandler11 {
             
                     // args
                     // ref arg
-                    Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                    com.amap.api.services.share.ShareSearch.ShareBusRouteQuery var1 = __var1RefId__ != null ? (com.amap.api.services.share.ShareSearch.ShareBusRouteQuery) getHEAP().get(__var1RefId__) : null;
+                    com.amap.api.services.share.ShareSearch.ShareBusRouteQuery var1 = (com.amap.api.services.share.ShareSearch.ShareBusRouteQuery) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.share.ShareSearch ref = (com.amap.api.services.share.ShareSearch) getHEAP().get(refId);
+                    com.amap.api.services.share.ShareSearch __this__ = (com.amap.api.services.share.ShareSearch) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    String __result__;
+                    String __result__ = null;
                     try {
-                        __result__ = ref.searchBusRouteShareUrl(var1);
+                        __result__ = __this__.searchBusRouteShareUrl(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -836,10 +729,7 @@ public class SubHandler11 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -853,17 +743,15 @@ public class SubHandler11 {
             
                     // args
                     // ref arg
-                    Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                    com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery var1 = __var1RefId__ != null ? (com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery) getHEAP().get(__var1RefId__) : null;
+                    com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery var1 = (com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.share.ShareSearch ref = (com.amap.api.services.share.ShareSearch) getHEAP().get(refId);
+                    com.amap.api.services.share.ShareSearch __this__ = (com.amap.api.services.share.ShareSearch) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    String __result__;
+                    String __result__ = null;
                     try {
-                        __result__ = ref.searchDrivingRouteShareUrl(var1);
+                        __result__ = __this__.searchDrivingRouteShareUrl(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -873,10 +761,7 @@ public class SubHandler11 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -890,17 +775,15 @@ public class SubHandler11 {
             
                     // args
                     // ref arg
-                    Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                    com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery var1 = __var1RefId__ != null ? (com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery) getHEAP().get(__var1RefId__) : null;
+                    com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery var1 = (com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.share.ShareSearch ref = (com.amap.api.services.share.ShareSearch) getHEAP().get(refId);
+                    com.amap.api.services.share.ShareSearch __this__ = (com.amap.api.services.share.ShareSearch) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    String __result__;
+                    String __result__ = null;
                     try {
-                        __result__ = ref.searchWalkRouteShareUrl(var1);
+                        __result__ = __this__.searchWalkRouteShareUrl(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -910,32 +793,29 @@ public class SubHandler11 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("com.amap.api.services.share.ShareSearch.ShareFromAndTo::setFromName_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.share.ShareSearch.ShareFromAndTo ref = (com.amap.api.services.share.ShareSearch.ShareFromAndTo) getHEAP().get(refId);
+                    com.amap.api.services.share.ShareSearch.ShareFromAndTo __this__ = (com.amap.api.services.share.ShareSearch.ShareFromAndTo) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
+                    Void __result__ = null;
                     try {
-                        ref.setFromName(var1);
+                        __this__.setFromName(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -945,32 +825,29 @@ public class SubHandler11 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("com.amap.api.services.share.ShareSearch.ShareFromAndTo::setToName_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.share.ShareSearch.ShareFromAndTo ref = (com.amap.api.services.share.ShareSearch.ShareFromAndTo) getHEAP().get(refId);
+                    com.amap.api.services.share.ShareSearch.ShareFromAndTo __this__ = (com.amap.api.services.share.ShareSearch.ShareFromAndTo) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
+                    Void __result__ = null;
                     try {
-                        ref.setToName(var1);
+                        __this__.setToName(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -980,17 +857,14 @@ public class SubHandler11 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("com.amap.api.services.share.ShareSearch.ShareFromAndTo::getFrom_batch", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.services.core.LatLonPoint> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
@@ -999,13 +873,12 @@ public class SubHandler11 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.share.ShareSearch.ShareFromAndTo ref = (com.amap.api.services.share.ShareSearch.ShareFromAndTo) getHEAP().get(refId);
+                    com.amap.api.services.share.ShareSearch.ShareFromAndTo __this__ = (com.amap.api.services.share.ShareSearch.ShareFromAndTo) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    com.amap.api.services.core.LatLonPoint __result__;
+                    com.amap.api.services.core.LatLonPoint __result__ = null;
                     try {
-                        __result__ = ref.getFrom();
+                        __result__ = __this__.getFrom();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -1015,21 +888,14 @@ public class SubHandler11 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    Integer jsonableResult = null;
-                    if (__result__ != null) {
-                        jsonableResult = System.identityHashCode(__result__);
-                        getHEAP().put(jsonableResult, __result__);
-                    }
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("com.amap.api.services.share.ShareSearch.ShareFromAndTo::getTo_batch", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.services.core.LatLonPoint> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
@@ -1038,13 +904,12 @@ public class SubHandler11 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.share.ShareSearch.ShareFromAndTo ref = (com.amap.api.services.share.ShareSearch.ShareFromAndTo) getHEAP().get(refId);
+                    com.amap.api.services.share.ShareSearch.ShareFromAndTo __this__ = (com.amap.api.services.share.ShareSearch.ShareFromAndTo) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    com.amap.api.services.core.LatLonPoint __result__;
+                    com.amap.api.services.core.LatLonPoint __result__ = null;
                     try {
-                        __result__ = ref.getTo();
+                        __result__ = __this__.getTo();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -1054,14 +919,7 @@ public class SubHandler11 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    Integer jsonableResult = null;
-                    if (__result__ != null) {
-                        jsonableResult = System.identityHashCode(__result__);
-                        getHEAP().put(jsonableResult, __result__);
-                    }
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -1077,13 +935,12 @@ public class SubHandler11 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.share.ShareSearch.ShareFromAndTo ref = (com.amap.api.services.share.ShareSearch.ShareFromAndTo) getHEAP().get(refId);
+                    com.amap.api.services.share.ShareSearch.ShareFromAndTo __this__ = (com.amap.api.services.share.ShareSearch.ShareFromAndTo) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    String __result__;
+                    String __result__ = null;
                     try {
-                        __result__ = ref.getFromName();
+                        __result__ = __this__.getFromName();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -1093,10 +950,7 @@ public class SubHandler11 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -1112,13 +966,12 @@ public class SubHandler11 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.share.ShareSearch.ShareFromAndTo ref = (com.amap.api.services.share.ShareSearch.ShareFromAndTo) getHEAP().get(refId);
+                    com.amap.api.services.share.ShareSearch.ShareFromAndTo __this__ = (com.amap.api.services.share.ShareSearch.ShareFromAndTo) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    String __result__;
+                    String __result__ = null;
                     try {
-                        __result__ = ref.getToName();
+                        __result__ = __this__.getToName();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -1128,10 +981,7 @@ public class SubHandler11 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -1147,13 +997,12 @@ public class SubHandler11 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery ref = (com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery) getHEAP().get(refId);
+                    com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery __this__ = (com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    int __result__;
+                    Integer __result__ = null;
                     try {
-                        __result__ = ref.getWalkMode();
+                        __result__ = __this__.getWalkMode();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -1163,17 +1012,14 @@ public class SubHandler11 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    int jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery::getShareFromAndTo_batch", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.services.share.ShareSearch.ShareFromAndTo> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
@@ -1182,13 +1028,12 @@ public class SubHandler11 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery ref = (com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery) getHEAP().get(refId);
+                    com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery __this__ = (com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    com.amap.api.services.share.ShareSearch.ShareFromAndTo __result__;
+                    com.amap.api.services.share.ShareSearch.ShareFromAndTo __result__ = null;
                     try {
-                        __result__ = ref.getShareFromAndTo();
+                        __result__ = __this__.getShareFromAndTo();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -1198,14 +1043,7 @@ public class SubHandler11 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    Integer jsonableResult = null;
-                    if (__result__ != null) {
-                        jsonableResult = System.identityHashCode(__result__);
-                        getHEAP().put(jsonableResult, __result__);
-                    }
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -1221,13 +1059,12 @@ public class SubHandler11 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery ref = (com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery) getHEAP().get(refId);
+                    com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery __this__ = (com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    int __result__;
+                    Integer __result__ = null;
                     try {
-                        __result__ = ref.getDrivingMode();
+                        __result__ = __this__.getDrivingMode();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -1237,17 +1074,14 @@ public class SubHandler11 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    int jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery::getShareFromAndTo_batch", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
+                List<com.amap.api.services.share.ShareSearch.ShareFromAndTo> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
@@ -1256,13 +1090,12 @@ public class SubHandler11 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery ref = (com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery) getHEAP().get(refId);
+                    com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery __this__ = (com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    com.amap.api.services.share.ShareSearch.ShareFromAndTo __result__;
+                    com.amap.api.services.share.ShareSearch.ShareFromAndTo __result__ = null;
                     try {
-                        __result__ = ref.getShareFromAndTo();
+                        __result__ = __this__.getShareFromAndTo();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -1272,899 +1105,766 @@ public class SubHandler11 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    Integer jsonableResult = null;
-                    if (__result__ != null) {
-                        jsonableResult = System.identityHashCode(__result__);
-                        getHEAP().put(jsonableResult, __result__);
-                    }
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             put("RefClass::isKindOfcom_amap_api_services_traffic_TrafficStatusInfo", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.traffic.TrafficStatusInfo);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.traffic.TrafficStatusInfo);
             });
             put("RefClass::isKindOfcom_amap_api_services_traffic_TrafficStatusResult", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.traffic.TrafficStatusResult);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.traffic.TrafficStatusResult);
             });
             put("RefClass::isKindOfcom_amap_api_services_traffic_TrafficSearch", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.traffic.TrafficSearch);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.traffic.TrafficSearch);
             });
             put("RefClass::isKindOfcom_amap_api_services_traffic_RoadTrafficQuery", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.traffic.RoadTrafficQuery);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.traffic.RoadTrafficQuery);
             });
             put("RefClass::isKindOfcom_amap_api_services_traffic_CircleTrafficQuery", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.traffic.CircleTrafficQuery);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.traffic.CircleTrafficQuery);
             });
             put("RefClass::isKindOfcom_amap_api_services_traffic_TrafficStatusEvaluation", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.traffic.TrafficStatusEvaluation);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.traffic.TrafficStatusEvaluation);
             });
             put("RefClass::isKindOfcom_amap_api_services_busline_BusLineItem", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.busline.BusLineItem);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.busline.BusLineItem);
             });
             put("RefClass::isKindOfcom_amap_api_services_busline_BusStationResult", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.busline.BusStationResult);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.busline.BusStationResult);
             });
             put("RefClass::isKindOfcom_amap_api_services_busline_BusStationSearch", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.busline.BusStationSearch);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.busline.BusStationSearch);
             });
             put("RefClass::isKindOfcom_amap_api_services_busline_BusLineSearch", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.busline.BusLineSearch);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.busline.BusLineSearch);
             });
             put("RefClass::isKindOfcom_amap_api_services_busline_BusLineQuery", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.busline.BusLineQuery);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.busline.BusLineQuery);
             });
             put("RefClass::isKindOfcom_amap_api_services_busline_BusLineResult", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.busline.BusLineResult);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.busline.BusLineResult);
             });
             put("RefClass::isKindOfcom_amap_api_services_busline_BusStationItem", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.busline.BusStationItem);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.busline.BusStationItem);
             });
             put("RefClass::isKindOfcom_amap_api_services_busline_BusStationQuery", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.busline.BusStationQuery);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.busline.BusStationQuery);
             });
             put("RefClass::isKindOfcom_amap_api_services_core_AMapException", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.core.AMapException);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.core.AMapException);
             });
             put("RefClass::isKindOfcom_amap_api_services_core_ServiceSettings", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.core.ServiceSettings);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.core.ServiceSettings);
             });
             put("RefClass::isKindOfcom_amap_api_services_core_SearchUtils", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.core.SearchUtils);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.core.SearchUtils);
             });
             put("RefClass::isKindOfcom_amap_api_services_core_LatLonSharePoint", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.core.LatLonSharePoint);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.core.LatLonSharePoint);
             });
             put("RefClass::isKindOfcom_amap_api_services_core_LatLonPoint", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.core.LatLonPoint);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.core.LatLonPoint);
             });
             put("RefClass::isKindOfcom_amap_api_services_core_PoiItem", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.core.PoiItem);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.core.PoiItem);
             });
             put("RefClass::isKindOfcom_amap_api_services_core_SuggestionCity", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.core.SuggestionCity);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.core.SuggestionCity);
             });
             put("RefClass::isKindOfcom_amap_api_services_poisearch_Photo", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.poisearch.Photo);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.poisearch.Photo);
             });
             put("RefClass::isKindOfcom_amap_api_services_poisearch_SubPoiItem", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.poisearch.SubPoiItem);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.poisearch.SubPoiItem);
             });
             put("RefClass::isKindOfcom_amap_api_services_poisearch_PoiItemExtension", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.poisearch.PoiItemExtension);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.poisearch.PoiItemExtension);
             });
             put("RefClass::isKindOfcom_amap_api_services_poisearch_PoiSearch_SearchBound", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.poisearch.PoiSearch.SearchBound);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.poisearch.PoiSearch.SearchBound);
             });
             put("RefClass::isKindOfcom_amap_api_services_poisearch_PoiResult", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.poisearch.PoiResult);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.poisearch.PoiResult);
             });
             put("RefClass::isKindOfcom_amap_api_services_poisearch_PoiSearch", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.poisearch.PoiSearch);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.poisearch.PoiSearch);
             });
             put("RefClass::isKindOfcom_amap_api_services_poisearch_PoiSearch_Query", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.poisearch.PoiSearch.Query);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.poisearch.PoiSearch.Query);
             });
             put("RefClass::isKindOfcom_amap_api_services_poisearch_IndoorData", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.poisearch.IndoorData);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.poisearch.IndoorData);
             });
             put("RefClass::isKindOfcom_amap_api_services_route_Railway", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.route.Railway);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.Railway);
             });
             put("RefClass::isKindOfcom_amap_api_services_route_BusPath", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.route.BusPath);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.BusPath);
             });
             put("RefClass::isKindOfcom_amap_api_services_route_DriveRoutePlanResult", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.route.DriveRoutePlanResult);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.DriveRoutePlanResult);
             });
             put("RefClass::isKindOfcom_amap_api_services_route_RouteSearch_TruckRouteQuery", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.route.RouteSearch.TruckRouteQuery);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RouteSearch.TruckRouteQuery);
             });
             put("RefClass::isKindOfcom_amap_api_services_route_TMC", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.route.TMC);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.TMC);
             });
             put("RefClass::isKindOfcom_amap_api_services_route_RouteBusWalkItem", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.route.RouteBusWalkItem);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RouteBusWalkItem);
             });
             put("RefClass::isKindOfcom_amap_api_services_route_RouteResult", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.route.RouteResult);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RouteResult);
             });
             put("RefClass::isKindOfcom_amap_api_services_route_RouteSearch", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.route.RouteSearch);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RouteSearch);
             });
             put("RefClass::isKindOfcom_amap_api_services_route_BusStep", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.route.BusStep);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.BusStep);
             });
             put("RefClass::isKindOfcom_amap_api_services_route_TaxiItem", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.route.TaxiItem);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.TaxiItem);
             });
             put("RefClass::isKindOfcom_amap_api_services_route_BusRouteResult", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.route.BusRouteResult);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.BusRouteResult);
             });
             put("RefClass::isKindOfcom_amap_api_services_route_RoutePlanResult", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.route.RoutePlanResult);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RoutePlanResult);
             });
             put("RefClass::isKindOfcom_amap_api_services_route_RailwaySpace", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.route.RailwaySpace);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RailwaySpace);
             });
             put("RefClass::isKindOfcom_amap_api_services_route_TruckRouteRestult", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.route.TruckRouteRestult);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.TruckRouteRestult);
             });
             put("RefClass::isKindOfcom_amap_api_services_route_RouteSearch_RideRouteQuery", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.route.RouteSearch.RideRouteQuery);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RouteSearch.RideRouteQuery);
             });
             put("RefClass::isKindOfcom_amap_api_services_route_RouteSearch_DriveRouteQuery", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.route.RouteSearch.DriveRouteQuery);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RouteSearch.DriveRouteQuery);
             });
             put("RefClass::isKindOfcom_amap_api_services_route_RouteRailwayItem", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.route.RouteRailwayItem);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RouteRailwayItem);
             });
             put("RefClass::isKindOfcom_amap_api_services_route_WalkStep", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.route.WalkStep);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.WalkStep);
             });
             put("RefClass::isKindOfcom_amap_api_services_route_RailwayStationItem", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.route.RailwayStationItem);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RailwayStationItem);
             });
             put("RefClass::isKindOfcom_amap_api_services_route_RideRouteResult", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.route.RideRouteResult);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RideRouteResult);
             });
             put("RefClass::isKindOfcom_amap_api_services_route_RouteSearch_FromAndTo", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.route.RouteSearch.FromAndTo);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RouteSearch.FromAndTo);
             });
             put("RefClass::isKindOfcom_amap_api_services_route_RidePath", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.route.RidePath);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RidePath);
             });
             put("RefClass::isKindOfcom_amap_api_services_route_RouteSearch_BusRouteQuery", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.route.RouteSearch.BusRouteQuery);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RouteSearch.BusRouteQuery);
             });
             put("RefClass::isKindOfcom_amap_api_services_route_RideStep", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.route.RideStep);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RideStep);
             });
             put("RefClass::isKindOfcom_amap_api_services_route_RouteSearchCity", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.route.RouteSearchCity);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RouteSearchCity);
             });
             put("RefClass::isKindOfcom_amap_api_services_route_DistanceResult", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.route.DistanceResult);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.DistanceResult);
             });
             put("RefClass::isKindOfcom_amap_api_services_route_RouteSearch_WalkRouteQuery", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.route.RouteSearch.WalkRouteQuery);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RouteSearch.WalkRouteQuery);
             });
             put("RefClass::isKindOfcom_amap_api_services_route_District", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.route.District);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.District);
             });
             put("RefClass::isKindOfcom_amap_api_services_route_WalkRouteResult", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.route.WalkRouteResult);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.WalkRouteResult);
             });
             put("RefClass::isKindOfcom_amap_api_services_route_DistanceSearch_DistanceQuery", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.route.DistanceSearch.DistanceQuery);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.DistanceSearch.DistanceQuery);
             });
             put("RefClass::isKindOfcom_amap_api_services_route_SearchCity", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.route.SearchCity);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.SearchCity);
             });
             put("RefClass::isKindOfcom_amap_api_services_route_DistanceSearch", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.route.DistanceSearch);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.DistanceSearch);
             });
             put("RefClass::isKindOfcom_amap_api_services_route_WalkPath", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.route.WalkPath);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.WalkPath);
             });
             put("RefClass::isKindOfcom_amap_api_services_route_RouteBusLineItem", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.route.RouteBusLineItem);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RouteBusLineItem);
             });
             put("RefClass::isKindOfcom_amap_api_services_route_RouteSearch_DrivePlanQuery", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.route.RouteSearch.DrivePlanQuery);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RouteSearch.DrivePlanQuery);
             });
             put("RefClass::isKindOfcom_amap_api_services_route_DrivePlanStep", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.route.DrivePlanStep);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.DrivePlanStep);
             });
             put("RefClass::isKindOfcom_amap_api_services_route_TimeInfo", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.route.TimeInfo);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.TimeInfo);
             });
             put("RefClass::isKindOfcom_amap_api_services_route_DriveStep", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.route.DriveStep);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.DriveStep);
             });
             put("RefClass::isKindOfcom_amap_api_services_route_TruckStep", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.route.TruckStep);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.TruckStep);
             });
             put("RefClass::isKindOfcom_amap_api_services_route_DriveRouteResult", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.route.DriveRouteResult);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.DriveRouteResult);
             });
             put("RefClass::isKindOfcom_amap_api_services_route_DrivePath", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.route.DrivePath);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.DrivePath);
             });
             put("RefClass::isKindOfcom_amap_api_services_route_TruckPath", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.route.TruckPath);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.TruckPath);
             });
             put("RefClass::isKindOfcom_amap_api_services_route_Doorway", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.route.Doorway);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.Doorway);
             });
             put("RefClass::isKindOfcom_amap_api_services_route_DrivePlanPath", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.route.DrivePlanPath);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.DrivePlanPath);
             });
             put("RefClass::isKindOfcom_amap_api_services_route_TimeInfosElement", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.route.TimeInfosElement);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.TimeInfosElement);
             });
             put("RefClass::isKindOfcom_amap_api_services_route_DistanceItem", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.route.DistanceItem);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.DistanceItem);
             });
             put("RefClass::isKindOfcom_amap_api_services_route_Path", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.route.Path);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.Path);
             });
             put("RefClass::isKindOfcom_amap_api_services_road_Road", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.road.Road);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.road.Road);
             });
             put("RefClass::isKindOfcom_amap_api_services_road_Crossroad", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.road.Crossroad);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.road.Crossroad);
             });
             put("RefClass::isKindOfcom_amap_api_services_nearby_NearbyInfo", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.nearby.NearbyInfo);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.nearby.NearbyInfo);
             });
             put("RefClass::isKindOfcom_amap_api_services_nearby_UploadInfo", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.nearby.UploadInfo);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.nearby.UploadInfo);
             });
             put("RefClass::isKindOfcom_amap_api_services_nearby_NearbySearch", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.nearby.NearbySearch);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.nearby.NearbySearch);
             });
             put("RefClass::isKindOfcom_amap_api_services_nearby_NearbySearchResult", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.nearby.NearbySearchResult);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.nearby.NearbySearchResult);
             });
             put("RefClass::isKindOfcom_amap_api_services_nearby_NearbySearch_NearbyQuery", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.nearby.NearbySearch.NearbyQuery);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.nearby.NearbySearch.NearbyQuery);
             });
             put("RefClass::isKindOfcom_amap_api_services_routepoisearch_RoutePOIItem", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.routepoisearch.RoutePOIItem);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.routepoisearch.RoutePOIItem);
             });
             put("RefClass::isKindOfcom_amap_api_services_routepoisearch_RoutePOISearch", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.routepoisearch.RoutePOISearch);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.routepoisearch.RoutePOISearch);
             });
             put("RefClass::isKindOfcom_amap_api_services_routepoisearch_RoutePOISearchResult", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.routepoisearch.RoutePOISearchResult);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.routepoisearch.RoutePOISearchResult);
             });
             put("RefClass::isKindOfcom_amap_api_services_routepoisearch_RoutePOISearchQuery", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.routepoisearch.RoutePOISearchQuery);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.routepoisearch.RoutePOISearchQuery);
             });
             put("RefClass::isKindOfcom_amap_api_services_cloud_CloudItem", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.cloud.CloudItem);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.cloud.CloudItem);
             });
             put("RefClass::isKindOfcom_amap_api_services_cloud_CloudSearch_Query", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.cloud.CloudSearch.Query);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.cloud.CloudSearch.Query);
             });
             put("RefClass::isKindOfcom_amap_api_services_cloud_CloudResult", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.cloud.CloudResult);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.cloud.CloudResult);
             });
             put("RefClass::isKindOfcom_amap_api_services_cloud_CloudSearch", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.cloud.CloudSearch);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.cloud.CloudSearch);
             });
             put("RefClass::isKindOfcom_amap_api_services_cloud_CloudSearch_SearchBound", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.cloud.CloudSearch.SearchBound);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.cloud.CloudSearch.SearchBound);
             });
             put("RefClass::isKindOfcom_amap_api_services_cloud_CloudImage", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.cloud.CloudImage);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.cloud.CloudImage);
             });
             put("RefClass::isKindOfcom_amap_api_services_cloud_CloudSearch_Sortingrules", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.cloud.CloudSearch.Sortingrules);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.cloud.CloudSearch.Sortingrules);
             });
             put("RefClass::isKindOfcom_amap_api_services_cloud_CloudItemDetail", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.cloud.CloudItemDetail);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.cloud.CloudItemDetail);
             });
             put("RefClass::isKindOfcom_amap_api_services_weather_LocalDayWeatherForecast", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.weather.LocalDayWeatherForecast);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.weather.LocalDayWeatherForecast);
             });
             put("RefClass::isKindOfcom_amap_api_services_weather_WeatherSearchQuery", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.weather.WeatherSearchQuery);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.weather.WeatherSearchQuery);
             });
             put("RefClass::isKindOfcom_amap_api_services_weather_LocalWeatherForecastResult", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.weather.LocalWeatherForecastResult);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.weather.LocalWeatherForecastResult);
             });
             put("RefClass::isKindOfcom_amap_api_services_weather_LocalWeatherForecast", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.weather.LocalWeatherForecast);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.weather.LocalWeatherForecast);
             });
             put("RefClass::isKindOfcom_amap_api_services_weather_WeatherSearch", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.weather.WeatherSearch);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.weather.WeatherSearch);
             });
             put("RefClass::isKindOfcom_amap_api_services_weather_LocalWeatherLive", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.weather.LocalWeatherLive);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.weather.LocalWeatherLive);
             });
             put("RefClass::isKindOfcom_amap_api_services_weather_LocalWeatherLiveResult", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.weather.LocalWeatherLiveResult);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.weather.LocalWeatherLiveResult);
             });
             put("RefClass::isKindOfcom_amap_api_services_geocoder_BusinessArea", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.geocoder.BusinessArea);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.geocoder.BusinessArea);
             });
             put("RefClass::isKindOfcom_amap_api_services_geocoder_GeocodeQuery", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.geocoder.GeocodeQuery);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.geocoder.GeocodeQuery);
             });
             put("RefClass::isKindOfcom_amap_api_services_geocoder_GeocodeSearch", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.geocoder.GeocodeSearch);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.geocoder.GeocodeSearch);
             });
             put("RefClass::isKindOfcom_amap_api_services_geocoder_RegeocodeResult", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.geocoder.RegeocodeResult);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.geocoder.RegeocodeResult);
             });
             put("RefClass::isKindOfcom_amap_api_services_geocoder_GeocodeResult", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.geocoder.GeocodeResult);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.geocoder.GeocodeResult);
             });
             put("RefClass::isKindOfcom_amap_api_services_geocoder_AoiItem", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.geocoder.AoiItem);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.geocoder.AoiItem);
             });
             put("RefClass::isKindOfcom_amap_api_services_geocoder_RegeocodeRoad", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.geocoder.RegeocodeRoad);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.geocoder.RegeocodeRoad);
             });
             put("RefClass::isKindOfcom_amap_api_services_geocoder_GeocodeAddress", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.geocoder.GeocodeAddress);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.geocoder.GeocodeAddress);
             });
             put("RefClass::isKindOfcom_amap_api_services_geocoder_RegeocodeQuery", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.geocoder.RegeocodeQuery);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.geocoder.RegeocodeQuery);
             });
             put("RefClass::isKindOfcom_amap_api_services_geocoder_StreetNumber", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.geocoder.StreetNumber);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.geocoder.StreetNumber);
             });
             put("RefClass::isKindOfcom_amap_api_services_geocoder_RegeocodeAddress", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.geocoder.RegeocodeAddress);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.geocoder.RegeocodeAddress);
             });
             put("RefClass::isKindOfcom_amap_api_services_district_DistrictSearchQuery", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.district.DistrictSearchQuery);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.district.DistrictSearchQuery);
             });
             put("RefClass::isKindOfcom_amap_api_services_district_DistrictSearch", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.district.DistrictSearch);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.district.DistrictSearch);
             });
             put("RefClass::isKindOfcom_amap_api_services_district_DistrictResult", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.district.DistrictResult);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.district.DistrictResult);
             });
             put("RefClass::isKindOfcom_amap_api_services_district_DistrictItem", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.district.DistrictItem);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.district.DistrictItem);
             });
             put("RefClass::isKindOfcom_amap_api_services_help_Tip", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.help.Tip);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.help.Tip);
             });
             put("RefClass::isKindOfcom_amap_api_services_help_InputtipsQuery", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.help.InputtipsQuery);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.help.InputtipsQuery);
             });
             put("RefClass::isKindOfcom_amap_api_services_help_Inputtips", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.help.Inputtips);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.help.Inputtips);
             });
             put("RefClass::isKindOfcom_amap_api_services_share_ShareSearch_ShareNaviQuery", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.share.ShareSearch.ShareNaviQuery);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.share.ShareSearch.ShareNaviQuery);
             });
             put("RefClass::isKindOfcom_amap_api_services_share_ShareSearch_ShareBusRouteQuery", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.share.ShareSearch.ShareBusRouteQuery);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.share.ShareSearch.ShareBusRouteQuery);
             });
             put("RefClass::isKindOfcom_amap_api_services_share_ShareSearch", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.share.ShareSearch);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.share.ShareSearch);
             });
             put("RefClass::isKindOfcom_amap_api_services_share_ShareSearch_ShareFromAndTo", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.share.ShareSearch.ShareFromAndTo);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.share.ShareSearch.ShareFromAndTo);
             });
             put("RefClass::isKindOfcom_amap_api_services_share_ShareSearch_ShareWalkRouteQuery", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery);
             });
             put("RefClass::isKindOfcom_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery", (__args__, __methodResult__) -> {
                 // 引用对象
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                Object ref = getHEAP().get(refId);
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(ref instanceof com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery);
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_traffic_TrafficStatusInfo__", (__args__, __methodResult__) -> {
@@ -2177,14 +1877,13 @@ public class SubHandler11 {
             
                 // create target object
                 com.amap.api.services.traffic.TrafficStatusInfo __obj__ = new com.amap.api.services.traffic.TrafficStatusInfo();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                __methodResult__.success(System.identityHashCode(__obj__));
+                __methodResult__.success(__obj__);
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_traffic_TrafficStatusResult__", (__args__, __methodResult__) -> {
@@ -2197,14 +1896,13 @@ public class SubHandler11 {
             
                 // create target object
                 com.amap.api.services.traffic.TrafficStatusResult __obj__ = new com.amap.api.services.traffic.TrafficStatusResult();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                __methodResult__.success(System.identityHashCode(__obj__));
+                __methodResult__.success(__obj__);
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_traffic_TrafficSearch__android_content_Context", (__args__, __methodResult__) -> {
@@ -2214,19 +1912,17 @@ public class SubHandler11 {
             
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                android.content.Context var1 = __var1RefId__ != null ? (android.content.Context) getHEAP().get(__var1RefId__) : null;
+                android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
             
                 // create target object
                 com.amap.api.services.traffic.TrafficSearch __obj__ = new com.amap.api.services.traffic.TrafficSearch(var1);
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                __methodResult__.success(System.identityHashCode(__obj__));
+                __methodResult__.success(__obj__);
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_traffic_TrafficStatusEvaluation__", (__args__, __methodResult__) -> {
@@ -2239,14 +1935,13 @@ public class SubHandler11 {
             
                 // create target object
                 com.amap.api.services.traffic.TrafficStatusEvaluation __obj__ = new com.amap.api.services.traffic.TrafficStatusEvaluation();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                __methodResult__.success(System.identityHashCode(__obj__));
+                __methodResult__.success(__obj__);
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_busline_BusLineItem__", (__args__, __methodResult__) -> {
@@ -2259,14 +1954,13 @@ public class SubHandler11 {
             
                 // create target object
                 com.amap.api.services.busline.BusLineItem __obj__ = new com.amap.api.services.busline.BusLineItem();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                __methodResult__.success(System.identityHashCode(__obj__));
+                __methodResult__.success(__obj__);
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_busline_BusStationSearch__android_content_Context__com_amap_api_services_busline_BusStationQuery", (__args__, __methodResult__) -> {
@@ -2276,22 +1970,19 @@ public class SubHandler11 {
             
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                android.content.Context var1 = __var1RefId__ != null ? (android.content.Context) getHEAP().get(__var1RefId__) : null;
+                android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
                 // ref arg
-                Integer __var2RefId__ = (Integer) ((Map<String, Object>) __args__).get("var2");
-                com.amap.api.services.busline.BusStationQuery var2 = __var2RefId__ != null ? (com.amap.api.services.busline.BusStationQuery) getHEAP().get(__var2RefId__) : null;
+                com.amap.api.services.busline.BusStationQuery var2 = (com.amap.api.services.busline.BusStationQuery) ((Map<String, Object>) __args__).get("var2");
             
                 // create target object
                 com.amap.api.services.busline.BusStationSearch __obj__ = new com.amap.api.services.busline.BusStationSearch(var1, var2);
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                __methodResult__.success(System.identityHashCode(__obj__));
+                __methodResult__.success(__obj__);
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_busline_BusLineSearch__android_content_Context__com_amap_api_services_busline_BusLineQuery", (__args__, __methodResult__) -> {
@@ -2301,22 +1992,19 @@ public class SubHandler11 {
             
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                android.content.Context var1 = __var1RefId__ != null ? (android.content.Context) getHEAP().get(__var1RefId__) : null;
+                android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
                 // ref arg
-                Integer __var2RefId__ = (Integer) ((Map<String, Object>) __args__).get("var2");
-                com.amap.api.services.busline.BusLineQuery var2 = __var2RefId__ != null ? (com.amap.api.services.busline.BusLineQuery) getHEAP().get(__var2RefId__) : null;
+                com.amap.api.services.busline.BusLineQuery var2 = (com.amap.api.services.busline.BusLineQuery) ((Map<String, Object>) __args__).get("var2");
             
                 // create target object
                 com.amap.api.services.busline.BusLineSearch __obj__ = new com.amap.api.services.busline.BusLineSearch(var1, var2);
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                __methodResult__.success(System.identityHashCode(__obj__));
+                __methodResult__.success(__obj__);
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_busline_BusLineQuery__String__com_amap_api_services_busline_BusLineQuery_SearchType__String", (__args__, __methodResult__) -> {
@@ -2325,23 +2013,22 @@ public class SubHandler11 {
                 }
             
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
                 // enum arg
                 com.amap.api.services.busline.BusLineQuery.SearchType var2 = com.amap.api.services.busline.BusLineQuery.SearchType.values()[(int) ((Map<String, Object>) __args__).get("var2")];
-                // jsonable arg
+                // ref arg
                 String var3 = (String) ((Map<String, Object>) __args__).get("var3");
             
                 // create target object
                 com.amap.api.services.busline.BusLineQuery __obj__ = new com.amap.api.services.busline.BusLineQuery(var1, var2, var3);
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                __methodResult__.success(System.identityHashCode(__obj__));
+                __methodResult__.success(__obj__);
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_busline_BusStationItem__", (__args__, __methodResult__) -> {
@@ -2354,14 +2041,13 @@ public class SubHandler11 {
             
                 // create target object
                 com.amap.api.services.busline.BusStationItem __obj__ = new com.amap.api.services.busline.BusStationItem();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                __methodResult__.success(System.identityHashCode(__obj__));
+                __methodResult__.success(__obj__);
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_busline_BusStationQuery__String__String", (__args__, __methodResult__) -> {
@@ -2370,21 +2056,20 @@ public class SubHandler11 {
                 }
             
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // jsonable arg
+                // ref arg
                 String var2 = (String) ((Map<String, Object>) __args__).get("var2");
             
                 // create target object
                 com.amap.api.services.busline.BusStationQuery __obj__ = new com.amap.api.services.busline.BusStationQuery(var1, var2);
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                __methodResult__.success(System.identityHashCode(__obj__));
+                __methodResult__.success(__obj__);
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_core_AMapException__String", (__args__, __methodResult__) -> {
@@ -2393,19 +2078,18 @@ public class SubHandler11 {
                 }
             
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // create target object
                 com.amap.api.services.core.AMapException __obj__ = new com.amap.api.services.core.AMapException(var1);
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                __methodResult__.success(System.identityHashCode(__obj__));
+                __methodResult__.success(__obj__);
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_core_AMapException__String__int__String", (__args__, __methodResult__) -> {
@@ -2414,23 +2098,22 @@ public class SubHandler11 {
                 }
             
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // jsonable arg
+                // ref arg
                 int var2 = (int) ((Map<String, Object>) __args__).get("var2");
-                // jsonable arg
+                // ref arg
                 String var3 = (String) ((Map<String, Object>) __args__).get("var3");
             
                 // create target object
                 com.amap.api.services.core.AMapException __obj__ = new com.amap.api.services.core.AMapException(var1, var2, var3);
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                __methodResult__.success(System.identityHashCode(__obj__));
+                __methodResult__.success(__obj__);
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_core_AMapException__", (__args__, __methodResult__) -> {
@@ -2443,14 +2126,13 @@ public class SubHandler11 {
             
                 // create target object
                 com.amap.api.services.core.AMapException __obj__ = new com.amap.api.services.core.AMapException();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                __methodResult__.success(System.identityHashCode(__obj__));
+                __methodResult__.success(__obj__);
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_core_SearchUtils__", (__args__, __methodResult__) -> {
@@ -2463,14 +2145,13 @@ public class SubHandler11 {
             
                 // create target object
                 com.amap.api.services.core.SearchUtils __obj__ = new com.amap.api.services.core.SearchUtils();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                __methodResult__.success(System.identityHashCode(__obj__));
+                __methodResult__.success(__obj__);
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_core_LatLonSharePoint__double__double__String", (__args__, __methodResult__) -> {
@@ -2479,23 +2160,22 @@ public class SubHandler11 {
                 }
             
                 // args
-                // jsonable arg
+                // ref arg
                 double var1 = (double) ((Map<String, Object>) __args__).get("var1");
-                // jsonable arg
+                // ref arg
                 double var3 = (double) ((Map<String, Object>) __args__).get("var3");
-                // jsonable arg
+                // ref arg
                 String var5 = (String) ((Map<String, Object>) __args__).get("var5");
             
                 // create target object
                 com.amap.api.services.core.LatLonSharePoint __obj__ = new com.amap.api.services.core.LatLonSharePoint(var1, var3, var5);
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                __methodResult__.success(System.identityHashCode(__obj__));
+                __methodResult__.success(__obj__);
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_core_LatLonPoint__double__double", (__args__, __methodResult__) -> {
@@ -2504,21 +2184,20 @@ public class SubHandler11 {
                 }
             
                 // args
-                // jsonable arg
+                // ref arg
                 double var1 = (double) ((Map<String, Object>) __args__).get("var1");
-                // jsonable arg
+                // ref arg
                 double var3 = (double) ((Map<String, Object>) __args__).get("var3");
             
                 // create target object
                 com.amap.api.services.core.LatLonPoint __obj__ = new com.amap.api.services.core.LatLonPoint(var1, var3);
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                __methodResult__.success(System.identityHashCode(__obj__));
+                __methodResult__.success(__obj__);
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_core_PoiItem__String__com_amap_api_services_core_LatLonPoint__String__String", (__args__, __methodResult__) -> {
@@ -2527,26 +2206,24 @@ public class SubHandler11 {
                 }
             
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
                 // ref arg
-                Integer __var2RefId__ = (Integer) ((Map<String, Object>) __args__).get("var2");
-                com.amap.api.services.core.LatLonPoint var2 = __var2RefId__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var2RefId__) : null;
-                // jsonable arg
+                com.amap.api.services.core.LatLonPoint var2 = (com.amap.api.services.core.LatLonPoint) ((Map<String, Object>) __args__).get("var2");
+                // ref arg
                 String var3 = (String) ((Map<String, Object>) __args__).get("var3");
-                // jsonable arg
+                // ref arg
                 String var4 = (String) ((Map<String, Object>) __args__).get("var4");
             
                 // create target object
                 com.amap.api.services.core.PoiItem __obj__ = new com.amap.api.services.core.PoiItem(var1, var2, var3, var4);
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                __methodResult__.success(System.identityHashCode(__obj__));
+                __methodResult__.success(__obj__);
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_core_SuggestionCity__String__String__String__int", (__args__, __methodResult__) -> {
@@ -2555,25 +2232,24 @@ public class SubHandler11 {
                 }
             
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // jsonable arg
+                // ref arg
                 String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-                // jsonable arg
+                // ref arg
                 String var3 = (String) ((Map<String, Object>) __args__).get("var3");
-                // jsonable arg
+                // ref arg
                 int var4 = (int) ((Map<String, Object>) __args__).get("var4");
             
                 // create target object
                 com.amap.api.services.core.SuggestionCity __obj__ = new com.amap.api.services.core.SuggestionCity(var1, var2, var3, var4);
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                __methodResult__.success(System.identityHashCode(__obj__));
+                __methodResult__.success(__obj__);
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_poisearch_Photo__", (__args__, __methodResult__) -> {
@@ -2586,14 +2262,13 @@ public class SubHandler11 {
             
                 // create target object
                 com.amap.api.services.poisearch.Photo __obj__ = new com.amap.api.services.poisearch.Photo();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                __methodResult__.success(System.identityHashCode(__obj__));
+                __methodResult__.success(__obj__);
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_poisearch_Photo__String__String", (__args__, __methodResult__) -> {
@@ -2602,21 +2277,20 @@ public class SubHandler11 {
                 }
             
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // jsonable arg
+                // ref arg
                 String var2 = (String) ((Map<String, Object>) __args__).get("var2");
             
                 // create target object
                 com.amap.api.services.poisearch.Photo __obj__ = new com.amap.api.services.poisearch.Photo(var1, var2);
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                __methodResult__.success(System.identityHashCode(__obj__));
+                __methodResult__.success(__obj__);
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_poisearch_SubPoiItem__String__com_amap_api_services_core_LatLonPoint__String__String", (__args__, __methodResult__) -> {
@@ -2625,26 +2299,24 @@ public class SubHandler11 {
                 }
             
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
                 // ref arg
-                Integer __var2RefId__ = (Integer) ((Map<String, Object>) __args__).get("var2");
-                com.amap.api.services.core.LatLonPoint var2 = __var2RefId__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var2RefId__) : null;
-                // jsonable arg
+                com.amap.api.services.core.LatLonPoint var2 = (com.amap.api.services.core.LatLonPoint) ((Map<String, Object>) __args__).get("var2");
+                // ref arg
                 String var3 = (String) ((Map<String, Object>) __args__).get("var3");
-                // jsonable arg
+                // ref arg
                 String var4 = (String) ((Map<String, Object>) __args__).get("var4");
             
                 // create target object
                 com.amap.api.services.poisearch.SubPoiItem __obj__ = new com.amap.api.services.poisearch.SubPoiItem(var1, var2, var3, var4);
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                __methodResult__.success(System.identityHashCode(__obj__));
+                __methodResult__.success(__obj__);
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_poisearch_PoiItemExtension__String__String", (__args__, __methodResult__) -> {
@@ -2653,21 +2325,20 @@ public class SubHandler11 {
                 }
             
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // jsonable arg
+                // ref arg
                 String var2 = (String) ((Map<String, Object>) __args__).get("var2");
             
                 // create target object
                 com.amap.api.services.poisearch.PoiItemExtension __obj__ = new com.amap.api.services.poisearch.PoiItemExtension(var1, var2);
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                __methodResult__.success(System.identityHashCode(__obj__));
+                __methodResult__.success(__obj__);
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint__int", (__args__, __methodResult__) -> {
@@ -2677,21 +2348,19 @@ public class SubHandler11 {
             
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.core.LatLonPoint var1 = __var1RefId__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1RefId__) : null;
-                // jsonable arg
+                com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
                 int var2 = (int) ((Map<String, Object>) __args__).get("var2");
             
                 // create target object
                 com.amap.api.services.poisearch.PoiSearch.SearchBound __obj__ = new com.amap.api.services.poisearch.PoiSearch.SearchBound(var1, var2);
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                __methodResult__.success(System.identityHashCode(__obj__));
+                __methodResult__.success(__obj__);
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint__int__boolean", (__args__, __methodResult__) -> {
@@ -2701,23 +2370,21 @@ public class SubHandler11 {
             
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.core.LatLonPoint var1 = __var1RefId__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1RefId__) : null;
-                // jsonable arg
+                com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
                 int var2 = (int) ((Map<String, Object>) __args__).get("var2");
-                // jsonable arg
+                // ref arg
                 boolean var3 = (boolean) ((Map<String, Object>) __args__).get("var3");
             
                 // create target object
                 com.amap.api.services.poisearch.PoiSearch.SearchBound __obj__ = new com.amap.api.services.poisearch.PoiSearch.SearchBound(var1, var2, var3);
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                __methodResult__.success(System.identityHashCode(__obj__));
+                __methodResult__.success(__obj__);
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint", (__args__, __methodResult__) -> {
@@ -2727,22 +2394,19 @@ public class SubHandler11 {
             
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.core.LatLonPoint var1 = __var1RefId__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1RefId__) : null;
+                com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) ((Map<String, Object>) __args__).get("var1");
                 // ref arg
-                Integer __var2RefId__ = (Integer) ((Map<String, Object>) __args__).get("var2");
-                com.amap.api.services.core.LatLonPoint var2 = __var2RefId__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var2RefId__) : null;
+                com.amap.api.services.core.LatLonPoint var2 = (com.amap.api.services.core.LatLonPoint) ((Map<String, Object>) __args__).get("var2");
             
                 // create target object
                 com.amap.api.services.poisearch.PoiSearch.SearchBound __obj__ = new com.amap.api.services.poisearch.PoiSearch.SearchBound(var1, var2);
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                __methodResult__.success(System.identityHashCode(__obj__));
+                __methodResult__.success(__obj__);
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch_SearchBound__java_util_List_com_amap_api_services_core_LatLonPoint_", (__args__, __methodResult__) -> {
@@ -2751,23 +2415,18 @@ public class SubHandler11 {
                 }
             
                 // args
-                // list arg
-                List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) __args__).get("var1");
-                java.util.List<com.amap.api.services.core.LatLonPoint> var1 = new ArrayList<>();
-                for (int refId : var1RefIdList) {
-                    ((ArrayList<com.amap.api.services.core.LatLonPoint>) var1).add((com.amap.api.services.core.LatLonPoint) getHEAP().get(refId));
-                }
+                // ref arg
+                java.util.List<com.amap.api.services.core.LatLonPoint> var1 = (java.util.List<com.amap.api.services.core.LatLonPoint>) ((Map<String, Object>) __args__).get("var1");
             
                 // create target object
                 com.amap.api.services.poisearch.PoiSearch.SearchBound __obj__ = new com.amap.api.services.poisearch.PoiSearch.SearchBound((ArrayList) var1);
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                __methodResult__.success(System.identityHashCode(__obj__));
+                __methodResult__.success(__obj__);
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch__android_content_Context__com_amap_api_services_poisearch_PoiSearch_Query", (__args__, __methodResult__) -> {
@@ -2777,22 +2436,19 @@ public class SubHandler11 {
             
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                android.content.Context var1 = __var1RefId__ != null ? (android.content.Context) getHEAP().get(__var1RefId__) : null;
+                android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
                 // ref arg
-                Integer __var2RefId__ = (Integer) ((Map<String, Object>) __args__).get("var2");
-                com.amap.api.services.poisearch.PoiSearch.Query var2 = __var2RefId__ != null ? (com.amap.api.services.poisearch.PoiSearch.Query) getHEAP().get(__var2RefId__) : null;
+                com.amap.api.services.poisearch.PoiSearch.Query var2 = (com.amap.api.services.poisearch.PoiSearch.Query) ((Map<String, Object>) __args__).get("var2");
             
                 // create target object
                 com.amap.api.services.poisearch.PoiSearch __obj__ = new com.amap.api.services.poisearch.PoiSearch(var1, var2);
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                __methodResult__.success(System.identityHashCode(__obj__));
+                __methodResult__.success(__obj__);
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch_Query__String__String", (__args__, __methodResult__) -> {
@@ -2801,21 +2457,20 @@ public class SubHandler11 {
                 }
             
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // jsonable arg
+                // ref arg
                 String var2 = (String) ((Map<String, Object>) __args__).get("var2");
             
                 // create target object
                 com.amap.api.services.poisearch.PoiSearch.Query __obj__ = new com.amap.api.services.poisearch.PoiSearch.Query(var1, var2);
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                __methodResult__.success(System.identityHashCode(__obj__));
+                __methodResult__.success(__obj__);
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch_Query__String__String__String", (__args__, __methodResult__) -> {
@@ -2824,23 +2479,22 @@ public class SubHandler11 {
                 }
             
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // jsonable arg
+                // ref arg
                 String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-                // jsonable arg
+                // ref arg
                 String var3 = (String) ((Map<String, Object>) __args__).get("var3");
             
                 // create target object
                 com.amap.api.services.poisearch.PoiSearch.Query __obj__ = new com.amap.api.services.poisearch.PoiSearch.Query(var1, var2, var3);
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                __methodResult__.success(System.identityHashCode(__obj__));
+                __methodResult__.success(__obj__);
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_poisearch_IndoorData__String__int__String", (__args__, __methodResult__) -> {
@@ -2849,23 +2503,22 @@ public class SubHandler11 {
                 }
             
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // jsonable arg
+                // ref arg
                 int var2 = (int) ((Map<String, Object>) __args__).get("var2");
-                // jsonable arg
+                // ref arg
                 String var3 = (String) ((Map<String, Object>) __args__).get("var3");
             
                 // create target object
                 com.amap.api.services.poisearch.IndoorData __obj__ = new com.amap.api.services.poisearch.IndoorData(var1, var2, var3);
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                __methodResult__.success(System.identityHashCode(__obj__));
+                __methodResult__.success(__obj__);
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_Railway__", (__args__, __methodResult__) -> {
@@ -2878,14 +2531,13 @@ public class SubHandler11 {
             
                 // create target object
                 com.amap.api.services.route.Railway __obj__ = new com.amap.api.services.route.Railway();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                __methodResult__.success(System.identityHashCode(__obj__));
+                __methodResult__.success(__obj__);
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_BusPath__", (__args__, __methodResult__) -> {
@@ -2898,14 +2550,13 @@ public class SubHandler11 {
             
                 // create target object
                 com.amap.api.services.route.BusPath __obj__ = new com.amap.api.services.route.BusPath();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                __methodResult__.success(System.identityHashCode(__obj__));
+                __methodResult__.success(__obj__);
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_DriveRoutePlanResult__", (__args__, __methodResult__) -> {
@@ -2918,14 +2569,13 @@ public class SubHandler11 {
             
                 // create target object
                 com.amap.api.services.route.DriveRoutePlanResult __obj__ = new com.amap.api.services.route.DriveRoutePlanResult();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                __methodResult__.success(System.identityHashCode(__obj__));
+                __methodResult__.success(__obj__);
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_TruckRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__java_util_List_com_amap_api_services_core_LatLonPoint___int", (__args__, __methodResult__) -> {
@@ -2935,29 +2585,23 @@ public class SubHandler11 {
             
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.route.RouteSearch.FromAndTo var1 = __var1RefId__ != null ? (com.amap.api.services.route.RouteSearch.FromAndTo) getHEAP().get(__var1RefId__) : null;
-                // jsonable arg
+                com.amap.api.services.route.RouteSearch.FromAndTo var1 = (com.amap.api.services.route.RouteSearch.FromAndTo) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
                 int var2 = (int) ((Map<String, Object>) __args__).get("var2");
-                // list arg
-                List<Integer> var3RefIdList = (List<Integer>) ((Map<String, Object>) __args__).get("var3");
-                java.util.List<com.amap.api.services.core.LatLonPoint> var3 = new ArrayList<>();
-                for (int refId : var3RefIdList) {
-                    ((ArrayList<com.amap.api.services.core.LatLonPoint>) var3).add((com.amap.api.services.core.LatLonPoint) getHEAP().get(refId));
-                }
-                // jsonable arg
+                // ref arg
+                java.util.List<com.amap.api.services.core.LatLonPoint> var3 = (java.util.List<com.amap.api.services.core.LatLonPoint>) ((Map<String, Object>) __args__).get("var3");
+                // ref arg
                 int var4 = (int) ((Map<String, Object>) __args__).get("var4");
             
                 // create target object
                 com.amap.api.services.route.RouteSearch.TruckRouteQuery __obj__ = new com.amap.api.services.route.RouteSearch.TruckRouteQuery(var1, var2, (ArrayList) var3, var4);
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                __methodResult__.success(System.identityHashCode(__obj__));
+                __methodResult__.success(__obj__);
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_TMC__", (__args__, __methodResult__) -> {
@@ -2970,14 +2614,13 @@ public class SubHandler11 {
             
                 // create target object
                 com.amap.api.services.route.TMC __obj__ = new com.amap.api.services.route.TMC();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                __methodResult__.success(System.identityHashCode(__obj__));
+                __methodResult__.success(__obj__);
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_RouteBusWalkItem__", (__args__, __methodResult__) -> {
@@ -2990,14 +2633,13 @@ public class SubHandler11 {
             
                 // create target object
                 com.amap.api.services.route.RouteBusWalkItem __obj__ = new com.amap.api.services.route.RouteBusWalkItem();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                __methodResult__.success(System.identityHashCode(__obj__));
+                __methodResult__.success(__obj__);
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_RouteResult__", (__args__, __methodResult__) -> {
@@ -3010,14 +2652,13 @@ public class SubHandler11 {
             
                 // create target object
                 com.amap.api.services.route.RouteResult __obj__ = new com.amap.api.services.route.RouteResult();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                __methodResult__.success(System.identityHashCode(__obj__));
+                __methodResult__.success(__obj__);
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_RouteSearch__android_content_Context", (__args__, __methodResult__) -> {
@@ -3027,19 +2668,17 @@ public class SubHandler11 {
             
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                android.content.Context var1 = __var1RefId__ != null ? (android.content.Context) getHEAP().get(__var1RefId__) : null;
+                android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
             
                 // create target object
                 com.amap.api.services.route.RouteSearch __obj__ = new com.amap.api.services.route.RouteSearch(var1);
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                __methodResult__.success(System.identityHashCode(__obj__));
+                __methodResult__.success(__obj__);
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_BusStep__", (__args__, __methodResult__) -> {
@@ -3052,14 +2691,13 @@ public class SubHandler11 {
             
                 // create target object
                 com.amap.api.services.route.BusStep __obj__ = new com.amap.api.services.route.BusStep();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                __methodResult__.success(System.identityHashCode(__obj__));
+                __methodResult__.success(__obj__);
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_TaxiItem__", (__args__, __methodResult__) -> {
@@ -3072,14 +2710,13 @@ public class SubHandler11 {
             
                 // create target object
                 com.amap.api.services.route.TaxiItem __obj__ = new com.amap.api.services.route.TaxiItem();
-                getHEAP().put(System.identityHashCode(__obj__), __obj__);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                __methodResult__.success(System.identityHashCode(__obj__));
+                __methodResult__.success(__obj__);
             });
         }};
     }

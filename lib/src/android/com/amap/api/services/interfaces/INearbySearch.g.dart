@@ -25,8 +25,6 @@ mixin com_amap_api_services_interfaces_INearbySearch on java_lang_Object {
 
   @mustCallSuper
   Future<void> addNearbyListener(com_amap_api_services_nearby_NearbySearch_NearbyListener var1) {
-    if (var1 is Ref) kNativeObjectPool.add(var1);
-  
     if (fluttifyLogEnabled) {
       debugPrint('addNearbyListener::kNativeObjectPool: $kNativeObjectPool');
     }
@@ -34,8 +32,6 @@ mixin com_amap_api_services_interfaces_INearbySearch on java_lang_Object {
   
   @mustCallSuper
   Future<void> removeNearbyListener(com_amap_api_services_nearby_NearbySearch_NearbyListener var1) {
-    if (var1 is Ref) kNativeObjectPool.add(var1);
-  
     if (fluttifyLogEnabled) {
       debugPrint('removeNearbyListener::kNativeObjectPool: $kNativeObjectPool');
     }
@@ -43,8 +39,6 @@ mixin com_amap_api_services_interfaces_INearbySearch on java_lang_Object {
   
   @mustCallSuper
   Future<void> clearUserInfoAsyn() {
-  
-  
     if (fluttifyLogEnabled) {
       debugPrint('clearUserInfoAsyn::kNativeObjectPool: $kNativeObjectPool');
     }
@@ -52,8 +46,6 @@ mixin com_amap_api_services_interfaces_INearbySearch on java_lang_Object {
   
   @mustCallSuper
   Future<void> setUserID(String var1) {
-  
-  
     if (fluttifyLogEnabled) {
       debugPrint('setUserID::kNativeObjectPool: $kNativeObjectPool');
     }
@@ -61,8 +53,6 @@ mixin com_amap_api_services_interfaces_INearbySearch on java_lang_Object {
   
   @mustCallSuper
   Future<void> startUploadNearbyInfoAuto(com_amap_api_services_nearby_UploadInfoCallback var1, int var2) {
-    if (var1 is Ref) kNativeObjectPool.add(var1);
-  
     if (fluttifyLogEnabled) {
       debugPrint('startUploadNearbyInfoAuto::kNativeObjectPool: $kNativeObjectPool');
     }
@@ -70,8 +60,6 @@ mixin com_amap_api_services_interfaces_INearbySearch on java_lang_Object {
   
   @mustCallSuper
   Future<void> stopUploadNearbyInfoAuto() {
-  
-  
     if (fluttifyLogEnabled) {
       debugPrint('stopUploadNearbyInfoAuto::kNativeObjectPool: $kNativeObjectPool');
     }
@@ -79,8 +67,6 @@ mixin com_amap_api_services_interfaces_INearbySearch on java_lang_Object {
   
   @mustCallSuper
   Future<void> uploadNearbyInfoAsyn(com_amap_api_services_nearby_UploadInfo var1) {
-    if (var1 is Ref) kNativeObjectPool.add(var1);
-  
     if (fluttifyLogEnabled) {
       debugPrint('uploadNearbyInfoAsyn::kNativeObjectPool: $kNativeObjectPool');
     }
@@ -88,8 +74,6 @@ mixin com_amap_api_services_interfaces_INearbySearch on java_lang_Object {
   
   @mustCallSuper
   Future<void> searchNearbyInfoAsyn(com_amap_api_services_nearby_NearbySearch_NearbyQuery var1) {
-    if (var1 is Ref) kNativeObjectPool.add(var1);
-  
     if (fluttifyLogEnabled) {
       debugPrint('searchNearbyInfoAsyn::kNativeObjectPool: $kNativeObjectPool');
     }
@@ -97,8 +81,6 @@ mixin com_amap_api_services_interfaces_INearbySearch on java_lang_Object {
   
   @mustCallSuper
   Future<com_amap_api_services_nearby_NearbySearchResult> searchNearbyInfo(com_amap_api_services_nearby_NearbySearch_NearbyQuery var1) {
-    if (var1 is Ref) kNativeObjectPool.add(var1);
-  
     if (fluttifyLogEnabled) {
       debugPrint('searchNearbyInfo::kNativeObjectPool: $kNativeObjectPool');
     }
@@ -106,8 +88,6 @@ mixin com_amap_api_services_interfaces_INearbySearch on java_lang_Object {
   
   @mustCallSuper
   Future<void> destroy() {
-  
-  
     if (fluttifyLogEnabled) {
       debugPrint('destroy::kNativeObjectPool: $kNativeObjectPool');
     }

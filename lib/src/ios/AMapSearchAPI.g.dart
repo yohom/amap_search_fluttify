@@ -21,10 +21,8 @@ class AMapSearchAPI extends NSObject  {
 
   //region creators
   static Future<AMapSearchAPI> create__() async {
-    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapSearchAPI');
+    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createAMapSearchAPI');
     final object = AMapSearchAPI()..refId = refId..tag__ = 'amap_search_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
@@ -32,10 +30,9 @@ class AMapSearchAPI extends NSObject  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapSearchAPI', {'length': length});
+    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchAMapSearchAPI', {'length': length});
   
     final List<AMapSearchAPI> typedResult = resultBatch.map((result) => AMapSearchAPI()..refId = result..tag__ = 'amap_search_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -43,194 +40,200 @@ class AMapSearchAPI extends NSObject  {
 
   //region getters
   Future<int> get_timeout() async {
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapSearchAPI::get_timeout", {'refId': refId});
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapSearchAPI::get_timeout", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   Future<AMapSearchLanguage> get_language() async {
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapSearchAPI::get_language", {'refId': refId});
-  
-    return (__result__ as int).toAMapSearchLanguage();
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapSearchAPI::get_language", {'__this__': this});
+    return __result__ == null ? null : ((__result__ as int).toAMapSearchLanguage());
   }
   
   //endregion
 
   //region setters
   Future<void> set_delegate(AMapSearchDelegate delegate) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::set_delegate', {'refId': refId, "delegate": delegate.refId});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
+        .invokeMethod('AMapSearchAPI::set_delegate', <String, dynamic>{'__this__': this, });
   
-    MethodChannel('AMapSearchDelegate::Callback')
+    MethodChannel('AMapSearchDelegate::Callback', StandardMethodCodec(FluttifyMessageCodec()))
       .setMethodCallHandler((methodCall) async {
-        final args = methodCall.arguments as Map;
-        switch (methodCall.method) {
-          case 'Callback::AMapSearchDelegate::AMapSearchRequest_didFailWithError':
-            // print log
-            if (fluttifyLogEnabled) {
-              debugPrint('fluttify-dart-callback: AMapSearchRequest_didFailWithError([\'request\':${args['request']}, \'error\':${args['error']}])');
-            }
-        
-            // handle the native call
-            delegate?.AMapSearchRequest_didFailWithError(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<dynamic>(), TypeOpAmapSearchFluttifyIOS((args['error'] as Object))?.as__<NSError>());
-            break;
-          case 'Callback::AMapSearchDelegate::onPOISearchDone_response':
-            // print log
-            if (fluttifyLogEnabled) {
-              debugPrint('fluttify-dart-callback: onPOISearchDone_response([\'request\':${args['request']}, \'response\':${args['response']}])');
-            }
-        
-            // handle the native call
-            delegate?.onPOISearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapPOISearchBaseRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapPOISearchResponse>());
-            break;
-          case 'Callback::AMapSearchDelegate::onRoutePOISearchDone_response':
-            // print log
-            if (fluttifyLogEnabled) {
-              debugPrint('fluttify-dart-callback: onRoutePOISearchDone_response([\'request\':${args['request']}, \'response\':${args['response']}])');
-            }
-        
-            // handle the native call
-            delegate?.onRoutePOISearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapRoutePOISearchRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapRoutePOISearchResponse>());
-            break;
-          case 'Callback::AMapSearchDelegate::onGeocodeSearchDone_response':
-            // print log
-            if (fluttifyLogEnabled) {
-              debugPrint('fluttify-dart-callback: onGeocodeSearchDone_response([\'request\':${args['request']}, \'response\':${args['response']}])');
-            }
-        
-            // handle the native call
-            delegate?.onGeocodeSearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapGeocodeSearchRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapGeocodeSearchResponse>());
-            break;
-          case 'Callback::AMapSearchDelegate::onReGeocodeSearchDone_response':
-            // print log
-            if (fluttifyLogEnabled) {
-              debugPrint('fluttify-dart-callback: onReGeocodeSearchDone_response([\'request\':${args['request']}, \'response\':${args['response']}])');
-            }
-        
-            // handle the native call
-            delegate?.onReGeocodeSearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapReGeocodeSearchRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapReGeocodeSearchResponse>());
-            break;
-          case 'Callback::AMapSearchDelegate::onInputTipsSearchDone_response':
-            // print log
-            if (fluttifyLogEnabled) {
-              debugPrint('fluttify-dart-callback: onInputTipsSearchDone_response([\'request\':${args['request']}, \'response\':${args['response']}])');
-            }
-        
-            // handle the native call
-            delegate?.onInputTipsSearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapInputTipsSearchRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapInputTipsSearchResponse>());
-            break;
-          case 'Callback::AMapSearchDelegate::onBusStopSearchDone_response':
-            // print log
-            if (fluttifyLogEnabled) {
-              debugPrint('fluttify-dart-callback: onBusStopSearchDone_response([\'request\':${args['request']}, \'response\':${args['response']}])');
-            }
-        
-            // handle the native call
-            delegate?.onBusStopSearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapBusStopSearchRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapBusStopSearchResponse>());
-            break;
-          case 'Callback::AMapSearchDelegate::onBusLineSearchDone_response':
-            // print log
-            if (fluttifyLogEnabled) {
-              debugPrint('fluttify-dart-callback: onBusLineSearchDone_response([\'request\':${args['request']}, \'response\':${args['response']}])');
-            }
-        
-            // handle the native call
-            delegate?.onBusLineSearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapBusLineBaseSearchRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapBusLineSearchResponse>());
-            break;
-          case 'Callback::AMapSearchDelegate::onDistrictSearchDone_response':
-            // print log
-            if (fluttifyLogEnabled) {
-              debugPrint('fluttify-dart-callback: onDistrictSearchDone_response([\'request\':${args['request']}, \'response\':${args['response']}])');
-            }
-        
-            // handle the native call
-            delegate?.onDistrictSearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapDistrictSearchRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapDistrictSearchResponse>());
-            break;
-          case 'Callback::AMapSearchDelegate::onRouteSearchDone_response':
-            // print log
-            if (fluttifyLogEnabled) {
-              debugPrint('fluttify-dart-callback: onRouteSearchDone_response([\'request\':${args['request']}, \'response\':${args['response']}])');
-            }
-        
-            // handle the native call
-            delegate?.onRouteSearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapRouteSearchBaseRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapRouteSearchResponse>());
-            break;
-          case 'Callback::AMapSearchDelegate::onFutureRouteSearchDone_response':
-            // print log
-            if (fluttifyLogEnabled) {
-              debugPrint('fluttify-dart-callback: onFutureRouteSearchDone_response([\'request\':${args['request']}, \'response\':${args['response']}])');
-            }
-        
-            // handle the native call
-            delegate?.onFutureRouteSearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapRouteSearchBaseRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapFutureRouteSearchResponse>());
-            break;
-          case 'Callback::AMapSearchDelegate::onDistanceSearchDone_response':
-            // print log
-            if (fluttifyLogEnabled) {
-              debugPrint('fluttify-dart-callback: onDistanceSearchDone_response([\'request\':${args['request']}, \'response\':${args['response']}])');
-            }
-        
-            // handle the native call
-            delegate?.onDistanceSearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapDistanceSearchRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapDistanceSearchResponse>());
-            break;
-          case 'Callback::AMapSearchDelegate::onWeatherSearchDone_response':
-            // print log
-            if (fluttifyLogEnabled) {
-              debugPrint('fluttify-dart-callback: onWeatherSearchDone_response([\'request\':${args['request']}, \'response\':${args['response']}])');
-            }
-        
-            // handle the native call
-            delegate?.onWeatherSearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapWeatherSearchRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapWeatherSearchResponse>());
-            break;
-          case 'Callback::AMapSearchDelegate::onRoadTrafficSearchDone_response':
-            // print log
-            if (fluttifyLogEnabled) {
-              debugPrint('fluttify-dart-callback: onRoadTrafficSearchDone_response([\'request\':${args['request']}, \'response\':${args['response']}])');
-            }
-        
-            // handle the native call
-            delegate?.onRoadTrafficSearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapRoadTrafficSearchBaseRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapRoadTrafficSearchResponse>());
-            break;
-          case 'Callback::AMapSearchDelegate::onNearbySearchDone_response':
-            // print log
-            if (fluttifyLogEnabled) {
-              debugPrint('fluttify-dart-callback: onNearbySearchDone_response([\'request\':${args['request']}, \'response\':${args['response']}])');
-            }
-        
-            // handle the native call
-            delegate?.onNearbySearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapNearbySearchRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapNearbySearchResponse>());
-            break;
-          case 'Callback::AMapSearchDelegate::onCloudSearchDone_response':
-            // print log
-            if (fluttifyLogEnabled) {
-              debugPrint('fluttify-dart-callback: onCloudSearchDone_response([\'request\':${args['request']}, \'response\':${args['response']}])');
-            }
-        
-            // handle the native call
-            delegate?.onCloudSearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapCloudSearchBaseRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapCloudPOISearchResponse>());
-            break;
-          case 'Callback::AMapSearchDelegate::onShareSearchDone_response':
-            // print log
-            if (fluttifyLogEnabled) {
-              debugPrint('fluttify-dart-callback: onShareSearchDone_response([\'request\':${args['request']}, \'response\':${args['response']}])');
-            }
-        
-            // handle the native call
-            delegate?.onShareSearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapShareSearchBaseRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapShareSearchResponse>());
-            break;
-          default:
-            break;
+        try {
+          final args = methodCall.arguments as Map;
+          switch (methodCall.method) {
+            case 'Callback::AMapSearchDelegate::AMapSearchRequest_didFailWithError':
+              // print log
+              if (fluttifyLogEnabled) {
+                debugPrint('fluttify-dart-callback: AMapSearchRequest_didFailWithError([\'request\':${args['request']}, \'error\':${args['error']}])');
+              }
+          
+              // handle the native call
+              delegate?.AMapSearchRequest_didFailWithError(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<dynamic>(), TypeOpAmapSearchFluttifyIOS((args['error'] as Object))?.as__<NSError>());
+              break;
+            case 'Callback::AMapSearchDelegate::onPOISearchDone_response':
+              // print log
+              if (fluttifyLogEnabled) {
+                debugPrint('fluttify-dart-callback: onPOISearchDone_response([\'request\':${args['request']}, \'response\':${args['response']}])');
+              }
+          
+              // handle the native call
+              delegate?.onPOISearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapPOISearchBaseRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapPOISearchResponse>());
+              break;
+            case 'Callback::AMapSearchDelegate::onRoutePOISearchDone_response':
+              // print log
+              if (fluttifyLogEnabled) {
+                debugPrint('fluttify-dart-callback: onRoutePOISearchDone_response([\'request\':${args['request']}, \'response\':${args['response']}])');
+              }
+          
+              // handle the native call
+              delegate?.onRoutePOISearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapRoutePOISearchRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapRoutePOISearchResponse>());
+              break;
+            case 'Callback::AMapSearchDelegate::onGeocodeSearchDone_response':
+              // print log
+              if (fluttifyLogEnabled) {
+                debugPrint('fluttify-dart-callback: onGeocodeSearchDone_response([\'request\':${args['request']}, \'response\':${args['response']}])');
+              }
+          
+              // handle the native call
+              delegate?.onGeocodeSearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapGeocodeSearchRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapGeocodeSearchResponse>());
+              break;
+            case 'Callback::AMapSearchDelegate::onReGeocodeSearchDone_response':
+              // print log
+              if (fluttifyLogEnabled) {
+                debugPrint('fluttify-dart-callback: onReGeocodeSearchDone_response([\'request\':${args['request']}, \'response\':${args['response']}])');
+              }
+          
+              // handle the native call
+              delegate?.onReGeocodeSearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapReGeocodeSearchRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapReGeocodeSearchResponse>());
+              break;
+            case 'Callback::AMapSearchDelegate::onInputTipsSearchDone_response':
+              // print log
+              if (fluttifyLogEnabled) {
+                debugPrint('fluttify-dart-callback: onInputTipsSearchDone_response([\'request\':${args['request']}, \'response\':${args['response']}])');
+              }
+          
+              // handle the native call
+              delegate?.onInputTipsSearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapInputTipsSearchRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapInputTipsSearchResponse>());
+              break;
+            case 'Callback::AMapSearchDelegate::onBusStopSearchDone_response':
+              // print log
+              if (fluttifyLogEnabled) {
+                debugPrint('fluttify-dart-callback: onBusStopSearchDone_response([\'request\':${args['request']}, \'response\':${args['response']}])');
+              }
+          
+              // handle the native call
+              delegate?.onBusStopSearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapBusStopSearchRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapBusStopSearchResponse>());
+              break;
+            case 'Callback::AMapSearchDelegate::onBusLineSearchDone_response':
+              // print log
+              if (fluttifyLogEnabled) {
+                debugPrint('fluttify-dart-callback: onBusLineSearchDone_response([\'request\':${args['request']}, \'response\':${args['response']}])');
+              }
+          
+              // handle the native call
+              delegate?.onBusLineSearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapBusLineBaseSearchRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapBusLineSearchResponse>());
+              break;
+            case 'Callback::AMapSearchDelegate::onDistrictSearchDone_response':
+              // print log
+              if (fluttifyLogEnabled) {
+                debugPrint('fluttify-dart-callback: onDistrictSearchDone_response([\'request\':${args['request']}, \'response\':${args['response']}])');
+              }
+          
+              // handle the native call
+              delegate?.onDistrictSearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapDistrictSearchRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapDistrictSearchResponse>());
+              break;
+            case 'Callback::AMapSearchDelegate::onRouteSearchDone_response':
+              // print log
+              if (fluttifyLogEnabled) {
+                debugPrint('fluttify-dart-callback: onRouteSearchDone_response([\'request\':${args['request']}, \'response\':${args['response']}])');
+              }
+          
+              // handle the native call
+              delegate?.onRouteSearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapRouteSearchBaseRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapRouteSearchResponse>());
+              break;
+            case 'Callback::AMapSearchDelegate::onFutureRouteSearchDone_response':
+              // print log
+              if (fluttifyLogEnabled) {
+                debugPrint('fluttify-dart-callback: onFutureRouteSearchDone_response([\'request\':${args['request']}, \'response\':${args['response']}])');
+              }
+          
+              // handle the native call
+              delegate?.onFutureRouteSearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapRouteSearchBaseRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapFutureRouteSearchResponse>());
+              break;
+            case 'Callback::AMapSearchDelegate::onDistanceSearchDone_response':
+              // print log
+              if (fluttifyLogEnabled) {
+                debugPrint('fluttify-dart-callback: onDistanceSearchDone_response([\'request\':${args['request']}, \'response\':${args['response']}])');
+              }
+          
+              // handle the native call
+              delegate?.onDistanceSearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapDistanceSearchRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapDistanceSearchResponse>());
+              break;
+            case 'Callback::AMapSearchDelegate::onWeatherSearchDone_response':
+              // print log
+              if (fluttifyLogEnabled) {
+                debugPrint('fluttify-dart-callback: onWeatherSearchDone_response([\'request\':${args['request']}, \'response\':${args['response']}])');
+              }
+          
+              // handle the native call
+              delegate?.onWeatherSearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapWeatherSearchRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapWeatherSearchResponse>());
+              break;
+            case 'Callback::AMapSearchDelegate::onRoadTrafficSearchDone_response':
+              // print log
+              if (fluttifyLogEnabled) {
+                debugPrint('fluttify-dart-callback: onRoadTrafficSearchDone_response([\'request\':${args['request']}, \'response\':${args['response']}])');
+              }
+          
+              // handle the native call
+              delegate?.onRoadTrafficSearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapRoadTrafficSearchBaseRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapRoadTrafficSearchResponse>());
+              break;
+            case 'Callback::AMapSearchDelegate::onNearbySearchDone_response':
+              // print log
+              if (fluttifyLogEnabled) {
+                debugPrint('fluttify-dart-callback: onNearbySearchDone_response([\'request\':${args['request']}, \'response\':${args['response']}])');
+              }
+          
+              // handle the native call
+              delegate?.onNearbySearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapNearbySearchRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapNearbySearchResponse>());
+              break;
+            case 'Callback::AMapSearchDelegate::onCloudSearchDone_response':
+              // print log
+              if (fluttifyLogEnabled) {
+                debugPrint('fluttify-dart-callback: onCloudSearchDone_response([\'request\':${args['request']}, \'response\':${args['response']}])');
+              }
+          
+              // handle the native call
+              delegate?.onCloudSearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapCloudSearchBaseRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapCloudPOISearchResponse>());
+              break;
+            case 'Callback::AMapSearchDelegate::onShareSearchDone_response':
+              // print log
+              if (fluttifyLogEnabled) {
+                debugPrint('fluttify-dart-callback: onShareSearchDone_response([\'request\':${args['request']}, \'response\':${args['response']}])');
+              }
+          
+              // handle the native call
+              delegate?.onShareSearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapShareSearchBaseRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapShareSearchResponse>());
+              break;
+            default:
+              break;
+          }
+        } catch (e) {
+          debugPrint(e);
+          throw e;
         }
       });
   }
   
   Future<void> set_timeout(int timeout) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::set_timeout', {'refId': refId, "timeout": timeout});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
+        .invokeMethod('AMapSearchAPI::set_timeout', <String, dynamic>{'__this__': this, "timeout": timeout});
   
   
   }
   
   Future<void> set_language(AMapSearchLanguage language) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::set_language', {'refId': refId, "language": language.toValue()});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
+        .invokeMethod('AMapSearchAPI::set_language', <String, dynamic>{'__this__': this, "language": language.toValue()});
   
   
   }
@@ -246,7 +249,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::init', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::init', {"__this__": this});
   
   
     // handle native call
@@ -257,7 +260,6 @@ class AMapSearchAPI extends NSObject  {
       return null;
     } else {
       final __return__ = AMapSearchAPI()..refId = __result__..tag__ = 'amap_search_fluttify';
-      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -270,7 +272,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::cancelAllRequests', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::cancelAllRequests', {"__this__": this});
   
   
     // handle native call
@@ -281,7 +283,6 @@ class AMapSearchAPI extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -294,7 +295,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapPOIIDSearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapPOIIDSearch', {"request": request, "__this__": this});
   
   
     // handle native call
@@ -305,7 +306,6 @@ class AMapSearchAPI extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -318,7 +318,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapPOIKeywordsSearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapPOIKeywordsSearch', {"request": request, "__this__": this});
   
   
     // handle native call
@@ -329,7 +329,6 @@ class AMapSearchAPI extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -342,7 +341,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapPOIAroundSearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapPOIAroundSearch', {"request": request, "__this__": this});
   
   
     // handle native call
@@ -353,7 +352,6 @@ class AMapSearchAPI extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -366,7 +364,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapPOIPolygonSearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapPOIPolygonSearch', {"request": request, "__this__": this});
   
   
     // handle native call
@@ -377,7 +375,6 @@ class AMapSearchAPI extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -390,7 +387,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapRoutePOISearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapRoutePOISearch', {"request": request, "__this__": this});
   
   
     // handle native call
@@ -401,7 +398,6 @@ class AMapSearchAPI extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -414,7 +410,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapGeocodeSearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapGeocodeSearch', {"request": request, "__this__": this});
   
   
     // handle native call
@@ -425,7 +421,6 @@ class AMapSearchAPI extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -438,7 +433,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapReGoecodeSearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapReGoecodeSearch', {"request": request, "__this__": this});
   
   
     // handle native call
@@ -449,7 +444,6 @@ class AMapSearchAPI extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -462,7 +456,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapInputTipsSearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapInputTipsSearch', {"request": request, "__this__": this});
   
   
     // handle native call
@@ -473,7 +467,6 @@ class AMapSearchAPI extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -486,7 +479,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapBusStopSearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapBusStopSearch', {"request": request, "__this__": this});
   
   
     // handle native call
@@ -497,7 +490,6 @@ class AMapSearchAPI extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -510,7 +502,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapBusLineIDSearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapBusLineIDSearch', {"request": request, "__this__": this});
   
   
     // handle native call
@@ -521,7 +513,6 @@ class AMapSearchAPI extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -534,7 +525,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapBusLineNameSearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapBusLineNameSearch', {"request": request, "__this__": this});
   
   
     // handle native call
@@ -545,7 +536,6 @@ class AMapSearchAPI extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -558,7 +548,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapDistrictSearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapDistrictSearch', {"request": request, "__this__": this});
   
   
     // handle native call
@@ -569,7 +559,6 @@ class AMapSearchAPI extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -582,7 +571,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapDrivingRouteSearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapDrivingRouteSearch', {"request": request, "__this__": this});
   
   
     // handle native call
@@ -593,7 +582,6 @@ class AMapSearchAPI extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -606,7 +594,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapWalkingRouteSearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapWalkingRouteSearch', {"request": request, "__this__": this});
   
   
     // handle native call
@@ -617,7 +605,6 @@ class AMapSearchAPI extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -630,7 +617,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapTransitRouteSearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapTransitRouteSearch', {"request": request, "__this__": this});
   
   
     // handle native call
@@ -641,7 +628,6 @@ class AMapSearchAPI extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -654,7 +640,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapRidingRouteSearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapRidingRouteSearch', {"request": request, "__this__": this});
   
   
     // handle native call
@@ -665,7 +651,6 @@ class AMapSearchAPI extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -678,7 +663,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapTruckRouteSearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapTruckRouteSearch', {"request": request, "__this__": this});
   
   
     // handle native call
@@ -689,7 +674,6 @@ class AMapSearchAPI extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -702,7 +686,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapFutureRouteSearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapFutureRouteSearch', {"request": request, "__this__": this});
   
   
     // handle native call
@@ -713,7 +697,6 @@ class AMapSearchAPI extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -726,7 +709,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapWeatherSearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapWeatherSearch', {"request": request, "__this__": this});
   
   
     // handle native call
@@ -737,7 +720,6 @@ class AMapSearchAPI extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -750,7 +732,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapRoadTrafficSearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapRoadTrafficSearch', {"request": request, "__this__": this});
   
   
     // handle native call
@@ -761,7 +743,6 @@ class AMapSearchAPI extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -774,7 +755,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapRoadTrafficCircleSearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapRoadTrafficCircleSearch', {"request": request, "__this__": this});
   
   
     // handle native call
@@ -785,7 +766,6 @@ class AMapSearchAPI extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -798,7 +778,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapDistanceSearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapDistanceSearch', {"request": request, "__this__": this});
   
   
     // handle native call
@@ -809,7 +789,6 @@ class AMapSearchAPI extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -822,7 +801,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapNearbySearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapNearbySearch', {"request": request, "__this__": this});
   
   
     // handle native call
@@ -833,7 +812,6 @@ class AMapSearchAPI extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -846,7 +824,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapCloudPOIAroundSearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapCloudPOIAroundSearch', {"request": request, "__this__": this});
   
   
     // handle native call
@@ -857,7 +835,6 @@ class AMapSearchAPI extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -870,7 +847,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapCloudPOIPolygonSearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapCloudPOIPolygonSearch', {"request": request, "__this__": this});
   
   
     // handle native call
@@ -881,7 +858,6 @@ class AMapSearchAPI extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -894,7 +870,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapCloudPOIIDSearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapCloudPOIIDSearch', {"request": request, "__this__": this});
   
   
     // handle native call
@@ -905,7 +881,6 @@ class AMapSearchAPI extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -918,7 +893,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapCloudPOILocalSearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapCloudPOILocalSearch', {"request": request, "__this__": this});
   
   
     // handle native call
@@ -929,7 +904,6 @@ class AMapSearchAPI extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -942,7 +916,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapLocationShareSearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapLocationShareSearch', {"request": request, "__this__": this});
   
   
     // handle native call
@@ -953,7 +927,6 @@ class AMapSearchAPI extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -966,7 +939,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapPOIShareSearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapPOIShareSearch', {"request": request, "__this__": this});
   
   
     // handle native call
@@ -977,7 +950,6 @@ class AMapSearchAPI extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -990,7 +962,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapRouteShareSearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapRouteShareSearch', {"request": request, "__this__": this});
   
   
     // handle native call
@@ -1001,7 +973,6 @@ class AMapSearchAPI extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1014,7 +985,7 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapNavigationShareSearch', {"request": request is Ref ? (request as Ref)?.refId : request, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapNavigationShareSearch', {"request": request, "__this__": this});
   
   
     // handle native call
@@ -1025,7 +996,6 @@ class AMapSearchAPI extends NSObject  {
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -1036,16 +1006,16 @@ class AMapSearchAPI extends NSObject  {
 extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   //region getters
   Future<List<int>> get_timeout_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapSearchAPI::get_timeout_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapSearchAPI::get_timeout_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<AMapSearchLanguage>> get_language_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapSearchAPI::get_language_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as int).toAMapSearchLanguage()).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapSearchAPI::get_language_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as int).toAMapSearchLanguage()).toList();
     return typedResult;
   }
   
@@ -1053,13 +1023,13 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
 
   //region setters
   Future<void> set_timeout_batch(List<int> timeout) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::set_timeout_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "timeout": timeout[__i__]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::set_timeout_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "timeout": timeout[__i__]}]);
   
   
   }
   
   Future<void> set_language_batch(List<AMapSearchLanguage> language) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::set_language_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "language": language[__i__].toValue()}]);
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::set_language_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "language": language[__i__].toValue()}]);
   
   
   }
@@ -1074,15 +1044,14 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::init_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::init_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => AMapSearchAPI()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
-      kNativeObjectPool.addAll(typedResult);
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapSearchAPI()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
       return typedResult;
     }
   }
@@ -1094,7 +1063,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::cancelAllRequests_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::cancelAllRequests_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1102,7 +1071,6 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1114,7 +1082,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapPOIIDSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapPOIIDSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1122,7 +1090,6 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1134,7 +1101,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapPOIKeywordsSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapPOIKeywordsSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1142,7 +1109,6 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1154,7 +1120,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapPOIAroundSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapPOIAroundSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1162,7 +1128,6 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1174,7 +1139,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapPOIPolygonSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapPOIPolygonSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1182,7 +1147,6 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1194,7 +1158,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapRoutePOISearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapRoutePOISearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1202,7 +1166,6 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1214,7 +1177,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapGeocodeSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapGeocodeSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1222,7 +1185,6 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1234,7 +1196,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapReGoecodeSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapReGoecodeSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1242,7 +1204,6 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1254,7 +1215,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapInputTipsSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapInputTipsSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1262,7 +1223,6 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1274,7 +1234,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapBusStopSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapBusStopSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1282,7 +1242,6 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1294,7 +1253,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapBusLineIDSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapBusLineIDSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1302,7 +1261,6 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1314,7 +1272,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapBusLineNameSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapBusLineNameSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1322,7 +1280,6 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1334,7 +1291,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapDistrictSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapDistrictSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1342,7 +1299,6 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1354,7 +1310,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapDrivingRouteSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapDrivingRouteSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1362,7 +1318,6 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1374,7 +1329,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapWalkingRouteSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapWalkingRouteSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1382,7 +1337,6 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1394,7 +1348,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapTransitRouteSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapTransitRouteSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1402,7 +1356,6 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1414,7 +1367,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapRidingRouteSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapRidingRouteSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1422,7 +1375,6 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1434,7 +1386,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapTruckRouteSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapTruckRouteSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1442,7 +1394,6 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1454,7 +1405,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapFutureRouteSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapFutureRouteSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1462,7 +1413,6 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1474,7 +1424,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapWeatherSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapWeatherSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1482,7 +1432,6 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1494,7 +1443,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapRoadTrafficSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapRoadTrafficSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1502,7 +1451,6 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1514,7 +1462,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapRoadTrafficCircleSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapRoadTrafficCircleSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1522,7 +1470,6 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1534,7 +1481,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapDistanceSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapDistanceSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1542,7 +1489,6 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1554,7 +1500,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapNearbySearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapNearbySearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1562,7 +1508,6 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1574,7 +1519,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapCloudPOIAroundSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapCloudPOIAroundSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1582,7 +1527,6 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1594,7 +1538,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapCloudPOIPolygonSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapCloudPOIPolygonSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1602,7 +1546,6 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1614,7 +1557,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapCloudPOIIDSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapCloudPOIIDSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1622,7 +1565,6 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1634,7 +1576,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapCloudPOILocalSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapCloudPOILocalSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1642,7 +1584,6 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1654,7 +1595,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapLocationShareSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapLocationShareSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1662,7 +1603,6 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1674,7 +1614,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapPOIShareSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapPOIShareSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1682,7 +1622,6 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1694,7 +1633,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapRouteShareSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapRouteShareSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1702,7 +1641,6 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1714,7 +1652,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapNavigationShareSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::AMapNavigationShareSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1722,7 +1660,6 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }

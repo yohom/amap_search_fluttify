@@ -21,10 +21,8 @@ class AMapShareSearchResponse extends AMapSearchObject with NSCoding, NSCopying 
 
   //region creators
   static Future<AMapShareSearchResponse> create__() async {
-    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapShareSearchResponse');
+    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createAMapShareSearchResponse');
     final object = AMapShareSearchResponse()..refId = refId..tag__ = 'amap_search_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
@@ -32,10 +30,9 @@ class AMapShareSearchResponse extends AMapSearchObject with NSCoding, NSCopying 
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapShareSearchResponse', {'length': length});
+    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchAMapShareSearchResponse', {'length': length});
   
     final List<AMapShareSearchResponse> typedResult = resultBatch.map((result) => AMapShareSearchResponse()..refId = result..tag__ = 'amap_search_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -43,16 +40,16 @@ class AMapShareSearchResponse extends AMapSearchObject with NSCoding, NSCopying 
 
   //region getters
   Future<String> get_shareURL() async {
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapShareSearchResponse::get_shareURL", {'refId': refId});
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapShareSearchResponse::get_shareURL", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   //endregion
 
   //region setters
   Future<void> set_shareURL(String shareURL) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapShareSearchResponse::set_shareURL', {'refId': refId, "shareURL": shareURL});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
+        .invokeMethod('AMapShareSearchResponse::set_shareURL', <String, dynamic>{'__this__': this, "shareURL": shareURL});
   
   
   }
@@ -67,9 +64,9 @@ class AMapShareSearchResponse extends AMapSearchObject with NSCoding, NSCopying 
 extension AMapShareSearchResponse_Batch on List<AMapShareSearchResponse> {
   //region getters
   Future<List<String>> get_shareURL_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapShareSearchResponse::get_shareURL_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapShareSearchResponse::get_shareURL_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
@@ -77,7 +74,7 @@ extension AMapShareSearchResponse_Batch on List<AMapShareSearchResponse> {
 
   //region setters
   Future<void> set_shareURL_batch(List<String> shareURL) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapShareSearchResponse::set_shareURL_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "shareURL": shareURL[__i__]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapShareSearchResponse::set_shareURL_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "shareURL": shareURL[__i__]}]);
   
   
   }

@@ -25,8 +25,6 @@ mixin com_amap_api_services_route_RouteSearch_OnRouteSearchListener on java_lang
 
   @mustCallSuper
   Future<void> onBusRouteSearched(com_amap_api_services_route_BusRouteResult var1, int var2) {
-    if (var1 is Ref) kNativeObjectPool.add(var1);
-  
     if (fluttifyLogEnabled) {
       debugPrint('onBusRouteSearched::kNativeObjectPool: $kNativeObjectPool');
     }
@@ -34,8 +32,6 @@ mixin com_amap_api_services_route_RouteSearch_OnRouteSearchListener on java_lang
   
   @mustCallSuper
   Future<void> onDriveRouteSearched(com_amap_api_services_route_DriveRouteResult var1, int var2) {
-    if (var1 is Ref) kNativeObjectPool.add(var1);
-  
     if (fluttifyLogEnabled) {
       debugPrint('onDriveRouteSearched::kNativeObjectPool: $kNativeObjectPool');
     }
@@ -43,8 +39,6 @@ mixin com_amap_api_services_route_RouteSearch_OnRouteSearchListener on java_lang
   
   @mustCallSuper
   Future<void> onWalkRouteSearched(com_amap_api_services_route_WalkRouteResult var1, int var2) {
-    if (var1 is Ref) kNativeObjectPool.add(var1);
-  
     if (fluttifyLogEnabled) {
       debugPrint('onWalkRouteSearched::kNativeObjectPool: $kNativeObjectPool');
     }
@@ -52,8 +46,6 @@ mixin com_amap_api_services_route_RouteSearch_OnRouteSearchListener on java_lang
   
   @mustCallSuper
   Future<void> onRideRouteSearched(com_amap_api_services_route_RideRouteResult var1, int var2) {
-    if (var1 is Ref) kNativeObjectPool.add(var1);
-  
     if (fluttifyLogEnabled) {
       debugPrint('onRideRouteSearched::kNativeObjectPool: $kNativeObjectPool');
     }

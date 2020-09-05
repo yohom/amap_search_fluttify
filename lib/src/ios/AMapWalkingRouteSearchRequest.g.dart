@@ -21,10 +21,8 @@ class AMapWalkingRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCo
 
   //region creators
   static Future<AMapWalkingRouteSearchRequest> create__() async {
-    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapWalkingRouteSearchRequest');
+    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createAMapWalkingRouteSearchRequest');
     final object = AMapWalkingRouteSearchRequest()..refId = refId..tag__ = 'amap_search_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
@@ -32,10 +30,9 @@ class AMapWalkingRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCo
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapWalkingRouteSearchRequest', {'length': length});
+    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchAMapWalkingRouteSearchRequest', {'length': length});
   
     final List<AMapWalkingRouteSearchRequest> typedResult = resultBatch.map((result) => AMapWalkingRouteSearchRequest()..refId = result..tag__ = 'amap_search_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -43,16 +40,16 @@ class AMapWalkingRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCo
 
   //region getters
   Future<int> get_multipath() async {
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapWalkingRouteSearchRequest::get_multipath", {'refId': refId});
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapWalkingRouteSearchRequest::get_multipath", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   //endregion
 
   //region setters
   Future<void> set_multipath(int multipath) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapWalkingRouteSearchRequest::set_multipath', {'refId': refId, "multipath": multipath});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
+        .invokeMethod('AMapWalkingRouteSearchRequest::set_multipath', <String, dynamic>{'__this__': this, "multipath": multipath});
   
   
   }
@@ -67,9 +64,9 @@ class AMapWalkingRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCo
 extension AMapWalkingRouteSearchRequest_Batch on List<AMapWalkingRouteSearchRequest> {
   //region getters
   Future<List<int>> get_multipath_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapWalkingRouteSearchRequest::get_multipath_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapWalkingRouteSearchRequest::get_multipath_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
@@ -77,7 +74,7 @@ extension AMapWalkingRouteSearchRequest_Batch on List<AMapWalkingRouteSearchRequ
 
   //region setters
   Future<void> set_multipath_batch(List<int> multipath) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapWalkingRouteSearchRequest::set_multipath_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "multipath": multipath[__i__]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapWalkingRouteSearchRequest::set_multipath_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "multipath": multipath[__i__]}]);
   
   
   }

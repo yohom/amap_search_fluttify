@@ -21,10 +21,8 @@ class AMapRoute extends AMapSearchObject with NSCoding, NSCopying {
 
   //region creators
   static Future<AMapRoute> create__() async {
-    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapRoute');
+    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createAMapRoute');
     final object = AMapRoute()..refId = refId..tag__ = 'amap_search_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
@@ -32,10 +30,9 @@ class AMapRoute extends AMapSearchObject with NSCoding, NSCopying {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapRoute', {'length': length});
+    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchAMapRoute', {'length': length});
   
     final List<AMapRoute> typedResult = resultBatch.map((result) => AMapRoute()..refId = result..tag__ = 'amap_search_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -43,64 +40,64 @@ class AMapRoute extends AMapSearchObject with NSCoding, NSCopying {
 
   //region getters
   Future<AMapGeoPoint> get_origin() async {
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoute::get_origin", {'refId': refId});
-    kNativeObjectPool.add(AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify');
-    return AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify';
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapRoute::get_origin", {'__this__': this});
+    return __result__ == null ? null : (AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify');
   }
   
   Future<AMapGeoPoint> get_destination() async {
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoute::get_destination", {'refId': refId});
-    kNativeObjectPool.add(AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify');
-    return AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify';
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapRoute::get_destination", {'__this__': this});
+    return __result__ == null ? null : (AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify');
   }
   
   Future<double> get_taxiCost() async {
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoute::get_taxiCost", {'refId': refId});
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapRoute::get_taxiCost", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   Future<List<AMapPath>> get_paths() async {
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoute::get_paths", {'refId': refId});
-    kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => AMapPath()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
-    return (__result__ as List).cast<int>().map((__it__) => AMapPath()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapRoute::get_paths", {'__this__': this});
+    return __result__ == null ? null : ((__result__ as List).cast<String>().map((__it__) => AMapPath()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
   }
   
   Future<List<AMapTransit>> get_transits() async {
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoute::get_transits", {'refId': refId});
-    kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => AMapTransit()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
-    return (__result__ as List).cast<int>().map((__it__) => AMapTransit()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapRoute::get_transits", {'__this__': this});
+    return __result__ == null ? null : ((__result__ as List).cast<String>().map((__it__) => AMapTransit()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
   }
   
   //endregion
 
   //region setters
   Future<void> set_origin(AMapGeoPoint origin) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoute::set_origin', {'refId': refId, "origin": origin.refId});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
+        .invokeMethod('AMapRoute::set_origin', <String, dynamic>{'__this__': this, "origin": origin});
   
   
   }
   
   Future<void> set_destination(AMapGeoPoint destination) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoute::set_destination', {'refId': refId, "destination": destination.refId});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
+        .invokeMethod('AMapRoute::set_destination', <String, dynamic>{'__this__': this, "destination": destination});
   
   
   }
   
   Future<void> set_taxiCost(double taxiCost) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoute::set_taxiCost', {'refId': refId, "taxiCost": taxiCost});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
+        .invokeMethod('AMapRoute::set_taxiCost', <String, dynamic>{'__this__': this, "taxiCost": taxiCost});
   
   
   }
   
   Future<void> set_paths(List<AMapPath> paths) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoute::set_paths', {'refId': refId, "paths": paths.map((it) => it.refId).toList()});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
+        .invokeMethod('AMapRoute::set_paths', <String, dynamic>{'__this__': this, "paths": paths});
   
   
   }
   
   Future<void> set_transits(List<AMapTransit> transits) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoute::set_transits', {'refId': refId, "transits": transits.map((it) => it.refId).toList()});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
+        .invokeMethod('AMapRoute::set_transits', <String, dynamic>{'__this__': this, "transits": transits});
   
   
   }
@@ -115,37 +112,37 @@ class AMapRoute extends AMapSearchObject with NSCoding, NSCopying {
 extension AMapRoute_Batch on List<AMapRoute> {
   //region getters
   Future<List<AMapGeoPoint>> get_origin_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoute::get_origin_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapRoute::get_origin_batch", [for (final __item__ in this) {'__this__': __item__}]);
+  
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
     return typedResult;
   }
   
   Future<List<AMapGeoPoint>> get_destination_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoute::get_destination_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapRoute::get_destination_batch", [for (final __item__ in this) {'__this__': __item__}]);
+  
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
     return typedResult;
   }
   
   Future<List<double>> get_taxiCost_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoute::get_taxiCost_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapRoute::get_taxiCost_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<List<AMapPath>>> get_paths_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoute::get_paths_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as List).cast<int>().map((__it__) => AMapPath()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
-    kNativeObjectPool.addAll(typedResult.expand((e) => e));
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapRoute::get_paths_batch", [for (final __item__ in this) {'__this__': __item__}]);
+  
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => AMapPath()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
     return typedResult;
   }
   
   Future<List<List<AMapTransit>>> get_transits_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoute::get_transits_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as List).cast<int>().map((__it__) => AMapTransit()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
-    kNativeObjectPool.addAll(typedResult.expand((e) => e));
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapRoute::get_transits_batch", [for (final __item__ in this) {'__this__': __item__}]);
+  
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => AMapTransit()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
     return typedResult;
   }
   
@@ -153,31 +150,31 @@ extension AMapRoute_Batch on List<AMapRoute> {
 
   //region setters
   Future<void> set_origin_batch(List<AMapGeoPoint> origin) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoute::set_origin_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "origin": origin[__i__].refId}]);
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRoute::set_origin_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "origin": origin[__i__].refId}]);
   
   
   }
   
   Future<void> set_destination_batch(List<AMapGeoPoint> destination) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoute::set_destination_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "destination": destination[__i__].refId}]);
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRoute::set_destination_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "destination": destination[__i__].refId}]);
   
   
   }
   
   Future<void> set_taxiCost_batch(List<double> taxiCost) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoute::set_taxiCost_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "taxiCost": taxiCost[__i__]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRoute::set_taxiCost_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "taxiCost": taxiCost[__i__]}]);
   
   
   }
   
   Future<void> set_paths_batch(List<List<AMapPath>> paths) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoute::set_paths_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "paths": paths[__i__].map((it) => it.refId).toList()}]);
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRoute::set_paths_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "paths": paths[__i__].map((it) => it.refId).toList()}]);
   
   
   }
   
   Future<void> set_transits_batch(List<List<AMapTransit>> transits) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoute::set_transits_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "transits": transits[__i__].map((it) => it.refId).toList()}]);
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRoute::set_transits_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "transits": transits[__i__].map((it) => it.refId).toList()}]);
   
   
   }

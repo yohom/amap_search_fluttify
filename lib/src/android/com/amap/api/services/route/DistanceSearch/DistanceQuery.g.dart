@@ -21,10 +21,8 @@ class com_amap_api_services_route_DistanceSearch_DistanceQuery extends java_lang
 
   //region creators
   static Future<com_amap_api_services_route_DistanceSearch_DistanceQuery> create__() async {
-    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_services_route_DistanceSearch_DistanceQuery__');
+    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createcom_amap_api_services_route_DistanceSearch_DistanceQuery__');
     final object = com_amap_api_services_route_DistanceSearch_DistanceQuery()..refId = refId..tag__ = 'amap_search_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
@@ -32,10 +30,9 @@ class com_amap_api_services_route_DistanceSearch_DistanceQuery extends java_lang
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_services_route_DistanceSearch_DistanceQuery__', {'length': length});
+    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchcom_amap_api_services_route_DistanceSearch_DistanceQuery__', {'length': length});
   
     final List<com_amap_api_services_route_DistanceSearch_DistanceQuery> typedResult = resultBatch.map((result) => com_amap_api_services_route_DistanceSearch_DistanceQuery()..refId = result..tag__ = 'amap_search_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -58,7 +55,7 @@ class com_amap_api_services_route_DistanceSearch_DistanceQuery extends java_lang
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DistanceSearch.DistanceQuery::clone', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.route.DistanceSearch.DistanceQuery::clone', {"__this__": this});
   
   
     // handle native call
@@ -69,7 +66,6 @@ class com_amap_api_services_route_DistanceSearch_DistanceQuery extends java_lang
       return null;
     } else {
       final __return__ = com_amap_api_services_route_DistanceSearch_DistanceQuery()..refId = __result__..tag__ = 'amap_search_fluttify';
-      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -82,7 +78,7 @@ class com_amap_api_services_route_DistanceSearch_DistanceQuery extends java_lang
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DistanceSearch.DistanceQuery::getType', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.route.DistanceSearch.DistanceQuery::getType', {"__this__": this});
   
   
     // handle native call
@@ -93,7 +89,6 @@ class com_amap_api_services_route_DistanceSearch_DistanceQuery extends java_lang
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -106,7 +101,7 @@ class com_amap_api_services_route_DistanceSearch_DistanceQuery extends java_lang
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DistanceSearch.DistanceQuery::getOrigins', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.route.DistanceSearch.DistanceQuery::getOrigins', {"__this__": this});
   
   
     // handle native call
@@ -116,8 +111,7 @@ class com_amap_api_services_route_DistanceSearch_DistanceQuery extends java_lang
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_core_LatLonPoint()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
-      kNativeObjectPool.addAll(__return__);
+      final __return__ = (__result__ as List).cast<String>().map((__it__) => com_amap_api_services_core_LatLonPoint()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
       return __return__;
     }
   }
@@ -130,7 +124,7 @@ class com_amap_api_services_route_DistanceSearch_DistanceQuery extends java_lang
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DistanceSearch.DistanceQuery::getDestination', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.route.DistanceSearch.DistanceQuery::getDestination', {"__this__": this});
   
   
     // handle native call
@@ -141,7 +135,6 @@ class com_amap_api_services_route_DistanceSearch_DistanceQuery extends java_lang
       return null;
     } else {
       final __return__ = com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify';
-      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -154,7 +147,7 @@ class com_amap_api_services_route_DistanceSearch_DistanceQuery extends java_lang
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DistanceSearch.DistanceQuery::setType', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.route.DistanceSearch.DistanceQuery::setType', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -165,7 +158,6 @@ class com_amap_api_services_route_DistanceSearch_DistanceQuery extends java_lang
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -178,7 +170,7 @@ class com_amap_api_services_route_DistanceSearch_DistanceQuery extends java_lang
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DistanceSearch.DistanceQuery::setOrigins', {"var1": var1.map((__it__) => __it__?.refId).toList(), "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.route.DistanceSearch.DistanceQuery::setOrigins', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -189,7 +181,6 @@ class com_amap_api_services_route_DistanceSearch_DistanceQuery extends java_lang
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -202,7 +193,7 @@ class com_amap_api_services_route_DistanceSearch_DistanceQuery extends java_lang
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DistanceSearch.DistanceQuery::addOrigins', {"var1": var1 is Ref ? (var1 as Ref)?.refId : var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.route.DistanceSearch.DistanceQuery::addOrigins', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -213,7 +204,6 @@ class com_amap_api_services_route_DistanceSearch_DistanceQuery extends java_lang
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -226,7 +216,7 @@ class com_amap_api_services_route_DistanceSearch_DistanceQuery extends java_lang
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DistanceSearch.DistanceQuery::setDestination', {"var1": var1 is Ref ? (var1 as Ref)?.refId : var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.route.DistanceSearch.DistanceQuery::setDestination', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -237,7 +227,6 @@ class com_amap_api_services_route_DistanceSearch_DistanceQuery extends java_lang
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -262,15 +251,14 @@ extension com_amap_api_services_route_DistanceSearch_DistanceQuery_Batch on List
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DistanceSearch.DistanceQuery::clone_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.route.DistanceSearch.DistanceQuery::clone_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_amap_api_services_route_DistanceSearch_DistanceQuery()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
-      kNativeObjectPool.addAll(typedResult);
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_route_DistanceSearch_DistanceQuery()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
       return typedResult;
     }
   }
@@ -282,7 +270,7 @@ extension com_amap_api_services_route_DistanceSearch_DistanceQuery_Batch on List
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DistanceSearch.DistanceQuery::getType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.route.DistanceSearch.DistanceQuery::getType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -290,7 +278,6 @@ extension com_amap_api_services_route_DistanceSearch_DistanceQuery_Batch on List
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -302,15 +289,14 @@ extension com_amap_api_services_route_DistanceSearch_DistanceQuery_Batch on List
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DistanceSearch.DistanceQuery::getOrigins_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.route.DistanceSearch.DistanceQuery::getOrigins_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_core_LatLonPoint()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
-      kNativeObjectPool.addAll(typedResult.expand((e) => e));
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => com_amap_api_services_core_LatLonPoint()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
       return typedResult;
     }
   }
@@ -322,15 +308,14 @@ extension com_amap_api_services_route_DistanceSearch_DistanceQuery_Batch on List
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DistanceSearch.DistanceQuery::getDestination_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.route.DistanceSearch.DistanceQuery::getDestination_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
-      kNativeObjectPool.addAll(typedResult);
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
       return typedResult;
     }
   }
@@ -342,7 +327,7 @@ extension com_amap_api_services_route_DistanceSearch_DistanceQuery_Batch on List
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DistanceSearch.DistanceQuery::setType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.route.DistanceSearch.DistanceQuery::setType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -350,7 +335,6 @@ extension com_amap_api_services_route_DistanceSearch_DistanceQuery_Batch on List
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -362,7 +346,7 @@ extension com_amap_api_services_route_DistanceSearch_DistanceQuery_Batch on List
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DistanceSearch.DistanceQuery::setOrigins_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__].map((it) => it.refId).toList(), "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.route.DistanceSearch.DistanceQuery::setOrigins_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -370,7 +354,6 @@ extension com_amap_api_services_route_DistanceSearch_DistanceQuery_Batch on List
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -382,7 +365,7 @@ extension com_amap_api_services_route_DistanceSearch_DistanceQuery_Batch on List
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DistanceSearch.DistanceQuery::addOrigins_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__].refId, "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.route.DistanceSearch.DistanceQuery::addOrigins_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -390,7 +373,6 @@ extension com_amap_api_services_route_DistanceSearch_DistanceQuery_Batch on List
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -402,7 +384,7 @@ extension com_amap_api_services_route_DistanceSearch_DistanceQuery_Batch on List
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DistanceSearch.DistanceQuery::setDestination_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__].refId, "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.route.DistanceSearch.DistanceQuery::setDestination_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -410,7 +392,6 @@ extension com_amap_api_services_route_DistanceSearch_DistanceQuery_Batch on List
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }

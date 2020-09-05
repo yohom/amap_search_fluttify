@@ -40,7 +40,7 @@ class com_amap_api_services_traffic_CircleTrafficQuery extends java_lang_Object 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.traffic.CircleTrafficQuery::getCenterPoint', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.traffic.CircleTrafficQuery::getCenterPoint', {"__this__": this});
   
   
     // handle native call
@@ -51,7 +51,6 @@ class com_amap_api_services_traffic_CircleTrafficQuery extends java_lang_Object 
       return null;
     } else {
       final __return__ = com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify';
-      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -64,7 +63,7 @@ class com_amap_api_services_traffic_CircleTrafficQuery extends java_lang_Object 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.traffic.CircleTrafficQuery::setCenterPoint', {"var1": var1 is Ref ? (var1 as Ref)?.refId : var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.traffic.CircleTrafficQuery::setCenterPoint', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -75,7 +74,6 @@ class com_amap_api_services_traffic_CircleTrafficQuery extends java_lang_Object 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -88,7 +86,7 @@ class com_amap_api_services_traffic_CircleTrafficQuery extends java_lang_Object 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.traffic.CircleTrafficQuery::getRadius', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.traffic.CircleTrafficQuery::getRadius', {"__this__": this});
   
   
     // handle native call
@@ -99,7 +97,6 @@ class com_amap_api_services_traffic_CircleTrafficQuery extends java_lang_Object 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -112,7 +109,7 @@ class com_amap_api_services_traffic_CircleTrafficQuery extends java_lang_Object 
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.traffic.CircleTrafficQuery::setRadius', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.traffic.CircleTrafficQuery::setRadius', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -123,7 +120,6 @@ class com_amap_api_services_traffic_CircleTrafficQuery extends java_lang_Object 
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -148,15 +144,14 @@ extension com_amap_api_services_traffic_CircleTrafficQuery_Batch on List<com_ama
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.traffic.CircleTrafficQuery::getCenterPoint_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.traffic.CircleTrafficQuery::getCenterPoint_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
-      kNativeObjectPool.addAll(typedResult);
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
       return typedResult;
     }
   }
@@ -168,7 +163,7 @@ extension com_amap_api_services_traffic_CircleTrafficQuery_Batch on List<com_ama
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.traffic.CircleTrafficQuery::setCenterPoint_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__].refId, "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.traffic.CircleTrafficQuery::setCenterPoint_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -176,7 +171,6 @@ extension com_amap_api_services_traffic_CircleTrafficQuery_Batch on List<com_ama
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -188,7 +182,7 @@ extension com_amap_api_services_traffic_CircleTrafficQuery_Batch on List<com_ama
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.traffic.CircleTrafficQuery::getRadius_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.traffic.CircleTrafficQuery::getRadius_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -196,7 +190,6 @@ extension com_amap_api_services_traffic_CircleTrafficQuery_Batch on List<com_ama
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -208,7 +201,7 @@ extension com_amap_api_services_traffic_CircleTrafficQuery_Batch on List<com_ama
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.traffic.CircleTrafficQuery::setRadius_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.traffic.CircleTrafficQuery::setRadius_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -216,7 +209,6 @@ extension com_amap_api_services_traffic_CircleTrafficQuery_Batch on List<com_ama
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }

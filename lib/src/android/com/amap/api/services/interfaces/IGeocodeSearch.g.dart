@@ -25,8 +25,6 @@ mixin com_amap_api_services_interfaces_IGeocodeSearch on java_lang_Object {
 
   @mustCallSuper
   Future<com_amap_api_services_geocoder_RegeocodeAddress> getFromLocation(com_amap_api_services_geocoder_RegeocodeQuery var1) {
-    if (var1 is Ref) kNativeObjectPool.add(var1);
-  
     if (fluttifyLogEnabled) {
       debugPrint('getFromLocation::kNativeObjectPool: $kNativeObjectPool');
     }
@@ -34,8 +32,6 @@ mixin com_amap_api_services_interfaces_IGeocodeSearch on java_lang_Object {
   
   @mustCallSuper
   Future<List<com_amap_api_services_geocoder_GeocodeAddress>> getFromLocationName(com_amap_api_services_geocoder_GeocodeQuery var1) {
-    if (var1 is Ref) kNativeObjectPool.add(var1);
-  
     if (fluttifyLogEnabled) {
       debugPrint('getFromLocationName::kNativeObjectPool: $kNativeObjectPool');
     }
@@ -43,8 +39,6 @@ mixin com_amap_api_services_interfaces_IGeocodeSearch on java_lang_Object {
   
   @mustCallSuper
   Future<void> setOnGeocodeSearchListener(com_amap_api_services_geocoder_GeocodeSearch_OnGeocodeSearchListener var1) {
-    if (var1 is Ref) kNativeObjectPool.add(var1);
-  
     if (fluttifyLogEnabled) {
       debugPrint('setOnGeocodeSearchListener::kNativeObjectPool: $kNativeObjectPool');
     }
@@ -52,8 +46,6 @@ mixin com_amap_api_services_interfaces_IGeocodeSearch on java_lang_Object {
   
   @mustCallSuper
   Future<void> getFromLocationAsyn(com_amap_api_services_geocoder_RegeocodeQuery var1) {
-    if (var1 is Ref) kNativeObjectPool.add(var1);
-  
     if (fluttifyLogEnabled) {
       debugPrint('getFromLocationAsyn::kNativeObjectPool: $kNativeObjectPool');
     }
@@ -61,8 +53,6 @@ mixin com_amap_api_services_interfaces_IGeocodeSearch on java_lang_Object {
   
   @mustCallSuper
   Future<void> getFromLocationNameAsyn(com_amap_api_services_geocoder_GeocodeQuery var1) {
-    if (var1 is Ref) kNativeObjectPool.add(var1);
-  
     if (fluttifyLogEnabled) {
       debugPrint('getFromLocationNameAsyn::kNativeObjectPool: $kNativeObjectPool');
     }

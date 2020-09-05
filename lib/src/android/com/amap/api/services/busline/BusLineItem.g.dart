@@ -21,10 +21,8 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
 
   //region creators
   static Future<com_amap_api_services_busline_BusLineItem> create__() async {
-    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_services_busline_BusLineItem__');
+    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createcom_amap_api_services_busline_BusLineItem__');
     final object = com_amap_api_services_busline_BusLineItem()..refId = refId..tag__ = 'amap_search_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
@@ -32,10 +30,9 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_services_busline_BusLineItem__', {'length': length});
+    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchcom_amap_api_services_busline_BusLineItem__', {'length': length});
   
     final List<com_amap_api_services_busline_BusLineItem> typedResult = resultBatch.map((result) => com_amap_api_services_busline_BusLineItem()..refId = result..tag__ = 'amap_search_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -58,7 +55,7 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineItem::getDistance', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.busline.BusLineItem::getDistance', {"__this__": this});
   
   
     // handle native call
@@ -69,7 +66,6 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -82,7 +78,7 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineItem::setDistance', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.busline.BusLineItem::setDistance', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -93,7 +89,6 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -106,7 +101,7 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineItem::getBusLineName', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.busline.BusLineItem::getBusLineName', {"__this__": this});
   
   
     // handle native call
@@ -117,7 +112,6 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -130,7 +124,7 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineItem::setBusLineName', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.busline.BusLineItem::setBusLineName', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -141,7 +135,6 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -154,7 +147,7 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineItem::getBusLineType', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.busline.BusLineItem::getBusLineType', {"__this__": this});
   
   
     // handle native call
@@ -165,7 +158,6 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -178,7 +170,7 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineItem::setBusLineType', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.busline.BusLineItem::setBusLineType', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -189,7 +181,6 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -202,7 +193,7 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineItem::getCityCode', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.busline.BusLineItem::getCityCode', {"__this__": this});
   
   
     // handle native call
@@ -213,7 +204,6 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -226,7 +216,7 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineItem::setCityCode', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.busline.BusLineItem::setCityCode', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -237,7 +227,6 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -250,7 +239,7 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineItem::getDirectionsCoordinates', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.busline.BusLineItem::getDirectionsCoordinates', {"__this__": this});
   
   
     // handle native call
@@ -260,8 +249,7 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_core_LatLonPoint()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
-      kNativeObjectPool.addAll(__return__);
+      final __return__ = (__result__ as List).cast<String>().map((__it__) => com_amap_api_services_core_LatLonPoint()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
       return __return__;
     }
   }
@@ -274,7 +262,7 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineItem::setDirectionsCoordinates', {"var1": var1.map((__it__) => __it__?.refId).toList(), "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.busline.BusLineItem::setDirectionsCoordinates', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -285,7 +273,6 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -298,7 +285,7 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineItem::getBounds', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.busline.BusLineItem::getBounds', {"__this__": this});
   
   
     // handle native call
@@ -308,8 +295,7 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_core_LatLonPoint()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
-      kNativeObjectPool.addAll(__return__);
+      final __return__ = (__result__ as List).cast<String>().map((__it__) => com_amap_api_services_core_LatLonPoint()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
       return __return__;
     }
   }
@@ -322,7 +308,7 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineItem::setBounds', {"var1": var1.map((__it__) => __it__?.refId).toList(), "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.busline.BusLineItem::setBounds', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -333,7 +319,6 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -346,7 +331,7 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineItem::getBusLineId', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.busline.BusLineItem::getBusLineId', {"__this__": this});
   
   
     // handle native call
@@ -357,7 +342,6 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -370,7 +354,7 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineItem::setBusLineId', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.busline.BusLineItem::setBusLineId', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -381,7 +365,6 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -394,7 +377,7 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineItem::getOriginatingStation', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.busline.BusLineItem::getOriginatingStation', {"__this__": this});
   
   
     // handle native call
@@ -405,7 +388,6 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -418,7 +400,7 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineItem::setOriginatingStation', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.busline.BusLineItem::setOriginatingStation', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -429,7 +411,6 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -442,7 +423,7 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineItem::getTerminalStation', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.busline.BusLineItem::getTerminalStation', {"__this__": this});
   
   
     // handle native call
@@ -453,7 +434,6 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -466,7 +446,7 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineItem::setTerminalStation', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.busline.BusLineItem::setTerminalStation', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -477,7 +457,6 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -490,7 +469,7 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineItem::getBusCompany', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.busline.BusLineItem::getBusCompany', {"__this__": this});
   
   
     // handle native call
@@ -501,7 +480,6 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -514,7 +492,7 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineItem::setBusCompany', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.busline.BusLineItem::setBusCompany', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -525,7 +503,6 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -538,7 +515,7 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineItem::getBasicPrice', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.busline.BusLineItem::getBasicPrice', {"__this__": this});
   
   
     // handle native call
@@ -549,7 +526,6 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -562,7 +538,7 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineItem::setBasicPrice', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.busline.BusLineItem::setBasicPrice', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -573,7 +549,6 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -586,7 +561,7 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineItem::getTotalPrice', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.busline.BusLineItem::getTotalPrice', {"__this__": this});
   
   
     // handle native call
@@ -597,7 +572,6 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -610,7 +584,7 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineItem::setTotalPrice', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.busline.BusLineItem::setTotalPrice', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -621,7 +595,6 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -634,7 +607,7 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineItem::getBusStations', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.busline.BusLineItem::getBusStations', {"__this__": this});
   
   
     // handle native call
@@ -644,8 +617,7 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_busline_BusStationItem()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
-      kNativeObjectPool.addAll(__return__);
+      final __return__ = (__result__ as List).cast<String>().map((__it__) => com_amap_api_services_busline_BusStationItem()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
       return __return__;
     }
   }
@@ -658,7 +630,7 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineItem::setBusStations', {"var1": var1.map((__it__) => __it__?.refId).toList(), "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.busline.BusLineItem::setBusStations', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -669,7 +641,6 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -694,7 +665,7 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineItem::getDistance_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.busline.BusLineItem::getDistance_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -702,7 +673,6 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -714,7 +684,7 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineItem::setDistance_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.busline.BusLineItem::setDistance_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -722,7 +692,6 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -734,7 +703,7 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineItem::getBusLineName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.busline.BusLineItem::getBusLineName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -742,7 +711,6 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -754,7 +722,7 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineItem::setBusLineName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.busline.BusLineItem::setBusLineName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -762,7 +730,6 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -774,7 +741,7 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineItem::getBusLineType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.busline.BusLineItem::getBusLineType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -782,7 +749,6 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -794,7 +760,7 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineItem::setBusLineType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.busline.BusLineItem::setBusLineType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -802,7 +768,6 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -814,7 +779,7 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineItem::getCityCode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.busline.BusLineItem::getCityCode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -822,7 +787,6 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -834,7 +798,7 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineItem::setCityCode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.busline.BusLineItem::setCityCode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -842,7 +806,6 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -854,15 +817,14 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineItem::getDirectionsCoordinates_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.busline.BusLineItem::getDirectionsCoordinates_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_core_LatLonPoint()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
-      kNativeObjectPool.addAll(typedResult.expand((e) => e));
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => com_amap_api_services_core_LatLonPoint()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
       return typedResult;
     }
   }
@@ -874,7 +836,7 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineItem::setDirectionsCoordinates_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__].map((it) => it.refId).toList(), "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.busline.BusLineItem::setDirectionsCoordinates_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -882,7 +844,6 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -894,15 +855,14 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineItem::getBounds_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.busline.BusLineItem::getBounds_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_core_LatLonPoint()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
-      kNativeObjectPool.addAll(typedResult.expand((e) => e));
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => com_amap_api_services_core_LatLonPoint()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
       return typedResult;
     }
   }
@@ -914,7 +874,7 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineItem::setBounds_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__].map((it) => it.refId).toList(), "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.busline.BusLineItem::setBounds_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -922,7 +882,6 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -934,7 +893,7 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineItem::getBusLineId_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.busline.BusLineItem::getBusLineId_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -942,7 +901,6 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -954,7 +912,7 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineItem::setBusLineId_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.busline.BusLineItem::setBusLineId_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -962,7 +920,6 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -974,7 +931,7 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineItem::getOriginatingStation_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.busline.BusLineItem::getOriginatingStation_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -982,7 +939,6 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -994,7 +950,7 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineItem::setOriginatingStation_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.busline.BusLineItem::setOriginatingStation_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1002,7 +958,6 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1014,7 +969,7 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineItem::getTerminalStation_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.busline.BusLineItem::getTerminalStation_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1022,7 +977,6 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1034,7 +988,7 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineItem::setTerminalStation_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.busline.BusLineItem::setTerminalStation_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1042,7 +996,6 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1054,7 +1007,7 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineItem::getBusCompany_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.busline.BusLineItem::getBusCompany_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1062,7 +1015,6 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1074,7 +1026,7 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineItem::setBusCompany_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.busline.BusLineItem::setBusCompany_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1082,7 +1034,6 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1094,7 +1045,7 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineItem::getBasicPrice_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.busline.BusLineItem::getBasicPrice_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1102,7 +1053,6 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1114,7 +1064,7 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineItem::setBasicPrice_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.busline.BusLineItem::setBasicPrice_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1122,7 +1072,6 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1134,7 +1083,7 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineItem::getTotalPrice_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.busline.BusLineItem::getTotalPrice_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1142,7 +1091,6 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1154,7 +1102,7 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineItem::setTotalPrice_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.busline.BusLineItem::setTotalPrice_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1162,7 +1110,6 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -1174,15 +1121,14 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineItem::getBusStations_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.busline.BusLineItem::getBusStations_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_busline_BusStationItem()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
-      kNativeObjectPool.addAll(typedResult.expand((e) => e));
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => com_amap_api_services_busline_BusStationItem()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
       return typedResult;
     }
   }
@@ -1194,7 +1140,7 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineItem::setBusStations_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__].map((it) => it.refId).toList(), "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.busline.BusLineItem::setBusStations_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -1202,7 +1148,6 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }

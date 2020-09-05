@@ -19,9 +19,11 @@ import io.flutter.plugin.common.BinaryMessenger;
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.PluginRegistry.Registrar;
+import io.flutter.plugin.common.StandardMethodCodec;
 import io.flutter.plugin.platform.PlatformViewRegistry;
 
 import me.yohom.amap_search_fluttify.AmapSearchFluttifyPlugin.Handler;
+import me.yohom.foundation_fluttify.FluttifyMessageCodec;
 
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getEnableLog;
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getHEAP;
@@ -33,21 +35,21 @@ public class SubHandler5 {
             // method
             put("com.amap.api.services.geocoder.RegeocodeAddress::setProvince", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
+                com.amap.api.services.geocoder.RegeocodeAddress __this__ = (com.amap.api.services.geocoder.RegeocodeAddress) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::setProvince(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + __this__ + "::setProvince(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setProvince(var1);
+                    __this__.setProvince(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -57,10 +59,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.geocoder.RegeocodeAddress::getCity", (__args__, __methodResult__) -> {
@@ -68,18 +67,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
+                com.amap.api.services.geocoder.RegeocodeAddress __this__ = (com.amap.api.services.geocoder.RegeocodeAddress) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::getCity(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + __this__ + "::getCity(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getCity();
+                    __result__ = __this__.getCity();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -89,29 +87,26 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.geocoder.RegeocodeAddress::setCity", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
+                com.amap.api.services.geocoder.RegeocodeAddress __this__ = (com.amap.api.services.geocoder.RegeocodeAddress) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::setCity(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + __this__ + "::setCity(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setCity(var1);
+                    __this__.setCity(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -121,10 +116,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.geocoder.RegeocodeAddress::getCityCode", (__args__, __methodResult__) -> {
@@ -132,18 +124,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
+                com.amap.api.services.geocoder.RegeocodeAddress __this__ = (com.amap.api.services.geocoder.RegeocodeAddress) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::getCityCode(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + __this__ + "::getCityCode(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getCityCode();
+                    __result__ = __this__.getCityCode();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -153,29 +144,26 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.geocoder.RegeocodeAddress::setCityCode", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
+                com.amap.api.services.geocoder.RegeocodeAddress __this__ = (com.amap.api.services.geocoder.RegeocodeAddress) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::setCityCode(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + __this__ + "::setCityCode(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setCityCode(var1);
+                    __this__.setCityCode(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -185,10 +173,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.geocoder.RegeocodeAddress::getAdCode", (__args__, __methodResult__) -> {
@@ -196,18 +181,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
+                com.amap.api.services.geocoder.RegeocodeAddress __this__ = (com.amap.api.services.geocoder.RegeocodeAddress) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::getAdCode(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + __this__ + "::getAdCode(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getAdCode();
+                    __result__ = __this__.getAdCode();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -217,29 +201,26 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.geocoder.RegeocodeAddress::setAdCode", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
+                com.amap.api.services.geocoder.RegeocodeAddress __this__ = (com.amap.api.services.geocoder.RegeocodeAddress) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::setAdCode(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + __this__ + "::setAdCode(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setAdCode(var1);
+                    __this__.setAdCode(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -249,10 +230,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.geocoder.RegeocodeAddress::getDistrict", (__args__, __methodResult__) -> {
@@ -260,18 +238,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
+                com.amap.api.services.geocoder.RegeocodeAddress __this__ = (com.amap.api.services.geocoder.RegeocodeAddress) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::getDistrict(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + __this__ + "::getDistrict(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getDistrict();
+                    __result__ = __this__.getDistrict();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -281,29 +258,26 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.geocoder.RegeocodeAddress::setDistrict", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
+                com.amap.api.services.geocoder.RegeocodeAddress __this__ = (com.amap.api.services.geocoder.RegeocodeAddress) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::setDistrict(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + __this__ + "::setDistrict(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setDistrict(var1);
+                    __this__.setDistrict(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -313,10 +287,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.geocoder.RegeocodeAddress::getTownship", (__args__, __methodResult__) -> {
@@ -324,18 +295,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
+                com.amap.api.services.geocoder.RegeocodeAddress __this__ = (com.amap.api.services.geocoder.RegeocodeAddress) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::getTownship(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + __this__ + "::getTownship(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getTownship();
+                    __result__ = __this__.getTownship();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -345,29 +315,26 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.geocoder.RegeocodeAddress::setTownship", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
+                com.amap.api.services.geocoder.RegeocodeAddress __this__ = (com.amap.api.services.geocoder.RegeocodeAddress) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::setTownship(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + __this__ + "::setTownship(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setTownship(var1);
+                    __this__.setTownship(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -377,10 +344,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.geocoder.RegeocodeAddress::getNeighborhood", (__args__, __methodResult__) -> {
@@ -388,18 +352,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
+                com.amap.api.services.geocoder.RegeocodeAddress __this__ = (com.amap.api.services.geocoder.RegeocodeAddress) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::getNeighborhood(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + __this__ + "::getNeighborhood(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getNeighborhood();
+                    __result__ = __this__.getNeighborhood();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -409,29 +372,26 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.geocoder.RegeocodeAddress::setNeighborhood", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
+                com.amap.api.services.geocoder.RegeocodeAddress __this__ = (com.amap.api.services.geocoder.RegeocodeAddress) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::setNeighborhood(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + __this__ + "::setNeighborhood(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setNeighborhood(var1);
+                    __this__.setNeighborhood(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -441,10 +401,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.geocoder.RegeocodeAddress::getBuilding", (__args__, __methodResult__) -> {
@@ -452,18 +409,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
+                com.amap.api.services.geocoder.RegeocodeAddress __this__ = (com.amap.api.services.geocoder.RegeocodeAddress) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::getBuilding(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + __this__ + "::getBuilding(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getBuilding();
+                    __result__ = __this__.getBuilding();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -473,29 +429,26 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.geocoder.RegeocodeAddress::setBuilding", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
+                com.amap.api.services.geocoder.RegeocodeAddress __this__ = (com.amap.api.services.geocoder.RegeocodeAddress) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::setBuilding(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + __this__ + "::setBuilding(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setBuilding(var1);
+                    __this__.setBuilding(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -505,10 +458,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.geocoder.RegeocodeAddress::getStreetNumber", (__args__, __methodResult__) -> {
@@ -516,18 +466,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
+                com.amap.api.services.geocoder.RegeocodeAddress __this__ = (com.amap.api.services.geocoder.RegeocodeAddress) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::getStreetNumber(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + __this__ + "::getStreetNumber(" + "" + ")");
                 }
             
                 // invoke native method
-                com.amap.api.services.geocoder.StreetNumber __result__;
+                com.amap.api.services.geocoder.StreetNumber __result__ = null;
                 try {
-                    __result__ = ref.getStreetNumber();
+                    __result__ = __this__.getStreetNumber();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -537,34 +486,26 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                Integer jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = System.identityHashCode(__result__);
-                    getHEAP().put(jsonableResult, __result__);
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.geocoder.RegeocodeAddress::setStreetNumber", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.geocoder.StreetNumber var1 = __var1RefId__ != null ? (com.amap.api.services.geocoder.StreetNumber) getHEAP().get(__var1RefId__) : null;
+                com.amap.api.services.geocoder.StreetNumber var1 = (com.amap.api.services.geocoder.StreetNumber) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
+                com.amap.api.services.geocoder.RegeocodeAddress __this__ = (com.amap.api.services.geocoder.RegeocodeAddress) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::setStreetNumber(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + __this__ + "::setStreetNumber(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setStreetNumber(var1);
+                    __this__.setStreetNumber(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -574,10 +515,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.geocoder.RegeocodeAddress::getRoads", (__args__, __methodResult__) -> {
@@ -585,18 +523,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
+                com.amap.api.services.geocoder.RegeocodeAddress __this__ = (com.amap.api.services.geocoder.RegeocodeAddress) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::getRoads(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + __this__ + "::getRoads(" + "" + ")");
                 }
             
                 // invoke native method
-                java.util.List<com.amap.api.services.geocoder.RegeocodeRoad> __result__;
+                java.util.List<com.amap.api.services.geocoder.RegeocodeRoad> __result__ = null;
                 try {
-                    __result__ = ref.getRoads();
+                    __result__ = __this__.getRoads();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -606,40 +543,26 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                List<Integer> jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = new ArrayList<>();
-                    for (com.amap.api.services.geocoder.RegeocodeRoad item : __result__) {
-                        getHEAP().put(System.identityHashCode(item), item);
-                        jsonableResult.add(System.identityHashCode(item));
-                    }
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.geocoder.RegeocodeAddress::setRoads", (__args__, __methodResult__) -> {
                 // args
-                // list arg
-                List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) __args__).get("var1");
-                java.util.List<com.amap.api.services.geocoder.RegeocodeRoad> var1 = new ArrayList<>();
-                for (int refId : var1RefIdList) {
-                    ((ArrayList<com.amap.api.services.geocoder.RegeocodeRoad>) var1).add((com.amap.api.services.geocoder.RegeocodeRoad) getHEAP().get(refId));
-                }
+                // ref arg
+                java.util.List<com.amap.api.services.geocoder.RegeocodeRoad> var1 = (java.util.List<com.amap.api.services.geocoder.RegeocodeRoad>) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
+                com.amap.api.services.geocoder.RegeocodeAddress __this__ = (com.amap.api.services.geocoder.RegeocodeAddress) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::setRoads(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + __this__ + "::setRoads(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setRoads((ArrayList) var1);
+                    __this__.setRoads((ArrayList) var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -649,10 +572,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.geocoder.RegeocodeAddress::getPois", (__args__, __methodResult__) -> {
@@ -660,18 +580,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
+                com.amap.api.services.geocoder.RegeocodeAddress __this__ = (com.amap.api.services.geocoder.RegeocodeAddress) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::getPois(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + __this__ + "::getPois(" + "" + ")");
                 }
             
                 // invoke native method
-                java.util.List<com.amap.api.services.core.PoiItem> __result__;
+                java.util.List<com.amap.api.services.core.PoiItem> __result__ = null;
                 try {
-                    __result__ = ref.getPois();
+                    __result__ = __this__.getPois();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -681,40 +600,26 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                List<Integer> jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = new ArrayList<>();
-                    for (com.amap.api.services.core.PoiItem item : __result__) {
-                        getHEAP().put(System.identityHashCode(item), item);
-                        jsonableResult.add(System.identityHashCode(item));
-                    }
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.geocoder.RegeocodeAddress::setPois", (__args__, __methodResult__) -> {
                 // args
-                // list arg
-                List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) __args__).get("var1");
-                java.util.List<com.amap.api.services.core.PoiItem> var1 = new ArrayList<>();
-                for (int refId : var1RefIdList) {
-                    ((ArrayList<com.amap.api.services.core.PoiItem>) var1).add((com.amap.api.services.core.PoiItem) getHEAP().get(refId));
-                }
+                // ref arg
+                java.util.List<com.amap.api.services.core.PoiItem> var1 = (java.util.List<com.amap.api.services.core.PoiItem>) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
+                com.amap.api.services.geocoder.RegeocodeAddress __this__ = (com.amap.api.services.geocoder.RegeocodeAddress) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::setPois(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + __this__ + "::setPois(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setPois((ArrayList) var1);
+                    __this__.setPois((ArrayList) var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -724,10 +629,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.geocoder.RegeocodeAddress::getCrossroads", (__args__, __methodResult__) -> {
@@ -735,18 +637,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
+                com.amap.api.services.geocoder.RegeocodeAddress __this__ = (com.amap.api.services.geocoder.RegeocodeAddress) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::getCrossroads(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + __this__ + "::getCrossroads(" + "" + ")");
                 }
             
                 // invoke native method
-                java.util.List<com.amap.api.services.road.Crossroad> __result__;
+                java.util.List<com.amap.api.services.road.Crossroad> __result__ = null;
                 try {
-                    __result__ = ref.getCrossroads();
+                    __result__ = __this__.getCrossroads();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -756,40 +657,26 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                List<Integer> jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = new ArrayList<>();
-                    for (com.amap.api.services.road.Crossroad item : __result__) {
-                        getHEAP().put(System.identityHashCode(item), item);
-                        jsonableResult.add(System.identityHashCode(item));
-                    }
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.geocoder.RegeocodeAddress::setCrossroads", (__args__, __methodResult__) -> {
                 // args
-                // list arg
-                List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) __args__).get("var1");
-                java.util.List<com.amap.api.services.road.Crossroad> var1 = new ArrayList<>();
-                for (int refId : var1RefIdList) {
-                    ((ArrayList<com.amap.api.services.road.Crossroad>) var1).add((com.amap.api.services.road.Crossroad) getHEAP().get(refId));
-                }
+                // ref arg
+                java.util.List<com.amap.api.services.road.Crossroad> var1 = (java.util.List<com.amap.api.services.road.Crossroad>) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
+                com.amap.api.services.geocoder.RegeocodeAddress __this__ = (com.amap.api.services.geocoder.RegeocodeAddress) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::setCrossroads(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + __this__ + "::setCrossroads(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setCrossroads((ArrayList) var1);
+                    __this__.setCrossroads((ArrayList) var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -799,10 +686,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.geocoder.RegeocodeAddress::getBusinessAreas", (__args__, __methodResult__) -> {
@@ -810,18 +694,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
+                com.amap.api.services.geocoder.RegeocodeAddress __this__ = (com.amap.api.services.geocoder.RegeocodeAddress) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::getBusinessAreas(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + __this__ + "::getBusinessAreas(" + "" + ")");
                 }
             
                 // invoke native method
-                java.util.List<com.amap.api.services.geocoder.BusinessArea> __result__;
+                java.util.List<com.amap.api.services.geocoder.BusinessArea> __result__ = null;
                 try {
-                    __result__ = ref.getBusinessAreas();
+                    __result__ = __this__.getBusinessAreas();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -831,40 +714,26 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                List<Integer> jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = new ArrayList<>();
-                    for (com.amap.api.services.geocoder.BusinessArea item : __result__) {
-                        getHEAP().put(System.identityHashCode(item), item);
-                        jsonableResult.add(System.identityHashCode(item));
-                    }
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.geocoder.RegeocodeAddress::setBusinessAreas", (__args__, __methodResult__) -> {
                 // args
-                // list arg
-                List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) __args__).get("var1");
-                java.util.List<com.amap.api.services.geocoder.BusinessArea> var1 = new ArrayList<>();
-                for (int refId : var1RefIdList) {
-                    ((ArrayList<com.amap.api.services.geocoder.BusinessArea>) var1).add((com.amap.api.services.geocoder.BusinessArea) getHEAP().get(refId));
-                }
+                // ref arg
+                java.util.List<com.amap.api.services.geocoder.BusinessArea> var1 = (java.util.List<com.amap.api.services.geocoder.BusinessArea>) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
+                com.amap.api.services.geocoder.RegeocodeAddress __this__ = (com.amap.api.services.geocoder.RegeocodeAddress) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::setBusinessAreas(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + __this__ + "::setBusinessAreas(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setBusinessAreas((ArrayList) var1);
+                    __this__.setBusinessAreas((ArrayList) var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -874,10 +743,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.geocoder.RegeocodeAddress::getAois", (__args__, __methodResult__) -> {
@@ -885,18 +751,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
+                com.amap.api.services.geocoder.RegeocodeAddress __this__ = (com.amap.api.services.geocoder.RegeocodeAddress) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::getAois(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + __this__ + "::getAois(" + "" + ")");
                 }
             
                 // invoke native method
-                java.util.List<com.amap.api.services.geocoder.AoiItem> __result__;
+                java.util.List<com.amap.api.services.geocoder.AoiItem> __result__ = null;
                 try {
-                    __result__ = ref.getAois();
+                    __result__ = __this__.getAois();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -906,40 +771,26 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                List<Integer> jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = new ArrayList<>();
-                    for (com.amap.api.services.geocoder.AoiItem item : __result__) {
-                        getHEAP().put(System.identityHashCode(item), item);
-                        jsonableResult.add(System.identityHashCode(item));
-                    }
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.geocoder.RegeocodeAddress::setAois", (__args__, __methodResult__) -> {
                 // args
-                // list arg
-                List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) __args__).get("var1");
-                java.util.List<com.amap.api.services.geocoder.AoiItem> var1 = new ArrayList<>();
-                for (int refId : var1RefIdList) {
-                    ((ArrayList<com.amap.api.services.geocoder.AoiItem>) var1).add((com.amap.api.services.geocoder.AoiItem) getHEAP().get(refId));
-                }
+                // ref arg
+                java.util.List<com.amap.api.services.geocoder.AoiItem> var1 = (java.util.List<com.amap.api.services.geocoder.AoiItem>) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
+                com.amap.api.services.geocoder.RegeocodeAddress __this__ = (com.amap.api.services.geocoder.RegeocodeAddress) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::setAois(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + __this__ + "::setAois(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setAois((ArrayList) var1);
+                    __this__.setAois((ArrayList) var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -949,10 +800,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.geocoder.RegeocodeAddress::getTowncode", (__args__, __methodResult__) -> {
@@ -960,18 +808,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
+                com.amap.api.services.geocoder.RegeocodeAddress __this__ = (com.amap.api.services.geocoder.RegeocodeAddress) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::getTowncode(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + __this__ + "::getTowncode(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getTowncode();
+                    __result__ = __this__.getTowncode();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -981,29 +828,26 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.geocoder.RegeocodeAddress::setTowncode", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
+                com.amap.api.services.geocoder.RegeocodeAddress __this__ = (com.amap.api.services.geocoder.RegeocodeAddress) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::setTowncode(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + __this__ + "::setTowncode(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setTowncode(var1);
+                    __this__.setTowncode(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1013,29 +857,26 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.geocoder.RegeocodeAddress::setCountry", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
+                com.amap.api.services.geocoder.RegeocodeAddress __this__ = (com.amap.api.services.geocoder.RegeocodeAddress) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::setCountry(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + __this__ + "::setCountry(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setCountry(var1);
+                    __this__.setCountry(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1045,10 +886,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.geocoder.RegeocodeAddress::getCountry", (__args__, __methodResult__) -> {
@@ -1056,18 +894,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
+                com.amap.api.services.geocoder.RegeocodeAddress __this__ = (com.amap.api.services.geocoder.RegeocodeAddress) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::getCountry(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + __this__ + "::getCountry(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getCountry();
+                    __result__ = __this__.getCountry();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1077,29 +914,26 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.district.DistrictSearchQuery::setShowBoundary", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.district.DistrictSearchQuery ref = (com.amap.api.services.district.DistrictSearchQuery) getHEAP().get(refId);
+                com.amap.api.services.district.DistrictSearchQuery __this__ = (com.amap.api.services.district.DistrictSearchQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearchQuery@" + refId + "::setShowBoundary(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearchQuery@" + __this__ + "::setShowBoundary(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setShowBoundary(var1);
+                    __this__.setShowBoundary(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1109,10 +943,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.district.DistrictSearchQuery::isShowBoundary", (__args__, __methodResult__) -> {
@@ -1120,18 +951,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.district.DistrictSearchQuery ref = (com.amap.api.services.district.DistrictSearchQuery) getHEAP().get(refId);
+                com.amap.api.services.district.DistrictSearchQuery __this__ = (com.amap.api.services.district.DistrictSearchQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearchQuery@" + refId + "::isShowBoundary(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearchQuery@" + __this__ + "::isShowBoundary(" + "" + ")");
                 }
             
                 // invoke native method
-                boolean __result__;
+                Boolean __result__ = null;
                 try {
-                    __result__ = ref.isShowBoundary();
+                    __result__ = __this__.isShowBoundary();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1141,10 +971,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                boolean jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.district.DistrictSearchQuery::getPageNum", (__args__, __methodResult__) -> {
@@ -1152,18 +979,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.district.DistrictSearchQuery ref = (com.amap.api.services.district.DistrictSearchQuery) getHEAP().get(refId);
+                com.amap.api.services.district.DistrictSearchQuery __this__ = (com.amap.api.services.district.DistrictSearchQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearchQuery@" + refId + "::getPageNum(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearchQuery@" + __this__ + "::getPageNum(" + "" + ")");
                 }
             
                 // invoke native method
-                int __result__;
+                Integer __result__ = null;
                 try {
-                    __result__ = ref.getPageNum();
+                    __result__ = __this__.getPageNum();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1173,29 +999,26 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                int jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.district.DistrictSearchQuery::setPageNum", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 int var1 = (int) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.district.DistrictSearchQuery ref = (com.amap.api.services.district.DistrictSearchQuery) getHEAP().get(refId);
+                com.amap.api.services.district.DistrictSearchQuery __this__ = (com.amap.api.services.district.DistrictSearchQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearchQuery@" + refId + "::setPageNum(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearchQuery@" + __this__ + "::setPageNum(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setPageNum(var1);
+                    __this__.setPageNum(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1205,10 +1028,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.district.DistrictSearchQuery::getPageSize", (__args__, __methodResult__) -> {
@@ -1216,18 +1036,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.district.DistrictSearchQuery ref = (com.amap.api.services.district.DistrictSearchQuery) getHEAP().get(refId);
+                com.amap.api.services.district.DistrictSearchQuery __this__ = (com.amap.api.services.district.DistrictSearchQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearchQuery@" + refId + "::getPageSize(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearchQuery@" + __this__ + "::getPageSize(" + "" + ")");
                 }
             
                 // invoke native method
-                int __result__;
+                Integer __result__ = null;
                 try {
-                    __result__ = ref.getPageSize();
+                    __result__ = __this__.getPageSize();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1237,29 +1056,26 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                int jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.district.DistrictSearchQuery::setPageSize", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 int var1 = (int) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.district.DistrictSearchQuery ref = (com.amap.api.services.district.DistrictSearchQuery) getHEAP().get(refId);
+                com.amap.api.services.district.DistrictSearchQuery __this__ = (com.amap.api.services.district.DistrictSearchQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearchQuery@" + refId + "::setPageSize(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearchQuery@" + __this__ + "::setPageSize(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setPageSize(var1);
+                    __this__.setPageSize(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1269,10 +1085,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.district.DistrictSearchQuery::getKeywords", (__args__, __methodResult__) -> {
@@ -1280,18 +1093,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.district.DistrictSearchQuery ref = (com.amap.api.services.district.DistrictSearchQuery) getHEAP().get(refId);
+                com.amap.api.services.district.DistrictSearchQuery __this__ = (com.amap.api.services.district.DistrictSearchQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearchQuery@" + refId + "::getKeywords(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearchQuery@" + __this__ + "::getKeywords(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getKeywords();
+                    __result__ = __this__.getKeywords();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1301,29 +1113,26 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.district.DistrictSearchQuery::setKeywords", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.district.DistrictSearchQuery ref = (com.amap.api.services.district.DistrictSearchQuery) getHEAP().get(refId);
+                com.amap.api.services.district.DistrictSearchQuery __this__ = (com.amap.api.services.district.DistrictSearchQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearchQuery@" + refId + "::setKeywords(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearchQuery@" + __this__ + "::setKeywords(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setKeywords(var1);
+                    __this__.setKeywords(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1333,10 +1142,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.district.DistrictSearchQuery::getKeywordsLevel", (__args__, __methodResult__) -> {
@@ -1344,18 +1150,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.district.DistrictSearchQuery ref = (com.amap.api.services.district.DistrictSearchQuery) getHEAP().get(refId);
+                com.amap.api.services.district.DistrictSearchQuery __this__ = (com.amap.api.services.district.DistrictSearchQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearchQuery@" + refId + "::getKeywordsLevel(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearchQuery@" + __this__ + "::getKeywordsLevel(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getKeywordsLevel();
+                    __result__ = __this__.getKeywordsLevel();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1365,29 +1170,26 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.district.DistrictSearchQuery::setKeywordsLevel", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.district.DistrictSearchQuery ref = (com.amap.api.services.district.DistrictSearchQuery) getHEAP().get(refId);
+                com.amap.api.services.district.DistrictSearchQuery __this__ = (com.amap.api.services.district.DistrictSearchQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearchQuery@" + refId + "::setKeywordsLevel(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearchQuery@" + __this__ + "::setKeywordsLevel(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setKeywordsLevel(var1);
+                    __this__.setKeywordsLevel(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1397,10 +1199,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.district.DistrictSearchQuery::isShowChild", (__args__, __methodResult__) -> {
@@ -1408,18 +1207,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.district.DistrictSearchQuery ref = (com.amap.api.services.district.DistrictSearchQuery) getHEAP().get(refId);
+                com.amap.api.services.district.DistrictSearchQuery __this__ = (com.amap.api.services.district.DistrictSearchQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearchQuery@" + refId + "::isShowChild(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearchQuery@" + __this__ + "::isShowChild(" + "" + ")");
                 }
             
                 // invoke native method
-                boolean __result__;
+                Boolean __result__ = null;
                 try {
-                    __result__ = ref.isShowChild();
+                    __result__ = __this__.isShowChild();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1429,29 +1227,26 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                boolean jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.district.DistrictSearchQuery::setShowChild", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.district.DistrictSearchQuery ref = (com.amap.api.services.district.DistrictSearchQuery) getHEAP().get(refId);
+                com.amap.api.services.district.DistrictSearchQuery __this__ = (com.amap.api.services.district.DistrictSearchQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearchQuery@" + refId + "::setShowChild(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearchQuery@" + __this__ + "::setShowChild(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setShowChild(var1);
+                    __this__.setShowChild(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1461,10 +1256,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.district.DistrictSearchQuery::getSubDistrict", (__args__, __methodResult__) -> {
@@ -1472,18 +1264,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.district.DistrictSearchQuery ref = (com.amap.api.services.district.DistrictSearchQuery) getHEAP().get(refId);
+                com.amap.api.services.district.DistrictSearchQuery __this__ = (com.amap.api.services.district.DistrictSearchQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearchQuery@" + refId + "::getSubDistrict(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearchQuery@" + __this__ + "::getSubDistrict(" + "" + ")");
                 }
             
                 // invoke native method
-                int __result__;
+                Integer __result__ = null;
                 try {
-                    __result__ = ref.getSubDistrict();
+                    __result__ = __this__.getSubDistrict();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1493,29 +1284,26 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                int jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.district.DistrictSearchQuery::setSubDistrict", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 int var1 = (int) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.district.DistrictSearchQuery ref = (com.amap.api.services.district.DistrictSearchQuery) getHEAP().get(refId);
+                com.amap.api.services.district.DistrictSearchQuery __this__ = (com.amap.api.services.district.DistrictSearchQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearchQuery@" + refId + "::setSubDistrict(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearchQuery@" + __this__ + "::setSubDistrict(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setSubDistrict(var1);
+                    __this__.setSubDistrict(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1525,10 +1313,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.district.DistrictSearchQuery::isShowBusinessArea", (__args__, __methodResult__) -> {
@@ -1536,18 +1321,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.district.DistrictSearchQuery ref = (com.amap.api.services.district.DistrictSearchQuery) getHEAP().get(refId);
+                com.amap.api.services.district.DistrictSearchQuery __this__ = (com.amap.api.services.district.DistrictSearchQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearchQuery@" + refId + "::isShowBusinessArea(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearchQuery@" + __this__ + "::isShowBusinessArea(" + "" + ")");
                 }
             
                 // invoke native method
-                boolean __result__;
+                Boolean __result__ = null;
                 try {
-                    __result__ = ref.isShowBusinessArea();
+                    __result__ = __this__.isShowBusinessArea();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1557,29 +1341,26 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                boolean jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.district.DistrictSearchQuery::setShowBusinessArea", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.district.DistrictSearchQuery ref = (com.amap.api.services.district.DistrictSearchQuery) getHEAP().get(refId);
+                com.amap.api.services.district.DistrictSearchQuery __this__ = (com.amap.api.services.district.DistrictSearchQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearchQuery@" + refId + "::setShowBusinessArea(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearchQuery@" + __this__ + "::setShowBusinessArea(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setShowBusinessArea(var1);
+                    __this__.setShowBusinessArea(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1589,10 +1370,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.district.DistrictSearchQuery::checkLevels", (__args__, __methodResult__) -> {
@@ -1600,18 +1378,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.district.DistrictSearchQuery ref = (com.amap.api.services.district.DistrictSearchQuery) getHEAP().get(refId);
+                com.amap.api.services.district.DistrictSearchQuery __this__ = (com.amap.api.services.district.DistrictSearchQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearchQuery@" + refId + "::checkLevels(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearchQuery@" + __this__ + "::checkLevels(" + "" + ")");
                 }
             
                 // invoke native method
-                boolean __result__;
+                Boolean __result__ = null;
                 try {
-                    __result__ = ref.checkLevels();
+                    __result__ = __this__.checkLevels();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1621,10 +1398,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                boolean jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.district.DistrictSearchQuery::checkKeyWords", (__args__, __methodResult__) -> {
@@ -1632,18 +1406,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.district.DistrictSearchQuery ref = (com.amap.api.services.district.DistrictSearchQuery) getHEAP().get(refId);
+                com.amap.api.services.district.DistrictSearchQuery __this__ = (com.amap.api.services.district.DistrictSearchQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearchQuery@" + refId + "::checkKeyWords(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearchQuery@" + __this__ + "::checkKeyWords(" + "" + ")");
                 }
             
                 // invoke native method
-                boolean __result__;
+                Boolean __result__ = null;
                 try {
-                    __result__ = ref.checkKeyWords();
+                    __result__ = __this__.checkKeyWords();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1653,31 +1426,26 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                boolean jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.district.DistrictSearchQuery::weakEquals", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.district.DistrictSearchQuery var1 = __var1RefId__ != null ? (com.amap.api.services.district.DistrictSearchQuery) getHEAP().get(__var1RefId__) : null;
+                com.amap.api.services.district.DistrictSearchQuery var1 = (com.amap.api.services.district.DistrictSearchQuery) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.district.DistrictSearchQuery ref = (com.amap.api.services.district.DistrictSearchQuery) getHEAP().get(refId);
+                com.amap.api.services.district.DistrictSearchQuery __this__ = (com.amap.api.services.district.DistrictSearchQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearchQuery@" + refId + "::weakEquals(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearchQuery@" + __this__ + "::weakEquals(" + var1 + ")");
                 }
             
                 // invoke native method
-                boolean __result__;
+                Boolean __result__ = null;
                 try {
-                    __result__ = ref.weakEquals(var1);
+                    __result__ = __this__.weakEquals(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1687,10 +1455,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                boolean jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.district.DistrictSearchQuery::clone", (__args__, __methodResult__) -> {
@@ -1698,18 +1463,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.district.DistrictSearchQuery ref = (com.amap.api.services.district.DistrictSearchQuery) getHEAP().get(refId);
+                com.amap.api.services.district.DistrictSearchQuery __this__ = (com.amap.api.services.district.DistrictSearchQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearchQuery@" + refId + "::clone(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearchQuery@" + __this__ + "::clone(" + "" + ")");
                 }
             
                 // invoke native method
-                com.amap.api.services.district.DistrictSearchQuery __result__;
+                com.amap.api.services.district.DistrictSearchQuery __result__ = null;
                 try {
-                    __result__ = ref.clone();
+                    __result__ = __this__.clone();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1719,14 +1483,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                Integer jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = System.identityHashCode(__result__);
-                    getHEAP().put(jsonableResult, __result__);
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.district.DistrictSearch::getQuery", (__args__, __methodResult__) -> {
@@ -1734,18 +1491,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.district.DistrictSearch ref = (com.amap.api.services.district.DistrictSearch) getHEAP().get(refId);
+                com.amap.api.services.district.DistrictSearch __this__ = (com.amap.api.services.district.DistrictSearch) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearch@" + refId + "::getQuery(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearch@" + __this__ + "::getQuery(" + "" + ")");
                 }
             
                 // invoke native method
-                com.amap.api.services.district.DistrictSearchQuery __result__;
+                com.amap.api.services.district.DistrictSearchQuery __result__ = null;
                 try {
-                    __result__ = ref.getQuery();
+                    __result__ = __this__.getQuery();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1755,34 +1511,26 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                Integer jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = System.identityHashCode(__result__);
-                    getHEAP().put(jsonableResult, __result__);
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.district.DistrictSearch::setQuery", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.district.DistrictSearchQuery var1 = __var1RefId__ != null ? (com.amap.api.services.district.DistrictSearchQuery) getHEAP().get(__var1RefId__) : null;
+                com.amap.api.services.district.DistrictSearchQuery var1 = (com.amap.api.services.district.DistrictSearchQuery) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.district.DistrictSearch ref = (com.amap.api.services.district.DistrictSearch) getHEAP().get(refId);
+                com.amap.api.services.district.DistrictSearch __this__ = (com.amap.api.services.district.DistrictSearch) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearch@" + refId + "::setQuery(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearch@" + __this__ + "::setQuery(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setQuery(var1);
+                    __this__.setQuery(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1792,10 +1540,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.district.DistrictSearch::searchDistrict", (__args__, __methodResult__) -> {
@@ -1803,18 +1548,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.district.DistrictSearch ref = (com.amap.api.services.district.DistrictSearch) getHEAP().get(refId);
+                com.amap.api.services.district.DistrictSearch __this__ = (com.amap.api.services.district.DistrictSearch) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearch@" + refId + "::searchDistrict(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearch@" + __this__ + "::searchDistrict(" + "" + ")");
                 }
             
                 // invoke native method
-                com.amap.api.services.district.DistrictResult __result__;
+                com.amap.api.services.district.DistrictResult __result__ = null;
                 try {
-                    __result__ = ref.searchDistrict();
+                    __result__ = __this__.searchDistrict();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1824,14 +1568,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                Integer jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = System.identityHashCode(__result__);
-                    getHEAP().put(jsonableResult, __result__);
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.district.DistrictSearch::searchDistrictAsyn", (__args__, __methodResult__) -> {
@@ -1839,17 +1576,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.district.DistrictSearch ref = (com.amap.api.services.district.DistrictSearch) getHEAP().get(refId);
+                com.amap.api.services.district.DistrictSearch __this__ = (com.amap.api.services.district.DistrictSearch) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearch@" + refId + "::searchDistrictAsyn(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearch@" + __this__ + "::searchDistrictAsyn(" + "" + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.searchDistrictAsyn();
+                    __this__.searchDistrictAsyn();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1859,10 +1596,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.district.DistrictSearch::searchDistrictAnsy", (__args__, __methodResult__) -> {
@@ -1870,17 +1604,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.district.DistrictSearch ref = (com.amap.api.services.district.DistrictSearch) getHEAP().get(refId);
+                com.amap.api.services.district.DistrictSearch __this__ = (com.amap.api.services.district.DistrictSearch) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearch@" + refId + "::searchDistrictAnsy(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearch@" + __this__ + "::searchDistrictAnsy(" + "" + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.searchDistrictAnsy();
+                    __this__.searchDistrictAnsy();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1890,10 +1624,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.district.DistrictSearch::setOnDistrictSearchListener", (__args__, __methodResult__) -> {
@@ -1901,19 +1632,19 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.district.DistrictSearch ref = (com.amap.api.services.district.DistrictSearch) getHEAP().get(refId);
+                com.amap.api.services.district.DistrictSearch __this__ = (com.amap.api.services.district.DistrictSearch) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearch@" + refId + "::setOnDistrictSearchListener(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearch@" + __this__ + "::setOnDistrictSearchListener(" + "" + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setOnDistrictSearchListener(new com.amap.api.services.district.DistrictSearch.OnDistrictSearchListener() {
+                    __this__.setOnDistrictSearchListener(new com.amap.api.services.district.DistrictSearch.OnDistrictSearchListener() {
                         // method channel
-                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.district.DistrictSearch::setOnDistrictSearchListener::Callback");
+                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.district.DistrictSearch::setOnDistrictSearchListener::Callback", new StandardMethodCodec(new FluttifyMessageCodec()));
                         android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
             
                         // call dart method
@@ -1961,10 +1692,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.district.DistrictResult::getDistrict", (__args__, __methodResult__) -> {
@@ -1972,18 +1700,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.district.DistrictResult ref = (com.amap.api.services.district.DistrictResult) getHEAP().get(refId);
+                com.amap.api.services.district.DistrictResult __this__ = (com.amap.api.services.district.DistrictResult) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictResult@" + refId + "::getDistrict(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictResult@" + __this__ + "::getDistrict(" + "" + ")");
                 }
             
                 // invoke native method
-                java.util.ArrayList<com.amap.api.services.district.DistrictItem> __result__;
+                java.util.ArrayList<com.amap.api.services.district.DistrictItem> __result__ = null;
                 try {
-                    __result__ = ref.getDistrict();
+                    __result__ = __this__.getDistrict();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1993,40 +1720,26 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                List<Integer> jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = new ArrayList<>();
-                    for (com.amap.api.services.district.DistrictItem item : __result__) {
-                        getHEAP().put(System.identityHashCode(item), item);
-                        jsonableResult.add(System.identityHashCode(item));
-                    }
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.district.DistrictResult::setDistrict", (__args__, __methodResult__) -> {
                 // args
-                // list arg
-                List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) __args__).get("var1");
-                java.util.ArrayList<com.amap.api.services.district.DistrictItem> var1 = new ArrayList<>();
-                for (int refId : var1RefIdList) {
-                    ((ArrayList<com.amap.api.services.district.DistrictItem>) var1).add((com.amap.api.services.district.DistrictItem) getHEAP().get(refId));
-                }
+                // ref arg
+                java.util.ArrayList<com.amap.api.services.district.DistrictItem> var1 = (java.util.ArrayList<com.amap.api.services.district.DistrictItem>) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.district.DistrictResult ref = (com.amap.api.services.district.DistrictResult) getHEAP().get(refId);
+                com.amap.api.services.district.DistrictResult __this__ = (com.amap.api.services.district.DistrictResult) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictResult@" + refId + "::setDistrict(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictResult@" + __this__ + "::setDistrict(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setDistrict((ArrayList) var1);
+                    __this__.setDistrict((ArrayList) var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2036,10 +1749,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.district.DistrictResult::getQuery", (__args__, __methodResult__) -> {
@@ -2047,18 +1757,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.district.DistrictResult ref = (com.amap.api.services.district.DistrictResult) getHEAP().get(refId);
+                com.amap.api.services.district.DistrictResult __this__ = (com.amap.api.services.district.DistrictResult) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictResult@" + refId + "::getQuery(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictResult@" + __this__ + "::getQuery(" + "" + ")");
                 }
             
                 // invoke native method
-                com.amap.api.services.district.DistrictSearchQuery __result__;
+                com.amap.api.services.district.DistrictSearchQuery __result__ = null;
                 try {
-                    __result__ = ref.getQuery();
+                    __result__ = __this__.getQuery();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2068,34 +1777,26 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                Integer jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = System.identityHashCode(__result__);
-                    getHEAP().put(jsonableResult, __result__);
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.district.DistrictResult::setQuery", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.district.DistrictSearchQuery var1 = __var1RefId__ != null ? (com.amap.api.services.district.DistrictSearchQuery) getHEAP().get(__var1RefId__) : null;
+                com.amap.api.services.district.DistrictSearchQuery var1 = (com.amap.api.services.district.DistrictSearchQuery) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.district.DistrictResult ref = (com.amap.api.services.district.DistrictResult) getHEAP().get(refId);
+                com.amap.api.services.district.DistrictResult __this__ = (com.amap.api.services.district.DistrictResult) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictResult@" + refId + "::setQuery(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictResult@" + __this__ + "::setQuery(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setQuery(var1);
+                    __this__.setQuery(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2105,10 +1806,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.district.DistrictResult::getPageCount", (__args__, __methodResult__) -> {
@@ -2116,18 +1814,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.district.DistrictResult ref = (com.amap.api.services.district.DistrictResult) getHEAP().get(refId);
+                com.amap.api.services.district.DistrictResult __this__ = (com.amap.api.services.district.DistrictResult) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictResult@" + refId + "::getPageCount(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictResult@" + __this__ + "::getPageCount(" + "" + ")");
                 }
             
                 // invoke native method
-                int __result__;
+                Integer __result__ = null;
                 try {
-                    __result__ = ref.getPageCount();
+                    __result__ = __this__.getPageCount();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2137,29 +1834,26 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                int jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.district.DistrictResult::setPageCount", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 int var1 = (int) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.district.DistrictResult ref = (com.amap.api.services.district.DistrictResult) getHEAP().get(refId);
+                com.amap.api.services.district.DistrictResult __this__ = (com.amap.api.services.district.DistrictResult) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictResult@" + refId + "::setPageCount(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictResult@" + __this__ + "::setPageCount(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setPageCount(var1);
+                    __this__.setPageCount(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2169,10 +1863,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.district.DistrictResult::getAMapException", (__args__, __methodResult__) -> {
@@ -2180,18 +1871,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.district.DistrictResult ref = (com.amap.api.services.district.DistrictResult) getHEAP().get(refId);
+                com.amap.api.services.district.DistrictResult __this__ = (com.amap.api.services.district.DistrictResult) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictResult@" + refId + "::getAMapException(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictResult@" + __this__ + "::getAMapException(" + "" + ")");
                 }
             
                 // invoke native method
-                com.amap.api.services.core.AMapException __result__;
+                com.amap.api.services.core.AMapException __result__ = null;
                 try {
-                    __result__ = ref.getAMapException();
+                    __result__ = __this__.getAMapException();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2201,34 +1891,26 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                Integer jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = System.identityHashCode(__result__);
-                    getHEAP().put(jsonableResult, __result__);
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.district.DistrictResult::setAMapException", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.core.AMapException var1 = __var1RefId__ != null ? (com.amap.api.services.core.AMapException) getHEAP().get(__var1RefId__) : null;
+                com.amap.api.services.core.AMapException var1 = (com.amap.api.services.core.AMapException) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.district.DistrictResult ref = (com.amap.api.services.district.DistrictResult) getHEAP().get(refId);
+                com.amap.api.services.district.DistrictResult __this__ = (com.amap.api.services.district.DistrictResult) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictResult@" + refId + "::setAMapException(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictResult@" + __this__ + "::setAMapException(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setAMapException(var1);
+                    __this__.setAMapException(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2238,29 +1920,26 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.district.DistrictItem::setDistrictBoundary", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
-                ArrayList<String> var1 = (ArrayList<String>) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                String[] var1 = (String[]) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.district.DistrictItem ref = (com.amap.api.services.district.DistrictItem) getHEAP().get(refId);
+                com.amap.api.services.district.DistrictItem __this__ = (com.amap.api.services.district.DistrictItem) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictItem@" + refId + "::setDistrictBoundary(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictItem@" + __this__ + "::setDistrictBoundary(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setDistrictBoundary(var1.toArray(new String[var1.size()]));
+                    __this__.setDistrictBoundary(var1.toArray(new String[var1.size()]));
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2270,10 +1949,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.district.DistrictItem::districtBoundary", (__args__, __methodResult__) -> {
@@ -2281,18 +1957,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.district.DistrictItem ref = (com.amap.api.services.district.DistrictItem) getHEAP().get(refId);
+                com.amap.api.services.district.DistrictItem __this__ = (com.amap.api.services.district.DistrictItem) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictItem@" + refId + "::districtBoundary(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictItem@" + __this__ + "::districtBoundary(" + "" + ")");
                 }
             
                 // invoke native method
-                String[] __result__;
+                String[] __result__ = null;
                 try {
-                    __result__ = ref.districtBoundary();
+                    __result__ = __this__.districtBoundary();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2302,10 +1977,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                List<String> jsonableResult = new ArrayList<String>(java.util.Arrays.asList(__result__));
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.district.DistrictItem::getCitycode", (__args__, __methodResult__) -> {
@@ -2313,18 +1985,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.district.DistrictItem ref = (com.amap.api.services.district.DistrictItem) getHEAP().get(refId);
+                com.amap.api.services.district.DistrictItem __this__ = (com.amap.api.services.district.DistrictItem) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictItem@" + refId + "::getCitycode(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictItem@" + __this__ + "::getCitycode(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getCitycode();
+                    __result__ = __this__.getCitycode();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2334,29 +2005,26 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.district.DistrictItem::setCitycode", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.district.DistrictItem ref = (com.amap.api.services.district.DistrictItem) getHEAP().get(refId);
+                com.amap.api.services.district.DistrictItem __this__ = (com.amap.api.services.district.DistrictItem) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictItem@" + refId + "::setCitycode(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictItem@" + __this__ + "::setCitycode(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setCitycode(var1);
+                    __this__.setCitycode(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2366,10 +2034,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.district.DistrictItem::getAdcode", (__args__, __methodResult__) -> {
@@ -2377,18 +2042,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.district.DistrictItem ref = (com.amap.api.services.district.DistrictItem) getHEAP().get(refId);
+                com.amap.api.services.district.DistrictItem __this__ = (com.amap.api.services.district.DistrictItem) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictItem@" + refId + "::getAdcode(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictItem@" + __this__ + "::getAdcode(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getAdcode();
+                    __result__ = __this__.getAdcode();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2398,29 +2062,26 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.district.DistrictItem::setAdcode", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.district.DistrictItem ref = (com.amap.api.services.district.DistrictItem) getHEAP().get(refId);
+                com.amap.api.services.district.DistrictItem __this__ = (com.amap.api.services.district.DistrictItem) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictItem@" + refId + "::setAdcode(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictItem@" + __this__ + "::setAdcode(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setAdcode(var1);
+                    __this__.setAdcode(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2430,10 +2091,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.district.DistrictItem::getName", (__args__, __methodResult__) -> {
@@ -2441,18 +2099,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.district.DistrictItem ref = (com.amap.api.services.district.DistrictItem) getHEAP().get(refId);
+                com.amap.api.services.district.DistrictItem __this__ = (com.amap.api.services.district.DistrictItem) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictItem@" + refId + "::getName(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictItem@" + __this__ + "::getName(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getName();
+                    __result__ = __this__.getName();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2462,29 +2119,26 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.district.DistrictItem::setName", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.district.DistrictItem ref = (com.amap.api.services.district.DistrictItem) getHEAP().get(refId);
+                com.amap.api.services.district.DistrictItem __this__ = (com.amap.api.services.district.DistrictItem) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictItem@" + refId + "::setName(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictItem@" + __this__ + "::setName(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setName(var1);
+                    __this__.setName(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2494,10 +2148,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.district.DistrictItem::getCenter", (__args__, __methodResult__) -> {
@@ -2505,18 +2156,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.district.DistrictItem ref = (com.amap.api.services.district.DistrictItem) getHEAP().get(refId);
+                com.amap.api.services.district.DistrictItem __this__ = (com.amap.api.services.district.DistrictItem) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictItem@" + refId + "::getCenter(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictItem@" + __this__ + "::getCenter(" + "" + ")");
                 }
             
                 // invoke native method
-                com.amap.api.services.core.LatLonPoint __result__;
+                com.amap.api.services.core.LatLonPoint __result__ = null;
                 try {
-                    __result__ = ref.getCenter();
+                    __result__ = __this__.getCenter();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2526,34 +2176,26 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                Integer jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = System.identityHashCode(__result__);
-                    getHEAP().put(jsonableResult, __result__);
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.district.DistrictItem::setCenter", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.core.LatLonPoint var1 = __var1RefId__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1RefId__) : null;
+                com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.district.DistrictItem ref = (com.amap.api.services.district.DistrictItem) getHEAP().get(refId);
+                com.amap.api.services.district.DistrictItem __this__ = (com.amap.api.services.district.DistrictItem) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictItem@" + refId + "::setCenter(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictItem@" + __this__ + "::setCenter(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setCenter(var1);
+                    __this__.setCenter(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2563,10 +2205,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.district.DistrictItem::getLevel", (__args__, __methodResult__) -> {
@@ -2574,18 +2213,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.district.DistrictItem ref = (com.amap.api.services.district.DistrictItem) getHEAP().get(refId);
+                com.amap.api.services.district.DistrictItem __this__ = (com.amap.api.services.district.DistrictItem) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictItem@" + refId + "::getLevel(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictItem@" + __this__ + "::getLevel(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getLevel();
+                    __result__ = __this__.getLevel();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2595,29 +2233,26 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.district.DistrictItem::setLevel", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.district.DistrictItem ref = (com.amap.api.services.district.DistrictItem) getHEAP().get(refId);
+                com.amap.api.services.district.DistrictItem __this__ = (com.amap.api.services.district.DistrictItem) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictItem@" + refId + "::setLevel(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictItem@" + __this__ + "::setLevel(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setLevel(var1);
+                    __this__.setLevel(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2627,10 +2262,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.district.DistrictItem::getSubDistrict", (__args__, __methodResult__) -> {
@@ -2638,18 +2270,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.district.DistrictItem ref = (com.amap.api.services.district.DistrictItem) getHEAP().get(refId);
+                com.amap.api.services.district.DistrictItem __this__ = (com.amap.api.services.district.DistrictItem) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictItem@" + refId + "::getSubDistrict(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictItem@" + __this__ + "::getSubDistrict(" + "" + ")");
                 }
             
                 // invoke native method
-                java.util.List<com.amap.api.services.district.DistrictItem> __result__;
+                java.util.List<com.amap.api.services.district.DistrictItem> __result__ = null;
                 try {
-                    __result__ = ref.getSubDistrict();
+                    __result__ = __this__.getSubDistrict();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2659,40 +2290,26 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                List<Integer> jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = new ArrayList<>();
-                    for (com.amap.api.services.district.DistrictItem item : __result__) {
-                        getHEAP().put(System.identityHashCode(item), item);
-                        jsonableResult.add(System.identityHashCode(item));
-                    }
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.district.DistrictItem::setSubDistrict", (__args__, __methodResult__) -> {
                 // args
-                // list arg
-                List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) __args__).get("var1");
-                java.util.ArrayList<com.amap.api.services.district.DistrictItem> var1 = new ArrayList<>();
-                for (int refId : var1RefIdList) {
-                    ((ArrayList<com.amap.api.services.district.DistrictItem>) var1).add((com.amap.api.services.district.DistrictItem) getHEAP().get(refId));
-                }
+                // ref arg
+                java.util.ArrayList<com.amap.api.services.district.DistrictItem> var1 = (java.util.ArrayList<com.amap.api.services.district.DistrictItem>) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.district.DistrictItem ref = (com.amap.api.services.district.DistrictItem) getHEAP().get(refId);
+                com.amap.api.services.district.DistrictItem __this__ = (com.amap.api.services.district.DistrictItem) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictItem@" + refId + "::setSubDistrict(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictItem@" + __this__ + "::setSubDistrict(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setSubDistrict((ArrayList) var1);
+                    __this__.setSubDistrict((ArrayList) var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2702,10 +2319,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.help.Tip::getPoiID", (__args__, __methodResult__) -> {
@@ -2713,18 +2327,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.help.Tip ref = (com.amap.api.services.help.Tip) getHEAP().get(refId);
+                com.amap.api.services.help.Tip __this__ = (com.amap.api.services.help.Tip) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Tip@" + refId + "::getPoiID(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Tip@" + __this__ + "::getPoiID(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getPoiID();
+                    __result__ = __this__.getPoiID();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2734,29 +2347,26 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.help.Tip::setID", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.help.Tip ref = (com.amap.api.services.help.Tip) getHEAP().get(refId);
+                com.amap.api.services.help.Tip __this__ = (com.amap.api.services.help.Tip) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Tip@" + refId + "::setID(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Tip@" + __this__ + "::setID(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setID(var1);
+                    __this__.setID(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2766,10 +2376,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.help.Tip::getPoint", (__args__, __methodResult__) -> {
@@ -2777,18 +2384,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.help.Tip ref = (com.amap.api.services.help.Tip) getHEAP().get(refId);
+                com.amap.api.services.help.Tip __this__ = (com.amap.api.services.help.Tip) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Tip@" + refId + "::getPoint(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Tip@" + __this__ + "::getPoint(" + "" + ")");
                 }
             
                 // invoke native method
-                com.amap.api.services.core.LatLonPoint __result__;
+                com.amap.api.services.core.LatLonPoint __result__ = null;
                 try {
-                    __result__ = ref.getPoint();
+                    __result__ = __this__.getPoint();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2798,34 +2404,26 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                Integer jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = System.identityHashCode(__result__);
-                    getHEAP().put(jsonableResult, __result__);
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.help.Tip::setPostion", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.core.LatLonPoint var1 = __var1RefId__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1RefId__) : null;
+                com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.help.Tip ref = (com.amap.api.services.help.Tip) getHEAP().get(refId);
+                com.amap.api.services.help.Tip __this__ = (com.amap.api.services.help.Tip) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Tip@" + refId + "::setPostion(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Tip@" + __this__ + "::setPostion(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setPostion(var1);
+                    __this__.setPostion(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2835,10 +2433,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.help.Tip::getName", (__args__, __methodResult__) -> {
@@ -2846,18 +2441,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.help.Tip ref = (com.amap.api.services.help.Tip) getHEAP().get(refId);
+                com.amap.api.services.help.Tip __this__ = (com.amap.api.services.help.Tip) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Tip@" + refId + "::getName(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Tip@" + __this__ + "::getName(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getName();
+                    __result__ = __this__.getName();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2867,29 +2461,26 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.help.Tip::setName", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.help.Tip ref = (com.amap.api.services.help.Tip) getHEAP().get(refId);
+                com.amap.api.services.help.Tip __this__ = (com.amap.api.services.help.Tip) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Tip@" + refId + "::setName(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Tip@" + __this__ + "::setName(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setName(var1);
+                    __this__.setName(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2899,10 +2490,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.help.Tip::getDistrict", (__args__, __methodResult__) -> {
@@ -2910,18 +2498,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.help.Tip ref = (com.amap.api.services.help.Tip) getHEAP().get(refId);
+                com.amap.api.services.help.Tip __this__ = (com.amap.api.services.help.Tip) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Tip@" + refId + "::getDistrict(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Tip@" + __this__ + "::getDistrict(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getDistrict();
+                    __result__ = __this__.getDistrict();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2931,29 +2518,26 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.help.Tip::setDistrict", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.help.Tip ref = (com.amap.api.services.help.Tip) getHEAP().get(refId);
+                com.amap.api.services.help.Tip __this__ = (com.amap.api.services.help.Tip) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Tip@" + refId + "::setDistrict(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Tip@" + __this__ + "::setDistrict(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setDistrict(var1);
+                    __this__.setDistrict(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2963,10 +2547,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.help.Tip::getAdcode", (__args__, __methodResult__) -> {
@@ -2974,18 +2555,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.help.Tip ref = (com.amap.api.services.help.Tip) getHEAP().get(refId);
+                com.amap.api.services.help.Tip __this__ = (com.amap.api.services.help.Tip) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Tip@" + refId + "::getAdcode(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Tip@" + __this__ + "::getAdcode(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getAdcode();
+                    __result__ = __this__.getAdcode();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2995,29 +2575,26 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.help.Tip::setAdcode", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.help.Tip ref = (com.amap.api.services.help.Tip) getHEAP().get(refId);
+                com.amap.api.services.help.Tip __this__ = (com.amap.api.services.help.Tip) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Tip@" + refId + "::setAdcode(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Tip@" + __this__ + "::setAdcode(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setAdcode(var1);
+                    __this__.setAdcode(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3027,10 +2604,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.help.Tip::getAddress", (__args__, __methodResult__) -> {
@@ -3038,18 +2612,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.help.Tip ref = (com.amap.api.services.help.Tip) getHEAP().get(refId);
+                com.amap.api.services.help.Tip __this__ = (com.amap.api.services.help.Tip) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Tip@" + refId + "::getAddress(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Tip@" + __this__ + "::getAddress(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getAddress();
+                    __result__ = __this__.getAddress();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3059,29 +2632,26 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.help.Tip::setAddress", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.help.Tip ref = (com.amap.api.services.help.Tip) getHEAP().get(refId);
+                com.amap.api.services.help.Tip __this__ = (com.amap.api.services.help.Tip) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Tip@" + refId + "::setAddress(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Tip@" + __this__ + "::setAddress(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setAddress(var1);
+                    __this__.setAddress(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3091,29 +2661,26 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.help.Tip::setTypeCode", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.help.Tip ref = (com.amap.api.services.help.Tip) getHEAP().get(refId);
+                com.amap.api.services.help.Tip __this__ = (com.amap.api.services.help.Tip) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Tip@" + refId + "::setTypeCode(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Tip@" + __this__ + "::setTypeCode(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setTypeCode(var1);
+                    __this__.setTypeCode(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3123,10 +2690,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.help.Tip::getTypeCode", (__args__, __methodResult__) -> {
@@ -3134,18 +2698,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.help.Tip ref = (com.amap.api.services.help.Tip) getHEAP().get(refId);
+                com.amap.api.services.help.Tip __this__ = (com.amap.api.services.help.Tip) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Tip@" + refId + "::getTypeCode(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Tip@" + __this__ + "::getTypeCode(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getTypeCode();
+                    __result__ = __this__.getTypeCode();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3155,10 +2718,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.help.InputtipsQuery::getKeyword", (__args__, __methodResult__) -> {
@@ -3166,18 +2726,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.help.InputtipsQuery ref = (com.amap.api.services.help.InputtipsQuery) getHEAP().get(refId);
+                com.amap.api.services.help.InputtipsQuery __this__ = (com.amap.api.services.help.InputtipsQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.InputtipsQuery@" + refId + "::getKeyword(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.InputtipsQuery@" + __this__ + "::getKeyword(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getKeyword();
+                    __result__ = __this__.getKeyword();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3187,10 +2746,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.help.InputtipsQuery::getCity", (__args__, __methodResult__) -> {
@@ -3198,18 +2754,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.help.InputtipsQuery ref = (com.amap.api.services.help.InputtipsQuery) getHEAP().get(refId);
+                com.amap.api.services.help.InputtipsQuery __this__ = (com.amap.api.services.help.InputtipsQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.InputtipsQuery@" + refId + "::getCity(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.InputtipsQuery@" + __this__ + "::getCity(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getCity();
+                    __result__ = __this__.getCity();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3219,29 +2774,26 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.help.InputtipsQuery::setType", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.help.InputtipsQuery ref = (com.amap.api.services.help.InputtipsQuery) getHEAP().get(refId);
+                com.amap.api.services.help.InputtipsQuery __this__ = (com.amap.api.services.help.InputtipsQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.InputtipsQuery@" + refId + "::setType(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.InputtipsQuery@" + __this__ + "::setType(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setType(var1);
+                    __this__.setType(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3251,10 +2803,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.help.InputtipsQuery::getType", (__args__, __methodResult__) -> {
@@ -3262,18 +2811,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.help.InputtipsQuery ref = (com.amap.api.services.help.InputtipsQuery) getHEAP().get(refId);
+                com.amap.api.services.help.InputtipsQuery __this__ = (com.amap.api.services.help.InputtipsQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.InputtipsQuery@" + refId + "::getType(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.InputtipsQuery@" + __this__ + "::getType(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getType();
+                    __result__ = __this__.getType();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3283,29 +2831,26 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.help.InputtipsQuery::setCityLimit", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.help.InputtipsQuery ref = (com.amap.api.services.help.InputtipsQuery) getHEAP().get(refId);
+                com.amap.api.services.help.InputtipsQuery __this__ = (com.amap.api.services.help.InputtipsQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.InputtipsQuery@" + refId + "::setCityLimit(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.InputtipsQuery@" + __this__ + "::setCityLimit(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setCityLimit(var1);
+                    __this__.setCityLimit(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3315,10 +2860,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.help.InputtipsQuery::getCityLimit", (__args__, __methodResult__) -> {
@@ -3326,18 +2868,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.help.InputtipsQuery ref = (com.amap.api.services.help.InputtipsQuery) getHEAP().get(refId);
+                com.amap.api.services.help.InputtipsQuery __this__ = (com.amap.api.services.help.InputtipsQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.InputtipsQuery@" + refId + "::getCityLimit(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.InputtipsQuery@" + __this__ + "::getCityLimit(" + "" + ")");
                 }
             
                 // invoke native method
-                boolean __result__;
+                Boolean __result__ = null;
                 try {
-                    __result__ = ref.getCityLimit();
+                    __result__ = __this__.getCityLimit();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3347,30 +2888,26 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                boolean jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.help.InputtipsQuery::setLocation", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.core.LatLonPoint var1 = __var1RefId__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1RefId__) : null;
+                com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.help.InputtipsQuery ref = (com.amap.api.services.help.InputtipsQuery) getHEAP().get(refId);
+                com.amap.api.services.help.InputtipsQuery __this__ = (com.amap.api.services.help.InputtipsQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.InputtipsQuery@" + refId + "::setLocation(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.InputtipsQuery@" + __this__ + "::setLocation(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setLocation(var1);
+                    __this__.setLocation(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3380,10 +2917,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.help.InputtipsQuery::getLocation", (__args__, __methodResult__) -> {
@@ -3391,18 +2925,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.help.InputtipsQuery ref = (com.amap.api.services.help.InputtipsQuery) getHEAP().get(refId);
+                com.amap.api.services.help.InputtipsQuery __this__ = (com.amap.api.services.help.InputtipsQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.InputtipsQuery@" + refId + "::getLocation(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.InputtipsQuery@" + __this__ + "::getLocation(" + "" + ")");
                 }
             
                 // invoke native method
-                com.amap.api.services.core.LatLonPoint __result__;
+                com.amap.api.services.core.LatLonPoint __result__ = null;
                 try {
-                    __result__ = ref.getLocation();
+                    __result__ = __this__.getLocation();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3412,14 +2945,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                Integer jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = System.identityHashCode(__result__);
-                    getHEAP().put(jsonableResult, __result__);
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.help.Inputtips::getQuery", (__args__, __methodResult__) -> {
@@ -3427,18 +2953,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.help.Inputtips ref = (com.amap.api.services.help.Inputtips) getHEAP().get(refId);
+                com.amap.api.services.help.Inputtips __this__ = (com.amap.api.services.help.Inputtips) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Inputtips@" + refId + "::getQuery(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Inputtips@" + __this__ + "::getQuery(" + "" + ")");
                 }
             
                 // invoke native method
-                com.amap.api.services.help.InputtipsQuery __result__;
+                com.amap.api.services.help.InputtipsQuery __result__ = null;
                 try {
-                    __result__ = ref.getQuery();
+                    __result__ = __this__.getQuery();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3448,34 +2973,26 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                Integer jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = System.identityHashCode(__result__);
-                    getHEAP().put(jsonableResult, __result__);
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.help.Inputtips::setQuery", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.help.InputtipsQuery var1 = __var1RefId__ != null ? (com.amap.api.services.help.InputtipsQuery) getHEAP().get(__var1RefId__) : null;
+                com.amap.api.services.help.InputtipsQuery var1 = (com.amap.api.services.help.InputtipsQuery) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.help.Inputtips ref = (com.amap.api.services.help.Inputtips) getHEAP().get(refId);
+                com.amap.api.services.help.Inputtips __this__ = (com.amap.api.services.help.Inputtips) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Inputtips@" + refId + "::setQuery(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Inputtips@" + __this__ + "::setQuery(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setQuery(var1);
+                    __this__.setQuery(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3485,10 +3002,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.help.Inputtips::setInputtipsListener", (__args__, __methodResult__) -> {
@@ -3496,19 +3010,19 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.help.Inputtips ref = (com.amap.api.services.help.Inputtips) getHEAP().get(refId);
+                com.amap.api.services.help.Inputtips __this__ = (com.amap.api.services.help.Inputtips) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Inputtips@" + refId + "::setInputtipsListener(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Inputtips@" + __this__ + "::setInputtipsListener(" + "" + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setInputtipsListener(new com.amap.api.services.help.Inputtips.InputtipsListener() {
+                    __this__.setInputtipsListener(new com.amap.api.services.help.Inputtips.InputtipsListener() {
                         // method channel
-                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.help.Inputtips::setInputtipsListener::Callback");
+                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.help.Inputtips::setInputtipsListener::Callback", new StandardMethodCodec(new FluttifyMessageCodec()));
                         android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
             
                         // call dart method
@@ -3557,10 +3071,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.help.Inputtips::requestInputtipsAsyn", (__args__, __methodResult__) -> {
@@ -3568,17 +3079,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.help.Inputtips ref = (com.amap.api.services.help.Inputtips) getHEAP().get(refId);
+                com.amap.api.services.help.Inputtips __this__ = (com.amap.api.services.help.Inputtips) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Inputtips@" + refId + "::requestInputtipsAsyn(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Inputtips@" + __this__ + "::requestInputtipsAsyn(" + "" + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.requestInputtipsAsyn();
+                    __this__.requestInputtipsAsyn();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3588,10 +3099,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.help.Inputtips::requestInputtips", (__args__, __methodResult__) -> {
@@ -3599,18 +3107,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.help.Inputtips ref = (com.amap.api.services.help.Inputtips) getHEAP().get(refId);
+                com.amap.api.services.help.Inputtips __this__ = (com.amap.api.services.help.Inputtips) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Inputtips@" + refId + "::requestInputtips(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Inputtips@" + __this__ + "::requestInputtips(" + "" + ")");
                 }
             
                 // invoke native method
-                java.util.List<com.amap.api.services.help.Tip> __result__;
+                java.util.List<com.amap.api.services.help.Tip> __result__ = null;
                 try {
-                    __result__ = ref.requestInputtips();
+                    __result__ = __this__.requestInputtips();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3620,38 +3127,28 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                List<Integer> jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = new ArrayList<>();
-                    for (com.amap.api.services.help.Tip item : __result__) {
-                        getHEAP().put(System.identityHashCode(item), item);
-                        jsonableResult.add(System.identityHashCode(item));
-                    }
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.help.Inputtips::requestInputtips__String__String", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // jsonable arg
+                // ref arg
                 String var2 = (String) ((Map<String, Object>) __args__).get("var2");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.help.Inputtips ref = (com.amap.api.services.help.Inputtips) getHEAP().get(refId);
+                com.amap.api.services.help.Inputtips __this__ = (com.amap.api.services.help.Inputtips) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Inputtips@" + refId + "::requestInputtips(" + var1 + var2 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Inputtips@" + __this__ + "::requestInputtips(" + var1 + var2 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.requestInputtips(var1, var2);
+                    __this__.requestInputtips(var1, var2);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3661,33 +3158,30 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.help.Inputtips::requestInputtips__String__String__String", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // jsonable arg
+                // ref arg
                 String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-                // jsonable arg
+                // ref arg
                 String var3 = (String) ((Map<String, Object>) __args__).get("var3");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.help.Inputtips ref = (com.amap.api.services.help.Inputtips) getHEAP().get(refId);
+                com.amap.api.services.help.Inputtips __this__ = (com.amap.api.services.help.Inputtips) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Inputtips@" + refId + "::requestInputtips(" + var1 + var2 + var3 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Inputtips@" + __this__ + "::requestInputtips(" + var1 + var2 + var3 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.requestInputtips(var1, var2, var3);
+                    __this__.requestInputtips(var1, var2, var3);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3697,10 +3191,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.share.ShareSearch.ShareNaviQuery::getFromAndTo", (__args__, __methodResult__) -> {
@@ -3708,18 +3199,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.share.ShareSearch.ShareNaviQuery ref = (com.amap.api.services.share.ShareSearch.ShareNaviQuery) getHEAP().get(refId);
+                com.amap.api.services.share.ShareSearch.ShareNaviQuery __this__ = (com.amap.api.services.share.ShareSearch.ShareNaviQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch.ShareNaviQuery@" + refId + "::getFromAndTo(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch.ShareNaviQuery@" + __this__ + "::getFromAndTo(" + "" + ")");
                 }
             
                 // invoke native method
-                com.amap.api.services.share.ShareSearch.ShareFromAndTo __result__;
+                com.amap.api.services.share.ShareSearch.ShareFromAndTo __result__ = null;
                 try {
-                    __result__ = ref.getFromAndTo();
+                    __result__ = __this__.getFromAndTo();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3729,14 +3219,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                Integer jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = System.identityHashCode(__result__);
-                    getHEAP().put(jsonableResult, __result__);
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.share.ShareSearch.ShareNaviQuery::getNaviMode", (__args__, __methodResult__) -> {
@@ -3744,18 +3227,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.share.ShareSearch.ShareNaviQuery ref = (com.amap.api.services.share.ShareSearch.ShareNaviQuery) getHEAP().get(refId);
+                com.amap.api.services.share.ShareSearch.ShareNaviQuery __this__ = (com.amap.api.services.share.ShareSearch.ShareNaviQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch.ShareNaviQuery@" + refId + "::getNaviMode(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch.ShareNaviQuery@" + __this__ + "::getNaviMode(" + "" + ")");
                 }
             
                 // invoke native method
-                int __result__;
+                Integer __result__ = null;
                 try {
-                    __result__ = ref.getNaviMode();
+                    __result__ = __this__.getNaviMode();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3765,10 +3247,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                int jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.share.ShareSearch.ShareBusRouteQuery::getBusMode", (__args__, __methodResult__) -> {
@@ -3776,18 +3255,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.share.ShareSearch.ShareBusRouteQuery ref = (com.amap.api.services.share.ShareSearch.ShareBusRouteQuery) getHEAP().get(refId);
+                com.amap.api.services.share.ShareSearch.ShareBusRouteQuery __this__ = (com.amap.api.services.share.ShareSearch.ShareBusRouteQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch.ShareBusRouteQuery@" + refId + "::getBusMode(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch.ShareBusRouteQuery@" + __this__ + "::getBusMode(" + "" + ")");
                 }
             
                 // invoke native method
-                int __result__;
+                Integer __result__ = null;
                 try {
-                    __result__ = ref.getBusMode();
+                    __result__ = __this__.getBusMode();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3797,10 +3275,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                int jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.share.ShareSearch.ShareBusRouteQuery::getShareFromAndTo", (__args__, __methodResult__) -> {
@@ -3808,18 +3283,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.share.ShareSearch.ShareBusRouteQuery ref = (com.amap.api.services.share.ShareSearch.ShareBusRouteQuery) getHEAP().get(refId);
+                com.amap.api.services.share.ShareSearch.ShareBusRouteQuery __this__ = (com.amap.api.services.share.ShareSearch.ShareBusRouteQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch.ShareBusRouteQuery@" + refId + "::getShareFromAndTo(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch.ShareBusRouteQuery@" + __this__ + "::getShareFromAndTo(" + "" + ")");
                 }
             
                 // invoke native method
-                com.amap.api.services.share.ShareSearch.ShareFromAndTo __result__;
+                com.amap.api.services.share.ShareSearch.ShareFromAndTo __result__ = null;
                 try {
-                    __result__ = ref.getShareFromAndTo();
+                    __result__ = __this__.getShareFromAndTo();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3829,14 +3303,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                Integer jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = System.identityHashCode(__result__);
-                    getHEAP().put(jsonableResult, __result__);
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.share.ShareSearch::setOnShareSearchListener", (__args__, __methodResult__) -> {
@@ -3844,19 +3311,19 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.share.ShareSearch ref = (com.amap.api.services.share.ShareSearch) getHEAP().get(refId);
+                com.amap.api.services.share.ShareSearch __this__ = (com.amap.api.services.share.ShareSearch) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch@" + refId + "::setOnShareSearchListener(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch@" + __this__ + "::setOnShareSearchListener(" + "" + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setOnShareSearchListener(new com.amap.api.services.share.ShareSearch.OnShareSearchListener() {
+                    __this__.setOnShareSearchListener(new com.amap.api.services.share.ShareSearch.OnShareSearchListener() {
                         // method channel
-                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.share.ShareSearch::setOnShareSearchListener::Callback");
+                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.share.ShareSearch::setOnShareSearchListener::Callback", new StandardMethodCodec(new FluttifyMessageCodec()));
                         android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
             
                         // call dart method
@@ -4056,30 +3523,26 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.share.ShareSearch::searchPoiShareUrlAsyn", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.core.PoiItem var1 = __var1RefId__ != null ? (com.amap.api.services.core.PoiItem) getHEAP().get(__var1RefId__) : null;
+                com.amap.api.services.core.PoiItem var1 = (com.amap.api.services.core.PoiItem) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.share.ShareSearch ref = (com.amap.api.services.share.ShareSearch) getHEAP().get(refId);
+                com.amap.api.services.share.ShareSearch __this__ = (com.amap.api.services.share.ShareSearch) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch@" + refId + "::searchPoiShareUrlAsyn(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch@" + __this__ + "::searchPoiShareUrlAsyn(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.searchPoiShareUrlAsyn(var1);
+                    __this__.searchPoiShareUrlAsyn(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4089,30 +3552,26 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.share.ShareSearch::searchBusRouteShareUrlAsyn", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.share.ShareSearch.ShareBusRouteQuery var1 = __var1RefId__ != null ? (com.amap.api.services.share.ShareSearch.ShareBusRouteQuery) getHEAP().get(__var1RefId__) : null;
+                com.amap.api.services.share.ShareSearch.ShareBusRouteQuery var1 = (com.amap.api.services.share.ShareSearch.ShareBusRouteQuery) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.share.ShareSearch ref = (com.amap.api.services.share.ShareSearch) getHEAP().get(refId);
+                com.amap.api.services.share.ShareSearch __this__ = (com.amap.api.services.share.ShareSearch) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch@" + refId + "::searchBusRouteShareUrlAsyn(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch@" + __this__ + "::searchBusRouteShareUrlAsyn(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.searchBusRouteShareUrlAsyn(var1);
+                    __this__.searchBusRouteShareUrlAsyn(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4122,30 +3581,26 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.share.ShareSearch::searchWalkRouteShareUrlAsyn", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery var1 = __var1RefId__ != null ? (com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery) getHEAP().get(__var1RefId__) : null;
+                com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery var1 = (com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.share.ShareSearch ref = (com.amap.api.services.share.ShareSearch) getHEAP().get(refId);
+                com.amap.api.services.share.ShareSearch __this__ = (com.amap.api.services.share.ShareSearch) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch@" + refId + "::searchWalkRouteShareUrlAsyn(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch@" + __this__ + "::searchWalkRouteShareUrlAsyn(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.searchWalkRouteShareUrlAsyn(var1);
+                    __this__.searchWalkRouteShareUrlAsyn(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4155,30 +3610,26 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.share.ShareSearch::searchDrivingRouteShareUrlAsyn", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery var1 = __var1RefId__ != null ? (com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery) getHEAP().get(__var1RefId__) : null;
+                com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery var1 = (com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.share.ShareSearch ref = (com.amap.api.services.share.ShareSearch) getHEAP().get(refId);
+                com.amap.api.services.share.ShareSearch __this__ = (com.amap.api.services.share.ShareSearch) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch@" + refId + "::searchDrivingRouteShareUrlAsyn(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch@" + __this__ + "::searchDrivingRouteShareUrlAsyn(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.searchDrivingRouteShareUrlAsyn(var1);
+                    __this__.searchDrivingRouteShareUrlAsyn(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4188,30 +3639,26 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.share.ShareSearch::searchNaviShareUrlAsyn", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.share.ShareSearch.ShareNaviQuery var1 = __var1RefId__ != null ? (com.amap.api.services.share.ShareSearch.ShareNaviQuery) getHEAP().get(__var1RefId__) : null;
+                com.amap.api.services.share.ShareSearch.ShareNaviQuery var1 = (com.amap.api.services.share.ShareSearch.ShareNaviQuery) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.share.ShareSearch ref = (com.amap.api.services.share.ShareSearch) getHEAP().get(refId);
+                com.amap.api.services.share.ShareSearch __this__ = (com.amap.api.services.share.ShareSearch) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch@" + refId + "::searchNaviShareUrlAsyn(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch@" + __this__ + "::searchNaviShareUrlAsyn(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.searchNaviShareUrlAsyn(var1);
+                    __this__.searchNaviShareUrlAsyn(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4221,30 +3668,26 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.share.ShareSearch::searchLocationShareUrlAsyn", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.core.LatLonSharePoint var1 = __var1RefId__ != null ? (com.amap.api.services.core.LatLonSharePoint) getHEAP().get(__var1RefId__) : null;
+                com.amap.api.services.core.LatLonSharePoint var1 = (com.amap.api.services.core.LatLonSharePoint) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.share.ShareSearch ref = (com.amap.api.services.share.ShareSearch) getHEAP().get(refId);
+                com.amap.api.services.share.ShareSearch __this__ = (com.amap.api.services.share.ShareSearch) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch@" + refId + "::searchLocationShareUrlAsyn(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch@" + __this__ + "::searchLocationShareUrlAsyn(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.searchLocationShareUrlAsyn(var1);
+                    __this__.searchLocationShareUrlAsyn(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4254,31 +3697,26 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.share.ShareSearch::searchPoiShareUrl", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.core.PoiItem var1 = __var1RefId__ != null ? (com.amap.api.services.core.PoiItem) getHEAP().get(__var1RefId__) : null;
+                com.amap.api.services.core.PoiItem var1 = (com.amap.api.services.core.PoiItem) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.share.ShareSearch ref = (com.amap.api.services.share.ShareSearch) getHEAP().get(refId);
+                com.amap.api.services.share.ShareSearch __this__ = (com.amap.api.services.share.ShareSearch) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch@" + refId + "::searchPoiShareUrl(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch@" + __this__ + "::searchPoiShareUrl(" + var1 + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.searchPoiShareUrl(var1);
+                    __result__ = __this__.searchPoiShareUrl(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4288,31 +3726,26 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.share.ShareSearch::searchNaviShareUrl", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.share.ShareSearch.ShareNaviQuery var1 = __var1RefId__ != null ? (com.amap.api.services.share.ShareSearch.ShareNaviQuery) getHEAP().get(__var1RefId__) : null;
+                com.amap.api.services.share.ShareSearch.ShareNaviQuery var1 = (com.amap.api.services.share.ShareSearch.ShareNaviQuery) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.share.ShareSearch ref = (com.amap.api.services.share.ShareSearch) getHEAP().get(refId);
+                com.amap.api.services.share.ShareSearch __this__ = (com.amap.api.services.share.ShareSearch) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch@" + refId + "::searchNaviShareUrl(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch@" + __this__ + "::searchNaviShareUrl(" + var1 + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.searchNaviShareUrl(var1);
+                    __result__ = __this__.searchNaviShareUrl(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4322,31 +3755,26 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.share.ShareSearch::searchLocationShareUrl", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.core.LatLonSharePoint var1 = __var1RefId__ != null ? (com.amap.api.services.core.LatLonSharePoint) getHEAP().get(__var1RefId__) : null;
+                com.amap.api.services.core.LatLonSharePoint var1 = (com.amap.api.services.core.LatLonSharePoint) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.share.ShareSearch ref = (com.amap.api.services.share.ShareSearch) getHEAP().get(refId);
+                com.amap.api.services.share.ShareSearch __this__ = (com.amap.api.services.share.ShareSearch) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch@" + refId + "::searchLocationShareUrl(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch@" + __this__ + "::searchLocationShareUrl(" + var1 + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.searchLocationShareUrl(var1);
+                    __result__ = __this__.searchLocationShareUrl(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4356,31 +3784,26 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.share.ShareSearch::searchBusRouteShareUrl", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.share.ShareSearch.ShareBusRouteQuery var1 = __var1RefId__ != null ? (com.amap.api.services.share.ShareSearch.ShareBusRouteQuery) getHEAP().get(__var1RefId__) : null;
+                com.amap.api.services.share.ShareSearch.ShareBusRouteQuery var1 = (com.amap.api.services.share.ShareSearch.ShareBusRouteQuery) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.share.ShareSearch ref = (com.amap.api.services.share.ShareSearch) getHEAP().get(refId);
+                com.amap.api.services.share.ShareSearch __this__ = (com.amap.api.services.share.ShareSearch) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch@" + refId + "::searchBusRouteShareUrl(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch@" + __this__ + "::searchBusRouteShareUrl(" + var1 + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.searchBusRouteShareUrl(var1);
+                    __result__ = __this__.searchBusRouteShareUrl(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4390,31 +3813,26 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.share.ShareSearch::searchDrivingRouteShareUrl", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery var1 = __var1RefId__ != null ? (com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery) getHEAP().get(__var1RefId__) : null;
+                com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery var1 = (com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.share.ShareSearch ref = (com.amap.api.services.share.ShareSearch) getHEAP().get(refId);
+                com.amap.api.services.share.ShareSearch __this__ = (com.amap.api.services.share.ShareSearch) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch@" + refId + "::searchDrivingRouteShareUrl(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch@" + __this__ + "::searchDrivingRouteShareUrl(" + var1 + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.searchDrivingRouteShareUrl(var1);
+                    __result__ = __this__.searchDrivingRouteShareUrl(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4424,31 +3842,26 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.share.ShareSearch::searchWalkRouteShareUrl", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery var1 = __var1RefId__ != null ? (com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery) getHEAP().get(__var1RefId__) : null;
+                com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery var1 = (com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.share.ShareSearch ref = (com.amap.api.services.share.ShareSearch) getHEAP().get(refId);
+                com.amap.api.services.share.ShareSearch __this__ = (com.amap.api.services.share.ShareSearch) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch@" + refId + "::searchWalkRouteShareUrl(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch@" + __this__ + "::searchWalkRouteShareUrl(" + var1 + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.searchWalkRouteShareUrl(var1);
+                    __result__ = __this__.searchWalkRouteShareUrl(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4458,29 +3871,26 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.share.ShareSearch.ShareFromAndTo::setFromName", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.share.ShareSearch.ShareFromAndTo ref = (com.amap.api.services.share.ShareSearch.ShareFromAndTo) getHEAP().get(refId);
+                com.amap.api.services.share.ShareSearch.ShareFromAndTo __this__ = (com.amap.api.services.share.ShareSearch.ShareFromAndTo) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch.ShareFromAndTo@" + refId + "::setFromName(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch.ShareFromAndTo@" + __this__ + "::setFromName(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setFromName(var1);
+                    __this__.setFromName(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4490,29 +3900,26 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.share.ShareSearch.ShareFromAndTo::setToName", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.share.ShareSearch.ShareFromAndTo ref = (com.amap.api.services.share.ShareSearch.ShareFromAndTo) getHEAP().get(refId);
+                com.amap.api.services.share.ShareSearch.ShareFromAndTo __this__ = (com.amap.api.services.share.ShareSearch.ShareFromAndTo) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch.ShareFromAndTo@" + refId + "::setToName(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch.ShareFromAndTo@" + __this__ + "::setToName(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setToName(var1);
+                    __this__.setToName(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4522,10 +3929,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.share.ShareSearch.ShareFromAndTo::getFrom", (__args__, __methodResult__) -> {
@@ -4533,18 +3937,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.share.ShareSearch.ShareFromAndTo ref = (com.amap.api.services.share.ShareSearch.ShareFromAndTo) getHEAP().get(refId);
+                com.amap.api.services.share.ShareSearch.ShareFromAndTo __this__ = (com.amap.api.services.share.ShareSearch.ShareFromAndTo) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch.ShareFromAndTo@" + refId + "::getFrom(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch.ShareFromAndTo@" + __this__ + "::getFrom(" + "" + ")");
                 }
             
                 // invoke native method
-                com.amap.api.services.core.LatLonPoint __result__;
+                com.amap.api.services.core.LatLonPoint __result__ = null;
                 try {
-                    __result__ = ref.getFrom();
+                    __result__ = __this__.getFrom();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4554,14 +3957,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                Integer jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = System.identityHashCode(__result__);
-                    getHEAP().put(jsonableResult, __result__);
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.share.ShareSearch.ShareFromAndTo::getTo", (__args__, __methodResult__) -> {
@@ -4569,18 +3965,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.share.ShareSearch.ShareFromAndTo ref = (com.amap.api.services.share.ShareSearch.ShareFromAndTo) getHEAP().get(refId);
+                com.amap.api.services.share.ShareSearch.ShareFromAndTo __this__ = (com.amap.api.services.share.ShareSearch.ShareFromAndTo) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch.ShareFromAndTo@" + refId + "::getTo(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch.ShareFromAndTo@" + __this__ + "::getTo(" + "" + ")");
                 }
             
                 // invoke native method
-                com.amap.api.services.core.LatLonPoint __result__;
+                com.amap.api.services.core.LatLonPoint __result__ = null;
                 try {
-                    __result__ = ref.getTo();
+                    __result__ = __this__.getTo();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4590,14 +3985,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                Integer jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = System.identityHashCode(__result__);
-                    getHEAP().put(jsonableResult, __result__);
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.share.ShareSearch.ShareFromAndTo::getFromName", (__args__, __methodResult__) -> {
@@ -4605,18 +3993,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.share.ShareSearch.ShareFromAndTo ref = (com.amap.api.services.share.ShareSearch.ShareFromAndTo) getHEAP().get(refId);
+                com.amap.api.services.share.ShareSearch.ShareFromAndTo __this__ = (com.amap.api.services.share.ShareSearch.ShareFromAndTo) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch.ShareFromAndTo@" + refId + "::getFromName(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch.ShareFromAndTo@" + __this__ + "::getFromName(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getFromName();
+                    __result__ = __this__.getFromName();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4626,10 +4013,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.share.ShareSearch.ShareFromAndTo::getToName", (__args__, __methodResult__) -> {
@@ -4637,18 +4021,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.share.ShareSearch.ShareFromAndTo ref = (com.amap.api.services.share.ShareSearch.ShareFromAndTo) getHEAP().get(refId);
+                com.amap.api.services.share.ShareSearch.ShareFromAndTo __this__ = (com.amap.api.services.share.ShareSearch.ShareFromAndTo) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch.ShareFromAndTo@" + refId + "::getToName(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch.ShareFromAndTo@" + __this__ + "::getToName(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getToName();
+                    __result__ = __this__.getToName();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4658,10 +4041,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery::getWalkMode", (__args__, __methodResult__) -> {
@@ -4669,18 +4049,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery ref = (com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery) getHEAP().get(refId);
+                com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery __this__ = (com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery@" + refId + "::getWalkMode(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery@" + __this__ + "::getWalkMode(" + "" + ")");
                 }
             
                 // invoke native method
-                int __result__;
+                Integer __result__ = null;
                 try {
-                    __result__ = ref.getWalkMode();
+                    __result__ = __this__.getWalkMode();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4690,10 +4069,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                int jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery::getShareFromAndTo", (__args__, __methodResult__) -> {
@@ -4701,18 +4077,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery ref = (com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery) getHEAP().get(refId);
+                com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery __this__ = (com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery@" + refId + "::getShareFromAndTo(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery@" + __this__ + "::getShareFromAndTo(" + "" + ")");
                 }
             
                 // invoke native method
-                com.amap.api.services.share.ShareSearch.ShareFromAndTo __result__;
+                com.amap.api.services.share.ShareSearch.ShareFromAndTo __result__ = null;
                 try {
-                    __result__ = ref.getShareFromAndTo();
+                    __result__ = __this__.getShareFromAndTo();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4722,14 +4097,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                Integer jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = System.identityHashCode(__result__);
-                    getHEAP().put(jsonableResult, __result__);
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery::getDrivingMode", (__args__, __methodResult__) -> {
@@ -4737,18 +4105,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery ref = (com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery) getHEAP().get(refId);
+                com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery __this__ = (com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery@" + refId + "::getDrivingMode(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery@" + __this__ + "::getDrivingMode(" + "" + ")");
                 }
             
                 // invoke native method
-                int __result__;
+                Integer __result__ = null;
                 try {
-                    __result__ = ref.getDrivingMode();
+                    __result__ = __this__.getDrivingMode();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4758,10 +4125,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                int jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery::getShareFromAndTo", (__args__, __methodResult__) -> {
@@ -4769,18 +4133,17 @@ public class SubHandler5 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery ref = (com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery) getHEAP().get(refId);
+                com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery __this__ = (com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery@" + refId + "::getShareFromAndTo(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery@" + __this__ + "::getShareFromAndTo(" + "" + ")");
                 }
             
                 // invoke native method
-                com.amap.api.services.share.ShareSearch.ShareFromAndTo __result__;
+                com.amap.api.services.share.ShareSearch.ShareFromAndTo __result__ = null;
                 try {
-                    __result__ = ref.getShareFromAndTo();
+                    __result__ = __this__.getShareFromAndTo();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4790,14 +4153,7 @@ public class SubHandler5 {
                     return;
                 }
             
-                // convert result to jsonable result
-                Integer jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = System.identityHashCode(__result__);
-                    getHEAP().put(jsonableResult, __result__);
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.traffic.TrafficStatusInfo::getName_batch", (__argsBatch__, __methodResult__) -> {
@@ -4810,13 +4166,12 @@ public class SubHandler5 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.traffic.TrafficStatusInfo ref = (com.amap.api.services.traffic.TrafficStatusInfo) getHEAP().get(refId);
+                    com.amap.api.services.traffic.TrafficStatusInfo __this__ = (com.amap.api.services.traffic.TrafficStatusInfo) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    String __result__;
+                    String __result__ = null;
                     try {
-                        __result__ = ref.getName();
+                        __result__ = __this__.getName();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -4826,32 +4181,29 @@ public class SubHandler5 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("com.amap.api.services.traffic.TrafficStatusInfo::setName_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.traffic.TrafficStatusInfo ref = (com.amap.api.services.traffic.TrafficStatusInfo) getHEAP().get(refId);
+                    com.amap.api.services.traffic.TrafficStatusInfo __this__ = (com.amap.api.services.traffic.TrafficStatusInfo) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
+                    Void __result__ = null;
                     try {
-                        ref.setName(var1);
+                        __this__.setName(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -4861,10 +4213,7 @@ public class SubHandler5 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -4880,13 +4229,12 @@ public class SubHandler5 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.traffic.TrafficStatusInfo ref = (com.amap.api.services.traffic.TrafficStatusInfo) getHEAP().get(refId);
+                    com.amap.api.services.traffic.TrafficStatusInfo __this__ = (com.amap.api.services.traffic.TrafficStatusInfo) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    String __result__;
+                    String __result__ = null;
                     try {
-                        __result__ = ref.getStatus();
+                        __result__ = __this__.getStatus();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -4896,32 +4244,29 @@ public class SubHandler5 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("com.amap.api.services.traffic.TrafficStatusInfo::setStatus_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.traffic.TrafficStatusInfo ref = (com.amap.api.services.traffic.TrafficStatusInfo) getHEAP().get(refId);
+                    com.amap.api.services.traffic.TrafficStatusInfo __this__ = (com.amap.api.services.traffic.TrafficStatusInfo) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
+                    Void __result__ = null;
                     try {
-                        ref.setStatus(var1);
+                        __this__.setStatus(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -4931,10 +4276,7 @@ public class SubHandler5 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -4950,13 +4292,12 @@ public class SubHandler5 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.traffic.TrafficStatusInfo ref = (com.amap.api.services.traffic.TrafficStatusInfo) getHEAP().get(refId);
+                    com.amap.api.services.traffic.TrafficStatusInfo __this__ = (com.amap.api.services.traffic.TrafficStatusInfo) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    String __result__;
+                    String __result__ = null;
                     try {
-                        __result__ = ref.getDirection();
+                        __result__ = __this__.getDirection();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -4966,32 +4307,29 @@ public class SubHandler5 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("com.amap.api.services.traffic.TrafficStatusInfo::setDirection_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.traffic.TrafficStatusInfo ref = (com.amap.api.services.traffic.TrafficStatusInfo) getHEAP().get(refId);
+                    com.amap.api.services.traffic.TrafficStatusInfo __this__ = (com.amap.api.services.traffic.TrafficStatusInfo) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
+                    Void __result__ = null;
                     try {
-                        ref.setDirection(var1);
+                        __this__.setDirection(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5001,10 +4339,7 @@ public class SubHandler5 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -5020,13 +4355,12 @@ public class SubHandler5 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.traffic.TrafficStatusInfo ref = (com.amap.api.services.traffic.TrafficStatusInfo) getHEAP().get(refId);
+                    com.amap.api.services.traffic.TrafficStatusInfo __this__ = (com.amap.api.services.traffic.TrafficStatusInfo) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    int __result__;
+                    Integer __result__ = null;
                     try {
-                        __result__ = ref.getAngle();
+                        __result__ = __this__.getAngle();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5036,32 +4370,29 @@ public class SubHandler5 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    int jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("com.amap.api.services.traffic.TrafficStatusInfo::setAngle_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     int var1 = (int) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.traffic.TrafficStatusInfo ref = (com.amap.api.services.traffic.TrafficStatusInfo) getHEAP().get(refId);
+                    com.amap.api.services.traffic.TrafficStatusInfo __this__ = (com.amap.api.services.traffic.TrafficStatusInfo) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
+                    Void __result__ = null;
                     try {
-                        ref.setAngle(var1);
+                        __this__.setAngle(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5071,10 +4402,7 @@ public class SubHandler5 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -5090,13 +4418,12 @@ public class SubHandler5 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.traffic.TrafficStatusInfo ref = (com.amap.api.services.traffic.TrafficStatusInfo) getHEAP().get(refId);
+                    com.amap.api.services.traffic.TrafficStatusInfo __this__ = (com.amap.api.services.traffic.TrafficStatusInfo) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    float __result__;
+                    Float __result__ = null;
                     try {
-                        __result__ = ref.getSpeed();
+                        __result__ = __this__.getSpeed();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5106,32 +4433,29 @@ public class SubHandler5 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    float jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("com.amap.api.services.traffic.TrafficStatusInfo::setSpeed_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // jsonable arg
-                    Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
+                    // ref arg
+                    float var1 = (float) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.traffic.TrafficStatusInfo ref = (com.amap.api.services.traffic.TrafficStatusInfo) getHEAP().get(refId);
+                    com.amap.api.services.traffic.TrafficStatusInfo __this__ = (com.amap.api.services.traffic.TrafficStatusInfo) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
+                    Void __result__ = null;
                     try {
-                        ref.setSpeed(new Double(var1).floatValue());
+                        __this__.setSpeed(new Double(var1).floatValue());
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5141,10 +4465,7 @@ public class SubHandler5 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -5160,13 +4481,12 @@ public class SubHandler5 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.traffic.TrafficStatusInfo ref = (com.amap.api.services.traffic.TrafficStatusInfo) getHEAP().get(refId);
+                    com.amap.api.services.traffic.TrafficStatusInfo __this__ = (com.amap.api.services.traffic.TrafficStatusInfo) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    String __result__;
+                    String __result__ = null;
                     try {
-                        __result__ = ref.getLcodes();
+                        __result__ = __this__.getLcodes();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5176,32 +4496,29 @@ public class SubHandler5 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("com.amap.api.services.traffic.TrafficStatusInfo::setLcodes_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.traffic.TrafficStatusInfo ref = (com.amap.api.services.traffic.TrafficStatusInfo) getHEAP().get(refId);
+                    com.amap.api.services.traffic.TrafficStatusInfo __this__ = (com.amap.api.services.traffic.TrafficStatusInfo) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
+                    Void __result__ = null;
                     try {
-                        ref.setLcodes(var1);
+                        __this__.setLcodes(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5211,17 +4528,14 @@ public class SubHandler5 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("com.amap.api.services.traffic.TrafficStatusInfo::getCoordinates_batch", (__argsBatch__, __methodResult__) -> {
-                List<List<Integer>> __resultList__ = new ArrayList<>();
+                List<java.util.List<com.amap.api.services.core.LatLonPoint>> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
@@ -5230,13 +4544,12 @@ public class SubHandler5 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.traffic.TrafficStatusInfo ref = (com.amap.api.services.traffic.TrafficStatusInfo) getHEAP().get(refId);
+                    com.amap.api.services.traffic.TrafficStatusInfo __this__ = (com.amap.api.services.traffic.TrafficStatusInfo) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    java.util.List<com.amap.api.services.core.LatLonPoint> __result__;
+                    java.util.List<com.amap.api.services.core.LatLonPoint> __result__ = null;
                     try {
-                        __result__ = ref.getCoordinates();
+                        __result__ = __this__.getCoordinates();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5246,43 +4559,29 @@ public class SubHandler5 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    List<Integer> jsonableResult = null;
-                    if (__result__ != null) {
-                        jsonableResult = new ArrayList<>();
-                        for (com.amap.api.services.core.LatLonPoint item : __result__) {
-                            getHEAP().put(System.identityHashCode(item), item);
-                            jsonableResult.add(System.identityHashCode(item));
-                        }
-                    }
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("com.amap.api.services.traffic.TrafficStatusInfo::setCoordinates_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // list arg
-                    List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) __args__).get("var1");
-                    java.util.List<com.amap.api.services.core.LatLonPoint> var1 = new ArrayList<>();
-                    for (int refId : var1RefIdList) {
-                        ((ArrayList<com.amap.api.services.core.LatLonPoint>) var1).add((com.amap.api.services.core.LatLonPoint) getHEAP().get(refId));
-                    }
+                    // ref arg
+                    java.util.List<com.amap.api.services.core.LatLonPoint> var1 = (java.util.List<com.amap.api.services.core.LatLonPoint>) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.traffic.TrafficStatusInfo ref = (com.amap.api.services.traffic.TrafficStatusInfo) getHEAP().get(refId);
+                    com.amap.api.services.traffic.TrafficStatusInfo __this__ = (com.amap.api.services.traffic.TrafficStatusInfo) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
+                    Void __result__ = null;
                     try {
-                        ref.setCoordinates((ArrayList) var1);
+                        __this__.setCoordinates((ArrayList) var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5292,10 +4591,7 @@ public class SubHandler5 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -5311,13 +4607,12 @@ public class SubHandler5 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.traffic.TrafficStatusResult ref = (com.amap.api.services.traffic.TrafficStatusResult) getHEAP().get(refId);
+                    com.amap.api.services.traffic.TrafficStatusResult __this__ = (com.amap.api.services.traffic.TrafficStatusResult) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    String __result__;
+                    String __result__ = null;
                     try {
-                        __result__ = ref.getDescription();
+                        __result__ = __this__.getDescription();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5327,107 +4622,29 @@ public class SubHandler5 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("com.amap.api.services.traffic.TrafficStatusResult::setDescription_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.traffic.TrafficStatusResult ref = (com.amap.api.services.traffic.TrafficStatusResult) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setDescription(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.amap.api.services.traffic.TrafficStatusResult::getEvaluation_batch", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.traffic.TrafficStatusResult ref = (com.amap.api.services.traffic.TrafficStatusResult) getHEAP().get(refId);
-            
-                    // invoke native method
-                    com.amap.api.services.traffic.TrafficStatusEvaluation __result__;
-                    try {
-                        __result__ = ref.getEvaluation();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    Integer jsonableResult = null;
-                    if (__result__ != null) {
-                        jsonableResult = System.identityHashCode(__result__);
-                        getHEAP().put(jsonableResult, __result__);
-                    }
-            
-                    __resultList__.add(jsonableResult);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.amap.api.services.traffic.TrafficStatusResult::setEvaluation_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
                     // ref arg
-                    Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                    com.amap.api.services.traffic.TrafficStatusEvaluation var1 = __var1RefId__ != null ? (com.amap.api.services.traffic.TrafficStatusEvaluation) getHEAP().get(__var1RefId__) : null;
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.traffic.TrafficStatusResult ref = (com.amap.api.services.traffic.TrafficStatusResult) getHEAP().get(refId);
+                    com.amap.api.services.traffic.TrafficStatusResult __this__ = (com.amap.api.services.traffic.TrafficStatusResult) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
+                    Void __result__ = null;
                     try {
-                        ref.setEvaluation(var1);
+                        __this__.setDescription(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5437,17 +4654,77 @@ public class SubHandler5 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
+                    __resultList__.add(__result__);
+                }
             
-                    __resultList__.add(jsonableResult);
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.traffic.TrafficStatusResult::getEvaluation_batch", (__argsBatch__, __methodResult__) -> {
+                List<com.amap.api.services.traffic.TrafficStatusEvaluation> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.traffic.TrafficStatusResult __this__ = (com.amap.api.services.traffic.TrafficStatusResult) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    com.amap.api.services.traffic.TrafficStatusEvaluation __result__ = null;
+                    try {
+                        __result__ = __this__.getEvaluation();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.traffic.TrafficStatusResult::setEvaluation_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    com.amap.api.services.traffic.TrafficStatusEvaluation var1 = (com.amap.api.services.traffic.TrafficStatusEvaluation) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.traffic.TrafficStatusResult __this__ = (com.amap.api.services.traffic.TrafficStatusResult) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setEvaluation(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("com.amap.api.services.traffic.TrafficStatusResult::getRoads_batch", (__argsBatch__, __methodResult__) -> {
-                List<List<Integer>> __resultList__ = new ArrayList<>();
+                List<java.util.List<com.amap.api.services.traffic.TrafficStatusInfo>> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
@@ -5456,13 +4733,12 @@ public class SubHandler5 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.traffic.TrafficStatusResult ref = (com.amap.api.services.traffic.TrafficStatusResult) getHEAP().get(refId);
+                    com.amap.api.services.traffic.TrafficStatusResult __this__ = (com.amap.api.services.traffic.TrafficStatusResult) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    java.util.List<com.amap.api.services.traffic.TrafficStatusInfo> __result__;
+                    java.util.List<com.amap.api.services.traffic.TrafficStatusInfo> __result__ = null;
                     try {
-                        __result__ = ref.getRoads();
+                        __result__ = __this__.getRoads();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5472,43 +4748,29 @@ public class SubHandler5 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    List<Integer> jsonableResult = null;
-                    if (__result__ != null) {
-                        jsonableResult = new ArrayList<>();
-                        for (com.amap.api.services.traffic.TrafficStatusInfo item : __result__) {
-                            getHEAP().put(System.identityHashCode(item), item);
-                            jsonableResult.add(System.identityHashCode(item));
-                        }
-                    }
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("com.amap.api.services.traffic.TrafficStatusResult::setRoads_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // list arg
-                    List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) __args__).get("var1");
-                    java.util.List<com.amap.api.services.traffic.TrafficStatusInfo> var1 = new ArrayList<>();
-                    for (int refId : var1RefIdList) {
-                        ((ArrayList<com.amap.api.services.traffic.TrafficStatusInfo>) var1).add((com.amap.api.services.traffic.TrafficStatusInfo) getHEAP().get(refId));
-                    }
+                    // ref arg
+                    java.util.List<com.amap.api.services.traffic.TrafficStatusInfo> var1 = (java.util.List<com.amap.api.services.traffic.TrafficStatusInfo>) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.traffic.TrafficStatusResult ref = (com.amap.api.services.traffic.TrafficStatusResult) getHEAP().get(refId);
+                    com.amap.api.services.traffic.TrafficStatusResult __this__ = (com.amap.api.services.traffic.TrafficStatusResult) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
+                    Void __result__ = null;
                     try {
-                        ref.setRoads((ArrayList) var1);
+                        __this__.setRoads((ArrayList) var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5518,10 +4780,7 @@ public class SubHandler5 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -5537,13 +4796,12 @@ public class SubHandler5 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.traffic.RoadTrafficQuery ref = (com.amap.api.services.traffic.RoadTrafficQuery) getHEAP().get(refId);
+                    com.amap.api.services.traffic.RoadTrafficQuery __this__ = (com.amap.api.services.traffic.RoadTrafficQuery) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    String __result__;
+                    String __result__ = null;
                     try {
-                        __result__ = ref.getName();
+                        __result__ = __this__.getName();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5553,32 +4811,29 @@ public class SubHandler5 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("com.amap.api.services.traffic.RoadTrafficQuery::setName_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.traffic.RoadTrafficQuery ref = (com.amap.api.services.traffic.RoadTrafficQuery) getHEAP().get(refId);
+                    com.amap.api.services.traffic.RoadTrafficQuery __this__ = (com.amap.api.services.traffic.RoadTrafficQuery) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
+                    Void __result__ = null;
                     try {
-                        ref.setName(var1);
+                        __this__.setName(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5588,10 +4843,7 @@ public class SubHandler5 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -5607,13 +4859,12 @@ public class SubHandler5 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.traffic.RoadTrafficQuery ref = (com.amap.api.services.traffic.RoadTrafficQuery) getHEAP().get(refId);
+                    com.amap.api.services.traffic.RoadTrafficQuery __this__ = (com.amap.api.services.traffic.RoadTrafficQuery) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    String __result__;
+                    String __result__ = null;
                     try {
-                        __result__ = ref.getAdCode();
+                        __result__ = __this__.getAdCode();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5623,107 +4874,29 @@ public class SubHandler5 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("com.amap.api.services.traffic.RoadTrafficQuery::setAdCode_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // jsonable arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.traffic.RoadTrafficQuery ref = (com.amap.api.services.traffic.RoadTrafficQuery) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setAdCode(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.amap.api.services.traffic.CircleTrafficQuery::getCenterPoint_batch", (__argsBatch__, __methodResult__) -> {
-                List<Integer> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.traffic.CircleTrafficQuery ref = (com.amap.api.services.traffic.CircleTrafficQuery) getHEAP().get(refId);
-            
-                    // invoke native method
-                    com.amap.api.services.core.LatLonPoint __result__;
-                    try {
-                        __result__ = ref.getCenterPoint();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    Integer jsonableResult = null;
-                    if (__result__ != null) {
-                        jsonableResult = System.identityHashCode(__result__);
-                        getHEAP().put(jsonableResult, __result__);
-                    }
-            
-                    __resultList__.add(jsonableResult);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.amap.api.services.traffic.CircleTrafficQuery::setCenterPoint_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
                     // ref arg
-                    Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                    com.amap.api.services.core.LatLonPoint var1 = __var1RefId__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1RefId__) : null;
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.traffic.CircleTrafficQuery ref = (com.amap.api.services.traffic.CircleTrafficQuery) getHEAP().get(refId);
+                    com.amap.api.services.traffic.RoadTrafficQuery __this__ = (com.amap.api.services.traffic.RoadTrafficQuery) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
+                    Void __result__ = null;
                     try {
-                        ref.setCenterPoint(var1);
+                        __this__.setAdCode(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5733,10 +4906,70 @@ public class SubHandler5 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
+                    __resultList__.add(__result__);
+                }
             
-                    __resultList__.add(jsonableResult);
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.traffic.CircleTrafficQuery::getCenterPoint_batch", (__argsBatch__, __methodResult__) -> {
+                List<com.amap.api.services.core.LatLonPoint> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.traffic.CircleTrafficQuery __this__ = (com.amap.api.services.traffic.CircleTrafficQuery) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    com.amap.api.services.core.LatLonPoint __result__ = null;
+                    try {
+                        __result__ = __this__.getCenterPoint();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.traffic.CircleTrafficQuery::setCenterPoint_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.traffic.CircleTrafficQuery __this__ = (com.amap.api.services.traffic.CircleTrafficQuery) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setCenterPoint(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -5752,13 +4985,12 @@ public class SubHandler5 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.traffic.CircleTrafficQuery ref = (com.amap.api.services.traffic.CircleTrafficQuery) getHEAP().get(refId);
+                    com.amap.api.services.traffic.CircleTrafficQuery __this__ = (com.amap.api.services.traffic.CircleTrafficQuery) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    int __result__;
+                    Integer __result__ = null;
                     try {
-                        __result__ = ref.getRadius();
+                        __result__ = __this__.getRadius();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5768,32 +5000,29 @@ public class SubHandler5 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    int jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("com.amap.api.services.traffic.CircleTrafficQuery::setRadius_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     int var1 = (int) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.traffic.CircleTrafficQuery ref = (com.amap.api.services.traffic.CircleTrafficQuery) getHEAP().get(refId);
+                    com.amap.api.services.traffic.CircleTrafficQuery __this__ = (com.amap.api.services.traffic.CircleTrafficQuery) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
+                    Void __result__ = null;
                     try {
-                        ref.setRadius(var1);
+                        __this__.setRadius(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5803,10 +5032,7 @@ public class SubHandler5 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -5822,13 +5048,12 @@ public class SubHandler5 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.traffic.TrafficStatusEvaluation ref = (com.amap.api.services.traffic.TrafficStatusEvaluation) getHEAP().get(refId);
+                    com.amap.api.services.traffic.TrafficStatusEvaluation __this__ = (com.amap.api.services.traffic.TrafficStatusEvaluation) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    String __result__;
+                    String __result__ = null;
                     try {
-                        __result__ = ref.getExpedite();
+                        __result__ = __this__.getExpedite();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5838,32 +5063,29 @@ public class SubHandler5 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("com.amap.api.services.traffic.TrafficStatusEvaluation::setExpedite_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.traffic.TrafficStatusEvaluation ref = (com.amap.api.services.traffic.TrafficStatusEvaluation) getHEAP().get(refId);
+                    com.amap.api.services.traffic.TrafficStatusEvaluation __this__ = (com.amap.api.services.traffic.TrafficStatusEvaluation) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
+                    Void __result__ = null;
                     try {
-                        ref.setExpedite(var1);
+                        __this__.setExpedite(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5873,10 +5095,7 @@ public class SubHandler5 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -5892,13 +5111,12 @@ public class SubHandler5 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.traffic.TrafficStatusEvaluation ref = (com.amap.api.services.traffic.TrafficStatusEvaluation) getHEAP().get(refId);
+                    com.amap.api.services.traffic.TrafficStatusEvaluation __this__ = (com.amap.api.services.traffic.TrafficStatusEvaluation) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    String __result__;
+                    String __result__ = null;
                     try {
-                        __result__ = ref.getCongested();
+                        __result__ = __this__.getCongested();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5908,32 +5126,29 @@ public class SubHandler5 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("com.amap.api.services.traffic.TrafficStatusEvaluation::setCongested_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.traffic.TrafficStatusEvaluation ref = (com.amap.api.services.traffic.TrafficStatusEvaluation) getHEAP().get(refId);
+                    com.amap.api.services.traffic.TrafficStatusEvaluation __this__ = (com.amap.api.services.traffic.TrafficStatusEvaluation) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
+                    Void __result__ = null;
                     try {
-                        ref.setCongested(var1);
+                        __this__.setCongested(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5943,10 +5158,7 @@ public class SubHandler5 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -5962,13 +5174,12 @@ public class SubHandler5 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.traffic.TrafficStatusEvaluation ref = (com.amap.api.services.traffic.TrafficStatusEvaluation) getHEAP().get(refId);
+                    com.amap.api.services.traffic.TrafficStatusEvaluation __this__ = (com.amap.api.services.traffic.TrafficStatusEvaluation) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    String __result__;
+                    String __result__ = null;
                     try {
-                        __result__ = ref.getBlocked();
+                        __result__ = __this__.getBlocked();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5978,32 +5189,29 @@ public class SubHandler5 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("com.amap.api.services.traffic.TrafficStatusEvaluation::setBlocked_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.traffic.TrafficStatusEvaluation ref = (com.amap.api.services.traffic.TrafficStatusEvaluation) getHEAP().get(refId);
+                    com.amap.api.services.traffic.TrafficStatusEvaluation __this__ = (com.amap.api.services.traffic.TrafficStatusEvaluation) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
+                    Void __result__ = null;
                     try {
-                        ref.setBlocked(var1);
+                        __this__.setBlocked(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -6013,10 +5221,7 @@ public class SubHandler5 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -6032,13 +5237,12 @@ public class SubHandler5 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.traffic.TrafficStatusEvaluation ref = (com.amap.api.services.traffic.TrafficStatusEvaluation) getHEAP().get(refId);
+                    com.amap.api.services.traffic.TrafficStatusEvaluation __this__ = (com.amap.api.services.traffic.TrafficStatusEvaluation) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    String __result__;
+                    String __result__ = null;
                     try {
-                        __result__ = ref.getUnknown();
+                        __result__ = __this__.getUnknown();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -6048,32 +5252,29 @@ public class SubHandler5 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("com.amap.api.services.traffic.TrafficStatusEvaluation::setUnknown_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.traffic.TrafficStatusEvaluation ref = (com.amap.api.services.traffic.TrafficStatusEvaluation) getHEAP().get(refId);
+                    com.amap.api.services.traffic.TrafficStatusEvaluation __this__ = (com.amap.api.services.traffic.TrafficStatusEvaluation) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
+                    Void __result__ = null;
                     try {
-                        ref.setUnknown(var1);
+                        __this__.setUnknown(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -6083,10 +5284,7 @@ public class SubHandler5 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -6102,13 +5300,12 @@ public class SubHandler5 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.traffic.TrafficStatusEvaluation ref = (com.amap.api.services.traffic.TrafficStatusEvaluation) getHEAP().get(refId);
+                    com.amap.api.services.traffic.TrafficStatusEvaluation __this__ = (com.amap.api.services.traffic.TrafficStatusEvaluation) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    String __result__;
+                    String __result__ = null;
                     try {
-                        __result__ = ref.getStatus();
+                        __result__ = __this__.getStatus();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -6118,32 +5315,29 @@ public class SubHandler5 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("com.amap.api.services.traffic.TrafficStatusEvaluation::setStatus_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.traffic.TrafficStatusEvaluation ref = (com.amap.api.services.traffic.TrafficStatusEvaluation) getHEAP().get(refId);
+                    com.amap.api.services.traffic.TrafficStatusEvaluation __this__ = (com.amap.api.services.traffic.TrafficStatusEvaluation) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
+                    Void __result__ = null;
                     try {
-                        ref.setStatus(var1);
+                        __this__.setStatus(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -6153,10 +5347,7 @@ public class SubHandler5 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -6172,13 +5363,12 @@ public class SubHandler5 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.traffic.TrafficStatusEvaluation ref = (com.amap.api.services.traffic.TrafficStatusEvaluation) getHEAP().get(refId);
+                    com.amap.api.services.traffic.TrafficStatusEvaluation __this__ = (com.amap.api.services.traffic.TrafficStatusEvaluation) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    String __result__;
+                    String __result__ = null;
                     try {
-                        __result__ = ref.getDescription();
+                        __result__ = __this__.getDescription();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -6188,32 +5378,29 @@ public class SubHandler5 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("com.amap.api.services.traffic.TrafficStatusEvaluation::setDescription_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.traffic.TrafficStatusEvaluation ref = (com.amap.api.services.traffic.TrafficStatusEvaluation) getHEAP().get(refId);
+                    com.amap.api.services.traffic.TrafficStatusEvaluation __this__ = (com.amap.api.services.traffic.TrafficStatusEvaluation) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
+                    Void __result__ = null;
                     try {
-                        ref.setDescription(var1);
+                        __this__.setDescription(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -6223,10 +5410,7 @@ public class SubHandler5 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -6242,13 +5426,12 @@ public class SubHandler5 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.busline.BusLineItem ref = (com.amap.api.services.busline.BusLineItem) getHEAP().get(refId);
+                    com.amap.api.services.busline.BusLineItem __this__ = (com.amap.api.services.busline.BusLineItem) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    float __result__;
+                    Float __result__ = null;
                     try {
-                        __result__ = ref.getDistance();
+                        __result__ = __this__.getDistance();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -6258,32 +5441,29 @@ public class SubHandler5 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    float jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("com.amap.api.services.busline.BusLineItem::setDistance_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // jsonable arg
-                    Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
+                    // ref arg
+                    float var1 = (float) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.busline.BusLineItem ref = (com.amap.api.services.busline.BusLineItem) getHEAP().get(refId);
+                    com.amap.api.services.busline.BusLineItem __this__ = (com.amap.api.services.busline.BusLineItem) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
+                    Void __result__ = null;
                     try {
-                        ref.setDistance(new Double(var1).floatValue());
+                        __this__.setDistance(new Double(var1).floatValue());
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -6293,10 +5473,7 @@ public class SubHandler5 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -6312,13 +5489,12 @@ public class SubHandler5 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.busline.BusLineItem ref = (com.amap.api.services.busline.BusLineItem) getHEAP().get(refId);
+                    com.amap.api.services.busline.BusLineItem __this__ = (com.amap.api.services.busline.BusLineItem) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    String __result__;
+                    String __result__ = null;
                     try {
-                        __result__ = ref.getBusLineName();
+                        __result__ = __this__.getBusLineName();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -6328,32 +5504,29 @@ public class SubHandler5 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("com.amap.api.services.busline.BusLineItem::setBusLineName_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.busline.BusLineItem ref = (com.amap.api.services.busline.BusLineItem) getHEAP().get(refId);
+                    com.amap.api.services.busline.BusLineItem __this__ = (com.amap.api.services.busline.BusLineItem) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
+                    Void __result__ = null;
                     try {
-                        ref.setBusLineName(var1);
+                        __this__.setBusLineName(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -6363,10 +5536,7 @@ public class SubHandler5 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -6382,13 +5552,12 @@ public class SubHandler5 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.busline.BusLineItem ref = (com.amap.api.services.busline.BusLineItem) getHEAP().get(refId);
+                    com.amap.api.services.busline.BusLineItem __this__ = (com.amap.api.services.busline.BusLineItem) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    String __result__;
+                    String __result__ = null;
                     try {
-                        __result__ = ref.getBusLineType();
+                        __result__ = __this__.getBusLineType();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -6398,32 +5567,29 @@ public class SubHandler5 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("com.amap.api.services.busline.BusLineItem::setBusLineType_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.busline.BusLineItem ref = (com.amap.api.services.busline.BusLineItem) getHEAP().get(refId);
+                    com.amap.api.services.busline.BusLineItem __this__ = (com.amap.api.services.busline.BusLineItem) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
+                    Void __result__ = null;
                     try {
-                        ref.setBusLineType(var1);
+                        __this__.setBusLineType(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -6433,10 +5599,7 @@ public class SubHandler5 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -6452,13 +5615,12 @@ public class SubHandler5 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.busline.BusLineItem ref = (com.amap.api.services.busline.BusLineItem) getHEAP().get(refId);
+                    com.amap.api.services.busline.BusLineItem __this__ = (com.amap.api.services.busline.BusLineItem) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    String __result__;
+                    String __result__ = null;
                     try {
-                        __result__ = ref.getCityCode();
+                        __result__ = __this__.getCityCode();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -6468,32 +5630,29 @@ public class SubHandler5 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("com.amap.api.services.busline.BusLineItem::setCityCode_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.busline.BusLineItem ref = (com.amap.api.services.busline.BusLineItem) getHEAP().get(refId);
+                    com.amap.api.services.busline.BusLineItem __this__ = (com.amap.api.services.busline.BusLineItem) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
+                    Void __result__ = null;
                     try {
-                        ref.setCityCode(var1);
+                        __this__.setCityCode(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -6503,17 +5662,14 @@ public class SubHandler5 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("com.amap.api.services.busline.BusLineItem::getDirectionsCoordinates_batch", (__argsBatch__, __methodResult__) -> {
-                List<List<Integer>> __resultList__ = new ArrayList<>();
+                List<java.util.List<com.amap.api.services.core.LatLonPoint>> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
@@ -6522,13 +5678,12 @@ public class SubHandler5 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.busline.BusLineItem ref = (com.amap.api.services.busline.BusLineItem) getHEAP().get(refId);
+                    com.amap.api.services.busline.BusLineItem __this__ = (com.amap.api.services.busline.BusLineItem) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    java.util.List<com.amap.api.services.core.LatLonPoint> __result__;
+                    java.util.List<com.amap.api.services.core.LatLonPoint> __result__ = null;
                     try {
-                        __result__ = ref.getDirectionsCoordinates();
+                        __result__ = __this__.getDirectionsCoordinates();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -6538,43 +5693,29 @@ public class SubHandler5 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    List<Integer> jsonableResult = null;
-                    if (__result__ != null) {
-                        jsonableResult = new ArrayList<>();
-                        for (com.amap.api.services.core.LatLonPoint item : __result__) {
-                            getHEAP().put(System.identityHashCode(item), item);
-                            jsonableResult.add(System.identityHashCode(item));
-                        }
-                    }
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("com.amap.api.services.busline.BusLineItem::setDirectionsCoordinates_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // list arg
-                    List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) __args__).get("var1");
-                    java.util.List<com.amap.api.services.core.LatLonPoint> var1 = new ArrayList<>();
-                    for (int refId : var1RefIdList) {
-                        ((ArrayList<com.amap.api.services.core.LatLonPoint>) var1).add((com.amap.api.services.core.LatLonPoint) getHEAP().get(refId));
-                    }
+                    // ref arg
+                    java.util.List<com.amap.api.services.core.LatLonPoint> var1 = (java.util.List<com.amap.api.services.core.LatLonPoint>) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.busline.BusLineItem ref = (com.amap.api.services.busline.BusLineItem) getHEAP().get(refId);
+                    com.amap.api.services.busline.BusLineItem __this__ = (com.amap.api.services.busline.BusLineItem) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
+                    Void __result__ = null;
                     try {
-                        ref.setDirectionsCoordinates((ArrayList) var1);
+                        __this__.setDirectionsCoordinates((ArrayList) var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -6584,17 +5725,14 @@ public class SubHandler5 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("com.amap.api.services.busline.BusLineItem::getBounds_batch", (__argsBatch__, __methodResult__) -> {
-                List<List<Integer>> __resultList__ = new ArrayList<>();
+                List<java.util.List<com.amap.api.services.core.LatLonPoint>> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
@@ -6603,13 +5741,12 @@ public class SubHandler5 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.busline.BusLineItem ref = (com.amap.api.services.busline.BusLineItem) getHEAP().get(refId);
+                    com.amap.api.services.busline.BusLineItem __this__ = (com.amap.api.services.busline.BusLineItem) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    java.util.List<com.amap.api.services.core.LatLonPoint> __result__;
+                    java.util.List<com.amap.api.services.core.LatLonPoint> __result__ = null;
                     try {
-                        __result__ = ref.getBounds();
+                        __result__ = __this__.getBounds();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -6619,43 +5756,29 @@ public class SubHandler5 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    List<Integer> jsonableResult = null;
-                    if (__result__ != null) {
-                        jsonableResult = new ArrayList<>();
-                        for (com.amap.api.services.core.LatLonPoint item : __result__) {
-                            getHEAP().put(System.identityHashCode(item), item);
-                            jsonableResult.add(System.identityHashCode(item));
-                        }
-                    }
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("com.amap.api.services.busline.BusLineItem::setBounds_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // list arg
-                    List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) __args__).get("var1");
-                    java.util.List<com.amap.api.services.core.LatLonPoint> var1 = new ArrayList<>();
-                    for (int refId : var1RefIdList) {
-                        ((ArrayList<com.amap.api.services.core.LatLonPoint>) var1).add((com.amap.api.services.core.LatLonPoint) getHEAP().get(refId));
-                    }
+                    // ref arg
+                    java.util.List<com.amap.api.services.core.LatLonPoint> var1 = (java.util.List<com.amap.api.services.core.LatLonPoint>) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.busline.BusLineItem ref = (com.amap.api.services.busline.BusLineItem) getHEAP().get(refId);
+                    com.amap.api.services.busline.BusLineItem __this__ = (com.amap.api.services.busline.BusLineItem) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
+                    Void __result__ = null;
                     try {
-                        ref.setBounds((ArrayList) var1);
+                        __this__.setBounds((ArrayList) var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -6665,10 +5788,7 @@ public class SubHandler5 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -6684,13 +5804,12 @@ public class SubHandler5 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.busline.BusLineItem ref = (com.amap.api.services.busline.BusLineItem) getHEAP().get(refId);
+                    com.amap.api.services.busline.BusLineItem __this__ = (com.amap.api.services.busline.BusLineItem) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    String __result__;
+                    String __result__ = null;
                     try {
-                        __result__ = ref.getBusLineId();
+                        __result__ = __this__.getBusLineId();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -6700,32 +5819,29 @@ public class SubHandler5 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("com.amap.api.services.busline.BusLineItem::setBusLineId_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.busline.BusLineItem ref = (com.amap.api.services.busline.BusLineItem) getHEAP().get(refId);
+                    com.amap.api.services.busline.BusLineItem __this__ = (com.amap.api.services.busline.BusLineItem) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
+                    Void __result__ = null;
                     try {
-                        ref.setBusLineId(var1);
+                        __this__.setBusLineId(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -6735,10 +5851,7 @@ public class SubHandler5 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -6754,13 +5867,12 @@ public class SubHandler5 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.busline.BusLineItem ref = (com.amap.api.services.busline.BusLineItem) getHEAP().get(refId);
+                    com.amap.api.services.busline.BusLineItem __this__ = (com.amap.api.services.busline.BusLineItem) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    String __result__;
+                    String __result__ = null;
                     try {
-                        __result__ = ref.getOriginatingStation();
+                        __result__ = __this__.getOriginatingStation();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -6770,32 +5882,29 @@ public class SubHandler5 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("com.amap.api.services.busline.BusLineItem::setOriginatingStation_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.busline.BusLineItem ref = (com.amap.api.services.busline.BusLineItem) getHEAP().get(refId);
+                    com.amap.api.services.busline.BusLineItem __this__ = (com.amap.api.services.busline.BusLineItem) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
+                    Void __result__ = null;
                     try {
-                        ref.setOriginatingStation(var1);
+                        __this__.setOriginatingStation(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -6805,10 +5914,7 @@ public class SubHandler5 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -6824,13 +5930,12 @@ public class SubHandler5 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.busline.BusLineItem ref = (com.amap.api.services.busline.BusLineItem) getHEAP().get(refId);
+                    com.amap.api.services.busline.BusLineItem __this__ = (com.amap.api.services.busline.BusLineItem) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    String __result__;
+                    String __result__ = null;
                     try {
-                        __result__ = ref.getTerminalStation();
+                        __result__ = __this__.getTerminalStation();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -6840,32 +5945,29 @@ public class SubHandler5 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("com.amap.api.services.busline.BusLineItem::setTerminalStation_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.busline.BusLineItem ref = (com.amap.api.services.busline.BusLineItem) getHEAP().get(refId);
+                    com.amap.api.services.busline.BusLineItem __this__ = (com.amap.api.services.busline.BusLineItem) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
+                    Void __result__ = null;
                     try {
-                        ref.setTerminalStation(var1);
+                        __this__.setTerminalStation(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -6875,10 +5977,7 @@ public class SubHandler5 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -6894,13 +5993,12 @@ public class SubHandler5 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.busline.BusLineItem ref = (com.amap.api.services.busline.BusLineItem) getHEAP().get(refId);
+                    com.amap.api.services.busline.BusLineItem __this__ = (com.amap.api.services.busline.BusLineItem) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    String __result__;
+                    String __result__ = null;
                     try {
-                        __result__ = ref.getBusCompany();
+                        __result__ = __this__.getBusCompany();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -6910,32 +6008,29 @@ public class SubHandler5 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("com.amap.api.services.busline.BusLineItem::setBusCompany_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.busline.BusLineItem ref = (com.amap.api.services.busline.BusLineItem) getHEAP().get(refId);
+                    com.amap.api.services.busline.BusLineItem __this__ = (com.amap.api.services.busline.BusLineItem) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
+                    Void __result__ = null;
                     try {
-                        ref.setBusCompany(var1);
+                        __this__.setBusCompany(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -6945,10 +6040,7 @@ public class SubHandler5 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -6964,13 +6056,12 @@ public class SubHandler5 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.busline.BusLineItem ref = (com.amap.api.services.busline.BusLineItem) getHEAP().get(refId);
+                    com.amap.api.services.busline.BusLineItem __this__ = (com.amap.api.services.busline.BusLineItem) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    float __result__;
+                    Float __result__ = null;
                     try {
-                        __result__ = ref.getBasicPrice();
+                        __result__ = __this__.getBasicPrice();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -6980,32 +6071,29 @@ public class SubHandler5 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    float jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("com.amap.api.services.busline.BusLineItem::setBasicPrice_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // jsonable arg
-                    Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
+                    // ref arg
+                    float var1 = (float) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.busline.BusLineItem ref = (com.amap.api.services.busline.BusLineItem) getHEAP().get(refId);
+                    com.amap.api.services.busline.BusLineItem __this__ = (com.amap.api.services.busline.BusLineItem) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
+                    Void __result__ = null;
                     try {
-                        ref.setBasicPrice(new Double(var1).floatValue());
+                        __this__.setBasicPrice(new Double(var1).floatValue());
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -7015,10 +6103,7 @@ public class SubHandler5 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
@@ -7034,13 +6119,12 @@ public class SubHandler5 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.busline.BusLineItem ref = (com.amap.api.services.busline.BusLineItem) getHEAP().get(refId);
+                    com.amap.api.services.busline.BusLineItem __this__ = (com.amap.api.services.busline.BusLineItem) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    float __result__;
+                    Float __result__ = null;
                     try {
-                        __result__ = ref.getTotalPrice();
+                        __result__ = __this__.getTotalPrice();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -7050,32 +6134,29 @@ public class SubHandler5 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    float jsonableResult = __result__;
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("com.amap.api.services.busline.BusLineItem::setTotalPrice_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // jsonable arg
-                    Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
+                    // ref arg
+                    float var1 = (float) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.busline.BusLineItem ref = (com.amap.api.services.busline.BusLineItem) getHEAP().get(refId);
+                    com.amap.api.services.busline.BusLineItem __this__ = (com.amap.api.services.busline.BusLineItem) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
+                    Void __result__ = null;
                     try {
-                        ref.setTotalPrice(new Double(var1).floatValue());
+                        __this__.setTotalPrice(new Double(var1).floatValue());
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -7085,17 +6166,14 @@ public class SubHandler5 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);
             });
             // method
             put("com.amap.api.services.busline.BusLineItem::getBusStations_batch", (__argsBatch__, __methodResult__) -> {
-                List<List<Integer>> __resultList__ = new ArrayList<>();
+                List<java.util.List<com.amap.api.services.busline.BusStationItem>> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
@@ -7104,13 +6182,12 @@ public class SubHandler5 {
             
             
                     // ref
-                    int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                    com.amap.api.services.busline.BusLineItem ref = (com.amap.api.services.busline.BusLineItem) getHEAP().get(refId);
+                    com.amap.api.services.busline.BusLineItem __this__ = (com.amap.api.services.busline.BusLineItem) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    java.util.List<com.amap.api.services.busline.BusStationItem> __result__;
+                    java.util.List<com.amap.api.services.busline.BusStationItem> __result__ = null;
                     try {
-                        __result__ = ref.getBusStations();
+                        __result__ = __this__.getBusStations();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -7120,17 +6197,7 @@ public class SubHandler5 {
                         return;
                     }
             
-                    // convert result to jsonable result
-                    List<Integer> jsonableResult = null;
-                    if (__result__ != null) {
-                        jsonableResult = new ArrayList<>();
-                        for (com.amap.api.services.busline.BusStationItem item : __result__) {
-                            getHEAP().put(System.identityHashCode(item), item);
-                            jsonableResult.add(System.identityHashCode(item));
-                        }
-                    }
-            
-                    __resultList__.add(jsonableResult);
+                    __resultList__.add(__result__);
                 }
             
                 __methodResult__.success(__resultList__);

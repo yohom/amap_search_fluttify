@@ -25,8 +25,6 @@ mixin com_amap_api_services_interfaces_IDistrictSearch on java_lang_Object {
 
   @mustCallSuper
   Future<com_amap_api_services_district_DistrictSearchQuery> getQuery() {
-  
-  
     if (fluttifyLogEnabled) {
       debugPrint('getQuery::kNativeObjectPool: $kNativeObjectPool');
     }
@@ -34,8 +32,6 @@ mixin com_amap_api_services_interfaces_IDistrictSearch on java_lang_Object {
   
   @mustCallSuper
   Future<void> setQuery(com_amap_api_services_district_DistrictSearchQuery var1) {
-    if (var1 is Ref) kNativeObjectPool.add(var1);
-  
     if (fluttifyLogEnabled) {
       debugPrint('setQuery::kNativeObjectPool: $kNativeObjectPool');
     }
@@ -43,8 +39,6 @@ mixin com_amap_api_services_interfaces_IDistrictSearch on java_lang_Object {
   
   @mustCallSuper
   Future<void> searchDistrictAsyn() {
-  
-  
     if (fluttifyLogEnabled) {
       debugPrint('searchDistrictAsyn::kNativeObjectPool: $kNativeObjectPool');
     }
@@ -52,8 +46,6 @@ mixin com_amap_api_services_interfaces_IDistrictSearch on java_lang_Object {
   
   @mustCallSuper
   Future<void> searchDistrictAnsy() {
-  
-  
     if (fluttifyLogEnabled) {
       debugPrint('searchDistrictAnsy::kNativeObjectPool: $kNativeObjectPool');
     }
@@ -61,8 +53,6 @@ mixin com_amap_api_services_interfaces_IDistrictSearch on java_lang_Object {
   
   @mustCallSuper
   Future<void> setOnDistrictSearchListener(com_amap_api_services_district_DistrictSearch_OnDistrictSearchListener var1) {
-    if (var1 is Ref) kNativeObjectPool.add(var1);
-  
     if (fluttifyLogEnabled) {
       debugPrint('setOnDistrictSearchListener::kNativeObjectPool: $kNativeObjectPool');
     }
@@ -70,8 +60,6 @@ mixin com_amap_api_services_interfaces_IDistrictSearch on java_lang_Object {
   
   @mustCallSuper
   Future<com_amap_api_services_district_DistrictResult> searchDistrict() {
-  
-  
     if (fluttifyLogEnabled) {
       debugPrint('searchDistrict::kNativeObjectPool: $kNativeObjectPool');
     }

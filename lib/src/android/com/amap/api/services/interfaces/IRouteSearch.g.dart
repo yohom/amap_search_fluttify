@@ -25,8 +25,6 @@ mixin com_amap_api_services_interfaces_IRouteSearch on java_lang_Object {
 
   @mustCallSuper
   Future<void> setRouteSearchListener(com_amap_api_services_route_RouteSearch_OnRouteSearchListener var1) {
-    if (var1 is Ref) kNativeObjectPool.add(var1);
-  
     if (fluttifyLogEnabled) {
       debugPrint('setRouteSearchListener::kNativeObjectPool: $kNativeObjectPool');
     }
@@ -34,8 +32,6 @@ mixin com_amap_api_services_interfaces_IRouteSearch on java_lang_Object {
   
   @mustCallSuper
   Future<void> setOnTruckRouteSearchListener(com_amap_api_services_route_RouteSearch_OnTruckRouteSearchListener var1) {
-    if (var1 is Ref) kNativeObjectPool.add(var1);
-  
     if (fluttifyLogEnabled) {
       debugPrint('setOnTruckRouteSearchListener::kNativeObjectPool: $kNativeObjectPool');
     }
@@ -43,8 +39,6 @@ mixin com_amap_api_services_interfaces_IRouteSearch on java_lang_Object {
   
   @mustCallSuper
   Future<void> setOnRoutePlanSearchListener(com_amap_api_services_route_RouteSearch_OnRoutePlanSearchListener var1) {
-    if (var1 is Ref) kNativeObjectPool.add(var1);
-  
     if (fluttifyLogEnabled) {
       debugPrint('setOnRoutePlanSearchListener::kNativeObjectPool: $kNativeObjectPool');
     }
@@ -52,8 +46,6 @@ mixin com_amap_api_services_interfaces_IRouteSearch on java_lang_Object {
   
   @mustCallSuper
   Future<com_amap_api_services_route_WalkRouteResult> calculateWalkRoute(com_amap_api_services_route_RouteSearch_WalkRouteQuery var1) {
-    if (var1 is Ref) kNativeObjectPool.add(var1);
-  
     if (fluttifyLogEnabled) {
       debugPrint('calculateWalkRoute::kNativeObjectPool: $kNativeObjectPool');
     }
@@ -61,8 +53,6 @@ mixin com_amap_api_services_interfaces_IRouteSearch on java_lang_Object {
   
   @mustCallSuper
   Future<void> calculateWalkRouteAsyn(com_amap_api_services_route_RouteSearch_WalkRouteQuery var1) {
-    if (var1 is Ref) kNativeObjectPool.add(var1);
-  
     if (fluttifyLogEnabled) {
       debugPrint('calculateWalkRouteAsyn::kNativeObjectPool: $kNativeObjectPool');
     }
@@ -70,8 +60,6 @@ mixin com_amap_api_services_interfaces_IRouteSearch on java_lang_Object {
   
   @mustCallSuper
   Future<com_amap_api_services_route_BusRouteResult> calculateBusRoute(com_amap_api_services_route_RouteSearch_BusRouteQuery var1) {
-    if (var1 is Ref) kNativeObjectPool.add(var1);
-  
     if (fluttifyLogEnabled) {
       debugPrint('calculateBusRoute::kNativeObjectPool: $kNativeObjectPool');
     }
@@ -79,8 +67,6 @@ mixin com_amap_api_services_interfaces_IRouteSearch on java_lang_Object {
   
   @mustCallSuper
   Future<void> calculateBusRouteAsyn(com_amap_api_services_route_RouteSearch_BusRouteQuery var1) {
-    if (var1 is Ref) kNativeObjectPool.add(var1);
-  
     if (fluttifyLogEnabled) {
       debugPrint('calculateBusRouteAsyn::kNativeObjectPool: $kNativeObjectPool');
     }
@@ -88,8 +74,6 @@ mixin com_amap_api_services_interfaces_IRouteSearch on java_lang_Object {
   
   @mustCallSuper
   Future<com_amap_api_services_route_DriveRouteResult> calculateDriveRoute(com_amap_api_services_route_RouteSearch_DriveRouteQuery var1) {
-    if (var1 is Ref) kNativeObjectPool.add(var1);
-  
     if (fluttifyLogEnabled) {
       debugPrint('calculateDriveRoute::kNativeObjectPool: $kNativeObjectPool');
     }
@@ -97,8 +81,6 @@ mixin com_amap_api_services_interfaces_IRouteSearch on java_lang_Object {
   
   @mustCallSuper
   Future<void> calculateDriveRouteAsyn(com_amap_api_services_route_RouteSearch_DriveRouteQuery var1) {
-    if (var1 is Ref) kNativeObjectPool.add(var1);
-  
     if (fluttifyLogEnabled) {
       debugPrint('calculateDriveRouteAsyn::kNativeObjectPool: $kNativeObjectPool');
     }
@@ -106,8 +88,6 @@ mixin com_amap_api_services_interfaces_IRouteSearch on java_lang_Object {
   
   @mustCallSuper
   Future<com_amap_api_services_route_RideRouteResult> calculateRideRoute(com_amap_api_services_route_RouteSearch_RideRouteQuery var1) {
-    if (var1 is Ref) kNativeObjectPool.add(var1);
-  
     if (fluttifyLogEnabled) {
       debugPrint('calculateRideRoute::kNativeObjectPool: $kNativeObjectPool');
     }
@@ -115,8 +95,6 @@ mixin com_amap_api_services_interfaces_IRouteSearch on java_lang_Object {
   
   @mustCallSuper
   Future<void> calculateRideRouteAsyn(com_amap_api_services_route_RouteSearch_RideRouteQuery var1) {
-    if (var1 is Ref) kNativeObjectPool.add(var1);
-  
     if (fluttifyLogEnabled) {
       debugPrint('calculateRideRouteAsyn::kNativeObjectPool: $kNativeObjectPool');
     }
@@ -124,8 +102,6 @@ mixin com_amap_api_services_interfaces_IRouteSearch on java_lang_Object {
   
   @mustCallSuper
   Future<com_amap_api_services_route_TruckRouteRestult> calculateTruckRoute(com_amap_api_services_route_RouteSearch_TruckRouteQuery var1) {
-    if (var1 is Ref) kNativeObjectPool.add(var1);
-  
     if (fluttifyLogEnabled) {
       debugPrint('calculateTruckRoute::kNativeObjectPool: $kNativeObjectPool');
     }
@@ -133,8 +109,6 @@ mixin com_amap_api_services_interfaces_IRouteSearch on java_lang_Object {
   
   @mustCallSuper
   Future<void> calculateTruckRouteAsyn(com_amap_api_services_route_RouteSearch_TruckRouteQuery var1) {
-    if (var1 is Ref) kNativeObjectPool.add(var1);
-  
     if (fluttifyLogEnabled) {
       debugPrint('calculateTruckRouteAsyn::kNativeObjectPool: $kNativeObjectPool');
     }
@@ -142,8 +116,6 @@ mixin com_amap_api_services_interfaces_IRouteSearch on java_lang_Object {
   
   @mustCallSuper
   Future<com_amap_api_services_route_DriveRoutePlanResult> calculateDrivePlan(com_amap_api_services_route_RouteSearch_DrivePlanQuery var1) {
-    if (var1 is Ref) kNativeObjectPool.add(var1);
-  
     if (fluttifyLogEnabled) {
       debugPrint('calculateDrivePlan::kNativeObjectPool: $kNativeObjectPool');
     }
@@ -151,8 +123,6 @@ mixin com_amap_api_services_interfaces_IRouteSearch on java_lang_Object {
   
   @mustCallSuper
   Future<void> calculateDrivePlanAsyn(com_amap_api_services_route_RouteSearch_DrivePlanQuery var1) {
-    if (var1 is Ref) kNativeObjectPool.add(var1);
-  
     if (fluttifyLogEnabled) {
       debugPrint('calculateDrivePlanAsyn::kNativeObjectPool: $kNativeObjectPool');
     }

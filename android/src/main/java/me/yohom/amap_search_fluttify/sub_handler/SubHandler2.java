@@ -19,9 +19,11 @@ import io.flutter.plugin.common.BinaryMessenger;
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.PluginRegistry.Registrar;
+import io.flutter.plugin.common.StandardMethodCodec;
 import io.flutter.plugin.platform.PlatformViewRegistry;
 
 import me.yohom.amap_search_fluttify.AmapSearchFluttifyPlugin.Handler;
+import me.yohom.foundation_fluttify.FluttifyMessageCodec;
 
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getEnableLog;
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getHEAP;
@@ -36,18 +38,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RailwaySpace ref = (com.amap.api.services.route.RailwaySpace) getHEAP().get(refId);
+                com.amap.api.services.route.RailwaySpace __this__ = (com.amap.api.services.route.RailwaySpace) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RailwaySpace@" + refId + "::getCode(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RailwaySpace@" + __this__ + "::getCode(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getCode();
+                    __result__ = __this__.getCode();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -57,10 +58,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RailwaySpace::getCost", (__args__, __methodResult__) -> {
@@ -68,18 +66,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RailwaySpace ref = (com.amap.api.services.route.RailwaySpace) getHEAP().get(refId);
+                com.amap.api.services.route.RailwaySpace __this__ = (com.amap.api.services.route.RailwaySpace) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RailwaySpace@" + refId + "::getCost(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RailwaySpace@" + __this__ + "::getCost(" + "" + ")");
                 }
             
                 // invoke native method
-                float __result__;
+                Float __result__ = null;
                 try {
-                    __result__ = ref.getCost();
+                    __result__ = __this__.getCost();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -89,30 +86,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                float jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.TruckRouteRestult::setTruckQuery", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.route.RouteSearch.TruckRouteQuery var1 = __var1RefId__ != null ? (com.amap.api.services.route.RouteSearch.TruckRouteQuery) getHEAP().get(__var1RefId__) : null;
+                com.amap.api.services.route.RouteSearch.TruckRouteQuery var1 = (com.amap.api.services.route.RouteSearch.TruckRouteQuery) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.TruckRouteRestult ref = (com.amap.api.services.route.TruckRouteRestult) getHEAP().get(refId);
+                com.amap.api.services.route.TruckRouteRestult __this__ = (com.amap.api.services.route.TruckRouteRestult) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckRouteRestult@" + refId + "::setTruckQuery(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckRouteRestult@" + __this__ + "::setTruckQuery(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setTruckQuery(var1);
+                    __this__.setTruckQuery(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -122,33 +115,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.TruckRouteRestult::setPaths", (__args__, __methodResult__) -> {
                 // args
-                // list arg
-                List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) __args__).get("var1");
-                java.util.List<com.amap.api.services.route.TruckPath> var1 = new ArrayList<>();
-                for (int refId : var1RefIdList) {
-                    ((ArrayList<com.amap.api.services.route.TruckPath>) var1).add((com.amap.api.services.route.TruckPath) getHEAP().get(refId));
-                }
+                // ref arg
+                java.util.List<com.amap.api.services.route.TruckPath> var1 = (java.util.List<com.amap.api.services.route.TruckPath>) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.TruckRouteRestult ref = (com.amap.api.services.route.TruckRouteRestult) getHEAP().get(refId);
+                com.amap.api.services.route.TruckRouteRestult __this__ = (com.amap.api.services.route.TruckRouteRestult) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckRouteRestult@" + refId + "::setPaths(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckRouteRestult@" + __this__ + "::setPaths(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setPaths((ArrayList) var1);
+                    __this__.setPaths((ArrayList) var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -158,30 +144,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.TruckRouteRestult::setStartPos", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.core.LatLonPoint var1 = __var1RefId__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1RefId__) : null;
+                com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.TruckRouteRestult ref = (com.amap.api.services.route.TruckRouteRestult) getHEAP().get(refId);
+                com.amap.api.services.route.TruckRouteRestult __this__ = (com.amap.api.services.route.TruckRouteRestult) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckRouteRestult@" + refId + "::setStartPos(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckRouteRestult@" + __this__ + "::setStartPos(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setStartPos(var1);
+                    __this__.setStartPos(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -191,30 +173,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.TruckRouteRestult::setTargetPos", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.core.LatLonPoint var1 = __var1RefId__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1RefId__) : null;
+                com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.TruckRouteRestult ref = (com.amap.api.services.route.TruckRouteRestult) getHEAP().get(refId);
+                com.amap.api.services.route.TruckRouteRestult __this__ = (com.amap.api.services.route.TruckRouteRestult) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckRouteRestult@" + refId + "::setTargetPos(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckRouteRestult@" + __this__ + "::setTargetPos(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setTargetPos(var1);
+                    __this__.setTargetPos(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -224,10 +202,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.TruckRouteRestult::getTruckQuery", (__args__, __methodResult__) -> {
@@ -235,18 +210,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.TruckRouteRestult ref = (com.amap.api.services.route.TruckRouteRestult) getHEAP().get(refId);
+                com.amap.api.services.route.TruckRouteRestult __this__ = (com.amap.api.services.route.TruckRouteRestult) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckRouteRestult@" + refId + "::getTruckQuery(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckRouteRestult@" + __this__ + "::getTruckQuery(" + "" + ")");
                 }
             
                 // invoke native method
-                com.amap.api.services.route.RouteSearch.TruckRouteQuery __result__;
+                com.amap.api.services.route.RouteSearch.TruckRouteQuery __result__ = null;
                 try {
-                    __result__ = ref.getTruckQuery();
+                    __result__ = __this__.getTruckQuery();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -256,14 +230,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                Integer jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = System.identityHashCode(__result__);
-                    getHEAP().put(jsonableResult, __result__);
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.TruckRouteRestult::getPaths", (__args__, __methodResult__) -> {
@@ -271,18 +238,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.TruckRouteRestult ref = (com.amap.api.services.route.TruckRouteRestult) getHEAP().get(refId);
+                com.amap.api.services.route.TruckRouteRestult __this__ = (com.amap.api.services.route.TruckRouteRestult) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckRouteRestult@" + refId + "::getPaths(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckRouteRestult@" + __this__ + "::getPaths(" + "" + ")");
                 }
             
                 // invoke native method
-                java.util.List<com.amap.api.services.route.TruckPath> __result__;
+                java.util.List<com.amap.api.services.route.TruckPath> __result__ = null;
                 try {
-                    __result__ = ref.getPaths();
+                    __result__ = __this__.getPaths();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -292,17 +258,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                List<Integer> jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = new ArrayList<>();
-                    for (com.amap.api.services.route.TruckPath item : __result__) {
-                        getHEAP().put(System.identityHashCode(item), item);
-                        jsonableResult.add(System.identityHashCode(item));
-                    }
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.TruckRouteRestult::getStartPos", (__args__, __methodResult__) -> {
@@ -310,18 +266,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.TruckRouteRestult ref = (com.amap.api.services.route.TruckRouteRestult) getHEAP().get(refId);
+                com.amap.api.services.route.TruckRouteRestult __this__ = (com.amap.api.services.route.TruckRouteRestult) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckRouteRestult@" + refId + "::getStartPos(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckRouteRestult@" + __this__ + "::getStartPos(" + "" + ")");
                 }
             
                 // invoke native method
-                com.amap.api.services.core.LatLonPoint __result__;
+                com.amap.api.services.core.LatLonPoint __result__ = null;
                 try {
-                    __result__ = ref.getStartPos();
+                    __result__ = __this__.getStartPos();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -331,14 +286,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                Integer jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = System.identityHashCode(__result__);
-                    getHEAP().put(jsonableResult, __result__);
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.TruckRouteRestult::getTargetPos", (__args__, __methodResult__) -> {
@@ -346,18 +294,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.TruckRouteRestult ref = (com.amap.api.services.route.TruckRouteRestult) getHEAP().get(refId);
+                com.amap.api.services.route.TruckRouteRestult __this__ = (com.amap.api.services.route.TruckRouteRestult) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckRouteRestult@" + refId + "::getTargetPos(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckRouteRestult@" + __this__ + "::getTargetPos(" + "" + ")");
                 }
             
                 // invoke native method
-                com.amap.api.services.core.LatLonPoint __result__;
+                com.amap.api.services.core.LatLonPoint __result__ = null;
                 try {
-                    __result__ = ref.getTargetPos();
+                    __result__ = __this__.getTargetPos();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -367,14 +314,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                Integer jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = System.identityHashCode(__result__);
-                    getHEAP().put(jsonableResult, __result__);
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteSearch.RideRouteQuery::getFromAndTo", (__args__, __methodResult__) -> {
@@ -382,18 +322,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteSearch.RideRouteQuery ref = (com.amap.api.services.route.RouteSearch.RideRouteQuery) getHEAP().get(refId);
+                com.amap.api.services.route.RouteSearch.RideRouteQuery __this__ = (com.amap.api.services.route.RouteSearch.RideRouteQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.RideRouteQuery@" + refId + "::getFromAndTo(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.RideRouteQuery@" + __this__ + "::getFromAndTo(" + "" + ")");
                 }
             
                 // invoke native method
-                com.amap.api.services.route.RouteSearch.FromAndTo __result__;
+                com.amap.api.services.route.RouteSearch.FromAndTo __result__ = null;
                 try {
-                    __result__ = ref.getFromAndTo();
+                    __result__ = __this__.getFromAndTo();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -403,14 +342,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                Integer jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = System.identityHashCode(__result__);
-                    getHEAP().put(jsonableResult, __result__);
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteSearch.RideRouteQuery::getMode", (__args__, __methodResult__) -> {
@@ -418,18 +350,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteSearch.RideRouteQuery ref = (com.amap.api.services.route.RouteSearch.RideRouteQuery) getHEAP().get(refId);
+                com.amap.api.services.route.RouteSearch.RideRouteQuery __this__ = (com.amap.api.services.route.RouteSearch.RideRouteQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.RideRouteQuery@" + refId + "::getMode(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.RideRouteQuery@" + __this__ + "::getMode(" + "" + ")");
                 }
             
                 // invoke native method
-                int __result__;
+                Integer __result__ = null;
                 try {
-                    __result__ = ref.getMode();
+                    __result__ = __this__.getMode();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -439,10 +370,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                int jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteSearch.RideRouteQuery::clone", (__args__, __methodResult__) -> {
@@ -450,18 +378,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteSearch.RideRouteQuery ref = (com.amap.api.services.route.RouteSearch.RideRouteQuery) getHEAP().get(refId);
+                com.amap.api.services.route.RouteSearch.RideRouteQuery __this__ = (com.amap.api.services.route.RouteSearch.RideRouteQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.RideRouteQuery@" + refId + "::clone(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.RideRouteQuery@" + __this__ + "::clone(" + "" + ")");
                 }
             
                 // invoke native method
-                com.amap.api.services.route.RouteSearch.RideRouteQuery __result__;
+                com.amap.api.services.route.RouteSearch.RideRouteQuery __result__ = null;
                 try {
-                    __result__ = ref.clone();
+                    __result__ = __this__.clone();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -471,14 +398,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                Integer jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = System.identityHashCode(__result__);
-                    getHEAP().put(jsonableResult, __result__);
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteSearch.DriveRouteQuery::getFromAndTo", (__args__, __methodResult__) -> {
@@ -486,18 +406,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteSearch.DriveRouteQuery ref = (com.amap.api.services.route.RouteSearch.DriveRouteQuery) getHEAP().get(refId);
+                com.amap.api.services.route.RouteSearch.DriveRouteQuery __this__ = (com.amap.api.services.route.RouteSearch.DriveRouteQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DriveRouteQuery@" + refId + "::getFromAndTo(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DriveRouteQuery@" + __this__ + "::getFromAndTo(" + "" + ")");
                 }
             
                 // invoke native method
-                com.amap.api.services.route.RouteSearch.FromAndTo __result__;
+                com.amap.api.services.route.RouteSearch.FromAndTo __result__ = null;
                 try {
-                    __result__ = ref.getFromAndTo();
+                    __result__ = __this__.getFromAndTo();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -507,14 +426,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                Integer jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = System.identityHashCode(__result__);
-                    getHEAP().put(jsonableResult, __result__);
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteSearch.DriveRouteQuery::getMode", (__args__, __methodResult__) -> {
@@ -522,18 +434,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteSearch.DriveRouteQuery ref = (com.amap.api.services.route.RouteSearch.DriveRouteQuery) getHEAP().get(refId);
+                com.amap.api.services.route.RouteSearch.DriveRouteQuery __this__ = (com.amap.api.services.route.RouteSearch.DriveRouteQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DriveRouteQuery@" + refId + "::getMode(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DriveRouteQuery@" + __this__ + "::getMode(" + "" + ")");
                 }
             
                 // invoke native method
-                int __result__;
+                Integer __result__ = null;
                 try {
-                    __result__ = ref.getMode();
+                    __result__ = __this__.getMode();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -543,10 +454,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                int jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteSearch.DriveRouteQuery::getCarType", (__args__, __methodResult__) -> {
@@ -554,18 +462,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteSearch.DriveRouteQuery ref = (com.amap.api.services.route.RouteSearch.DriveRouteQuery) getHEAP().get(refId);
+                com.amap.api.services.route.RouteSearch.DriveRouteQuery __this__ = (com.amap.api.services.route.RouteSearch.DriveRouteQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DriveRouteQuery@" + refId + "::getCarType(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DriveRouteQuery@" + __this__ + "::getCarType(" + "" + ")");
                 }
             
                 // invoke native method
-                int __result__;
+                Integer __result__ = null;
                 try {
-                    __result__ = ref.getCarType();
+                    __result__ = __this__.getCarType();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -575,10 +482,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                int jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteSearch.DriveRouteQuery::getPassedByPoints", (__args__, __methodResult__) -> {
@@ -586,18 +490,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteSearch.DriveRouteQuery ref = (com.amap.api.services.route.RouteSearch.DriveRouteQuery) getHEAP().get(refId);
+                com.amap.api.services.route.RouteSearch.DriveRouteQuery __this__ = (com.amap.api.services.route.RouteSearch.DriveRouteQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DriveRouteQuery@" + refId + "::getPassedByPoints(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DriveRouteQuery@" + __this__ + "::getPassedByPoints(" + "" + ")");
                 }
             
                 // invoke native method
-                java.util.List<com.amap.api.services.core.LatLonPoint> __result__;
+                java.util.List<com.amap.api.services.core.LatLonPoint> __result__ = null;
                 try {
-                    __result__ = ref.getPassedByPoints();
+                    __result__ = __this__.getPassedByPoints();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -607,17 +510,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                List<Integer> jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = new ArrayList<>();
-                    for (com.amap.api.services.core.LatLonPoint item : __result__) {
-                        getHEAP().put(System.identityHashCode(item), item);
-                        jsonableResult.add(System.identityHashCode(item));
-                    }
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteSearch.DriveRouteQuery::getAvoidRoad", (__args__, __methodResult__) -> {
@@ -625,18 +518,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteSearch.DriveRouteQuery ref = (com.amap.api.services.route.RouteSearch.DriveRouteQuery) getHEAP().get(refId);
+                com.amap.api.services.route.RouteSearch.DriveRouteQuery __this__ = (com.amap.api.services.route.RouteSearch.DriveRouteQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DriveRouteQuery@" + refId + "::getAvoidRoad(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DriveRouteQuery@" + __this__ + "::getAvoidRoad(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getAvoidRoad();
+                    __result__ = __this__.getAvoidRoad();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -646,10 +538,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteSearch.DriveRouteQuery::getPassedPointStr", (__args__, __methodResult__) -> {
@@ -657,18 +546,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteSearch.DriveRouteQuery ref = (com.amap.api.services.route.RouteSearch.DriveRouteQuery) getHEAP().get(refId);
+                com.amap.api.services.route.RouteSearch.DriveRouteQuery __this__ = (com.amap.api.services.route.RouteSearch.DriveRouteQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DriveRouteQuery@" + refId + "::getPassedPointStr(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DriveRouteQuery@" + __this__ + "::getPassedPointStr(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getPassedPointStr();
+                    __result__ = __this__.getPassedPointStr();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -678,10 +566,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteSearch.DriveRouteQuery::hasPassPoint", (__args__, __methodResult__) -> {
@@ -689,18 +574,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteSearch.DriveRouteQuery ref = (com.amap.api.services.route.RouteSearch.DriveRouteQuery) getHEAP().get(refId);
+                com.amap.api.services.route.RouteSearch.DriveRouteQuery __this__ = (com.amap.api.services.route.RouteSearch.DriveRouteQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DriveRouteQuery@" + refId + "::hasPassPoint(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DriveRouteQuery@" + __this__ + "::hasPassPoint(" + "" + ")");
                 }
             
                 // invoke native method
-                boolean __result__;
+                Boolean __result__ = null;
                 try {
-                    __result__ = ref.hasPassPoint();
+                    __result__ = __this__.hasPassPoint();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -710,10 +594,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                boolean jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteSearch.DriveRouteQuery::getAvoidpolygonsStr", (__args__, __methodResult__) -> {
@@ -721,18 +602,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteSearch.DriveRouteQuery ref = (com.amap.api.services.route.RouteSearch.DriveRouteQuery) getHEAP().get(refId);
+                com.amap.api.services.route.RouteSearch.DriveRouteQuery __this__ = (com.amap.api.services.route.RouteSearch.DriveRouteQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DriveRouteQuery@" + refId + "::getAvoidpolygonsStr(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DriveRouteQuery@" + __this__ + "::getAvoidpolygonsStr(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getAvoidpolygonsStr();
+                    __result__ = __this__.getAvoidpolygonsStr();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -742,10 +622,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteSearch.DriveRouteQuery::hasAvoidpolygons", (__args__, __methodResult__) -> {
@@ -753,18 +630,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteSearch.DriveRouteQuery ref = (com.amap.api.services.route.RouteSearch.DriveRouteQuery) getHEAP().get(refId);
+                com.amap.api.services.route.RouteSearch.DriveRouteQuery __this__ = (com.amap.api.services.route.RouteSearch.DriveRouteQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DriveRouteQuery@" + refId + "::hasAvoidpolygons(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DriveRouteQuery@" + __this__ + "::hasAvoidpolygons(" + "" + ")");
                 }
             
                 // invoke native method
-                boolean __result__;
+                Boolean __result__ = null;
                 try {
-                    __result__ = ref.hasAvoidpolygons();
+                    __result__ = __this__.hasAvoidpolygons();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -774,10 +650,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                boolean jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteSearch.DriveRouteQuery::hasAvoidRoad", (__args__, __methodResult__) -> {
@@ -785,18 +658,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteSearch.DriveRouteQuery ref = (com.amap.api.services.route.RouteSearch.DriveRouteQuery) getHEAP().get(refId);
+                com.amap.api.services.route.RouteSearch.DriveRouteQuery __this__ = (com.amap.api.services.route.RouteSearch.DriveRouteQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DriveRouteQuery@" + refId + "::hasAvoidRoad(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DriveRouteQuery@" + __this__ + "::hasAvoidRoad(" + "" + ")");
                 }
             
                 // invoke native method
-                boolean __result__;
+                Boolean __result__ = null;
                 try {
-                    __result__ = ref.hasAvoidRoad();
+                    __result__ = __this__.hasAvoidRoad();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -806,10 +678,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                boolean jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteSearch.DriveRouteQuery::clone", (__args__, __methodResult__) -> {
@@ -817,18 +686,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteSearch.DriveRouteQuery ref = (com.amap.api.services.route.RouteSearch.DriveRouteQuery) getHEAP().get(refId);
+                com.amap.api.services.route.RouteSearch.DriveRouteQuery __this__ = (com.amap.api.services.route.RouteSearch.DriveRouteQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DriveRouteQuery@" + refId + "::clone(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DriveRouteQuery@" + __this__ + "::clone(" + "" + ")");
                 }
             
                 // invoke native method
-                com.amap.api.services.route.RouteSearch.DriveRouteQuery __result__;
+                com.amap.api.services.route.RouteSearch.DriveRouteQuery __result__ = null;
                 try {
-                    __result__ = ref.clone();
+                    __result__ = __this__.clone();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -838,14 +706,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                Integer jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = System.identityHashCode(__result__);
-                    getHEAP().put(jsonableResult, __result__);
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteSearch.DriveRouteQuery::isUseFerry", (__args__, __methodResult__) -> {
@@ -853,18 +714,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteSearch.DriveRouteQuery ref = (com.amap.api.services.route.RouteSearch.DriveRouteQuery) getHEAP().get(refId);
+                com.amap.api.services.route.RouteSearch.DriveRouteQuery __this__ = (com.amap.api.services.route.RouteSearch.DriveRouteQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DriveRouteQuery@" + refId + "::isUseFerry(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DriveRouteQuery@" + __this__ + "::isUseFerry(" + "" + ")");
                 }
             
                 // invoke native method
-                boolean __result__;
+                Boolean __result__ = null;
                 try {
-                    __result__ = ref.isUseFerry();
+                    __result__ = __this__.isUseFerry();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -874,29 +734,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                boolean jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteSearch.DriveRouteQuery::setUseFerry", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteSearch.DriveRouteQuery ref = (com.amap.api.services.route.RouteSearch.DriveRouteQuery) getHEAP().get(refId);
+                com.amap.api.services.route.RouteSearch.DriveRouteQuery __this__ = (com.amap.api.services.route.RouteSearch.DriveRouteQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DriveRouteQuery@" + refId + "::setUseFerry(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DriveRouteQuery@" + __this__ + "::setUseFerry(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setUseFerry(var1);
+                    __this__.setUseFerry(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -906,29 +763,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteSearch.DriveRouteQuery::setCarType", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 int var1 = (int) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteSearch.DriveRouteQuery ref = (com.amap.api.services.route.RouteSearch.DriveRouteQuery) getHEAP().get(refId);
+                com.amap.api.services.route.RouteSearch.DriveRouteQuery __this__ = (com.amap.api.services.route.RouteSearch.DriveRouteQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DriveRouteQuery@" + refId + "::setCarType(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DriveRouteQuery@" + __this__ + "::setCarType(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setCarType(var1);
+                    __this__.setCarType(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -938,10 +792,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteRailwayItem::getTime", (__args__, __methodResult__) -> {
@@ -949,18 +800,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteRailwayItem ref = (com.amap.api.services.route.RouteRailwayItem) getHEAP().get(refId);
+                com.amap.api.services.route.RouteRailwayItem __this__ = (com.amap.api.services.route.RouteRailwayItem) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + refId + "::getTime(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + __this__ + "::getTime(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getTime();
+                    __result__ = __this__.getTime();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -970,10 +820,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteRailwayItem::getTrip", (__args__, __methodResult__) -> {
@@ -981,18 +828,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteRailwayItem ref = (com.amap.api.services.route.RouteRailwayItem) getHEAP().get(refId);
+                com.amap.api.services.route.RouteRailwayItem __this__ = (com.amap.api.services.route.RouteRailwayItem) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + refId + "::getTrip(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + __this__ + "::getTrip(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getTrip();
+                    __result__ = __this__.getTrip();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1002,10 +848,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteRailwayItem::getDistance", (__args__, __methodResult__) -> {
@@ -1013,18 +856,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteRailwayItem ref = (com.amap.api.services.route.RouteRailwayItem) getHEAP().get(refId);
+                com.amap.api.services.route.RouteRailwayItem __this__ = (com.amap.api.services.route.RouteRailwayItem) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + refId + "::getDistance(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + __this__ + "::getDistance(" + "" + ")");
                 }
             
                 // invoke native method
-                float __result__;
+                Float __result__ = null;
                 try {
-                    __result__ = ref.getDistance();
+                    __result__ = __this__.getDistance();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1034,10 +876,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                float jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteRailwayItem::getType", (__args__, __methodResult__) -> {
@@ -1045,18 +884,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteRailwayItem ref = (com.amap.api.services.route.RouteRailwayItem) getHEAP().get(refId);
+                com.amap.api.services.route.RouteRailwayItem __this__ = (com.amap.api.services.route.RouteRailwayItem) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + refId + "::getType(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + __this__ + "::getType(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getType();
+                    __result__ = __this__.getType();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1066,10 +904,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteRailwayItem::getDeparturestop", (__args__, __methodResult__) -> {
@@ -1077,18 +912,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteRailwayItem ref = (com.amap.api.services.route.RouteRailwayItem) getHEAP().get(refId);
+                com.amap.api.services.route.RouteRailwayItem __this__ = (com.amap.api.services.route.RouteRailwayItem) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + refId + "::getDeparturestop(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + __this__ + "::getDeparturestop(" + "" + ")");
                 }
             
                 // invoke native method
-                com.amap.api.services.route.RailwayStationItem __result__;
+                com.amap.api.services.route.RailwayStationItem __result__ = null;
                 try {
-                    __result__ = ref.getDeparturestop();
+                    __result__ = __this__.getDeparturestop();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1098,14 +932,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                Integer jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = System.identityHashCode(__result__);
-                    getHEAP().put(jsonableResult, __result__);
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteRailwayItem::getArrivalstop", (__args__, __methodResult__) -> {
@@ -1113,18 +940,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteRailwayItem ref = (com.amap.api.services.route.RouteRailwayItem) getHEAP().get(refId);
+                com.amap.api.services.route.RouteRailwayItem __this__ = (com.amap.api.services.route.RouteRailwayItem) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + refId + "::getArrivalstop(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + __this__ + "::getArrivalstop(" + "" + ")");
                 }
             
                 // invoke native method
-                com.amap.api.services.route.RailwayStationItem __result__;
+                com.amap.api.services.route.RailwayStationItem __result__ = null;
                 try {
-                    __result__ = ref.getArrivalstop();
+                    __result__ = __this__.getArrivalstop();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1134,14 +960,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                Integer jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = System.identityHashCode(__result__);
-                    getHEAP().put(jsonableResult, __result__);
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteRailwayItem::getViastops", (__args__, __methodResult__) -> {
@@ -1149,18 +968,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteRailwayItem ref = (com.amap.api.services.route.RouteRailwayItem) getHEAP().get(refId);
+                com.amap.api.services.route.RouteRailwayItem __this__ = (com.amap.api.services.route.RouteRailwayItem) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + refId + "::getViastops(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + __this__ + "::getViastops(" + "" + ")");
                 }
             
                 // invoke native method
-                java.util.List<com.amap.api.services.route.RailwayStationItem> __result__;
+                java.util.List<com.amap.api.services.route.RailwayStationItem> __result__ = null;
                 try {
-                    __result__ = ref.getViastops();
+                    __result__ = __this__.getViastops();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1170,17 +988,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                List<Integer> jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = new ArrayList<>();
-                    for (com.amap.api.services.route.RailwayStationItem item : __result__) {
-                        getHEAP().put(System.identityHashCode(item), item);
-                        jsonableResult.add(System.identityHashCode(item));
-                    }
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteRailwayItem::getAlters", (__args__, __methodResult__) -> {
@@ -1188,18 +996,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteRailwayItem ref = (com.amap.api.services.route.RouteRailwayItem) getHEAP().get(refId);
+                com.amap.api.services.route.RouteRailwayItem __this__ = (com.amap.api.services.route.RouteRailwayItem) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + refId + "::getAlters(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + __this__ + "::getAlters(" + "" + ")");
                 }
             
                 // invoke native method
-                java.util.List<com.amap.api.services.route.Railway> __result__;
+                java.util.List<com.amap.api.services.route.Railway> __result__ = null;
                 try {
-                    __result__ = ref.getAlters();
+                    __result__ = __this__.getAlters();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1209,17 +1016,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                List<Integer> jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = new ArrayList<>();
-                    for (com.amap.api.services.route.Railway item : __result__) {
-                        getHEAP().put(System.identityHashCode(item), item);
-                        jsonableResult.add(System.identityHashCode(item));
-                    }
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteRailwayItem::getSpaces", (__args__, __methodResult__) -> {
@@ -1227,18 +1024,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteRailwayItem ref = (com.amap.api.services.route.RouteRailwayItem) getHEAP().get(refId);
+                com.amap.api.services.route.RouteRailwayItem __this__ = (com.amap.api.services.route.RouteRailwayItem) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + refId + "::getSpaces(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + __this__ + "::getSpaces(" + "" + ")");
                 }
             
                 // invoke native method
-                java.util.List<com.amap.api.services.route.RailwaySpace> __result__;
+                java.util.List<com.amap.api.services.route.RailwaySpace> __result__ = null;
                 try {
-                    __result__ = ref.getSpaces();
+                    __result__ = __this__.getSpaces();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1248,36 +1044,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                List<Integer> jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = new ArrayList<>();
-                    for (com.amap.api.services.route.RailwaySpace item : __result__) {
-                        getHEAP().put(System.identityHashCode(item), item);
-                        jsonableResult.add(System.identityHashCode(item));
-                    }
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteRailwayItem::setTime", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteRailwayItem ref = (com.amap.api.services.route.RouteRailwayItem) getHEAP().get(refId);
+                com.amap.api.services.route.RouteRailwayItem __this__ = (com.amap.api.services.route.RouteRailwayItem) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + refId + "::setTime(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + __this__ + "::setTime(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setTime(var1);
+                    __this__.setTime(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1287,29 +1073,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteRailwayItem::setTrip", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteRailwayItem ref = (com.amap.api.services.route.RouteRailwayItem) getHEAP().get(refId);
+                com.amap.api.services.route.RouteRailwayItem __this__ = (com.amap.api.services.route.RouteRailwayItem) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + refId + "::setTrip(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + __this__ + "::setTrip(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setTrip(var1);
+                    __this__.setTrip(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1319,29 +1102,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteRailwayItem::setDistance", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
-                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteRailwayItem ref = (com.amap.api.services.route.RouteRailwayItem) getHEAP().get(refId);
+                com.amap.api.services.route.RouteRailwayItem __this__ = (com.amap.api.services.route.RouteRailwayItem) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + refId + "::setDistance(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + __this__ + "::setDistance(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setDistance(new Double(var1).floatValue());
+                    __this__.setDistance(new Double(var1).floatValue());
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1351,29 +1131,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteRailwayItem::setType", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteRailwayItem ref = (com.amap.api.services.route.RouteRailwayItem) getHEAP().get(refId);
+                com.amap.api.services.route.RouteRailwayItem __this__ = (com.amap.api.services.route.RouteRailwayItem) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + refId + "::setType(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + __this__ + "::setType(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setType(var1);
+                    __this__.setType(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1383,30 +1160,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteRailwayItem::setDeparturestop", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.route.RailwayStationItem var1 = __var1RefId__ != null ? (com.amap.api.services.route.RailwayStationItem) getHEAP().get(__var1RefId__) : null;
+                com.amap.api.services.route.RailwayStationItem var1 = (com.amap.api.services.route.RailwayStationItem) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteRailwayItem ref = (com.amap.api.services.route.RouteRailwayItem) getHEAP().get(refId);
+                com.amap.api.services.route.RouteRailwayItem __this__ = (com.amap.api.services.route.RouteRailwayItem) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + refId + "::setDeparturestop(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + __this__ + "::setDeparturestop(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setDeparturestop(var1);
+                    __this__.setDeparturestop(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1416,30 +1189,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteRailwayItem::setArrivalstop", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.route.RailwayStationItem var1 = __var1RefId__ != null ? (com.amap.api.services.route.RailwayStationItem) getHEAP().get(__var1RefId__) : null;
+                com.amap.api.services.route.RailwayStationItem var1 = (com.amap.api.services.route.RailwayStationItem) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteRailwayItem ref = (com.amap.api.services.route.RouteRailwayItem) getHEAP().get(refId);
+                com.amap.api.services.route.RouteRailwayItem __this__ = (com.amap.api.services.route.RouteRailwayItem) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + refId + "::setArrivalstop(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + __this__ + "::setArrivalstop(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setArrivalstop(var1);
+                    __this__.setArrivalstop(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1449,33 +1218,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteRailwayItem::setViastops", (__args__, __methodResult__) -> {
                 // args
-                // list arg
-                List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) __args__).get("var1");
-                java.util.List<com.amap.api.services.route.RailwayStationItem> var1 = new ArrayList<>();
-                for (int refId : var1RefIdList) {
-                    ((ArrayList<com.amap.api.services.route.RailwayStationItem>) var1).add((com.amap.api.services.route.RailwayStationItem) getHEAP().get(refId));
-                }
+                // ref arg
+                java.util.List<com.amap.api.services.route.RailwayStationItem> var1 = (java.util.List<com.amap.api.services.route.RailwayStationItem>) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteRailwayItem ref = (com.amap.api.services.route.RouteRailwayItem) getHEAP().get(refId);
+                com.amap.api.services.route.RouteRailwayItem __this__ = (com.amap.api.services.route.RouteRailwayItem) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + refId + "::setViastops(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + __this__ + "::setViastops(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setViastops((ArrayList) var1);
+                    __this__.setViastops((ArrayList) var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1485,33 +1247,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteRailwayItem::setAlters", (__args__, __methodResult__) -> {
                 // args
-                // list arg
-                List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) __args__).get("var1");
-                java.util.List<com.amap.api.services.route.Railway> var1 = new ArrayList<>();
-                for (int refId : var1RefIdList) {
-                    ((ArrayList<com.amap.api.services.route.Railway>) var1).add((com.amap.api.services.route.Railway) getHEAP().get(refId));
-                }
+                // ref arg
+                java.util.List<com.amap.api.services.route.Railway> var1 = (java.util.List<com.amap.api.services.route.Railway>) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteRailwayItem ref = (com.amap.api.services.route.RouteRailwayItem) getHEAP().get(refId);
+                com.amap.api.services.route.RouteRailwayItem __this__ = (com.amap.api.services.route.RouteRailwayItem) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + refId + "::setAlters(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + __this__ + "::setAlters(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setAlters((ArrayList) var1);
+                    __this__.setAlters((ArrayList) var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1521,33 +1276,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteRailwayItem::setSpaces", (__args__, __methodResult__) -> {
                 // args
-                // list arg
-                List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) __args__).get("var1");
-                java.util.List<com.amap.api.services.route.RailwaySpace> var1 = new ArrayList<>();
-                for (int refId : var1RefIdList) {
-                    ((ArrayList<com.amap.api.services.route.RailwaySpace>) var1).add((com.amap.api.services.route.RailwaySpace) getHEAP().get(refId));
-                }
+                // ref arg
+                java.util.List<com.amap.api.services.route.RailwaySpace> var1 = (java.util.List<com.amap.api.services.route.RailwaySpace>) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteRailwayItem ref = (com.amap.api.services.route.RouteRailwayItem) getHEAP().get(refId);
+                com.amap.api.services.route.RouteRailwayItem __this__ = (com.amap.api.services.route.RouteRailwayItem) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + refId + "::setSpaces(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + __this__ + "::setSpaces(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setSpaces((ArrayList) var1);
+                    __this__.setSpaces((ArrayList) var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1557,10 +1305,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.WalkStep::getInstruction", (__args__, __methodResult__) -> {
@@ -1568,18 +1313,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.WalkStep ref = (com.amap.api.services.route.WalkStep) getHEAP().get(refId);
+                com.amap.api.services.route.WalkStep __this__ = (com.amap.api.services.route.WalkStep) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkStep@" + refId + "::getInstruction(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkStep@" + __this__ + "::getInstruction(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getInstruction();
+                    __result__ = __this__.getInstruction();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1589,29 +1333,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.WalkStep::setInstruction", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.WalkStep ref = (com.amap.api.services.route.WalkStep) getHEAP().get(refId);
+                com.amap.api.services.route.WalkStep __this__ = (com.amap.api.services.route.WalkStep) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkStep@" + refId + "::setInstruction(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkStep@" + __this__ + "::setInstruction(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setInstruction(var1);
+                    __this__.setInstruction(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1621,10 +1362,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.WalkStep::getOrientation", (__args__, __methodResult__) -> {
@@ -1632,18 +1370,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.WalkStep ref = (com.amap.api.services.route.WalkStep) getHEAP().get(refId);
+                com.amap.api.services.route.WalkStep __this__ = (com.amap.api.services.route.WalkStep) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkStep@" + refId + "::getOrientation(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkStep@" + __this__ + "::getOrientation(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getOrientation();
+                    __result__ = __this__.getOrientation();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1653,29 +1390,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.WalkStep::setOrientation", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.WalkStep ref = (com.amap.api.services.route.WalkStep) getHEAP().get(refId);
+                com.amap.api.services.route.WalkStep __this__ = (com.amap.api.services.route.WalkStep) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkStep@" + refId + "::setOrientation(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkStep@" + __this__ + "::setOrientation(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setOrientation(var1);
+                    __this__.setOrientation(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1685,10 +1419,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.WalkStep::getRoad", (__args__, __methodResult__) -> {
@@ -1696,18 +1427,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.WalkStep ref = (com.amap.api.services.route.WalkStep) getHEAP().get(refId);
+                com.amap.api.services.route.WalkStep __this__ = (com.amap.api.services.route.WalkStep) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkStep@" + refId + "::getRoad(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkStep@" + __this__ + "::getRoad(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getRoad();
+                    __result__ = __this__.getRoad();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1717,29 +1447,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.WalkStep::setRoad", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.WalkStep ref = (com.amap.api.services.route.WalkStep) getHEAP().get(refId);
+                com.amap.api.services.route.WalkStep __this__ = (com.amap.api.services.route.WalkStep) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkStep@" + refId + "::setRoad(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkStep@" + __this__ + "::setRoad(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setRoad(var1);
+                    __this__.setRoad(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1749,10 +1476,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.WalkStep::getDistance", (__args__, __methodResult__) -> {
@@ -1760,18 +1484,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.WalkStep ref = (com.amap.api.services.route.WalkStep) getHEAP().get(refId);
+                com.amap.api.services.route.WalkStep __this__ = (com.amap.api.services.route.WalkStep) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkStep@" + refId + "::getDistance(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkStep@" + __this__ + "::getDistance(" + "" + ")");
                 }
             
                 // invoke native method
-                float __result__;
+                Float __result__ = null;
                 try {
-                    __result__ = ref.getDistance();
+                    __result__ = __this__.getDistance();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1781,29 +1504,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                float jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.WalkStep::setDistance", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
-                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.WalkStep ref = (com.amap.api.services.route.WalkStep) getHEAP().get(refId);
+                com.amap.api.services.route.WalkStep __this__ = (com.amap.api.services.route.WalkStep) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkStep@" + refId + "::setDistance(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkStep@" + __this__ + "::setDistance(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setDistance(new Double(var1).floatValue());
+                    __this__.setDistance(new Double(var1).floatValue());
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1813,10 +1533,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.WalkStep::getDuration", (__args__, __methodResult__) -> {
@@ -1824,18 +1541,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.WalkStep ref = (com.amap.api.services.route.WalkStep) getHEAP().get(refId);
+                com.amap.api.services.route.WalkStep __this__ = (com.amap.api.services.route.WalkStep) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkStep@" + refId + "::getDuration(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkStep@" + __this__ + "::getDuration(" + "" + ")");
                 }
             
                 // invoke native method
-                float __result__;
+                Float __result__ = null;
                 try {
-                    __result__ = ref.getDuration();
+                    __result__ = __this__.getDuration();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1845,29 +1561,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                float jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.WalkStep::setDuration", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
-                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.WalkStep ref = (com.amap.api.services.route.WalkStep) getHEAP().get(refId);
+                com.amap.api.services.route.WalkStep __this__ = (com.amap.api.services.route.WalkStep) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkStep@" + refId + "::setDuration(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkStep@" + __this__ + "::setDuration(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setDuration(new Double(var1).floatValue());
+                    __this__.setDuration(new Double(var1).floatValue());
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1877,10 +1590,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.WalkStep::getPolyline", (__args__, __methodResult__) -> {
@@ -1888,18 +1598,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.WalkStep ref = (com.amap.api.services.route.WalkStep) getHEAP().get(refId);
+                com.amap.api.services.route.WalkStep __this__ = (com.amap.api.services.route.WalkStep) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkStep@" + refId + "::getPolyline(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkStep@" + __this__ + "::getPolyline(" + "" + ")");
                 }
             
                 // invoke native method
-                java.util.List<com.amap.api.services.core.LatLonPoint> __result__;
+                java.util.List<com.amap.api.services.core.LatLonPoint> __result__ = null;
                 try {
-                    __result__ = ref.getPolyline();
+                    __result__ = __this__.getPolyline();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1909,40 +1618,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                List<Integer> jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = new ArrayList<>();
-                    for (com.amap.api.services.core.LatLonPoint item : __result__) {
-                        getHEAP().put(System.identityHashCode(item), item);
-                        jsonableResult.add(System.identityHashCode(item));
-                    }
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.WalkStep::setPolyline", (__args__, __methodResult__) -> {
                 // args
-                // list arg
-                List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) __args__).get("var1");
-                java.util.List<com.amap.api.services.core.LatLonPoint> var1 = new ArrayList<>();
-                for (int refId : var1RefIdList) {
-                    ((ArrayList<com.amap.api.services.core.LatLonPoint>) var1).add((com.amap.api.services.core.LatLonPoint) getHEAP().get(refId));
-                }
+                // ref arg
+                java.util.List<com.amap.api.services.core.LatLonPoint> var1 = (java.util.List<com.amap.api.services.core.LatLonPoint>) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.WalkStep ref = (com.amap.api.services.route.WalkStep) getHEAP().get(refId);
+                com.amap.api.services.route.WalkStep __this__ = (com.amap.api.services.route.WalkStep) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkStep@" + refId + "::setPolyline(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkStep@" + __this__ + "::setPolyline(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setPolyline((ArrayList) var1);
+                    __this__.setPolyline((ArrayList) var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1952,10 +1647,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.WalkStep::getAction", (__args__, __methodResult__) -> {
@@ -1963,18 +1655,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.WalkStep ref = (com.amap.api.services.route.WalkStep) getHEAP().get(refId);
+                com.amap.api.services.route.WalkStep __this__ = (com.amap.api.services.route.WalkStep) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkStep@" + refId + "::getAction(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkStep@" + __this__ + "::getAction(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getAction();
+                    __result__ = __this__.getAction();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1984,29 +1675,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.WalkStep::setAction", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.WalkStep ref = (com.amap.api.services.route.WalkStep) getHEAP().get(refId);
+                com.amap.api.services.route.WalkStep __this__ = (com.amap.api.services.route.WalkStep) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkStep@" + refId + "::setAction(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkStep@" + __this__ + "::setAction(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setAction(var1);
+                    __this__.setAction(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2016,10 +1704,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.WalkStep::getAssistantAction", (__args__, __methodResult__) -> {
@@ -2027,18 +1712,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.WalkStep ref = (com.amap.api.services.route.WalkStep) getHEAP().get(refId);
+                com.amap.api.services.route.WalkStep __this__ = (com.amap.api.services.route.WalkStep) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkStep@" + refId + "::getAssistantAction(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkStep@" + __this__ + "::getAssistantAction(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getAssistantAction();
+                    __result__ = __this__.getAssistantAction();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2048,29 +1732,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.WalkStep::setAssistantAction", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.WalkStep ref = (com.amap.api.services.route.WalkStep) getHEAP().get(refId);
+                com.amap.api.services.route.WalkStep __this__ = (com.amap.api.services.route.WalkStep) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkStep@" + refId + "::setAssistantAction(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkStep@" + __this__ + "::setAssistantAction(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setAssistantAction(var1);
+                    __this__.setAssistantAction(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2080,10 +1761,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RailwayStationItem::getID", (__args__, __methodResult__) -> {
@@ -2091,18 +1769,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RailwayStationItem ref = (com.amap.api.services.route.RailwayStationItem) getHEAP().get(refId);
+                com.amap.api.services.route.RailwayStationItem __this__ = (com.amap.api.services.route.RailwayStationItem) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RailwayStationItem@" + refId + "::getID(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RailwayStationItem@" + __this__ + "::getID(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getID();
+                    __result__ = __this__.getID();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2112,10 +1789,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RailwayStationItem::getName", (__args__, __methodResult__) -> {
@@ -2123,18 +1797,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RailwayStationItem ref = (com.amap.api.services.route.RailwayStationItem) getHEAP().get(refId);
+                com.amap.api.services.route.RailwayStationItem __this__ = (com.amap.api.services.route.RailwayStationItem) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RailwayStationItem@" + refId + "::getName(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RailwayStationItem@" + __this__ + "::getName(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getName();
+                    __result__ = __this__.getName();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2144,10 +1817,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RailwayStationItem::getLocation", (__args__, __methodResult__) -> {
@@ -2155,18 +1825,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RailwayStationItem ref = (com.amap.api.services.route.RailwayStationItem) getHEAP().get(refId);
+                com.amap.api.services.route.RailwayStationItem __this__ = (com.amap.api.services.route.RailwayStationItem) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RailwayStationItem@" + refId + "::getLocation(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RailwayStationItem@" + __this__ + "::getLocation(" + "" + ")");
                 }
             
                 // invoke native method
-                com.amap.api.services.core.LatLonPoint __result__;
+                com.amap.api.services.core.LatLonPoint __result__ = null;
                 try {
-                    __result__ = ref.getLocation();
+                    __result__ = __this__.getLocation();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2176,14 +1845,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                Integer jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = System.identityHashCode(__result__);
-                    getHEAP().put(jsonableResult, __result__);
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RailwayStationItem::getAdcode", (__args__, __methodResult__) -> {
@@ -2191,18 +1853,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RailwayStationItem ref = (com.amap.api.services.route.RailwayStationItem) getHEAP().get(refId);
+                com.amap.api.services.route.RailwayStationItem __this__ = (com.amap.api.services.route.RailwayStationItem) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RailwayStationItem@" + refId + "::getAdcode(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RailwayStationItem@" + __this__ + "::getAdcode(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getAdcode();
+                    __result__ = __this__.getAdcode();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2212,10 +1873,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RailwayStationItem::getTime", (__args__, __methodResult__) -> {
@@ -2223,18 +1881,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RailwayStationItem ref = (com.amap.api.services.route.RailwayStationItem) getHEAP().get(refId);
+                com.amap.api.services.route.RailwayStationItem __this__ = (com.amap.api.services.route.RailwayStationItem) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RailwayStationItem@" + refId + "::getTime(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RailwayStationItem@" + __this__ + "::getTime(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getTime();
+                    __result__ = __this__.getTime();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2244,10 +1901,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RailwayStationItem::isStart", (__args__, __methodResult__) -> {
@@ -2255,18 +1909,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RailwayStationItem ref = (com.amap.api.services.route.RailwayStationItem) getHEAP().get(refId);
+                com.amap.api.services.route.RailwayStationItem __this__ = (com.amap.api.services.route.RailwayStationItem) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RailwayStationItem@" + refId + "::isStart(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RailwayStationItem@" + __this__ + "::isStart(" + "" + ")");
                 }
             
                 // invoke native method
-                boolean __result__;
+                Boolean __result__ = null;
                 try {
-                    __result__ = ref.isStart();
+                    __result__ = __this__.isStart();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2276,10 +1929,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                boolean jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RailwayStationItem::isEnd", (__args__, __methodResult__) -> {
@@ -2287,18 +1937,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RailwayStationItem ref = (com.amap.api.services.route.RailwayStationItem) getHEAP().get(refId);
+                com.amap.api.services.route.RailwayStationItem __this__ = (com.amap.api.services.route.RailwayStationItem) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RailwayStationItem@" + refId + "::isEnd(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RailwayStationItem@" + __this__ + "::isEnd(" + "" + ")");
                 }
             
                 // invoke native method
-                boolean __result__;
+                Boolean __result__ = null;
                 try {
-                    __result__ = ref.isEnd();
+                    __result__ = __this__.isEnd();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2308,10 +1957,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                boolean jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RailwayStationItem::getWait", (__args__, __methodResult__) -> {
@@ -2319,18 +1965,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RailwayStationItem ref = (com.amap.api.services.route.RailwayStationItem) getHEAP().get(refId);
+                com.amap.api.services.route.RailwayStationItem __this__ = (com.amap.api.services.route.RailwayStationItem) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RailwayStationItem@" + refId + "::getWait(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RailwayStationItem@" + __this__ + "::getWait(" + "" + ")");
                 }
             
                 // invoke native method
-                float __result__;
+                Float __result__ = null;
                 try {
-                    __result__ = ref.getWait();
+                    __result__ = __this__.getWait();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2340,29 +1985,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                float jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RailwayStationItem::setID", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RailwayStationItem ref = (com.amap.api.services.route.RailwayStationItem) getHEAP().get(refId);
+                com.amap.api.services.route.RailwayStationItem __this__ = (com.amap.api.services.route.RailwayStationItem) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RailwayStationItem@" + refId + "::setID(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RailwayStationItem@" + __this__ + "::setID(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setID(var1);
+                    __this__.setID(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2372,29 +2014,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RailwayStationItem::setName", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RailwayStationItem ref = (com.amap.api.services.route.RailwayStationItem) getHEAP().get(refId);
+                com.amap.api.services.route.RailwayStationItem __this__ = (com.amap.api.services.route.RailwayStationItem) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RailwayStationItem@" + refId + "::setName(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RailwayStationItem@" + __this__ + "::setName(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setName(var1);
+                    __this__.setName(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2404,30 +2043,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RailwayStationItem::setLocation", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.core.LatLonPoint var1 = __var1RefId__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1RefId__) : null;
+                com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RailwayStationItem ref = (com.amap.api.services.route.RailwayStationItem) getHEAP().get(refId);
+                com.amap.api.services.route.RailwayStationItem __this__ = (com.amap.api.services.route.RailwayStationItem) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RailwayStationItem@" + refId + "::setLocation(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RailwayStationItem@" + __this__ + "::setLocation(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setLocation(var1);
+                    __this__.setLocation(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2437,29 +2072,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RailwayStationItem::setAdcode", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RailwayStationItem ref = (com.amap.api.services.route.RailwayStationItem) getHEAP().get(refId);
+                com.amap.api.services.route.RailwayStationItem __this__ = (com.amap.api.services.route.RailwayStationItem) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RailwayStationItem@" + refId + "::setAdcode(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RailwayStationItem@" + __this__ + "::setAdcode(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setAdcode(var1);
+                    __this__.setAdcode(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2469,29 +2101,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RailwayStationItem::setTime", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RailwayStationItem ref = (com.amap.api.services.route.RailwayStationItem) getHEAP().get(refId);
+                com.amap.api.services.route.RailwayStationItem __this__ = (com.amap.api.services.route.RailwayStationItem) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RailwayStationItem@" + refId + "::setTime(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RailwayStationItem@" + __this__ + "::setTime(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setTime(var1);
+                    __this__.setTime(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2501,29 +2130,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RailwayStationItem::setisStart", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RailwayStationItem ref = (com.amap.api.services.route.RailwayStationItem) getHEAP().get(refId);
+                com.amap.api.services.route.RailwayStationItem __this__ = (com.amap.api.services.route.RailwayStationItem) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RailwayStationItem@" + refId + "::setisStart(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RailwayStationItem@" + __this__ + "::setisStart(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setisStart(var1);
+                    __this__.setisStart(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2533,29 +2159,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RailwayStationItem::setisEnd", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RailwayStationItem ref = (com.amap.api.services.route.RailwayStationItem) getHEAP().get(refId);
+                com.amap.api.services.route.RailwayStationItem __this__ = (com.amap.api.services.route.RailwayStationItem) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RailwayStationItem@" + refId + "::setisEnd(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RailwayStationItem@" + __this__ + "::setisEnd(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setisEnd(var1);
+                    __this__.setisEnd(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2565,29 +2188,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RailwayStationItem::setWait", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
-                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RailwayStationItem ref = (com.amap.api.services.route.RailwayStationItem) getHEAP().get(refId);
+                com.amap.api.services.route.RailwayStationItem __this__ = (com.amap.api.services.route.RailwayStationItem) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RailwayStationItem@" + refId + "::setWait(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RailwayStationItem@" + __this__ + "::setWait(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setWait(new Double(var1).floatValue());
+                    __this__.setWait(new Double(var1).floatValue());
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2597,10 +2217,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RideRouteResult::getPaths", (__args__, __methodResult__) -> {
@@ -2608,18 +2225,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RideRouteResult ref = (com.amap.api.services.route.RideRouteResult) getHEAP().get(refId);
+                com.amap.api.services.route.RideRouteResult __this__ = (com.amap.api.services.route.RideRouteResult) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RideRouteResult@" + refId + "::getPaths(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RideRouteResult@" + __this__ + "::getPaths(" + "" + ")");
                 }
             
                 // invoke native method
-                java.util.List<com.amap.api.services.route.RidePath> __result__;
+                java.util.List<com.amap.api.services.route.RidePath> __result__ = null;
                 try {
-                    __result__ = ref.getPaths();
+                    __result__ = __this__.getPaths();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2629,40 +2245,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                List<Integer> jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = new ArrayList<>();
-                    for (com.amap.api.services.route.RidePath item : __result__) {
-                        getHEAP().put(System.identityHashCode(item), item);
-                        jsonableResult.add(System.identityHashCode(item));
-                    }
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RideRouteResult::setPaths", (__args__, __methodResult__) -> {
                 // args
-                // list arg
-                List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) __args__).get("var1");
-                java.util.List<com.amap.api.services.route.RidePath> var1 = new ArrayList<>();
-                for (int refId : var1RefIdList) {
-                    ((ArrayList<com.amap.api.services.route.RidePath>) var1).add((com.amap.api.services.route.RidePath) getHEAP().get(refId));
-                }
+                // ref arg
+                java.util.List<com.amap.api.services.route.RidePath> var1 = (java.util.List<com.amap.api.services.route.RidePath>) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RideRouteResult ref = (com.amap.api.services.route.RideRouteResult) getHEAP().get(refId);
+                com.amap.api.services.route.RideRouteResult __this__ = (com.amap.api.services.route.RideRouteResult) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RideRouteResult@" + refId + "::setPaths(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RideRouteResult@" + __this__ + "::setPaths(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setPaths((ArrayList) var1);
+                    __this__.setPaths((ArrayList) var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2672,10 +2274,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RideRouteResult::getRideQuery", (__args__, __methodResult__) -> {
@@ -2683,18 +2282,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RideRouteResult ref = (com.amap.api.services.route.RideRouteResult) getHEAP().get(refId);
+                com.amap.api.services.route.RideRouteResult __this__ = (com.amap.api.services.route.RideRouteResult) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RideRouteResult@" + refId + "::getRideQuery(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RideRouteResult@" + __this__ + "::getRideQuery(" + "" + ")");
                 }
             
                 // invoke native method
-                com.amap.api.services.route.RouteSearch.RideRouteQuery __result__;
+                com.amap.api.services.route.RouteSearch.RideRouteQuery __result__ = null;
                 try {
-                    __result__ = ref.getRideQuery();
+                    __result__ = __this__.getRideQuery();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2704,34 +2302,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                Integer jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = System.identityHashCode(__result__);
-                    getHEAP().put(jsonableResult, __result__);
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RideRouteResult::setRideQuery", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.route.RouteSearch.RideRouteQuery var1 = __var1RefId__ != null ? (com.amap.api.services.route.RouteSearch.RideRouteQuery) getHEAP().get(__var1RefId__) : null;
+                com.amap.api.services.route.RouteSearch.RideRouteQuery var1 = (com.amap.api.services.route.RouteSearch.RideRouteQuery) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RideRouteResult ref = (com.amap.api.services.route.RideRouteResult) getHEAP().get(refId);
+                com.amap.api.services.route.RideRouteResult __this__ = (com.amap.api.services.route.RideRouteResult) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RideRouteResult@" + refId + "::setRideQuery(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RideRouteResult@" + __this__ + "::setRideQuery(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setRideQuery(var1);
+                    __this__.setRideQuery(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2741,10 +2331,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteSearch.FromAndTo::getFrom", (__args__, __methodResult__) -> {
@@ -2752,18 +2339,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteSearch.FromAndTo ref = (com.amap.api.services.route.RouteSearch.FromAndTo) getHEAP().get(refId);
+                com.amap.api.services.route.RouteSearch.FromAndTo __this__ = (com.amap.api.services.route.RouteSearch.FromAndTo) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.FromAndTo@" + refId + "::getFrom(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.FromAndTo@" + __this__ + "::getFrom(" + "" + ")");
                 }
             
                 // invoke native method
-                com.amap.api.services.core.LatLonPoint __result__;
+                com.amap.api.services.core.LatLonPoint __result__ = null;
                 try {
-                    __result__ = ref.getFrom();
+                    __result__ = __this__.getFrom();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2773,14 +2359,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                Integer jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = System.identityHashCode(__result__);
-                    getHEAP().put(jsonableResult, __result__);
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteSearch.FromAndTo::getTo", (__args__, __methodResult__) -> {
@@ -2788,18 +2367,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteSearch.FromAndTo ref = (com.amap.api.services.route.RouteSearch.FromAndTo) getHEAP().get(refId);
+                com.amap.api.services.route.RouteSearch.FromAndTo __this__ = (com.amap.api.services.route.RouteSearch.FromAndTo) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.FromAndTo@" + refId + "::getTo(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.FromAndTo@" + __this__ + "::getTo(" + "" + ")");
                 }
             
                 // invoke native method
-                com.amap.api.services.core.LatLonPoint __result__;
+                com.amap.api.services.core.LatLonPoint __result__ = null;
                 try {
-                    __result__ = ref.getTo();
+                    __result__ = __this__.getTo();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2809,14 +2387,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                Integer jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = System.identityHashCode(__result__);
-                    getHEAP().put(jsonableResult, __result__);
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteSearch.FromAndTo::getStartPoiID", (__args__, __methodResult__) -> {
@@ -2824,18 +2395,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteSearch.FromAndTo ref = (com.amap.api.services.route.RouteSearch.FromAndTo) getHEAP().get(refId);
+                com.amap.api.services.route.RouteSearch.FromAndTo __this__ = (com.amap.api.services.route.RouteSearch.FromAndTo) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.FromAndTo@" + refId + "::getStartPoiID(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.FromAndTo@" + __this__ + "::getStartPoiID(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getStartPoiID();
+                    __result__ = __this__.getStartPoiID();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2845,29 +2415,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteSearch.FromAndTo::setStartPoiID", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteSearch.FromAndTo ref = (com.amap.api.services.route.RouteSearch.FromAndTo) getHEAP().get(refId);
+                com.amap.api.services.route.RouteSearch.FromAndTo __this__ = (com.amap.api.services.route.RouteSearch.FromAndTo) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.FromAndTo@" + refId + "::setStartPoiID(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.FromAndTo@" + __this__ + "::setStartPoiID(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setStartPoiID(var1);
+                    __this__.setStartPoiID(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2877,10 +2444,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteSearch.FromAndTo::getDestinationPoiID", (__args__, __methodResult__) -> {
@@ -2888,18 +2452,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteSearch.FromAndTo ref = (com.amap.api.services.route.RouteSearch.FromAndTo) getHEAP().get(refId);
+                com.amap.api.services.route.RouteSearch.FromAndTo __this__ = (com.amap.api.services.route.RouteSearch.FromAndTo) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.FromAndTo@" + refId + "::getDestinationPoiID(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.FromAndTo@" + __this__ + "::getDestinationPoiID(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getDestinationPoiID();
+                    __result__ = __this__.getDestinationPoiID();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2909,29 +2472,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteSearch.FromAndTo::setDestinationPoiID", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteSearch.FromAndTo ref = (com.amap.api.services.route.RouteSearch.FromAndTo) getHEAP().get(refId);
+                com.amap.api.services.route.RouteSearch.FromAndTo __this__ = (com.amap.api.services.route.RouteSearch.FromAndTo) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.FromAndTo@" + refId + "::setDestinationPoiID(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.FromAndTo@" + __this__ + "::setDestinationPoiID(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setDestinationPoiID(var1);
+                    __this__.setDestinationPoiID(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2941,10 +2501,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteSearch.FromAndTo::getOriginType", (__args__, __methodResult__) -> {
@@ -2952,18 +2509,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteSearch.FromAndTo ref = (com.amap.api.services.route.RouteSearch.FromAndTo) getHEAP().get(refId);
+                com.amap.api.services.route.RouteSearch.FromAndTo __this__ = (com.amap.api.services.route.RouteSearch.FromAndTo) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.FromAndTo@" + refId + "::getOriginType(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.FromAndTo@" + __this__ + "::getOriginType(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getOriginType();
+                    __result__ = __this__.getOriginType();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2973,29 +2529,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteSearch.FromAndTo::setOriginType", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteSearch.FromAndTo ref = (com.amap.api.services.route.RouteSearch.FromAndTo) getHEAP().get(refId);
+                com.amap.api.services.route.RouteSearch.FromAndTo __this__ = (com.amap.api.services.route.RouteSearch.FromAndTo) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.FromAndTo@" + refId + "::setOriginType(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.FromAndTo@" + __this__ + "::setOriginType(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setOriginType(var1);
+                    __this__.setOriginType(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3005,10 +2558,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteSearch.FromAndTo::getDestinationType", (__args__, __methodResult__) -> {
@@ -3016,18 +2566,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteSearch.FromAndTo ref = (com.amap.api.services.route.RouteSearch.FromAndTo) getHEAP().get(refId);
+                com.amap.api.services.route.RouteSearch.FromAndTo __this__ = (com.amap.api.services.route.RouteSearch.FromAndTo) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.FromAndTo@" + refId + "::getDestinationType(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.FromAndTo@" + __this__ + "::getDestinationType(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getDestinationType();
+                    __result__ = __this__.getDestinationType();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3037,29 +2586,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteSearch.FromAndTo::setDestinationType", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteSearch.FromAndTo ref = (com.amap.api.services.route.RouteSearch.FromAndTo) getHEAP().get(refId);
+                com.amap.api.services.route.RouteSearch.FromAndTo __this__ = (com.amap.api.services.route.RouteSearch.FromAndTo) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.FromAndTo@" + refId + "::setDestinationType(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.FromAndTo@" + __this__ + "::setDestinationType(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setDestinationType(var1);
+                    __this__.setDestinationType(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3069,10 +2615,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteSearch.FromAndTo::getPlateProvince", (__args__, __methodResult__) -> {
@@ -3080,18 +2623,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteSearch.FromAndTo ref = (com.amap.api.services.route.RouteSearch.FromAndTo) getHEAP().get(refId);
+                com.amap.api.services.route.RouteSearch.FromAndTo __this__ = (com.amap.api.services.route.RouteSearch.FromAndTo) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.FromAndTo@" + refId + "::getPlateProvince(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.FromAndTo@" + __this__ + "::getPlateProvince(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getPlateProvince();
+                    __result__ = __this__.getPlateProvince();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3101,29 +2643,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteSearch.FromAndTo::setPlateProvince", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteSearch.FromAndTo ref = (com.amap.api.services.route.RouteSearch.FromAndTo) getHEAP().get(refId);
+                com.amap.api.services.route.RouteSearch.FromAndTo __this__ = (com.amap.api.services.route.RouteSearch.FromAndTo) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.FromAndTo@" + refId + "::setPlateProvince(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.FromAndTo@" + __this__ + "::setPlateProvince(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setPlateProvince(var1);
+                    __this__.setPlateProvince(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3133,10 +2672,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteSearch.FromAndTo::getPlateNumber", (__args__, __methodResult__) -> {
@@ -3144,18 +2680,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteSearch.FromAndTo ref = (com.amap.api.services.route.RouteSearch.FromAndTo) getHEAP().get(refId);
+                com.amap.api.services.route.RouteSearch.FromAndTo __this__ = (com.amap.api.services.route.RouteSearch.FromAndTo) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.FromAndTo@" + refId + "::getPlateNumber(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.FromAndTo@" + __this__ + "::getPlateNumber(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getPlateNumber();
+                    __result__ = __this__.getPlateNumber();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3165,29 +2700,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteSearch.FromAndTo::setPlateNumber", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteSearch.FromAndTo ref = (com.amap.api.services.route.RouteSearch.FromAndTo) getHEAP().get(refId);
+                com.amap.api.services.route.RouteSearch.FromAndTo __this__ = (com.amap.api.services.route.RouteSearch.FromAndTo) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.FromAndTo@" + refId + "::setPlateNumber(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.FromAndTo@" + __this__ + "::setPlateNumber(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setPlateNumber(var1);
+                    __this__.setPlateNumber(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3197,10 +2729,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteSearch.FromAndTo::clone", (__args__, __methodResult__) -> {
@@ -3208,18 +2737,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteSearch.FromAndTo ref = (com.amap.api.services.route.RouteSearch.FromAndTo) getHEAP().get(refId);
+                com.amap.api.services.route.RouteSearch.FromAndTo __this__ = (com.amap.api.services.route.RouteSearch.FromAndTo) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.FromAndTo@" + refId + "::clone(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.FromAndTo@" + __this__ + "::clone(" + "" + ")");
                 }
             
                 // invoke native method
-                com.amap.api.services.route.RouteSearch.FromAndTo __result__;
+                com.amap.api.services.route.RouteSearch.FromAndTo __result__ = null;
                 try {
-                    __result__ = ref.clone();
+                    __result__ = __this__.clone();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3229,14 +2757,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                Integer jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = System.identityHashCode(__result__);
-                    getHEAP().put(jsonableResult, __result__);
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RidePath::getSteps", (__args__, __methodResult__) -> {
@@ -3244,18 +2765,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RidePath ref = (com.amap.api.services.route.RidePath) getHEAP().get(refId);
+                com.amap.api.services.route.RidePath __this__ = (com.amap.api.services.route.RidePath) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RidePath@" + refId + "::getSteps(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RidePath@" + __this__ + "::getSteps(" + "" + ")");
                 }
             
                 // invoke native method
-                java.util.List<com.amap.api.services.route.RideStep> __result__;
+                java.util.List<com.amap.api.services.route.RideStep> __result__ = null;
                 try {
-                    __result__ = ref.getSteps();
+                    __result__ = __this__.getSteps();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3265,40 +2785,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                List<Integer> jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = new ArrayList<>();
-                    for (com.amap.api.services.route.RideStep item : __result__) {
-                        getHEAP().put(System.identityHashCode(item), item);
-                        jsonableResult.add(System.identityHashCode(item));
-                    }
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RidePath::setSteps", (__args__, __methodResult__) -> {
                 // args
-                // list arg
-                List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) __args__).get("var1");
-                java.util.List<com.amap.api.services.route.RideStep> var1 = new ArrayList<>();
-                for (int refId : var1RefIdList) {
-                    ((ArrayList<com.amap.api.services.route.RideStep>) var1).add((com.amap.api.services.route.RideStep) getHEAP().get(refId));
-                }
+                // ref arg
+                java.util.List<com.amap.api.services.route.RideStep> var1 = (java.util.List<com.amap.api.services.route.RideStep>) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RidePath ref = (com.amap.api.services.route.RidePath) getHEAP().get(refId);
+                com.amap.api.services.route.RidePath __this__ = (com.amap.api.services.route.RidePath) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RidePath@" + refId + "::setSteps(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RidePath@" + __this__ + "::setSteps(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setSteps((ArrayList) var1);
+                    __this__.setSteps((ArrayList) var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3308,10 +2814,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteSearch.BusRouteQuery::getFromAndTo", (__args__, __methodResult__) -> {
@@ -3319,18 +2822,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteSearch.BusRouteQuery ref = (com.amap.api.services.route.RouteSearch.BusRouteQuery) getHEAP().get(refId);
+                com.amap.api.services.route.RouteSearch.BusRouteQuery __this__ = (com.amap.api.services.route.RouteSearch.BusRouteQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.BusRouteQuery@" + refId + "::getFromAndTo(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.BusRouteQuery@" + __this__ + "::getFromAndTo(" + "" + ")");
                 }
             
                 // invoke native method
-                com.amap.api.services.route.RouteSearch.FromAndTo __result__;
+                com.amap.api.services.route.RouteSearch.FromAndTo __result__ = null;
                 try {
-                    __result__ = ref.getFromAndTo();
+                    __result__ = __this__.getFromAndTo();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3340,14 +2842,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                Integer jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = System.identityHashCode(__result__);
-                    getHEAP().put(jsonableResult, __result__);
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteSearch.BusRouteQuery::getMode", (__args__, __methodResult__) -> {
@@ -3355,18 +2850,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteSearch.BusRouteQuery ref = (com.amap.api.services.route.RouteSearch.BusRouteQuery) getHEAP().get(refId);
+                com.amap.api.services.route.RouteSearch.BusRouteQuery __this__ = (com.amap.api.services.route.RouteSearch.BusRouteQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.BusRouteQuery@" + refId + "::getMode(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.BusRouteQuery@" + __this__ + "::getMode(" + "" + ")");
                 }
             
                 // invoke native method
-                int __result__;
+                Integer __result__ = null;
                 try {
-                    __result__ = ref.getMode();
+                    __result__ = __this__.getMode();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3376,10 +2870,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                int jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteSearch.BusRouteQuery::getCity", (__args__, __methodResult__) -> {
@@ -3387,18 +2878,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteSearch.BusRouteQuery ref = (com.amap.api.services.route.RouteSearch.BusRouteQuery) getHEAP().get(refId);
+                com.amap.api.services.route.RouteSearch.BusRouteQuery __this__ = (com.amap.api.services.route.RouteSearch.BusRouteQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.BusRouteQuery@" + refId + "::getCity(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.BusRouteQuery@" + __this__ + "::getCity(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getCity();
+                    __result__ = __this__.getCity();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3408,10 +2898,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteSearch.BusRouteQuery::getNightFlag", (__args__, __methodResult__) -> {
@@ -3419,18 +2906,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteSearch.BusRouteQuery ref = (com.amap.api.services.route.RouteSearch.BusRouteQuery) getHEAP().get(refId);
+                com.amap.api.services.route.RouteSearch.BusRouteQuery __this__ = (com.amap.api.services.route.RouteSearch.BusRouteQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.BusRouteQuery@" + refId + "::getNightFlag(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.BusRouteQuery@" + __this__ + "::getNightFlag(" + "" + ")");
                 }
             
                 // invoke native method
-                int __result__;
+                Integer __result__ = null;
                 try {
-                    __result__ = ref.getNightFlag();
+                    __result__ = __this__.getNightFlag();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3440,10 +2926,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                int jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteSearch.BusRouteQuery::getCityd", (__args__, __methodResult__) -> {
@@ -3451,18 +2934,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteSearch.BusRouteQuery ref = (com.amap.api.services.route.RouteSearch.BusRouteQuery) getHEAP().get(refId);
+                com.amap.api.services.route.RouteSearch.BusRouteQuery __this__ = (com.amap.api.services.route.RouteSearch.BusRouteQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.BusRouteQuery@" + refId + "::getCityd(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.BusRouteQuery@" + __this__ + "::getCityd(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getCityd();
+                    __result__ = __this__.getCityd();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3472,29 +2954,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteSearch.BusRouteQuery::setCityd", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteSearch.BusRouteQuery ref = (com.amap.api.services.route.RouteSearch.BusRouteQuery) getHEAP().get(refId);
+                com.amap.api.services.route.RouteSearch.BusRouteQuery __this__ = (com.amap.api.services.route.RouteSearch.BusRouteQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.BusRouteQuery@" + refId + "::setCityd(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.BusRouteQuery@" + __this__ + "::setCityd(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setCityd(var1);
+                    __this__.setCityd(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3504,10 +2983,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteSearch.BusRouteQuery::clone", (__args__, __methodResult__) -> {
@@ -3515,18 +2991,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteSearch.BusRouteQuery ref = (com.amap.api.services.route.RouteSearch.BusRouteQuery) getHEAP().get(refId);
+                com.amap.api.services.route.RouteSearch.BusRouteQuery __this__ = (com.amap.api.services.route.RouteSearch.BusRouteQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.BusRouteQuery@" + refId + "::clone(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.BusRouteQuery@" + __this__ + "::clone(" + "" + ")");
                 }
             
                 // invoke native method
-                com.amap.api.services.route.RouteSearch.BusRouteQuery __result__;
+                com.amap.api.services.route.RouteSearch.BusRouteQuery __result__ = null;
                 try {
-                    __result__ = ref.clone();
+                    __result__ = __this__.clone();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3536,14 +3011,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                Integer jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = System.identityHashCode(__result__);
-                    getHEAP().put(jsonableResult, __result__);
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RideStep::getInstruction", (__args__, __methodResult__) -> {
@@ -3551,18 +3019,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RideStep ref = (com.amap.api.services.route.RideStep) getHEAP().get(refId);
+                com.amap.api.services.route.RideStep __this__ = (com.amap.api.services.route.RideStep) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RideStep@" + refId + "::getInstruction(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RideStep@" + __this__ + "::getInstruction(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getInstruction();
+                    __result__ = __this__.getInstruction();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3572,29 +3039,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RideStep::setInstruction", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RideStep ref = (com.amap.api.services.route.RideStep) getHEAP().get(refId);
+                com.amap.api.services.route.RideStep __this__ = (com.amap.api.services.route.RideStep) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RideStep@" + refId + "::setInstruction(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RideStep@" + __this__ + "::setInstruction(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setInstruction(var1);
+                    __this__.setInstruction(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3604,10 +3068,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RideStep::getOrientation", (__args__, __methodResult__) -> {
@@ -3615,18 +3076,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RideStep ref = (com.amap.api.services.route.RideStep) getHEAP().get(refId);
+                com.amap.api.services.route.RideStep __this__ = (com.amap.api.services.route.RideStep) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RideStep@" + refId + "::getOrientation(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RideStep@" + __this__ + "::getOrientation(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getOrientation();
+                    __result__ = __this__.getOrientation();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3636,29 +3096,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RideStep::setOrientation", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RideStep ref = (com.amap.api.services.route.RideStep) getHEAP().get(refId);
+                com.amap.api.services.route.RideStep __this__ = (com.amap.api.services.route.RideStep) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RideStep@" + refId + "::setOrientation(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RideStep@" + __this__ + "::setOrientation(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setOrientation(var1);
+                    __this__.setOrientation(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3668,10 +3125,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RideStep::getRoad", (__args__, __methodResult__) -> {
@@ -3679,18 +3133,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RideStep ref = (com.amap.api.services.route.RideStep) getHEAP().get(refId);
+                com.amap.api.services.route.RideStep __this__ = (com.amap.api.services.route.RideStep) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RideStep@" + refId + "::getRoad(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RideStep@" + __this__ + "::getRoad(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getRoad();
+                    __result__ = __this__.getRoad();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3700,29 +3153,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RideStep::setRoad", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RideStep ref = (com.amap.api.services.route.RideStep) getHEAP().get(refId);
+                com.amap.api.services.route.RideStep __this__ = (com.amap.api.services.route.RideStep) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RideStep@" + refId + "::setRoad(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RideStep@" + __this__ + "::setRoad(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setRoad(var1);
+                    __this__.setRoad(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3732,10 +3182,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RideStep::getDistance", (__args__, __methodResult__) -> {
@@ -3743,18 +3190,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RideStep ref = (com.amap.api.services.route.RideStep) getHEAP().get(refId);
+                com.amap.api.services.route.RideStep __this__ = (com.amap.api.services.route.RideStep) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RideStep@" + refId + "::getDistance(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RideStep@" + __this__ + "::getDistance(" + "" + ")");
                 }
             
                 // invoke native method
-                float __result__;
+                Float __result__ = null;
                 try {
-                    __result__ = ref.getDistance();
+                    __result__ = __this__.getDistance();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3764,29 +3210,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                float jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RideStep::setDistance", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
-                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RideStep ref = (com.amap.api.services.route.RideStep) getHEAP().get(refId);
+                com.amap.api.services.route.RideStep __this__ = (com.amap.api.services.route.RideStep) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RideStep@" + refId + "::setDistance(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RideStep@" + __this__ + "::setDistance(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setDistance(new Double(var1).floatValue());
+                    __this__.setDistance(new Double(var1).floatValue());
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3796,10 +3239,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RideStep::getDuration", (__args__, __methodResult__) -> {
@@ -3807,18 +3247,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RideStep ref = (com.amap.api.services.route.RideStep) getHEAP().get(refId);
+                com.amap.api.services.route.RideStep __this__ = (com.amap.api.services.route.RideStep) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RideStep@" + refId + "::getDuration(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RideStep@" + __this__ + "::getDuration(" + "" + ")");
                 }
             
                 // invoke native method
-                float __result__;
+                Float __result__ = null;
                 try {
-                    __result__ = ref.getDuration();
+                    __result__ = __this__.getDuration();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3828,29 +3267,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                float jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RideStep::setDuration", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
-                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RideStep ref = (com.amap.api.services.route.RideStep) getHEAP().get(refId);
+                com.amap.api.services.route.RideStep __this__ = (com.amap.api.services.route.RideStep) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RideStep@" + refId + "::setDuration(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RideStep@" + __this__ + "::setDuration(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setDuration(new Double(var1).floatValue());
+                    __this__.setDuration(new Double(var1).floatValue());
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3860,10 +3296,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RideStep::getPolyline", (__args__, __methodResult__) -> {
@@ -3871,18 +3304,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RideStep ref = (com.amap.api.services.route.RideStep) getHEAP().get(refId);
+                com.amap.api.services.route.RideStep __this__ = (com.amap.api.services.route.RideStep) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RideStep@" + refId + "::getPolyline(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RideStep@" + __this__ + "::getPolyline(" + "" + ")");
                 }
             
                 // invoke native method
-                java.util.List<com.amap.api.services.core.LatLonPoint> __result__;
+                java.util.List<com.amap.api.services.core.LatLonPoint> __result__ = null;
                 try {
-                    __result__ = ref.getPolyline();
+                    __result__ = __this__.getPolyline();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3892,40 +3324,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                List<Integer> jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = new ArrayList<>();
-                    for (com.amap.api.services.core.LatLonPoint item : __result__) {
-                        getHEAP().put(System.identityHashCode(item), item);
-                        jsonableResult.add(System.identityHashCode(item));
-                    }
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RideStep::setPolyline", (__args__, __methodResult__) -> {
                 // args
-                // list arg
-                List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) __args__).get("var1");
-                java.util.List<com.amap.api.services.core.LatLonPoint> var1 = new ArrayList<>();
-                for (int refId : var1RefIdList) {
-                    ((ArrayList<com.amap.api.services.core.LatLonPoint>) var1).add((com.amap.api.services.core.LatLonPoint) getHEAP().get(refId));
-                }
+                // ref arg
+                java.util.List<com.amap.api.services.core.LatLonPoint> var1 = (java.util.List<com.amap.api.services.core.LatLonPoint>) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RideStep ref = (com.amap.api.services.route.RideStep) getHEAP().get(refId);
+                com.amap.api.services.route.RideStep __this__ = (com.amap.api.services.route.RideStep) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RideStep@" + refId + "::setPolyline(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RideStep@" + __this__ + "::setPolyline(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setPolyline((ArrayList) var1);
+                    __this__.setPolyline((ArrayList) var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3935,10 +3353,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RideStep::getAction", (__args__, __methodResult__) -> {
@@ -3946,18 +3361,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RideStep ref = (com.amap.api.services.route.RideStep) getHEAP().get(refId);
+                com.amap.api.services.route.RideStep __this__ = (com.amap.api.services.route.RideStep) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RideStep@" + refId + "::getAction(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RideStep@" + __this__ + "::getAction(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getAction();
+                    __result__ = __this__.getAction();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3967,29 +3381,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RideStep::setAction", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RideStep ref = (com.amap.api.services.route.RideStep) getHEAP().get(refId);
+                com.amap.api.services.route.RideStep __this__ = (com.amap.api.services.route.RideStep) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RideStep@" + refId + "::setAction(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RideStep@" + __this__ + "::setAction(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setAction(var1);
+                    __this__.setAction(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3999,10 +3410,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RideStep::getAssistantAction", (__args__, __methodResult__) -> {
@@ -4010,18 +3418,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RideStep ref = (com.amap.api.services.route.RideStep) getHEAP().get(refId);
+                com.amap.api.services.route.RideStep __this__ = (com.amap.api.services.route.RideStep) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RideStep@" + refId + "::getAssistantAction(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RideStep@" + __this__ + "::getAssistantAction(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getAssistantAction();
+                    __result__ = __this__.getAssistantAction();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4031,29 +3438,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RideStep::setAssistantAction", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RideStep ref = (com.amap.api.services.route.RideStep) getHEAP().get(refId);
+                com.amap.api.services.route.RideStep __this__ = (com.amap.api.services.route.RideStep) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RideStep@" + refId + "::setAssistantAction(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RideStep@" + __this__ + "::setAssistantAction(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setAssistantAction(var1);
+                    __this__.setAssistantAction(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4063,10 +3467,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteSearchCity::getDistricts", (__args__, __methodResult__) -> {
@@ -4074,18 +3475,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteSearchCity ref = (com.amap.api.services.route.RouteSearchCity) getHEAP().get(refId);
+                com.amap.api.services.route.RouteSearchCity __this__ = (com.amap.api.services.route.RouteSearchCity) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearchCity@" + refId + "::getDistricts(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearchCity@" + __this__ + "::getDistricts(" + "" + ")");
                 }
             
                 // invoke native method
-                java.util.List<com.amap.api.services.route.District> __result__;
+                java.util.List<com.amap.api.services.route.District> __result__ = null;
                 try {
-                    __result__ = ref.getDistricts();
+                    __result__ = __this__.getDistricts();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4095,40 +3495,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                List<Integer> jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = new ArrayList<>();
-                    for (com.amap.api.services.route.District item : __result__) {
-                        getHEAP().put(System.identityHashCode(item), item);
-                        jsonableResult.add(System.identityHashCode(item));
-                    }
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteSearchCity::setDistricts", (__args__, __methodResult__) -> {
                 // args
-                // list arg
-                List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) __args__).get("var1");
-                java.util.List<com.amap.api.services.route.District> var1 = new ArrayList<>();
-                for (int refId : var1RefIdList) {
-                    ((ArrayList<com.amap.api.services.route.District>) var1).add((com.amap.api.services.route.District) getHEAP().get(refId));
-                }
+                // ref arg
+                java.util.List<com.amap.api.services.route.District> var1 = (java.util.List<com.amap.api.services.route.District>) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteSearchCity ref = (com.amap.api.services.route.RouteSearchCity) getHEAP().get(refId);
+                com.amap.api.services.route.RouteSearchCity __this__ = (com.amap.api.services.route.RouteSearchCity) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearchCity@" + refId + "::setDistricts(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearchCity@" + __this__ + "::setDistricts(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setDistricts((ArrayList) var1);
+                    __this__.setDistricts((ArrayList) var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4138,30 +3524,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.DistanceResult::setDistanceQuery", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.route.DistanceSearch.DistanceQuery var1 = __var1RefId__ != null ? (com.amap.api.services.route.DistanceSearch.DistanceQuery) getHEAP().get(__var1RefId__) : null;
+                com.amap.api.services.route.DistanceSearch.DistanceQuery var1 = (com.amap.api.services.route.DistanceSearch.DistanceQuery) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.DistanceResult ref = (com.amap.api.services.route.DistanceResult) getHEAP().get(refId);
+                com.amap.api.services.route.DistanceResult __this__ = (com.amap.api.services.route.DistanceResult) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DistanceResult@" + refId + "::setDistanceQuery(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DistanceResult@" + __this__ + "::setDistanceQuery(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setDistanceQuery(var1);
+                    __this__.setDistanceQuery(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4171,10 +3553,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.DistanceResult::getDistanceQuery", (__args__, __methodResult__) -> {
@@ -4182,18 +3561,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.DistanceResult ref = (com.amap.api.services.route.DistanceResult) getHEAP().get(refId);
+                com.amap.api.services.route.DistanceResult __this__ = (com.amap.api.services.route.DistanceResult) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DistanceResult@" + refId + "::getDistanceQuery(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DistanceResult@" + __this__ + "::getDistanceQuery(" + "" + ")");
                 }
             
                 // invoke native method
-                com.amap.api.services.route.DistanceSearch.DistanceQuery __result__;
+                com.amap.api.services.route.DistanceSearch.DistanceQuery __result__ = null;
                 try {
-                    __result__ = ref.getDistanceQuery();
+                    __result__ = __this__.getDistanceQuery();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4203,14 +3581,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                Integer jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = System.identityHashCode(__result__);
-                    getHEAP().put(jsonableResult, __result__);
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.DistanceResult::getDistanceResults", (__args__, __methodResult__) -> {
@@ -4218,18 +3589,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.DistanceResult ref = (com.amap.api.services.route.DistanceResult) getHEAP().get(refId);
+                com.amap.api.services.route.DistanceResult __this__ = (com.amap.api.services.route.DistanceResult) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DistanceResult@" + refId + "::getDistanceResults(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DistanceResult@" + __this__ + "::getDistanceResults(" + "" + ")");
                 }
             
                 // invoke native method
-                java.util.List<com.amap.api.services.route.DistanceItem> __result__;
+                java.util.List<com.amap.api.services.route.DistanceItem> __result__ = null;
                 try {
-                    __result__ = ref.getDistanceResults();
+                    __result__ = __this__.getDistanceResults();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4239,40 +3609,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                List<Integer> jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = new ArrayList<>();
-                    for (com.amap.api.services.route.DistanceItem item : __result__) {
-                        getHEAP().put(System.identityHashCode(item), item);
-                        jsonableResult.add(System.identityHashCode(item));
-                    }
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.DistanceResult::setDistanceResults", (__args__, __methodResult__) -> {
                 // args
-                // list arg
-                List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) __args__).get("var1");
-                java.util.List<com.amap.api.services.route.DistanceItem> var1 = new ArrayList<>();
-                for (int refId : var1RefIdList) {
-                    ((ArrayList<com.amap.api.services.route.DistanceItem>) var1).add((com.amap.api.services.route.DistanceItem) getHEAP().get(refId));
-                }
+                // ref arg
+                java.util.List<com.amap.api.services.route.DistanceItem> var1 = (java.util.List<com.amap.api.services.route.DistanceItem>) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.DistanceResult ref = (com.amap.api.services.route.DistanceResult) getHEAP().get(refId);
+                com.amap.api.services.route.DistanceResult __this__ = (com.amap.api.services.route.DistanceResult) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DistanceResult@" + refId + "::setDistanceResults(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DistanceResult@" + __this__ + "::setDistanceResults(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setDistanceResults((ArrayList) var1);
+                    __this__.setDistanceResults((ArrayList) var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4282,10 +3638,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteSearch.WalkRouteQuery::getFromAndTo", (__args__, __methodResult__) -> {
@@ -4293,18 +3646,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteSearch.WalkRouteQuery ref = (com.amap.api.services.route.RouteSearch.WalkRouteQuery) getHEAP().get(refId);
+                com.amap.api.services.route.RouteSearch.WalkRouteQuery __this__ = (com.amap.api.services.route.RouteSearch.WalkRouteQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.WalkRouteQuery@" + refId + "::getFromAndTo(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.WalkRouteQuery@" + __this__ + "::getFromAndTo(" + "" + ")");
                 }
             
                 // invoke native method
-                com.amap.api.services.route.RouteSearch.FromAndTo __result__;
+                com.amap.api.services.route.RouteSearch.FromAndTo __result__ = null;
                 try {
-                    __result__ = ref.getFromAndTo();
+                    __result__ = __this__.getFromAndTo();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4314,14 +3666,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                Integer jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = System.identityHashCode(__result__);
-                    getHEAP().put(jsonableResult, __result__);
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteSearch.WalkRouteQuery::getMode", (__args__, __methodResult__) -> {
@@ -4329,18 +3674,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteSearch.WalkRouteQuery ref = (com.amap.api.services.route.RouteSearch.WalkRouteQuery) getHEAP().get(refId);
+                com.amap.api.services.route.RouteSearch.WalkRouteQuery __this__ = (com.amap.api.services.route.RouteSearch.WalkRouteQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.WalkRouteQuery@" + refId + "::getMode(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.WalkRouteQuery@" + __this__ + "::getMode(" + "" + ")");
                 }
             
                 // invoke native method
-                int __result__;
+                Integer __result__ = null;
                 try {
-                    __result__ = ref.getMode();
+                    __result__ = __this__.getMode();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4350,10 +3694,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                int jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteSearch.WalkRouteQuery::clone", (__args__, __methodResult__) -> {
@@ -4361,18 +3702,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteSearch.WalkRouteQuery ref = (com.amap.api.services.route.RouteSearch.WalkRouteQuery) getHEAP().get(refId);
+                com.amap.api.services.route.RouteSearch.WalkRouteQuery __this__ = (com.amap.api.services.route.RouteSearch.WalkRouteQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.WalkRouteQuery@" + refId + "::clone(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.WalkRouteQuery@" + __this__ + "::clone(" + "" + ")");
                 }
             
                 // invoke native method
-                com.amap.api.services.route.RouteSearch.WalkRouteQuery __result__;
+                com.amap.api.services.route.RouteSearch.WalkRouteQuery __result__ = null;
                 try {
-                    __result__ = ref.clone();
+                    __result__ = __this__.clone();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4382,14 +3722,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                Integer jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = System.identityHashCode(__result__);
-                    getHEAP().put(jsonableResult, __result__);
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.District::getDistrictName", (__args__, __methodResult__) -> {
@@ -4397,18 +3730,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.District ref = (com.amap.api.services.route.District) getHEAP().get(refId);
+                com.amap.api.services.route.District __this__ = (com.amap.api.services.route.District) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.District@" + refId + "::getDistrictName(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.District@" + __this__ + "::getDistrictName(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getDistrictName();
+                    __result__ = __this__.getDistrictName();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4418,29 +3750,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.District::setDistrictName", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.District ref = (com.amap.api.services.route.District) getHEAP().get(refId);
+                com.amap.api.services.route.District __this__ = (com.amap.api.services.route.District) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.District@" + refId + "::setDistrictName(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.District@" + __this__ + "::setDistrictName(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setDistrictName(var1);
+                    __this__.setDistrictName(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4450,10 +3779,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.District::getDistrictAdcode", (__args__, __methodResult__) -> {
@@ -4461,18 +3787,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.District ref = (com.amap.api.services.route.District) getHEAP().get(refId);
+                com.amap.api.services.route.District __this__ = (com.amap.api.services.route.District) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.District@" + refId + "::getDistrictAdcode(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.District@" + __this__ + "::getDistrictAdcode(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getDistrictAdcode();
+                    __result__ = __this__.getDistrictAdcode();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4482,29 +3807,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.District::setDistrictAdcode", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.District ref = (com.amap.api.services.route.District) getHEAP().get(refId);
+                com.amap.api.services.route.District __this__ = (com.amap.api.services.route.District) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.District@" + refId + "::setDistrictAdcode(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.District@" + __this__ + "::setDistrictAdcode(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setDistrictAdcode(var1);
+                    __this__.setDistrictAdcode(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4514,10 +3836,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.WalkRouteResult::getPaths", (__args__, __methodResult__) -> {
@@ -4525,18 +3844,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.WalkRouteResult ref = (com.amap.api.services.route.WalkRouteResult) getHEAP().get(refId);
+                com.amap.api.services.route.WalkRouteResult __this__ = (com.amap.api.services.route.WalkRouteResult) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkRouteResult@" + refId + "::getPaths(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkRouteResult@" + __this__ + "::getPaths(" + "" + ")");
                 }
             
                 // invoke native method
-                java.util.List<com.amap.api.services.route.WalkPath> __result__;
+                java.util.List<com.amap.api.services.route.WalkPath> __result__ = null;
                 try {
-                    __result__ = ref.getPaths();
+                    __result__ = __this__.getPaths();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4546,40 +3864,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                List<Integer> jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = new ArrayList<>();
-                    for (com.amap.api.services.route.WalkPath item : __result__) {
-                        getHEAP().put(System.identityHashCode(item), item);
-                        jsonableResult.add(System.identityHashCode(item));
-                    }
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.WalkRouteResult::setPaths", (__args__, __methodResult__) -> {
                 // args
-                // list arg
-                List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) __args__).get("var1");
-                java.util.List<com.amap.api.services.route.WalkPath> var1 = new ArrayList<>();
-                for (int refId : var1RefIdList) {
-                    ((ArrayList<com.amap.api.services.route.WalkPath>) var1).add((com.amap.api.services.route.WalkPath) getHEAP().get(refId));
-                }
+                // ref arg
+                java.util.List<com.amap.api.services.route.WalkPath> var1 = (java.util.List<com.amap.api.services.route.WalkPath>) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.WalkRouteResult ref = (com.amap.api.services.route.WalkRouteResult) getHEAP().get(refId);
+                com.amap.api.services.route.WalkRouteResult __this__ = (com.amap.api.services.route.WalkRouteResult) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkRouteResult@" + refId + "::setPaths(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkRouteResult@" + __this__ + "::setPaths(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setPaths((ArrayList) var1);
+                    __this__.setPaths((ArrayList) var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4589,10 +3893,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.WalkRouteResult::getWalkQuery", (__args__, __methodResult__) -> {
@@ -4600,18 +3901,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.WalkRouteResult ref = (com.amap.api.services.route.WalkRouteResult) getHEAP().get(refId);
+                com.amap.api.services.route.WalkRouteResult __this__ = (com.amap.api.services.route.WalkRouteResult) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkRouteResult@" + refId + "::getWalkQuery(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkRouteResult@" + __this__ + "::getWalkQuery(" + "" + ")");
                 }
             
                 // invoke native method
-                com.amap.api.services.route.RouteSearch.WalkRouteQuery __result__;
+                com.amap.api.services.route.RouteSearch.WalkRouteQuery __result__ = null;
                 try {
-                    __result__ = ref.getWalkQuery();
+                    __result__ = __this__.getWalkQuery();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4621,34 +3921,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                Integer jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = System.identityHashCode(__result__);
-                    getHEAP().put(jsonableResult, __result__);
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.WalkRouteResult::setWalkQuery", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.route.RouteSearch.WalkRouteQuery var1 = __var1RefId__ != null ? (com.amap.api.services.route.RouteSearch.WalkRouteQuery) getHEAP().get(__var1RefId__) : null;
+                com.amap.api.services.route.RouteSearch.WalkRouteQuery var1 = (com.amap.api.services.route.RouteSearch.WalkRouteQuery) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.WalkRouteResult ref = (com.amap.api.services.route.WalkRouteResult) getHEAP().get(refId);
+                com.amap.api.services.route.WalkRouteResult __this__ = (com.amap.api.services.route.WalkRouteResult) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkRouteResult@" + refId + "::setWalkQuery(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkRouteResult@" + __this__ + "::setWalkQuery(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setWalkQuery(var1);
+                    __this__.setWalkQuery(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4658,10 +3950,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.DistanceSearch.DistanceQuery::clone", (__args__, __methodResult__) -> {
@@ -4669,18 +3958,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.DistanceSearch.DistanceQuery ref = (com.amap.api.services.route.DistanceSearch.DistanceQuery) getHEAP().get(refId);
+                com.amap.api.services.route.DistanceSearch.DistanceQuery __this__ = (com.amap.api.services.route.DistanceSearch.DistanceQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DistanceSearch.DistanceQuery@" + refId + "::clone(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DistanceSearch.DistanceQuery@" + __this__ + "::clone(" + "" + ")");
                 }
             
                 // invoke native method
-                com.amap.api.services.route.DistanceSearch.DistanceQuery __result__;
+                com.amap.api.services.route.DistanceSearch.DistanceQuery __result__ = null;
                 try {
-                    __result__ = ref.clone();
+                    __result__ = __this__.clone();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4690,14 +3978,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                Integer jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = System.identityHashCode(__result__);
-                    getHEAP().put(jsonableResult, __result__);
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.DistanceSearch.DistanceQuery::getType", (__args__, __methodResult__) -> {
@@ -4705,18 +3986,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.DistanceSearch.DistanceQuery ref = (com.amap.api.services.route.DistanceSearch.DistanceQuery) getHEAP().get(refId);
+                com.amap.api.services.route.DistanceSearch.DistanceQuery __this__ = (com.amap.api.services.route.DistanceSearch.DistanceQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DistanceSearch.DistanceQuery@" + refId + "::getType(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DistanceSearch.DistanceQuery@" + __this__ + "::getType(" + "" + ")");
                 }
             
                 // invoke native method
-                int __result__;
+                Integer __result__ = null;
                 try {
-                    __result__ = ref.getType();
+                    __result__ = __this__.getType();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4726,10 +4006,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                int jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.DistanceSearch.DistanceQuery::getOrigins", (__args__, __methodResult__) -> {
@@ -4737,18 +4014,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.DistanceSearch.DistanceQuery ref = (com.amap.api.services.route.DistanceSearch.DistanceQuery) getHEAP().get(refId);
+                com.amap.api.services.route.DistanceSearch.DistanceQuery __this__ = (com.amap.api.services.route.DistanceSearch.DistanceQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DistanceSearch.DistanceQuery@" + refId + "::getOrigins(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DistanceSearch.DistanceQuery@" + __this__ + "::getOrigins(" + "" + ")");
                 }
             
                 // invoke native method
-                java.util.List<com.amap.api.services.core.LatLonPoint> __result__;
+                java.util.List<com.amap.api.services.core.LatLonPoint> __result__ = null;
                 try {
-                    __result__ = ref.getOrigins();
+                    __result__ = __this__.getOrigins();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4758,17 +4034,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                List<Integer> jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = new ArrayList<>();
-                    for (com.amap.api.services.core.LatLonPoint item : __result__) {
-                        getHEAP().put(System.identityHashCode(item), item);
-                        jsonableResult.add(System.identityHashCode(item));
-                    }
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.DistanceSearch.DistanceQuery::getDestination", (__args__, __methodResult__) -> {
@@ -4776,18 +4042,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.DistanceSearch.DistanceQuery ref = (com.amap.api.services.route.DistanceSearch.DistanceQuery) getHEAP().get(refId);
+                com.amap.api.services.route.DistanceSearch.DistanceQuery __this__ = (com.amap.api.services.route.DistanceSearch.DistanceQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DistanceSearch.DistanceQuery@" + refId + "::getDestination(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DistanceSearch.DistanceQuery@" + __this__ + "::getDestination(" + "" + ")");
                 }
             
                 // invoke native method
-                com.amap.api.services.core.LatLonPoint __result__;
+                com.amap.api.services.core.LatLonPoint __result__ = null;
                 try {
-                    __result__ = ref.getDestination();
+                    __result__ = __this__.getDestination();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4797,33 +4062,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                Integer jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = System.identityHashCode(__result__);
-                    getHEAP().put(jsonableResult, __result__);
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.DistanceSearch.DistanceQuery::setType", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 int var1 = (int) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.DistanceSearch.DistanceQuery ref = (com.amap.api.services.route.DistanceSearch.DistanceQuery) getHEAP().get(refId);
+                com.amap.api.services.route.DistanceSearch.DistanceQuery __this__ = (com.amap.api.services.route.DistanceSearch.DistanceQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DistanceSearch.DistanceQuery@" + refId + "::setType(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DistanceSearch.DistanceQuery@" + __this__ + "::setType(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setType(var1);
+                    __this__.setType(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4833,33 +4091,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.DistanceSearch.DistanceQuery::setOrigins", (__args__, __methodResult__) -> {
                 // args
-                // list arg
-                List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) __args__).get("var1");
-                java.util.List<com.amap.api.services.core.LatLonPoint> var1 = new ArrayList<>();
-                for (int refId : var1RefIdList) {
-                    ((ArrayList<com.amap.api.services.core.LatLonPoint>) var1).add((com.amap.api.services.core.LatLonPoint) getHEAP().get(refId));
-                }
+                // ref arg
+                java.util.List<com.amap.api.services.core.LatLonPoint> var1 = (java.util.List<com.amap.api.services.core.LatLonPoint>) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.DistanceSearch.DistanceQuery ref = (com.amap.api.services.route.DistanceSearch.DistanceQuery) getHEAP().get(refId);
+                com.amap.api.services.route.DistanceSearch.DistanceQuery __this__ = (com.amap.api.services.route.DistanceSearch.DistanceQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DistanceSearch.DistanceQuery@" + refId + "::setOrigins(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DistanceSearch.DistanceQuery@" + __this__ + "::setOrigins(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setOrigins((ArrayList) var1);
+                    __this__.setOrigins((ArrayList) var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4869,30 +4120,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.DistanceSearch.DistanceQuery::addOrigins", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.core.LatLonPoint var1 = __var1RefId__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1RefId__) : null;
+                com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.DistanceSearch.DistanceQuery ref = (com.amap.api.services.route.DistanceSearch.DistanceQuery) getHEAP().get(refId);
+                com.amap.api.services.route.DistanceSearch.DistanceQuery __this__ = (com.amap.api.services.route.DistanceSearch.DistanceQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DistanceSearch.DistanceQuery@" + refId + "::addOrigins(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DistanceSearch.DistanceQuery@" + __this__ + "::addOrigins(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.addOrigins(var1);
+                    __this__.addOrigins(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4902,30 +4149,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.DistanceSearch.DistanceQuery::setDestination", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.core.LatLonPoint var1 = __var1RefId__ != null ? (com.amap.api.services.core.LatLonPoint) getHEAP().get(__var1RefId__) : null;
+                com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.DistanceSearch.DistanceQuery ref = (com.amap.api.services.route.DistanceSearch.DistanceQuery) getHEAP().get(refId);
+                com.amap.api.services.route.DistanceSearch.DistanceQuery __this__ = (com.amap.api.services.route.DistanceSearch.DistanceQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DistanceSearch.DistanceQuery@" + refId + "::setDestination(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DistanceSearch.DistanceQuery@" + __this__ + "::setDestination(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setDestination(var1);
+                    __this__.setDestination(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4935,10 +4178,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.SearchCity::getSearchCityName", (__args__, __methodResult__) -> {
@@ -4946,18 +4186,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.SearchCity ref = (com.amap.api.services.route.SearchCity) getHEAP().get(refId);
+                com.amap.api.services.route.SearchCity __this__ = (com.amap.api.services.route.SearchCity) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.SearchCity@" + refId + "::getSearchCityName(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.SearchCity@" + __this__ + "::getSearchCityName(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getSearchCityName();
+                    __result__ = __this__.getSearchCityName();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4967,29 +4206,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.SearchCity::setSearchCityName", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.SearchCity ref = (com.amap.api.services.route.SearchCity) getHEAP().get(refId);
+                com.amap.api.services.route.SearchCity __this__ = (com.amap.api.services.route.SearchCity) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.SearchCity@" + refId + "::setSearchCityName(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.SearchCity@" + __this__ + "::setSearchCityName(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setSearchCityName(var1);
+                    __this__.setSearchCityName(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4999,10 +4235,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.SearchCity::getSearchCitycode", (__args__, __methodResult__) -> {
@@ -5010,18 +4243,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.SearchCity ref = (com.amap.api.services.route.SearchCity) getHEAP().get(refId);
+                com.amap.api.services.route.SearchCity __this__ = (com.amap.api.services.route.SearchCity) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.SearchCity@" + refId + "::getSearchCitycode(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.SearchCity@" + __this__ + "::getSearchCitycode(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getSearchCitycode();
+                    __result__ = __this__.getSearchCitycode();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -5031,29 +4263,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.SearchCity::setSearchCitycode", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.SearchCity ref = (com.amap.api.services.route.SearchCity) getHEAP().get(refId);
+                com.amap.api.services.route.SearchCity __this__ = (com.amap.api.services.route.SearchCity) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.SearchCity@" + refId + "::setSearchCitycode(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.SearchCity@" + __this__ + "::setSearchCitycode(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setSearchCitycode(var1);
+                    __this__.setSearchCitycode(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -5063,10 +4292,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.SearchCity::getSearchCityAdCode", (__args__, __methodResult__) -> {
@@ -5074,18 +4300,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.SearchCity ref = (com.amap.api.services.route.SearchCity) getHEAP().get(refId);
+                com.amap.api.services.route.SearchCity __this__ = (com.amap.api.services.route.SearchCity) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.SearchCity@" + refId + "::getSearchCityAdCode(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.SearchCity@" + __this__ + "::getSearchCityAdCode(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getSearchCityAdCode();
+                    __result__ = __this__.getSearchCityAdCode();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -5095,29 +4320,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.SearchCity::setSearchCityhAdCode", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.SearchCity ref = (com.amap.api.services.route.SearchCity) getHEAP().get(refId);
+                com.amap.api.services.route.SearchCity __this__ = (com.amap.api.services.route.SearchCity) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.SearchCity@" + refId + "::setSearchCityhAdCode(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.SearchCity@" + __this__ + "::setSearchCityhAdCode(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setSearchCityhAdCode(var1);
+                    __this__.setSearchCityhAdCode(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -5127,10 +4349,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.DistanceSearch::setDistanceSearchListener", (__args__, __methodResult__) -> {
@@ -5138,19 +4357,19 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.DistanceSearch ref = (com.amap.api.services.route.DistanceSearch) getHEAP().get(refId);
+                com.amap.api.services.route.DistanceSearch __this__ = (com.amap.api.services.route.DistanceSearch) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DistanceSearch@" + refId + "::setDistanceSearchListener(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DistanceSearch@" + __this__ + "::setDistanceSearchListener(" + "" + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setDistanceSearchListener(new com.amap.api.services.route.DistanceSearch.OnDistanceSearchListener() {
+                    __this__.setDistanceSearchListener(new com.amap.api.services.route.DistanceSearch.OnDistanceSearchListener() {
                         // method channel
-                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.route.DistanceSearch::setDistanceSearchListener::Callback");
+                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.route.DistanceSearch::setDistanceSearchListener::Callback", new StandardMethodCodec(new FluttifyMessageCodec()));
                         android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
             
                         // call dart method
@@ -5201,31 +4420,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.DistanceSearch::calculateRouteDistance", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.route.DistanceSearch.DistanceQuery var1 = __var1RefId__ != null ? (com.amap.api.services.route.DistanceSearch.DistanceQuery) getHEAP().get(__var1RefId__) : null;
+                com.amap.api.services.route.DistanceSearch.DistanceQuery var1 = (com.amap.api.services.route.DistanceSearch.DistanceQuery) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.DistanceSearch ref = (com.amap.api.services.route.DistanceSearch) getHEAP().get(refId);
+                com.amap.api.services.route.DistanceSearch __this__ = (com.amap.api.services.route.DistanceSearch) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DistanceSearch@" + refId + "::calculateRouteDistance(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DistanceSearch@" + __this__ + "::calculateRouteDistance(" + var1 + ")");
                 }
             
                 // invoke native method
-                com.amap.api.services.route.DistanceResult __result__;
+                com.amap.api.services.route.DistanceResult __result__ = null;
                 try {
-                    __result__ = ref.calculateRouteDistance(var1);
+                    __result__ = __this__.calculateRouteDistance(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -5235,34 +4449,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                Integer jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = System.identityHashCode(__result__);
-                    getHEAP().put(jsonableResult, __result__);
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.DistanceSearch::calculateRouteDistanceAsyn", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.route.DistanceSearch.DistanceQuery var1 = __var1RefId__ != null ? (com.amap.api.services.route.DistanceSearch.DistanceQuery) getHEAP().get(__var1RefId__) : null;
+                com.amap.api.services.route.DistanceSearch.DistanceQuery var1 = (com.amap.api.services.route.DistanceSearch.DistanceQuery) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.DistanceSearch ref = (com.amap.api.services.route.DistanceSearch) getHEAP().get(refId);
+                com.amap.api.services.route.DistanceSearch __this__ = (com.amap.api.services.route.DistanceSearch) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DistanceSearch@" + refId + "::calculateRouteDistanceAsyn(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DistanceSearch@" + __this__ + "::calculateRouteDistanceAsyn(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.calculateRouteDistanceAsyn(var1);
+                    __this__.calculateRouteDistanceAsyn(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -5272,10 +4478,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.WalkPath::getSteps", (__args__, __methodResult__) -> {
@@ -5283,18 +4486,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.WalkPath ref = (com.amap.api.services.route.WalkPath) getHEAP().get(refId);
+                com.amap.api.services.route.WalkPath __this__ = (com.amap.api.services.route.WalkPath) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkPath@" + refId + "::getSteps(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkPath@" + __this__ + "::getSteps(" + "" + ")");
                 }
             
                 // invoke native method
-                java.util.List<com.amap.api.services.route.WalkStep> __result__;
+                java.util.List<com.amap.api.services.route.WalkStep> __result__ = null;
                 try {
-                    __result__ = ref.getSteps();
+                    __result__ = __this__.getSteps();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -5304,40 +4506,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                List<Integer> jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = new ArrayList<>();
-                    for (com.amap.api.services.route.WalkStep item : __result__) {
-                        getHEAP().put(System.identityHashCode(item), item);
-                        jsonableResult.add(System.identityHashCode(item));
-                    }
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.WalkPath::setSteps", (__args__, __methodResult__) -> {
                 // args
-                // list arg
-                List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) __args__).get("var1");
-                java.util.List<com.amap.api.services.route.WalkStep> var1 = new ArrayList<>();
-                for (int refId : var1RefIdList) {
-                    ((ArrayList<com.amap.api.services.route.WalkStep>) var1).add((com.amap.api.services.route.WalkStep) getHEAP().get(refId));
-                }
+                // ref arg
+                java.util.List<com.amap.api.services.route.WalkStep> var1 = (java.util.List<com.amap.api.services.route.WalkStep>) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.WalkPath ref = (com.amap.api.services.route.WalkPath) getHEAP().get(refId);
+                com.amap.api.services.route.WalkPath __this__ = (com.amap.api.services.route.WalkPath) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkPath@" + refId + "::setSteps(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkPath@" + __this__ + "::setSteps(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setSteps((ArrayList) var1);
+                    __this__.setSteps((ArrayList) var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -5347,10 +4535,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteBusLineItem::getDepartureBusStation", (__args__, __methodResult__) -> {
@@ -5358,18 +4543,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteBusLineItem ref = (com.amap.api.services.route.RouteBusLineItem) getHEAP().get(refId);
+                com.amap.api.services.route.RouteBusLineItem __this__ = (com.amap.api.services.route.RouteBusLineItem) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteBusLineItem@" + refId + "::getDepartureBusStation(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteBusLineItem@" + __this__ + "::getDepartureBusStation(" + "" + ")");
                 }
             
                 // invoke native method
-                com.amap.api.services.busline.BusStationItem __result__;
+                com.amap.api.services.busline.BusStationItem __result__ = null;
                 try {
-                    __result__ = ref.getDepartureBusStation();
+                    __result__ = __this__.getDepartureBusStation();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -5379,34 +4563,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                Integer jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = System.identityHashCode(__result__);
-                    getHEAP().put(jsonableResult, __result__);
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteBusLineItem::setDepartureBusStation", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.busline.BusStationItem var1 = __var1RefId__ != null ? (com.amap.api.services.busline.BusStationItem) getHEAP().get(__var1RefId__) : null;
+                com.amap.api.services.busline.BusStationItem var1 = (com.amap.api.services.busline.BusStationItem) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteBusLineItem ref = (com.amap.api.services.route.RouteBusLineItem) getHEAP().get(refId);
+                com.amap.api.services.route.RouteBusLineItem __this__ = (com.amap.api.services.route.RouteBusLineItem) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteBusLineItem@" + refId + "::setDepartureBusStation(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteBusLineItem@" + __this__ + "::setDepartureBusStation(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setDepartureBusStation(var1);
+                    __this__.setDepartureBusStation(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -5416,10 +4592,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteBusLineItem::getArrivalBusStation", (__args__, __methodResult__) -> {
@@ -5427,18 +4600,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteBusLineItem ref = (com.amap.api.services.route.RouteBusLineItem) getHEAP().get(refId);
+                com.amap.api.services.route.RouteBusLineItem __this__ = (com.amap.api.services.route.RouteBusLineItem) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteBusLineItem@" + refId + "::getArrivalBusStation(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteBusLineItem@" + __this__ + "::getArrivalBusStation(" + "" + ")");
                 }
             
                 // invoke native method
-                com.amap.api.services.busline.BusStationItem __result__;
+                com.amap.api.services.busline.BusStationItem __result__ = null;
                 try {
-                    __result__ = ref.getArrivalBusStation();
+                    __result__ = __this__.getArrivalBusStation();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -5448,34 +4620,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                Integer jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = System.identityHashCode(__result__);
-                    getHEAP().put(jsonableResult, __result__);
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteBusLineItem::setArrivalBusStation", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Integer __var1RefId__ = (Integer) ((Map<String, Object>) __args__).get("var1");
-                com.amap.api.services.busline.BusStationItem var1 = __var1RefId__ != null ? (com.amap.api.services.busline.BusStationItem) getHEAP().get(__var1RefId__) : null;
+                com.amap.api.services.busline.BusStationItem var1 = (com.amap.api.services.busline.BusStationItem) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteBusLineItem ref = (com.amap.api.services.route.RouteBusLineItem) getHEAP().get(refId);
+                com.amap.api.services.route.RouteBusLineItem __this__ = (com.amap.api.services.route.RouteBusLineItem) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteBusLineItem@" + refId + "::setArrivalBusStation(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteBusLineItem@" + __this__ + "::setArrivalBusStation(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setArrivalBusStation(var1);
+                    __this__.setArrivalBusStation(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -5485,10 +4649,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteBusLineItem::getPolyline", (__args__, __methodResult__) -> {
@@ -5496,18 +4657,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteBusLineItem ref = (com.amap.api.services.route.RouteBusLineItem) getHEAP().get(refId);
+                com.amap.api.services.route.RouteBusLineItem __this__ = (com.amap.api.services.route.RouteBusLineItem) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteBusLineItem@" + refId + "::getPolyline(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteBusLineItem@" + __this__ + "::getPolyline(" + "" + ")");
                 }
             
                 // invoke native method
-                java.util.List<com.amap.api.services.core.LatLonPoint> __result__;
+                java.util.List<com.amap.api.services.core.LatLonPoint> __result__ = null;
                 try {
-                    __result__ = ref.getPolyline();
+                    __result__ = __this__.getPolyline();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -5517,40 +4677,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                List<Integer> jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = new ArrayList<>();
-                    for (com.amap.api.services.core.LatLonPoint item : __result__) {
-                        getHEAP().put(System.identityHashCode(item), item);
-                        jsonableResult.add(System.identityHashCode(item));
-                    }
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteBusLineItem::setPolyline", (__args__, __methodResult__) -> {
                 // args
-                // list arg
-                List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) __args__).get("var1");
-                java.util.List<com.amap.api.services.core.LatLonPoint> var1 = new ArrayList<>();
-                for (int refId : var1RefIdList) {
-                    ((ArrayList<com.amap.api.services.core.LatLonPoint>) var1).add((com.amap.api.services.core.LatLonPoint) getHEAP().get(refId));
-                }
+                // ref arg
+                java.util.List<com.amap.api.services.core.LatLonPoint> var1 = (java.util.List<com.amap.api.services.core.LatLonPoint>) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteBusLineItem ref = (com.amap.api.services.route.RouteBusLineItem) getHEAP().get(refId);
+                com.amap.api.services.route.RouteBusLineItem __this__ = (com.amap.api.services.route.RouteBusLineItem) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteBusLineItem@" + refId + "::setPolyline(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteBusLineItem@" + __this__ + "::setPolyline(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setPolyline((ArrayList) var1);
+                    __this__.setPolyline((ArrayList) var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -5560,10 +4706,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteBusLineItem::getPassStationNum", (__args__, __methodResult__) -> {
@@ -5571,18 +4714,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteBusLineItem ref = (com.amap.api.services.route.RouteBusLineItem) getHEAP().get(refId);
+                com.amap.api.services.route.RouteBusLineItem __this__ = (com.amap.api.services.route.RouteBusLineItem) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteBusLineItem@" + refId + "::getPassStationNum(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteBusLineItem@" + __this__ + "::getPassStationNum(" + "" + ")");
                 }
             
                 // invoke native method
-                int __result__;
+                Integer __result__ = null;
                 try {
-                    __result__ = ref.getPassStationNum();
+                    __result__ = __this__.getPassStationNum();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -5592,29 +4734,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                int jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteBusLineItem::setPassStationNum", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 int var1 = (int) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteBusLineItem ref = (com.amap.api.services.route.RouteBusLineItem) getHEAP().get(refId);
+                com.amap.api.services.route.RouteBusLineItem __this__ = (com.amap.api.services.route.RouteBusLineItem) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteBusLineItem@" + refId + "::setPassStationNum(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteBusLineItem@" + __this__ + "::setPassStationNum(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setPassStationNum(var1);
+                    __this__.setPassStationNum(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -5624,10 +4763,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteBusLineItem::getPassStations", (__args__, __methodResult__) -> {
@@ -5635,18 +4771,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteBusLineItem ref = (com.amap.api.services.route.RouteBusLineItem) getHEAP().get(refId);
+                com.amap.api.services.route.RouteBusLineItem __this__ = (com.amap.api.services.route.RouteBusLineItem) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteBusLineItem@" + refId + "::getPassStations(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteBusLineItem@" + __this__ + "::getPassStations(" + "" + ")");
                 }
             
                 // invoke native method
-                java.util.List<com.amap.api.services.busline.BusStationItem> __result__;
+                java.util.List<com.amap.api.services.busline.BusStationItem> __result__ = null;
                 try {
-                    __result__ = ref.getPassStations();
+                    __result__ = __this__.getPassStations();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -5656,40 +4791,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                List<Integer> jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = new ArrayList<>();
-                    for (com.amap.api.services.busline.BusStationItem item : __result__) {
-                        getHEAP().put(System.identityHashCode(item), item);
-                        jsonableResult.add(System.identityHashCode(item));
-                    }
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteBusLineItem::setPassStations", (__args__, __methodResult__) -> {
                 // args
-                // list arg
-                List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) __args__).get("var1");
-                java.util.List<com.amap.api.services.busline.BusStationItem> var1 = new ArrayList<>();
-                for (int refId : var1RefIdList) {
-                    ((ArrayList<com.amap.api.services.busline.BusStationItem>) var1).add((com.amap.api.services.busline.BusStationItem) getHEAP().get(refId));
-                }
+                // ref arg
+                java.util.List<com.amap.api.services.busline.BusStationItem> var1 = (java.util.List<com.amap.api.services.busline.BusStationItem>) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteBusLineItem ref = (com.amap.api.services.route.RouteBusLineItem) getHEAP().get(refId);
+                com.amap.api.services.route.RouteBusLineItem __this__ = (com.amap.api.services.route.RouteBusLineItem) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteBusLineItem@" + refId + "::setPassStations(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteBusLineItem@" + __this__ + "::setPassStations(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setPassStations((ArrayList) var1);
+                    __this__.setPassStations((ArrayList) var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -5699,10 +4820,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteBusLineItem::getDuration", (__args__, __methodResult__) -> {
@@ -5710,18 +4828,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteBusLineItem ref = (com.amap.api.services.route.RouteBusLineItem) getHEAP().get(refId);
+                com.amap.api.services.route.RouteBusLineItem __this__ = (com.amap.api.services.route.RouteBusLineItem) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteBusLineItem@" + refId + "::getDuration(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteBusLineItem@" + __this__ + "::getDuration(" + "" + ")");
                 }
             
                 // invoke native method
-                float __result__;
+                Float __result__ = null;
                 try {
-                    __result__ = ref.getDuration();
+                    __result__ = __this__.getDuration();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -5731,29 +4848,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                float jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteBusLineItem::setDuration", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
-                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteBusLineItem ref = (com.amap.api.services.route.RouteBusLineItem) getHEAP().get(refId);
+                com.amap.api.services.route.RouteBusLineItem __this__ = (com.amap.api.services.route.RouteBusLineItem) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteBusLineItem@" + refId + "::setDuration(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteBusLineItem@" + __this__ + "::setDuration(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setDuration(new Double(var1).floatValue());
+                    __this__.setDuration(new Double(var1).floatValue());
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -5763,10 +4877,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteSearch.DrivePlanQuery::getFromAndTo", (__args__, __methodResult__) -> {
@@ -5774,18 +4885,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteSearch.DrivePlanQuery ref = (com.amap.api.services.route.RouteSearch.DrivePlanQuery) getHEAP().get(refId);
+                com.amap.api.services.route.RouteSearch.DrivePlanQuery __this__ = (com.amap.api.services.route.RouteSearch.DrivePlanQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DrivePlanQuery@" + refId + "::getFromAndTo(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DrivePlanQuery@" + __this__ + "::getFromAndTo(" + "" + ")");
                 }
             
                 // invoke native method
-                com.amap.api.services.route.RouteSearch.FromAndTo __result__;
+                com.amap.api.services.route.RouteSearch.FromAndTo __result__ = null;
                 try {
-                    __result__ = ref.getFromAndTo();
+                    __result__ = __this__.getFromAndTo();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -5795,14 +4905,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                Integer jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = System.identityHashCode(__result__);
-                    getHEAP().put(jsonableResult, __result__);
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteSearch.DrivePlanQuery::getDestParentPoiID", (__args__, __methodResult__) -> {
@@ -5810,18 +4913,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteSearch.DrivePlanQuery ref = (com.amap.api.services.route.RouteSearch.DrivePlanQuery) getHEAP().get(refId);
+                com.amap.api.services.route.RouteSearch.DrivePlanQuery __this__ = (com.amap.api.services.route.RouteSearch.DrivePlanQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DrivePlanQuery@" + refId + "::getDestParentPoiID(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DrivePlanQuery@" + __this__ + "::getDestParentPoiID(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getDestParentPoiID();
+                    __result__ = __this__.getDestParentPoiID();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -5831,10 +4933,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteSearch.DrivePlanQuery::getMode", (__args__, __methodResult__) -> {
@@ -5842,18 +4941,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteSearch.DrivePlanQuery ref = (com.amap.api.services.route.RouteSearch.DrivePlanQuery) getHEAP().get(refId);
+                com.amap.api.services.route.RouteSearch.DrivePlanQuery __this__ = (com.amap.api.services.route.RouteSearch.DrivePlanQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DrivePlanQuery@" + refId + "::getMode(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DrivePlanQuery@" + __this__ + "::getMode(" + "" + ")");
                 }
             
                 // invoke native method
-                int __result__;
+                Integer __result__ = null;
                 try {
-                    __result__ = ref.getMode();
+                    __result__ = __this__.getMode();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -5863,10 +4961,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                int jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteSearch.DrivePlanQuery::getCarType", (__args__, __methodResult__) -> {
@@ -5874,18 +4969,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteSearch.DrivePlanQuery ref = (com.amap.api.services.route.RouteSearch.DrivePlanQuery) getHEAP().get(refId);
+                com.amap.api.services.route.RouteSearch.DrivePlanQuery __this__ = (com.amap.api.services.route.RouteSearch.DrivePlanQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DrivePlanQuery@" + refId + "::getCarType(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DrivePlanQuery@" + __this__ + "::getCarType(" + "" + ")");
                 }
             
                 // invoke native method
-                int __result__;
+                Integer __result__ = null;
                 try {
-                    __result__ = ref.getCarType();
+                    __result__ = __this__.getCarType();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -5895,10 +4989,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                int jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteSearch.DrivePlanQuery::getFirstTime", (__args__, __methodResult__) -> {
@@ -5906,18 +4997,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteSearch.DrivePlanQuery ref = (com.amap.api.services.route.RouteSearch.DrivePlanQuery) getHEAP().get(refId);
+                com.amap.api.services.route.RouteSearch.DrivePlanQuery __this__ = (com.amap.api.services.route.RouteSearch.DrivePlanQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DrivePlanQuery@" + refId + "::getFirstTime(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DrivePlanQuery@" + __this__ + "::getFirstTime(" + "" + ")");
                 }
             
                 // invoke native method
-                int __result__;
+                Integer __result__ = null;
                 try {
-                    __result__ = ref.getFirstTime();
+                    __result__ = __this__.getFirstTime();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -5927,10 +5017,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                int jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteSearch.DrivePlanQuery::getInterval", (__args__, __methodResult__) -> {
@@ -5938,18 +5025,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteSearch.DrivePlanQuery ref = (com.amap.api.services.route.RouteSearch.DrivePlanQuery) getHEAP().get(refId);
+                com.amap.api.services.route.RouteSearch.DrivePlanQuery __this__ = (com.amap.api.services.route.RouteSearch.DrivePlanQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DrivePlanQuery@" + refId + "::getInterval(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DrivePlanQuery@" + __this__ + "::getInterval(" + "" + ")");
                 }
             
                 // invoke native method
-                int __result__;
+                Integer __result__ = null;
                 try {
-                    __result__ = ref.getInterval();
+                    __result__ = __this__.getInterval();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -5959,10 +5045,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                int jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteSearch.DrivePlanQuery::getCount", (__args__, __methodResult__) -> {
@@ -5970,18 +5053,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteSearch.DrivePlanQuery ref = (com.amap.api.services.route.RouteSearch.DrivePlanQuery) getHEAP().get(refId);
+                com.amap.api.services.route.RouteSearch.DrivePlanQuery __this__ = (com.amap.api.services.route.RouteSearch.DrivePlanQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DrivePlanQuery@" + refId + "::getCount(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DrivePlanQuery@" + __this__ + "::getCount(" + "" + ")");
                 }
             
                 // invoke native method
-                int __result__;
+                Integer __result__ = null;
                 try {
-                    __result__ = ref.getCount();
+                    __result__ = __this__.getCount();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -5991,10 +5073,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                int jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteSearch.DrivePlanQuery::clone", (__args__, __methodResult__) -> {
@@ -6002,18 +5081,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteSearch.DrivePlanQuery ref = (com.amap.api.services.route.RouteSearch.DrivePlanQuery) getHEAP().get(refId);
+                com.amap.api.services.route.RouteSearch.DrivePlanQuery __this__ = (com.amap.api.services.route.RouteSearch.DrivePlanQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DrivePlanQuery@" + refId + "::clone(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DrivePlanQuery@" + __this__ + "::clone(" + "" + ")");
                 }
             
                 // invoke native method
-                com.amap.api.services.route.RouteSearch.DrivePlanQuery __result__;
+                com.amap.api.services.route.RouteSearch.DrivePlanQuery __result__ = null;
                 try {
-                    __result__ = ref.clone();
+                    __result__ = __this__.clone();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -6023,33 +5101,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                Integer jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = System.identityHashCode(__result__);
-                    getHEAP().put(jsonableResult, __result__);
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteSearch.DrivePlanQuery::setDestParentPoiID", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteSearch.DrivePlanQuery ref = (com.amap.api.services.route.RouteSearch.DrivePlanQuery) getHEAP().get(refId);
+                com.amap.api.services.route.RouteSearch.DrivePlanQuery __this__ = (com.amap.api.services.route.RouteSearch.DrivePlanQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DrivePlanQuery@" + refId + "::setDestParentPoiID(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DrivePlanQuery@" + __this__ + "::setDestParentPoiID(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setDestParentPoiID(var1);
+                    __this__.setDestParentPoiID(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -6059,29 +5130,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteSearch.DrivePlanQuery::setMode", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 int var1 = (int) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteSearch.DrivePlanQuery ref = (com.amap.api.services.route.RouteSearch.DrivePlanQuery) getHEAP().get(refId);
+                com.amap.api.services.route.RouteSearch.DrivePlanQuery __this__ = (com.amap.api.services.route.RouteSearch.DrivePlanQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DrivePlanQuery@" + refId + "::setMode(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DrivePlanQuery@" + __this__ + "::setMode(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setMode(var1);
+                    __this__.setMode(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -6091,29 +5159,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.RouteSearch.DrivePlanQuery::setCarType", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 int var1 = (int) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.RouteSearch.DrivePlanQuery ref = (com.amap.api.services.route.RouteSearch.DrivePlanQuery) getHEAP().get(refId);
+                com.amap.api.services.route.RouteSearch.DrivePlanQuery __this__ = (com.amap.api.services.route.RouteSearch.DrivePlanQuery) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DrivePlanQuery@" + refId + "::setCarType(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DrivePlanQuery@" + __this__ + "::setCarType(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setCarType(var1);
+                    __this__.setCarType(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -6123,10 +5188,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.DrivePlanStep::getRoad", (__args__, __methodResult__) -> {
@@ -6134,18 +5196,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.DrivePlanStep ref = (com.amap.api.services.route.DrivePlanStep) getHEAP().get(refId);
+                com.amap.api.services.route.DrivePlanStep __this__ = (com.amap.api.services.route.DrivePlanStep) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DrivePlanStep@" + refId + "::getRoad(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DrivePlanStep@" + __this__ + "::getRoad(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getRoad();
+                    __result__ = __this__.getRoad();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -6155,29 +5216,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.DrivePlanStep::setAdCode", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.DrivePlanStep ref = (com.amap.api.services.route.DrivePlanStep) getHEAP().get(refId);
+                com.amap.api.services.route.DrivePlanStep __this__ = (com.amap.api.services.route.DrivePlanStep) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DrivePlanStep@" + refId + "::setAdCode(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DrivePlanStep@" + __this__ + "::setAdCode(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setAdCode(var1);
+                    __this__.setAdCode(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -6187,10 +5245,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.DrivePlanStep::getAdCode", (__args__, __methodResult__) -> {
@@ -6198,18 +5253,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.DrivePlanStep ref = (com.amap.api.services.route.DrivePlanStep) getHEAP().get(refId);
+                com.amap.api.services.route.DrivePlanStep __this__ = (com.amap.api.services.route.DrivePlanStep) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DrivePlanStep@" + refId + "::getAdCode(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DrivePlanStep@" + __this__ + "::getAdCode(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getAdCode();
+                    __result__ = __this__.getAdCode();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -6219,29 +5273,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.DrivePlanStep::setRoad", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.DrivePlanStep ref = (com.amap.api.services.route.DrivePlanStep) getHEAP().get(refId);
+                com.amap.api.services.route.DrivePlanStep __this__ = (com.amap.api.services.route.DrivePlanStep) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DrivePlanStep@" + refId + "::setRoad(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DrivePlanStep@" + __this__ + "::setRoad(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setRoad(var1);
+                    __this__.setRoad(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -6251,10 +5302,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.DrivePlanStep::getDistance", (__args__, __methodResult__) -> {
@@ -6262,18 +5310,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.DrivePlanStep ref = (com.amap.api.services.route.DrivePlanStep) getHEAP().get(refId);
+                com.amap.api.services.route.DrivePlanStep __this__ = (com.amap.api.services.route.DrivePlanStep) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DrivePlanStep@" + refId + "::getDistance(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DrivePlanStep@" + __this__ + "::getDistance(" + "" + ")");
                 }
             
                 // invoke native method
-                float __result__;
+                Float __result__ = null;
                 try {
-                    __result__ = ref.getDistance();
+                    __result__ = __this__.getDistance();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -6283,29 +5330,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                float jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.DrivePlanStep::setDistance", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
-                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.DrivePlanStep ref = (com.amap.api.services.route.DrivePlanStep) getHEAP().get(refId);
+                com.amap.api.services.route.DrivePlanStep __this__ = (com.amap.api.services.route.DrivePlanStep) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DrivePlanStep@" + refId + "::setDistance(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DrivePlanStep@" + __this__ + "::setDistance(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setDistance(new Double(var1).floatValue());
+                    __this__.setDistance(new Double(var1).floatValue());
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -6315,10 +5359,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.DrivePlanStep::getToll", (__args__, __methodResult__) -> {
@@ -6326,18 +5367,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.DrivePlanStep ref = (com.amap.api.services.route.DrivePlanStep) getHEAP().get(refId);
+                com.amap.api.services.route.DrivePlanStep __this__ = (com.amap.api.services.route.DrivePlanStep) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DrivePlanStep@" + refId + "::getToll(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DrivePlanStep@" + __this__ + "::getToll(" + "" + ")");
                 }
             
                 // invoke native method
-                boolean __result__;
+                Boolean __result__ = null;
                 try {
-                    __result__ = ref.getToll();
+                    __result__ = __this__.getToll();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -6347,29 +5387,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                boolean jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.DrivePlanStep::setToll", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.DrivePlanStep ref = (com.amap.api.services.route.DrivePlanStep) getHEAP().get(refId);
+                com.amap.api.services.route.DrivePlanStep __this__ = (com.amap.api.services.route.DrivePlanStep) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DrivePlanStep@" + refId + "::setToll(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DrivePlanStep@" + __this__ + "::setToll(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setToll(var1);
+                    __this__.setToll(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -6379,10 +5416,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.DrivePlanStep::getPolyline", (__args__, __methodResult__) -> {
@@ -6390,18 +5424,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.DrivePlanStep ref = (com.amap.api.services.route.DrivePlanStep) getHEAP().get(refId);
+                com.amap.api.services.route.DrivePlanStep __this__ = (com.amap.api.services.route.DrivePlanStep) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DrivePlanStep@" + refId + "::getPolyline(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DrivePlanStep@" + __this__ + "::getPolyline(" + "" + ")");
                 }
             
                 // invoke native method
-                java.util.List<com.amap.api.services.core.LatLonPoint> __result__;
+                java.util.List<com.amap.api.services.core.LatLonPoint> __result__ = null;
                 try {
-                    __result__ = ref.getPolyline();
+                    __result__ = __this__.getPolyline();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -6411,40 +5444,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                List<Integer> jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = new ArrayList<>();
-                    for (com.amap.api.services.core.LatLonPoint item : __result__) {
-                        getHEAP().put(System.identityHashCode(item), item);
-                        jsonableResult.add(System.identityHashCode(item));
-                    }
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.DrivePlanStep::setPolyline", (__args__, __methodResult__) -> {
                 // args
-                // list arg
-                List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) __args__).get("var1");
-                java.util.List<com.amap.api.services.core.LatLonPoint> var1 = new ArrayList<>();
-                for (int refId : var1RefIdList) {
-                    ((ArrayList<com.amap.api.services.core.LatLonPoint>) var1).add((com.amap.api.services.core.LatLonPoint) getHEAP().get(refId));
-                }
+                // ref arg
+                java.util.List<com.amap.api.services.core.LatLonPoint> var1 = (java.util.List<com.amap.api.services.core.LatLonPoint>) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.DrivePlanStep ref = (com.amap.api.services.route.DrivePlanStep) getHEAP().get(refId);
+                com.amap.api.services.route.DrivePlanStep __this__ = (com.amap.api.services.route.DrivePlanStep) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DrivePlanStep@" + refId + "::setPolyline(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DrivePlanStep@" + __this__ + "::setPolyline(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setPolyline((ArrayList) var1);
+                    __this__.setPolyline((ArrayList) var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -6454,10 +5473,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.TimeInfo::getStartTime", (__args__, __methodResult__) -> {
@@ -6465,18 +5481,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.TimeInfo ref = (com.amap.api.services.route.TimeInfo) getHEAP().get(refId);
+                com.amap.api.services.route.TimeInfo __this__ = (com.amap.api.services.route.TimeInfo) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TimeInfo@" + refId + "::getStartTime(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TimeInfo@" + __this__ + "::getStartTime(" + "" + ")");
                 }
             
                 // invoke native method
-                long __result__;
+                Long __result__ = null;
                 try {
-                    __result__ = ref.getStartTime();
+                    __result__ = __this__.getStartTime();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -6486,29 +5501,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                long jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.TimeInfo::setStartTime", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
-                long var1 = (long) (int) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                long var1 = (long) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.TimeInfo ref = (com.amap.api.services.route.TimeInfo) getHEAP().get(refId);
+                com.amap.api.services.route.TimeInfo __this__ = (com.amap.api.services.route.TimeInfo) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TimeInfo@" + refId + "::setStartTime(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TimeInfo@" + __this__ + "::setStartTime(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setStartTime(var1);
+                    __this__.setStartTime(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -6518,10 +5530,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.TimeInfo::getElements", (__args__, __methodResult__) -> {
@@ -6529,18 +5538,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.TimeInfo ref = (com.amap.api.services.route.TimeInfo) getHEAP().get(refId);
+                com.amap.api.services.route.TimeInfo __this__ = (com.amap.api.services.route.TimeInfo) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TimeInfo@" + refId + "::getElements(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TimeInfo@" + __this__ + "::getElements(" + "" + ")");
                 }
             
                 // invoke native method
-                java.util.List<com.amap.api.services.route.TimeInfosElement> __result__;
+                java.util.List<com.amap.api.services.route.TimeInfosElement> __result__ = null;
                 try {
-                    __result__ = ref.getElements();
+                    __result__ = __this__.getElements();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -6550,40 +5558,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                List<Integer> jsonableResult = null;
-                if (__result__ != null) {
-                    jsonableResult = new ArrayList<>();
-                    for (com.amap.api.services.route.TimeInfosElement item : __result__) {
-                        getHEAP().put(System.identityHashCode(item), item);
-                        jsonableResult.add(System.identityHashCode(item));
-                    }
-                }
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.TimeInfo::setElements", (__args__, __methodResult__) -> {
                 // args
-                // list arg
-                List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) __args__).get("var1");
-                java.util.List<com.amap.api.services.route.TimeInfosElement> var1 = new ArrayList<>();
-                for (int refId : var1RefIdList) {
-                    ((ArrayList<com.amap.api.services.route.TimeInfosElement>) var1).add((com.amap.api.services.route.TimeInfosElement) getHEAP().get(refId));
-                }
+                // ref arg
+                java.util.List<com.amap.api.services.route.TimeInfosElement> var1 = (java.util.List<com.amap.api.services.route.TimeInfosElement>) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.TimeInfo ref = (com.amap.api.services.route.TimeInfo) getHEAP().get(refId);
+                com.amap.api.services.route.TimeInfo __this__ = (com.amap.api.services.route.TimeInfo) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TimeInfo@" + refId + "::setElements(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TimeInfo@" + __this__ + "::setElements(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setElements((ArrayList) var1);
+                    __this__.setElements((ArrayList) var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -6593,10 +5587,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.DriveStep::getInstruction", (__args__, __methodResult__) -> {
@@ -6604,18 +5595,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.DriveStep ref = (com.amap.api.services.route.DriveStep) getHEAP().get(refId);
+                com.amap.api.services.route.DriveStep __this__ = (com.amap.api.services.route.DriveStep) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DriveStep@" + refId + "::getInstruction(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DriveStep@" + __this__ + "::getInstruction(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getInstruction();
+                    __result__ = __this__.getInstruction();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -6625,29 +5615,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.DriveStep::setInstruction", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.DriveStep ref = (com.amap.api.services.route.DriveStep) getHEAP().get(refId);
+                com.amap.api.services.route.DriveStep __this__ = (com.amap.api.services.route.DriveStep) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DriveStep@" + refId + "::setInstruction(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DriveStep@" + __this__ + "::setInstruction(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setInstruction(var1);
+                    __this__.setInstruction(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -6657,10 +5644,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.DriveStep::getOrientation", (__args__, __methodResult__) -> {
@@ -6668,18 +5652,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.DriveStep ref = (com.amap.api.services.route.DriveStep) getHEAP().get(refId);
+                com.amap.api.services.route.DriveStep __this__ = (com.amap.api.services.route.DriveStep) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DriveStep@" + refId + "::getOrientation(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DriveStep@" + __this__ + "::getOrientation(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getOrientation();
+                    __result__ = __this__.getOrientation();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -6689,29 +5672,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.DriveStep::setOrientation", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.DriveStep ref = (com.amap.api.services.route.DriveStep) getHEAP().get(refId);
+                com.amap.api.services.route.DriveStep __this__ = (com.amap.api.services.route.DriveStep) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DriveStep@" + refId + "::setOrientation(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DriveStep@" + __this__ + "::setOrientation(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setOrientation(var1);
+                    __this__.setOrientation(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -6721,10 +5701,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.DriveStep::getRoad", (__args__, __methodResult__) -> {
@@ -6732,18 +5709,17 @@ public class SubHandler2 {
             
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.DriveStep ref = (com.amap.api.services.route.DriveStep) getHEAP().get(refId);
+                com.amap.api.services.route.DriveStep __this__ = (com.amap.api.services.route.DriveStep) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DriveStep@" + refId + "::getRoad(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DriveStep@" + __this__ + "::getRoad(" + "" + ")");
                 }
             
                 // invoke native method
-                String __result__;
+                String __result__ = null;
                 try {
-                    __result__ = ref.getRoad();
+                    __result__ = __this__.getRoad();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -6753,29 +5729,26 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = __result__;
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
             // method
             put("com.amap.api.services.route.DriveStep::setRoad", (__args__, __methodResult__) -> {
                 // args
-                // jsonable arg
+                // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                int refId = (int) ((Map<String, Object>) __args__).get("refId");
-                com.amap.api.services.route.DriveStep ref = (com.amap.api.services.route.DriveStep) getHEAP().get(refId);
+                com.amap.api.services.route.DriveStep __this__ = (com.amap.api.services.route.DriveStep) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DriveStep@" + refId + "::setRoad(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DriveStep@" + __this__ + "::setRoad(" + var1 + ")");
                 }
             
                 // invoke native method
+                Void __result__ = null;
                 try {
-                    ref.setRoad(var1);
+                    __this__.setRoad(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -6785,10 +5758,7 @@ public class SubHandler2 {
                     return;
                 }
             
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                __methodResult__.success(jsonableResult);
+                __methodResult__.success(__result__);
             });
         }};
     }

@@ -21,18 +21,14 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
 
   //region creators
   static Future<com_amap_api_services_route_RouteSearch_FromAndTo> create__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint(com_amap_api_services_core_LatLonPoint var1, com_amap_api_services_core_LatLonPoint var2) async {
-    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_services_route_RouteSearch_FromAndTo__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint', {"var1": var1.refId, "var2": var2.refId});
+    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createcom_amap_api_services_route_RouteSearch_FromAndTo__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint', {"var1": var1, "var2": var2});
     final object = com_amap_api_services_route_RouteSearch_FromAndTo()..refId = refId..tag__ = 'amap_search_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
   static Future<com_amap_api_services_route_RouteSearch_FromAndTo> create__() async {
-    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_services_route_RouteSearch_FromAndTo__');
+    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createcom_amap_api_services_route_RouteSearch_FromAndTo__');
     final object = com_amap_api_services_route_RouteSearch_FromAndTo()..refId = refId..tag__ = 'amap_search_fluttify';
-  
-    kNativeObjectPool.add(object);
     return object;
   }
   
@@ -40,10 +36,9 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
     if (var1.length != var2.length) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_services_route_RouteSearch_FromAndTo__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__].refId, "var2": var2[__i__].refId}]);
+    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchcom_amap_api_services_route_RouteSearch_FromAndTo__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]);
   
     final List<com_amap_api_services_route_RouteSearch_FromAndTo> typedResult = resultBatch.map((result) => com_amap_api_services_route_RouteSearch_FromAndTo()..refId = result..tag__ = 'amap_search_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -51,10 +46,9 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_services_route_RouteSearch_FromAndTo__', {'length': length});
+    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchcom_amap_api_services_route_RouteSearch_FromAndTo__', {'length': length});
   
     final List<com_amap_api_services_route_RouteSearch_FromAndTo> typedResult = resultBatch.map((result) => com_amap_api_services_route_RouteSearch_FromAndTo()..refId = result..tag__ = 'amap_search_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
@@ -77,7 +71,7 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::getFrom', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::getFrom', {"__this__": this});
   
   
     // handle native call
@@ -88,7 +82,6 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
       return null;
     } else {
       final __return__ = com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify';
-      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -101,7 +94,7 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::getTo', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::getTo', {"__this__": this});
   
   
     // handle native call
@@ -112,7 +105,6 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
       return null;
     } else {
       final __return__ = com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify';
-      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -125,7 +117,7 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::getStartPoiID', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::getStartPoiID', {"__this__": this});
   
   
     // handle native call
@@ -136,7 +128,6 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -149,7 +140,7 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::setStartPoiID', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::setStartPoiID', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -160,7 +151,6 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -173,7 +163,7 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::getDestinationPoiID', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::getDestinationPoiID', {"__this__": this});
   
   
     // handle native call
@@ -184,7 +174,6 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -197,7 +186,7 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::setDestinationPoiID', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::setDestinationPoiID', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -208,7 +197,6 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -221,7 +209,7 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::getOriginType', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::getOriginType', {"__this__": this});
   
   
     // handle native call
@@ -232,7 +220,6 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -245,7 +232,7 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::setOriginType', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::setOriginType', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -256,7 +243,6 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -269,7 +255,7 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::getDestinationType', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::getDestinationType', {"__this__": this});
   
   
     // handle native call
@@ -280,7 +266,6 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -293,7 +278,7 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::setDestinationType', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::setDestinationType', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -304,7 +289,6 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -317,7 +301,7 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::getPlateProvince', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::getPlateProvince', {"__this__": this});
   
   
     // handle native call
@@ -328,7 +312,6 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -341,7 +324,7 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::setPlateProvince', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::setPlateProvince', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -352,7 +335,6 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -365,7 +347,7 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::getPlateNumber', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::getPlateNumber', {"__this__": this});
   
   
     // handle native call
@@ -376,7 +358,6 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -389,7 +370,7 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::setPlateNumber', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::setPlateNumber', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -400,7 +381,6 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
       return null;
     } else {
       final __return__ = __result__;
-    
       return __return__;
     }
   }
@@ -413,7 +393,7 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::clone', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::clone', {"__this__": this});
   
   
     // handle native call
@@ -424,7 +404,6 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
       return null;
     } else {
       final __return__ = com_amap_api_services_route_RouteSearch_FromAndTo()..refId = __result__..tag__ = 'amap_search_fluttify';
-      if (__return__ is Ref) kNativeObjectPool.add(__return__);
       return __return__;
     }
   }
@@ -449,15 +428,14 @@ extension com_amap_api_services_route_RouteSearch_FromAndTo_Batch on List<com_am
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::getFrom_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::getFrom_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
-      kNativeObjectPool.addAll(typedResult);
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
       return typedResult;
     }
   }
@@ -469,15 +447,14 @@ extension com_amap_api_services_route_RouteSearch_FromAndTo_Batch on List<com_am
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::getTo_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::getTo_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
-      kNativeObjectPool.addAll(typedResult);
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
       return typedResult;
     }
   }
@@ -489,7 +466,7 @@ extension com_amap_api_services_route_RouteSearch_FromAndTo_Batch on List<com_am
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::getStartPoiID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::getStartPoiID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -497,7 +474,6 @@ extension com_amap_api_services_route_RouteSearch_FromAndTo_Batch on List<com_am
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -509,7 +485,7 @@ extension com_amap_api_services_route_RouteSearch_FromAndTo_Batch on List<com_am
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::setStartPoiID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::setStartPoiID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -517,7 +493,6 @@ extension com_amap_api_services_route_RouteSearch_FromAndTo_Batch on List<com_am
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -529,7 +504,7 @@ extension com_amap_api_services_route_RouteSearch_FromAndTo_Batch on List<com_am
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::getDestinationPoiID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::getDestinationPoiID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -537,7 +512,6 @@ extension com_amap_api_services_route_RouteSearch_FromAndTo_Batch on List<com_am
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -549,7 +523,7 @@ extension com_amap_api_services_route_RouteSearch_FromAndTo_Batch on List<com_am
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::setDestinationPoiID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::setDestinationPoiID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -557,7 +531,6 @@ extension com_amap_api_services_route_RouteSearch_FromAndTo_Batch on List<com_am
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -569,7 +542,7 @@ extension com_amap_api_services_route_RouteSearch_FromAndTo_Batch on List<com_am
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::getOriginType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::getOriginType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -577,7 +550,6 @@ extension com_amap_api_services_route_RouteSearch_FromAndTo_Batch on List<com_am
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -589,7 +561,7 @@ extension com_amap_api_services_route_RouteSearch_FromAndTo_Batch on List<com_am
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::setOriginType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::setOriginType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -597,7 +569,6 @@ extension com_amap_api_services_route_RouteSearch_FromAndTo_Batch on List<com_am
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -609,7 +580,7 @@ extension com_amap_api_services_route_RouteSearch_FromAndTo_Batch on List<com_am
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::getDestinationType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::getDestinationType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -617,7 +588,6 @@ extension com_amap_api_services_route_RouteSearch_FromAndTo_Batch on List<com_am
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -629,7 +599,7 @@ extension com_amap_api_services_route_RouteSearch_FromAndTo_Batch on List<com_am
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::setDestinationType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::setDestinationType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -637,7 +607,6 @@ extension com_amap_api_services_route_RouteSearch_FromAndTo_Batch on List<com_am
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -649,7 +618,7 @@ extension com_amap_api_services_route_RouteSearch_FromAndTo_Batch on List<com_am
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::getPlateProvince_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::getPlateProvince_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -657,7 +626,6 @@ extension com_amap_api_services_route_RouteSearch_FromAndTo_Batch on List<com_am
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -669,7 +637,7 @@ extension com_amap_api_services_route_RouteSearch_FromAndTo_Batch on List<com_am
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::setPlateProvince_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::setPlateProvince_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -677,7 +645,6 @@ extension com_amap_api_services_route_RouteSearch_FromAndTo_Batch on List<com_am
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -689,7 +656,7 @@ extension com_amap_api_services_route_RouteSearch_FromAndTo_Batch on List<com_am
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::getPlateNumber_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::getPlateNumber_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -697,7 +664,6 @@ extension com_amap_api_services_route_RouteSearch_FromAndTo_Batch on List<com_am
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -709,7 +675,7 @@ extension com_amap_api_services_route_RouteSearch_FromAndTo_Batch on List<com_am
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::setPlateNumber_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::setPlateNumber_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -717,7 +683,6 @@ extension com_amap_api_services_route_RouteSearch_FromAndTo_Batch on List<com_am
       return null;
     } else {
       final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    
       return typedResult;
     }
   }
@@ -729,15 +694,14 @@ extension com_amap_api_services_route_RouteSearch_FromAndTo_Batch on List<com_am
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::clone_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::clone_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => com_amap_api_services_route_RouteSearch_FromAndTo()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
-      kNativeObjectPool.addAll(typedResult);
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_route_RouteSearch_FromAndTo()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
       return typedResult;
     }
   }

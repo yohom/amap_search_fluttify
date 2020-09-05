@@ -25,8 +25,6 @@ mixin com_amap_api_services_busline_BusStationSearch_OnBusStationSearchListener 
 
   @mustCallSuper
   Future<void> onBusStationSearched(com_amap_api_services_busline_BusStationResult var1, int var2) {
-    if (var1 is Ref) kNativeObjectPool.add(var1);
-  
     if (fluttifyLogEnabled) {
       debugPrint('onBusStationSearched::kNativeObjectPool: $kNativeObjectPool');
     }
