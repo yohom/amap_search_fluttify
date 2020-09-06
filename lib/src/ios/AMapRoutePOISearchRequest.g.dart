@@ -22,7 +22,7 @@ class AMapRoutePOISearchRequest extends AMapSearchObject with NSCoding, NSCopyin
   //region creators
   static Future<AMapRoutePOISearchRequest> create__() async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createAMapRoutePOISearchRequest');
-    final object = AMapRoutePOISearchRequest()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = AMapRoutePOISearchRequest()..refId = refId;
     return object;
   }
   
@@ -32,7 +32,7 @@ class AMapRoutePOISearchRequest extends AMapSearchObject with NSCoding, NSCopyin
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchAMapRoutePOISearchRequest', {'length': length});
   
-    final List<AMapRoutePOISearchRequest> typedResult = resultBatch.map((result) => AMapRoutePOISearchRequest()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<AMapRoutePOISearchRequest> typedResult = resultBatch.map((result) => AMapRoutePOISearchRequest()..refId = result).toList();
     return typedResult;
   }
   
@@ -41,12 +41,12 @@ class AMapRoutePOISearchRequest extends AMapSearchObject with NSCoding, NSCopyin
   //region getters
   Future<AMapGeoPoint> get_origin() async {
     final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapRoutePOISearchRequest::get_origin", {'__this__': this});
-    return __result__ == null ? null : (AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify');
+    return __result__ == null ? null : (AMapGeoPoint()..refId = __result__);
   }
   
   Future<AMapGeoPoint> get_destination() async {
     final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapRoutePOISearchRequest::get_destination", {'__this__': this});
-    return __result__ == null ? null : (AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify');
+    return __result__ == null ? null : (AMapGeoPoint()..refId = __result__);
   }
   
   Future<AMapRoutePOISearchType> get_searchType() async {
@@ -71,57 +71,50 @@ class AMapRoutePOISearchRequest extends AMapSearchObject with NSCoding, NSCopyin
   
   Future<List<AMapGeoPoint>> get_polyline() async {
     final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapRoutePOISearchRequest::get_polyline", {'__this__': this});
-    return __result__ == null ? null : ((__result__ as List).cast<String>().map((__it__) => AMapGeoPoint()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
+    return __result__ == null ? null : ((__result__ as List).cast<String>().map((__it__) => AMapGeoPoint()..refId = __it__).toList());
   }
   
   //endregion
 
   //region setters
   Future<void> set_origin(AMapGeoPoint origin) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapRoutePOISearchRequest::set_origin', <String, dynamic>{'__this__': this, "origin": origin});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRoutePOISearchRequest::set_origin', <String, dynamic>{'__this__': this, "origin": origin});
   
   
   }
   
   Future<void> set_destination(AMapGeoPoint destination) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapRoutePOISearchRequest::set_destination', <String, dynamic>{'__this__': this, "destination": destination});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRoutePOISearchRequest::set_destination', <String, dynamic>{'__this__': this, "destination": destination});
   
   
   }
   
   Future<void> set_searchType(AMapRoutePOISearchType searchType) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapRoutePOISearchRequest::set_searchType', <String, dynamic>{'__this__': this, "searchType": searchType.toValue()});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRoutePOISearchRequest::set_searchType', <String, dynamic>{'__this__': this, "searchType": searchType.toValue()});
   
   
   }
   
   Future<void> set_strategy(int strategy) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapRoutePOISearchRequest::set_strategy', <String, dynamic>{'__this__': this, "strategy": strategy});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRoutePOISearchRequest::set_strategy', <String, dynamic>{'__this__': this, "strategy": strategy});
   
   
   }
   
   Future<void> set_range(int range) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapRoutePOISearchRequest::set_range', <String, dynamic>{'__this__': this, "range": range});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRoutePOISearchRequest::set_range', <String, dynamic>{'__this__': this, "range": range});
   
   
   }
   
   Future<void> set_polylineStr(String polylineStr) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapRoutePOISearchRequest::set_polylineStr', <String, dynamic>{'__this__': this, "polylineStr": polylineStr});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRoutePOISearchRequest::set_polylineStr', <String, dynamic>{'__this__': this, "polylineStr": polylineStr});
   
   
   }
   
   Future<void> set_polyline(List<AMapGeoPoint> polyline) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapRoutePOISearchRequest::set_polyline', <String, dynamic>{'__this__': this, "polyline": polyline});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRoutePOISearchRequest::set_polyline', <String, dynamic>{'__this__': this, "polyline": polyline});
   
   
   }
@@ -138,14 +131,14 @@ extension AMapRoutePOISearchRequest_Batch on List<AMapRoutePOISearchRequest> {
   Future<List<AMapGeoPoint>> get_origin_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapRoutePOISearchRequest::get_origin_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapGeoPoint()..refId = __result__).toList();
     return typedResult;
   }
   
   Future<List<AMapGeoPoint>> get_destination_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapRoutePOISearchRequest::get_destination_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapGeoPoint()..refId = __result__).toList();
     return typedResult;
   }
   
@@ -180,7 +173,7 @@ extension AMapRoutePOISearchRequest_Batch on List<AMapRoutePOISearchRequest> {
   Future<List<List<AMapGeoPoint>>> get_polyline_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapRoutePOISearchRequest::get_polyline_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => AMapGeoPoint()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => AMapGeoPoint()..refId = __it__).toList()).toList();
     return typedResult;
   }
   

@@ -22,7 +22,7 @@ class com_amap_api_services_share_ShareSearch_ShareBusRouteQuery extends java_la
   //region creators
   static Future<com_amap_api_services_share_ShareSearch_ShareBusRouteQuery> create__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int(com_amap_api_services_share_ShareSearch_ShareFromAndTo var1, int var2) async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createcom_amap_api_services_share_ShareSearch_ShareBusRouteQuery__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int', {"var1": var1, "var2": var2});
-    final object = com_amap_api_services_share_ShareSearch_ShareBusRouteQuery()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = com_amap_api_services_share_ShareSearch_ShareBusRouteQuery()..refId = refId;
     return object;
   }
   
@@ -32,7 +32,7 @@ class com_amap_api_services_share_ShareSearch_ShareBusRouteQuery extends java_la
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchcom_amap_api_services_share_ShareSearch_ShareBusRouteQuery__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]);
   
-    final List<com_amap_api_services_share_ShareSearch_ShareBusRouteQuery> typedResult = resultBatch.map((result) => com_amap_api_services_share_ShareSearch_ShareBusRouteQuery()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<com_amap_api_services_share_ShareSearch_ShareBusRouteQuery> typedResult = resultBatch.map((result) => com_amap_api_services_share_ShareSearch_ShareBusRouteQuery()..refId = result).toList();
     return typedResult;
   }
   
@@ -88,7 +88,7 @@ class com_amap_api_services_share_ShareSearch_ShareBusRouteQuery extends java_la
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_services_share_ShareSearch_ShareFromAndTo()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_share_ShareSearch_ShareFromAndTo()..refId = __result__;
       return __return__;
     }
   }
@@ -139,7 +139,7 @@ extension com_amap_api_services_share_ShareSearch_ShareBusRouteQuery_Batch on Li
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_share_ShareSearch_ShareFromAndTo()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_share_ShareSearch_ShareFromAndTo()..refId = __result__).toList();
       return typedResult;
     }
   }

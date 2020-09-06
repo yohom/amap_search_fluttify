@@ -22,7 +22,7 @@ class AMapGeoPoint extends AMapSearchObject with NSCoding, NSCopying {
   //region creators
   static Future<AMapGeoPoint> create__() async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createAMapGeoPoint');
-    final object = AMapGeoPoint()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = AMapGeoPoint()..refId = refId;
     return object;
   }
   
@@ -32,7 +32,7 @@ class AMapGeoPoint extends AMapSearchObject with NSCoding, NSCopying {
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchAMapGeoPoint', {'length': length});
   
-    final List<AMapGeoPoint> typedResult = resultBatch.map((result) => AMapGeoPoint()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<AMapGeoPoint> typedResult = resultBatch.map((result) => AMapGeoPoint()..refId = result).toList();
     return typedResult;
   }
   
@@ -53,15 +53,13 @@ class AMapGeoPoint extends AMapSearchObject with NSCoding, NSCopying {
 
   //region setters
   Future<void> set_latitude(double latitude) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapGeoPoint::set_latitude', <String, dynamic>{'__this__': this, "latitude": latitude});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapGeoPoint::set_latitude', <String, dynamic>{'__this__': this, "latitude": latitude});
   
   
   }
   
   Future<void> set_longitude(double longitude) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapGeoPoint::set_longitude', <String, dynamic>{'__this__': this, "longitude": longitude});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapGeoPoint::set_longitude', <String, dynamic>{'__this__': this, "longitude": longitude});
   
   
   }
@@ -87,7 +85,7 @@ class AMapGeoPoint extends AMapSearchObject with NSCoding, NSCopying {
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = AMapGeoPoint()..refId = __result__;
       return __return__;
     }
   }
@@ -143,7 +141,7 @@ extension AMapGeoPoint_Batch on List<AMapGeoPoint> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapGeoPoint()..refId = __result__).toList();
       return typedResult;
     }
   }

@@ -10,6 +10,7 @@ import 'models.dart';
 part 'delegates.dart';
 
 /// 释放资源mixin
+@Deprecated('在合适的位置调用AmapSearch.instance.dispose()即可')
 mixin AmapSearchDisposeMixin<T extends StatefulWidget> on State<T> {
   @override
   void dispose() {
@@ -1048,9 +1049,7 @@ mixin _Community on _Holder {
 
   /// 释放原生端对应的资源, 除了[AMapServices]
   Future<void> dispose() async {
-    final isCurrentPlugin = (Ref it) => it.tag__ == 'amap_search_fluttify';
-    await kNativeObjectPool.where(isCurrentPlugin).release_batch();
-    kNativeObjectPool.removeWhere(isCurrentPlugin);
+    await gGlobalReleasePool.release_batch();
 
     await _iosSearch?.release__();
     await _androidPoiSearch?.release__();

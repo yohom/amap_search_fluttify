@@ -22,7 +22,7 @@ class AMapDrivingRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCo
   //region creators
   static Future<AMapDrivingRouteSearchRequest> create__() async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createAMapDrivingRouteSearchRequest');
-    final object = AMapDrivingRouteSearchRequest()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = AMapDrivingRouteSearchRequest()..refId = refId;
     return object;
   }
   
@@ -32,7 +32,7 @@ class AMapDrivingRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCo
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchAMapDrivingRouteSearchRequest', {'length': length});
   
-    final List<AMapDrivingRouteSearchRequest> typedResult = resultBatch.map((result) => AMapDrivingRouteSearchRequest()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<AMapDrivingRouteSearchRequest> typedResult = resultBatch.map((result) => AMapDrivingRouteSearchRequest()..refId = result).toList();
     return typedResult;
   }
   
@@ -46,12 +46,12 @@ class AMapDrivingRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCo
   
   Future<List<AMapGeoPoint>> get_waypoints() async {
     final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapDrivingRouteSearchRequest::get_waypoints", {'__this__': this});
-    return __result__ == null ? null : ((__result__ as List).cast<String>().map((__it__) => AMapGeoPoint()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
+    return __result__ == null ? null : ((__result__ as List).cast<String>().map((__it__) => AMapGeoPoint()..refId = __it__).toList());
   }
   
   Future<List<AMapGeoPolygon>> get_avoidpolygons() async {
     final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapDrivingRouteSearchRequest::get_avoidpolygons", {'__this__': this});
-    return __result__ == null ? null : ((__result__ as List).cast<String>().map((__it__) => AMapGeoPolygon()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
+    return __result__ == null ? null : ((__result__ as List).cast<String>().map((__it__) => AMapGeoPolygon()..refId = __it__).toList());
   }
   
   Future<String> get_avoidroad() async {
@@ -108,92 +108,79 @@ class AMapDrivingRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCo
 
   //region setters
   Future<void> set_strategy(int strategy) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapDrivingRouteSearchRequest::set_strategy', <String, dynamic>{'__this__': this, "strategy": strategy});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapDrivingRouteSearchRequest::set_strategy', <String, dynamic>{'__this__': this, "strategy": strategy});
   
   
   }
   
   Future<void> set_waypoints(List<AMapGeoPoint> waypoints) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapDrivingRouteSearchRequest::set_waypoints', <String, dynamic>{'__this__': this, "waypoints": waypoints});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapDrivingRouteSearchRequest::set_waypoints', <String, dynamic>{'__this__': this, "waypoints": waypoints});
   
   
   }
   
   Future<void> set_avoidpolygons(List<AMapGeoPolygon> avoidpolygons) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapDrivingRouteSearchRequest::set_avoidpolygons', <String, dynamic>{'__this__': this, "avoidpolygons": avoidpolygons});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapDrivingRouteSearchRequest::set_avoidpolygons', <String, dynamic>{'__this__': this, "avoidpolygons": avoidpolygons});
   
   
   }
   
   Future<void> set_avoidroad(String avoidroad) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapDrivingRouteSearchRequest::set_avoidroad', <String, dynamic>{'__this__': this, "avoidroad": avoidroad});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapDrivingRouteSearchRequest::set_avoidroad', <String, dynamic>{'__this__': this, "avoidroad": avoidroad});
   
   
   }
   
   Future<void> set_originId(String originId) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapDrivingRouteSearchRequest::set_originId', <String, dynamic>{'__this__': this, "originId": originId});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapDrivingRouteSearchRequest::set_originId', <String, dynamic>{'__this__': this, "originId": originId});
   
   
   }
   
   Future<void> set_destinationId(String destinationId) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapDrivingRouteSearchRequest::set_destinationId', <String, dynamic>{'__this__': this, "destinationId": destinationId});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapDrivingRouteSearchRequest::set_destinationId', <String, dynamic>{'__this__': this, "destinationId": destinationId});
   
   
   }
   
   Future<void> set_origintype(String origintype) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapDrivingRouteSearchRequest::set_origintype', <String, dynamic>{'__this__': this, "origintype": origintype});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapDrivingRouteSearchRequest::set_origintype', <String, dynamic>{'__this__': this, "origintype": origintype});
   
   
   }
   
   Future<void> set_destinationtype(String destinationtype) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapDrivingRouteSearchRequest::set_destinationtype', <String, dynamic>{'__this__': this, "destinationtype": destinationtype});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapDrivingRouteSearchRequest::set_destinationtype', <String, dynamic>{'__this__': this, "destinationtype": destinationtype});
   
   
   }
   
   Future<void> set_requireExtension(bool requireExtension) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapDrivingRouteSearchRequest::set_requireExtension', <String, dynamic>{'__this__': this, "requireExtension": requireExtension});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapDrivingRouteSearchRequest::set_requireExtension', <String, dynamic>{'__this__': this, "requireExtension": requireExtension});
   
   
   }
   
   Future<void> set_plateProvince(String plateProvince) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapDrivingRouteSearchRequest::set_plateProvince', <String, dynamic>{'__this__': this, "plateProvince": plateProvince});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapDrivingRouteSearchRequest::set_plateProvince', <String, dynamic>{'__this__': this, "plateProvince": plateProvince});
   
   
   }
   
   Future<void> set_plateNumber(String plateNumber) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapDrivingRouteSearchRequest::set_plateNumber', <String, dynamic>{'__this__': this, "plateNumber": plateNumber});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapDrivingRouteSearchRequest::set_plateNumber', <String, dynamic>{'__this__': this, "plateNumber": plateNumber});
   
   
   }
   
   Future<void> set_ferry(int ferry) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapDrivingRouteSearchRequest::set_ferry', <String, dynamic>{'__this__': this, "ferry": ferry});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapDrivingRouteSearchRequest::set_ferry', <String, dynamic>{'__this__': this, "ferry": ferry});
   
   
   }
   
   Future<void> set_cartype(int cartype) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapDrivingRouteSearchRequest::set_cartype', <String, dynamic>{'__this__': this, "cartype": cartype});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapDrivingRouteSearchRequest::set_cartype', <String, dynamic>{'__this__': this, "cartype": cartype});
   
   
   }
@@ -217,14 +204,14 @@ extension AMapDrivingRouteSearchRequest_Batch on List<AMapDrivingRouteSearchRequ
   Future<List<List<AMapGeoPoint>>> get_waypoints_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapDrivingRouteSearchRequest::get_waypoints_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => AMapGeoPoint()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => AMapGeoPoint()..refId = __it__).toList()).toList();
     return typedResult;
   }
   
   Future<List<List<AMapGeoPolygon>>> get_avoidpolygons_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapDrivingRouteSearchRequest::get_avoidpolygons_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => AMapGeoPolygon()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => AMapGeoPolygon()..refId = __it__).toList()).toList();
     return typedResult;
   }
   

@@ -126,19 +126,19 @@ class com_amap_api_services_core_AMapException extends java_lang_Object  {
   //region creators
   static Future<com_amap_api_services_core_AMapException> create__String(String var1) async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createcom_amap_api_services_core_AMapException__String', {"var1": var1});
-    final object = com_amap_api_services_core_AMapException()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = com_amap_api_services_core_AMapException()..refId = refId;
     return object;
   }
   
   static Future<com_amap_api_services_core_AMapException> create__String__int__String(String var1, int var2, String var3) async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createcom_amap_api_services_core_AMapException__String__int__String', {"var1": var1, "var2": var2, "var3": var3});
-    final object = com_amap_api_services_core_AMapException()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = com_amap_api_services_core_AMapException()..refId = refId;
     return object;
   }
   
   static Future<com_amap_api_services_core_AMapException> create__() async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createcom_amap_api_services_core_AMapException__');
-    final object = com_amap_api_services_core_AMapException()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = com_amap_api_services_core_AMapException()..refId = refId;
     return object;
   }
   
@@ -148,7 +148,7 @@ class com_amap_api_services_core_AMapException extends java_lang_Object  {
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchcom_amap_api_services_core_AMapException__String', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]);
   
-    final List<com_amap_api_services_core_AMapException> typedResult = resultBatch.map((result) => com_amap_api_services_core_AMapException()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<com_amap_api_services_core_AMapException> typedResult = resultBatch.map((result) => com_amap_api_services_core_AMapException()..refId = result).toList();
     return typedResult;
   }
   
@@ -158,7 +158,7 @@ class com_amap_api_services_core_AMapException extends java_lang_Object  {
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchcom_amap_api_services_core_AMapException__String__int__String', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__]}]);
   
-    final List<com_amap_api_services_core_AMapException> typedResult = resultBatch.map((result) => com_amap_api_services_core_AMapException()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<com_amap_api_services_core_AMapException> typedResult = resultBatch.map((result) => com_amap_api_services_core_AMapException()..refId = result).toList();
     return typedResult;
   }
   
@@ -168,7 +168,7 @@ class com_amap_api_services_core_AMapException extends java_lang_Object  {
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchcom_amap_api_services_core_AMapException__', {'length': length});
   
-    final List<com_amap_api_services_core_AMapException> typedResult = resultBatch.map((result) => com_amap_api_services_core_AMapException()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<com_amap_api_services_core_AMapException> typedResult = resultBatch.map((result) => com_amap_api_services_core_AMapException()..refId = result).toList();
     return typedResult;
   }
   

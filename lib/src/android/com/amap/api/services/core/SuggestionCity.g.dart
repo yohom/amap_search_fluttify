@@ -22,7 +22,7 @@ class com_amap_api_services_core_SuggestionCity extends java_lang_Object  {
   //region creators
   static Future<com_amap_api_services_core_SuggestionCity> create__String__String__String__int(String var1, String var2, String var3, int var4) async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createcom_amap_api_services_core_SuggestionCity__String__String__String__int', {"var1": var1, "var2": var2, "var3": var3, "var4": var4});
-    final object = com_amap_api_services_core_SuggestionCity()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = com_amap_api_services_core_SuggestionCity()..refId = refId;
     return object;
   }
   
@@ -32,7 +32,7 @@ class com_amap_api_services_core_SuggestionCity extends java_lang_Object  {
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchcom_amap_api_services_core_SuggestionCity__String__String__String__int', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "var4": var4[__i__]}]);
   
-    final List<com_amap_api_services_core_SuggestionCity> typedResult = resultBatch.map((result) => com_amap_api_services_core_SuggestionCity()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<com_amap_api_services_core_SuggestionCity> typedResult = resultBatch.map((result) => com_amap_api_services_core_SuggestionCity()..refId = result).toList();
     return typedResult;
   }
   

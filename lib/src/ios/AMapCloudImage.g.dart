@@ -22,7 +22,7 @@ class AMapCloudImage extends AMapSearchObject with NSCoding, NSCopying {
   //region creators
   static Future<AMapCloudImage> create__() async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createAMapCloudImage');
-    final object = AMapCloudImage()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = AMapCloudImage()..refId = refId;
     return object;
   }
   
@@ -32,7 +32,7 @@ class AMapCloudImage extends AMapSearchObject with NSCoding, NSCopying {
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchAMapCloudImage', {'length': length});
   
-    final List<AMapCloudImage> typedResult = resultBatch.map((result) => AMapCloudImage()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<AMapCloudImage> typedResult = resultBatch.map((result) => AMapCloudImage()..refId = result).toList();
     return typedResult;
   }
   
@@ -58,22 +58,19 @@ class AMapCloudImage extends AMapSearchObject with NSCoding, NSCopying {
 
   //region setters
   Future<void> set_uid(String uid) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapCloudImage::set_uid', <String, dynamic>{'__this__': this, "uid": uid});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapCloudImage::set_uid', <String, dynamic>{'__this__': this, "uid": uid});
   
   
   }
   
   Future<void> set_preurl(String preurl) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapCloudImage::set_preurl', <String, dynamic>{'__this__': this, "preurl": preurl});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapCloudImage::set_preurl', <String, dynamic>{'__this__': this, "preurl": preurl});
   
   
   }
   
   Future<void> set_url(String url) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapCloudImage::set_url', <String, dynamic>{'__this__': this, "url": url});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapCloudImage::set_url', <String, dynamic>{'__this__': this, "url": url});
   
   
   }

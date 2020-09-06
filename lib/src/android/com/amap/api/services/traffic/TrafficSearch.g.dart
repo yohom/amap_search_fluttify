@@ -22,7 +22,7 @@ class com_amap_api_services_traffic_TrafficSearch extends java_lang_Object  {
   //region creators
   static Future<com_amap_api_services_traffic_TrafficSearch> create__android_content_Context(android_content_Context var1) async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createcom_amap_api_services_traffic_TrafficSearch__android_content_Context', {"var1": var1});
-    final object = com_amap_api_services_traffic_TrafficSearch()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = com_amap_api_services_traffic_TrafficSearch()..refId = refId;
     return object;
   }
   
@@ -32,7 +32,7 @@ class com_amap_api_services_traffic_TrafficSearch extends java_lang_Object  {
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchcom_amap_api_services_traffic_TrafficSearch__android_content_Context', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]);
   
-    final List<com_amap_api_services_traffic_TrafficSearch> typedResult = resultBatch.map((result) => com_amap_api_services_traffic_TrafficSearch()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<com_amap_api_services_traffic_TrafficSearch> typedResult = resultBatch.map((result) => com_amap_api_services_traffic_TrafficSearch()..refId = result).toList();
     return typedResult;
   }
   

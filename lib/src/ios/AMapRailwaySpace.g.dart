@@ -22,7 +22,7 @@ class AMapRailwaySpace extends AMapSearchObject with NSCoding, NSCopying {
   //region creators
   static Future<AMapRailwaySpace> create__() async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createAMapRailwaySpace');
-    final object = AMapRailwaySpace()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = AMapRailwaySpace()..refId = refId;
     return object;
   }
   
@@ -32,7 +32,7 @@ class AMapRailwaySpace extends AMapSearchObject with NSCoding, NSCopying {
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchAMapRailwaySpace', {'length': length});
   
-    final List<AMapRailwaySpace> typedResult = resultBatch.map((result) => AMapRailwaySpace()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<AMapRailwaySpace> typedResult = resultBatch.map((result) => AMapRailwaySpace()..refId = result).toList();
     return typedResult;
   }
   
@@ -53,15 +53,13 @@ class AMapRailwaySpace extends AMapSearchObject with NSCoding, NSCopying {
 
   //region setters
   Future<void> set_code(String code) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapRailwaySpace::set_code', <String, dynamic>{'__this__': this, "code": code});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRailwaySpace::set_code', <String, dynamic>{'__this__': this, "code": code});
   
   
   }
   
   Future<void> set_cost(double cost) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapRailwaySpace::set_cost', <String, dynamic>{'__this__': this, "cost": cost});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRailwaySpace::set_cost', <String, dynamic>{'__this__': this, "cost": cost});
   
   
   }

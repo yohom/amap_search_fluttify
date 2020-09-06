@@ -22,7 +22,7 @@ class AMapWalking extends AMapSearchObject with NSCoding, NSCopying {
   //region creators
   static Future<AMapWalking> create__() async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createAMapWalking');
-    final object = AMapWalking()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = AMapWalking()..refId = refId;
     return object;
   }
   
@@ -32,7 +32,7 @@ class AMapWalking extends AMapSearchObject with NSCoding, NSCopying {
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchAMapWalking', {'length': length});
   
-    final List<AMapWalking> typedResult = resultBatch.map((result) => AMapWalking()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<AMapWalking> typedResult = resultBatch.map((result) => AMapWalking()..refId = result).toList();
     return typedResult;
   }
   
@@ -41,12 +41,12 @@ class AMapWalking extends AMapSearchObject with NSCoding, NSCopying {
   //region getters
   Future<AMapGeoPoint> get_origin() async {
     final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapWalking::get_origin", {'__this__': this});
-    return __result__ == null ? null : (AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify');
+    return __result__ == null ? null : (AMapGeoPoint()..refId = __result__);
   }
   
   Future<AMapGeoPoint> get_destination() async {
     final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapWalking::get_destination", {'__this__': this});
-    return __result__ == null ? null : (AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify');
+    return __result__ == null ? null : (AMapGeoPoint()..refId = __result__);
   }
   
   Future<int> get_distance() async {
@@ -61,43 +61,38 @@ class AMapWalking extends AMapSearchObject with NSCoding, NSCopying {
   
   Future<List<AMapStep>> get_steps() async {
     final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapWalking::get_steps", {'__this__': this});
-    return __result__ == null ? null : ((__result__ as List).cast<String>().map((__it__) => AMapStep()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
+    return __result__ == null ? null : ((__result__ as List).cast<String>().map((__it__) => AMapStep()..refId = __it__).toList());
   }
   
   //endregion
 
   //region setters
   Future<void> set_origin(AMapGeoPoint origin) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapWalking::set_origin', <String, dynamic>{'__this__': this, "origin": origin});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapWalking::set_origin', <String, dynamic>{'__this__': this, "origin": origin});
   
   
   }
   
   Future<void> set_destination(AMapGeoPoint destination) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapWalking::set_destination', <String, dynamic>{'__this__': this, "destination": destination});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapWalking::set_destination', <String, dynamic>{'__this__': this, "destination": destination});
   
   
   }
   
   Future<void> set_distance(int distance) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapWalking::set_distance', <String, dynamic>{'__this__': this, "distance": distance});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapWalking::set_distance', <String, dynamic>{'__this__': this, "distance": distance});
   
   
   }
   
   Future<void> set_duration(int duration) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapWalking::set_duration', <String, dynamic>{'__this__': this, "duration": duration});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapWalking::set_duration', <String, dynamic>{'__this__': this, "duration": duration});
   
   
   }
   
   Future<void> set_steps(List<AMapStep> steps) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapWalking::set_steps', <String, dynamic>{'__this__': this, "steps": steps});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapWalking::set_steps', <String, dynamic>{'__this__': this, "steps": steps});
   
   
   }
@@ -114,14 +109,14 @@ extension AMapWalking_Batch on List<AMapWalking> {
   Future<List<AMapGeoPoint>> get_origin_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapWalking::get_origin_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapGeoPoint()..refId = __result__).toList();
     return typedResult;
   }
   
   Future<List<AMapGeoPoint>> get_destination_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapWalking::get_destination_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapGeoPoint()..refId = __result__).toList();
     return typedResult;
   }
   
@@ -142,7 +137,7 @@ extension AMapWalking_Batch on List<AMapWalking> {
   Future<List<List<AMapStep>>> get_steps_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapWalking::get_steps_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => AMapStep()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => AMapStep()..refId = __it__).toList()).toList();
     return typedResult;
   }
   

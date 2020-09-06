@@ -22,13 +22,13 @@ class com_amap_api_services_route_RouteSearch_BusRouteQuery extends java_lang_Ob
   //region creators
   static Future<com_amap_api_services_route_RouteSearch_BusRouteQuery> create__com_amap_api_services_route_RouteSearch_FromAndTo__int__String__int(com_amap_api_services_route_RouteSearch_FromAndTo var1, int var2, String var3, int var4) async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createcom_amap_api_services_route_RouteSearch_BusRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__String__int', {"var1": var1, "var2": var2, "var3": var3, "var4": var4});
-    final object = com_amap_api_services_route_RouteSearch_BusRouteQuery()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = com_amap_api_services_route_RouteSearch_BusRouteQuery()..refId = refId;
     return object;
   }
   
   static Future<com_amap_api_services_route_RouteSearch_BusRouteQuery> create__() async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createcom_amap_api_services_route_RouteSearch_BusRouteQuery__');
-    final object = com_amap_api_services_route_RouteSearch_BusRouteQuery()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = com_amap_api_services_route_RouteSearch_BusRouteQuery()..refId = refId;
     return object;
   }
   
@@ -38,7 +38,7 @@ class com_amap_api_services_route_RouteSearch_BusRouteQuery extends java_lang_Ob
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchcom_amap_api_services_route_RouteSearch_BusRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__String__int', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "var4": var4[__i__]}]);
   
-    final List<com_amap_api_services_route_RouteSearch_BusRouteQuery> typedResult = resultBatch.map((result) => com_amap_api_services_route_RouteSearch_BusRouteQuery()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<com_amap_api_services_route_RouteSearch_BusRouteQuery> typedResult = resultBatch.map((result) => com_amap_api_services_route_RouteSearch_BusRouteQuery()..refId = result).toList();
     return typedResult;
   }
   
@@ -48,7 +48,7 @@ class com_amap_api_services_route_RouteSearch_BusRouteQuery extends java_lang_Ob
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchcom_amap_api_services_route_RouteSearch_BusRouteQuery__', {'length': length});
   
-    final List<com_amap_api_services_route_RouteSearch_BusRouteQuery> typedResult = resultBatch.map((result) => com_amap_api_services_route_RouteSearch_BusRouteQuery()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<com_amap_api_services_route_RouteSearch_BusRouteQuery> typedResult = resultBatch.map((result) => com_amap_api_services_route_RouteSearch_BusRouteQuery()..refId = result).toList();
     return typedResult;
   }
   
@@ -81,7 +81,7 @@ class com_amap_api_services_route_RouteSearch_BusRouteQuery extends java_lang_Ob
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_services_route_RouteSearch_FromAndTo()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_route_RouteSearch_FromAndTo()..refId = __result__;
       return __return__;
     }
   }
@@ -219,7 +219,7 @@ class com_amap_api_services_route_RouteSearch_BusRouteQuery extends java_lang_Ob
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_services_route_RouteSearch_BusRouteQuery()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_route_RouteSearch_BusRouteQuery()..refId = __result__;
       return __return__;
     }
   }
@@ -251,7 +251,7 @@ extension com_amap_api_services_route_RouteSearch_BusRouteQuery_Batch on List<co
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_route_RouteSearch_FromAndTo()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_route_RouteSearch_FromAndTo()..refId = __result__).toList();
       return typedResult;
     }
   }
@@ -365,7 +365,7 @@ extension com_amap_api_services_route_RouteSearch_BusRouteQuery_Batch on List<co
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_route_RouteSearch_BusRouteQuery()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_route_RouteSearch_BusRouteQuery()..refId = __result__).toList();
       return typedResult;
     }
   }

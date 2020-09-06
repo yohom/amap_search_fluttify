@@ -22,7 +22,7 @@ class AMapShareSearchBaseRequest extends AMapSearchObject with NSCoding, NSCopyi
   //region creators
   static Future<AMapShareSearchBaseRequest> create__() async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createAMapShareSearchBaseRequest');
-    final object = AMapShareSearchBaseRequest()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = AMapShareSearchBaseRequest()..refId = refId;
     return object;
   }
   
@@ -32,7 +32,7 @@ class AMapShareSearchBaseRequest extends AMapSearchObject with NSCoding, NSCopyi
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchAMapShareSearchBaseRequest', {'length': length});
   
-    final List<AMapShareSearchBaseRequest> typedResult = resultBatch.map((result) => AMapShareSearchBaseRequest()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<AMapShareSearchBaseRequest> typedResult = resultBatch.map((result) => AMapShareSearchBaseRequest()..refId = result).toList();
     return typedResult;
   }
   

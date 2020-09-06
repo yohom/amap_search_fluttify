@@ -22,7 +22,7 @@ class AMapAddressComponent extends AMapSearchObject with NSCoding, NSCopying {
   //region creators
   static Future<AMapAddressComponent> create__() async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createAMapAddressComponent');
-    final object = AMapAddressComponent()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = AMapAddressComponent()..refId = refId;
     return object;
   }
   
@@ -32,7 +32,7 @@ class AMapAddressComponent extends AMapSearchObject with NSCoding, NSCopying {
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchAMapAddressComponent', {'length': length});
   
-    final List<AMapAddressComponent> typedResult = resultBatch.map((result) => AMapAddressComponent()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<AMapAddressComponent> typedResult = resultBatch.map((result) => AMapAddressComponent()..refId = result).toList();
     return typedResult;
   }
   
@@ -91,97 +91,85 @@ class AMapAddressComponent extends AMapSearchObject with NSCoding, NSCopying {
   
   Future<AMapStreetNumber> get_streetNumber() async {
     final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapAddressComponent::get_streetNumber", {'__this__': this});
-    return __result__ == null ? null : (AMapStreetNumber()..refId = __result__..tag__ = 'amap_search_fluttify');
+    return __result__ == null ? null : (AMapStreetNumber()..refId = __result__);
   }
   
   Future<List<AMapBusinessArea>> get_businessAreas() async {
     final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapAddressComponent::get_businessAreas", {'__this__': this});
-    return __result__ == null ? null : ((__result__ as List).cast<String>().map((__it__) => AMapBusinessArea()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
+    return __result__ == null ? null : ((__result__ as List).cast<String>().map((__it__) => AMapBusinessArea()..refId = __it__).toList());
   }
   
   //endregion
 
   //region setters
   Future<void> set_country(String country) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapAddressComponent::set_country', <String, dynamic>{'__this__': this, "country": country});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapAddressComponent::set_country', <String, dynamic>{'__this__': this, "country": country});
   
   
   }
   
   Future<void> set_province(String province) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapAddressComponent::set_province', <String, dynamic>{'__this__': this, "province": province});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapAddressComponent::set_province', <String, dynamic>{'__this__': this, "province": province});
   
   
   }
   
   Future<void> set_city(String city) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapAddressComponent::set_city', <String, dynamic>{'__this__': this, "city": city});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapAddressComponent::set_city', <String, dynamic>{'__this__': this, "city": city});
   
   
   }
   
   Future<void> set_citycode(String citycode) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapAddressComponent::set_citycode', <String, dynamic>{'__this__': this, "citycode": citycode});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapAddressComponent::set_citycode', <String, dynamic>{'__this__': this, "citycode": citycode});
   
   
   }
   
   Future<void> set_district(String district) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapAddressComponent::set_district', <String, dynamic>{'__this__': this, "district": district});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapAddressComponent::set_district', <String, dynamic>{'__this__': this, "district": district});
   
   
   }
   
   Future<void> set_adcode(String adcode) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapAddressComponent::set_adcode', <String, dynamic>{'__this__': this, "adcode": adcode});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapAddressComponent::set_adcode', <String, dynamic>{'__this__': this, "adcode": adcode});
   
   
   }
   
   Future<void> set_township(String township) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapAddressComponent::set_township', <String, dynamic>{'__this__': this, "township": township});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapAddressComponent::set_township', <String, dynamic>{'__this__': this, "township": township});
   
   
   }
   
   Future<void> set_towncode(String towncode) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapAddressComponent::set_towncode', <String, dynamic>{'__this__': this, "towncode": towncode});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapAddressComponent::set_towncode', <String, dynamic>{'__this__': this, "towncode": towncode});
   
   
   }
   
   Future<void> set_neighborhood(String neighborhood) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapAddressComponent::set_neighborhood', <String, dynamic>{'__this__': this, "neighborhood": neighborhood});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapAddressComponent::set_neighborhood', <String, dynamic>{'__this__': this, "neighborhood": neighborhood});
   
   
   }
   
   Future<void> set_building(String building) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapAddressComponent::set_building', <String, dynamic>{'__this__': this, "building": building});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapAddressComponent::set_building', <String, dynamic>{'__this__': this, "building": building});
   
   
   }
   
   Future<void> set_streetNumber(AMapStreetNumber streetNumber) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapAddressComponent::set_streetNumber', <String, dynamic>{'__this__': this, "streetNumber": streetNumber});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapAddressComponent::set_streetNumber', <String, dynamic>{'__this__': this, "streetNumber": streetNumber});
   
   
   }
   
   Future<void> set_businessAreas(List<AMapBusinessArea> businessAreas) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapAddressComponent::set_businessAreas', <String, dynamic>{'__this__': this, "businessAreas": businessAreas});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapAddressComponent::set_businessAreas', <String, dynamic>{'__this__': this, "businessAreas": businessAreas});
   
   
   }
@@ -268,14 +256,14 @@ extension AMapAddressComponent_Batch on List<AMapAddressComponent> {
   Future<List<AMapStreetNumber>> get_streetNumber_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapAddressComponent::get_streetNumber_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapStreetNumber()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapStreetNumber()..refId = __result__).toList();
     return typedResult;
   }
   
   Future<List<List<AMapBusinessArea>>> get_businessAreas_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapAddressComponent::get_businessAreas_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => AMapBusinessArea()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => AMapBusinessArea()..refId = __it__).toList()).toList();
     return typedResult;
   }
   

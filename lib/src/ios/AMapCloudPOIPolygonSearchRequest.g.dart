@@ -22,7 +22,7 @@ class AMapCloudPOIPolygonSearchRequest extends AMapCloudSearchBaseRequest with N
   //region creators
   static Future<AMapCloudPOIPolygonSearchRequest> create__() async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createAMapCloudPOIPolygonSearchRequest');
-    final object = AMapCloudPOIPolygonSearchRequest()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = AMapCloudPOIPolygonSearchRequest()..refId = refId;
     return object;
   }
   
@@ -32,7 +32,7 @@ class AMapCloudPOIPolygonSearchRequest extends AMapCloudSearchBaseRequest with N
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchAMapCloudPOIPolygonSearchRequest', {'length': length});
   
-    final List<AMapCloudPOIPolygonSearchRequest> typedResult = resultBatch.map((result) => AMapCloudPOIPolygonSearchRequest()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<AMapCloudPOIPolygonSearchRequest> typedResult = resultBatch.map((result) => AMapCloudPOIPolygonSearchRequest()..refId = result).toList();
     return typedResult;
   }
   
@@ -41,7 +41,7 @@ class AMapCloudPOIPolygonSearchRequest extends AMapCloudSearchBaseRequest with N
   //region getters
   Future<AMapGeoPolygon> get_polygon() async {
     final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapCloudPOIPolygonSearchRequest::get_polygon", {'__this__': this});
-    return __result__ == null ? null : (AMapGeoPolygon()..refId = __result__..tag__ = 'amap_search_fluttify');
+    return __result__ == null ? null : (AMapGeoPolygon()..refId = __result__);
   }
   
   Future<String> get_keywords() async {
@@ -53,15 +53,13 @@ class AMapCloudPOIPolygonSearchRequest extends AMapCloudSearchBaseRequest with N
 
   //region setters
   Future<void> set_polygon(AMapGeoPolygon polygon) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapCloudPOIPolygonSearchRequest::set_polygon', <String, dynamic>{'__this__': this, "polygon": polygon});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapCloudPOIPolygonSearchRequest::set_polygon', <String, dynamic>{'__this__': this, "polygon": polygon});
   
   
   }
   
   Future<void> set_keywords(String keywords) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapCloudPOIPolygonSearchRequest::set_keywords', <String, dynamic>{'__this__': this, "keywords": keywords});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapCloudPOIPolygonSearchRequest::set_keywords', <String, dynamic>{'__this__': this, "keywords": keywords});
   
   
   }
@@ -78,7 +76,7 @@ extension AMapCloudPOIPolygonSearchRequest_Batch on List<AMapCloudPOIPolygonSear
   Future<List<AMapGeoPolygon>> get_polygon_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapCloudPOIPolygonSearchRequest::get_polygon_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapGeoPolygon()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapGeoPolygon()..refId = __result__).toList();
     return typedResult;
   }
   

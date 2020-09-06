@@ -22,7 +22,7 @@ class AMapRoadTrafficSearchBaseRequest extends AMapSearchObject with NSCoding, N
   //region creators
   static Future<AMapRoadTrafficSearchBaseRequest> create__() async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createAMapRoadTrafficSearchBaseRequest');
-    final object = AMapRoadTrafficSearchBaseRequest()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = AMapRoadTrafficSearchBaseRequest()..refId = refId;
     return object;
   }
   
@@ -32,7 +32,7 @@ class AMapRoadTrafficSearchBaseRequest extends AMapSearchObject with NSCoding, N
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchAMapRoadTrafficSearchBaseRequest', {'length': length});
   
-    final List<AMapRoadTrafficSearchBaseRequest> typedResult = resultBatch.map((result) => AMapRoadTrafficSearchBaseRequest()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<AMapRoadTrafficSearchBaseRequest> typedResult = resultBatch.map((result) => AMapRoadTrafficSearchBaseRequest()..refId = result).toList();
     return typedResult;
   }
   
@@ -53,15 +53,13 @@ class AMapRoadTrafficSearchBaseRequest extends AMapSearchObject with NSCoding, N
 
   //region setters
   Future<void> set_level(int level) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapRoadTrafficSearchBaseRequest::set_level', <String, dynamic>{'__this__': this, "level": level});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRoadTrafficSearchBaseRequest::set_level', <String, dynamic>{'__this__': this, "level": level});
   
   
   }
   
   Future<void> set_requireExtension(bool requireExtension) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapRoadTrafficSearchBaseRequest::set_requireExtension', <String, dynamic>{'__this__': this, "requireExtension": requireExtension});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRoadTrafficSearchBaseRequest::set_requireExtension', <String, dynamic>{'__this__': this, "requireExtension": requireExtension});
   
   
   }

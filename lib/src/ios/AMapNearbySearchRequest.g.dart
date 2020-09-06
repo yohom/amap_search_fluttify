@@ -22,7 +22,7 @@ class AMapNearbySearchRequest extends AMapSearchObject with NSCoding, NSCopying 
   //region creators
   static Future<AMapNearbySearchRequest> create__() async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createAMapNearbySearchRequest');
-    final object = AMapNearbySearchRequest()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = AMapNearbySearchRequest()..refId = refId;
     return object;
   }
   
@@ -32,7 +32,7 @@ class AMapNearbySearchRequest extends AMapSearchObject with NSCoding, NSCopying 
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchAMapNearbySearchRequest', {'length': length});
   
-    final List<AMapNearbySearchRequest> typedResult = resultBatch.map((result) => AMapNearbySearchRequest()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<AMapNearbySearchRequest> typedResult = resultBatch.map((result) => AMapNearbySearchRequest()..refId = result).toList();
     return typedResult;
   }
   
@@ -41,7 +41,7 @@ class AMapNearbySearchRequest extends AMapSearchObject with NSCoding, NSCopying 
   //region getters
   Future<AMapGeoPoint> get_center() async {
     final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapNearbySearchRequest::get_center", {'__this__': this});
-    return __result__ == null ? null : (AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify');
+    return __result__ == null ? null : (AMapGeoPoint()..refId = __result__);
   }
   
   Future<int> get_radius() async {
@@ -68,36 +68,31 @@ class AMapNearbySearchRequest extends AMapSearchObject with NSCoding, NSCopying 
 
   //region setters
   Future<void> set_center(AMapGeoPoint center) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapNearbySearchRequest::set_center', <String, dynamic>{'__this__': this, "center": center});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapNearbySearchRequest::set_center', <String, dynamic>{'__this__': this, "center": center});
   
   
   }
   
   Future<void> set_radius(int radius) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapNearbySearchRequest::set_radius', <String, dynamic>{'__this__': this, "radius": radius});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapNearbySearchRequest::set_radius', <String, dynamic>{'__this__': this, "radius": radius});
   
   
   }
   
   Future<void> set_searchType(AMapNearbySearchType searchType) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapNearbySearchRequest::set_searchType', <String, dynamic>{'__this__': this, "searchType": searchType.toValue()});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapNearbySearchRequest::set_searchType', <String, dynamic>{'__this__': this, "searchType": searchType.toValue()});
   
   
   }
   
   Future<void> set_timeRange(int timeRange) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapNearbySearchRequest::set_timeRange', <String, dynamic>{'__this__': this, "timeRange": timeRange});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapNearbySearchRequest::set_timeRange', <String, dynamic>{'__this__': this, "timeRange": timeRange});
   
   
   }
   
   Future<void> set_limit(int limit) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapNearbySearchRequest::set_limit', <String, dynamic>{'__this__': this, "limit": limit});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapNearbySearchRequest::set_limit', <String, dynamic>{'__this__': this, "limit": limit});
   
   
   }
@@ -114,7 +109,7 @@ extension AMapNearbySearchRequest_Batch on List<AMapNearbySearchRequest> {
   Future<List<AMapGeoPoint>> get_center_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapNearbySearchRequest::get_center_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapGeoPoint()..refId = __result__).toList();
     return typedResult;
   }
   

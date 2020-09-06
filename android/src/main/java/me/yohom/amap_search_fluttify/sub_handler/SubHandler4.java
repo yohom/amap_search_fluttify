@@ -4430,7 +4430,7 @@ public class SubHandler4 {
             put("com.amap.api.services.geocoder.AoiItem::setArea", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                Float var1 = (Float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.geocoder.AoiItem __this__ = (com.amap.api.services.geocoder.AoiItem) ((Map<String, Object>) __args__).get("__this__");
@@ -4601,7 +4601,7 @@ public class SubHandler4 {
             put("com.amap.api.services.geocoder.RegeocodeRoad::setDistance", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.geocoder.RegeocodeRoad __this__ = (com.amap.api.services.geocoder.RegeocodeRoad) ((Map<String, Object>) __args__).get("__this__");
@@ -5399,7 +5399,7 @@ public class SubHandler4 {
             put("com.amap.api.services.geocoder.RegeocodeQuery::setRadius", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.geocoder.RegeocodeQuery __this__ = (com.amap.api.services.geocoder.RegeocodeQuery) ((Map<String, Object>) __args__).get("__this__");
@@ -5798,7 +5798,7 @@ public class SubHandler4 {
             put("com.amap.api.services.geocoder.StreetNumber::setDistance", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.geocoder.StreetNumber __this__ = (com.amap.api.services.geocoder.StreetNumber) ((Map<String, Object>) __args__).get("__this__");

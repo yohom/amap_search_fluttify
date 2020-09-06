@@ -22,7 +22,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearchResult extends java_lan
   //region creators
   static Future<com_amap_api_services_routepoisearch_RoutePOISearchResult> create__List_java_util_ArrayList_com_amap_api_services_routepoisearch_RoutePOIItem____com_amap_api_services_routepoisearch_RoutePOISearchQuery(List<com_amap_api_services_routepoisearch_RoutePOIItem> var1, com_amap_api_services_routepoisearch_RoutePOISearchQuery var2) async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createcom_amap_api_services_routepoisearch_RoutePOISearchResult__java_util_ArrayList_com_amap_api_services_routepoisearch_RoutePOIItem___com_amap_api_services_routepoisearch_RoutePOISearchQuery', {"var1": var1, "var2": var2});
-    final object = com_amap_api_services_routepoisearch_RoutePOISearchResult()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = com_amap_api_services_routepoisearch_RoutePOISearchResult()..refId = refId;
     return object;
   }
   
@@ -32,7 +32,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearchResult extends java_lan
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchcom_amap_api_services_routepoisearch_RoutePOISearchResult__java_util_ArrayList_com_amap_api_services_routepoisearch_RoutePOIItem___com_amap_api_services_routepoisearch_RoutePOISearchQuery', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]);
   
-    final List<com_amap_api_services_routepoisearch_RoutePOISearchResult> typedResult = resultBatch.map((result) => com_amap_api_services_routepoisearch_RoutePOISearchResult()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<com_amap_api_services_routepoisearch_RoutePOISearchResult> typedResult = resultBatch.map((result) => com_amap_api_services_routepoisearch_RoutePOISearchResult()..refId = result).toList();
     return typedResult;
   }
   
@@ -65,7 +65,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearchResult extends java_lan
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = (__result__ as List).cast<String>().map((__it__) => com_amap_api_services_routepoisearch_RoutePOIItem()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      final __return__ = (__result__ as List).cast<String>().map((__it__) => com_amap_api_services_routepoisearch_RoutePOIItem()..refId = __it__).toList();
       return __return__;
     }
   }
@@ -88,7 +88,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearchResult extends java_lan
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_services_routepoisearch_RoutePOISearchQuery()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_routepoisearch_RoutePOISearchQuery()..refId = __result__;
       return __return__;
     }
   }
@@ -120,7 +120,7 @@ extension com_amap_api_services_routepoisearch_RoutePOISearchResult_Batch on Lis
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => com_amap_api_services_routepoisearch_RoutePOIItem()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => com_amap_api_services_routepoisearch_RoutePOIItem()..refId = __it__).toList()).toList();
       return typedResult;
     }
   }
@@ -139,7 +139,7 @@ extension com_amap_api_services_routepoisearch_RoutePOISearchResult_Batch on Lis
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_routepoisearch_RoutePOISearchQuery()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_routepoisearch_RoutePOISearchQuery()..refId = __result__).toList();
       return typedResult;
     }
   }

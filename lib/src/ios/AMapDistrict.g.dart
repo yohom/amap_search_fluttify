@@ -22,7 +22,7 @@ class AMapDistrict extends AMapSearchObject with NSCoding, NSCopying {
   //region creators
   static Future<AMapDistrict> create__() async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createAMapDistrict');
-    final object = AMapDistrict()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = AMapDistrict()..refId = refId;
     return object;
   }
   
@@ -32,7 +32,7 @@ class AMapDistrict extends AMapSearchObject with NSCoding, NSCopying {
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchAMapDistrict', {'length': length});
   
-    final List<AMapDistrict> typedResult = resultBatch.map((result) => AMapDistrict()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<AMapDistrict> typedResult = resultBatch.map((result) => AMapDistrict()..refId = result).toList();
     return typedResult;
   }
   
@@ -61,12 +61,12 @@ class AMapDistrict extends AMapSearchObject with NSCoding, NSCopying {
   
   Future<AMapGeoPoint> get_center() async {
     final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapDistrict::get_center", {'__this__': this});
-    return __result__ == null ? null : (AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify');
+    return __result__ == null ? null : (AMapGeoPoint()..refId = __result__);
   }
   
   Future<List<AMapDistrict>> get_districts() async {
     final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapDistrict::get_districts", {'__this__': this});
-    return __result__ == null ? null : ((__result__ as List).cast<String>().map((__it__) => AMapDistrict()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
+    return __result__ == null ? null : ((__result__ as List).cast<String>().map((__it__) => AMapDistrict()..refId = __it__).toList());
   }
   
   Future<List<String>> get_polylines() async {
@@ -78,50 +78,43 @@ class AMapDistrict extends AMapSearchObject with NSCoding, NSCopying {
 
   //region setters
   Future<void> set_adcode(String adcode) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapDistrict::set_adcode', <String, dynamic>{'__this__': this, "adcode": adcode});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapDistrict::set_adcode', <String, dynamic>{'__this__': this, "adcode": adcode});
   
   
   }
   
   Future<void> set_citycode(String citycode) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapDistrict::set_citycode', <String, dynamic>{'__this__': this, "citycode": citycode});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapDistrict::set_citycode', <String, dynamic>{'__this__': this, "citycode": citycode});
   
   
   }
   
   Future<void> set_name(String name) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapDistrict::set_name', <String, dynamic>{'__this__': this, "name": name});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapDistrict::set_name', <String, dynamic>{'__this__': this, "name": name});
   
   
   }
   
   Future<void> set_level(String level) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapDistrict::set_level', <String, dynamic>{'__this__': this, "level": level});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapDistrict::set_level', <String, dynamic>{'__this__': this, "level": level});
   
   
   }
   
   Future<void> set_center(AMapGeoPoint center) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapDistrict::set_center', <String, dynamic>{'__this__': this, "center": center});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapDistrict::set_center', <String, dynamic>{'__this__': this, "center": center});
   
   
   }
   
   Future<void> set_districts(List<AMapDistrict> districts) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapDistrict::set_districts', <String, dynamic>{'__this__': this, "districts": districts});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapDistrict::set_districts', <String, dynamic>{'__this__': this, "districts": districts});
   
   
   }
   
   Future<void> set_polylines(List<String> polylines) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapDistrict::set_polylines', <String, dynamic>{'__this__': this, "polylines": polylines});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapDistrict::set_polylines', <String, dynamic>{'__this__': this, "polylines": polylines});
   
   
   }
@@ -166,14 +159,14 @@ extension AMapDistrict_Batch on List<AMapDistrict> {
   Future<List<AMapGeoPoint>> get_center_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapDistrict::get_center_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapGeoPoint()..refId = __result__).toList();
     return typedResult;
   }
   
   Future<List<List<AMapDistrict>>> get_districts_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapDistrict::get_districts_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => AMapDistrict()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => AMapDistrict()..refId = __it__).toList()).toList();
     return typedResult;
   }
   

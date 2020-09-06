@@ -22,7 +22,7 @@ class AMapDistrictSearchResponse extends AMapSearchObject with NSCoding, NSCopyi
   //region creators
   static Future<AMapDistrictSearchResponse> create__() async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createAMapDistrictSearchResponse');
-    final object = AMapDistrictSearchResponse()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = AMapDistrictSearchResponse()..refId = refId;
     return object;
   }
   
@@ -32,7 +32,7 @@ class AMapDistrictSearchResponse extends AMapSearchObject with NSCoding, NSCopyi
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchAMapDistrictSearchResponse', {'length': length});
   
-    final List<AMapDistrictSearchResponse> typedResult = resultBatch.map((result) => AMapDistrictSearchResponse()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<AMapDistrictSearchResponse> typedResult = resultBatch.map((result) => AMapDistrictSearchResponse()..refId = result).toList();
     return typedResult;
   }
   
@@ -46,22 +46,20 @@ class AMapDistrictSearchResponse extends AMapSearchObject with NSCoding, NSCopyi
   
   Future<List<AMapDistrict>> get_districts() async {
     final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapDistrictSearchResponse::get_districts", {'__this__': this});
-    return __result__ == null ? null : ((__result__ as List).cast<String>().map((__it__) => AMapDistrict()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
+    return __result__ == null ? null : ((__result__ as List).cast<String>().map((__it__) => AMapDistrict()..refId = __it__).toList());
   }
   
   //endregion
 
   //region setters
   Future<void> set_count(int count) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapDistrictSearchResponse::set_count', <String, dynamic>{'__this__': this, "count": count});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapDistrictSearchResponse::set_count', <String, dynamic>{'__this__': this, "count": count});
   
   
   }
   
   Future<void> set_districts(List<AMapDistrict> districts) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapDistrictSearchResponse::set_districts', <String, dynamic>{'__this__': this, "districts": districts});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapDistrictSearchResponse::set_districts', <String, dynamic>{'__this__': this, "districts": districts});
   
   
   }
@@ -85,7 +83,7 @@ extension AMapDistrictSearchResponse_Batch on List<AMapDistrictSearchResponse> {
   Future<List<List<AMapDistrict>>> get_districts_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapDistrictSearchResponse::get_districts_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => AMapDistrict()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => AMapDistrict()..refId = __it__).toList()).toList();
     return typedResult;
   }
   

@@ -22,7 +22,7 @@ class AMapRailwayStation extends AMapSearchObject with NSCoding, NSCopying {
   //region creators
   static Future<AMapRailwayStation> create__() async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createAMapRailwayStation');
-    final object = AMapRailwayStation()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = AMapRailwayStation()..refId = refId;
     return object;
   }
   
@@ -32,7 +32,7 @@ class AMapRailwayStation extends AMapSearchObject with NSCoding, NSCopying {
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchAMapRailwayStation', {'length': length});
   
-    final List<AMapRailwayStation> typedResult = resultBatch.map((result) => AMapRailwayStation()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<AMapRailwayStation> typedResult = resultBatch.map((result) => AMapRailwayStation()..refId = result).toList();
     return typedResult;
   }
   
@@ -51,7 +51,7 @@ class AMapRailwayStation extends AMapSearchObject with NSCoding, NSCopying {
   
   Future<AMapGeoPoint> get_location() async {
     final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapRailwayStation::get_location", {'__this__': this});
-    return __result__ == null ? null : (AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify');
+    return __result__ == null ? null : (AMapGeoPoint()..refId = __result__);
   }
   
   Future<String> get_adcode() async {
@@ -83,57 +83,49 @@ class AMapRailwayStation extends AMapSearchObject with NSCoding, NSCopying {
 
   //region setters
   Future<void> set_uid(String uid) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapRailwayStation::set_uid', <String, dynamic>{'__this__': this, "uid": uid});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRailwayStation::set_uid', <String, dynamic>{'__this__': this, "uid": uid});
   
   
   }
   
   Future<void> set_name(String name) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapRailwayStation::set_name', <String, dynamic>{'__this__': this, "name": name});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRailwayStation::set_name', <String, dynamic>{'__this__': this, "name": name});
   
   
   }
   
   Future<void> set_location(AMapGeoPoint location) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapRailwayStation::set_location', <String, dynamic>{'__this__': this, "location": location});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRailwayStation::set_location', <String, dynamic>{'__this__': this, "location": location});
   
   
   }
   
   Future<void> set_adcode(String adcode) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapRailwayStation::set_adcode', <String, dynamic>{'__this__': this, "adcode": adcode});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRailwayStation::set_adcode', <String, dynamic>{'__this__': this, "adcode": adcode});
   
   
   }
   
   Future<void> set_time(String time) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapRailwayStation::set_time', <String, dynamic>{'__this__': this, "time": time});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRailwayStation::set_time', <String, dynamic>{'__this__': this, "time": time});
   
   
   }
   
   Future<void> set_wait(int wait) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapRailwayStation::set_wait', <String, dynamic>{'__this__': this, "wait": wait});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRailwayStation::set_wait', <String, dynamic>{'__this__': this, "wait": wait});
   
   
   }
   
   Future<void> set_isStart(bool isStart) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapRailwayStation::set_isStart', <String, dynamic>{'__this__': this, "isStart": isStart});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRailwayStation::set_isStart', <String, dynamic>{'__this__': this, "isStart": isStart});
   
   
   }
   
   Future<void> set_isEnd(bool isEnd) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapRailwayStation::set_isEnd', <String, dynamic>{'__this__': this, "isEnd": isEnd});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRailwayStation::set_isEnd', <String, dynamic>{'__this__': this, "isEnd": isEnd});
   
   
   }
@@ -164,7 +156,7 @@ extension AMapRailwayStation_Batch on List<AMapRailwayStation> {
   Future<List<AMapGeoPoint>> get_location_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapRailwayStation::get_location_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapGeoPoint()..refId = __result__).toList();
     return typedResult;
   }
   

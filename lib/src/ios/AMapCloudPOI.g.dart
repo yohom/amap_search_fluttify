@@ -22,7 +22,7 @@ class AMapCloudPOI extends AMapSearchObject with NSCoding, NSCopying {
   //region creators
   static Future<AMapCloudPOI> create__() async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createAMapCloudPOI');
-    final object = AMapCloudPOI()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = AMapCloudPOI()..refId = refId;
     return object;
   }
   
@@ -32,7 +32,7 @@ class AMapCloudPOI extends AMapSearchObject with NSCoding, NSCopying {
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchAMapCloudPOI', {'length': length});
   
-    final List<AMapCloudPOI> typedResult = resultBatch.map((result) => AMapCloudPOI()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<AMapCloudPOI> typedResult = resultBatch.map((result) => AMapCloudPOI()..refId = result).toList();
     return typedResult;
   }
   
@@ -51,7 +51,7 @@ class AMapCloudPOI extends AMapSearchObject with NSCoding, NSCopying {
   
   Future<AMapGeoPoint> get_location() async {
     final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapCloudPOI::get_location", {'__this__': this});
-    return __result__ == null ? null : (AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify');
+    return __result__ == null ? null : (AMapGeoPoint()..refId = __result__);
   }
   
   Future<String> get_address() async {
@@ -81,71 +81,62 @@ class AMapCloudPOI extends AMapSearchObject with NSCoding, NSCopying {
   
   Future<List<AMapCloudImage>> get_images() async {
     final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapCloudPOI::get_images", {'__this__': this});
-    return __result__ == null ? null : ((__result__ as List).cast<String>().map((__it__) => AMapCloudImage()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
+    return __result__ == null ? null : ((__result__ as List).cast<String>().map((__it__) => AMapCloudImage()..refId = __it__).toList());
   }
   
   //endregion
 
   //region setters
   Future<void> set_uid(int uid) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapCloudPOI::set_uid', <String, dynamic>{'__this__': this, "uid": uid});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapCloudPOI::set_uid', <String, dynamic>{'__this__': this, "uid": uid});
   
   
   }
   
   Future<void> set_name(String name) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapCloudPOI::set_name', <String, dynamic>{'__this__': this, "name": name});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapCloudPOI::set_name', <String, dynamic>{'__this__': this, "name": name});
   
   
   }
   
   Future<void> set_location(AMapGeoPoint location) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapCloudPOI::set_location', <String, dynamic>{'__this__': this, "location": location});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapCloudPOI::set_location', <String, dynamic>{'__this__': this, "location": location});
   
   
   }
   
   Future<void> set_address(String address) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapCloudPOI::set_address', <String, dynamic>{'__this__': this, "address": address});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapCloudPOI::set_address', <String, dynamic>{'__this__': this, "address": address});
   
   
   }
   
   Future<void> set_customFields(Map customFields) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapCloudPOI::set_customFields', <String, dynamic>{'__this__': this, "customFields": customFields});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapCloudPOI::set_customFields', <String, dynamic>{'__this__': this, "customFields": customFields});
   
   
   }
   
   Future<void> set_createTime(String createTime) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapCloudPOI::set_createTime', <String, dynamic>{'__this__': this, "createTime": createTime});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapCloudPOI::set_createTime', <String, dynamic>{'__this__': this, "createTime": createTime});
   
   
   }
   
   Future<void> set_updateTime(String updateTime) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapCloudPOI::set_updateTime', <String, dynamic>{'__this__': this, "updateTime": updateTime});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapCloudPOI::set_updateTime', <String, dynamic>{'__this__': this, "updateTime": updateTime});
   
   
   }
   
   Future<void> set_distance(int distance) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapCloudPOI::set_distance', <String, dynamic>{'__this__': this, "distance": distance});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapCloudPOI::set_distance', <String, dynamic>{'__this__': this, "distance": distance});
   
   
   }
   
   Future<void> set_images(List<AMapCloudImage> images) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapCloudPOI::set_images', <String, dynamic>{'__this__': this, "images": images});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapCloudPOI::set_images', <String, dynamic>{'__this__': this, "images": images});
   
   
   }
@@ -176,7 +167,7 @@ extension AMapCloudPOI_Batch on List<AMapCloudPOI> {
   Future<List<AMapGeoPoint>> get_location_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapCloudPOI::get_location_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapGeoPoint()..refId = __result__).toList();
     return typedResult;
   }
   
@@ -218,7 +209,7 @@ extension AMapCloudPOI_Batch on List<AMapCloudPOI> {
   Future<List<List<AMapCloudImage>>> get_images_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapCloudPOI::get_images_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => AMapCloudImage()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => AMapCloudImage()..refId = __it__).toList()).toList();
     return typedResult;
   }
   

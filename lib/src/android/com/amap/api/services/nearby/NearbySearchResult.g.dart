@@ -22,7 +22,7 @@ class com_amap_api_services_nearby_NearbySearchResult extends java_lang_Object  
   //region creators
   static Future<com_amap_api_services_nearby_NearbySearchResult> create__() async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createcom_amap_api_services_nearby_NearbySearchResult__');
-    final object = com_amap_api_services_nearby_NearbySearchResult()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = com_amap_api_services_nearby_NearbySearchResult()..refId = refId;
     return object;
   }
   
@@ -32,7 +32,7 @@ class com_amap_api_services_nearby_NearbySearchResult extends java_lang_Object  
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchcom_amap_api_services_nearby_NearbySearchResult__', {'length': length});
   
-    final List<com_amap_api_services_nearby_NearbySearchResult> typedResult = resultBatch.map((result) => com_amap_api_services_nearby_NearbySearchResult()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<com_amap_api_services_nearby_NearbySearchResult> typedResult = resultBatch.map((result) => com_amap_api_services_nearby_NearbySearchResult()..refId = result).toList();
     return typedResult;
   }
   
@@ -65,7 +65,7 @@ class com_amap_api_services_nearby_NearbySearchResult extends java_lang_Object  
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = (__result__ as List).cast<String>().map((__it__) => com_amap_api_services_nearby_NearbyInfo()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      final __return__ = (__result__ as List).cast<String>().map((__it__) => com_amap_api_services_nearby_NearbyInfo()..refId = __it__).toList();
       return __return__;
     }
   }
@@ -143,7 +143,7 @@ extension com_amap_api_services_nearby_NearbySearchResult_Batch on List<com_amap
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => com_amap_api_services_nearby_NearbyInfo()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => com_amap_api_services_nearby_NearbyInfo()..refId = __it__).toList()).toList();
       return typedResult;
     }
   }

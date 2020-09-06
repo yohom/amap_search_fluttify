@@ -544,7 +544,7 @@ public class SubHandler0 {
             put("com.amap.api.services.traffic.TrafficStatusInfo::setSpeed", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.traffic.TrafficStatusInfo __this__ = (com.amap.api.services.traffic.TrafficStatusInfo) ((Map<String, Object>) __args__).get("__this__");
@@ -1515,7 +1515,7 @@ public class SubHandler0 {
             put("com.amap.api.services.busline.BusLineItem::setDistance", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.busline.BusLineItem __this__ = (com.amap.api.services.busline.BusLineItem) ((Map<String, Object>) __args__).get("__this__");
@@ -2085,7 +2085,7 @@ public class SubHandler0 {
             put("com.amap.api.services.busline.BusLineItem::setBasicPrice", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.busline.BusLineItem __this__ = (com.amap.api.services.busline.BusLineItem) ((Map<String, Object>) __args__).get("__this__");
@@ -2142,7 +2142,7 @@ public class SubHandler0 {
             put("com.amap.api.services.busline.BusLineItem::setTotalPrice", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.busline.BusLineItem __this__ = (com.amap.api.services.busline.BusLineItem) ((Map<String, Object>) __args__).get("__this__");

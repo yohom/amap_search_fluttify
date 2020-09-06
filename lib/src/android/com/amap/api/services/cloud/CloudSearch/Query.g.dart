@@ -22,7 +22,7 @@ class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
   //region creators
   static Future<com_amap_api_services_cloud_CloudSearch_Query> create__String__String__com_amap_api_services_cloud_CloudSearch_SearchBound(String var1, String var2, com_amap_api_services_cloud_CloudSearch_SearchBound var3) async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_Query__String__String__com_amap_api_services_cloud_CloudSearch_SearchBound', {"var1": var1, "var2": var2, "var3": var3});
-    final object = com_amap_api_services_cloud_CloudSearch_Query()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = com_amap_api_services_cloud_CloudSearch_Query()..refId = refId;
     return object;
   }
   
@@ -32,7 +32,7 @@ class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchcom_amap_api_services_cloud_CloudSearch_Query__String__String__com_amap_api_services_cloud_CloudSearch_SearchBound', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__]}]);
   
-    final List<com_amap_api_services_cloud_CloudSearch_Query> typedResult = resultBatch.map((result) => com_amap_api_services_cloud_CloudSearch_Query()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<com_amap_api_services_cloud_CloudSearch_Query> typedResult = resultBatch.map((result) => com_amap_api_services_cloud_CloudSearch_Query()..refId = result).toList();
     return typedResult;
   }
   
@@ -249,7 +249,7 @@ class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_services_cloud_CloudSearch_SearchBound()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_cloud_CloudSearch_SearchBound()..refId = __result__;
       return __return__;
     }
   }
@@ -387,7 +387,7 @@ class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_services_cloud_CloudSearch_Sortingrules()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_cloud_CloudSearch_Sortingrules()..refId = __result__;
       return __return__;
     }
   }
@@ -433,7 +433,7 @@ class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_services_cloud_CloudSearch_Query()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_cloud_CloudSearch_Query()..refId = __result__;
       return __return__;
     }
   }
@@ -617,7 +617,7 @@ extension com_amap_api_services_cloud_CloudSearch_Query_Batch on List<com_amap_a
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_cloud_CloudSearch_SearchBound()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_cloud_CloudSearch_SearchBound()..refId = __result__).toList();
       return typedResult;
     }
   }
@@ -731,7 +731,7 @@ extension com_amap_api_services_cloud_CloudSearch_Query_Batch on List<com_amap_a
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_cloud_CloudSearch_Sortingrules()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_cloud_CloudSearch_Sortingrules()..refId = __result__).toList();
       return typedResult;
     }
   }
@@ -769,7 +769,7 @@ extension com_amap_api_services_cloud_CloudSearch_Query_Batch on List<com_amap_a
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_cloud_CloudSearch_Query()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_cloud_CloudSearch_Query()..refId = __result__).toList();
       return typedResult;
     }
   }

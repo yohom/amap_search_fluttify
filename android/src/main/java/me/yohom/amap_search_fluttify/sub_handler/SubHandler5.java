@@ -4391,7 +4391,7 @@ public class SubHandler5 {
             
                     // args
                     // ref arg
-                    float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                    Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.traffic.TrafficStatusInfo __this__ = (com.amap.api.services.traffic.TrafficStatusInfo) ((Map<String, Object>) __args__).get("__this__");
@@ -5399,7 +5399,7 @@ public class SubHandler5 {
             
                     // args
                     // ref arg
-                    float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                    Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.busline.BusLineItem __this__ = (com.amap.api.services.busline.BusLineItem) ((Map<String, Object>) __args__).get("__this__");
@@ -6029,7 +6029,7 @@ public class SubHandler5 {
             
                     // args
                     // ref arg
-                    float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                    Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.busline.BusLineItem __this__ = (com.amap.api.services.busline.BusLineItem) ((Map<String, Object>) __args__).get("__this__");
@@ -6092,7 +6092,7 @@ public class SubHandler5 {
             
                     // args
                     // ref arg
-                    float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                    Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.busline.BusLineItem __this__ = (com.amap.api.services.busline.BusLineItem) ((Map<String, Object>) __args__).get("__this__");

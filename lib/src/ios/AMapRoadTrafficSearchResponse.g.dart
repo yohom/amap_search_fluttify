@@ -22,7 +22,7 @@ class AMapRoadTrafficSearchResponse extends AMapSearchObject with NSCoding, NSCo
   //region creators
   static Future<AMapRoadTrafficSearchResponse> create__() async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createAMapRoadTrafficSearchResponse');
-    final object = AMapRoadTrafficSearchResponse()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = AMapRoadTrafficSearchResponse()..refId = refId;
     return object;
   }
   
@@ -32,7 +32,7 @@ class AMapRoadTrafficSearchResponse extends AMapSearchObject with NSCoding, NSCo
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchAMapRoadTrafficSearchResponse', {'length': length});
   
-    final List<AMapRoadTrafficSearchResponse> typedResult = resultBatch.map((result) => AMapRoadTrafficSearchResponse()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<AMapRoadTrafficSearchResponse> typedResult = resultBatch.map((result) => AMapRoadTrafficSearchResponse()..refId = result).toList();
     return typedResult;
   }
   
@@ -41,15 +41,14 @@ class AMapRoadTrafficSearchResponse extends AMapSearchObject with NSCoding, NSCo
   //region getters
   Future<AMapTrafficInfo> get_trafficInfo() async {
     final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapRoadTrafficSearchResponse::get_trafficInfo", {'__this__': this});
-    return __result__ == null ? null : (AMapTrafficInfo()..refId = __result__..tag__ = 'amap_search_fluttify');
+    return __result__ == null ? null : (AMapTrafficInfo()..refId = __result__);
   }
   
   //endregion
 
   //region setters
   Future<void> set_trafficInfo(AMapTrafficInfo trafficInfo) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapRoadTrafficSearchResponse::set_trafficInfo', <String, dynamic>{'__this__': this, "trafficInfo": trafficInfo});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRoadTrafficSearchResponse::set_trafficInfo', <String, dynamic>{'__this__': this, "trafficInfo": trafficInfo});
   
   
   }
@@ -66,7 +65,7 @@ extension AMapRoadTrafficSearchResponse_Batch on List<AMapRoadTrafficSearchRespo
   Future<List<AMapTrafficInfo>> get_trafficInfo_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapRoadTrafficSearchResponse::get_trafficInfo_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapTrafficInfo()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapTrafficInfo()..refId = __result__).toList();
     return typedResult;
   }
   

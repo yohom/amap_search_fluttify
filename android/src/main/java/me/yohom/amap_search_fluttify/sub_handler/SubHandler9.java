@@ -104,7 +104,7 @@ public class SubHandler9 {
             
                     // args
                     // ref arg
-                    float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                    Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.route.TimeInfosElement __this__ = (com.amap.api.services.route.TimeInfosElement) ((Map<String, Object>) __args__).get("__this__");
@@ -167,7 +167,7 @@ public class SubHandler9 {
             
                     // args
                     // ref arg
-                    float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                    Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.route.TimeInfosElement __this__ = (com.amap.api.services.route.TimeInfosElement) ((Map<String, Object>) __args__).get("__this__");
@@ -575,7 +575,7 @@ public class SubHandler9 {
             
                     // args
                     // ref arg
-                    float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                    Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.route.DistanceItem __this__ = (com.amap.api.services.route.DistanceItem) ((Map<String, Object>) __args__).get("__this__");
@@ -607,7 +607,7 @@ public class SubHandler9 {
             
                     // args
                     // ref arg
-                    float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                    Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.route.DistanceItem __this__ = (com.amap.api.services.route.DistanceItem) ((Map<String, Object>) __args__).get("__this__");
@@ -734,7 +734,7 @@ public class SubHandler9 {
             
                     // args
                     // ref arg
-                    float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                    Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.route.Path __this__ = (com.amap.api.services.route.Path) ((Map<String, Object>) __args__).get("__this__");
@@ -987,7 +987,7 @@ public class SubHandler9 {
             
                     // args
                     // ref arg
-                    float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                    Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.road.Road __this__ = (com.amap.api.services.road.Road) ((Map<String, Object>) __args__).get("__this__");
@@ -1238,7 +1238,7 @@ public class SubHandler9 {
             
                     // args
                     // ref arg
-                    float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                    Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.road.Crossroad __this__ = (com.amap.api.services.road.Crossroad) ((Map<String, Object>) __args__).get("__this__");
@@ -2971,7 +2971,7 @@ public class SubHandler9 {
             
                     // args
                     // ref arg
-                    float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                    Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.routepoisearch.RoutePOIItem __this__ = (com.amap.api.services.routepoisearch.RoutePOIItem) ((Map<String, Object>) __args__).get("__this__");
@@ -3034,7 +3034,7 @@ public class SubHandler9 {
             
                     // args
                     // ref arg
-                    float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                    Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.routepoisearch.RoutePOIItem __this__ = (com.amap.api.services.routepoisearch.RoutePOIItem) ((Map<String, Object>) __args__).get("__this__");

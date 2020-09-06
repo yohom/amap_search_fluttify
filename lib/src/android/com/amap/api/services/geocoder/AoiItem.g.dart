@@ -22,7 +22,7 @@ class com_amap_api_services_geocoder_AoiItem extends java_lang_Object with andro
   //region creators
   static Future<com_amap_api_services_geocoder_AoiItem> create__() async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createcom_amap_api_services_geocoder_AoiItem__');
-    final object = com_amap_api_services_geocoder_AoiItem()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = com_amap_api_services_geocoder_AoiItem()..refId = refId;
     return object;
   }
   
@@ -32,7 +32,7 @@ class com_amap_api_services_geocoder_AoiItem extends java_lang_Object with andro
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchcom_amap_api_services_geocoder_AoiItem__', {'length': length});
   
-    final List<com_amap_api_services_geocoder_AoiItem> typedResult = resultBatch.map((result) => com_amap_api_services_geocoder_AoiItem()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<com_amap_api_services_geocoder_AoiItem> typedResult = resultBatch.map((result) => com_amap_api_services_geocoder_AoiItem()..refId = result).toList();
     return typedResult;
   }
   
@@ -134,7 +134,7 @@ class com_amap_api_services_geocoder_AoiItem extends java_lang_Object with andro
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_core_LatLonPoint()..refId = __result__;
       return __return__;
     }
   }
@@ -361,7 +361,7 @@ extension com_amap_api_services_geocoder_AoiItem_Batch on List<com_amap_api_serv
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_core_LatLonPoint()..refId = __result__).toList();
       return typedResult;
     }
   }

@@ -9,8 +9,7 @@ class GetBusInfoScreen extends StatefulWidget {
   _GetBusInfoScreenState createState() => _GetBusInfoScreenState();
 }
 
-class _GetBusInfoScreenState extends State<GetBusInfoScreen>
-    with AmapSearchDisposeMixin {
+class _GetBusInfoScreenState extends State<GetBusInfoScreen> {
   final _keywordController = TextEditingController(text: '武林广场');
   final _cityController = TextEditingController(text: '杭州');
 

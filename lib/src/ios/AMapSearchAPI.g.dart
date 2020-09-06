@@ -22,7 +22,7 @@ class AMapSearchAPI extends NSObject  {
   //region creators
   static Future<AMapSearchAPI> create__() async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createAMapSearchAPI');
-    final object = AMapSearchAPI()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = AMapSearchAPI()..refId = refId;
     return object;
   }
   
@@ -32,7 +32,7 @@ class AMapSearchAPI extends NSObject  {
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchAMapSearchAPI', {'length': length});
   
-    final List<AMapSearchAPI> typedResult = resultBatch.map((result) => AMapSearchAPI()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<AMapSearchAPI> typedResult = resultBatch.map((result) => AMapSearchAPI()..refId = result).toList();
     return typedResult;
   }
   
@@ -53,8 +53,7 @@ class AMapSearchAPI extends NSObject  {
 
   //region setters
   Future<void> set_delegate(AMapSearchDelegate delegate) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapSearchAPI::set_delegate', <String, dynamic>{'__this__': this, });
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::set_delegate', <String, dynamic>{'__this__': this, });
   
     MethodChannel('AMapSearchDelegate::Callback', StandardMethodCodec(FluttifyMessageCodec()))
       .setMethodCallHandler((methodCall) async {
@@ -225,15 +224,13 @@ class AMapSearchAPI extends NSObject  {
   }
   
   Future<void> set_timeout(int timeout) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapSearchAPI::set_timeout', <String, dynamic>{'__this__': this, "timeout": timeout});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::set_timeout', <String, dynamic>{'__this__': this, "timeout": timeout});
   
   
   }
   
   Future<void> set_language(AMapSearchLanguage language) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapSearchAPI::set_language', <String, dynamic>{'__this__': this, "language": language.toValue()});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::set_language', <String, dynamic>{'__this__': this, "language": language.toValue()});
   
   
   }
@@ -259,7 +256,7 @@ class AMapSearchAPI extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = AMapSearchAPI()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = AMapSearchAPI()..refId = __result__;
       return __return__;
     }
   }
@@ -1051,7 +1048,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapSearchAPI()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapSearchAPI()..refId = __result__).toList();
       return typedResult;
     }
   }

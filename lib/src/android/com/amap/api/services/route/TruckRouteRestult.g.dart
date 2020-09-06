@@ -22,7 +22,7 @@ class com_amap_api_services_route_TruckRouteRestult extends java_lang_Object wit
   //region creators
   static Future<com_amap_api_services_route_TruckRouteRestult> create__() async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createcom_amap_api_services_route_TruckRouteRestult__');
-    final object = com_amap_api_services_route_TruckRouteRestult()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = com_amap_api_services_route_TruckRouteRestult()..refId = refId;
     return object;
   }
   
@@ -32,7 +32,7 @@ class com_amap_api_services_route_TruckRouteRestult extends java_lang_Object wit
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchcom_amap_api_services_route_TruckRouteRestult__', {'length': length});
   
-    final List<com_amap_api_services_route_TruckRouteRestult> typedResult = resultBatch.map((result) => com_amap_api_services_route_TruckRouteRestult()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<com_amap_api_services_route_TruckRouteRestult> typedResult = resultBatch.map((result) => com_amap_api_services_route_TruckRouteRestult()..refId = result).toList();
     return typedResult;
   }
   
@@ -157,7 +157,7 @@ class com_amap_api_services_route_TruckRouteRestult extends java_lang_Object wit
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_services_route_RouteSearch_TruckRouteQuery()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_route_RouteSearch_TruckRouteQuery()..refId = __result__;
       return __return__;
     }
   }
@@ -180,7 +180,7 @@ class com_amap_api_services_route_TruckRouteRestult extends java_lang_Object wit
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = (__result__ as List).cast<String>().map((__it__) => com_amap_api_services_route_TruckPath()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      final __return__ = (__result__ as List).cast<String>().map((__it__) => com_amap_api_services_route_TruckPath()..refId = __it__).toList();
       return __return__;
     }
   }
@@ -203,7 +203,7 @@ class com_amap_api_services_route_TruckRouteRestult extends java_lang_Object wit
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_core_LatLonPoint()..refId = __result__;
       return __return__;
     }
   }
@@ -226,7 +226,7 @@ class com_amap_api_services_route_TruckRouteRestult extends java_lang_Object wit
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_core_LatLonPoint()..refId = __result__;
       return __return__;
     }
   }
@@ -334,7 +334,7 @@ extension com_amap_api_services_route_TruckRouteRestult_Batch on List<com_amap_a
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_route_RouteSearch_TruckRouteQuery()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_route_RouteSearch_TruckRouteQuery()..refId = __result__).toList();
       return typedResult;
     }
   }
@@ -353,7 +353,7 @@ extension com_amap_api_services_route_TruckRouteRestult_Batch on List<com_amap_a
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => com_amap_api_services_route_TruckPath()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => com_amap_api_services_route_TruckPath()..refId = __it__).toList()).toList();
       return typedResult;
     }
   }
@@ -372,7 +372,7 @@ extension com_amap_api_services_route_TruckRouteRestult_Batch on List<com_amap_a
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_core_LatLonPoint()..refId = __result__).toList();
       return typedResult;
     }
   }
@@ -391,7 +391,7 @@ extension com_amap_api_services_route_TruckRouteRestult_Batch on List<com_amap_a
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_core_LatLonPoint()..refId = __result__).toList();
       return typedResult;
     }
   }

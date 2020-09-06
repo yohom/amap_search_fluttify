@@ -22,7 +22,7 @@ class AMapBusinessArea extends AMapSearchObject with NSCoding, NSCopying {
   //region creators
   static Future<AMapBusinessArea> create__() async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createAMapBusinessArea');
-    final object = AMapBusinessArea()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = AMapBusinessArea()..refId = refId;
     return object;
   }
   
@@ -32,7 +32,7 @@ class AMapBusinessArea extends AMapSearchObject with NSCoding, NSCopying {
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchAMapBusinessArea', {'length': length});
   
-    final List<AMapBusinessArea> typedResult = resultBatch.map((result) => AMapBusinessArea()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<AMapBusinessArea> typedResult = resultBatch.map((result) => AMapBusinessArea()..refId = result).toList();
     return typedResult;
   }
   
@@ -46,22 +46,20 @@ class AMapBusinessArea extends AMapSearchObject with NSCoding, NSCopying {
   
   Future<AMapGeoPoint> get_location() async {
     final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapBusinessArea::get_location", {'__this__': this});
-    return __result__ == null ? null : (AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify');
+    return __result__ == null ? null : (AMapGeoPoint()..refId = __result__);
   }
   
   //endregion
 
   //region setters
   Future<void> set_name(String name) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapBusinessArea::set_name', <String, dynamic>{'__this__': this, "name": name});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapBusinessArea::set_name', <String, dynamic>{'__this__': this, "name": name});
   
   
   }
   
   Future<void> set_location(AMapGeoPoint location) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapBusinessArea::set_location', <String, dynamic>{'__this__': this, "location": location});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapBusinessArea::set_location', <String, dynamic>{'__this__': this, "location": location});
   
   
   }
@@ -85,7 +83,7 @@ extension AMapBusinessArea_Batch on List<AMapBusinessArea> {
   Future<List<AMapGeoPoint>> get_location_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapBusinessArea::get_location_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapGeoPoint()..refId = __result__).toList();
     return typedResult;
   }
   

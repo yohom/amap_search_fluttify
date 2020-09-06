@@ -731,7 +731,7 @@ public class SubHandler8 {
             
                     // args
                     // ref arg
-                    float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                    Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.route.RideStep __this__ = (com.amap.api.services.route.RideStep) ((Map<String, Object>) __args__).get("__this__");
@@ -794,7 +794,7 @@ public class SubHandler8 {
             
                     // args
                     // ref arg
-                    float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                    Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.route.RideStep __this__ = (com.amap.api.services.route.RideStep) ((Map<String, Object>) __args__).get("__this__");
@@ -2463,7 +2463,7 @@ public class SubHandler8 {
             
                     // args
                     // ref arg
-                    float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                    Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.route.RouteBusLineItem __this__ = (com.amap.api.services.route.RouteBusLineItem) ((Map<String, Object>) __args__).get("__this__");
@@ -2996,7 +2996,7 @@ public class SubHandler8 {
             
                     // args
                     // ref arg
-                    float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                    Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.route.DrivePlanStep __this__ = (com.amap.api.services.route.DrivePlanStep) ((Map<String, Object>) __args__).get("__this__");
@@ -3500,7 +3500,7 @@ public class SubHandler8 {
             
                     // args
                     // ref arg
-                    float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                    Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.route.DriveStep __this__ = (com.amap.api.services.route.DriveStep) ((Map<String, Object>) __args__).get("__this__");
@@ -3563,7 +3563,7 @@ public class SubHandler8 {
             
                     // args
                     // ref arg
-                    float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                    Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.route.DriveStep __this__ = (com.amap.api.services.route.DriveStep) ((Map<String, Object>) __args__).get("__this__");
@@ -3626,7 +3626,7 @@ public class SubHandler8 {
             
                     // args
                     // ref arg
-                    float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                    Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.route.DriveStep __this__ = (com.amap.api.services.route.DriveStep) ((Map<String, Object>) __args__).get("__this__");
@@ -3752,7 +3752,7 @@ public class SubHandler8 {
             
                     // args
                     // ref arg
-                    float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                    Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.route.DriveStep __this__ = (com.amap.api.services.route.DriveStep) ((Map<String, Object>) __args__).get("__this__");
@@ -4195,7 +4195,7 @@ public class SubHandler8 {
             
                     // args
                     // ref arg
-                    float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                    Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.route.TruckStep __this__ = (com.amap.api.services.route.TruckStep) ((Map<String, Object>) __args__).get("__this__");
@@ -4227,7 +4227,7 @@ public class SubHandler8 {
             
                     // args
                     // ref arg
-                    float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                    Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.route.TruckStep __this__ = (com.amap.api.services.route.TruckStep) ((Map<String, Object>) __args__).get("__this__");
@@ -4259,7 +4259,7 @@ public class SubHandler8 {
             
                     // args
                     // ref arg
-                    float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                    Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.route.TruckStep __this__ = (com.amap.api.services.route.TruckStep) ((Map<String, Object>) __args__).get("__this__");
@@ -4323,7 +4323,7 @@ public class SubHandler8 {
             
                     // args
                     // ref arg
-                    float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                    Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.route.TruckStep __this__ = (com.amap.api.services.route.TruckStep) ((Map<String, Object>) __args__).get("__this__");
@@ -4949,7 +4949,7 @@ public class SubHandler8 {
             
                     // args
                     // ref arg
-                    float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                    Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.route.DriveRouteResult __this__ = (com.amap.api.services.route.DriveRouteResult) ((Map<String, Object>) __args__).get("__this__");
@@ -5201,7 +5201,7 @@ public class SubHandler8 {
             
                     // args
                     // ref arg
-                    float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                    Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.route.DrivePath __this__ = (com.amap.api.services.route.DrivePath) ((Map<String, Object>) __args__).get("__this__");
@@ -5264,7 +5264,7 @@ public class SubHandler8 {
             
                     // args
                     // ref arg
-                    float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                    Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.route.DrivePath __this__ = (com.amap.api.services.route.DrivePath) ((Map<String, Object>) __args__).get("__this__");
@@ -5485,7 +5485,7 @@ public class SubHandler8 {
             
                     // args
                     // ref arg
-                    float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                    Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.route.TruckPath __this__ = (com.amap.api.services.route.TruckPath) ((Map<String, Object>) __args__).get("__this__");
@@ -5581,7 +5581,7 @@ public class SubHandler8 {
             
                     // args
                     // ref arg
-                    float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                    Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.route.TruckPath __this__ = (com.amap.api.services.route.TruckPath) ((Map<String, Object>) __args__).get("__this__");
@@ -5613,7 +5613,7 @@ public class SubHandler8 {
             
                     // args
                     // ref arg
-                    float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                    Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.route.TruckPath __this__ = (com.amap.api.services.route.TruckPath) ((Map<String, Object>) __args__).get("__this__");
@@ -6146,7 +6146,7 @@ public class SubHandler8 {
             
                     // args
                     // ref arg
-                    float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                    Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.route.DrivePlanPath __this__ = (com.amap.api.services.route.DrivePlanPath) ((Map<String, Object>) __args__).get("__this__");

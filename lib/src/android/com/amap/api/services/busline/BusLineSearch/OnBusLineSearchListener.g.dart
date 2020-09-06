@@ -24,11 +24,7 @@ mixin com_amap_api_services_busline_BusLineSearch_OnBusLineSearchListener on jav
   
 
   @mustCallSuper
-  Future<void> onBusLineSearched(com_amap_api_services_busline_BusLineResult var1, int var2) {
-    if (fluttifyLogEnabled) {
-      debugPrint('onBusLineSearched::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> onBusLineSearched(com_amap_api_services_busline_BusLineResult var1, int var2) {}
   
 }
 

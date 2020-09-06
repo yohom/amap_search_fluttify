@@ -24,123 +24,55 @@ mixin AMapSearchDelegate on NSObject {
   
 
   @mustCallSuper
-  Future<void> AMapSearchRequest_didFailWithError(dynamic request, NSError error) {
-    if (fluttifyLogEnabled) {
-      debugPrint('AMapSearchRequest_didFailWithError::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> AMapSearchRequest_didFailWithError(dynamic request, NSError error) {}
   
   @mustCallSuper
-  Future<void> onPOISearchDone_response(AMapPOISearchBaseRequest request, AMapPOISearchResponse response) {
-    if (fluttifyLogEnabled) {
-      debugPrint('onPOISearchDone_response::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> onPOISearchDone_response(AMapPOISearchBaseRequest request, AMapPOISearchResponse response) {}
   
   @mustCallSuper
-  Future<void> onRoutePOISearchDone_response(AMapRoutePOISearchRequest request, AMapRoutePOISearchResponse response) {
-    if (fluttifyLogEnabled) {
-      debugPrint('onRoutePOISearchDone_response::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> onRoutePOISearchDone_response(AMapRoutePOISearchRequest request, AMapRoutePOISearchResponse response) {}
   
   @mustCallSuper
-  Future<void> onGeocodeSearchDone_response(AMapGeocodeSearchRequest request, AMapGeocodeSearchResponse response) {
-    if (fluttifyLogEnabled) {
-      debugPrint('onGeocodeSearchDone_response::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> onGeocodeSearchDone_response(AMapGeocodeSearchRequest request, AMapGeocodeSearchResponse response) {}
   
   @mustCallSuper
-  Future<void> onReGeocodeSearchDone_response(AMapReGeocodeSearchRequest request, AMapReGeocodeSearchResponse response) {
-    if (fluttifyLogEnabled) {
-      debugPrint('onReGeocodeSearchDone_response::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> onReGeocodeSearchDone_response(AMapReGeocodeSearchRequest request, AMapReGeocodeSearchResponse response) {}
   
   @mustCallSuper
-  Future<void> onInputTipsSearchDone_response(AMapInputTipsSearchRequest request, AMapInputTipsSearchResponse response) {
-    if (fluttifyLogEnabled) {
-      debugPrint('onInputTipsSearchDone_response::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> onInputTipsSearchDone_response(AMapInputTipsSearchRequest request, AMapInputTipsSearchResponse response) {}
   
   @mustCallSuper
-  Future<void> onBusStopSearchDone_response(AMapBusStopSearchRequest request, AMapBusStopSearchResponse response) {
-    if (fluttifyLogEnabled) {
-      debugPrint('onBusStopSearchDone_response::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> onBusStopSearchDone_response(AMapBusStopSearchRequest request, AMapBusStopSearchResponse response) {}
   
   @mustCallSuper
-  Future<void> onBusLineSearchDone_response(AMapBusLineBaseSearchRequest request, AMapBusLineSearchResponse response) {
-    if (fluttifyLogEnabled) {
-      debugPrint('onBusLineSearchDone_response::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> onBusLineSearchDone_response(AMapBusLineBaseSearchRequest request, AMapBusLineSearchResponse response) {}
   
   @mustCallSuper
-  Future<void> onDistrictSearchDone_response(AMapDistrictSearchRequest request, AMapDistrictSearchResponse response) {
-    if (fluttifyLogEnabled) {
-      debugPrint('onDistrictSearchDone_response::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> onDistrictSearchDone_response(AMapDistrictSearchRequest request, AMapDistrictSearchResponse response) {}
   
   @mustCallSuper
-  Future<void> onRouteSearchDone_response(AMapRouteSearchBaseRequest request, AMapRouteSearchResponse response) {
-    if (fluttifyLogEnabled) {
-      debugPrint('onRouteSearchDone_response::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> onRouteSearchDone_response(AMapRouteSearchBaseRequest request, AMapRouteSearchResponse response) {}
   
   @mustCallSuper
-  Future<void> onFutureRouteSearchDone_response(AMapRouteSearchBaseRequest request, AMapFutureRouteSearchResponse response) {
-    if (fluttifyLogEnabled) {
-      debugPrint('onFutureRouteSearchDone_response::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> onFutureRouteSearchDone_response(AMapRouteSearchBaseRequest request, AMapFutureRouteSearchResponse response) {}
   
   @mustCallSuper
-  Future<void> onDistanceSearchDone_response(AMapDistanceSearchRequest request, AMapDistanceSearchResponse response) {
-    if (fluttifyLogEnabled) {
-      debugPrint('onDistanceSearchDone_response::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> onDistanceSearchDone_response(AMapDistanceSearchRequest request, AMapDistanceSearchResponse response) {}
   
   @mustCallSuper
-  Future<void> onWeatherSearchDone_response(AMapWeatherSearchRequest request, AMapWeatherSearchResponse response) {
-    if (fluttifyLogEnabled) {
-      debugPrint('onWeatherSearchDone_response::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> onWeatherSearchDone_response(AMapWeatherSearchRequest request, AMapWeatherSearchResponse response) {}
   
   @mustCallSuper
-  Future<void> onRoadTrafficSearchDone_response(AMapRoadTrafficSearchBaseRequest request, AMapRoadTrafficSearchResponse response) {
-    if (fluttifyLogEnabled) {
-      debugPrint('onRoadTrafficSearchDone_response::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> onRoadTrafficSearchDone_response(AMapRoadTrafficSearchBaseRequest request, AMapRoadTrafficSearchResponse response) {}
   
   @mustCallSuper
-  Future<void> onNearbySearchDone_response(AMapNearbySearchRequest request, AMapNearbySearchResponse response) {
-    if (fluttifyLogEnabled) {
-      debugPrint('onNearbySearchDone_response::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> onNearbySearchDone_response(AMapNearbySearchRequest request, AMapNearbySearchResponse response) {}
   
   @mustCallSuper
-  Future<void> onCloudSearchDone_response(AMapCloudSearchBaseRequest request, AMapCloudPOISearchResponse response) {
-    if (fluttifyLogEnabled) {
-      debugPrint('onCloudSearchDone_response::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> onCloudSearchDone_response(AMapCloudSearchBaseRequest request, AMapCloudPOISearchResponse response) {}
   
   @mustCallSuper
-  Future<void> onShareSearchDone_response(AMapShareSearchBaseRequest request, AMapShareSearchResponse response) {
-    if (fluttifyLogEnabled) {
-      debugPrint('onShareSearchDone_response::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> onShareSearchDone_response(AMapShareSearchBaseRequest request, AMapShareSearchResponse response) {}
   
 }
 

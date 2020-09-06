@@ -22,7 +22,7 @@ class com_amap_api_services_geocoder_GeocodeResult extends java_lang_Object  {
   //region creators
   static Future<com_amap_api_services_geocoder_GeocodeResult> create__com_amap_api_services_geocoder_GeocodeQuery__List_java_util_List_com_amap_api_services_geocoder_GeocodeAddress__(com_amap_api_services_geocoder_GeocodeQuery var1, List<com_amap_api_services_geocoder_GeocodeAddress> var2) async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createcom_amap_api_services_geocoder_GeocodeResult__com_amap_api_services_geocoder_GeocodeQuery__java_util_List_com_amap_api_services_geocoder_GeocodeAddress_', {"var1": var1, "var2": var2});
-    final object = com_amap_api_services_geocoder_GeocodeResult()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = com_amap_api_services_geocoder_GeocodeResult()..refId = refId;
     return object;
   }
   
@@ -32,7 +32,7 @@ class com_amap_api_services_geocoder_GeocodeResult extends java_lang_Object  {
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchcom_amap_api_services_geocoder_GeocodeResult__com_amap_api_services_geocoder_GeocodeQuery__java_util_List_com_amap_api_services_geocoder_GeocodeAddress_', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]);
   
-    final List<com_amap_api_services_geocoder_GeocodeResult> typedResult = resultBatch.map((result) => com_amap_api_services_geocoder_GeocodeResult()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<com_amap_api_services_geocoder_GeocodeResult> typedResult = resultBatch.map((result) => com_amap_api_services_geocoder_GeocodeResult()..refId = result).toList();
     return typedResult;
   }
   
@@ -65,7 +65,7 @@ class com_amap_api_services_geocoder_GeocodeResult extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_services_geocoder_GeocodeQuery()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_geocoder_GeocodeQuery()..refId = __result__;
       return __return__;
     }
   }
@@ -111,7 +111,7 @@ class com_amap_api_services_geocoder_GeocodeResult extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = (__result__ as List).cast<String>().map((__it__) => com_amap_api_services_geocoder_GeocodeAddress()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      final __return__ = (__result__ as List).cast<String>().map((__it__) => com_amap_api_services_geocoder_GeocodeAddress()..refId = __it__).toList();
       return __return__;
     }
   }
@@ -166,7 +166,7 @@ extension com_amap_api_services_geocoder_GeocodeResult_Batch on List<com_amap_ap
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_geocoder_GeocodeQuery()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_geocoder_GeocodeQuery()..refId = __result__).toList();
       return typedResult;
     }
   }
@@ -204,7 +204,7 @@ extension com_amap_api_services_geocoder_GeocodeResult_Batch on List<com_amap_ap
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => com_amap_api_services_geocoder_GeocodeAddress()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => com_amap_api_services_geocoder_GeocodeAddress()..refId = __it__).toList()).toList();
       return typedResult;
     }
   }

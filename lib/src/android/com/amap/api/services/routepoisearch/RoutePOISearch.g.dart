@@ -30,7 +30,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearch extends java_lang_Obje
   //region creators
   static Future<com_amap_api_services_routepoisearch_RoutePOISearch> create__android_content_Context__com_amap_api_services_routepoisearch_RoutePOISearchQuery(android_content_Context var1, com_amap_api_services_routepoisearch_RoutePOISearchQuery var2) async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createcom_amap_api_services_routepoisearch_RoutePOISearch__android_content_Context__com_amap_api_services_routepoisearch_RoutePOISearchQuery', {"var1": var1, "var2": var2});
-    final object = com_amap_api_services_routepoisearch_RoutePOISearch()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = com_amap_api_services_routepoisearch_RoutePOISearch()..refId = refId;
     return object;
   }
   
@@ -40,7 +40,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearch extends java_lang_Obje
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchcom_amap_api_services_routepoisearch_RoutePOISearch__android_content_Context__com_amap_api_services_routepoisearch_RoutePOISearchQuery', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]);
   
-    final List<com_amap_api_services_routepoisearch_RoutePOISearch> typedResult = resultBatch.map((result) => com_amap_api_services_routepoisearch_RoutePOISearch()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<com_amap_api_services_routepoisearch_RoutePOISearch> typedResult = resultBatch.map((result) => com_amap_api_services_routepoisearch_RoutePOISearch()..refId = result).toList();
     return typedResult;
   }
   
@@ -163,7 +163,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearch extends java_lang_Obje
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_services_routepoisearch_RoutePOISearchResult()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_routepoisearch_RoutePOISearchResult()..refId = __result__;
       return __return__;
     }
   }
@@ -233,7 +233,7 @@ extension com_amap_api_services_routepoisearch_RoutePOISearch_Batch on List<com_
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_routepoisearch_RoutePOISearchResult()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_routepoisearch_RoutePOISearchResult()..refId = __result__).toList();
       return typedResult;
     }
   }

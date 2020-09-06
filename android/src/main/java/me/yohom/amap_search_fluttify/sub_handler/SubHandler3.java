@@ -64,7 +64,7 @@ public class SubHandler3 {
             put("com.amap.api.services.route.DriveStep::setDistance", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.route.DriveStep __this__ = (com.amap.api.services.route.DriveStep) ((Map<String, Object>) __args__).get("__this__");
@@ -121,7 +121,7 @@ public class SubHandler3 {
             put("com.amap.api.services.route.DriveStep::setTolls", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.route.DriveStep __this__ = (com.amap.api.services.route.DriveStep) ((Map<String, Object>) __args__).get("__this__");
@@ -178,7 +178,7 @@ public class SubHandler3 {
             put("com.amap.api.services.route.DriveStep::setTollDistance", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.route.DriveStep __this__ = (com.amap.api.services.route.DriveStep) ((Map<String, Object>) __args__).get("__this__");
@@ -292,7 +292,7 @@ public class SubHandler3 {
             put("com.amap.api.services.route.DriveStep::setDuration", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.route.DriveStep __this__ = (com.amap.api.services.route.DriveStep) ((Map<String, Object>) __args__).get("__this__");
@@ -693,7 +693,7 @@ public class SubHandler3 {
             put("com.amap.api.services.route.TruckStep::setTolls", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.route.TruckStep __this__ = (com.amap.api.services.route.TruckStep) ((Map<String, Object>) __args__).get("__this__");
@@ -722,7 +722,7 @@ public class SubHandler3 {
             put("com.amap.api.services.route.TruckStep::setDistance", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.route.TruckStep __this__ = (com.amap.api.services.route.TruckStep) ((Map<String, Object>) __args__).get("__this__");
@@ -751,7 +751,7 @@ public class SubHandler3 {
             put("com.amap.api.services.route.TruckStep::setTollDistance", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.route.TruckStep __this__ = (com.amap.api.services.route.TruckStep) ((Map<String, Object>) __args__).get("__this__");
@@ -809,7 +809,7 @@ public class SubHandler3 {
             put("com.amap.api.services.route.TruckStep::setDuration", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.route.TruckStep __this__ = (com.amap.api.services.route.TruckStep) ((Map<String, Object>) __args__).get("__this__");
@@ -1375,7 +1375,7 @@ public class SubHandler3 {
             put("com.amap.api.services.route.DriveRouteResult::setTaxiCost", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.route.DriveRouteResult __this__ = (com.amap.api.services.route.DriveRouteResult) ((Map<String, Object>) __args__).get("__this__");
@@ -1603,7 +1603,7 @@ public class SubHandler3 {
             put("com.amap.api.services.route.DrivePath::setTolls", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.route.DrivePath __this__ = (com.amap.api.services.route.DrivePath) ((Map<String, Object>) __args__).get("__this__");
@@ -1660,7 +1660,7 @@ public class SubHandler3 {
             put("com.amap.api.services.route.DrivePath::setTollDistance", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.route.DrivePath __this__ = (com.amap.api.services.route.DrivePath) ((Map<String, Object>) __args__).get("__this__");
@@ -1860,7 +1860,7 @@ public class SubHandler3 {
             put("com.amap.api.services.route.TruckPath::setDistance", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.route.TruckPath __this__ = (com.amap.api.services.route.TruckPath) ((Map<String, Object>) __args__).get("__this__");
@@ -1947,7 +1947,7 @@ public class SubHandler3 {
             put("com.amap.api.services.route.TruckPath::setTolls", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.route.TruckPath __this__ = (com.amap.api.services.route.TruckPath) ((Map<String, Object>) __args__).get("__this__");
@@ -1976,7 +1976,7 @@ public class SubHandler3 {
             put("com.amap.api.services.route.TruckPath::setTollDistance", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.route.TruckPath __this__ = (com.amap.api.services.route.TruckPath) ((Map<String, Object>) __args__).get("__this__");
@@ -2458,7 +2458,7 @@ public class SubHandler3 {
             put("com.amap.api.services.route.DrivePlanPath::setDistance", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.route.DrivePlanPath __this__ = (com.amap.api.services.route.DrivePlanPath) ((Map<String, Object>) __args__).get("__this__");
@@ -2686,7 +2686,7 @@ public class SubHandler3 {
             put("com.amap.api.services.route.TimeInfosElement::setDuration", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.route.TimeInfosElement __this__ = (com.amap.api.services.route.TimeInfosElement) ((Map<String, Object>) __args__).get("__this__");
@@ -2743,7 +2743,7 @@ public class SubHandler3 {
             put("com.amap.api.services.route.TimeInfosElement::setTolls", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.route.TimeInfosElement __this__ = (com.amap.api.services.route.TimeInfosElement) ((Map<String, Object>) __args__).get("__this__");
@@ -3112,7 +3112,7 @@ public class SubHandler3 {
             put("com.amap.api.services.route.DistanceItem::setDistance", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.route.DistanceItem __this__ = (com.amap.api.services.route.DistanceItem) ((Map<String, Object>) __args__).get("__this__");
@@ -3141,7 +3141,7 @@ public class SubHandler3 {
             put("com.amap.api.services.route.DistanceItem::setDuration", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.route.DistanceItem __this__ = (com.amap.api.services.route.DistanceItem) ((Map<String, Object>) __args__).get("__this__");
@@ -3256,7 +3256,7 @@ public class SubHandler3 {
             put("com.amap.api.services.route.Path::setDistance", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.route.Path __this__ = (com.amap.api.services.route.Path) ((Map<String, Object>) __args__).get("__this__");
@@ -3485,7 +3485,7 @@ public class SubHandler3 {
             put("com.amap.api.services.road.Road::setRoadWidth", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.road.Road __this__ = (com.amap.api.services.road.Road) ((Map<String, Object>) __args__).get("__this__");
@@ -3712,7 +3712,7 @@ public class SubHandler3 {
             put("com.amap.api.services.road.Crossroad::setDistance", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.road.Crossroad __this__ = (com.amap.api.services.road.Crossroad) ((Map<String, Object>) __args__).get("__this__");
@@ -5553,7 +5553,7 @@ public class SubHandler3 {
             put("com.amap.api.services.routepoisearch.RoutePOIItem::setDistance", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.routepoisearch.RoutePOIItem __this__ = (com.amap.api.services.routepoisearch.RoutePOIItem) ((Map<String, Object>) __args__).get("__this__");
@@ -5610,7 +5610,7 @@ public class SubHandler3 {
             put("com.amap.api.services.routepoisearch.RoutePOIItem::setDuration", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.routepoisearch.RoutePOIItem __this__ = (com.amap.api.services.routepoisearch.RoutePOIItem) ((Map<String, Object>) __args__).get("__this__");

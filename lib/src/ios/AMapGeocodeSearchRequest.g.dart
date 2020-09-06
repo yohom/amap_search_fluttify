@@ -22,7 +22,7 @@ class AMapGeocodeSearchRequest extends AMapSearchObject with NSCoding, NSCopying
   //region creators
   static Future<AMapGeocodeSearchRequest> create__() async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createAMapGeocodeSearchRequest');
-    final object = AMapGeocodeSearchRequest()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = AMapGeocodeSearchRequest()..refId = refId;
     return object;
   }
   
@@ -32,7 +32,7 @@ class AMapGeocodeSearchRequest extends AMapSearchObject with NSCoding, NSCopying
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchAMapGeocodeSearchRequest', {'length': length});
   
-    final List<AMapGeocodeSearchRequest> typedResult = resultBatch.map((result) => AMapGeocodeSearchRequest()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<AMapGeocodeSearchRequest> typedResult = resultBatch.map((result) => AMapGeocodeSearchRequest()..refId = result).toList();
     return typedResult;
   }
   
@@ -53,15 +53,13 @@ class AMapGeocodeSearchRequest extends AMapSearchObject with NSCoding, NSCopying
 
   //region setters
   Future<void> set_address(String address) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapGeocodeSearchRequest::set_address', <String, dynamic>{'__this__': this, "address": address});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapGeocodeSearchRequest::set_address', <String, dynamic>{'__this__': this, "address": address});
   
   
   }
   
   Future<void> set_city(String city) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapGeocodeSearchRequest::set_city', <String, dynamic>{'__this__': this, "city": city});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapGeocodeSearchRequest::set_city', <String, dynamic>{'__this__': this, "city": city});
   
   
   }

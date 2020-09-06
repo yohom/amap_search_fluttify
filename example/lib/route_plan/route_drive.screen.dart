@@ -8,8 +8,7 @@ class RouteDriveScreen extends StatefulWidget {
   _RouteDriveScreenState createState() => _RouteDriveScreenState();
 }
 
-class _RouteDriveScreenState extends State<RouteDriveScreen>
-    with AmapSearchDisposeMixin {
+class _RouteDriveScreenState extends State<RouteDriveScreen> {
   final _fromLatController = TextEditingController(text: '30.219933');
   final _fromLngController = TextEditingController(text: '120.023728');
 

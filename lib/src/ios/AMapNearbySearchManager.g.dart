@@ -38,15 +38,13 @@ class AMapNearbySearchManager extends NSObject  {
 
   //region setters
   Future<void> set_uploadTimeInterval(double uploadTimeInterval) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapNearbySearchManager::set_uploadTimeInterval', <String, dynamic>{'__this__': this, "uploadTimeInterval": uploadTimeInterval});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapNearbySearchManager::set_uploadTimeInterval', <String, dynamic>{'__this__': this, "uploadTimeInterval": uploadTimeInterval});
   
   
   }
   
   Future<void> set_delegate(AMapNearbySearchManagerDelegate delegate) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapNearbySearchManager::set_delegate', <String, dynamic>{'__this__': this, });
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapNearbySearchManager::set_delegate', <String, dynamic>{'__this__': this, });
   
     MethodChannel('AMapNearbySearchManagerDelegate::Callback', StandardMethodCodec(FluttifyMessageCodec()))
       .setMethodCallHandler((methodCall) async {
@@ -111,7 +109,7 @@ class AMapNearbySearchManager extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = AMapNearbySearchManager()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = AMapNearbySearchManager()..refId = __result__;
       return __return__;
     }
   }
@@ -253,7 +251,7 @@ extension AMapNearbySearchManager_Batch on List<AMapNearbySearchManager> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapNearbySearchManager()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapNearbySearchManager()..refId = __result__).toList();
       return typedResult;
     }
   }

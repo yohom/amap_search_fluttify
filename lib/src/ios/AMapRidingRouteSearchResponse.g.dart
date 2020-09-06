@@ -22,7 +22,7 @@ class AMapRidingRouteSearchResponse extends AMapRouteSearchResponse with NSCodin
   //region creators
   static Future<AMapRidingRouteSearchResponse> create__() async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createAMapRidingRouteSearchResponse');
-    final object = AMapRidingRouteSearchResponse()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = AMapRidingRouteSearchResponse()..refId = refId;
     return object;
   }
   
@@ -32,7 +32,7 @@ class AMapRidingRouteSearchResponse extends AMapRouteSearchResponse with NSCodin
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchAMapRidingRouteSearchResponse', {'length': length});
   
-    final List<AMapRidingRouteSearchResponse> typedResult = resultBatch.map((result) => AMapRidingRouteSearchResponse()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<AMapRidingRouteSearchResponse> typedResult = resultBatch.map((result) => AMapRidingRouteSearchResponse()..refId = result).toList();
     return typedResult;
   }
   

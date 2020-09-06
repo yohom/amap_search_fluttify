@@ -1108,7 +1108,7 @@ public class SubHandler2 {
             put("com.amap.api.services.route.RouteRailwayItem::setDistance", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.route.RouteRailwayItem __this__ = (com.amap.api.services.route.RouteRailwayItem) ((Map<String, Object>) __args__).get("__this__");
@@ -1510,7 +1510,7 @@ public class SubHandler2 {
             put("com.amap.api.services.route.WalkStep::setDistance", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.route.WalkStep __this__ = (com.amap.api.services.route.WalkStep) ((Map<String, Object>) __args__).get("__this__");
@@ -1567,7 +1567,7 @@ public class SubHandler2 {
             put("com.amap.api.services.route.WalkStep::setDuration", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.route.WalkStep __this__ = (com.amap.api.services.route.WalkStep) ((Map<String, Object>) __args__).get("__this__");
@@ -2194,7 +2194,7 @@ public class SubHandler2 {
             put("com.amap.api.services.route.RailwayStationItem::setWait", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.route.RailwayStationItem __this__ = (com.amap.api.services.route.RailwayStationItem) ((Map<String, Object>) __args__).get("__this__");
@@ -3216,7 +3216,7 @@ public class SubHandler2 {
             put("com.amap.api.services.route.RideStep::setDistance", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.route.RideStep __this__ = (com.amap.api.services.route.RideStep) ((Map<String, Object>) __args__).get("__this__");
@@ -3273,7 +3273,7 @@ public class SubHandler2 {
             put("com.amap.api.services.route.RideStep::setDuration", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.route.RideStep __this__ = (com.amap.api.services.route.RideStep) ((Map<String, Object>) __args__).get("__this__");
@@ -4842,7 +4842,7 @@ public class SubHandler2 {
             put("com.amap.api.services.route.RouteBusLineItem::setDuration", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.route.RouteBusLineItem __this__ = (com.amap.api.services.route.RouteBusLineItem) ((Map<String, Object>) __args__).get("__this__");
@@ -5324,7 +5324,7 @@ public class SubHandler2 {
             put("com.amap.api.services.route.DrivePlanStep::setDistance", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.route.DrivePlanStep __this__ = (com.amap.api.services.route.DrivePlanStep) ((Map<String, Object>) __args__).get("__this__");

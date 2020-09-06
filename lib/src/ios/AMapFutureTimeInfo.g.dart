@@ -22,7 +22,7 @@ class AMapFutureTimeInfo extends AMapSearchObject with NSCoding, NSCopying {
   //region creators
   static Future<AMapFutureTimeInfo> create__() async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createAMapFutureTimeInfo');
-    final object = AMapFutureTimeInfo()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = AMapFutureTimeInfo()..refId = refId;
     return object;
   }
   
@@ -32,7 +32,7 @@ class AMapFutureTimeInfo extends AMapSearchObject with NSCoding, NSCopying {
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchAMapFutureTimeInfo', {'length': length});
   
-    final List<AMapFutureTimeInfo> typedResult = resultBatch.map((result) => AMapFutureTimeInfo()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<AMapFutureTimeInfo> typedResult = resultBatch.map((result) => AMapFutureTimeInfo()..refId = result).toList();
     return typedResult;
   }
   
@@ -46,22 +46,20 @@ class AMapFutureTimeInfo extends AMapSearchObject with NSCoding, NSCopying {
   
   Future<List<AMapFutureTimeInfoElement>> get_elements() async {
     final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapFutureTimeInfo::get_elements", {'__this__': this});
-    return __result__ == null ? null : ((__result__ as List).cast<String>().map((__it__) => AMapFutureTimeInfoElement()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
+    return __result__ == null ? null : ((__result__ as List).cast<String>().map((__it__) => AMapFutureTimeInfoElement()..refId = __it__).toList());
   }
   
   //endregion
 
   //region setters
   Future<void> set_startTime(String startTime) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapFutureTimeInfo::set_startTime', <String, dynamic>{'__this__': this, "startTime": startTime});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapFutureTimeInfo::set_startTime', <String, dynamic>{'__this__': this, "startTime": startTime});
   
   
   }
   
   Future<void> set_elements(List<AMapFutureTimeInfoElement> elements) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapFutureTimeInfo::set_elements', <String, dynamic>{'__this__': this, "elements": elements});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapFutureTimeInfo::set_elements', <String, dynamic>{'__this__': this, "elements": elements});
   
   
   }
@@ -85,7 +83,7 @@ extension AMapFutureTimeInfo_Batch on List<AMapFutureTimeInfo> {
   Future<List<List<AMapFutureTimeInfoElement>>> get_elements_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapFutureTimeInfo::get_elements_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => AMapFutureTimeInfoElement()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => AMapFutureTimeInfoElement()..refId = __it__).toList()).toList();
     return typedResult;
   }
   

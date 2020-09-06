@@ -22,7 +22,7 @@ class AMapPOIIDSearchRequest extends AMapPOISearchBaseRequest with NSCoding, NSC
   //region creators
   static Future<AMapPOIIDSearchRequest> create__() async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createAMapPOIIDSearchRequest');
-    final object = AMapPOIIDSearchRequest()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = AMapPOIIDSearchRequest()..refId = refId;
     return object;
   }
   
@@ -32,7 +32,7 @@ class AMapPOIIDSearchRequest extends AMapPOISearchBaseRequest with NSCoding, NSC
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchAMapPOIIDSearchRequest', {'length': length});
   
-    final List<AMapPOIIDSearchRequest> typedResult = resultBatch.map((result) => AMapPOIIDSearchRequest()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<AMapPOIIDSearchRequest> typedResult = resultBatch.map((result) => AMapPOIIDSearchRequest()..refId = result).toList();
     return typedResult;
   }
   
@@ -48,8 +48,7 @@ class AMapPOIIDSearchRequest extends AMapPOISearchBaseRequest with NSCoding, NSC
 
   //region setters
   Future<void> set_uid(String uid) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapPOIIDSearchRequest::set_uid', <String, dynamic>{'__this__': this, "uid": uid});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapPOIIDSearchRequest::set_uid', <String, dynamic>{'__this__': this, "uid": uid});
   
   
   }

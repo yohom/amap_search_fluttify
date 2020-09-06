@@ -22,7 +22,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
   //region creators
   static Future<com_amap_api_services_weather_LocalDayWeatherForecast> create__() async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createcom_amap_api_services_weather_LocalDayWeatherForecast__');
-    final object = com_amap_api_services_weather_LocalDayWeatherForecast()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = com_amap_api_services_weather_LocalDayWeatherForecast()..refId = refId;
     return object;
   }
   
@@ -32,7 +32,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchcom_amap_api_services_weather_LocalDayWeatherForecast__', {'length': length});
   
-    final List<com_amap_api_services_weather_LocalDayWeatherForecast> typedResult = resultBatch.map((result) => com_amap_api_services_weather_LocalDayWeatherForecast()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<com_amap_api_services_weather_LocalDayWeatherForecast> typedResult = resultBatch.map((result) => com_amap_api_services_weather_LocalDayWeatherForecast()..refId = result).toList();
     return typedResult;
   }
   

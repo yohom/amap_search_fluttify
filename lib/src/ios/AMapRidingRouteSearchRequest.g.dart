@@ -22,7 +22,7 @@ class AMapRidingRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCod
   //region creators
   static Future<AMapRidingRouteSearchRequest> create__() async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createAMapRidingRouteSearchRequest');
-    final object = AMapRidingRouteSearchRequest()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = AMapRidingRouteSearchRequest()..refId = refId;
     return object;
   }
   
@@ -32,7 +32,7 @@ class AMapRidingRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCod
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchAMapRidingRouteSearchRequest', {'length': length});
   
-    final List<AMapRidingRouteSearchRequest> typedResult = resultBatch.map((result) => AMapRidingRouteSearchRequest()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<AMapRidingRouteSearchRequest> typedResult = resultBatch.map((result) => AMapRidingRouteSearchRequest()..refId = result).toList();
     return typedResult;
   }
   
@@ -48,8 +48,7 @@ class AMapRidingRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCod
 
   //region setters
   Future<void> set_type(int type) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapRidingRouteSearchRequest::set_type', <String, dynamic>{'__this__': this, "type": type});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRidingRouteSearchRequest::set_type', <String, dynamic>{'__this__': this, "type": type});
   
   
   }
