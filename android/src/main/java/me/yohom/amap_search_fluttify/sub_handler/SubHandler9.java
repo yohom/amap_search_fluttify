@@ -23,7 +23,7 @@ import io.flutter.plugin.common.StandardMethodCodec;
 import io.flutter.plugin.platform.PlatformViewRegistry;
 
 import me.yohom.amap_search_fluttify.AmapSearchFluttifyPlugin.Handler;
-import me.yohom.foundation_fluttify.FluttifyMessageCodec;
+import me.yohom.foundation_fluttify.core.FluttifyMessageCodec;
 
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getEnableLog;
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getHEAP;
@@ -270,7 +270,7 @@ public class SubHandler9 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setTMCs((ArrayList) var1);
+                        __this__.setTMCs(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -2412,7 +2412,7 @@ public class SubHandler9 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setNearbyInfoList((ArrayList) var1);
+                        __this__.setNearbyInfoList(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -3854,7 +3854,7 @@ public class SubHandler9 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setmCloudImage((ArrayList) var1);
+                        __this__.setmCloudImage(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -4435,7 +4435,7 @@ public class SubHandler9 {
                     // invoke native method
                     com.amap.api.services.cloud.CloudResult __result__ = null;
                     try {
-                        __result__ = com.amap.api.services.cloud.CloudResult.createPagedResult(var0, var1, var2, var3, (ArrayList) var4);
+                        __result__ = com.amap.api.services.cloud.CloudResult.createPagedResult(var0, var1, var2, var3, var4);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -6227,7 +6227,7 @@ public class SubHandler9 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setWeatherForecast((ArrayList) var1);
+                        __this__.setWeatherForecast(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {

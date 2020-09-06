@@ -23,7 +23,7 @@ import io.flutter.plugin.common.StandardMethodCodec;
 import io.flutter.plugin.platform.PlatformViewRegistry;
 
 import me.yohom.amap_search_fluttify.AmapSearchFluttifyPlugin.Handler;
-import me.yohom.foundation_fluttify.FluttifyMessageCodec;
+import me.yohom.foundation_fluttify.core.FluttifyMessageCodec;
 
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getEnableLog;
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getHEAP;
@@ -562,7 +562,7 @@ public class SubHandler5 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setRoads((ArrayList) var1);
+                    __this__.setRoads(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -619,7 +619,7 @@ public class SubHandler5 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setPois((ArrayList) var1);
+                    __this__.setPois(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -676,7 +676,7 @@ public class SubHandler5 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setCrossroads((ArrayList) var1);
+                    __this__.setCrossroads(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -733,7 +733,7 @@ public class SubHandler5 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setBusinessAreas((ArrayList) var1);
+                    __this__.setBusinessAreas(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -790,7 +790,7 @@ public class SubHandler5 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setAois((ArrayList) var1);
+                    __this__.setAois(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1655,16 +1655,6 @@ public class SubHandler5 {
                                 Log.d("java-callback", "fluttify-java-callback: onDistrictSearched(" + var1 + ")");
                             }
             
-                            // convert to jsonable data
-                            // ref arg
-                            final Integer argvar1;
-                            if (var1 != null) {
-                                argvar1 = System.identityHashCode(var1);
-                                getHEAP().put(argvar1, var1);
-                            } else {
-                                argvar1 = null;
-                            }
-            
                             // call dart method
                             handler.post(new Runnable() {
                                 @Override
@@ -1672,7 +1662,7 @@ public class SubHandler5 {
                                     callbackChannel.invokeMethod(
                                         "Callback::com.amap.api.services.district.DistrictSearch.OnDistrictSearchListener::onDistrictSearched",
                                         new HashMap<String, Object>() {{
-                                            put("var1", argvar1);
+                                            put("var1", var1);
                                         }}
                                     );
                                 }
@@ -1739,7 +1729,7 @@ public class SubHandler5 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setDistrict((ArrayList) var1);
+                    __this__.setDistrict(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1939,7 +1929,7 @@ public class SubHandler5 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setDistrictBoundary(var1.toArray(new String[var1.size()]));
+                    __this__.setDistrictBoundary(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2309,7 +2299,7 @@ public class SubHandler5 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setSubDistrict((ArrayList) var1);
+                    __this__.setSubDistrict(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3033,16 +3023,6 @@ public class SubHandler5 {
                                 Log.d("java-callback", "fluttify-java-callback: onGetInputtips(" + var1 + var2 + ")");
                             }
             
-                            // convert to jsonable data
-                            // list arg
-                            List<Integer> argvar1 = new ArrayList<>();
-                            for (com.amap.api.services.help.Tip item : var1) {
-                                getHEAP().put(System.identityHashCode(item), item);
-                                argvar1.add(System.identityHashCode(item));
-                            }
-                            // jsonable arg
-                            int argvar2 = var2;
-            
                             // call dart method
                             handler.post(new Runnable() {
                                 @Override
@@ -3050,8 +3030,8 @@ public class SubHandler5 {
                                     callbackChannel.invokeMethod(
                                         "Callback::com.amap.api.services.help.Inputtips.InputtipsListener::onGetInputtips",
                                         new HashMap<String, Object>() {{
-                                            put("var1", argvar1);
-                                            put("var2", argvar2);
+                                            put("var1", var1);
+                                            put("var2", var2);
                                         }}
                                     );
                                 }
@@ -3334,12 +3314,6 @@ public class SubHandler5 {
                                 Log.d("java-callback", "fluttify-java-callback: onPoiShareUrlSearched(" + var1 + var2 + ")");
                             }
             
-                            // convert to jsonable data
-                            // jsonable arg
-                            String argvar1 = var1;
-                            // jsonable arg
-                            int argvar2 = var2;
-            
                             // call dart method
                             handler.post(new Runnable() {
                                 @Override
@@ -3347,8 +3321,8 @@ public class SubHandler5 {
                                     callbackChannel.invokeMethod(
                                         "Callback::com.amap.api.services.share.ShareSearch.OnShareSearchListener::onPoiShareUrlSearched",
                                         new HashMap<String, Object>() {{
-                                            put("var1", argvar1);
-                                            put("var2", argvar2);
+                                            put("var1", var1);
+                                            put("var2", var2);
                                         }}
                                     );
                                 }
@@ -3365,12 +3339,6 @@ public class SubHandler5 {
                                 Log.d("java-callback", "fluttify-java-callback: onLocationShareUrlSearched(" + var1 + var2 + ")");
                             }
             
-                            // convert to jsonable data
-                            // jsonable arg
-                            String argvar1 = var1;
-                            // jsonable arg
-                            int argvar2 = var2;
-            
                             // call dart method
                             handler.post(new Runnable() {
                                 @Override
@@ -3378,8 +3346,8 @@ public class SubHandler5 {
                                     callbackChannel.invokeMethod(
                                         "Callback::com.amap.api.services.share.ShareSearch.OnShareSearchListener::onLocationShareUrlSearched",
                                         new HashMap<String, Object>() {{
-                                            put("var1", argvar1);
-                                            put("var2", argvar2);
+                                            put("var1", var1);
+                                            put("var2", var2);
                                         }}
                                     );
                                 }
@@ -3396,12 +3364,6 @@ public class SubHandler5 {
                                 Log.d("java-callback", "fluttify-java-callback: onNaviShareUrlSearched(" + var1 + var2 + ")");
                             }
             
-                            // convert to jsonable data
-                            // jsonable arg
-                            String argvar1 = var1;
-                            // jsonable arg
-                            int argvar2 = var2;
-            
                             // call dart method
                             handler.post(new Runnable() {
                                 @Override
@@ -3409,8 +3371,8 @@ public class SubHandler5 {
                                     callbackChannel.invokeMethod(
                                         "Callback::com.amap.api.services.share.ShareSearch.OnShareSearchListener::onNaviShareUrlSearched",
                                         new HashMap<String, Object>() {{
-                                            put("var1", argvar1);
-                                            put("var2", argvar2);
+                                            put("var1", var1);
+                                            put("var2", var2);
                                         }}
                                     );
                                 }
@@ -3427,12 +3389,6 @@ public class SubHandler5 {
                                 Log.d("java-callback", "fluttify-java-callback: onBusRouteShareUrlSearched(" + var1 + var2 + ")");
                             }
             
-                            // convert to jsonable data
-                            // jsonable arg
-                            String argvar1 = var1;
-                            // jsonable arg
-                            int argvar2 = var2;
-            
                             // call dart method
                             handler.post(new Runnable() {
                                 @Override
@@ -3440,8 +3396,8 @@ public class SubHandler5 {
                                     callbackChannel.invokeMethod(
                                         "Callback::com.amap.api.services.share.ShareSearch.OnShareSearchListener::onBusRouteShareUrlSearched",
                                         new HashMap<String, Object>() {{
-                                            put("var1", argvar1);
-                                            put("var2", argvar2);
+                                            put("var1", var1);
+                                            put("var2", var2);
                                         }}
                                     );
                                 }
@@ -3458,12 +3414,6 @@ public class SubHandler5 {
                                 Log.d("java-callback", "fluttify-java-callback: onWalkRouteShareUrlSearched(" + var1 + var2 + ")");
                             }
             
-                            // convert to jsonable data
-                            // jsonable arg
-                            String argvar1 = var1;
-                            // jsonable arg
-                            int argvar2 = var2;
-            
                             // call dart method
                             handler.post(new Runnable() {
                                 @Override
@@ -3471,8 +3421,8 @@ public class SubHandler5 {
                                     callbackChannel.invokeMethod(
                                         "Callback::com.amap.api.services.share.ShareSearch.OnShareSearchListener::onWalkRouteShareUrlSearched",
                                         new HashMap<String, Object>() {{
-                                            put("var1", argvar1);
-                                            put("var2", argvar2);
+                                            put("var1", var1);
+                                            put("var2", var2);
                                         }}
                                     );
                                 }
@@ -3489,12 +3439,6 @@ public class SubHandler5 {
                                 Log.d("java-callback", "fluttify-java-callback: onDrivingRouteShareUrlSearched(" + var1 + var2 + ")");
                             }
             
-                            // convert to jsonable data
-                            // jsonable arg
-                            String argvar1 = var1;
-                            // jsonable arg
-                            int argvar2 = var2;
-            
                             // call dart method
                             handler.post(new Runnable() {
                                 @Override
@@ -3502,8 +3446,8 @@ public class SubHandler5 {
                                     callbackChannel.invokeMethod(
                                         "Callback::com.amap.api.services.share.ShareSearch.OnShareSearchListener::onDrivingRouteShareUrlSearched",
                                         new HashMap<String, Object>() {{
-                                            put("var1", argvar1);
-                                            put("var2", argvar2);
+                                            put("var1", var1);
+                                            put("var2", var2);
                                         }}
                                     );
                                 }
@@ -4581,7 +4525,7 @@ public class SubHandler5 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setCoordinates((ArrayList) var1);
+                        __this__.setCoordinates(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -4770,7 +4714,7 @@ public class SubHandler5 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setRoads((ArrayList) var1);
+                        __this__.setRoads(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5715,7 +5659,7 @@ public class SubHandler5 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setDirectionsCoordinates((ArrayList) var1);
+                        __this__.setDirectionsCoordinates(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5778,7 +5722,7 @@ public class SubHandler5 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setBounds((ArrayList) var1);
+                        __this__.setBounds(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {

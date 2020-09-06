@@ -23,7 +23,7 @@ import io.flutter.plugin.common.StandardMethodCodec;
 import io.flutter.plugin.platform.PlatformViewRegistry;
 
 import me.yohom.amap_search_fluttify.AmapSearchFluttifyPlugin.Handler;
-import me.yohom.foundation_fluttify.FluttifyMessageCodec;
+import me.yohom.foundation_fluttify.core.FluttifyMessageCodec;
 
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getEnableLog;
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getHEAP;
@@ -191,7 +191,7 @@ public class SubHandler12 {
                 String var5 = (String) ((Map<String, Object>) __args__).get("var5");
             
                 // create target object
-                com.amap.api.services.route.RouteSearch.DriveRouteQuery __obj__ = new com.amap.api.services.route.RouteSearch.DriveRouteQuery(var1, var2, (ArrayList) var3, (ArrayList) var4, var5);
+                com.amap.api.services.route.RouteSearch.DriveRouteQuery __obj__ = new com.amap.api.services.route.RouteSearch.DriveRouteQuery(var1, var2, var3, var4, var5);
             
                 // print current HEAP
                 if (getEnableLog()) {
@@ -1115,7 +1115,7 @@ public class SubHandler12 {
                 com.amap.api.services.routepoisearch.RoutePOISearchQuery var2 = (com.amap.api.services.routepoisearch.RoutePOISearchQuery) ((Map<String, Object>) __args__).get("var2");
             
                 // create target object
-                com.amap.api.services.routepoisearch.RoutePOISearchResult __obj__ = new com.amap.api.services.routepoisearch.RoutePOISearchResult((ArrayList) var1, var2);
+                com.amap.api.services.routepoisearch.RoutePOISearchResult __obj__ = new com.amap.api.services.routepoisearch.RoutePOISearchResult(var1, var2);
             
                 // print current HEAP
                 if (getEnableLog()) {
@@ -1167,7 +1167,7 @@ public class SubHandler12 {
                 int var3 = (int) ((Map<String, Object>) __args__).get("var3");
             
                 // create target object
-                com.amap.api.services.routepoisearch.RoutePOISearchQuery __obj__ = new com.amap.api.services.routepoisearch.RoutePOISearchQuery((ArrayList) var1, var2, var3);
+                com.amap.api.services.routepoisearch.RoutePOISearchQuery __obj__ = new com.amap.api.services.routepoisearch.RoutePOISearchQuery(var1, var2, var3);
             
                 // print current HEAP
                 if (getEnableLog()) {
@@ -1301,7 +1301,7 @@ public class SubHandler12 {
                 java.util.List<com.amap.api.services.core.LatLonPoint> var1 = (java.util.List<com.amap.api.services.core.LatLonPoint>) ((Map<String, Object>) __args__).get("var1");
             
                 // create target object
-                com.amap.api.services.cloud.CloudSearch.SearchBound __obj__ = new com.amap.api.services.cloud.CloudSearch.SearchBound((ArrayList) var1);
+                com.amap.api.services.cloud.CloudSearch.SearchBound __obj__ = new com.amap.api.services.cloud.CloudSearch.SearchBound(var1);
             
                 // print current HEAP
                 if (getEnableLog()) {
@@ -1636,7 +1636,7 @@ public class SubHandler12 {
                 java.util.List<com.amap.api.services.geocoder.GeocodeAddress> var2 = (java.util.List<com.amap.api.services.geocoder.GeocodeAddress>) ((Map<String, Object>) __args__).get("var2");
             
                 // create target object
-                com.amap.api.services.geocoder.GeocodeResult __obj__ = new com.amap.api.services.geocoder.GeocodeResult(var1, (ArrayList) var2);
+                com.amap.api.services.geocoder.GeocodeResult __obj__ = new com.amap.api.services.geocoder.GeocodeResult(var1, var2);
             
                 // print current HEAP
                 if (getEnableLog()) {
@@ -1868,7 +1868,7 @@ public class SubHandler12 {
                 java.util.ArrayList<com.amap.api.services.district.DistrictItem> var2 = (java.util.ArrayList<com.amap.api.services.district.DistrictItem>) ((Map<String, Object>) __args__).get("var2");
             
                 // create target object
-                com.amap.api.services.district.DistrictResult __obj__ = new com.amap.api.services.district.DistrictResult(var1, (ArrayList) var2);
+                com.amap.api.services.district.DistrictResult __obj__ = new com.amap.api.services.district.DistrictResult(var1, var2);
             
                 // print current HEAP
                 if (getEnableLog()) {
@@ -3184,7 +3184,7 @@ public class SubHandler12 {
                     }
             
                     // create target object
-                    com.amap.api.services.poisearch.PoiSearch.SearchBound __obj__ = new com.amap.api.services.poisearch.PoiSearch.SearchBound((ArrayList) var1);
+                    com.amap.api.services.poisearch.PoiSearch.SearchBound __obj__ = new com.amap.api.services.poisearch.PoiSearch.SearchBound(var1);
             
                     // print current HEAP
                     if (getEnableLog()) {
@@ -3515,7 +3515,7 @@ public class SubHandler12 {
                     int var4 = (int) ((Map<String, Object>) __args__).get("var4");
             
                     // create target object
-                    com.amap.api.services.route.RouteSearch.TruckRouteQuery __obj__ = new com.amap.api.services.route.RouteSearch.TruckRouteQuery(var1, var2, (ArrayList) var3, var4);
+                    com.amap.api.services.route.RouteSearch.TruckRouteQuery __obj__ = new com.amap.api.services.route.RouteSearch.TruckRouteQuery(var1, var2, var3, var4);
             
                     // print current HEAP
                     if (getEnableLog()) {
@@ -4067,7 +4067,7 @@ public class SubHandler12 {
                     String var5 = (String) ((Map<String, Object>) __args__).get("var5");
             
                     // create target object
-                    com.amap.api.services.route.RouteSearch.DriveRouteQuery __obj__ = new com.amap.api.services.route.RouteSearch.DriveRouteQuery(var1, var2, (ArrayList) var3, (ArrayList) var4, var5);
+                    com.amap.api.services.route.RouteSearch.DriveRouteQuery __obj__ = new com.amap.api.services.route.RouteSearch.DriveRouteQuery(var1, var2, var3, var4, var5);
             
                     // print current HEAP
                     if (getEnableLog()) {
@@ -5888,7 +5888,7 @@ public class SubHandler12 {
                     com.amap.api.services.routepoisearch.RoutePOISearchQuery var2 = (com.amap.api.services.routepoisearch.RoutePOISearchQuery) ((Map<String, Object>) __args__).get("var2");
             
                     // create target object
-                    com.amap.api.services.routepoisearch.RoutePOISearchResult __obj__ = new com.amap.api.services.routepoisearch.RoutePOISearchResult((ArrayList) var1, var2);
+                    com.amap.api.services.routepoisearch.RoutePOISearchResult __obj__ = new com.amap.api.services.routepoisearch.RoutePOISearchResult(var1, var2);
             
                     // print current HEAP
                     if (getEnableLog()) {
@@ -5982,7 +5982,7 @@ public class SubHandler12 {
                     int var3 = (int) ((Map<String, Object>) __args__).get("var3");
             
                     // create target object
-                    com.amap.api.services.routepoisearch.RoutePOISearchQuery __obj__ = new com.amap.api.services.routepoisearch.RoutePOISearchQuery((ArrayList) var1, var2, var3);
+                    com.amap.api.services.routepoisearch.RoutePOISearchQuery __obj__ = new com.amap.api.services.routepoisearch.RoutePOISearchQuery(var1, var2, var3);
             
                     // print current HEAP
                     if (getEnableLog()) {

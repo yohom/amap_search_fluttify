@@ -23,7 +23,7 @@ import io.flutter.plugin.common.StandardMethodCodec;
 import io.flutter.plugin.platform.PlatformViewRegistry;
 
 import me.yohom.amap_search_fluttify.AmapSearchFluttifyPlugin.Handler;
-import me.yohom.foundation_fluttify.FluttifyMessageCodec;
+import me.yohom.foundation_fluttify.core.FluttifyMessageCodec;
 
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getEnableLog;
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getHEAP;
@@ -805,7 +805,7 @@ public class SubHandler7 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setSteps((ArrayList) var1);
+                        __this__.setSteps(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -868,7 +868,7 @@ public class SubHandler7 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setPaths((ArrayList) var1);
+                        __this__.setPaths(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -931,7 +931,7 @@ public class SubHandler7 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setTimeInfos((ArrayList) var1);
+                        __this__.setTimeInfos(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -1717,7 +1717,7 @@ public class SubHandler7 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setPolyline((ArrayList) var1);
+                        __this__.setPolyline(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -2542,7 +2542,7 @@ public class SubHandler7 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setBusLines((ArrayList) var1);
+                        __this__.setBusLines(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -3298,7 +3298,7 @@ public class SubHandler7 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setPaths((ArrayList) var1);
+                        __this__.setPaths(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -3613,7 +3613,7 @@ public class SubHandler7 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setPaths((ArrayList) var1);
+                        __this__.setPaths(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -4833,7 +4833,7 @@ public class SubHandler7 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setViastops((ArrayList) var1);
+                        __this__.setViastops(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -4865,7 +4865,7 @@ public class SubHandler7 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setAlters((ArrayList) var1);
+                        __this__.setAlters(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -4897,7 +4897,7 @@ public class SubHandler7 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setSpaces((ArrayList) var1);
+                        __this__.setSpaces(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5275,7 +5275,7 @@ public class SubHandler7 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setPolyline((ArrayList) var1);
+                        __this__.setPolyline(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5968,7 +5968,7 @@ public class SubHandler7 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setPaths((ArrayList) var1);
+                        __this__.setPaths(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {

@@ -23,7 +23,7 @@ import io.flutter.plugin.common.StandardMethodCodec;
 import io.flutter.plugin.platform.PlatformViewRegistry;
 
 import me.yohom.amap_search_fluttify.AmapSearchFluttifyPlugin.Handler;
-import me.yohom.foundation_fluttify.FluttifyMessageCodec;
+import me.yohom.foundation_fluttify.core.FluttifyMessageCodec;
 
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getEnableLog;
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getHEAP;
@@ -49,7 +49,7 @@ public class SubHandler6 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setBusStations((ArrayList) var1);
+                        __this__.setBusStations(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -89,7 +89,7 @@ public class SubHandler6 {
                     // invoke native method
                     com.amap.api.services.busline.BusStationResult __result__ = null;
                     try {
-                        __result__ = com.amap.api.services.busline.BusStationResult.createPagedResult(var0, var1, (ArrayList) var2, (ArrayList) var3, (ArrayList) var4);
+                        __result__ = com.amap.api.services.busline.BusStationResult.createPagedResult(var0, var1, var2, var3, var4);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -912,7 +912,7 @@ public class SubHandler6 {
                     // invoke native method
                     com.amap.api.services.busline.BusLineResult __result__ = null;
                     try {
-                        __result__ = com.amap.api.services.busline.BusLineResult.createPagedResult(var0, var1, (ArrayList) var2, (ArrayList) var3, (ArrayList) var4);
+                        __result__ = com.amap.api.services.busline.BusLineResult.createPagedResult(var0, var1, var2, var3, var4);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -1445,7 +1445,7 @@ public class SubHandler6 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setBusLineItems((ArrayList) var1);
+                        __this__.setBusLineItems(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -3835,7 +3835,7 @@ public class SubHandler6 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setSubPois((ArrayList) var1);
+                        __this__.setSubPois(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -3992,7 +3992,7 @@ public class SubHandler6 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setPhotos((ArrayList) var1);
+                        __this__.setPhotos(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5354,7 +5354,7 @@ public class SubHandler6 {
                     // invoke native method
                     com.amap.api.services.poisearch.PoiResult __result__ = null;
                     try {
-                        __result__ = com.amap.api.services.poisearch.PoiResult.createPagedResult(var0, var1, (ArrayList) var2, (ArrayList) var3, var4, var5, (ArrayList) var6);
+                        __result__ = com.amap.api.services.poisearch.PoiResult.createPagedResult(var0, var1, var2, var3, var4, var5, var6);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {

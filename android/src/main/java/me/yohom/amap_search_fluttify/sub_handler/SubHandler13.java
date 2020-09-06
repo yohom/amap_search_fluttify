@@ -23,7 +23,7 @@ import io.flutter.plugin.common.StandardMethodCodec;
 import io.flutter.plugin.platform.PlatformViewRegistry;
 
 import me.yohom.amap_search_fluttify.AmapSearchFluttifyPlugin.Handler;
-import me.yohom.foundation_fluttify.FluttifyMessageCodec;
+import me.yohom.foundation_fluttify.core.FluttifyMessageCodec;
 
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getEnableLog;
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getHEAP;
@@ -227,7 +227,7 @@ public class SubHandler13 {
                     }
             
                     // create target object
-                    com.amap.api.services.cloud.CloudSearch.SearchBound __obj__ = new com.amap.api.services.cloud.CloudSearch.SearchBound((ArrayList) var1);
+                    com.amap.api.services.cloud.CloudSearch.SearchBound __obj__ = new com.amap.api.services.cloud.CloudSearch.SearchBound(var1);
             
                     // print current HEAP
                     if (getEnableLog()) {
@@ -870,7 +870,7 @@ public class SubHandler13 {
                     }
             
                     // create target object
-                    com.amap.api.services.geocoder.GeocodeResult __obj__ = new com.amap.api.services.geocoder.GeocodeResult(var1, (ArrayList) var2);
+                    com.amap.api.services.geocoder.GeocodeResult __obj__ = new com.amap.api.services.geocoder.GeocodeResult(var1, var2);
             
                     // print current HEAP
                     if (getEnableLog()) {
@@ -1315,7 +1315,7 @@ public class SubHandler13 {
                     }
             
                     // create target object
-                    com.amap.api.services.district.DistrictResult __obj__ = new com.amap.api.services.district.DistrictResult(var1, (ArrayList) var2);
+                    com.amap.api.services.district.DistrictResult __obj__ = new com.amap.api.services.district.DistrictResult(var1, var2);
             
                     // print current HEAP
                     if (getEnableLog()) {

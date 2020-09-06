@@ -23,7 +23,7 @@ import io.flutter.plugin.common.StandardMethodCodec;
 import io.flutter.plugin.platform.PlatformViewRegistry;
 
 import me.yohom.amap_search_fluttify.AmapSearchFluttifyPlugin.Handler;
-import me.yohom.foundation_fluttify.FluttifyMessageCodec;
+import me.yohom.foundation_fluttify.core.FluttifyMessageCodec;
 
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getEnableLog;
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getHEAP;
@@ -671,7 +671,7 @@ public class SubHandler0 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setCoordinates((ArrayList) var1);
+                    __this__.setCoordinates(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -842,7 +842,7 @@ public class SubHandler0 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setRoads((ArrayList) var1);
+                    __this__.setRoads(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -883,18 +883,6 @@ public class SubHandler0 {
                                 Log.d("java-callback", "fluttify-java-callback: onRoadTrafficSearched(" + var1 + var2 + ")");
                             }
             
-                            // convert to jsonable data
-                            // ref arg
-                            final Integer argvar1;
-                            if (var1 != null) {
-                                argvar1 = System.identityHashCode(var1);
-                                getHEAP().put(argvar1, var1);
-                            } else {
-                                argvar1 = null;
-                            }
-                            // jsonable arg
-                            int argvar2 = var2;
-            
                             // call dart method
                             handler.post(new Runnable() {
                                 @Override
@@ -902,8 +890,8 @@ public class SubHandler0 {
                                     callbackChannel.invokeMethod(
                                         "Callback::com.amap.api.services.traffic.TrafficSearch.OnTrafficSearchListener::onRoadTrafficSearched",
                                         new HashMap<String, Object>() {{
-                                            put("var1", argvar1);
-                                            put("var2", argvar2);
+                                            put("var1", var1);
+                                            put("var2", var2);
                                         }}
                                     );
                                 }
@@ -1768,7 +1756,7 @@ public class SubHandler0 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setDirectionsCoordinates((ArrayList) var1);
+                    __this__.setDirectionsCoordinates(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1825,7 +1813,7 @@ public class SubHandler0 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setBounds((ArrayList) var1);
+                    __this__.setBounds(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2224,7 +2212,7 @@ public class SubHandler0 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setBusStations((ArrayList) var1);
+                    __this__.setBusStations(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2261,7 +2249,7 @@ public class SubHandler0 {
                 // invoke native method
                 com.amap.api.services.busline.BusStationResult __result__ = null;
                 try {
-                    __result__ = com.amap.api.services.busline.BusStationResult.createPagedResult(var0, var1, (ArrayList) var2, (ArrayList) var3, (ArrayList) var4);
+                    __result__ = com.amap.api.services.busline.BusStationResult.createPagedResult(var0, var1, var2, var3, var4);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2470,18 +2458,6 @@ public class SubHandler0 {
                                 Log.d("java-callback", "fluttify-java-callback: onBusStationSearched(" + var1 + var2 + ")");
                             }
             
-                            // convert to jsonable data
-                            // ref arg
-                            final Integer argvar1;
-                            if (var1 != null) {
-                                argvar1 = System.identityHashCode(var1);
-                                getHEAP().put(argvar1, var1);
-                            } else {
-                                argvar1 = null;
-                            }
-                            // jsonable arg
-                            int argvar2 = var2;
-            
                             // call dart method
                             handler.post(new Runnable() {
                                 @Override
@@ -2489,8 +2465,8 @@ public class SubHandler0 {
                                     callbackChannel.invokeMethod(
                                         "Callback::com.amap.api.services.busline.BusStationSearch.OnBusStationSearchListener::onBusStationSearched",
                                         new HashMap<String, Object>() {{
-                                            put("var1", argvar1);
-                                            put("var2", argvar2);
+                                            put("var1", var1);
+                                            put("var2", var2);
                                         }}
                                     );
                                 }
@@ -2654,18 +2630,6 @@ public class SubHandler0 {
                                 Log.d("java-callback", "fluttify-java-callback: onBusLineSearched(" + var1 + var2 + ")");
                             }
             
-                            // convert to jsonable data
-                            // ref arg
-                            final Integer argvar1;
-                            if (var1 != null) {
-                                argvar1 = System.identityHashCode(var1);
-                                getHEAP().put(argvar1, var1);
-                            } else {
-                                argvar1 = null;
-                            }
-                            // jsonable arg
-                            int argvar2 = var2;
-            
                             // call dart method
                             handler.post(new Runnable() {
                                 @Override
@@ -2673,8 +2637,8 @@ public class SubHandler0 {
                                     callbackChannel.invokeMethod(
                                         "Callback::com.amap.api.services.busline.BusLineSearch.OnBusLineSearchListener::onBusLineSearched",
                                         new HashMap<String, Object>() {{
-                                            put("var1", argvar1);
-                                            put("var2", argvar2);
+                                            put("var1", var1);
+                                            put("var2", var2);
                                         }}
                                     );
                                 }
@@ -3148,7 +3112,7 @@ public class SubHandler0 {
                 // invoke native method
                 com.amap.api.services.busline.BusLineResult __result__ = null;
                 try {
-                    __result__ = com.amap.api.services.busline.BusLineResult.createPagedResult(var0, var1, (ArrayList) var2, (ArrayList) var3, (ArrayList) var4);
+                    __result__ = com.amap.api.services.busline.BusLineResult.createPagedResult(var0, var1, var2, var3, var4);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3630,7 +3594,7 @@ public class SubHandler0 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setBusLineItems((ArrayList) var1);
+                    __this__.setBusLineItems(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {

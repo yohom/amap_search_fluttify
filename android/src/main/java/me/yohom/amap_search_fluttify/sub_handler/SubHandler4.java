@@ -23,7 +23,7 @@ import io.flutter.plugin.common.StandardMethodCodec;
 import io.flutter.plugin.platform.PlatformViewRegistry;
 
 import me.yohom.amap_search_fluttify.AmapSearchFluttifyPlugin.Handler;
-import me.yohom.foundation_fluttify.FluttifyMessageCodec;
+import me.yohom.foundation_fluttify.core.FluttifyMessageCodec;
 
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getEnableLog;
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getHEAP;
@@ -501,7 +501,7 @@ public class SubHandler4 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setmCloudImage((ArrayList) var1);
+                    __this__.setmCloudImage(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1028,7 +1028,7 @@ public class SubHandler4 {
                 // invoke native method
                 com.amap.api.services.cloud.CloudResult __result__ = null;
                 try {
-                    __result__ = com.amap.api.services.cloud.CloudResult.createPagedResult(var0, var1, var2, var3, (ArrayList) var4);
+                    __result__ = com.amap.api.services.cloud.CloudResult.createPagedResult(var0, var1, var2, var3, var4);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1209,18 +1209,6 @@ public class SubHandler4 {
                                 Log.d("java-callback", "fluttify-java-callback: onCloudSearched(" + var1 + var2 + ")");
                             }
             
-                            // convert to jsonable data
-                            // ref arg
-                            final Integer argvar1;
-                            if (var1 != null) {
-                                argvar1 = System.identityHashCode(var1);
-                                getHEAP().put(argvar1, var1);
-                            } else {
-                                argvar1 = null;
-                            }
-                            // jsonable arg
-                            int argvar2 = var2;
-            
                             // call dart method
                             handler.post(new Runnable() {
                                 @Override
@@ -1228,8 +1216,8 @@ public class SubHandler4 {
                                     callbackChannel.invokeMethod(
                                         "Callback::com.amap.api.services.cloud.CloudSearch.OnCloudSearchListener::onCloudSearched",
                                         new HashMap<String, Object>() {{
-                                            put("var1", argvar1);
-                                            put("var2", argvar2);
+                                            put("var1", var1);
+                                            put("var2", var2);
                                         }}
                                     );
                                 }
@@ -1246,18 +1234,6 @@ public class SubHandler4 {
                                 Log.d("java-callback", "fluttify-java-callback: onCloudItemDetailSearched(" + var1 + var2 + ")");
                             }
             
-                            // convert to jsonable data
-                            // ref arg
-                            final Integer argvar1;
-                            if (var1 != null) {
-                                argvar1 = System.identityHashCode(var1);
-                                getHEAP().put(argvar1, var1);
-                            } else {
-                                argvar1 = null;
-                            }
-                            // jsonable arg
-                            int argvar2 = var2;
-            
                             // call dart method
                             handler.post(new Runnable() {
                                 @Override
@@ -1265,8 +1241,8 @@ public class SubHandler4 {
                                     callbackChannel.invokeMethod(
                                         "Callback::com.amap.api.services.cloud.CloudSearch.OnCloudSearchListener::onCloudItemDetailSearched",
                                         new HashMap<String, Object>() {{
-                                            put("var1", argvar1);
-                                            put("var2", argvar2);
+                                            put("var1", var1);
+                                            put("var2", var2);
                                         }}
                                     );
                                 }
@@ -2757,7 +2733,7 @@ public class SubHandler4 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setWeatherForecast((ArrayList) var1);
+                    __this__.setWeatherForecast(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2883,18 +2859,6 @@ public class SubHandler4 {
                                 Log.d("java-callback", "fluttify-java-callback: onWeatherLiveSearched(" + var1 + var2 + ")");
                             }
             
-                            // convert to jsonable data
-                            // ref arg
-                            final Integer argvar1;
-                            if (var1 != null) {
-                                argvar1 = System.identityHashCode(var1);
-                                getHEAP().put(argvar1, var1);
-                            } else {
-                                argvar1 = null;
-                            }
-                            // jsonable arg
-                            int argvar2 = var2;
-            
                             // call dart method
                             handler.post(new Runnable() {
                                 @Override
@@ -2902,8 +2866,8 @@ public class SubHandler4 {
                                     callbackChannel.invokeMethod(
                                         "Callback::com.amap.api.services.weather.WeatherSearch.OnWeatherSearchListener::onWeatherLiveSearched",
                                         new HashMap<String, Object>() {{
-                                            put("var1", argvar1);
-                                            put("var2", argvar2);
+                                            put("var1", var1);
+                                            put("var2", var2);
                                         }}
                                     );
                                 }
@@ -2920,18 +2884,6 @@ public class SubHandler4 {
                                 Log.d("java-callback", "fluttify-java-callback: onWeatherForecastSearched(" + var1 + var2 + ")");
                             }
             
-                            // convert to jsonable data
-                            // ref arg
-                            final Integer argvar1;
-                            if (var1 != null) {
-                                argvar1 = System.identityHashCode(var1);
-                                getHEAP().put(argvar1, var1);
-                            } else {
-                                argvar1 = null;
-                            }
-                            // jsonable arg
-                            int argvar2 = var2;
-            
                             // call dart method
                             handler.post(new Runnable() {
                                 @Override
@@ -2939,8 +2891,8 @@ public class SubHandler4 {
                                     callbackChannel.invokeMethod(
                                         "Callback::com.amap.api.services.weather.WeatherSearch.OnWeatherSearchListener::onWeatherForecastSearched",
                                         new HashMap<String, Object>() {{
-                                            put("var1", argvar1);
-                                            put("var2", argvar2);
+                                            put("var1", var1);
+                                            put("var2", var2);
                                         }}
                                     );
                                 }
@@ -3877,18 +3829,6 @@ public class SubHandler4 {
                                 Log.d("java-callback", "fluttify-java-callback: onRegeocodeSearched(" + var1 + var2 + ")");
                             }
             
-                            // convert to jsonable data
-                            // ref arg
-                            final Integer argvar1;
-                            if (var1 != null) {
-                                argvar1 = System.identityHashCode(var1);
-                                getHEAP().put(argvar1, var1);
-                            } else {
-                                argvar1 = null;
-                            }
-                            // jsonable arg
-                            int argvar2 = var2;
-            
                             // call dart method
                             handler.post(new Runnable() {
                                 @Override
@@ -3896,8 +3836,8 @@ public class SubHandler4 {
                                     callbackChannel.invokeMethod(
                                         "Callback::com.amap.api.services.geocoder.GeocodeSearch.OnGeocodeSearchListener::onRegeocodeSearched",
                                         new HashMap<String, Object>() {{
-                                            put("var1", argvar1);
-                                            put("var2", argvar2);
+                                            put("var1", var1);
+                                            put("var2", var2);
                                         }}
                                     );
                                 }
@@ -3914,18 +3854,6 @@ public class SubHandler4 {
                                 Log.d("java-callback", "fluttify-java-callback: onGeocodeSearched(" + var1 + var2 + ")");
                             }
             
-                            // convert to jsonable data
-                            // ref arg
-                            final Integer argvar1;
-                            if (var1 != null) {
-                                argvar1 = System.identityHashCode(var1);
-                                getHEAP().put(argvar1, var1);
-                            } else {
-                                argvar1 = null;
-                            }
-                            // jsonable arg
-                            int argvar2 = var2;
-            
                             // call dart method
                             handler.post(new Runnable() {
                                 @Override
@@ -3933,8 +3861,8 @@ public class SubHandler4 {
                                     callbackChannel.invokeMethod(
                                         "Callback::com.amap.api.services.geocoder.GeocodeSearch.OnGeocodeSearchListener::onGeocodeSearched",
                                         new HashMap<String, Object>() {{
-                                            put("var1", argvar1);
-                                            put("var2", argvar2);
+                                            put("var1", var1);
+                                            put("var2", var2);
                                         }}
                                     );
                                 }
@@ -4230,7 +4158,7 @@ public class SubHandler4 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setGeocodeAddressList((ArrayList) var1);
+                    __this__.setGeocodeAddressList(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
