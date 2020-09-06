@@ -515,367 +515,367 @@ extension TypeOpAmapSearchFluttifyIOS on Object {
     }
     // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
     else if (T == AMapPOISearchBaseRequest) {
-      return (AMapPOISearchBaseRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapPOISearchBaseRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapPOIIDSearchRequest) {
-      return (AMapPOIIDSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapPOIIDSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapPOIKeywordsSearchRequest) {
-      return (AMapPOIKeywordsSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapPOIKeywordsSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapPOIAroundSearchRequest) {
-      return (AMapPOIAroundSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapPOIAroundSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapPOIPolygonSearchRequest) {
-      return (AMapPOIPolygonSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapPOIPolygonSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapPOISearchResponse) {
-      return (AMapPOISearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapPOISearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapRoutePOISearchRequest) {
-      return (AMapRoutePOISearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapRoutePOISearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapRoutePOISearchResponse) {
-      return (AMapRoutePOISearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapRoutePOISearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapInputTipsSearchRequest) {
-      return (AMapInputTipsSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapInputTipsSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapInputTipsSearchResponse) {
-      return (AMapInputTipsSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapInputTipsSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapGeocodeSearchRequest) {
-      return (AMapGeocodeSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapGeocodeSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapGeocodeSearchResponse) {
-      return (AMapGeocodeSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapGeocodeSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapReGeocodeSearchRequest) {
-      return (AMapReGeocodeSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapReGeocodeSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapReGeocodeSearchResponse) {
-      return (AMapReGeocodeSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapReGeocodeSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapBusStopSearchRequest) {
-      return (AMapBusStopSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapBusStopSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapBusStopSearchResponse) {
-      return (AMapBusStopSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapBusStopSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapBusLineBaseSearchRequest) {
-      return (AMapBusLineBaseSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapBusLineBaseSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapBusLineNameSearchRequest) {
-      return (AMapBusLineNameSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapBusLineNameSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapBusLineIDSearchRequest) {
-      return (AMapBusLineIDSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapBusLineIDSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapBusLineSearchResponse) {
-      return (AMapBusLineSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapBusLineSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapDistrictSearchRequest) {
-      return (AMapDistrictSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapDistrictSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapDistrictSearchResponse) {
-      return (AMapDistrictSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapDistrictSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapRouteSearchBaseRequest) {
-      return (AMapRouteSearchBaseRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapRouteSearchBaseRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapDrivingRouteSearchRequest) {
-      return (AMapDrivingRouteSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapDrivingRouteSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapWalkingRouteSearchRequest) {
-      return (AMapWalkingRouteSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapWalkingRouteSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapTransitRouteSearchRequest) {
-      return (AMapTransitRouteSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapTransitRouteSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapRidingRouteSearchRequest) {
-      return (AMapRidingRouteSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapRidingRouteSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapRouteSearchResponse) {
-      return (AMapRouteSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapRouteSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapRidingRouteSearchResponse) {
-      return (AMapRidingRouteSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapRidingRouteSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapTruckRouteSearchRequest) {
-      return (AMapTruckRouteSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapTruckRouteSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapDistanceSearchRequest) {
-      return (AMapDistanceSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapDistanceSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapDistanceSearchResponse) {
-      return (AMapDistanceSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapDistanceSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapWeatherSearchRequest) {
-      return (AMapWeatherSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapWeatherSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapWeatherSearchResponse) {
-      return (AMapWeatherSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapWeatherSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapRoadTrafficSearchBaseRequest) {
-      return (AMapRoadTrafficSearchBaseRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapRoadTrafficSearchBaseRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapRoadTrafficSearchRequest) {
-      return (AMapRoadTrafficSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapRoadTrafficSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapRoadTrafficCircleSearchRequest) {
-      return (AMapRoadTrafficCircleSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapRoadTrafficCircleSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapRoadTrafficSearchResponse) {
-      return (AMapRoadTrafficSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapRoadTrafficSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapNearbySearchRequest) {
-      return (AMapNearbySearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapNearbySearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapNearbySearchResponse) {
-      return (AMapNearbySearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapNearbySearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapCloudSearchBaseRequest) {
-      return (AMapCloudSearchBaseRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapCloudSearchBaseRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapCloudPOIAroundSearchRequest) {
-      return (AMapCloudPOIAroundSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapCloudPOIAroundSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapCloudPOIPolygonSearchRequest) {
-      return (AMapCloudPOIPolygonSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapCloudPOIPolygonSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapCloudPOIIDSearchRequest) {
-      return (AMapCloudPOIIDSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapCloudPOIIDSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapCloudPOILocalSearchRequest) {
-      return (AMapCloudPOILocalSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapCloudPOILocalSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapCloudPOISearchResponse) {
-      return (AMapCloudPOISearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapCloudPOISearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapShareSearchBaseRequest) {
-      return (AMapShareSearchBaseRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapShareSearchBaseRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapLocationShareSearchRequest) {
-      return (AMapLocationShareSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapLocationShareSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapPOIShareSearchRequest) {
-      return (AMapPOIShareSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapPOIShareSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapRouteShareSearchRequest) {
-      return (AMapRouteShareSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapRouteShareSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapNavigationShareSearchRequest) {
-      return (AMapNavigationShareSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapNavigationShareSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapShareSearchResponse) {
-      return (AMapShareSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapShareSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapFutureRouteSearchRequest) {
-      return (AMapFutureRouteSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapFutureRouteSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapFutureRouteSearchResponse) {
-      return (AMapFutureRouteSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapFutureRouteSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapSearchObject) {
-      return (AMapSearchObject()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapSearchObject()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapGeoPoint) {
-      return (AMapGeoPoint()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapGeoPoint()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapGeoPolygon) {
-      return (AMapGeoPolygon()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapGeoPolygon()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapCity) {
-      return (AMapCity()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapCity()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapSuggestion) {
-      return (AMapSuggestion()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapSuggestion()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapTip) {
-      return (AMapTip()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapTip()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapImage) {
-      return (AMapImage()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapImage()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapPOIExtension) {
-      return (AMapPOIExtension()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapPOIExtension()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapIndoorData) {
-      return (AMapIndoorData()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapIndoorData()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapSubPOI) {
-      return (AMapSubPOI()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapSubPOI()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapRoutePOI) {
-      return (AMapRoutePOI()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapRoutePOI()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapPOI) {
-      return (AMapPOI()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapPOI()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapAOI) {
-      return (AMapAOI()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapAOI()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapRoad) {
-      return (AMapRoad()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapRoad()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapRoadInter) {
-      return (AMapRoadInter()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapRoadInter()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapStreetNumber) {
-      return (AMapStreetNumber()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapStreetNumber()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapBusinessArea) {
-      return (AMapBusinessArea()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapBusinessArea()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapAddressComponent) {
-      return (AMapAddressComponent()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapAddressComponent()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapReGeocode) {
-      return (AMapReGeocode()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapReGeocode()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapGeocode) {
-      return (AMapGeocode()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapGeocode()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapBusStop) {
-      return (AMapBusStop()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapBusStop()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapBusLine) {
-      return (AMapBusLine()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapBusLine()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapDistrict) {
-      return (AMapDistrict()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapDistrict()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapTMC) {
-      return (AMapTMC()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapTMC()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapStep) {
-      return (AMapStep()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapStep()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapPath) {
-      return (AMapPath()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapPath()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapFutureTimeInfoElement) {
-      return (AMapFutureTimeInfoElement()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapFutureTimeInfoElement()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapFutureTimeInfo) {
-      return (AMapFutureTimeInfo()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapFutureTimeInfo()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapWalking) {
-      return (AMapWalking()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapWalking()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapTaxi) {
-      return (AMapTaxi()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapTaxi()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapRailwayStation) {
-      return (AMapRailwayStation()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapRailwayStation()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapRailwaySpace) {
-      return (AMapRailwaySpace()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapRailwaySpace()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapRailway) {
-      return (AMapRailway()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapRailway()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapSegment) {
-      return (AMapSegment()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapSegment()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapTransit) {
-      return (AMapTransit()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapTransit()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapRoute) {
-      return (AMapRoute()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapRoute()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapDistanceResult) {
-      return (AMapDistanceResult()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapDistanceResult()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapLocalWeatherLive) {
-      return (AMapLocalWeatherLive()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapLocalWeatherLive()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapLocalDayWeatherForecast) {
-      return (AMapLocalDayWeatherForecast()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapLocalDayWeatherForecast()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapLocalWeatherForecast) {
-      return (AMapLocalWeatherForecast()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapLocalWeatherForecast()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapNearbyUserInfo) {
-      return (AMapNearbyUserInfo()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapNearbyUserInfo()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapTrafficEvaluation) {
-      return (AMapTrafficEvaluation()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapTrafficEvaluation()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapTrafficRoad) {
-      return (AMapTrafficRoad()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapTrafficRoad()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapTrafficInfo) {
-      return (AMapTrafficInfo()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapTrafficInfo()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapCloudImage) {
-      return (AMapCloudImage()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapCloudImage()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapCloudPOI) {
-      return (AMapCloudPOI()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapCloudPOI()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapNearbyUploadInfo) {
-      return (AMapNearbyUploadInfo()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapNearbyUploadInfo()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapNearbySearchManager) {
-      return (AMapNearbySearchManager()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapNearbySearchManager()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == AMapSearchAPI) {
-      return (AMapSearchAPI()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (AMapSearchAPI()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == CLLocation) {
-      return (CLLocation()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (CLLocation()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == CLHeading) {
-      return (CLHeading()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (CLHeading()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == CGRect) {
-      return (CGRect()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (CGRect()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == CGPoint) {
-      return (CGPoint()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (CGPoint()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == CGSize) {
-      return (CGSize()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (CGSize()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == UIEdgeInsets) {
-      return (UIEdgeInsets()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (UIEdgeInsets()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == CLLocationCoordinate2D) {
-      return (CLLocationCoordinate2D()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (CLLocationCoordinate2D()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == CLLocationManager) {
-      return (CLLocationManager()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (CLLocationManager()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == NSError) {
-      return (NSError()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (NSError()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == NSCoding) {
-      return (NSCoding.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (NSCoding.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == NSCopying) {
-      return (NSCopying.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (NSCopying.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == UIView) {
-      return (UIView()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (UIView()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == UIViewController) {
-      return (UIViewController()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (UIViewController()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == UIControl) {
-      return (UIControl()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (UIControl()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == UIImage) {
-      return (UIImage()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (UIImage()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == UIColor) {
-      return (UIColor()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (UIColor()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == NSData) {
-      return (NSData()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (NSData()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
     else if (T == NSOperation) {
-      return (NSOperation()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
+      return (NSOperation()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
     }
   }
 }
