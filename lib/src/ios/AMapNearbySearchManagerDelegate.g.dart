@@ -24,25 +24,13 @@ mixin AMapNearbySearchManagerDelegate on NSObject {
   
 
   @mustCallSuper
-  Future<AMapNearbyUploadInfo> nearbyInfoForUploading(AMapNearbySearchManager manager) {
-    if (fluttifyLogEnabled) {
-      debugPrint('nearbyInfoForUploading::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<AMapNearbyUploadInfo> nearbyInfoForUploading(AMapNearbySearchManager manager) {}
   
   @mustCallSuper
-  Future<void> onNearbyInfoUploadedWithError(NSError error) {
-    if (fluttifyLogEnabled) {
-      debugPrint('onNearbyInfoUploadedWithError::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> onNearbyInfoUploadedWithError(NSError error) {}
   
   @mustCallSuper
-  Future<void> onUserInfoClearedWithError(NSError error) {
-    if (fluttifyLogEnabled) {
-      debugPrint('onUserInfoClearedWithError::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> onUserInfoClearedWithError(NSError error) {}
   
 }
 

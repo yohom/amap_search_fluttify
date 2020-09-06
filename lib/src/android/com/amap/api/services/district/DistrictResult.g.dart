@@ -22,13 +22,13 @@ class com_amap_api_services_district_DistrictResult extends java_lang_Object wit
   //region creators
   static Future<com_amap_api_services_district_DistrictResult> create__com_amap_api_services_district_DistrictSearchQuery__List_java_util_ArrayList_com_amap_api_services_district_DistrictItem__(com_amap_api_services_district_DistrictSearchQuery var1, List<com_amap_api_services_district_DistrictItem> var2) async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createcom_amap_api_services_district_DistrictResult__com_amap_api_services_district_DistrictSearchQuery__java_util_ArrayList_com_amap_api_services_district_DistrictItem_', {"var1": var1, "var2": var2});
-    final object = com_amap_api_services_district_DistrictResult()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = com_amap_api_services_district_DistrictResult()..refId = refId;
     return object;
   }
   
   static Future<com_amap_api_services_district_DistrictResult> create__() async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createcom_amap_api_services_district_DistrictResult__');
-    final object = com_amap_api_services_district_DistrictResult()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = com_amap_api_services_district_DistrictResult()..refId = refId;
     return object;
   }
   
@@ -38,7 +38,7 @@ class com_amap_api_services_district_DistrictResult extends java_lang_Object wit
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchcom_amap_api_services_district_DistrictResult__com_amap_api_services_district_DistrictSearchQuery__java_util_ArrayList_com_amap_api_services_district_DistrictItem_', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]);
   
-    final List<com_amap_api_services_district_DistrictResult> typedResult = resultBatch.map((result) => com_amap_api_services_district_DistrictResult()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<com_amap_api_services_district_DistrictResult> typedResult = resultBatch.map((result) => com_amap_api_services_district_DistrictResult()..refId = result).toList();
     return typedResult;
   }
   
@@ -48,7 +48,7 @@ class com_amap_api_services_district_DistrictResult extends java_lang_Object wit
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchcom_amap_api_services_district_DistrictResult__', {'length': length});
   
-    final List<com_amap_api_services_district_DistrictResult> typedResult = resultBatch.map((result) => com_amap_api_services_district_DistrictResult()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<com_amap_api_services_district_DistrictResult> typedResult = resultBatch.map((result) => com_amap_api_services_district_DistrictResult()..refId = result).toList();
     return typedResult;
   }
   
@@ -81,7 +81,7 @@ class com_amap_api_services_district_DistrictResult extends java_lang_Object wit
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = (__result__ as List).cast<String>().map((__it__) => com_amap_api_services_district_DistrictItem()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      final __return__ = (__result__ as List).cast<String>().map((__it__) => com_amap_api_services_district_DistrictItem()..refId = __it__).toList();
       return __return__;
     }
   }
@@ -127,7 +127,7 @@ class com_amap_api_services_district_DistrictResult extends java_lang_Object wit
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_services_district_DistrictSearchQuery()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_district_DistrictSearchQuery()..refId = __result__;
       return __return__;
     }
   }
@@ -219,7 +219,7 @@ class com_amap_api_services_district_DistrictResult extends java_lang_Object wit
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_services_core_AMapException()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_core_AMapException()..refId = __result__;
       return __return__;
     }
   }
@@ -274,7 +274,7 @@ extension com_amap_api_services_district_DistrictResult_Batch on List<com_amap_a
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => com_amap_api_services_district_DistrictItem()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => com_amap_api_services_district_DistrictItem()..refId = __it__).toList()).toList();
       return typedResult;
     }
   }
@@ -312,7 +312,7 @@ extension com_amap_api_services_district_DistrictResult_Batch on List<com_amap_a
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_district_DistrictSearchQuery()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_district_DistrictSearchQuery()..refId = __result__).toList();
       return typedResult;
     }
   }
@@ -388,7 +388,7 @@ extension com_amap_api_services_district_DistrictResult_Batch on List<com_amap_a
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_core_AMapException()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_core_AMapException()..refId = __result__).toList();
       return typedResult;
     }
   }

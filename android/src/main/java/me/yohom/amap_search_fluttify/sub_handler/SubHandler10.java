@@ -23,7 +23,7 @@ import io.flutter.plugin.common.StandardMethodCodec;
 import io.flutter.plugin.platform.PlatformViewRegistry;
 
 import me.yohom.amap_search_fluttify.AmapSearchFluttifyPlugin.Handler;
-import me.yohom.foundation_fluttify.FluttifyMessageCodec;
+import me.yohom.foundation_fluttify.core.FluttifyMessageCodec;
 
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getEnableLog;
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getHEAP;
@@ -1312,7 +1312,7 @@ public class SubHandler10 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setGeocodeAddressList((ArrayList) var1);
+                        __this__.setGeocodeAddressList(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -1619,7 +1619,7 @@ public class SubHandler10 {
             
                     // args
                     // ref arg
-                    Float var1 = (Float) ((Map<String, Object>) __args__).get("var1");
+                    Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.geocoder.AoiItem __this__ = (com.amap.api.services.geocoder.AoiItem) ((Map<String, Object>) __args__).get("__this__");
@@ -1808,7 +1808,7 @@ public class SubHandler10 {
             
                     // args
                     // ref arg
-                    float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                    Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.geocoder.RegeocodeRoad __this__ = (com.amap.api.services.geocoder.RegeocodeRoad) ((Map<String, Object>) __args__).get("__this__");
@@ -2690,7 +2690,7 @@ public class SubHandler10 {
             
                     // args
                     // ref arg
-                    float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                    Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.geocoder.RegeocodeQuery __this__ = (com.amap.api.services.geocoder.RegeocodeQuery) ((Map<String, Object>) __args__).get("__this__");
@@ -3131,7 +3131,7 @@ public class SubHandler10 {
             
                     // args
                     // ref arg
-                    float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                    Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.geocoder.StreetNumber __this__ = (com.amap.api.services.geocoder.StreetNumber) ((Map<String, Object>) __args__).get("__this__");
@@ -3832,7 +3832,7 @@ public class SubHandler10 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setRoads((ArrayList) var1);
+                        __this__.setRoads(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -3895,7 +3895,7 @@ public class SubHandler10 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setPois((ArrayList) var1);
+                        __this__.setPois(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -3958,7 +3958,7 @@ public class SubHandler10 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setCrossroads((ArrayList) var1);
+                        __this__.setCrossroads(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -4021,7 +4021,7 @@ public class SubHandler10 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setBusinessAreas((ArrayList) var1);
+                        __this__.setBusinessAreas(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -4084,7 +4084,7 @@ public class SubHandler10 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setAois((ArrayList) var1);
+                        __this__.setAois(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5058,7 +5058,7 @@ public class SubHandler10 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setDistrict((ArrayList) var1);
+                        __this__.setDistrict(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5279,7 +5279,7 @@ public class SubHandler10 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setDistrictBoundary(var1.toArray(new String[var1.size()]));
+                        __this__.setDistrictBoundary(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -5688,7 +5688,7 @@ public class SubHandler10 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setSubDistrict((ArrayList) var1);
+                        __this__.setSubDistrict(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {

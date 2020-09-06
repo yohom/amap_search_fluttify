@@ -22,7 +22,7 @@ class AMapInputTipsSearchRequest extends AMapSearchObject with NSCoding, NSCopyi
   //region creators
   static Future<AMapInputTipsSearchRequest> create__() async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createAMapInputTipsSearchRequest');
-    final object = AMapInputTipsSearchRequest()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = AMapInputTipsSearchRequest()..refId = refId;
     return object;
   }
   
@@ -32,7 +32,7 @@ class AMapInputTipsSearchRequest extends AMapSearchObject with NSCoding, NSCopyi
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchAMapInputTipsSearchRequest', {'length': length});
   
-    final List<AMapInputTipsSearchRequest> typedResult = resultBatch.map((result) => AMapInputTipsSearchRequest()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<AMapInputTipsSearchRequest> typedResult = resultBatch.map((result) => AMapInputTipsSearchRequest()..refId = result).toList();
     return typedResult;
   }
   
@@ -68,36 +68,31 @@ class AMapInputTipsSearchRequest extends AMapSearchObject with NSCoding, NSCopyi
 
   //region setters
   Future<void> set_keywords(String keywords) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapInputTipsSearchRequest::set_keywords', <String, dynamic>{'__this__': this, "keywords": keywords});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapInputTipsSearchRequest::set_keywords', <String, dynamic>{'__this__': this, "keywords": keywords});
   
   
   }
   
   Future<void> set_city(String city) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapInputTipsSearchRequest::set_city', <String, dynamic>{'__this__': this, "city": city});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapInputTipsSearchRequest::set_city', <String, dynamic>{'__this__': this, "city": city});
   
   
   }
   
   Future<void> set_types(String types) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapInputTipsSearchRequest::set_types', <String, dynamic>{'__this__': this, "types": types});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapInputTipsSearchRequest::set_types', <String, dynamic>{'__this__': this, "types": types});
   
   
   }
   
   Future<void> set_cityLimit(bool cityLimit) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapInputTipsSearchRequest::set_cityLimit', <String, dynamic>{'__this__': this, "cityLimit": cityLimit});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapInputTipsSearchRequest::set_cityLimit', <String, dynamic>{'__this__': this, "cityLimit": cityLimit});
   
   
   }
   
   Future<void> set_location(String location) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapInputTipsSearchRequest::set_location', <String, dynamic>{'__this__': this, "location": location});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapInputTipsSearchRequest::set_location', <String, dynamic>{'__this__': this, "location": location});
   
   
   }

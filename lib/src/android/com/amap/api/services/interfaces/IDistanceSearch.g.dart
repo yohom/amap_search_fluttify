@@ -24,25 +24,13 @@ mixin com_amap_api_services_interfaces_IDistanceSearch on java_lang_Object {
   
 
   @mustCallSuper
-  Future<com_amap_api_services_route_DistanceResult> calculateRouteDistance(com_amap_api_services_route_DistanceSearch_DistanceQuery var1) {
-    if (fluttifyLogEnabled) {
-      debugPrint('calculateRouteDistance::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<com_amap_api_services_route_DistanceResult> calculateRouteDistance(com_amap_api_services_route_DistanceSearch_DistanceQuery var1) {}
   
   @mustCallSuper
-  Future<void> calculateRouteDistanceAsyn(com_amap_api_services_route_DistanceSearch_DistanceQuery var1) {
-    if (fluttifyLogEnabled) {
-      debugPrint('calculateRouteDistanceAsyn::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> calculateRouteDistanceAsyn(com_amap_api_services_route_DistanceSearch_DistanceQuery var1) {}
   
   @mustCallSuper
-  Future<void> setDistanceSearchListener(com_amap_api_services_route_DistanceSearch_OnDistanceSearchListener var1) {
-    if (fluttifyLogEnabled) {
-      debugPrint('setDistanceSearchListener::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> setDistanceSearchListener(com_amap_api_services_route_DistanceSearch_OnDistanceSearchListener var1) {}
   
 }
 

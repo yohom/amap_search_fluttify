@@ -83,8 +83,7 @@ class AddressDecodeScreen extends StatefulWidget {
   _AddressDecodeScreenState createState() => _AddressDecodeScreenState();
 }
 
-class _AddressDecodeScreenState extends State<AddressDecodeScreen>
-    with AmapSearchDisposeMixin {
+class _AddressDecodeScreenState extends State<AddressDecodeScreen> {
   final _latController = TextEditingController(text: '39.9824');
   final _lngController = TextEditingController(text: '116.3053');
   final _radiusController = TextEditingController(text: '200.0');

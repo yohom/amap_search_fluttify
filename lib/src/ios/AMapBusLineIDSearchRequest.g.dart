@@ -22,7 +22,7 @@ class AMapBusLineIDSearchRequest extends AMapBusLineBaseSearchRequest with NSCod
   //region creators
   static Future<AMapBusLineIDSearchRequest> create__() async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createAMapBusLineIDSearchRequest');
-    final object = AMapBusLineIDSearchRequest()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = AMapBusLineIDSearchRequest()..refId = refId;
     return object;
   }
   
@@ -32,7 +32,7 @@ class AMapBusLineIDSearchRequest extends AMapBusLineBaseSearchRequest with NSCod
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchAMapBusLineIDSearchRequest', {'length': length});
   
-    final List<AMapBusLineIDSearchRequest> typedResult = resultBatch.map((result) => AMapBusLineIDSearchRequest()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<AMapBusLineIDSearchRequest> typedResult = resultBatch.map((result) => AMapBusLineIDSearchRequest()..refId = result).toList();
     return typedResult;
   }
   
@@ -48,8 +48,7 @@ class AMapBusLineIDSearchRequest extends AMapBusLineBaseSearchRequest with NSCod
 
   //region setters
   Future<void> set_uid(String uid) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapBusLineIDSearchRequest::set_uid', <String, dynamic>{'__this__': this, "uid": uid});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapBusLineIDSearchRequest::set_uid', <String, dynamic>{'__this__': this, "uid": uid});
   
   
   }

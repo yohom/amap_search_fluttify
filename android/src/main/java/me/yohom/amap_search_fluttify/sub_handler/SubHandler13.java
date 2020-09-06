@@ -23,7 +23,7 @@ import io.flutter.plugin.common.StandardMethodCodec;
 import io.flutter.plugin.platform.PlatformViewRegistry;
 
 import me.yohom.amap_search_fluttify.AmapSearchFluttifyPlugin.Handler;
-import me.yohom.foundation_fluttify.FluttifyMessageCodec;
+import me.yohom.foundation_fluttify.core.FluttifyMessageCodec;
 
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getEnableLog;
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getHEAP;
@@ -55,9 +55,9 @@ public class SubHandler13 {
                     }
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                    // jsonable arg
+                    // ref arg
                     String var2 = (String) ((Map<String, Object>) __args__).get("var2");
                     // ref arg
                     com.amap.api.services.cloud.CloudSearch.SearchBound var3 = (com.amap.api.services.cloud.CloudSearch.SearchBound) ((Map<String, Object>) __args__).get("var3");
@@ -139,7 +139,7 @@ public class SubHandler13 {
                     // args
                     // ref arg
                     com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) ((Map<String, Object>) __args__).get("var1");
-                    // jsonable arg
+                    // ref arg
                     int var2 = (int) ((Map<String, Object>) __args__).get("var2");
             
                     // create target object
@@ -219,15 +219,11 @@ public class SubHandler13 {
                     }
             
                     // args
-                    // list arg
-                    List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) __args__).get("var1");
-                    java.util.List<com.amap.api.services.core.LatLonPoint> var1 = new ArrayList<>();
-                    for (int refId : var1RefIdList) {
-                        ((ArrayList<com.amap.api.services.core.LatLonPoint>) var1).add((com.amap.api.services.core.LatLonPoint) getHEAP().get(refId));
-                    }
+                    // ref arg
+                    java.util.List<com.amap.api.services.core.LatLonPoint> var1 = (java.util.List<com.amap.api.services.core.LatLonPoint>) ((Map<String, Object>) __args__).get("var1");
             
                     // create target object
-                    com.amap.api.services.cloud.CloudSearch.SearchBound __obj__ = new com.amap.api.services.cloud.CloudSearch.SearchBound((ArrayList) var1);
+                    com.amap.api.services.cloud.CloudSearch.SearchBound __obj__ = new com.amap.api.services.cloud.CloudSearch.SearchBound(var1);
             
                     // print current HEAP
                     if (getEnableLog()) {
@@ -262,7 +258,7 @@ public class SubHandler13 {
                     }
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                     // create target object
@@ -301,11 +297,11 @@ public class SubHandler13 {
                     }
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                    // jsonable arg
+                    // ref arg
                     String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-                    // jsonable arg
+                    // ref arg
                     String var3 = (String) ((Map<String, Object>) __args__).get("var3");
             
                     // create target object
@@ -344,9 +340,9 @@ public class SubHandler13 {
                     }
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                    // jsonable arg
+                    // ref arg
                     boolean var2 = (boolean) ((Map<String, Object>) __args__).get("var2");
             
                     // create target object
@@ -385,7 +381,7 @@ public class SubHandler13 {
                     }
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     int var1 = (int) ((Map<String, Object>) __args__).get("var1");
             
                     // create target object
@@ -424,13 +420,13 @@ public class SubHandler13 {
                     }
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     String var1 = (String) ((Map<String, Object>) __args__).get("var1");
                     // ref arg
                     com.amap.api.services.core.LatLonPoint var2 = (com.amap.api.services.core.LatLonPoint) ((Map<String, Object>) __args__).get("var2");
-                    // jsonable arg
+                    // ref arg
                     String var3 = (String) ((Map<String, Object>) __args__).get("var3");
-                    // jsonable arg
+                    // ref arg
                     String var4 = (String) ((Map<String, Object>) __args__).get("var4");
             
                     // create target object
@@ -507,9 +503,9 @@ public class SubHandler13 {
                     }
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                    // jsonable arg
+                    // ref arg
                     int var2 = (int) ((Map<String, Object>) __args__).get("var2");
             
                     // create target object
@@ -739,9 +735,9 @@ public class SubHandler13 {
                     }
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                    // jsonable arg
+                    // ref arg
                     String var2 = (String) ((Map<String, Object>) __args__).get("var2");
             
                     // create target object
@@ -862,15 +858,11 @@ public class SubHandler13 {
                     // args
                     // ref arg
                     com.amap.api.services.geocoder.GeocodeQuery var1 = (com.amap.api.services.geocoder.GeocodeQuery) ((Map<String, Object>) __args__).get("var1");
-                    // list arg
-                    List<Integer> var2RefIdList = (List<Integer>) ((Map<String, Object>) __args__).get("var2");
-                    java.util.List<com.amap.api.services.geocoder.GeocodeAddress> var2 = new ArrayList<>();
-                    for (int refId : var2RefIdList) {
-                        ((ArrayList<com.amap.api.services.geocoder.GeocodeAddress>) var2).add((com.amap.api.services.geocoder.GeocodeAddress) getHEAP().get(refId));
-                    }
+                    // ref arg
+                    java.util.List<com.amap.api.services.geocoder.GeocodeAddress> var2 = (java.util.List<com.amap.api.services.geocoder.GeocodeAddress>) ((Map<String, Object>) __args__).get("var2");
             
                     // create target object
-                    com.amap.api.services.geocoder.GeocodeResult __obj__ = new com.amap.api.services.geocoder.GeocodeResult(var1, (ArrayList) var2);
+                    com.amap.api.services.geocoder.GeocodeResult __obj__ = new com.amap.api.services.geocoder.GeocodeResult(var1, var2);
             
                     // print current HEAP
                     if (getEnableLog()) {
@@ -1021,9 +1013,9 @@ public class SubHandler13 {
                     // args
                     // ref arg
                     com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) ((Map<String, Object>) __args__).get("var1");
-                    // jsonable arg
+                    // ref arg
                     Double var2 = (Double) ((Map<String, Object>) __args__).get("var2");
-                    // jsonable arg
+                    // ref arg
                     String var3 = (String) ((Map<String, Object>) __args__).get("var3");
             
                     // create target object
@@ -1176,11 +1168,11 @@ public class SubHandler13 {
                     }
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                    // jsonable arg
+                    // ref arg
                     String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-                    // jsonable arg
+                    // ref arg
                     int var3 = (int) ((Map<String, Object>) __args__).get("var3");
             
                     // create target object
@@ -1219,15 +1211,15 @@ public class SubHandler13 {
                     }
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                    // jsonable arg
+                    // ref arg
                     String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-                    // jsonable arg
+                    // ref arg
                     int var3 = (int) ((Map<String, Object>) __args__).get("var3");
-                    // jsonable arg
+                    // ref arg
                     boolean var4 = (boolean) ((Map<String, Object>) __args__).get("var4");
-                    // jsonable arg
+                    // ref arg
                     int var5 = (int) ((Map<String, Object>) __args__).get("var5");
             
                     // create target object
@@ -1307,15 +1299,11 @@ public class SubHandler13 {
                     // args
                     // ref arg
                     com.amap.api.services.district.DistrictSearchQuery var1 = (com.amap.api.services.district.DistrictSearchQuery) ((Map<String, Object>) __args__).get("var1");
-                    // list arg
-                    List<Integer> var2RefIdList = (List<Integer>) ((Map<String, Object>) __args__).get("var2");
-                    java.util.ArrayList<com.amap.api.services.district.DistrictItem> var2 = new ArrayList<>();
-                    for (int refId : var2RefIdList) {
-                        ((ArrayList<com.amap.api.services.district.DistrictItem>) var2).add((com.amap.api.services.district.DistrictItem) getHEAP().get(refId));
-                    }
+                    // ref arg
+                    java.util.ArrayList<com.amap.api.services.district.DistrictItem> var2 = (java.util.ArrayList<com.amap.api.services.district.DistrictItem>) ((Map<String, Object>) __args__).get("var2");
             
                     // create target object
-                    com.amap.api.services.district.DistrictResult __obj__ = new com.amap.api.services.district.DistrictResult(var1, (ArrayList) var2);
+                    com.amap.api.services.district.DistrictResult __obj__ = new com.amap.api.services.district.DistrictResult(var1, var2);
             
                     // print current HEAP
                     if (getEnableLog()) {
@@ -1426,15 +1414,15 @@ public class SubHandler13 {
                     }
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                    // jsonable arg
+                    // ref arg
                     String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-                    // jsonable arg
+                    // ref arg
                     String var3 = (String) ((Map<String, Object>) __args__).get("var3");
                     // ref arg
                     com.amap.api.services.core.LatLonPoint var4 = (com.amap.api.services.core.LatLonPoint) ((Map<String, Object>) __args__).get("var4");
-                    // jsonable arg
+                    // ref arg
                     String var5 = (String) ((Map<String, Object>) __args__).get("var5");
             
                     // create target object
@@ -1511,9 +1499,9 @@ public class SubHandler13 {
                     }
             
                     // args
-                    // jsonable arg
+                    // ref arg
                     String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                    // jsonable arg
+                    // ref arg
                     String var2 = (String) ((Map<String, Object>) __args__).get("var2");
             
                     // create target object
@@ -1595,7 +1583,7 @@ public class SubHandler13 {
                     // args
                     // ref arg
                     com.amap.api.services.share.ShareSearch.ShareFromAndTo var1 = (com.amap.api.services.share.ShareSearch.ShareFromAndTo) ((Map<String, Object>) __args__).get("var1");
-                    // jsonable arg
+                    // ref arg
                     int var2 = (int) ((Map<String, Object>) __args__).get("var2");
             
                     // create target object
@@ -1636,7 +1624,7 @@ public class SubHandler13 {
                     // args
                     // ref arg
                     com.amap.api.services.share.ShareSearch.ShareFromAndTo var1 = (com.amap.api.services.share.ShareSearch.ShareFromAndTo) ((Map<String, Object>) __args__).get("var1");
-                    // jsonable arg
+                    // ref arg
                     int var2 = (int) ((Map<String, Object>) __args__).get("var2");
             
                     // create target object
@@ -1757,7 +1745,7 @@ public class SubHandler13 {
                     // args
                     // ref arg
                     com.amap.api.services.share.ShareSearch.ShareFromAndTo var1 = (com.amap.api.services.share.ShareSearch.ShareFromAndTo) ((Map<String, Object>) __args__).get("var1");
-                    // jsonable arg
+                    // ref arg
                     int var2 = (int) ((Map<String, Object>) __args__).get("var2");
             
                     // create target object
@@ -1798,7 +1786,7 @@ public class SubHandler13 {
                     // args
                     // ref arg
                     com.amap.api.services.share.ShareSearch.ShareFromAndTo var1 = (com.amap.api.services.share.ShareSearch.ShareFromAndTo) ((Map<String, Object>) __args__).get("var1");
-                    // jsonable arg
+                    // ref arg
                     int var2 = (int) ((Map<String, Object>) __args__).get("var2");
             
                     // create target object

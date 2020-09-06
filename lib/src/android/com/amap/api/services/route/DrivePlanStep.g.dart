@@ -22,7 +22,7 @@ class com_amap_api_services_route_DrivePlanStep extends java_lang_Object with an
   //region creators
   static Future<com_amap_api_services_route_DrivePlanStep> create__() async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createcom_amap_api_services_route_DrivePlanStep__');
-    final object = com_amap_api_services_route_DrivePlanStep()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = com_amap_api_services_route_DrivePlanStep()..refId = refId;
     return object;
   }
   
@@ -32,7 +32,7 @@ class com_amap_api_services_route_DrivePlanStep extends java_lang_Object with an
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchcom_amap_api_services_route_DrivePlanStep__', {'length': length});
   
-    final List<com_amap_api_services_route_DrivePlanStep> typedResult = resultBatch.map((result) => com_amap_api_services_route_DrivePlanStep()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<com_amap_api_services_route_DrivePlanStep> typedResult = resultBatch.map((result) => com_amap_api_services_route_DrivePlanStep()..refId = result).toList();
     return typedResult;
   }
   
@@ -249,7 +249,7 @@ class com_amap_api_services_route_DrivePlanStep extends java_lang_Object with an
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = (__result__ as List).cast<String>().map((__it__) => com_amap_api_services_core_LatLonPoint()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      final __return__ = (__result__ as List).cast<String>().map((__it__) => com_amap_api_services_core_LatLonPoint()..refId = __it__).toList();
       return __return__;
     }
   }
@@ -456,7 +456,7 @@ extension com_amap_api_services_route_DrivePlanStep_Batch on List<com_amap_api_s
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => com_amap_api_services_core_LatLonPoint()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => com_amap_api_services_core_LatLonPoint()..refId = __it__).toList()).toList();
       return typedResult;
     }
   }

@@ -22,7 +22,7 @@ class AMapCloudPOILocalSearchRequest extends AMapCloudSearchBaseRequest with NSC
   //region creators
   static Future<AMapCloudPOILocalSearchRequest> create__() async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createAMapCloudPOILocalSearchRequest');
-    final object = AMapCloudPOILocalSearchRequest()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = AMapCloudPOILocalSearchRequest()..refId = refId;
     return object;
   }
   
@@ -32,7 +32,7 @@ class AMapCloudPOILocalSearchRequest extends AMapCloudSearchBaseRequest with NSC
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchAMapCloudPOILocalSearchRequest', {'length': length});
   
-    final List<AMapCloudPOILocalSearchRequest> typedResult = resultBatch.map((result) => AMapCloudPOILocalSearchRequest()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<AMapCloudPOILocalSearchRequest> typedResult = resultBatch.map((result) => AMapCloudPOILocalSearchRequest()..refId = result).toList();
     return typedResult;
   }
   
@@ -53,15 +53,13 @@ class AMapCloudPOILocalSearchRequest extends AMapCloudSearchBaseRequest with NSC
 
   //region setters
   Future<void> set_keywords(String keywords) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapCloudPOILocalSearchRequest::set_keywords', <String, dynamic>{'__this__': this, "keywords": keywords});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapCloudPOILocalSearchRequest::set_keywords', <String, dynamic>{'__this__': this, "keywords": keywords});
   
   
   }
   
   Future<void> set_city(String city) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapCloudPOILocalSearchRequest::set_city', <String, dynamic>{'__this__': this, "city": city});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapCloudPOILocalSearchRequest::set_city', <String, dynamic>{'__this__': this, "city": city});
   
   
   }

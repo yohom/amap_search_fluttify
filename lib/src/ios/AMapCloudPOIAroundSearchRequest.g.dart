@@ -22,7 +22,7 @@ class AMapCloudPOIAroundSearchRequest extends AMapCloudSearchBaseRequest with NS
   //region creators
   static Future<AMapCloudPOIAroundSearchRequest> create__() async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createAMapCloudPOIAroundSearchRequest');
-    final object = AMapCloudPOIAroundSearchRequest()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = AMapCloudPOIAroundSearchRequest()..refId = refId;
     return object;
   }
   
@@ -32,7 +32,7 @@ class AMapCloudPOIAroundSearchRequest extends AMapCloudSearchBaseRequest with NS
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchAMapCloudPOIAroundSearchRequest', {'length': length});
   
-    final List<AMapCloudPOIAroundSearchRequest> typedResult = resultBatch.map((result) => AMapCloudPOIAroundSearchRequest()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<AMapCloudPOIAroundSearchRequest> typedResult = resultBatch.map((result) => AMapCloudPOIAroundSearchRequest()..refId = result).toList();
     return typedResult;
   }
   
@@ -41,7 +41,7 @@ class AMapCloudPOIAroundSearchRequest extends AMapCloudSearchBaseRequest with NS
   //region getters
   Future<AMapGeoPoint> get_center() async {
     final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapCloudPOIAroundSearchRequest::get_center", {'__this__': this});
-    return __result__ == null ? null : (AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify');
+    return __result__ == null ? null : (AMapGeoPoint()..refId = __result__);
   }
   
   Future<int> get_radius() async {
@@ -58,22 +58,19 @@ class AMapCloudPOIAroundSearchRequest extends AMapCloudSearchBaseRequest with NS
 
   //region setters
   Future<void> set_center(AMapGeoPoint center) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapCloudPOIAroundSearchRequest::set_center', <String, dynamic>{'__this__': this, "center": center});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapCloudPOIAroundSearchRequest::set_center', <String, dynamic>{'__this__': this, "center": center});
   
   
   }
   
   Future<void> set_radius(int radius) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapCloudPOIAroundSearchRequest::set_radius', <String, dynamic>{'__this__': this, "radius": radius});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapCloudPOIAroundSearchRequest::set_radius', <String, dynamic>{'__this__': this, "radius": radius});
   
   
   }
   
   Future<void> set_keywords(String keywords) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapCloudPOIAroundSearchRequest::set_keywords', <String, dynamic>{'__this__': this, "keywords": keywords});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapCloudPOIAroundSearchRequest::set_keywords', <String, dynamic>{'__this__': this, "keywords": keywords});
   
   
   }
@@ -90,7 +87,7 @@ extension AMapCloudPOIAroundSearchRequest_Batch on List<AMapCloudPOIAroundSearch
   Future<List<AMapGeoPoint>> get_center_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapCloudPOIAroundSearchRequest::get_center_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapGeoPoint()..refId = __result__).toList();
     return typedResult;
   }
   

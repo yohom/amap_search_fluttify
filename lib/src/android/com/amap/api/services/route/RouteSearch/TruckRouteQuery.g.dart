@@ -22,7 +22,7 @@ class com_amap_api_services_route_RouteSearch_TruckRouteQuery extends java_lang_
   //region creators
   static Future<com_amap_api_services_route_RouteSearch_TruckRouteQuery> create__com_amap_api_services_route_RouteSearch_FromAndTo__int__List_java_util_List_com_amap_api_services_core_LatLonPoint____int(com_amap_api_services_route_RouteSearch_FromAndTo var1, int var2, List<com_amap_api_services_core_LatLonPoint> var3, int var4) async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createcom_amap_api_services_route_RouteSearch_TruckRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__java_util_List_com_amap_api_services_core_LatLonPoint___int', {"var1": var1, "var2": var2, "var3": var3, "var4": var4});
-    final object = com_amap_api_services_route_RouteSearch_TruckRouteQuery()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = com_amap_api_services_route_RouteSearch_TruckRouteQuery()..refId = refId;
     return object;
   }
   
@@ -32,7 +32,7 @@ class com_amap_api_services_route_RouteSearch_TruckRouteQuery extends java_lang_
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchcom_amap_api_services_route_RouteSearch_TruckRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__java_util_List_com_amap_api_services_core_LatLonPoint___int', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "var4": var4[__i__]}]);
   
-    final List<com_amap_api_services_route_RouteSearch_TruckRouteQuery> typedResult = resultBatch.map((result) => com_amap_api_services_route_RouteSearch_TruckRouteQuery()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<com_amap_api_services_route_RouteSearch_TruckRouteQuery> typedResult = resultBatch.map((result) => com_amap_api_services_route_RouteSearch_TruckRouteQuery()..refId = result).toList();
     return typedResult;
   }
   
@@ -226,7 +226,7 @@ class com_amap_api_services_route_RouteSearch_TruckRouteQuery extends java_lang_
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_services_route_RouteSearch_FromAndTo()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_route_RouteSearch_FromAndTo()..refId = __result__;
       return __return__;
     }
   }
@@ -456,7 +456,7 @@ class com_amap_api_services_route_RouteSearch_TruckRouteQuery extends java_lang_
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_services_route_RouteSearch_TruckRouteQuery()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_route_RouteSearch_TruckRouteQuery()..refId = __result__;
       return __return__;
     }
   }
@@ -621,7 +621,7 @@ extension com_amap_api_services_route_RouteSearch_TruckRouteQuery_Batch on List<
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_route_RouteSearch_FromAndTo()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_route_RouteSearch_FromAndTo()..refId = __result__).toList();
       return typedResult;
     }
   }
@@ -811,7 +811,7 @@ extension com_amap_api_services_route_RouteSearch_TruckRouteQuery_Batch on List<
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_route_RouteSearch_TruckRouteQuery()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_route_RouteSearch_TruckRouteQuery()..refId = __result__).toList();
       return typedResult;
     }
   }

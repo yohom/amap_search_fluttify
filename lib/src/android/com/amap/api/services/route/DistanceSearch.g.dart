@@ -23,7 +23,7 @@ class com_amap_api_services_route_DistanceSearch extends java_lang_Object  {
   //region creators
   static Future<com_amap_api_services_route_DistanceSearch> create__android_content_Context(android_content_Context var1) async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createcom_amap_api_services_route_DistanceSearch__android_content_Context', {"var1": var1});
-    final object = com_amap_api_services_route_DistanceSearch()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = com_amap_api_services_route_DistanceSearch()..refId = refId;
     return object;
   }
   
@@ -33,7 +33,7 @@ class com_amap_api_services_route_DistanceSearch extends java_lang_Object  {
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchcom_amap_api_services_route_DistanceSearch__android_content_Context', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]);
   
-    final List<com_amap_api_services_route_DistanceSearch> typedResult = resultBatch.map((result) => com_amap_api_services_route_DistanceSearch()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<com_amap_api_services_route_DistanceSearch> typedResult = resultBatch.map((result) => com_amap_api_services_route_DistanceSearch()..refId = result).toList();
     return typedResult;
   }
   
@@ -110,7 +110,7 @@ class com_amap_api_services_route_DistanceSearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_services_route_DistanceResult()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_route_DistanceResult()..refId = __result__;
       return __return__;
     }
   }
@@ -165,7 +165,7 @@ extension com_amap_api_services_route_DistanceSearch_Batch on List<com_amap_api_
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_route_DistanceResult()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_route_DistanceResult()..refId = __result__).toList();
       return typedResult;
     }
   }

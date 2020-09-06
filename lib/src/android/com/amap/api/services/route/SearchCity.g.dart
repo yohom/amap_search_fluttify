@@ -22,7 +22,7 @@ class com_amap_api_services_route_SearchCity extends java_lang_Object with andro
   //region creators
   static Future<com_amap_api_services_route_SearchCity> create__() async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createcom_amap_api_services_route_SearchCity__');
-    final object = com_amap_api_services_route_SearchCity()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = com_amap_api_services_route_SearchCity()..refId = refId;
     return object;
   }
   
@@ -32,7 +32,7 @@ class com_amap_api_services_route_SearchCity extends java_lang_Object with andro
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchcom_amap_api_services_route_SearchCity__', {'length': length});
   
-    final List<com_amap_api_services_route_SearchCity> typedResult = resultBatch.map((result) => com_amap_api_services_route_SearchCity()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<com_amap_api_services_route_SearchCity> typedResult = resultBatch.map((result) => com_amap_api_services_route_SearchCity()..refId = result).toList();
     return typedResult;
   }
   

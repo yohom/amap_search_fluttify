@@ -24,18 +24,10 @@ mixin com_amap_api_services_cloud_CloudSearch_OnCloudSearchListener on java_lang
   
 
   @mustCallSuper
-  Future<void> onCloudSearched(com_amap_api_services_cloud_CloudResult var1, int var2) {
-    if (fluttifyLogEnabled) {
-      debugPrint('onCloudSearched::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> onCloudSearched(com_amap_api_services_cloud_CloudResult var1, int var2) {}
   
   @mustCallSuper
-  Future<void> onCloudItemDetailSearched(com_amap_api_services_cloud_CloudItemDetail var1, int var2) {
-    if (fluttifyLogEnabled) {
-      debugPrint('onCloudItemDetailSearched::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> onCloudItemDetailSearched(com_amap_api_services_cloud_CloudItemDetail var1, int var2) {}
   
 }
 

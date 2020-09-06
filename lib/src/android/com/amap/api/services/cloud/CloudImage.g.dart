@@ -22,7 +22,7 @@ class com_amap_api_services_cloud_CloudImage extends java_lang_Object with andro
   //region creators
   static Future<com_amap_api_services_cloud_CloudImage> create__String__String__String(String var1, String var2, String var3) async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createcom_amap_api_services_cloud_CloudImage__String__String__String', {"var1": var1, "var2": var2, "var3": var3});
-    final object = com_amap_api_services_cloud_CloudImage()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = com_amap_api_services_cloud_CloudImage()..refId = refId;
     return object;
   }
   
@@ -32,7 +32,7 @@ class com_amap_api_services_cloud_CloudImage extends java_lang_Object with andro
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchcom_amap_api_services_cloud_CloudImage__String__String__String', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__]}]);
   
-    final List<com_amap_api_services_cloud_CloudImage> typedResult = resultBatch.map((result) => com_amap_api_services_cloud_CloudImage()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<com_amap_api_services_cloud_CloudImage> typedResult = resultBatch.map((result) => com_amap_api_services_cloud_CloudImage()..refId = result).toList();
     return typedResult;
   }
   

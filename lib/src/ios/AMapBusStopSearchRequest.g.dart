@@ -22,7 +22,7 @@ class AMapBusStopSearchRequest extends AMapSearchObject with NSCoding, NSCopying
   //region creators
   static Future<AMapBusStopSearchRequest> create__() async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createAMapBusStopSearchRequest');
-    final object = AMapBusStopSearchRequest()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = AMapBusStopSearchRequest()..refId = refId;
     return object;
   }
   
@@ -32,7 +32,7 @@ class AMapBusStopSearchRequest extends AMapSearchObject with NSCoding, NSCopying
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchAMapBusStopSearchRequest', {'length': length});
   
-    final List<AMapBusStopSearchRequest> typedResult = resultBatch.map((result) => AMapBusStopSearchRequest()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<AMapBusStopSearchRequest> typedResult = resultBatch.map((result) => AMapBusStopSearchRequest()..refId = result).toList();
     return typedResult;
   }
   
@@ -63,29 +63,25 @@ class AMapBusStopSearchRequest extends AMapSearchObject with NSCoding, NSCopying
 
   //region setters
   Future<void> set_keywords(String keywords) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapBusStopSearchRequest::set_keywords', <String, dynamic>{'__this__': this, "keywords": keywords});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapBusStopSearchRequest::set_keywords', <String, dynamic>{'__this__': this, "keywords": keywords});
   
   
   }
   
   Future<void> set_city(String city) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapBusStopSearchRequest::set_city', <String, dynamic>{'__this__': this, "city": city});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapBusStopSearchRequest::set_city', <String, dynamic>{'__this__': this, "city": city});
   
   
   }
   
   Future<void> set_offset(int offset) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapBusStopSearchRequest::set_offset', <String, dynamic>{'__this__': this, "offset": offset});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapBusStopSearchRequest::set_offset', <String, dynamic>{'__this__': this, "offset": offset});
   
   
   }
   
   Future<void> set_page(int page) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapBusStopSearchRequest::set_page', <String, dynamic>{'__this__': this, "page": page});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapBusStopSearchRequest::set_page', <String, dynamic>{'__this__': this, "page": page});
   
   
   }

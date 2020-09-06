@@ -24,18 +24,10 @@ mixin com_amap_api_services_poisearch_PoiSearch_OnPoiSearchListener on java_lang
   
 
   @mustCallSuper
-  Future<void> onPoiSearched(com_amap_api_services_poisearch_PoiResult var1, int var2) {
-    if (fluttifyLogEnabled) {
-      debugPrint('onPoiSearched::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> onPoiSearched(com_amap_api_services_poisearch_PoiResult var1, int var2) {}
   
   @mustCallSuper
-  Future<void> onPoiItemSearched(com_amap_api_services_core_PoiItem var1, int var2) {
-    if (fluttifyLogEnabled) {
-      debugPrint('onPoiItemSearched::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> onPoiItemSearched(com_amap_api_services_core_PoiItem var1, int var2) {}
   
 }
 

@@ -22,7 +22,7 @@ class AMapTransit extends AMapSearchObject with NSCoding, NSCopying {
   //region creators
   static Future<AMapTransit> create__() async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createAMapTransit');
-    final object = AMapTransit()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = AMapTransit()..refId = refId;
     return object;
   }
   
@@ -32,7 +32,7 @@ class AMapTransit extends AMapSearchObject with NSCoding, NSCopying {
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchAMapTransit', {'length': length});
   
-    final List<AMapTransit> typedResult = resultBatch.map((result) => AMapTransit()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<AMapTransit> typedResult = resultBatch.map((result) => AMapTransit()..refId = result).toList();
     return typedResult;
   }
   
@@ -61,7 +61,7 @@ class AMapTransit extends AMapSearchObject with NSCoding, NSCopying {
   
   Future<List<AMapSegment>> get_segments() async {
     final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapTransit::get_segments", {'__this__': this});
-    return __result__ == null ? null : ((__result__ as List).cast<String>().map((__it__) => AMapSegment()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
+    return __result__ == null ? null : ((__result__ as List).cast<String>().map((__it__) => AMapSegment()..refId = __it__).toList());
   }
   
   Future<int> get_distance() async {
@@ -73,43 +73,37 @@ class AMapTransit extends AMapSearchObject with NSCoding, NSCopying {
 
   //region setters
   Future<void> set_cost(double cost) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapTransit::set_cost', <String, dynamic>{'__this__': this, "cost": cost});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapTransit::set_cost', <String, dynamic>{'__this__': this, "cost": cost});
   
   
   }
   
   Future<void> set_duration(int duration) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapTransit::set_duration', <String, dynamic>{'__this__': this, "duration": duration});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapTransit::set_duration', <String, dynamic>{'__this__': this, "duration": duration});
   
   
   }
   
   Future<void> set_nightflag(bool nightflag) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapTransit::set_nightflag', <String, dynamic>{'__this__': this, "nightflag": nightflag});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapTransit::set_nightflag', <String, dynamic>{'__this__': this, "nightflag": nightflag});
   
   
   }
   
   Future<void> set_walkingDistance(int walkingDistance) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapTransit::set_walkingDistance', <String, dynamic>{'__this__': this, "walkingDistance": walkingDistance});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapTransit::set_walkingDistance', <String, dynamic>{'__this__': this, "walkingDistance": walkingDistance});
   
   
   }
   
   Future<void> set_segments(List<AMapSegment> segments) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapTransit::set_segments', <String, dynamic>{'__this__': this, "segments": segments});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapTransit::set_segments', <String, dynamic>{'__this__': this, "segments": segments});
   
   
   }
   
   Future<void> set_distance(int distance) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapTransit::set_distance', <String, dynamic>{'__this__': this, "distance": distance});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapTransit::set_distance', <String, dynamic>{'__this__': this, "distance": distance});
   
   
   }
@@ -154,7 +148,7 @@ extension AMapTransit_Batch on List<AMapTransit> {
   Future<List<List<AMapSegment>>> get_segments_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapTransit::get_segments_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => AMapSegment()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => AMapSegment()..refId = __it__).toList()).toList();
     return typedResult;
   }
   

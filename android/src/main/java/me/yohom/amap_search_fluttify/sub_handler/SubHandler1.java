@@ -23,7 +23,7 @@ import io.flutter.plugin.common.StandardMethodCodec;
 import io.flutter.plugin.platform.PlatformViewRegistry;
 
 import me.yohom.amap_search_fluttify.AmapSearchFluttifyPlugin.Handler;
-import me.yohom.foundation_fluttify.FluttifyMessageCodec;
+import me.yohom.foundation_fluttify.core.FluttifyMessageCodec;
 
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getEnableLog;
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getHEAP;
@@ -220,7 +220,7 @@ public class SubHandler1 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setSubPois((ArrayList) var1);
+                    __this__.setSubPois(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -362,7 +362,7 @@ public class SubHandler1 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setPhotos((ArrayList) var1);
+                    __this__.setPhotos(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1595,7 +1595,7 @@ public class SubHandler1 {
                 // invoke native method
                 com.amap.api.services.poisearch.PoiResult __result__ = null;
                 try {
-                    __result__ = com.amap.api.services.poisearch.PoiResult.createPagedResult(var0, var1, (ArrayList) var2, (ArrayList) var3, var4, var5, (ArrayList) var6);
+                    __result__ = com.amap.api.services.poisearch.PoiResult.createPagedResult(var0, var1, var2, var3, var4, var5, var6);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1804,18 +1804,6 @@ public class SubHandler1 {
                                 Log.d("java-callback", "fluttify-java-callback: onPoiSearched(" + var1 + var2 + ")");
                             }
             
-                            // convert to jsonable data
-                            // ref arg
-                            final Integer argvar1;
-                            if (var1 != null) {
-                                argvar1 = System.identityHashCode(var1);
-                                getHEAP().put(argvar1, var1);
-                            } else {
-                                argvar1 = null;
-                            }
-                            // jsonable arg
-                            int argvar2 = var2;
-            
                             // call dart method
                             handler.post(new Runnable() {
                                 @Override
@@ -1823,8 +1811,8 @@ public class SubHandler1 {
                                     callbackChannel.invokeMethod(
                                         "Callback::com.amap.api.services.poisearch.PoiSearch.OnPoiSearchListener::onPoiSearched",
                                         new HashMap<String, Object>() {{
-                                            put("var1", argvar1);
-                                            put("var2", argvar2);
+                                            put("var1", var1);
+                                            put("var2", var2);
                                         }}
                                     );
                                 }
@@ -1841,18 +1829,6 @@ public class SubHandler1 {
                                 Log.d("java-callback", "fluttify-java-callback: onPoiItemSearched(" + var1 + var2 + ")");
                             }
             
-                            // convert to jsonable data
-                            // ref arg
-                            final Integer argvar1;
-                            if (var1 != null) {
-                                argvar1 = System.identityHashCode(var1);
-                                getHEAP().put(argvar1, var1);
-                            } else {
-                                argvar1 = null;
-                            }
-                            // jsonable arg
-                            int argvar2 = var2;
-            
                             // call dart method
                             handler.post(new Runnable() {
                                 @Override
@@ -1860,8 +1836,8 @@ public class SubHandler1 {
                                     callbackChannel.invokeMethod(
                                         "Callback::com.amap.api.services.poisearch.PoiSearch.OnPoiSearchListener::onPoiItemSearched",
                                         new HashMap<String, Object>() {{
-                                            put("var1", argvar1);
-                                            put("var2", argvar2);
+                                            put("var1", var1);
+                                            put("var2", var2);
                                         }}
                                     );
                                 }
@@ -3054,7 +3030,7 @@ public class SubHandler1 {
             put("com.amap.api.services.route.BusPath::setCost", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.route.BusPath __this__ = (com.amap.api.services.route.BusPath) ((Map<String, Object>) __args__).get("__this__");
@@ -3168,7 +3144,7 @@ public class SubHandler1 {
             put("com.amap.api.services.route.BusPath::setWalkDistance", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.route.BusPath __this__ = (com.amap.api.services.route.BusPath) ((Map<String, Object>) __args__).get("__this__");
@@ -3225,7 +3201,7 @@ public class SubHandler1 {
             put("com.amap.api.services.route.BusPath::setBusDistance", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.route.BusPath __this__ = (com.amap.api.services.route.BusPath) ((Map<String, Object>) __args__).get("__this__");
@@ -3295,7 +3271,7 @@ public class SubHandler1 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setSteps((ArrayList) var1);
+                    __this__.setSteps(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3352,7 +3328,7 @@ public class SubHandler1 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setPaths((ArrayList) var1);
+                    __this__.setPaths(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3409,7 +3385,7 @@ public class SubHandler1 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setTimeInfos((ArrayList) var1);
+                    __this__.setTimeInfos(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3512,7 +3488,7 @@ public class SubHandler1 {
             put("com.amap.api.services.route.RouteSearch.TruckRouteQuery::setTruckHeight", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.route.RouteSearch.TruckRouteQuery __this__ = (com.amap.api.services.route.RouteSearch.TruckRouteQuery) ((Map<String, Object>) __args__).get("__this__");
@@ -3541,7 +3517,7 @@ public class SubHandler1 {
             put("com.amap.api.services.route.RouteSearch.TruckRouteQuery::setTruckWidth", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.route.RouteSearch.TruckRouteQuery __this__ = (com.amap.api.services.route.RouteSearch.TruckRouteQuery) ((Map<String, Object>) __args__).get("__this__");
@@ -3570,7 +3546,7 @@ public class SubHandler1 {
             put("com.amap.api.services.route.RouteSearch.TruckRouteQuery::setTruckLoad", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.route.RouteSearch.TruckRouteQuery __this__ = (com.amap.api.services.route.RouteSearch.TruckRouteQuery) ((Map<String, Object>) __args__).get("__this__");
@@ -3599,7 +3575,7 @@ public class SubHandler1 {
             put("com.amap.api.services.route.RouteSearch.TruckRouteQuery::setTruckWeight", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.route.RouteSearch.TruckRouteQuery __this__ = (com.amap.api.services.route.RouteSearch.TruckRouteQuery) ((Map<String, Object>) __args__).get("__this__");
@@ -3628,7 +3604,7 @@ public class SubHandler1 {
             put("com.amap.api.services.route.RouteSearch.TruckRouteQuery::setTruckAxis", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.route.RouteSearch.TruckRouteQuery __this__ = (com.amap.api.services.route.RouteSearch.TruckRouteQuery) ((Map<String, Object>) __args__).get("__this__");
@@ -4120,7 +4096,7 @@ public class SubHandler1 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setPolyline((ArrayList) var1);
+                    __this__.setPolyline(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4389,18 +4365,6 @@ public class SubHandler1 {
                                 Log.d("java-callback", "fluttify-java-callback: onBusRouteSearched(" + var1 + var2 + ")");
                             }
             
-                            // convert to jsonable data
-                            // ref arg
-                            final Integer argvar1;
-                            if (var1 != null) {
-                                argvar1 = System.identityHashCode(var1);
-                                getHEAP().put(argvar1, var1);
-                            } else {
-                                argvar1 = null;
-                            }
-                            // jsonable arg
-                            int argvar2 = var2;
-            
                             // call dart method
                             handler.post(new Runnable() {
                                 @Override
@@ -4408,8 +4372,8 @@ public class SubHandler1 {
                                     callbackChannel.invokeMethod(
                                         "Callback::com.amap.api.services.route.RouteSearch.OnRouteSearchListener::onBusRouteSearched",
                                         new HashMap<String, Object>() {{
-                                            put("var1", argvar1);
-                                            put("var2", argvar2);
+                                            put("var1", var1);
+                                            put("var2", var2);
                                         }}
                                     );
                                 }
@@ -4426,18 +4390,6 @@ public class SubHandler1 {
                                 Log.d("java-callback", "fluttify-java-callback: onDriveRouteSearched(" + var1 + var2 + ")");
                             }
             
-                            // convert to jsonable data
-                            // ref arg
-                            final Integer argvar1;
-                            if (var1 != null) {
-                                argvar1 = System.identityHashCode(var1);
-                                getHEAP().put(argvar1, var1);
-                            } else {
-                                argvar1 = null;
-                            }
-                            // jsonable arg
-                            int argvar2 = var2;
-            
                             // call dart method
                             handler.post(new Runnable() {
                                 @Override
@@ -4445,8 +4397,8 @@ public class SubHandler1 {
                                     callbackChannel.invokeMethod(
                                         "Callback::com.amap.api.services.route.RouteSearch.OnRouteSearchListener::onDriveRouteSearched",
                                         new HashMap<String, Object>() {{
-                                            put("var1", argvar1);
-                                            put("var2", argvar2);
+                                            put("var1", var1);
+                                            put("var2", var2);
                                         }}
                                     );
                                 }
@@ -4463,18 +4415,6 @@ public class SubHandler1 {
                                 Log.d("java-callback", "fluttify-java-callback: onWalkRouteSearched(" + var1 + var2 + ")");
                             }
             
-                            // convert to jsonable data
-                            // ref arg
-                            final Integer argvar1;
-                            if (var1 != null) {
-                                argvar1 = System.identityHashCode(var1);
-                                getHEAP().put(argvar1, var1);
-                            } else {
-                                argvar1 = null;
-                            }
-                            // jsonable arg
-                            int argvar2 = var2;
-            
                             // call dart method
                             handler.post(new Runnable() {
                                 @Override
@@ -4482,8 +4422,8 @@ public class SubHandler1 {
                                     callbackChannel.invokeMethod(
                                         "Callback::com.amap.api.services.route.RouteSearch.OnRouteSearchListener::onWalkRouteSearched",
                                         new HashMap<String, Object>() {{
-                                            put("var1", argvar1);
-                                            put("var2", argvar2);
+                                            put("var1", var1);
+                                            put("var2", var2);
                                         }}
                                     );
                                 }
@@ -4500,18 +4440,6 @@ public class SubHandler1 {
                                 Log.d("java-callback", "fluttify-java-callback: onRideRouteSearched(" + var1 + var2 + ")");
                             }
             
-                            // convert to jsonable data
-                            // ref arg
-                            final Integer argvar1;
-                            if (var1 != null) {
-                                argvar1 = System.identityHashCode(var1);
-                                getHEAP().put(argvar1, var1);
-                            } else {
-                                argvar1 = null;
-                            }
-                            // jsonable arg
-                            int argvar2 = var2;
-            
                             // call dart method
                             handler.post(new Runnable() {
                                 @Override
@@ -4519,8 +4447,8 @@ public class SubHandler1 {
                                     callbackChannel.invokeMethod(
                                         "Callback::com.amap.api.services.route.RouteSearch.OnRouteSearchListener::onRideRouteSearched",
                                         new HashMap<String, Object>() {{
-                                            put("var1", argvar1);
-                                            put("var2", argvar2);
+                                            put("var1", var1);
+                                            put("var2", var2);
                                         }}
                                     );
                                 }
@@ -4571,18 +4499,6 @@ public class SubHandler1 {
                                 Log.d("java-callback", "fluttify-java-callback: onTruckRouteSearched(" + var1 + var2 + ")");
                             }
             
-                            // convert to jsonable data
-                            // ref arg
-                            final Integer argvar1;
-                            if (var1 != null) {
-                                argvar1 = System.identityHashCode(var1);
-                                getHEAP().put(argvar1, var1);
-                            } else {
-                                argvar1 = null;
-                            }
-                            // jsonable arg
-                            int argvar2 = var2;
-            
                             // call dart method
                             handler.post(new Runnable() {
                                 @Override
@@ -4590,8 +4506,8 @@ public class SubHandler1 {
                                     callbackChannel.invokeMethod(
                                         "Callback::com.amap.api.services.route.RouteSearch.OnTruckRouteSearchListener::onTruckRouteSearched",
                                         new HashMap<String, Object>() {{
-                                            put("var1", argvar1);
-                                            put("var2", argvar2);
+                                            put("var1", var1);
+                                            put("var2", var2);
                                         }}
                                     );
                                 }
@@ -4642,18 +4558,6 @@ public class SubHandler1 {
                                 Log.d("java-callback", "fluttify-java-callback: onDriveRoutePlanSearched(" + var1 + var2 + ")");
                             }
             
-                            // convert to jsonable data
-                            // ref arg
-                            final Integer argvar1;
-                            if (var1 != null) {
-                                argvar1 = System.identityHashCode(var1);
-                                getHEAP().put(argvar1, var1);
-                            } else {
-                                argvar1 = null;
-                            }
-                            // jsonable arg
-                            int argvar2 = var2;
-            
                             // call dart method
                             handler.post(new Runnable() {
                                 @Override
@@ -4661,8 +4565,8 @@ public class SubHandler1 {
                                     callbackChannel.invokeMethod(
                                         "Callback::com.amap.api.services.route.RouteSearch.OnRoutePlanSearchListener::onDriveRoutePlanSearched",
                                         new HashMap<String, Object>() {{
-                                            put("var1", argvar1);
-                                            put("var2", argvar2);
+                                            put("var1", var1);
+                                            put("var2", var2);
                                         }}
                                     );
                                 }
@@ -5191,7 +5095,7 @@ public class SubHandler1 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setBusLines((ArrayList) var1);
+                    __this__.setBusLines(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -5661,7 +5565,7 @@ public class SubHandler1 {
             put("com.amap.api.services.route.TaxiItem::setDistance", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.route.TaxiItem __this__ = (com.amap.api.services.route.TaxiItem) ((Map<String, Object>) __args__).get("__this__");
@@ -5690,7 +5594,7 @@ public class SubHandler1 {
             put("com.amap.api.services.route.TaxiItem::setDuration", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.route.TaxiItem __this__ = (com.amap.api.services.route.TaxiItem) ((Map<String, Object>) __args__).get("__this__");
@@ -5805,7 +5709,7 @@ public class SubHandler1 {
             put("com.amap.api.services.route.BusRouteResult::setTaxiCost", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.route.BusRouteResult __this__ = (com.amap.api.services.route.BusRouteResult) ((Map<String, Object>) __args__).get("__this__");
@@ -5875,7 +5779,7 @@ public class SubHandler1 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setPaths((ArrayList) var1);
+                    __this__.setPaths(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {

@@ -50,7 +50,7 @@ class com_amap_api_services_weather_LocalWeatherForecastResult extends java_lang
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_services_weather_LocalWeatherForecastResult()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_weather_LocalWeatherForecastResult()..refId = __result__;
       return __return__;
     }
   }
@@ -73,7 +73,7 @@ class com_amap_api_services_weather_LocalWeatherForecastResult extends java_lang
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_services_weather_WeatherSearchQuery()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_weather_WeatherSearchQuery()..refId = __result__;
       return __return__;
     }
   }
@@ -96,7 +96,7 @@ class com_amap_api_services_weather_LocalWeatherForecastResult extends java_lang
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_services_weather_LocalWeatherForecast()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_weather_LocalWeatherForecast()..refId = __result__;
       return __return__;
     }
   }
@@ -128,7 +128,7 @@ extension com_amap_api_services_weather_LocalWeatherForecastResult_Batch on List
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_weather_LocalWeatherForecastResult()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_weather_LocalWeatherForecastResult()..refId = __result__).toList();
       return typedResult;
     }
   }
@@ -147,7 +147,7 @@ extension com_amap_api_services_weather_LocalWeatherForecastResult_Batch on List
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_weather_WeatherSearchQuery()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_weather_WeatherSearchQuery()..refId = __result__).toList();
       return typedResult;
     }
   }
@@ -166,7 +166,7 @@ extension com_amap_api_services_weather_LocalWeatherForecastResult_Batch on List
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_weather_LocalWeatherForecast()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_weather_LocalWeatherForecast()..refId = __result__).toList();
       return typedResult;
     }
   }

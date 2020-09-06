@@ -22,7 +22,7 @@ class AMapImage extends AMapSearchObject with NSCoding, NSCopying {
   //region creators
   static Future<AMapImage> create__() async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createAMapImage');
-    final object = AMapImage()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = AMapImage()..refId = refId;
     return object;
   }
   
@@ -32,7 +32,7 @@ class AMapImage extends AMapSearchObject with NSCoding, NSCopying {
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchAMapImage', {'length': length});
   
-    final List<AMapImage> typedResult = resultBatch.map((result) => AMapImage()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<AMapImage> typedResult = resultBatch.map((result) => AMapImage()..refId = result).toList();
     return typedResult;
   }
   
@@ -53,15 +53,13 @@ class AMapImage extends AMapSearchObject with NSCoding, NSCopying {
 
   //region setters
   Future<void> set_title(String title) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapImage::set_title', <String, dynamic>{'__this__': this, "title": title});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapImage::set_title', <String, dynamic>{'__this__': this, "title": title});
   
   
   }
   
   Future<void> set_url(String url) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapImage::set_url', <String, dynamic>{'__this__': this, "url": url});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapImage::set_url', <String, dynamic>{'__this__': this, "url": url});
   
   
   }

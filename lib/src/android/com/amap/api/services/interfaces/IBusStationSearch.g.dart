@@ -24,39 +24,19 @@ mixin com_amap_api_services_interfaces_IBusStationSearch on java_lang_Object {
   
 
   @mustCallSuper
-  Future<com_amap_api_services_busline_BusStationResult> searchBusStation() {
-    if (fluttifyLogEnabled) {
-      debugPrint('searchBusStation::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<com_amap_api_services_busline_BusStationResult> searchBusStation() {}
   
   @mustCallSuper
-  Future<void> setOnBusStationSearchListener(com_amap_api_services_busline_BusStationSearch_OnBusStationSearchListener var1) {
-    if (fluttifyLogEnabled) {
-      debugPrint('setOnBusStationSearchListener::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> setOnBusStationSearchListener(com_amap_api_services_busline_BusStationSearch_OnBusStationSearchListener var1) {}
   
   @mustCallSuper
-  Future<void> searchBusStationAsyn() {
-    if (fluttifyLogEnabled) {
-      debugPrint('searchBusStationAsyn::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> searchBusStationAsyn() {}
   
   @mustCallSuper
-  Future<void> setQuery(com_amap_api_services_busline_BusStationQuery var1) {
-    if (fluttifyLogEnabled) {
-      debugPrint('setQuery::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> setQuery(com_amap_api_services_busline_BusStationQuery var1) {}
   
   @mustCallSuper
-  Future<com_amap_api_services_busline_BusStationQuery> getQuery() {
-    if (fluttifyLogEnabled) {
-      debugPrint('getQuery::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<com_amap_api_services_busline_BusStationQuery> getQuery() {}
   
 }
 

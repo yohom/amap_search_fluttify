@@ -22,7 +22,7 @@ class AMapBusLineNameSearchRequest extends AMapBusLineBaseSearchRequest with NSC
   //region creators
   static Future<AMapBusLineNameSearchRequest> create__() async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createAMapBusLineNameSearchRequest');
-    final object = AMapBusLineNameSearchRequest()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = AMapBusLineNameSearchRequest()..refId = refId;
     return object;
   }
   
@@ -32,7 +32,7 @@ class AMapBusLineNameSearchRequest extends AMapBusLineBaseSearchRequest with NSC
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchAMapBusLineNameSearchRequest', {'length': length});
   
-    final List<AMapBusLineNameSearchRequest> typedResult = resultBatch.map((result) => AMapBusLineNameSearchRequest()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<AMapBusLineNameSearchRequest> typedResult = resultBatch.map((result) => AMapBusLineNameSearchRequest()..refId = result).toList();
     return typedResult;
   }
   
@@ -48,8 +48,7 @@ class AMapBusLineNameSearchRequest extends AMapBusLineBaseSearchRequest with NSC
 
   //region setters
   Future<void> set_keywords(String keywords) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapBusLineNameSearchRequest::set_keywords', <String, dynamic>{'__this__': this, "keywords": keywords});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapBusLineNameSearchRequest::set_keywords', <String, dynamic>{'__this__': this, "keywords": keywords});
   
   
   }

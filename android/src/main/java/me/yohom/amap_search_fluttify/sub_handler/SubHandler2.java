@@ -23,7 +23,7 @@ import io.flutter.plugin.common.StandardMethodCodec;
 import io.flutter.plugin.platform.PlatformViewRegistry;
 
 import me.yohom.amap_search_fluttify.AmapSearchFluttifyPlugin.Handler;
-import me.yohom.foundation_fluttify.FluttifyMessageCodec;
+import me.yohom.foundation_fluttify.core.FluttifyMessageCodec;
 
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getEnableLog;
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getHEAP;
@@ -134,7 +134,7 @@ public class SubHandler2 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setPaths((ArrayList) var1);
+                    __this__.setPaths(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1108,7 +1108,7 @@ public class SubHandler2 {
             put("com.amap.api.services.route.RouteRailwayItem::setDistance", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.route.RouteRailwayItem __this__ = (com.amap.api.services.route.RouteRailwayItem) ((Map<String, Object>) __args__).get("__this__");
@@ -1237,7 +1237,7 @@ public class SubHandler2 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setViastops((ArrayList) var1);
+                    __this__.setViastops(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1266,7 +1266,7 @@ public class SubHandler2 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setAlters((ArrayList) var1);
+                    __this__.setAlters(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1295,7 +1295,7 @@ public class SubHandler2 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setSpaces((ArrayList) var1);
+                    __this__.setSpaces(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1510,7 +1510,7 @@ public class SubHandler2 {
             put("com.amap.api.services.route.WalkStep::setDistance", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.route.WalkStep __this__ = (com.amap.api.services.route.WalkStep) ((Map<String, Object>) __args__).get("__this__");
@@ -1567,7 +1567,7 @@ public class SubHandler2 {
             put("com.amap.api.services.route.WalkStep::setDuration", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.route.WalkStep __this__ = (com.amap.api.services.route.WalkStep) ((Map<String, Object>) __args__).get("__this__");
@@ -1637,7 +1637,7 @@ public class SubHandler2 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setPolyline((ArrayList) var1);
+                    __this__.setPolyline(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2194,7 +2194,7 @@ public class SubHandler2 {
             put("com.amap.api.services.route.RailwayStationItem::setWait", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.route.RailwayStationItem __this__ = (com.amap.api.services.route.RailwayStationItem) ((Map<String, Object>) __args__).get("__this__");
@@ -2264,7 +2264,7 @@ public class SubHandler2 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setPaths((ArrayList) var1);
+                    __this__.setPaths(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2804,7 +2804,7 @@ public class SubHandler2 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setSteps((ArrayList) var1);
+                    __this__.setSteps(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3216,7 +3216,7 @@ public class SubHandler2 {
             put("com.amap.api.services.route.RideStep::setDistance", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.route.RideStep __this__ = (com.amap.api.services.route.RideStep) ((Map<String, Object>) __args__).get("__this__");
@@ -3273,7 +3273,7 @@ public class SubHandler2 {
             put("com.amap.api.services.route.RideStep::setDuration", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.route.RideStep __this__ = (com.amap.api.services.route.RideStep) ((Map<String, Object>) __args__).get("__this__");
@@ -3343,7 +3343,7 @@ public class SubHandler2 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setPolyline((ArrayList) var1);
+                    __this__.setPolyline(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3514,7 +3514,7 @@ public class SubHandler2 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setDistricts((ArrayList) var1);
+                    __this__.setDistricts(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3628,7 +3628,7 @@ public class SubHandler2 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setDistanceResults((ArrayList) var1);
+                    __this__.setDistanceResults(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3883,7 +3883,7 @@ public class SubHandler2 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setPaths((ArrayList) var1);
+                    __this__.setPaths(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4110,7 +4110,7 @@ public class SubHandler2 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setOrigins((ArrayList) var1);
+                    __this__.setOrigins(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4380,18 +4380,6 @@ public class SubHandler2 {
                                 Log.d("java-callback", "fluttify-java-callback: onDistanceSearched(" + var1 + var2 + ")");
                             }
             
-                            // convert to jsonable data
-                            // ref arg
-                            final Integer argvar1;
-                            if (var1 != null) {
-                                argvar1 = System.identityHashCode(var1);
-                                getHEAP().put(argvar1, var1);
-                            } else {
-                                argvar1 = null;
-                            }
-                            // jsonable arg
-                            int argvar2 = var2;
-            
                             // call dart method
                             handler.post(new Runnable() {
                                 @Override
@@ -4399,8 +4387,8 @@ public class SubHandler2 {
                                     callbackChannel.invokeMethod(
                                         "Callback::com.amap.api.services.route.DistanceSearch.OnDistanceSearchListener::onDistanceSearched",
                                         new HashMap<String, Object>() {{
-                                            put("var1", argvar1);
-                                            put("var2", argvar2);
+                                            put("var1", var1);
+                                            put("var2", var2);
                                         }}
                                     );
                                 }
@@ -4525,7 +4513,7 @@ public class SubHandler2 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setSteps((ArrayList) var1);
+                    __this__.setSteps(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4696,7 +4684,7 @@ public class SubHandler2 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setPolyline((ArrayList) var1);
+                    __this__.setPolyline(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4810,7 +4798,7 @@ public class SubHandler2 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setPassStations((ArrayList) var1);
+                    __this__.setPassStations(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -4854,7 +4842,7 @@ public class SubHandler2 {
             put("com.amap.api.services.route.RouteBusLineItem::setDuration", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.route.RouteBusLineItem __this__ = (com.amap.api.services.route.RouteBusLineItem) ((Map<String, Object>) __args__).get("__this__");
@@ -5336,7 +5324,7 @@ public class SubHandler2 {
             put("com.amap.api.services.route.DrivePlanStep::setDistance", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                float var1 = (float) ((Map<String, Object>) __args__).get("var1");
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.route.DrivePlanStep __this__ = (com.amap.api.services.route.DrivePlanStep) ((Map<String, Object>) __args__).get("__this__");
@@ -5463,7 +5451,7 @@ public class SubHandler2 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setPolyline((ArrayList) var1);
+                    __this__.setPolyline(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -5577,7 +5565,7 @@ public class SubHandler2 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setElements((ArrayList) var1);
+                    __this__.setElements(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {

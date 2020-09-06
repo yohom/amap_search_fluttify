@@ -22,7 +22,7 @@ class AMapWeatherSearchResponse extends AMapSearchObject with NSCoding, NSCopyin
   //region creators
   static Future<AMapWeatherSearchResponse> create__() async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createAMapWeatherSearchResponse');
-    final object = AMapWeatherSearchResponse()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = AMapWeatherSearchResponse()..refId = refId;
     return object;
   }
   
@@ -32,7 +32,7 @@ class AMapWeatherSearchResponse extends AMapSearchObject with NSCoding, NSCopyin
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchAMapWeatherSearchResponse', {'length': length});
   
-    final List<AMapWeatherSearchResponse> typedResult = resultBatch.map((result) => AMapWeatherSearchResponse()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<AMapWeatherSearchResponse> typedResult = resultBatch.map((result) => AMapWeatherSearchResponse()..refId = result).toList();
     return typedResult;
   }
   
@@ -41,27 +41,25 @@ class AMapWeatherSearchResponse extends AMapSearchObject with NSCoding, NSCopyin
   //region getters
   Future<List<AMapLocalWeatherLive>> get_lives() async {
     final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapWeatherSearchResponse::get_lives", {'__this__': this});
-    return __result__ == null ? null : ((__result__ as List).cast<String>().map((__it__) => AMapLocalWeatherLive()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
+    return __result__ == null ? null : ((__result__ as List).cast<String>().map((__it__) => AMapLocalWeatherLive()..refId = __it__).toList());
   }
   
   Future<List<AMapLocalWeatherForecast>> get_forecasts() async {
     final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapWeatherSearchResponse::get_forecasts", {'__this__': this});
-    return __result__ == null ? null : ((__result__ as List).cast<String>().map((__it__) => AMapLocalWeatherForecast()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
+    return __result__ == null ? null : ((__result__ as List).cast<String>().map((__it__) => AMapLocalWeatherForecast()..refId = __it__).toList());
   }
   
   //endregion
 
   //region setters
   Future<void> set_lives(List<AMapLocalWeatherLive> lives) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapWeatherSearchResponse::set_lives', <String, dynamic>{'__this__': this, "lives": lives});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapWeatherSearchResponse::set_lives', <String, dynamic>{'__this__': this, "lives": lives});
   
   
   }
   
   Future<void> set_forecasts(List<AMapLocalWeatherForecast> forecasts) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapWeatherSearchResponse::set_forecasts', <String, dynamic>{'__this__': this, "forecasts": forecasts});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapWeatherSearchResponse::set_forecasts', <String, dynamic>{'__this__': this, "forecasts": forecasts});
   
   
   }
@@ -78,14 +76,14 @@ extension AMapWeatherSearchResponse_Batch on List<AMapWeatherSearchResponse> {
   Future<List<List<AMapLocalWeatherLive>>> get_lives_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapWeatherSearchResponse::get_lives_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => AMapLocalWeatherLive()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => AMapLocalWeatherLive()..refId = __it__).toList()).toList();
     return typedResult;
   }
   
   Future<List<List<AMapLocalWeatherForecast>>> get_forecasts_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapWeatherSearchResponse::get_forecasts_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => AMapLocalWeatherForecast()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => AMapLocalWeatherForecast()..refId = __it__).toList()).toList();
     return typedResult;
   }
   

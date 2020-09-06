@@ -22,7 +22,7 @@ class AMapShareSearchResponse extends AMapSearchObject with NSCoding, NSCopying 
   //region creators
   static Future<AMapShareSearchResponse> create__() async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createAMapShareSearchResponse');
-    final object = AMapShareSearchResponse()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = AMapShareSearchResponse()..refId = refId;
     return object;
   }
   
@@ -32,7 +32,7 @@ class AMapShareSearchResponse extends AMapSearchObject with NSCoding, NSCopying 
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchAMapShareSearchResponse', {'length': length});
   
-    final List<AMapShareSearchResponse> typedResult = resultBatch.map((result) => AMapShareSearchResponse()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<AMapShareSearchResponse> typedResult = resultBatch.map((result) => AMapShareSearchResponse()..refId = result).toList();
     return typedResult;
   }
   
@@ -48,8 +48,7 @@ class AMapShareSearchResponse extends AMapSearchObject with NSCoding, NSCopying 
 
   //region setters
   Future<void> set_shareURL(String shareURL) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapShareSearchResponse::set_shareURL', <String, dynamic>{'__this__': this, "shareURL": shareURL});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapShareSearchResponse::set_shareURL', <String, dynamic>{'__this__': this, "shareURL": shareURL});
   
   
   }

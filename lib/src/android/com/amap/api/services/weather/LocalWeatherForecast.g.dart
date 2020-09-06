@@ -22,7 +22,7 @@ class com_amap_api_services_weather_LocalWeatherForecast extends java_lang_Objec
   //region creators
   static Future<com_amap_api_services_weather_LocalWeatherForecast> create__() async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createcom_amap_api_services_weather_LocalWeatherForecast__');
-    final object = com_amap_api_services_weather_LocalWeatherForecast()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = com_amap_api_services_weather_LocalWeatherForecast()..refId = refId;
     return object;
   }
   
@@ -32,7 +32,7 @@ class com_amap_api_services_weather_LocalWeatherForecast extends java_lang_Objec
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchcom_amap_api_services_weather_LocalWeatherForecast__', {'length': length});
   
-    final List<com_amap_api_services_weather_LocalWeatherForecast> typedResult = resultBatch.map((result) => com_amap_api_services_weather_LocalWeatherForecast()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<com_amap_api_services_weather_LocalWeatherForecast> typedResult = resultBatch.map((result) => com_amap_api_services_weather_LocalWeatherForecast()..refId = result).toList();
     return typedResult;
   }
   
@@ -249,7 +249,7 @@ class com_amap_api_services_weather_LocalWeatherForecast extends java_lang_Objec
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = (__result__ as List).cast<String>().map((__it__) => com_amap_api_services_weather_LocalDayWeatherForecast()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      final __return__ = (__result__ as List).cast<String>().map((__it__) => com_amap_api_services_weather_LocalDayWeatherForecast()..refId = __it__).toList();
       return __return__;
     }
   }
@@ -456,7 +456,7 @@ extension com_amap_api_services_weather_LocalWeatherForecast_Batch on List<com_a
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => com_amap_api_services_weather_LocalDayWeatherForecast()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => com_amap_api_services_weather_LocalDayWeatherForecast()..refId = __it__).toList()).toList();
       return typedResult;
     }
   }

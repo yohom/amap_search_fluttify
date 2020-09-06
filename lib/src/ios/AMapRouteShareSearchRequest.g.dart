@@ -22,7 +22,7 @@ class AMapRouteShareSearchRequest extends AMapShareSearchBaseRequest with NSCodi
   //region creators
   static Future<AMapRouteShareSearchRequest> create__() async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createAMapRouteShareSearchRequest');
-    final object = AMapRouteShareSearchRequest()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = AMapRouteShareSearchRequest()..refId = refId;
     return object;
   }
   
@@ -32,7 +32,7 @@ class AMapRouteShareSearchRequest extends AMapShareSearchBaseRequest with NSCodi
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchAMapRouteShareSearchRequest', {'length': length});
   
-    final List<AMapRouteShareSearchRequest> typedResult = resultBatch.map((result) => AMapRouteShareSearchRequest()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<AMapRouteShareSearchRequest> typedResult = resultBatch.map((result) => AMapRouteShareSearchRequest()..refId = result).toList();
     return typedResult;
   }
   
@@ -51,12 +51,12 @@ class AMapRouteShareSearchRequest extends AMapShareSearchBaseRequest with NSCodi
   
   Future<AMapGeoPoint> get_startCoordinate() async {
     final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapRouteShareSearchRequest::get_startCoordinate", {'__this__': this});
-    return __result__ == null ? null : (AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify');
+    return __result__ == null ? null : (AMapGeoPoint()..refId = __result__);
   }
   
   Future<AMapGeoPoint> get_destinationCoordinate() async {
     final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapRouteShareSearchRequest::get_destinationCoordinate", {'__this__': this});
-    return __result__ == null ? null : (AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify');
+    return __result__ == null ? null : (AMapGeoPoint()..refId = __result__);
   }
   
   Future<String> get_startName() async {
@@ -73,43 +73,37 @@ class AMapRouteShareSearchRequest extends AMapShareSearchBaseRequest with NSCodi
 
   //region setters
   Future<void> set_strategy(int strategy) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapRouteShareSearchRequest::set_strategy', <String, dynamic>{'__this__': this, "strategy": strategy});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRouteShareSearchRequest::set_strategy', <String, dynamic>{'__this__': this, "strategy": strategy});
   
   
   }
   
   Future<void> set_type(int type) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapRouteShareSearchRequest::set_type', <String, dynamic>{'__this__': this, "type": type});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRouteShareSearchRequest::set_type', <String, dynamic>{'__this__': this, "type": type});
   
   
   }
   
   Future<void> set_startCoordinate(AMapGeoPoint startCoordinate) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapRouteShareSearchRequest::set_startCoordinate', <String, dynamic>{'__this__': this, "startCoordinate": startCoordinate});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRouteShareSearchRequest::set_startCoordinate', <String, dynamic>{'__this__': this, "startCoordinate": startCoordinate});
   
   
   }
   
   Future<void> set_destinationCoordinate(AMapGeoPoint destinationCoordinate) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapRouteShareSearchRequest::set_destinationCoordinate', <String, dynamic>{'__this__': this, "destinationCoordinate": destinationCoordinate});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRouteShareSearchRequest::set_destinationCoordinate', <String, dynamic>{'__this__': this, "destinationCoordinate": destinationCoordinate});
   
   
   }
   
   Future<void> set_startName(String startName) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapRouteShareSearchRequest::set_startName', <String, dynamic>{'__this__': this, "startName": startName});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRouteShareSearchRequest::set_startName', <String, dynamic>{'__this__': this, "startName": startName});
   
   
   }
   
   Future<void> set_destinationName(String destinationName) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapRouteShareSearchRequest::set_destinationName', <String, dynamic>{'__this__': this, "destinationName": destinationName});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRouteShareSearchRequest::set_destinationName', <String, dynamic>{'__this__': this, "destinationName": destinationName});
   
   
   }
@@ -140,14 +134,14 @@ extension AMapRouteShareSearchRequest_Batch on List<AMapRouteShareSearchRequest>
   Future<List<AMapGeoPoint>> get_startCoordinate_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapRouteShareSearchRequest::get_startCoordinate_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapGeoPoint()..refId = __result__).toList();
     return typedResult;
   }
   
   Future<List<AMapGeoPoint>> get_destinationCoordinate_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapRouteShareSearchRequest::get_destinationCoordinate_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapGeoPoint()..refId = __result__).toList();
     return typedResult;
   }
   

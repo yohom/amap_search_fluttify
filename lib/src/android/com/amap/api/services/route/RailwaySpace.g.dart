@@ -22,7 +22,7 @@ class com_amap_api_services_route_RailwaySpace extends java_lang_Object with and
   //region creators
   static Future<com_amap_api_services_route_RailwaySpace> create__String__float(String var1, double var2) async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createcom_amap_api_services_route_RailwaySpace__String__float', {"var1": var1, "var2": var2});
-    final object = com_amap_api_services_route_RailwaySpace()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = com_amap_api_services_route_RailwaySpace()..refId = refId;
     return object;
   }
   
@@ -32,7 +32,7 @@ class com_amap_api_services_route_RailwaySpace extends java_lang_Object with and
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchcom_amap_api_services_route_RailwaySpace__String__float', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]);
   
-    final List<com_amap_api_services_route_RailwaySpace> typedResult = resultBatch.map((result) => com_amap_api_services_route_RailwaySpace()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<com_amap_api_services_route_RailwaySpace> typedResult = resultBatch.map((result) => com_amap_api_services_route_RailwaySpace()..refId = result).toList();
     return typedResult;
   }
   

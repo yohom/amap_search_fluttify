@@ -22,7 +22,7 @@ class AMapRoadTrafficSearchRequest extends AMapRoadTrafficSearchBaseRequest with
   //region creators
   static Future<AMapRoadTrafficSearchRequest> create__() async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createAMapRoadTrafficSearchRequest');
-    final object = AMapRoadTrafficSearchRequest()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = AMapRoadTrafficSearchRequest()..refId = refId;
     return object;
   }
   
@@ -32,7 +32,7 @@ class AMapRoadTrafficSearchRequest extends AMapRoadTrafficSearchBaseRequest with
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchAMapRoadTrafficSearchRequest', {'length': length});
   
-    final List<AMapRoadTrafficSearchRequest> typedResult = resultBatch.map((result) => AMapRoadTrafficSearchRequest()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<AMapRoadTrafficSearchRequest> typedResult = resultBatch.map((result) => AMapRoadTrafficSearchRequest()..refId = result).toList();
     return typedResult;
   }
   
@@ -53,15 +53,13 @@ class AMapRoadTrafficSearchRequest extends AMapRoadTrafficSearchBaseRequest with
 
   //region setters
   Future<void> set_roadName(String roadName) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapRoadTrafficSearchRequest::set_roadName', <String, dynamic>{'__this__': this, "roadName": roadName});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRoadTrafficSearchRequest::set_roadName', <String, dynamic>{'__this__': this, "roadName": roadName});
   
   
   }
   
   Future<void> set_adcode(String adcode) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapRoadTrafficSearchRequest::set_adcode', <String, dynamic>{'__this__': this, "adcode": adcode});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRoadTrafficSearchRequest::set_adcode', <String, dynamic>{'__this__': this, "adcode": adcode});
   
   
   }

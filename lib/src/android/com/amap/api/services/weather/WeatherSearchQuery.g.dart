@@ -23,13 +23,13 @@ class com_amap_api_services_weather_WeatherSearchQuery extends java_lang_Object 
   //region creators
   static Future<com_amap_api_services_weather_WeatherSearchQuery> create__String__int(String var1, int var2) async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createcom_amap_api_services_weather_WeatherSearchQuery__String__int', {"var1": var1, "var2": var2});
-    final object = com_amap_api_services_weather_WeatherSearchQuery()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = com_amap_api_services_weather_WeatherSearchQuery()..refId = refId;
     return object;
   }
   
   static Future<com_amap_api_services_weather_WeatherSearchQuery> create__() async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createcom_amap_api_services_weather_WeatherSearchQuery__');
-    final object = com_amap_api_services_weather_WeatherSearchQuery()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = com_amap_api_services_weather_WeatherSearchQuery()..refId = refId;
     return object;
   }
   
@@ -39,7 +39,7 @@ class com_amap_api_services_weather_WeatherSearchQuery extends java_lang_Object 
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchcom_amap_api_services_weather_WeatherSearchQuery__String__int', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]);
   
-    final List<com_amap_api_services_weather_WeatherSearchQuery> typedResult = resultBatch.map((result) => com_amap_api_services_weather_WeatherSearchQuery()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<com_amap_api_services_weather_WeatherSearchQuery> typedResult = resultBatch.map((result) => com_amap_api_services_weather_WeatherSearchQuery()..refId = result).toList();
     return typedResult;
   }
   
@@ -49,7 +49,7 @@ class com_amap_api_services_weather_WeatherSearchQuery extends java_lang_Object 
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchcom_amap_api_services_weather_WeatherSearchQuery__', {'length': length});
   
-    final List<com_amap_api_services_weather_WeatherSearchQuery> typedResult = resultBatch.map((result) => com_amap_api_services_weather_WeatherSearchQuery()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<com_amap_api_services_weather_WeatherSearchQuery> typedResult = resultBatch.map((result) => com_amap_api_services_weather_WeatherSearchQuery()..refId = result).toList();
     return typedResult;
   }
   
@@ -128,7 +128,7 @@ class com_amap_api_services_weather_WeatherSearchQuery extends java_lang_Object 
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_services_weather_WeatherSearchQuery()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_weather_WeatherSearchQuery()..refId = __result__;
       return __return__;
     }
   }
@@ -198,7 +198,7 @@ extension com_amap_api_services_weather_WeatherSearchQuery_Batch on List<com_ama
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_weather_WeatherSearchQuery()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_weather_WeatherSearchQuery()..refId = __result__).toList();
       return typedResult;
     }
   }

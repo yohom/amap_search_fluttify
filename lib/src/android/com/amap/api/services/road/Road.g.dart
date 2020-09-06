@@ -22,13 +22,13 @@ class com_amap_api_services_road_Road extends java_lang_Object with android_os_P
   //region creators
   static Future<com_amap_api_services_road_Road> create__() async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createcom_amap_api_services_road_Road__');
-    final object = com_amap_api_services_road_Road()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = com_amap_api_services_road_Road()..refId = refId;
     return object;
   }
   
   static Future<com_amap_api_services_road_Road> create__String__String(String var1, String var2) async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createcom_amap_api_services_road_Road__String__String', {"var1": var1, "var2": var2});
-    final object = com_amap_api_services_road_Road()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = com_amap_api_services_road_Road()..refId = refId;
     return object;
   }
   
@@ -38,7 +38,7 @@ class com_amap_api_services_road_Road extends java_lang_Object with android_os_P
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchcom_amap_api_services_road_Road__', {'length': length});
   
-    final List<com_amap_api_services_road_Road> typedResult = resultBatch.map((result) => com_amap_api_services_road_Road()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<com_amap_api_services_road_Road> typedResult = resultBatch.map((result) => com_amap_api_services_road_Road()..refId = result).toList();
     return typedResult;
   }
   
@@ -48,7 +48,7 @@ class com_amap_api_services_road_Road extends java_lang_Object with android_os_P
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchcom_amap_api_services_road_Road__String__String', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]);
   
-    final List<com_amap_api_services_road_Road> typedResult = resultBatch.map((result) => com_amap_api_services_road_Road()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<com_amap_api_services_road_Road> typedResult = resultBatch.map((result) => com_amap_api_services_road_Road()..refId = result).toList();
     return typedResult;
   }
   
@@ -265,7 +265,7 @@ class com_amap_api_services_road_Road extends java_lang_Object with android_os_P
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_core_LatLonPoint()..refId = __result__;
       return __return__;
     }
   }
@@ -518,7 +518,7 @@ extension com_amap_api_services_road_Road_Batch on List<com_amap_api_services_ro
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_core_LatLonPoint()..refId = __result__).toList();
       return typedResult;
     }
   }

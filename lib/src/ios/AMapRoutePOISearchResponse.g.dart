@@ -22,7 +22,7 @@ class AMapRoutePOISearchResponse extends AMapSearchObject with NSCoding, NSCopyi
   //region creators
   static Future<AMapRoutePOISearchResponse> create__() async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createAMapRoutePOISearchResponse');
-    final object = AMapRoutePOISearchResponse()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = AMapRoutePOISearchResponse()..refId = refId;
     return object;
   }
   
@@ -32,7 +32,7 @@ class AMapRoutePOISearchResponse extends AMapSearchObject with NSCoding, NSCopyi
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchAMapRoutePOISearchResponse', {'length': length});
   
-    final List<AMapRoutePOISearchResponse> typedResult = resultBatch.map((result) => AMapRoutePOISearchResponse()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<AMapRoutePOISearchResponse> typedResult = resultBatch.map((result) => AMapRoutePOISearchResponse()..refId = result).toList();
     return typedResult;
   }
   
@@ -46,22 +46,20 @@ class AMapRoutePOISearchResponse extends AMapSearchObject with NSCoding, NSCopyi
   
   Future<List<AMapRoutePOI>> get_pois() async {
     final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapRoutePOISearchResponse::get_pois", {'__this__': this});
-    return __result__ == null ? null : ((__result__ as List).cast<String>().map((__it__) => AMapRoutePOI()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
+    return __result__ == null ? null : ((__result__ as List).cast<String>().map((__it__) => AMapRoutePOI()..refId = __it__).toList());
   }
   
   //endregion
 
   //region setters
   Future<void> set_count(int count) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapRoutePOISearchResponse::set_count', <String, dynamic>{'__this__': this, "count": count});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRoutePOISearchResponse::set_count', <String, dynamic>{'__this__': this, "count": count});
   
   
   }
   
   Future<void> set_pois(List<AMapRoutePOI> pois) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapRoutePOISearchResponse::set_pois', <String, dynamic>{'__this__': this, "pois": pois});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRoutePOISearchResponse::set_pois', <String, dynamic>{'__this__': this, "pois": pois});
   
   
   }
@@ -85,7 +83,7 @@ extension AMapRoutePOISearchResponse_Batch on List<AMapRoutePOISearchResponse> {
   Future<List<List<AMapRoutePOI>>> get_pois_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapRoutePOISearchResponse::get_pois_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => AMapRoutePOI()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => AMapRoutePOI()..refId = __it__).toList()).toList();
     return typedResult;
   }
   

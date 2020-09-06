@@ -22,7 +22,7 @@ class com_amap_api_services_poisearch_IndoorData extends java_lang_Object with a
   //region creators
   static Future<com_amap_api_services_poisearch_IndoorData> create__String__int__String(String var1, int var2, String var3) async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createcom_amap_api_services_poisearch_IndoorData__String__int__String', {"var1": var1, "var2": var2, "var3": var3});
-    final object = com_amap_api_services_poisearch_IndoorData()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = com_amap_api_services_poisearch_IndoorData()..refId = refId;
     return object;
   }
   
@@ -32,7 +32,7 @@ class com_amap_api_services_poisearch_IndoorData extends java_lang_Object with a
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchcom_amap_api_services_poisearch_IndoorData__String__int__String', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__]}]);
   
-    final List<com_amap_api_services_poisearch_IndoorData> typedResult = resultBatch.map((result) => com_amap_api_services_poisearch_IndoorData()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<com_amap_api_services_poisearch_IndoorData> typedResult = resultBatch.map((result) => com_amap_api_services_poisearch_IndoorData()..refId = result).toList();
     return typedResult;
   }
   

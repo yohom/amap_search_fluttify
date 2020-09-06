@@ -25,25 +25,25 @@ class com_amap_api_services_poisearch_PoiSearch_SearchBound extends java_lang_Ob
   //region creators
   static Future<com_amap_api_services_poisearch_PoiSearch_SearchBound> create__com_amap_api_services_core_LatLonPoint__int(com_amap_api_services_core_LatLonPoint var1, int var2) async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint__int', {"var1": var1, "var2": var2});
-    final object = com_amap_api_services_poisearch_PoiSearch_SearchBound()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = com_amap_api_services_poisearch_PoiSearch_SearchBound()..refId = refId;
     return object;
   }
   
   static Future<com_amap_api_services_poisearch_PoiSearch_SearchBound> create__com_amap_api_services_core_LatLonPoint__int__boolean(com_amap_api_services_core_LatLonPoint var1, int var2, bool var3) async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint__int__boolean', {"var1": var1, "var2": var2, "var3": var3});
-    final object = com_amap_api_services_poisearch_PoiSearch_SearchBound()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = com_amap_api_services_poisearch_PoiSearch_SearchBound()..refId = refId;
     return object;
   }
   
   static Future<com_amap_api_services_poisearch_PoiSearch_SearchBound> create__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint(com_amap_api_services_core_LatLonPoint var1, com_amap_api_services_core_LatLonPoint var2) async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint', {"var1": var1, "var2": var2});
-    final object = com_amap_api_services_poisearch_PoiSearch_SearchBound()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = com_amap_api_services_poisearch_PoiSearch_SearchBound()..refId = refId;
     return object;
   }
   
   static Future<com_amap_api_services_poisearch_PoiSearch_SearchBound> create__List_java_util_List_com_amap_api_services_core_LatLonPoint__(List<com_amap_api_services_core_LatLonPoint> var1) async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch_SearchBound__java_util_List_com_amap_api_services_core_LatLonPoint_', {"var1": var1});
-    final object = com_amap_api_services_poisearch_PoiSearch_SearchBound()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = com_amap_api_services_poisearch_PoiSearch_SearchBound()..refId = refId;
     return object;
   }
   
@@ -53,7 +53,7 @@ class com_amap_api_services_poisearch_PoiSearch_SearchBound extends java_lang_Ob
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchcom_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint__int', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]);
   
-    final List<com_amap_api_services_poisearch_PoiSearch_SearchBound> typedResult = resultBatch.map((result) => com_amap_api_services_poisearch_PoiSearch_SearchBound()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<com_amap_api_services_poisearch_PoiSearch_SearchBound> typedResult = resultBatch.map((result) => com_amap_api_services_poisearch_PoiSearch_SearchBound()..refId = result).toList();
     return typedResult;
   }
   
@@ -63,7 +63,7 @@ class com_amap_api_services_poisearch_PoiSearch_SearchBound extends java_lang_Ob
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchcom_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint__int__boolean', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__]}]);
   
-    final List<com_amap_api_services_poisearch_PoiSearch_SearchBound> typedResult = resultBatch.map((result) => com_amap_api_services_poisearch_PoiSearch_SearchBound()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<com_amap_api_services_poisearch_PoiSearch_SearchBound> typedResult = resultBatch.map((result) => com_amap_api_services_poisearch_PoiSearch_SearchBound()..refId = result).toList();
     return typedResult;
   }
   
@@ -73,7 +73,7 @@ class com_amap_api_services_poisearch_PoiSearch_SearchBound extends java_lang_Ob
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchcom_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]);
   
-    final List<com_amap_api_services_poisearch_PoiSearch_SearchBound> typedResult = resultBatch.map((result) => com_amap_api_services_poisearch_PoiSearch_SearchBound()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<com_amap_api_services_poisearch_PoiSearch_SearchBound> typedResult = resultBatch.map((result) => com_amap_api_services_poisearch_PoiSearch_SearchBound()..refId = result).toList();
     return typedResult;
   }
   
@@ -83,7 +83,7 @@ class com_amap_api_services_poisearch_PoiSearch_SearchBound extends java_lang_Ob
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchcom_amap_api_services_poisearch_PoiSearch_SearchBound__java_util_List_com_amap_api_services_core_LatLonPoint_', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]);
   
-    final List<com_amap_api_services_poisearch_PoiSearch_SearchBound> typedResult = resultBatch.map((result) => com_amap_api_services_poisearch_PoiSearch_SearchBound()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<com_amap_api_services_poisearch_PoiSearch_SearchBound> typedResult = resultBatch.map((result) => com_amap_api_services_poisearch_PoiSearch_SearchBound()..refId = result).toList();
     return typedResult;
   }
   
@@ -116,7 +116,7 @@ class com_amap_api_services_poisearch_PoiSearch_SearchBound extends java_lang_Ob
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_core_LatLonPoint()..refId = __result__;
       return __return__;
     }
   }
@@ -139,7 +139,7 @@ class com_amap_api_services_poisearch_PoiSearch_SearchBound extends java_lang_Ob
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_core_LatLonPoint()..refId = __result__;
       return __return__;
     }
   }
@@ -162,7 +162,7 @@ class com_amap_api_services_poisearch_PoiSearch_SearchBound extends java_lang_Ob
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_core_LatLonPoint()..refId = __result__;
       return __return__;
     }
   }
@@ -254,7 +254,7 @@ class com_amap_api_services_poisearch_PoiSearch_SearchBound extends java_lang_Ob
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = (__result__ as List).cast<String>().map((__it__) => com_amap_api_services_core_LatLonPoint()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      final __return__ = (__result__ as List).cast<String>().map((__it__) => com_amap_api_services_core_LatLonPoint()..refId = __it__).toList();
       return __return__;
     }
   }
@@ -277,7 +277,7 @@ class com_amap_api_services_poisearch_PoiSearch_SearchBound extends java_lang_Ob
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_services_poisearch_PoiSearch_SearchBound()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_poisearch_PoiSearch_SearchBound()..refId = __result__;
       return __return__;
     }
   }
@@ -309,7 +309,7 @@ extension com_amap_api_services_poisearch_PoiSearch_SearchBound_Batch on List<co
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_core_LatLonPoint()..refId = __result__).toList();
       return typedResult;
     }
   }
@@ -328,7 +328,7 @@ extension com_amap_api_services_poisearch_PoiSearch_SearchBound_Batch on List<co
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_core_LatLonPoint()..refId = __result__).toList();
       return typedResult;
     }
   }
@@ -347,7 +347,7 @@ extension com_amap_api_services_poisearch_PoiSearch_SearchBound_Batch on List<co
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_core_LatLonPoint()..refId = __result__).toList();
       return typedResult;
     }
   }
@@ -423,7 +423,7 @@ extension com_amap_api_services_poisearch_PoiSearch_SearchBound_Batch on List<co
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => com_amap_api_services_core_LatLonPoint()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => com_amap_api_services_core_LatLonPoint()..refId = __it__).toList()).toList();
       return typedResult;
     }
   }
@@ -442,7 +442,7 @@ extension com_amap_api_services_poisearch_PoiSearch_SearchBound_Batch on List<co
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_poisearch_PoiSearch_SearchBound()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_poisearch_PoiSearch_SearchBound()..refId = __result__).toList();
       return typedResult;
     }
   }

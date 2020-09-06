@@ -22,7 +22,7 @@ class AMapPOIExtension extends AMapSearchObject with NSCoding, NSCopying {
   //region creators
   static Future<AMapPOIExtension> create__() async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createAMapPOIExtension');
-    final object = AMapPOIExtension()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = AMapPOIExtension()..refId = refId;
     return object;
   }
   
@@ -32,7 +32,7 @@ class AMapPOIExtension extends AMapSearchObject with NSCoding, NSCopying {
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchAMapPOIExtension', {'length': length});
   
-    final List<AMapPOIExtension> typedResult = resultBatch.map((result) => AMapPOIExtension()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<AMapPOIExtension> typedResult = resultBatch.map((result) => AMapPOIExtension()..refId = result).toList();
     return typedResult;
   }
   
@@ -58,22 +58,19 @@ class AMapPOIExtension extends AMapSearchObject with NSCoding, NSCopying {
 
   //region setters
   Future<void> set_rating(double rating) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapPOIExtension::set_rating', <String, dynamic>{'__this__': this, "rating": rating});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapPOIExtension::set_rating', <String, dynamic>{'__this__': this, "rating": rating});
   
   
   }
   
   Future<void> set_cost(double cost) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapPOIExtension::set_cost', <String, dynamic>{'__this__': this, "cost": cost});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapPOIExtension::set_cost', <String, dynamic>{'__this__': this, "cost": cost});
   
   
   }
   
   Future<void> set_openTime(String openTime) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapPOIExtension::set_openTime', <String, dynamic>{'__this__': this, "openTime": openTime});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapPOIExtension::set_openTime', <String, dynamic>{'__this__': this, "openTime": openTime});
   
   
   }

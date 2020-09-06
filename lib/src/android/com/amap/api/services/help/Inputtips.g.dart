@@ -22,7 +22,7 @@ class com_amap_api_services_help_Inputtips extends java_lang_Object  {
   //region creators
   static Future<com_amap_api_services_help_Inputtips> create__android_content_Context__com_amap_api_services_help_InputtipsQuery(android_content_Context var1, com_amap_api_services_help_InputtipsQuery var2) async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createcom_amap_api_services_help_Inputtips__android_content_Context__com_amap_api_services_help_InputtipsQuery', {"var1": var1, "var2": var2});
-    final object = com_amap_api_services_help_Inputtips()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = com_amap_api_services_help_Inputtips()..refId = refId;
     return object;
   }
   
@@ -32,7 +32,7 @@ class com_amap_api_services_help_Inputtips extends java_lang_Object  {
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchcom_amap_api_services_help_Inputtips__android_content_Context__com_amap_api_services_help_InputtipsQuery', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]);
   
-    final List<com_amap_api_services_help_Inputtips> typedResult = resultBatch.map((result) => com_amap_api_services_help_Inputtips()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<com_amap_api_services_help_Inputtips> typedResult = resultBatch.map((result) => com_amap_api_services_help_Inputtips()..refId = result).toList();
     return typedResult;
   }
   
@@ -65,7 +65,7 @@ class com_amap_api_services_help_Inputtips extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_services_help_InputtipsQuery()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_help_InputtipsQuery()..refId = __result__;
       return __return__;
     }
   }
@@ -117,7 +117,7 @@ class com_amap_api_services_help_Inputtips extends java_lang_Object  {
                 }
           
                 // handle the native call
-                var1?.onGetInputtips((args['var1'] as List).cast<int>().map((__it__) => TypeOpAmapSearchFluttifyAndroid(__it__).as__<com_amap_api_services_help_Tip>()).toList(), args['var2']);
+                var1?.onGetInputtips((args['var1'] as List).cast<String>().map((__it__) => TypeOpAmapSearchFluttifyAndroid(__it__).as__<com_amap_api_services_help_Tip>()).toList(), args['var2']);
                 break;
               default:
                 break;
@@ -178,7 +178,7 @@ class com_amap_api_services_help_Inputtips extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = (__result__ as List).cast<String>().map((__it__) => com_amap_api_services_help_Tip()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      final __return__ = (__result__ as List).cast<String>().map((__it__) => com_amap_api_services_help_Tip()..refId = __it__).toList();
       return __return__;
     }
   }
@@ -256,7 +256,7 @@ extension com_amap_api_services_help_Inputtips_Batch on List<com_amap_api_servic
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_help_InputtipsQuery()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_help_InputtipsQuery()..refId = __result__).toList();
       return typedResult;
     }
   }
@@ -313,7 +313,7 @@ extension com_amap_api_services_help_Inputtips_Batch on List<com_amap_api_servic
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => com_amap_api_services_help_Tip()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => com_amap_api_services_help_Tip()..refId = __it__).toList()).toList();
       return typedResult;
     }
   }

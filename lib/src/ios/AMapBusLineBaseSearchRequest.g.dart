@@ -22,7 +22,7 @@ class AMapBusLineBaseSearchRequest extends AMapSearchObject with NSCoding, NSCop
   //region creators
   static Future<AMapBusLineBaseSearchRequest> create__() async {
     final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createAMapBusLineBaseSearchRequest');
-    final object = AMapBusLineBaseSearchRequest()..refId = refId..tag__ = 'amap_search_fluttify';
+    final object = AMapBusLineBaseSearchRequest()..refId = refId;
     return object;
   }
   
@@ -32,7 +32,7 @@ class AMapBusLineBaseSearchRequest extends AMapSearchObject with NSCoding, NSCop
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchAMapBusLineBaseSearchRequest', {'length': length});
   
-    final List<AMapBusLineBaseSearchRequest> typedResult = resultBatch.map((result) => AMapBusLineBaseSearchRequest()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<AMapBusLineBaseSearchRequest> typedResult = resultBatch.map((result) => AMapBusLineBaseSearchRequest()..refId = result).toList();
     return typedResult;
   }
   
@@ -63,29 +63,25 @@ class AMapBusLineBaseSearchRequest extends AMapSearchObject with NSCoding, NSCop
 
   //region setters
   Future<void> set_city(String city) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapBusLineBaseSearchRequest::set_city', <String, dynamic>{'__this__': this, "city": city});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapBusLineBaseSearchRequest::set_city', <String, dynamic>{'__this__': this, "city": city});
   
   
   }
   
   Future<void> set_requireExtension(bool requireExtension) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapBusLineBaseSearchRequest::set_requireExtension', <String, dynamic>{'__this__': this, "requireExtension": requireExtension});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapBusLineBaseSearchRequest::set_requireExtension', <String, dynamic>{'__this__': this, "requireExtension": requireExtension});
   
   
   }
   
   Future<void> set_offset(int offset) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapBusLineBaseSearchRequest::set_offset', <String, dynamic>{'__this__': this, "offset": offset});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapBusLineBaseSearchRequest::set_offset', <String, dynamic>{'__this__': this, "offset": offset});
   
   
   }
   
   Future<void> set_page(int page) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec()))
-        .invokeMethod('AMapBusLineBaseSearchRequest::set_page', <String, dynamic>{'__this__': this, "page": page});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapBusLineBaseSearchRequest::set_page', <String, dynamic>{'__this__': this, "page": page});
   
   
   }
