@@ -3,6 +3,7 @@
 //////////////////////////////////////////////////////////
 
 #import "SubHandler10.h"
+#import "FluttifyMessageCodec.h"
 
 // Dart端一次方法调用所存在的栈, 只有当MethodChannel传递参数受限时, 再启用这个容器
 extern NSMutableDictionary<NSString*, NSObject*>* STACK;
@@ -17,775 +18,689 @@ extern BOOL enableLog;
     return @{
         @"RefClass::isKindOfAMapBusLineNameSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapBusLineNameSearchRequest class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapBusLineNameSearchRequest class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapBusLineIDSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapBusLineIDSearchRequest class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapBusLineIDSearchRequest class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapBusLineSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapBusLineSearchResponse class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapBusLineSearchResponse class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapDistrictSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapDistrictSearchRequest class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapDistrictSearchRequest class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapDistrictSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapDistrictSearchResponse class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapDistrictSearchResponse class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapRouteSearchBaseRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapRouteSearchBaseRequest class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapRouteSearchBaseRequest class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapDrivingRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapDrivingRouteSearchRequest class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapDrivingRouteSearchRequest class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapWalkingRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapWalkingRouteSearchRequest class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapWalkingRouteSearchRequest class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapTransitRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapTransitRouteSearchRequest class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapTransitRouteSearchRequest class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapRidingRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapRidingRouteSearchRequest class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapRidingRouteSearchRequest class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapRouteSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapRouteSearchResponse class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapRouteSearchResponse class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapRidingRouteSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapRidingRouteSearchResponse class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapRidingRouteSearchResponse class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapTruckRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapTruckRouteSearchRequest class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapTruckRouteSearchRequest class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapDistanceSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapDistanceSearchRequest class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapDistanceSearchRequest class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapDistanceSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapDistanceSearchResponse class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapDistanceSearchResponse class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapWeatherSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapWeatherSearchRequest class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapWeatherSearchRequest class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapWeatherSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapWeatherSearchResponse class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapWeatherSearchResponse class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapRoadTrafficSearchBaseRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapRoadTrafficSearchBaseRequest class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapRoadTrafficSearchBaseRequest class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapRoadTrafficSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapRoadTrafficSearchRequest class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapRoadTrafficSearchRequest class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapRoadTrafficCircleSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapRoadTrafficCircleSearchRequest class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapRoadTrafficCircleSearchRequest class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapRoadTrafficSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapRoadTrafficSearchResponse class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapRoadTrafficSearchResponse class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapNearbySearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapNearbySearchRequest class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapNearbySearchRequest class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapNearbySearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapNearbySearchResponse class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapNearbySearchResponse class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapCloudSearchBaseRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapCloudSearchBaseRequest class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapCloudSearchBaseRequest class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapCloudPOIAroundSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapCloudPOIAroundSearchRequest class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapCloudPOIAroundSearchRequest class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapCloudPOIPolygonSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapCloudPOIPolygonSearchRequest class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapCloudPOIPolygonSearchRequest class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapCloudPOIIDSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapCloudPOIIDSearchRequest class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapCloudPOIIDSearchRequest class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapCloudPOILocalSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapCloudPOILocalSearchRequest class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapCloudPOILocalSearchRequest class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapCloudPOISearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapCloudPOISearchResponse class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapCloudPOISearchResponse class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapShareSearchBaseRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapShareSearchBaseRequest class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapShareSearchBaseRequest class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapLocationShareSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapLocationShareSearchRequest class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapLocationShareSearchRequest class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapPOIShareSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapPOIShareSearchRequest class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapPOIShareSearchRequest class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapRouteShareSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapRouteShareSearchRequest class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapRouteShareSearchRequest class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapNavigationShareSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapNavigationShareSearchRequest class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapNavigationShareSearchRequest class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapShareSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapShareSearchResponse class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapShareSearchResponse class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapFutureRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapFutureRouteSearchRequest class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapFutureRouteSearchRequest class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapFutureRouteSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapFutureRouteSearchResponse class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapFutureRouteSearchResponse class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapSearchObject": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapSearchObject class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapSearchObject class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapGeoPoint": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapGeoPoint class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapGeoPoint class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapGeoPolygon": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapGeoPolygon class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapGeoPolygon class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapCity": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapCity class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapCity class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapSuggestion": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapSuggestion class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapSuggestion class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapTip": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapTip class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapTip class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapImage": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapImage class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapImage class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapPOIExtension": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapPOIExtension class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapPOIExtension class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapIndoorData": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapIndoorData class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapIndoorData class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapSubPOI": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapSubPOI class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapSubPOI class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapRoutePOI": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapRoutePOI class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapRoutePOI class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapPOI": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapPOI class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapPOI class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapAOI": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapAOI class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapAOI class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapRoad": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapRoad class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapRoad class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapRoadInter": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapRoadInter class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapRoadInter class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapStreetNumber": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapStreetNumber class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapStreetNumber class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapBusinessArea": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapBusinessArea class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapBusinessArea class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapAddressComponent": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapAddressComponent class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapAddressComponent class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapReGeocode": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapReGeocode class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapReGeocode class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapGeocode": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapGeocode class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapGeocode class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapBusStop": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapBusStop class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapBusStop class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapBusLine": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapBusLine class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapBusLine class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapDistrict": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapDistrict class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapDistrict class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapTMC": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapTMC class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapTMC class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapStep": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapStep class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapStep class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapPath": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapPath class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapPath class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapFutureTimeInfoElement": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapFutureTimeInfoElement class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapFutureTimeInfoElement class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapFutureTimeInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapFutureTimeInfo class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapFutureTimeInfo class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapWalking": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapWalking class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapWalking class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapTaxi": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapTaxi class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapTaxi class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapRailwayStation": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapRailwayStation class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapRailwayStation class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapRailwaySpace": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapRailwaySpace class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapRailwaySpace class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapRailway": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapRailway class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapRailway class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapSegment": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapSegment class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapSegment class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapTransit": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapTransit class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapTransit class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapRoute": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapRoute class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapRoute class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapDistanceResult": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapDistanceResult class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapDistanceResult class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapLocalWeatherLive": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapLocalWeatherLive class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapLocalWeatherLive class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapLocalDayWeatherForecast": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapLocalDayWeatherForecast class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapLocalDayWeatherForecast class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapLocalWeatherForecast": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapLocalWeatherForecast class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapLocalWeatherForecast class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapNearbyUserInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapNearbyUserInfo class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapNearbyUserInfo class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapTrafficEvaluation": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapTrafficEvaluation class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapTrafficEvaluation class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapTrafficRoad": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapTrafficRoad class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapTrafficRoad class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapTrafficInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapTrafficInfo class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapTrafficInfo class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapCloudImage": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapCloudImage class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapCloudImage class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapCloudPOI": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapCloudPOI class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapCloudPOI class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapNearbyUploadInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapNearbyUploadInfo class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapNearbyUploadInfo class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapNearbySearchManager": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapNearbySearchManager class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapNearbySearchManager class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapSearchAPI": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapSearchAPI class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapSearchAPI class]];
             methodResult(@(isTargetType));
         },
         
@@ -796,9 +711,8 @@ extern BOOL enableLog;
             }
         
             AMapPOISearchBaseRequest* ref = [[AMapPOISearchBaseRequest alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -810,9 +724,8 @@ extern BOOL enableLog;
             }
         
             AMapPOIIDSearchRequest* ref = [[AMapPOIIDSearchRequest alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -824,9 +737,8 @@ extern BOOL enableLog;
             }
         
             AMapPOIKeywordsSearchRequest* ref = [[AMapPOIKeywordsSearchRequest alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -838,9 +750,8 @@ extern BOOL enableLog;
             }
         
             AMapPOIAroundSearchRequest* ref = [[AMapPOIAroundSearchRequest alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -852,9 +763,8 @@ extern BOOL enableLog;
             }
         
             AMapPOIPolygonSearchRequest* ref = [[AMapPOIPolygonSearchRequest alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -866,9 +776,8 @@ extern BOOL enableLog;
             }
         
             AMapPOISearchResponse* ref = [[AMapPOISearchResponse alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -880,9 +789,8 @@ extern BOOL enableLog;
             }
         
             AMapRoutePOISearchRequest* ref = [[AMapRoutePOISearchRequest alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -894,9 +802,8 @@ extern BOOL enableLog;
             }
         
             AMapRoutePOISearchResponse* ref = [[AMapRoutePOISearchResponse alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -908,9 +815,8 @@ extern BOOL enableLog;
             }
         
             AMapInputTipsSearchRequest* ref = [[AMapInputTipsSearchRequest alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -922,9 +828,8 @@ extern BOOL enableLog;
             }
         
             AMapInputTipsSearchResponse* ref = [[AMapInputTipsSearchResponse alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -936,9 +841,8 @@ extern BOOL enableLog;
             }
         
             AMapGeocodeSearchRequest* ref = [[AMapGeocodeSearchRequest alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -950,9 +854,8 @@ extern BOOL enableLog;
             }
         
             AMapGeocodeSearchResponse* ref = [[AMapGeocodeSearchResponse alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -964,9 +867,8 @@ extern BOOL enableLog;
             }
         
             AMapReGeocodeSearchRequest* ref = [[AMapReGeocodeSearchRequest alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -978,9 +880,8 @@ extern BOOL enableLog;
             }
         
             AMapReGeocodeSearchResponse* ref = [[AMapReGeocodeSearchResponse alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -992,9 +893,8 @@ extern BOOL enableLog;
             }
         
             AMapBusStopSearchRequest* ref = [[AMapBusStopSearchRequest alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1006,9 +906,8 @@ extern BOOL enableLog;
             }
         
             AMapBusStopSearchResponse* ref = [[AMapBusStopSearchResponse alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1020,9 +919,8 @@ extern BOOL enableLog;
             }
         
             AMapBusLineBaseSearchRequest* ref = [[AMapBusLineBaseSearchRequest alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1034,9 +932,8 @@ extern BOOL enableLog;
             }
         
             AMapBusLineNameSearchRequest* ref = [[AMapBusLineNameSearchRequest alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1048,9 +945,8 @@ extern BOOL enableLog;
             }
         
             AMapBusLineIDSearchRequest* ref = [[AMapBusLineIDSearchRequest alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1062,9 +958,8 @@ extern BOOL enableLog;
             }
         
             AMapBusLineSearchResponse* ref = [[AMapBusLineSearchResponse alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1076,9 +971,8 @@ extern BOOL enableLog;
             }
         
             AMapDistrictSearchRequest* ref = [[AMapDistrictSearchRequest alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1090,9 +984,8 @@ extern BOOL enableLog;
             }
         
             AMapDistrictSearchResponse* ref = [[AMapDistrictSearchResponse alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1104,9 +997,8 @@ extern BOOL enableLog;
             }
         
             AMapRouteSearchBaseRequest* ref = [[AMapRouteSearchBaseRequest alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1118,9 +1010,8 @@ extern BOOL enableLog;
             }
         
             AMapDrivingRouteSearchRequest* ref = [[AMapDrivingRouteSearchRequest alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1132,9 +1023,8 @@ extern BOOL enableLog;
             }
         
             AMapWalkingRouteSearchRequest* ref = [[AMapWalkingRouteSearchRequest alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1146,9 +1036,8 @@ extern BOOL enableLog;
             }
         
             AMapTransitRouteSearchRequest* ref = [[AMapTransitRouteSearchRequest alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1160,9 +1049,8 @@ extern BOOL enableLog;
             }
         
             AMapRidingRouteSearchRequest* ref = [[AMapRidingRouteSearchRequest alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1174,9 +1062,8 @@ extern BOOL enableLog;
             }
         
             AMapRouteSearchResponse* ref = [[AMapRouteSearchResponse alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1188,9 +1075,8 @@ extern BOOL enableLog;
             }
         
             AMapRidingRouteSearchResponse* ref = [[AMapRidingRouteSearchResponse alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1202,9 +1088,8 @@ extern BOOL enableLog;
             }
         
             AMapTruckRouteSearchRequest* ref = [[AMapTruckRouteSearchRequest alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1216,9 +1101,8 @@ extern BOOL enableLog;
             }
         
             AMapDistanceSearchRequest* ref = [[AMapDistanceSearchRequest alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1230,9 +1114,8 @@ extern BOOL enableLog;
             }
         
             AMapDistanceSearchResponse* ref = [[AMapDistanceSearchResponse alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1244,9 +1127,8 @@ extern BOOL enableLog;
             }
         
             AMapWeatherSearchRequest* ref = [[AMapWeatherSearchRequest alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1258,9 +1140,8 @@ extern BOOL enableLog;
             }
         
             AMapWeatherSearchResponse* ref = [[AMapWeatherSearchResponse alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1272,9 +1153,8 @@ extern BOOL enableLog;
             }
         
             AMapRoadTrafficSearchBaseRequest* ref = [[AMapRoadTrafficSearchBaseRequest alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1286,9 +1166,8 @@ extern BOOL enableLog;
             }
         
             AMapRoadTrafficSearchRequest* ref = [[AMapRoadTrafficSearchRequest alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1300,9 +1179,8 @@ extern BOOL enableLog;
             }
         
             AMapRoadTrafficCircleSearchRequest* ref = [[AMapRoadTrafficCircleSearchRequest alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1314,9 +1192,8 @@ extern BOOL enableLog;
             }
         
             AMapRoadTrafficSearchResponse* ref = [[AMapRoadTrafficSearchResponse alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1328,9 +1205,8 @@ extern BOOL enableLog;
             }
         
             AMapNearbySearchRequest* ref = [[AMapNearbySearchRequest alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1342,9 +1218,8 @@ extern BOOL enableLog;
             }
         
             AMapNearbySearchResponse* ref = [[AMapNearbySearchResponse alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1356,9 +1231,8 @@ extern BOOL enableLog;
             }
         
             AMapCloudSearchBaseRequest* ref = [[AMapCloudSearchBaseRequest alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1370,9 +1244,8 @@ extern BOOL enableLog;
             }
         
             AMapCloudPOIAroundSearchRequest* ref = [[AMapCloudPOIAroundSearchRequest alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1384,9 +1257,8 @@ extern BOOL enableLog;
             }
         
             AMapCloudPOIPolygonSearchRequest* ref = [[AMapCloudPOIPolygonSearchRequest alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1398,9 +1270,8 @@ extern BOOL enableLog;
             }
         
             AMapCloudPOIIDSearchRequest* ref = [[AMapCloudPOIIDSearchRequest alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1412,9 +1283,8 @@ extern BOOL enableLog;
             }
         
             AMapCloudPOILocalSearchRequest* ref = [[AMapCloudPOILocalSearchRequest alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1426,9 +1296,8 @@ extern BOOL enableLog;
             }
         
             AMapCloudPOISearchResponse* ref = [[AMapCloudPOISearchResponse alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1440,9 +1309,8 @@ extern BOOL enableLog;
             }
         
             AMapShareSearchBaseRequest* ref = [[AMapShareSearchBaseRequest alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1454,9 +1322,8 @@ extern BOOL enableLog;
             }
         
             AMapLocationShareSearchRequest* ref = [[AMapLocationShareSearchRequest alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1468,9 +1335,8 @@ extern BOOL enableLog;
             }
         
             AMapPOIShareSearchRequest* ref = [[AMapPOIShareSearchRequest alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1482,9 +1348,8 @@ extern BOOL enableLog;
             }
         
             AMapRouteShareSearchRequest* ref = [[AMapRouteShareSearchRequest alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1496,9 +1361,8 @@ extern BOOL enableLog;
             }
         
             AMapNavigationShareSearchRequest* ref = [[AMapNavigationShareSearchRequest alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1510,9 +1374,8 @@ extern BOOL enableLog;
             }
         
             AMapShareSearchResponse* ref = [[AMapShareSearchResponse alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1524,9 +1387,8 @@ extern BOOL enableLog;
             }
         
             AMapFutureRouteSearchRequest* ref = [[AMapFutureRouteSearchRequest alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1538,9 +1400,8 @@ extern BOOL enableLog;
             }
         
             AMapFutureRouteSearchResponse* ref = [[AMapFutureRouteSearchResponse alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1552,9 +1413,8 @@ extern BOOL enableLog;
             }
         
             AMapSearchObject* ref = [[AMapSearchObject alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1566,9 +1426,8 @@ extern BOOL enableLog;
             }
         
             AMapGeoPoint* ref = [[AMapGeoPoint alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1580,9 +1439,8 @@ extern BOOL enableLog;
             }
         
             AMapGeoPolygon* ref = [[AMapGeoPolygon alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1594,9 +1452,8 @@ extern BOOL enableLog;
             }
         
             AMapCity* ref = [[AMapCity alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1608,9 +1465,8 @@ extern BOOL enableLog;
             }
         
             AMapSuggestion* ref = [[AMapSuggestion alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1622,9 +1478,8 @@ extern BOOL enableLog;
             }
         
             AMapTip* ref = [[AMapTip alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1636,9 +1491,8 @@ extern BOOL enableLog;
             }
         
             AMapImage* ref = [[AMapImage alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1650,9 +1504,8 @@ extern BOOL enableLog;
             }
         
             AMapPOIExtension* ref = [[AMapPOIExtension alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1664,9 +1517,8 @@ extern BOOL enableLog;
             }
         
             AMapIndoorData* ref = [[AMapIndoorData alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1678,9 +1530,8 @@ extern BOOL enableLog;
             }
         
             AMapSubPOI* ref = [[AMapSubPOI alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1692,9 +1543,8 @@ extern BOOL enableLog;
             }
         
             AMapRoutePOI* ref = [[AMapRoutePOI alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1706,9 +1556,8 @@ extern BOOL enableLog;
             }
         
             AMapPOI* ref = [[AMapPOI alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1720,9 +1569,8 @@ extern BOOL enableLog;
             }
         
             AMapAOI* ref = [[AMapAOI alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1734,9 +1582,8 @@ extern BOOL enableLog;
             }
         
             AMapRoad* ref = [[AMapRoad alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1748,9 +1595,8 @@ extern BOOL enableLog;
             }
         
             AMapRoadInter* ref = [[AMapRoadInter alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1762,9 +1608,8 @@ extern BOOL enableLog;
             }
         
             AMapStreetNumber* ref = [[AMapStreetNumber alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1776,9 +1621,8 @@ extern BOOL enableLog;
             }
         
             AMapBusinessArea* ref = [[AMapBusinessArea alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1790,9 +1634,8 @@ extern BOOL enableLog;
             }
         
             AMapAddressComponent* ref = [[AMapAddressComponent alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1804,9 +1647,8 @@ extern BOOL enableLog;
             }
         
             AMapReGeocode* ref = [[AMapReGeocode alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1818,9 +1660,8 @@ extern BOOL enableLog;
             }
         
             AMapGeocode* ref = [[AMapGeocode alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1832,9 +1673,8 @@ extern BOOL enableLog;
             }
         
             AMapBusStop* ref = [[AMapBusStop alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1846,9 +1686,8 @@ extern BOOL enableLog;
             }
         
             AMapBusLine* ref = [[AMapBusLine alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1860,9 +1699,8 @@ extern BOOL enableLog;
             }
         
             AMapDistrict* ref = [[AMapDistrict alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1874,9 +1712,8 @@ extern BOOL enableLog;
             }
         
             AMapTMC* ref = [[AMapTMC alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1888,9 +1725,8 @@ extern BOOL enableLog;
             }
         
             AMapStep* ref = [[AMapStep alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1902,9 +1738,8 @@ extern BOOL enableLog;
             }
         
             AMapPath* ref = [[AMapPath alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1916,9 +1751,8 @@ extern BOOL enableLog;
             }
         
             AMapFutureTimeInfoElement* ref = [[AMapFutureTimeInfoElement alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1930,9 +1764,8 @@ extern BOOL enableLog;
             }
         
             AMapFutureTimeInfo* ref = [[AMapFutureTimeInfo alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1944,9 +1777,8 @@ extern BOOL enableLog;
             }
         
             AMapWalking* ref = [[AMapWalking alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1958,9 +1790,8 @@ extern BOOL enableLog;
             }
         
             AMapTaxi* ref = [[AMapTaxi alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1972,9 +1803,8 @@ extern BOOL enableLog;
             }
         
             AMapRailwayStation* ref = [[AMapRailwayStation alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1986,9 +1816,8 @@ extern BOOL enableLog;
             }
         
             AMapRailwaySpace* ref = [[AMapRailwaySpace alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -2000,9 +1829,8 @@ extern BOOL enableLog;
             }
         
             AMapRailway* ref = [[AMapRailway alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -2014,9 +1842,8 @@ extern BOOL enableLog;
             }
         
             AMapSegment* ref = [[AMapSegment alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -2028,9 +1855,8 @@ extern BOOL enableLog;
             }
         
             AMapTransit* ref = [[AMapTransit alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -2042,9 +1868,8 @@ extern BOOL enableLog;
             }
         
             AMapRoute* ref = [[AMapRoute alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -2056,9 +1881,8 @@ extern BOOL enableLog;
             }
         
             AMapDistanceResult* ref = [[AMapDistanceResult alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -2070,9 +1894,8 @@ extern BOOL enableLog;
             }
         
             AMapLocalWeatherLive* ref = [[AMapLocalWeatherLive alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -2084,9 +1907,8 @@ extern BOOL enableLog;
             }
         
             AMapLocalDayWeatherForecast* ref = [[AMapLocalDayWeatherForecast alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -2098,9 +1920,8 @@ extern BOOL enableLog;
             }
         
             AMapLocalWeatherForecast* ref = [[AMapLocalWeatherForecast alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -2112,9 +1933,8 @@ extern BOOL enableLog;
             }
         
             AMapNearbyUserInfo* ref = [[AMapNearbyUserInfo alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -2126,9 +1946,8 @@ extern BOOL enableLog;
             }
         
             AMapTrafficEvaluation* ref = [[AMapTrafficEvaluation alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -2140,9 +1959,8 @@ extern BOOL enableLog;
             }
         
             AMapTrafficRoad* ref = [[AMapTrafficRoad alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -2154,9 +1972,8 @@ extern BOOL enableLog;
             }
         
             AMapTrafficInfo* ref = [[AMapTrafficInfo alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -2168,9 +1985,8 @@ extern BOOL enableLog;
             }
         
             AMapCloudImage* ref = [[AMapCloudImage alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -2182,9 +1998,8 @@ extern BOOL enableLog;
             }
         
             AMapCloudPOI* ref = [[AMapCloudPOI alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -2196,9 +2011,8 @@ extern BOOL enableLog;
             }
         
             AMapNearbyUploadInfo* ref = [[AMapNearbyUploadInfo alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -2210,21 +2024,18 @@ extern BOOL enableLog;
             }
         
             AMapSearchAPI* ref = [[AMapSearchAPI alloc] init];
-            HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
         
-            methodResult([NSNumber numberWithLong: ref.hash]);
+            methodResult(ref);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
         
         @"ObjectFactory::create_batchAMapPOISearchBaseRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
+            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapPOISearchBaseRequest* ref = [[AMapPOISearchBaseRequest alloc] init];
-                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
-        
-                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
+                [resultList addObject:ref];
             }
         
             methodResult(resultList);
@@ -2233,13 +2044,11 @@ extern BOOL enableLog;
         },
         
         @"ObjectFactory::create_batchAMapPOIIDSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
+            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapPOIIDSearchRequest* ref = [[AMapPOIIDSearchRequest alloc] init];
-                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
-        
-                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
+                [resultList addObject:ref];
             }
         
             methodResult(resultList);
@@ -2248,13 +2057,11 @@ extern BOOL enableLog;
         },
         
         @"ObjectFactory::create_batchAMapPOIKeywordsSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
+            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapPOIKeywordsSearchRequest* ref = [[AMapPOIKeywordsSearchRequest alloc] init];
-                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
-        
-                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
+                [resultList addObject:ref];
             }
         
             methodResult(resultList);
@@ -2263,13 +2070,11 @@ extern BOOL enableLog;
         },
         
         @"ObjectFactory::create_batchAMapPOIAroundSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
+            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapPOIAroundSearchRequest* ref = [[AMapPOIAroundSearchRequest alloc] init];
-                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
-        
-                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
+                [resultList addObject:ref];
             }
         
             methodResult(resultList);
@@ -2278,13 +2083,11 @@ extern BOOL enableLog;
         },
         
         @"ObjectFactory::create_batchAMapPOIPolygonSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
+            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapPOIPolygonSearchRequest* ref = [[AMapPOIPolygonSearchRequest alloc] init];
-                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
-        
-                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
+                [resultList addObject:ref];
             }
         
             methodResult(resultList);
@@ -2293,13 +2096,11 @@ extern BOOL enableLog;
         },
         
         @"ObjectFactory::create_batchAMapPOISearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
+            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapPOISearchResponse* ref = [[AMapPOISearchResponse alloc] init];
-                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
-        
-                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
+                [resultList addObject:ref];
             }
         
             methodResult(resultList);
@@ -2308,13 +2109,11 @@ extern BOOL enableLog;
         },
         
         @"ObjectFactory::create_batchAMapRoutePOISearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
+            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapRoutePOISearchRequest* ref = [[AMapRoutePOISearchRequest alloc] init];
-                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
-        
-                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
+                [resultList addObject:ref];
             }
         
             methodResult(resultList);
@@ -2323,13 +2122,11 @@ extern BOOL enableLog;
         },
         
         @"ObjectFactory::create_batchAMapRoutePOISearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
+            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapRoutePOISearchResponse* ref = [[AMapRoutePOISearchResponse alloc] init];
-                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
-        
-                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
+                [resultList addObject:ref];
             }
         
             methodResult(resultList);
@@ -2338,13 +2135,11 @@ extern BOOL enableLog;
         },
         
         @"ObjectFactory::create_batchAMapInputTipsSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
+            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapInputTipsSearchRequest* ref = [[AMapInputTipsSearchRequest alloc] init];
-                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
-        
-                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
+                [resultList addObject:ref];
             }
         
             methodResult(resultList);
@@ -2353,13 +2148,11 @@ extern BOOL enableLog;
         },
         
         @"ObjectFactory::create_batchAMapInputTipsSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
+            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapInputTipsSearchResponse* ref = [[AMapInputTipsSearchResponse alloc] init];
-                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
-        
-                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
+                [resultList addObject:ref];
             }
         
             methodResult(resultList);
@@ -2368,13 +2161,11 @@ extern BOOL enableLog;
         },
         
         @"ObjectFactory::create_batchAMapGeocodeSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
+            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapGeocodeSearchRequest* ref = [[AMapGeocodeSearchRequest alloc] init];
-                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
-        
-                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
+                [resultList addObject:ref];
             }
         
             methodResult(resultList);
@@ -2383,13 +2174,11 @@ extern BOOL enableLog;
         },
         
         @"ObjectFactory::create_batchAMapGeocodeSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
+            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
             for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapGeocodeSearchResponse* ref = [[AMapGeocodeSearchResponse alloc] init];
-                HEAP[[NSNumber numberWithLong: ref.hash]] = ref;
-        
-                [resultList addObject:[NSNumber numberWithLong: ref.hash]];
+                [resultList addObject:ref];
             }
         
             methodResult(resultList);

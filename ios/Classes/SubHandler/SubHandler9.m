@@ -3,6 +3,7 @@
 //////////////////////////////////////////////////////////
 
 #import "SubHandler9.h"
+#import "FluttifyMessageCodec.h"
 
 // Dart端一次方法调用所存在的栈, 只有当MethodChannel传递参数受限时, 再启用这个容器
 extern NSMutableDictionary<NSString*, NSObject*>* STACK;
@@ -24,7 +25,7 @@ extern BOOL enableLog;
                 NSString* level = (NSString*) args[@"level"];
         
                 // ref
-                AMapGeocode* ref = (AMapGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapGeocode* ref = (AMapGeocode*) args[@"__this__"];
         
                 ref.level = level;
                 methodResult(@"success");
@@ -42,7 +43,7 @@ extern BOOL enableLog;
                 NSString* uid = (NSString*) args[@"uid"];
         
                 // ref
-                AMapBusStop* ref = (AMapBusStop*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapBusStop* ref = (AMapBusStop*) args[@"__this__"];
         
                 ref.uid = uid;
                 methodResult(@"success");
@@ -60,7 +61,7 @@ extern BOOL enableLog;
                 NSString* adcode = (NSString*) args[@"adcode"];
         
                 // ref
-                AMapBusStop* ref = (AMapBusStop*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapBusStop* ref = (AMapBusStop*) args[@"__this__"];
         
                 ref.adcode = adcode;
                 methodResult(@"success");
@@ -78,7 +79,7 @@ extern BOOL enableLog;
                 NSString* name = (NSString*) args[@"name"];
         
                 // ref
-                AMapBusStop* ref = (AMapBusStop*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapBusStop* ref = (AMapBusStop*) args[@"__this__"];
         
                 ref.name = name;
                 methodResult(@"success");
@@ -96,7 +97,7 @@ extern BOOL enableLog;
                 NSString* citycode = (NSString*) args[@"citycode"];
         
                 // ref
-                AMapBusStop* ref = (AMapBusStop*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapBusStop* ref = (AMapBusStop*) args[@"__this__"];
         
                 ref.citycode = citycode;
                 methodResult(@"success");
@@ -111,10 +112,10 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeoPoint* location = (AMapGeoPoint*) HEAP[args[@"location"]];
+                AMapGeoPoint* location = (AMapGeoPoint*) args[@"location"];
         
                 // ref
-                AMapBusStop* ref = (AMapBusStop*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapBusStop* ref = (AMapBusStop*) args[@"__this__"];
         
                 ref.location = location;
                 methodResult(@"success");
@@ -137,7 +138,7 @@ extern BOOL enableLog;
                 }
         
                 // ref
-                AMapBusStop* ref = (AMapBusStop*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapBusStop* ref = (AMapBusStop*) args[@"__this__"];
         
                 ref.buslines = buslines;
                 methodResult(@"success");
@@ -155,7 +156,7 @@ extern BOOL enableLog;
                 NSString* sequence = (NSString*) args[@"sequence"];
         
                 // ref
-                AMapBusStop* ref = (AMapBusStop*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapBusStop* ref = (AMapBusStop*) args[@"__this__"];
         
                 ref.sequence = sequence;
                 methodResult(@"success");
@@ -173,7 +174,7 @@ extern BOOL enableLog;
                 NSString* uid = (NSString*) args[@"uid"];
         
                 // ref
-                AMapBusLine* ref = (AMapBusLine*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapBusLine* ref = (AMapBusLine*) args[@"__this__"];
         
                 ref.uid = uid;
                 methodResult(@"success");
@@ -191,7 +192,7 @@ extern BOOL enableLog;
                 NSString* type = (NSString*) args[@"type"];
         
                 // ref
-                AMapBusLine* ref = (AMapBusLine*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapBusLine* ref = (AMapBusLine*) args[@"__this__"];
         
                 ref.type = type;
                 methodResult(@"success");
@@ -209,7 +210,7 @@ extern BOOL enableLog;
                 NSString* name = (NSString*) args[@"name"];
         
                 // ref
-                AMapBusLine* ref = (AMapBusLine*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapBusLine* ref = (AMapBusLine*) args[@"__this__"];
         
                 ref.name = name;
                 methodResult(@"success");
@@ -227,7 +228,7 @@ extern BOOL enableLog;
                 NSString* polyline = (NSString*) args[@"polyline"];
         
                 // ref
-                AMapBusLine* ref = (AMapBusLine*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapBusLine* ref = (AMapBusLine*) args[@"__this__"];
         
                 ref.polyline = polyline;
                 methodResult(@"success");
@@ -245,7 +246,7 @@ extern BOOL enableLog;
                 NSString* citycode = (NSString*) args[@"citycode"];
         
                 // ref
-                AMapBusLine* ref = (AMapBusLine*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapBusLine* ref = (AMapBusLine*) args[@"__this__"];
         
                 ref.citycode = citycode;
                 methodResult(@"success");
@@ -263,7 +264,7 @@ extern BOOL enableLog;
                 NSString* startStop = (NSString*) args[@"startStop"];
         
                 // ref
-                AMapBusLine* ref = (AMapBusLine*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapBusLine* ref = (AMapBusLine*) args[@"__this__"];
         
                 ref.startStop = startStop;
                 methodResult(@"success");
@@ -281,7 +282,7 @@ extern BOOL enableLog;
                 NSString* endStop = (NSString*) args[@"endStop"];
         
                 // ref
-                AMapBusLine* ref = (AMapBusLine*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapBusLine* ref = (AMapBusLine*) args[@"__this__"];
         
                 ref.endStop = endStop;
                 methodResult(@"success");
@@ -296,10 +297,10 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeoPoint* location = (AMapGeoPoint*) HEAP[args[@"location"]];
+                AMapGeoPoint* location = (AMapGeoPoint*) args[@"location"];
         
                 // ref
-                AMapBusLine* ref = (AMapBusLine*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapBusLine* ref = (AMapBusLine*) args[@"__this__"];
         
                 ref.location = location;
                 methodResult(@"success");
@@ -317,7 +318,7 @@ extern BOOL enableLog;
                 NSString* startTime = (NSString*) args[@"startTime"];
         
                 // ref
-                AMapBusLine* ref = (AMapBusLine*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapBusLine* ref = (AMapBusLine*) args[@"__this__"];
         
                 ref.startTime = startTime;
                 methodResult(@"success");
@@ -335,7 +336,7 @@ extern BOOL enableLog;
                 NSString* endTime = (NSString*) args[@"endTime"];
         
                 // ref
-                AMapBusLine* ref = (AMapBusLine*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapBusLine* ref = (AMapBusLine*) args[@"__this__"];
         
                 ref.endTime = endTime;
                 methodResult(@"success");
@@ -353,7 +354,7 @@ extern BOOL enableLog;
                 NSString* company = (NSString*) args[@"company"];
         
                 // ref
-                AMapBusLine* ref = (AMapBusLine*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapBusLine* ref = (AMapBusLine*) args[@"__this__"];
         
                 ref.company = company;
                 methodResult(@"success");
@@ -371,7 +372,7 @@ extern BOOL enableLog;
                 CGFloat distance = [args[@"distance"] floatValue];
         
                 // ref
-                AMapBusLine* ref = (AMapBusLine*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapBusLine* ref = (AMapBusLine*) args[@"__this__"];
         
                 ref.distance = distance;
                 methodResult(@"success");
@@ -389,7 +390,7 @@ extern BOOL enableLog;
                 CGFloat basicPrice = [args[@"basicPrice"] floatValue];
         
                 // ref
-                AMapBusLine* ref = (AMapBusLine*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapBusLine* ref = (AMapBusLine*) args[@"__this__"];
         
                 ref.basicPrice = basicPrice;
                 methodResult(@"success");
@@ -407,7 +408,7 @@ extern BOOL enableLog;
                 CGFloat totalPrice = [args[@"totalPrice"] floatValue];
         
                 // ref
-                AMapBusLine* ref = (AMapBusLine*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapBusLine* ref = (AMapBusLine*) args[@"__this__"];
         
                 ref.totalPrice = totalPrice;
                 methodResult(@"success");
@@ -422,10 +423,10 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeoPolygon* bounds = (AMapGeoPolygon*) HEAP[args[@"bounds"]];
+                AMapGeoPolygon* bounds = (AMapGeoPolygon*) args[@"bounds"];
         
                 // ref
-                AMapBusLine* ref = (AMapBusLine*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapBusLine* ref = (AMapBusLine*) args[@"__this__"];
         
                 ref.bounds = bounds;
                 methodResult(@"success");
@@ -448,7 +449,7 @@ extern BOOL enableLog;
                 }
         
                 // ref
-                AMapBusLine* ref = (AMapBusLine*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapBusLine* ref = (AMapBusLine*) args[@"__this__"];
         
                 ref.busStops = busStops;
                 methodResult(@"success");
@@ -463,10 +464,10 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapBusStop* departureStop = (AMapBusStop*) HEAP[args[@"departureStop"]];
+                AMapBusStop* departureStop = (AMapBusStop*) args[@"departureStop"];
         
                 // ref
-                AMapBusLine* ref = (AMapBusLine*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapBusLine* ref = (AMapBusLine*) args[@"__this__"];
         
                 ref.departureStop = departureStop;
                 methodResult(@"success");
@@ -481,10 +482,10 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapBusStop* arrivalStop = (AMapBusStop*) HEAP[args[@"arrivalStop"]];
+                AMapBusStop* arrivalStop = (AMapBusStop*) args[@"arrivalStop"];
         
                 // ref
-                AMapBusLine* ref = (AMapBusLine*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapBusLine* ref = (AMapBusLine*) args[@"__this__"];
         
                 ref.arrivalStop = arrivalStop;
                 methodResult(@"success");
@@ -507,7 +508,7 @@ extern BOOL enableLog;
                 }
         
                 // ref
-                AMapBusLine* ref = (AMapBusLine*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapBusLine* ref = (AMapBusLine*) args[@"__this__"];
         
                 ref.viaBusStops = viaBusStops;
                 methodResult(@"success");
@@ -525,7 +526,7 @@ extern BOOL enableLog;
                 NSInteger duration = [args[@"duration"] longValue];
         
                 // ref
-                AMapBusLine* ref = (AMapBusLine*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapBusLine* ref = (AMapBusLine*) args[@"__this__"];
         
                 ref.duration = duration;
                 methodResult(@"success");
@@ -543,7 +544,7 @@ extern BOOL enableLog;
                 NSString* adcode = (NSString*) args[@"adcode"];
         
                 // ref
-                AMapDistrict* ref = (AMapDistrict*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapDistrict* ref = (AMapDistrict*) args[@"__this__"];
         
                 ref.adcode = adcode;
                 methodResult(@"success");
@@ -561,7 +562,7 @@ extern BOOL enableLog;
                 NSString* citycode = (NSString*) args[@"citycode"];
         
                 // ref
-                AMapDistrict* ref = (AMapDistrict*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapDistrict* ref = (AMapDistrict*) args[@"__this__"];
         
                 ref.citycode = citycode;
                 methodResult(@"success");
@@ -579,7 +580,7 @@ extern BOOL enableLog;
                 NSString* name = (NSString*) args[@"name"];
         
                 // ref
-                AMapDistrict* ref = (AMapDistrict*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapDistrict* ref = (AMapDistrict*) args[@"__this__"];
         
                 ref.name = name;
                 methodResult(@"success");
@@ -597,7 +598,7 @@ extern BOOL enableLog;
                 NSString* level = (NSString*) args[@"level"];
         
                 // ref
-                AMapDistrict* ref = (AMapDistrict*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapDistrict* ref = (AMapDistrict*) args[@"__this__"];
         
                 ref.level = level;
                 methodResult(@"success");
@@ -612,10 +613,10 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeoPoint* center = (AMapGeoPoint*) HEAP[args[@"center"]];
+                AMapGeoPoint* center = (AMapGeoPoint*) args[@"center"];
         
                 // ref
-                AMapDistrict* ref = (AMapDistrict*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapDistrict* ref = (AMapDistrict*) args[@"__this__"];
         
                 ref.center = center;
                 methodResult(@"success");
@@ -638,7 +639,7 @@ extern BOOL enableLog;
                 }
         
                 // ref
-                AMapDistrict* ref = (AMapDistrict*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapDistrict* ref = (AMapDistrict*) args[@"__this__"];
         
                 ref.districts = districts;
                 methodResult(@"success");
@@ -656,7 +657,7 @@ extern BOOL enableLog;
                 NSArray<NSString*>* polylines = (NSArray<NSString*>*) args[@"polylines"];
         
                 // ref
-                AMapDistrict* ref = (AMapDistrict*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapDistrict* ref = (AMapDistrict*) args[@"__this__"];
         
                 ref.polylines = polylines;
                 methodResult(@"success");
@@ -674,7 +675,7 @@ extern BOOL enableLog;
                 NSInteger distance = [args[@"distance"] longValue];
         
                 // ref
-                AMapTMC* ref = (AMapTMC*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapTMC* ref = (AMapTMC*) args[@"__this__"];
         
                 ref.distance = distance;
                 methodResult(@"success");
@@ -692,7 +693,7 @@ extern BOOL enableLog;
                 NSString* status = (NSString*) args[@"status"];
         
                 // ref
-                AMapTMC* ref = (AMapTMC*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapTMC* ref = (AMapTMC*) args[@"__this__"];
         
                 ref.status = status;
                 methodResult(@"success");
@@ -710,7 +711,7 @@ extern BOOL enableLog;
                 NSString* polyline = (NSString*) args[@"polyline"];
         
                 // ref
-                AMapTMC* ref = (AMapTMC*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapTMC* ref = (AMapTMC*) args[@"__this__"];
         
                 ref.polyline = polyline;
                 methodResult(@"success");
@@ -728,7 +729,7 @@ extern BOOL enableLog;
                 NSString* instruction = (NSString*) args[@"instruction"];
         
                 // ref
-                AMapStep* ref = (AMapStep*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapStep* ref = (AMapStep*) args[@"__this__"];
         
                 ref.instruction = instruction;
                 methodResult(@"success");
@@ -746,7 +747,7 @@ extern BOOL enableLog;
                 NSString* orientation = (NSString*) args[@"orientation"];
         
                 // ref
-                AMapStep* ref = (AMapStep*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapStep* ref = (AMapStep*) args[@"__this__"];
         
                 ref.orientation = orientation;
                 methodResult(@"success");
@@ -764,7 +765,7 @@ extern BOOL enableLog;
                 NSString* road = (NSString*) args[@"road"];
         
                 // ref
-                AMapStep* ref = (AMapStep*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapStep* ref = (AMapStep*) args[@"__this__"];
         
                 ref.road = road;
                 methodResult(@"success");
@@ -782,7 +783,7 @@ extern BOOL enableLog;
                 NSInteger distance = [args[@"distance"] longValue];
         
                 // ref
-                AMapStep* ref = (AMapStep*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapStep* ref = (AMapStep*) args[@"__this__"];
         
                 ref.distance = distance;
                 methodResult(@"success");
@@ -800,7 +801,7 @@ extern BOOL enableLog;
                 NSInteger duration = [args[@"duration"] longValue];
         
                 // ref
-                AMapStep* ref = (AMapStep*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapStep* ref = (AMapStep*) args[@"__this__"];
         
                 ref.duration = duration;
                 methodResult(@"success");
@@ -818,7 +819,7 @@ extern BOOL enableLog;
                 NSString* polyline = (NSString*) args[@"polyline"];
         
                 // ref
-                AMapStep* ref = (AMapStep*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapStep* ref = (AMapStep*) args[@"__this__"];
         
                 ref.polyline = polyline;
                 methodResult(@"success");
@@ -836,7 +837,7 @@ extern BOOL enableLog;
                 NSString* action = (NSString*) args[@"action"];
         
                 // ref
-                AMapStep* ref = (AMapStep*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapStep* ref = (AMapStep*) args[@"__this__"];
         
                 ref.action = action;
                 methodResult(@"success");
@@ -854,7 +855,7 @@ extern BOOL enableLog;
                 NSString* assistantAction = (NSString*) args[@"assistantAction"];
         
                 // ref
-                AMapStep* ref = (AMapStep*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapStep* ref = (AMapStep*) args[@"__this__"];
         
                 ref.assistantAction = assistantAction;
                 methodResult(@"success");
@@ -872,7 +873,7 @@ extern BOOL enableLog;
                 CGFloat tolls = [args[@"tolls"] floatValue];
         
                 // ref
-                AMapStep* ref = (AMapStep*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapStep* ref = (AMapStep*) args[@"__this__"];
         
                 ref.tolls = tolls;
                 methodResult(@"success");
@@ -890,7 +891,7 @@ extern BOOL enableLog;
                 NSInteger tollDistance = [args[@"tollDistance"] longValue];
         
                 // ref
-                AMapStep* ref = (AMapStep*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapStep* ref = (AMapStep*) args[@"__this__"];
         
                 ref.tollDistance = tollDistance;
                 methodResult(@"success");
@@ -908,7 +909,7 @@ extern BOOL enableLog;
                 NSString* tollRoad = (NSString*) args[@"tollRoad"];
         
                 // ref
-                AMapStep* ref = (AMapStep*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapStep* ref = (AMapStep*) args[@"__this__"];
         
                 ref.tollRoad = tollRoad;
                 methodResult(@"success");
@@ -931,7 +932,7 @@ extern BOOL enableLog;
                 }
         
                 // ref
-                AMapStep* ref = (AMapStep*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapStep* ref = (AMapStep*) args[@"__this__"];
         
                 ref.cities = cities;
                 methodResult(@"success");
@@ -954,7 +955,7 @@ extern BOOL enableLog;
                 }
         
                 // ref
-                AMapStep* ref = (AMapStep*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapStep* ref = (AMapStep*) args[@"__this__"];
         
                 ref.tmcs = tmcs;
                 methodResult(@"success");
@@ -972,7 +973,7 @@ extern BOOL enableLog;
                 NSInteger distance = [args[@"distance"] longValue];
         
                 // ref
-                AMapPath* ref = (AMapPath*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapPath* ref = (AMapPath*) args[@"__this__"];
         
                 ref.distance = distance;
                 methodResult(@"success");
@@ -990,7 +991,7 @@ extern BOOL enableLog;
                 NSInteger duration = [args[@"duration"] longValue];
         
                 // ref
-                AMapPath* ref = (AMapPath*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapPath* ref = (AMapPath*) args[@"__this__"];
         
                 ref.duration = duration;
                 methodResult(@"success");
@@ -1008,7 +1009,7 @@ extern BOOL enableLog;
                 NSString* strategy = (NSString*) args[@"strategy"];
         
                 // ref
-                AMapPath* ref = (AMapPath*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapPath* ref = (AMapPath*) args[@"__this__"];
         
                 ref.strategy = strategy;
                 methodResult(@"success");
@@ -1031,7 +1032,7 @@ extern BOOL enableLog;
                 }
         
                 // ref
-                AMapPath* ref = (AMapPath*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapPath* ref = (AMapPath*) args[@"__this__"];
         
                 ref.steps = steps;
                 methodResult(@"success");
@@ -1049,7 +1050,7 @@ extern BOOL enableLog;
                 CGFloat tolls = [args[@"tolls"] floatValue];
         
                 // ref
-                AMapPath* ref = (AMapPath*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapPath* ref = (AMapPath*) args[@"__this__"];
         
                 ref.tolls = tolls;
                 methodResult(@"success");
@@ -1067,7 +1068,7 @@ extern BOOL enableLog;
                 NSInteger tollDistance = [args[@"tollDistance"] longValue];
         
                 // ref
-                AMapPath* ref = (AMapPath*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapPath* ref = (AMapPath*) args[@"__this__"];
         
                 ref.tollDistance = tollDistance;
                 methodResult(@"success");
@@ -1085,7 +1086,7 @@ extern BOOL enableLog;
                 NSInteger totalTrafficLights = [args[@"totalTrafficLights"] longValue];
         
                 // ref
-                AMapPath* ref = (AMapPath*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapPath* ref = (AMapPath*) args[@"__this__"];
         
                 ref.totalTrafficLights = totalTrafficLights;
                 methodResult(@"success");
@@ -1103,7 +1104,7 @@ extern BOOL enableLog;
                 NSInteger restriction = [args[@"restriction"] longValue];
         
                 // ref
-                AMapPath* ref = (AMapPath*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapPath* ref = (AMapPath*) args[@"__this__"];
         
                 ref.restriction = restriction;
                 methodResult(@"success");
@@ -1121,7 +1122,7 @@ extern BOOL enableLog;
                 NSInteger duration = [args[@"duration"] longValue];
         
                 // ref
-                AMapFutureTimeInfoElement* ref = (AMapFutureTimeInfoElement*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapFutureTimeInfoElement* ref = (AMapFutureTimeInfoElement*) args[@"__this__"];
         
                 ref.duration = duration;
                 methodResult(@"success");
@@ -1139,7 +1140,7 @@ extern BOOL enableLog;
                 NSInteger pathindex = [args[@"pathindex"] longValue];
         
                 // ref
-                AMapFutureTimeInfoElement* ref = (AMapFutureTimeInfoElement*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapFutureTimeInfoElement* ref = (AMapFutureTimeInfoElement*) args[@"__this__"];
         
                 ref.pathindex = pathindex;
                 methodResult(@"success");
@@ -1157,7 +1158,7 @@ extern BOOL enableLog;
                 NSInteger restriction = [args[@"restriction"] longValue];
         
                 // ref
-                AMapFutureTimeInfoElement* ref = (AMapFutureTimeInfoElement*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapFutureTimeInfoElement* ref = (AMapFutureTimeInfoElement*) args[@"__this__"];
         
                 ref.restriction = restriction;
                 methodResult(@"success");
@@ -1180,7 +1181,7 @@ extern BOOL enableLog;
                 }
         
                 // ref
-                AMapFutureTimeInfoElement* ref = (AMapFutureTimeInfoElement*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapFutureTimeInfoElement* ref = (AMapFutureTimeInfoElement*) args[@"__this__"];
         
                 ref.tmcs = tmcs;
                 methodResult(@"success");
@@ -1198,7 +1199,7 @@ extern BOOL enableLog;
                 NSString* startTime = (NSString*) args[@"startTime"];
         
                 // ref
-                AMapFutureTimeInfo* ref = (AMapFutureTimeInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapFutureTimeInfo* ref = (AMapFutureTimeInfo*) args[@"__this__"];
         
                 ref.startTime = startTime;
                 methodResult(@"success");
@@ -1221,7 +1222,7 @@ extern BOOL enableLog;
                 }
         
                 // ref
-                AMapFutureTimeInfo* ref = (AMapFutureTimeInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapFutureTimeInfo* ref = (AMapFutureTimeInfo*) args[@"__this__"];
         
                 ref.elements = elements;
                 methodResult(@"success");
@@ -1236,10 +1237,10 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeoPoint* origin = (AMapGeoPoint*) HEAP[args[@"origin"]];
+                AMapGeoPoint* origin = (AMapGeoPoint*) args[@"origin"];
         
                 // ref
-                AMapWalking* ref = (AMapWalking*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapWalking* ref = (AMapWalking*) args[@"__this__"];
         
                 ref.origin = origin;
                 methodResult(@"success");
@@ -1254,10 +1255,10 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeoPoint* destination = (AMapGeoPoint*) HEAP[args[@"destination"]];
+                AMapGeoPoint* destination = (AMapGeoPoint*) args[@"destination"];
         
                 // ref
-                AMapWalking* ref = (AMapWalking*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapWalking* ref = (AMapWalking*) args[@"__this__"];
         
                 ref.destination = destination;
                 methodResult(@"success");
@@ -1275,7 +1276,7 @@ extern BOOL enableLog;
                 NSInteger distance = [args[@"distance"] longValue];
         
                 // ref
-                AMapWalking* ref = (AMapWalking*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapWalking* ref = (AMapWalking*) args[@"__this__"];
         
                 ref.distance = distance;
                 methodResult(@"success");
@@ -1293,7 +1294,7 @@ extern BOOL enableLog;
                 NSInteger duration = [args[@"duration"] longValue];
         
                 // ref
-                AMapWalking* ref = (AMapWalking*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapWalking* ref = (AMapWalking*) args[@"__this__"];
         
                 ref.duration = duration;
                 methodResult(@"success");
@@ -1316,7 +1317,7 @@ extern BOOL enableLog;
                 }
         
                 // ref
-                AMapWalking* ref = (AMapWalking*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapWalking* ref = (AMapWalking*) args[@"__this__"];
         
                 ref.steps = steps;
                 methodResult(@"success");
@@ -1331,10 +1332,10 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeoPoint* origin = (AMapGeoPoint*) HEAP[args[@"origin"]];
+                AMapGeoPoint* origin = (AMapGeoPoint*) args[@"origin"];
         
                 // ref
-                AMapTaxi* ref = (AMapTaxi*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapTaxi* ref = (AMapTaxi*) args[@"__this__"];
         
                 ref.origin = origin;
                 methodResult(@"success");
@@ -1349,10 +1350,10 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeoPoint* destination = (AMapGeoPoint*) HEAP[args[@"destination"]];
+                AMapGeoPoint* destination = (AMapGeoPoint*) args[@"destination"];
         
                 // ref
-                AMapTaxi* ref = (AMapTaxi*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapTaxi* ref = (AMapTaxi*) args[@"__this__"];
         
                 ref.destination = destination;
                 methodResult(@"success");
@@ -1370,7 +1371,7 @@ extern BOOL enableLog;
                 NSInteger distance = [args[@"distance"] longValue];
         
                 // ref
-                AMapTaxi* ref = (AMapTaxi*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapTaxi* ref = (AMapTaxi*) args[@"__this__"];
         
                 ref.distance = distance;
                 methodResult(@"success");
@@ -1388,7 +1389,7 @@ extern BOOL enableLog;
                 NSInteger duration = [args[@"duration"] longValue];
         
                 // ref
-                AMapTaxi* ref = (AMapTaxi*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapTaxi* ref = (AMapTaxi*) args[@"__this__"];
         
                 ref.duration = duration;
                 methodResult(@"success");
@@ -1406,7 +1407,7 @@ extern BOOL enableLog;
                 NSString* sname = (NSString*) args[@"sname"];
         
                 // ref
-                AMapTaxi* ref = (AMapTaxi*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapTaxi* ref = (AMapTaxi*) args[@"__this__"];
         
                 ref.sname = sname;
                 methodResult(@"success");
@@ -1424,7 +1425,7 @@ extern BOOL enableLog;
                 NSString* tname = (NSString*) args[@"tname"];
         
                 // ref
-                AMapTaxi* ref = (AMapTaxi*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapTaxi* ref = (AMapTaxi*) args[@"__this__"];
         
                 ref.tname = tname;
                 methodResult(@"success");
@@ -1442,7 +1443,7 @@ extern BOOL enableLog;
                 NSString* uid = (NSString*) args[@"uid"];
         
                 // ref
-                AMapRailwayStation* ref = (AMapRailwayStation*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapRailwayStation* ref = (AMapRailwayStation*) args[@"__this__"];
         
                 ref.uid = uid;
                 methodResult(@"success");
@@ -1460,7 +1461,7 @@ extern BOOL enableLog;
                 NSString* name = (NSString*) args[@"name"];
         
                 // ref
-                AMapRailwayStation* ref = (AMapRailwayStation*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapRailwayStation* ref = (AMapRailwayStation*) args[@"__this__"];
         
                 ref.name = name;
                 methodResult(@"success");
@@ -1475,10 +1476,10 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeoPoint* location = (AMapGeoPoint*) HEAP[args[@"location"]];
+                AMapGeoPoint* location = (AMapGeoPoint*) args[@"location"];
         
                 // ref
-                AMapRailwayStation* ref = (AMapRailwayStation*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapRailwayStation* ref = (AMapRailwayStation*) args[@"__this__"];
         
                 ref.location = location;
                 methodResult(@"success");
@@ -1496,7 +1497,7 @@ extern BOOL enableLog;
                 NSString* adcode = (NSString*) args[@"adcode"];
         
                 // ref
-                AMapRailwayStation* ref = (AMapRailwayStation*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapRailwayStation* ref = (AMapRailwayStation*) args[@"__this__"];
         
                 ref.adcode = adcode;
                 methodResult(@"success");
@@ -1514,7 +1515,7 @@ extern BOOL enableLog;
                 NSString* time = (NSString*) args[@"time"];
         
                 // ref
-                AMapRailwayStation* ref = (AMapRailwayStation*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapRailwayStation* ref = (AMapRailwayStation*) args[@"__this__"];
         
                 ref.time = time;
                 methodResult(@"success");
@@ -1532,7 +1533,7 @@ extern BOOL enableLog;
                 NSInteger wait = [args[@"wait"] longValue];
         
                 // ref
-                AMapRailwayStation* ref = (AMapRailwayStation*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapRailwayStation* ref = (AMapRailwayStation*) args[@"__this__"];
         
                 ref.wait = wait;
                 methodResult(@"success");
@@ -1550,7 +1551,7 @@ extern BOOL enableLog;
                 BOOL isStart = [args[@"isStart"] boolValue];
         
                 // ref
-                AMapRailwayStation* ref = (AMapRailwayStation*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapRailwayStation* ref = (AMapRailwayStation*) args[@"__this__"];
         
                 ref.isStart = isStart;
                 methodResult(@"success");
@@ -1568,7 +1569,7 @@ extern BOOL enableLog;
                 BOOL isEnd = [args[@"isEnd"] boolValue];
         
                 // ref
-                AMapRailwayStation* ref = (AMapRailwayStation*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapRailwayStation* ref = (AMapRailwayStation*) args[@"__this__"];
         
                 ref.isEnd = isEnd;
                 methodResult(@"success");
@@ -1586,7 +1587,7 @@ extern BOOL enableLog;
                 NSString* code = (NSString*) args[@"code"];
         
                 // ref
-                AMapRailwaySpace* ref = (AMapRailwaySpace*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapRailwaySpace* ref = (AMapRailwaySpace*) args[@"__this__"];
         
                 ref.code = code;
                 methodResult(@"success");
@@ -1604,7 +1605,7 @@ extern BOOL enableLog;
                 CGFloat cost = [args[@"cost"] floatValue];
         
                 // ref
-                AMapRailwaySpace* ref = (AMapRailwaySpace*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapRailwaySpace* ref = (AMapRailwaySpace*) args[@"__this__"];
         
                 ref.cost = cost;
                 methodResult(@"success");
@@ -1622,7 +1623,7 @@ extern BOOL enableLog;
                 NSString* uid = (NSString*) args[@"uid"];
         
                 // ref
-                AMapRailway* ref = (AMapRailway*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapRailway* ref = (AMapRailway*) args[@"__this__"];
         
                 ref.uid = uid;
                 methodResult(@"success");
@@ -1640,7 +1641,7 @@ extern BOOL enableLog;
                 NSString* name = (NSString*) args[@"name"];
         
                 // ref
-                AMapRailway* ref = (AMapRailway*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapRailway* ref = (AMapRailway*) args[@"__this__"];
         
                 ref.name = name;
                 methodResult(@"success");
@@ -1658,7 +1659,7 @@ extern BOOL enableLog;
                 NSString* trip = (NSString*) args[@"trip"];
         
                 // ref
-                AMapRailway* ref = (AMapRailway*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapRailway* ref = (AMapRailway*) args[@"__this__"];
         
                 ref.trip = trip;
                 methodResult(@"success");
@@ -1676,7 +1677,7 @@ extern BOOL enableLog;
                 NSString* type = (NSString*) args[@"type"];
         
                 // ref
-                AMapRailway* ref = (AMapRailway*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapRailway* ref = (AMapRailway*) args[@"__this__"];
         
                 ref.type = type;
                 methodResult(@"success");
@@ -1694,7 +1695,7 @@ extern BOOL enableLog;
                 NSInteger distance = [args[@"distance"] longValue];
         
                 // ref
-                AMapRailway* ref = (AMapRailway*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapRailway* ref = (AMapRailway*) args[@"__this__"];
         
                 ref.distance = distance;
                 methodResult(@"success");
@@ -1712,7 +1713,7 @@ extern BOOL enableLog;
                 NSInteger time = [args[@"time"] longValue];
         
                 // ref
-                AMapRailway* ref = (AMapRailway*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapRailway* ref = (AMapRailway*) args[@"__this__"];
         
                 ref.time = time;
                 methodResult(@"success");
@@ -1727,10 +1728,10 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapRailwayStation* departureStation = (AMapRailwayStation*) HEAP[args[@"departureStation"]];
+                AMapRailwayStation* departureStation = (AMapRailwayStation*) args[@"departureStation"];
         
                 // ref
-                AMapRailway* ref = (AMapRailway*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapRailway* ref = (AMapRailway*) args[@"__this__"];
         
                 ref.departureStation = departureStation;
                 methodResult(@"success");
@@ -1745,10 +1746,10 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapRailwayStation* arrivalStation = (AMapRailwayStation*) HEAP[args[@"arrivalStation"]];
+                AMapRailwayStation* arrivalStation = (AMapRailwayStation*) args[@"arrivalStation"];
         
                 // ref
-                AMapRailway* ref = (AMapRailway*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapRailway* ref = (AMapRailway*) args[@"__this__"];
         
                 ref.arrivalStation = arrivalStation;
                 methodResult(@"success");
@@ -1771,7 +1772,7 @@ extern BOOL enableLog;
                 }
         
                 // ref
-                AMapRailway* ref = (AMapRailway*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapRailway* ref = (AMapRailway*) args[@"__this__"];
         
                 ref.spaces = spaces;
                 methodResult(@"success");
@@ -1794,7 +1795,7 @@ extern BOOL enableLog;
                 }
         
                 // ref
-                AMapRailway* ref = (AMapRailway*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapRailway* ref = (AMapRailway*) args[@"__this__"];
         
                 ref.viaStops = viaStops;
                 methodResult(@"success");
@@ -1817,7 +1818,7 @@ extern BOOL enableLog;
                 }
         
                 // ref
-                AMapRailway* ref = (AMapRailway*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapRailway* ref = (AMapRailway*) args[@"__this__"];
         
                 ref.alters = alters;
                 methodResult(@"success");
@@ -1832,10 +1833,10 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapWalking* walking = (AMapWalking*) HEAP[args[@"walking"]];
+                AMapWalking* walking = (AMapWalking*) args[@"walking"];
         
                 // ref
-                AMapSegment* ref = (AMapSegment*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapSegment* ref = (AMapSegment*) args[@"__this__"];
         
                 ref.walking = walking;
                 methodResult(@"success");
@@ -1858,7 +1859,7 @@ extern BOOL enableLog;
                 }
         
                 // ref
-                AMapSegment* ref = (AMapSegment*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapSegment* ref = (AMapSegment*) args[@"__this__"];
         
                 ref.buslines = buslines;
                 methodResult(@"success");
@@ -1873,10 +1874,10 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapTaxi* taxi = (AMapTaxi*) HEAP[args[@"taxi"]];
+                AMapTaxi* taxi = (AMapTaxi*) args[@"taxi"];
         
                 // ref
-                AMapSegment* ref = (AMapSegment*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapSegment* ref = (AMapSegment*) args[@"__this__"];
         
                 ref.taxi = taxi;
                 methodResult(@"success");
@@ -1891,10 +1892,10 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapRailway* railway = (AMapRailway*) HEAP[args[@"railway"]];
+                AMapRailway* railway = (AMapRailway*) args[@"railway"];
         
                 // ref
-                AMapSegment* ref = (AMapSegment*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapSegment* ref = (AMapSegment*) args[@"__this__"];
         
                 ref.railway = railway;
                 methodResult(@"success");
@@ -1912,7 +1913,7 @@ extern BOOL enableLog;
                 NSString* enterName = (NSString*) args[@"enterName"];
         
                 // ref
-                AMapSegment* ref = (AMapSegment*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapSegment* ref = (AMapSegment*) args[@"__this__"];
         
                 ref.enterName = enterName;
                 methodResult(@"success");
@@ -1927,10 +1928,10 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeoPoint* enterLocation = (AMapGeoPoint*) HEAP[args[@"enterLocation"]];
+                AMapGeoPoint* enterLocation = (AMapGeoPoint*) args[@"enterLocation"];
         
                 // ref
-                AMapSegment* ref = (AMapSegment*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapSegment* ref = (AMapSegment*) args[@"__this__"];
         
                 ref.enterLocation = enterLocation;
                 methodResult(@"success");
@@ -1948,7 +1949,7 @@ extern BOOL enableLog;
                 NSString* exitName = (NSString*) args[@"exitName"];
         
                 // ref
-                AMapSegment* ref = (AMapSegment*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapSegment* ref = (AMapSegment*) args[@"__this__"];
         
                 ref.exitName = exitName;
                 methodResult(@"success");
@@ -1963,10 +1964,10 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeoPoint* exitLocation = (AMapGeoPoint*) HEAP[args[@"exitLocation"]];
+                AMapGeoPoint* exitLocation = (AMapGeoPoint*) args[@"exitLocation"];
         
                 // ref
-                AMapSegment* ref = (AMapSegment*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapSegment* ref = (AMapSegment*) args[@"__this__"];
         
                 ref.exitLocation = exitLocation;
                 methodResult(@"success");
@@ -1984,7 +1985,7 @@ extern BOOL enableLog;
                 CGFloat cost = [args[@"cost"] floatValue];
         
                 // ref
-                AMapTransit* ref = (AMapTransit*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapTransit* ref = (AMapTransit*) args[@"__this__"];
         
                 ref.cost = cost;
                 methodResult(@"success");
@@ -2002,7 +2003,7 @@ extern BOOL enableLog;
                 NSInteger duration = [args[@"duration"] longValue];
         
                 // ref
-                AMapTransit* ref = (AMapTransit*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapTransit* ref = (AMapTransit*) args[@"__this__"];
         
                 ref.duration = duration;
                 methodResult(@"success");
@@ -2020,7 +2021,7 @@ extern BOOL enableLog;
                 BOOL nightflag = [args[@"nightflag"] boolValue];
         
                 // ref
-                AMapTransit* ref = (AMapTransit*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapTransit* ref = (AMapTransit*) args[@"__this__"];
         
                 ref.nightflag = nightflag;
                 methodResult(@"success");
@@ -2038,7 +2039,7 @@ extern BOOL enableLog;
                 NSInteger walkingDistance = [args[@"walkingDistance"] longValue];
         
                 // ref
-                AMapTransit* ref = (AMapTransit*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapTransit* ref = (AMapTransit*) args[@"__this__"];
         
                 ref.walkingDistance = walkingDistance;
                 methodResult(@"success");
@@ -2061,7 +2062,7 @@ extern BOOL enableLog;
                 }
         
                 // ref
-                AMapTransit* ref = (AMapTransit*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapTransit* ref = (AMapTransit*) args[@"__this__"];
         
                 ref.segments = segments;
                 methodResult(@"success");
@@ -2079,7 +2080,7 @@ extern BOOL enableLog;
                 NSInteger distance = [args[@"distance"] longValue];
         
                 // ref
-                AMapTransit* ref = (AMapTransit*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapTransit* ref = (AMapTransit*) args[@"__this__"];
         
                 ref.distance = distance;
                 methodResult(@"success");
@@ -2094,10 +2095,10 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeoPoint* origin = (AMapGeoPoint*) HEAP[args[@"origin"]];
+                AMapGeoPoint* origin = (AMapGeoPoint*) args[@"origin"];
         
                 // ref
-                AMapRoute* ref = (AMapRoute*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapRoute* ref = (AMapRoute*) args[@"__this__"];
         
                 ref.origin = origin;
                 methodResult(@"success");
@@ -2112,10 +2113,10 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeoPoint* destination = (AMapGeoPoint*) HEAP[args[@"destination"]];
+                AMapGeoPoint* destination = (AMapGeoPoint*) args[@"destination"];
         
                 // ref
-                AMapRoute* ref = (AMapRoute*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapRoute* ref = (AMapRoute*) args[@"__this__"];
         
                 ref.destination = destination;
                 methodResult(@"success");
@@ -2133,7 +2134,7 @@ extern BOOL enableLog;
                 CGFloat taxiCost = [args[@"taxiCost"] floatValue];
         
                 // ref
-                AMapRoute* ref = (AMapRoute*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapRoute* ref = (AMapRoute*) args[@"__this__"];
         
                 ref.taxiCost = taxiCost;
                 methodResult(@"success");
@@ -2156,7 +2157,7 @@ extern BOOL enableLog;
                 }
         
                 // ref
-                AMapRoute* ref = (AMapRoute*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapRoute* ref = (AMapRoute*) args[@"__this__"];
         
                 ref.paths = paths;
                 methodResult(@"success");
@@ -2179,7 +2180,7 @@ extern BOOL enableLog;
                 }
         
                 // ref
-                AMapRoute* ref = (AMapRoute*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapRoute* ref = (AMapRoute*) args[@"__this__"];
         
                 ref.transits = transits;
                 methodResult(@"success");
@@ -2197,7 +2198,7 @@ extern BOOL enableLog;
                 NSInteger originID = [args[@"originID"] longValue];
         
                 // ref
-                AMapDistanceResult* ref = (AMapDistanceResult*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapDistanceResult* ref = (AMapDistanceResult*) args[@"__this__"];
         
                 ref.originID = originID;
                 methodResult(@"success");
@@ -2215,7 +2216,7 @@ extern BOOL enableLog;
                 NSInteger destID = [args[@"destID"] longValue];
         
                 // ref
-                AMapDistanceResult* ref = (AMapDistanceResult*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapDistanceResult* ref = (AMapDistanceResult*) args[@"__this__"];
         
                 ref.destID = destID;
                 methodResult(@"success");
@@ -2233,7 +2234,7 @@ extern BOOL enableLog;
                 NSInteger distance = [args[@"distance"] longValue];
         
                 // ref
-                AMapDistanceResult* ref = (AMapDistanceResult*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapDistanceResult* ref = (AMapDistanceResult*) args[@"__this__"];
         
                 ref.distance = distance;
                 methodResult(@"success");
@@ -2251,7 +2252,7 @@ extern BOOL enableLog;
                 NSInteger duration = [args[@"duration"] longValue];
         
                 // ref
-                AMapDistanceResult* ref = (AMapDistanceResult*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapDistanceResult* ref = (AMapDistanceResult*) args[@"__this__"];
         
                 ref.duration = duration;
                 methodResult(@"success");
@@ -2269,7 +2270,7 @@ extern BOOL enableLog;
                 NSString* info = (NSString*) args[@"info"];
         
                 // ref
-                AMapDistanceResult* ref = (AMapDistanceResult*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapDistanceResult* ref = (AMapDistanceResult*) args[@"__this__"];
         
                 ref.info = info;
                 methodResult(@"success");
@@ -2287,7 +2288,7 @@ extern BOOL enableLog;
                 NSInteger code = [args[@"code"] longValue];
         
                 // ref
-                AMapDistanceResult* ref = (AMapDistanceResult*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapDistanceResult* ref = (AMapDistanceResult*) args[@"__this__"];
         
                 ref.code = code;
                 methodResult(@"success");
@@ -2305,7 +2306,7 @@ extern BOOL enableLog;
                 NSString* adcode = (NSString*) args[@"adcode"];
         
                 // ref
-                AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) args[@"__this__"];
         
                 ref.adcode = adcode;
                 methodResult(@"success");
@@ -2323,7 +2324,7 @@ extern BOOL enableLog;
                 NSString* province = (NSString*) args[@"province"];
         
                 // ref
-                AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) args[@"__this__"];
         
                 ref.province = province;
                 methodResult(@"success");
@@ -2341,7 +2342,7 @@ extern BOOL enableLog;
                 NSString* city = (NSString*) args[@"city"];
         
                 // ref
-                AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) args[@"__this__"];
         
                 ref.city = city;
                 methodResult(@"success");
@@ -2359,7 +2360,7 @@ extern BOOL enableLog;
                 NSString* weather = (NSString*) args[@"weather"];
         
                 // ref
-                AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) args[@"__this__"];
         
                 ref.weather = weather;
                 methodResult(@"success");
@@ -2377,7 +2378,7 @@ extern BOOL enableLog;
                 NSString* temperature = (NSString*) args[@"temperature"];
         
                 // ref
-                AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) args[@"__this__"];
         
                 ref.temperature = temperature;
                 methodResult(@"success");
@@ -2395,7 +2396,7 @@ extern BOOL enableLog;
                 NSString* windDirection = (NSString*) args[@"windDirection"];
         
                 // ref
-                AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) args[@"__this__"];
         
                 ref.windDirection = windDirection;
                 methodResult(@"success");
@@ -2413,7 +2414,7 @@ extern BOOL enableLog;
                 NSString* windPower = (NSString*) args[@"windPower"];
         
                 // ref
-                AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) args[@"__this__"];
         
                 ref.windPower = windPower;
                 methodResult(@"success");
@@ -2431,7 +2432,7 @@ extern BOOL enableLog;
                 NSString* humidity = (NSString*) args[@"humidity"];
         
                 // ref
-                AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) args[@"__this__"];
         
                 ref.humidity = humidity;
                 methodResult(@"success");
@@ -2449,7 +2450,7 @@ extern BOOL enableLog;
                 NSString* reportTime = (NSString*) args[@"reportTime"];
         
                 // ref
-                AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) args[@"__this__"];
         
                 ref.reportTime = reportTime;
                 methodResult(@"success");
@@ -2467,7 +2468,7 @@ extern BOOL enableLog;
                 NSString* date = (NSString*) args[@"date"];
         
                 // ref
-                AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) args[@"__this__"];
         
                 ref.date = date;
                 methodResult(@"success");
@@ -2485,7 +2486,7 @@ extern BOOL enableLog;
                 NSString* week = (NSString*) args[@"week"];
         
                 // ref
-                AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) args[@"__this__"];
         
                 ref.week = week;
                 methodResult(@"success");
@@ -2503,7 +2504,7 @@ extern BOOL enableLog;
                 NSString* dayWeather = (NSString*) args[@"dayWeather"];
         
                 // ref
-                AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) args[@"__this__"];
         
                 ref.dayWeather = dayWeather;
                 methodResult(@"success");
@@ -2521,7 +2522,7 @@ extern BOOL enableLog;
                 NSString* nightWeather = (NSString*) args[@"nightWeather"];
         
                 // ref
-                AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) args[@"__this__"];
         
                 ref.nightWeather = nightWeather;
                 methodResult(@"success");
@@ -2539,7 +2540,7 @@ extern BOOL enableLog;
                 NSString* dayTemp = (NSString*) args[@"dayTemp"];
         
                 // ref
-                AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) args[@"__this__"];
         
                 ref.dayTemp = dayTemp;
                 methodResult(@"success");
@@ -2557,7 +2558,7 @@ extern BOOL enableLog;
                 NSString* nightTemp = (NSString*) args[@"nightTemp"];
         
                 // ref
-                AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) args[@"__this__"];
         
                 ref.nightTemp = nightTemp;
                 methodResult(@"success");
@@ -2575,7 +2576,7 @@ extern BOOL enableLog;
                 NSString* dayWind = (NSString*) args[@"dayWind"];
         
                 // ref
-                AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) args[@"__this__"];
         
                 ref.dayWind = dayWind;
                 methodResult(@"success");
@@ -2593,7 +2594,7 @@ extern BOOL enableLog;
                 NSString* nightWind = (NSString*) args[@"nightWind"];
         
                 // ref
-                AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) args[@"__this__"];
         
                 ref.nightWind = nightWind;
                 methodResult(@"success");
@@ -2611,7 +2612,7 @@ extern BOOL enableLog;
                 NSString* dayPower = (NSString*) args[@"dayPower"];
         
                 // ref
-                AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) args[@"__this__"];
         
                 ref.dayPower = dayPower;
                 methodResult(@"success");
@@ -2629,7 +2630,7 @@ extern BOOL enableLog;
                 NSString* nightPower = (NSString*) args[@"nightPower"];
         
                 // ref
-                AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) args[@"__this__"];
         
                 ref.nightPower = nightPower;
                 methodResult(@"success");
@@ -2647,7 +2648,7 @@ extern BOOL enableLog;
                 NSString* adcode = (NSString*) args[@"adcode"];
         
                 // ref
-                AMapLocalWeatherForecast* ref = (AMapLocalWeatherForecast*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocalWeatherForecast* ref = (AMapLocalWeatherForecast*) args[@"__this__"];
         
                 ref.adcode = adcode;
                 methodResult(@"success");
@@ -2665,7 +2666,7 @@ extern BOOL enableLog;
                 NSString* province = (NSString*) args[@"province"];
         
                 // ref
-                AMapLocalWeatherForecast* ref = (AMapLocalWeatherForecast*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocalWeatherForecast* ref = (AMapLocalWeatherForecast*) args[@"__this__"];
         
                 ref.province = province;
                 methodResult(@"success");
@@ -2683,7 +2684,7 @@ extern BOOL enableLog;
                 NSString* city = (NSString*) args[@"city"];
         
                 // ref
-                AMapLocalWeatherForecast* ref = (AMapLocalWeatherForecast*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocalWeatherForecast* ref = (AMapLocalWeatherForecast*) args[@"__this__"];
         
                 ref.city = city;
                 methodResult(@"success");
@@ -2701,7 +2702,7 @@ extern BOOL enableLog;
                 NSString* reportTime = (NSString*) args[@"reportTime"];
         
                 // ref
-                AMapLocalWeatherForecast* ref = (AMapLocalWeatherForecast*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocalWeatherForecast* ref = (AMapLocalWeatherForecast*) args[@"__this__"];
         
                 ref.reportTime = reportTime;
                 methodResult(@"success");
@@ -2724,7 +2725,7 @@ extern BOOL enableLog;
                 }
         
                 // ref
-                AMapLocalWeatherForecast* ref = (AMapLocalWeatherForecast*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapLocalWeatherForecast* ref = (AMapLocalWeatherForecast*) args[@"__this__"];
         
                 ref.casts = casts;
                 methodResult(@"success");
@@ -2742,7 +2743,7 @@ extern BOOL enableLog;
                 NSString* userID = (NSString*) args[@"userID"];
         
                 // ref
-                AMapNearbyUserInfo* ref = (AMapNearbyUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapNearbyUserInfo* ref = (AMapNearbyUserInfo*) args[@"__this__"];
         
                 ref.userID = userID;
                 methodResult(@"success");
@@ -2757,10 +2758,10 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeoPoint* location = (AMapGeoPoint*) HEAP[args[@"location"]];
+                AMapGeoPoint* location = (AMapGeoPoint*) args[@"location"];
         
                 // ref
-                AMapNearbyUserInfo* ref = (AMapNearbyUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapNearbyUserInfo* ref = (AMapNearbyUserInfo*) args[@"__this__"];
         
                 ref.location = location;
                 methodResult(@"success");
@@ -2778,7 +2779,7 @@ extern BOOL enableLog;
                 CGFloat distance = [args[@"distance"] floatValue];
         
                 // ref
-                AMapNearbyUserInfo* ref = (AMapNearbyUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapNearbyUserInfo* ref = (AMapNearbyUserInfo*) args[@"__this__"];
         
                 ref.distance = distance;
                 methodResult(@"success");
@@ -2796,7 +2797,7 @@ extern BOOL enableLog;
                 NSTimeInterval updatetime = [args[@"updatetime"] doubleValue];
         
                 // ref
-                AMapNearbyUserInfo* ref = (AMapNearbyUserInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapNearbyUserInfo* ref = (AMapNearbyUserInfo*) args[@"__this__"];
         
                 ref.updatetime = updatetime;
                 methodResult(@"success");
@@ -2814,7 +2815,7 @@ extern BOOL enableLog;
                 NSString* evaluationDescription = (NSString*) args[@"evaluationDescription"];
         
                 // ref
-                AMapTrafficEvaluation* ref = (AMapTrafficEvaluation*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapTrafficEvaluation* ref = (AMapTrafficEvaluation*) args[@"__this__"];
         
                 ref.evaluationDescription = evaluationDescription;
                 methodResult(@"success");
@@ -2832,7 +2833,7 @@ extern BOOL enableLog;
                 NSInteger status = [args[@"status"] longValue];
         
                 // ref
-                AMapTrafficEvaluation* ref = (AMapTrafficEvaluation*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapTrafficEvaluation* ref = (AMapTrafficEvaluation*) args[@"__this__"];
         
                 ref.status = status;
                 methodResult(@"success");
@@ -2850,7 +2851,7 @@ extern BOOL enableLog;
                 NSString* expedite = (NSString*) args[@"expedite"];
         
                 // ref
-                AMapTrafficEvaluation* ref = (AMapTrafficEvaluation*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapTrafficEvaluation* ref = (AMapTrafficEvaluation*) args[@"__this__"];
         
                 ref.expedite = expedite;
                 methodResult(@"success");
@@ -2868,7 +2869,7 @@ extern BOOL enableLog;
                 NSString* congested = (NSString*) args[@"congested"];
         
                 // ref
-                AMapTrafficEvaluation* ref = (AMapTrafficEvaluation*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapTrafficEvaluation* ref = (AMapTrafficEvaluation*) args[@"__this__"];
         
                 ref.congested = congested;
                 methodResult(@"success");
@@ -2886,7 +2887,7 @@ extern BOOL enableLog;
                 NSString* blocked = (NSString*) args[@"blocked"];
         
                 // ref
-                AMapTrafficEvaluation* ref = (AMapTrafficEvaluation*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapTrafficEvaluation* ref = (AMapTrafficEvaluation*) args[@"__this__"];
         
                 ref.blocked = blocked;
                 methodResult(@"success");
@@ -2904,7 +2905,7 @@ extern BOOL enableLog;
                 NSString* unknown = (NSString*) args[@"unknown"];
         
                 // ref
-                AMapTrafficEvaluation* ref = (AMapTrafficEvaluation*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapTrafficEvaluation* ref = (AMapTrafficEvaluation*) args[@"__this__"];
         
                 ref.unknown = unknown;
                 methodResult(@"success");
@@ -2922,7 +2923,7 @@ extern BOOL enableLog;
                 NSString* name = (NSString*) args[@"name"];
         
                 // ref
-                AMapTrafficRoad* ref = (AMapTrafficRoad*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapTrafficRoad* ref = (AMapTrafficRoad*) args[@"__this__"];
         
                 ref.name = name;
                 methodResult(@"success");
@@ -2940,7 +2941,7 @@ extern BOOL enableLog;
                 NSInteger status = [args[@"status"] longValue];
         
                 // ref
-                AMapTrafficRoad* ref = (AMapTrafficRoad*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapTrafficRoad* ref = (AMapTrafficRoad*) args[@"__this__"];
         
                 ref.status = status;
                 methodResult(@"success");
@@ -2958,7 +2959,7 @@ extern BOOL enableLog;
                 NSString* direction = (NSString*) args[@"direction"];
         
                 // ref
-                AMapTrafficRoad* ref = (AMapTrafficRoad*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapTrafficRoad* ref = (AMapTrafficRoad*) args[@"__this__"];
         
                 ref.direction = direction;
                 methodResult(@"success");
@@ -2976,7 +2977,7 @@ extern BOOL enableLog;
                 float angle = [args[@"angle"] floatValue];
         
                 // ref
-                AMapTrafficRoad* ref = (AMapTrafficRoad*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapTrafficRoad* ref = (AMapTrafficRoad*) args[@"__this__"];
         
                 ref.angle = angle;
                 methodResult(@"success");
@@ -2994,7 +2995,7 @@ extern BOOL enableLog;
                 float speed = [args[@"speed"] floatValue];
         
                 // ref
-                AMapTrafficRoad* ref = (AMapTrafficRoad*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapTrafficRoad* ref = (AMapTrafficRoad*) args[@"__this__"];
         
                 ref.speed = speed;
                 methodResult(@"success");
@@ -3012,7 +3013,7 @@ extern BOOL enableLog;
                 NSString* polyline = (NSString*) args[@"polyline"];
         
                 // ref
-                AMapTrafficRoad* ref = (AMapTrafficRoad*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapTrafficRoad* ref = (AMapTrafficRoad*) args[@"__this__"];
         
                 ref.polyline = polyline;
                 methodResult(@"success");
@@ -3030,7 +3031,7 @@ extern BOOL enableLog;
                 NSString* statusDescription = (NSString*) args[@"statusDescription"];
         
                 // ref
-                AMapTrafficInfo* ref = (AMapTrafficInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapTrafficInfo* ref = (AMapTrafficInfo*) args[@"__this__"];
         
                 ref.statusDescription = statusDescription;
                 methodResult(@"success");
@@ -3045,10 +3046,10 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapTrafficEvaluation* evaluation = (AMapTrafficEvaluation*) HEAP[args[@"evaluation"]];
+                AMapTrafficEvaluation* evaluation = (AMapTrafficEvaluation*) args[@"evaluation"];
         
                 // ref
-                AMapTrafficInfo* ref = (AMapTrafficInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapTrafficInfo* ref = (AMapTrafficInfo*) args[@"__this__"];
         
                 ref.evaluation = evaluation;
                 methodResult(@"success");
@@ -3071,7 +3072,7 @@ extern BOOL enableLog;
                 }
         
                 // ref
-                AMapTrafficInfo* ref = (AMapTrafficInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapTrafficInfo* ref = (AMapTrafficInfo*) args[@"__this__"];
         
                 ref.roads = roads;
                 methodResult(@"success");
@@ -3089,7 +3090,7 @@ extern BOOL enableLog;
                 NSString* uid = (NSString*) args[@"uid"];
         
                 // ref
-                AMapCloudImage* ref = (AMapCloudImage*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapCloudImage* ref = (AMapCloudImage*) args[@"__this__"];
         
                 ref.uid = uid;
                 methodResult(@"success");
@@ -3107,7 +3108,7 @@ extern BOOL enableLog;
                 NSString* preurl = (NSString*) args[@"preurl"];
         
                 // ref
-                AMapCloudImage* ref = (AMapCloudImage*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapCloudImage* ref = (AMapCloudImage*) args[@"__this__"];
         
                 ref.preurl = preurl;
                 methodResult(@"success");
@@ -3125,7 +3126,7 @@ extern BOOL enableLog;
                 NSString* url = (NSString*) args[@"url"];
         
                 // ref
-                AMapCloudImage* ref = (AMapCloudImage*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapCloudImage* ref = (AMapCloudImage*) args[@"__this__"];
         
                 ref.url = url;
                 methodResult(@"success");
@@ -3143,7 +3144,7 @@ extern BOOL enableLog;
                 NSInteger uid = [args[@"uid"] longValue];
         
                 // ref
-                AMapCloudPOI* ref = (AMapCloudPOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapCloudPOI* ref = (AMapCloudPOI*) args[@"__this__"];
         
                 ref.uid = uid;
                 methodResult(@"success");
@@ -3161,7 +3162,7 @@ extern BOOL enableLog;
                 NSString* name = (NSString*) args[@"name"];
         
                 // ref
-                AMapCloudPOI* ref = (AMapCloudPOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapCloudPOI* ref = (AMapCloudPOI*) args[@"__this__"];
         
                 ref.name = name;
                 methodResult(@"success");
@@ -3176,10 +3177,10 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeoPoint* location = (AMapGeoPoint*) HEAP[args[@"location"]];
+                AMapGeoPoint* location = (AMapGeoPoint*) args[@"location"];
         
                 // ref
-                AMapCloudPOI* ref = (AMapCloudPOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapCloudPOI* ref = (AMapCloudPOI*) args[@"__this__"];
         
                 ref.location = location;
                 methodResult(@"success");
@@ -3197,7 +3198,7 @@ extern BOOL enableLog;
                 NSString* address = (NSString*) args[@"address"];
         
                 // ref
-                AMapCloudPOI* ref = (AMapCloudPOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapCloudPOI* ref = (AMapCloudPOI*) args[@"__this__"];
         
                 ref.address = address;
                 methodResult(@"success");
@@ -3215,7 +3216,7 @@ extern BOOL enableLog;
                 NSDictionary* customFields = (NSDictionary*) args[@"customFields"];
         
                 // ref
-                AMapCloudPOI* ref = (AMapCloudPOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapCloudPOI* ref = (AMapCloudPOI*) args[@"__this__"];
         
                 ref.customFields = customFields;
                 methodResult(@"success");
@@ -3233,7 +3234,7 @@ extern BOOL enableLog;
                 NSString* createTime = (NSString*) args[@"createTime"];
         
                 // ref
-                AMapCloudPOI* ref = (AMapCloudPOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapCloudPOI* ref = (AMapCloudPOI*) args[@"__this__"];
         
                 ref.createTime = createTime;
                 methodResult(@"success");
@@ -3251,7 +3252,7 @@ extern BOOL enableLog;
                 NSString* updateTime = (NSString*) args[@"updateTime"];
         
                 // ref
-                AMapCloudPOI* ref = (AMapCloudPOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapCloudPOI* ref = (AMapCloudPOI*) args[@"__this__"];
         
                 ref.updateTime = updateTime;
                 methodResult(@"success");
@@ -3269,7 +3270,7 @@ extern BOOL enableLog;
                 NSInteger distance = [args[@"distance"] longValue];
         
                 // ref
-                AMapCloudPOI* ref = (AMapCloudPOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapCloudPOI* ref = (AMapCloudPOI*) args[@"__this__"];
         
                 ref.distance = distance;
                 methodResult(@"success");
@@ -3292,7 +3293,7 @@ extern BOOL enableLog;
                 }
         
                 // ref
-                AMapCloudPOI* ref = (AMapCloudPOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapCloudPOI* ref = (AMapCloudPOI*) args[@"__this__"];
         
                 ref.images = images;
                 methodResult(@"success");
@@ -3310,7 +3311,7 @@ extern BOOL enableLog;
                 NSString* userID = (NSString*) args[@"userID"];
         
                 // ref
-                AMapNearbyUploadInfo* ref = (AMapNearbyUploadInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapNearbyUploadInfo* ref = (AMapNearbyUploadInfo*) args[@"__this__"];
         
                 ref.userID = userID;
                 methodResult(@"success");
@@ -3328,7 +3329,7 @@ extern BOOL enableLog;
                 AMapSearchCoordinateType coordinateType = (AMapSearchCoordinateType) [args[@"coordinateType"] integerValue];
         
                 // ref
-                AMapNearbyUploadInfo* ref = (AMapNearbyUploadInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapNearbyUploadInfo* ref = (AMapNearbyUploadInfo*) args[@"__this__"];
         
                 ref.coordinateType = coordinateType;
                 methodResult(@"success");
@@ -3348,7 +3349,7 @@ extern BOOL enableLog;
                 [coordinateValue getValue:&coordinate];
         
                 // ref
-                AMapNearbyUploadInfo* ref = (AMapNearbyUploadInfo*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapNearbyUploadInfo* ref = (AMapNearbyUploadInfo*) args[@"__this__"];
         
                 ref.coordinate = coordinate;
                 methodResult(@"success");
@@ -3366,7 +3367,7 @@ extern BOOL enableLog;
                 NSTimeInterval uploadTimeInterval = [args[@"uploadTimeInterval"] doubleValue];
         
                 // ref
-                AMapNearbySearchManager* ref = (AMapNearbySearchManager*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapNearbySearchManager* ref = (AMapNearbySearchManager*) args[@"__this__"];
         
                 ref.uploadTimeInterval = uploadTimeInterval;
                 methodResult(@"success");
@@ -3384,7 +3385,7 @@ extern BOOL enableLog;
                 NSInteger timeout = [args[@"timeout"] longValue];
         
                 // ref
-                AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
         
                 ref.timeout = timeout;
                 methodResult(@"success");
@@ -3402,7 +3403,7 @@ extern BOOL enableLog;
                 AMapSearchLanguage language = (AMapSearchLanguage) [args[@"language"] integerValue];
         
                 // ref
-                AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+                AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
         
                 ref.language = language;
                 methodResult(@"success");
@@ -3413,154 +3414,137 @@ extern BOOL enableLog;
         
         @"RefClass::isKindOfAMapPOISearchBaseRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapPOISearchBaseRequest class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapPOISearchBaseRequest class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapPOIIDSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapPOIIDSearchRequest class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapPOIIDSearchRequest class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapPOIKeywordsSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapPOIKeywordsSearchRequest class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapPOIKeywordsSearchRequest class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapPOIAroundSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapPOIAroundSearchRequest class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapPOIAroundSearchRequest class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapPOIPolygonSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapPOIPolygonSearchRequest class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapPOIPolygonSearchRequest class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapPOISearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapPOISearchResponse class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapPOISearchResponse class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapRoutePOISearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapRoutePOISearchRequest class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapRoutePOISearchRequest class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapRoutePOISearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapRoutePOISearchResponse class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapRoutePOISearchResponse class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapInputTipsSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapInputTipsSearchRequest class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapInputTipsSearchRequest class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapInputTipsSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapInputTipsSearchResponse class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapInputTipsSearchResponse class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapGeocodeSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapGeocodeSearchRequest class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapGeocodeSearchRequest class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapGeocodeSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapGeocodeSearchResponse class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapGeocodeSearchResponse class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapReGeocodeSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapReGeocodeSearchRequest class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapReGeocodeSearchRequest class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapReGeocodeSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapReGeocodeSearchResponse class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapReGeocodeSearchResponse class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapBusStopSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapBusStopSearchRequest class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapBusStopSearchRequest class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapBusStopSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapBusStopSearchResponse class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapBusStopSearchResponse class]];
             methodResult(@(isTargetType));
         },
         
         @"RefClass::isKindOfAMapBusLineBaseSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
-            NSNumber* refId = ((NSDictionary<NSString*, NSNumber*>*) args)[@"refId"];
-            id ref = HEAP[refId];
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
-            BOOL isTargetType = [ref isKindOfClass:[AMapBusLineBaseSearchRequest class]];
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapBusLineBaseSearchRequest class]];
             methodResult(@(isTargetType));
         },
         

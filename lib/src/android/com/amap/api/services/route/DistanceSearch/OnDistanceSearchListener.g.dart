@@ -24,13 +24,7 @@ mixin com_amap_api_services_route_DistanceSearch_OnDistanceSearchListener on jav
   
 
   @mustCallSuper
-  Future<void> onDistanceSearched(com_amap_api_services_route_DistanceResult var1, int var2) {
-    if (var1 is Ref) kNativeObjectPool.add(var1);
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('onDistanceSearched::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> onDistanceSearched(com_amap_api_services_route_DistanceResult var1, int var2) {}
   
 }
 

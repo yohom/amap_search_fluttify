@@ -24,13 +24,7 @@ mixin com_amap_api_services_interfaces_ITrafficSearch on java_lang_Object {
   
 
   @mustCallSuper
-  Future<void> setTrafficSearchListener(com_amap_api_services_traffic_TrafficSearch_OnTrafficSearchListener var1) {
-    if (var1 is Ref) kNativeObjectPool.add(var1);
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('setTrafficSearchListener::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> setTrafficSearchListener(com_amap_api_services_traffic_TrafficSearch_OnTrafficSearchListener var1) {}
   
 }
 

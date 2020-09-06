@@ -24,13 +24,7 @@ mixin com_amap_api_services_route_RouteSearch_OnRoutePlanSearchListener on java_
   
 
   @mustCallSuper
-  Future<void> onDriveRoutePlanSearched(com_amap_api_services_route_DriveRoutePlanResult var1, int var2) {
-    if (var1 is Ref) kNativeObjectPool.add(var1);
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('onDriveRoutePlanSearched::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> onDriveRoutePlanSearched(com_amap_api_services_route_DriveRoutePlanResult var1, int var2) {}
   
 }
 

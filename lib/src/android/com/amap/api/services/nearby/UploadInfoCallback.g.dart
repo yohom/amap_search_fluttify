@@ -24,13 +24,7 @@ mixin com_amap_api_services_nearby_UploadInfoCallback on java_lang_Object {
   
 
   @mustCallSuper
-  Future<com_amap_api_services_nearby_UploadInfo> OnUploadInfoCallback() {
-  
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('OnUploadInfoCallback::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<com_amap_api_services_nearby_UploadInfo> OnUploadInfoCallback() {}
   
 }
 

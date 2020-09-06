@@ -24,40 +24,16 @@ mixin com_amap_api_services_interfaces_IWeatherSearch on java_lang_Object {
   
 
   @mustCallSuper
-  Future<com_amap_api_services_weather_WeatherSearchQuery> getQuery() {
-  
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('getQuery::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<com_amap_api_services_weather_WeatherSearchQuery> getQuery() {}
   
   @mustCallSuper
-  Future<void> setQuery(com_amap_api_services_weather_WeatherSearchQuery var1) {
-    if (var1 is Ref) kNativeObjectPool.add(var1);
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('setQuery::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> setQuery(com_amap_api_services_weather_WeatherSearchQuery var1) {}
   
   @mustCallSuper
-  Future<void> searchWeatherAsyn() {
-  
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('searchWeatherAsyn::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> searchWeatherAsyn() {}
   
   @mustCallSuper
-  Future<void> setOnWeatherSearchListener(com_amap_api_services_weather_WeatherSearch_OnWeatherSearchListener var1) {
-    if (var1 is Ref) kNativeObjectPool.add(var1);
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('setOnWeatherSearchListener::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> setOnWeatherSearchListener(com_amap_api_services_weather_WeatherSearch_OnWeatherSearchListener var1) {}
   
 }
 

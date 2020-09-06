@@ -24,13 +24,7 @@ mixin com_amap_api_services_traffic_TrafficSearch_OnTrafficSearchListener on jav
   
 
   @mustCallSuper
-  Future<void> onRoadTrafficSearched(com_amap_api_services_traffic_TrafficStatusResult var1, int var2) {
-    if (var1 is Ref) kNativeObjectPool.add(var1);
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('onRoadTrafficSearched::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> onRoadTrafficSearched(com_amap_api_services_traffic_TrafficStatusResult var1, int var2) {}
   
 }
 

@@ -21,10 +21,8 @@ class AMapImage extends AMapSearchObject with NSCoding, NSCopying {
 
   //region creators
   static Future<AMapImage> create__() async {
-    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapImage');
-    final object = AMapImage()..refId = refId..tag__ = 'amap_search_fluttify';
-  
-    kNativeObjectPool.add(object);
+    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createAMapImage');
+    final object = AMapImage()..refId = refId;
     return object;
   }
   
@@ -32,10 +30,9 @@ class AMapImage extends AMapSearchObject with NSCoding, NSCopying {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapImage', {'length': length});
+    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchAMapImage', {'length': length});
   
-    final List<AMapImage> typedResult = resultBatch.map((result) => AMapImage()..refId = result..tag__ = 'amap_search_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
+    final List<AMapImage> typedResult = resultBatch.map((result) => AMapImage()..refId = result).toList();
     return typedResult;
   }
   
@@ -43,28 +40,26 @@ class AMapImage extends AMapSearchObject with NSCoding, NSCopying {
 
   //region getters
   Future<String> get_title() async {
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapImage::get_title", {'refId': refId});
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapImage::get_title", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   Future<String> get_url() async {
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapImage::get_url", {'refId': refId});
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapImage::get_url", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   //endregion
 
   //region setters
   Future<void> set_title(String title) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapImage::set_title', {'refId': refId, "title": title});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapImage::set_title', <String, dynamic>{'__this__': this, "title": title});
   
   
   }
   
   Future<void> set_url(String url) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapImage::set_url', {'refId': refId, "url": url});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapImage::set_url', <String, dynamic>{'__this__': this, "url": url});
   
   
   }
@@ -79,16 +74,16 @@ class AMapImage extends AMapSearchObject with NSCoding, NSCopying {
 extension AMapImage_Batch on List<AMapImage> {
   //region getters
   Future<List<String>> get_title_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapImage::get_title_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapImage::get_title_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<String>> get_url_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapImage::get_url_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapImage::get_url_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
@@ -96,13 +91,13 @@ extension AMapImage_Batch on List<AMapImage> {
 
   //region setters
   Future<void> set_title_batch(List<String> title) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapImage::set_title_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "title": title[__i__]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapImage::set_title_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "title": title[__i__]}]);
   
   
   }
   
   Future<void> set_url_batch(List<String> url) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapImage::set_url_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "url": url[__i__]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapImage::set_url_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "url": url[__i__]}]);
   
   
   }

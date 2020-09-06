@@ -21,10 +21,8 @@ class AMapPOIIDSearchRequest extends AMapPOISearchBaseRequest with NSCoding, NSC
 
   //region creators
   static Future<AMapPOIIDSearchRequest> create__() async {
-    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapPOIIDSearchRequest');
-    final object = AMapPOIIDSearchRequest()..refId = refId..tag__ = 'amap_search_fluttify';
-  
-    kNativeObjectPool.add(object);
+    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createAMapPOIIDSearchRequest');
+    final object = AMapPOIIDSearchRequest()..refId = refId;
     return object;
   }
   
@@ -32,10 +30,9 @@ class AMapPOIIDSearchRequest extends AMapPOISearchBaseRequest with NSCoding, NSC
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapPOIIDSearchRequest', {'length': length});
+    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchAMapPOIIDSearchRequest', {'length': length});
   
-    final List<AMapPOIIDSearchRequest> typedResult = resultBatch.map((result) => AMapPOIIDSearchRequest()..refId = result..tag__ = 'amap_search_fluttify').toList();
-    kNativeObjectPool.addAll(typedResult);
+    final List<AMapPOIIDSearchRequest> typedResult = resultBatch.map((result) => AMapPOIIDSearchRequest()..refId = result).toList();
     return typedResult;
   }
   
@@ -43,16 +40,15 @@ class AMapPOIIDSearchRequest extends AMapPOISearchBaseRequest with NSCoding, NSC
 
   //region getters
   Future<String> get_uid() async {
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOIIDSearchRequest::get_uid", {'refId': refId});
-  
-    return __result__;
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapPOIIDSearchRequest::get_uid", {'__this__': this});
+    return __result__ == null ? null : (__result__);
   }
   
   //endregion
 
   //region setters
   Future<void> set_uid(String uid) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOIIDSearchRequest::set_uid', {'refId': refId, "uid": uid});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapPOIIDSearchRequest::set_uid', <String, dynamic>{'__this__': this, "uid": uid});
   
   
   }
@@ -67,9 +63,9 @@ class AMapPOIIDSearchRequest extends AMapPOISearchBaseRequest with NSCoding, NSC
 extension AMapPOIIDSearchRequest_Batch on List<AMapPOIIDSearchRequest> {
   //region getters
   Future<List<String>> get_uid_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOIIDSearchRequest::get_uid_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapPOIIDSearchRequest::get_uid_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
@@ -77,7 +73,7 @@ extension AMapPOIIDSearchRequest_Batch on List<AMapPOIIDSearchRequest> {
 
   //region setters
   Future<void> set_uid_batch(List<String> uid) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOIIDSearchRequest::set_uid_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "uid": uid[__i__]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapPOIIDSearchRequest::set_uid_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "uid": uid[__i__]}]);
   
   
   }

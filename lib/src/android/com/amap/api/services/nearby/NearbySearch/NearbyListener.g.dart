@@ -24,31 +24,13 @@ mixin com_amap_api_services_nearby_NearbySearch_NearbyListener on java_lang_Obje
   
 
   @mustCallSuper
-  Future<void> onUserInfoCleared(int var1) {
-  
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('onUserInfoCleared::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> onUserInfoCleared(int var1) {}
   
   @mustCallSuper
-  Future<void> onNearbyInfoSearched(com_amap_api_services_nearby_NearbySearchResult var1, int var2) {
-    if (var1 is Ref) kNativeObjectPool.add(var1);
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('onNearbyInfoSearched::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> onNearbyInfoSearched(com_amap_api_services_nearby_NearbySearchResult var1, int var2) {}
   
   @mustCallSuper
-  Future<void> onNearbyInfoUploaded(int var1) {
-  
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('onNearbyInfoUploaded::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> onNearbyInfoUploaded(int var1) {}
   
 }
 

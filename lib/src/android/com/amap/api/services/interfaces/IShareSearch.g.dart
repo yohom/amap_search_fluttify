@@ -24,121 +24,43 @@ mixin com_amap_api_services_interfaces_IShareSearch on java_lang_Object {
   
 
   @mustCallSuper
-  Future<void> setOnShareSearchListener(com_amap_api_services_share_ShareSearch_OnShareSearchListener var1) {
-    if (var1 is Ref) kNativeObjectPool.add(var1);
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('setOnShareSearchListener::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> setOnShareSearchListener(com_amap_api_services_share_ShareSearch_OnShareSearchListener var1) {}
   
   @mustCallSuper
-  Future<void> searchPoiShareUrlAsyn(com_amap_api_services_core_PoiItem var1) {
-    if (var1 is Ref) kNativeObjectPool.add(var1);
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('searchPoiShareUrlAsyn::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> searchPoiShareUrlAsyn(com_amap_api_services_core_PoiItem var1) {}
   
   @mustCallSuper
-  Future<void> searchBusRouteShareUrlAsyn(com_amap_api_services_share_ShareSearch_ShareBusRouteQuery var1) {
-    if (var1 is Ref) kNativeObjectPool.add(var1);
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('searchBusRouteShareUrlAsyn::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> searchBusRouteShareUrlAsyn(com_amap_api_services_share_ShareSearch_ShareBusRouteQuery var1) {}
   
   @mustCallSuper
-  Future<void> searchWalkRouteShareUrlAsyn(com_amap_api_services_share_ShareSearch_ShareWalkRouteQuery var1) {
-    if (var1 is Ref) kNativeObjectPool.add(var1);
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('searchWalkRouteShareUrlAsyn::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> searchWalkRouteShareUrlAsyn(com_amap_api_services_share_ShareSearch_ShareWalkRouteQuery var1) {}
   
   @mustCallSuper
-  Future<void> searchDrivingRouteShareUrlAsyn(com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery var1) {
-    if (var1 is Ref) kNativeObjectPool.add(var1);
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('searchDrivingRouteShareUrlAsyn::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> searchDrivingRouteShareUrlAsyn(com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery var1) {}
   
   @mustCallSuper
-  Future<void> searchNaviShareUrlAsyn(com_amap_api_services_share_ShareSearch_ShareNaviQuery var1) {
-    if (var1 is Ref) kNativeObjectPool.add(var1);
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('searchNaviShareUrlAsyn::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> searchNaviShareUrlAsyn(com_amap_api_services_share_ShareSearch_ShareNaviQuery var1) {}
   
   @mustCallSuper
-  Future<void> searchLocationShareUrlAsyn(com_amap_api_services_core_LatLonSharePoint var1) {
-    if (var1 is Ref) kNativeObjectPool.add(var1);
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('searchLocationShareUrlAsyn::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<void> searchLocationShareUrlAsyn(com_amap_api_services_core_LatLonSharePoint var1) {}
   
   @mustCallSuper
-  Future<String> searchPoiShareUrl(com_amap_api_services_core_PoiItem var1) {
-    if (var1 is Ref) kNativeObjectPool.add(var1);
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('searchPoiShareUrl::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<String> searchPoiShareUrl(com_amap_api_services_core_PoiItem var1) {}
   
   @mustCallSuper
-  Future<String> searchNaviShareUrl(com_amap_api_services_share_ShareSearch_ShareNaviQuery var1) {
-    if (var1 is Ref) kNativeObjectPool.add(var1);
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('searchNaviShareUrl::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<String> searchNaviShareUrl(com_amap_api_services_share_ShareSearch_ShareNaviQuery var1) {}
   
   @mustCallSuper
-  Future<String> searchLocationShareUrl(com_amap_api_services_core_LatLonSharePoint var1) {
-    if (var1 is Ref) kNativeObjectPool.add(var1);
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('searchLocationShareUrl::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<String> searchLocationShareUrl(com_amap_api_services_core_LatLonSharePoint var1) {}
   
   @mustCallSuper
-  Future<String> searchBusRouteShareUrl(com_amap_api_services_share_ShareSearch_ShareBusRouteQuery var1) {
-    if (var1 is Ref) kNativeObjectPool.add(var1);
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('searchBusRouteShareUrl::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<String> searchBusRouteShareUrl(com_amap_api_services_share_ShareSearch_ShareBusRouteQuery var1) {}
   
   @mustCallSuper
-  Future<String> searchDrivingRouteShareUrl(com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery var1) {
-    if (var1 is Ref) kNativeObjectPool.add(var1);
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('searchDrivingRouteShareUrl::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<String> searchDrivingRouteShareUrl(com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery var1) {}
   
   @mustCallSuper
-  Future<String> searchWalkRouteShareUrl(com_amap_api_services_share_ShareSearch_ShareWalkRouteQuery var1) {
-    if (var1 is Ref) kNativeObjectPool.add(var1);
-  
-    if (fluttifyLogEnabled) {
-      debugPrint('searchWalkRouteShareUrl::kNativeObjectPool: $kNativeObjectPool');
-    }
-  }
+  Future<String> searchWalkRouteShareUrl(com_amap_api_services_share_ShareSearch_ShareWalkRouteQuery var1) {}
   
 }
 

@@ -115,11 +115,15 @@ class InputTip with _ToFutureString {
     return platform(
       android: (pool) async {
         final point = await _androidModel.getPoint();
-        return LatLng(await point.getLatitude(), await point.getLongitude());
+        return point == null
+            ? null
+            : LatLng(await point.getLatitude(), await point.getLongitude());
       },
       ios: (pool) async {
         final point = await _iosModel.get_location();
-        return LatLng(await point.get_latitude(), await point.get_longitude());
+        return point == null
+            ? null
+            : LatLng(await point.get_latitude(), await point.get_longitude());
       },
     );
   }

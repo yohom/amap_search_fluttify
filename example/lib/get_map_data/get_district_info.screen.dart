@@ -8,8 +8,7 @@ class GetDistrictInfoScreen extends StatefulWidget {
   _GetDistrictInfoScreenState createState() => _GetDistrictInfoScreenState();
 }
 
-class _GetDistrictInfoScreenState extends State<GetDistrictInfoScreen>
-    with AmapSearchDisposeMixin {
+class _GetDistrictInfoScreenState extends State<GetDistrictInfoScreen> {
   final _keywordController = TextEditingController(text: '西湖区');
 
   String _district = '';
