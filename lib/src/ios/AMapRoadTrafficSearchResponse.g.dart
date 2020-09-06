@@ -21,8 +21,8 @@ class AMapRoadTrafficSearchResponse extends AMapSearchObject with NSCoding, NSCo
 
   //region creators
   static Future<AMapRoadTrafficSearchResponse> create__() async {
-    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createAMapRoadTrafficSearchResponse');
-    final object = AMapRoadTrafficSearchResponse()..refId = refId;
+    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createAMapRoadTrafficSearchResponse');
+    final object = AMapRoadTrafficSearchResponse()..refId = refId..tag__ = 'amap_search_fluttify';
     return object;
   }
   
@@ -30,9 +30,9 @@ class AMapRoadTrafficSearchResponse extends AMapSearchObject with NSCoding, NSCo
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchAMapRoadTrafficSearchResponse', {'length': length});
+    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::create_batchAMapRoadTrafficSearchResponse', {'length': length});
   
-    final List<AMapRoadTrafficSearchResponse> typedResult = resultBatch.map((result) => AMapRoadTrafficSearchResponse()..refId = result).toList();
+    final List<AMapRoadTrafficSearchResponse> typedResult = resultBatch.map((result) => AMapRoadTrafficSearchResponse()..refId = result..tag__ = 'amap_search_fluttify').toList();
     return typedResult;
   }
   
@@ -40,8 +40,8 @@ class AMapRoadTrafficSearchResponse extends AMapSearchObject with NSCoding, NSCo
 
   //region getters
   Future<AMapTrafficInfo> get_trafficInfo() async {
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapRoadTrafficSearchResponse::get_trafficInfo", {'__this__': this});
-    return __result__ == null ? null : (AMapTrafficInfo()..refId = __result__);
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapRoadTrafficSearchResponse::get_trafficInfo", {'__this__': this});
+    return __result__ == null ? null : (AMapTrafficInfo()..refId = __result__..tag__ = 'amap_search_fluttify');
   }
   
   //endregion
@@ -63,9 +63,9 @@ class AMapRoadTrafficSearchResponse extends AMapSearchObject with NSCoding, NSCo
 extension AMapRoadTrafficSearchResponse_Batch on List<AMapRoadTrafficSearchResponse> {
   //region getters
   Future<List<AMapTrafficInfo>> get_trafficInfo_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapRoadTrafficSearchResponse::get_trafficInfo_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapRoadTrafficSearchResponse::get_trafficInfo_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapTrafficInfo()..refId = __result__).toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapTrafficInfo()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
     return typedResult;
   }
   

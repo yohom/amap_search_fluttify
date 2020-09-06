@@ -21,8 +21,8 @@ class AMapReGeocodeSearchResponse extends AMapSearchObject with NSCoding, NSCopy
 
   //region creators
   static Future<AMapReGeocodeSearchResponse> create__() async {
-    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::createAMapReGeocodeSearchResponse');
-    final object = AMapReGeocodeSearchResponse()..refId = refId;
+    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createAMapReGeocodeSearchResponse');
+    final object = AMapReGeocodeSearchResponse()..refId = refId..tag__ = 'amap_search_fluttify';
     return object;
   }
   
@@ -30,9 +30,9 @@ class AMapReGeocodeSearchResponse extends AMapSearchObject with NSCoding, NSCopy
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('ObjectFactory::create_batchAMapReGeocodeSearchResponse', {'length': length});
+    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::create_batchAMapReGeocodeSearchResponse', {'length': length});
   
-    final List<AMapReGeocodeSearchResponse> typedResult = resultBatch.map((result) => AMapReGeocodeSearchResponse()..refId = result).toList();
+    final List<AMapReGeocodeSearchResponse> typedResult = resultBatch.map((result) => AMapReGeocodeSearchResponse()..refId = result..tag__ = 'amap_search_fluttify').toList();
     return typedResult;
   }
   
@@ -40,8 +40,8 @@ class AMapReGeocodeSearchResponse extends AMapSearchObject with NSCoding, NSCopy
 
   //region getters
   Future<AMapReGeocode> get_regeocode() async {
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapReGeocodeSearchResponse::get_regeocode", {'__this__': this});
-    return __result__ == null ? null : (AMapReGeocode()..refId = __result__);
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapReGeocodeSearchResponse::get_regeocode", {'__this__': this});
+    return __result__ == null ? null : (AMapReGeocode()..refId = __result__..tag__ = 'amap_search_fluttify');
   }
   
   //endregion
@@ -63,9 +63,9 @@ class AMapReGeocodeSearchResponse extends AMapSearchObject with NSCoding, NSCopy
 extension AMapReGeocodeSearchResponse_Batch on List<AMapReGeocodeSearchResponse> {
   //region getters
   Future<List<AMapReGeocode>> get_regeocode_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod("AMapReGeocodeSearchResponse::get_regeocode_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapReGeocodeSearchResponse::get_regeocode_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapReGeocode()..refId = __result__).toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapReGeocode()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
     return typedResult;
   }
   

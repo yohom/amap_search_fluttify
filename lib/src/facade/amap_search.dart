@@ -1049,7 +1049,9 @@ mixin _Community on _Holder {
 
   /// 释放原生端对应的资源, 除了[AMapServices]
   Future<void> dispose() async {
-    await gGlobalReleasePool.release_batch();
+    final isCurrentPlugin = (Ref it) => it.tag__ == 'amap_search_fluttify';
+    await gGlobalReleasePool.where(isCurrentPlugin).release_batch();
+    gGlobalReleasePool.removeWhere(isCurrentPlugin);
 
     await _iosSearch?.release__();
     await _androidPoiSearch?.release__();
