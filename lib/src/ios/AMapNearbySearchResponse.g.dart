@@ -53,13 +53,13 @@ class AMapNearbySearchResponse extends AMapSearchObject with NSCoding, NSCopying
 
   //region setters
   Future<void> set_count(int count) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapNearbySearchResponse::set_count', <String, dynamic>{'__this__': this, "count": count});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapNearbySearchResponse::set_count', <String, dynamic>{'__this__': this, "count": count});
   
   
   }
   
   Future<void> set_infos(List<AMapNearbyUserInfo> infos) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapNearbySearchResponse::set_infos', <String, dynamic>{'__this__': this, "infos": infos});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapNearbySearchResponse::set_infos', <String, dynamic>{'__this__': this, "infos": infos});
   
   
   }
@@ -97,7 +97,7 @@ extension AMapNearbySearchResponse_Batch on List<AMapNearbySearchResponse> {
   }
   
   Future<void> set_infos_batch(List<List<AMapNearbyUserInfo>> infos) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapNearbySearchResponse::set_infos_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "infos": infos[__i__].map((it) => it.refId).toList()}]);
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapNearbySearchResponse::set_infos_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "infos": infos[__i__]}]);
   
   
   }

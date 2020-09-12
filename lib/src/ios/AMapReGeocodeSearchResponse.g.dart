@@ -48,7 +48,7 @@ class AMapReGeocodeSearchResponse extends AMapSearchObject with NSCoding, NSCopy
 
   //region setters
   Future<void> set_regeocode(AMapReGeocode regeocode) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapReGeocodeSearchResponse::set_regeocode', <String, dynamic>{'__this__': this, "regeocode": regeocode});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapReGeocodeSearchResponse::set_regeocode', <String, dynamic>{'__this__': this, "regeocode": regeocode});
   
   
   }
@@ -73,7 +73,7 @@ extension AMapReGeocodeSearchResponse_Batch on List<AMapReGeocodeSearchResponse>
 
   //region setters
   Future<void> set_regeocode_batch(List<AMapReGeocode> regeocode) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapReGeocodeSearchResponse::set_regeocode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "regeocode": regeocode[__i__].refId}]);
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapReGeocodeSearchResponse::set_regeocode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "regeocode": regeocode[__i__]}]);
   
   
   }

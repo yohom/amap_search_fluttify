@@ -68,7 +68,7 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
   
   
     // handle native call
-    MethodChannel('com.amap.api.services.nearby.NearbySearch::addNearbyListener::Callback', StandardMethodCodec(FluttifyMessageCodec()))
+    MethodChannel('com.amap.api.services.nearby.NearbySearch::addNearbyListener::Callback@$refId', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify')))
         .setMethodCallHandler((methodCall) async {
           try {
             final args = methodCall.arguments as Map;
@@ -130,7 +130,7 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
   
   
     // handle native call
-    MethodChannel('com.amap.api.services.nearby.NearbySearch::removeNearbyListener::Callback', StandardMethodCodec(FluttifyMessageCodec()))
+    MethodChannel('com.amap.api.services.nearby.NearbySearch::removeNearbyListener::Callback@$refId', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify')))
         .setMethodCallHandler((methodCall) async {
           try {
             final args = methodCall.arguments as Map;
@@ -238,7 +238,7 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
   
   
     // handle native call
-    MethodChannel('com.amap.api.services.nearby.NearbySearch::startUploadNearbyInfoAuto::Callback', StandardMethodCodec(FluttifyMessageCodec()))
+    MethodChannel('com.amap.api.services.nearby.NearbySearch::startUploadNearbyInfoAuto::Callback@$refId', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify')))
         .setMethodCallHandler((methodCall) async {
           try {
             final args = methodCall.arguments as Map;

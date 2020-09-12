@@ -64,12 +64,7 @@ extern BOOL enableLog;
         @"AMapGeoPolygon::polygonWithPoints": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // list arg
-            NSArray<NSNumber*>* pointsRefArray = (NSArray<NSNumber*> *) args[@"points"];
-            NSMutableArray<NSObject*>* points = [NSMutableArray arrayWithCapacity:pointsRefArray.count];
-            for (int __i__ = 0; __i__ < pointsRefArray.count; __i__++) {
-                NSObject* item = (NSObject*) HEAP[[pointsRefArray objectAtIndex:__i__]];
-                [points addObject:item];
-            }
+            NSArray<NSObject*>* points = (NSArray<NSObject*>*) args[@"points"];
         
             // ref
         
@@ -978,12 +973,7 @@ extern BOOL enableLog;
         
                 // args
                 // list arg
-                NSArray<NSNumber*>* pointsRefArray = (NSArray<NSNumber*> *) args[@"points"];
-                NSMutableArray<NSObject*>* points = [NSMutableArray arrayWithCapacity:pointsRefArray.count];
-                for (int __i__ = 0; __i__ < pointsRefArray.count; __i__++) {
-                    NSObject* item = (NSObject*) HEAP[[pointsRefArray objectAtIndex:__i__]];
-                    [points addObject:item];
-                }
+                NSArray<NSObject*>* points = (NSArray<NSObject*>*) args[@"points"];
         
                 // ref
         

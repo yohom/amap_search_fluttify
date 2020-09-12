@@ -53,13 +53,13 @@ class AMapGeoPoint extends AMapSearchObject with NSCoding, NSCopying {
 
   //region setters
   Future<void> set_latitude(double latitude) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapGeoPoint::set_latitude', <String, dynamic>{'__this__': this, "latitude": latitude});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapGeoPoint::set_latitude', <String, dynamic>{'__this__': this, "latitude": latitude});
   
   
   }
   
   Future<void> set_longitude(double longitude) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapGeoPoint::set_longitude', <String, dynamic>{'__this__': this, "longitude": longitude});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapGeoPoint::set_longitude', <String, dynamic>{'__this__': this, "longitude": longitude});
   
   
   }

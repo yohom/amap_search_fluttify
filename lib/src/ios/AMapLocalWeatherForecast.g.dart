@@ -68,31 +68,31 @@ class AMapLocalWeatherForecast extends AMapSearchObject with NSCoding, NSCopying
 
   //region setters
   Future<void> set_adcode(String adcode) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocalWeatherForecast::set_adcode', <String, dynamic>{'__this__': this, "adcode": adcode});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapLocalWeatherForecast::set_adcode', <String, dynamic>{'__this__': this, "adcode": adcode});
   
   
   }
   
   Future<void> set_province(String province) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocalWeatherForecast::set_province', <String, dynamic>{'__this__': this, "province": province});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapLocalWeatherForecast::set_province', <String, dynamic>{'__this__': this, "province": province});
   
   
   }
   
   Future<void> set_city(String city) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocalWeatherForecast::set_city', <String, dynamic>{'__this__': this, "city": city});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapLocalWeatherForecast::set_city', <String, dynamic>{'__this__': this, "city": city});
   
   
   }
   
   Future<void> set_reportTime(String reportTime) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocalWeatherForecast::set_reportTime', <String, dynamic>{'__this__': this, "reportTime": reportTime});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapLocalWeatherForecast::set_reportTime', <String, dynamic>{'__this__': this, "reportTime": reportTime});
   
   
   }
   
   Future<void> set_casts(List<AMapLocalDayWeatherForecast> casts) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocalWeatherForecast::set_casts', <String, dynamic>{'__this__': this, "casts": casts});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapLocalWeatherForecast::set_casts', <String, dynamic>{'__this__': this, "casts": casts});
   
   
   }
@@ -169,7 +169,7 @@ extension AMapLocalWeatherForecast_Batch on List<AMapLocalWeatherForecast> {
   }
   
   Future<void> set_casts_batch(List<List<AMapLocalDayWeatherForecast>> casts) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocalWeatherForecast::set_casts_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "casts": casts[__i__].map((it) => it.refId).toList()}]);
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocalWeatherForecast::set_casts_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "casts": casts[__i__]}]);
   
   
   }

@@ -78,43 +78,43 @@ class AMapRoadInter extends AMapSearchObject with NSCoding, NSCopying {
 
   //region setters
   Future<void> set_distance(int distance) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRoadInter::set_distance', <String, dynamic>{'__this__': this, "distance": distance});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapRoadInter::set_distance', <String, dynamic>{'__this__': this, "distance": distance});
   
   
   }
   
   Future<void> set_direction(String direction) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRoadInter::set_direction', <String, dynamic>{'__this__': this, "direction": direction});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapRoadInter::set_direction', <String, dynamic>{'__this__': this, "direction": direction});
   
   
   }
   
   Future<void> set_location(AMapGeoPoint location) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRoadInter::set_location', <String, dynamic>{'__this__': this, "location": location});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapRoadInter::set_location', <String, dynamic>{'__this__': this, "location": location});
   
   
   }
   
   Future<void> set_firstId(String firstId) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRoadInter::set_firstId', <String, dynamic>{'__this__': this, "firstId": firstId});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapRoadInter::set_firstId', <String, dynamic>{'__this__': this, "firstId": firstId});
   
   
   }
   
   Future<void> set_firstName(String firstName) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRoadInter::set_firstName', <String, dynamic>{'__this__': this, "firstName": firstName});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapRoadInter::set_firstName', <String, dynamic>{'__this__': this, "firstName": firstName});
   
   
   }
   
   Future<void> set_secondId(String secondId) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRoadInter::set_secondId', <String, dynamic>{'__this__': this, "secondId": secondId});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapRoadInter::set_secondId', <String, dynamic>{'__this__': this, "secondId": secondId});
   
   
   }
   
   Future<void> set_secondName(String secondName) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRoadInter::set_secondName', <String, dynamic>{'__this__': this, "secondName": secondName});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapRoadInter::set_secondName', <String, dynamic>{'__this__': this, "secondName": secondName});
   
   
   }
@@ -193,7 +193,7 @@ extension AMapRoadInter_Batch on List<AMapRoadInter> {
   }
   
   Future<void> set_location_batch(List<AMapGeoPoint> location) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRoadInter::set_location_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "location": location[__i__].refId}]);
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRoadInter::set_location_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "location": location[__i__]}]);
   
   
   }

@@ -48,7 +48,7 @@ class AMapBusLineNameSearchRequest extends AMapBusLineBaseSearchRequest with NSC
 
   //region setters
   Future<void> set_keywords(String keywords) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapBusLineNameSearchRequest::set_keywords', <String, dynamic>{'__this__': this, "keywords": keywords});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapBusLineNameSearchRequest::set_keywords', <String, dynamic>{'__this__': this, "keywords": keywords});
   
   
   }

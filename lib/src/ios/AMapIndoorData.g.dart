@@ -58,19 +58,19 @@ class AMapIndoorData extends AMapSearchObject with NSCoding, NSCopying {
 
   //region setters
   Future<void> set_floor(int floor) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapIndoorData::set_floor', <String, dynamic>{'__this__': this, "floor": floor});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapIndoorData::set_floor', <String, dynamic>{'__this__': this, "floor": floor});
   
   
   }
   
   Future<void> set_floorName(String floorName) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapIndoorData::set_floorName', <String, dynamic>{'__this__': this, "floorName": floorName});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapIndoorData::set_floorName', <String, dynamic>{'__this__': this, "floorName": floorName});
   
   
   }
   
   Future<void> set_pid(String pid) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapIndoorData::set_pid', <String, dynamic>{'__this__': this, "pid": pid});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapIndoorData::set_pid', <String, dynamic>{'__this__': this, "pid": pid});
   
   
   }

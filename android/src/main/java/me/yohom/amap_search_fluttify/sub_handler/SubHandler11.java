@@ -33,6 +33,257 @@ public class SubHandler11 {
     public static Map<String, Handler> getSubHandler(BinaryMessenger messenger) {
         return new HashMap<String, Handler>() {{
             // method
+            put("com.amap.api.services.help.Tip::setTypeCode_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.help.Tip __this__ = (com.amap.api.services.help.Tip) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setTypeCode(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.help.Tip::getTypeCode_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.help.Tip __this__ = (com.amap.api.services.help.Tip) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getTypeCode();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.help.InputtipsQuery::getKeyword_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.help.InputtipsQuery __this__ = (com.amap.api.services.help.InputtipsQuery) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getKeyword();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.help.InputtipsQuery::getCity_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.help.InputtipsQuery __this__ = (com.amap.api.services.help.InputtipsQuery) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getCity();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.help.InputtipsQuery::setType_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.help.InputtipsQuery __this__ = (com.amap.api.services.help.InputtipsQuery) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setType(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.help.InputtipsQuery::getType_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.help.InputtipsQuery __this__ = (com.amap.api.services.help.InputtipsQuery) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getType();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.help.InputtipsQuery::setCityLimit_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.help.InputtipsQuery __this__ = (com.amap.api.services.help.InputtipsQuery) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setCityLimit(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.help.InputtipsQuery::getCityLimit_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.help.InputtipsQuery __this__ = (com.amap.api.services.help.InputtipsQuery) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = __this__.getCityLimit();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
             put("com.amap.api.services.help.InputtipsQuery::setLocation_batch", (__argsBatch__, __methodResult__) -> {
                 List<Void> __resultList__ = new ArrayList<>();
             
@@ -1925,6 +2176,54 @@ public class SubHandler11 {
                 __methodResult__.success(__obj__);
             });
             // factory
+            put("ObjectFactory::createcom_amap_api_services_traffic_RoadTrafficQuery__String__String__int", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_traffic_RoadTrafficQuery__String__String__int");
+                }
+            
+                // args
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                String var2 = (String) ((Map<String, Object>) __args__).get("var2");
+                // ref arg
+                int var3 = (int) ((Map<String, Object>) __args__).get("var3");
+            
+                // create target object
+                com.amap.api.services.traffic.RoadTrafficQuery __obj__ = new com.amap.api.services.traffic.RoadTrafficQuery(var1, var2, var3);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_traffic_CircleTrafficQuery__com_amap_api_services_core_LatLonPoint__int__int", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_traffic_CircleTrafficQuery__com_amap_api_services_core_LatLonPoint__int__int");
+                }
+            
+                // args
+                // ref arg
+                com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                int var2 = (int) ((Map<String, Object>) __args__).get("var2");
+                // ref arg
+                int var3 = (int) ((Map<String, Object>) __args__).get("var3");
+            
+                // create target object
+                com.amap.api.services.traffic.CircleTrafficQuery __obj__ = new com.amap.api.services.traffic.CircleTrafficQuery(var1, var2, var3);
+            
+                // print current HEAP
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                }
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
             put("ObjectFactory::createcom_amap_api_services_traffic_TrafficStatusEvaluation__", (__args__, __methodResult__) -> {
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "创建对象: com_amap_api_services_traffic_TrafficStatusEvaluation__");
@@ -2512,204 +2811,6 @@ public class SubHandler11 {
             
                 // create target object
                 com.amap.api.services.poisearch.IndoorData __obj__ = new com.amap.api.services.poisearch.IndoorData(var1, var2, var3);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_route_Railway__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_Railway__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.amap.api.services.route.Railway __obj__ = new com.amap.api.services.route.Railway();
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_route_BusPath__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_BusPath__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.amap.api.services.route.BusPath __obj__ = new com.amap.api.services.route.BusPath();
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_route_DriveRoutePlanResult__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_DriveRoutePlanResult__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.amap.api.services.route.DriveRoutePlanResult __obj__ = new com.amap.api.services.route.DriveRoutePlanResult();
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_TruckRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__java_util_List_com_amap_api_services_core_LatLonPoint___int", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_TruckRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__java_util_List_com_amap_api_services_core_LatLonPoint___int");
-                }
-            
-                // args
-                // ref arg
-                com.amap.api.services.route.RouteSearch.FromAndTo var1 = (com.amap.api.services.route.RouteSearch.FromAndTo) ((Map<String, Object>) __args__).get("var1");
-                // ref arg
-                int var2 = (int) ((Map<String, Object>) __args__).get("var2");
-                // ref arg
-                java.util.List<com.amap.api.services.core.LatLonPoint> var3 = (java.util.List<com.amap.api.services.core.LatLonPoint>) ((Map<String, Object>) __args__).get("var3");
-                // ref arg
-                int var4 = (int) ((Map<String, Object>) __args__).get("var4");
-            
-                // create target object
-                com.amap.api.services.route.RouteSearch.TruckRouteQuery __obj__ = new com.amap.api.services.route.RouteSearch.TruckRouteQuery(var1, var2, var3, var4);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_route_TMC__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_TMC__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.amap.api.services.route.TMC __obj__ = new com.amap.api.services.route.TMC();
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_route_RouteBusWalkItem__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteBusWalkItem__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.amap.api.services.route.RouteBusWalkItem __obj__ = new com.amap.api.services.route.RouteBusWalkItem();
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_route_RouteResult__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteResult__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.amap.api.services.route.RouteResult __obj__ = new com.amap.api.services.route.RouteResult();
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_route_RouteSearch__android_content_Context", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch__android_content_Context");
-                }
-            
-                // args
-                // ref arg
-                android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
-            
-                // create target object
-                com.amap.api.services.route.RouteSearch __obj__ = new com.amap.api.services.route.RouteSearch(var1);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_route_BusStep__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_BusStep__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.amap.api.services.route.BusStep __obj__ = new com.amap.api.services.route.BusStep();
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_route_TaxiItem__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_TaxiItem__");
-                }
-            
-                // args
-            
-            
-                // create target object
-                com.amap.api.services.route.TaxiItem __obj__ = new com.amap.api.services.route.TaxiItem();
             
                 // print current HEAP
                 if (getEnableLog()) {

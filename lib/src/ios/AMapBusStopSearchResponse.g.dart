@@ -58,19 +58,19 @@ class AMapBusStopSearchResponse extends AMapSearchObject with NSCoding, NSCopyin
 
   //region setters
   Future<void> set_count(int count) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapBusStopSearchResponse::set_count', <String, dynamic>{'__this__': this, "count": count});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapBusStopSearchResponse::set_count', <String, dynamic>{'__this__': this, "count": count});
   
   
   }
   
   Future<void> set_suggestion(AMapSuggestion suggestion) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapBusStopSearchResponse::set_suggestion', <String, dynamic>{'__this__': this, "suggestion": suggestion});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapBusStopSearchResponse::set_suggestion', <String, dynamic>{'__this__': this, "suggestion": suggestion});
   
   
   }
   
   Future<void> set_busstops(List<AMapBusStop> busstops) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapBusStopSearchResponse::set_busstops', <String, dynamic>{'__this__': this, "busstops": busstops});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapBusStopSearchResponse::set_busstops', <String, dynamic>{'__this__': this, "busstops": busstops});
   
   
   }
@@ -115,13 +115,13 @@ extension AMapBusStopSearchResponse_Batch on List<AMapBusStopSearchResponse> {
   }
   
   Future<void> set_suggestion_batch(List<AMapSuggestion> suggestion) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapBusStopSearchResponse::set_suggestion_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "suggestion": suggestion[__i__].refId}]);
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapBusStopSearchResponse::set_suggestion_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "suggestion": suggestion[__i__]}]);
   
   
   }
   
   Future<void> set_busstops_batch(List<List<AMapBusStop>> busstops) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapBusStopSearchResponse::set_busstops_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "busstops": busstops[__i__].map((it) => it.refId).toList()}]);
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapBusStopSearchResponse::set_busstops_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "busstops": busstops[__i__]}]);
   
   
   }

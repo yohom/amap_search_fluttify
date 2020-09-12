@@ -20,6 +20,21 @@ class com_amap_api_services_traffic_CircleTrafficQuery extends java_lang_Object 
   //endregion
 
   //region creators
+  static Future<com_amap_api_services_traffic_CircleTrafficQuery> create__com_amap_api_services_core_LatLonPoint__int__int(com_amap_api_services_core_LatLonPoint var1, int var2, int var3) async {
+    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_services_traffic_CircleTrafficQuery__com_amap_api_services_core_LatLonPoint__int__int', {"var1": var1, "var2": var2, "var3": var3});
+    final object = com_amap_api_services_traffic_CircleTrafficQuery()..refId = refId..tag__ = 'amap_search_fluttify';
+    return object;
+  }
+  
+  static Future<List<com_amap_api_services_traffic_CircleTrafficQuery>> create_batch__com_amap_api_services_core_LatLonPoint__int__int(List<com_amap_api_services_core_LatLonPoint> var1, List<int> var2, List<int> var3) async {
+    if (var1.length != var2.length || var2.length != var3.length) {
+      return Future.error('all args must have same length!');
+    }
+    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_amap_api_services_traffic_CircleTrafficQuery__com_amap_api_services_core_LatLonPoint__int__int', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__]}]);
+  
+    final List<com_amap_api_services_traffic_CircleTrafficQuery> typedResult = resultBatch.map((result) => com_amap_api_services_traffic_CircleTrafficQuery()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    return typedResult;
+  }
   
   //endregion
 

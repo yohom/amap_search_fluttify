@@ -63,25 +63,25 @@ class AMapReGeocodeSearchRequest extends AMapSearchObject with NSCoding, NSCopyi
 
   //region setters
   Future<void> set_requireExtension(bool requireExtension) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapReGeocodeSearchRequest::set_requireExtension', <String, dynamic>{'__this__': this, "requireExtension": requireExtension});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapReGeocodeSearchRequest::set_requireExtension', <String, dynamic>{'__this__': this, "requireExtension": requireExtension});
   
   
   }
   
   Future<void> set_location(AMapGeoPoint location) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapReGeocodeSearchRequest::set_location', <String, dynamic>{'__this__': this, "location": location});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapReGeocodeSearchRequest::set_location', <String, dynamic>{'__this__': this, "location": location});
   
   
   }
   
   Future<void> set_radius(int radius) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapReGeocodeSearchRequest::set_radius', <String, dynamic>{'__this__': this, "radius": radius});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapReGeocodeSearchRequest::set_radius', <String, dynamic>{'__this__': this, "radius": radius});
   
   
   }
   
   Future<void> set_poitype(String poitype) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapReGeocodeSearchRequest::set_poitype', <String, dynamic>{'__this__': this, "poitype": poitype});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapReGeocodeSearchRequest::set_poitype', <String, dynamic>{'__this__': this, "poitype": poitype});
   
   
   }
@@ -133,7 +133,7 @@ extension AMapReGeocodeSearchRequest_Batch on List<AMapReGeocodeSearchRequest> {
   }
   
   Future<void> set_location_batch(List<AMapGeoPoint> location) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapReGeocodeSearchRequest::set_location_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "location": location[__i__].refId}]);
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapReGeocodeSearchRequest::set_location_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "location": location[__i__]}]);
   
   
   }

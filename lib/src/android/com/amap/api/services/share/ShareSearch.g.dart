@@ -82,7 +82,7 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
   
   
     // handle native call
-    MethodChannel('com.amap.api.services.share.ShareSearch::setOnShareSearchListener::Callback', StandardMethodCodec(FluttifyMessageCodec()))
+    MethodChannel('com.amap.api.services.share.ShareSearch::setOnShareSearchListener::Callback@$refId', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify')))
         .setMethodCallHandler((methodCall) async {
           try {
             final args = methodCall.arguments as Map;

@@ -53,13 +53,13 @@ class AMapPOIPolygonSearchRequest extends AMapPOISearchBaseRequest with NSCoding
 
   //region setters
   Future<void> set_keywords(String keywords) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapPOIPolygonSearchRequest::set_keywords', <String, dynamic>{'__this__': this, "keywords": keywords});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapPOIPolygonSearchRequest::set_keywords', <String, dynamic>{'__this__': this, "keywords": keywords});
   
   
   }
   
   Future<void> set_polygon(AMapGeoPolygon polygon) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapPOIPolygonSearchRequest::set_polygon', <String, dynamic>{'__this__': this, "polygon": polygon});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapPOIPolygonSearchRequest::set_polygon', <String, dynamic>{'__this__': this, "polygon": polygon});
   
   
   }
@@ -97,7 +97,7 @@ extension AMapPOIPolygonSearchRequest_Batch on List<AMapPOIPolygonSearchRequest>
   }
   
   Future<void> set_polygon_batch(List<AMapGeoPolygon> polygon) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapPOIPolygonSearchRequest::set_polygon_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "polygon": polygon[__i__].refId}]);
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapPOIPolygonSearchRequest::set_polygon_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "polygon": polygon[__i__]}]);
   
   
   }

@@ -88,7 +88,7 @@ class com_amap_api_services_traffic_TrafficSearch extends java_lang_Object  {
   
   
     // handle native call
-    MethodChannel('com.amap.api.services.traffic.TrafficSearch::setTrafficSearchListener::Callback', StandardMethodCodec(FluttifyMessageCodec()))
+    MethodChannel('com.amap.api.services.traffic.TrafficSearch::setTrafficSearchListener::Callback@$refId', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify')))
         .setMethodCallHandler((methodCall) async {
           try {
             final args = methodCall.arguments as Map;
@@ -110,6 +110,98 @@ class com_amap_api_services_traffic_TrafficSearch extends java_lang_Object  {
             throw e;
           }
         });
+  
+    // convert native result to dart side object
+    if (__result__ == null) {
+      return null;
+    } else {
+      final __return__ = __result__;
+      return __return__;
+    }
+  }
+  
+  
+  Future<com_amap_api_services_traffic_TrafficStatusResult> loadTrafficByRoad(com_amap_api_services_traffic_RoadTrafficQuery var1) async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: com.amap.api.services.traffic.TrafficSearch@$refId::loadTrafficByRoad([])');
+    }
+  
+    // invoke native method
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.traffic.TrafficSearch::loadTrafficByRoad', {"var1": var1, "__this__": this});
+  
+  
+    // handle native call
+  
+  
+    // convert native result to dart side object
+    if (__result__ == null) {
+      return null;
+    } else {
+      final __return__ = com_amap_api_services_traffic_TrafficStatusResult()..refId = __result__..tag__ = 'amap_search_fluttify';
+      return __return__;
+    }
+  }
+  
+  
+  Future<void> loadTrafficByRoadAsyn(com_amap_api_services_traffic_RoadTrafficQuery var1) async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: com.amap.api.services.traffic.TrafficSearch@$refId::loadTrafficByRoadAsyn([])');
+    }
+  
+    // invoke native method
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.traffic.TrafficSearch::loadTrafficByRoadAsyn', {"var1": var1, "__this__": this});
+  
+  
+    // handle native call
+  
+  
+    // convert native result to dart side object
+    if (__result__ == null) {
+      return null;
+    } else {
+      final __return__ = __result__;
+      return __return__;
+    }
+  }
+  
+  
+  Future<com_amap_api_services_traffic_TrafficStatusResult> loadTrafficByCircle(com_amap_api_services_traffic_CircleTrafficQuery var1) async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: com.amap.api.services.traffic.TrafficSearch@$refId::loadTrafficByCircle([])');
+    }
+  
+    // invoke native method
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.traffic.TrafficSearch::loadTrafficByCircle', {"var1": var1, "__this__": this});
+  
+  
+    // handle native call
+  
+  
+    // convert native result to dart side object
+    if (__result__ == null) {
+      return null;
+    } else {
+      final __return__ = com_amap_api_services_traffic_TrafficStatusResult()..refId = __result__..tag__ = 'amap_search_fluttify';
+      return __return__;
+    }
+  }
+  
+  
+  Future<void> loadTrafficByCircleAsyn(com_amap_api_services_traffic_CircleTrafficQuery var1) async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: com.amap.api.services.traffic.TrafficSearch@$refId::loadTrafficByCircleAsyn([])');
+    }
+  
+    // invoke native method
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.traffic.TrafficSearch::loadTrafficByCircleAsyn', {"var1": var1, "__this__": this});
+  
+  
+    // handle native call
+  
   
     // convert native result to dart side object
     if (__result__ == null) {
@@ -174,6 +266,81 @@ extension com_amap_api_services_traffic_TrafficSearch_Batch on List<com_amap_api
   //endregion
 
   //region methods
+  
+  Future<List<com_amap_api_services_traffic_TrafficStatusResult>> loadTrafficByRoad_batch(List<com_amap_api_services_traffic_RoadTrafficQuery> var1) async {
+    if (false) {
+      return Future.error('all args must have same length!');
+    }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.traffic.TrafficSearch::loadTrafficByRoad_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_traffic_TrafficStatusResult()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      return typedResult;
+    }
+  }
+  
+  
+  Future<List<void>> loadTrafficByRoadAsyn_batch(List<com_amap_api_services_traffic_RoadTrafficQuery> var1) async {
+    if (false) {
+      return Future.error('all args must have same length!');
+    }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.traffic.TrafficSearch::loadTrafficByRoadAsyn_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+      return typedResult;
+    }
+  }
+  
+  
+  Future<List<com_amap_api_services_traffic_TrafficStatusResult>> loadTrafficByCircle_batch(List<com_amap_api_services_traffic_CircleTrafficQuery> var1) async {
+    if (false) {
+      return Future.error('all args must have same length!');
+    }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.traffic.TrafficSearch::loadTrafficByCircle_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_traffic_TrafficStatusResult()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      return typedResult;
+    }
+  }
+  
+  
+  Future<List<void>> loadTrafficByCircleAsyn_batch(List<com_amap_api_services_traffic_CircleTrafficQuery> var1) async {
+    if (false) {
+      return Future.error('all args must have same length!');
+    }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.traffic.TrafficSearch::loadTrafficByCircleAsyn_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+      return typedResult;
+    }
+  }
   
   //endregion
 }

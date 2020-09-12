@@ -39,7 +39,7 @@ public class SubHandler0 {
                // ref object
                com.amap.api.services.traffic.TrafficSearch __this__ = (com.amap.api.services.traffic.TrafficSearch) __args__.get("__this__");
             
-               int __result__ = __this__.ROAD_LEVEL_HIGH_WAY;
+               Integer __result__ = __this__.ROAD_LEVEL_HIGH_WAY;
             
                 __methodResult__.success(__result__);
             });
@@ -50,7 +50,7 @@ public class SubHandler0 {
                // ref object
                com.amap.api.services.traffic.TrafficSearch __this__ = (com.amap.api.services.traffic.TrafficSearch) __args__.get("__this__");
             
-               int __result__ = __this__.ROAD_LEVEL_CITY_QUICK_WAY;
+               Integer __result__ = __this__.ROAD_LEVEL_CITY_QUICK_WAY;
             
                 __methodResult__.success(__result__);
             });
@@ -61,7 +61,7 @@ public class SubHandler0 {
                // ref object
                com.amap.api.services.traffic.TrafficSearch __this__ = (com.amap.api.services.traffic.TrafficSearch) __args__.get("__this__");
             
-               int __result__ = __this__.ROAD_LEVEL_HIGH_WAY_BYROAD;
+               Integer __result__ = __this__.ROAD_LEVEL_HIGH_WAY_BYROAD;
             
                 __methodResult__.success(__result__);
             });
@@ -72,7 +72,7 @@ public class SubHandler0 {
                // ref object
                com.amap.api.services.traffic.TrafficSearch __this__ = (com.amap.api.services.traffic.TrafficSearch) __args__.get("__this__");
             
-               int __result__ = __this__.ROAD_LEVEL_MAIN_WAY;
+               Integer __result__ = __this__.ROAD_LEVEL_MAIN_WAY;
             
                 __methodResult__.success(__result__);
             });
@@ -83,7 +83,7 @@ public class SubHandler0 {
                // ref object
                com.amap.api.services.traffic.TrafficSearch __this__ = (com.amap.api.services.traffic.TrafficSearch) __args__.get("__this__");
             
-               int __result__ = __this__.ROAD_LEVEL_NORMAL_WAY;
+               Integer __result__ = __this__.ROAD_LEVEL_NORMAL_WAY;
             
                 __methodResult__.success(__result__);
             });
@@ -94,7 +94,7 @@ public class SubHandler0 {
                // ref object
                com.amap.api.services.traffic.TrafficSearch __this__ = (com.amap.api.services.traffic.TrafficSearch) __args__.get("__this__");
             
-               int __result__ = __this__.ROAD_LEVEL_NONAME_WAY;
+               Integer __result__ = __this__.ROAD_LEVEL_NONAME_WAY;
             
                 __methodResult__.success(__result__);
             });
@@ -105,7 +105,7 @@ public class SubHandler0 {
                // ref object
                com.amap.api.services.route.DistanceItem __this__ = (com.amap.api.services.route.DistanceItem) __args__.get("__this__");
             
-               int __result__ = __this__.ERROR_CODE_NO_DRIVE;
+               Integer __result__ = __this__.ERROR_CODE_NO_DRIVE;
             
                 __methodResult__.success(__result__);
             });
@@ -116,7 +116,7 @@ public class SubHandler0 {
                // ref object
                com.amap.api.services.route.DistanceItem __this__ = (com.amap.api.services.route.DistanceItem) __args__.get("__this__");
             
-               int __result__ = __this__.ERROR_CODE_TOO_FAR;
+               Integer __result__ = __this__.ERROR_CODE_TOO_FAR;
             
                 __methodResult__.success(__result__);
             });
@@ -127,7 +127,7 @@ public class SubHandler0 {
                // ref object
                com.amap.api.services.route.DistanceItem __this__ = (com.amap.api.services.route.DistanceItem) __args__.get("__this__");
             
-               int __result__ = __this__.ERROR_CODE_NOT_IN_CHINA;
+               Integer __result__ = __this__.ERROR_CODE_NOT_IN_CHINA;
             
                 __methodResult__.success(__result__);
             });
@@ -141,7 +141,7 @@ public class SubHandler0 {
                     // ref object
                     com.amap.api.services.traffic.TrafficSearch __this__ = (com.amap.api.services.traffic.TrafficSearch) __args__.get("__this__");
             
-                    int __result__ = __this__.ROAD_LEVEL_HIGH_WAY;
+                    Integer __result__ = __this__.ROAD_LEVEL_HIGH_WAY;
             
                     __resultList__.add(__result__);
                 }
@@ -158,7 +158,7 @@ public class SubHandler0 {
                     // ref object
                     com.amap.api.services.traffic.TrafficSearch __this__ = (com.amap.api.services.traffic.TrafficSearch) __args__.get("__this__");
             
-                    int __result__ = __this__.ROAD_LEVEL_CITY_QUICK_WAY;
+                    Integer __result__ = __this__.ROAD_LEVEL_CITY_QUICK_WAY;
             
                     __resultList__.add(__result__);
                 }
@@ -175,7 +175,7 @@ public class SubHandler0 {
                     // ref object
                     com.amap.api.services.traffic.TrafficSearch __this__ = (com.amap.api.services.traffic.TrafficSearch) __args__.get("__this__");
             
-                    int __result__ = __this__.ROAD_LEVEL_HIGH_WAY_BYROAD;
+                    Integer __result__ = __this__.ROAD_LEVEL_HIGH_WAY_BYROAD;
             
                     __resultList__.add(__result__);
                 }
@@ -192,7 +192,7 @@ public class SubHandler0 {
                     // ref object
                     com.amap.api.services.traffic.TrafficSearch __this__ = (com.amap.api.services.traffic.TrafficSearch) __args__.get("__this__");
             
-                    int __result__ = __this__.ROAD_LEVEL_MAIN_WAY;
+                    Integer __result__ = __this__.ROAD_LEVEL_MAIN_WAY;
             
                     __resultList__.add(__result__);
                 }
@@ -209,7 +209,7 @@ public class SubHandler0 {
                     // ref object
                     com.amap.api.services.traffic.TrafficSearch __this__ = (com.amap.api.services.traffic.TrafficSearch) __args__.get("__this__");
             
-                    int __result__ = __this__.ROAD_LEVEL_NORMAL_WAY;
+                    Integer __result__ = __this__.ROAD_LEVEL_NORMAL_WAY;
             
                     __resultList__.add(__result__);
                 }
@@ -226,7 +226,7 @@ public class SubHandler0 {
                     // ref object
                     com.amap.api.services.traffic.TrafficSearch __this__ = (com.amap.api.services.traffic.TrafficSearch) __args__.get("__this__");
             
-                    int __result__ = __this__.ROAD_LEVEL_NONAME_WAY;
+                    Integer __result__ = __this__.ROAD_LEVEL_NONAME_WAY;
             
                     __resultList__.add(__result__);
                 }
@@ -243,7 +243,7 @@ public class SubHandler0 {
                     // ref object
                     com.amap.api.services.route.DistanceItem __this__ = (com.amap.api.services.route.DistanceItem) __args__.get("__this__");
             
-                    int __result__ = __this__.ERROR_CODE_NO_DRIVE;
+                    Integer __result__ = __this__.ERROR_CODE_NO_DRIVE;
             
                     __resultList__.add(__result__);
                 }
@@ -260,7 +260,7 @@ public class SubHandler0 {
                     // ref object
                     com.amap.api.services.route.DistanceItem __this__ = (com.amap.api.services.route.DistanceItem) __args__.get("__this__");
             
-                    int __result__ = __this__.ERROR_CODE_TOO_FAR;
+                    Integer __result__ = __this__.ERROR_CODE_TOO_FAR;
             
                     __resultList__.add(__result__);
                 }
@@ -277,7 +277,7 @@ public class SubHandler0 {
                     // ref object
                     com.amap.api.services.route.DistanceItem __this__ = (com.amap.api.services.route.DistanceItem) __args__.get("__this__");
             
-                    int __result__ = __this__.ERROR_CODE_NOT_IN_CHINA;
+                    Integer __result__ = __this__.ERROR_CODE_NOT_IN_CHINA;
             
                     __resultList__.add(__result__);
                 }
@@ -872,7 +872,7 @@ public class SubHandler0 {
                 try {
                     __this__.setTrafficSearchListener(new com.amap.api.services.traffic.TrafficSearch.OnTrafficSearchListener() {
                         // method channel
-                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.traffic.TrafficSearch::setTrafficSearchListener::Callback", new StandardMethodCodec(new FluttifyMessageCodec()));
+                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.traffic.TrafficSearch::setTrafficSearchListener::Callback@" + String.valueOf(System.identityHashCode(__this__)), new StandardMethodCodec(new FluttifyMessageCodec()));
                         android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
             
                         // call dart method
@@ -902,6 +902,122 @@ public class SubHandler0 {
                         }
             
                 });
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.amap.api.services.traffic.TrafficSearch::loadTrafficByRoad", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                com.amap.api.services.traffic.RoadTrafficQuery var1 = (com.amap.api.services.traffic.RoadTrafficQuery) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+                com.amap.api.services.traffic.TrafficSearch __this__ = (com.amap.api.services.traffic.TrafficSearch) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.TrafficSearch@" + __this__ + "::loadTrafficByRoad(" + var1 + ")");
+                }
+            
+                // invoke native method
+                com.amap.api.services.traffic.TrafficStatusResult __result__ = null;
+                try {
+                    __result__ = __this__.loadTrafficByRoad(var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.amap.api.services.traffic.TrafficSearch::loadTrafficByRoadAsyn", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                com.amap.api.services.traffic.RoadTrafficQuery var1 = (com.amap.api.services.traffic.RoadTrafficQuery) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+                com.amap.api.services.traffic.TrafficSearch __this__ = (com.amap.api.services.traffic.TrafficSearch) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.TrafficSearch@" + __this__ + "::loadTrafficByRoadAsyn(" + var1 + ")");
+                }
+            
+                // invoke native method
+                Void __result__ = null;
+                try {
+                    __this__.loadTrafficByRoadAsyn(var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.amap.api.services.traffic.TrafficSearch::loadTrafficByCircle", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                com.amap.api.services.traffic.CircleTrafficQuery var1 = (com.amap.api.services.traffic.CircleTrafficQuery) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+                com.amap.api.services.traffic.TrafficSearch __this__ = (com.amap.api.services.traffic.TrafficSearch) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.TrafficSearch@" + __this__ + "::loadTrafficByCircle(" + var1 + ")");
+                }
+            
+                // invoke native method
+                com.amap.api.services.traffic.TrafficStatusResult __result__ = null;
+                try {
+                    __result__ = __this__.loadTrafficByCircle(var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.amap.api.services.traffic.TrafficSearch::loadTrafficByCircleAsyn", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                com.amap.api.services.traffic.CircleTrafficQuery var1 = (com.amap.api.services.traffic.CircleTrafficQuery) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+                com.amap.api.services.traffic.TrafficSearch __this__ = (com.amap.api.services.traffic.TrafficSearch) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.TrafficSearch@" + __this__ + "::loadTrafficByCircleAsyn(" + var1 + ")");
+                }
+            
+                // invoke native method
+                Void __result__ = null;
+                try {
+                    __this__.loadTrafficByCircleAsyn(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2447,7 +2563,7 @@ public class SubHandler0 {
                 try {
                     __this__.setOnBusStationSearchListener(new com.amap.api.services.busline.BusStationSearch.OnBusStationSearchListener() {
                         // method channel
-                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.busline.BusStationSearch::setOnBusStationSearchListener::Callback", new StandardMethodCodec(new FluttifyMessageCodec()));
+                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.busline.BusStationSearch::setOnBusStationSearchListener::Callback@" + String.valueOf(System.identityHashCode(__this__)), new StandardMethodCodec(new FluttifyMessageCodec()));
                         android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
             
                         // call dart method
@@ -2619,7 +2735,7 @@ public class SubHandler0 {
                 try {
                     __this__.setOnBusLineSearchListener(new com.amap.api.services.busline.BusLineSearch.OnBusLineSearchListener() {
                         // method channel
-                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.busline.BusLineSearch::setOnBusLineSearchListener::Callback", new StandardMethodCodec(new FluttifyMessageCodec()));
+                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.busline.BusLineSearch::setOnBusLineSearchListener::Callback@" + String.valueOf(System.identityHashCode(__this__)), new StandardMethodCodec(new FluttifyMessageCodec()));
                         android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
             
                         // call dart method
@@ -5443,120 +5559,6 @@ public class SubHandler0 {
                 Void __result__ = null;
                 try {
                     __this__.setPostcode(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.amap.api.services.core.PoiItem::getEmail", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.amap.api.services.core.PoiItem __this__ = (com.amap.api.services.core.PoiItem) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + __this__ + "::getEmail(" + "" + ")");
-                }
-            
-                // invoke native method
-                String __result__ = null;
-                try {
-                    __result__ = __this__.getEmail();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.amap.api.services.core.PoiItem::setEmail", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-                com.amap.api.services.core.PoiItem __this__ = (com.amap.api.services.core.PoiItem) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + __this__ + "::setEmail(" + var1 + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.setEmail(var1);
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.amap.api.services.core.PoiItem::getDirection", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.amap.api.services.core.PoiItem __this__ = (com.amap.api.services.core.PoiItem) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + __this__ + "::getDirection(" + "" + ")");
-                }
-            
-                // invoke native method
-                String __result__ = null;
-                try {
-                    __result__ = __this__.getDirection();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.amap.api.services.core.PoiItem::setDirection", (__args__, __methodResult__) -> {
-                // args
-                // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-            
-                // ref
-                com.amap.api.services.core.PoiItem __this__ = (com.amap.api.services.core.PoiItem) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + __this__ + "::setDirection(" + var1 + ")");
-                }
-            
-                // invoke native method
-                Void __result__ = null;
-                try {
-                    __this__.setDirection(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {

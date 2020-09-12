@@ -53,13 +53,13 @@ class AMapBusinessArea extends AMapSearchObject with NSCoding, NSCopying {
 
   //region setters
   Future<void> set_name(String name) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapBusinessArea::set_name', <String, dynamic>{'__this__': this, "name": name});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapBusinessArea::set_name', <String, dynamic>{'__this__': this, "name": name});
   
   
   }
   
   Future<void> set_location(AMapGeoPoint location) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapBusinessArea::set_location', <String, dynamic>{'__this__': this, "location": location});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapBusinessArea::set_location', <String, dynamic>{'__this__': this, "location": location});
   
   
   }
@@ -97,7 +97,7 @@ extension AMapBusinessArea_Batch on List<AMapBusinessArea> {
   }
   
   Future<void> set_location_batch(List<AMapGeoPoint> location) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapBusinessArea::set_location_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "location": location[__i__].refId}]);
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapBusinessArea::set_location_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "location": location[__i__]}]);
   
   
   }

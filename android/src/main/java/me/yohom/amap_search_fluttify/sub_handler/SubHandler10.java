@@ -33,6 +33,258 @@ public class SubHandler10 {
     public static Map<String, Handler> getSubHandler(BinaryMessenger messenger) {
         return new HashMap<String, Handler>() {{
             // method
+            put("com.amap.api.services.weather.LocalWeatherForecast::setAdCode_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.weather.LocalWeatherForecast __this__ = (com.amap.api.services.weather.LocalWeatherForecast) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setAdCode(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.LocalWeatherForecast::getReportTime_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.weather.LocalWeatherForecast __this__ = (com.amap.api.services.weather.LocalWeatherForecast) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getReportTime();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.LocalWeatherForecast::setReportTime_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.weather.LocalWeatherForecast __this__ = (com.amap.api.services.weather.LocalWeatherForecast) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setReportTime(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.LocalWeatherForecast::getWeatherForecast_batch", (__argsBatch__, __methodResult__) -> {
+                List<java.util.List<com.amap.api.services.weather.LocalDayWeatherForecast>> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.weather.LocalWeatherForecast __this__ = (com.amap.api.services.weather.LocalWeatherForecast) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    java.util.List<com.amap.api.services.weather.LocalDayWeatherForecast> __result__ = null;
+                    try {
+                        __result__ = __this__.getWeatherForecast();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.LocalWeatherForecast::setWeatherForecast_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    java.util.List<com.amap.api.services.weather.LocalDayWeatherForecast> var1 = (java.util.List<com.amap.api.services.weather.LocalDayWeatherForecast>) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.weather.LocalWeatherForecast __this__ = (com.amap.api.services.weather.LocalWeatherForecast) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setWeatherForecast(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.WeatherSearch::getQuery_batch", (__argsBatch__, __methodResult__) -> {
+                List<com.amap.api.services.weather.WeatherSearchQuery> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.weather.WeatherSearch __this__ = (com.amap.api.services.weather.WeatherSearch) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    com.amap.api.services.weather.WeatherSearchQuery __result__ = null;
+                    try {
+                        __result__ = __this__.getQuery();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.WeatherSearch::setQuery_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    com.amap.api.services.weather.WeatherSearchQuery var1 = (com.amap.api.services.weather.WeatherSearchQuery) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.weather.WeatherSearch __this__ = (com.amap.api.services.weather.WeatherSearch) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setQuery(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.WeatherSearch::searchWeatherAsyn_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.weather.WeatherSearch __this__ = (com.amap.api.services.weather.WeatherSearch) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.searchWeatherAsyn();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
             put("com.amap.api.services.weather.LocalWeatherLive::getProvince_batch", (__argsBatch__, __methodResult__) -> {
                 List<String> __resultList__ = new ArrayList<>();
             
@@ -6067,257 +6319,6 @@ public class SubHandler10 {
                     Void __result__ = null;
                     try {
                         __this__.setAddress(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.amap.api.services.help.Tip::setTypeCode_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-                    com.amap.api.services.help.Tip __this__ = (com.amap.api.services.help.Tip) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.setTypeCode(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.amap.api.services.help.Tip::getTypeCode_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    com.amap.api.services.help.Tip __this__ = (com.amap.api.services.help.Tip) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    String __result__ = null;
-                    try {
-                        __result__ = __this__.getTypeCode();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.amap.api.services.help.InputtipsQuery::getKeyword_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    com.amap.api.services.help.InputtipsQuery __this__ = (com.amap.api.services.help.InputtipsQuery) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    String __result__ = null;
-                    try {
-                        __result__ = __this__.getKeyword();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.amap.api.services.help.InputtipsQuery::getCity_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    com.amap.api.services.help.InputtipsQuery __this__ = (com.amap.api.services.help.InputtipsQuery) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    String __result__ = null;
-                    try {
-                        __result__ = __this__.getCity();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.amap.api.services.help.InputtipsQuery::setType_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-                    com.amap.api.services.help.InputtipsQuery __this__ = (com.amap.api.services.help.InputtipsQuery) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.setType(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.amap.api.services.help.InputtipsQuery::getType_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    com.amap.api.services.help.InputtipsQuery __this__ = (com.amap.api.services.help.InputtipsQuery) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    String __result__ = null;
-                    try {
-                        __result__ = __this__.getType();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.amap.api.services.help.InputtipsQuery::setCityLimit_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-                    com.amap.api.services.help.InputtipsQuery __this__ = (com.amap.api.services.help.InputtipsQuery) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.setCityLimit(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.amap.api.services.help.InputtipsQuery::getCityLimit_batch", (__argsBatch__, __methodResult__) -> {
-                List<Boolean> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    com.amap.api.services.help.InputtipsQuery __this__ = (com.amap.api.services.help.InputtipsQuery) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Boolean __result__ = null;
-                    try {
-                        __result__ = __this__.getCityLimit();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {

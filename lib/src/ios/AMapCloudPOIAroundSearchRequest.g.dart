@@ -58,19 +58,19 @@ class AMapCloudPOIAroundSearchRequest extends AMapCloudSearchBaseRequest with NS
 
   //region setters
   Future<void> set_center(AMapGeoPoint center) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapCloudPOIAroundSearchRequest::set_center', <String, dynamic>{'__this__': this, "center": center});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapCloudPOIAroundSearchRequest::set_center', <String, dynamic>{'__this__': this, "center": center});
   
   
   }
   
   Future<void> set_radius(int radius) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapCloudPOIAroundSearchRequest::set_radius', <String, dynamic>{'__this__': this, "radius": radius});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapCloudPOIAroundSearchRequest::set_radius', <String, dynamic>{'__this__': this, "radius": radius});
   
   
   }
   
   Future<void> set_keywords(String keywords) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapCloudPOIAroundSearchRequest::set_keywords', <String, dynamic>{'__this__': this, "keywords": keywords});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapCloudPOIAroundSearchRequest::set_keywords', <String, dynamic>{'__this__': this, "keywords": keywords});
   
   
   }
@@ -109,7 +109,7 @@ extension AMapCloudPOIAroundSearchRequest_Batch on List<AMapCloudPOIAroundSearch
 
   //region setters
   Future<void> set_center_batch(List<AMapGeoPoint> center) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapCloudPOIAroundSearchRequest::set_center_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "center": center[__i__].refId}]);
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapCloudPOIAroundSearchRequest::set_center_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "center": center[__i__]}]);
   
   
   }

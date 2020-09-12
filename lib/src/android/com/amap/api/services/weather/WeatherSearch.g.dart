@@ -128,7 +128,7 @@ class com_amap_api_services_weather_WeatherSearch extends java_lang_Object  {
   
   
     // handle native call
-    MethodChannel('com.amap.api.services.weather.WeatherSearch::setOnWeatherSearchListener::Callback', StandardMethodCodec(FluttifyMessageCodec()))
+    MethodChannel('com.amap.api.services.weather.WeatherSearch::setOnWeatherSearchListener::Callback@$refId', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify')))
         .setMethodCallHandler((methodCall) async {
           try {
             final args = methodCall.arguments as Map;

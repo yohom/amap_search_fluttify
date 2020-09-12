@@ -53,13 +53,13 @@ class AMapCloudPOILocalSearchRequest extends AMapCloudSearchBaseRequest with NSC
 
   //region setters
   Future<void> set_keywords(String keywords) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapCloudPOILocalSearchRequest::set_keywords', <String, dynamic>{'__this__': this, "keywords": keywords});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapCloudPOILocalSearchRequest::set_keywords', <String, dynamic>{'__this__': this, "keywords": keywords});
   
   
   }
   
   Future<void> set_city(String city) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapCloudPOILocalSearchRequest::set_city', <String, dynamic>{'__this__': this, "city": city});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapCloudPOILocalSearchRequest::set_city', <String, dynamic>{'__this__': this, "city": city});
   
   
   }

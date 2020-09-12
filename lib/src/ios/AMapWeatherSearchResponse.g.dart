@@ -53,13 +53,13 @@ class AMapWeatherSearchResponse extends AMapSearchObject with NSCoding, NSCopyin
 
   //region setters
   Future<void> set_lives(List<AMapLocalWeatherLive> lives) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapWeatherSearchResponse::set_lives', <String, dynamic>{'__this__': this, "lives": lives});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapWeatherSearchResponse::set_lives', <String, dynamic>{'__this__': this, "lives": lives});
   
   
   }
   
   Future<void> set_forecasts(List<AMapLocalWeatherForecast> forecasts) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapWeatherSearchResponse::set_forecasts', <String, dynamic>{'__this__': this, "forecasts": forecasts});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapWeatherSearchResponse::set_forecasts', <String, dynamic>{'__this__': this, "forecasts": forecasts});
   
   
   }
@@ -91,13 +91,13 @@ extension AMapWeatherSearchResponse_Batch on List<AMapWeatherSearchResponse> {
 
   //region setters
   Future<void> set_lives_batch(List<List<AMapLocalWeatherLive>> lives) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapWeatherSearchResponse::set_lives_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "lives": lives[__i__].map((it) => it.refId).toList()}]);
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapWeatherSearchResponse::set_lives_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "lives": lives[__i__]}]);
   
   
   }
   
   Future<void> set_forecasts_batch(List<List<AMapLocalWeatherForecast>> forecasts) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapWeatherSearchResponse::set_forecasts_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "forecasts": forecasts[__i__].map((it) => it.refId).toList()}]);
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapWeatherSearchResponse::set_forecasts_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "forecasts": forecasts[__i__]}]);
   
   
   }

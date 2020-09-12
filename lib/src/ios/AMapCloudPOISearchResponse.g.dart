@@ -53,13 +53,13 @@ class AMapCloudPOISearchResponse extends AMapSearchObject with NSCoding, NSCopyi
 
   //region setters
   Future<void> set_count(int count) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapCloudPOISearchResponse::set_count', <String, dynamic>{'__this__': this, "count": count});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapCloudPOISearchResponse::set_count', <String, dynamic>{'__this__': this, "count": count});
   
   
   }
   
   Future<void> set_POIs(List<AMapCloudPOI> POIs) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapCloudPOISearchResponse::set_POIs', <String, dynamic>{'__this__': this, "POIs": POIs});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapCloudPOISearchResponse::set_POIs', <String, dynamic>{'__this__': this, "POIs": POIs});
   
   
   }
@@ -97,7 +97,7 @@ extension AMapCloudPOISearchResponse_Batch on List<AMapCloudPOISearchResponse> {
   }
   
   Future<void> set_POIs_batch(List<List<AMapCloudPOI>> POIs) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapCloudPOISearchResponse::set_POIs_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "POIs": POIs[__i__].map((it) => it.refId).toList()}]);
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapCloudPOISearchResponse::set_POIs_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "POIs": POIs[__i__]}]);
   
   
   }

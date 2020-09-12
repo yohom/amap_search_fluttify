@@ -78,43 +78,43 @@ class AMapTip extends AMapSearchObject with NSCoding, NSCopying {
 
   //region setters
   Future<void> set_uid(String uid) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapTip::set_uid', <String, dynamic>{'__this__': this, "uid": uid});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapTip::set_uid', <String, dynamic>{'__this__': this, "uid": uid});
   
   
   }
   
   Future<void> set_name(String name) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapTip::set_name', <String, dynamic>{'__this__': this, "name": name});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapTip::set_name', <String, dynamic>{'__this__': this, "name": name});
   
   
   }
   
   Future<void> set_adcode(String adcode) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapTip::set_adcode', <String, dynamic>{'__this__': this, "adcode": adcode});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapTip::set_adcode', <String, dynamic>{'__this__': this, "adcode": adcode});
   
   
   }
   
   Future<void> set_district(String district) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapTip::set_district', <String, dynamic>{'__this__': this, "district": district});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapTip::set_district', <String, dynamic>{'__this__': this, "district": district});
   
   
   }
   
   Future<void> set_address(String address) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapTip::set_address', <String, dynamic>{'__this__': this, "address": address});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapTip::set_address', <String, dynamic>{'__this__': this, "address": address});
   
   
   }
   
   Future<void> set_location(AMapGeoPoint location) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapTip::set_location', <String, dynamic>{'__this__': this, "location": location});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapTip::set_location', <String, dynamic>{'__this__': this, "location": location});
   
   
   }
   
   Future<void> set_typecode(String typecode) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapTip::set_typecode', <String, dynamic>{'__this__': this, "typecode": typecode});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapTip::set_typecode', <String, dynamic>{'__this__': this, "typecode": typecode});
   
   
   }
@@ -211,7 +211,7 @@ extension AMapTip_Batch on List<AMapTip> {
   }
   
   Future<void> set_location_batch(List<AMapGeoPoint> location) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapTip::set_location_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "location": location[__i__].refId}]);
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapTip::set_location_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "location": location[__i__]}]);
   
   
   }

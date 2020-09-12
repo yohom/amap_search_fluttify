@@ -33,6 +33,120 @@ public class SubHandler3 {
     public static Map<String, Handler> getSubHandler(BinaryMessenger messenger) {
         return new HashMap<String, Handler>() {{
             // method
+            put("com.amap.api.services.route.DriveStep::getOrientation", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                com.amap.api.services.route.DriveStep __this__ = (com.amap.api.services.route.DriveStep) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DriveStep@" + __this__ + "::getOrientation(" + "" + ")");
+                }
+            
+                // invoke native method
+                String __result__ = null;
+                try {
+                    __result__ = __this__.getOrientation();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.amap.api.services.route.DriveStep::setOrientation", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+                com.amap.api.services.route.DriveStep __this__ = (com.amap.api.services.route.DriveStep) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DriveStep@" + __this__ + "::setOrientation(" + var1 + ")");
+                }
+            
+                // invoke native method
+                Void __result__ = null;
+                try {
+                    __this__.setOrientation(var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.amap.api.services.route.DriveStep::getRoad", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                com.amap.api.services.route.DriveStep __this__ = (com.amap.api.services.route.DriveStep) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DriveStep@" + __this__ + "::getRoad(" + "" + ")");
+                }
+            
+                // invoke native method
+                String __result__ = null;
+                try {
+                    __result__ = __this__.getRoad();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.amap.api.services.route.DriveStep::setRoad", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+                com.amap.api.services.route.DriveStep __this__ = (com.amap.api.services.route.DriveStep) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DriveStep@" + __this__ + "::setRoad(" + var1 + ")");
+                }
+            
+                // invoke native method
+                Void __result__ = null;
+                try {
+                    __this__.setRoad(var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
             put("com.amap.api.services.route.DriveStep::getDistance", (__args__, __methodResult__) -> {
                 // args
             
@@ -1889,7 +2003,7 @@ public class SubHandler3 {
             put("com.amap.api.services.route.TruckPath::setDuration", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                long var1 = (long) ((Map<String, Object>) __args__).get("var1");
+                Integer var1 = (Integer) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.route.TruckPath __this__ = (com.amap.api.services.route.TruckPath) ((Map<String, Object>) __args__).get("__this__");
@@ -3313,7 +3427,7 @@ public class SubHandler3 {
             put("com.amap.api.services.route.Path::setDuration", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                long var1 = (long) ((Map<String, Object>) __args__).get("var1");
+                Integer var1 = (Integer) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.route.Path __this__ = (com.amap.api.services.route.Path) ((Map<String, Object>) __args__).get("__this__");
@@ -4140,7 +4254,7 @@ public class SubHandler3 {
             put("com.amap.api.services.nearby.NearbyInfo::setTimeStamp", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                long var1 = (long) ((Map<String, Object>) __args__).get("var1");
+                Integer var1 = (Integer) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.nearby.NearbyInfo __this__ = (com.amap.api.services.nearby.NearbyInfo) ((Map<String, Object>) __args__).get("__this__");
@@ -4525,7 +4639,7 @@ public class SubHandler3 {
                 try {
                     __this__.addNearbyListener(new com.amap.api.services.nearby.NearbySearch.NearbyListener() {
                         // method channel
-                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.nearby.NearbySearch::addNearbyListener::Callback", new StandardMethodCodec(new FluttifyMessageCodec()));
+                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.nearby.NearbySearch::addNearbyListener::Callback@" + String.valueOf(System.identityHashCode(__this__)), new StandardMethodCodec(new FluttifyMessageCodec()));
                         android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
             
                         // call dart method
@@ -4632,7 +4746,7 @@ public class SubHandler3 {
                 try {
                     __this__.removeNearbyListener(new com.amap.api.services.nearby.NearbySearch.NearbyListener() {
                         // method channel
-                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.nearby.NearbySearch::removeNearbyListener::Callback", new StandardMethodCodec(new FluttifyMessageCodec()));
+                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.nearby.NearbySearch::removeNearbyListener::Callback@" + String.valueOf(System.identityHashCode(__this__)), new StandardMethodCodec(new FluttifyMessageCodec()));
                         android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
             
                         // call dart method
@@ -4797,7 +4911,7 @@ public class SubHandler3 {
                 try {
                     __this__.startUploadNearbyInfoAuto(new com.amap.api.services.nearby.UploadInfoCallback() {
                         // method channel
-                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.nearby.NearbySearch::startUploadNearbyInfoAuto::Callback", new StandardMethodCodec(new FluttifyMessageCodec()));
+                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.nearby.NearbySearch::startUploadNearbyInfoAuto::Callback@" + String.valueOf(System.identityHashCode(__this__)), new StandardMethodCodec(new FluttifyMessageCodec()));
                         android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
             
                         // call dart method
@@ -5653,7 +5767,7 @@ public class SubHandler3 {
                 try {
                     __this__.setPoiSearchListener(new com.amap.api.services.routepoisearch.RoutePOISearch.OnRoutePOISearchListener() {
                         // method channel
-                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.routepoisearch.RoutePOISearch::setPoiSearchListener::Callback", new StandardMethodCodec(new FluttifyMessageCodec()));
+                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.routepoisearch.RoutePOISearch::setPoiSearchListener::Callback@" + String.valueOf(System.identityHashCode(__this__)), new StandardMethodCodec(new FluttifyMessageCodec()));
                         android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
             
                         // call dart method
@@ -5824,118 +5938,6 @@ public class SubHandler3 {
                 com.amap.api.services.routepoisearch.RoutePOISearchQuery __result__ = null;
                 try {
                     __result__ = __this__.getQuery();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.amap.api.services.routepoisearch.RoutePOISearchQuery::getFrom", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.amap.api.services.routepoisearch.RoutePOISearchQuery __this__ = (com.amap.api.services.routepoisearch.RoutePOISearchQuery) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.routepoisearch.RoutePOISearchQuery@" + __this__ + "::getFrom(" + "" + ")");
-                }
-            
-                // invoke native method
-                com.amap.api.services.core.LatLonPoint __result__ = null;
-                try {
-                    __result__ = __this__.getFrom();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.amap.api.services.routepoisearch.RoutePOISearchQuery::getTo", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.amap.api.services.routepoisearch.RoutePOISearchQuery __this__ = (com.amap.api.services.routepoisearch.RoutePOISearchQuery) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.routepoisearch.RoutePOISearchQuery@" + __this__ + "::getTo(" + "" + ")");
-                }
-            
-                // invoke native method
-                com.amap.api.services.core.LatLonPoint __result__ = null;
-                try {
-                    __result__ = __this__.getTo();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.amap.api.services.routepoisearch.RoutePOISearchQuery::getMode", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.amap.api.services.routepoisearch.RoutePOISearchQuery __this__ = (com.amap.api.services.routepoisearch.RoutePOISearchQuery) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.routepoisearch.RoutePOISearchQuery@" + __this__ + "::getMode(" + "" + ")");
-                }
-            
-                // invoke native method
-                Integer __result__ = null;
-                try {
-                    __result__ = __this__.getMode();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.amap.api.services.routepoisearch.RoutePOISearchQuery::getSearchType", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.amap.api.services.routepoisearch.RoutePOISearchQuery __this__ = (com.amap.api.services.routepoisearch.RoutePOISearchQuery) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.routepoisearch.RoutePOISearchQuery@" + __this__ + "::getSearchType(" + "" + ")");
-                }
-            
-                // invoke native method
-                com.amap.api.services.routepoisearch.RoutePOISearch.RoutePOISearchType __result__ = null;
-                try {
-                    __result__ = __this__.getSearchType();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {

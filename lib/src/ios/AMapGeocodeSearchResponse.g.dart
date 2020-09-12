@@ -53,13 +53,13 @@ class AMapGeocodeSearchResponse extends AMapSearchObject with NSCoding, NSCopyin
 
   //region setters
   Future<void> set_count(int count) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapGeocodeSearchResponse::set_count', <String, dynamic>{'__this__': this, "count": count});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapGeocodeSearchResponse::set_count', <String, dynamic>{'__this__': this, "count": count});
   
   
   }
   
   Future<void> set_geocodes(List<AMapGeocode> geocodes) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapGeocodeSearchResponse::set_geocodes', <String, dynamic>{'__this__': this, "geocodes": geocodes});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapGeocodeSearchResponse::set_geocodes', <String, dynamic>{'__this__': this, "geocodes": geocodes});
   
   
   }
@@ -97,7 +97,7 @@ extension AMapGeocodeSearchResponse_Batch on List<AMapGeocodeSearchResponse> {
   }
   
   Future<void> set_geocodes_batch(List<List<AMapGeocode>> geocodes) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapGeocodeSearchResponse::set_geocodes_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "geocodes": geocodes[__i__].map((it) => it.refId).toList()}]);
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapGeocodeSearchResponse::set_geocodes_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "geocodes": geocodes[__i__]}]);
   
   
   }

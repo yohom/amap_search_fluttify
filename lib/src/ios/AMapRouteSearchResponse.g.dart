@@ -53,13 +53,13 @@ class AMapRouteSearchResponse extends AMapSearchObject with NSCoding, NSCopying 
 
   //region setters
   Future<void> set_count(int count) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRouteSearchResponse::set_count', <String, dynamic>{'__this__': this, "count": count});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapRouteSearchResponse::set_count', <String, dynamic>{'__this__': this, "count": count});
   
   
   }
   
   Future<void> set_route(AMapRoute route) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRouteSearchResponse::set_route', <String, dynamic>{'__this__': this, "route": route});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapRouteSearchResponse::set_route', <String, dynamic>{'__this__': this, "route": route});
   
   
   }
@@ -97,7 +97,7 @@ extension AMapRouteSearchResponse_Batch on List<AMapRouteSearchResponse> {
   }
   
   Future<void> set_route_batch(List<AMapRoute> route) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRouteSearchResponse::set_route_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "route": route[__i__].refId}]);
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRouteSearchResponse::set_route_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "route": route[__i__]}]);
   
   
   }

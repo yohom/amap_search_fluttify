@@ -48,7 +48,7 @@ class AMapGeoPolygon extends AMapSearchObject with NSCoding, NSCopying {
 
   //region setters
   Future<void> set_points(List<AMapGeoPoint> points) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapGeoPolygon::set_points', <String, dynamic>{'__this__': this, "points": points});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapGeoPolygon::set_points', <String, dynamic>{'__this__': this, "points": points});
   
   
   }
@@ -95,7 +95,7 @@ extension AMapGeoPolygon_Batch on List<AMapGeoPolygon> {
 
   //region setters
   Future<void> set_points_batch(List<List<AMapGeoPoint>> points) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapGeoPolygon::set_points_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "points": points[__i__].map((it) => it.refId).toList()}]);
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapGeoPolygon::set_points_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "points": points[__i__]}]);
   
   
   }

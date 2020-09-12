@@ -78,43 +78,43 @@ class AMapPOISearchBaseRequest extends AMapSearchObject with NSCoding, NSCopying
 
   //region setters
   Future<void> set_types(String types) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapPOISearchBaseRequest::set_types', <String, dynamic>{'__this__': this, "types": types});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapPOISearchBaseRequest::set_types', <String, dynamic>{'__this__': this, "types": types});
   
   
   }
   
   Future<void> set_sortrule(int sortrule) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapPOISearchBaseRequest::set_sortrule', <String, dynamic>{'__this__': this, "sortrule": sortrule});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapPOISearchBaseRequest::set_sortrule', <String, dynamic>{'__this__': this, "sortrule": sortrule});
   
   
   }
   
   Future<void> set_offset(int offset) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapPOISearchBaseRequest::set_offset', <String, dynamic>{'__this__': this, "offset": offset});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapPOISearchBaseRequest::set_offset', <String, dynamic>{'__this__': this, "offset": offset});
   
   
   }
   
   Future<void> set_page(int page) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapPOISearchBaseRequest::set_page', <String, dynamic>{'__this__': this, "page": page});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapPOISearchBaseRequest::set_page', <String, dynamic>{'__this__': this, "page": page});
   
   
   }
   
   Future<void> set_building(String building) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapPOISearchBaseRequest::set_building', <String, dynamic>{'__this__': this, "building": building});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapPOISearchBaseRequest::set_building', <String, dynamic>{'__this__': this, "building": building});
   
   
   }
   
   Future<void> set_requireExtension(bool requireExtension) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapPOISearchBaseRequest::set_requireExtension', <String, dynamic>{'__this__': this, "requireExtension": requireExtension});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapPOISearchBaseRequest::set_requireExtension', <String, dynamic>{'__this__': this, "requireExtension": requireExtension});
   
   
   }
   
   Future<void> set_requireSubPOIs(bool requireSubPOIs) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapPOISearchBaseRequest::set_requireSubPOIs', <String, dynamic>{'__this__': this, "requireSubPOIs": requireSubPOIs});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapPOISearchBaseRequest::set_requireSubPOIs', <String, dynamic>{'__this__': this, "requireSubPOIs": requireSubPOIs});
   
   
   }

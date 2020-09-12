@@ -68,31 +68,31 @@ class AMapWalking extends AMapSearchObject with NSCoding, NSCopying {
 
   //region setters
   Future<void> set_origin(AMapGeoPoint origin) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapWalking::set_origin', <String, dynamic>{'__this__': this, "origin": origin});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapWalking::set_origin', <String, dynamic>{'__this__': this, "origin": origin});
   
   
   }
   
   Future<void> set_destination(AMapGeoPoint destination) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapWalking::set_destination', <String, dynamic>{'__this__': this, "destination": destination});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapWalking::set_destination', <String, dynamic>{'__this__': this, "destination": destination});
   
   
   }
   
   Future<void> set_distance(int distance) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapWalking::set_distance', <String, dynamic>{'__this__': this, "distance": distance});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapWalking::set_distance', <String, dynamic>{'__this__': this, "distance": distance});
   
   
   }
   
   Future<void> set_duration(int duration) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapWalking::set_duration', <String, dynamic>{'__this__': this, "duration": duration});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapWalking::set_duration', <String, dynamic>{'__this__': this, "duration": duration});
   
   
   }
   
   Future<void> set_steps(List<AMapStep> steps) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapWalking::set_steps', <String, dynamic>{'__this__': this, "steps": steps});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapWalking::set_steps', <String, dynamic>{'__this__': this, "steps": steps});
   
   
   }
@@ -145,13 +145,13 @@ extension AMapWalking_Batch on List<AMapWalking> {
 
   //region setters
   Future<void> set_origin_batch(List<AMapGeoPoint> origin) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapWalking::set_origin_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "origin": origin[__i__].refId}]);
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapWalking::set_origin_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "origin": origin[__i__]}]);
   
   
   }
   
   Future<void> set_destination_batch(List<AMapGeoPoint> destination) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapWalking::set_destination_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "destination": destination[__i__].refId}]);
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapWalking::set_destination_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "destination": destination[__i__]}]);
   
   
   }
@@ -169,7 +169,7 @@ extension AMapWalking_Batch on List<AMapWalking> {
   }
   
   Future<void> set_steps_batch(List<List<AMapStep>> steps) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapWalking::set_steps_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "steps": steps[__i__].map((it) => it.refId).toList()}]);
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapWalking::set_steps_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "steps": steps[__i__]}]);
   
   
   }

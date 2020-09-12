@@ -33,6 +33,120 @@ public class SubHandler5 {
     public static Map<String, Handler> getSubHandler(BinaryMessenger messenger) {
         return new HashMap<String, Handler>() {{
             // method
+            put("com.amap.api.services.geocoder.StreetNumber::setDistance", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+                com.amap.api.services.geocoder.StreetNumber __this__ = (com.amap.api.services.geocoder.StreetNumber) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.StreetNumber@" + __this__ + "::setDistance(" + var1 + ")");
+                }
+            
+                // invoke native method
+                Void __result__ = null;
+                try {
+                    __this__.setDistance(new Double(var1).floatValue());
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.amap.api.services.geocoder.RegeocodeAddress::getFormatAddress", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                com.amap.api.services.geocoder.RegeocodeAddress __this__ = (com.amap.api.services.geocoder.RegeocodeAddress) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + __this__ + "::getFormatAddress(" + "" + ")");
+                }
+            
+                // invoke native method
+                String __result__ = null;
+                try {
+                    __result__ = __this__.getFormatAddress();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.amap.api.services.geocoder.RegeocodeAddress::setFormatAddress", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+                com.amap.api.services.geocoder.RegeocodeAddress __this__ = (com.amap.api.services.geocoder.RegeocodeAddress) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + __this__ + "::setFormatAddress(" + var1 + ")");
+                }
+            
+                // invoke native method
+                Void __result__ = null;
+                try {
+                    __this__.setFormatAddress(var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.amap.api.services.geocoder.RegeocodeAddress::getProvince", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                com.amap.api.services.geocoder.RegeocodeAddress __this__ = (com.amap.api.services.geocoder.RegeocodeAddress) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + __this__ + "::getProvince(" + "" + ")");
+                }
+            
+                // invoke native method
+                String __result__ = null;
+                try {
+                    __result__ = __this__.getProvince();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
             put("com.amap.api.services.geocoder.RegeocodeAddress::setProvince", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
@@ -1644,7 +1758,7 @@ public class SubHandler5 {
                 try {
                     __this__.setOnDistrictSearchListener(new com.amap.api.services.district.DistrictSearch.OnDistrictSearchListener() {
                         // method channel
-                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.district.DistrictSearch::setOnDistrictSearchListener::Callback", new StandardMethodCodec(new FluttifyMessageCodec()));
+                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.district.DistrictSearch::setOnDistrictSearchListener::Callback@" + String.valueOf(System.identityHashCode(__this__)), new StandardMethodCodec(new FluttifyMessageCodec()));
                         android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
             
                         // call dart method
@@ -3012,7 +3126,7 @@ public class SubHandler5 {
                 try {
                     __this__.setInputtipsListener(new com.amap.api.services.help.Inputtips.InputtipsListener() {
                         // method channel
-                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.help.Inputtips::setInputtipsListener::Callback", new StandardMethodCodec(new FluttifyMessageCodec()));
+                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.help.Inputtips::setInputtipsListener::Callback@" + String.valueOf(System.identityHashCode(__this__)), new StandardMethodCodec(new FluttifyMessageCodec()));
                         android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
             
                         // call dart method
@@ -3303,7 +3417,7 @@ public class SubHandler5 {
                 try {
                     __this__.setOnShareSearchListener(new com.amap.api.services.share.ShareSearch.OnShareSearchListener() {
                         // method channel
-                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.share.ShareSearch::setOnShareSearchListener::Callback", new StandardMethodCodec(new FluttifyMessageCodec()));
+                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.share.ShareSearch::setOnShareSearchListener::Callback@" + String.valueOf(System.identityHashCode(__this__)), new StandardMethodCodec(new FluttifyMessageCodec()));
                         android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
             
                         // call dart method
@@ -4730,6 +4844,134 @@ public class SubHandler5 {
                 __methodResult__.success(__resultList__);
             });
             // method
+            put("com.amap.api.services.traffic.TrafficSearch::loadTrafficByRoad_batch", (__argsBatch__, __methodResult__) -> {
+                List<com.amap.api.services.traffic.TrafficStatusResult> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    com.amap.api.services.traffic.RoadTrafficQuery var1 = (com.amap.api.services.traffic.RoadTrafficQuery) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.traffic.TrafficSearch __this__ = (com.amap.api.services.traffic.TrafficSearch) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    com.amap.api.services.traffic.TrafficStatusResult __result__ = null;
+                    try {
+                        __result__ = __this__.loadTrafficByRoad(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.traffic.TrafficSearch::loadTrafficByRoadAsyn_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    com.amap.api.services.traffic.RoadTrafficQuery var1 = (com.amap.api.services.traffic.RoadTrafficQuery) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.traffic.TrafficSearch __this__ = (com.amap.api.services.traffic.TrafficSearch) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.loadTrafficByRoadAsyn(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.traffic.TrafficSearch::loadTrafficByCircle_batch", (__argsBatch__, __methodResult__) -> {
+                List<com.amap.api.services.traffic.TrafficStatusResult> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    com.amap.api.services.traffic.CircleTrafficQuery var1 = (com.amap.api.services.traffic.CircleTrafficQuery) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.traffic.TrafficSearch __this__ = (com.amap.api.services.traffic.TrafficSearch) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    com.amap.api.services.traffic.TrafficStatusResult __result__ = null;
+                    try {
+                        __result__ = __this__.loadTrafficByCircle(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.traffic.TrafficSearch::loadTrafficByCircleAsyn_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    com.amap.api.services.traffic.CircleTrafficQuery var1 = (com.amap.api.services.traffic.CircleTrafficQuery) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.traffic.TrafficSearch __this__ = (com.amap.api.services.traffic.TrafficSearch) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.loadTrafficByCircleAsyn(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
             put("com.amap.api.services.traffic.RoadTrafficQuery::getName_batch", (__argsBatch__, __methodResult__) -> {
                 List<String> __resultList__ = new ArrayList<>();
             
@@ -5880,258 +6122,6 @@ public class SubHandler5 {
                     String __result__ = null;
                     try {
                         __result__ = __this__.getTerminalStation();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.amap.api.services.busline.BusLineItem::setTerminalStation_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-                    com.amap.api.services.busline.BusLineItem __this__ = (com.amap.api.services.busline.BusLineItem) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.setTerminalStation(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.amap.api.services.busline.BusLineItem::getBusCompany_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    com.amap.api.services.busline.BusLineItem __this__ = (com.amap.api.services.busline.BusLineItem) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    String __result__ = null;
-                    try {
-                        __result__ = __this__.getBusCompany();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.amap.api.services.busline.BusLineItem::setBusCompany_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-                    com.amap.api.services.busline.BusLineItem __this__ = (com.amap.api.services.busline.BusLineItem) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.setBusCompany(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.amap.api.services.busline.BusLineItem::getBasicPrice_batch", (__argsBatch__, __methodResult__) -> {
-                List<Float> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    com.amap.api.services.busline.BusLineItem __this__ = (com.amap.api.services.busline.BusLineItem) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Float __result__ = null;
-                    try {
-                        __result__ = __this__.getBasicPrice();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.amap.api.services.busline.BusLineItem::setBasicPrice_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-                    com.amap.api.services.busline.BusLineItem __this__ = (com.amap.api.services.busline.BusLineItem) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.setBasicPrice(new Double(var1).floatValue());
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.amap.api.services.busline.BusLineItem::getTotalPrice_batch", (__argsBatch__, __methodResult__) -> {
-                List<Float> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    com.amap.api.services.busline.BusLineItem __this__ = (com.amap.api.services.busline.BusLineItem) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Float __result__ = null;
-                    try {
-                        __result__ = __this__.getTotalPrice();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.amap.api.services.busline.BusLineItem::setTotalPrice_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-                    com.amap.api.services.busline.BusLineItem __this__ = (com.amap.api.services.busline.BusLineItem) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.setTotalPrice(new Double(var1).floatValue());
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.amap.api.services.busline.BusLineItem::getBusStations_batch", (__argsBatch__, __methodResult__) -> {
-                List<java.util.List<com.amap.api.services.busline.BusStationItem>> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    com.amap.api.services.busline.BusLineItem __this__ = (com.amap.api.services.busline.BusLineItem) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    java.util.List<com.amap.api.services.busline.BusStationItem> __result__ = null;
-                    try {
-                        __result__ = __this__.getBusStations();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
