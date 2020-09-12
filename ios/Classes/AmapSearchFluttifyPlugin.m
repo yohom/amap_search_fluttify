@@ -80,6 +80,10 @@ extern BOOL enableLog;
 // 委托方法们
 - (AMapNearbyUploadInfo*)nearbyInfoForUploading : (AMapNearbySearchManager*)manager
 {
+  FlutterMethodChannel *channel = [FlutterMethodChannel
+        methodChannelWithName:@"AMapNearbySearchManagerDelegate::Callback"
+              binaryMessenger:[_registrar messenger]
+                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
   // print log
   if (enableLog) {
     NSLog(@"AMapNearbySearchManagerDelegate::nearbyInfoForUploading");
@@ -91,11 +95,6 @@ extern BOOL enableLog;
   
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    FlutterMethodChannel *channel = [FlutterMethodChannel
-          methodChannelWithName:@"AMapNearbySearchManagerDelegate::Callback"
-                binaryMessenger:[[self registrar] messenger]
-                          codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
-  
     [channel invokeMethod:@"Callback::AMapNearbySearchManagerDelegate::nearbyInfoForUploading"
                 arguments:@{}
                    result:^(id result) {}]; // 由于结果是异步返回, 这里用不上, 所以就不生成代码了
@@ -114,6 +113,10 @@ extern BOOL enableLog;
 
 - (void)onNearbyInfoUploadedWithError : (NSError*)error
 {
+  FlutterMethodChannel *channel = [FlutterMethodChannel
+        methodChannelWithName:@"AMapNearbySearchManagerDelegate::Callback"
+              binaryMessenger:[_registrar messenger]
+                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
   // print log
   if (enableLog) {
     NSLog(@"AMapNearbySearchManagerDelegate::onNearbyInfoUploadedWithError");
@@ -125,11 +128,6 @@ extern BOOL enableLog;
   
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    FlutterMethodChannel *channel = [FlutterMethodChannel
-          methodChannelWithName:@"AMapNearbySearchManagerDelegate::Callback"
-                binaryMessenger:[[self registrar] messenger]
-                          codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
-  
     [channel invokeMethod:@"Callback::AMapNearbySearchManagerDelegate::onNearbyInfoUploadedWithError" arguments:@{@"error": argerror == nil ? [NSNull null] : argerror}];
   });
   
@@ -137,6 +135,10 @@ extern BOOL enableLog;
 
 - (void)onUserInfoClearedWithError : (NSError*)error
 {
+  FlutterMethodChannel *channel = [FlutterMethodChannel
+        methodChannelWithName:@"AMapNearbySearchManagerDelegate::Callback"
+              binaryMessenger:[_registrar messenger]
+                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
   // print log
   if (enableLog) {
     NSLog(@"AMapNearbySearchManagerDelegate::onUserInfoClearedWithError");
@@ -148,11 +150,6 @@ extern BOOL enableLog;
   
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    FlutterMethodChannel *channel = [FlutterMethodChannel
-          methodChannelWithName:@"AMapNearbySearchManagerDelegate::Callback"
-                binaryMessenger:[[self registrar] messenger]
-                          codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
-  
     [channel invokeMethod:@"Callback::AMapNearbySearchManagerDelegate::onUserInfoClearedWithError" arguments:@{@"error": argerror == nil ? [NSNull null] : argerror}];
   });
   
@@ -160,6 +157,10 @@ extern BOOL enableLog;
 
 - (void)AMapSearchRequest : (id)request didFailWithError: (NSError*)error
 {
+  FlutterMethodChannel *channel = [FlutterMethodChannel
+        methodChannelWithName:@"AMapSearchDelegate::Callback"
+              binaryMessenger:[_registrar messenger]
+                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
   // print log
   if (enableLog) {
     NSLog(@"AMapSearchDelegate::AMapSearchRequest_didFailWithError");
@@ -174,11 +175,6 @@ extern BOOL enableLog;
   
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    FlutterMethodChannel *channel = [FlutterMethodChannel
-          methodChannelWithName:@"AMapSearchDelegate::Callback"
-                binaryMessenger:[[self registrar] messenger]
-                          codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
-  
     [channel invokeMethod:@"Callback::AMapSearchDelegate::AMapSearchRequest_didFailWithError" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"error": argerror == nil ? [NSNull null] : argerror}];
   });
   
@@ -186,6 +182,10 @@ extern BOOL enableLog;
 
 - (void)onPOISearchDone : (AMapPOISearchBaseRequest*)request response: (AMapPOISearchResponse*)response
 {
+  FlutterMethodChannel *channel = [FlutterMethodChannel
+        methodChannelWithName:@"AMapSearchDelegate::Callback"
+              binaryMessenger:[_registrar messenger]
+                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
   // print log
   if (enableLog) {
     NSLog(@"AMapSearchDelegate::onPOISearchDone_response");
@@ -200,11 +200,6 @@ extern BOOL enableLog;
   
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    FlutterMethodChannel *channel = [FlutterMethodChannel
-          methodChannelWithName:@"AMapSearchDelegate::Callback"
-                binaryMessenger:[[self registrar] messenger]
-                          codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
-  
     [channel invokeMethod:@"Callback::AMapSearchDelegate::onPOISearchDone_response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
   });
   
@@ -212,6 +207,10 @@ extern BOOL enableLog;
 
 - (void)onRoutePOISearchDone : (AMapRoutePOISearchRequest*)request response: (AMapRoutePOISearchResponse*)response
 {
+  FlutterMethodChannel *channel = [FlutterMethodChannel
+        methodChannelWithName:@"AMapSearchDelegate::Callback"
+              binaryMessenger:[_registrar messenger]
+                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
   // print log
   if (enableLog) {
     NSLog(@"AMapSearchDelegate::onRoutePOISearchDone_response");
@@ -226,11 +225,6 @@ extern BOOL enableLog;
   
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    FlutterMethodChannel *channel = [FlutterMethodChannel
-          methodChannelWithName:@"AMapSearchDelegate::Callback"
-                binaryMessenger:[[self registrar] messenger]
-                          codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
-  
     [channel invokeMethod:@"Callback::AMapSearchDelegate::onRoutePOISearchDone_response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
   });
   
@@ -238,6 +232,10 @@ extern BOOL enableLog;
 
 - (void)onGeocodeSearchDone : (AMapGeocodeSearchRequest*)request response: (AMapGeocodeSearchResponse*)response
 {
+  FlutterMethodChannel *channel = [FlutterMethodChannel
+        methodChannelWithName:@"AMapSearchDelegate::Callback"
+              binaryMessenger:[_registrar messenger]
+                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
   // print log
   if (enableLog) {
     NSLog(@"AMapSearchDelegate::onGeocodeSearchDone_response");
@@ -252,11 +250,6 @@ extern BOOL enableLog;
   
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    FlutterMethodChannel *channel = [FlutterMethodChannel
-          methodChannelWithName:@"AMapSearchDelegate::Callback"
-                binaryMessenger:[[self registrar] messenger]
-                          codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
-  
     [channel invokeMethod:@"Callback::AMapSearchDelegate::onGeocodeSearchDone_response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
   });
   
@@ -264,6 +257,10 @@ extern BOOL enableLog;
 
 - (void)onReGeocodeSearchDone : (AMapReGeocodeSearchRequest*)request response: (AMapReGeocodeSearchResponse*)response
 {
+  FlutterMethodChannel *channel = [FlutterMethodChannel
+        methodChannelWithName:@"AMapSearchDelegate::Callback"
+              binaryMessenger:[_registrar messenger]
+                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
   // print log
   if (enableLog) {
     NSLog(@"AMapSearchDelegate::onReGeocodeSearchDone_response");
@@ -278,11 +275,6 @@ extern BOOL enableLog;
   
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    FlutterMethodChannel *channel = [FlutterMethodChannel
-          methodChannelWithName:@"AMapSearchDelegate::Callback"
-                binaryMessenger:[[self registrar] messenger]
-                          codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
-  
     [channel invokeMethod:@"Callback::AMapSearchDelegate::onReGeocodeSearchDone_response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
   });
   
@@ -290,6 +282,10 @@ extern BOOL enableLog;
 
 - (void)onInputTipsSearchDone : (AMapInputTipsSearchRequest*)request response: (AMapInputTipsSearchResponse*)response
 {
+  FlutterMethodChannel *channel = [FlutterMethodChannel
+        methodChannelWithName:@"AMapSearchDelegate::Callback"
+              binaryMessenger:[_registrar messenger]
+                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
   // print log
   if (enableLog) {
     NSLog(@"AMapSearchDelegate::onInputTipsSearchDone_response");
@@ -304,11 +300,6 @@ extern BOOL enableLog;
   
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    FlutterMethodChannel *channel = [FlutterMethodChannel
-          methodChannelWithName:@"AMapSearchDelegate::Callback"
-                binaryMessenger:[[self registrar] messenger]
-                          codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
-  
     [channel invokeMethod:@"Callback::AMapSearchDelegate::onInputTipsSearchDone_response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
   });
   
@@ -316,6 +307,10 @@ extern BOOL enableLog;
 
 - (void)onBusStopSearchDone : (AMapBusStopSearchRequest*)request response: (AMapBusStopSearchResponse*)response
 {
+  FlutterMethodChannel *channel = [FlutterMethodChannel
+        methodChannelWithName:@"AMapSearchDelegate::Callback"
+              binaryMessenger:[_registrar messenger]
+                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
   // print log
   if (enableLog) {
     NSLog(@"AMapSearchDelegate::onBusStopSearchDone_response");
@@ -330,11 +325,6 @@ extern BOOL enableLog;
   
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    FlutterMethodChannel *channel = [FlutterMethodChannel
-          methodChannelWithName:@"AMapSearchDelegate::Callback"
-                binaryMessenger:[[self registrar] messenger]
-                          codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
-  
     [channel invokeMethod:@"Callback::AMapSearchDelegate::onBusStopSearchDone_response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
   });
   
@@ -342,6 +332,10 @@ extern BOOL enableLog;
 
 - (void)onBusLineSearchDone : (AMapBusLineBaseSearchRequest*)request response: (AMapBusLineSearchResponse*)response
 {
+  FlutterMethodChannel *channel = [FlutterMethodChannel
+        methodChannelWithName:@"AMapSearchDelegate::Callback"
+              binaryMessenger:[_registrar messenger]
+                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
   // print log
   if (enableLog) {
     NSLog(@"AMapSearchDelegate::onBusLineSearchDone_response");
@@ -356,11 +350,6 @@ extern BOOL enableLog;
   
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    FlutterMethodChannel *channel = [FlutterMethodChannel
-          methodChannelWithName:@"AMapSearchDelegate::Callback"
-                binaryMessenger:[[self registrar] messenger]
-                          codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
-  
     [channel invokeMethod:@"Callback::AMapSearchDelegate::onBusLineSearchDone_response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
   });
   
@@ -368,6 +357,10 @@ extern BOOL enableLog;
 
 - (void)onDistrictSearchDone : (AMapDistrictSearchRequest*)request response: (AMapDistrictSearchResponse*)response
 {
+  FlutterMethodChannel *channel = [FlutterMethodChannel
+        methodChannelWithName:@"AMapSearchDelegate::Callback"
+              binaryMessenger:[_registrar messenger]
+                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
   // print log
   if (enableLog) {
     NSLog(@"AMapSearchDelegate::onDistrictSearchDone_response");
@@ -382,11 +375,6 @@ extern BOOL enableLog;
   
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    FlutterMethodChannel *channel = [FlutterMethodChannel
-          methodChannelWithName:@"AMapSearchDelegate::Callback"
-                binaryMessenger:[[self registrar] messenger]
-                          codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
-  
     [channel invokeMethod:@"Callback::AMapSearchDelegate::onDistrictSearchDone_response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
   });
   
@@ -394,6 +382,10 @@ extern BOOL enableLog;
 
 - (void)onRouteSearchDone : (AMapRouteSearchBaseRequest*)request response: (AMapRouteSearchResponse*)response
 {
+  FlutterMethodChannel *channel = [FlutterMethodChannel
+        methodChannelWithName:@"AMapSearchDelegate::Callback"
+              binaryMessenger:[_registrar messenger]
+                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
   // print log
   if (enableLog) {
     NSLog(@"AMapSearchDelegate::onRouteSearchDone_response");
@@ -408,11 +400,6 @@ extern BOOL enableLog;
   
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    FlutterMethodChannel *channel = [FlutterMethodChannel
-          methodChannelWithName:@"AMapSearchDelegate::Callback"
-                binaryMessenger:[[self registrar] messenger]
-                          codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
-  
     [channel invokeMethod:@"Callback::AMapSearchDelegate::onRouteSearchDone_response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
   });
   
@@ -420,6 +407,10 @@ extern BOOL enableLog;
 
 - (void)onFutureRouteSearchDone : (AMapRouteSearchBaseRequest*)request response: (AMapFutureRouteSearchResponse*)response
 {
+  FlutterMethodChannel *channel = [FlutterMethodChannel
+        methodChannelWithName:@"AMapSearchDelegate::Callback"
+              binaryMessenger:[_registrar messenger]
+                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
   // print log
   if (enableLog) {
     NSLog(@"AMapSearchDelegate::onFutureRouteSearchDone_response");
@@ -434,11 +425,6 @@ extern BOOL enableLog;
   
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    FlutterMethodChannel *channel = [FlutterMethodChannel
-          methodChannelWithName:@"AMapSearchDelegate::Callback"
-                binaryMessenger:[[self registrar] messenger]
-                          codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
-  
     [channel invokeMethod:@"Callback::AMapSearchDelegate::onFutureRouteSearchDone_response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
   });
   
@@ -446,6 +432,10 @@ extern BOOL enableLog;
 
 - (void)onDistanceSearchDone : (AMapDistanceSearchRequest*)request response: (AMapDistanceSearchResponse*)response
 {
+  FlutterMethodChannel *channel = [FlutterMethodChannel
+        methodChannelWithName:@"AMapSearchDelegate::Callback"
+              binaryMessenger:[_registrar messenger]
+                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
   // print log
   if (enableLog) {
     NSLog(@"AMapSearchDelegate::onDistanceSearchDone_response");
@@ -460,11 +450,6 @@ extern BOOL enableLog;
   
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    FlutterMethodChannel *channel = [FlutterMethodChannel
-          methodChannelWithName:@"AMapSearchDelegate::Callback"
-                binaryMessenger:[[self registrar] messenger]
-                          codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
-  
     [channel invokeMethod:@"Callback::AMapSearchDelegate::onDistanceSearchDone_response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
   });
   
@@ -472,6 +457,10 @@ extern BOOL enableLog;
 
 - (void)onWeatherSearchDone : (AMapWeatherSearchRequest*)request response: (AMapWeatherSearchResponse*)response
 {
+  FlutterMethodChannel *channel = [FlutterMethodChannel
+        methodChannelWithName:@"AMapSearchDelegate::Callback"
+              binaryMessenger:[_registrar messenger]
+                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
   // print log
   if (enableLog) {
     NSLog(@"AMapSearchDelegate::onWeatherSearchDone_response");
@@ -486,11 +475,6 @@ extern BOOL enableLog;
   
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    FlutterMethodChannel *channel = [FlutterMethodChannel
-          methodChannelWithName:@"AMapSearchDelegate::Callback"
-                binaryMessenger:[[self registrar] messenger]
-                          codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
-  
     [channel invokeMethod:@"Callback::AMapSearchDelegate::onWeatherSearchDone_response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
   });
   
@@ -498,6 +482,10 @@ extern BOOL enableLog;
 
 - (void)onRoadTrafficSearchDone : (AMapRoadTrafficSearchBaseRequest*)request response: (AMapRoadTrafficSearchResponse*)response
 {
+  FlutterMethodChannel *channel = [FlutterMethodChannel
+        methodChannelWithName:@"AMapSearchDelegate::Callback"
+              binaryMessenger:[_registrar messenger]
+                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
   // print log
   if (enableLog) {
     NSLog(@"AMapSearchDelegate::onRoadTrafficSearchDone_response");
@@ -512,11 +500,6 @@ extern BOOL enableLog;
   
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    FlutterMethodChannel *channel = [FlutterMethodChannel
-          methodChannelWithName:@"AMapSearchDelegate::Callback"
-                binaryMessenger:[[self registrar] messenger]
-                          codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
-  
     [channel invokeMethod:@"Callback::AMapSearchDelegate::onRoadTrafficSearchDone_response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
   });
   
@@ -524,6 +507,10 @@ extern BOOL enableLog;
 
 - (void)onNearbySearchDone : (AMapNearbySearchRequest*)request response: (AMapNearbySearchResponse*)response
 {
+  FlutterMethodChannel *channel = [FlutterMethodChannel
+        methodChannelWithName:@"AMapSearchDelegate::Callback"
+              binaryMessenger:[_registrar messenger]
+                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
   // print log
   if (enableLog) {
     NSLog(@"AMapSearchDelegate::onNearbySearchDone_response");
@@ -538,11 +525,6 @@ extern BOOL enableLog;
   
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    FlutterMethodChannel *channel = [FlutterMethodChannel
-          methodChannelWithName:@"AMapSearchDelegate::Callback"
-                binaryMessenger:[[self registrar] messenger]
-                          codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
-  
     [channel invokeMethod:@"Callback::AMapSearchDelegate::onNearbySearchDone_response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
   });
   
@@ -550,6 +532,10 @@ extern BOOL enableLog;
 
 - (void)onCloudSearchDone : (AMapCloudSearchBaseRequest*)request response: (AMapCloudPOISearchResponse*)response
 {
+  FlutterMethodChannel *channel = [FlutterMethodChannel
+        methodChannelWithName:@"AMapSearchDelegate::Callback"
+              binaryMessenger:[_registrar messenger]
+                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
   // print log
   if (enableLog) {
     NSLog(@"AMapSearchDelegate::onCloudSearchDone_response");
@@ -564,11 +550,6 @@ extern BOOL enableLog;
   
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    FlutterMethodChannel *channel = [FlutterMethodChannel
-          methodChannelWithName:@"AMapSearchDelegate::Callback"
-                binaryMessenger:[[self registrar] messenger]
-                          codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
-  
     [channel invokeMethod:@"Callback::AMapSearchDelegate::onCloudSearchDone_response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
   });
   
@@ -576,6 +557,10 @@ extern BOOL enableLog;
 
 - (void)onShareSearchDone : (AMapShareSearchBaseRequest*)request response: (AMapShareSearchResponse*)response
 {
+  FlutterMethodChannel *channel = [FlutterMethodChannel
+        methodChannelWithName:@"AMapSearchDelegate::Callback"
+              binaryMessenger:[_registrar messenger]
+                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
   // print log
   if (enableLog) {
     NSLog(@"AMapSearchDelegate::onShareSearchDone_response");
@@ -590,11 +575,6 @@ extern BOOL enableLog;
   
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    FlutterMethodChannel *channel = [FlutterMethodChannel
-          methodChannelWithName:@"AMapSearchDelegate::Callback"
-                binaryMessenger:[[self registrar] messenger]
-                          codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
-  
     [channel invokeMethod:@"Callback::AMapSearchDelegate::onShareSearchDone_response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
   });
   

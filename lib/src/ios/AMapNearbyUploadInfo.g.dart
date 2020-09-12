@@ -58,19 +58,19 @@ class AMapNearbyUploadInfo extends NSObject with NSCopying {
 
   //region setters
   Future<void> set_userID(String userID) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapNearbyUploadInfo::set_userID', <String, dynamic>{'__this__': this, "userID": userID});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapNearbyUploadInfo::set_userID', <String, dynamic>{'__this__': this, "userID": userID});
   
   
   }
   
   Future<void> set_coordinateType(AMapSearchCoordinateType coordinateType) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapNearbyUploadInfo::set_coordinateType', <String, dynamic>{'__this__': this, "coordinateType": coordinateType.toValue()});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapNearbyUploadInfo::set_coordinateType', <String, dynamic>{'__this__': this, "coordinateType": coordinateType.toValue()});
   
   
   }
   
   Future<void> set_coordinate(CLLocationCoordinate2D coordinate) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapNearbyUploadInfo::set_coordinate', <String, dynamic>{'__this__': this, "coordinate": coordinate});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapNearbyUploadInfo::set_coordinate', <String, dynamic>{'__this__': this, "coordinate": coordinate});
   
   
   }
@@ -121,7 +121,7 @@ extension AMapNearbyUploadInfo_Batch on List<AMapNearbyUploadInfo> {
   }
   
   Future<void> set_coordinate_batch(List<CLLocationCoordinate2D> coordinate) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapNearbyUploadInfo::set_coordinate_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "coordinate": coordinate[__i__].refId}]);
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapNearbyUploadInfo::set_coordinate_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "coordinate": coordinate[__i__]}]);
   
   
   }

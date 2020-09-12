@@ -92,12 +92,7 @@ extern BOOL enableLog;
         
             // args
             // list arg
-            NSArray<NSNumber*>* pathsRefArray = (NSArray<NSNumber*> *) args[@"paths"];
-            NSMutableArray<AMapPath*>* paths = [NSMutableArray arrayWithCapacity:pathsRefArray.count];
-            for (int __i__ = 0; __i__ < pathsRefArray.count; __i__++) {
-                AMapPath* item = (AMapPath*) HEAP[[pathsRefArray objectAtIndex:__i__]];
-                [paths addObject:item];
-            }
+            NSArray<AMapPath*>* paths = (NSArray<AMapPath*>*) args[@"paths"];
         
             // ref
             AMapFutureRouteSearchResponse* ref = (AMapFutureRouteSearchResponse*) args[@"__this__"];
@@ -114,12 +109,7 @@ extern BOOL enableLog;
         
             // args
             // list arg
-            NSArray<NSNumber*>* timeInfosRefArray = (NSArray<NSNumber*> *) args[@"timeInfos"];
-            NSMutableArray<AMapFutureTimeInfo*>* timeInfos = [NSMutableArray arrayWithCapacity:timeInfosRefArray.count];
-            for (int __i__ = 0; __i__ < timeInfosRefArray.count; __i__++) {
-                AMapFutureTimeInfo* item = (AMapFutureTimeInfo*) HEAP[[timeInfosRefArray objectAtIndex:__i__]];
-                [timeInfos addObject:item];
-            }
+            NSArray<AMapFutureTimeInfo*>* timeInfos = (NSArray<AMapFutureTimeInfo*>*) args[@"timeInfos"];
         
             // ref
             AMapFutureRouteSearchResponse* ref = (AMapFutureRouteSearchResponse*) args[@"__this__"];
@@ -170,12 +160,7 @@ extern BOOL enableLog;
         
             // args
             // list arg
-            NSArray<NSNumber*>* pointsRefArray = (NSArray<NSNumber*> *) args[@"points"];
-            NSMutableArray<AMapGeoPoint*>* points = [NSMutableArray arrayWithCapacity:pointsRefArray.count];
-            for (int __i__ = 0; __i__ < pointsRefArray.count; __i__++) {
-                AMapGeoPoint* item = (AMapGeoPoint*) HEAP[[pointsRefArray objectAtIndex:__i__]];
-                [points addObject:item];
-            }
+            NSArray<AMapGeoPoint*>* points = (NSArray<AMapGeoPoint*>*) args[@"points"];
         
             // ref
             AMapGeoPolygon* ref = (AMapGeoPolygon*) args[@"__this__"];
@@ -260,12 +245,7 @@ extern BOOL enableLog;
         
             // args
             // list arg
-            NSArray<NSNumber*>* districtsRefArray = (NSArray<NSNumber*> *) args[@"districts"];
-            NSMutableArray<AMapDistrict*>* districts = [NSMutableArray arrayWithCapacity:districtsRefArray.count];
-            for (int __i__ = 0; __i__ < districtsRefArray.count; __i__++) {
-                AMapDistrict* item = (AMapDistrict*) HEAP[[districtsRefArray objectAtIndex:__i__]];
-                [districts addObject:item];
-            }
+            NSArray<AMapDistrict*>* districts = (NSArray<AMapDistrict*>*) args[@"districts"];
         
             // ref
             AMapCity* ref = (AMapCity*) args[@"__this__"];
@@ -299,12 +279,7 @@ extern BOOL enableLog;
         
             // args
             // list arg
-            NSArray<NSNumber*>* citiesRefArray = (NSArray<NSNumber*> *) args[@"cities"];
-            NSMutableArray<AMapCity*>* cities = [NSMutableArray arrayWithCapacity:citiesRefArray.count];
-            for (int __i__ = 0; __i__ < citiesRefArray.count; __i__++) {
-                AMapCity* item = (AMapCity*) HEAP[[citiesRefArray objectAtIndex:__i__]];
-                [cities addObject:item];
-            }
+            NSArray<AMapCity*>* cities = (NSArray<AMapCity*>*) args[@"cities"];
         
             // ref
             AMapSuggestion* ref = (AMapSuggestion*) args[@"__this__"];
@@ -1222,12 +1197,7 @@ extern BOOL enableLog;
         
             // args
             // list arg
-            NSArray<NSNumber*>* subPOIsRefArray = (NSArray<NSNumber*> *) args[@"subPOIs"];
-            NSMutableArray<AMapSubPOI*>* subPOIs = [NSMutableArray arrayWithCapacity:subPOIsRefArray.count];
-            for (int __i__ = 0; __i__ < subPOIsRefArray.count; __i__++) {
-                AMapSubPOI* item = (AMapSubPOI*) HEAP[[subPOIsRefArray objectAtIndex:__i__]];
-                [subPOIs addObject:item];
-            }
+            NSArray<AMapSubPOI*>* subPOIs = (NSArray<AMapSubPOI*>*) args[@"subPOIs"];
         
             // ref
             AMapPOI* ref = (AMapPOI*) args[@"__this__"];
@@ -1244,12 +1214,7 @@ extern BOOL enableLog;
         
             // args
             // list arg
-            NSArray<NSNumber*>* imagesRefArray = (NSArray<NSNumber*> *) args[@"images"];
-            NSMutableArray<AMapImage*>* images = [NSMutableArray arrayWithCapacity:imagesRefArray.count];
-            for (int __i__ = 0; __i__ < imagesRefArray.count; __i__++) {
-                AMapImage* item = (AMapImage*) HEAP[[imagesRefArray objectAtIndex:__i__]];
-                [images addObject:item];
-            }
+            NSArray<AMapImage*>* images = (NSArray<AMapImage*>*) args[@"images"];
         
             // ref
             AMapPOI* ref = (AMapPOI*) args[@"__this__"];
@@ -1878,12 +1843,7 @@ extern BOOL enableLog;
         
             // args
             // list arg
-            NSArray<NSNumber*>* businessAreasRefArray = (NSArray<NSNumber*> *) args[@"businessAreas"];
-            NSMutableArray<AMapBusinessArea*>* businessAreas = [NSMutableArray arrayWithCapacity:businessAreasRefArray.count];
-            for (int __i__ = 0; __i__ < businessAreasRefArray.count; __i__++) {
-                AMapBusinessArea* item = (AMapBusinessArea*) HEAP[[businessAreasRefArray objectAtIndex:__i__]];
-                [businessAreas addObject:item];
-            }
+            NSArray<AMapBusinessArea*>* businessAreas = (NSArray<AMapBusinessArea*>*) args[@"businessAreas"];
         
             // ref
             AMapAddressComponent* ref = (AMapAddressComponent*) args[@"__this__"];
@@ -1934,12 +1894,7 @@ extern BOOL enableLog;
         
             // args
             // list arg
-            NSArray<NSNumber*>* roadsRefArray = (NSArray<NSNumber*> *) args[@"roads"];
-            NSMutableArray<AMapRoad*>* roads = [NSMutableArray arrayWithCapacity:roadsRefArray.count];
-            for (int __i__ = 0; __i__ < roadsRefArray.count; __i__++) {
-                AMapRoad* item = (AMapRoad*) HEAP[[roadsRefArray objectAtIndex:__i__]];
-                [roads addObject:item];
-            }
+            NSArray<AMapRoad*>* roads = (NSArray<AMapRoad*>*) args[@"roads"];
         
             // ref
             AMapReGeocode* ref = (AMapReGeocode*) args[@"__this__"];
@@ -1956,12 +1911,7 @@ extern BOOL enableLog;
         
             // args
             // list arg
-            NSArray<NSNumber*>* roadintersRefArray = (NSArray<NSNumber*> *) args[@"roadinters"];
-            NSMutableArray<AMapRoadInter*>* roadinters = [NSMutableArray arrayWithCapacity:roadintersRefArray.count];
-            for (int __i__ = 0; __i__ < roadintersRefArray.count; __i__++) {
-                AMapRoadInter* item = (AMapRoadInter*) HEAP[[roadintersRefArray objectAtIndex:__i__]];
-                [roadinters addObject:item];
-            }
+            NSArray<AMapRoadInter*>* roadinters = (NSArray<AMapRoadInter*>*) args[@"roadinters"];
         
             // ref
             AMapReGeocode* ref = (AMapReGeocode*) args[@"__this__"];
@@ -1978,12 +1928,7 @@ extern BOOL enableLog;
         
             // args
             // list arg
-            NSArray<NSNumber*>* poisRefArray = (NSArray<NSNumber*> *) args[@"pois"];
-            NSMutableArray<AMapPOI*>* pois = [NSMutableArray arrayWithCapacity:poisRefArray.count];
-            for (int __i__ = 0; __i__ < poisRefArray.count; __i__++) {
-                AMapPOI* item = (AMapPOI*) HEAP[[poisRefArray objectAtIndex:__i__]];
-                [pois addObject:item];
-            }
+            NSArray<AMapPOI*>* pois = (NSArray<AMapPOI*>*) args[@"pois"];
         
             // ref
             AMapReGeocode* ref = (AMapReGeocode*) args[@"__this__"];
@@ -2000,12 +1945,7 @@ extern BOOL enableLog;
         
             // args
             // list arg
-            NSArray<NSNumber*>* aoisRefArray = (NSArray<NSNumber*> *) args[@"aois"];
-            NSMutableArray<AMapAOI*>* aois = [NSMutableArray arrayWithCapacity:aoisRefArray.count];
-            for (int __i__ = 0; __i__ < aoisRefArray.count; __i__++) {
-                AMapAOI* item = (AMapAOI*) HEAP[[aoisRefArray objectAtIndex:__i__]];
-                [aois addObject:item];
-            }
+            NSArray<AMapAOI*>* aois = (NSArray<AMapAOI*>*) args[@"aois"];
         
             // ref
             AMapReGeocode* ref = (AMapReGeocode*) args[@"__this__"];
@@ -2294,12 +2234,7 @@ extern BOOL enableLog;
         
             // args
             // list arg
-            NSArray<NSNumber*>* buslinesRefArray = (NSArray<NSNumber*> *) args[@"buslines"];
-            NSMutableArray<AMapBusLine*>* buslines = [NSMutableArray arrayWithCapacity:buslinesRefArray.count];
-            for (int __i__ = 0; __i__ < buslinesRefArray.count; __i__++) {
-                AMapBusLine* item = (AMapBusLine*) HEAP[[buslinesRefArray objectAtIndex:__i__]];
-                [buslines addObject:item];
-            }
+            NSArray<AMapBusLine*>* buslines = (NSArray<AMapBusLine*>*) args[@"buslines"];
         
             // ref
             AMapBusStop* ref = (AMapBusStop*) args[@"__this__"];
@@ -2588,12 +2523,7 @@ extern BOOL enableLog;
         
             // args
             // list arg
-            NSArray<NSNumber*>* busStopsRefArray = (NSArray<NSNumber*> *) args[@"busStops"];
-            NSMutableArray<AMapBusStop*>* busStops = [NSMutableArray arrayWithCapacity:busStopsRefArray.count];
-            for (int __i__ = 0; __i__ < busStopsRefArray.count; __i__++) {
-                AMapBusStop* item = (AMapBusStop*) HEAP[[busStopsRefArray objectAtIndex:__i__]];
-                [busStops addObject:item];
-            }
+            NSArray<AMapBusStop*>* busStops = (NSArray<AMapBusStop*>*) args[@"busStops"];
         
             // ref
             AMapBusLine* ref = (AMapBusLine*) args[@"__this__"];
@@ -2644,12 +2574,7 @@ extern BOOL enableLog;
         
             // args
             // list arg
-            NSArray<NSNumber*>* viaBusStopsRefArray = (NSArray<NSNumber*> *) args[@"viaBusStops"];
-            NSMutableArray<AMapBusStop*>* viaBusStops = [NSMutableArray arrayWithCapacity:viaBusStopsRefArray.count];
-            for (int __i__ = 0; __i__ < viaBusStopsRefArray.count; __i__++) {
-                AMapBusStop* item = (AMapBusStop*) HEAP[[viaBusStopsRefArray objectAtIndex:__i__]];
-                [viaBusStops addObject:item];
-            }
+            NSArray<AMapBusStop*>* viaBusStops = (NSArray<AMapBusStop*>*) args[@"viaBusStops"];
         
             // ref
             AMapBusLine* ref = (AMapBusLine*) args[@"__this__"];
@@ -2768,12 +2693,7 @@ extern BOOL enableLog;
         
             // args
             // list arg
-            NSArray<NSNumber*>* districtsRefArray = (NSArray<NSNumber*> *) args[@"districts"];
-            NSMutableArray<AMapDistrict*>* districts = [NSMutableArray arrayWithCapacity:districtsRefArray.count];
-            for (int __i__ = 0; __i__ < districtsRefArray.count; __i__++) {
-                AMapDistrict* item = (AMapDistrict*) HEAP[[districtsRefArray objectAtIndex:__i__]];
-                [districts addObject:item];
-            }
+            NSArray<AMapDistrict*>* districts = (NSArray<AMapDistrict*>*) args[@"districts"];
         
             // ref
             AMapDistrict* ref = (AMapDistrict*) args[@"__this__"];
@@ -3045,12 +2965,7 @@ extern BOOL enableLog;
         
             // args
             // list arg
-            NSArray<NSNumber*>* citiesRefArray = (NSArray<NSNumber*> *) args[@"cities"];
-            NSMutableArray<AMapCity*>* cities = [NSMutableArray arrayWithCapacity:citiesRefArray.count];
-            for (int __i__ = 0; __i__ < citiesRefArray.count; __i__++) {
-                AMapCity* item = (AMapCity*) HEAP[[citiesRefArray objectAtIndex:__i__]];
-                [cities addObject:item];
-            }
+            NSArray<AMapCity*>* cities = (NSArray<AMapCity*>*) args[@"cities"];
         
             // ref
             AMapStep* ref = (AMapStep*) args[@"__this__"];
@@ -3067,12 +2982,7 @@ extern BOOL enableLog;
         
             // args
             // list arg
-            NSArray<NSNumber*>* tmcsRefArray = (NSArray<NSNumber*> *) args[@"tmcs"];
-            NSMutableArray<AMapTMC*>* tmcs = [NSMutableArray arrayWithCapacity:tmcsRefArray.count];
-            for (int __i__ = 0; __i__ < tmcsRefArray.count; __i__++) {
-                AMapTMC* item = (AMapTMC*) HEAP[[tmcsRefArray objectAtIndex:__i__]];
-                [tmcs addObject:item];
-            }
+            NSArray<AMapTMC*>* tmcs = (NSArray<AMapTMC*>*) args[@"tmcs"];
         
             // ref
             AMapStep* ref = (AMapStep*) args[@"__this__"];
@@ -3140,12 +3050,7 @@ extern BOOL enableLog;
         
             // args
             // list arg
-            NSArray<NSNumber*>* stepsRefArray = (NSArray<NSNumber*> *) args[@"steps"];
-            NSMutableArray<AMapStep*>* steps = [NSMutableArray arrayWithCapacity:stepsRefArray.count];
-            for (int __i__ = 0; __i__ < stepsRefArray.count; __i__++) {
-                AMapStep* item = (AMapStep*) HEAP[[stepsRefArray objectAtIndex:__i__]];
-                [steps addObject:item];
-            }
+            NSArray<AMapStep*>* steps = (NSArray<AMapStep*>*) args[@"steps"];
         
             // ref
             AMapPath* ref = (AMapPath*) args[@"__this__"];
@@ -3281,12 +3186,7 @@ extern BOOL enableLog;
         
             // args
             // list arg
-            NSArray<NSNumber*>* tmcsRefArray = (NSArray<NSNumber*> *) args[@"tmcs"];
-            NSMutableArray<AMapTMC*>* tmcs = [NSMutableArray arrayWithCapacity:tmcsRefArray.count];
-            for (int __i__ = 0; __i__ < tmcsRefArray.count; __i__++) {
-                AMapTMC* item = (AMapTMC*) HEAP[[tmcsRefArray objectAtIndex:__i__]];
-                [tmcs addObject:item];
-            }
+            NSArray<AMapTMC*>* tmcs = (NSArray<AMapTMC*>*) args[@"tmcs"];
         
             // ref
             AMapFutureTimeInfoElement* ref = (AMapFutureTimeInfoElement*) args[@"__this__"];
@@ -3320,12 +3220,7 @@ extern BOOL enableLog;
         
             // args
             // list arg
-            NSArray<NSNumber*>* elementsRefArray = (NSArray<NSNumber*> *) args[@"elements"];
-            NSMutableArray<AMapFutureTimeInfoElement*>* elements = [NSMutableArray arrayWithCapacity:elementsRefArray.count];
-            for (int __i__ = 0; __i__ < elementsRefArray.count; __i__++) {
-                AMapFutureTimeInfoElement* item = (AMapFutureTimeInfoElement*) HEAP[[elementsRefArray objectAtIndex:__i__]];
-                [elements addObject:item];
-            }
+            NSArray<AMapFutureTimeInfoElement*>* elements = (NSArray<AMapFutureTimeInfoElement*>*) args[@"elements"];
         
             // ref
             AMapFutureTimeInfo* ref = (AMapFutureTimeInfo*) args[@"__this__"];
@@ -3410,12 +3305,7 @@ extern BOOL enableLog;
         
             // args
             // list arg
-            NSArray<NSNumber*>* stepsRefArray = (NSArray<NSNumber*> *) args[@"steps"];
-            NSMutableArray<AMapStep*>* steps = [NSMutableArray arrayWithCapacity:stepsRefArray.count];
-            for (int __i__ = 0; __i__ < stepsRefArray.count; __i__++) {
-                AMapStep* item = (AMapStep*) HEAP[[stepsRefArray objectAtIndex:__i__]];
-                [steps addObject:item];
-            }
+            NSArray<AMapStep*>* steps = (NSArray<AMapStep*>*) args[@"steps"];
         
             // ref
             AMapWalking* ref = (AMapWalking*) args[@"__this__"];

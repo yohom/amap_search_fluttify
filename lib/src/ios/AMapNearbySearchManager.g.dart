@@ -38,15 +38,15 @@ class AMapNearbySearchManager extends NSObject  {
 
   //region setters
   Future<void> set_uploadTimeInterval(double uploadTimeInterval) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapNearbySearchManager::set_uploadTimeInterval', <String, dynamic>{'__this__': this, "uploadTimeInterval": uploadTimeInterval});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapNearbySearchManager::set_uploadTimeInterval', <String, dynamic>{'__this__': this, "uploadTimeInterval": uploadTimeInterval});
   
   
   }
   
   Future<void> set_delegate(AMapNearbySearchManagerDelegate delegate) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapNearbySearchManager::set_delegate', <String, dynamic>{'__this__': this, });
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapNearbySearchManager::set_delegate', <String, dynamic>{'__this__': this, });
   
-    MethodChannel('AMapNearbySearchManagerDelegate::Callback', StandardMethodCodec(FluttifyMessageCodec()))
+    MethodChannel('AMapNearbySearchManagerDelegate::Callback', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify')))
       .setMethodCallHandler((methodCall) async {
         try {
           final args = methodCall.arguments as Map;

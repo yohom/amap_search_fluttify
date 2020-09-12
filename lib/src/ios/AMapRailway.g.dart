@@ -98,67 +98,67 @@ class AMapRailway extends AMapSearchObject with NSCoding, NSCopying {
 
   //region setters
   Future<void> set_uid(String uid) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRailway::set_uid', <String, dynamic>{'__this__': this, "uid": uid});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapRailway::set_uid', <String, dynamic>{'__this__': this, "uid": uid});
   
   
   }
   
   Future<void> set_name(String name) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRailway::set_name', <String, dynamic>{'__this__': this, "name": name});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapRailway::set_name', <String, dynamic>{'__this__': this, "name": name});
   
   
   }
   
   Future<void> set_trip(String trip) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRailway::set_trip', <String, dynamic>{'__this__': this, "trip": trip});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapRailway::set_trip', <String, dynamic>{'__this__': this, "trip": trip});
   
   
   }
   
   Future<void> set_type(String type) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRailway::set_type', <String, dynamic>{'__this__': this, "type": type});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapRailway::set_type', <String, dynamic>{'__this__': this, "type": type});
   
   
   }
   
   Future<void> set_distance(int distance) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRailway::set_distance', <String, dynamic>{'__this__': this, "distance": distance});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapRailway::set_distance', <String, dynamic>{'__this__': this, "distance": distance});
   
   
   }
   
   Future<void> set_time(int time) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRailway::set_time', <String, dynamic>{'__this__': this, "time": time});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapRailway::set_time', <String, dynamic>{'__this__': this, "time": time});
   
   
   }
   
   Future<void> set_departureStation(AMapRailwayStation departureStation) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRailway::set_departureStation', <String, dynamic>{'__this__': this, "departureStation": departureStation});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapRailway::set_departureStation', <String, dynamic>{'__this__': this, "departureStation": departureStation});
   
   
   }
   
   Future<void> set_arrivalStation(AMapRailwayStation arrivalStation) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRailway::set_arrivalStation', <String, dynamic>{'__this__': this, "arrivalStation": arrivalStation});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapRailway::set_arrivalStation', <String, dynamic>{'__this__': this, "arrivalStation": arrivalStation});
   
   
   }
   
   Future<void> set_spaces(List<AMapRailwaySpace> spaces) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRailway::set_spaces', <String, dynamic>{'__this__': this, "spaces": spaces});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapRailway::set_spaces', <String, dynamic>{'__this__': this, "spaces": spaces});
   
   
   }
   
   Future<void> set_viaStops(List<AMapRailwayStation> viaStops) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRailway::set_viaStops', <String, dynamic>{'__this__': this, "viaStops": viaStops});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapRailway::set_viaStops', <String, dynamic>{'__this__': this, "viaStops": viaStops});
   
   
   }
   
   Future<void> set_alters(List<AMapRailway> alters) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRailway::set_alters', <String, dynamic>{'__this__': this, "alters": alters});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapRailway::set_alters', <String, dynamic>{'__this__': this, "alters": alters});
   
   
   }
@@ -289,31 +289,31 @@ extension AMapRailway_Batch on List<AMapRailway> {
   }
   
   Future<void> set_departureStation_batch(List<AMapRailwayStation> departureStation) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRailway::set_departureStation_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "departureStation": departureStation[__i__].refId}]);
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRailway::set_departureStation_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "departureStation": departureStation[__i__]}]);
   
   
   }
   
   Future<void> set_arrivalStation_batch(List<AMapRailwayStation> arrivalStation) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRailway::set_arrivalStation_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "arrivalStation": arrivalStation[__i__].refId}]);
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRailway::set_arrivalStation_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "arrivalStation": arrivalStation[__i__]}]);
   
   
   }
   
   Future<void> set_spaces_batch(List<List<AMapRailwaySpace>> spaces) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRailway::set_spaces_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "spaces": spaces[__i__].map((it) => it.refId).toList()}]);
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRailway::set_spaces_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "spaces": spaces[__i__]}]);
   
   
   }
   
   Future<void> set_viaStops_batch(List<List<AMapRailwayStation>> viaStops) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRailway::set_viaStops_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "viaStops": viaStops[__i__].map((it) => it.refId).toList()}]);
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRailway::set_viaStops_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "viaStops": viaStops[__i__]}]);
   
   
   }
   
   Future<void> set_alters_batch(List<List<AMapRailway>> alters) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRailway::set_alters_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "alters": alters[__i__].map((it) => it.refId).toList()}]);
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRailway::set_alters_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "alters": alters[__i__]}]);
   
   
   }

@@ -53,13 +53,13 @@ class AMapFutureRouteSearchResponse extends AMapSearchObject with NSCoding, NSCo
 
   //region setters
   Future<void> set_paths(List<AMapPath> paths) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapFutureRouteSearchResponse::set_paths', <String, dynamic>{'__this__': this, "paths": paths});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapFutureRouteSearchResponse::set_paths', <String, dynamic>{'__this__': this, "paths": paths});
   
   
   }
   
   Future<void> set_timeInfos(List<AMapFutureTimeInfo> timeInfos) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapFutureRouteSearchResponse::set_timeInfos', <String, dynamic>{'__this__': this, "timeInfos": timeInfos});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapFutureRouteSearchResponse::set_timeInfos', <String, dynamic>{'__this__': this, "timeInfos": timeInfos});
   
   
   }
@@ -91,13 +91,13 @@ extension AMapFutureRouteSearchResponse_Batch on List<AMapFutureRouteSearchRespo
 
   //region setters
   Future<void> set_paths_batch(List<List<AMapPath>> paths) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapFutureRouteSearchResponse::set_paths_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "paths": paths[__i__].map((it) => it.refId).toList()}]);
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapFutureRouteSearchResponse::set_paths_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "paths": paths[__i__]}]);
   
   
   }
   
   Future<void> set_timeInfos_batch(List<List<AMapFutureTimeInfo>> timeInfos) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapFutureRouteSearchResponse::set_timeInfos_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "timeInfos": timeInfos[__i__].map((it) => it.refId).toList()}]);
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapFutureRouteSearchResponse::set_timeInfos_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "timeInfos": timeInfos[__i__]}]);
   
   
   }

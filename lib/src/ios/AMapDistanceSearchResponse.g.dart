@@ -48,7 +48,7 @@ class AMapDistanceSearchResponse extends AMapSearchObject with NSCoding, NSCopyi
 
   //region setters
   Future<void> set_results(List<AMapDistanceResult> results) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapDistanceSearchResponse::set_results', <String, dynamic>{'__this__': this, "results": results});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapDistanceSearchResponse::set_results', <String, dynamic>{'__this__': this, "results": results});
   
   
   }
@@ -73,7 +73,7 @@ extension AMapDistanceSearchResponse_Batch on List<AMapDistanceSearchResponse> {
 
   //region setters
   Future<void> set_results_batch(List<List<AMapDistanceResult>> results) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapDistanceSearchResponse::set_results_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "results": results[__i__].map((it) => it.refId).toList()}]);
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapDistanceSearchResponse::set_results_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "results": results[__i__]}]);
   
   
   }

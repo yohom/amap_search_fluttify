@@ -53,9 +53,9 @@ class AMapSearchAPI extends NSObject  {
 
   //region setters
   Future<void> set_delegate(AMapSearchDelegate delegate) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::set_delegate', <String, dynamic>{'__this__': this, });
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapSearchAPI::set_delegate', <String, dynamic>{'__this__': this, });
   
-    MethodChannel('AMapSearchDelegate::Callback', StandardMethodCodec(FluttifyMessageCodec()))
+    MethodChannel('AMapSearchDelegate::Callback', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify')))
       .setMethodCallHandler((methodCall) async {
         try {
           final args = methodCall.arguments as Map;
@@ -224,13 +224,13 @@ class AMapSearchAPI extends NSObject  {
   }
   
   Future<void> set_timeout(int timeout) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::set_timeout', <String, dynamic>{'__this__': this, "timeout": timeout});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapSearchAPI::set_timeout', <String, dynamic>{'__this__': this, "timeout": timeout});
   
   
   }
   
   Future<void> set_language(AMapSearchLanguage language) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapSearchAPI::set_language', <String, dynamic>{'__this__': this, "language": language.toValue()});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapSearchAPI::set_language', <String, dynamic>{'__this__': this, "language": language.toValue()});
   
   
   }

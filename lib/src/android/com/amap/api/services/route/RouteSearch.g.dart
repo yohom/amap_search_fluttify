@@ -138,7 +138,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
   
   
     // handle native call
-    MethodChannel('com.amap.api.services.route.RouteSearch::setRouteSearchListener::Callback', StandardMethodCodec(FluttifyMessageCodec()))
+    MethodChannel('com.amap.api.services.route.RouteSearch::setRouteSearchListener::Callback@$refId', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify')))
         .setMethodCallHandler((methodCall) async {
           try {
             final args = methodCall.arguments as Map;
@@ -209,7 +209,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
   
   
     // handle native call
-    MethodChannel('com.amap.api.services.route.RouteSearch::setOnTruckRouteSearchListener::Callback', StandardMethodCodec(FluttifyMessageCodec()))
+    MethodChannel('com.amap.api.services.route.RouteSearch::setOnTruckRouteSearchListener::Callback@$refId', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify')))
         .setMethodCallHandler((methodCall) async {
           try {
             final args = methodCall.arguments as Map;
@@ -253,7 +253,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
   
   
     // handle native call
-    MethodChannel('com.amap.api.services.route.RouteSearch::setOnRoutePlanSearchListener::Callback', StandardMethodCodec(FluttifyMessageCodec()))
+    MethodChannel('com.amap.api.services.route.RouteSearch::setOnRoutePlanSearchListener::Callback@$refId', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify')))
         .setMethodCallHandler((methodCall) async {
           try {
             final args = methodCall.arguments as Map;

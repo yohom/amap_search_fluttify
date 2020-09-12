@@ -73,37 +73,37 @@ class AMapCloudSearchBaseRequest extends AMapSearchObject with NSCoding, NSCopyi
 
   //region setters
   Future<void> set_tableID(String tableID) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapCloudSearchBaseRequest::set_tableID', <String, dynamic>{'__this__': this, "tableID": tableID});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapCloudSearchBaseRequest::set_tableID', <String, dynamic>{'__this__': this, "tableID": tableID});
   
   
   }
   
   Future<void> set_filter(List<String> filter) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapCloudSearchBaseRequest::set_filter', <String, dynamic>{'__this__': this, "filter": filter});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapCloudSearchBaseRequest::set_filter', <String, dynamic>{'__this__': this, "filter": filter});
   
   
   }
   
   Future<void> set_sortFields(String sortFields) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapCloudSearchBaseRequest::set_sortFields', <String, dynamic>{'__this__': this, "sortFields": sortFields});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapCloudSearchBaseRequest::set_sortFields', <String, dynamic>{'__this__': this, "sortFields": sortFields});
   
   
   }
   
   Future<void> set_sortType(AMapCloudSortType sortType) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapCloudSearchBaseRequest::set_sortType', <String, dynamic>{'__this__': this, "sortType": sortType.toValue()});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapCloudSearchBaseRequest::set_sortType', <String, dynamic>{'__this__': this, "sortType": sortType.toValue()});
   
   
   }
   
   Future<void> set_offset(int offset) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapCloudSearchBaseRequest::set_offset', <String, dynamic>{'__this__': this, "offset": offset});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapCloudSearchBaseRequest::set_offset', <String, dynamic>{'__this__': this, "offset": offset});
   
   
   }
   
   Future<void> set_page(int page) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapCloudSearchBaseRequest::set_page', <String, dynamic>{'__this__': this, "page": page});
+    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapCloudSearchBaseRequest::set_page', <String, dynamic>{'__this__': this, "page": page});
   
   
   }
