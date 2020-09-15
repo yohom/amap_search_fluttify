@@ -21,7 +21,7 @@ class com_amap_api_services_routepoisearch_RoutePOIItem extends java_lang_Object
 
   //region creators
   static Future<com_amap_api_services_routepoisearch_RoutePOIItem> create__() async {
-    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_services_routepoisearch_RoutePOIItem__');
+    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_services_routepoisearch_RoutePOIItem__', );
     final object = com_amap_api_services_routepoisearch_RoutePOIItem()..refId = refId..tag__ = 'amap_search_fluttify';
     return object;
   }

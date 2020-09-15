@@ -21,7 +21,7 @@ class com_amap_api_services_geocoder_RegeocodeRoad extends java_lang_Object with
 
   //region creators
   static Future<com_amap_api_services_geocoder_RegeocodeRoad> create__() async {
-    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_services_geocoder_RegeocodeRoad__');
+    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_services_geocoder_RegeocodeRoad__', );
     final object = com_amap_api_services_geocoder_RegeocodeRoad()..refId = refId..tag__ = 'amap_search_fluttify';
     return object;
   }

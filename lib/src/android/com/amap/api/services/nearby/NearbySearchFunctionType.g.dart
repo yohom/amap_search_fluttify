@@ -13,6 +13,7 @@ extension com_amap_api_services_nearby_NearbySearchFunctionTypeToX on com_amap_a
     switch (this) {
       case com_amap_api_services_nearby_NearbySearchFunctionType.DISTANCE_SEARCH: return com_amap_api_services_nearby_NearbySearchFunctionType.DISTANCE_SEARCH.index + 0;
       case com_amap_api_services_nearby_NearbySearchFunctionType.DRIVING_DISTANCE_SEARCH: return com_amap_api_services_nearby_NearbySearchFunctionType.DRIVING_DISTANCE_SEARCH.index + 0;
+      default: return 0;
     }
   }
 }

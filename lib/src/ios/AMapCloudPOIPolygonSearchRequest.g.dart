@@ -20,17 +20,17 @@ class AMapCloudPOIPolygonSearchRequest extends AMapCloudSearchBaseRequest with N
   //endregion
 
   //region creators
-  static Future<AMapCloudPOIPolygonSearchRequest> create__() async {
-    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createAMapCloudPOIPolygonSearchRequest');
+  static Future<AMapCloudPOIPolygonSearchRequest> create__({ bool init = true /* ios only */ }) async {
+    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createAMapCloudPOIPolygonSearchRequest', {'init': init});
     final object = AMapCloudPOIPolygonSearchRequest()..refId = refId..tag__ = 'amap_search_fluttify';
     return object;
   }
   
-  static Future<List<AMapCloudPOIPolygonSearchRequest>> create_batch__(int length) async {
+  static Future<List<AMapCloudPOIPolygonSearchRequest>> create_batch__(int length, { bool init = true /* ios only */ }) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::create_batchAMapCloudPOIPolygonSearchRequest', {'length': length});
+    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::create_batchAMapCloudPOIPolygonSearchRequest', {'length': length, 'init': init});
   
     final List<AMapCloudPOIPolygonSearchRequest> typedResult = resultBatch.map((result) => AMapCloudPOIPolygonSearchRequest()..refId = result..tag__ = 'amap_search_fluttify').toList();
     return typedResult;

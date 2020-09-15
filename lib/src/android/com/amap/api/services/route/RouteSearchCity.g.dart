@@ -21,7 +21,7 @@ class com_amap_api_services_route_RouteSearchCity extends com_amap_api_services_
 
   //region creators
   static Future<com_amap_api_services_route_RouteSearchCity> create__() async {
-    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_services_route_RouteSearchCity__');
+    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_services_route_RouteSearchCity__', );
     final object = com_amap_api_services_route_RouteSearchCity()..refId = refId..tag__ = 'amap_search_fluttify';
     return object;
   }

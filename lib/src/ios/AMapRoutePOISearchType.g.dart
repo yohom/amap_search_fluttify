@@ -21,6 +21,7 @@ extension AMapRoutePOISearchTypeToX on AMapRoutePOISearchType {
       case AMapRoutePOISearchType.AMapRoutePOISearchTypeToilet: return 3;
       case AMapRoutePOISearchType.AMapRoutePOISearchTypeGasAirStation: return 4;
       case AMapRoutePOISearchType.AMapRoutePOISearchTypeParkStation: return 5;
+      default: return 0;
     }
   }
 }

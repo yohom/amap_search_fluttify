@@ -17,6 +17,7 @@ extension AMapTruckSizeTypeToX on AMapTruckSizeType {
       case AMapTruckSizeType.AMapTruckSizeTypeLight: return 2;
       case AMapTruckSizeType.AMapTruckSizeTypeMedium: return 3;
       case AMapTruckSizeType.AMapTruckSizeTypeHeavy: return 4;
+      default: return 0;
     }
   }
 }

@@ -20,17 +20,17 @@ class AMapBusLineNameSearchRequest extends AMapBusLineBaseSearchRequest with NSC
   //endregion
 
   //region creators
-  static Future<AMapBusLineNameSearchRequest> create__() async {
-    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createAMapBusLineNameSearchRequest');
+  static Future<AMapBusLineNameSearchRequest> create__({ bool init = true /* ios only */ }) async {
+    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createAMapBusLineNameSearchRequest', {'init': init});
     final object = AMapBusLineNameSearchRequest()..refId = refId..tag__ = 'amap_search_fluttify';
     return object;
   }
   
-  static Future<List<AMapBusLineNameSearchRequest>> create_batch__(int length) async {
+  static Future<List<AMapBusLineNameSearchRequest>> create_batch__(int length, { bool init = true /* ios only */ }) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::create_batchAMapBusLineNameSearchRequest', {'length': length});
+    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::create_batchAMapBusLineNameSearchRequest', {'length': length, 'init': init});
   
     final List<AMapBusLineNameSearchRequest> typedResult = resultBatch.map((result) => AMapBusLineNameSearchRequest()..refId = result..tag__ = 'amap_search_fluttify').toList();
     return typedResult;

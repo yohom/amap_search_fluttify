@@ -21,7 +21,7 @@ class com_amap_api_services_route_RideRouteResult extends com_amap_api_services_
 
   //region creators
   static Future<com_amap_api_services_route_RideRouteResult> create__() async {
-    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_services_route_RideRouteResult__');
+    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_services_route_RideRouteResult__', );
     final object = com_amap_api_services_route_RideRouteResult()..refId = refId..tag__ = 'amap_search_fluttify';
     return object;
   }

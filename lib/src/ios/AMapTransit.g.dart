@@ -20,17 +20,17 @@ class AMapTransit extends AMapSearchObject with NSCoding, NSCopying {
   //endregion
 
   //region creators
-  static Future<AMapTransit> create__() async {
-    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createAMapTransit');
+  static Future<AMapTransit> create__({ bool init = true /* ios only */ }) async {
+    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createAMapTransit', {'init': init});
     final object = AMapTransit()..refId = refId..tag__ = 'amap_search_fluttify';
     return object;
   }
   
-  static Future<List<AMapTransit>> create_batch__(int length) async {
+  static Future<List<AMapTransit>> create_batch__(int length, { bool init = true /* ios only */ }) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::create_batchAMapTransit', {'length': length});
+    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::create_batchAMapTransit', {'length': length, 'init': init});
   
     final List<AMapTransit> typedResult = resultBatch.map((result) => AMapTransit()..refId = result..tag__ = 'amap_search_fluttify').toList();
     return typedResult;

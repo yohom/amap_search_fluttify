@@ -27,7 +27,7 @@ class com_amap_api_services_route_RouteSearch_BusRouteQuery extends java_lang_Ob
   }
   
   static Future<com_amap_api_services_route_RouteSearch_BusRouteQuery> create__() async {
-    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_services_route_RouteSearch_BusRouteQuery__');
+    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_services_route_RouteSearch_BusRouteQuery__', );
     final object = com_amap_api_services_route_RouteSearch_BusRouteQuery()..refId = refId..tag__ = 'amap_search_fluttify';
     return object;
   }

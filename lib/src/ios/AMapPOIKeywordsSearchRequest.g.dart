@@ -20,17 +20,17 @@ class AMapPOIKeywordsSearchRequest extends AMapPOISearchBaseRequest with NSCodin
   //endregion
 
   //region creators
-  static Future<AMapPOIKeywordsSearchRequest> create__() async {
-    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createAMapPOIKeywordsSearchRequest');
+  static Future<AMapPOIKeywordsSearchRequest> create__({ bool init = true /* ios only */ }) async {
+    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createAMapPOIKeywordsSearchRequest', {'init': init});
     final object = AMapPOIKeywordsSearchRequest()..refId = refId..tag__ = 'amap_search_fluttify';
     return object;
   }
   
-  static Future<List<AMapPOIKeywordsSearchRequest>> create_batch__(int length) async {
+  static Future<List<AMapPOIKeywordsSearchRequest>> create_batch__(int length, { bool init = true /* ios only */ }) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::create_batchAMapPOIKeywordsSearchRequest', {'length': length});
+    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::create_batchAMapPOIKeywordsSearchRequest', {'length': length, 'init': init});
   
     final List<AMapPOIKeywordsSearchRequest> typedResult = resultBatch.map((result) => AMapPOIKeywordsSearchRequest()..refId = result..tag__ = 'amap_search_fluttify').toList();
     return typedResult;

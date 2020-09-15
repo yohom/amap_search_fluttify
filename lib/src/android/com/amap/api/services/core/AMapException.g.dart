@@ -137,7 +137,7 @@ class com_amap_api_services_core_AMapException extends java_lang_Object  {
   }
   
   static Future<com_amap_api_services_core_AMapException> create__() async {
-    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_services_core_AMapException__');
+    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_services_core_AMapException__', );
     final object = com_amap_api_services_core_AMapException()..refId = refId..tag__ = 'amap_search_fluttify';
     return object;
   }

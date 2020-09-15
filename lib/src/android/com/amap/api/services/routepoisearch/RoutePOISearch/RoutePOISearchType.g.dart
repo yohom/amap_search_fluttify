@@ -21,6 +21,7 @@ extension com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType
       case com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType.TypeToilet: return com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType.TypeToilet.index + 0;
       case com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType.TypeFillingStation: return com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType.TypeFillingStation.index + 0;
       case com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType.TypeServiceArea: return com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType.TypeServiceArea.index + 0;
+      default: return 0;
     }
   }
 }

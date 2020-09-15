@@ -21,7 +21,7 @@ class com_amap_api_services_core_SearchUtils extends java_lang_Object  {
 
   //region creators
   static Future<com_amap_api_services_core_SearchUtils> create__() async {
-    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_services_core_SearchUtils__');
+    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_services_core_SearchUtils__', );
     final object = com_amap_api_services_core_SearchUtils()..refId = refId..tag__ = 'amap_search_fluttify';
     return object;
   }

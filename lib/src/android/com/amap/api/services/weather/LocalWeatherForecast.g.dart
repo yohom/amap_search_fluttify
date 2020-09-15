@@ -21,7 +21,7 @@ class com_amap_api_services_weather_LocalWeatherForecast extends java_lang_Objec
 
   //region creators
   static Future<com_amap_api_services_weather_LocalWeatherForecast> create__() async {
-    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_services_weather_LocalWeatherForecast__');
+    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_services_weather_LocalWeatherForecast__', );
     final object = com_amap_api_services_weather_LocalWeatherForecast()..refId = refId..tag__ = 'amap_search_fluttify';
     return object;
   }

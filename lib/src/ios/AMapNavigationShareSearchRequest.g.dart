@@ -20,17 +20,17 @@ class AMapNavigationShareSearchRequest extends AMapShareSearchBaseRequest with N
   //endregion
 
   //region creators
-  static Future<AMapNavigationShareSearchRequest> create__() async {
-    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createAMapNavigationShareSearchRequest');
+  static Future<AMapNavigationShareSearchRequest> create__({ bool init = true /* ios only */ }) async {
+    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createAMapNavigationShareSearchRequest', {'init': init});
     final object = AMapNavigationShareSearchRequest()..refId = refId..tag__ = 'amap_search_fluttify';
     return object;
   }
   
-  static Future<List<AMapNavigationShareSearchRequest>> create_batch__(int length) async {
+  static Future<List<AMapNavigationShareSearchRequest>> create_batch__(int length, { bool init = true /* ios only */ }) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::create_batchAMapNavigationShareSearchRequest', {'length': length});
+    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::create_batchAMapNavigationShareSearchRequest', {'length': length, 'init': init});
   
     final List<AMapNavigationShareSearchRequest> typedResult = resultBatch.map((result) => AMapNavigationShareSearchRequest()..refId = result..tag__ = 'amap_search_fluttify').toList();
     return typedResult;

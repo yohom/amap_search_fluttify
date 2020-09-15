@@ -13,6 +13,7 @@ extension com_amap_api_services_busline_BusLineQuery_SearchTypeToX on com_amap_a
     switch (this) {
       case com_amap_api_services_busline_BusLineQuery_SearchType.BY_LINE_ID: return com_amap_api_services_busline_BusLineQuery_SearchType.BY_LINE_ID.index + 0;
       case com_amap_api_services_busline_BusLineQuery_SearchType.BY_LINE_NAME: return com_amap_api_services_busline_BusLineQuery_SearchType.BY_LINE_NAME.index + 0;
+      default: return 0;
     }
   }
 }
