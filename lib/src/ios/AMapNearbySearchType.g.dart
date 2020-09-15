@@ -13,6 +13,7 @@ extension AMapNearbySearchTypeToX on AMapNearbySearchType {
     switch (this) {
       case AMapNearbySearchType.AMapNearbySearchTypeLiner: return 0;
       case AMapNearbySearchType.AMapNearbySearchTypeDriving: return 1;
+      default: return 0;
     }
   }
 }

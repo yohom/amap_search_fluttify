@@ -20,17 +20,17 @@ class AMapLocalWeatherLive extends AMapSearchObject with NSCoding, NSCopying {
   //endregion
 
   //region creators
-  static Future<AMapLocalWeatherLive> create__() async {
-    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createAMapLocalWeatherLive');
+  static Future<AMapLocalWeatherLive> create__({ bool init = true /* ios only */ }) async {
+    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createAMapLocalWeatherLive', {'init': init});
     final object = AMapLocalWeatherLive()..refId = refId..tag__ = 'amap_search_fluttify';
     return object;
   }
   
-  static Future<List<AMapLocalWeatherLive>> create_batch__(int length) async {
+  static Future<List<AMapLocalWeatherLive>> create_batch__(int length, { bool init = true /* ios only */ }) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::create_batchAMapLocalWeatherLive', {'length': length});
+    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::create_batchAMapLocalWeatherLive', {'length': length, 'init': init});
   
     final List<AMapLocalWeatherLive> typedResult = resultBatch.map((result) => AMapLocalWeatherLive()..refId = result..tag__ = 'amap_search_fluttify').toList();
     return typedResult;

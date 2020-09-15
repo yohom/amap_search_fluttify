@@ -21,7 +21,7 @@ class com_amap_api_services_geocoder_AoiItem extends java_lang_Object with andro
 
   //region creators
   static Future<com_amap_api_services_geocoder_AoiItem> create__() async {
-    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_services_geocoder_AoiItem__');
+    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_services_geocoder_AoiItem__', );
     final object = com_amap_api_services_geocoder_AoiItem()..refId = refId..tag__ = 'amap_search_fluttify';
     return object;
   }

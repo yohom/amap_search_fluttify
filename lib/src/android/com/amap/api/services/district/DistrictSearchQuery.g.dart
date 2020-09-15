@@ -25,7 +25,7 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
 
   //region creators
   static Future<com_amap_api_services_district_DistrictSearchQuery> create__() async {
-    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_services_district_DistrictSearchQuery__');
+    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_services_district_DistrictSearchQuery__', );
     final object = com_amap_api_services_district_DistrictSearchQuery()..refId = refId..tag__ = 'amap_search_fluttify';
     return object;
   }

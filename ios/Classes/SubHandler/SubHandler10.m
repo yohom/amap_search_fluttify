@@ -710,9 +710,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapPOISearchBaseRequest");
             }
         
-            AMapPOISearchBaseRequest* ref = [[AMapPOISearchBaseRequest alloc] init];
+            AMapPOISearchBaseRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapPOISearchBaseRequest alloc] init];
+            } else {
+                __this__ = [AMapPOISearchBaseRequest alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -723,9 +728,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapPOIIDSearchRequest");
             }
         
-            AMapPOIIDSearchRequest* ref = [[AMapPOIIDSearchRequest alloc] init];
+            AMapPOIIDSearchRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapPOIIDSearchRequest alloc] init];
+            } else {
+                __this__ = [AMapPOIIDSearchRequest alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -736,9 +746,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapPOIKeywordsSearchRequest");
             }
         
-            AMapPOIKeywordsSearchRequest* ref = [[AMapPOIKeywordsSearchRequest alloc] init];
+            AMapPOIKeywordsSearchRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapPOIKeywordsSearchRequest alloc] init];
+            } else {
+                __this__ = [AMapPOIKeywordsSearchRequest alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -749,9 +764,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapPOIAroundSearchRequest");
             }
         
-            AMapPOIAroundSearchRequest* ref = [[AMapPOIAroundSearchRequest alloc] init];
+            AMapPOIAroundSearchRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapPOIAroundSearchRequest alloc] init];
+            } else {
+                __this__ = [AMapPOIAroundSearchRequest alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -762,9 +782,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapPOIPolygonSearchRequest");
             }
         
-            AMapPOIPolygonSearchRequest* ref = [[AMapPOIPolygonSearchRequest alloc] init];
+            AMapPOIPolygonSearchRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapPOIPolygonSearchRequest alloc] init];
+            } else {
+                __this__ = [AMapPOIPolygonSearchRequest alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -775,9 +800,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapPOISearchResponse");
             }
         
-            AMapPOISearchResponse* ref = [[AMapPOISearchResponse alloc] init];
+            AMapPOISearchResponse* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapPOISearchResponse alloc] init];
+            } else {
+                __this__ = [AMapPOISearchResponse alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -788,9 +818,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapRoutePOISearchRequest");
             }
         
-            AMapRoutePOISearchRequest* ref = [[AMapRoutePOISearchRequest alloc] init];
+            AMapRoutePOISearchRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapRoutePOISearchRequest alloc] init];
+            } else {
+                __this__ = [AMapRoutePOISearchRequest alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -801,9 +836,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapRoutePOISearchResponse");
             }
         
-            AMapRoutePOISearchResponse* ref = [[AMapRoutePOISearchResponse alloc] init];
+            AMapRoutePOISearchResponse* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapRoutePOISearchResponse alloc] init];
+            } else {
+                __this__ = [AMapRoutePOISearchResponse alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -814,9 +854,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapInputTipsSearchRequest");
             }
         
-            AMapInputTipsSearchRequest* ref = [[AMapInputTipsSearchRequest alloc] init];
+            AMapInputTipsSearchRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapInputTipsSearchRequest alloc] init];
+            } else {
+                __this__ = [AMapInputTipsSearchRequest alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -827,9 +872,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapInputTipsSearchResponse");
             }
         
-            AMapInputTipsSearchResponse* ref = [[AMapInputTipsSearchResponse alloc] init];
+            AMapInputTipsSearchResponse* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapInputTipsSearchResponse alloc] init];
+            } else {
+                __this__ = [AMapInputTipsSearchResponse alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -840,9 +890,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapGeocodeSearchRequest");
             }
         
-            AMapGeocodeSearchRequest* ref = [[AMapGeocodeSearchRequest alloc] init];
+            AMapGeocodeSearchRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapGeocodeSearchRequest alloc] init];
+            } else {
+                __this__ = [AMapGeocodeSearchRequest alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -853,9 +908,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapGeocodeSearchResponse");
             }
         
-            AMapGeocodeSearchResponse* ref = [[AMapGeocodeSearchResponse alloc] init];
+            AMapGeocodeSearchResponse* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapGeocodeSearchResponse alloc] init];
+            } else {
+                __this__ = [AMapGeocodeSearchResponse alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -866,9 +926,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapReGeocodeSearchRequest");
             }
         
-            AMapReGeocodeSearchRequest* ref = [[AMapReGeocodeSearchRequest alloc] init];
+            AMapReGeocodeSearchRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapReGeocodeSearchRequest alloc] init];
+            } else {
+                __this__ = [AMapReGeocodeSearchRequest alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -879,9 +944,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapReGeocodeSearchResponse");
             }
         
-            AMapReGeocodeSearchResponse* ref = [[AMapReGeocodeSearchResponse alloc] init];
+            AMapReGeocodeSearchResponse* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapReGeocodeSearchResponse alloc] init];
+            } else {
+                __this__ = [AMapReGeocodeSearchResponse alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -892,9 +962,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapBusStopSearchRequest");
             }
         
-            AMapBusStopSearchRequest* ref = [[AMapBusStopSearchRequest alloc] init];
+            AMapBusStopSearchRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapBusStopSearchRequest alloc] init];
+            } else {
+                __this__ = [AMapBusStopSearchRequest alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -905,9 +980,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapBusStopSearchResponse");
             }
         
-            AMapBusStopSearchResponse* ref = [[AMapBusStopSearchResponse alloc] init];
+            AMapBusStopSearchResponse* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapBusStopSearchResponse alloc] init];
+            } else {
+                __this__ = [AMapBusStopSearchResponse alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -918,9 +998,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapBusLineBaseSearchRequest");
             }
         
-            AMapBusLineBaseSearchRequest* ref = [[AMapBusLineBaseSearchRequest alloc] init];
+            AMapBusLineBaseSearchRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapBusLineBaseSearchRequest alloc] init];
+            } else {
+                __this__ = [AMapBusLineBaseSearchRequest alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -931,9 +1016,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapBusLineNameSearchRequest");
             }
         
-            AMapBusLineNameSearchRequest* ref = [[AMapBusLineNameSearchRequest alloc] init];
+            AMapBusLineNameSearchRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapBusLineNameSearchRequest alloc] init];
+            } else {
+                __this__ = [AMapBusLineNameSearchRequest alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -944,9 +1034,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapBusLineIDSearchRequest");
             }
         
-            AMapBusLineIDSearchRequest* ref = [[AMapBusLineIDSearchRequest alloc] init];
+            AMapBusLineIDSearchRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapBusLineIDSearchRequest alloc] init];
+            } else {
+                __this__ = [AMapBusLineIDSearchRequest alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -957,9 +1052,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapBusLineSearchResponse");
             }
         
-            AMapBusLineSearchResponse* ref = [[AMapBusLineSearchResponse alloc] init];
+            AMapBusLineSearchResponse* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapBusLineSearchResponse alloc] init];
+            } else {
+                __this__ = [AMapBusLineSearchResponse alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -970,9 +1070,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapDistrictSearchRequest");
             }
         
-            AMapDistrictSearchRequest* ref = [[AMapDistrictSearchRequest alloc] init];
+            AMapDistrictSearchRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapDistrictSearchRequest alloc] init];
+            } else {
+                __this__ = [AMapDistrictSearchRequest alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -983,9 +1088,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapDistrictSearchResponse");
             }
         
-            AMapDistrictSearchResponse* ref = [[AMapDistrictSearchResponse alloc] init];
+            AMapDistrictSearchResponse* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapDistrictSearchResponse alloc] init];
+            } else {
+                __this__ = [AMapDistrictSearchResponse alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -996,9 +1106,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapRouteSearchBaseRequest");
             }
         
-            AMapRouteSearchBaseRequest* ref = [[AMapRouteSearchBaseRequest alloc] init];
+            AMapRouteSearchBaseRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapRouteSearchBaseRequest alloc] init];
+            } else {
+                __this__ = [AMapRouteSearchBaseRequest alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1009,9 +1124,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapDrivingRouteSearchRequest");
             }
         
-            AMapDrivingRouteSearchRequest* ref = [[AMapDrivingRouteSearchRequest alloc] init];
+            AMapDrivingRouteSearchRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapDrivingRouteSearchRequest alloc] init];
+            } else {
+                __this__ = [AMapDrivingRouteSearchRequest alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1022,9 +1142,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapWalkingRouteSearchRequest");
             }
         
-            AMapWalkingRouteSearchRequest* ref = [[AMapWalkingRouteSearchRequest alloc] init];
+            AMapWalkingRouteSearchRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapWalkingRouteSearchRequest alloc] init];
+            } else {
+                __this__ = [AMapWalkingRouteSearchRequest alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1035,9 +1160,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapTransitRouteSearchRequest");
             }
         
-            AMapTransitRouteSearchRequest* ref = [[AMapTransitRouteSearchRequest alloc] init];
+            AMapTransitRouteSearchRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapTransitRouteSearchRequest alloc] init];
+            } else {
+                __this__ = [AMapTransitRouteSearchRequest alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1048,9 +1178,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapRidingRouteSearchRequest");
             }
         
-            AMapRidingRouteSearchRequest* ref = [[AMapRidingRouteSearchRequest alloc] init];
+            AMapRidingRouteSearchRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapRidingRouteSearchRequest alloc] init];
+            } else {
+                __this__ = [AMapRidingRouteSearchRequest alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1061,9 +1196,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapRouteSearchResponse");
             }
         
-            AMapRouteSearchResponse* ref = [[AMapRouteSearchResponse alloc] init];
+            AMapRouteSearchResponse* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapRouteSearchResponse alloc] init];
+            } else {
+                __this__ = [AMapRouteSearchResponse alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1074,9 +1214,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapRidingRouteSearchResponse");
             }
         
-            AMapRidingRouteSearchResponse* ref = [[AMapRidingRouteSearchResponse alloc] init];
+            AMapRidingRouteSearchResponse* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapRidingRouteSearchResponse alloc] init];
+            } else {
+                __this__ = [AMapRidingRouteSearchResponse alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1087,9 +1232,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapTruckRouteSearchRequest");
             }
         
-            AMapTruckRouteSearchRequest* ref = [[AMapTruckRouteSearchRequest alloc] init];
+            AMapTruckRouteSearchRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapTruckRouteSearchRequest alloc] init];
+            } else {
+                __this__ = [AMapTruckRouteSearchRequest alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1100,9 +1250,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapDistanceSearchRequest");
             }
         
-            AMapDistanceSearchRequest* ref = [[AMapDistanceSearchRequest alloc] init];
+            AMapDistanceSearchRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapDistanceSearchRequest alloc] init];
+            } else {
+                __this__ = [AMapDistanceSearchRequest alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1113,9 +1268,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapDistanceSearchResponse");
             }
         
-            AMapDistanceSearchResponse* ref = [[AMapDistanceSearchResponse alloc] init];
+            AMapDistanceSearchResponse* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapDistanceSearchResponse alloc] init];
+            } else {
+                __this__ = [AMapDistanceSearchResponse alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1126,9 +1286,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapWeatherSearchRequest");
             }
         
-            AMapWeatherSearchRequest* ref = [[AMapWeatherSearchRequest alloc] init];
+            AMapWeatherSearchRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapWeatherSearchRequest alloc] init];
+            } else {
+                __this__ = [AMapWeatherSearchRequest alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1139,9 +1304,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapWeatherSearchResponse");
             }
         
-            AMapWeatherSearchResponse* ref = [[AMapWeatherSearchResponse alloc] init];
+            AMapWeatherSearchResponse* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapWeatherSearchResponse alloc] init];
+            } else {
+                __this__ = [AMapWeatherSearchResponse alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1152,9 +1322,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapRoadTrafficSearchBaseRequest");
             }
         
-            AMapRoadTrafficSearchBaseRequest* ref = [[AMapRoadTrafficSearchBaseRequest alloc] init];
+            AMapRoadTrafficSearchBaseRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapRoadTrafficSearchBaseRequest alloc] init];
+            } else {
+                __this__ = [AMapRoadTrafficSearchBaseRequest alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1165,9 +1340,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapRoadTrafficSearchRequest");
             }
         
-            AMapRoadTrafficSearchRequest* ref = [[AMapRoadTrafficSearchRequest alloc] init];
+            AMapRoadTrafficSearchRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapRoadTrafficSearchRequest alloc] init];
+            } else {
+                __this__ = [AMapRoadTrafficSearchRequest alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1178,9 +1358,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapRoadTrafficCircleSearchRequest");
             }
         
-            AMapRoadTrafficCircleSearchRequest* ref = [[AMapRoadTrafficCircleSearchRequest alloc] init];
+            AMapRoadTrafficCircleSearchRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapRoadTrafficCircleSearchRequest alloc] init];
+            } else {
+                __this__ = [AMapRoadTrafficCircleSearchRequest alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1191,9 +1376,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapRoadTrafficSearchResponse");
             }
         
-            AMapRoadTrafficSearchResponse* ref = [[AMapRoadTrafficSearchResponse alloc] init];
+            AMapRoadTrafficSearchResponse* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapRoadTrafficSearchResponse alloc] init];
+            } else {
+                __this__ = [AMapRoadTrafficSearchResponse alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1204,9 +1394,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapNearbySearchRequest");
             }
         
-            AMapNearbySearchRequest* ref = [[AMapNearbySearchRequest alloc] init];
+            AMapNearbySearchRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapNearbySearchRequest alloc] init];
+            } else {
+                __this__ = [AMapNearbySearchRequest alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1217,9 +1412,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapNearbySearchResponse");
             }
         
-            AMapNearbySearchResponse* ref = [[AMapNearbySearchResponse alloc] init];
+            AMapNearbySearchResponse* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapNearbySearchResponse alloc] init];
+            } else {
+                __this__ = [AMapNearbySearchResponse alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1230,9 +1430,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapCloudSearchBaseRequest");
             }
         
-            AMapCloudSearchBaseRequest* ref = [[AMapCloudSearchBaseRequest alloc] init];
+            AMapCloudSearchBaseRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapCloudSearchBaseRequest alloc] init];
+            } else {
+                __this__ = [AMapCloudSearchBaseRequest alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1243,9 +1448,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapCloudPOIAroundSearchRequest");
             }
         
-            AMapCloudPOIAroundSearchRequest* ref = [[AMapCloudPOIAroundSearchRequest alloc] init];
+            AMapCloudPOIAroundSearchRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapCloudPOIAroundSearchRequest alloc] init];
+            } else {
+                __this__ = [AMapCloudPOIAroundSearchRequest alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1256,9 +1466,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapCloudPOIPolygonSearchRequest");
             }
         
-            AMapCloudPOIPolygonSearchRequest* ref = [[AMapCloudPOIPolygonSearchRequest alloc] init];
+            AMapCloudPOIPolygonSearchRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapCloudPOIPolygonSearchRequest alloc] init];
+            } else {
+                __this__ = [AMapCloudPOIPolygonSearchRequest alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1269,9 +1484,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapCloudPOIIDSearchRequest");
             }
         
-            AMapCloudPOIIDSearchRequest* ref = [[AMapCloudPOIIDSearchRequest alloc] init];
+            AMapCloudPOIIDSearchRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapCloudPOIIDSearchRequest alloc] init];
+            } else {
+                __this__ = [AMapCloudPOIIDSearchRequest alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1282,9 +1502,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapCloudPOILocalSearchRequest");
             }
         
-            AMapCloudPOILocalSearchRequest* ref = [[AMapCloudPOILocalSearchRequest alloc] init];
+            AMapCloudPOILocalSearchRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapCloudPOILocalSearchRequest alloc] init];
+            } else {
+                __this__ = [AMapCloudPOILocalSearchRequest alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1295,9 +1520,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapCloudPOISearchResponse");
             }
         
-            AMapCloudPOISearchResponse* ref = [[AMapCloudPOISearchResponse alloc] init];
+            AMapCloudPOISearchResponse* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapCloudPOISearchResponse alloc] init];
+            } else {
+                __this__ = [AMapCloudPOISearchResponse alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1308,9 +1538,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapShareSearchBaseRequest");
             }
         
-            AMapShareSearchBaseRequest* ref = [[AMapShareSearchBaseRequest alloc] init];
+            AMapShareSearchBaseRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapShareSearchBaseRequest alloc] init];
+            } else {
+                __this__ = [AMapShareSearchBaseRequest alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1321,9 +1556,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapLocationShareSearchRequest");
             }
         
-            AMapLocationShareSearchRequest* ref = [[AMapLocationShareSearchRequest alloc] init];
+            AMapLocationShareSearchRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapLocationShareSearchRequest alloc] init];
+            } else {
+                __this__ = [AMapLocationShareSearchRequest alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1334,9 +1574,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapPOIShareSearchRequest");
             }
         
-            AMapPOIShareSearchRequest* ref = [[AMapPOIShareSearchRequest alloc] init];
+            AMapPOIShareSearchRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapPOIShareSearchRequest alloc] init];
+            } else {
+                __this__ = [AMapPOIShareSearchRequest alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1347,9 +1592,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapRouteShareSearchRequest");
             }
         
-            AMapRouteShareSearchRequest* ref = [[AMapRouteShareSearchRequest alloc] init];
+            AMapRouteShareSearchRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapRouteShareSearchRequest alloc] init];
+            } else {
+                __this__ = [AMapRouteShareSearchRequest alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1360,9 +1610,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapNavigationShareSearchRequest");
             }
         
-            AMapNavigationShareSearchRequest* ref = [[AMapNavigationShareSearchRequest alloc] init];
+            AMapNavigationShareSearchRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapNavigationShareSearchRequest alloc] init];
+            } else {
+                __this__ = [AMapNavigationShareSearchRequest alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1373,9 +1628,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapShareSearchResponse");
             }
         
-            AMapShareSearchResponse* ref = [[AMapShareSearchResponse alloc] init];
+            AMapShareSearchResponse* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapShareSearchResponse alloc] init];
+            } else {
+                __this__ = [AMapShareSearchResponse alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1386,9 +1646,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapFutureRouteSearchRequest");
             }
         
-            AMapFutureRouteSearchRequest* ref = [[AMapFutureRouteSearchRequest alloc] init];
+            AMapFutureRouteSearchRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapFutureRouteSearchRequest alloc] init];
+            } else {
+                __this__ = [AMapFutureRouteSearchRequest alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1399,9 +1664,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapFutureRouteSearchResponse");
             }
         
-            AMapFutureRouteSearchResponse* ref = [[AMapFutureRouteSearchResponse alloc] init];
+            AMapFutureRouteSearchResponse* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapFutureRouteSearchResponse alloc] init];
+            } else {
+                __this__ = [AMapFutureRouteSearchResponse alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1412,9 +1682,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapSearchObject");
             }
         
-            AMapSearchObject* ref = [[AMapSearchObject alloc] init];
+            AMapSearchObject* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapSearchObject alloc] init];
+            } else {
+                __this__ = [AMapSearchObject alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1425,9 +1700,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapGeoPoint");
             }
         
-            AMapGeoPoint* ref = [[AMapGeoPoint alloc] init];
+            AMapGeoPoint* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapGeoPoint alloc] init];
+            } else {
+                __this__ = [AMapGeoPoint alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1438,9 +1718,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapGeoPolygon");
             }
         
-            AMapGeoPolygon* ref = [[AMapGeoPolygon alloc] init];
+            AMapGeoPolygon* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapGeoPolygon alloc] init];
+            } else {
+                __this__ = [AMapGeoPolygon alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1451,9 +1736,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapCity");
             }
         
-            AMapCity* ref = [[AMapCity alloc] init];
+            AMapCity* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapCity alloc] init];
+            } else {
+                __this__ = [AMapCity alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1464,9 +1754,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapSuggestion");
             }
         
-            AMapSuggestion* ref = [[AMapSuggestion alloc] init];
+            AMapSuggestion* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapSuggestion alloc] init];
+            } else {
+                __this__ = [AMapSuggestion alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1477,9 +1772,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapTip");
             }
         
-            AMapTip* ref = [[AMapTip alloc] init];
+            AMapTip* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapTip alloc] init];
+            } else {
+                __this__ = [AMapTip alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1490,9 +1790,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapImage");
             }
         
-            AMapImage* ref = [[AMapImage alloc] init];
+            AMapImage* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapImage alloc] init];
+            } else {
+                __this__ = [AMapImage alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1503,9 +1808,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapPOIExtension");
             }
         
-            AMapPOIExtension* ref = [[AMapPOIExtension alloc] init];
+            AMapPOIExtension* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapPOIExtension alloc] init];
+            } else {
+                __this__ = [AMapPOIExtension alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1516,9 +1826,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapIndoorData");
             }
         
-            AMapIndoorData* ref = [[AMapIndoorData alloc] init];
+            AMapIndoorData* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapIndoorData alloc] init];
+            } else {
+                __this__ = [AMapIndoorData alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1529,9 +1844,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapSubPOI");
             }
         
-            AMapSubPOI* ref = [[AMapSubPOI alloc] init];
+            AMapSubPOI* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapSubPOI alloc] init];
+            } else {
+                __this__ = [AMapSubPOI alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1542,9 +1862,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapRoutePOI");
             }
         
-            AMapRoutePOI* ref = [[AMapRoutePOI alloc] init];
+            AMapRoutePOI* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapRoutePOI alloc] init];
+            } else {
+                __this__ = [AMapRoutePOI alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1555,9 +1880,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapPOI");
             }
         
-            AMapPOI* ref = [[AMapPOI alloc] init];
+            AMapPOI* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapPOI alloc] init];
+            } else {
+                __this__ = [AMapPOI alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1568,9 +1898,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapAOI");
             }
         
-            AMapAOI* ref = [[AMapAOI alloc] init];
+            AMapAOI* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapAOI alloc] init];
+            } else {
+                __this__ = [AMapAOI alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1581,9 +1916,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapRoad");
             }
         
-            AMapRoad* ref = [[AMapRoad alloc] init];
+            AMapRoad* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapRoad alloc] init];
+            } else {
+                __this__ = [AMapRoad alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1594,9 +1934,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapRoadInter");
             }
         
-            AMapRoadInter* ref = [[AMapRoadInter alloc] init];
+            AMapRoadInter* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapRoadInter alloc] init];
+            } else {
+                __this__ = [AMapRoadInter alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1607,9 +1952,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapStreetNumber");
             }
         
-            AMapStreetNumber* ref = [[AMapStreetNumber alloc] init];
+            AMapStreetNumber* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapStreetNumber alloc] init];
+            } else {
+                __this__ = [AMapStreetNumber alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1620,9 +1970,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapBusinessArea");
             }
         
-            AMapBusinessArea* ref = [[AMapBusinessArea alloc] init];
+            AMapBusinessArea* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapBusinessArea alloc] init];
+            } else {
+                __this__ = [AMapBusinessArea alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1633,9 +1988,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapAddressComponent");
             }
         
-            AMapAddressComponent* ref = [[AMapAddressComponent alloc] init];
+            AMapAddressComponent* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapAddressComponent alloc] init];
+            } else {
+                __this__ = [AMapAddressComponent alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1646,9 +2006,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapReGeocode");
             }
         
-            AMapReGeocode* ref = [[AMapReGeocode alloc] init];
+            AMapReGeocode* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapReGeocode alloc] init];
+            } else {
+                __this__ = [AMapReGeocode alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1659,9 +2024,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapGeocode");
             }
         
-            AMapGeocode* ref = [[AMapGeocode alloc] init];
+            AMapGeocode* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapGeocode alloc] init];
+            } else {
+                __this__ = [AMapGeocode alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1672,9 +2042,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapBusStop");
             }
         
-            AMapBusStop* ref = [[AMapBusStop alloc] init];
+            AMapBusStop* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapBusStop alloc] init];
+            } else {
+                __this__ = [AMapBusStop alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1685,9 +2060,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapBusLine");
             }
         
-            AMapBusLine* ref = [[AMapBusLine alloc] init];
+            AMapBusLine* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapBusLine alloc] init];
+            } else {
+                __this__ = [AMapBusLine alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1698,9 +2078,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapDistrict");
             }
         
-            AMapDistrict* ref = [[AMapDistrict alloc] init];
+            AMapDistrict* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapDistrict alloc] init];
+            } else {
+                __this__ = [AMapDistrict alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1711,9 +2096,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapTMC");
             }
         
-            AMapTMC* ref = [[AMapTMC alloc] init];
+            AMapTMC* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapTMC alloc] init];
+            } else {
+                __this__ = [AMapTMC alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1724,9 +2114,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapStep");
             }
         
-            AMapStep* ref = [[AMapStep alloc] init];
+            AMapStep* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapStep alloc] init];
+            } else {
+                __this__ = [AMapStep alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1737,9 +2132,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapPath");
             }
         
-            AMapPath* ref = [[AMapPath alloc] init];
+            AMapPath* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapPath alloc] init];
+            } else {
+                __this__ = [AMapPath alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1750,9 +2150,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapFutureTimeInfoElement");
             }
         
-            AMapFutureTimeInfoElement* ref = [[AMapFutureTimeInfoElement alloc] init];
+            AMapFutureTimeInfoElement* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapFutureTimeInfoElement alloc] init];
+            } else {
+                __this__ = [AMapFutureTimeInfoElement alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1763,9 +2168,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapFutureTimeInfo");
             }
         
-            AMapFutureTimeInfo* ref = [[AMapFutureTimeInfo alloc] init];
+            AMapFutureTimeInfo* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapFutureTimeInfo alloc] init];
+            } else {
+                __this__ = [AMapFutureTimeInfo alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1776,9 +2186,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapWalking");
             }
         
-            AMapWalking* ref = [[AMapWalking alloc] init];
+            AMapWalking* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapWalking alloc] init];
+            } else {
+                __this__ = [AMapWalking alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1789,9 +2204,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapTaxi");
             }
         
-            AMapTaxi* ref = [[AMapTaxi alloc] init];
+            AMapTaxi* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapTaxi alloc] init];
+            } else {
+                __this__ = [AMapTaxi alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1802,9 +2222,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapRailwayStation");
             }
         
-            AMapRailwayStation* ref = [[AMapRailwayStation alloc] init];
+            AMapRailwayStation* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapRailwayStation alloc] init];
+            } else {
+                __this__ = [AMapRailwayStation alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1815,9 +2240,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapRailwaySpace");
             }
         
-            AMapRailwaySpace* ref = [[AMapRailwaySpace alloc] init];
+            AMapRailwaySpace* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapRailwaySpace alloc] init];
+            } else {
+                __this__ = [AMapRailwaySpace alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1828,9 +2258,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapRailway");
             }
         
-            AMapRailway* ref = [[AMapRailway alloc] init];
+            AMapRailway* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapRailway alloc] init];
+            } else {
+                __this__ = [AMapRailway alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1841,9 +2276,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapSegment");
             }
         
-            AMapSegment* ref = [[AMapSegment alloc] init];
+            AMapSegment* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapSegment alloc] init];
+            } else {
+                __this__ = [AMapSegment alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1854,9 +2294,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapTransit");
             }
         
-            AMapTransit* ref = [[AMapTransit alloc] init];
+            AMapTransit* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapTransit alloc] init];
+            } else {
+                __this__ = [AMapTransit alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1867,9 +2312,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapRoute");
             }
         
-            AMapRoute* ref = [[AMapRoute alloc] init];
+            AMapRoute* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapRoute alloc] init];
+            } else {
+                __this__ = [AMapRoute alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1880,9 +2330,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapDistanceResult");
             }
         
-            AMapDistanceResult* ref = [[AMapDistanceResult alloc] init];
+            AMapDistanceResult* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapDistanceResult alloc] init];
+            } else {
+                __this__ = [AMapDistanceResult alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1893,9 +2348,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapLocalWeatherLive");
             }
         
-            AMapLocalWeatherLive* ref = [[AMapLocalWeatherLive alloc] init];
+            AMapLocalWeatherLive* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapLocalWeatherLive alloc] init];
+            } else {
+                __this__ = [AMapLocalWeatherLive alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1906,9 +2366,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapLocalDayWeatherForecast");
             }
         
-            AMapLocalDayWeatherForecast* ref = [[AMapLocalDayWeatherForecast alloc] init];
+            AMapLocalDayWeatherForecast* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapLocalDayWeatherForecast alloc] init];
+            } else {
+                __this__ = [AMapLocalDayWeatherForecast alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1919,9 +2384,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapLocalWeatherForecast");
             }
         
-            AMapLocalWeatherForecast* ref = [[AMapLocalWeatherForecast alloc] init];
+            AMapLocalWeatherForecast* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapLocalWeatherForecast alloc] init];
+            } else {
+                __this__ = [AMapLocalWeatherForecast alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1932,9 +2402,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapNearbyUserInfo");
             }
         
-            AMapNearbyUserInfo* ref = [[AMapNearbyUserInfo alloc] init];
+            AMapNearbyUserInfo* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapNearbyUserInfo alloc] init];
+            } else {
+                __this__ = [AMapNearbyUserInfo alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1945,9 +2420,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapTrafficEvaluation");
             }
         
-            AMapTrafficEvaluation* ref = [[AMapTrafficEvaluation alloc] init];
+            AMapTrafficEvaluation* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapTrafficEvaluation alloc] init];
+            } else {
+                __this__ = [AMapTrafficEvaluation alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1958,9 +2438,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapTrafficRoad");
             }
         
-            AMapTrafficRoad* ref = [[AMapTrafficRoad alloc] init];
+            AMapTrafficRoad* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapTrafficRoad alloc] init];
+            } else {
+                __this__ = [AMapTrafficRoad alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1971,9 +2456,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapTrafficInfo");
             }
         
-            AMapTrafficInfo* ref = [[AMapTrafficInfo alloc] init];
+            AMapTrafficInfo* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapTrafficInfo alloc] init];
+            } else {
+                __this__ = [AMapTrafficInfo alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1984,9 +2474,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapCloudImage");
             }
         
-            AMapCloudImage* ref = [[AMapCloudImage alloc] init];
+            AMapCloudImage* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapCloudImage alloc] init];
+            } else {
+                __this__ = [AMapCloudImage alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -1997,9 +2492,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapCloudPOI");
             }
         
-            AMapCloudPOI* ref = [[AMapCloudPOI alloc] init];
+            AMapCloudPOI* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapCloudPOI alloc] init];
+            } else {
+                __this__ = [AMapCloudPOI alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -2010,9 +2510,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapNearbyUploadInfo");
             }
         
-            AMapNearbyUploadInfo* ref = [[AMapNearbyUploadInfo alloc] init];
+            AMapNearbyUploadInfo* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapNearbyUploadInfo alloc] init];
+            } else {
+                __this__ = [AMapNearbyUploadInfo alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -2023,9 +2528,14 @@ extern BOOL enableLog;
                 NSLog(@"ObjectFactory::createAMapSearchAPI");
             }
         
-            AMapSearchAPI* ref = [[AMapSearchAPI alloc] init];
+            AMapSearchAPI* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapSearchAPI alloc] init];
+            } else {
+                __this__ = [AMapSearchAPI alloc];
+            }
         
-            methodResult(ref);
+            methodResult(__this__);
         
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
@@ -2033,9 +2543,16 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapPOISearchBaseRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
-                AMapPOISearchBaseRequest* ref = [[AMapPOISearchBaseRequest alloc] init];
-                [resultList addObject:ref];
+            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
+            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
+            for (int __i__ = 0; __i__ < [length integerValue]; __i__++) {
+                AMapPOISearchBaseRequest* __this__;
+                if ([init boolValue]) {
+                    __this__ = [[AMapPOISearchBaseRequest alloc] init];
+                } else {
+                    __this__ = [AMapPOISearchBaseRequest alloc];
+                }
+                [resultList addObject:__this__];
             }
         
             methodResult(resultList);
@@ -2046,9 +2563,16 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapPOIIDSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
-                AMapPOIIDSearchRequest* ref = [[AMapPOIIDSearchRequest alloc] init];
-                [resultList addObject:ref];
+            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
+            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
+            for (int __i__ = 0; __i__ < [length integerValue]; __i__++) {
+                AMapPOIIDSearchRequest* __this__;
+                if ([init boolValue]) {
+                    __this__ = [[AMapPOIIDSearchRequest alloc] init];
+                } else {
+                    __this__ = [AMapPOIIDSearchRequest alloc];
+                }
+                [resultList addObject:__this__];
             }
         
             methodResult(resultList);
@@ -2059,9 +2583,16 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapPOIKeywordsSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
-                AMapPOIKeywordsSearchRequest* ref = [[AMapPOIKeywordsSearchRequest alloc] init];
-                [resultList addObject:ref];
+            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
+            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
+            for (int __i__ = 0; __i__ < [length integerValue]; __i__++) {
+                AMapPOIKeywordsSearchRequest* __this__;
+                if ([init boolValue]) {
+                    __this__ = [[AMapPOIKeywordsSearchRequest alloc] init];
+                } else {
+                    __this__ = [AMapPOIKeywordsSearchRequest alloc];
+                }
+                [resultList addObject:__this__];
             }
         
             methodResult(resultList);
@@ -2072,9 +2603,16 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapPOIAroundSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
-                AMapPOIAroundSearchRequest* ref = [[AMapPOIAroundSearchRequest alloc] init];
-                [resultList addObject:ref];
+            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
+            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
+            for (int __i__ = 0; __i__ < [length integerValue]; __i__++) {
+                AMapPOIAroundSearchRequest* __this__;
+                if ([init boolValue]) {
+                    __this__ = [[AMapPOIAroundSearchRequest alloc] init];
+                } else {
+                    __this__ = [AMapPOIAroundSearchRequest alloc];
+                }
+                [resultList addObject:__this__];
             }
         
             methodResult(resultList);
@@ -2085,9 +2623,16 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapPOIPolygonSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
-                AMapPOIPolygonSearchRequest* ref = [[AMapPOIPolygonSearchRequest alloc] init];
-                [resultList addObject:ref];
+            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
+            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
+            for (int __i__ = 0; __i__ < [length integerValue]; __i__++) {
+                AMapPOIPolygonSearchRequest* __this__;
+                if ([init boolValue]) {
+                    __this__ = [[AMapPOIPolygonSearchRequest alloc] init];
+                } else {
+                    __this__ = [AMapPOIPolygonSearchRequest alloc];
+                }
+                [resultList addObject:__this__];
             }
         
             methodResult(resultList);
@@ -2098,9 +2643,16 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapPOISearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
-                AMapPOISearchResponse* ref = [[AMapPOISearchResponse alloc] init];
-                [resultList addObject:ref];
+            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
+            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
+            for (int __i__ = 0; __i__ < [length integerValue]; __i__++) {
+                AMapPOISearchResponse* __this__;
+                if ([init boolValue]) {
+                    __this__ = [[AMapPOISearchResponse alloc] init];
+                } else {
+                    __this__ = [AMapPOISearchResponse alloc];
+                }
+                [resultList addObject:__this__];
             }
         
             methodResult(resultList);
@@ -2111,9 +2663,16 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapRoutePOISearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
-                AMapRoutePOISearchRequest* ref = [[AMapRoutePOISearchRequest alloc] init];
-                [resultList addObject:ref];
+            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
+            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
+            for (int __i__ = 0; __i__ < [length integerValue]; __i__++) {
+                AMapRoutePOISearchRequest* __this__;
+                if ([init boolValue]) {
+                    __this__ = [[AMapRoutePOISearchRequest alloc] init];
+                } else {
+                    __this__ = [AMapRoutePOISearchRequest alloc];
+                }
+                [resultList addObject:__this__];
             }
         
             methodResult(resultList);
@@ -2124,9 +2683,16 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapRoutePOISearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
-                AMapRoutePOISearchResponse* ref = [[AMapRoutePOISearchResponse alloc] init];
-                [resultList addObject:ref];
+            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
+            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
+            for (int __i__ = 0; __i__ < [length integerValue]; __i__++) {
+                AMapRoutePOISearchResponse* __this__;
+                if ([init boolValue]) {
+                    __this__ = [[AMapRoutePOISearchResponse alloc] init];
+                } else {
+                    __this__ = [AMapRoutePOISearchResponse alloc];
+                }
+                [resultList addObject:__this__];
             }
         
             methodResult(resultList);
@@ -2137,9 +2703,16 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapInputTipsSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
-                AMapInputTipsSearchRequest* ref = [[AMapInputTipsSearchRequest alloc] init];
-                [resultList addObject:ref];
+            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
+            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
+            for (int __i__ = 0; __i__ < [length integerValue]; __i__++) {
+                AMapInputTipsSearchRequest* __this__;
+                if ([init boolValue]) {
+                    __this__ = [[AMapInputTipsSearchRequest alloc] init];
+                } else {
+                    __this__ = [AMapInputTipsSearchRequest alloc];
+                }
+                [resultList addObject:__this__];
             }
         
             methodResult(resultList);
@@ -2150,9 +2723,16 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapInputTipsSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
-                AMapInputTipsSearchResponse* ref = [[AMapInputTipsSearchResponse alloc] init];
-                [resultList addObject:ref];
+            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
+            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
+            for (int __i__ = 0; __i__ < [length integerValue]; __i__++) {
+                AMapInputTipsSearchResponse* __this__;
+                if ([init boolValue]) {
+                    __this__ = [[AMapInputTipsSearchResponse alloc] init];
+                } else {
+                    __this__ = [AMapInputTipsSearchResponse alloc];
+                }
+                [resultList addObject:__this__];
             }
         
             methodResult(resultList);
@@ -2163,9 +2743,16 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapGeocodeSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
-                AMapGeocodeSearchRequest* ref = [[AMapGeocodeSearchRequest alloc] init];
-                [resultList addObject:ref];
+            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
+            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
+            for (int __i__ = 0; __i__ < [length integerValue]; __i__++) {
+                AMapGeocodeSearchRequest* __this__;
+                if ([init boolValue]) {
+                    __this__ = [[AMapGeocodeSearchRequest alloc] init];
+                } else {
+                    __this__ = [AMapGeocodeSearchRequest alloc];
+                }
+                [resultList addObject:__this__];
             }
         
             methodResult(resultList);
@@ -2176,9 +2763,16 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapGeocodeSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
-            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
-                AMapGeocodeSearchResponse* ref = [[AMapGeocodeSearchResponse alloc] init];
-                [resultList addObject:ref];
+            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
+            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
+            for (int __i__ = 0; __i__ < [length integerValue]; __i__++) {
+                AMapGeocodeSearchResponse* __this__;
+                if ([init boolValue]) {
+                    __this__ = [[AMapGeocodeSearchResponse alloc] init];
+                } else {
+                    __this__ = [AMapGeocodeSearchResponse alloc];
+                }
+                [resultList addObject:__this__];
             }
         
             methodResult(resultList);

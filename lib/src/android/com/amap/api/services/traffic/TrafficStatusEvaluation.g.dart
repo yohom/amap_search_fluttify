@@ -21,7 +21,7 @@ class com_amap_api_services_traffic_TrafficStatusEvaluation extends java_lang_Ob
 
   //region creators
   static Future<com_amap_api_services_traffic_TrafficStatusEvaluation> create__() async {
-    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_services_traffic_TrafficStatusEvaluation__');
+    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_services_traffic_TrafficStatusEvaluation__', );
     final object = com_amap_api_services_traffic_TrafficStatusEvaluation()..refId = refId..tag__ = 'amap_search_fluttify';
     return object;
   }

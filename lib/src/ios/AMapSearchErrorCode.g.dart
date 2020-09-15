@@ -93,6 +93,7 @@ extension AMapSearchErrorCodeToX on AMapSearchErrorCode {
       case AMapSearchErrorCode.AMapSearchErrorOverDirectionRange: return 3003;
       case AMapSearchErrorCode.AMapSearchErrorShareLicenseExpired: return 4000;
       case AMapSearchErrorCode.AMapSearchErrorShareFailed: return 4001;
+      default: return 0;
     }
   }
 }

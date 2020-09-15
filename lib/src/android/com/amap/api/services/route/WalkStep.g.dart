@@ -21,7 +21,7 @@ class com_amap_api_services_route_WalkStep extends java_lang_Object with android
 
   //region creators
   static Future<com_amap_api_services_route_WalkStep> create__() async {
-    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_services_route_WalkStep__');
+    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_services_route_WalkStep__', );
     final object = com_amap_api_services_route_WalkStep()..refId = refId..tag__ = 'amap_search_fluttify';
     return object;
   }

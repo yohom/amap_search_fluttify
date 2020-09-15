@@ -20,17 +20,17 @@ class AMapNearbyUserInfo extends AMapSearchObject with NSCoding, NSCopying {
   //endregion
 
   //region creators
-  static Future<AMapNearbyUserInfo> create__() async {
-    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createAMapNearbyUserInfo');
+  static Future<AMapNearbyUserInfo> create__({ bool init = true /* ios only */ }) async {
+    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createAMapNearbyUserInfo', {'init': init});
     final object = AMapNearbyUserInfo()..refId = refId..tag__ = 'amap_search_fluttify';
     return object;
   }
   
-  static Future<List<AMapNearbyUserInfo>> create_batch__(int length) async {
+  static Future<List<AMapNearbyUserInfo>> create_batch__(int length, { bool init = true /* ios only */ }) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::create_batchAMapNearbyUserInfo', {'length': length});
+    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::create_batchAMapNearbyUserInfo', {'length': length, 'init': init});
   
     final List<AMapNearbyUserInfo> typedResult = resultBatch.map((result) => AMapNearbyUserInfo()..refId = result..tag__ = 'amap_search_fluttify').toList();
     return typedResult;

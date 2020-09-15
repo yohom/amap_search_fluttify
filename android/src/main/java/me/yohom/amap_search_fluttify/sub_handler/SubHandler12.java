@@ -99,14 +99,14 @@ public class SubHandler12 {
                 // ref arg
                 com.amap.api.services.route.RouteSearch.FromAndTo var1 = (com.amap.api.services.route.RouteSearch.FromAndTo) ((Map<String, Object>) __args__).get("var1");
                 // ref arg
-                int var2 = (int) ((Map<String, Object>) __args__).get("var2");
+                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
                 // ref arg
                 java.util.List<com.amap.api.services.core.LatLonPoint> var3 = (java.util.List<com.amap.api.services.core.LatLonPoint>) ((Map<String, Object>) __args__).get("var3");
                 // ref arg
-                int var4 = (int) ((Map<String, Object>) __args__).get("var4");
+                Number var4 = (Number) ((Map<String, Object>) __args__).get("var4");
             
                 // create target object
-                com.amap.api.services.route.RouteSearch.TruckRouteQuery __obj__ = new com.amap.api.services.route.RouteSearch.TruckRouteQuery(var1, var2, var3, var4);
+                com.amap.api.services.route.RouteSearch.TruckRouteQuery __obj__ = new com.amap.api.services.route.RouteSearch.TruckRouteQuery(var1, var2.intValue(), var3, var4.intValue());
             
                 // print current HEAP
                 if (getEnableLog()) {
@@ -278,10 +278,10 @@ public class SubHandler12 {
                 // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
                 // ref arg
-                Double var2 = (Double) ((Map<String, Object>) __args__).get("var2");
+                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
             
                 // create target object
-                com.amap.api.services.route.RailwaySpace __obj__ = new com.amap.api.services.route.RailwaySpace(var1, new Double(var2).floatValue());
+                com.amap.api.services.route.RailwaySpace __obj__ = new com.amap.api.services.route.RailwaySpace(var1, var2.floatValue());
             
                 // print current HEAP
                 if (getEnableLog()) {
@@ -319,10 +319,10 @@ public class SubHandler12 {
                 // ref arg
                 com.amap.api.services.route.RouteSearch.FromAndTo var1 = (com.amap.api.services.route.RouteSearch.FromAndTo) ((Map<String, Object>) __args__).get("var1");
                 // ref arg
-                int var2 = (int) ((Map<String, Object>) __args__).get("var2");
+                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
             
                 // create target object
-                com.amap.api.services.route.RouteSearch.RideRouteQuery __obj__ = new com.amap.api.services.route.RouteSearch.RideRouteQuery(var1, var2);
+                com.amap.api.services.route.RouteSearch.RideRouteQuery __obj__ = new com.amap.api.services.route.RouteSearch.RideRouteQuery(var1, var2.intValue());
             
                 // print current HEAP
                 if (getEnableLog()) {
@@ -380,7 +380,7 @@ public class SubHandler12 {
                 // ref arg
                 com.amap.api.services.route.RouteSearch.FromAndTo var1 = (com.amap.api.services.route.RouteSearch.FromAndTo) ((Map<String, Object>) __args__).get("var1");
                 // ref arg
-                int var2 = (int) ((Map<String, Object>) __args__).get("var2");
+                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
                 // ref arg
                 java.util.List<com.amap.api.services.core.LatLonPoint> var3 = (java.util.List<com.amap.api.services.core.LatLonPoint>) ((Map<String, Object>) __args__).get("var3");
                 // ref arg
@@ -389,7 +389,7 @@ public class SubHandler12 {
                 String var5 = (String) ((Map<String, Object>) __args__).get("var5");
             
                 // create target object
-                com.amap.api.services.route.RouteSearch.DriveRouteQuery __obj__ = new com.amap.api.services.route.RouteSearch.DriveRouteQuery(var1, var2, var3, var4, var5);
+                com.amap.api.services.route.RouteSearch.DriveRouteQuery __obj__ = new com.amap.api.services.route.RouteSearch.DriveRouteQuery(var1, var2.intValue(), var3, var4, var5);
             
                 // print current HEAP
                 if (getEnableLog()) {
@@ -563,14 +563,14 @@ public class SubHandler12 {
                 // ref arg
                 com.amap.api.services.route.RouteSearch.FromAndTo var1 = (com.amap.api.services.route.RouteSearch.FromAndTo) ((Map<String, Object>) __args__).get("var1");
                 // ref arg
-                int var2 = (int) ((Map<String, Object>) __args__).get("var2");
+                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
                 // ref arg
                 String var3 = (String) ((Map<String, Object>) __args__).get("var3");
                 // ref arg
-                int var4 = (int) ((Map<String, Object>) __args__).get("var4");
+                Number var4 = (Number) ((Map<String, Object>) __args__).get("var4");
             
                 // create target object
-                com.amap.api.services.route.RouteSearch.BusRouteQuery __obj__ = new com.amap.api.services.route.RouteSearch.BusRouteQuery(var1, var2, var3, var4);
+                com.amap.api.services.route.RouteSearch.BusRouteQuery __obj__ = new com.amap.api.services.route.RouteSearch.BusRouteQuery(var1, var2.intValue(), var3, var4.intValue());
             
                 // print current HEAP
                 if (getEnableLog()) {
@@ -665,10 +665,10 @@ public class SubHandler12 {
                 // ref arg
                 com.amap.api.services.route.RouteSearch.FromAndTo var1 = (com.amap.api.services.route.RouteSearch.FromAndTo) ((Map<String, Object>) __args__).get("var1");
                 // ref arg
-                int var2 = (int) ((Map<String, Object>) __args__).get("var2");
+                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
             
                 // create target object
-                com.amap.api.services.route.RouteSearch.WalkRouteQuery __obj__ = new com.amap.api.services.route.RouteSearch.WalkRouteQuery(var1, var2);
+                com.amap.api.services.route.RouteSearch.WalkRouteQuery __obj__ = new com.amap.api.services.route.RouteSearch.WalkRouteQuery(var1, var2.intValue());
             
                 // print current HEAP
                 if (getEnableLog()) {
@@ -860,14 +860,14 @@ public class SubHandler12 {
                 // ref arg
                 com.amap.api.services.route.RouteSearch.FromAndTo var1 = (com.amap.api.services.route.RouteSearch.FromAndTo) ((Map<String, Object>) __args__).get("var1");
                 // ref arg
-                int var2 = (int) ((Map<String, Object>) __args__).get("var2");
+                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
                 // ref arg
-                int var3 = (int) ((Map<String, Object>) __args__).get("var3");
+                Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
                 // ref arg
-                int var4 = (int) ((Map<String, Object>) __args__).get("var4");
+                Number var4 = (Number) ((Map<String, Object>) __args__).get("var4");
             
                 // create target object
-                com.amap.api.services.route.RouteSearch.DrivePlanQuery __obj__ = new com.amap.api.services.route.RouteSearch.DrivePlanQuery(var1, var2, var3, var4);
+                com.amap.api.services.route.RouteSearch.DrivePlanQuery __obj__ = new com.amap.api.services.route.RouteSearch.DrivePlanQuery(var1, var2.intValue(), var3.intValue(), var4.intValue());
             
                 // print current HEAP
                 if (getEnableLog()) {
@@ -1334,14 +1334,14 @@ public class SubHandler12 {
                 // ref arg
                 com.amap.api.services.core.LatLonPoint var2 = (com.amap.api.services.core.LatLonPoint) ((Map<String, Object>) __args__).get("var2");
                 // ref arg
-                int var3 = (int) ((Map<String, Object>) __args__).get("var3");
+                Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
                 // enum arg
                 com.amap.api.services.routepoisearch.RoutePOISearch.RoutePOISearchType var4 = com.amap.api.services.routepoisearch.RoutePOISearch.RoutePOISearchType.values()[(int) ((Map<String, Object>) __args__).get("var4")];
                 // ref arg
-                int var5 = (int) ((Map<String, Object>) __args__).get("var5");
+                Number var5 = (Number) ((Map<String, Object>) __args__).get("var5");
             
                 // create target object
-                com.amap.api.services.routepoisearch.RoutePOISearchQuery __obj__ = new com.amap.api.services.routepoisearch.RoutePOISearchQuery(var1, var2, var3, var4, var5);
+                com.amap.api.services.routepoisearch.RoutePOISearchQuery __obj__ = new com.amap.api.services.routepoisearch.RoutePOISearchQuery(var1, var2, var3.intValue(), var4, var5.intValue());
             
                 // print current HEAP
                 if (getEnableLog()) {
@@ -1362,10 +1362,10 @@ public class SubHandler12 {
                 // enum arg
                 com.amap.api.services.routepoisearch.RoutePOISearch.RoutePOISearchType var2 = com.amap.api.services.routepoisearch.RoutePOISearch.RoutePOISearchType.values()[(int) ((Map<String, Object>) __args__).get("var2")];
                 // ref arg
-                int var3 = (int) ((Map<String, Object>) __args__).get("var3");
+                Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
             
                 // create target object
-                com.amap.api.services.routepoisearch.RoutePOISearchQuery __obj__ = new com.amap.api.services.routepoisearch.RoutePOISearchQuery(var1, var2, var3);
+                com.amap.api.services.routepoisearch.RoutePOISearchQuery __obj__ = new com.amap.api.services.routepoisearch.RoutePOISearchQuery(var1, var2, var3.intValue());
             
                 // print current HEAP
                 if (getEnableLog()) {
@@ -1454,10 +1454,10 @@ public class SubHandler12 {
                 // ref arg
                 com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) ((Map<String, Object>) __args__).get("var1");
                 // ref arg
-                int var2 = (int) ((Map<String, Object>) __args__).get("var2");
+                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
             
                 // create target object
-                com.amap.api.services.cloud.CloudSearch.SearchBound __obj__ = new com.amap.api.services.cloud.CloudSearch.SearchBound(var1, var2);
+                com.amap.api.services.cloud.CloudSearch.SearchBound __obj__ = new com.amap.api.services.cloud.CloudSearch.SearchBound(var1, var2.intValue());
             
                 // print current HEAP
                 if (getEnableLog()) {
@@ -1582,10 +1582,10 @@ public class SubHandler12 {
             
                 // args
                 // ref arg
-                int var1 = (int) ((Map<String, Object>) __args__).get("var1");
+                Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
             
                 // create target object
-                com.amap.api.services.cloud.CloudSearch.Sortingrules __obj__ = new com.amap.api.services.cloud.CloudSearch.Sortingrules(var1);
+                com.amap.api.services.cloud.CloudSearch.Sortingrules __obj__ = new com.amap.api.services.cloud.CloudSearch.Sortingrules(var1.intValue());
             
                 // print current HEAP
                 if (getEnableLog()) {
@@ -1649,10 +1649,10 @@ public class SubHandler12 {
                 // ref arg
                 String var1 = (String) ((Map<String, Object>) __args__).get("var1");
                 // ref arg
-                int var2 = (int) ((Map<String, Object>) __args__).get("var2");
+                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
             
                 // create target object
-                com.amap.api.services.weather.WeatherSearchQuery __obj__ = new com.amap.api.services.weather.WeatherSearchQuery(var1, var2);
+                com.amap.api.services.weather.WeatherSearchQuery __obj__ = new com.amap.api.services.weather.WeatherSearchQuery(var1, var2.intValue());
             
                 // print current HEAP
                 if (getEnableLog()) {
@@ -1910,12 +1910,12 @@ public class SubHandler12 {
                 // ref arg
                 com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) ((Map<String, Object>) __args__).get("var1");
                 // ref arg
-                Double var2 = (Double) ((Map<String, Object>) __args__).get("var2");
+                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
                 // ref arg
                 String var3 = (String) ((Map<String, Object>) __args__).get("var3");
             
                 // create target object
-                com.amap.api.services.geocoder.RegeocodeQuery __obj__ = new com.amap.api.services.geocoder.RegeocodeQuery(var1, new Double(var2).floatValue(), var3);
+                com.amap.api.services.geocoder.RegeocodeQuery __obj__ = new com.amap.api.services.geocoder.RegeocodeQuery(var1, var2.floatValue(), var3);
             
                 // print current HEAP
                 if (getEnableLog()) {
@@ -1993,10 +1993,10 @@ public class SubHandler12 {
                 // ref arg
                 String var2 = (String) ((Map<String, Object>) __args__).get("var2");
                 // ref arg
-                int var3 = (int) ((Map<String, Object>) __args__).get("var3");
+                Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
             
                 // create target object
-                com.amap.api.services.district.DistrictSearchQuery __obj__ = new com.amap.api.services.district.DistrictSearchQuery(var1, var2, var3);
+                com.amap.api.services.district.DistrictSearchQuery __obj__ = new com.amap.api.services.district.DistrictSearchQuery(var1, var2, var3.intValue());
             
                 // print current HEAP
                 if (getEnableLog()) {
@@ -2017,14 +2017,14 @@ public class SubHandler12 {
                 // ref arg
                 String var2 = (String) ((Map<String, Object>) __args__).get("var2");
                 // ref arg
-                int var3 = (int) ((Map<String, Object>) __args__).get("var3");
+                Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
                 // ref arg
                 boolean var4 = (boolean) ((Map<String, Object>) __args__).get("var4");
                 // ref arg
-                int var5 = (int) ((Map<String, Object>) __args__).get("var5");
+                Number var5 = (Number) ((Map<String, Object>) __args__).get("var5");
             
                 // create target object
-                com.amap.api.services.district.DistrictSearchQuery __obj__ = new com.amap.api.services.district.DistrictSearchQuery(var1, var2, var3, var4, var5);
+                com.amap.api.services.district.DistrictSearchQuery __obj__ = new com.amap.api.services.district.DistrictSearchQuery(var1, var2, var3.intValue(), var4, var5.intValue());
             
                 // print current HEAP
                 if (getEnableLog()) {
@@ -2214,10 +2214,10 @@ public class SubHandler12 {
                 // ref arg
                 com.amap.api.services.share.ShareSearch.ShareFromAndTo var1 = (com.amap.api.services.share.ShareSearch.ShareFromAndTo) ((Map<String, Object>) __args__).get("var1");
                 // ref arg
-                int var2 = (int) ((Map<String, Object>) __args__).get("var2");
+                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
             
                 // create target object
-                com.amap.api.services.share.ShareSearch.ShareNaviQuery __obj__ = new com.amap.api.services.share.ShareSearch.ShareNaviQuery(var1, var2);
+                com.amap.api.services.share.ShareSearch.ShareNaviQuery __obj__ = new com.amap.api.services.share.ShareSearch.ShareNaviQuery(var1, var2.intValue());
             
                 // print current HEAP
                 if (getEnableLog()) {
@@ -2236,10 +2236,10 @@ public class SubHandler12 {
                 // ref arg
                 com.amap.api.services.share.ShareSearch.ShareFromAndTo var1 = (com.amap.api.services.share.ShareSearch.ShareFromAndTo) ((Map<String, Object>) __args__).get("var1");
                 // ref arg
-                int var2 = (int) ((Map<String, Object>) __args__).get("var2");
+                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
             
                 // create target object
-                com.amap.api.services.share.ShareSearch.ShareBusRouteQuery __obj__ = new com.amap.api.services.share.ShareSearch.ShareBusRouteQuery(var1, var2);
+                com.amap.api.services.share.ShareSearch.ShareBusRouteQuery __obj__ = new com.amap.api.services.share.ShareSearch.ShareBusRouteQuery(var1, var2.intValue());
             
                 // print current HEAP
                 if (getEnableLog()) {
@@ -2300,10 +2300,10 @@ public class SubHandler12 {
                 // ref arg
                 com.amap.api.services.share.ShareSearch.ShareFromAndTo var1 = (com.amap.api.services.share.ShareSearch.ShareFromAndTo) ((Map<String, Object>) __args__).get("var1");
                 // ref arg
-                int var2 = (int) ((Map<String, Object>) __args__).get("var2");
+                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
             
                 // create target object
-                com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery __obj__ = new com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery(var1, var2);
+                com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery __obj__ = new com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery(var1, var2.intValue());
             
                 // print current HEAP
                 if (getEnableLog()) {
@@ -2322,10 +2322,10 @@ public class SubHandler12 {
                 // ref arg
                 com.amap.api.services.share.ShareSearch.ShareFromAndTo var1 = (com.amap.api.services.share.ShareSearch.ShareFromAndTo) ((Map<String, Object>) __args__).get("var1");
                 // ref arg
-                int var2 = (int) ((Map<String, Object>) __args__).get("var2");
+                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
             
                 // create target object
-                com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery __obj__ = new com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery(var1, var2);
+                com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery __obj__ = new com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery(var1, var2.intValue());
             
                 // print current HEAP
                 if (getEnableLog()) {
@@ -2477,10 +2477,10 @@ public class SubHandler12 {
                     // ref arg
                     String var2 = (String) ((Map<String, Object>) __args__).get("var2");
                     // ref arg
-                    int var3 = (int) ((Map<String, Object>) __args__).get("var3");
+                    Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
             
                     // create target object
-                    com.amap.api.services.traffic.RoadTrafficQuery __obj__ = new com.amap.api.services.traffic.RoadTrafficQuery(var1, var2, var3);
+                    com.amap.api.services.traffic.RoadTrafficQuery __obj__ = new com.amap.api.services.traffic.RoadTrafficQuery(var1, var2, var3.intValue());
             
                     // print current HEAP
                     if (getEnableLog()) {
@@ -2518,12 +2518,12 @@ public class SubHandler12 {
                     // ref arg
                     com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) ((Map<String, Object>) __args__).get("var1");
                     // ref arg
-                    int var2 = (int) ((Map<String, Object>) __args__).get("var2");
+                    Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
                     // ref arg
-                    int var3 = (int) ((Map<String, Object>) __args__).get("var3");
+                    Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
             
                     // create target object
-                    com.amap.api.services.traffic.CircleTrafficQuery __obj__ = new com.amap.api.services.traffic.CircleTrafficQuery(var1, var2, var3);
+                    com.amap.api.services.traffic.CircleTrafficQuery __obj__ = new com.amap.api.services.traffic.CircleTrafficQuery(var1, var2.intValue(), var3.intValue());
             
                     // print current HEAP
                     if (getEnableLog()) {
@@ -2880,12 +2880,12 @@ public class SubHandler12 {
                     // ref arg
                     String var1 = (String) ((Map<String, Object>) __args__).get("var1");
                     // ref arg
-                    int var2 = (int) ((Map<String, Object>) __args__).get("var2");
+                    Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
                     // ref arg
                     String var3 = (String) ((Map<String, Object>) __args__).get("var3");
             
                     // create target object
-                    com.amap.api.services.core.AMapException __obj__ = new com.amap.api.services.core.AMapException(var1, var2, var3);
+                    com.amap.api.services.core.AMapException __obj__ = new com.amap.api.services.core.AMapException(var1, var2.intValue(), var3);
             
                     // print current HEAP
                     if (getEnableLog()) {
@@ -2997,14 +2997,14 @@ public class SubHandler12 {
             
                     // args
                     // ref arg
-                    double var1 = (double) ((Map<String, Object>) __args__).get("var1");
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
                     // ref arg
-                    double var3 = (double) ((Map<String, Object>) __args__).get("var3");
+                    Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
                     // ref arg
                     String var5 = (String) ((Map<String, Object>) __args__).get("var5");
             
                     // create target object
-                    com.amap.api.services.core.LatLonSharePoint __obj__ = new com.amap.api.services.core.LatLonSharePoint(var1, var3, var5);
+                    com.amap.api.services.core.LatLonSharePoint __obj__ = new com.amap.api.services.core.LatLonSharePoint(var1.doubleValue(), var3.doubleValue(), var5);
             
                     // print current HEAP
                     if (getEnableLog()) {
@@ -3040,12 +3040,12 @@ public class SubHandler12 {
             
                     // args
                     // ref arg
-                    double var1 = (double) ((Map<String, Object>) __args__).get("var1");
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
                     // ref arg
-                    double var3 = (double) ((Map<String, Object>) __args__).get("var3");
+                    Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
             
                     // create target object
-                    com.amap.api.services.core.LatLonPoint __obj__ = new com.amap.api.services.core.LatLonPoint(var1, var3);
+                    com.amap.api.services.core.LatLonPoint __obj__ = new com.amap.api.services.core.LatLonPoint(var1.doubleValue(), var3.doubleValue());
             
                     // print current HEAP
                     if (getEnableLog()) {
@@ -3132,10 +3132,10 @@ public class SubHandler12 {
                     // ref arg
                     String var3 = (String) ((Map<String, Object>) __args__).get("var3");
                     // ref arg
-                    int var4 = (int) ((Map<String, Object>) __args__).get("var4");
+                    Number var4 = (Number) ((Map<String, Object>) __args__).get("var4");
             
                     // create target object
-                    com.amap.api.services.core.SuggestionCity __obj__ = new com.amap.api.services.core.SuggestionCity(var1, var2, var3, var4);
+                    com.amap.api.services.core.SuggestionCity __obj__ = new com.amap.api.services.core.SuggestionCity(var1, var2, var3, var4.intValue());
             
                     // print current HEAP
                     if (getEnableLog()) {
@@ -3338,10 +3338,10 @@ public class SubHandler12 {
                     // ref arg
                     com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) ((Map<String, Object>) __args__).get("var1");
                     // ref arg
-                    int var2 = (int) ((Map<String, Object>) __args__).get("var2");
+                    Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
             
                     // create target object
-                    com.amap.api.services.poisearch.PoiSearch.SearchBound __obj__ = new com.amap.api.services.poisearch.PoiSearch.SearchBound(var1, var2);
+                    com.amap.api.services.poisearch.PoiSearch.SearchBound __obj__ = new com.amap.api.services.poisearch.PoiSearch.SearchBound(var1, var2.intValue());
             
                     // print current HEAP
                     if (getEnableLog()) {
@@ -3379,12 +3379,12 @@ public class SubHandler12 {
                     // ref arg
                     com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) ((Map<String, Object>) __args__).get("var1");
                     // ref arg
-                    int var2 = (int) ((Map<String, Object>) __args__).get("var2");
+                    Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
                     // ref arg
                     boolean var3 = (boolean) ((Map<String, Object>) __args__).get("var3");
             
                     // create target object
-                    com.amap.api.services.poisearch.PoiSearch.SearchBound __obj__ = new com.amap.api.services.poisearch.PoiSearch.SearchBound(var1, var2, var3);
+                    com.amap.api.services.poisearch.PoiSearch.SearchBound __obj__ = new com.amap.api.services.poisearch.PoiSearch.SearchBound(var1, var2.intValue(), var3);
             
                     // print current HEAP
                     if (getEnableLog()) {
@@ -3627,12 +3627,12 @@ public class SubHandler12 {
                     // ref arg
                     String var1 = (String) ((Map<String, Object>) __args__).get("var1");
                     // ref arg
-                    int var2 = (int) ((Map<String, Object>) __args__).get("var2");
+                    Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
                     // ref arg
                     String var3 = (String) ((Map<String, Object>) __args__).get("var3");
             
                     // create target object
-                    com.amap.api.services.poisearch.IndoorData __obj__ = new com.amap.api.services.poisearch.IndoorData(var1, var2, var3);
+                    com.amap.api.services.poisearch.IndoorData __obj__ = new com.amap.api.services.poisearch.IndoorData(var1, var2.intValue(), var3);
             
                     // print current HEAP
                     if (getEnableLog()) {
@@ -3784,14 +3784,14 @@ public class SubHandler12 {
                     // ref arg
                     com.amap.api.services.route.RouteSearch.FromAndTo var1 = (com.amap.api.services.route.RouteSearch.FromAndTo) ((Map<String, Object>) __args__).get("var1");
                     // ref arg
-                    int var2 = (int) ((Map<String, Object>) __args__).get("var2");
+                    Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
                     // ref arg
                     java.util.List<com.amap.api.services.core.LatLonPoint> var3 = (java.util.List<com.amap.api.services.core.LatLonPoint>) ((Map<String, Object>) __args__).get("var3");
                     // ref arg
-                    int var4 = (int) ((Map<String, Object>) __args__).get("var4");
+                    Number var4 = (Number) ((Map<String, Object>) __args__).get("var4");
             
                     // create target object
-                    com.amap.api.services.route.RouteSearch.TruckRouteQuery __obj__ = new com.amap.api.services.route.RouteSearch.TruckRouteQuery(var1, var2, var3, var4);
+                    com.amap.api.services.route.RouteSearch.TruckRouteQuery __obj__ = new com.amap.api.services.route.RouteSearch.TruckRouteQuery(var1, var2.intValue(), var3, var4.intValue());
             
                     // print current HEAP
                     if (getEnableLog()) {
@@ -4134,10 +4134,10 @@ public class SubHandler12 {
                     // ref arg
                     String var1 = (String) ((Map<String, Object>) __args__).get("var1");
                     // ref arg
-                    Double var2 = (Double) ((Map<String, Object>) __args__).get("var2");
+                    Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
             
                     // create target object
-                    com.amap.api.services.route.RailwaySpace __obj__ = new com.amap.api.services.route.RailwaySpace(var1, new Double(var2).floatValue());
+                    com.amap.api.services.route.RailwaySpace __obj__ = new com.amap.api.services.route.RailwaySpace(var1, var2.floatValue());
             
                     // print current HEAP
                     if (getEnableLog()) {
@@ -4213,10 +4213,10 @@ public class SubHandler12 {
                     // ref arg
                     com.amap.api.services.route.RouteSearch.FromAndTo var1 = (com.amap.api.services.route.RouteSearch.FromAndTo) ((Map<String, Object>) __args__).get("var1");
                     // ref arg
-                    int var2 = (int) ((Map<String, Object>) __args__).get("var2");
+                    Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
             
                     // create target object
-                    com.amap.api.services.route.RouteSearch.RideRouteQuery __obj__ = new com.amap.api.services.route.RouteSearch.RideRouteQuery(var1, var2);
+                    com.amap.api.services.route.RouteSearch.RideRouteQuery __obj__ = new com.amap.api.services.route.RouteSearch.RideRouteQuery(var1, var2.intValue());
             
                     // print current HEAP
                     if (getEnableLog()) {
@@ -4331,7 +4331,7 @@ public class SubHandler12 {
                     // ref arg
                     com.amap.api.services.route.RouteSearch.FromAndTo var1 = (com.amap.api.services.route.RouteSearch.FromAndTo) ((Map<String, Object>) __args__).get("var1");
                     // ref arg
-                    int var2 = (int) ((Map<String, Object>) __args__).get("var2");
+                    Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
                     // ref arg
                     java.util.List<com.amap.api.services.core.LatLonPoint> var3 = (java.util.List<com.amap.api.services.core.LatLonPoint>) ((Map<String, Object>) __args__).get("var3");
                     // ref arg
@@ -4340,7 +4340,7 @@ public class SubHandler12 {
                     String var5 = (String) ((Map<String, Object>) __args__).get("var5");
             
                     // create target object
-                    com.amap.api.services.route.RouteSearch.DriveRouteQuery __obj__ = new com.amap.api.services.route.RouteSearch.DriveRouteQuery(var1, var2, var3, var4, var5);
+                    com.amap.api.services.route.RouteSearch.DriveRouteQuery __obj__ = new com.amap.api.services.route.RouteSearch.DriveRouteQuery(var1, var2.intValue(), var3, var4, var5);
             
                     // print current HEAP
                     if (getEnableLog()) {
@@ -4685,14 +4685,14 @@ public class SubHandler12 {
                     // ref arg
                     com.amap.api.services.route.RouteSearch.FromAndTo var1 = (com.amap.api.services.route.RouteSearch.FromAndTo) ((Map<String, Object>) __args__).get("var1");
                     // ref arg
-                    int var2 = (int) ((Map<String, Object>) __args__).get("var2");
+                    Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
                     // ref arg
                     String var3 = (String) ((Map<String, Object>) __args__).get("var3");
                     // ref arg
-                    int var4 = (int) ((Map<String, Object>) __args__).get("var4");
+                    Number var4 = (Number) ((Map<String, Object>) __args__).get("var4");
             
                     // create target object
-                    com.amap.api.services.route.RouteSearch.BusRouteQuery __obj__ = new com.amap.api.services.route.RouteSearch.BusRouteQuery(var1, var2, var3, var4);
+                    com.amap.api.services.route.RouteSearch.BusRouteQuery __obj__ = new com.amap.api.services.route.RouteSearch.BusRouteQuery(var1, var2.intValue(), var3, var4.intValue());
             
                     // print current HEAP
                     if (getEnableLog()) {
@@ -4882,10 +4882,10 @@ public class SubHandler12 {
                     // ref arg
                     com.amap.api.services.route.RouteSearch.FromAndTo var1 = (com.amap.api.services.route.RouteSearch.FromAndTo) ((Map<String, Object>) __args__).get("var1");
                     // ref arg
-                    int var2 = (int) ((Map<String, Object>) __args__).get("var2");
+                    Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
             
                     // create target object
-                    com.amap.api.services.route.RouteSearch.WalkRouteQuery __obj__ = new com.amap.api.services.route.RouteSearch.WalkRouteQuery(var1, var2);
+                    com.amap.api.services.route.RouteSearch.WalkRouteQuery __obj__ = new com.amap.api.services.route.RouteSearch.WalkRouteQuery(var1, var2.intValue());
             
                     // print current HEAP
                     if (getEnableLog()) {
@@ -5267,14 +5267,14 @@ public class SubHandler12 {
                     // ref arg
                     com.amap.api.services.route.RouteSearch.FromAndTo var1 = (com.amap.api.services.route.RouteSearch.FromAndTo) ((Map<String, Object>) __args__).get("var1");
                     // ref arg
-                    int var2 = (int) ((Map<String, Object>) __args__).get("var2");
+                    Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
                     // ref arg
-                    int var3 = (int) ((Map<String, Object>) __args__).get("var3");
+                    Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
                     // ref arg
-                    int var4 = (int) ((Map<String, Object>) __args__).get("var4");
+                    Number var4 = (Number) ((Map<String, Object>) __args__).get("var4");
             
                     // create target object
-                    com.amap.api.services.route.RouteSearch.DrivePlanQuery __obj__ = new com.amap.api.services.route.RouteSearch.DrivePlanQuery(var1, var2, var3, var4);
+                    com.amap.api.services.route.RouteSearch.DrivePlanQuery __obj__ = new com.amap.api.services.route.RouteSearch.DrivePlanQuery(var1, var2.intValue(), var3.intValue(), var4.intValue());
             
                     // print current HEAP
                     if (getEnableLog()) {

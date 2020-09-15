@@ -13,6 +13,7 @@ extension AMapSearchCoordinateTypeToX on AMapSearchCoordinateType {
     switch (this) {
       case AMapSearchCoordinateType.AMapSearchCoordinateTypeGPS: return 1;
       case AMapSearchCoordinateType.AMapSearchCoordinateTypeAMap: return 2;
+      default: return 0;
     }
   }
 }

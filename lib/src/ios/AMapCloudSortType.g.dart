@@ -13,6 +13,7 @@ extension AMapCloudSortTypeToX on AMapCloudSortType {
     switch (this) {
       case AMapCloudSortType.AMapCloudSortTypeDESC: return 0;
       case AMapCloudSortType.AMapCloudSortTypeASC: return 1;
+      default: return 0;
     }
   }
 }

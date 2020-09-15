@@ -21,7 +21,7 @@ class com_amap_api_services_nearby_UploadInfo extends java_lang_Object  {
 
   //region creators
   static Future<com_amap_api_services_nearby_UploadInfo> create__() async {
-    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_services_nearby_UploadInfo__');
+    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_services_nearby_UploadInfo__', );
     final object = com_amap_api_services_nearby_UploadInfo()..refId = refId..tag__ = 'amap_search_fluttify';
     return object;
   }

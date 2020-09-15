@@ -13,6 +13,7 @@ extension AMapWeatherTypeToX on AMapWeatherType {
     switch (this) {
       case AMapWeatherType.AMapWeatherTypeLive: return 1;
       case AMapWeatherType.AMapWeatherTypeForecast: return AMapWeatherType.AMapWeatherTypeForecast.index + 1;
+      default: return 0;
     }
   }
 }

@@ -20,17 +20,17 @@ class AMapDistanceSearchResponse extends AMapSearchObject with NSCoding, NSCopyi
   //endregion
 
   //region creators
-  static Future<AMapDistanceSearchResponse> create__() async {
-    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createAMapDistanceSearchResponse');
+  static Future<AMapDistanceSearchResponse> create__({ bool init = true /* ios only */ }) async {
+    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createAMapDistanceSearchResponse', {'init': init});
     final object = AMapDistanceSearchResponse()..refId = refId..tag__ = 'amap_search_fluttify';
     return object;
   }
   
-  static Future<List<AMapDistanceSearchResponse>> create_batch__(int length) async {
+  static Future<List<AMapDistanceSearchResponse>> create_batch__(int length, { bool init = true /* ios only */ }) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::create_batchAMapDistanceSearchResponse', {'length': length});
+    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::create_batchAMapDistanceSearchResponse', {'length': length, 'init': init});
   
     final List<AMapDistanceSearchResponse> typedResult = resultBatch.map((result) => AMapDistanceSearchResponse()..refId = result..tag__ = 'amap_search_fluttify').toList();
     return typedResult;

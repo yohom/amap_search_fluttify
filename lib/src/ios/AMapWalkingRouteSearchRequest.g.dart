@@ -20,17 +20,17 @@ class AMapWalkingRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCo
   //endregion
 
   //region creators
-  static Future<AMapWalkingRouteSearchRequest> create__() async {
-    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createAMapWalkingRouteSearchRequest');
+  static Future<AMapWalkingRouteSearchRequest> create__({ bool init = true /* ios only */ }) async {
+    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createAMapWalkingRouteSearchRequest', {'init': init});
     final object = AMapWalkingRouteSearchRequest()..refId = refId..tag__ = 'amap_search_fluttify';
     return object;
   }
   
-  static Future<List<AMapWalkingRouteSearchRequest>> create_batch__(int length) async {
+  static Future<List<AMapWalkingRouteSearchRequest>> create_batch__(int length, { bool init = true /* ios only */ }) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::create_batchAMapWalkingRouteSearchRequest', {'length': length});
+    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::create_batchAMapWalkingRouteSearchRequest', {'length': length, 'init': init});
   
     final List<AMapWalkingRouteSearchRequest> typedResult = resultBatch.map((result) => AMapWalkingRouteSearchRequest()..refId = result..tag__ = 'amap_search_fluttify').toList();
     return typedResult;

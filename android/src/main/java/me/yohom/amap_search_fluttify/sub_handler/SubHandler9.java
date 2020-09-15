@@ -104,7 +104,7 @@ public class SubHandler9 {
             
                     // args
                     // ref arg
-                    Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.route.DrivePlanPath __this__ = (com.amap.api.services.route.DrivePlanPath) ((Map<String, Object>) __args__).get("__this__");
@@ -112,7 +112,7 @@ public class SubHandler9 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setDistance(new Double(var1).floatValue());
+                        __this__.setDistance(var1.floatValue());
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -167,7 +167,7 @@ public class SubHandler9 {
             
                     // args
                     // ref arg
-                    int var1 = (int) ((Map<String, Object>) __args__).get("var1");
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.route.DrivePlanPath __this__ = (com.amap.api.services.route.DrivePlanPath) ((Map<String, Object>) __args__).get("__this__");
@@ -175,7 +175,7 @@ public class SubHandler9 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setTrafficLights(var1);
+                        __this__.setTrafficLights(var1.intValue());
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -293,7 +293,7 @@ public class SubHandler9 {
             
                     // args
                     // ref arg
-                    int var1 = (int) ((Map<String, Object>) __args__).get("var1");
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.route.TimeInfosElement __this__ = (com.amap.api.services.route.TimeInfosElement) ((Map<String, Object>) __args__).get("__this__");
@@ -301,7 +301,7 @@ public class SubHandler9 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setPathindex(var1);
+                        __this__.setPathindex(var1.intValue());
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -356,7 +356,7 @@ public class SubHandler9 {
             
                     // args
                     // ref arg
-                    Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.route.TimeInfosElement __this__ = (com.amap.api.services.route.TimeInfosElement) ((Map<String, Object>) __args__).get("__this__");
@@ -364,7 +364,7 @@ public class SubHandler9 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setDuration(new Double(var1).floatValue());
+                        __this__.setDuration(var1.floatValue());
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -419,7 +419,7 @@ public class SubHandler9 {
             
                     // args
                     // ref arg
-                    Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.route.TimeInfosElement __this__ = (com.amap.api.services.route.TimeInfosElement) ((Map<String, Object>) __args__).get("__this__");
@@ -427,7 +427,7 @@ public class SubHandler9 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setTolls(new Double(var1).floatValue());
+                        __this__.setTolls(var1.floatValue());
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -482,7 +482,7 @@ public class SubHandler9 {
             
                     // args
                     // ref arg
-                    int var1 = (int) ((Map<String, Object>) __args__).get("var1");
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.route.TimeInfosElement __this__ = (com.amap.api.services.route.TimeInfosElement) ((Map<String, Object>) __args__).get("__this__");
@@ -490,7 +490,7 @@ public class SubHandler9 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setRestriction(var1);
+                        __this__.setRestriction(var1.intValue());
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -763,7 +763,7 @@ public class SubHandler9 {
             
                     // args
                     // ref arg
-                    int var1 = (int) ((Map<String, Object>) __args__).get("var1");
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.route.DistanceItem __this__ = (com.amap.api.services.route.DistanceItem) ((Map<String, Object>) __args__).get("__this__");
@@ -771,7 +771,7 @@ public class SubHandler9 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setOriginId(var1);
+                        __this__.setOriginId(var1.intValue());
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -795,7 +795,7 @@ public class SubHandler9 {
             
                     // args
                     // ref arg
-                    int var1 = (int) ((Map<String, Object>) __args__).get("var1");
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.route.DistanceItem __this__ = (com.amap.api.services.route.DistanceItem) ((Map<String, Object>) __args__).get("__this__");
@@ -803,7 +803,7 @@ public class SubHandler9 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setDestId(var1);
+                        __this__.setDestId(var1.intValue());
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -827,7 +827,7 @@ public class SubHandler9 {
             
                     // args
                     // ref arg
-                    Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.route.DistanceItem __this__ = (com.amap.api.services.route.DistanceItem) ((Map<String, Object>) __args__).get("__this__");
@@ -835,7 +835,7 @@ public class SubHandler9 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setDistance(new Double(var1).floatValue());
+                        __this__.setDistance(var1.floatValue());
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -859,7 +859,7 @@ public class SubHandler9 {
             
                     // args
                     // ref arg
-                    Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.route.DistanceItem __this__ = (com.amap.api.services.route.DistanceItem) ((Map<String, Object>) __args__).get("__this__");
@@ -867,7 +867,7 @@ public class SubHandler9 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setDuration(new Double(var1).floatValue());
+                        __this__.setDuration(var1.floatValue());
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -923,7 +923,7 @@ public class SubHandler9 {
             
                     // args
                     // ref arg
-                    int var1 = (int) ((Map<String, Object>) __args__).get("var1");
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.route.DistanceItem __this__ = (com.amap.api.services.route.DistanceItem) ((Map<String, Object>) __args__).get("__this__");
@@ -931,7 +931,7 @@ public class SubHandler9 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setErrorCode(var1);
+                        __this__.setErrorCode(var1.intValue());
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -986,7 +986,7 @@ public class SubHandler9 {
             
                     // args
                     // ref arg
-                    Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.route.Path __this__ = (com.amap.api.services.route.Path) ((Map<String, Object>) __args__).get("__this__");
@@ -994,7 +994,7 @@ public class SubHandler9 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setDistance(new Double(var1).floatValue());
+                        __this__.setDistance(var1.floatValue());
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -1049,7 +1049,7 @@ public class SubHandler9 {
             
                     // args
                     // ref arg
-                    Integer var1 = (Integer) ((Map<String, Object>) __args__).get("var1");
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.route.Path __this__ = (com.amap.api.services.route.Path) ((Map<String, Object>) __args__).get("__this__");
@@ -1057,7 +1057,7 @@ public class SubHandler9 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setDuration(var1);
+                        __this__.setDuration(var1.longValue());
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -1239,7 +1239,7 @@ public class SubHandler9 {
             
                     // args
                     // ref arg
-                    Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.road.Road __this__ = (com.amap.api.services.road.Road) ((Map<String, Object>) __args__).get("__this__");
@@ -1247,7 +1247,7 @@ public class SubHandler9 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setRoadWidth(new Double(var1).floatValue());
+                        __this__.setRoadWidth(var1.floatValue());
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -1490,7 +1490,7 @@ public class SubHandler9 {
             
                     // args
                     // ref arg
-                    Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.road.Crossroad __this__ = (com.amap.api.services.road.Crossroad) ((Map<String, Object>) __args__).get("__this__");
@@ -1498,7 +1498,7 @@ public class SubHandler9 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setDistance(new Double(var1).floatValue());
+                        __this__.setDistance(var1.floatValue());
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -1963,7 +1963,7 @@ public class SubHandler9 {
             
                     // args
                     // ref arg
-                    Integer var1 = (Integer) ((Map<String, Object>) __args__).get("var1");
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.nearby.NearbyInfo __this__ = (com.amap.api.services.nearby.NearbyInfo) ((Map<String, Object>) __args__).get("__this__");
@@ -1971,7 +1971,7 @@ public class SubHandler9 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setTimeStamp(var1);
+                        __this__.setTimeStamp(var1.longValue());
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -2026,7 +2026,7 @@ public class SubHandler9 {
             
                     // args
                     // ref arg
-                    int var1 = (int) ((Map<String, Object>) __args__).get("var1");
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.nearby.NearbyInfo __this__ = (com.amap.api.services.nearby.NearbyInfo) ((Map<String, Object>) __args__).get("__this__");
@@ -2034,7 +2034,7 @@ public class SubHandler9 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setDistance(var1);
+                        __this__.setDistance(var1.intValue());
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -2089,7 +2089,7 @@ public class SubHandler9 {
             
                     // args
                     // ref arg
-                    int var1 = (int) ((Map<String, Object>) __args__).get("var1");
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.nearby.NearbyInfo __this__ = (com.amap.api.services.nearby.NearbyInfo) ((Map<String, Object>) __args__).get("__this__");
@@ -2097,7 +2097,7 @@ public class SubHandler9 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setDrivingDistance(var1);
+                        __this__.setDrivingDistance(var1.intValue());
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -2309,7 +2309,7 @@ public class SubHandler9 {
             
                     // args
                     // ref arg
-                    int var1 = (int) ((Map<String, Object>) __args__).get("var1");
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.nearby.UploadInfo __this__ = (com.amap.api.services.nearby.UploadInfo) ((Map<String, Object>) __args__).get("__this__");
@@ -2317,7 +2317,7 @@ public class SubHandler9 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setCoordType(var1);
+                        __this__.setCoordType(var1.intValue());
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -2782,7 +2782,7 @@ public class SubHandler9 {
             
                     // args
                     // ref arg
-                    int var1 = (int) ((Map<String, Object>) __args__).get("var1");
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.nearby.NearbySearch.NearbyQuery __this__ = (com.amap.api.services.nearby.NearbySearch.NearbyQuery) ((Map<String, Object>) __args__).get("__this__");
@@ -2790,7 +2790,7 @@ public class SubHandler9 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setRadius(var1);
+                        __this__.setRadius(var1.intValue());
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -2877,7 +2877,7 @@ public class SubHandler9 {
             
                     // args
                     // ref arg
-                    int var1 = (int) ((Map<String, Object>) __args__).get("var1");
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.nearby.NearbySearch.NearbyQuery __this__ = (com.amap.api.services.nearby.NearbySearch.NearbyQuery) ((Map<String, Object>) __args__).get("__this__");
@@ -2885,7 +2885,7 @@ public class SubHandler9 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setCoordType(var1);
+                        __this__.setCoordType(var1.intValue());
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -2940,7 +2940,7 @@ public class SubHandler9 {
             
                     // args
                     // ref arg
-                    int var1 = (int) ((Map<String, Object>) __args__).get("var1");
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.nearby.NearbySearch.NearbyQuery __this__ = (com.amap.api.services.nearby.NearbySearch.NearbyQuery) ((Map<String, Object>) __args__).get("__this__");
@@ -2948,7 +2948,7 @@ public class SubHandler9 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setTimeRange(var1);
+                        __this__.setTimeRange(var1.intValue());
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -3223,7 +3223,7 @@ public class SubHandler9 {
             
                     // args
                     // ref arg
-                    Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.routepoisearch.RoutePOIItem __this__ = (com.amap.api.services.routepoisearch.RoutePOIItem) ((Map<String, Object>) __args__).get("__this__");
@@ -3231,7 +3231,7 @@ public class SubHandler9 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setDistance(new Double(var1).floatValue());
+                        __this__.setDistance(var1.floatValue());
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -3286,7 +3286,7 @@ public class SubHandler9 {
             
                     // args
                     // ref arg
-                    Double var1 = (Double) ((Map<String, Object>) __args__).get("var1");
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.routepoisearch.RoutePOIItem __this__ = (com.amap.api.services.routepoisearch.RoutePOIItem) ((Map<String, Object>) __args__).get("__this__");
@@ -3294,7 +3294,7 @@ public class SubHandler9 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setDuration(new Double(var1).floatValue());
+                        __this__.setDuration(var1.floatValue());
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -3753,7 +3753,7 @@ public class SubHandler9 {
             
                     // args
                     // ref arg
-                    int var1 = (int) ((Map<String, Object>) __args__).get("var1");
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.cloud.CloudItem __this__ = (com.amap.api.services.cloud.CloudItem) ((Map<String, Object>) __args__).get("__this__");
@@ -3761,7 +3761,7 @@ public class SubHandler9 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setDistance(var1);
+                        __this__.setDistance(var1.intValue());
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -4255,7 +4255,7 @@ public class SubHandler9 {
             
                     // args
                     // ref arg
-                    int var1 = (int) ((Map<String, Object>) __args__).get("var1");
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.cloud.CloudSearch.Query __this__ = (com.amap.api.services.cloud.CloudSearch.Query) ((Map<String, Object>) __args__).get("__this__");
@@ -4263,7 +4263,7 @@ public class SubHandler9 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setPageNum(var1);
+                        __this__.setPageNum(var1.intValue());
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -4287,7 +4287,7 @@ public class SubHandler9 {
             
                     // args
                     // ref arg
-                    int var1 = (int) ((Map<String, Object>) __args__).get("var1");
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
                     com.amap.api.services.cloud.CloudSearch.Query __this__ = (com.amap.api.services.cloud.CloudSearch.Query) ((Map<String, Object>) __args__).get("__this__");
@@ -4295,7 +4295,7 @@ public class SubHandler9 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setPageSize(var1);
+                        __this__.setPageSize(var1.intValue());
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -4673,11 +4673,11 @@ public class SubHandler9 {
                     // ref arg
                     com.amap.api.services.cloud.CloudSearch.Query var0 = (com.amap.api.services.cloud.CloudSearch.Query) ((Map<String, Object>) __args__).get("var0");
                     // ref arg
-                    int var1 = (int) ((Map<String, Object>) __args__).get("var1");
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
                     // ref arg
                     com.amap.api.services.cloud.CloudSearch.SearchBound var2 = (com.amap.api.services.cloud.CloudSearch.SearchBound) ((Map<String, Object>) __args__).get("var2");
                     // ref arg
-                    int var3 = (int) ((Map<String, Object>) __args__).get("var3");
+                    Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
                     // ref arg
                     java.util.ArrayList<com.amap.api.services.cloud.CloudItem> var4 = (java.util.ArrayList<com.amap.api.services.cloud.CloudItem>) ((Map<String, Object>) __args__).get("var4");
             
@@ -4687,7 +4687,7 @@ public class SubHandler9 {
                     // invoke native method
                     com.amap.api.services.cloud.CloudResult __result__ = null;
                     try {
-                        __result__ = com.amap.api.services.cloud.CloudResult.createPagedResult(var0, var1, var2, var3, var4);
+                        __result__ = com.amap.api.services.cloud.CloudResult.createPagedResult(var0, var1.intValue(), var2, var3.intValue(), var4);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {

@@ -13,6 +13,7 @@ extension AMapSearchLanguageToX on AMapSearchLanguage {
     switch (this) {
       case AMapSearchLanguage.AMapSearchLanguageZhCN: return 0;
       case AMapSearchLanguage.AMapSearchLanguageEn: return 1;
+      default: return 0;
     }
   }
 }
