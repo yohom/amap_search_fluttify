@@ -33,6 +33,132 @@ public class SubHandler11 {
     public static Map<String, Handler> getSubHandler(BinaryMessenger messenger) {
         return new HashMap<String, Handler>() {{
             // method
+            put("com.amap.api.services.help.Tip::getAdcode_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.help.Tip __this__ = (com.amap.api.services.help.Tip) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getAdcode();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.help.Tip::setAdcode_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.help.Tip __this__ = (com.amap.api.services.help.Tip) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setAdcode(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.help.Tip::getAddress_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.help.Tip __this__ = (com.amap.api.services.help.Tip) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getAddress();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.help.Tip::setAddress_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.help.Tip __this__ = (com.amap.api.services.help.Tip) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setAddress(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
             put("com.amap.api.services.help.Tip::setTypeCode_batch", (__argsBatch__, __methodResult__) -> {
                 List<Void> __resultList__ = new ArrayList<>();
             
@@ -2719,98 +2845,6 @@ public class SubHandler11 {
             
                 // create target object
                 com.amap.api.services.poisearch.PoiSearch.SearchBound __obj__ = new com.amap.api.services.poisearch.PoiSearch.SearchBound(var1);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch__android_content_Context__com_amap_api_services_poisearch_PoiSearch_Query", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_PoiSearch__android_content_Context__com_amap_api_services_poisearch_PoiSearch_Query");
-                }
-            
-                // args
-                // ref arg
-                android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
-                // ref arg
-                com.amap.api.services.poisearch.PoiSearch.Query var2 = (com.amap.api.services.poisearch.PoiSearch.Query) ((Map<String, Object>) __args__).get("var2");
-            
-                // create target object
-                com.amap.api.services.poisearch.PoiSearch __obj__ = new com.amap.api.services.poisearch.PoiSearch(var1, var2);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch_Query__String__String", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_PoiSearch_Query__String__String");
-                }
-            
-                // args
-                // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // ref arg
-                String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-            
-                // create target object
-                com.amap.api.services.poisearch.PoiSearch.Query __obj__ = new com.amap.api.services.poisearch.PoiSearch.Query(var1, var2);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch_Query__String__String__String", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_PoiSearch_Query__String__String__String");
-                }
-            
-                // args
-                // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // ref arg
-                String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-                // ref arg
-                String var3 = (String) ((Map<String, Object>) __args__).get("var3");
-            
-                // create target object
-                com.amap.api.services.poisearch.PoiSearch.Query __obj__ = new com.amap.api.services.poisearch.PoiSearch.Query(var1, var2, var3);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_poisearch_IndoorData__String__int__String", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_IndoorData__String__int__String");
-                }
-            
-                // args
-                // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // ref arg
-                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
-                // ref arg
-                String var3 = (String) ((Map<String, Object>) __args__).get("var3");
-            
-                // create target object
-                com.amap.api.services.poisearch.IndoorData __obj__ = new com.amap.api.services.poisearch.IndoorData(var1, var2.intValue(), var3);
             
                 // print current HEAP
                 if (getEnableLog()) {

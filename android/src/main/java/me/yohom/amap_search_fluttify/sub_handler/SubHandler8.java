@@ -33,6 +33,132 @@ public class SubHandler8 {
     public static Map<String, Handler> getSubHandler(BinaryMessenger messenger) {
         return new HashMap<String, Handler>() {{
             // method
+            put("com.amap.api.services.route.RideRouteResult::setPaths_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    java.util.List<com.amap.api.services.route.RidePath> var1 = (java.util.List<com.amap.api.services.route.RidePath>) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.route.RideRouteResult __this__ = (com.amap.api.services.route.RideRouteResult) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setPaths(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.route.RideRouteResult::getRideQuery_batch", (__argsBatch__, __methodResult__) -> {
+                List<com.amap.api.services.route.RouteSearch.RideRouteQuery> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.route.RideRouteResult __this__ = (com.amap.api.services.route.RideRouteResult) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    com.amap.api.services.route.RouteSearch.RideRouteQuery __result__ = null;
+                    try {
+                        __result__ = __this__.getRideQuery();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.route.RideRouteResult::setRideQuery_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    com.amap.api.services.route.RouteSearch.RideRouteQuery var1 = (com.amap.api.services.route.RouteSearch.RideRouteQuery) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.route.RideRouteResult __this__ = (com.amap.api.services.route.RideRouteResult) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setRideQuery(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.route.RouteSearch.FromAndTo::getFrom_batch", (__argsBatch__, __methodResult__) -> {
+                List<com.amap.api.services.core.LatLonPoint> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.route.RouteSearch.FromAndTo __this__ = (com.amap.api.services.route.RouteSearch.FromAndTo) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    com.amap.api.services.core.LatLonPoint __result__ = null;
+                    try {
+                        __result__ = __this__.getFrom();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
             put("com.amap.api.services.route.RouteSearch.FromAndTo::getTo_batch", (__argsBatch__, __methodResult__) -> {
                 List<com.amap.api.services.core.LatLonPoint> __resultList__ = new ArrayList<>();
             
@@ -6186,131 +6312,6 @@ public class SubHandler8 {
                     Integer __result__ = null;
                     try {
                         __result__ = __this__.getRestriction();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.amap.api.services.route.TruckPath::getSteps_batch", (__argsBatch__, __methodResult__) -> {
-                List<java.util.List<com.amap.api.services.route.TruckStep>> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    com.amap.api.services.route.TruckPath __this__ = (com.amap.api.services.route.TruckPath) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    java.util.List<com.amap.api.services.route.TruckStep> __result__ = null;
-                    try {
-                        __result__ = __this__.getSteps();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.amap.api.services.route.Doorway::getName_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    com.amap.api.services.route.Doorway __this__ = (com.amap.api.services.route.Doorway) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    String __result__ = null;
-                    try {
-                        __result__ = __this__.getName();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.amap.api.services.route.Doorway::setName_batch", (__argsBatch__, __methodResult__) -> {
-                List<Void> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-                    // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-            
-                    // ref
-                    com.amap.api.services.route.Doorway __this__ = (com.amap.api.services.route.Doorway) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    Void __result__ = null;
-                    try {
-                        __this__.setName(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.amap.api.services.route.Doorway::getLatLonPoint_batch", (__argsBatch__, __methodResult__) -> {
-                List<com.amap.api.services.core.LatLonPoint> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    com.amap.api.services.route.Doorway __this__ = (com.amap.api.services.route.Doorway) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    com.amap.api.services.core.LatLonPoint __result__ = null;
-                    try {
-                        __result__ = __this__.getLatLonPoint();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
