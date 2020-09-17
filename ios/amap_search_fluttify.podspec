@@ -19,7 +19,7 @@ A new flutter plugin project.
   # flutter plugin dependency
   s.dependency 'amap_core_fluttify'
   # sdk dependency
-  s.dependency 'AMapSearch', '~> 7.3.0'
+  s.dependency 'AMapSearch-NO-IDFA', '~> 7.3.0'
 
   s.static_framework = true
   s.ios.deployment_target = '8.0'
