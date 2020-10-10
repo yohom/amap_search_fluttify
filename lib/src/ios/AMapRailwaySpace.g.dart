@@ -16,13 +16,16 @@ class AMapRailwaySpace extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
   static const String name__ = 'AMapRailwaySpace';
 
+  @override
+  final String tag__ = 'amap_search_fluttify';
+
   
   //endregion
 
   //region creators
   static Future<AMapRailwaySpace> create__({ bool init = true /* ios only */ }) async {
-    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createAMapRailwaySpace', {'init': init});
-    final object = AMapRailwaySpace()..refId = refId..tag__ = 'amap_search_fluttify';
+    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapRailwaySpace', {'init': init});
+    final object = AMapRailwaySpace()..refId = refId;
     return object;
   }
   
@@ -30,9 +33,9 @@ class AMapRailwaySpace extends AMapSearchObject with NSCoding, NSCopying {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::create_batchAMapRailwaySpace', {'length': length, 'init': init});
+    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapRailwaySpace', {'length': length, 'init': init});
   
-    final List<AMapRailwaySpace> typedResult = resultBatch.map((result) => AMapRailwaySpace()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<AMapRailwaySpace> typedResult = resultBatch.map((result) => AMapRailwaySpace()..refId = result).toList();
     return typedResult;
   }
   
@@ -40,12 +43,12 @@ class AMapRailwaySpace extends AMapSearchObject with NSCoding, NSCopying {
 
   //region getters
   Future<String> get_code() async {
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapRailwaySpace::get_code", {'__this__': this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapRailwaySpace::get_code", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<double> get_cost() async {
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapRailwaySpace::get_cost", {'__this__': this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapRailwaySpace::get_cost", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
@@ -53,13 +56,13 @@ class AMapRailwaySpace extends AMapSearchObject with NSCoding, NSCopying {
 
   //region setters
   Future<void> set_code(String code) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapRailwaySpace::set_code', <String, dynamic>{'__this__': this, "code": code});
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapRailwaySpace::set_code', <String, dynamic>{'__this__': this, "code": code});
   
   
   }
   
   Future<void> set_cost(double cost) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapRailwaySpace::set_cost', <String, dynamic>{'__this__': this, "cost": cost});
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapRailwaySpace::set_cost', <String, dynamic>{'__this__': this, "cost": cost});
   
   
   }
@@ -69,19 +72,24 @@ class AMapRailwaySpace extends AMapSearchObject with NSCoding, NSCopying {
   //region methods
   
   //endregion
+
+  @override
+  String toString() {
+    return 'AMapRailwaySpace{refId: $refId, runtimeType: $runtimeType, tag__: $tag__}';
+  }
 }
 
 extension AMapRailwaySpace_Batch on List<AMapRailwaySpace> {
   //region getters
   Future<List<String>> get_code_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapRailwaySpace::get_code_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRailwaySpace::get_code_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<double>> get_cost_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapRailwaySpace::get_cost_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRailwaySpace::get_cost_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
     return typedResult;
@@ -91,13 +99,13 @@ extension AMapRailwaySpace_Batch on List<AMapRailwaySpace> {
 
   //region setters
   Future<void> set_code_batch(List<String> code) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRailwaySpace::set_code_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "code": code[__i__]}]);
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapRailwaySpace::set_code_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "code": code[__i__]}]);
   
   
   }
   
   Future<void> set_cost_batch(List<double> cost) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRailwaySpace::set_cost_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "cost": cost[__i__]}]);
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapRailwaySpace::set_cost_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "cost": cost[__i__]}]);
   
   
   }

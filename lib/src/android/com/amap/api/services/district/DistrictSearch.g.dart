@@ -16,13 +16,16 @@ class com_amap_api_services_district_DistrictSearch extends java_lang_Object  {
   //region constants
   static const String name__ = 'com.amap.api.services.district.DistrictSearch';
 
+  @override
+  final String tag__ = 'amap_search_fluttify';
+
   
   //endregion
 
   //region creators
   static Future<com_amap_api_services_district_DistrictSearch> create__android_content_Context(android_content_Context var1) async {
-    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_services_district_DistrictSearch__android_content_Context', {"var1": var1});
-    final object = com_amap_api_services_district_DistrictSearch()..refId = refId..tag__ = 'amap_search_fluttify';
+    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_services_district_DistrictSearch__android_content_Context', {"var1": var1});
+    final object = com_amap_api_services_district_DistrictSearch()..refId = refId;
     return object;
   }
   
@@ -30,9 +33,9 @@ class com_amap_api_services_district_DistrictSearch extends java_lang_Object  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_amap_api_services_district_DistrictSearch__android_content_Context', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]);
+    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchcom_amap_api_services_district_DistrictSearch__android_content_Context', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]);
   
-    final List<com_amap_api_services_district_DistrictSearch> typedResult = resultBatch.map((result) => com_amap_api_services_district_DistrictSearch()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<com_amap_api_services_district_DistrictSearch> typedResult = resultBatch.map((result) => com_amap_api_services_district_DistrictSearch()..refId = result).toList();
     return typedResult;
   }
   
@@ -55,7 +58,7 @@ class com_amap_api_services_district_DistrictSearch extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.district.DistrictSearch::getQuery', {"__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.district.DistrictSearch::getQuery', {"__this__": this});
   
   
     // handle native call
@@ -65,7 +68,7 @@ class com_amap_api_services_district_DistrictSearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_services_district_DistrictSearchQuery()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_district_DistrictSearchQuery()..refId = __result__;
       return __return__;
     }
   }
@@ -78,7 +81,7 @@ class com_amap_api_services_district_DistrictSearch extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.district.DistrictSearch::setQuery', {"var1": var1, "__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.district.DistrictSearch::setQuery', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -101,7 +104,7 @@ class com_amap_api_services_district_DistrictSearch extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.district.DistrictSearch::searchDistrict', {"__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.district.DistrictSearch::searchDistrict', {"__this__": this});
   
   
     // handle native call
@@ -111,7 +114,7 @@ class com_amap_api_services_district_DistrictSearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_services_district_DistrictResult()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_district_DistrictResult()..refId = __result__;
       return __return__;
     }
   }
@@ -124,7 +127,7 @@ class com_amap_api_services_district_DistrictSearch extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.district.DistrictSearch::searchDistrictAsyn', {"__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.district.DistrictSearch::searchDistrictAsyn', {"__this__": this});
   
   
     // handle native call
@@ -147,7 +150,7 @@ class com_amap_api_services_district_DistrictSearch extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.district.DistrictSearch::searchDistrictAnsy', {"__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.district.DistrictSearch::searchDistrictAnsy', {"__this__": this});
   
   
     // handle native call
@@ -170,7 +173,7 @@ class com_amap_api_services_district_DistrictSearch extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.district.DistrictSearch::setOnDistrictSearchListener', {"__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.district.DistrictSearch::setOnDistrictSearchListener', {"__this__": this});
   
   
     // handle native call
@@ -207,6 +210,11 @@ class com_amap_api_services_district_DistrictSearch extends java_lang_Object  {
   }
   
   //endregion
+
+  @override
+  String toString() {
+    return 'com_amap_api_services_district_DistrictSearch{refId: $refId, runtimeType: $runtimeType, tag__: $tag__}';
+  }
 }
 
 extension com_amap_api_services_district_DistrictSearch_Batch on List<com_amap_api_services_district_DistrictSearch> {
@@ -226,14 +234,14 @@ extension com_amap_api_services_district_DistrictSearch_Batch on List<com_amap_a
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.district.DistrictSearch::getQuery_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.district.DistrictSearch::getQuery_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_district_DistrictSearchQuery()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_district_DistrictSearchQuery()..refId = __result__).toList();
       return typedResult;
     }
   }
@@ -245,7 +253,7 @@ extension com_amap_api_services_district_DistrictSearch_Batch on List<com_amap_a
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.district.DistrictSearch::setQuery_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.district.DistrictSearch::setQuery_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -264,14 +272,14 @@ extension com_amap_api_services_district_DistrictSearch_Batch on List<com_amap_a
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.district.DistrictSearch::searchDistrict_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.district.DistrictSearch::searchDistrict_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_district_DistrictResult()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_district_DistrictResult()..refId = __result__).toList();
       return typedResult;
     }
   }
@@ -283,7 +291,7 @@ extension com_amap_api_services_district_DistrictSearch_Batch on List<com_amap_a
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.district.DistrictSearch::searchDistrictAsyn_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.district.DistrictSearch::searchDistrictAsyn_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -302,7 +310,7 @@ extension com_amap_api_services_district_DistrictSearch_Batch on List<com_amap_a
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.district.DistrictSearch::searchDistrictAnsy_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.district.DistrictSearch::searchDistrictAnsy_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object

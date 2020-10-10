@@ -16,13 +16,16 @@ class AMapCity extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
   static const String name__ = 'AMapCity';
 
+  @override
+  final String tag__ = 'amap_search_fluttify';
+
   
   //endregion
 
   //region creators
   static Future<AMapCity> create__({ bool init = true /* ios only */ }) async {
-    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createAMapCity', {'init': init});
-    final object = AMapCity()..refId = refId..tag__ = 'amap_search_fluttify';
+    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapCity', {'init': init});
+    final object = AMapCity()..refId = refId;
     return object;
   }
   
@@ -30,9 +33,9 @@ class AMapCity extends AMapSearchObject with NSCoding, NSCopying {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::create_batchAMapCity', {'length': length, 'init': init});
+    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapCity', {'length': length, 'init': init});
   
-    final List<AMapCity> typedResult = resultBatch.map((result) => AMapCity()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<AMapCity> typedResult = resultBatch.map((result) => AMapCity()..refId = result).toList();
     return typedResult;
   }
   
@@ -40,59 +43,59 @@ class AMapCity extends AMapSearchObject with NSCoding, NSCopying {
 
   //region getters
   Future<String> get_city() async {
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapCity::get_city", {'__this__': this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapCity::get_city", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<String> get_citycode() async {
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapCity::get_citycode", {'__this__': this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapCity::get_citycode", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<String> get_adcode() async {
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapCity::get_adcode", {'__this__': this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapCity::get_adcode", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<int> get_num() async {
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapCity::get_num", {'__this__': this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapCity::get_num", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<List<AMapDistrict>> get_districts() async {
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapCity::get_districts", {'__this__': this});
-    return __result__ == null ? null : ((__result__ as List).cast<String>().map((__it__) => AMapDistrict()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapCity::get_districts", {'__this__': this});
+    return __result__ == null ? null : ((__result__ as List).cast<String>().map((__it__) => AMapDistrict()..refId = __it__).toList());
   }
   
   //endregion
 
   //region setters
   Future<void> set_city(String city) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapCity::set_city', <String, dynamic>{'__this__': this, "city": city});
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapCity::set_city', <String, dynamic>{'__this__': this, "city": city});
   
   
   }
   
   Future<void> set_citycode(String citycode) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapCity::set_citycode', <String, dynamic>{'__this__': this, "citycode": citycode});
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapCity::set_citycode', <String, dynamic>{'__this__': this, "citycode": citycode});
   
   
   }
   
   Future<void> set_adcode(String adcode) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapCity::set_adcode', <String, dynamic>{'__this__': this, "adcode": adcode});
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapCity::set_adcode', <String, dynamic>{'__this__': this, "adcode": adcode});
   
   
   }
   
   Future<void> set_num(int num) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapCity::set_num', <String, dynamic>{'__this__': this, "num": num});
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapCity::set_num', <String, dynamic>{'__this__': this, "num": num});
   
   
   }
   
   Future<void> set_districts(List<AMapDistrict> districts) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapCity::set_districts', <String, dynamic>{'__this__': this, "districts": districts});
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapCity::set_districts', <String, dynamic>{'__this__': this, "districts": districts});
   
   
   }
@@ -102,42 +105,47 @@ class AMapCity extends AMapSearchObject with NSCoding, NSCopying {
   //region methods
   
   //endregion
+
+  @override
+  String toString() {
+    return 'AMapCity{refId: $refId, runtimeType: $runtimeType, tag__: $tag__}';
+  }
 }
 
 extension AMapCity_Batch on List<AMapCity> {
   //region getters
   Future<List<String>> get_city_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapCity::get_city_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapCity::get_city_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<String>> get_citycode_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapCity::get_citycode_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapCity::get_citycode_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<String>> get_adcode_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapCity::get_adcode_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapCity::get_adcode_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<int>> get_num_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapCity::get_num_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapCity::get_num_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<List<AMapDistrict>>> get_districts_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapCity::get_districts_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapCity::get_districts_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => AMapDistrict()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => AMapDistrict()..refId = __it__).toList()).toList();
     return typedResult;
   }
   
@@ -145,31 +153,31 @@ extension AMapCity_Batch on List<AMapCity> {
 
   //region setters
   Future<void> set_city_batch(List<String> city) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapCity::set_city_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "city": city[__i__]}]);
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapCity::set_city_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "city": city[__i__]}]);
   
   
   }
   
   Future<void> set_citycode_batch(List<String> citycode) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapCity::set_citycode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "citycode": citycode[__i__]}]);
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapCity::set_citycode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "citycode": citycode[__i__]}]);
   
   
   }
   
   Future<void> set_adcode_batch(List<String> adcode) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapCity::set_adcode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "adcode": adcode[__i__]}]);
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapCity::set_adcode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "adcode": adcode[__i__]}]);
   
   
   }
   
   Future<void> set_num_batch(List<int> num) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapCity::set_num_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "num": num[__i__]}]);
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapCity::set_num_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "num": num[__i__]}]);
   
   
   }
   
   Future<void> set_districts_batch(List<List<AMapDistrict>> districts) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapCity::set_districts_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "districts": districts[__i__]}]);
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapCity::set_districts_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "districts": districts[__i__]}]);
   
   
   }

@@ -28,6 +28,11 @@ import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getHEAP;
 
 @SuppressWarnings("ALL")
 public class SubHandlerCustom {
+
+    public static final SubHandlerCustom instance = new SubHandlerCustom();
+
+    private SubHandlerCustom() {}
+
     public static Map<String, Handler> getSubHandler(BinaryMessenger messenger, android.app.Activity activity) {
         return new HashMap<String, Handler>() {{
             put("", (args, methodResult) -> {

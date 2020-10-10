@@ -115,3 +115,4 @@ export 'AMapRouteSearchResponse.g.dart';
 export 'AMapRoutePOISearchType.g.dart';
 export 'AMapSuggestion.g.dart';
 export 'package:amap_core_fluttify/amap_core_fluttify.dart';
+export '../facade/objects.g.dart';

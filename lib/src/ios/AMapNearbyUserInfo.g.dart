@@ -16,13 +16,16 @@ class AMapNearbyUserInfo extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
   static const String name__ = 'AMapNearbyUserInfo';
 
+  @override
+  final String tag__ = 'amap_search_fluttify';
+
   
   //endregion
 
   //region creators
   static Future<AMapNearbyUserInfo> create__({ bool init = true /* ios only */ }) async {
-    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createAMapNearbyUserInfo', {'init': init});
-    final object = AMapNearbyUserInfo()..refId = refId..tag__ = 'amap_search_fluttify';
+    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapNearbyUserInfo', {'init': init});
+    final object = AMapNearbyUserInfo()..refId = refId;
     return object;
   }
   
@@ -30,9 +33,9 @@ class AMapNearbyUserInfo extends AMapSearchObject with NSCoding, NSCopying {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::create_batchAMapNearbyUserInfo', {'length': length, 'init': init});
+    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapNearbyUserInfo', {'length': length, 'init': init});
   
-    final List<AMapNearbyUserInfo> typedResult = resultBatch.map((result) => AMapNearbyUserInfo()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<AMapNearbyUserInfo> typedResult = resultBatch.map((result) => AMapNearbyUserInfo()..refId = result).toList();
     return typedResult;
   }
   
@@ -40,22 +43,22 @@ class AMapNearbyUserInfo extends AMapSearchObject with NSCoding, NSCopying {
 
   //region getters
   Future<String> get_userID() async {
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapNearbyUserInfo::get_userID", {'__this__': this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapNearbyUserInfo::get_userID", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<AMapGeoPoint> get_location() async {
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapNearbyUserInfo::get_location", {'__this__': this});
-    return __result__ == null ? null : (AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify');
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapNearbyUserInfo::get_location", {'__this__': this});
+    return __result__ == null ? null : (AMapGeoPoint()..refId = __result__);
   }
   
   Future<double> get_distance() async {
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapNearbyUserInfo::get_distance", {'__this__': this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapNearbyUserInfo::get_distance", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<double> get_updatetime() async {
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapNearbyUserInfo::get_updatetime", {'__this__': this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapNearbyUserInfo::get_updatetime", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
@@ -63,25 +66,25 @@ class AMapNearbyUserInfo extends AMapSearchObject with NSCoding, NSCopying {
 
   //region setters
   Future<void> set_userID(String userID) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapNearbyUserInfo::set_userID', <String, dynamic>{'__this__': this, "userID": userID});
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapNearbyUserInfo::set_userID', <String, dynamic>{'__this__': this, "userID": userID});
   
   
   }
   
   Future<void> set_location(AMapGeoPoint location) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapNearbyUserInfo::set_location', <String, dynamic>{'__this__': this, "location": location});
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapNearbyUserInfo::set_location', <String, dynamic>{'__this__': this, "location": location});
   
   
   }
   
   Future<void> set_distance(double distance) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapNearbyUserInfo::set_distance', <String, dynamic>{'__this__': this, "distance": distance});
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapNearbyUserInfo::set_distance', <String, dynamic>{'__this__': this, "distance": distance});
   
   
   }
   
   Future<void> set_updatetime(double updatetime) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapNearbyUserInfo::set_updatetime', <String, dynamic>{'__this__': this, "updatetime": updatetime});
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapNearbyUserInfo::set_updatetime', <String, dynamic>{'__this__': this, "updatetime": updatetime});
   
   
   }
@@ -91,33 +94,38 @@ class AMapNearbyUserInfo extends AMapSearchObject with NSCoding, NSCopying {
   //region methods
   
   //endregion
+
+  @override
+  String toString() {
+    return 'AMapNearbyUserInfo{refId: $refId, runtimeType: $runtimeType, tag__: $tag__}';
+  }
 }
 
 extension AMapNearbyUserInfo_Batch on List<AMapNearbyUserInfo> {
   //region getters
   Future<List<String>> get_userID_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapNearbyUserInfo::get_userID_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapNearbyUserInfo::get_userID_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<AMapGeoPoint>> get_location_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapNearbyUserInfo::get_location_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapNearbyUserInfo::get_location_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapGeoPoint()..refId = __result__).toList();
     return typedResult;
   }
   
   Future<List<double>> get_distance_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapNearbyUserInfo::get_distance_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapNearbyUserInfo::get_distance_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<double>> get_updatetime_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapNearbyUserInfo::get_updatetime_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapNearbyUserInfo::get_updatetime_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
     return typedResult;
@@ -127,25 +135,25 @@ extension AMapNearbyUserInfo_Batch on List<AMapNearbyUserInfo> {
 
   //region setters
   Future<void> set_userID_batch(List<String> userID) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapNearbyUserInfo::set_userID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "userID": userID[__i__]}]);
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapNearbyUserInfo::set_userID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "userID": userID[__i__]}]);
   
   
   }
   
   Future<void> set_location_batch(List<AMapGeoPoint> location) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapNearbyUserInfo::set_location_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "location": location[__i__]}]);
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapNearbyUserInfo::set_location_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "location": location[__i__]}]);
   
   
   }
   
   Future<void> set_distance_batch(List<double> distance) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapNearbyUserInfo::set_distance_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "distance": distance[__i__]}]);
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapNearbyUserInfo::set_distance_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "distance": distance[__i__]}]);
   
   
   }
   
   Future<void> set_updatetime_batch(List<double> updatetime) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapNearbyUserInfo::set_updatetime_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "updatetime": updatetime[__i__]}]);
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapNearbyUserInfo::set_updatetime_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "updatetime": updatetime[__i__]}]);
   
   
   }

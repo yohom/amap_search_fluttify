@@ -16,13 +16,16 @@ class AMapBusLineSearchResponse extends AMapSearchObject with NSCoding, NSCopyin
   //region constants
   static const String name__ = 'AMapBusLineSearchResponse';
 
+  @override
+  final String tag__ = 'amap_search_fluttify';
+
   
   //endregion
 
   //region creators
   static Future<AMapBusLineSearchResponse> create__({ bool init = true /* ios only */ }) async {
-    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createAMapBusLineSearchResponse', {'init': init});
-    final object = AMapBusLineSearchResponse()..refId = refId..tag__ = 'amap_search_fluttify';
+    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapBusLineSearchResponse', {'init': init});
+    final object = AMapBusLineSearchResponse()..refId = refId;
     return object;
   }
   
@@ -30,9 +33,9 @@ class AMapBusLineSearchResponse extends AMapSearchObject with NSCoding, NSCopyin
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::create_batchAMapBusLineSearchResponse', {'length': length, 'init': init});
+    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapBusLineSearchResponse', {'length': length, 'init': init});
   
-    final List<AMapBusLineSearchResponse> typedResult = resultBatch.map((result) => AMapBusLineSearchResponse()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<AMapBusLineSearchResponse> typedResult = resultBatch.map((result) => AMapBusLineSearchResponse()..refId = result).toList();
     return typedResult;
   }
   
@@ -40,37 +43,37 @@ class AMapBusLineSearchResponse extends AMapSearchObject with NSCoding, NSCopyin
 
   //region getters
   Future<int> get_count() async {
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapBusLineSearchResponse::get_count", {'__this__': this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapBusLineSearchResponse::get_count", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<AMapSuggestion> get_suggestion() async {
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapBusLineSearchResponse::get_suggestion", {'__this__': this});
-    return __result__ == null ? null : (AMapSuggestion()..refId = __result__..tag__ = 'amap_search_fluttify');
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapBusLineSearchResponse::get_suggestion", {'__this__': this});
+    return __result__ == null ? null : (AMapSuggestion()..refId = __result__);
   }
   
   Future<List<AMapBusLine>> get_buslines() async {
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapBusLineSearchResponse::get_buslines", {'__this__': this});
-    return __result__ == null ? null : ((__result__ as List).cast<String>().map((__it__) => AMapBusLine()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapBusLineSearchResponse::get_buslines", {'__this__': this});
+    return __result__ == null ? null : ((__result__ as List).cast<String>().map((__it__) => AMapBusLine()..refId = __it__).toList());
   }
   
   //endregion
 
   //region setters
   Future<void> set_count(int count) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapBusLineSearchResponse::set_count', <String, dynamic>{'__this__': this, "count": count});
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapBusLineSearchResponse::set_count', <String, dynamic>{'__this__': this, "count": count});
   
   
   }
   
   Future<void> set_suggestion(AMapSuggestion suggestion) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapBusLineSearchResponse::set_suggestion', <String, dynamic>{'__this__': this, "suggestion": suggestion});
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapBusLineSearchResponse::set_suggestion', <String, dynamic>{'__this__': this, "suggestion": suggestion});
   
   
   }
   
   Future<void> set_buslines(List<AMapBusLine> buslines) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapBusLineSearchResponse::set_buslines', <String, dynamic>{'__this__': this, "buslines": buslines});
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapBusLineSearchResponse::set_buslines', <String, dynamic>{'__this__': this, "buslines": buslines});
   
   
   }
@@ -80,28 +83,33 @@ class AMapBusLineSearchResponse extends AMapSearchObject with NSCoding, NSCopyin
   //region methods
   
   //endregion
+
+  @override
+  String toString() {
+    return 'AMapBusLineSearchResponse{refId: $refId, runtimeType: $runtimeType, tag__: $tag__}';
+  }
 }
 
 extension AMapBusLineSearchResponse_Batch on List<AMapBusLineSearchResponse> {
   //region getters
   Future<List<int>> get_count_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapBusLineSearchResponse::get_count_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapBusLineSearchResponse::get_count_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<AMapSuggestion>> get_suggestion_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapBusLineSearchResponse::get_suggestion_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapBusLineSearchResponse::get_suggestion_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapSuggestion()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapSuggestion()..refId = __result__).toList();
     return typedResult;
   }
   
   Future<List<List<AMapBusLine>>> get_buslines_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapBusLineSearchResponse::get_buslines_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapBusLineSearchResponse::get_buslines_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => AMapBusLine()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => AMapBusLine()..refId = __it__).toList()).toList();
     return typedResult;
   }
   
@@ -109,19 +117,19 @@ extension AMapBusLineSearchResponse_Batch on List<AMapBusLineSearchResponse> {
 
   //region setters
   Future<void> set_count_batch(List<int> count) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapBusLineSearchResponse::set_count_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "count": count[__i__]}]);
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapBusLineSearchResponse::set_count_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "count": count[__i__]}]);
   
   
   }
   
   Future<void> set_suggestion_batch(List<AMapSuggestion> suggestion) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapBusLineSearchResponse::set_suggestion_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "suggestion": suggestion[__i__]}]);
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapBusLineSearchResponse::set_suggestion_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "suggestion": suggestion[__i__]}]);
   
   
   }
   
   Future<void> set_buslines_batch(List<List<AMapBusLine>> buslines) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapBusLineSearchResponse::set_buslines_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "buslines": buslines[__i__]}]);
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapBusLineSearchResponse::set_buslines_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "buslines": buslines[__i__]}]);
   
   
   }

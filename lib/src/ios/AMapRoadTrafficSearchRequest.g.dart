@@ -16,13 +16,16 @@ class AMapRoadTrafficSearchRequest extends AMapRoadTrafficSearchBaseRequest with
   //region constants
   static const String name__ = 'AMapRoadTrafficSearchRequest';
 
+  @override
+  final String tag__ = 'amap_search_fluttify';
+
   
   //endregion
 
   //region creators
   static Future<AMapRoadTrafficSearchRequest> create__({ bool init = true /* ios only */ }) async {
-    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createAMapRoadTrafficSearchRequest', {'init': init});
-    final object = AMapRoadTrafficSearchRequest()..refId = refId..tag__ = 'amap_search_fluttify';
+    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapRoadTrafficSearchRequest', {'init': init});
+    final object = AMapRoadTrafficSearchRequest()..refId = refId;
     return object;
   }
   
@@ -30,9 +33,9 @@ class AMapRoadTrafficSearchRequest extends AMapRoadTrafficSearchBaseRequest with
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::create_batchAMapRoadTrafficSearchRequest', {'length': length, 'init': init});
+    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapRoadTrafficSearchRequest', {'length': length, 'init': init});
   
-    final List<AMapRoadTrafficSearchRequest> typedResult = resultBatch.map((result) => AMapRoadTrafficSearchRequest()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<AMapRoadTrafficSearchRequest> typedResult = resultBatch.map((result) => AMapRoadTrafficSearchRequest()..refId = result).toList();
     return typedResult;
   }
   
@@ -40,12 +43,12 @@ class AMapRoadTrafficSearchRequest extends AMapRoadTrafficSearchBaseRequest with
 
   //region getters
   Future<String> get_roadName() async {
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapRoadTrafficSearchRequest::get_roadName", {'__this__': this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoadTrafficSearchRequest::get_roadName", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<String> get_adcode() async {
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapRoadTrafficSearchRequest::get_adcode", {'__this__': this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoadTrafficSearchRequest::get_adcode", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
@@ -53,13 +56,13 @@ class AMapRoadTrafficSearchRequest extends AMapRoadTrafficSearchBaseRequest with
 
   //region setters
   Future<void> set_roadName(String roadName) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapRoadTrafficSearchRequest::set_roadName', <String, dynamic>{'__this__': this, "roadName": roadName});
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapRoadTrafficSearchRequest::set_roadName', <String, dynamic>{'__this__': this, "roadName": roadName});
   
   
   }
   
   Future<void> set_adcode(String adcode) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapRoadTrafficSearchRequest::set_adcode', <String, dynamic>{'__this__': this, "adcode": adcode});
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapRoadTrafficSearchRequest::set_adcode', <String, dynamic>{'__this__': this, "adcode": adcode});
   
   
   }
@@ -69,19 +72,24 @@ class AMapRoadTrafficSearchRequest extends AMapRoadTrafficSearchBaseRequest with
   //region methods
   
   //endregion
+
+  @override
+  String toString() {
+    return 'AMapRoadTrafficSearchRequest{refId: $refId, runtimeType: $runtimeType, tag__: $tag__}';
+  }
 }
 
 extension AMapRoadTrafficSearchRequest_Batch on List<AMapRoadTrafficSearchRequest> {
   //region getters
   Future<List<String>> get_roadName_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapRoadTrafficSearchRequest::get_roadName_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoadTrafficSearchRequest::get_roadName_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<String>> get_adcode_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapRoadTrafficSearchRequest::get_adcode_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoadTrafficSearchRequest::get_adcode_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     return typedResult;
@@ -91,13 +99,13 @@ extension AMapRoadTrafficSearchRequest_Batch on List<AMapRoadTrafficSearchReques
 
   //region setters
   Future<void> set_roadName_batch(List<String> roadName) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRoadTrafficSearchRequest::set_roadName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "roadName": roadName[__i__]}]);
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapRoadTrafficSearchRequest::set_roadName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "roadName": roadName[__i__]}]);
   
   
   }
   
   Future<void> set_adcode_batch(List<String> adcode) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRoadTrafficSearchRequest::set_adcode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "adcode": adcode[__i__]}]);
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapRoadTrafficSearchRequest::set_adcode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "adcode": adcode[__i__]}]);
   
   
   }

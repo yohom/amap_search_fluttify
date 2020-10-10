@@ -16,13 +16,16 @@ class AMapLocationShareSearchRequest extends AMapShareSearchBaseRequest with NSC
   //region constants
   static const String name__ = 'AMapLocationShareSearchRequest';
 
+  @override
+  final String tag__ = 'amap_search_fluttify';
+
   
   //endregion
 
   //region creators
   static Future<AMapLocationShareSearchRequest> create__({ bool init = true /* ios only */ }) async {
-    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createAMapLocationShareSearchRequest', {'init': init});
-    final object = AMapLocationShareSearchRequest()..refId = refId..tag__ = 'amap_search_fluttify';
+    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapLocationShareSearchRequest', {'init': init});
+    final object = AMapLocationShareSearchRequest()..refId = refId;
     return object;
   }
   
@@ -30,9 +33,9 @@ class AMapLocationShareSearchRequest extends AMapShareSearchBaseRequest with NSC
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::create_batchAMapLocationShareSearchRequest', {'length': length, 'init': init});
+    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapLocationShareSearchRequest', {'length': length, 'init': init});
   
-    final List<AMapLocationShareSearchRequest> typedResult = resultBatch.map((result) => AMapLocationShareSearchRequest()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<AMapLocationShareSearchRequest> typedResult = resultBatch.map((result) => AMapLocationShareSearchRequest()..refId = result).toList();
     return typedResult;
   }
   
@@ -40,12 +43,12 @@ class AMapLocationShareSearchRequest extends AMapShareSearchBaseRequest with NSC
 
   //region getters
   Future<AMapGeoPoint> get_location() async {
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapLocationShareSearchRequest::get_location", {'__this__': this});
-    return __result__ == null ? null : (AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify');
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapLocationShareSearchRequest::get_location", {'__this__': this});
+    return __result__ == null ? null : (AMapGeoPoint()..refId = __result__);
   }
   
   Future<String> get_name() async {
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapLocationShareSearchRequest::get_name", {'__this__': this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapLocationShareSearchRequest::get_name", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
@@ -53,13 +56,13 @@ class AMapLocationShareSearchRequest extends AMapShareSearchBaseRequest with NSC
 
   //region setters
   Future<void> set_location(AMapGeoPoint location) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapLocationShareSearchRequest::set_location', <String, dynamic>{'__this__': this, "location": location});
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapLocationShareSearchRequest::set_location', <String, dynamic>{'__this__': this, "location": location});
   
   
   }
   
   Future<void> set_name(String name) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapLocationShareSearchRequest::set_name', <String, dynamic>{'__this__': this, "name": name});
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapLocationShareSearchRequest::set_name', <String, dynamic>{'__this__': this, "name": name});
   
   
   }
@@ -69,19 +72,24 @@ class AMapLocationShareSearchRequest extends AMapShareSearchBaseRequest with NSC
   //region methods
   
   //endregion
+
+  @override
+  String toString() {
+    return 'AMapLocationShareSearchRequest{refId: $refId, runtimeType: $runtimeType, tag__: $tag__}';
+  }
 }
 
 extension AMapLocationShareSearchRequest_Batch on List<AMapLocationShareSearchRequest> {
   //region getters
   Future<List<AMapGeoPoint>> get_location_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapLocationShareSearchRequest::get_location_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapLocationShareSearchRequest::get_location_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapGeoPoint()..refId = __result__).toList();
     return typedResult;
   }
   
   Future<List<String>> get_name_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapLocationShareSearchRequest::get_name_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapLocationShareSearchRequest::get_name_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     return typedResult;
@@ -91,13 +99,13 @@ extension AMapLocationShareSearchRequest_Batch on List<AMapLocationShareSearchRe
 
   //region setters
   Future<void> set_location_batch(List<AMapGeoPoint> location) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationShareSearchRequest::set_location_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "location": location[__i__]}]);
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapLocationShareSearchRequest::set_location_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "location": location[__i__]}]);
   
   
   }
   
   Future<void> set_name_batch(List<String> name) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapLocationShareSearchRequest::set_name_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "name": name[__i__]}]);
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapLocationShareSearchRequest::set_name_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "name": name[__i__]}]);
   
   
   }

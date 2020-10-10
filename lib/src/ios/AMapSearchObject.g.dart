@@ -16,13 +16,16 @@ class AMapSearchObject extends NSObject with NSCoding, NSCopying {
   //region constants
   static const String name__ = 'AMapSearchObject';
 
+  @override
+  final String tag__ = 'amap_search_fluttify';
+
   
   //endregion
 
   //region creators
   static Future<AMapSearchObject> create__({ bool init = true /* ios only */ }) async {
-    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createAMapSearchObject', {'init': init});
-    final object = AMapSearchObject()..refId = refId..tag__ = 'amap_search_fluttify';
+    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapSearchObject', {'init': init});
+    final object = AMapSearchObject()..refId = refId;
     return object;
   }
   
@@ -30,9 +33,9 @@ class AMapSearchObject extends NSObject with NSCoding, NSCopying {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::create_batchAMapSearchObject', {'length': length, 'init': init});
+    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapSearchObject', {'length': length, 'init': init});
   
-    final List<AMapSearchObject> typedResult = resultBatch.map((result) => AMapSearchObject()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<AMapSearchObject> typedResult = resultBatch.map((result) => AMapSearchObject()..refId = result).toList();
     return typedResult;
   }
   
@@ -55,7 +58,7 @@ class AMapSearchObject extends NSObject with NSCoding, NSCopying {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapSearchObject::formattedDescription', {"__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchObject::formattedDescription', {"__this__": this});
   
   
     // handle native call
@@ -71,6 +74,11 @@ class AMapSearchObject extends NSObject with NSCoding, NSCopying {
   }
   
   //endregion
+
+  @override
+  String toString() {
+    return 'AMapSearchObject{refId: $refId, runtimeType: $runtimeType, tag__: $tag__}';
+  }
 }
 
 extension AMapSearchObject_Batch on List<AMapSearchObject> {
@@ -90,7 +98,7 @@ extension AMapSearchObject_Batch on List<AMapSearchObject> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapSearchObject::formattedDescription_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchObject::formattedDescription_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object

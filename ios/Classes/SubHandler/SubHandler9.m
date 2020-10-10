@@ -112,7 +112,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeoPoint* location = (AMapGeoPoint*) args[@"location"];
+                AMapGeoPoint* location = (AMapGeoPoint*) (args[@"location"] == [NSNull null] ? nil : args[@"location"]);
         
                 // ref
                 AMapBusStop* ref = (AMapBusStop*) args[@"__this__"];
@@ -292,7 +292,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeoPoint* location = (AMapGeoPoint*) args[@"location"];
+                AMapGeoPoint* location = (AMapGeoPoint*) (args[@"location"] == [NSNull null] ? nil : args[@"location"]);
         
                 // ref
                 AMapBusLine* ref = (AMapBusLine*) args[@"__this__"];
@@ -418,7 +418,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeoPolygon* bounds = (AMapGeoPolygon*) args[@"bounds"];
+                AMapGeoPolygon* bounds = (AMapGeoPolygon*) (args[@"bounds"] == [NSNull null] ? nil : args[@"bounds"]);
         
                 // ref
                 AMapBusLine* ref = (AMapBusLine*) args[@"__this__"];
@@ -454,7 +454,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapBusStop* departureStop = (AMapBusStop*) args[@"departureStop"];
+                AMapBusStop* departureStop = (AMapBusStop*) (args[@"departureStop"] == [NSNull null] ? nil : args[@"departureStop"]);
         
                 // ref
                 AMapBusLine* ref = (AMapBusLine*) args[@"__this__"];
@@ -472,7 +472,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapBusStop* arrivalStop = (AMapBusStop*) args[@"arrivalStop"];
+                AMapBusStop* arrivalStop = (AMapBusStop*) (args[@"arrivalStop"] == [NSNull null] ? nil : args[@"arrivalStop"]);
         
                 // ref
                 AMapBusLine* ref = (AMapBusLine*) args[@"__this__"];
@@ -598,7 +598,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeoPoint* center = (AMapGeoPoint*) args[@"center"];
+                AMapGeoPoint* center = (AMapGeoPoint*) (args[@"center"] == [NSNull null] ? nil : args[@"center"]);
         
                 // ref
                 AMapDistrict* ref = (AMapDistrict*) args[@"__this__"];
@@ -1192,7 +1192,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeoPoint* origin = (AMapGeoPoint*) args[@"origin"];
+                AMapGeoPoint* origin = (AMapGeoPoint*) (args[@"origin"] == [NSNull null] ? nil : args[@"origin"]);
         
                 // ref
                 AMapWalking* ref = (AMapWalking*) args[@"__this__"];
@@ -1210,7 +1210,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeoPoint* destination = (AMapGeoPoint*) args[@"destination"];
+                AMapGeoPoint* destination = (AMapGeoPoint*) (args[@"destination"] == [NSNull null] ? nil : args[@"destination"]);
         
                 // ref
                 AMapWalking* ref = (AMapWalking*) args[@"__this__"];
@@ -1282,7 +1282,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeoPoint* origin = (AMapGeoPoint*) args[@"origin"];
+                AMapGeoPoint* origin = (AMapGeoPoint*) (args[@"origin"] == [NSNull null] ? nil : args[@"origin"]);
         
                 // ref
                 AMapTaxi* ref = (AMapTaxi*) args[@"__this__"];
@@ -1300,7 +1300,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeoPoint* destination = (AMapGeoPoint*) args[@"destination"];
+                AMapGeoPoint* destination = (AMapGeoPoint*) (args[@"destination"] == [NSNull null] ? nil : args[@"destination"]);
         
                 // ref
                 AMapTaxi* ref = (AMapTaxi*) args[@"__this__"];
@@ -1426,7 +1426,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeoPoint* location = (AMapGeoPoint*) args[@"location"];
+                AMapGeoPoint* location = (AMapGeoPoint*) (args[@"location"] == [NSNull null] ? nil : args[@"location"]);
         
                 // ref
                 AMapRailwayStation* ref = (AMapRailwayStation*) args[@"__this__"];
@@ -1678,7 +1678,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapRailwayStation* departureStation = (AMapRailwayStation*) args[@"departureStation"];
+                AMapRailwayStation* departureStation = (AMapRailwayStation*) (args[@"departureStation"] == [NSNull null] ? nil : args[@"departureStation"]);
         
                 // ref
                 AMapRailway* ref = (AMapRailway*) args[@"__this__"];
@@ -1696,7 +1696,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapRailwayStation* arrivalStation = (AMapRailwayStation*) args[@"arrivalStation"];
+                AMapRailwayStation* arrivalStation = (AMapRailwayStation*) (args[@"arrivalStation"] == [NSNull null] ? nil : args[@"arrivalStation"]);
         
                 // ref
                 AMapRailway* ref = (AMapRailway*) args[@"__this__"];
@@ -1768,7 +1768,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapWalking* walking = (AMapWalking*) args[@"walking"];
+                AMapWalking* walking = (AMapWalking*) (args[@"walking"] == [NSNull null] ? nil : args[@"walking"]);
         
                 // ref
                 AMapSegment* ref = (AMapSegment*) args[@"__this__"];
@@ -1804,7 +1804,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapTaxi* taxi = (AMapTaxi*) args[@"taxi"];
+                AMapTaxi* taxi = (AMapTaxi*) (args[@"taxi"] == [NSNull null] ? nil : args[@"taxi"]);
         
                 // ref
                 AMapSegment* ref = (AMapSegment*) args[@"__this__"];
@@ -1822,7 +1822,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapRailway* railway = (AMapRailway*) args[@"railway"];
+                AMapRailway* railway = (AMapRailway*) (args[@"railway"] == [NSNull null] ? nil : args[@"railway"]);
         
                 // ref
                 AMapSegment* ref = (AMapSegment*) args[@"__this__"];
@@ -1858,7 +1858,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeoPoint* enterLocation = (AMapGeoPoint*) args[@"enterLocation"];
+                AMapGeoPoint* enterLocation = (AMapGeoPoint*) (args[@"enterLocation"] == [NSNull null] ? nil : args[@"enterLocation"]);
         
                 // ref
                 AMapSegment* ref = (AMapSegment*) args[@"__this__"];
@@ -1894,7 +1894,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeoPoint* exitLocation = (AMapGeoPoint*) args[@"exitLocation"];
+                AMapGeoPoint* exitLocation = (AMapGeoPoint*) (args[@"exitLocation"] == [NSNull null] ? nil : args[@"exitLocation"]);
         
                 // ref
                 AMapSegment* ref = (AMapSegment*) args[@"__this__"];
@@ -2020,7 +2020,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeoPoint* origin = (AMapGeoPoint*) args[@"origin"];
+                AMapGeoPoint* origin = (AMapGeoPoint*) (args[@"origin"] == [NSNull null] ? nil : args[@"origin"]);
         
                 // ref
                 AMapRoute* ref = (AMapRoute*) args[@"__this__"];
@@ -2038,7 +2038,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeoPoint* destination = (AMapGeoPoint*) args[@"destination"];
+                AMapGeoPoint* destination = (AMapGeoPoint*) (args[@"destination"] == [NSNull null] ? nil : args[@"destination"]);
         
                 // ref
                 AMapRoute* ref = (AMapRoute*) args[@"__this__"];
@@ -2668,7 +2668,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeoPoint* location = (AMapGeoPoint*) args[@"location"];
+                AMapGeoPoint* location = (AMapGeoPoint*) (args[@"location"] == [NSNull null] ? nil : args[@"location"]);
         
                 // ref
                 AMapNearbyUserInfo* ref = (AMapNearbyUserInfo*) args[@"__this__"];
@@ -2956,7 +2956,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapTrafficEvaluation* evaluation = (AMapTrafficEvaluation*) args[@"evaluation"];
+                AMapTrafficEvaluation* evaluation = (AMapTrafficEvaluation*) (args[@"evaluation"] == [NSNull null] ? nil : args[@"evaluation"]);
         
                 // ref
                 AMapTrafficInfo* ref = (AMapTrafficInfo*) args[@"__this__"];
@@ -3082,7 +3082,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeoPoint* location = (AMapGeoPoint*) args[@"location"];
+                AMapGeoPoint* location = (AMapGeoPoint*) (args[@"location"] == [NSNull null] ? nil : args[@"location"]);
         
                 // ref
                 AMapCloudPOI* ref = (AMapCloudPOI*) args[@"__this__"];

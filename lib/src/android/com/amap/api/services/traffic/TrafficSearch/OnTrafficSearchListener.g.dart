@@ -19,6 +19,9 @@ mixin com_amap_api_services_traffic_TrafficSearch_OnTrafficSearchListener on jav
 
   
 
+  @override
+  final String tag__ = 'amap_search_fluttify';
+
   
 
   

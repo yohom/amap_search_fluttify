@@ -19,6 +19,9 @@ mixin com_amap_api_services_interfaces_IRouteSearch on java_lang_Object {
 
   
 
+  @override
+  final String tag__ = 'amap_search_fluttify';
+
   
 
   

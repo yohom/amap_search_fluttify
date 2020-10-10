@@ -16,13 +16,16 @@ class com_amap_api_services_route_TimeInfosElement extends java_lang_Object with
   //region constants
   static const String name__ = 'com.amap.api.services.route.TimeInfosElement';
 
+  @override
+  final String tag__ = 'amap_search_fluttify';
+
   
   //endregion
 
   //region creators
   static Future<com_amap_api_services_route_TimeInfosElement> create__() async {
-    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_services_route_TimeInfosElement__', );
-    final object = com_amap_api_services_route_TimeInfosElement()..refId = refId..tag__ = 'amap_search_fluttify';
+    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_services_route_TimeInfosElement__', );
+    final object = com_amap_api_services_route_TimeInfosElement()..refId = refId;
     return object;
   }
   
@@ -30,9 +33,9 @@ class com_amap_api_services_route_TimeInfosElement extends java_lang_Object with
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_amap_api_services_route_TimeInfosElement__', {'length': length});
+    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchcom_amap_api_services_route_TimeInfosElement__', {'length': length});
   
-    final List<com_amap_api_services_route_TimeInfosElement> typedResult = resultBatch.map((result) => com_amap_api_services_route_TimeInfosElement()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<com_amap_api_services_route_TimeInfosElement> typedResult = resultBatch.map((result) => com_amap_api_services_route_TimeInfosElement()..refId = result).toList();
     return typedResult;
   }
   
@@ -55,7 +58,7 @@ class com_amap_api_services_route_TimeInfosElement extends java_lang_Object with
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.route.TimeInfosElement::getPathindex', {"__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TimeInfosElement::getPathindex', {"__this__": this});
   
   
     // handle native call
@@ -78,7 +81,7 @@ class com_amap_api_services_route_TimeInfosElement extends java_lang_Object with
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.route.TimeInfosElement::setPathindex', {"var1": var1, "__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TimeInfosElement::setPathindex', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -101,7 +104,7 @@ class com_amap_api_services_route_TimeInfosElement extends java_lang_Object with
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.route.TimeInfosElement::getDuration', {"__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TimeInfosElement::getDuration', {"__this__": this});
   
   
     // handle native call
@@ -124,7 +127,7 @@ class com_amap_api_services_route_TimeInfosElement extends java_lang_Object with
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.route.TimeInfosElement::setDuration', {"var1": var1, "__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TimeInfosElement::setDuration', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -147,7 +150,7 @@ class com_amap_api_services_route_TimeInfosElement extends java_lang_Object with
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.route.TimeInfosElement::getTolls', {"__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TimeInfosElement::getTolls', {"__this__": this});
   
   
     // handle native call
@@ -170,7 +173,7 @@ class com_amap_api_services_route_TimeInfosElement extends java_lang_Object with
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.route.TimeInfosElement::setTolls', {"var1": var1, "__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TimeInfosElement::setTolls', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -193,7 +196,7 @@ class com_amap_api_services_route_TimeInfosElement extends java_lang_Object with
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.route.TimeInfosElement::getRestriction', {"__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TimeInfosElement::getRestriction', {"__this__": this});
   
   
     // handle native call
@@ -216,7 +219,7 @@ class com_amap_api_services_route_TimeInfosElement extends java_lang_Object with
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.route.TimeInfosElement::setRestriction', {"var1": var1, "__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TimeInfosElement::setRestriction', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -239,7 +242,7 @@ class com_amap_api_services_route_TimeInfosElement extends java_lang_Object with
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.route.TimeInfosElement::setTMCs', {"var1": var1, "__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TimeInfosElement::setTMCs', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -262,7 +265,7 @@ class com_amap_api_services_route_TimeInfosElement extends java_lang_Object with
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.route.TimeInfosElement::getTMCs', {"__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TimeInfosElement::getTMCs', {"__this__": this});
   
   
     // handle native call
@@ -272,12 +275,17 @@ class com_amap_api_services_route_TimeInfosElement extends java_lang_Object with
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = (__result__ as List).cast<String>().map((__it__) => com_amap_api_services_route_TMC()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
+      final __return__ = (__result__ as List).cast<String>().map((__it__) => com_amap_api_services_route_TMC()..refId = __it__).toList();
       return __return__;
     }
   }
   
   //endregion
+
+  @override
+  String toString() {
+    return 'com_amap_api_services_route_TimeInfosElement{refId: $refId, runtimeType: $runtimeType, tag__: $tag__}';
+  }
 }
 
 extension com_amap_api_services_route_TimeInfosElement_Batch on List<com_amap_api_services_route_TimeInfosElement> {
@@ -297,7 +305,7 @@ extension com_amap_api_services_route_TimeInfosElement_Batch on List<com_amap_ap
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.route.TimeInfosElement::getPathindex_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TimeInfosElement::getPathindex_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -316,7 +324,7 @@ extension com_amap_api_services_route_TimeInfosElement_Batch on List<com_amap_ap
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.route.TimeInfosElement::setPathindex_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TimeInfosElement::setPathindex_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -335,7 +343,7 @@ extension com_amap_api_services_route_TimeInfosElement_Batch on List<com_amap_ap
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.route.TimeInfosElement::getDuration_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TimeInfosElement::getDuration_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -354,7 +362,7 @@ extension com_amap_api_services_route_TimeInfosElement_Batch on List<com_amap_ap
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.route.TimeInfosElement::setDuration_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TimeInfosElement::setDuration_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -373,7 +381,7 @@ extension com_amap_api_services_route_TimeInfosElement_Batch on List<com_amap_ap
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.route.TimeInfosElement::getTolls_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TimeInfosElement::getTolls_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -392,7 +400,7 @@ extension com_amap_api_services_route_TimeInfosElement_Batch on List<com_amap_ap
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.route.TimeInfosElement::setTolls_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TimeInfosElement::setTolls_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -411,7 +419,7 @@ extension com_amap_api_services_route_TimeInfosElement_Batch on List<com_amap_ap
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.route.TimeInfosElement::getRestriction_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TimeInfosElement::getRestriction_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -430,7 +438,7 @@ extension com_amap_api_services_route_TimeInfosElement_Batch on List<com_amap_ap
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.route.TimeInfosElement::setRestriction_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TimeInfosElement::setRestriction_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -449,7 +457,7 @@ extension com_amap_api_services_route_TimeInfosElement_Batch on List<com_amap_ap
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.route.TimeInfosElement::setTMCs_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TimeInfosElement::setTMCs_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -468,14 +476,14 @@ extension com_amap_api_services_route_TimeInfosElement_Batch on List<com_amap_ap
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.route.TimeInfosElement::getTMCs_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TimeInfosElement::getTMCs_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => com_amap_api_services_route_TMC()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => com_amap_api_services_route_TMC()..refId = __it__).toList()).toList();
       return typedResult;
     }
   }

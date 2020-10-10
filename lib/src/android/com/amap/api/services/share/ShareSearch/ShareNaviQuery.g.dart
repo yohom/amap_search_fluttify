@@ -16,13 +16,16 @@ class com_amap_api_services_share_ShareSearch_ShareNaviQuery extends java_lang_O
   //region constants
   static const String name__ = 'com.amap.api.services.share.ShareSearch.ShareNaviQuery';
 
+  @override
+  final String tag__ = 'amap_search_fluttify';
+
   
   //endregion
 
   //region creators
   static Future<com_amap_api_services_share_ShareSearch_ShareNaviQuery> create__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int(com_amap_api_services_share_ShareSearch_ShareFromAndTo var1, int var2) async {
-    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_services_share_ShareSearch_ShareNaviQuery__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int', {"var1": var1, "var2": var2});
-    final object = com_amap_api_services_share_ShareSearch_ShareNaviQuery()..refId = refId..tag__ = 'amap_search_fluttify';
+    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_services_share_ShareSearch_ShareNaviQuery__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int', {"var1": var1, "var2": var2});
+    final object = com_amap_api_services_share_ShareSearch_ShareNaviQuery()..refId = refId;
     return object;
   }
   
@@ -30,9 +33,9 @@ class com_amap_api_services_share_ShareSearch_ShareNaviQuery extends java_lang_O
     if (var1.length != var2.length) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_amap_api_services_share_ShareSearch_ShareNaviQuery__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]);
+    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchcom_amap_api_services_share_ShareSearch_ShareNaviQuery__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]);
   
-    final List<com_amap_api_services_share_ShareSearch_ShareNaviQuery> typedResult = resultBatch.map((result) => com_amap_api_services_share_ShareSearch_ShareNaviQuery()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<com_amap_api_services_share_ShareSearch_ShareNaviQuery> typedResult = resultBatch.map((result) => com_amap_api_services_share_ShareSearch_ShareNaviQuery()..refId = result).toList();
     return typedResult;
   }
   
@@ -55,7 +58,7 @@ class com_amap_api_services_share_ShareSearch_ShareNaviQuery extends java_lang_O
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.share.ShareSearch.ShareNaviQuery::getFromAndTo', {"__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.share.ShareSearch.ShareNaviQuery::getFromAndTo', {"__this__": this});
   
   
     // handle native call
@@ -65,7 +68,7 @@ class com_amap_api_services_share_ShareSearch_ShareNaviQuery extends java_lang_O
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_services_share_ShareSearch_ShareFromAndTo()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_share_ShareSearch_ShareFromAndTo()..refId = __result__;
       return __return__;
     }
   }
@@ -78,7 +81,7 @@ class com_amap_api_services_share_ShareSearch_ShareNaviQuery extends java_lang_O
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.share.ShareSearch.ShareNaviQuery::getNaviMode', {"__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.share.ShareSearch.ShareNaviQuery::getNaviMode', {"__this__": this});
   
   
     // handle native call
@@ -94,6 +97,11 @@ class com_amap_api_services_share_ShareSearch_ShareNaviQuery extends java_lang_O
   }
   
   //endregion
+
+  @override
+  String toString() {
+    return 'com_amap_api_services_share_ShareSearch_ShareNaviQuery{refId: $refId, runtimeType: $runtimeType, tag__: $tag__}';
+  }
 }
 
 extension com_amap_api_services_share_ShareSearch_ShareNaviQuery_Batch on List<com_amap_api_services_share_ShareSearch_ShareNaviQuery> {
@@ -113,14 +121,14 @@ extension com_amap_api_services_share_ShareSearch_ShareNaviQuery_Batch on List<c
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.share.ShareSearch.ShareNaviQuery::getFromAndTo_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.share.ShareSearch.ShareNaviQuery::getFromAndTo_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_share_ShareSearch_ShareFromAndTo()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_share_ShareSearch_ShareFromAndTo()..refId = __result__).toList();
       return typedResult;
     }
   }
@@ -132,7 +140,7 @@ extension com_amap_api_services_share_ShareSearch_ShareNaviQuery_Batch on List<c
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.share.ShareSearch.ShareNaviQuery::getNaviMode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.share.ShareSearch.ShareNaviQuery::getNaviMode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object

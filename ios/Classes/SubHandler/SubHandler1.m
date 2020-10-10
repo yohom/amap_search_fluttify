@@ -29,7 +29,7 @@ extern BOOL enableLog;
             AMapGeoPoint* result = ref.location;
         
             // return a ref
-            id __result__ = result;
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -65,7 +65,7 @@ extern BOOL enableLog;
             AMapTrafficInfo* result = ref.trafficInfo;
         
             // return a ref
-            id __result__ = result;
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -83,7 +83,7 @@ extern BOOL enableLog;
             AMapGeoPoint* result = ref.center;
         
             // return a ref
-            id __result__ = result;
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -190,12 +190,8 @@ extern BOOL enableLog;
             // invoke native method
             NSArray<AMapNearbyUserInfo*>* result = ref.infos;
         
-            // 返回值: 列表
-            NSMutableArray<NSObject*>* __result__ = [NSMutableArray array];
-            for (int __i__ = 0; __i__ < result.count; __i__++) {
-                NSObject* object = [result objectAtIndex:__i__];
-                [__result__ addObject: object];
-            }
+            // return a ref
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -321,7 +317,7 @@ extern BOOL enableLog;
             AMapGeoPoint* result = ref.center;
         
             // return a ref
-            id __result__ = result;
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -375,7 +371,7 @@ extern BOOL enableLog;
             AMapGeoPolygon* result = ref.polygon;
         
             // return a ref
-            id __result__ = result;
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -482,12 +478,8 @@ extern BOOL enableLog;
             // invoke native method
             NSArray<AMapCloudPOI*>* result = ref.POIs;
         
-            // 返回值: 列表
-            NSMutableArray<NSObject*>* __result__ = [NSMutableArray array];
-            for (int __i__ = 0; __i__ < result.count; __i__++) {
-                NSObject* object = [result objectAtIndex:__i__];
-                [__result__ addObject: object];
-            }
+            // return a ref
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -505,7 +497,7 @@ extern BOOL enableLog;
             AMapGeoPoint* result = ref.location;
         
             // return a ref
-            id __result__ = result;
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -559,7 +551,7 @@ extern BOOL enableLog;
             AMapGeoPoint* result = ref.location;
         
             // return a ref
-            id __result__ = result;
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -649,7 +641,7 @@ extern BOOL enableLog;
             AMapGeoPoint* result = ref.startCoordinate;
         
             // return a ref
-            id __result__ = result;
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -667,7 +659,7 @@ extern BOOL enableLog;
             AMapGeoPoint* result = ref.destinationCoordinate;
         
             // return a ref
-            id __result__ = result;
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -739,7 +731,7 @@ extern BOOL enableLog;
             AMapGeoPoint* result = ref.startCoordinate;
         
             // return a ref
-            id __result__ = result;
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -757,7 +749,7 @@ extern BOOL enableLog;
             AMapGeoPoint* result = ref.destinationCoordinate;
         
             // return a ref
-            id __result__ = result;
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -1008,12 +1000,8 @@ extern BOOL enableLog;
             // invoke native method
             NSArray<AMapPath*>* result = ref.paths;
         
-            // 返回值: 列表
-            NSMutableArray<NSObject*>* __result__ = [NSMutableArray array];
-            for (int __i__ = 0; __i__ < result.count; __i__++) {
-                NSObject* object = [result objectAtIndex:__i__];
-                [__result__ addObject: object];
-            }
+            // return a ref
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -1030,12 +1018,8 @@ extern BOOL enableLog;
             // invoke native method
             NSArray<AMapFutureTimeInfo*>* result = ref.timeInfos;
         
-            // 返回值: 列表
-            NSMutableArray<NSObject*>* __result__ = [NSMutableArray array];
-            for (int __i__ = 0; __i__ < result.count; __i__++) {
-                NSObject* object = [result objectAtIndex:__i__];
-                [__result__ addObject: object];
-            }
+            // return a ref
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -1088,12 +1072,8 @@ extern BOOL enableLog;
             // invoke native method
             NSArray<AMapGeoPoint*>* result = ref.points;
         
-            // 返回值: 列表
-            NSMutableArray<NSObject*>* __result__ = [NSMutableArray array];
-            for (int __i__ = 0; __i__ < result.count; __i__++) {
-                NSObject* object = [result objectAtIndex:__i__];
-                [__result__ addObject: object];
-            }
+            // return a ref
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -1182,12 +1162,8 @@ extern BOOL enableLog;
             // invoke native method
             NSArray<AMapDistrict*>* result = ref.districts;
         
-            // 返回值: 列表
-            NSMutableArray<NSObject*>* __result__ = [NSMutableArray array];
-            for (int __i__ = 0; __i__ < result.count; __i__++) {
-                NSObject* object = [result objectAtIndex:__i__];
-                [__result__ addObject: object];
-            }
+            // return a ref
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -1222,12 +1198,8 @@ extern BOOL enableLog;
             // invoke native method
             NSArray<AMapCity*>* result = ref.cities;
         
-            // 返回值: 列表
-            NSMutableArray<NSObject*>* __result__ = [NSMutableArray array];
-            for (int __i__ = 0; __i__ < result.count; __i__++) {
-                NSObject* object = [result objectAtIndex:__i__];
-                [__result__ addObject: object];
-            }
+            // return a ref
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -1335,7 +1307,7 @@ extern BOOL enableLog;
             AMapGeoPoint* result = ref.location;
         
             // return a ref
-            id __result__ = result;
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -1569,7 +1541,7 @@ extern BOOL enableLog;
             AMapGeoPoint* result = ref.location;
         
             // return a ref
-            id __result__ = result;
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -1677,7 +1649,7 @@ extern BOOL enableLog;
             AMapGeoPoint* result = ref.location;
         
             // return a ref
-            id __result__ = result;
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -1803,7 +1775,7 @@ extern BOOL enableLog;
             AMapGeoPoint* result = ref.location;
         
             // return a ref
-            id __result__ = result;
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -2091,7 +2063,7 @@ extern BOOL enableLog;
             AMapGeoPoint* result = ref.enterLocation;
         
             // return a ref
-            id __result__ = result;
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -2109,7 +2081,7 @@ extern BOOL enableLog;
             AMapGeoPoint* result = ref.exitLocation;
         
             // return a ref
-            id __result__ = result;
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -2181,7 +2153,7 @@ extern BOOL enableLog;
             AMapIndoorData* result = ref.indoorData;
         
             // return a ref
-            id __result__ = result;
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -2198,12 +2170,8 @@ extern BOOL enableLog;
             // invoke native method
             NSArray<AMapSubPOI*>* result = ref.subPOIs;
         
-            // 返回值: 列表
-            NSMutableArray<NSObject*>* __result__ = [NSMutableArray array];
-            for (int __i__ = 0; __i__ < result.count; __i__++) {
-                NSObject* object = [result objectAtIndex:__i__];
-                [__result__ addObject: object];
-            }
+            // return a ref
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -2220,12 +2188,8 @@ extern BOOL enableLog;
             // invoke native method
             NSArray<AMapImage*>* result = ref.images;
         
-            // 返回值: 列表
-            NSMutableArray<NSObject*>* __result__ = [NSMutableArray array];
-            for (int __i__ = 0; __i__ < result.count; __i__++) {
-                NSObject* object = [result objectAtIndex:__i__];
-                [__result__ addObject: object];
-            }
+            // return a ref
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -2243,7 +2207,7 @@ extern BOOL enableLog;
             AMapPOIExtension* result = ref.extensionInfo;
         
             // return a ref
-            id __result__ = result;
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -2315,7 +2279,7 @@ extern BOOL enableLog;
             AMapGeoPoint* result = ref.location;
         
             // return a ref
-            id __result__ = result;
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -2423,7 +2387,7 @@ extern BOOL enableLog;
             AMapGeoPoint* result = ref.location;
         
             // return a ref
-            id __result__ = result;
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -2477,7 +2441,7 @@ extern BOOL enableLog;
             AMapGeoPoint* result = ref.location;
         
             // return a ref
-            id __result__ = result;
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -2603,7 +2567,7 @@ extern BOOL enableLog;
             AMapGeoPoint* result = ref.location;
         
             // return a ref
-            id __result__ = result;
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -2675,7 +2639,7 @@ extern BOOL enableLog;
             AMapGeoPoint* result = ref.location;
         
             // return a ref
-            id __result__ = result;
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -2873,7 +2837,7 @@ extern BOOL enableLog;
             AMapStreetNumber* result = ref.streetNumber;
         
             // return a ref
-            id __result__ = result;
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -2890,12 +2854,8 @@ extern BOOL enableLog;
             // invoke native method
             NSArray<AMapBusinessArea*>* result = ref.businessAreas;
         
-            // 返回值: 列表
-            NSMutableArray<NSObject*>* __result__ = [NSMutableArray array];
-            for (int __i__ = 0; __i__ < result.count; __i__++) {
-                NSObject* object = [result objectAtIndex:__i__];
-                [__result__ addObject: object];
-            }
+            // return a ref
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -2931,7 +2891,7 @@ extern BOOL enableLog;
             AMapAddressComponent* result = ref.addressComponent;
         
             // return a ref
-            id __result__ = result;
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -2948,12 +2908,8 @@ extern BOOL enableLog;
             // invoke native method
             NSArray<AMapRoad*>* result = ref.roads;
         
-            // 返回值: 列表
-            NSMutableArray<NSObject*>* __result__ = [NSMutableArray array];
-            for (int __i__ = 0; __i__ < result.count; __i__++) {
-                NSObject* object = [result objectAtIndex:__i__];
-                [__result__ addObject: object];
-            }
+            // return a ref
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -2970,12 +2926,8 @@ extern BOOL enableLog;
             // invoke native method
             NSArray<AMapRoadInter*>* result = ref.roadinters;
         
-            // 返回值: 列表
-            NSMutableArray<NSObject*>* __result__ = [NSMutableArray array];
-            for (int __i__ = 0; __i__ < result.count; __i__++) {
-                NSObject* object = [result objectAtIndex:__i__];
-                [__result__ addObject: object];
-            }
+            // return a ref
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -2992,12 +2944,8 @@ extern BOOL enableLog;
             // invoke native method
             NSArray<AMapPOI*>* result = ref.pois;
         
-            // 返回值: 列表
-            NSMutableArray<NSObject*>* __result__ = [NSMutableArray array];
-            for (int __i__ = 0; __i__ < result.count; __i__++) {
-                NSObject* object = [result objectAtIndex:__i__];
-                [__result__ addObject: object];
-            }
+            // return a ref
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -3014,12 +2962,8 @@ extern BOOL enableLog;
             // invoke native method
             NSArray<AMapAOI*>* result = ref.aois;
         
-            // 返回值: 列表
-            NSMutableArray<NSObject*>* __result__ = [NSMutableArray array];
-            for (int __i__ = 0; __i__ < result.count; __i__++) {
-                NSObject* object = [result objectAtIndex:__i__];
-                [__result__ addObject: object];
-            }
+            // return a ref
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -3199,7 +3143,7 @@ extern BOOL enableLog;
             AMapGeoPoint* result = ref.location;
         
             // return a ref
-            id __result__ = result;
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -3307,7 +3251,7 @@ extern BOOL enableLog;
             AMapGeoPoint* result = ref.location;
         
             // return a ref
-            id __result__ = result;
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -3324,12 +3268,8 @@ extern BOOL enableLog;
             // invoke native method
             NSArray<AMapBusLine*>* result = ref.buslines;
         
-            // 返回值: 列表
-            NSMutableArray<NSObject*>* __result__ = [NSMutableArray array];
-            for (int __i__ = 0; __i__ < result.count; __i__++) {
-                NSObject* object = [result objectAtIndex:__i__];
-                [__result__ addObject: object];
-            }
+            // return a ref
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -3491,7 +3431,7 @@ extern BOOL enableLog;
             AMapGeoPoint* result = ref.location;
         
             // return a ref
-            id __result__ = result;
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -3617,7 +3557,7 @@ extern BOOL enableLog;
             AMapGeoPolygon* result = ref.bounds;
         
             // return a ref
-            id __result__ = result;
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -3634,12 +3574,8 @@ extern BOOL enableLog;
             // invoke native method
             NSArray<AMapBusStop*>* result = ref.busStops;
         
-            // 返回值: 列表
-            NSMutableArray<NSObject*>* __result__ = [NSMutableArray array];
-            for (int __i__ = 0; __i__ < result.count; __i__++) {
-                NSObject* object = [result objectAtIndex:__i__];
-                [__result__ addObject: object];
-            }
+            // return a ref
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -3657,7 +3593,7 @@ extern BOOL enableLog;
             AMapBusStop* result = ref.departureStop;
         
             // return a ref
-            id __result__ = result;
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -3675,7 +3611,7 @@ extern BOOL enableLog;
             AMapBusStop* result = ref.arrivalStop;
         
             // return a ref
-            id __result__ = result;
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },

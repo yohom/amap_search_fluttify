@@ -65,7 +65,7 @@ public class AmapSearchFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
         handlerMapList.add(SubHandler11.getSubHandler(messenger));
         handlerMapList.add(SubHandler12.getSubHandler(messenger));
         handlerMapList.add(SubHandler13.getSubHandler(messenger));
-        handlerMapList.add(SubHandlerCustom.getSubHandler(messenger, registrar.activity()));
+        handlerMapList.add(SubHandlerCustom.instance.getSubHandler(messenger, registrar.activity()));
 
         channel.setMethodCallHandler(plugin);
 
@@ -121,7 +121,7 @@ public class AmapSearchFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
         }
         Activity activity = binding.getActivity();
 
-        handlerMapList.add(SubHandlerCustom.getSubHandler(messenger, activity));
+        handlerMapList.add(SubHandlerCustom.instance.getSubHandler(messenger, activity));
 
         // register platform view
         

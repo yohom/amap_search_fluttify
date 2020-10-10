@@ -16,20 +16,23 @@ class com_amap_api_services_cloud_CloudSearch_Sortingrules extends java_lang_Obj
   //region constants
   static const String name__ = 'com.amap.api.services.cloud.CloudSearch.Sortingrules';
 
+  @override
+  final String tag__ = 'amap_search_fluttify';
+
   static final int WEIGHT = 0;
   static final int DISTANCE = 1;
   //endregion
 
   //region creators
   static Future<com_amap_api_services_cloud_CloudSearch_Sortingrules> create__String__boolean(String var1, bool var2) async {
-    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_Sortingrules__String__boolean', {"var1": var1, "var2": var2});
-    final object = com_amap_api_services_cloud_CloudSearch_Sortingrules()..refId = refId..tag__ = 'amap_search_fluttify';
+    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_Sortingrules__String__boolean', {"var1": var1, "var2": var2});
+    final object = com_amap_api_services_cloud_CloudSearch_Sortingrules()..refId = refId;
     return object;
   }
   
   static Future<com_amap_api_services_cloud_CloudSearch_Sortingrules> create__int(int var1) async {
-    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_Sortingrules__int', {"var1": var1});
-    final object = com_amap_api_services_cloud_CloudSearch_Sortingrules()..refId = refId..tag__ = 'amap_search_fluttify';
+    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_Sortingrules__int', {"var1": var1});
+    final object = com_amap_api_services_cloud_CloudSearch_Sortingrules()..refId = refId;
     return object;
   }
   
@@ -37,9 +40,9 @@ class com_amap_api_services_cloud_CloudSearch_Sortingrules extends java_lang_Obj
     if (var1.length != var2.length) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_amap_api_services_cloud_CloudSearch_Sortingrules__String__boolean', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]);
+    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchcom_amap_api_services_cloud_CloudSearch_Sortingrules__String__boolean', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]);
   
-    final List<com_amap_api_services_cloud_CloudSearch_Sortingrules> typedResult = resultBatch.map((result) => com_amap_api_services_cloud_CloudSearch_Sortingrules()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<com_amap_api_services_cloud_CloudSearch_Sortingrules> typedResult = resultBatch.map((result) => com_amap_api_services_cloud_CloudSearch_Sortingrules()..refId = result).toList();
     return typedResult;
   }
   
@@ -47,9 +50,9 @@ class com_amap_api_services_cloud_CloudSearch_Sortingrules extends java_lang_Obj
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_amap_api_services_cloud_CloudSearch_Sortingrules__int', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]);
+    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchcom_amap_api_services_cloud_CloudSearch_Sortingrules__int', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]);
   
-    final List<com_amap_api_services_cloud_CloudSearch_Sortingrules> typedResult = resultBatch.map((result) => com_amap_api_services_cloud_CloudSearch_Sortingrules()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<com_amap_api_services_cloud_CloudSearch_Sortingrules> typedResult = resultBatch.map((result) => com_amap_api_services_cloud_CloudSearch_Sortingrules()..refId = result).toList();
     return typedResult;
   }
   
@@ -66,6 +69,11 @@ class com_amap_api_services_cloud_CloudSearch_Sortingrules extends java_lang_Obj
   //region methods
   
   //endregion
+
+  @override
+  String toString() {
+    return 'com_amap_api_services_cloud_CloudSearch_Sortingrules{refId: $refId, runtimeType: $runtimeType, tag__: $tag__}';
+  }
 }
 
 extension com_amap_api_services_cloud_CloudSearch_Sortingrules_Batch on List<com_amap_api_services_cloud_CloudSearch_Sortingrules> {

@@ -16,13 +16,16 @@ class AMapShareSearchBaseRequest extends AMapSearchObject with NSCoding, NSCopyi
   //region constants
   static const String name__ = 'AMapShareSearchBaseRequest';
 
+  @override
+  final String tag__ = 'amap_search_fluttify';
+
   
   //endregion
 
   //region creators
   static Future<AMapShareSearchBaseRequest> create__({ bool init = true /* ios only */ }) async {
-    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createAMapShareSearchBaseRequest', {'init': init});
-    final object = AMapShareSearchBaseRequest()..refId = refId..tag__ = 'amap_search_fluttify';
+    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapShareSearchBaseRequest', {'init': init});
+    final object = AMapShareSearchBaseRequest()..refId = refId;
     return object;
   }
   
@@ -30,9 +33,9 @@ class AMapShareSearchBaseRequest extends AMapSearchObject with NSCoding, NSCopyi
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::create_batchAMapShareSearchBaseRequest', {'length': length, 'init': init});
+    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapShareSearchBaseRequest', {'length': length, 'init': init});
   
-    final List<AMapShareSearchBaseRequest> typedResult = resultBatch.map((result) => AMapShareSearchBaseRequest()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<AMapShareSearchBaseRequest> typedResult = resultBatch.map((result) => AMapShareSearchBaseRequest()..refId = result).toList();
     return typedResult;
   }
   
@@ -49,6 +52,11 @@ class AMapShareSearchBaseRequest extends AMapSearchObject with NSCoding, NSCopyi
   //region methods
   
   //endregion
+
+  @override
+  String toString() {
+    return 'AMapShareSearchBaseRequest{refId: $refId, runtimeType: $runtimeType, tag__: $tag__}';
+  }
 }
 
 extension AMapShareSearchBaseRequest_Batch on List<AMapShareSearchBaseRequest> {

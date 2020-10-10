@@ -16,13 +16,16 @@ class com_amap_api_services_nearby_NearbySearch_NearbyQuery extends java_lang_Ob
   //region constants
   static const String name__ = 'com.amap.api.services.nearby.NearbySearch.NearbyQuery';
 
+  @override
+  final String tag__ = 'amap_search_fluttify';
+
   
   //endregion
 
   //region creators
   static Future<com_amap_api_services_nearby_NearbySearch_NearbyQuery> create__() async {
-    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_services_nearby_NearbySearch_NearbyQuery__', );
-    final object = com_amap_api_services_nearby_NearbySearch_NearbyQuery()..refId = refId..tag__ = 'amap_search_fluttify';
+    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_services_nearby_NearbySearch_NearbyQuery__', );
+    final object = com_amap_api_services_nearby_NearbySearch_NearbyQuery()..refId = refId;
     return object;
   }
   
@@ -30,9 +33,9 @@ class com_amap_api_services_nearby_NearbySearch_NearbyQuery extends java_lang_Ob
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_amap_api_services_nearby_NearbySearch_NearbyQuery__', {'length': length});
+    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchcom_amap_api_services_nearby_NearbySearch_NearbyQuery__', {'length': length});
   
-    final List<com_amap_api_services_nearby_NearbySearch_NearbyQuery> typedResult = resultBatch.map((result) => com_amap_api_services_nearby_NearbySearch_NearbyQuery()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<com_amap_api_services_nearby_NearbySearch_NearbyQuery> typedResult = resultBatch.map((result) => com_amap_api_services_nearby_NearbySearch_NearbyQuery()..refId = result).toList();
     return typedResult;
   }
   
@@ -55,7 +58,7 @@ class com_amap_api_services_nearby_NearbySearch_NearbyQuery extends java_lang_Ob
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.nearby.NearbySearch.NearbyQuery::setCenterPoint', {"var1": var1, "__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.NearbySearch.NearbyQuery::setCenterPoint', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -78,7 +81,7 @@ class com_amap_api_services_nearby_NearbySearch_NearbyQuery extends java_lang_Ob
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.nearby.NearbySearch.NearbyQuery::getCenterPoint', {"__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.NearbySearch.NearbyQuery::getCenterPoint', {"__this__": this});
   
   
     // handle native call
@@ -88,7 +91,7 @@ class com_amap_api_services_nearby_NearbySearch_NearbyQuery extends java_lang_Ob
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_core_LatLonPoint()..refId = __result__;
       return __return__;
     }
   }
@@ -101,7 +104,7 @@ class com_amap_api_services_nearby_NearbySearch_NearbyQuery extends java_lang_Ob
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.nearby.NearbySearch.NearbyQuery::getRadius', {"__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.NearbySearch.NearbyQuery::getRadius', {"__this__": this});
   
   
     // handle native call
@@ -124,7 +127,7 @@ class com_amap_api_services_nearby_NearbySearch_NearbyQuery extends java_lang_Ob
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.nearby.NearbySearch.NearbyQuery::setRadius', {"var1": var1, "__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.NearbySearch.NearbyQuery::setRadius', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -147,7 +150,7 @@ class com_amap_api_services_nearby_NearbySearch_NearbyQuery extends java_lang_Ob
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.nearby.NearbySearch.NearbyQuery::setType', {"var1": var1.toValue(), "__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.NearbySearch.NearbyQuery::setType', {"var1": var1.toValue(), "__this__": this});
   
   
     // handle native call
@@ -170,7 +173,7 @@ class com_amap_api_services_nearby_NearbySearch_NearbyQuery extends java_lang_Ob
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.nearby.NearbySearch.NearbyQuery::getType', {"__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.NearbySearch.NearbyQuery::getType', {"__this__": this});
   
   
     // handle native call
@@ -193,7 +196,7 @@ class com_amap_api_services_nearby_NearbySearch_NearbyQuery extends java_lang_Ob
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.nearby.NearbySearch.NearbyQuery::setCoordType', {"var1": var1, "__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.NearbySearch.NearbyQuery::setCoordType', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -216,7 +219,7 @@ class com_amap_api_services_nearby_NearbySearch_NearbyQuery extends java_lang_Ob
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.nearby.NearbySearch.NearbyQuery::getCoordType', {"__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.NearbySearch.NearbyQuery::getCoordType', {"__this__": this});
   
   
     // handle native call
@@ -239,7 +242,7 @@ class com_amap_api_services_nearby_NearbySearch_NearbyQuery extends java_lang_Ob
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.nearby.NearbySearch.NearbyQuery::setTimeRange', {"var1": var1, "__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.NearbySearch.NearbyQuery::setTimeRange', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -262,7 +265,7 @@ class com_amap_api_services_nearby_NearbySearch_NearbyQuery extends java_lang_Ob
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.nearby.NearbySearch.NearbyQuery::getTimeRange', {"__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.NearbySearch.NearbyQuery::getTimeRange', {"__this__": this});
   
   
     // handle native call
@@ -278,6 +281,11 @@ class com_amap_api_services_nearby_NearbySearch_NearbyQuery extends java_lang_Ob
   }
   
   //endregion
+
+  @override
+  String toString() {
+    return 'com_amap_api_services_nearby_NearbySearch_NearbyQuery{refId: $refId, runtimeType: $runtimeType, tag__: $tag__}';
+  }
 }
 
 extension com_amap_api_services_nearby_NearbySearch_NearbyQuery_Batch on List<com_amap_api_services_nearby_NearbySearch_NearbyQuery> {
@@ -297,7 +305,7 @@ extension com_amap_api_services_nearby_NearbySearch_NearbyQuery_Batch on List<co
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.nearby.NearbySearch.NearbyQuery::setCenterPoint_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.NearbySearch.NearbyQuery::setCenterPoint_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -316,14 +324,14 @@ extension com_amap_api_services_nearby_NearbySearch_NearbyQuery_Batch on List<co
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.nearby.NearbySearch.NearbyQuery::getCenterPoint_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.NearbySearch.NearbyQuery::getCenterPoint_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_core_LatLonPoint()..refId = __result__).toList();
       return typedResult;
     }
   }
@@ -335,7 +343,7 @@ extension com_amap_api_services_nearby_NearbySearch_NearbyQuery_Batch on List<co
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.nearby.NearbySearch.NearbyQuery::getRadius_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.NearbySearch.NearbyQuery::getRadius_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -354,7 +362,7 @@ extension com_amap_api_services_nearby_NearbySearch_NearbyQuery_Batch on List<co
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.nearby.NearbySearch.NearbyQuery::setRadius_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.NearbySearch.NearbyQuery::setRadius_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -373,7 +381,7 @@ extension com_amap_api_services_nearby_NearbySearch_NearbyQuery_Batch on List<co
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.nearby.NearbySearch.NearbyQuery::setType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__].toValue(), "__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.NearbySearch.NearbyQuery::setType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__].toValue(), "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -392,7 +400,7 @@ extension com_amap_api_services_nearby_NearbySearch_NearbyQuery_Batch on List<co
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.nearby.NearbySearch.NearbyQuery::getType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.NearbySearch.NearbyQuery::getType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -411,7 +419,7 @@ extension com_amap_api_services_nearby_NearbySearch_NearbyQuery_Batch on List<co
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.nearby.NearbySearch.NearbyQuery::setCoordType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.NearbySearch.NearbyQuery::setCoordType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -430,7 +438,7 @@ extension com_amap_api_services_nearby_NearbySearch_NearbyQuery_Batch on List<co
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.nearby.NearbySearch.NearbyQuery::getCoordType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.NearbySearch.NearbyQuery::getCoordType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -449,7 +457,7 @@ extension com_amap_api_services_nearby_NearbySearch_NearbyQuery_Batch on List<co
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.nearby.NearbySearch.NearbyQuery::setTimeRange_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.NearbySearch.NearbyQuery::setTimeRange_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -468,7 +476,7 @@ extension com_amap_api_services_nearby_NearbySearch_NearbyQuery_Batch on List<co
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.nearby.NearbySearch.NearbyQuery::getTimeRange_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.NearbySearch.NearbyQuery::getTimeRange_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object

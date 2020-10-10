@@ -19,6 +19,9 @@ mixin AMapSearchDelegate on NSObject {
 
   
 
+  @override
+  final String tag__ = 'amap_search_fluttify';
+
   
 
   
