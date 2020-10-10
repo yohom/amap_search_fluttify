@@ -16,13 +16,16 @@ class AMapFutureTimeInfoElement extends AMapSearchObject with NSCoding, NSCopyin
   //region constants
   static const String name__ = 'AMapFutureTimeInfoElement';
 
+  @override
+  final String tag__ = 'amap_search_fluttify';
+
   
   //endregion
 
   //region creators
   static Future<AMapFutureTimeInfoElement> create__({ bool init = true /* ios only */ }) async {
-    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createAMapFutureTimeInfoElement', {'init': init});
-    final object = AMapFutureTimeInfoElement()..refId = refId..tag__ = 'amap_search_fluttify';
+    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapFutureTimeInfoElement', {'init': init});
+    final object = AMapFutureTimeInfoElement()..refId = refId;
     return object;
   }
   
@@ -30,9 +33,9 @@ class AMapFutureTimeInfoElement extends AMapSearchObject with NSCoding, NSCopyin
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::create_batchAMapFutureTimeInfoElement', {'length': length, 'init': init});
+    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapFutureTimeInfoElement', {'length': length, 'init': init});
   
-    final List<AMapFutureTimeInfoElement> typedResult = resultBatch.map((result) => AMapFutureTimeInfoElement()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<AMapFutureTimeInfoElement> typedResult = resultBatch.map((result) => AMapFutureTimeInfoElement()..refId = result).toList();
     return typedResult;
   }
   
@@ -40,48 +43,48 @@ class AMapFutureTimeInfoElement extends AMapSearchObject with NSCoding, NSCopyin
 
   //region getters
   Future<int> get_duration() async {
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapFutureTimeInfoElement::get_duration", {'__this__': this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapFutureTimeInfoElement::get_duration", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<int> get_pathindex() async {
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapFutureTimeInfoElement::get_pathindex", {'__this__': this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapFutureTimeInfoElement::get_pathindex", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<int> get_restriction() async {
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapFutureTimeInfoElement::get_restriction", {'__this__': this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapFutureTimeInfoElement::get_restriction", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<List<AMapTMC>> get_tmcs() async {
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapFutureTimeInfoElement::get_tmcs", {'__this__': this});
-    return __result__ == null ? null : ((__result__ as List).cast<String>().map((__it__) => AMapTMC()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapFutureTimeInfoElement::get_tmcs", {'__this__': this});
+    return __result__ == null ? null : ((__result__ as List).cast<String>().map((__it__) => AMapTMC()..refId = __it__).toList());
   }
   
   //endregion
 
   //region setters
   Future<void> set_duration(int duration) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapFutureTimeInfoElement::set_duration', <String, dynamic>{'__this__': this, "duration": duration});
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapFutureTimeInfoElement::set_duration', <String, dynamic>{'__this__': this, "duration": duration});
   
   
   }
   
   Future<void> set_pathindex(int pathindex) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapFutureTimeInfoElement::set_pathindex', <String, dynamic>{'__this__': this, "pathindex": pathindex});
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapFutureTimeInfoElement::set_pathindex', <String, dynamic>{'__this__': this, "pathindex": pathindex});
   
   
   }
   
   Future<void> set_restriction(int restriction) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapFutureTimeInfoElement::set_restriction', <String, dynamic>{'__this__': this, "restriction": restriction});
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapFutureTimeInfoElement::set_restriction', <String, dynamic>{'__this__': this, "restriction": restriction});
   
   
   }
   
   Future<void> set_tmcs(List<AMapTMC> tmcs) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapFutureTimeInfoElement::set_tmcs', <String, dynamic>{'__this__': this, "tmcs": tmcs});
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapFutureTimeInfoElement::set_tmcs', <String, dynamic>{'__this__': this, "tmcs": tmcs});
   
   
   }
@@ -91,35 +94,40 @@ class AMapFutureTimeInfoElement extends AMapSearchObject with NSCoding, NSCopyin
   //region methods
   
   //endregion
+
+  @override
+  String toString() {
+    return 'AMapFutureTimeInfoElement{refId: $refId, runtimeType: $runtimeType, tag__: $tag__}';
+  }
 }
 
 extension AMapFutureTimeInfoElement_Batch on List<AMapFutureTimeInfoElement> {
   //region getters
   Future<List<int>> get_duration_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapFutureTimeInfoElement::get_duration_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapFutureTimeInfoElement::get_duration_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<int>> get_pathindex_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapFutureTimeInfoElement::get_pathindex_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapFutureTimeInfoElement::get_pathindex_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<int>> get_restriction_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapFutureTimeInfoElement::get_restriction_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapFutureTimeInfoElement::get_restriction_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<List<AMapTMC>>> get_tmcs_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapFutureTimeInfoElement::get_tmcs_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapFutureTimeInfoElement::get_tmcs_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => AMapTMC()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => AMapTMC()..refId = __it__).toList()).toList();
     return typedResult;
   }
   
@@ -127,25 +135,25 @@ extension AMapFutureTimeInfoElement_Batch on List<AMapFutureTimeInfoElement> {
 
   //region setters
   Future<void> set_duration_batch(List<int> duration) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapFutureTimeInfoElement::set_duration_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "duration": duration[__i__]}]);
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapFutureTimeInfoElement::set_duration_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "duration": duration[__i__]}]);
   
   
   }
   
   Future<void> set_pathindex_batch(List<int> pathindex) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapFutureTimeInfoElement::set_pathindex_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "pathindex": pathindex[__i__]}]);
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapFutureTimeInfoElement::set_pathindex_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "pathindex": pathindex[__i__]}]);
   
   
   }
   
   Future<void> set_restriction_batch(List<int> restriction) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapFutureTimeInfoElement::set_restriction_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "restriction": restriction[__i__]}]);
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapFutureTimeInfoElement::set_restriction_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "restriction": restriction[__i__]}]);
   
   
   }
   
   Future<void> set_tmcs_batch(List<List<AMapTMC>> tmcs) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapFutureTimeInfoElement::set_tmcs_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "tmcs": tmcs[__i__]}]);
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapFutureTimeInfoElement::set_tmcs_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "tmcs": tmcs[__i__]}]);
   
   
   }

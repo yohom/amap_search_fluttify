@@ -19,6 +19,9 @@ mixin com_amap_api_services_nearby_NearbySearch_NearbyListener on java_lang_Obje
 
   
 
+  @override
+  final String tag__ = 'amap_search_fluttify';
+
   
 
   

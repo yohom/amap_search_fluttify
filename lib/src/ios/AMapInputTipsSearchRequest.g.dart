@@ -16,13 +16,16 @@ class AMapInputTipsSearchRequest extends AMapSearchObject with NSCoding, NSCopyi
   //region constants
   static const String name__ = 'AMapInputTipsSearchRequest';
 
+  @override
+  final String tag__ = 'amap_search_fluttify';
+
   
   //endregion
 
   //region creators
   static Future<AMapInputTipsSearchRequest> create__({ bool init = true /* ios only */ }) async {
-    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createAMapInputTipsSearchRequest', {'init': init});
-    final object = AMapInputTipsSearchRequest()..refId = refId..tag__ = 'amap_search_fluttify';
+    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapInputTipsSearchRequest', {'init': init});
+    final object = AMapInputTipsSearchRequest()..refId = refId;
     return object;
   }
   
@@ -30,9 +33,9 @@ class AMapInputTipsSearchRequest extends AMapSearchObject with NSCoding, NSCopyi
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::create_batchAMapInputTipsSearchRequest', {'length': length, 'init': init});
+    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapInputTipsSearchRequest', {'length': length, 'init': init});
   
-    final List<AMapInputTipsSearchRequest> typedResult = resultBatch.map((result) => AMapInputTipsSearchRequest()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<AMapInputTipsSearchRequest> typedResult = resultBatch.map((result) => AMapInputTipsSearchRequest()..refId = result).toList();
     return typedResult;
   }
   
@@ -40,27 +43,27 @@ class AMapInputTipsSearchRequest extends AMapSearchObject with NSCoding, NSCopyi
 
   //region getters
   Future<String> get_keywords() async {
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapInputTipsSearchRequest::get_keywords", {'__this__': this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapInputTipsSearchRequest::get_keywords", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<String> get_city() async {
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapInputTipsSearchRequest::get_city", {'__this__': this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapInputTipsSearchRequest::get_city", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<String> get_types() async {
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapInputTipsSearchRequest::get_types", {'__this__': this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapInputTipsSearchRequest::get_types", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<bool> get_cityLimit() async {
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapInputTipsSearchRequest::get_cityLimit", {'__this__': this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapInputTipsSearchRequest::get_cityLimit", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<String> get_location() async {
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapInputTipsSearchRequest::get_location", {'__this__': this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapInputTipsSearchRequest::get_location", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
@@ -68,31 +71,31 @@ class AMapInputTipsSearchRequest extends AMapSearchObject with NSCoding, NSCopyi
 
   //region setters
   Future<void> set_keywords(String keywords) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapInputTipsSearchRequest::set_keywords', <String, dynamic>{'__this__': this, "keywords": keywords});
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapInputTipsSearchRequest::set_keywords', <String, dynamic>{'__this__': this, "keywords": keywords});
   
   
   }
   
   Future<void> set_city(String city) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapInputTipsSearchRequest::set_city', <String, dynamic>{'__this__': this, "city": city});
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapInputTipsSearchRequest::set_city', <String, dynamic>{'__this__': this, "city": city});
   
   
   }
   
   Future<void> set_types(String types) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapInputTipsSearchRequest::set_types', <String, dynamic>{'__this__': this, "types": types});
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapInputTipsSearchRequest::set_types', <String, dynamic>{'__this__': this, "types": types});
   
   
   }
   
   Future<void> set_cityLimit(bool cityLimit) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapInputTipsSearchRequest::set_cityLimit', <String, dynamic>{'__this__': this, "cityLimit": cityLimit});
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapInputTipsSearchRequest::set_cityLimit', <String, dynamic>{'__this__': this, "cityLimit": cityLimit});
   
   
   }
   
   Future<void> set_location(String location) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapInputTipsSearchRequest::set_location', <String, dynamic>{'__this__': this, "location": location});
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapInputTipsSearchRequest::set_location', <String, dynamic>{'__this__': this, "location": location});
   
   
   }
@@ -102,40 +105,45 @@ class AMapInputTipsSearchRequest extends AMapSearchObject with NSCoding, NSCopyi
   //region methods
   
   //endregion
+
+  @override
+  String toString() {
+    return 'AMapInputTipsSearchRequest{refId: $refId, runtimeType: $runtimeType, tag__: $tag__}';
+  }
 }
 
 extension AMapInputTipsSearchRequest_Batch on List<AMapInputTipsSearchRequest> {
   //region getters
   Future<List<String>> get_keywords_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapInputTipsSearchRequest::get_keywords_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapInputTipsSearchRequest::get_keywords_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<String>> get_city_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapInputTipsSearchRequest::get_city_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapInputTipsSearchRequest::get_city_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<String>> get_types_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapInputTipsSearchRequest::get_types_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapInputTipsSearchRequest::get_types_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_cityLimit_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapInputTipsSearchRequest::get_cityLimit_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapInputTipsSearchRequest::get_cityLimit_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<String>> get_location_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapInputTipsSearchRequest::get_location_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapInputTipsSearchRequest::get_location_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     return typedResult;
@@ -145,31 +153,31 @@ extension AMapInputTipsSearchRequest_Batch on List<AMapInputTipsSearchRequest> {
 
   //region setters
   Future<void> set_keywords_batch(List<String> keywords) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapInputTipsSearchRequest::set_keywords_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "keywords": keywords[__i__]}]);
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapInputTipsSearchRequest::set_keywords_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "keywords": keywords[__i__]}]);
   
   
   }
   
   Future<void> set_city_batch(List<String> city) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapInputTipsSearchRequest::set_city_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "city": city[__i__]}]);
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapInputTipsSearchRequest::set_city_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "city": city[__i__]}]);
   
   
   }
   
   Future<void> set_types_batch(List<String> types) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapInputTipsSearchRequest::set_types_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "types": types[__i__]}]);
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapInputTipsSearchRequest::set_types_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "types": types[__i__]}]);
   
   
   }
   
   Future<void> set_cityLimit_batch(List<bool> cityLimit) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapInputTipsSearchRequest::set_cityLimit_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "cityLimit": cityLimit[__i__]}]);
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapInputTipsSearchRequest::set_cityLimit_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "cityLimit": cityLimit[__i__]}]);
   
   
   }
   
   Future<void> set_location_batch(List<String> location) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapInputTipsSearchRequest::set_location_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "location": location[__i__]}]);
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapInputTipsSearchRequest::set_location_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "location": location[__i__]}]);
   
   
   }

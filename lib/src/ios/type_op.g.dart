@@ -21,487 +21,487 @@ extension TypeOpAmapSearchFluttifyIOS on Object {
       return this is T;
     }
     else if (T == AMapPOISearchBaseRequest) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapPOISearchBaseRequest', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapPOISearchBaseRequest', {'__this__': this});
       return result;
     }
     else if (T == AMapPOIIDSearchRequest) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapPOIIDSearchRequest', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapPOIIDSearchRequest', {'__this__': this});
       return result;
     }
     else if (T == AMapPOIKeywordsSearchRequest) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapPOIKeywordsSearchRequest', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapPOIKeywordsSearchRequest', {'__this__': this});
       return result;
     }
     else if (T == AMapPOIAroundSearchRequest) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapPOIAroundSearchRequest', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapPOIAroundSearchRequest', {'__this__': this});
       return result;
     }
     else if (T == AMapPOIPolygonSearchRequest) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapPOIPolygonSearchRequest', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapPOIPolygonSearchRequest', {'__this__': this});
       return result;
     }
     else if (T == AMapPOISearchResponse) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapPOISearchResponse', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapPOISearchResponse', {'__this__': this});
       return result;
     }
     else if (T == AMapRoutePOISearchRequest) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapRoutePOISearchRequest', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapRoutePOISearchRequest', {'__this__': this});
       return result;
     }
     else if (T == AMapRoutePOISearchResponse) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapRoutePOISearchResponse', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapRoutePOISearchResponse', {'__this__': this});
       return result;
     }
     else if (T == AMapInputTipsSearchRequest) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapInputTipsSearchRequest', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapInputTipsSearchRequest', {'__this__': this});
       return result;
     }
     else if (T == AMapInputTipsSearchResponse) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapInputTipsSearchResponse', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapInputTipsSearchResponse', {'__this__': this});
       return result;
     }
     else if (T == AMapGeocodeSearchRequest) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapGeocodeSearchRequest', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapGeocodeSearchRequest', {'__this__': this});
       return result;
     }
     else if (T == AMapGeocodeSearchResponse) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapGeocodeSearchResponse', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapGeocodeSearchResponse', {'__this__': this});
       return result;
     }
     else if (T == AMapReGeocodeSearchRequest) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapReGeocodeSearchRequest', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapReGeocodeSearchRequest', {'__this__': this});
       return result;
     }
     else if (T == AMapReGeocodeSearchResponse) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapReGeocodeSearchResponse', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapReGeocodeSearchResponse', {'__this__': this});
       return result;
     }
     else if (T == AMapBusStopSearchRequest) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapBusStopSearchRequest', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapBusStopSearchRequest', {'__this__': this});
       return result;
     }
     else if (T == AMapBusStopSearchResponse) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapBusStopSearchResponse', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapBusStopSearchResponse', {'__this__': this});
       return result;
     }
     else if (T == AMapBusLineBaseSearchRequest) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapBusLineBaseSearchRequest', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapBusLineBaseSearchRequest', {'__this__': this});
       return result;
     }
     else if (T == AMapBusLineNameSearchRequest) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapBusLineNameSearchRequest', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapBusLineNameSearchRequest', {'__this__': this});
       return result;
     }
     else if (T == AMapBusLineIDSearchRequest) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapBusLineIDSearchRequest', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapBusLineIDSearchRequest', {'__this__': this});
       return result;
     }
     else if (T == AMapBusLineSearchResponse) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapBusLineSearchResponse', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapBusLineSearchResponse', {'__this__': this});
       return result;
     }
     else if (T == AMapDistrictSearchRequest) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapDistrictSearchRequest', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapDistrictSearchRequest', {'__this__': this});
       return result;
     }
     else if (T == AMapDistrictSearchResponse) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapDistrictSearchResponse', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapDistrictSearchResponse', {'__this__': this});
       return result;
     }
     else if (T == AMapRouteSearchBaseRequest) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapRouteSearchBaseRequest', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapRouteSearchBaseRequest', {'__this__': this});
       return result;
     }
     else if (T == AMapDrivingRouteSearchRequest) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapDrivingRouteSearchRequest', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapDrivingRouteSearchRequest', {'__this__': this});
       return result;
     }
     else if (T == AMapWalkingRouteSearchRequest) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapWalkingRouteSearchRequest', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapWalkingRouteSearchRequest', {'__this__': this});
       return result;
     }
     else if (T == AMapTransitRouteSearchRequest) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapTransitRouteSearchRequest', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapTransitRouteSearchRequest', {'__this__': this});
       return result;
     }
     else if (T == AMapRidingRouteSearchRequest) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapRidingRouteSearchRequest', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapRidingRouteSearchRequest', {'__this__': this});
       return result;
     }
     else if (T == AMapRouteSearchResponse) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapRouteSearchResponse', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapRouteSearchResponse', {'__this__': this});
       return result;
     }
     else if (T == AMapRidingRouteSearchResponse) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapRidingRouteSearchResponse', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapRidingRouteSearchResponse', {'__this__': this});
       return result;
     }
     else if (T == AMapTruckRouteSearchRequest) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapTruckRouteSearchRequest', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapTruckRouteSearchRequest', {'__this__': this});
       return result;
     }
     else if (T == AMapDistanceSearchRequest) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapDistanceSearchRequest', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapDistanceSearchRequest', {'__this__': this});
       return result;
     }
     else if (T == AMapDistanceSearchResponse) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapDistanceSearchResponse', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapDistanceSearchResponse', {'__this__': this});
       return result;
     }
     else if (T == AMapWeatherSearchRequest) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapWeatherSearchRequest', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapWeatherSearchRequest', {'__this__': this});
       return result;
     }
     else if (T == AMapWeatherSearchResponse) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapWeatherSearchResponse', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapWeatherSearchResponse', {'__this__': this});
       return result;
     }
     else if (T == AMapRoadTrafficSearchBaseRequest) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapRoadTrafficSearchBaseRequest', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapRoadTrafficSearchBaseRequest', {'__this__': this});
       return result;
     }
     else if (T == AMapRoadTrafficSearchRequest) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapRoadTrafficSearchRequest', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapRoadTrafficSearchRequest', {'__this__': this});
       return result;
     }
     else if (T == AMapRoadTrafficCircleSearchRequest) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapRoadTrafficCircleSearchRequest', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapRoadTrafficCircleSearchRequest', {'__this__': this});
       return result;
     }
     else if (T == AMapRoadTrafficSearchResponse) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapRoadTrafficSearchResponse', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapRoadTrafficSearchResponse', {'__this__': this});
       return result;
     }
     else if (T == AMapNearbySearchRequest) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapNearbySearchRequest', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapNearbySearchRequest', {'__this__': this});
       return result;
     }
     else if (T == AMapNearbySearchResponse) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapNearbySearchResponse', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapNearbySearchResponse', {'__this__': this});
       return result;
     }
     else if (T == AMapCloudSearchBaseRequest) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapCloudSearchBaseRequest', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapCloudSearchBaseRequest', {'__this__': this});
       return result;
     }
     else if (T == AMapCloudPOIAroundSearchRequest) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapCloudPOIAroundSearchRequest', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapCloudPOIAroundSearchRequest', {'__this__': this});
       return result;
     }
     else if (T == AMapCloudPOIPolygonSearchRequest) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapCloudPOIPolygonSearchRequest', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapCloudPOIPolygonSearchRequest', {'__this__': this});
       return result;
     }
     else if (T == AMapCloudPOIIDSearchRequest) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapCloudPOIIDSearchRequest', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapCloudPOIIDSearchRequest', {'__this__': this});
       return result;
     }
     else if (T == AMapCloudPOILocalSearchRequest) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapCloudPOILocalSearchRequest', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapCloudPOILocalSearchRequest', {'__this__': this});
       return result;
     }
     else if (T == AMapCloudPOISearchResponse) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapCloudPOISearchResponse', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapCloudPOISearchResponse', {'__this__': this});
       return result;
     }
     else if (T == AMapShareSearchBaseRequest) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapShareSearchBaseRequest', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapShareSearchBaseRequest', {'__this__': this});
       return result;
     }
     else if (T == AMapLocationShareSearchRequest) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapLocationShareSearchRequest', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapLocationShareSearchRequest', {'__this__': this});
       return result;
     }
     else if (T == AMapPOIShareSearchRequest) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapPOIShareSearchRequest', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapPOIShareSearchRequest', {'__this__': this});
       return result;
     }
     else if (T == AMapRouteShareSearchRequest) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapRouteShareSearchRequest', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapRouteShareSearchRequest', {'__this__': this});
       return result;
     }
     else if (T == AMapNavigationShareSearchRequest) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapNavigationShareSearchRequest', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapNavigationShareSearchRequest', {'__this__': this});
       return result;
     }
     else if (T == AMapShareSearchResponse) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapShareSearchResponse', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapShareSearchResponse', {'__this__': this});
       return result;
     }
     else if (T == AMapFutureRouteSearchRequest) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapFutureRouteSearchRequest', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapFutureRouteSearchRequest', {'__this__': this});
       return result;
     }
     else if (T == AMapFutureRouteSearchResponse) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapFutureRouteSearchResponse', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapFutureRouteSearchResponse', {'__this__': this});
       return result;
     }
     else if (T == AMapSearchObject) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapSearchObject', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapSearchObject', {'__this__': this});
       return result;
     }
     else if (T == AMapGeoPoint) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapGeoPoint', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapGeoPoint', {'__this__': this});
       return result;
     }
     else if (T == AMapGeoPolygon) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapGeoPolygon', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapGeoPolygon', {'__this__': this});
       return result;
     }
     else if (T == AMapCity) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapCity', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapCity', {'__this__': this});
       return result;
     }
     else if (T == AMapSuggestion) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapSuggestion', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapSuggestion', {'__this__': this});
       return result;
     }
     else if (T == AMapTip) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapTip', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapTip', {'__this__': this});
       return result;
     }
     else if (T == AMapImage) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapImage', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapImage', {'__this__': this});
       return result;
     }
     else if (T == AMapPOIExtension) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapPOIExtension', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapPOIExtension', {'__this__': this});
       return result;
     }
     else if (T == AMapIndoorData) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapIndoorData', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapIndoorData', {'__this__': this});
       return result;
     }
     else if (T == AMapSubPOI) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapSubPOI', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapSubPOI', {'__this__': this});
       return result;
     }
     else if (T == AMapRoutePOI) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapRoutePOI', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapRoutePOI', {'__this__': this});
       return result;
     }
     else if (T == AMapPOI) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapPOI', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapPOI', {'__this__': this});
       return result;
     }
     else if (T == AMapAOI) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapAOI', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapAOI', {'__this__': this});
       return result;
     }
     else if (T == AMapRoad) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapRoad', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapRoad', {'__this__': this});
       return result;
     }
     else if (T == AMapRoadInter) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapRoadInter', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapRoadInter', {'__this__': this});
       return result;
     }
     else if (T == AMapStreetNumber) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapStreetNumber', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapStreetNumber', {'__this__': this});
       return result;
     }
     else if (T == AMapBusinessArea) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapBusinessArea', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapBusinessArea', {'__this__': this});
       return result;
     }
     else if (T == AMapAddressComponent) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapAddressComponent', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapAddressComponent', {'__this__': this});
       return result;
     }
     else if (T == AMapReGeocode) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapReGeocode', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapReGeocode', {'__this__': this});
       return result;
     }
     else if (T == AMapGeocode) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapGeocode', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapGeocode', {'__this__': this});
       return result;
     }
     else if (T == AMapBusStop) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapBusStop', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapBusStop', {'__this__': this});
       return result;
     }
     else if (T == AMapBusLine) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapBusLine', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapBusLine', {'__this__': this});
       return result;
     }
     else if (T == AMapDistrict) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapDistrict', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapDistrict', {'__this__': this});
       return result;
     }
     else if (T == AMapTMC) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapTMC', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapTMC', {'__this__': this});
       return result;
     }
     else if (T == AMapStep) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapStep', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapStep', {'__this__': this});
       return result;
     }
     else if (T == AMapPath) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapPath', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapPath', {'__this__': this});
       return result;
     }
     else if (T == AMapFutureTimeInfoElement) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapFutureTimeInfoElement', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapFutureTimeInfoElement', {'__this__': this});
       return result;
     }
     else if (T == AMapFutureTimeInfo) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapFutureTimeInfo', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapFutureTimeInfo', {'__this__': this});
       return result;
     }
     else if (T == AMapWalking) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapWalking', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapWalking', {'__this__': this});
       return result;
     }
     else if (T == AMapTaxi) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapTaxi', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapTaxi', {'__this__': this});
       return result;
     }
     else if (T == AMapRailwayStation) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapRailwayStation', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapRailwayStation', {'__this__': this});
       return result;
     }
     else if (T == AMapRailwaySpace) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapRailwaySpace', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapRailwaySpace', {'__this__': this});
       return result;
     }
     else if (T == AMapRailway) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapRailway', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapRailway', {'__this__': this});
       return result;
     }
     else if (T == AMapSegment) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapSegment', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapSegment', {'__this__': this});
       return result;
     }
     else if (T == AMapTransit) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapTransit', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapTransit', {'__this__': this});
       return result;
     }
     else if (T == AMapRoute) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapRoute', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapRoute', {'__this__': this});
       return result;
     }
     else if (T == AMapDistanceResult) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapDistanceResult', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapDistanceResult', {'__this__': this});
       return result;
     }
     else if (T == AMapLocalWeatherLive) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapLocalWeatherLive', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapLocalWeatherLive', {'__this__': this});
       return result;
     }
     else if (T == AMapLocalDayWeatherForecast) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapLocalDayWeatherForecast', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapLocalDayWeatherForecast', {'__this__': this});
       return result;
     }
     else if (T == AMapLocalWeatherForecast) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapLocalWeatherForecast', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapLocalWeatherForecast', {'__this__': this});
       return result;
     }
     else if (T == AMapNearbyUserInfo) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapNearbyUserInfo', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapNearbyUserInfo', {'__this__': this});
       return result;
     }
     else if (T == AMapTrafficEvaluation) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapTrafficEvaluation', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapTrafficEvaluation', {'__this__': this});
       return result;
     }
     else if (T == AMapTrafficRoad) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapTrafficRoad', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapTrafficRoad', {'__this__': this});
       return result;
     }
     else if (T == AMapTrafficInfo) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapTrafficInfo', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapTrafficInfo', {'__this__': this});
       return result;
     }
     else if (T == AMapCloudImage) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapCloudImage', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapCloudImage', {'__this__': this});
       return result;
     }
     else if (T == AMapCloudPOI) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapCloudPOI', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapCloudPOI', {'__this__': this});
       return result;
     }
     else if (T == AMapNearbyUploadInfo) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapNearbyUploadInfo', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapNearbyUploadInfo', {'__this__': this});
       return result;
     }
     else if (T == AMapNearbySearchManager) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapNearbySearchManager', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapNearbySearchManager', {'__this__': this});
       return result;
     }
     else if (T == AMapSearchAPI) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfAMapSearchAPI', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapSearchAPI', {'__this__': this});
       return result;
     }
     else if (T == CLLocation) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfCLLocation', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfCLLocation', {'__this__': this});
       return result;
     }
     else if (T == CLHeading) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfCLHeading', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfCLHeading', {'__this__': this});
       return result;
     }
     else if (T == CGRect) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfCGRect', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfCGRect', {'__this__': this});
       return result;
     }
     else if (T == CGPoint) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfCGPoint', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfCGPoint', {'__this__': this});
       return result;
     }
     else if (T == CGSize) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfCGSize', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfCGSize', {'__this__': this});
       return result;
     }
     else if (T == UIEdgeInsets) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfUIEdgeInsets', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfUIEdgeInsets', {'__this__': this});
       return result;
     }
     else if (T == CLLocationCoordinate2D) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfCLLocationCoordinate2D', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfCLLocationCoordinate2D', {'__this__': this});
       return result;
     }
     else if (T == CLLocationManager) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfCLLocationManager', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfCLLocationManager', {'__this__': this});
       return result;
     }
     else if (T == NSError) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfNSError', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfNSError', {'__this__': this});
       return result;
     }
     else if (T == NSCoding) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfNSCoding', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfNSCoding', {'__this__': this});
       return result;
     }
     else if (T == NSCopying) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfNSCopying', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfNSCopying', {'__this__': this});
       return result;
     }
     else if (T == UIView) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfUIView', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfUIView', {'__this__': this});
       return result;
     }
     else if (T == UIViewController) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfUIViewController', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfUIViewController', {'__this__': this});
       return result;
     }
     else if (T == UIControl) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfUIControl', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfUIControl', {'__this__': this});
       return result;
     }
     else if (T == UIImage) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfUIImage', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfUIImage', {'__this__': this});
       return result;
     }
     else if (T == UIColor) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfUIColor', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfUIColor', {'__this__': this});
       return result;
     }
     else if (T == NSData) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfNSData', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfNSData', {'__this__': this});
       return result;
     }
     else if (T == NSOperation) {
-      final result = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('RefClass::isKindOfNSOperation', {'__this__': this});
+      final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfNSOperation', {'__this__': this});
       return result;
     }
   }
@@ -515,367 +515,367 @@ extension TypeOpAmapSearchFluttifyIOS on Object {
     }
     // 如果是Ref类的cast, 那么取其refId, 如果本身是refId, 那么直接使用(int)
     else if (T == AMapPOISearchBaseRequest) {
-      return (AMapPOISearchBaseRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapPOISearchBaseRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapPOIIDSearchRequest) {
-      return (AMapPOIIDSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapPOIIDSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapPOIKeywordsSearchRequest) {
-      return (AMapPOIKeywordsSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapPOIKeywordsSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapPOIAroundSearchRequest) {
-      return (AMapPOIAroundSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapPOIAroundSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapPOIPolygonSearchRequest) {
-      return (AMapPOIPolygonSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapPOIPolygonSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapPOISearchResponse) {
-      return (AMapPOISearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapPOISearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapRoutePOISearchRequest) {
-      return (AMapRoutePOISearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapRoutePOISearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapRoutePOISearchResponse) {
-      return (AMapRoutePOISearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapRoutePOISearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapInputTipsSearchRequest) {
-      return (AMapInputTipsSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapInputTipsSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapInputTipsSearchResponse) {
-      return (AMapInputTipsSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapInputTipsSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapGeocodeSearchRequest) {
-      return (AMapGeocodeSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapGeocodeSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapGeocodeSearchResponse) {
-      return (AMapGeocodeSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapGeocodeSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapReGeocodeSearchRequest) {
-      return (AMapReGeocodeSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapReGeocodeSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapReGeocodeSearchResponse) {
-      return (AMapReGeocodeSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapReGeocodeSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapBusStopSearchRequest) {
-      return (AMapBusStopSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapBusStopSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapBusStopSearchResponse) {
-      return (AMapBusStopSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapBusStopSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapBusLineBaseSearchRequest) {
-      return (AMapBusLineBaseSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapBusLineBaseSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapBusLineNameSearchRequest) {
-      return (AMapBusLineNameSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapBusLineNameSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapBusLineIDSearchRequest) {
-      return (AMapBusLineIDSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapBusLineIDSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapBusLineSearchResponse) {
-      return (AMapBusLineSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapBusLineSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapDistrictSearchRequest) {
-      return (AMapDistrictSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapDistrictSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapDistrictSearchResponse) {
-      return (AMapDistrictSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapDistrictSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapRouteSearchBaseRequest) {
-      return (AMapRouteSearchBaseRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapRouteSearchBaseRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapDrivingRouteSearchRequest) {
-      return (AMapDrivingRouteSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapDrivingRouteSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapWalkingRouteSearchRequest) {
-      return (AMapWalkingRouteSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapWalkingRouteSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapTransitRouteSearchRequest) {
-      return (AMapTransitRouteSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapTransitRouteSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapRidingRouteSearchRequest) {
-      return (AMapRidingRouteSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapRidingRouteSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapRouteSearchResponse) {
-      return (AMapRouteSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapRouteSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapRidingRouteSearchResponse) {
-      return (AMapRidingRouteSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapRidingRouteSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapTruckRouteSearchRequest) {
-      return (AMapTruckRouteSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapTruckRouteSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapDistanceSearchRequest) {
-      return (AMapDistanceSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapDistanceSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapDistanceSearchResponse) {
-      return (AMapDistanceSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapDistanceSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapWeatherSearchRequest) {
-      return (AMapWeatherSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapWeatherSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapWeatherSearchResponse) {
-      return (AMapWeatherSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapWeatherSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapRoadTrafficSearchBaseRequest) {
-      return (AMapRoadTrafficSearchBaseRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapRoadTrafficSearchBaseRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapRoadTrafficSearchRequest) {
-      return (AMapRoadTrafficSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapRoadTrafficSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapRoadTrafficCircleSearchRequest) {
-      return (AMapRoadTrafficCircleSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapRoadTrafficCircleSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapRoadTrafficSearchResponse) {
-      return (AMapRoadTrafficSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapRoadTrafficSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapNearbySearchRequest) {
-      return (AMapNearbySearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapNearbySearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapNearbySearchResponse) {
-      return (AMapNearbySearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapNearbySearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapCloudSearchBaseRequest) {
-      return (AMapCloudSearchBaseRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapCloudSearchBaseRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapCloudPOIAroundSearchRequest) {
-      return (AMapCloudPOIAroundSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapCloudPOIAroundSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapCloudPOIPolygonSearchRequest) {
-      return (AMapCloudPOIPolygonSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapCloudPOIPolygonSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapCloudPOIIDSearchRequest) {
-      return (AMapCloudPOIIDSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapCloudPOIIDSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapCloudPOILocalSearchRequest) {
-      return (AMapCloudPOILocalSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapCloudPOILocalSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapCloudPOISearchResponse) {
-      return (AMapCloudPOISearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapCloudPOISearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapShareSearchBaseRequest) {
-      return (AMapShareSearchBaseRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapShareSearchBaseRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapLocationShareSearchRequest) {
-      return (AMapLocationShareSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapLocationShareSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapPOIShareSearchRequest) {
-      return (AMapPOIShareSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapPOIShareSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapRouteShareSearchRequest) {
-      return (AMapRouteShareSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapRouteShareSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapNavigationShareSearchRequest) {
-      return (AMapNavigationShareSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapNavigationShareSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapShareSearchResponse) {
-      return (AMapShareSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapShareSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapFutureRouteSearchRequest) {
-      return (AMapFutureRouteSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapFutureRouteSearchRequest()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapFutureRouteSearchResponse) {
-      return (AMapFutureRouteSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapFutureRouteSearchResponse()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapSearchObject) {
-      return (AMapSearchObject()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapSearchObject()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapGeoPoint) {
-      return (AMapGeoPoint()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapGeoPoint()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapGeoPolygon) {
-      return (AMapGeoPolygon()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapGeoPolygon()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapCity) {
-      return (AMapCity()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapCity()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapSuggestion) {
-      return (AMapSuggestion()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapSuggestion()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapTip) {
-      return (AMapTip()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapTip()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapImage) {
-      return (AMapImage()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapImage()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapPOIExtension) {
-      return (AMapPOIExtension()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapPOIExtension()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapIndoorData) {
-      return (AMapIndoorData()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapIndoorData()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapSubPOI) {
-      return (AMapSubPOI()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapSubPOI()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapRoutePOI) {
-      return (AMapRoutePOI()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapRoutePOI()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapPOI) {
-      return (AMapPOI()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapPOI()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapAOI) {
-      return (AMapAOI()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapAOI()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapRoad) {
-      return (AMapRoad()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapRoad()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapRoadInter) {
-      return (AMapRoadInter()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapRoadInter()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapStreetNumber) {
-      return (AMapStreetNumber()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapStreetNumber()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapBusinessArea) {
-      return (AMapBusinessArea()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapBusinessArea()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapAddressComponent) {
-      return (AMapAddressComponent()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapAddressComponent()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapReGeocode) {
-      return (AMapReGeocode()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapReGeocode()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapGeocode) {
-      return (AMapGeocode()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapGeocode()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapBusStop) {
-      return (AMapBusStop()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapBusStop()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapBusLine) {
-      return (AMapBusLine()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapBusLine()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapDistrict) {
-      return (AMapDistrict()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapDistrict()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapTMC) {
-      return (AMapTMC()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapTMC()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapStep) {
-      return (AMapStep()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapStep()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapPath) {
-      return (AMapPath()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapPath()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapFutureTimeInfoElement) {
-      return (AMapFutureTimeInfoElement()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapFutureTimeInfoElement()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapFutureTimeInfo) {
-      return (AMapFutureTimeInfo()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapFutureTimeInfo()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapWalking) {
-      return (AMapWalking()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapWalking()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapTaxi) {
-      return (AMapTaxi()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapTaxi()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapRailwayStation) {
-      return (AMapRailwayStation()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapRailwayStation()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapRailwaySpace) {
-      return (AMapRailwaySpace()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapRailwaySpace()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapRailway) {
-      return (AMapRailway()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapRailway()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapSegment) {
-      return (AMapSegment()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapSegment()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapTransit) {
-      return (AMapTransit()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapTransit()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapRoute) {
-      return (AMapRoute()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapRoute()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapDistanceResult) {
-      return (AMapDistanceResult()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapDistanceResult()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapLocalWeatherLive) {
-      return (AMapLocalWeatherLive()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapLocalWeatherLive()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapLocalDayWeatherForecast) {
-      return (AMapLocalDayWeatherForecast()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapLocalDayWeatherForecast()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapLocalWeatherForecast) {
-      return (AMapLocalWeatherForecast()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapLocalWeatherForecast()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapNearbyUserInfo) {
-      return (AMapNearbyUserInfo()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapNearbyUserInfo()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapTrafficEvaluation) {
-      return (AMapTrafficEvaluation()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapTrafficEvaluation()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapTrafficRoad) {
-      return (AMapTrafficRoad()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapTrafficRoad()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapTrafficInfo) {
-      return (AMapTrafficInfo()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapTrafficInfo()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapCloudImage) {
-      return (AMapCloudImage()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapCloudImage()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapCloudPOI) {
-      return (AMapCloudPOI()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapCloudPOI()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapNearbyUploadInfo) {
-      return (AMapNearbyUploadInfo()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapNearbyUploadInfo()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapNearbySearchManager) {
-      return (AMapNearbySearchManager()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapNearbySearchManager()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == AMapSearchAPI) {
-      return (AMapSearchAPI()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (AMapSearchAPI()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == CLLocation) {
-      return (CLLocation()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (CLLocation()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == CLHeading) {
-      return (CLHeading()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (CLHeading()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == CGRect) {
-      return (CGRect()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (CGRect()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == CGPoint) {
-      return (CGPoint()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (CGPoint()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == CGSize) {
-      return (CGSize()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (CGSize()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == UIEdgeInsets) {
-      return (UIEdgeInsets()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (UIEdgeInsets()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == CLLocationCoordinate2D) {
-      return (CLLocationCoordinate2D()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (CLLocationCoordinate2D()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == CLLocationManager) {
-      return (CLLocationManager()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (CLLocationManager()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == NSError) {
-      return (NSError()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (NSError()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == NSCoding) {
-      return (NSCoding.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (NSCoding.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == NSCopying) {
-      return (NSCopying.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (NSCopying.subInstance()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == UIView) {
-      return (UIView()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (UIView()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == UIViewController) {
-      return (UIViewController()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (UIViewController()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == UIControl) {
-      return (UIControl()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (UIControl()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == UIImage) {
-      return (UIImage()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (UIImage()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == UIColor) {
-      return (UIColor()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (UIColor()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == NSData) {
-      return (NSData()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (NSData()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
     else if (T == NSOperation) {
-      return (NSOperation()..refId = (this is Ref ? (this as Ref).refId : this as String)..tag__ = 'amap_search_fluttify') as T;
+      return (NSOperation()..refId = (this is Ref ? (this as Ref).refId : this as String)) as T;
     }
   }
 }

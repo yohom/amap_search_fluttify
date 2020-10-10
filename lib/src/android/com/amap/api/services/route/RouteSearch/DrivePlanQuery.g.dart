@@ -16,19 +16,22 @@ class com_amap_api_services_route_RouteSearch_DrivePlanQuery extends java_lang_O
   //region constants
   static const String name__ = 'com.amap.api.services.route.RouteSearch.DrivePlanQuery';
 
+  @override
+  final String tag__ = 'amap_search_fluttify';
+
   
   //endregion
 
   //region creators
   static Future<com_amap_api_services_route_RouteSearch_DrivePlanQuery> create__com_amap_api_services_route_RouteSearch_FromAndTo__int__int__int(com_amap_api_services_route_RouteSearch_FromAndTo var1, int var2, int var3, int var4) async {
-    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_services_route_RouteSearch_DrivePlanQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__int__int', {"var1": var1, "var2": var2, "var3": var3, "var4": var4});
-    final object = com_amap_api_services_route_RouteSearch_DrivePlanQuery()..refId = refId..tag__ = 'amap_search_fluttify';
+    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_services_route_RouteSearch_DrivePlanQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__int__int', {"var1": var1, "var2": var2, "var3": var3, "var4": var4});
+    final object = com_amap_api_services_route_RouteSearch_DrivePlanQuery()..refId = refId;
     return object;
   }
   
   static Future<com_amap_api_services_route_RouteSearch_DrivePlanQuery> create__() async {
-    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_services_route_RouteSearch_DrivePlanQuery__', );
-    final object = com_amap_api_services_route_RouteSearch_DrivePlanQuery()..refId = refId..tag__ = 'amap_search_fluttify';
+    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_services_route_RouteSearch_DrivePlanQuery__', );
+    final object = com_amap_api_services_route_RouteSearch_DrivePlanQuery()..refId = refId;
     return object;
   }
   
@@ -36,9 +39,9 @@ class com_amap_api_services_route_RouteSearch_DrivePlanQuery extends java_lang_O
     if (var1.length != var2.length || var2.length != var3.length || var3.length != var4.length) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_amap_api_services_route_RouteSearch_DrivePlanQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__int__int', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "var4": var4[__i__]}]);
+    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchcom_amap_api_services_route_RouteSearch_DrivePlanQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__int__int', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "var4": var4[__i__]}]);
   
-    final List<com_amap_api_services_route_RouteSearch_DrivePlanQuery> typedResult = resultBatch.map((result) => com_amap_api_services_route_RouteSearch_DrivePlanQuery()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<com_amap_api_services_route_RouteSearch_DrivePlanQuery> typedResult = resultBatch.map((result) => com_amap_api_services_route_RouteSearch_DrivePlanQuery()..refId = result).toList();
     return typedResult;
   }
   
@@ -46,9 +49,9 @@ class com_amap_api_services_route_RouteSearch_DrivePlanQuery extends java_lang_O
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_amap_api_services_route_RouteSearch_DrivePlanQuery__', {'length': length});
+    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchcom_amap_api_services_route_RouteSearch_DrivePlanQuery__', {'length': length});
   
-    final List<com_amap_api_services_route_RouteSearch_DrivePlanQuery> typedResult = resultBatch.map((result) => com_amap_api_services_route_RouteSearch_DrivePlanQuery()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<com_amap_api_services_route_RouteSearch_DrivePlanQuery> typedResult = resultBatch.map((result) => com_amap_api_services_route_RouteSearch_DrivePlanQuery()..refId = result).toList();
     return typedResult;
   }
   
@@ -71,7 +74,7 @@ class com_amap_api_services_route_RouteSearch_DrivePlanQuery extends java_lang_O
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.route.RouteSearch.DrivePlanQuery::getFromAndTo', {"__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteSearch.DrivePlanQuery::getFromAndTo', {"__this__": this});
   
   
     // handle native call
@@ -81,7 +84,7 @@ class com_amap_api_services_route_RouteSearch_DrivePlanQuery extends java_lang_O
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_services_route_RouteSearch_FromAndTo()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_route_RouteSearch_FromAndTo()..refId = __result__;
       return __return__;
     }
   }
@@ -94,7 +97,7 @@ class com_amap_api_services_route_RouteSearch_DrivePlanQuery extends java_lang_O
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.route.RouteSearch.DrivePlanQuery::getDestParentPoiID', {"__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteSearch.DrivePlanQuery::getDestParentPoiID', {"__this__": this});
   
   
     // handle native call
@@ -117,7 +120,7 @@ class com_amap_api_services_route_RouteSearch_DrivePlanQuery extends java_lang_O
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.route.RouteSearch.DrivePlanQuery::getMode', {"__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteSearch.DrivePlanQuery::getMode', {"__this__": this});
   
   
     // handle native call
@@ -140,7 +143,7 @@ class com_amap_api_services_route_RouteSearch_DrivePlanQuery extends java_lang_O
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.route.RouteSearch.DrivePlanQuery::getCarType', {"__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteSearch.DrivePlanQuery::getCarType', {"__this__": this});
   
   
     // handle native call
@@ -163,7 +166,7 @@ class com_amap_api_services_route_RouteSearch_DrivePlanQuery extends java_lang_O
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.route.RouteSearch.DrivePlanQuery::getFirstTime', {"__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteSearch.DrivePlanQuery::getFirstTime', {"__this__": this});
   
   
     // handle native call
@@ -186,7 +189,7 @@ class com_amap_api_services_route_RouteSearch_DrivePlanQuery extends java_lang_O
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.route.RouteSearch.DrivePlanQuery::getInterval', {"__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteSearch.DrivePlanQuery::getInterval', {"__this__": this});
   
   
     // handle native call
@@ -209,7 +212,7 @@ class com_amap_api_services_route_RouteSearch_DrivePlanQuery extends java_lang_O
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.route.RouteSearch.DrivePlanQuery::getCount', {"__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteSearch.DrivePlanQuery::getCount', {"__this__": this});
   
   
     // handle native call
@@ -232,7 +235,7 @@ class com_amap_api_services_route_RouteSearch_DrivePlanQuery extends java_lang_O
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.route.RouteSearch.DrivePlanQuery::clone', {"__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteSearch.DrivePlanQuery::clone', {"__this__": this});
   
   
     // handle native call
@@ -242,7 +245,7 @@ class com_amap_api_services_route_RouteSearch_DrivePlanQuery extends java_lang_O
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_services_route_RouteSearch_DrivePlanQuery()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_route_RouteSearch_DrivePlanQuery()..refId = __result__;
       return __return__;
     }
   }
@@ -255,7 +258,7 @@ class com_amap_api_services_route_RouteSearch_DrivePlanQuery extends java_lang_O
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.route.RouteSearch.DrivePlanQuery::setDestParentPoiID', {"var1": var1, "__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteSearch.DrivePlanQuery::setDestParentPoiID', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -278,7 +281,7 @@ class com_amap_api_services_route_RouteSearch_DrivePlanQuery extends java_lang_O
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.route.RouteSearch.DrivePlanQuery::setMode', {"var1": var1, "__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteSearch.DrivePlanQuery::setMode', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -301,7 +304,7 @@ class com_amap_api_services_route_RouteSearch_DrivePlanQuery extends java_lang_O
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.route.RouteSearch.DrivePlanQuery::setCarType', {"var1": var1, "__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteSearch.DrivePlanQuery::setCarType', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -317,6 +320,11 @@ class com_amap_api_services_route_RouteSearch_DrivePlanQuery extends java_lang_O
   }
   
   //endregion
+
+  @override
+  String toString() {
+    return 'com_amap_api_services_route_RouteSearch_DrivePlanQuery{refId: $refId, runtimeType: $runtimeType, tag__: $tag__}';
+  }
 }
 
 extension com_amap_api_services_route_RouteSearch_DrivePlanQuery_Batch on List<com_amap_api_services_route_RouteSearch_DrivePlanQuery> {
@@ -336,14 +344,14 @@ extension com_amap_api_services_route_RouteSearch_DrivePlanQuery_Batch on List<c
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.route.RouteSearch.DrivePlanQuery::getFromAndTo_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteSearch.DrivePlanQuery::getFromAndTo_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_route_RouteSearch_FromAndTo()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_route_RouteSearch_FromAndTo()..refId = __result__).toList();
       return typedResult;
     }
   }
@@ -355,7 +363,7 @@ extension com_amap_api_services_route_RouteSearch_DrivePlanQuery_Batch on List<c
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.route.RouteSearch.DrivePlanQuery::getDestParentPoiID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteSearch.DrivePlanQuery::getDestParentPoiID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -374,7 +382,7 @@ extension com_amap_api_services_route_RouteSearch_DrivePlanQuery_Batch on List<c
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.route.RouteSearch.DrivePlanQuery::getMode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteSearch.DrivePlanQuery::getMode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -393,7 +401,7 @@ extension com_amap_api_services_route_RouteSearch_DrivePlanQuery_Batch on List<c
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.route.RouteSearch.DrivePlanQuery::getCarType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteSearch.DrivePlanQuery::getCarType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -412,7 +420,7 @@ extension com_amap_api_services_route_RouteSearch_DrivePlanQuery_Batch on List<c
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.route.RouteSearch.DrivePlanQuery::getFirstTime_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteSearch.DrivePlanQuery::getFirstTime_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -431,7 +439,7 @@ extension com_amap_api_services_route_RouteSearch_DrivePlanQuery_Batch on List<c
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.route.RouteSearch.DrivePlanQuery::getInterval_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteSearch.DrivePlanQuery::getInterval_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -450,7 +458,7 @@ extension com_amap_api_services_route_RouteSearch_DrivePlanQuery_Batch on List<c
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.route.RouteSearch.DrivePlanQuery::getCount_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteSearch.DrivePlanQuery::getCount_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -469,14 +477,14 @@ extension com_amap_api_services_route_RouteSearch_DrivePlanQuery_Batch on List<c
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.route.RouteSearch.DrivePlanQuery::clone_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteSearch.DrivePlanQuery::clone_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_route_RouteSearch_DrivePlanQuery()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_route_RouteSearch_DrivePlanQuery()..refId = __result__).toList();
       return typedResult;
     }
   }
@@ -488,7 +496,7 @@ extension com_amap_api_services_route_RouteSearch_DrivePlanQuery_Batch on List<c
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.route.RouteSearch.DrivePlanQuery::setDestParentPoiID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteSearch.DrivePlanQuery::setDestParentPoiID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -507,7 +515,7 @@ extension com_amap_api_services_route_RouteSearch_DrivePlanQuery_Batch on List<c
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.route.RouteSearch.DrivePlanQuery::setMode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteSearch.DrivePlanQuery::setMode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -526,7 +534,7 @@ extension com_amap_api_services_route_RouteSearch_DrivePlanQuery_Batch on List<c
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.route.RouteSearch.DrivePlanQuery::setCarType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteSearch.DrivePlanQuery::setCarType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object

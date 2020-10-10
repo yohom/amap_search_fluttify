@@ -19,6 +19,9 @@ mixin com_amap_api_services_poisearch_PoiSearch_OnPoiSearchListener on java_lang
 
   
 
+  @override
+  final String tag__ = 'amap_search_fluttify';
+
   
 
   

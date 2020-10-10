@@ -19,6 +19,9 @@ mixin com_amap_api_services_routepoisearch_RoutePOISearch_OnRoutePOISearchListen
 
   
 
+  @override
+  final String tag__ = 'amap_search_fluttify';
+
   
 
   

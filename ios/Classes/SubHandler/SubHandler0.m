@@ -25,7 +25,7 @@ extern BOOL enableLog;
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapSearchObject@%@::formattedDescription()", args[@"refId"]);
+                NSLog(@"fluttify-objc: AMapSearchObject@%@::formattedDescription()", args[@"__this__"]);
             }
         
             // invoke native method
@@ -57,7 +57,7 @@ extern BOOL enableLog;
         
             // result
             // return a ref
-            id __result__ = result;
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -79,7 +79,7 @@ extern BOOL enableLog;
         
             // result
             // return a ref
-            id __result__ = result;
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -100,7 +100,7 @@ extern BOOL enableLog;
         
             // result
             // return a ref
-            id __result__ = result;
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -113,7 +113,7 @@ extern BOOL enableLog;
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapNearbySearchManager@%@::startAutoUploadNearbyInfo()", args[@"refId"]);
+                NSLog(@"fluttify-objc: AMapNearbySearchManager@%@::startAutoUploadNearbyInfo()", args[@"__this__"]);
             }
         
             // invoke native method
@@ -134,7 +134,7 @@ extern BOOL enableLog;
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapNearbySearchManager@%@::stopAutoUploadNearbyInfo()", args[@"refId"]);
+                NSLog(@"fluttify-objc: AMapNearbySearchManager@%@::stopAutoUploadNearbyInfo()", args[@"__this__"]);
             }
         
             // invoke native method
@@ -149,14 +149,14 @@ extern BOOL enableLog;
         @"AMapNearbySearchManager::uploadNearbyInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapNearbyUploadInfo* info = (AMapNearbyUploadInfo*) args[@"info"];
+            AMapNearbyUploadInfo* info = (AMapNearbyUploadInfo*) (args[@"info"] == [NSNull null] ? nil : args[@"info"]);
         
             // ref
             AMapNearbySearchManager* ref = (AMapNearbySearchManager*) args[@"__this__"];
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapNearbySearchManager@%@::uploadNearbyInfo(%@)", args[@"refId"], args[@"info"]);
+                NSLog(@"fluttify-objc: AMapNearbySearchManager@%@::uploadNearbyInfo(%@)", args[@"__this__"], args[@"info"]);
             }
         
             // invoke native method
@@ -178,7 +178,7 @@ extern BOOL enableLog;
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapNearbySearchManager@%@::clearUserInfoWithID(%@)", args[@"refId"], args[@"userID"]);
+                NSLog(@"fluttify-objc: AMapNearbySearchManager@%@::clearUserInfoWithID(%@)", args[@"__this__"], args[@"userID"]);
             }
         
             // invoke native method
@@ -199,7 +199,7 @@ extern BOOL enableLog;
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapSearchAPI@%@::init()", args[@"refId"]);
+                NSLog(@"fluttify-objc: AMapSearchAPI@%@::init()", args[@"__this__"]);
             }
         
             // invoke native method
@@ -207,7 +207,7 @@ extern BOOL enableLog;
         
             // result
             // return a ref
-            id __result__ = result;
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -220,7 +220,7 @@ extern BOOL enableLog;
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapSearchAPI@%@::cancelAllRequests()", args[@"refId"]);
+                NSLog(@"fluttify-objc: AMapSearchAPI@%@::cancelAllRequests()", args[@"__this__"]);
             }
         
             // invoke native method
@@ -235,14 +235,14 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapPOIIDSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapPOIIDSearchRequest* request = (AMapPOIIDSearchRequest*) args[@"request"];
+            AMapPOIIDSearchRequest* request = (AMapPOIIDSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapPOIIDSearch(%@)", args[@"refId"], args[@"request"]);
+                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapPOIIDSearch(%@)", args[@"__this__"], args[@"request"]);
             }
         
             // invoke native method
@@ -257,14 +257,14 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapPOIKeywordsSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapPOIKeywordsSearchRequest* request = (AMapPOIKeywordsSearchRequest*) args[@"request"];
+            AMapPOIKeywordsSearchRequest* request = (AMapPOIKeywordsSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapPOIKeywordsSearch(%@)", args[@"refId"], args[@"request"]);
+                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapPOIKeywordsSearch(%@)", args[@"__this__"], args[@"request"]);
             }
         
             // invoke native method
@@ -279,14 +279,14 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapPOIAroundSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapPOIAroundSearchRequest* request = (AMapPOIAroundSearchRequest*) args[@"request"];
+            AMapPOIAroundSearchRequest* request = (AMapPOIAroundSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapPOIAroundSearch(%@)", args[@"refId"], args[@"request"]);
+                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapPOIAroundSearch(%@)", args[@"__this__"], args[@"request"]);
             }
         
             // invoke native method
@@ -301,14 +301,14 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapPOIPolygonSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapPOIPolygonSearchRequest* request = (AMapPOIPolygonSearchRequest*) args[@"request"];
+            AMapPOIPolygonSearchRequest* request = (AMapPOIPolygonSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapPOIPolygonSearch(%@)", args[@"refId"], args[@"request"]);
+                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapPOIPolygonSearch(%@)", args[@"__this__"], args[@"request"]);
             }
         
             // invoke native method
@@ -323,14 +323,14 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapRoutePOISearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapRoutePOISearchRequest* request = (AMapRoutePOISearchRequest*) args[@"request"];
+            AMapRoutePOISearchRequest* request = (AMapRoutePOISearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapRoutePOISearch(%@)", args[@"refId"], args[@"request"]);
+                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapRoutePOISearch(%@)", args[@"__this__"], args[@"request"]);
             }
         
             // invoke native method
@@ -345,14 +345,14 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapGeocodeSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapGeocodeSearchRequest* request = (AMapGeocodeSearchRequest*) args[@"request"];
+            AMapGeocodeSearchRequest* request = (AMapGeocodeSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapGeocodeSearch(%@)", args[@"refId"], args[@"request"]);
+                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapGeocodeSearch(%@)", args[@"__this__"], args[@"request"]);
             }
         
             // invoke native method
@@ -367,14 +367,14 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapReGoecodeSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapReGeocodeSearchRequest* request = (AMapReGeocodeSearchRequest*) args[@"request"];
+            AMapReGeocodeSearchRequest* request = (AMapReGeocodeSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapReGoecodeSearch(%@)", args[@"refId"], args[@"request"]);
+                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapReGoecodeSearch(%@)", args[@"__this__"], args[@"request"]);
             }
         
             // invoke native method
@@ -389,14 +389,14 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapInputTipsSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapInputTipsSearchRequest* request = (AMapInputTipsSearchRequest*) args[@"request"];
+            AMapInputTipsSearchRequest* request = (AMapInputTipsSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapInputTipsSearch(%@)", args[@"refId"], args[@"request"]);
+                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapInputTipsSearch(%@)", args[@"__this__"], args[@"request"]);
             }
         
             // invoke native method
@@ -411,14 +411,14 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapBusStopSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapBusStopSearchRequest* request = (AMapBusStopSearchRequest*) args[@"request"];
+            AMapBusStopSearchRequest* request = (AMapBusStopSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapBusStopSearch(%@)", args[@"refId"], args[@"request"]);
+                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapBusStopSearch(%@)", args[@"__this__"], args[@"request"]);
             }
         
             // invoke native method
@@ -433,14 +433,14 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapBusLineIDSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapBusLineIDSearchRequest* request = (AMapBusLineIDSearchRequest*) args[@"request"];
+            AMapBusLineIDSearchRequest* request = (AMapBusLineIDSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapBusLineIDSearch(%@)", args[@"refId"], args[@"request"]);
+                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapBusLineIDSearch(%@)", args[@"__this__"], args[@"request"]);
             }
         
             // invoke native method
@@ -455,14 +455,14 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapBusLineNameSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapBusLineNameSearchRequest* request = (AMapBusLineNameSearchRequest*) args[@"request"];
+            AMapBusLineNameSearchRequest* request = (AMapBusLineNameSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapBusLineNameSearch(%@)", args[@"refId"], args[@"request"]);
+                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapBusLineNameSearch(%@)", args[@"__this__"], args[@"request"]);
             }
         
             // invoke native method
@@ -477,14 +477,14 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapDistrictSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapDistrictSearchRequest* request = (AMapDistrictSearchRequest*) args[@"request"];
+            AMapDistrictSearchRequest* request = (AMapDistrictSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapDistrictSearch(%@)", args[@"refId"], args[@"request"]);
+                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapDistrictSearch(%@)", args[@"__this__"], args[@"request"]);
             }
         
             // invoke native method
@@ -499,14 +499,14 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapDrivingRouteSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapDrivingRouteSearchRequest* request = (AMapDrivingRouteSearchRequest*) args[@"request"];
+            AMapDrivingRouteSearchRequest* request = (AMapDrivingRouteSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapDrivingRouteSearch(%@)", args[@"refId"], args[@"request"]);
+                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapDrivingRouteSearch(%@)", args[@"__this__"], args[@"request"]);
             }
         
             // invoke native method
@@ -521,14 +521,14 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapWalkingRouteSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapWalkingRouteSearchRequest* request = (AMapWalkingRouteSearchRequest*) args[@"request"];
+            AMapWalkingRouteSearchRequest* request = (AMapWalkingRouteSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapWalkingRouteSearch(%@)", args[@"refId"], args[@"request"]);
+                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapWalkingRouteSearch(%@)", args[@"__this__"], args[@"request"]);
             }
         
             // invoke native method
@@ -543,14 +543,14 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapTransitRouteSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapTransitRouteSearchRequest* request = (AMapTransitRouteSearchRequest*) args[@"request"];
+            AMapTransitRouteSearchRequest* request = (AMapTransitRouteSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapTransitRouteSearch(%@)", args[@"refId"], args[@"request"]);
+                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapTransitRouteSearch(%@)", args[@"__this__"], args[@"request"]);
             }
         
             // invoke native method
@@ -565,14 +565,14 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapRidingRouteSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapRidingRouteSearchRequest* request = (AMapRidingRouteSearchRequest*) args[@"request"];
+            AMapRidingRouteSearchRequest* request = (AMapRidingRouteSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapRidingRouteSearch(%@)", args[@"refId"], args[@"request"]);
+                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapRidingRouteSearch(%@)", args[@"__this__"], args[@"request"]);
             }
         
             // invoke native method
@@ -587,14 +587,14 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapTruckRouteSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapTruckRouteSearchRequest* request = (AMapTruckRouteSearchRequest*) args[@"request"];
+            AMapTruckRouteSearchRequest* request = (AMapTruckRouteSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapTruckRouteSearch(%@)", args[@"refId"], args[@"request"]);
+                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapTruckRouteSearch(%@)", args[@"__this__"], args[@"request"]);
             }
         
             // invoke native method
@@ -609,14 +609,14 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapFutureRouteSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapFutureRouteSearchRequest* request = (AMapFutureRouteSearchRequest*) args[@"request"];
+            AMapFutureRouteSearchRequest* request = (AMapFutureRouteSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapFutureRouteSearch(%@)", args[@"refId"], args[@"request"]);
+                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapFutureRouteSearch(%@)", args[@"__this__"], args[@"request"]);
             }
         
             // invoke native method
@@ -631,14 +631,14 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapWeatherSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapWeatherSearchRequest* request = (AMapWeatherSearchRequest*) args[@"request"];
+            AMapWeatherSearchRequest* request = (AMapWeatherSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapWeatherSearch(%@)", args[@"refId"], args[@"request"]);
+                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapWeatherSearch(%@)", args[@"__this__"], args[@"request"]);
             }
         
             // invoke native method
@@ -653,14 +653,14 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapRoadTrafficSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapRoadTrafficSearchRequest* request = (AMapRoadTrafficSearchRequest*) args[@"request"];
+            AMapRoadTrafficSearchRequest* request = (AMapRoadTrafficSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapRoadTrafficSearch(%@)", args[@"refId"], args[@"request"]);
+                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapRoadTrafficSearch(%@)", args[@"__this__"], args[@"request"]);
             }
         
             // invoke native method
@@ -675,14 +675,14 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapRoadTrafficCircleSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapRoadTrafficCircleSearchRequest* request = (AMapRoadTrafficCircleSearchRequest*) args[@"request"];
+            AMapRoadTrafficCircleSearchRequest* request = (AMapRoadTrafficCircleSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapRoadTrafficCircleSearch(%@)", args[@"refId"], args[@"request"]);
+                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapRoadTrafficCircleSearch(%@)", args[@"__this__"], args[@"request"]);
             }
         
             // invoke native method
@@ -697,14 +697,14 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapDistanceSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapDistanceSearchRequest* request = (AMapDistanceSearchRequest*) args[@"request"];
+            AMapDistanceSearchRequest* request = (AMapDistanceSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapDistanceSearch(%@)", args[@"refId"], args[@"request"]);
+                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapDistanceSearch(%@)", args[@"__this__"], args[@"request"]);
             }
         
             // invoke native method
@@ -719,14 +719,14 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapNearbySearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapNearbySearchRequest* request = (AMapNearbySearchRequest*) args[@"request"];
+            AMapNearbySearchRequest* request = (AMapNearbySearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapNearbySearch(%@)", args[@"refId"], args[@"request"]);
+                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapNearbySearch(%@)", args[@"__this__"], args[@"request"]);
             }
         
             // invoke native method
@@ -741,14 +741,14 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapCloudPOIAroundSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapCloudPOIAroundSearchRequest* request = (AMapCloudPOIAroundSearchRequest*) args[@"request"];
+            AMapCloudPOIAroundSearchRequest* request = (AMapCloudPOIAroundSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapCloudPOIAroundSearch(%@)", args[@"refId"], args[@"request"]);
+                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapCloudPOIAroundSearch(%@)", args[@"__this__"], args[@"request"]);
             }
         
             // invoke native method
@@ -763,14 +763,14 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapCloudPOIPolygonSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapCloudPOIPolygonSearchRequest* request = (AMapCloudPOIPolygonSearchRequest*) args[@"request"];
+            AMapCloudPOIPolygonSearchRequest* request = (AMapCloudPOIPolygonSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapCloudPOIPolygonSearch(%@)", args[@"refId"], args[@"request"]);
+                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapCloudPOIPolygonSearch(%@)", args[@"__this__"], args[@"request"]);
             }
         
             // invoke native method
@@ -785,14 +785,14 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapCloudPOIIDSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapCloudPOIIDSearchRequest* request = (AMapCloudPOIIDSearchRequest*) args[@"request"];
+            AMapCloudPOIIDSearchRequest* request = (AMapCloudPOIIDSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapCloudPOIIDSearch(%@)", args[@"refId"], args[@"request"]);
+                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapCloudPOIIDSearch(%@)", args[@"__this__"], args[@"request"]);
             }
         
             // invoke native method
@@ -807,14 +807,14 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapCloudPOILocalSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapCloudPOILocalSearchRequest* request = (AMapCloudPOILocalSearchRequest*) args[@"request"];
+            AMapCloudPOILocalSearchRequest* request = (AMapCloudPOILocalSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapCloudPOILocalSearch(%@)", args[@"refId"], args[@"request"]);
+                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapCloudPOILocalSearch(%@)", args[@"__this__"], args[@"request"]);
             }
         
             // invoke native method
@@ -829,14 +829,14 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapLocationShareSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapLocationShareSearchRequest* request = (AMapLocationShareSearchRequest*) args[@"request"];
+            AMapLocationShareSearchRequest* request = (AMapLocationShareSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapLocationShareSearch(%@)", args[@"refId"], args[@"request"]);
+                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapLocationShareSearch(%@)", args[@"__this__"], args[@"request"]);
             }
         
             // invoke native method
@@ -851,14 +851,14 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapPOIShareSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapPOIShareSearchRequest* request = (AMapPOIShareSearchRequest*) args[@"request"];
+            AMapPOIShareSearchRequest* request = (AMapPOIShareSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapPOIShareSearch(%@)", args[@"refId"], args[@"request"]);
+                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapPOIShareSearch(%@)", args[@"__this__"], args[@"request"]);
             }
         
             // invoke native method
@@ -873,14 +873,14 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapRouteShareSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapRouteShareSearchRequest* request = (AMapRouteShareSearchRequest*) args[@"request"];
+            AMapRouteShareSearchRequest* request = (AMapRouteShareSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapRouteShareSearch(%@)", args[@"refId"], args[@"request"]);
+                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapRouteShareSearch(%@)", args[@"__this__"], args[@"request"]);
             }
         
             // invoke native method
@@ -895,14 +895,14 @@ extern BOOL enableLog;
         @"AMapSearchAPI::AMapNavigationShareSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // args
             // ref arg
-            AMapNavigationShareSearchRequest* request = (AMapNavigationShareSearchRequest*) args[@"request"];
+            AMapNavigationShareSearchRequest* request = (AMapNavigationShareSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
         
             // print log
             if (enableLog) {
-                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapNavigationShareSearch(%@)", args[@"refId"], args[@"request"]);
+                NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapNavigationShareSearch(%@)", args[@"__this__"], args[@"request"]);
             }
         
             // invoke native method
@@ -958,7 +958,7 @@ extern BOOL enableLog;
         
                 // result
                 // return a ref
-                id __result__ = result;
+                NSObject* __result__ = result;
         
                 [resultList addObject:__result__];
             }
@@ -983,7 +983,7 @@ extern BOOL enableLog;
         
                 // result
                 // return a ref
-                id __result__ = result;
+                NSObject* __result__ = result;
         
                 [resultList addObject:__result__];
             }
@@ -1007,7 +1007,7 @@ extern BOOL enableLog;
         
                 // result
                 // return a ref
-                id __result__ = result;
+                NSObject* __result__ = result;
         
                 [resultList addObject:__result__];
             }
@@ -1070,7 +1070,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapNearbyUploadInfo* info = (AMapNearbyUploadInfo*) args[@"info"];
+                AMapNearbyUploadInfo* info = (AMapNearbyUploadInfo*) (args[@"info"] == [NSNull null] ? nil : args[@"info"]);
         
                 // ref
                 AMapNearbySearchManager* ref = (AMapNearbySearchManager*) args[@"__this__"];
@@ -1129,7 +1129,7 @@ extern BOOL enableLog;
         
                 // result
                 // return a ref
-                id __result__ = result;
+                NSObject* __result__ = result;
         
                 [resultList addObject:__result__];
             }
@@ -1168,7 +1168,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapPOIIDSearchRequest* request = (AMapPOIIDSearchRequest*) args[@"request"];
+                AMapPOIIDSearchRequest* request = (AMapPOIIDSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
@@ -1193,7 +1193,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapPOIKeywordsSearchRequest* request = (AMapPOIKeywordsSearchRequest*) args[@"request"];
+                AMapPOIKeywordsSearchRequest* request = (AMapPOIKeywordsSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
@@ -1218,7 +1218,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapPOIAroundSearchRequest* request = (AMapPOIAroundSearchRequest*) args[@"request"];
+                AMapPOIAroundSearchRequest* request = (AMapPOIAroundSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
@@ -1243,7 +1243,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapPOIPolygonSearchRequest* request = (AMapPOIPolygonSearchRequest*) args[@"request"];
+                AMapPOIPolygonSearchRequest* request = (AMapPOIPolygonSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
@@ -1268,7 +1268,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapRoutePOISearchRequest* request = (AMapRoutePOISearchRequest*) args[@"request"];
+                AMapRoutePOISearchRequest* request = (AMapRoutePOISearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
@@ -1293,7 +1293,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeocodeSearchRequest* request = (AMapGeocodeSearchRequest*) args[@"request"];
+                AMapGeocodeSearchRequest* request = (AMapGeocodeSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
@@ -1318,7 +1318,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapReGeocodeSearchRequest* request = (AMapReGeocodeSearchRequest*) args[@"request"];
+                AMapReGeocodeSearchRequest* request = (AMapReGeocodeSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
@@ -1343,7 +1343,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapInputTipsSearchRequest* request = (AMapInputTipsSearchRequest*) args[@"request"];
+                AMapInputTipsSearchRequest* request = (AMapInputTipsSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
@@ -1368,7 +1368,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapBusStopSearchRequest* request = (AMapBusStopSearchRequest*) args[@"request"];
+                AMapBusStopSearchRequest* request = (AMapBusStopSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
@@ -1393,7 +1393,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapBusLineIDSearchRequest* request = (AMapBusLineIDSearchRequest*) args[@"request"];
+                AMapBusLineIDSearchRequest* request = (AMapBusLineIDSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
@@ -1418,7 +1418,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapBusLineNameSearchRequest* request = (AMapBusLineNameSearchRequest*) args[@"request"];
+                AMapBusLineNameSearchRequest* request = (AMapBusLineNameSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
@@ -1443,7 +1443,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapDistrictSearchRequest* request = (AMapDistrictSearchRequest*) args[@"request"];
+                AMapDistrictSearchRequest* request = (AMapDistrictSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
@@ -1468,7 +1468,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapDrivingRouteSearchRequest* request = (AMapDrivingRouteSearchRequest*) args[@"request"];
+                AMapDrivingRouteSearchRequest* request = (AMapDrivingRouteSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
@@ -1493,7 +1493,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapWalkingRouteSearchRequest* request = (AMapWalkingRouteSearchRequest*) args[@"request"];
+                AMapWalkingRouteSearchRequest* request = (AMapWalkingRouteSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
@@ -1518,7 +1518,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapTransitRouteSearchRequest* request = (AMapTransitRouteSearchRequest*) args[@"request"];
+                AMapTransitRouteSearchRequest* request = (AMapTransitRouteSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
@@ -1543,7 +1543,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapRidingRouteSearchRequest* request = (AMapRidingRouteSearchRequest*) args[@"request"];
+                AMapRidingRouteSearchRequest* request = (AMapRidingRouteSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
@@ -1568,7 +1568,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapTruckRouteSearchRequest* request = (AMapTruckRouteSearchRequest*) args[@"request"];
+                AMapTruckRouteSearchRequest* request = (AMapTruckRouteSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
@@ -1593,7 +1593,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapFutureRouteSearchRequest* request = (AMapFutureRouteSearchRequest*) args[@"request"];
+                AMapFutureRouteSearchRequest* request = (AMapFutureRouteSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
@@ -1618,7 +1618,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapWeatherSearchRequest* request = (AMapWeatherSearchRequest*) args[@"request"];
+                AMapWeatherSearchRequest* request = (AMapWeatherSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
@@ -1643,7 +1643,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapRoadTrafficSearchRequest* request = (AMapRoadTrafficSearchRequest*) args[@"request"];
+                AMapRoadTrafficSearchRequest* request = (AMapRoadTrafficSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
@@ -1668,7 +1668,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapRoadTrafficCircleSearchRequest* request = (AMapRoadTrafficCircleSearchRequest*) args[@"request"];
+                AMapRoadTrafficCircleSearchRequest* request = (AMapRoadTrafficCircleSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
@@ -1693,7 +1693,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapDistanceSearchRequest* request = (AMapDistanceSearchRequest*) args[@"request"];
+                AMapDistanceSearchRequest* request = (AMapDistanceSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
@@ -1718,7 +1718,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapNearbySearchRequest* request = (AMapNearbySearchRequest*) args[@"request"];
+                AMapNearbySearchRequest* request = (AMapNearbySearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
@@ -1743,7 +1743,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapCloudPOIAroundSearchRequest* request = (AMapCloudPOIAroundSearchRequest*) args[@"request"];
+                AMapCloudPOIAroundSearchRequest* request = (AMapCloudPOIAroundSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
@@ -1768,7 +1768,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapCloudPOIPolygonSearchRequest* request = (AMapCloudPOIPolygonSearchRequest*) args[@"request"];
+                AMapCloudPOIPolygonSearchRequest* request = (AMapCloudPOIPolygonSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
@@ -1793,7 +1793,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapCloudPOIIDSearchRequest* request = (AMapCloudPOIIDSearchRequest*) args[@"request"];
+                AMapCloudPOIIDSearchRequest* request = (AMapCloudPOIIDSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
@@ -1818,7 +1818,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapCloudPOILocalSearchRequest* request = (AMapCloudPOILocalSearchRequest*) args[@"request"];
+                AMapCloudPOILocalSearchRequest* request = (AMapCloudPOILocalSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
@@ -1843,7 +1843,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapLocationShareSearchRequest* request = (AMapLocationShareSearchRequest*) args[@"request"];
+                AMapLocationShareSearchRequest* request = (AMapLocationShareSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
@@ -1868,7 +1868,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapPOIShareSearchRequest* request = (AMapPOIShareSearchRequest*) args[@"request"];
+                AMapPOIShareSearchRequest* request = (AMapPOIShareSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
@@ -1893,7 +1893,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapRouteShareSearchRequest* request = (AMapRouteShareSearchRequest*) args[@"request"];
+                AMapRouteShareSearchRequest* request = (AMapRouteShareSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
@@ -1918,7 +1918,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapNavigationShareSearchRequest* request = (AMapNavigationShareSearchRequest*) args[@"request"];
+                AMapNavigationShareSearchRequest* request = (AMapNavigationShareSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
         
                 // ref
                 AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
@@ -2150,7 +2150,7 @@ extern BOOL enableLog;
             AMapGeoPoint* result = ref.location;
         
             // return a ref
-            id __result__ = result;
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -2186,7 +2186,7 @@ extern BOOL enableLog;
             AMapGeoPoint* result = ref.location;
         
             // return a ref
-            id __result__ = result;
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -2258,7 +2258,7 @@ extern BOOL enableLog;
             AMapGeoPolygon* result = ref.polygon;
         
             // return a ref
-            id __result__ = result;
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -2294,7 +2294,7 @@ extern BOOL enableLog;
             AMapSuggestion* result = ref.suggestion;
         
             // return a ref
-            id __result__ = result;
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -2311,12 +2311,8 @@ extern BOOL enableLog;
             // invoke native method
             NSArray<AMapPOI*>* result = ref.pois;
         
-            // 返回值: 列表
-            NSMutableArray<NSObject*>* __result__ = [NSMutableArray array];
-            for (int __i__ = 0; __i__ < result.count; __i__++) {
-                NSObject* object = [result objectAtIndex:__i__];
-                [__result__ addObject: object];
-            }
+            // return a ref
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -2334,7 +2330,7 @@ extern BOOL enableLog;
             AMapGeoPoint* result = ref.origin;
         
             // return a ref
-            id __result__ = result;
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -2352,7 +2348,7 @@ extern BOOL enableLog;
             AMapGeoPoint* result = ref.destination;
         
             // return a ref
-            id __result__ = result;
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -2441,12 +2437,8 @@ extern BOOL enableLog;
             // invoke native method
             NSArray<AMapGeoPoint*>* result = ref.polyline;
         
-            // 返回值: 列表
-            NSMutableArray<NSObject*>* __result__ = [NSMutableArray array];
-            for (int __i__ = 0; __i__ < result.count; __i__++) {
-                NSObject* object = [result objectAtIndex:__i__];
-                [__result__ addObject: object];
-            }
+            // return a ref
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -2481,12 +2473,8 @@ extern BOOL enableLog;
             // invoke native method
             NSArray<AMapRoutePOI*>* result = ref.pois;
         
-            // 返回值: 列表
-            NSMutableArray<NSObject*>* __result__ = [NSMutableArray array];
-            for (int __i__ = 0; __i__ < result.count; __i__++) {
-                NSObject* object = [result objectAtIndex:__i__];
-                [__result__ addObject: object];
-            }
+            // return a ref
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -2611,12 +2599,8 @@ extern BOOL enableLog;
             // invoke native method
             NSArray<AMapTip*>* result = ref.tips;
         
-            // 返回值: 列表
-            NSMutableArray<NSObject*>* __result__ = [NSMutableArray array];
-            for (int __i__ = 0; __i__ < result.count; __i__++) {
-                NSObject* object = [result objectAtIndex:__i__];
-                [__result__ addObject: object];
-            }
+            // return a ref
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -2687,12 +2671,8 @@ extern BOOL enableLog;
             // invoke native method
             NSArray<AMapGeocode*>* result = ref.geocodes;
         
-            // 返回值: 列表
-            NSMutableArray<NSObject*>* __result__ = [NSMutableArray array];
-            for (int __i__ = 0; __i__ < result.count; __i__++) {
-                NSObject* object = [result objectAtIndex:__i__];
-                [__result__ addObject: object];
-            }
+            // return a ref
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -2728,7 +2708,7 @@ extern BOOL enableLog;
             AMapGeoPoint* result = ref.location;
         
             // return a ref
-            id __result__ = result;
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -2782,7 +2762,7 @@ extern BOOL enableLog;
             AMapReGeocode* result = ref.regeocode;
         
             // return a ref
-            id __result__ = result;
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -2890,7 +2870,7 @@ extern BOOL enableLog;
             AMapSuggestion* result = ref.suggestion;
         
             // return a ref
-            id __result__ = result;
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -2907,12 +2887,8 @@ extern BOOL enableLog;
             // invoke native method
             NSArray<AMapBusStop*>* result = ref.busstops;
         
-            // 返回值: 列表
-            NSMutableArray<NSObject*>* __result__ = [NSMutableArray array];
-            for (int __i__ = 0; __i__ < result.count; __i__++) {
-                NSObject* object = [result objectAtIndex:__i__];
-                [__result__ addObject: object];
-            }
+            // return a ref
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -3056,7 +3032,7 @@ extern BOOL enableLog;
             AMapSuggestion* result = ref.suggestion;
         
             // return a ref
-            id __result__ = result;
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -3073,12 +3049,8 @@ extern BOOL enableLog;
             // invoke native method
             NSArray<AMapBusLine*>* result = ref.buslines;
         
-            // 返回值: 列表
-            NSMutableArray<NSObject*>* __result__ = [NSMutableArray array];
-            for (int __i__ = 0; __i__ < result.count; __i__++) {
-                NSObject* object = [result objectAtIndex:__i__];
-                [__result__ addObject: object];
-            }
+            // return a ref
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -3167,12 +3139,8 @@ extern BOOL enableLog;
             // invoke native method
             NSArray<AMapDistrict*>* result = ref.districts;
         
-            // 返回值: 列表
-            NSMutableArray<NSObject*>* __result__ = [NSMutableArray array];
-            for (int __i__ = 0; __i__ < result.count; __i__++) {
-                NSObject* object = [result objectAtIndex:__i__];
-                [__result__ addObject: object];
-            }
+            // return a ref
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -3190,7 +3158,7 @@ extern BOOL enableLog;
             AMapGeoPoint* result = ref.origin;
         
             // return a ref
-            id __result__ = result;
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -3208,7 +3176,7 @@ extern BOOL enableLog;
             AMapGeoPoint* result = ref.destination;
         
             // return a ref
-            id __result__ = result;
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -3243,12 +3211,8 @@ extern BOOL enableLog;
             // invoke native method
             NSArray<AMapGeoPoint*>* result = ref.waypoints;
         
-            // 返回值: 列表
-            NSMutableArray<NSObject*>* __result__ = [NSMutableArray array];
-            for (int __i__ = 0; __i__ < result.count; __i__++) {
-                NSObject* object = [result objectAtIndex:__i__];
-                [__result__ addObject: object];
-            }
+            // return a ref
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -3265,12 +3229,8 @@ extern BOOL enableLog;
             // invoke native method
             NSArray<AMapGeoPolygon*>* result = ref.avoidpolygons;
         
-            // 返回值: 列表
-            NSMutableArray<NSObject*>* __result__ = [NSMutableArray array];
-            for (int __i__ = 0; __i__ < result.count; __i__++) {
-                NSObject* object = [result objectAtIndex:__i__];
-                [__result__ addObject: object];
-            }
+            // return a ref
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -3612,7 +3572,7 @@ extern BOOL enableLog;
             AMapRoute* result = ref.route;
         
             // return a ref
-            id __result__ = result;
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -3647,12 +3607,8 @@ extern BOOL enableLog;
             // invoke native method
             NSArray<AMapGeoPoint*>* result = ref.waypoints;
         
-            // 返回值: 列表
-            NSMutableArray<NSObject*>* __result__ = [NSMutableArray array];
-            for (int __i__ = 0; __i__ < result.count; __i__++) {
-                NSObject* object = [result objectAtIndex:__i__];
-                [__result__ addObject: object];
-            }
+            // return a ref
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -3885,12 +3841,8 @@ extern BOOL enableLog;
             // invoke native method
             NSArray<AMapGeoPoint*>* result = ref.origins;
         
-            // 返回值: 列表
-            NSMutableArray<NSObject*>* __result__ = [NSMutableArray array];
-            for (int __i__ = 0; __i__ < result.count; __i__++) {
-                NSObject* object = [result objectAtIndex:__i__];
-                [__result__ addObject: object];
-            }
+            // return a ref
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -3908,7 +3860,7 @@ extern BOOL enableLog;
             AMapGeoPoint* result = ref.destination;
         
             // return a ref
-            id __result__ = result;
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -3943,12 +3895,8 @@ extern BOOL enableLog;
             // invoke native method
             NSArray<AMapDistanceResult*>* result = ref.results;
         
-            // 返回值: 列表
-            NSMutableArray<NSObject*>* __result__ = [NSMutableArray array];
-            for (int __i__ = 0; __i__ < result.count; __i__++) {
-                NSObject* object = [result objectAtIndex:__i__];
-                [__result__ addObject: object];
-            }
+            // return a ref
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -4001,12 +3949,8 @@ extern BOOL enableLog;
             // invoke native method
             NSArray<AMapLocalWeatherLive*>* result = ref.lives;
         
-            // 返回值: 列表
-            NSMutableArray<NSObject*>* __result__ = [NSMutableArray array];
-            for (int __i__ = 0; __i__ < result.count; __i__++) {
-                NSObject* object = [result objectAtIndex:__i__];
-                [__result__ addObject: object];
-            }
+            // return a ref
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },
@@ -4023,12 +3967,8 @@ extern BOOL enableLog;
             // invoke native method
             NSArray<AMapLocalWeatherForecast*>* result = ref.forecasts;
         
-            // 返回值: 列表
-            NSMutableArray<NSObject*>* __result__ = [NSMutableArray array];
-            for (int __i__ = 0; __i__ < result.count; __i__++) {
-                NSObject* object = [result objectAtIndex:__i__];
-                [__result__ addObject: object];
-            }
+            // return a ref
+            NSObject* __result__ = result;
         
             methodResult(__result__);
         },

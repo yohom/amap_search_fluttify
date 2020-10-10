@@ -292,7 +292,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeoPoint* destination = (AMapGeoPoint*) args[@"destination"];
+                AMapGeoPoint* destination = (AMapGeoPoint*) (args[@"destination"] == [NSNull null] ? nil : args[@"destination"]);
         
                 // ref
                 AMapDistanceSearchRequest* ref = (AMapDistanceSearchRequest*) args[@"__this__"];
@@ -490,7 +490,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeoPoint* location = (AMapGeoPoint*) args[@"location"];
+                AMapGeoPoint* location = (AMapGeoPoint*) (args[@"location"] == [NSNull null] ? nil : args[@"location"]);
         
                 // ref
                 AMapRoadTrafficCircleSearchRequest* ref = (AMapRoadTrafficCircleSearchRequest*) args[@"__this__"];
@@ -526,7 +526,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapTrafficInfo* trafficInfo = (AMapTrafficInfo*) args[@"trafficInfo"];
+                AMapTrafficInfo* trafficInfo = (AMapTrafficInfo*) (args[@"trafficInfo"] == [NSNull null] ? nil : args[@"trafficInfo"]);
         
                 // ref
                 AMapRoadTrafficSearchResponse* ref = (AMapRoadTrafficSearchResponse*) args[@"__this__"];
@@ -544,7 +544,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeoPoint* center = (AMapGeoPoint*) args[@"center"];
+                AMapGeoPoint* center = (AMapGeoPoint*) (args[@"center"] == [NSNull null] ? nil : args[@"center"]);
         
                 // ref
                 AMapNearbySearchRequest* ref = (AMapNearbySearchRequest*) args[@"__this__"];
@@ -778,7 +778,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeoPoint* center = (AMapGeoPoint*) args[@"center"];
+                AMapGeoPoint* center = (AMapGeoPoint*) (args[@"center"] == [NSNull null] ? nil : args[@"center"]);
         
                 // ref
                 AMapCloudPOIAroundSearchRequest* ref = (AMapCloudPOIAroundSearchRequest*) args[@"__this__"];
@@ -832,7 +832,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeoPolygon* polygon = (AMapGeoPolygon*) args[@"polygon"];
+                AMapGeoPolygon* polygon = (AMapGeoPolygon*) (args[@"polygon"] == [NSNull null] ? nil : args[@"polygon"]);
         
                 // ref
                 AMapCloudPOIPolygonSearchRequest* ref = (AMapCloudPOIPolygonSearchRequest*) args[@"__this__"];
@@ -958,7 +958,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeoPoint* location = (AMapGeoPoint*) args[@"location"];
+                AMapGeoPoint* location = (AMapGeoPoint*) (args[@"location"] == [NSNull null] ? nil : args[@"location"]);
         
                 // ref
                 AMapLocationShareSearchRequest* ref = (AMapLocationShareSearchRequest*) args[@"__this__"];
@@ -1012,7 +1012,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeoPoint* location = (AMapGeoPoint*) args[@"location"];
+                AMapGeoPoint* location = (AMapGeoPoint*) (args[@"location"] == [NSNull null] ? nil : args[@"location"]);
         
                 // ref
                 AMapPOIShareSearchRequest* ref = (AMapPOIShareSearchRequest*) args[@"__this__"];
@@ -1102,7 +1102,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeoPoint* startCoordinate = (AMapGeoPoint*) args[@"startCoordinate"];
+                AMapGeoPoint* startCoordinate = (AMapGeoPoint*) (args[@"startCoordinate"] == [NSNull null] ? nil : args[@"startCoordinate"]);
         
                 // ref
                 AMapRouteShareSearchRequest* ref = (AMapRouteShareSearchRequest*) args[@"__this__"];
@@ -1120,7 +1120,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeoPoint* destinationCoordinate = (AMapGeoPoint*) args[@"destinationCoordinate"];
+                AMapGeoPoint* destinationCoordinate = (AMapGeoPoint*) (args[@"destinationCoordinate"] == [NSNull null] ? nil : args[@"destinationCoordinate"]);
         
                 // ref
                 AMapRouteShareSearchRequest* ref = (AMapRouteShareSearchRequest*) args[@"__this__"];
@@ -1192,7 +1192,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeoPoint* startCoordinate = (AMapGeoPoint*) args[@"startCoordinate"];
+                AMapGeoPoint* startCoordinate = (AMapGeoPoint*) (args[@"startCoordinate"] == [NSNull null] ? nil : args[@"startCoordinate"]);
         
                 // ref
                 AMapNavigationShareSearchRequest* ref = (AMapNavigationShareSearchRequest*) args[@"__this__"];
@@ -1210,7 +1210,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeoPoint* destinationCoordinate = (AMapGeoPoint*) args[@"destinationCoordinate"];
+                AMapGeoPoint* destinationCoordinate = (AMapGeoPoint*) (args[@"destinationCoordinate"] == [NSNull null] ? nil : args[@"destinationCoordinate"]);
         
                 // ref
                 AMapNavigationShareSearchRequest* ref = (AMapNavigationShareSearchRequest*) args[@"__this__"];
@@ -1768,7 +1768,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeoPoint* location = (AMapGeoPoint*) args[@"location"];
+                AMapGeoPoint* location = (AMapGeoPoint*) (args[@"location"] == [NSNull null] ? nil : args[@"location"]);
         
                 // ref
                 AMapTip* ref = (AMapTip*) args[@"__this__"];
@@ -2002,7 +2002,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeoPoint* location = (AMapGeoPoint*) args[@"location"];
+                AMapGeoPoint* location = (AMapGeoPoint*) (args[@"location"] == [NSNull null] ? nil : args[@"location"]);
         
                 // ref
                 AMapSubPOI* ref = (AMapSubPOI*) args[@"__this__"];
@@ -2110,7 +2110,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeoPoint* location = (AMapGeoPoint*) args[@"location"];
+                AMapGeoPoint* location = (AMapGeoPoint*) (args[@"location"] == [NSNull null] ? nil : args[@"location"]);
         
                 // ref
                 AMapRoutePOI* ref = (AMapRoutePOI*) args[@"__this__"];
@@ -2236,7 +2236,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeoPoint* location = (AMapGeoPoint*) args[@"location"];
+                AMapGeoPoint* location = (AMapGeoPoint*) (args[@"location"] == [NSNull null] ? nil : args[@"location"]);
         
                 // ref
                 AMapPOI* ref = (AMapPOI*) args[@"__this__"];
@@ -2524,7 +2524,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeoPoint* enterLocation = (AMapGeoPoint*) args[@"enterLocation"];
+                AMapGeoPoint* enterLocation = (AMapGeoPoint*) (args[@"enterLocation"] == [NSNull null] ? nil : args[@"enterLocation"]);
         
                 // ref
                 AMapPOI* ref = (AMapPOI*) args[@"__this__"];
@@ -2542,7 +2542,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeoPoint* exitLocation = (AMapGeoPoint*) args[@"exitLocation"];
+                AMapGeoPoint* exitLocation = (AMapGeoPoint*) (args[@"exitLocation"] == [NSNull null] ? nil : args[@"exitLocation"]);
         
                 // ref
                 AMapPOI* ref = (AMapPOI*) args[@"__this__"];
@@ -2614,7 +2614,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapIndoorData* indoorData = (AMapIndoorData*) args[@"indoorData"];
+                AMapIndoorData* indoorData = (AMapIndoorData*) (args[@"indoorData"] == [NSNull null] ? nil : args[@"indoorData"]);
         
                 // ref
                 AMapPOI* ref = (AMapPOI*) args[@"__this__"];
@@ -2668,7 +2668,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapPOIExtension* extensionInfo = (AMapPOIExtension*) args[@"extensionInfo"];
+                AMapPOIExtension* extensionInfo = (AMapPOIExtension*) (args[@"extensionInfo"] == [NSNull null] ? nil : args[@"extensionInfo"]);
         
                 // ref
                 AMapPOI* ref = (AMapPOI*) args[@"__this__"];
@@ -2740,7 +2740,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeoPoint* location = (AMapGeoPoint*) args[@"location"];
+                AMapGeoPoint* location = (AMapGeoPoint*) (args[@"location"] == [NSNull null] ? nil : args[@"location"]);
         
                 // ref
                 AMapAOI* ref = (AMapAOI*) args[@"__this__"];
@@ -2848,7 +2848,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeoPoint* location = (AMapGeoPoint*) args[@"location"];
+                AMapGeoPoint* location = (AMapGeoPoint*) (args[@"location"] == [NSNull null] ? nil : args[@"location"]);
         
                 // ref
                 AMapRoad* ref = (AMapRoad*) args[@"__this__"];
@@ -2902,7 +2902,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeoPoint* location = (AMapGeoPoint*) args[@"location"];
+                AMapGeoPoint* location = (AMapGeoPoint*) (args[@"location"] == [NSNull null] ? nil : args[@"location"]);
         
                 // ref
                 AMapRoadInter* ref = (AMapRoadInter*) args[@"__this__"];
@@ -3028,7 +3028,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeoPoint* location = (AMapGeoPoint*) args[@"location"];
+                AMapGeoPoint* location = (AMapGeoPoint*) (args[@"location"] == [NSNull null] ? nil : args[@"location"]);
         
                 // ref
                 AMapStreetNumber* ref = (AMapStreetNumber*) args[@"__this__"];
@@ -3100,7 +3100,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeoPoint* location = (AMapGeoPoint*) args[@"location"];
+                AMapGeoPoint* location = (AMapGeoPoint*) (args[@"location"] == [NSNull null] ? nil : args[@"location"]);
         
                 // ref
                 AMapBusinessArea* ref = (AMapBusinessArea*) args[@"__this__"];
@@ -3298,7 +3298,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapStreetNumber* streetNumber = (AMapStreetNumber*) args[@"streetNumber"];
+                AMapStreetNumber* streetNumber = (AMapStreetNumber*) (args[@"streetNumber"] == [NSNull null] ? nil : args[@"streetNumber"]);
         
                 // ref
                 AMapAddressComponent* ref = (AMapAddressComponent*) args[@"__this__"];
@@ -3352,7 +3352,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapAddressComponent* addressComponent = (AMapAddressComponent*) args[@"addressComponent"];
+                AMapAddressComponent* addressComponent = (AMapAddressComponent*) (args[@"addressComponent"] == [NSNull null] ? nil : args[@"addressComponent"]);
         
                 // ref
                 AMapReGeocode* ref = (AMapReGeocode*) args[@"__this__"];
@@ -3604,7 +3604,7 @@ extern BOOL enableLog;
         
                 // args
                 // ref arg
-                AMapGeoPoint* location = (AMapGeoPoint*) args[@"location"];
+                AMapGeoPoint* location = (AMapGeoPoint*) (args[@"location"] == [NSNull null] ? nil : args[@"location"]);
         
                 // ref
                 AMapGeocode* ref = (AMapGeocode*) args[@"__this__"];

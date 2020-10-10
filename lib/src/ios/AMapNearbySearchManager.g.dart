@@ -16,6 +16,9 @@ class AMapNearbySearchManager extends NSObject  {
   //region constants
   static const String name__ = 'AMapNearbySearchManager';
 
+  @override
+  final String tag__ = 'amap_search_fluttify';
+
   
   //endregion
 
@@ -25,12 +28,12 @@ class AMapNearbySearchManager extends NSObject  {
 
   //region getters
   Future<double> get_uploadTimeInterval() async {
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapNearbySearchManager::get_uploadTimeInterval", {'__this__': this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapNearbySearchManager::get_uploadTimeInterval", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<bool> get_isAutoUploading() async {
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapNearbySearchManager::get_isAutoUploading", {'__this__': this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapNearbySearchManager::get_isAutoUploading", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
@@ -38,13 +41,13 @@ class AMapNearbySearchManager extends NSObject  {
 
   //region setters
   Future<void> set_uploadTimeInterval(double uploadTimeInterval) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapNearbySearchManager::set_uploadTimeInterval', <String, dynamic>{'__this__': this, "uploadTimeInterval": uploadTimeInterval});
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapNearbySearchManager::set_uploadTimeInterval', <String, dynamic>{'__this__': this, "uploadTimeInterval": uploadTimeInterval});
   
   
   }
   
   Future<void> set_delegate(AMapNearbySearchManagerDelegate delegate) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapNearbySearchManager::set_delegate', <String, dynamic>{'__this__': this, });
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapNearbySearchManager::set_delegate', <String, dynamic>{'__this__': this, });
   
     MethodChannel('AMapNearbySearchManagerDelegate::Callback', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify')))
       .setMethodCallHandler((methodCall) async {
@@ -99,7 +102,7 @@ class AMapNearbySearchManager extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapNearbySearchManager::sharedInstance', );
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('AMapNearbySearchManager::sharedInstance', );
   
   
     // handle native call
@@ -109,7 +112,7 @@ class AMapNearbySearchManager extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = AMapNearbySearchManager()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = AMapNearbySearchManager()..refId = __result__;
       return __return__;
     }
   }
@@ -122,7 +125,7 @@ class AMapNearbySearchManager extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapNearbySearchManager::startAutoUploadNearbyInfo', {"__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('AMapNearbySearchManager::startAutoUploadNearbyInfo', {"__this__": this});
   
   
     // handle native call
@@ -145,7 +148,7 @@ class AMapNearbySearchManager extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapNearbySearchManager::stopAutoUploadNearbyInfo', {"__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('AMapNearbySearchManager::stopAutoUploadNearbyInfo', {"__this__": this});
   
   
     // handle native call
@@ -168,7 +171,7 @@ class AMapNearbySearchManager extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapNearbySearchManager::uploadNearbyInfo', {"info": info, "__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('AMapNearbySearchManager::uploadNearbyInfo', {"info": info, "__this__": this});
   
   
     // handle native call
@@ -191,7 +194,7 @@ class AMapNearbySearchManager extends NSObject  {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapNearbySearchManager::clearUserInfoWithID', {"userID": userID, "__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('AMapNearbySearchManager::clearUserInfoWithID', {"userID": userID, "__this__": this});
   
   
     // handle native call
@@ -207,19 +210,24 @@ class AMapNearbySearchManager extends NSObject  {
   }
   
   //endregion
+
+  @override
+  String toString() {
+    return 'AMapNearbySearchManager{refId: $refId, runtimeType: $runtimeType, tag__: $tag__}';
+  }
 }
 
 extension AMapNearbySearchManager_Batch on List<AMapNearbySearchManager> {
   //region getters
   Future<List<double>> get_uploadTimeInterval_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapNearbySearchManager::get_uploadTimeInterval_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapNearbySearchManager::get_uploadTimeInterval_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_isAutoUploading_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapNearbySearchManager::get_isAutoUploading_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapNearbySearchManager::get_isAutoUploading_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
@@ -229,7 +237,7 @@ extension AMapNearbySearchManager_Batch on List<AMapNearbySearchManager> {
 
   //region setters
   Future<void> set_uploadTimeInterval_batch(List<double> uploadTimeInterval) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapNearbySearchManager::set_uploadTimeInterval_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "uploadTimeInterval": uploadTimeInterval[__i__]}]);
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapNearbySearchManager::set_uploadTimeInterval_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "uploadTimeInterval": uploadTimeInterval[__i__]}]);
   
   
   }
@@ -244,14 +252,14 @@ extension AMapNearbySearchManager_Batch on List<AMapNearbySearchManager> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapNearbySearchManager::sharedInstance_batch', );
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapNearbySearchManager::sharedInstance_batch', );
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapNearbySearchManager()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapNearbySearchManager()..refId = __result__).toList();
       return typedResult;
     }
   }
@@ -263,7 +271,7 @@ extension AMapNearbySearchManager_Batch on List<AMapNearbySearchManager> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapNearbySearchManager::startAutoUploadNearbyInfo_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapNearbySearchManager::startAutoUploadNearbyInfo_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -282,7 +290,7 @@ extension AMapNearbySearchManager_Batch on List<AMapNearbySearchManager> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapNearbySearchManager::stopAutoUploadNearbyInfo_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapNearbySearchManager::stopAutoUploadNearbyInfo_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -301,7 +309,7 @@ extension AMapNearbySearchManager_Batch on List<AMapNearbySearchManager> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapNearbySearchManager::uploadNearbyInfo_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"info": info[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapNearbySearchManager::uploadNearbyInfo_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"info": info[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -320,7 +328,7 @@ extension AMapNearbySearchManager_Batch on List<AMapNearbySearchManager> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapNearbySearchManager::clearUserInfoWithID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"userID": userID[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapNearbySearchManager::clearUserInfoWithID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"userID": userID[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object

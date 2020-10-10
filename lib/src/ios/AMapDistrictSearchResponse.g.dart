@@ -16,13 +16,16 @@ class AMapDistrictSearchResponse extends AMapSearchObject with NSCoding, NSCopyi
   //region constants
   static const String name__ = 'AMapDistrictSearchResponse';
 
+  @override
+  final String tag__ = 'amap_search_fluttify';
+
   
   //endregion
 
   //region creators
   static Future<AMapDistrictSearchResponse> create__({ bool init = true /* ios only */ }) async {
-    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createAMapDistrictSearchResponse', {'init': init});
-    final object = AMapDistrictSearchResponse()..refId = refId..tag__ = 'amap_search_fluttify';
+    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapDistrictSearchResponse', {'init': init});
+    final object = AMapDistrictSearchResponse()..refId = refId;
     return object;
   }
   
@@ -30,9 +33,9 @@ class AMapDistrictSearchResponse extends AMapSearchObject with NSCoding, NSCopyi
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::create_batchAMapDistrictSearchResponse', {'length': length, 'init': init});
+    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapDistrictSearchResponse', {'length': length, 'init': init});
   
-    final List<AMapDistrictSearchResponse> typedResult = resultBatch.map((result) => AMapDistrictSearchResponse()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<AMapDistrictSearchResponse> typedResult = resultBatch.map((result) => AMapDistrictSearchResponse()..refId = result).toList();
     return typedResult;
   }
   
@@ -40,26 +43,26 @@ class AMapDistrictSearchResponse extends AMapSearchObject with NSCoding, NSCopyi
 
   //region getters
   Future<int> get_count() async {
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapDistrictSearchResponse::get_count", {'__this__': this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapDistrictSearchResponse::get_count", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<List<AMapDistrict>> get_districts() async {
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapDistrictSearchResponse::get_districts", {'__this__': this});
-    return __result__ == null ? null : ((__result__ as List).cast<String>().map((__it__) => AMapDistrict()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapDistrictSearchResponse::get_districts", {'__this__': this});
+    return __result__ == null ? null : ((__result__ as List).cast<String>().map((__it__) => AMapDistrict()..refId = __it__).toList());
   }
   
   //endregion
 
   //region setters
   Future<void> set_count(int count) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapDistrictSearchResponse::set_count', <String, dynamic>{'__this__': this, "count": count});
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapDistrictSearchResponse::set_count', <String, dynamic>{'__this__': this, "count": count});
   
   
   }
   
   Future<void> set_districts(List<AMapDistrict> districts) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapDistrictSearchResponse::set_districts', <String, dynamic>{'__this__': this, "districts": districts});
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapDistrictSearchResponse::set_districts', <String, dynamic>{'__this__': this, "districts": districts});
   
   
   }
@@ -69,21 +72,26 @@ class AMapDistrictSearchResponse extends AMapSearchObject with NSCoding, NSCopyi
   //region methods
   
   //endregion
+
+  @override
+  String toString() {
+    return 'AMapDistrictSearchResponse{refId: $refId, runtimeType: $runtimeType, tag__: $tag__}';
+  }
 }
 
 extension AMapDistrictSearchResponse_Batch on List<AMapDistrictSearchResponse> {
   //region getters
   Future<List<int>> get_count_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapDistrictSearchResponse::get_count_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapDistrictSearchResponse::get_count_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<List<AMapDistrict>>> get_districts_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapDistrictSearchResponse::get_districts_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapDistrictSearchResponse::get_districts_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => AMapDistrict()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => AMapDistrict()..refId = __it__).toList()).toList();
     return typedResult;
   }
   
@@ -91,13 +99,13 @@ extension AMapDistrictSearchResponse_Batch on List<AMapDistrictSearchResponse> {
 
   //region setters
   Future<void> set_count_batch(List<int> count) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapDistrictSearchResponse::set_count_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "count": count[__i__]}]);
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapDistrictSearchResponse::set_count_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "count": count[__i__]}]);
   
   
   }
   
   Future<void> set_districts_batch(List<List<AMapDistrict>> districts) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapDistrictSearchResponse::set_districts_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "districts": districts[__i__]}]);
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapDistrictSearchResponse::set_districts_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "districts": districts[__i__]}]);
   
   
   }

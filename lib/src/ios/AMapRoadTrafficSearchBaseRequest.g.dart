@@ -16,13 +16,16 @@ class AMapRoadTrafficSearchBaseRequest extends AMapSearchObject with NSCoding, N
   //region constants
   static const String name__ = 'AMapRoadTrafficSearchBaseRequest';
 
+  @override
+  final String tag__ = 'amap_search_fluttify';
+
   
   //endregion
 
   //region creators
   static Future<AMapRoadTrafficSearchBaseRequest> create__({ bool init = true /* ios only */ }) async {
-    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createAMapRoadTrafficSearchBaseRequest', {'init': init});
-    final object = AMapRoadTrafficSearchBaseRequest()..refId = refId..tag__ = 'amap_search_fluttify';
+    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapRoadTrafficSearchBaseRequest', {'init': init});
+    final object = AMapRoadTrafficSearchBaseRequest()..refId = refId;
     return object;
   }
   
@@ -30,9 +33,9 @@ class AMapRoadTrafficSearchBaseRequest extends AMapSearchObject with NSCoding, N
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::create_batchAMapRoadTrafficSearchBaseRequest', {'length': length, 'init': init});
+    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapRoadTrafficSearchBaseRequest', {'length': length, 'init': init});
   
-    final List<AMapRoadTrafficSearchBaseRequest> typedResult = resultBatch.map((result) => AMapRoadTrafficSearchBaseRequest()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<AMapRoadTrafficSearchBaseRequest> typedResult = resultBatch.map((result) => AMapRoadTrafficSearchBaseRequest()..refId = result).toList();
     return typedResult;
   }
   
@@ -40,12 +43,12 @@ class AMapRoadTrafficSearchBaseRequest extends AMapSearchObject with NSCoding, N
 
   //region getters
   Future<int> get_level() async {
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapRoadTrafficSearchBaseRequest::get_level", {'__this__': this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoadTrafficSearchBaseRequest::get_level", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
   Future<bool> get_requireExtension() async {
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapRoadTrafficSearchBaseRequest::get_requireExtension", {'__this__': this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoadTrafficSearchBaseRequest::get_requireExtension", {'__this__': this});
     return __result__ == null ? null : (__result__);
   }
   
@@ -53,13 +56,13 @@ class AMapRoadTrafficSearchBaseRequest extends AMapSearchObject with NSCoding, N
 
   //region setters
   Future<void> set_level(int level) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapRoadTrafficSearchBaseRequest::set_level', <String, dynamic>{'__this__': this, "level": level});
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapRoadTrafficSearchBaseRequest::set_level', <String, dynamic>{'__this__': this, "level": level});
   
   
   }
   
   Future<void> set_requireExtension(bool requireExtension) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('AMapRoadTrafficSearchBaseRequest::set_requireExtension', <String, dynamic>{'__this__': this, "requireExtension": requireExtension});
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapRoadTrafficSearchBaseRequest::set_requireExtension', <String, dynamic>{'__this__': this, "requireExtension": requireExtension});
   
   
   }
@@ -69,19 +72,24 @@ class AMapRoadTrafficSearchBaseRequest extends AMapSearchObject with NSCoding, N
   //region methods
   
   //endregion
+
+  @override
+  String toString() {
+    return 'AMapRoadTrafficSearchBaseRequest{refId: $refId, runtimeType: $runtimeType, tag__: $tag__}';
+  }
 }
 
 extension AMapRoadTrafficSearchBaseRequest_Batch on List<AMapRoadTrafficSearchBaseRequest> {
   //region getters
   Future<List<int>> get_level_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapRoadTrafficSearchBaseRequest::get_level_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoadTrafficSearchBaseRequest::get_level_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
     return typedResult;
   }
   
   Future<List<bool>> get_requireExtension_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod("AMapRoadTrafficSearchBaseRequest::get_requireExtension_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoadTrafficSearchBaseRequest::get_requireExtension_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
     final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
     return typedResult;
@@ -91,13 +99,13 @@ extension AMapRoadTrafficSearchBaseRequest_Batch on List<AMapRoadTrafficSearchBa
 
   //region setters
   Future<void> set_level_batch(List<int> level) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRoadTrafficSearchBaseRequest::set_level_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "level": level[__i__]}]);
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapRoadTrafficSearchBaseRequest::set_level_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "level": level[__i__]}]);
   
   
   }
   
   Future<void> set_requireExtension_batch(List<bool> requireExtension) async {
-    await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec())).invokeMethod('AMapRoadTrafficSearchBaseRequest::set_requireExtension_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "requireExtension": requireExtension[__i__]}]);
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapRoadTrafficSearchBaseRequest::set_requireExtension_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "requireExtension": requireExtension[__i__]}]);
   
   
   }

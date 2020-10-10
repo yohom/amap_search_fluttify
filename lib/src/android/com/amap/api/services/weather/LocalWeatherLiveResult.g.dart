@@ -16,6 +16,9 @@ class com_amap_api_services_weather_LocalWeatherLiveResult extends java_lang_Obj
   //region constants
   static const String name__ = 'com.amap.api.services.weather.LocalWeatherLiveResult';
 
+  @override
+  final String tag__ = 'amap_search_fluttify';
+
   
   //endregion
 
@@ -40,7 +43,7 @@ class com_amap_api_services_weather_LocalWeatherLiveResult extends java_lang_Obj
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.weather.LocalWeatherLiveResult::createPagedResult', {"var0": var0, "var1": var1});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.weather.LocalWeatherLiveResult::createPagedResult', {"var0": var0, "var1": var1});
   
   
     // handle native call
@@ -50,7 +53,7 @@ class com_amap_api_services_weather_LocalWeatherLiveResult extends java_lang_Obj
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_services_weather_LocalWeatherLiveResult()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_weather_LocalWeatherLiveResult()..refId = __result__;
       return __return__;
     }
   }
@@ -63,7 +66,7 @@ class com_amap_api_services_weather_LocalWeatherLiveResult extends java_lang_Obj
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.weather.LocalWeatherLiveResult::getWeatherLiveQuery', {"__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.weather.LocalWeatherLiveResult::getWeatherLiveQuery', {"__this__": this});
   
   
     // handle native call
@@ -73,7 +76,7 @@ class com_amap_api_services_weather_LocalWeatherLiveResult extends java_lang_Obj
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_services_weather_WeatherSearchQuery()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_weather_WeatherSearchQuery()..refId = __result__;
       return __return__;
     }
   }
@@ -86,7 +89,7 @@ class com_amap_api_services_weather_LocalWeatherLiveResult extends java_lang_Obj
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.weather.LocalWeatherLiveResult::getLiveResult', {"__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.weather.LocalWeatherLiveResult::getLiveResult', {"__this__": this});
   
   
     // handle native call
@@ -96,12 +99,17 @@ class com_amap_api_services_weather_LocalWeatherLiveResult extends java_lang_Obj
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_services_weather_LocalWeatherLive()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_weather_LocalWeatherLive()..refId = __result__;
       return __return__;
     }
   }
   
   //endregion
+
+  @override
+  String toString() {
+    return 'com_amap_api_services_weather_LocalWeatherLiveResult{refId: $refId, runtimeType: $runtimeType, tag__: $tag__}';
+  }
 }
 
 extension com_amap_api_services_weather_LocalWeatherLiveResult_Batch on List<com_amap_api_services_weather_LocalWeatherLiveResult> {
@@ -121,14 +129,14 @@ extension com_amap_api_services_weather_LocalWeatherLiveResult_Batch on List<com
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.weather.LocalWeatherLiveResult::createPagedResult_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.weather.LocalWeatherLiveResult::createPagedResult_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_weather_LocalWeatherLiveResult()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_weather_LocalWeatherLiveResult()..refId = __result__).toList();
       return typedResult;
     }
   }
@@ -140,14 +148,14 @@ extension com_amap_api_services_weather_LocalWeatherLiveResult_Batch on List<com
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.weather.LocalWeatherLiveResult::getWeatherLiveQuery_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.weather.LocalWeatherLiveResult::getWeatherLiveQuery_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_weather_WeatherSearchQuery()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_weather_WeatherSearchQuery()..refId = __result__).toList();
       return typedResult;
     }
   }
@@ -159,14 +167,14 @@ extension com_amap_api_services_weather_LocalWeatherLiveResult_Batch on List<com
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.weather.LocalWeatherLiveResult::getLiveResult_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.weather.LocalWeatherLiveResult::getLiveResult_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_weather_LocalWeatherLive()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_weather_LocalWeatherLive()..refId = __result__).toList();
       return typedResult;
     }
   }

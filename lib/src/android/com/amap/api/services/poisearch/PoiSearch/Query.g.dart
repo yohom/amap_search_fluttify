@@ -16,19 +16,22 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   //region constants
   static const String name__ = 'com.amap.api.services.poisearch.PoiSearch.Query';
 
+  @override
+  final String tag__ = 'amap_search_fluttify';
+
   
   //endregion
 
   //region creators
   static Future<com_amap_api_services_poisearch_PoiSearch_Query> create__String__String(String var1, String var2) async {
-    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch_Query__String__String', {"var1": var1, "var2": var2});
-    final object = com_amap_api_services_poisearch_PoiSearch_Query()..refId = refId..tag__ = 'amap_search_fluttify';
+    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch_Query__String__String', {"var1": var1, "var2": var2});
+    final object = com_amap_api_services_poisearch_PoiSearch_Query()..refId = refId;
     return object;
   }
   
   static Future<com_amap_api_services_poisearch_PoiSearch_Query> create__String__String__String(String var1, String var2, String var3) async {
-    final refId = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch_Query__String__String__String', {"var1": var1, "var2": var2, "var3": var3});
-    final object = com_amap_api_services_poisearch_PoiSearch_Query()..refId = refId..tag__ = 'amap_search_fluttify';
+    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch_Query__String__String__String', {"var1": var1, "var2": var2, "var3": var3});
+    final object = com_amap_api_services_poisearch_PoiSearch_Query()..refId = refId;
     return object;
   }
   
@@ -36,9 +39,9 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
     if (var1.length != var2.length) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_amap_api_services_poisearch_PoiSearch_Query__String__String', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]);
+    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchcom_amap_api_services_poisearch_PoiSearch_Query__String__String', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]);
   
-    final List<com_amap_api_services_poisearch_PoiSearch_Query> typedResult = resultBatch.map((result) => com_amap_api_services_poisearch_PoiSearch_Query()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<com_amap_api_services_poisearch_PoiSearch_Query> typedResult = resultBatch.map((result) => com_amap_api_services_poisearch_PoiSearch_Query()..refId = result).toList();
     return typedResult;
   }
   
@@ -46,9 +49,9 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
     if (var1.length != var2.length || var2.length != var3.length) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('ObjectFactory::create_batchcom_amap_api_services_poisearch_PoiSearch_Query__String__String__String', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__]}]);
+    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchcom_amap_api_services_poisearch_PoiSearch_Query__String__String__String', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__]}]);
   
-    final List<com_amap_api_services_poisearch_PoiSearch_Query> typedResult = resultBatch.map((result) => com_amap_api_services_poisearch_PoiSearch_Query()..refId = result..tag__ = 'amap_search_fluttify').toList();
+    final List<com_amap_api_services_poisearch_PoiSearch_Query> typedResult = resultBatch.map((result) => com_amap_api_services_poisearch_PoiSearch_Query()..refId = result).toList();
     return typedResult;
   }
   
@@ -71,7 +74,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::getBuilding', {"__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::getBuilding', {"__this__": this});
   
   
     // handle native call
@@ -94,7 +97,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::setBuilding', {"var1": var1, "__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::setBuilding', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -117,7 +120,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::getQueryString', {"__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::getQueryString', {"__this__": this});
   
   
     // handle native call
@@ -140,7 +143,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::setQueryLanguage', {"var1": var1, "__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::setQueryLanguage', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -163,7 +166,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::getCategory', {"__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::getCategory', {"__this__": this});
   
   
     // handle native call
@@ -186,7 +189,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::getCity', {"__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::getCity', {"__this__": this});
   
   
     // handle native call
@@ -209,7 +212,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::getPageNum', {"__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::getPageNum', {"__this__": this});
   
   
     // handle native call
@@ -232,7 +235,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::setPageNum', {"var1": var1, "__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::setPageNum', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -255,7 +258,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::setPageSize', {"var1": var1, "__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::setPageSize', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -278,7 +281,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::getPageSize', {"__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::getPageSize', {"__this__": this});
   
   
     // handle native call
@@ -301,7 +304,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::setCityLimit', {"var1": var1, "__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::setCityLimit', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -324,7 +327,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::getCityLimit', {"__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::getCityLimit', {"__this__": this});
   
   
     // handle native call
@@ -347,7 +350,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::requireSubPois', {"var1": var1, "__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::requireSubPois', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -370,7 +373,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::isRequireSubPois', {"__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::isRequireSubPois', {"__this__": this});
   
   
     // handle native call
@@ -393,7 +396,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::isDistanceSort', {"__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::isDistanceSort', {"__this__": this});
   
   
     // handle native call
@@ -416,7 +419,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::setDistanceSort', {"var1": var1, "__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::setDistanceSort', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -439,7 +442,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::getLocation', {"__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::getLocation', {"__this__": this});
   
   
     // handle native call
@@ -449,7 +452,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_core_LatLonPoint()..refId = __result__;
       return __return__;
     }
   }
@@ -462,7 +465,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::setLocation', {"var1": var1, "__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::setLocation', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -485,7 +488,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::queryEquals', {"var1": var1, "__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::queryEquals', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -508,7 +511,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::clone', {"__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::clone', {"__this__": this});
   
   
     // handle native call
@@ -518,12 +521,17 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_services_poisearch_PoiSearch_Query()..refId = __result__..tag__ = 'amap_search_fluttify';
+      final __return__ = com_amap_api_services_poisearch_PoiSearch_Query()..refId = __result__;
       return __return__;
     }
   }
   
   //endregion
+
+  @override
+  String toString() {
+    return 'com_amap_api_services_poisearch_PoiSearch_Query{refId: $refId, runtimeType: $runtimeType, tag__: $tag__}';
+  }
 }
 
 extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap_api_services_poisearch_PoiSearch_Query> {
@@ -543,7 +551,7 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::getBuilding_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::getBuilding_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -562,7 +570,7 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::setBuilding_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::setBuilding_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -581,7 +589,7 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::getQueryString_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::getQueryString_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -600,7 +608,7 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::setQueryLanguage_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::setQueryLanguage_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -619,7 +627,7 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::getCategory_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::getCategory_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -638,7 +646,7 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::getCity_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::getCity_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -657,7 +665,7 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::getPageNum_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::getPageNum_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -676,7 +684,7 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::setPageNum_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::setPageNum_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -695,7 +703,7 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::setPageSize_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::setPageSize_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -714,7 +722,7 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::getPageSize_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::getPageSize_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -733,7 +741,7 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::setCityLimit_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::setCityLimit_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -752,7 +760,7 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::getCityLimit_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::getCityLimit_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -771,7 +779,7 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::requireSubPois_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::requireSubPois_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -790,7 +798,7 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::isRequireSubPois_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::isRequireSubPois_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -809,7 +817,7 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::isDistanceSort_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::isDistanceSort_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -828,7 +836,7 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::setDistanceSort_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::setDistanceSort_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -847,14 +855,14 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::getLocation_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::getLocation_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_core_LatLonPoint()..refId = __result__).toList();
       return typedResult;
     }
   }
@@ -866,7 +874,7 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::setLocation_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::setLocation_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -885,7 +893,7 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::queryEquals_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::queryEquals_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
@@ -904,14 +912,14 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify'))).invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::clone_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::clone_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_poisearch_PoiSearch_Query()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_poisearch_PoiSearch_Query()..refId = __result__).toList();
       return typedResult;
     }
   }

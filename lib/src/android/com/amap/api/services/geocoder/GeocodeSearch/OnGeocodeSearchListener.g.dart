@@ -19,6 +19,9 @@ mixin com_amap_api_services_geocoder_GeocodeSearch_OnGeocodeSearchListener on ja
 
   
 
+  @override
+  final String tag__ = 'amap_search_fluttify';
+
   
 
   

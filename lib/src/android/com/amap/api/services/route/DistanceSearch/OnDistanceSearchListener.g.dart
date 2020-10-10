@@ -19,6 +19,9 @@ mixin com_amap_api_services_route_DistanceSearch_OnDistanceSearchListener on jav
 
   
 
+  @override
+  final String tag__ = 'amap_search_fluttify';
+
   
 
   

@@ -19,6 +19,9 @@ mixin com_amap_api_services_busline_BusStationSearch_OnBusStationSearchListener 
 
   
 
+  @override
+  final String tag__ = 'amap_search_fluttify';
+
   
 
   

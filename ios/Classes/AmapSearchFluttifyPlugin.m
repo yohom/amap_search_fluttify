@@ -91,12 +91,11 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSObject* argmanager = manager;
-  
+  AMapNearbySearchManager* argmanager = manager;
 
   dispatch_async(dispatch_get_main_queue(), ^{
     [channel invokeMethod:@"Callback::AMapNearbySearchManagerDelegate::nearbyInfoForUploading"
-                arguments:@{}
+                arguments:@{@"manager": argmanager == nil ? [NSNull null] : argmanager}
                    result:^(id result) {}]; // 由于结果是异步返回, 这里用不上, 所以就不生成代码了
   });
   
@@ -124,8 +123,7 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSObject* argerror = error;
-  
+  NSError* argerror = error;
 
   dispatch_async(dispatch_get_main_queue(), ^{
     [channel invokeMethod:@"Callback::AMapNearbySearchManagerDelegate::onNearbyInfoUploadedWithError" arguments:@{@"error": argerror == nil ? [NSNull null] : argerror}];
@@ -146,8 +144,7 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSObject* argerror = error;
-  
+  NSError* argerror = error;
 
   dispatch_async(dispatch_get_main_queue(), ^{
     [channel invokeMethod:@"Callback::AMapNearbySearchManagerDelegate::onUserInfoClearedWithError" arguments:@{@"error": argerror == nil ? [NSNull null] : argerror}];
@@ -168,11 +165,9 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSObject* argrequest = ((NSObject*) request);
-  
+  id argrequest = request;
   // ref callback arg
-  NSObject* argerror = error;
-  
+  NSError* argerror = error;
 
   dispatch_async(dispatch_get_main_queue(), ^{
     [channel invokeMethod:@"Callback::AMapSearchDelegate::AMapSearchRequest_didFailWithError" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"error": argerror == nil ? [NSNull null] : argerror}];
@@ -193,11 +188,9 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSObject* argrequest = request;
-  
+  AMapPOISearchBaseRequest* argrequest = request;
   // ref callback arg
-  NSObject* argresponse = response;
-  
+  AMapPOISearchResponse* argresponse = response;
 
   dispatch_async(dispatch_get_main_queue(), ^{
     [channel invokeMethod:@"Callback::AMapSearchDelegate::onPOISearchDone_response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
@@ -218,11 +211,9 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSObject* argrequest = request;
-  
+  AMapRoutePOISearchRequest* argrequest = request;
   // ref callback arg
-  NSObject* argresponse = response;
-  
+  AMapRoutePOISearchResponse* argresponse = response;
 
   dispatch_async(dispatch_get_main_queue(), ^{
     [channel invokeMethod:@"Callback::AMapSearchDelegate::onRoutePOISearchDone_response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
@@ -243,11 +234,9 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSObject* argrequest = request;
-  
+  AMapGeocodeSearchRequest* argrequest = request;
   // ref callback arg
-  NSObject* argresponse = response;
-  
+  AMapGeocodeSearchResponse* argresponse = response;
 
   dispatch_async(dispatch_get_main_queue(), ^{
     [channel invokeMethod:@"Callback::AMapSearchDelegate::onGeocodeSearchDone_response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
@@ -268,11 +257,9 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSObject* argrequest = request;
-  
+  AMapReGeocodeSearchRequest* argrequest = request;
   // ref callback arg
-  NSObject* argresponse = response;
-  
+  AMapReGeocodeSearchResponse* argresponse = response;
 
   dispatch_async(dispatch_get_main_queue(), ^{
     [channel invokeMethod:@"Callback::AMapSearchDelegate::onReGeocodeSearchDone_response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
@@ -293,11 +280,9 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSObject* argrequest = request;
-  
+  AMapInputTipsSearchRequest* argrequest = request;
   // ref callback arg
-  NSObject* argresponse = response;
-  
+  AMapInputTipsSearchResponse* argresponse = response;
 
   dispatch_async(dispatch_get_main_queue(), ^{
     [channel invokeMethod:@"Callback::AMapSearchDelegate::onInputTipsSearchDone_response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
@@ -318,11 +303,9 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSObject* argrequest = request;
-  
+  AMapBusStopSearchRequest* argrequest = request;
   // ref callback arg
-  NSObject* argresponse = response;
-  
+  AMapBusStopSearchResponse* argresponse = response;
 
   dispatch_async(dispatch_get_main_queue(), ^{
     [channel invokeMethod:@"Callback::AMapSearchDelegate::onBusStopSearchDone_response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
@@ -343,11 +326,9 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSObject* argrequest = request;
-  
+  AMapBusLineBaseSearchRequest* argrequest = request;
   // ref callback arg
-  NSObject* argresponse = response;
-  
+  AMapBusLineSearchResponse* argresponse = response;
 
   dispatch_async(dispatch_get_main_queue(), ^{
     [channel invokeMethod:@"Callback::AMapSearchDelegate::onBusLineSearchDone_response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
@@ -368,11 +349,9 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSObject* argrequest = request;
-  
+  AMapDistrictSearchRequest* argrequest = request;
   // ref callback arg
-  NSObject* argresponse = response;
-  
+  AMapDistrictSearchResponse* argresponse = response;
 
   dispatch_async(dispatch_get_main_queue(), ^{
     [channel invokeMethod:@"Callback::AMapSearchDelegate::onDistrictSearchDone_response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
@@ -393,11 +372,9 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSObject* argrequest = request;
-  
+  AMapRouteSearchBaseRequest* argrequest = request;
   // ref callback arg
-  NSObject* argresponse = response;
-  
+  AMapRouteSearchResponse* argresponse = response;
 
   dispatch_async(dispatch_get_main_queue(), ^{
     [channel invokeMethod:@"Callback::AMapSearchDelegate::onRouteSearchDone_response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
@@ -418,11 +395,9 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSObject* argrequest = request;
-  
+  AMapRouteSearchBaseRequest* argrequest = request;
   // ref callback arg
-  NSObject* argresponse = response;
-  
+  AMapFutureRouteSearchResponse* argresponse = response;
 
   dispatch_async(dispatch_get_main_queue(), ^{
     [channel invokeMethod:@"Callback::AMapSearchDelegate::onFutureRouteSearchDone_response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
@@ -443,11 +418,9 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSObject* argrequest = request;
-  
+  AMapDistanceSearchRequest* argrequest = request;
   // ref callback arg
-  NSObject* argresponse = response;
-  
+  AMapDistanceSearchResponse* argresponse = response;
 
   dispatch_async(dispatch_get_main_queue(), ^{
     [channel invokeMethod:@"Callback::AMapSearchDelegate::onDistanceSearchDone_response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
@@ -468,11 +441,9 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSObject* argrequest = request;
-  
+  AMapWeatherSearchRequest* argrequest = request;
   // ref callback arg
-  NSObject* argresponse = response;
-  
+  AMapWeatherSearchResponse* argresponse = response;
 
   dispatch_async(dispatch_get_main_queue(), ^{
     [channel invokeMethod:@"Callback::AMapSearchDelegate::onWeatherSearchDone_response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
@@ -493,11 +464,9 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSObject* argrequest = request;
-  
+  AMapRoadTrafficSearchBaseRequest* argrequest = request;
   // ref callback arg
-  NSObject* argresponse = response;
-  
+  AMapRoadTrafficSearchResponse* argresponse = response;
 
   dispatch_async(dispatch_get_main_queue(), ^{
     [channel invokeMethod:@"Callback::AMapSearchDelegate::onRoadTrafficSearchDone_response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
@@ -518,11 +487,9 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSObject* argrequest = request;
-  
+  AMapNearbySearchRequest* argrequest = request;
   // ref callback arg
-  NSObject* argresponse = response;
-  
+  AMapNearbySearchResponse* argresponse = response;
 
   dispatch_async(dispatch_get_main_queue(), ^{
     [channel invokeMethod:@"Callback::AMapSearchDelegate::onNearbySearchDone_response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
@@ -543,11 +510,9 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSObject* argrequest = request;
-  
+  AMapCloudSearchBaseRequest* argrequest = request;
   // ref callback arg
-  NSObject* argresponse = response;
-  
+  AMapCloudPOISearchResponse* argresponse = response;
 
   dispatch_async(dispatch_get_main_queue(), ^{
     [channel invokeMethod:@"Callback::AMapSearchDelegate::onCloudSearchDone_response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
@@ -568,11 +533,9 @@ extern BOOL enableLog;
 
   // convert to jsonable arg
   // ref callback arg
-  NSObject* argrequest = request;
-  
+  AMapShareSearchBaseRequest* argrequest = request;
   // ref callback arg
-  NSObject* argresponse = response;
-  
+  AMapShareSearchResponse* argresponse = response;
 
   dispatch_async(dispatch_get_main_queue(), ^{
     [channel invokeMethod:@"Callback::AMapSearchDelegate::onShareSearchDone_response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];

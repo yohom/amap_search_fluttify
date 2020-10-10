@@ -19,6 +19,9 @@ mixin com_amap_api_services_route_RouteSearch_OnRoutePlanSearchListener on java_
 
   
 
+  @override
+  final String tag__ = 'amap_search_fluttify';
+
   
 
   
