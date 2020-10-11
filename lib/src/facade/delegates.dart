@@ -66,7 +66,19 @@ class _AndroidSearchListener extends java_lang_Object
     int var2,
   ) async {
     await super.onGetInputtips(var1, var2);
-    final inputTipList = [for (final item in var1) InputTip.android(item)];
+    final inputTipList = [
+      for (final item in var1)
+        InputTip(
+          name: await item.getName(),
+          poiId: await item.getPoiID(),
+          address: await item.getAddress(),
+          district: await item.getDistrict(),
+          coordinate: await item.getPoint().then(
+                (it) async =>
+                    LatLng(await it.getLatitude(), await it.getLongitude()),
+              ),
+        )
+    ];
     _completer?.complete(inputTipList);
   }
 
@@ -226,7 +238,17 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
   ) async {
     await super.onInputTipsSearchDone_response(request, response);
     final inputTipList = [
-      for (final item in (await response.get_tips())) InputTip.ios(item)
+      for (final item in (await response.get_tips()))
+        InputTip(
+          name: await item.get_name(),
+          poiId: await item.get_uid(),
+          address: await item.get_address(),
+          district: await item.get_district(),
+          coordinate: await item.get_location().then(
+                (it) async =>
+                    LatLng(await it.get_latitude(), await it.get_longitude()),
+              ),
+        )
     ];
     _completer?.complete(inputTipList);
   }

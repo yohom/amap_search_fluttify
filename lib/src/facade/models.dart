@@ -70,67 +70,33 @@ class Poi {
 }
 
 /// 输入提示 model
-class InputTip with _ToFutureString {
-  InputTip.android(this._androidModel) : _iosModel = null;
-
-  InputTip.ios(this._iosModel) : _androidModel = null;
-
-  final com_amap_api_services_help_Tip _androidModel;
-  final AMapTip _iosModel;
+class InputTip {
+  InputTip({
+    this.name,
+    this.poiId,
+    this.address,
+    this.district,
+    this.coordinate,
+  });
 
   /// 提示名称
-  Future<String> get name {
-    return platform(
-      android: (pool) => _androidModel.getName(),
-      ios: (pool) => _iosModel.get_name(),
-    );
-  }
+  final String name;
 
   /// 兴趣点id
-  Future<String> get poiId {
-    return platform(
-      android: (pool) => _androidModel.getPoiID(),
-      ios: (pool) => _iosModel.get_uid(),
-    );
-  }
+  final String poiId;
 
   /// 地址
-  Future<String> get address {
-    return platform(
-      android: (pool) => _androidModel.getAddress(),
-      ios: (pool) => _iosModel.get_address(),
-    );
-  }
+  final String address;
 
   /// 区域
-  Future<String> get district {
-    return platform(
-      android: (pool) => _androidModel.getDistrict(),
-      ios: (pool) => _iosModel.get_district(),
-    );
-  }
+  final String district;
 
   /// 经纬度
-  Future<LatLng> get location {
-    return platform(
-      android: (pool) async {
-        final point = await _androidModel.getPoint();
-        return point == null
-            ? null
-            : LatLng(await point.getLatitude(), await point.getLongitude());
-      },
-      ios: (pool) async {
-        final point = await _iosModel.get_location();
-        return point == null
-            ? null
-            : LatLng(await point.get_latitude(), await point.get_longitude());
-      },
-    );
-  }
+  final LatLng coordinate;
 
   @override
-  Future<String> toFutureString() async {
-    return 'InputTip{name: ${await name}, poiId: ${await poiId}, address: ${await address}, district: ${await district}, location: ${await location}';
+  String toString() {
+    return 'InputTip{name: $name, poiId: $poiId, address: $address, district: $district, coordinate: $coordinate}';
   }
 }
 
