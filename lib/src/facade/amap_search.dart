@@ -211,7 +211,7 @@ mixin _Community on _Holder {
     // ignore: close_sinks
     final _controller = Completer<List<InputTip>>.sync();
 
-    platform(
+    await platform(
       android: (pool) async {
         // 创建查询对象
         final query = await com_amap_api_services_help_InputtipsQuery
@@ -271,7 +271,7 @@ mixin _Community on _Holder {
     // ignore: close_sinks
     final _controller = Completer<List<Geocode>>.sync();
 
-    platform(
+    await platform(
       android: (pool) async {
         // 创建查询对象
         final query = await com_amap_api_services_geocoder_GeocodeQuery
@@ -329,7 +329,7 @@ mixin _Community on _Holder {
     // ignore: close_sinks
     final _controller = Completer<ReGeocode>();
 
-    platform(
+    await platform(
       android: (pool) async {
         // 创建中心点
         final latLngPoint = await com_amap_api_services_core_LatLonPoint
@@ -402,7 +402,7 @@ mixin _Community on _Holder {
     // ignore: close_sinks
     final _controller = Completer<DriveRouteResult>();
 
-    platform(
+    await platform(
       android: (pool) async {
         // 起点
         final fromLatLng =
@@ -532,7 +532,7 @@ mixin _Community on _Holder {
     // ignore: close_sinks
     final _controller = Completer<BusRouteResult>();
 
-    platform(
+    await platform(
       android: (pool) async {
         // 起点
         final fromLatLng =
@@ -623,7 +623,7 @@ mixin _Community on _Holder {
     // ignore: close_sinks
     final _controller = Completer<WalkRouteResult>();
 
-    platform(
+    await platform(
       android: (pool) async {
         // 起点
         final fromLatLng =
@@ -710,7 +710,7 @@ mixin _Community on _Holder {
     // ignore: close_sinks
     final _controller = Completer<RideRouteResult>();
 
-    platform(
+    await platform(
       android: (pool) async {
         // 起点
         final fromLatLng =
@@ -798,7 +798,7 @@ mixin _Community on _Holder {
     // ignore: close_sinks
     final _controller = Completer<BusStation>();
 
-    platform(
+    await platform(
       android: (pool) async {
         // 创建请求对象
         final query = await com_amap_api_services_busline_BusStationQuery
@@ -862,7 +862,7 @@ mixin _Community on _Holder {
     // ignore: close_sinks
     final _controller = Completer<District>();
 
-    platform(
+    await platform(
       android: (pool) async {
         // 创建请求对象
         final query =
@@ -922,7 +922,7 @@ mixin _Community on _Holder {
     // ignore: close_sinks
     final _controller = Completer<Weather>();
 
-    platform(
+    await platform(
       android: (pool) async {
         // 创建请求对象
         final query = await com_amap_api_services_weather_WeatherSearchQuery
@@ -990,7 +990,7 @@ mixin _Community on _Holder {
     // ignore: close_sinks
     final _controller = Completer<Cloud>();
 
-    platform(
+    await platform(
       android: (pool) async {
         // 上下文
         final context = await android_app_Activity.get();
