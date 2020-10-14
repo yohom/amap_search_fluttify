@@ -44,12 +44,12 @@ class AMapSearchAPI extends NSObject  {
   //region getters
   Future<int> get_timeout() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapSearchAPI::get_timeout", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<AMapSearchLanguage> get_language() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapSearchAPI::get_language", {'__this__': this});
-    return __result__ == null ? null : ((__result__ as int).toAMapSearchLanguage());
+    return (__result__ as int).toAMapSearchLanguage();
   }
   
   //endregion
@@ -259,7 +259,7 @@ class AMapSearchAPI extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = AMapSearchAPI()..refId = __result__;
+      final __return__ = __result__ == null ? null : (AMapSearchAPI()..refId = __result__);
       return __return__;
     }
   }
@@ -1056,7 +1056,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapSearchAPI()..refId = __result__).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__ == null ? null : (AMapSearchAPI()..refId = __result__)).toList();
       return typedResult;
     }
   }

@@ -29,12 +29,12 @@ class AMapNearbySearchManager extends NSObject  {
   //region getters
   Future<double> get_uploadTimeInterval() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapNearbySearchManager::get_uploadTimeInterval", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<bool> get_isAutoUploading() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapNearbySearchManager::get_isAutoUploading", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   //endregion
@@ -112,7 +112,7 @@ class AMapNearbySearchManager extends NSObject  {
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = AMapNearbySearchManager()..refId = __result__;
+      final __return__ = __result__ == null ? null : (AMapNearbySearchManager()..refId = __result__);
       return __return__;
     }
   }
@@ -259,7 +259,7 @@ extension AMapNearbySearchManager_Batch on List<AMapNearbySearchManager> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapNearbySearchManager()..refId = __result__).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__ == null ? null : (AMapNearbySearchManager()..refId = __result__)).toList();
       return typedResult;
     }
   }

@@ -44,22 +44,22 @@ class AMapPOI extends AMapSearchObject with NSCoding, NSCopying {
   //region getters
   Future<String> get_uid() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOI::get_uid", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_name() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOI::get_name", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_type() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOI::get_type", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_typecode() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOI::get_typecode", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<AMapGeoPoint> get_location() async {
@@ -69,77 +69,77 @@ class AMapPOI extends AMapSearchObject with NSCoding, NSCopying {
   
   Future<String> get_address() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOI::get_address", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_tel() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOI::get_tel", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<int> get_distance() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOI::get_distance", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_parkingType() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOI::get_parkingType", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_shopID() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOI::get_shopID", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_postcode() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOI::get_postcode", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_website() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOI::get_website", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_email() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOI::get_email", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_province() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOI::get_province", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_pcode() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOI::get_pcode", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_city() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOI::get_city", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_citycode() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOI::get_citycode", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_district() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOI::get_district", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_adcode() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOI::get_adcode", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_gridcode() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOI::get_gridcode", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<AMapGeoPoint> get_enterLocation() async {
@@ -154,17 +154,17 @@ class AMapPOI extends AMapSearchObject with NSCoding, NSCopying {
   
   Future<String> get_direction() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOI::get_direction", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<bool> get_hasIndoorMap() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOI::get_hasIndoorMap", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_businessArea() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOI::get_businessArea", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<AMapIndoorData> get_indoorData() async {
@@ -174,12 +174,12 @@ class AMapPOI extends AMapSearchObject with NSCoding, NSCopying {
   
   Future<List<AMapSubPOI>> get_subPOIs() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOI::get_subPOIs", {'__this__': this});
-    return __result__ == null ? null : ((__result__ as List).cast<String>().map((__it__) => AMapSubPOI()..refId = __it__).toList());
+    return (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapSubPOI()..refId = __it__))?.toList();
   }
   
   Future<List<AMapImage>> get_images() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOI::get_images", {'__this__': this});
-    return __result__ == null ? null : ((__result__ as List).cast<String>().map((__it__) => AMapImage()..refId = __it__).toList());
+    return (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapImage()..refId = __it__))?.toList();
   }
   
   Future<AMapPOIExtension> get_extensionInfo() async {
@@ -409,7 +409,7 @@ extension AMapPOI_Batch on List<AMapPOI> {
   Future<List<AMapGeoPoint>> get_location_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOI::get_location_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapGeoPoint()..refId = __result__).toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__ == null ? null : (AMapGeoPoint()..refId = __result__)).toList();
     return typedResult;
   }
   
@@ -521,14 +521,14 @@ extension AMapPOI_Batch on List<AMapPOI> {
   Future<List<AMapGeoPoint>> get_enterLocation_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOI::get_enterLocation_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapGeoPoint()..refId = __result__).toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__ == null ? null : (AMapGeoPoint()..refId = __result__)).toList();
     return typedResult;
   }
   
   Future<List<AMapGeoPoint>> get_exitLocation_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOI::get_exitLocation_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapGeoPoint()..refId = __result__).toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__ == null ? null : (AMapGeoPoint()..refId = __result__)).toList();
     return typedResult;
   }
   
@@ -556,28 +556,28 @@ extension AMapPOI_Batch on List<AMapPOI> {
   Future<List<AMapIndoorData>> get_indoorData_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOI::get_indoorData_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapIndoorData()..refId = __result__).toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__ == null ? null : (AMapIndoorData()..refId = __result__)).toList();
     return typedResult;
   }
   
   Future<List<List<AMapSubPOI>>> get_subPOIs_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOI::get_subPOIs_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => AMapSubPOI()..refId = __it__).toList()).toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapSubPOI()..refId = __it__))?.toList()).toList();
     return typedResult;
   }
   
   Future<List<List<AMapImage>>> get_images_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOI::get_images_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => AMapImage()..refId = __it__).toList()).toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapImage()..refId = __it__))?.toList()).toList();
     return typedResult;
   }
   
   Future<List<AMapPOIExtension>> get_extensionInfo_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOI::get_extensionInfo_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapPOIExtension()..refId = __result__).toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__ == null ? null : (AMapPOIExtension()..refId = __result__)).toList();
     return typedResult;
   }
   

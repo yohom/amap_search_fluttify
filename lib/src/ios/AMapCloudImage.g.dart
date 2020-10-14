@@ -44,17 +44,17 @@ class AMapCloudImage extends AMapSearchObject with NSCoding, NSCopying {
   //region getters
   Future<String> get_uid() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudImage::get_uid", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_preurl() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudImage::get_preurl", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_url() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudImage::get_url", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   //endregion

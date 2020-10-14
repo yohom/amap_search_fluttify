@@ -452,7 +452,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_services_core_LatLonPoint()..refId = __result__;
+      final __return__ = __result__ == null ? null : (com_amap_api_services_core_LatLonPoint()..refId = __result__);
       return __return__;
     }
   }
@@ -521,7 +521,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_services_poisearch_PoiSearch_Query()..refId = __result__;
+      final __return__ = __result__ == null ? null : (com_amap_api_services_poisearch_PoiSearch_Query()..refId = __result__);
       return __return__;
     }
   }
@@ -862,7 +862,7 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_core_LatLonPoint()..refId = __result__).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__ == null ? null : (com_amap_api_services_core_LatLonPoint()..refId = __result__)).toList();
       return typedResult;
     }
   }
@@ -919,7 +919,7 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_poisearch_PoiSearch_Query()..refId = __result__).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__ == null ? null : (com_amap_api_services_poisearch_PoiSearch_Query()..refId = __result__)).toList();
       return typedResult;
     }
   }

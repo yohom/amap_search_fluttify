@@ -44,17 +44,17 @@ class AMapPOIExtension extends AMapSearchObject with NSCoding, NSCopying {
   //region getters
   Future<double> get_rating() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOIExtension::get_rating", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<double> get_cost() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOIExtension::get_cost", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_openTime() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOIExtension::get_openTime", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   //endregion

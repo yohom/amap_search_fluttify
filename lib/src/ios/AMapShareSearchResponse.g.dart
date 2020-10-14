@@ -44,7 +44,7 @@ class AMapShareSearchResponse extends AMapSearchObject with NSCoding, NSCopying 
   //region getters
   Future<String> get_shareURL() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapShareSearchResponse::get_shareURL", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   //endregion

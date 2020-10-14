@@ -91,7 +91,7 @@ class com_amap_api_services_route_DistanceResult extends java_lang_Object with a
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_services_route_DistanceSearch_DistanceQuery()..refId = __result__;
+      final __return__ = __result__ == null ? null : (com_amap_api_services_route_DistanceSearch_DistanceQuery()..refId = __result__);
       return __return__;
     }
   }
@@ -114,7 +114,7 @@ class com_amap_api_services_route_DistanceResult extends java_lang_Object with a
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = (__result__ as List).cast<String>().map((__it__) => com_amap_api_services_route_DistanceItem()..refId = __it__).toList();
+      final __return__ = (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_route_DistanceItem()..refId = __it__))?.toList();
       return __return__;
     }
   }
@@ -193,7 +193,7 @@ extension com_amap_api_services_route_DistanceResult_Batch on List<com_amap_api_
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_route_DistanceSearch_DistanceQuery()..refId = __result__).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__ == null ? null : (com_amap_api_services_route_DistanceSearch_DistanceQuery()..refId = __result__)).toList();
       return typedResult;
     }
   }
@@ -212,7 +212,7 @@ extension com_amap_api_services_route_DistanceResult_Batch on List<com_amap_api_
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => com_amap_api_services_route_DistanceItem()..refId = __it__).toList()).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_route_DistanceItem()..refId = __it__))?.toList()).toList();
       return typedResult;
     }
   }

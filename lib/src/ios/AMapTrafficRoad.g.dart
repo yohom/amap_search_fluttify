@@ -44,32 +44,32 @@ class AMapTrafficRoad extends AMapSearchObject with NSCoding, NSCopying {
   //region getters
   Future<String> get_name() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapTrafficRoad::get_name", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<int> get_status() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapTrafficRoad::get_status", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_direction() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapTrafficRoad::get_direction", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<double> get_angle() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapTrafficRoad::get_angle", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<double> get_speed() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapTrafficRoad::get_speed", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_polyline() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapTrafficRoad::get_polyline", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   //endregion

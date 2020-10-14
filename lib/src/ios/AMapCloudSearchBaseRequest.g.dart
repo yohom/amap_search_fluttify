@@ -44,32 +44,32 @@ class AMapCloudSearchBaseRequest extends AMapSearchObject with NSCoding, NSCopyi
   //region getters
   Future<String> get_tableID() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudSearchBaseRequest::get_tableID", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<List<String>> get_filter() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudSearchBaseRequest::get_filter", {'__this__': this});
-    return __result__ == null ? null : ((__result__ as List).cast<String>());
+    return (__result__ as List).cast<String>();
   }
   
   Future<String> get_sortFields() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudSearchBaseRequest::get_sortFields", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<AMapCloudSortType> get_sortType() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudSearchBaseRequest::get_sortType", {'__this__': this});
-    return __result__ == null ? null : ((__result__ as int).toAMapCloudSortType());
+    return (__result__ as int).toAMapCloudSortType();
   }
   
   Future<int> get_offset() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudSearchBaseRequest::get_offset", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<int> get_page() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudSearchBaseRequest::get_page", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   //endregion

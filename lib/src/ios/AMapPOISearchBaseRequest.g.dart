@@ -44,37 +44,37 @@ class AMapPOISearchBaseRequest extends AMapSearchObject with NSCoding, NSCopying
   //region getters
   Future<String> get_types() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOISearchBaseRequest::get_types", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<int> get_sortrule() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOISearchBaseRequest::get_sortrule", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<int> get_offset() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOISearchBaseRequest::get_offset", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<int> get_page() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOISearchBaseRequest::get_page", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_building() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOISearchBaseRequest::get_building", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<bool> get_requireExtension() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOISearchBaseRequest::get_requireExtension", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<bool> get_requireSubPOIs() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOISearchBaseRequest::get_requireSubPOIs", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   //endregion

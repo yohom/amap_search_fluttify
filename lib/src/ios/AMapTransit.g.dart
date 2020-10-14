@@ -44,32 +44,32 @@ class AMapTransit extends AMapSearchObject with NSCoding, NSCopying {
   //region getters
   Future<double> get_cost() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapTransit::get_cost", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<int> get_duration() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapTransit::get_duration", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<bool> get_nightflag() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapTransit::get_nightflag", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<int> get_walkingDistance() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapTransit::get_walkingDistance", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<List<AMapSegment>> get_segments() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapTransit::get_segments", {'__this__': this});
-    return __result__ == null ? null : ((__result__ as List).cast<String>().map((__it__) => AMapSegment()..refId = __it__).toList());
+    return (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapSegment()..refId = __it__))?.toList();
   }
   
   Future<int> get_distance() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapTransit::get_distance", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   //endregion
@@ -156,7 +156,7 @@ extension AMapTransit_Batch on List<AMapTransit> {
   Future<List<List<AMapSegment>>> get_segments_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTransit::get_segments_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => AMapSegment()..refId = __it__).toList()).toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapSegment()..refId = __it__))?.toList()).toList();
     return typedResult;
   }
   

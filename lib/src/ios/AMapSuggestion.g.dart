@@ -44,12 +44,12 @@ class AMapSuggestion extends AMapSearchObject with NSCoding, NSCopying {
   //region getters
   Future<List<String>> get_keywords() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapSuggestion::get_keywords", {'__this__': this});
-    return __result__ == null ? null : ((__result__ as List).cast<String>());
+    return (__result__ as List).cast<String>();
   }
   
   Future<List<AMapCity>> get_cities() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapSuggestion::get_cities", {'__this__': this});
-    return __result__ == null ? null : ((__result__ as List).cast<String>().map((__it__) => AMapCity()..refId = __it__).toList());
+    return (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapCity()..refId = __it__))?.toList();
   }
   
   //endregion
@@ -91,7 +91,7 @@ extension AMapSuggestion_Batch on List<AMapSuggestion> {
   Future<List<List<AMapCity>>> get_cities_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapSuggestion::get_cities_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => AMapCity()..refId = __it__).toList()).toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapCity()..refId = __it__))?.toList()).toList();
     return typedResult;
   }
   

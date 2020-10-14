@@ -44,7 +44,7 @@ class AMapRouteSearchResponse extends AMapSearchObject with NSCoding, NSCopying 
   //region getters
   Future<int> get_count() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapRouteSearchResponse::get_count", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<AMapRoute> get_route() async {
@@ -91,7 +91,7 @@ extension AMapRouteSearchResponse_Batch on List<AMapRouteSearchResponse> {
   Future<List<AMapRoute>> get_route_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRouteSearchResponse::get_route_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapRoute()..refId = __result__).toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__ == null ? null : (AMapRoute()..refId = __result__)).toList();
     return typedResult;
   }
   

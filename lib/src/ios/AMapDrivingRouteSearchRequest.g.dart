@@ -44,67 +44,67 @@ class AMapDrivingRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCo
   //region getters
   Future<int> get_strategy() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapDrivingRouteSearchRequest::get_strategy", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<List<AMapGeoPoint>> get_waypoints() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapDrivingRouteSearchRequest::get_waypoints", {'__this__': this});
-    return __result__ == null ? null : ((__result__ as List).cast<String>().map((__it__) => AMapGeoPoint()..refId = __it__).toList());
+    return (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapGeoPoint()..refId = __it__))?.toList();
   }
   
   Future<List<AMapGeoPolygon>> get_avoidpolygons() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapDrivingRouteSearchRequest::get_avoidpolygons", {'__this__': this});
-    return __result__ == null ? null : ((__result__ as List).cast<String>().map((__it__) => AMapGeoPolygon()..refId = __it__).toList());
+    return (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapGeoPolygon()..refId = __it__))?.toList();
   }
   
   Future<String> get_avoidroad() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapDrivingRouteSearchRequest::get_avoidroad", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_originId() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapDrivingRouteSearchRequest::get_originId", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_destinationId() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapDrivingRouteSearchRequest::get_destinationId", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_origintype() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapDrivingRouteSearchRequest::get_origintype", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_destinationtype() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapDrivingRouteSearchRequest::get_destinationtype", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<bool> get_requireExtension() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapDrivingRouteSearchRequest::get_requireExtension", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_plateProvince() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapDrivingRouteSearchRequest::get_plateProvince", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_plateNumber() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapDrivingRouteSearchRequest::get_plateNumber", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<int> get_ferry() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapDrivingRouteSearchRequest::get_ferry", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<int> get_cartype() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapDrivingRouteSearchRequest::get_cartype", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   //endregion
@@ -212,14 +212,14 @@ extension AMapDrivingRouteSearchRequest_Batch on List<AMapDrivingRouteSearchRequ
   Future<List<List<AMapGeoPoint>>> get_waypoints_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapDrivingRouteSearchRequest::get_waypoints_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => AMapGeoPoint()..refId = __it__).toList()).toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapGeoPoint()..refId = __it__))?.toList()).toList();
     return typedResult;
   }
   
   Future<List<List<AMapGeoPolygon>>> get_avoidpolygons_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapDrivingRouteSearchRequest::get_avoidpolygons_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => AMapGeoPolygon()..refId = __it__).toList()).toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapGeoPolygon()..refId = __it__))?.toList()).toList();
     return typedResult;
   }
   

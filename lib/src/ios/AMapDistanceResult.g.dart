@@ -44,32 +44,32 @@ class AMapDistanceResult extends AMapSearchObject with NSCoding, NSCopying {
   //region getters
   Future<int> get_originID() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapDistanceResult::get_originID", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<int> get_destID() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapDistanceResult::get_destID", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<int> get_distance() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapDistanceResult::get_distance", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<int> get_duration() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapDistanceResult::get_duration", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_info() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapDistanceResult::get_info", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<int> get_code() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapDistanceResult::get_code", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   //endregion

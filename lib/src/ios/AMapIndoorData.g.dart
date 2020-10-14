@@ -44,17 +44,17 @@ class AMapIndoorData extends AMapSearchObject with NSCoding, NSCopying {
   //region getters
   Future<int> get_floor() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapIndoorData::get_floor", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_floorName() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapIndoorData::get_floorName", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_pid() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapIndoorData::get_pid", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   //endregion

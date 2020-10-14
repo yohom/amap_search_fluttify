@@ -44,12 +44,12 @@ class AMapStreetNumber extends AMapSearchObject with NSCoding, NSCopying {
   //region getters
   Future<String> get_street() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapStreetNumber::get_street", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_number() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapStreetNumber::get_number", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<AMapGeoPoint> get_location() async {
@@ -59,12 +59,12 @@ class AMapStreetNumber extends AMapSearchObject with NSCoding, NSCopying {
   
   Future<int> get_distance() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapStreetNumber::get_distance", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_direction() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapStreetNumber::get_direction", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   //endregion
@@ -131,7 +131,7 @@ extension AMapStreetNumber_Batch on List<AMapStreetNumber> {
   Future<List<AMapGeoPoint>> get_location_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapStreetNumber::get_location_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapGeoPoint()..refId = __result__).toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__ == null ? null : (AMapGeoPoint()..refId = __result__)).toList();
     return typedResult;
   }
   

@@ -44,32 +44,32 @@ class com_amap_api_services_traffic_TrafficSearch extends java_lang_Object  {
   //region getters
   static Future<int> get_static_ROAD_LEVEL_HIGH_WAY() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("com.amap.api.services.traffic.TrafficSearch::get_ROAD_LEVEL_HIGH_WAY", );
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   static Future<int> get_static_ROAD_LEVEL_CITY_QUICK_WAY() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("com.amap.api.services.traffic.TrafficSearch::get_ROAD_LEVEL_CITY_QUICK_WAY", );
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   static Future<int> get_static_ROAD_LEVEL_HIGH_WAY_BYROAD() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("com.amap.api.services.traffic.TrafficSearch::get_ROAD_LEVEL_HIGH_WAY_BYROAD", );
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   static Future<int> get_static_ROAD_LEVEL_MAIN_WAY() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("com.amap.api.services.traffic.TrafficSearch::get_ROAD_LEVEL_MAIN_WAY", );
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   static Future<int> get_static_ROAD_LEVEL_NORMAL_WAY() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("com.amap.api.services.traffic.TrafficSearch::get_ROAD_LEVEL_NORMAL_WAY", );
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   static Future<int> get_static_ROAD_LEVEL_NONAME_WAY() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("com.amap.api.services.traffic.TrafficSearch::get_ROAD_LEVEL_NONAME_WAY", );
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   //endregion
@@ -141,7 +141,7 @@ class com_amap_api_services_traffic_TrafficSearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_services_traffic_TrafficStatusResult()..refId = __result__;
+      final __return__ = __result__ == null ? null : (com_amap_api_services_traffic_TrafficStatusResult()..refId = __result__);
       return __return__;
     }
   }
@@ -187,7 +187,7 @@ class com_amap_api_services_traffic_TrafficSearch extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_services_traffic_TrafficStatusResult()..refId = __result__;
+      final __return__ = __result__ == null ? null : (com_amap_api_services_traffic_TrafficStatusResult()..refId = __result__);
       return __return__;
     }
   }
@@ -288,7 +288,7 @@ extension com_amap_api_services_traffic_TrafficSearch_Batch on List<com_amap_api
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_traffic_TrafficStatusResult()..refId = __result__).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__ == null ? null : (com_amap_api_services_traffic_TrafficStatusResult()..refId = __result__)).toList();
       return typedResult;
     }
   }
@@ -326,7 +326,7 @@ extension com_amap_api_services_traffic_TrafficSearch_Batch on List<com_amap_api
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_traffic_TrafficStatusResult()..refId = __result__).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__ == null ? null : (com_amap_api_services_traffic_TrafficStatusResult()..refId = __result__)).toList();
       return typedResult;
     }
   }

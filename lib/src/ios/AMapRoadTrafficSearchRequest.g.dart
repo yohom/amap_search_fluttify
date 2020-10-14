@@ -44,12 +44,12 @@ class AMapRoadTrafficSearchRequest extends AMapRoadTrafficSearchBaseRequest with
   //region getters
   Future<String> get_roadName() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoadTrafficSearchRequest::get_roadName", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_adcode() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoadTrafficSearchRequest::get_adcode", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   //endregion
