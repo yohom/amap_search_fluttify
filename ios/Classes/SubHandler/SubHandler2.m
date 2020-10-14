@@ -3510,7 +3510,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3534,7 +3534,7 @@ extern BOOL enableLog;
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3558,7 +3558,7 @@ extern BOOL enableLog;
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3582,7 +3582,7 @@ extern BOOL enableLog;
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3606,7 +3606,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3630,7 +3630,7 @@ extern BOOL enableLog;
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3654,7 +3654,7 @@ extern BOOL enableLog;
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3678,7 +3678,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3702,7 +3702,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3726,7 +3726,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3750,7 +3750,7 @@ extern BOOL enableLog;
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3774,7 +3774,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3798,7 +3798,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3822,7 +3822,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3846,7 +3846,7 @@ extern BOOL enableLog;
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3870,7 +3870,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3894,7 +3894,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3918,7 +3918,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3942,7 +3942,7 @@ extern BOOL enableLog;
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3966,7 +3966,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3990,7 +3990,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -4014,7 +4014,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -4038,7 +4038,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -4062,7 +4062,7 @@ extern BOOL enableLog;
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -4086,7 +4086,7 @@ extern BOOL enableLog;
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -4110,7 +4110,7 @@ extern BOOL enableLog;
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -4134,7 +4134,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -4158,7 +4158,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -4182,7 +4182,7 @@ extern BOOL enableLog;
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -4206,7 +4206,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -4230,7 +4230,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -4254,7 +4254,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -4278,7 +4278,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -4302,7 +4302,7 @@ extern BOOL enableLog;
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -4326,7 +4326,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -4350,7 +4350,7 @@ extern BOOL enableLog;
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -4374,7 +4374,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -4398,7 +4398,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -4422,7 +4422,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -4446,7 +4446,7 @@ extern BOOL enableLog;
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -4470,7 +4470,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -4494,7 +4494,7 @@ extern BOOL enableLog;
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
