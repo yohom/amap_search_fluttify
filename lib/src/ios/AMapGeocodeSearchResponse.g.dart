@@ -44,12 +44,12 @@ class AMapGeocodeSearchResponse extends AMapSearchObject with NSCoding, NSCopyin
   //region getters
   Future<int> get_count() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapGeocodeSearchResponse::get_count", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<List<AMapGeocode>> get_geocodes() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapGeocodeSearchResponse::get_geocodes", {'__this__': this});
-    return __result__ == null ? null : ((__result__ as List).cast<String>().map((__it__) => AMapGeocode()..refId = __it__).toList());
+    return (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapGeocode()..refId = __it__))?.toList();
   }
   
   //endregion
@@ -91,7 +91,7 @@ extension AMapGeocodeSearchResponse_Batch on List<AMapGeocodeSearchResponse> {
   Future<List<List<AMapGeocode>>> get_geocodes_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapGeocodeSearchResponse::get_geocodes_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => AMapGeocode()..refId = __it__).toList()).toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapGeocode()..refId = __it__))?.toList()).toList();
     return typedResult;
   }
   

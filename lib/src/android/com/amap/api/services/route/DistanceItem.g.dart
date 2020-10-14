@@ -44,17 +44,17 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
   //region getters
   Future<int> get_ERROR_CODE_NO_DRIVE() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("com.amap.api.services.route.DistanceItem::get_ERROR_CODE_NO_DRIVE", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<int> get_ERROR_CODE_TOO_FAR() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("com.amap.api.services.route.DistanceItem::get_ERROR_CODE_TOO_FAR", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<int> get_ERROR_CODE_NOT_IN_CHINA() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("com.amap.api.services.route.DistanceItem::get_ERROR_CODE_NOT_IN_CHINA", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   //endregion

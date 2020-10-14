@@ -91,7 +91,7 @@ class com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery extends jav
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_services_share_ShareSearch_ShareFromAndTo()..refId = __result__;
+      final __return__ = __result__ == null ? null : (com_amap_api_services_share_ShareSearch_ShareFromAndTo()..refId = __result__);
       return __return__;
     }
   }
@@ -147,7 +147,7 @@ extension com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery_Batch o
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_share_ShareSearch_ShareFromAndTo()..refId = __result__).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__ == null ? null : (com_amap_api_services_share_ShareSearch_ShareFromAndTo()..refId = __result__)).toList();
       return typedResult;
     }
   }

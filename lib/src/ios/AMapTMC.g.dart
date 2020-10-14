@@ -44,17 +44,17 @@ class AMapTMC extends AMapSearchObject with NSCoding, NSCopying {
   //region getters
   Future<int> get_distance() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapTMC::get_distance", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_status() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapTMC::get_status", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_polyline() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapTMC::get_polyline", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   //endregion

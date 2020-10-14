@@ -44,12 +44,12 @@ class AMapWeatherSearchRequest extends AMapSearchObject with NSCoding, NSCopying
   //region getters
   Future<String> get_city() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapWeatherSearchRequest::get_city", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<AMapWeatherType> get_type() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapWeatherSearchRequest::get_type", {'__this__': this});
-    return __result__ == null ? null : ((__result__ as int).toAMapWeatherType());
+    return (__result__ as int).toAMapWeatherType();
   }
   
   //endregion

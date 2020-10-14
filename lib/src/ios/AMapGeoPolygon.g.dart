@@ -44,7 +44,7 @@ class AMapGeoPolygon extends AMapSearchObject with NSCoding, NSCopying {
   //region getters
   Future<List<AMapGeoPoint>> get_points() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapGeoPolygon::get_points", {'__this__': this});
-    return __result__ == null ? null : ((__result__ as List).cast<String>().map((__it__) => AMapGeoPoint()..refId = __it__).toList());
+    return (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapGeoPoint()..refId = __it__))?.toList();
   }
   
   //endregion
@@ -77,7 +77,7 @@ class AMapGeoPolygon extends AMapSearchObject with NSCoding, NSCopying {
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = AMapGeoPolygon()..refId = __result__;
+      final __return__ = __result__ == null ? null : (AMapGeoPolygon()..refId = __result__);
       return __return__;
     }
   }
@@ -95,7 +95,7 @@ extension AMapGeoPolygon_Batch on List<AMapGeoPolygon> {
   Future<List<List<AMapGeoPoint>>> get_points_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapGeoPolygon::get_points_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => AMapGeoPoint()..refId = __it__).toList()).toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapGeoPoint()..refId = __it__))?.toList()).toList();
     return typedResult;
   }
   
@@ -125,7 +125,7 @@ extension AMapGeoPolygon_Batch on List<AMapGeoPolygon> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapGeoPolygon()..refId = __result__).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__ == null ? null : (AMapGeoPolygon()..refId = __result__)).toList();
       return typedResult;
     }
   }

@@ -44,22 +44,22 @@ class AMapBusLineBaseSearchRequest extends AMapSearchObject with NSCoding, NSCop
   //region getters
   Future<String> get_city() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapBusLineBaseSearchRequest::get_city", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<bool> get_requireExtension() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapBusLineBaseSearchRequest::get_requireExtension", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<int> get_offset() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapBusLineBaseSearchRequest::get_offset", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<int> get_page() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapBusLineBaseSearchRequest::get_page", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   //endregion

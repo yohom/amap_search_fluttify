@@ -44,27 +44,27 @@ class AMapTransitRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCo
   //region getters
   Future<int> get_strategy() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapTransitRouteSearchRequest::get_strategy", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_city() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapTransitRouteSearchRequest::get_city", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_destinationCity() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapTransitRouteSearchRequest::get_destinationCity", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<bool> get_nightflag() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapTransitRouteSearchRequest::get_nightflag", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<bool> get_requireExtension() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapTransitRouteSearchRequest::get_requireExtension", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   //endregion
