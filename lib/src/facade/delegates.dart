@@ -104,7 +104,23 @@ class _AndroidSearchListener extends java_lang_Object
       com_amap_api_services_geocoder_RegeocodeResult var1, int var2) async {
     await super.onRegeocodeSearched(var1, var2);
     final result = await var1.getRegeocodeAddress();
-    _completer?.complete(ReGeocode.android(result));
+
+    _completer?.complete(ReGeocode(
+      provinceName: await result.getProvince(),
+      cityName: await result.getCity(),
+      cityCode: await result.getCityCode(),
+      adCode: await result.getAdCode(),
+      districtName: await result.getDistrict(),
+      townCode: await result.getTowncode(),
+      township: await result.getTownship(),
+      neighborhood: await result.getNeighborhood(),
+      building: await result.getBuilding(),
+      country: await result.getCountry(),
+      formatAddress: await result.getFormatAddress(),
+      roads: await RoadListX.fromAndroid(await result.getRoads()),
+      aoiList: await AoiListX.fromAndroid(await result.getAois()),
+      poiList: await PoiListX.fromAndroid(await result.getPois()),
+    ));
   }
 
   @override
@@ -289,8 +305,26 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
     AMapReGeocodeSearchResponse response,
   ) async {
     await super.onReGeocodeSearchDone_response(request, response);
-    final reGeocode = ReGeocode.ios(await response.get_regeocode());
-    _completer?.complete(reGeocode);
+
+    final result = await response.get_regeocode();
+    final addressComponent = await result.get_addressComponent();
+
+    _completer?.complete(ReGeocode(
+      provinceName: await addressComponent.get_province(),
+      cityName: await addressComponent.get_city(),
+      cityCode: await addressComponent.get_citycode(),
+      adCode: await addressComponent.get_adcode(),
+      districtName: await addressComponent.get_district(),
+      townCode: await addressComponent.get_towncode(),
+      township: await addressComponent.get_township(),
+      neighborhood: await addressComponent.get_neighborhood(),
+      building: await addressComponent.get_building(),
+      country: await addressComponent.get_country(),
+      formatAddress: await result.get_formattedAddress(),
+      roads: await RoadListX.fromIOS(await result.get_roads()),
+      aoiList: await AoiListX.fromIOS(await result.get_aois()),
+      poiList: await PoiListX.fromIOS(await result.get_pois()),
+    ));
   }
 
   @override

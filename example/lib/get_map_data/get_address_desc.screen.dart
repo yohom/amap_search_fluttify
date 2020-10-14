@@ -1,6 +1,5 @@
 import 'package:amap_search_fluttify/amap_search_fluttify.dart';
 import 'package:amap_search_fluttify_example/widgets/function_item.widget.dart';
-import 'package:amap_search_fluttify_example/widgets/future.widget.dart';
 import 'package:decorated_flutter/decorated_flutter.dart';
 import 'package:flutter/material.dart';
 
@@ -131,7 +130,7 @@ class _AddressDecodeScreenState extends State<AddressDecodeScreen> {
             },
             child: Text('搜索'),
           ),
-          FutureText(_reGeocode?.toFutureString() ?? Future.value('')),
+          Text(_reGeocode?.toString() ?? ''),
         ],
       ),
     );

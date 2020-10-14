@@ -1,6 +1,4 @@
-import 'package:amap_core_fluttify/amap_core_fluttify.dart';
-import 'package:amap_search_fluttify/src/android/android.export.g.dart';
-import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
+part of 'amap_search.dart';
 
 mixin _ToFutureString {
   Future<String> toFutureString();
@@ -114,295 +112,69 @@ class Geocode {
 }
 
 /// 逆地理编码 model
-class ReGeocode with _ToFutureString {
-  ReGeocode.android(this._androidModel) : _iosModel = null;
-
-  ReGeocode.ios(this._iosModel) : _androidModel = null;
-
-  final com_amap_api_services_geocoder_RegeocodeAddress _androidModel;
-  final AMapReGeocode _iosModel;
+class ReGeocode {
+  ReGeocode({
+    this.provinceName,
+    this.cityName,
+    this.cityCode,
+    this.adCode,
+    this.districtName,
+    this.townCode,
+    this.township,
+    this.neighborhood,
+    this.building,
+    this.country,
+    this.formatAddress,
+    this.roads,
+    this.aoiList,
+    this.poiList,
+  });
 
   /// 省份名称
-  Future<String> get provinceName {
-    return platform(
-      android: (pool) => _androidModel.getProvince(),
-      ios: (pool) =>
-          _iosModel.get_addressComponent().then((it) => it.get_province()),
-    );
-  }
+  final String provinceName;
 
   /// 城市名称
-  Future<String> get cityName {
-    return platform(
-      android: (pool) => _androidModel.getCity(),
-      ios: (pool) =>
-          _iosModel.get_addressComponent().then((it) => it.get_city()),
-    );
-  }
+  final String cityName;
 
   /// 城市代码
-  Future<String> get cityCode {
-    return platform(
-      android: (pool) => _androidModel.getCityCode(),
-      ios: (pool) =>
-          _iosModel.get_addressComponent().then((it) => it.get_citycode()),
-    );
-  }
+  final String cityCode;
 
   /// 邮政
-  Future<String> get adCode {
-    return platform(
-      android: (pool) => _androidModel.getAdCode(),
-      ios: (pool) =>
-          _iosModel.get_addressComponent().then((it) => it.get_adcode()),
-    );
-  }
+  final String adCode;
 
   /// 区域名称
-  Future<String> get districtName {
-    return platform(
-      android: (pool) => _androidModel.getDistrict(),
-      ios: (pool) =>
-          _iosModel.get_addressComponent().then((it) => it.get_district()),
-    );
-  }
+  final String districtName;
 
   /// 乡镇编码
-  Future<String> get townCode {
-    return platform(
-      android: (pool) => _androidModel.getTowncode(),
-      ios: (pool) =>
-          _iosModel.get_addressComponent().then((it) => it.get_towncode()),
-    );
-  }
+  final String townCode;
 
   /// 乡镇名称
-  Future<String> get township {
-    return platform(
-      android: (pool) => _androidModel.getTownship(),
-      ios: (pool) =>
-          _iosModel.get_addressComponent().then((it) => it.get_township()),
-    );
-  }
+  final String township;
 
   /// 社区名称
-  Future<String> get neighborhood {
-    return platform(
-      android: (pool) => _androidModel.getNeighborhood(),
-      ios: (pool) =>
-          _iosModel.get_addressComponent().then((it) => it.get_neighborhood()),
-    );
-  }
+  final String neighborhood;
 
   /// 建筑物
-  Future<String> get building {
-    return platform(
-      android: (pool) => _androidModel.getBuilding(),
-      ios: (pool) =>
-          _iosModel.get_addressComponent().then((it) => it.get_building()),
-    );
-  }
+  final String building;
 
   /// 国家
-  Future<String> get country {
-    return platform(
-      android: (pool) => _androidModel.getCountry(),
-      ios: (pool) =>
-          _iosModel.get_addressComponent().then((it) => it.get_country()),
-    );
-  }
+  final String country;
 
   /// 地址全称
-  Future<String> get formatAddress {
-    return platform(
-      android: (pool) => _androidModel.getFormatAddress(),
-      ios: (pool) => _iosModel.get_formattedAddress(),
-    );
-  }
+  final String formatAddress;
 
   /// 道路列表
-  Future<List<Road>> get roads {
-    return platform(
-      android: (pool) async {
-        final roadList = await _androidModel.getRoads();
-        final idBatch = await roadList.getId_batch();
-        final nameBatch = await roadList.getName_batch();
-        final distanceBatch = await roadList.getDistance_batch();
-        final directionBatch = await roadList.getDirection_batch();
-
-        final coordinateBatch = await roadList.getLatLngPoint_batch();
-        final latitudeBatch = await coordinateBatch.getLatitude_batch();
-        final longitudeBatch = await coordinateBatch.getLongitude_batch();
-
-        return [
-          for (int i = 0; i < roadList.length; i++)
-            Road(
-              id: idBatch[i],
-              name: nameBatch[i],
-              distance: distanceBatch[i],
-              direction: directionBatch[i],
-              coordinate: LatLng(latitudeBatch[i], longitudeBatch[i]),
-            )
-        ];
-      },
-      ios: (pool) async {
-        final roadList = await _iosModel.get_roads();
-        final idBatch = await roadList.get_uid_batch();
-        final nameBatch = await roadList.get_name_batch();
-        final distanceBatch = await roadList.get_distance_batch();
-        final directionBatch = await roadList.get_direction_batch();
-
-        final coordinateBatch = await roadList.get_location_batch();
-        final latitudeBatch = await coordinateBatch.get_latitude_batch();
-        final longitudeBatch = await coordinateBatch.get_longitude_batch();
-
-        return [
-          for (int i = 0; i < roadList.length; i++)
-            Road(
-              id: idBatch[i],
-              name: nameBatch[i],
-              distance: distanceBatch[i].toDouble(),
-              direction: directionBatch[i],
-              coordinate: LatLng(latitudeBatch[i], longitudeBatch[i]),
-            )
-        ];
-      },
-    );
-  }
+  final List<Road> roads;
 
   /// 兴趣区域列表
-  Future<List<Aoi>> get aoiList {
-    return platform(
-      android: (pool) async {
-        final aoiList = await _androidModel.getAois();
-        final adcodeBatch = await aoiList.getAdCode_batch();
-        final areaBatch = await aoiList.getAoiArea_batch();
-        final idBatch = await aoiList.getAoiId_batch();
-        final nameBatch = await aoiList.getAoiName_batch();
-
-        final coordinateBatch = await aoiList.getAoiCenterPoint_batch();
-        final latitudeBatch = await coordinateBatch.getLatitude_batch();
-        final longitudeBatch = await coordinateBatch.getLongitude_batch();
-
-        return <Aoi>[
-          for (int i = 0; i < aoiList.length; i++)
-            Aoi(
-              adcode: adcodeBatch[i],
-              area: areaBatch[i],
-              id: idBatch[i],
-              name: nameBatch[i],
-              centerPoint: LatLng(latitudeBatch[i], longitudeBatch[i]),
-            )
-        ];
-      },
-      ios: (pool) async {
-        final aoiList = await _iosModel.get_aois();
-        final adcodeBatch = await aoiList.get_adcode_batch();
-        final areaBatch = await aoiList.get_area_batch();
-        final idBatch = await aoiList.get_uid_batch();
-        final nameBatch = await aoiList.get_name_batch();
-
-        final coordinateBatch = await aoiList.get_location_batch();
-        final latitudeBatch = await coordinateBatch.get_latitude_batch();
-        final longitudeBatch = await coordinateBatch.get_longitude_batch();
-
-        return <Aoi>[
-          for (int i = 0; i < aoiList.length; i++)
-            Aoi(
-              adcode: adcodeBatch[i],
-              area: areaBatch[i],
-              id: idBatch[i],
-              name: nameBatch[i],
-              centerPoint: LatLng(latitudeBatch[i], longitudeBatch[i]),
-            )
-        ];
-      },
-    );
-  }
+  final List<Aoi> aoiList;
 
   /// 兴趣点列表
-  Future<List<Poi>> get poiList {
-    return platform(
-      android: (pool) async {
-        final pois = await _androidModel.getPois();
-        final addressBatch = await pois.getSnippet_batch();
-        final titleBatch = await pois.getTitle_batch();
-        final latLngBatch = await pois.getLatLonPoint_batch();
-        final latitudeBatch = await latLngBatch.getLatitude_batch();
-        final longitudeBatch = await latLngBatch.getLongitude_batch();
-        final cityNameBatch = await pois.getCityName_batch();
-        final cityCodeBatch = await pois.getCityCode_batch();
-        final provinceNameBatch = await pois.getProvinceName_batch();
-        final provinceCodeBatch = await pois.getProvinceCode_batch();
-        final telBatch = await pois.getTel_batch();
-        final poiIdBatch = await pois.getPoiId_batch();
-        final businessAreaBatch = await pois.getBusinessArea_batch();
-        final distanceBatch = await pois.getDistance_batch();
-        final adNameBatch = await pois.getAdName_batch();
-        final adCodeBatch = await pois.getAdCode_batch();
-
-        return <Poi>[
-          for (int i = 0; i < pois.length; i++)
-            Poi(
-              address: addressBatch[i],
-              title: titleBatch[i],
-              latLng: LatLng(latitudeBatch[i], longitudeBatch[i]),
-              cityName: cityNameBatch[i],
-              cityCode: cityCodeBatch[i],
-              provinceName: provinceNameBatch[i],
-              provinceCode: provinceCodeBatch[i],
-              tel: telBatch[i],
-              poiId: poiIdBatch[i],
-              businessArea: businessAreaBatch[i],
-              distance: distanceBatch[i],
-              adName: adNameBatch[i],
-              adCode: adCodeBatch[i],
-            )
-        ];
-      },
-      ios: (pool) async {
-        final pois = await _iosModel.get_pois();
-        final addressBatch = await pois.get_address_batch();
-        final titleBatch = await pois.get_name_batch();
-        final latLngBatch = await pois.get_location_batch();
-        final latitudeBatch = await latLngBatch.get_latitude_batch();
-        final longitudeBatch = await latLngBatch.get_longitude_batch();
-        final cityNameBatch = await pois.get_city_batch();
-        final cityCodeBatch = await pois.get_citycode_batch();
-        final provinceNameBatch = await pois.get_province_batch();
-        final provinceCodeBatch = await pois.get_pcode_batch();
-        final telBatch = await pois.get_tel_batch();
-        final poiIdBatch = await pois.get_uid_batch();
-        final businessAreaBatch = await pois.get_businessArea_batch();
-        final distanceBatch = await pois.get_distance_batch();
-        final adNameBatch = await pois.get_district_batch();
-        final adCodeBatch = await pois.get_adcode_batch();
-
-        return <Poi>[
-          for (int i = 0; i < pois.length; i++)
-            Poi(
-              address: addressBatch[i],
-              title: titleBatch[i],
-              latLng: LatLng(latitudeBatch[i], longitudeBatch[i]),
-              cityName: cityNameBatch[i],
-              cityCode: cityCodeBatch[i],
-              provinceName: provinceNameBatch[i],
-              provinceCode: provinceCodeBatch[i],
-              tel: telBatch[i],
-              poiId: poiIdBatch[i],
-              businessArea: businessAreaBatch[i],
-              distance: distanceBatch[i],
-              adName: adNameBatch[i],
-              adCode: adCodeBatch[i],
-            )
-        ];
-      },
-    );
-  }
+  final List<Poi> poiList;
 
   @override
-  Future<String> toFutureString() async {
-    return 'ReGeocode{provinceName: ${await provinceName}}, cityName: ${await cityName}, cityCode: ${await cityCode}, districtName: ${await districtName}, building: ${await building}, country: ${await country}, formatAddress: ${await formatAddress}, aoiList: ${await aoiList}';
+  String toString() {
+    return 'ReGeocode{provinceName: $provinceName, cityName: $cityName, cityCode: $cityCode, adCode: $adCode, districtName: $districtName, townCode: $townCode, township: $township, neighborhood: $neighborhood, building: $building, country: $country, formatAddress: $formatAddress, roads: $roads, aoiList: $aoiList, poiList: $poiList}';
   }
 }
 
