@@ -173,3 +173,49 @@ extension PoiListX on List<Poi> {
     ];
   }
 }
+
+extension InputTipListX on List<InputTip> {
+  static Future<List<InputTip>> fromAndroid(
+    List<com_amap_api_services_help_Tip> inputTipList,
+  ) async {
+    final nameBatch = await inputTipList.getName_batch();
+    final idBatch = await inputTipList.getPoiID_batch();
+    final addressBatch = await inputTipList.getAddress_batch();
+    final districtBatch = await inputTipList.getDistrict_batch();
+    final coordinateBatch = await inputTipList.getPoint_batch();
+    final latitudeBatch = await coordinateBatch.getLatitude_batch();
+    final longitudeBatch = await coordinateBatch.getLongitude_batch();
+
+    return <InputTip>[
+      for (int i = 0; i < inputTipList.length; i++)
+        InputTip(
+          name: nameBatch[i],
+          poiId: idBatch[i],
+          address: addressBatch[i],
+          district: districtBatch[i],
+          coordinate: LatLng(latitudeBatch[i], longitudeBatch[i]),
+        )
+    ];
+  }
+
+  static Future<List<InputTip>> fromIOS(List<AMapTip> inputTipList) async {
+    final nameBatch = await inputTipList.get_name_batch();
+    final idBatch = await inputTipList.get_uid_batch();
+    final addressBatch = await inputTipList.get_address_batch();
+    final districtBatch = await inputTipList.get_district_batch();
+    final coordinateBatch = await inputTipList.get_location_batch();
+    final latitudeBatch = await coordinateBatch.get_latitude_batch();
+    final longitudeBatch = await coordinateBatch.get_longitude_batch();
+
+    return <InputTip>[
+      for (int i = 0; i < inputTipList.length; i++)
+        InputTip(
+          name: nameBatch[i],
+          poiId: idBatch[i],
+          address: addressBatch[i],
+          district: districtBatch[i],
+          coordinate: LatLng(latitudeBatch[i], longitudeBatch[i]),
+        )
+    ];
+  }
+}

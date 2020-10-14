@@ -22,42 +22,7 @@ class _AndroidSearchListener extends java_lang_Object
     int var2,
   ) async {
     await super.onPoiSearched(var1, var2);
-    final pois = await var1.getPois();
-    final addressBatch = await pois.getSnippet_batch();
-    final titleBatch = await pois.getTitle_batch();
-    final latLngBatch = await pois.getLatLonPoint_batch();
-    final latitudeBatch = await latLngBatch.getLatitude_batch();
-    final longitudeBatch = await latLngBatch.getLongitude_batch();
-    final cityNameBatch = await pois.getCityName_batch();
-    final cityCodeBatch = await pois.getCityCode_batch();
-    final provinceNameBatch = await pois.getProvinceName_batch();
-    final provinceCodeBatch = await pois.getProvinceCode_batch();
-    final telBatch = await pois.getTel_batch();
-    final poiIdBatch = await pois.getPoiId_batch();
-    final businessAreaBatch = await pois.getBusinessArea_batch();
-    final distanceBatch = await pois.getDistance_batch();
-    final adNameBatch = await pois.getAdName_batch();
-    final adCodeBatch = await pois.getAdCode_batch();
-
-    final poiList = [
-      for (int i = 0; i < pois.length; i++)
-        Poi(
-          address: addressBatch[i],
-          title: titleBatch[i],
-          latLng: LatLng(latitudeBatch[i], longitudeBatch[i]),
-          cityName: cityNameBatch[i],
-          cityCode: cityCodeBatch[i],
-          provinceName: provinceNameBatch[i],
-          provinceCode: provinceCodeBatch[i],
-          tel: telBatch[i],
-          poiId: poiIdBatch[i],
-          businessArea: businessAreaBatch[i],
-          distance: distanceBatch[i],
-          adName: adNameBatch[i],
-          adCode: adCodeBatch[i],
-        )
-    ];
-    _completer?.complete(poiList);
+    _completer?.complete(await PoiListX.fromAndroid(await var1.getPois()));
   }
 
   @override
@@ -66,20 +31,7 @@ class _AndroidSearchListener extends java_lang_Object
     int var2,
   ) async {
     await super.onGetInputtips(var1, var2);
-    final inputTipList = [
-      for (final item in var1)
-        InputTip(
-          name: await item.getName(),
-          poiId: await item.getPoiID(),
-          address: await item.getAddress(),
-          district: await item.getDistrict(),
-          coordinate: await item.getPoint().then(
-                (it) async =>
-                    LatLng(await it.getLatitude(), await it.getLongitude()),
-              ),
-        )
-    ];
-    _completer?.complete(inputTipList);
+    _completer?.complete(InputTipListX.fromAndroid(var1));
   }
 
   @override
@@ -213,42 +165,7 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
     AMapPOISearchResponse response,
   ) async {
     await super.onPOISearchDone_response(request, response);
-    final pois = await response.get_pois();
-    final addressBatch = await pois.get_address_batch();
-    final titleBatch = await pois.get_name_batch();
-    final latLngBatch = await pois.get_location_batch();
-    final latitudeBatch = await latLngBatch.get_latitude_batch();
-    final longitudeBatch = await latLngBatch.get_longitude_batch();
-    final cityNameBatch = await pois.get_city_batch();
-    final cityCodeBatch = await pois.get_citycode_batch();
-    final provinceNameBatch = await pois.get_province_batch();
-    final provinceCodeBatch = await pois.get_pcode_batch();
-    final telBatch = await pois.get_tel_batch();
-    final poiIdBatch = await pois.get_uid_batch();
-    final businessAreaBatch = await pois.get_businessArea_batch();
-    final distanceBatch = await pois.get_distance_batch();
-    final adNameBatch = await pois.get_district_batch();
-    final adCodeBatch = await pois.get_adcode_batch();
-
-    final poiList = [
-      for (int i = 0; i < pois.length; i++)
-        Poi(
-          address: addressBatch[i],
-          title: titleBatch[i],
-          latLng: LatLng(latitudeBatch[i], longitudeBatch[i]),
-          cityName: cityNameBatch[i],
-          cityCode: cityCodeBatch[i],
-          provinceName: provinceNameBatch[i],
-          provinceCode: provinceCodeBatch[i],
-          tel: telBatch[i],
-          poiId: poiIdBatch[i],
-          businessArea: businessAreaBatch[i],
-          distance: distanceBatch[i],
-          adName: adNameBatch[i],
-          adCode: adCodeBatch[i],
-        )
-    ];
-    _completer?.complete(poiList);
+    _completer?.complete(await PoiListX.fromIOS(await response.get_pois()));
   }
 
   @override
@@ -257,20 +174,8 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
     AMapInputTipsSearchResponse response,
   ) async {
     await super.onInputTipsSearchDone_response(request, response);
-    final inputTipList = [
-      for (final item in (await response.get_tips()))
-        InputTip(
-          name: await item.get_name(),
-          poiId: await item.get_uid(),
-          address: await item.get_address(),
-          district: await item.get_district(),
-          coordinate: await item.get_location().then(
-                (it) async =>
-                    LatLng(await it.get_latitude(), await it.get_longitude()),
-              ),
-        )
-    ];
-    _completer?.complete(inputTipList);
+    _completer
+        ?.complete(await InputTipListX.fromIOS(await response.get_tips()));
   }
 
   @override

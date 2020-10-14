@@ -130,7 +130,11 @@ class _AddressDecodeScreenState extends State<AddressDecodeScreen> {
             },
             child: Text('搜索'),
           ),
-          Text(_reGeocode?.toString() ?? ''),
+          Expanded(
+            child: SingleChildScrollView(
+              child: Text(_reGeocode?.toString() ?? ''),
+            ),
+          ),
         ],
       ),
     );
