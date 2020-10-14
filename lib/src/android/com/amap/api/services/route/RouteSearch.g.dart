@@ -185,7 +185,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
             }
           } catch (e) {
             debugPrint(e);
-            throw e;
+            rethrow;
           }
         });
   
@@ -223,7 +223,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
             }
           } catch (e) {
             debugPrint(e);
-            throw e;
+            rethrow;
           }
         });
   
@@ -261,7 +261,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
             }
           } catch (e) {
             debugPrint(e);
-            throw e;
+            rethrow;
           }
         });
   

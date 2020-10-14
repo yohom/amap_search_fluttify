@@ -106,14 +106,14 @@ class com_amap_api_services_help_Inputtips extends java_lang_Object  {
                 }
           
                 // handle the native call
-                var1?.onGetInputtips((args['var1'] as List).cast<String>().map((__it__) => TypeOpAmapSearchFluttifyAndroid(__it__).as__<com_amap_api_services_help_Tip>()).toList(), args['var2']);
+                var1?.onGetInputtips((args['var1'] as List).cast<Ref>().map((__it__) => TypeOpAmapSearchFluttifyAndroid(__it__).as__<com_amap_api_services_help_Tip>()).toList(), args['var2']);
                 break;
               default:
                 break;
             }
           } catch (e) {
             debugPrint(e);
-            throw e;
+            rethrow;
           }
         });
   

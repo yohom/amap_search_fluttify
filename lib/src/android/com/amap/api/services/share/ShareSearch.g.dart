@@ -147,7 +147,7 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
             }
           } catch (e) {
             debugPrint(e);
-            throw e;
+            rethrow;
           }
         });
   

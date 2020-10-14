@@ -86,7 +86,7 @@ class AMapNearbySearchManager extends NSObject  {
           }
         } catch (e) {
           debugPrint(e);
-          throw e;
+          rethrow;
         }
       });
   }

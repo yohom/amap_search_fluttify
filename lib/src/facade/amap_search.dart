@@ -200,7 +200,7 @@ mixin _Community on _Holder {
 
   /// id搜索poi
   Future<Poi> searchPoiId(String id) {
-   return platform(
+    return platform(
       android: (pool) async {
         // 获取android上下文
         final context = await android_app_Activity.get();
@@ -246,8 +246,6 @@ mixin _Community on _Holder {
     String keyword, {
     String city = '',
   }) async {
-    // 会在listener中关闭
-    // ignore: close_sinks
     final _controller = Completer<List<InputTip>>.sync();
 
     await platform(

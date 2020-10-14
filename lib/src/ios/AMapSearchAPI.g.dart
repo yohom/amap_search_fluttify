@@ -219,7 +219,7 @@ class AMapSearchAPI extends NSObject  {
           }
         } catch (e) {
           debugPrint(e);
-          throw e;
+          rethrow;
         }
       });
   }

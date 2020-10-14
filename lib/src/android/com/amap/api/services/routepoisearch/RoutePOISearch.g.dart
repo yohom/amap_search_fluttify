@@ -87,7 +87,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearch extends java_lang_Obje
             }
           } catch (e) {
             debugPrint(e);
-            throw e;
+            rethrow;
           }
         });
   
