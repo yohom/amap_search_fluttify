@@ -101,37 +101,15 @@ class InputTip {
 }
 
 /// 地理编码 model
-class Geocode with _ToFutureString {
-  Geocode.android(this._androidModel) : _iosModel = null;
-
-  Geocode.ios(this._iosModel) : _androidModel = null;
-
-  final com_amap_api_services_geocoder_GeocodeAddress _androidModel;
-  final AMapGeocode _iosModel;
+class Geocode {
+  Geocode(this.latLng);
 
   /// 经纬度
-  Future<LatLng> get latLng {
-    return platform(
-      android: (pool) async {
-        final location = await _androidModel.getLatLonPoint();
-        return LatLng(
-          await location.getLatitude(),
-          await location.getLongitude(),
-        );
-      },
-      ios: (pool) async {
-        final location = await _iosModel.get_location();
-        return LatLng(
-          await location.get_latitude(),
-          await location.get_longitude(),
-        );
-      },
-    );
-  }
+  final LatLng latLng;
 
   @override
-  Future<String> toFutureString() async {
-    return 'Geocode{latLng: ${await latLng}}';
+  String toString() {
+    return 'Geocode{latLng: $latLng}';
   }
 }
 
@@ -246,12 +224,48 @@ class ReGeocode with _ToFutureString {
   Future<List<Road>> get roads {
     return platform(
       android: (pool) async {
-        return (await _androidModel.getRoads())
-            .map((e) => Road.android(e))
-            .toList();
+        final roadList = await _androidModel.getRoads();
+        final idBatch = await roadList.getId_batch();
+        final nameBatch = await roadList.getName_batch();
+        final distanceBatch = await roadList.getDistance_batch();
+        final directionBatch = await roadList.getDirection_batch();
+
+        final coordinateBatch = await roadList.getLatLngPoint_batch();
+        final latitudeBatch = await coordinateBatch.getLatitude_batch();
+        final longitudeBatch = await coordinateBatch.getLongitude_batch();
+
+        return [
+          for (int i = 0; i < roadList.length; i++)
+            Road(
+              id: idBatch[i],
+              name: nameBatch[i],
+              distance: distanceBatch[i],
+              direction: directionBatch[i],
+              coordinate: LatLng(latitudeBatch[i], longitudeBatch[i]),
+            )
+        ];
       },
       ios: (pool) async {
-        return (await _iosModel.get_roads()).map((it) => Road.ios(it)).toList();
+        final roadList = await _iosModel.get_roads();
+        final idBatch = await roadList.get_uid_batch();
+        final nameBatch = await roadList.get_name_batch();
+        final distanceBatch = await roadList.get_distance_batch();
+        final directionBatch = await roadList.get_direction_batch();
+
+        final coordinateBatch = await roadList.get_location_batch();
+        final latitudeBatch = await coordinateBatch.get_latitude_batch();
+        final longitudeBatch = await coordinateBatch.get_longitude_batch();
+
+        return [
+          for (int i = 0; i < roadList.length; i++)
+            Road(
+              id: idBatch[i],
+              name: nameBatch[i],
+              distance: distanceBatch[i].toDouble(),
+              direction: directionBatch[i],
+              coordinate: LatLng(latitudeBatch[i], longitudeBatch[i]),
+            )
+        ];
       },
     );
   }
@@ -260,12 +274,48 @@ class ReGeocode with _ToFutureString {
   Future<List<Aoi>> get aoiList {
     return platform(
       android: (pool) async {
-        return (await _androidModel.getAois())
-            .map((it) => Aoi.android(it))
-            .toList();
+        final aoiList = await _androidModel.getAois();
+        final adcodeBatch = await aoiList.getAdCode_batch();
+        final areaBatch = await aoiList.getAoiArea_batch();
+        final idBatch = await aoiList.getAoiId_batch();
+        final nameBatch = await aoiList.getAoiName_batch();
+
+        final coordinateBatch = await aoiList.getAoiCenterPoint_batch();
+        final latitudeBatch = await coordinateBatch.getLatitude_batch();
+        final longitudeBatch = await coordinateBatch.getLongitude_batch();
+
+        return <Aoi>[
+          for (int i = 0; i < aoiList.length; i++)
+            Aoi(
+              adcode: adcodeBatch[i],
+              area: areaBatch[i],
+              id: idBatch[i],
+              name: nameBatch[i],
+              centerPoint: LatLng(latitudeBatch[i], longitudeBatch[i]),
+            )
+        ];
       },
       ios: (pool) async {
-        return (await _iosModel.get_aois()).map((it) => Aoi.ios(it)).toList();
+        final aoiList = await _iosModel.get_aois();
+        final adcodeBatch = await aoiList.get_adcode_batch();
+        final areaBatch = await aoiList.get_area_batch();
+        final idBatch = await aoiList.get_uid_batch();
+        final nameBatch = await aoiList.get_name_batch();
+
+        final coordinateBatch = await aoiList.get_location_batch();
+        final latitudeBatch = await coordinateBatch.get_latitude_batch();
+        final longitudeBatch = await coordinateBatch.get_longitude_batch();
+
+        return <Aoi>[
+          for (int i = 0; i < aoiList.length; i++)
+            Aoi(
+              adcode: adcodeBatch[i],
+              area: areaBatch[i],
+              id: idBatch[i],
+              name: nameBatch[i],
+              centerPoint: LatLng(latitudeBatch[i], longitudeBatch[i]),
+            )
+        ];
       },
     );
   }
@@ -352,128 +402,59 @@ class ReGeocode with _ToFutureString {
 
   @override
   Future<String> toFutureString() async {
-    return 'ReGeocode{provinceName: ${await provinceName}}, cityName: ${await cityName}, cityCode: ${await cityCode}, districtName: ${await districtName}, building: ${await building}, country: ${await country}, formatAddress: ${await formatAddress}, aoiList: ${await _expandToString(aoiList)}';
+    return 'ReGeocode{provinceName: ${await provinceName}}, cityName: ${await cityName}, cityCode: ${await cityCode}, districtName: ${await districtName}, building: ${await building}, country: ${await country}, formatAddress: ${await formatAddress}, aoiList: ${await aoiList}';
   }
 }
 
 /// 道路
-class Road with _ToFutureString {
-  Road.android(this._androidModel) : _iosModel = null;
+class Road {
+  Road({
+    this.id,
+    this.name,
+    this.distance,
+    this.direction,
+    this.coordinate,
+  });
 
-  Road.ios(this._iosModel) : _androidModel = null;
-
-  final com_amap_api_services_geocoder_RegeocodeRoad _androidModel;
-  final AMapRoad _iosModel;
-
-  Future<String> get id {
-    return platform(
-      android: (pool) => _androidModel.getId(),
-      ios: (pool) => _iosModel.get_uid(),
-    );
-  }
-
-  Future<String> get name {
-    return platform(
-      android: (pool) => _androidModel.getName(),
-      ios: (pool) => _iosModel.get_name(),
-    );
-  }
-
-  Future<double> get distance {
-    return platform(
-      android: (pool) => _androidModel.getDistance(),
-      ios: (pool) => _iosModel.get_distance().then((value) => value.toDouble()),
-    );
-  }
-
-  Future<String> get direction {
-    return platform(
-      android: (pool) => _androidModel.getDirection(),
-      ios: (pool) => _iosModel.get_direction(),
-    );
-  }
-
-  Future<LatLng> get coordinate {
-    return platform(
-      android: (pool) async {
-        final latLng = await _androidModel.getLatLngPoint();
-        pool.add(latLng);
-        return LatLng(await latLng.getLatitude(), await latLng.getLongitude());
-      },
-      ios: (pool) async {
-        final latLng = await _iosModel.get_location();
-        pool.add(latLng);
-        return LatLng(
-          await latLng.get_latitude(),
-          await latLng.get_longitude(),
-        );
-      },
-    );
-  }
+  String id;
+  String name;
+  double distance;
+  String direction;
+  LatLng coordinate;
 
   @override
-  Future<String> toFutureString() async {
-    return 'Road{id: ${await id}}, name: ${await name}, distance: ${await distance}, direction: ${await direction}, coordinate: ${await coordinate}';
+  String toString() {
+    return 'Road{id: $id, name: $name, distance: $distance, direction: $direction, coordinate: $coordinate}';
   }
 }
 
-class Aoi with _ToFutureString {
-  Aoi.android(this._androidModel);
-
-  Aoi.ios(this._iosModel);
-
-  com_amap_api_services_geocoder_AoiItem _androidModel;
-  AMapAOI _iosModel;
+class Aoi {
+  Aoi({
+    this.adcode,
+    this.area,
+    this.id,
+    this.name,
+    this.centerPoint,
+  });
 
   /// 邮政编码
-  Future<String> get adcode {
-    return platform(
-      android: (pool) => _androidModel.getAdCode(),
-      ios: (pool) => _iosModel.get_adcode(),
-    );
-  }
+  final String adcode;
 
   /// 覆盖面积 单位平方米
-  Future<double> get area {
-    return platform(
-      android: (pool) => _androidModel.getAoiArea(),
-      ios: (pool) => _iosModel.get_area(),
-    );
-  }
+  final double area;
 
   /// 唯一标识
-  Future<String> get id {
-    return platform(
-      android: (pool) => _androidModel.getAoiId(),
-      ios: (pool) => _iosModel.get_uid(),
-    );
-  }
+  final String id;
 
   /// 名称
-  Future<String> get name {
-    return platform(
-      android: (pool) => _androidModel.getAoiName(),
-      ios: (pool) => _iosModel.get_name(),
-    );
-  }
+  final String name;
 
   /// 中心点坐标
-  Future<LatLng> get centerPoint {
-    return platform(
-      android: (pool) async {
-        final point = await _androidModel.getAoiCenterPoint();
-        return LatLng(await point.getLatitude(), await point.getLongitude());
-      },
-      ios: (pool) async {
-        final point = await _iosModel.get_location();
-        return LatLng(await point.get_latitude(), await point.get_longitude());
-      },
-    );
-  }
+  final LatLng centerPoint;
 
   @override
-  Future<String> toFutureString() async {
-    return 'Aoi{adcode: ${await adcode}}, area: ${await area}, id: ${await id}, name: ${await name}, centerPoint: ${(await centerPoint).toString()}';
+  String toString() {
+    return 'Aoi{adcode: $adcode, area: $area, id: $id, name: $name, centerPoint: $centerPoint}';
   }
 }
 

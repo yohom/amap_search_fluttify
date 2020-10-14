@@ -88,9 +88,13 @@ class _AndroidSearchListener extends java_lang_Object
     int var2,
   ) async {
     await super.onGeocodeSearched(var1, var2);
+    final geocodeList = await var1.getGeocodeAddressList();
+    final coordinateBatch = await geocodeList.getLatLonPoint_batch();
+    final latitudeBatch = await coordinateBatch.getLatitude_batch();
+    final longitudeBatch = await coordinateBatch.getLongitude_batch();
     final geocode = [
-      for (final item in (await var1.getGeocodeAddressList()))
-        Geocode.android(item)
+      for (int i = 0; i < coordinateBatch.length; i++)
+        Geocode(LatLng(latitudeBatch[i], longitudeBatch[i]))
     ];
     _completer?.complete(geocode);
   }
@@ -268,8 +272,13 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
     AMapGeocodeSearchResponse response,
   ) async {
     await super.onGeocodeSearchDone_response(request, response);
+    final geocodeList = await response.get_geocodes();
+    final coordinateBatch = await geocodeList.get_location_batch();
+    final latitudeBatch = await coordinateBatch.get_latitude_batch();
+    final longitudeBatch = await coordinateBatch.get_longitude_batch();
     final geocode = [
-      for (final item in (await response.get_geocodes())) Geocode.ios(item)
+      for (int i = 0; i < coordinateBatch.length; i++)
+        Geocode(LatLng(latitudeBatch[i], longitudeBatch[i]))
     ];
     _completer?.complete(geocode);
   }

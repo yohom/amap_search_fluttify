@@ -34,8 +34,7 @@ class AddressEncodeScreen extends StatefulWidget {
   _AddressEncodeScreenState createState() => _AddressEncodeScreenState();
 }
 
-class _AddressEncodeScreenState extends State<AddressEncodeScreen>
-    with AmapSearchDisposeMixin {
+class _AddressEncodeScreenState extends State<AddressEncodeScreen> {
   final _keywordController = TextEditingController(text: '阿里巴巴');
   final _cityController = TextEditingController(text: '杭州');
 
@@ -69,8 +68,7 @@ class _AddressEncodeScreenState extends State<AddressEncodeScreen>
             },
             child: Text('搜索'),
           ),
-          if (_geocodeList.isNotEmpty)
-            FutureText(_geocodeList[0].toFutureString()),
+          if (_geocodeList.isNotEmpty) Text(_geocodeList.toString()),
         ],
       ),
     );
