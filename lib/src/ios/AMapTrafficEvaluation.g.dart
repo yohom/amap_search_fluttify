@@ -24,8 +24,8 @@ class AMapTrafficEvaluation extends AMapSearchObject with NSCoding, NSCopying {
 
   //region creators
   static Future<AMapTrafficEvaluation> create__({ bool init = true /* ios only */ }) async {
-    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapTrafficEvaluation', {'init': init});
-    final object = AMapTrafficEvaluation()..refId = refId;
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapTrafficEvaluation', {'init': init});
+    final object = AMapTrafficEvaluation()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class AMapTrafficEvaluation extends AMapSearchObject with NSCoding, NSCopying {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapTrafficEvaluation', {'length': length, 'init': init});
-  
-    final List<AMapTrafficEvaluation> typedResult = resultBatch.map((result) => AMapTrafficEvaluation()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapTrafficEvaluation', {'length': length, 'init': init});
+    return resultBatch.map((it) => AMapTrafficEvaluation()..refId = it.refId).toList();
   }
   
   //endregion

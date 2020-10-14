@@ -24,8 +24,8 @@ class AMapGeocodeSearchResponse extends AMapSearchObject with NSCoding, NSCopyin
 
   //region creators
   static Future<AMapGeocodeSearchResponse> create__({ bool init = true /* ios only */ }) async {
-    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapGeocodeSearchResponse', {'init': init});
-    final object = AMapGeocodeSearchResponse()..refId = refId;
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapGeocodeSearchResponse', {'init': init});
+    final object = AMapGeocodeSearchResponse()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class AMapGeocodeSearchResponse extends AMapSearchObject with NSCoding, NSCopyin
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapGeocodeSearchResponse', {'length': length, 'init': init});
-  
-    final List<AMapGeocodeSearchResponse> typedResult = resultBatch.map((result) => AMapGeocodeSearchResponse()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapGeocodeSearchResponse', {'length': length, 'init': init});
+    return resultBatch.map((it) => AMapGeocodeSearchResponse()..refId = it.refId).toList();
   }
   
   //endregion
@@ -49,7 +47,7 @@ class AMapGeocodeSearchResponse extends AMapSearchObject with NSCoding, NSCopyin
   
   Future<List<AMapGeocode>> get_geocodes() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapGeocodeSearchResponse::get_geocodes", {'__this__': this});
-    return (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapGeocode()..refId = __it__))?.toList();
+    return (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (AMapGeocode()..refId = __it__.refId))?.toList();
   }
   
   //endregion
@@ -91,7 +89,7 @@ extension AMapGeocodeSearchResponse_Batch on List<AMapGeocodeSearchResponse> {
   Future<List<List<AMapGeocode>>> get_geocodes_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapGeocodeSearchResponse::get_geocodes_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapGeocode()..refId = __it__))?.toList()).toList();
+    final typedResult = (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (AMapGeocode()..refId = __it__.refId))?.toList()).toList();
     return typedResult;
   }
   

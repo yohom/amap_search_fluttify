@@ -24,8 +24,8 @@ class AMapGeoPolygon extends AMapSearchObject with NSCoding, NSCopying {
 
   //region creators
   static Future<AMapGeoPolygon> create__({ bool init = true /* ios only */ }) async {
-    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapGeoPolygon', {'init': init});
-    final object = AMapGeoPolygon()..refId = refId;
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapGeoPolygon', {'init': init});
+    final object = AMapGeoPolygon()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class AMapGeoPolygon extends AMapSearchObject with NSCoding, NSCopying {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapGeoPolygon', {'length': length, 'init': init});
-  
-    final List<AMapGeoPolygon> typedResult = resultBatch.map((result) => AMapGeoPolygon()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapGeoPolygon', {'length': length, 'init': init});
+    return resultBatch.map((it) => AMapGeoPolygon()..refId = it.refId).toList();
   }
   
   //endregion
@@ -44,7 +42,7 @@ class AMapGeoPolygon extends AMapSearchObject with NSCoding, NSCopying {
   //region getters
   Future<List<AMapGeoPoint>> get_points() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapGeoPolygon::get_points", {'__this__': this});
-    return (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapGeoPoint()..refId = __it__))?.toList();
+    return (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (AMapGeoPoint()..refId = __it__.refId))?.toList();
   }
   
   //endregion
@@ -73,13 +71,7 @@ class AMapGeoPolygon extends AMapSearchObject with NSCoding, NSCopying {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__ == null ? null : (AMapGeoPolygon()..refId = __result__);
-      return __return__;
-    }
+    return __result__ == null ? null : (AMapGeoPolygon()..refId = __result__.refId);
   }
   
   //endregion
@@ -95,7 +87,7 @@ extension AMapGeoPolygon_Batch on List<AMapGeoPolygon> {
   Future<List<List<AMapGeoPoint>>> get_points_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapGeoPolygon::get_points_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapGeoPoint()..refId = __it__))?.toList()).toList();
+    final typedResult = (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (AMapGeoPoint()..refId = __it__.refId))?.toList()).toList();
     return typedResult;
   }
   
@@ -121,13 +113,7 @@ extension AMapGeoPolygon_Batch on List<AMapGeoPolygon> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapGeoPolygon::polygonWithPoints_batch', [for (int __i__ = 0; __i__ < points.length; __i__++) {"points": points[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__ == null ? null : (AMapGeoPolygon()..refId = __result__)).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (AMapGeoPolygon()..refId = __result__.refId)).toList();
   }
   
   //endregion

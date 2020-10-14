@@ -24,8 +24,8 @@ class AMapBusLineNameSearchRequest extends AMapBusLineBaseSearchRequest with NSC
 
   //region creators
   static Future<AMapBusLineNameSearchRequest> create__({ bool init = true /* ios only */ }) async {
-    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapBusLineNameSearchRequest', {'init': init});
-    final object = AMapBusLineNameSearchRequest()..refId = refId;
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapBusLineNameSearchRequest', {'init': init});
+    final object = AMapBusLineNameSearchRequest()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class AMapBusLineNameSearchRequest extends AMapBusLineBaseSearchRequest with NSC
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapBusLineNameSearchRequest', {'length': length, 'init': init});
-  
-    final List<AMapBusLineNameSearchRequest> typedResult = resultBatch.map((result) => AMapBusLineNameSearchRequest()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapBusLineNameSearchRequest', {'length': length, 'init': init});
+    return resultBatch.map((it) => AMapBusLineNameSearchRequest()..refId = it.refId).toList();
   }
   
   //endregion

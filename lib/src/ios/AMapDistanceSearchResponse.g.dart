@@ -24,8 +24,8 @@ class AMapDistanceSearchResponse extends AMapSearchObject with NSCoding, NSCopyi
 
   //region creators
   static Future<AMapDistanceSearchResponse> create__({ bool init = true /* ios only */ }) async {
-    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapDistanceSearchResponse', {'init': init});
-    final object = AMapDistanceSearchResponse()..refId = refId;
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapDistanceSearchResponse', {'init': init});
+    final object = AMapDistanceSearchResponse()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class AMapDistanceSearchResponse extends AMapSearchObject with NSCoding, NSCopyi
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapDistanceSearchResponse', {'length': length, 'init': init});
-  
-    final List<AMapDistanceSearchResponse> typedResult = resultBatch.map((result) => AMapDistanceSearchResponse()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapDistanceSearchResponse', {'length': length, 'init': init});
+    return resultBatch.map((it) => AMapDistanceSearchResponse()..refId = it.refId).toList();
   }
   
   //endregion
@@ -44,7 +42,7 @@ class AMapDistanceSearchResponse extends AMapSearchObject with NSCoding, NSCopyi
   //region getters
   Future<List<AMapDistanceResult>> get_results() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapDistanceSearchResponse::get_results", {'__this__': this});
-    return (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapDistanceResult()..refId = __it__))?.toList();
+    return (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (AMapDistanceResult()..refId = __it__.refId))?.toList();
   }
   
   //endregion
@@ -73,7 +71,7 @@ extension AMapDistanceSearchResponse_Batch on List<AMapDistanceSearchResponse> {
   Future<List<List<AMapDistanceResult>>> get_results_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapDistanceSearchResponse::get_results_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapDistanceResult()..refId = __it__))?.toList()).toList();
+    final typedResult = (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (AMapDistanceResult()..refId = __it__.refId))?.toList()).toList();
     return typedResult;
   }
   

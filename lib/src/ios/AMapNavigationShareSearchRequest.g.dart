@@ -24,8 +24,8 @@ class AMapNavigationShareSearchRequest extends AMapShareSearchBaseRequest with N
 
   //region creators
   static Future<AMapNavigationShareSearchRequest> create__({ bool init = true /* ios only */ }) async {
-    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapNavigationShareSearchRequest', {'init': init});
-    final object = AMapNavigationShareSearchRequest()..refId = refId;
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapNavigationShareSearchRequest', {'init': init});
+    final object = AMapNavigationShareSearchRequest()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class AMapNavigationShareSearchRequest extends AMapShareSearchBaseRequest with N
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapNavigationShareSearchRequest', {'length': length, 'init': init});
-  
-    final List<AMapNavigationShareSearchRequest> typedResult = resultBatch.map((result) => AMapNavigationShareSearchRequest()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapNavigationShareSearchRequest', {'length': length, 'init': init});
+    return resultBatch.map((it) => AMapNavigationShareSearchRequest()..refId = it.refId).toList();
   }
   
   //endregion
@@ -49,12 +47,12 @@ class AMapNavigationShareSearchRequest extends AMapShareSearchBaseRequest with N
   
   Future<AMapGeoPoint> get_startCoordinate() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapNavigationShareSearchRequest::get_startCoordinate", {'__this__': this});
-    return __result__ == null ? null : (AMapGeoPoint()..refId = __result__);
+    return __result__ == null ? null : (AMapGeoPoint()..refId = __result__.refId);
   }
   
   Future<AMapGeoPoint> get_destinationCoordinate() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapNavigationShareSearchRequest::get_destinationCoordinate", {'__this__': this});
-    return __result__ == null ? null : (AMapGeoPoint()..refId = __result__);
+    return __result__ == null ? null : (AMapGeoPoint()..refId = __result__.refId);
   }
   
   //endregion
@@ -102,14 +100,14 @@ extension AMapNavigationShareSearchRequest_Batch on List<AMapNavigationShareSear
   Future<List<AMapGeoPoint>> get_startCoordinate_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapNavigationShareSearchRequest::get_startCoordinate_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__ == null ? null : (AMapGeoPoint()..refId = __result__)).toList();
+    final typedResult = (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (AMapGeoPoint()..refId = __result__.refId)).toList();
     return typedResult;
   }
   
   Future<List<AMapGeoPoint>> get_destinationCoordinate_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapNavigationShareSearchRequest::get_destinationCoordinate_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__ == null ? null : (AMapGeoPoint()..refId = __result__)).toList();
+    final typedResult = (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (AMapGeoPoint()..refId = __result__.refId)).toList();
     return typedResult;
   }
   

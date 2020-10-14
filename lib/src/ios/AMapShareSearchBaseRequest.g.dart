@@ -24,8 +24,8 @@ class AMapShareSearchBaseRequest extends AMapSearchObject with NSCoding, NSCopyi
 
   //region creators
   static Future<AMapShareSearchBaseRequest> create__({ bool init = true /* ios only */ }) async {
-    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapShareSearchBaseRequest', {'init': init});
-    final object = AMapShareSearchBaseRequest()..refId = refId;
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapShareSearchBaseRequest', {'init': init});
+    final object = AMapShareSearchBaseRequest()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class AMapShareSearchBaseRequest extends AMapSearchObject with NSCoding, NSCopyi
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapShareSearchBaseRequest', {'length': length, 'init': init});
-  
-    final List<AMapShareSearchBaseRequest> typedResult = resultBatch.map((result) => AMapShareSearchBaseRequest()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapShareSearchBaseRequest', {'length': length, 'init': init});
+    return resultBatch.map((it) => AMapShareSearchBaseRequest()..refId = it.refId).toList();
   }
   
   //endregion

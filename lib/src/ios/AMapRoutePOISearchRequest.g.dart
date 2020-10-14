@@ -24,8 +24,8 @@ class AMapRoutePOISearchRequest extends AMapSearchObject with NSCoding, NSCopyin
 
   //region creators
   static Future<AMapRoutePOISearchRequest> create__({ bool init = true /* ios only */ }) async {
-    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapRoutePOISearchRequest', {'init': init});
-    final object = AMapRoutePOISearchRequest()..refId = refId;
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapRoutePOISearchRequest', {'init': init});
+    final object = AMapRoutePOISearchRequest()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class AMapRoutePOISearchRequest extends AMapSearchObject with NSCoding, NSCopyin
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapRoutePOISearchRequest', {'length': length, 'init': init});
-  
-    final List<AMapRoutePOISearchRequest> typedResult = resultBatch.map((result) => AMapRoutePOISearchRequest()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapRoutePOISearchRequest', {'length': length, 'init': init});
+    return resultBatch.map((it) => AMapRoutePOISearchRequest()..refId = it.refId).toList();
   }
   
   //endregion
@@ -44,12 +42,12 @@ class AMapRoutePOISearchRequest extends AMapSearchObject with NSCoding, NSCopyin
   //region getters
   Future<AMapGeoPoint> get_origin() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoutePOISearchRequest::get_origin", {'__this__': this});
-    return __result__ == null ? null : (AMapGeoPoint()..refId = __result__);
+    return __result__ == null ? null : (AMapGeoPoint()..refId = __result__.refId);
   }
   
   Future<AMapGeoPoint> get_destination() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoutePOISearchRequest::get_destination", {'__this__': this});
-    return __result__ == null ? null : (AMapGeoPoint()..refId = __result__);
+    return __result__ == null ? null : (AMapGeoPoint()..refId = __result__.refId);
   }
   
   Future<AMapRoutePOISearchType> get_searchType() async {
@@ -74,7 +72,7 @@ class AMapRoutePOISearchRequest extends AMapSearchObject with NSCoding, NSCopyin
   
   Future<List<AMapGeoPoint>> get_polyline() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoutePOISearchRequest::get_polyline", {'__this__': this});
-    return (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapGeoPoint()..refId = __it__))?.toList();
+    return (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (AMapGeoPoint()..refId = __it__.refId))?.toList();
   }
   
   //endregion
@@ -139,21 +137,21 @@ extension AMapRoutePOISearchRequest_Batch on List<AMapRoutePOISearchRequest> {
   Future<List<AMapGeoPoint>> get_origin_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoutePOISearchRequest::get_origin_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__ == null ? null : (AMapGeoPoint()..refId = __result__)).toList();
+    final typedResult = (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (AMapGeoPoint()..refId = __result__.refId)).toList();
     return typedResult;
   }
   
   Future<List<AMapGeoPoint>> get_destination_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoutePOISearchRequest::get_destination_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__ == null ? null : (AMapGeoPoint()..refId = __result__)).toList();
+    final typedResult = (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (AMapGeoPoint()..refId = __result__.refId)).toList();
     return typedResult;
   }
   
   Future<List<AMapRoutePOISearchType>> get_searchType_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoutePOISearchRequest::get_searchType_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as int).toAMapRoutePOISearchType()).toList();
+    final typedResult = (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as int).toAMapRoutePOISearchType()).toList();
     return typedResult;
   }
   
@@ -181,7 +179,7 @@ extension AMapRoutePOISearchRequest_Batch on List<AMapRoutePOISearchRequest> {
   Future<List<List<AMapGeoPoint>>> get_polyline_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoutePOISearchRequest::get_polyline_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapGeoPoint()..refId = __it__))?.toList()).toList();
+    final typedResult = (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (AMapGeoPoint()..refId = __it__.refId))?.toList()).toList();
     return typedResult;
   }
   

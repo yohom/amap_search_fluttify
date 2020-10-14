@@ -25,8 +25,8 @@ class com_amap_api_services_route_DistanceSearch extends java_lang_Object  {
 
   //region creators
   static Future<com_amap_api_services_route_DistanceSearch> create__android_content_Context(android_content_Context var1) async {
-    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_services_route_DistanceSearch__android_content_Context', {"var1": var1});
-    final object = com_amap_api_services_route_DistanceSearch()..refId = refId;
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createcom_amap_api_services_route_DistanceSearch__android_content_Context', {"var1": var1});
+    final object = com_amap_api_services_route_DistanceSearch()..refId = __result__.refId;
     return object;
   }
   
@@ -34,10 +34,8 @@ class com_amap_api_services_route_DistanceSearch extends java_lang_Object  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchcom_amap_api_services_route_DistanceSearch__android_content_Context', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]);
-  
-    final List<com_amap_api_services_route_DistanceSearch> typedResult = resultBatch.map((result) => com_amap_api_services_route_DistanceSearch()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchcom_amap_api_services_route_DistanceSearch__android_content_Context', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]);
+    return resultBatch.map((it) => com_amap_api_services_route_DistanceSearch()..refId = it.refId).toList();
   }
   
   //endregion
@@ -86,13 +84,7 @@ class com_amap_api_services_route_DistanceSearch extends java_lang_Object  {
           }
         });
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -109,13 +101,7 @@ class com_amap_api_services_route_DistanceSearch extends java_lang_Object  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__ == null ? null : (com_amap_api_services_route_DistanceResult()..refId = __result__);
-      return __return__;
-    }
+    return __result__ == null ? null : (com_amap_api_services_route_DistanceResult()..refId = __result__.refId);
   }
   
   
@@ -132,13 +118,7 @@ class com_amap_api_services_route_DistanceSearch extends java_lang_Object  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   //endregion
@@ -169,13 +149,7 @@ extension com_amap_api_services_route_DistanceSearch_Batch on List<com_amap_api_
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.DistanceSearch::calculateRouteDistance_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__ == null ? null : (com_amap_api_services_route_DistanceResult()..refId = __result__)).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_services_route_DistanceResult()..refId = __result__.refId)).toList();
   }
   
   
@@ -188,13 +162,7 @@ extension com_amap_api_services_route_DistanceSearch_Batch on List<com_amap_api_
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.DistanceSearch::calculateRouteDistanceAsyn_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   //endregion

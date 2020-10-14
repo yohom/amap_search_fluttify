@@ -24,8 +24,8 @@ class AMapInputTipsSearchResponse extends AMapSearchObject with NSCoding, NSCopy
 
   //region creators
   static Future<AMapInputTipsSearchResponse> create__({ bool init = true /* ios only */ }) async {
-    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapInputTipsSearchResponse', {'init': init});
-    final object = AMapInputTipsSearchResponse()..refId = refId;
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapInputTipsSearchResponse', {'init': init});
+    final object = AMapInputTipsSearchResponse()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class AMapInputTipsSearchResponse extends AMapSearchObject with NSCoding, NSCopy
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapInputTipsSearchResponse', {'length': length, 'init': init});
-  
-    final List<AMapInputTipsSearchResponse> typedResult = resultBatch.map((result) => AMapInputTipsSearchResponse()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapInputTipsSearchResponse', {'length': length, 'init': init});
+    return resultBatch.map((it) => AMapInputTipsSearchResponse()..refId = it.refId).toList();
   }
   
   //endregion
@@ -49,7 +47,7 @@ class AMapInputTipsSearchResponse extends AMapSearchObject with NSCoding, NSCopy
   
   Future<List<AMapTip>> get_tips() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapInputTipsSearchResponse::get_tips", {'__this__': this});
-    return (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapTip()..refId = __it__))?.toList();
+    return (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (AMapTip()..refId = __it__.refId))?.toList();
   }
   
   //endregion
@@ -91,7 +89,7 @@ extension AMapInputTipsSearchResponse_Batch on List<AMapInputTipsSearchResponse>
   Future<List<List<AMapTip>>> get_tips_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapInputTipsSearchResponse::get_tips_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapTip()..refId = __it__))?.toList()).toList();
+    final typedResult = (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (AMapTip()..refId = __it__.refId))?.toList()).toList();
     return typedResult;
   }
   

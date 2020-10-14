@@ -24,8 +24,8 @@ class com_amap_api_services_nearby_NearbySearchResult extends java_lang_Object  
 
   //region creators
   static Future<com_amap_api_services_nearby_NearbySearchResult> create__() async {
-    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_services_nearby_NearbySearchResult__', );
-    final object = com_amap_api_services_nearby_NearbySearchResult()..refId = refId;
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createcom_amap_api_services_nearby_NearbySearchResult__', );
+    final object = com_amap_api_services_nearby_NearbySearchResult()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class com_amap_api_services_nearby_NearbySearchResult extends java_lang_Object  
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchcom_amap_api_services_nearby_NearbySearchResult__', {'length': length});
-  
-    final List<com_amap_api_services_nearby_NearbySearchResult> typedResult = resultBatch.map((result) => com_amap_api_services_nearby_NearbySearchResult()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchcom_amap_api_services_nearby_NearbySearchResult__', {'length': length});
+    return resultBatch.map((it) => com_amap_api_services_nearby_NearbySearchResult()..refId = it.refId).toList();
   }
   
   //endregion
@@ -64,13 +62,7 @@ class com_amap_api_services_nearby_NearbySearchResult extends java_lang_Object  
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_nearby_NearbyInfo()..refId = __it__))?.toList();
-      return __return__;
-    }
+    return (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_nearby_NearbyInfo()..refId = __it__.refId))?.toList();
   }
   
   
@@ -87,13 +79,7 @@ class com_amap_api_services_nearby_NearbySearchResult extends java_lang_Object  
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -110,13 +96,7 @@ class com_amap_api_services_nearby_NearbySearchResult extends java_lang_Object  
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   //endregion
@@ -147,13 +127,7 @@ extension com_amap_api_services_nearby_NearbySearchResult_Batch on List<com_amap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.NearbySearchResult::getNearbyInfoList_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_nearby_NearbyInfo()..refId = __it__))?.toList()).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_nearby_NearbyInfo()..refId = __it__.refId))?.toList()).toList();
   }
   
   
@@ -166,13 +140,7 @@ extension com_amap_api_services_nearby_NearbySearchResult_Batch on List<com_amap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.NearbySearchResult::getTotalNum_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
   }
   
   
@@ -185,13 +153,7 @@ extension com_amap_api_services_nearby_NearbySearchResult_Batch on List<com_amap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.NearbySearchResult::setNearbyInfoList_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   //endregion

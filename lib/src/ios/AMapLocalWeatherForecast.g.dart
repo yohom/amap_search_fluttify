@@ -24,8 +24,8 @@ class AMapLocalWeatherForecast extends AMapSearchObject with NSCoding, NSCopying
 
   //region creators
   static Future<AMapLocalWeatherForecast> create__({ bool init = true /* ios only */ }) async {
-    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapLocalWeatherForecast', {'init': init});
-    final object = AMapLocalWeatherForecast()..refId = refId;
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapLocalWeatherForecast', {'init': init});
+    final object = AMapLocalWeatherForecast()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class AMapLocalWeatherForecast extends AMapSearchObject with NSCoding, NSCopying
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapLocalWeatherForecast', {'length': length, 'init': init});
-  
-    final List<AMapLocalWeatherForecast> typedResult = resultBatch.map((result) => AMapLocalWeatherForecast()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapLocalWeatherForecast', {'length': length, 'init': init});
+    return resultBatch.map((it) => AMapLocalWeatherForecast()..refId = it.refId).toList();
   }
   
   //endregion
@@ -64,7 +62,7 @@ class AMapLocalWeatherForecast extends AMapSearchObject with NSCoding, NSCopying
   
   Future<List<AMapLocalDayWeatherForecast>> get_casts() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapLocalWeatherForecast::get_casts", {'__this__': this});
-    return (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapLocalDayWeatherForecast()..refId = __it__))?.toList();
+    return (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (AMapLocalDayWeatherForecast()..refId = __it__.refId))?.toList();
   }
   
   //endregion
@@ -145,7 +143,7 @@ extension AMapLocalWeatherForecast_Batch on List<AMapLocalWeatherForecast> {
   Future<List<List<AMapLocalDayWeatherForecast>>> get_casts_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapLocalWeatherForecast::get_casts_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapLocalDayWeatherForecast()..refId = __it__))?.toList()).toList();
+    final typedResult = (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (AMapLocalDayWeatherForecast()..refId = __it__.refId))?.toList()).toList();
     return typedResult;
   }
   

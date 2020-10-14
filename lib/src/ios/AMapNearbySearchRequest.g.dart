@@ -24,8 +24,8 @@ class AMapNearbySearchRequest extends AMapSearchObject with NSCoding, NSCopying 
 
   //region creators
   static Future<AMapNearbySearchRequest> create__({ bool init = true /* ios only */ }) async {
-    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapNearbySearchRequest', {'init': init});
-    final object = AMapNearbySearchRequest()..refId = refId;
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapNearbySearchRequest', {'init': init});
+    final object = AMapNearbySearchRequest()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class AMapNearbySearchRequest extends AMapSearchObject with NSCoding, NSCopying 
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapNearbySearchRequest', {'length': length, 'init': init});
-  
-    final List<AMapNearbySearchRequest> typedResult = resultBatch.map((result) => AMapNearbySearchRequest()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapNearbySearchRequest', {'length': length, 'init': init});
+    return resultBatch.map((it) => AMapNearbySearchRequest()..refId = it.refId).toList();
   }
   
   //endregion
@@ -44,7 +42,7 @@ class AMapNearbySearchRequest extends AMapSearchObject with NSCoding, NSCopying 
   //region getters
   Future<AMapGeoPoint> get_center() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapNearbySearchRequest::get_center", {'__this__': this});
-    return __result__ == null ? null : (AMapGeoPoint()..refId = __result__);
+    return __result__ == null ? null : (AMapGeoPoint()..refId = __result__.refId);
   }
   
   Future<int> get_radius() async {
@@ -117,7 +115,7 @@ extension AMapNearbySearchRequest_Batch on List<AMapNearbySearchRequest> {
   Future<List<AMapGeoPoint>> get_center_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapNearbySearchRequest::get_center_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__ == null ? null : (AMapGeoPoint()..refId = __result__)).toList();
+    final typedResult = (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (AMapGeoPoint()..refId = __result__.refId)).toList();
     return typedResult;
   }
   
@@ -131,7 +129,7 @@ extension AMapNearbySearchRequest_Batch on List<AMapNearbySearchRequest> {
   Future<List<AMapNearbySearchType>> get_searchType_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapNearbySearchRequest::get_searchType_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as int).toAMapNearbySearchType()).toList();
+    final typedResult = (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as int).toAMapNearbySearchType()).toList();
     return typedResult;
   }
   

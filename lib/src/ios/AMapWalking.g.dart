@@ -24,8 +24,8 @@ class AMapWalking extends AMapSearchObject with NSCoding, NSCopying {
 
   //region creators
   static Future<AMapWalking> create__({ bool init = true /* ios only */ }) async {
-    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapWalking', {'init': init});
-    final object = AMapWalking()..refId = refId;
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapWalking', {'init': init});
+    final object = AMapWalking()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class AMapWalking extends AMapSearchObject with NSCoding, NSCopying {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapWalking', {'length': length, 'init': init});
-  
-    final List<AMapWalking> typedResult = resultBatch.map((result) => AMapWalking()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapWalking', {'length': length, 'init': init});
+    return resultBatch.map((it) => AMapWalking()..refId = it.refId).toList();
   }
   
   //endregion
@@ -44,12 +42,12 @@ class AMapWalking extends AMapSearchObject with NSCoding, NSCopying {
   //region getters
   Future<AMapGeoPoint> get_origin() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapWalking::get_origin", {'__this__': this});
-    return __result__ == null ? null : (AMapGeoPoint()..refId = __result__);
+    return __result__ == null ? null : (AMapGeoPoint()..refId = __result__.refId);
   }
   
   Future<AMapGeoPoint> get_destination() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapWalking::get_destination", {'__this__': this});
-    return __result__ == null ? null : (AMapGeoPoint()..refId = __result__);
+    return __result__ == null ? null : (AMapGeoPoint()..refId = __result__.refId);
   }
   
   Future<int> get_distance() async {
@@ -64,7 +62,7 @@ class AMapWalking extends AMapSearchObject with NSCoding, NSCopying {
   
   Future<List<AMapStep>> get_steps() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapWalking::get_steps", {'__this__': this});
-    return (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapStep()..refId = __it__))?.toList();
+    return (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (AMapStep()..refId = __it__.refId))?.toList();
   }
   
   //endregion
@@ -117,14 +115,14 @@ extension AMapWalking_Batch on List<AMapWalking> {
   Future<List<AMapGeoPoint>> get_origin_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapWalking::get_origin_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__ == null ? null : (AMapGeoPoint()..refId = __result__)).toList();
+    final typedResult = (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (AMapGeoPoint()..refId = __result__.refId)).toList();
     return typedResult;
   }
   
   Future<List<AMapGeoPoint>> get_destination_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapWalking::get_destination_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__ == null ? null : (AMapGeoPoint()..refId = __result__)).toList();
+    final typedResult = (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (AMapGeoPoint()..refId = __result__.refId)).toList();
     return typedResult;
   }
   
@@ -145,7 +143,7 @@ extension AMapWalking_Batch on List<AMapWalking> {
   Future<List<List<AMapStep>>> get_steps_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapWalking::get_steps_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapStep()..refId = __it__))?.toList()).toList();
+    final typedResult = (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (AMapStep()..refId = __it__.refId))?.toList()).toList();
     return typedResult;
   }
   

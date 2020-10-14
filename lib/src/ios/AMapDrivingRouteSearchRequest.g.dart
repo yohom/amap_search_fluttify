@@ -24,8 +24,8 @@ class AMapDrivingRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCo
 
   //region creators
   static Future<AMapDrivingRouteSearchRequest> create__({ bool init = true /* ios only */ }) async {
-    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapDrivingRouteSearchRequest', {'init': init});
-    final object = AMapDrivingRouteSearchRequest()..refId = refId;
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapDrivingRouteSearchRequest', {'init': init});
+    final object = AMapDrivingRouteSearchRequest()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class AMapDrivingRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCo
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapDrivingRouteSearchRequest', {'length': length, 'init': init});
-  
-    final List<AMapDrivingRouteSearchRequest> typedResult = resultBatch.map((result) => AMapDrivingRouteSearchRequest()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapDrivingRouteSearchRequest', {'length': length, 'init': init});
+    return resultBatch.map((it) => AMapDrivingRouteSearchRequest()..refId = it.refId).toList();
   }
   
   //endregion
@@ -49,12 +47,12 @@ class AMapDrivingRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCo
   
   Future<List<AMapGeoPoint>> get_waypoints() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapDrivingRouteSearchRequest::get_waypoints", {'__this__': this});
-    return (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapGeoPoint()..refId = __it__))?.toList();
+    return (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (AMapGeoPoint()..refId = __it__.refId))?.toList();
   }
   
   Future<List<AMapGeoPolygon>> get_avoidpolygons() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapDrivingRouteSearchRequest::get_avoidpolygons", {'__this__': this});
-    return (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapGeoPolygon()..refId = __it__))?.toList();
+    return (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (AMapGeoPolygon()..refId = __it__.refId))?.toList();
   }
   
   Future<String> get_avoidroad() async {
@@ -212,14 +210,14 @@ extension AMapDrivingRouteSearchRequest_Batch on List<AMapDrivingRouteSearchRequ
   Future<List<List<AMapGeoPoint>>> get_waypoints_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapDrivingRouteSearchRequest::get_waypoints_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapGeoPoint()..refId = __it__))?.toList()).toList();
+    final typedResult = (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (AMapGeoPoint()..refId = __it__.refId))?.toList()).toList();
     return typedResult;
   }
   
   Future<List<List<AMapGeoPolygon>>> get_avoidpolygons_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapDrivingRouteSearchRequest::get_avoidpolygons_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapGeoPolygon()..refId = __it__))?.toList()).toList();
+    final typedResult = (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (AMapGeoPolygon()..refId = __it__.refId))?.toList()).toList();
     return typedResult;
   }
   

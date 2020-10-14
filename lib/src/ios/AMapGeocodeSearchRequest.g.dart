@@ -24,8 +24,8 @@ class AMapGeocodeSearchRequest extends AMapSearchObject with NSCoding, NSCopying
 
   //region creators
   static Future<AMapGeocodeSearchRequest> create__({ bool init = true /* ios only */ }) async {
-    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapGeocodeSearchRequest', {'init': init});
-    final object = AMapGeocodeSearchRequest()..refId = refId;
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapGeocodeSearchRequest', {'init': init});
+    final object = AMapGeocodeSearchRequest()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class AMapGeocodeSearchRequest extends AMapSearchObject with NSCoding, NSCopying
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapGeocodeSearchRequest', {'length': length, 'init': init});
-  
-    final List<AMapGeocodeSearchRequest> typedResult = resultBatch.map((result) => AMapGeocodeSearchRequest()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapGeocodeSearchRequest', {'length': length, 'init': init});
+    return resultBatch.map((it) => AMapGeocodeSearchRequest()..refId = it.refId).toList();
   }
   
   //endregion

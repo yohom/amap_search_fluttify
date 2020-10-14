@@ -24,8 +24,8 @@ class AMapPOIPolygonSearchRequest extends AMapPOISearchBaseRequest with NSCoding
 
   //region creators
   static Future<AMapPOIPolygonSearchRequest> create__({ bool init = true /* ios only */ }) async {
-    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapPOIPolygonSearchRequest', {'init': init});
-    final object = AMapPOIPolygonSearchRequest()..refId = refId;
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapPOIPolygonSearchRequest', {'init': init});
+    final object = AMapPOIPolygonSearchRequest()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class AMapPOIPolygonSearchRequest extends AMapPOISearchBaseRequest with NSCoding
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapPOIPolygonSearchRequest', {'length': length, 'init': init});
-  
-    final List<AMapPOIPolygonSearchRequest> typedResult = resultBatch.map((result) => AMapPOIPolygonSearchRequest()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapPOIPolygonSearchRequest', {'length': length, 'init': init});
+    return resultBatch.map((it) => AMapPOIPolygonSearchRequest()..refId = it.refId).toList();
   }
   
   //endregion
@@ -49,7 +47,7 @@ class AMapPOIPolygonSearchRequest extends AMapPOISearchBaseRequest with NSCoding
   
   Future<AMapGeoPolygon> get_polygon() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOIPolygonSearchRequest::get_polygon", {'__this__': this});
-    return __result__ == null ? null : (AMapGeoPolygon()..refId = __result__);
+    return __result__ == null ? null : (AMapGeoPolygon()..refId = __result__.refId);
   }
   
   //endregion
@@ -91,7 +89,7 @@ extension AMapPOIPolygonSearchRequest_Batch on List<AMapPOIPolygonSearchRequest>
   Future<List<AMapGeoPolygon>> get_polygon_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOIPolygonSearchRequest::get_polygon_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__ == null ? null : (AMapGeoPolygon()..refId = __result__)).toList();
+    final typedResult = (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (AMapGeoPolygon()..refId = __result__.refId)).toList();
     return typedResult;
   }
   

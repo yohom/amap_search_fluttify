@@ -24,8 +24,8 @@ class AMapPOISearchResponse extends AMapSearchObject with NSCoding, NSCopying {
 
   //region creators
   static Future<AMapPOISearchResponse> create__({ bool init = true /* ios only */ }) async {
-    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapPOISearchResponse', {'init': init});
-    final object = AMapPOISearchResponse()..refId = refId;
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapPOISearchResponse', {'init': init});
+    final object = AMapPOISearchResponse()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class AMapPOISearchResponse extends AMapSearchObject with NSCoding, NSCopying {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapPOISearchResponse', {'length': length, 'init': init});
-  
-    final List<AMapPOISearchResponse> typedResult = resultBatch.map((result) => AMapPOISearchResponse()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapPOISearchResponse', {'length': length, 'init': init});
+    return resultBatch.map((it) => AMapPOISearchResponse()..refId = it.refId).toList();
   }
   
   //endregion
@@ -49,12 +47,12 @@ class AMapPOISearchResponse extends AMapSearchObject with NSCoding, NSCopying {
   
   Future<AMapSuggestion> get_suggestion() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOISearchResponse::get_suggestion", {'__this__': this});
-    return __result__ == null ? null : (AMapSuggestion()..refId = __result__);
+    return __result__ == null ? null : (AMapSuggestion()..refId = __result__.refId);
   }
   
   Future<List<AMapPOI>> get_pois() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOISearchResponse::get_pois", {'__this__': this});
-    return (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapPOI()..refId = __it__))?.toList();
+    return (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (AMapPOI()..refId = __it__.refId))?.toList();
   }
   
   //endregion
@@ -102,14 +100,14 @@ extension AMapPOISearchResponse_Batch on List<AMapPOISearchResponse> {
   Future<List<AMapSuggestion>> get_suggestion_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOISearchResponse::get_suggestion_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__ == null ? null : (AMapSuggestion()..refId = __result__)).toList();
+    final typedResult = (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (AMapSuggestion()..refId = __result__.refId)).toList();
     return typedResult;
   }
   
   Future<List<List<AMapPOI>>> get_pois_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOISearchResponse::get_pois_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapPOI()..refId = __it__))?.toList()).toList();
+    final typedResult = (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (AMapPOI()..refId = __it__.refId))?.toList()).toList();
     return typedResult;
   }
   

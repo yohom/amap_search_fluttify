@@ -24,8 +24,8 @@ class AMapRailwaySpace extends AMapSearchObject with NSCoding, NSCopying {
 
   //region creators
   static Future<AMapRailwaySpace> create__({ bool init = true /* ios only */ }) async {
-    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapRailwaySpace', {'init': init});
-    final object = AMapRailwaySpace()..refId = refId;
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapRailwaySpace', {'init': init});
+    final object = AMapRailwaySpace()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class AMapRailwaySpace extends AMapSearchObject with NSCoding, NSCopying {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapRailwaySpace', {'length': length, 'init': init});
-  
-    final List<AMapRailwaySpace> typedResult = resultBatch.map((result) => AMapRailwaySpace()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapRailwaySpace', {'length': length, 'init': init});
+    return resultBatch.map((it) => AMapRailwaySpace()..refId = it.refId).toList();
   }
   
   //endregion

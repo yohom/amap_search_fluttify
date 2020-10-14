@@ -24,8 +24,8 @@ class AMapSearchAPI extends NSObject  {
 
   //region creators
   static Future<AMapSearchAPI> create__({ bool init = true /* ios only */ }) async {
-    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapSearchAPI', {'init': init});
-    final object = AMapSearchAPI()..refId = refId;
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapSearchAPI', {'init': init});
+    final object = AMapSearchAPI()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class AMapSearchAPI extends NSObject  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapSearchAPI', {'length': length, 'init': init});
-  
-    final List<AMapSearchAPI> typedResult = resultBatch.map((result) => AMapSearchAPI()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapSearchAPI', {'length': length, 'init': init});
+    return resultBatch.map((it) => AMapSearchAPI()..refId = it.refId).toList();
   }
   
   //endregion
@@ -255,13 +253,7 @@ class AMapSearchAPI extends NSObject  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__ == null ? null : (AMapSearchAPI()..refId = __result__);
-      return __return__;
-    }
+    return __result__ == null ? null : (AMapSearchAPI()..refId = __result__.refId);
   }
   
   
@@ -278,13 +270,7 @@ class AMapSearchAPI extends NSObject  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -301,13 +287,7 @@ class AMapSearchAPI extends NSObject  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -324,13 +304,7 @@ class AMapSearchAPI extends NSObject  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -347,13 +321,7 @@ class AMapSearchAPI extends NSObject  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -370,13 +338,7 @@ class AMapSearchAPI extends NSObject  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -393,13 +355,7 @@ class AMapSearchAPI extends NSObject  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -416,13 +372,7 @@ class AMapSearchAPI extends NSObject  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -439,13 +389,7 @@ class AMapSearchAPI extends NSObject  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -462,13 +406,7 @@ class AMapSearchAPI extends NSObject  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -485,13 +423,7 @@ class AMapSearchAPI extends NSObject  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -508,13 +440,7 @@ class AMapSearchAPI extends NSObject  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -531,13 +457,7 @@ class AMapSearchAPI extends NSObject  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -554,13 +474,7 @@ class AMapSearchAPI extends NSObject  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -577,13 +491,7 @@ class AMapSearchAPI extends NSObject  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -600,13 +508,7 @@ class AMapSearchAPI extends NSObject  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -623,13 +525,7 @@ class AMapSearchAPI extends NSObject  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -646,13 +542,7 @@ class AMapSearchAPI extends NSObject  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -669,13 +559,7 @@ class AMapSearchAPI extends NSObject  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -692,13 +576,7 @@ class AMapSearchAPI extends NSObject  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -715,13 +593,7 @@ class AMapSearchAPI extends NSObject  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -738,13 +610,7 @@ class AMapSearchAPI extends NSObject  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -761,13 +627,7 @@ class AMapSearchAPI extends NSObject  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -784,13 +644,7 @@ class AMapSearchAPI extends NSObject  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -807,13 +661,7 @@ class AMapSearchAPI extends NSObject  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -830,13 +678,7 @@ class AMapSearchAPI extends NSObject  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -853,13 +695,7 @@ class AMapSearchAPI extends NSObject  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -876,13 +712,7 @@ class AMapSearchAPI extends NSObject  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -899,13 +729,7 @@ class AMapSearchAPI extends NSObject  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -922,13 +746,7 @@ class AMapSearchAPI extends NSObject  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -945,13 +763,7 @@ class AMapSearchAPI extends NSObject  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -968,13 +780,7 @@ class AMapSearchAPI extends NSObject  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -991,13 +797,7 @@ class AMapSearchAPI extends NSObject  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   //endregion
@@ -1020,7 +820,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   Future<List<AMapSearchLanguage>> get_language_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapSearchAPI::get_language_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as int).toAMapSearchLanguage()).toList();
+    final typedResult = (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as int).toAMapSearchLanguage()).toList();
     return typedResult;
   }
   
@@ -1052,13 +852,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::init_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__ == null ? null : (AMapSearchAPI()..refId = __result__)).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (AMapSearchAPI()..refId = __result__.refId)).toList();
   }
   
   
@@ -1071,13 +865,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::cancelAllRequests_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -1090,13 +878,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapPOIIDSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -1109,13 +891,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapPOIKeywordsSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -1128,13 +904,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapPOIAroundSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -1147,13 +917,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapPOIPolygonSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -1166,13 +930,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapRoutePOISearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -1185,13 +943,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapGeocodeSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -1204,13 +956,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapReGoecodeSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -1223,13 +969,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapInputTipsSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -1242,13 +982,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapBusStopSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -1261,13 +995,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapBusLineIDSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -1280,13 +1008,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapBusLineNameSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -1299,13 +1021,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapDistrictSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -1318,13 +1034,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapDrivingRouteSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -1337,13 +1047,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapWalkingRouteSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -1356,13 +1060,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapTransitRouteSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -1375,13 +1073,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapRidingRouteSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -1394,13 +1086,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapTruckRouteSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -1413,13 +1099,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapFutureRouteSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -1432,13 +1112,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapWeatherSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -1451,13 +1125,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapRoadTrafficSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -1470,13 +1138,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapRoadTrafficCircleSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -1489,13 +1151,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapDistanceSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -1508,13 +1164,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapNearbySearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -1527,13 +1177,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapCloudPOIAroundSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -1546,13 +1190,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapCloudPOIPolygonSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -1565,13 +1203,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapCloudPOIIDSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -1584,13 +1216,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapCloudPOILocalSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -1603,13 +1229,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapLocationShareSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -1622,13 +1242,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapPOIShareSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -1641,13 +1255,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapRouteShareSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -1660,13 +1268,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapNavigationShareSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   //endregion

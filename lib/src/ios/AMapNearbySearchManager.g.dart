@@ -108,13 +108,7 @@ class AMapNearbySearchManager extends NSObject  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__ == null ? null : (AMapNearbySearchManager()..refId = __result__);
-      return __return__;
-    }
+    return __result__ == null ? null : (AMapNearbySearchManager()..refId = __result__.refId);
   }
   
   
@@ -131,13 +125,7 @@ class AMapNearbySearchManager extends NSObject  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -154,13 +142,7 @@ class AMapNearbySearchManager extends NSObject  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -177,13 +159,7 @@ class AMapNearbySearchManager extends NSObject  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -200,13 +176,7 @@ class AMapNearbySearchManager extends NSObject  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   //endregion
@@ -255,13 +225,7 @@ extension AMapNearbySearchManager_Batch on List<AMapNearbySearchManager> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapNearbySearchManager::sharedInstance_batch', );
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__ == null ? null : (AMapNearbySearchManager()..refId = __result__)).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (AMapNearbySearchManager()..refId = __result__.refId)).toList();
   }
   
   
@@ -274,13 +238,7 @@ extension AMapNearbySearchManager_Batch on List<AMapNearbySearchManager> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapNearbySearchManager::startAutoUploadNearbyInfo_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -293,13 +251,7 @@ extension AMapNearbySearchManager_Batch on List<AMapNearbySearchManager> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapNearbySearchManager::stopAutoUploadNearbyInfo_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -312,13 +264,7 @@ extension AMapNearbySearchManager_Batch on List<AMapNearbySearchManager> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapNearbySearchManager::uploadNearbyInfo_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"info": info[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
   }
   
   
@@ -331,13 +277,7 @@ extension AMapNearbySearchManager_Batch on List<AMapNearbySearchManager> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapNearbySearchManager::clearUserInfoWithID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"userID": userID[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
   }
   
   //endregion

@@ -24,8 +24,8 @@ class AMapCloudImage extends AMapSearchObject with NSCoding, NSCopying {
 
   //region creators
   static Future<AMapCloudImage> create__({ bool init = true /* ios only */ }) async {
-    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapCloudImage', {'init': init});
-    final object = AMapCloudImage()..refId = refId;
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapCloudImage', {'init': init});
+    final object = AMapCloudImage()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class AMapCloudImage extends AMapSearchObject with NSCoding, NSCopying {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapCloudImage', {'length': length, 'init': init});
-  
-    final List<AMapCloudImage> typedResult = resultBatch.map((result) => AMapCloudImage()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapCloudImage', {'length': length, 'init': init});
+    return resultBatch.map((it) => AMapCloudImage()..refId = it.refId).toList();
   }
   
   //endregion

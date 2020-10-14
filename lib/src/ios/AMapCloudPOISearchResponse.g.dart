@@ -24,8 +24,8 @@ class AMapCloudPOISearchResponse extends AMapSearchObject with NSCoding, NSCopyi
 
   //region creators
   static Future<AMapCloudPOISearchResponse> create__({ bool init = true /* ios only */ }) async {
-    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapCloudPOISearchResponse', {'init': init});
-    final object = AMapCloudPOISearchResponse()..refId = refId;
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapCloudPOISearchResponse', {'init': init});
+    final object = AMapCloudPOISearchResponse()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class AMapCloudPOISearchResponse extends AMapSearchObject with NSCoding, NSCopyi
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapCloudPOISearchResponse', {'length': length, 'init': init});
-  
-    final List<AMapCloudPOISearchResponse> typedResult = resultBatch.map((result) => AMapCloudPOISearchResponse()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapCloudPOISearchResponse', {'length': length, 'init': init});
+    return resultBatch.map((it) => AMapCloudPOISearchResponse()..refId = it.refId).toList();
   }
   
   //endregion
@@ -49,7 +47,7 @@ class AMapCloudPOISearchResponse extends AMapSearchObject with NSCoding, NSCopyi
   
   Future<List<AMapCloudPOI>> get_POIs() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudPOISearchResponse::get_POIs", {'__this__': this});
-    return (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapCloudPOI()..refId = __it__))?.toList();
+    return (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (AMapCloudPOI()..refId = __it__.refId))?.toList();
   }
   
   //endregion
@@ -91,7 +89,7 @@ extension AMapCloudPOISearchResponse_Batch on List<AMapCloudPOISearchResponse> {
   Future<List<List<AMapCloudPOI>>> get_POIs_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudPOISearchResponse::get_POIs_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapCloudPOI()..refId = __it__))?.toList()).toList();
+    final typedResult = (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (AMapCloudPOI()..refId = __it__.refId))?.toList()).toList();
     return typedResult;
   }
   

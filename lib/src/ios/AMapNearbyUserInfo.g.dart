@@ -24,8 +24,8 @@ class AMapNearbyUserInfo extends AMapSearchObject with NSCoding, NSCopying {
 
   //region creators
   static Future<AMapNearbyUserInfo> create__({ bool init = true /* ios only */ }) async {
-    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapNearbyUserInfo', {'init': init});
-    final object = AMapNearbyUserInfo()..refId = refId;
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapNearbyUserInfo', {'init': init});
+    final object = AMapNearbyUserInfo()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class AMapNearbyUserInfo extends AMapSearchObject with NSCoding, NSCopying {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapNearbyUserInfo', {'length': length, 'init': init});
-  
-    final List<AMapNearbyUserInfo> typedResult = resultBatch.map((result) => AMapNearbyUserInfo()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapNearbyUserInfo', {'length': length, 'init': init});
+    return resultBatch.map((it) => AMapNearbyUserInfo()..refId = it.refId).toList();
   }
   
   //endregion
@@ -49,7 +47,7 @@ class AMapNearbyUserInfo extends AMapSearchObject with NSCoding, NSCopying {
   
   Future<AMapGeoPoint> get_location() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapNearbyUserInfo::get_location", {'__this__': this});
-    return __result__ == null ? null : (AMapGeoPoint()..refId = __result__);
+    return __result__ == null ? null : (AMapGeoPoint()..refId = __result__.refId);
   }
   
   Future<double> get_distance() async {
@@ -113,7 +111,7 @@ extension AMapNearbyUserInfo_Batch on List<AMapNearbyUserInfo> {
   Future<List<AMapGeoPoint>> get_location_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapNearbyUserInfo::get_location_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__ == null ? null : (AMapGeoPoint()..refId = __result__)).toList();
+    final typedResult = (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (AMapGeoPoint()..refId = __result__.refId)).toList();
     return typedResult;
   }
   

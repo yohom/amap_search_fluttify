@@ -24,8 +24,8 @@ class AMapGeoPoint extends AMapSearchObject with NSCoding, NSCopying {
 
   //region creators
   static Future<AMapGeoPoint> create__({ bool init = true /* ios only */ }) async {
-    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapGeoPoint', {'init': init});
-    final object = AMapGeoPoint()..refId = refId;
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapGeoPoint', {'init': init});
+    final object = AMapGeoPoint()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class AMapGeoPoint extends AMapSearchObject with NSCoding, NSCopying {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapGeoPoint', {'length': length, 'init': init});
-  
-    final List<AMapGeoPoint> typedResult = resultBatch.map((result) => AMapGeoPoint()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapGeoPoint', {'length': length, 'init': init});
+    return resultBatch.map((it) => AMapGeoPoint()..refId = it.refId).toList();
   }
   
   //endregion
@@ -84,13 +82,7 @@ class AMapGeoPoint extends AMapSearchObject with NSCoding, NSCopying {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__ == null ? null : (AMapGeoPoint()..refId = __result__);
-      return __return__;
-    }
+    return __result__ == null ? null : (AMapGeoPoint()..refId = __result__.refId);
   }
   
   //endregion
@@ -145,13 +137,7 @@ extension AMapGeoPoint_Batch on List<AMapGeoPoint> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapGeoPoint::locationWithLatitude_longitude_batch', [for (int __i__ = 0; __i__ < lat.length; __i__++) {"lat": lat[__i__], "lon": lon[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__ == null ? null : (AMapGeoPoint()..refId = __result__)).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (AMapGeoPoint()..refId = __result__.refId)).toList();
   }
   
   //endregion
