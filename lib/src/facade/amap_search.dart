@@ -50,9 +50,7 @@ mixin _Community on _Holder {
   }) {
     assert(page > 0 && page < 100, '页数范围为1-100');
     assert(pageSize > 0 && pageSize < 50, '每页大小范围为1-50');
-    // 会在listener中关闭
-    // ignore: close_sinks
-    final _controller = Completer<List<Poi>>.sync();
+    final completer = Completer<List<Poi>>.sync();
 
     platform(
       android: (pool) async {
@@ -73,7 +71,7 @@ mixin _Community on _Holder {
 
         // 设置回调
         await _androidPoiSearch
-            .setOnPoiSearchListener(_AndroidSearchListener(_controller));
+            .setOnPoiSearchListener(_AndroidSearchListener(completer));
 
         // 开始搜索
         await _androidPoiSearch.searchPOIAsyn();
@@ -85,7 +83,7 @@ mixin _Community on _Holder {
         _iosSearch = await AMapSearchAPI.create__();
 
         // 设置回调
-        await _iosSearch.set_delegate(_IOSSearchListener(_controller));
+        await _iosSearch.set_delegate(_IOSSearchListener(completer));
 
         // 创建请求对象
         final request = await AMapPOIKeywordsSearchRequest.create__();
@@ -105,7 +103,7 @@ mixin _Community on _Holder {
         pool..add(request);
       },
     );
-    return _controller.future;
+    return completer.future;
   }
 
   /// 周边搜索poi
