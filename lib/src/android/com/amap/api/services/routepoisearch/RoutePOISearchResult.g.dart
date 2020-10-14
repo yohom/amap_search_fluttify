@@ -24,8 +24,8 @@ class com_amap_api_services_routepoisearch_RoutePOISearchResult extends java_lan
 
   //region creators
   static Future<com_amap_api_services_routepoisearch_RoutePOISearchResult> create__List_java_util_ArrayList_com_amap_api_services_routepoisearch_RoutePOIItem____com_amap_api_services_routepoisearch_RoutePOISearchQuery(List<com_amap_api_services_routepoisearch_RoutePOIItem> var1, com_amap_api_services_routepoisearch_RoutePOISearchQuery var2) async {
-    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_services_routepoisearch_RoutePOISearchResult__java_util_ArrayList_com_amap_api_services_routepoisearch_RoutePOIItem___com_amap_api_services_routepoisearch_RoutePOISearchQuery', {"var1": var1, "var2": var2});
-    final object = com_amap_api_services_routepoisearch_RoutePOISearchResult()..refId = refId;
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createcom_amap_api_services_routepoisearch_RoutePOISearchResult__java_util_ArrayList_com_amap_api_services_routepoisearch_RoutePOIItem___com_amap_api_services_routepoisearch_RoutePOISearchQuery', {"var1": var1, "var2": var2});
+    final object = com_amap_api_services_routepoisearch_RoutePOISearchResult()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class com_amap_api_services_routepoisearch_RoutePOISearchResult extends java_lan
     if (var1.length != var2.length) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchcom_amap_api_services_routepoisearch_RoutePOISearchResult__java_util_ArrayList_com_amap_api_services_routepoisearch_RoutePOIItem___com_amap_api_services_routepoisearch_RoutePOISearchQuery', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]);
-  
-    final List<com_amap_api_services_routepoisearch_RoutePOISearchResult> typedResult = resultBatch.map((result) => com_amap_api_services_routepoisearch_RoutePOISearchResult()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchcom_amap_api_services_routepoisearch_RoutePOISearchResult__java_util_ArrayList_com_amap_api_services_routepoisearch_RoutePOIItem___com_amap_api_services_routepoisearch_RoutePOISearchQuery', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]);
+    return resultBatch.map((it) => com_amap_api_services_routepoisearch_RoutePOISearchResult()..refId = it.refId).toList();
   }
   
   //endregion
@@ -64,13 +62,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearchResult extends java_lan
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_routepoisearch_RoutePOIItem()..refId = __it__))?.toList();
-      return __return__;
-    }
+    return (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_routepoisearch_RoutePOIItem()..refId = __it__.refId))?.toList();
   }
   
   
@@ -87,13 +79,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearchResult extends java_lan
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__ == null ? null : (com_amap_api_services_routepoisearch_RoutePOISearchQuery()..refId = __result__);
-      return __return__;
-    }
+    return __result__ == null ? null : (com_amap_api_services_routepoisearch_RoutePOISearchQuery()..refId = __result__.refId);
   }
   
   //endregion
@@ -124,13 +110,7 @@ extension com_amap_api_services_routepoisearch_RoutePOISearchResult_Batch on Lis
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.routepoisearch.RoutePOISearchResult::getRoutePois_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_routepoisearch_RoutePOIItem()..refId = __it__))?.toList()).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_routepoisearch_RoutePOIItem()..refId = __it__.refId))?.toList()).toList();
   }
   
   
@@ -143,13 +123,7 @@ extension com_amap_api_services_routepoisearch_RoutePOISearchResult_Batch on Lis
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.routepoisearch.RoutePOISearchResult::getQuery_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__ == null ? null : (com_amap_api_services_routepoisearch_RoutePOISearchQuery()..refId = __result__)).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_services_routepoisearch_RoutePOISearchQuery()..refId = __result__.refId)).toList();
   }
   
   //endregion

@@ -52,13 +52,7 @@ class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -75,13 +69,7 @@ class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -98,13 +86,7 @@ class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -121,13 +103,7 @@ class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -144,13 +120,7 @@ class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__ == null ? null : (com_amap_api_services_core_ServiceSettings()..refId = __result__);
-      return __return__;
-    }
+    return __result__ == null ? null : (com_amap_api_services_core_ServiceSettings()..refId = __result__.refId);
   }
   
   
@@ -167,13 +137,7 @@ class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -190,13 +154,7 @@ class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -213,13 +171,7 @@ class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -236,13 +188,7 @@ class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -259,13 +205,7 @@ class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -282,13 +222,7 @@ class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   //endregion
@@ -319,13 +253,7 @@ extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.ServiceSettings::getConnectionTimeOut_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
   }
   
   
@@ -338,13 +266,7 @@ extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.ServiceSettings::getSoTimeOut_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
   }
   
   
@@ -357,13 +279,7 @@ extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.ServiceSettings::setConnectionTimeOut_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -376,13 +292,7 @@ extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.ServiceSettings::setSoTimeOut_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -395,13 +305,7 @@ extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.ServiceSettings::getInstance_batch', );
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__ == null ? null : (com_amap_api_services_core_ServiceSettings()..refId = __result__)).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_services_core_ServiceSettings()..refId = __result__.refId)).toList();
   }
   
   
@@ -414,13 +318,7 @@ extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.ServiceSettings::setLanguage_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -433,13 +331,7 @@ extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.ServiceSettings::setProtocol_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -452,13 +344,7 @@ extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.ServiceSettings::getLanguage_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
   }
   
   
@@ -471,13 +357,7 @@ extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.ServiceSettings::getProtocol_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
   }
   
   
@@ -490,13 +370,7 @@ extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.ServiceSettings::setApiKey_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -509,13 +383,7 @@ extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.ServiceSettings::destroyInnerAsynThreadPool_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   //endregion

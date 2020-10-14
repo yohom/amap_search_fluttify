@@ -24,8 +24,8 @@ class AMapStep extends AMapSearchObject with NSCoding, NSCopying {
 
   //region creators
   static Future<AMapStep> create__({ bool init = true /* ios only */ }) async {
-    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapStep', {'init': init});
-    final object = AMapStep()..refId = refId;
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapStep', {'init': init});
+    final object = AMapStep()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class AMapStep extends AMapSearchObject with NSCoding, NSCopying {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapStep', {'length': length, 'init': init});
-  
-    final List<AMapStep> typedResult = resultBatch.map((result) => AMapStep()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapStep', {'length': length, 'init': init});
+    return resultBatch.map((it) => AMapStep()..refId = it.refId).toList();
   }
   
   //endregion
@@ -99,12 +97,12 @@ class AMapStep extends AMapSearchObject with NSCoding, NSCopying {
   
   Future<List<AMapCity>> get_cities() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapStep::get_cities", {'__this__': this});
-    return (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapCity()..refId = __it__))?.toList();
+    return (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (AMapCity()..refId = __it__.refId))?.toList();
   }
   
   Future<List<AMapTMC>> get_tmcs() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapStep::get_tmcs", {'__this__': this});
-    return (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapTMC()..refId = __it__))?.toList();
+    return (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (AMapTMC()..refId = __it__.refId))?.toList();
   }
   
   //endregion
@@ -282,14 +280,14 @@ extension AMapStep_Batch on List<AMapStep> {
   Future<List<List<AMapCity>>> get_cities_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapStep::get_cities_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapCity()..refId = __it__))?.toList()).toList();
+    final typedResult = (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (AMapCity()..refId = __it__.refId))?.toList()).toList();
     return typedResult;
   }
   
   Future<List<List<AMapTMC>>> get_tmcs_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapStep::get_tmcs_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapTMC()..refId = __it__))?.toList()).toList();
+    final typedResult = (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (AMapTMC()..refId = __it__.refId))?.toList()).toList();
     return typedResult;
   }
   

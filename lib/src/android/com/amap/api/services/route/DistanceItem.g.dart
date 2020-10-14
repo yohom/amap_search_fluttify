@@ -24,8 +24,8 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
 
   //region creators
   static Future<com_amap_api_services_route_DistanceItem> create__() async {
-    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_services_route_DistanceItem__', );
-    final object = com_amap_api_services_route_DistanceItem()..refId = refId;
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createcom_amap_api_services_route_DistanceItem__', );
+    final object = com_amap_api_services_route_DistanceItem()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchcom_amap_api_services_route_DistanceItem__', {'length': length});
-  
-    final List<com_amap_api_services_route_DistanceItem> typedResult = resultBatch.map((result) => com_amap_api_services_route_DistanceItem()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchcom_amap_api_services_route_DistanceItem__', {'length': length});
+    return resultBatch.map((it) => com_amap_api_services_route_DistanceItem()..refId = it.refId).toList();
   }
   
   //endregion
@@ -78,13 +76,7 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -101,13 +93,7 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -124,13 +110,7 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -147,13 +127,7 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -170,13 +144,7 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -193,13 +161,7 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -216,13 +178,7 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -239,13 +195,7 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -262,13 +212,7 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -285,13 +229,7 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -308,13 +246,7 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -331,13 +263,7 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   //endregion
@@ -388,13 +314,7 @@ extension com_amap_api_services_route_DistanceItem_Batch on List<com_amap_api_se
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.DistanceItem::getOriginId_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
   }
   
   
@@ -407,13 +327,7 @@ extension com_amap_api_services_route_DistanceItem_Batch on List<com_amap_api_se
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.DistanceItem::getDestId_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
   }
   
   
@@ -426,13 +340,7 @@ extension com_amap_api_services_route_DistanceItem_Batch on List<com_amap_api_se
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.DistanceItem::getDistance_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
   }
   
   
@@ -445,13 +353,7 @@ extension com_amap_api_services_route_DistanceItem_Batch on List<com_amap_api_se
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.DistanceItem::getDuration_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
   }
   
   
@@ -464,13 +366,7 @@ extension com_amap_api_services_route_DistanceItem_Batch on List<com_amap_api_se
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.DistanceItem::getErrorInfo_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
   }
   
   
@@ -483,13 +379,7 @@ extension com_amap_api_services_route_DistanceItem_Batch on List<com_amap_api_se
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.DistanceItem::getErrorCode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
   }
   
   
@@ -502,13 +392,7 @@ extension com_amap_api_services_route_DistanceItem_Batch on List<com_amap_api_se
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.DistanceItem::setOriginId_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -521,13 +405,7 @@ extension com_amap_api_services_route_DistanceItem_Batch on List<com_amap_api_se
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.DistanceItem::setDestId_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -540,13 +418,7 @@ extension com_amap_api_services_route_DistanceItem_Batch on List<com_amap_api_se
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.DistanceItem::setDistance_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -559,13 +431,7 @@ extension com_amap_api_services_route_DistanceItem_Batch on List<com_amap_api_se
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.DistanceItem::setDuration_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -578,13 +444,7 @@ extension com_amap_api_services_route_DistanceItem_Batch on List<com_amap_api_se
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.DistanceItem::setErrorInfo_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -597,13 +457,7 @@ extension com_amap_api_services_route_DistanceItem_Batch on List<com_amap_api_se
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.DistanceItem::setErrorCode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   //endregion

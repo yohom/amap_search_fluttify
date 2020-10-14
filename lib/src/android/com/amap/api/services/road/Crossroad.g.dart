@@ -24,8 +24,8 @@ class com_amap_api_services_road_Crossroad extends com_amap_api_services_road_Ro
 
   //region creators
   static Future<com_amap_api_services_road_Crossroad> create__() async {
-    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_services_road_Crossroad__', );
-    final object = com_amap_api_services_road_Crossroad()..refId = refId;
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createcom_amap_api_services_road_Crossroad__', );
+    final object = com_amap_api_services_road_Crossroad()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class com_amap_api_services_road_Crossroad extends com_amap_api_services_road_Ro
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchcom_amap_api_services_road_Crossroad__', {'length': length});
-  
-    final List<com_amap_api_services_road_Crossroad> typedResult = resultBatch.map((result) => com_amap_api_services_road_Crossroad()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchcom_amap_api_services_road_Crossroad__', {'length': length});
+    return resultBatch.map((it) => com_amap_api_services_road_Crossroad()..refId = it.refId).toList();
   }
   
   //endregion
@@ -64,13 +62,7 @@ class com_amap_api_services_road_Crossroad extends com_amap_api_services_road_Ro
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -87,13 +79,7 @@ class com_amap_api_services_road_Crossroad extends com_amap_api_services_road_Ro
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -110,13 +96,7 @@ class com_amap_api_services_road_Crossroad extends com_amap_api_services_road_Ro
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -133,13 +113,7 @@ class com_amap_api_services_road_Crossroad extends com_amap_api_services_road_Ro
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -156,13 +130,7 @@ class com_amap_api_services_road_Crossroad extends com_amap_api_services_road_Ro
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -179,13 +147,7 @@ class com_amap_api_services_road_Crossroad extends com_amap_api_services_road_Ro
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -202,13 +164,7 @@ class com_amap_api_services_road_Crossroad extends com_amap_api_services_road_Ro
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -225,13 +181,7 @@ class com_amap_api_services_road_Crossroad extends com_amap_api_services_road_Ro
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -248,13 +198,7 @@ class com_amap_api_services_road_Crossroad extends com_amap_api_services_road_Ro
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -271,13 +215,7 @@ class com_amap_api_services_road_Crossroad extends com_amap_api_services_road_Ro
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -294,13 +232,7 @@ class com_amap_api_services_road_Crossroad extends com_amap_api_services_road_Ro
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -317,13 +249,7 @@ class com_amap_api_services_road_Crossroad extends com_amap_api_services_road_Ro
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   //endregion
@@ -354,13 +280,7 @@ extension com_amap_api_services_road_Crossroad_Batch on List<com_amap_api_servic
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.road.Crossroad::getDistance_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
   }
   
   
@@ -373,13 +293,7 @@ extension com_amap_api_services_road_Crossroad_Batch on List<com_amap_api_servic
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.road.Crossroad::setDistance_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -392,13 +306,7 @@ extension com_amap_api_services_road_Crossroad_Batch on List<com_amap_api_servic
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.road.Crossroad::getDirection_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
   }
   
   
@@ -411,13 +319,7 @@ extension com_amap_api_services_road_Crossroad_Batch on List<com_amap_api_servic
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.road.Crossroad::setDirection_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -430,13 +332,7 @@ extension com_amap_api_services_road_Crossroad_Batch on List<com_amap_api_servic
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.road.Crossroad::getFirstRoadId_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
   }
   
   
@@ -449,13 +345,7 @@ extension com_amap_api_services_road_Crossroad_Batch on List<com_amap_api_servic
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.road.Crossroad::setFirstRoadId_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -468,13 +358,7 @@ extension com_amap_api_services_road_Crossroad_Batch on List<com_amap_api_servic
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.road.Crossroad::getFirstRoadName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
   }
   
   
@@ -487,13 +371,7 @@ extension com_amap_api_services_road_Crossroad_Batch on List<com_amap_api_servic
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.road.Crossroad::setFirstRoadName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -506,13 +384,7 @@ extension com_amap_api_services_road_Crossroad_Batch on List<com_amap_api_servic
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.road.Crossroad::getSecondRoadId_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
   }
   
   
@@ -525,13 +397,7 @@ extension com_amap_api_services_road_Crossroad_Batch on List<com_amap_api_servic
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.road.Crossroad::setSecondRoadId_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -544,13 +410,7 @@ extension com_amap_api_services_road_Crossroad_Batch on List<com_amap_api_servic
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.road.Crossroad::getSecondRoadName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
   }
   
   
@@ -563,13 +423,7 @@ extension com_amap_api_services_road_Crossroad_Batch on List<com_amap_api_servic
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.road.Crossroad::setSecondRoadName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   //endregion

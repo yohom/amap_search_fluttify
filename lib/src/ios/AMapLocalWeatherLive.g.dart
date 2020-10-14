@@ -24,8 +24,8 @@ class AMapLocalWeatherLive extends AMapSearchObject with NSCoding, NSCopying {
 
   //region creators
   static Future<AMapLocalWeatherLive> create__({ bool init = true /* ios only */ }) async {
-    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapLocalWeatherLive', {'init': init});
-    final object = AMapLocalWeatherLive()..refId = refId;
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapLocalWeatherLive', {'init': init});
+    final object = AMapLocalWeatherLive()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class AMapLocalWeatherLive extends AMapSearchObject with NSCoding, NSCopying {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapLocalWeatherLive', {'length': length, 'init': init});
-  
-    final List<AMapLocalWeatherLive> typedResult = resultBatch.map((result) => AMapLocalWeatherLive()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapLocalWeatherLive', {'length': length, 'init': init});
+    return resultBatch.map((it) => AMapLocalWeatherLive()..refId = it.refId).toList();
   }
   
   //endregion

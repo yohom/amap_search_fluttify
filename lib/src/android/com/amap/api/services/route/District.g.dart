@@ -24,8 +24,8 @@ class com_amap_api_services_route_District extends java_lang_Object with android
 
   //region creators
   static Future<com_amap_api_services_route_District> create__() async {
-    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_services_route_District__', );
-    final object = com_amap_api_services_route_District()..refId = refId;
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createcom_amap_api_services_route_District__', );
+    final object = com_amap_api_services_route_District()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class com_amap_api_services_route_District extends java_lang_Object with android
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchcom_amap_api_services_route_District__', {'length': length});
-  
-    final List<com_amap_api_services_route_District> typedResult = resultBatch.map((result) => com_amap_api_services_route_District()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchcom_amap_api_services_route_District__', {'length': length});
+    return resultBatch.map((it) => com_amap_api_services_route_District()..refId = it.refId).toList();
   }
   
   //endregion
@@ -64,13 +62,7 @@ class com_amap_api_services_route_District extends java_lang_Object with android
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -87,13 +79,7 @@ class com_amap_api_services_route_District extends java_lang_Object with android
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -110,13 +96,7 @@ class com_amap_api_services_route_District extends java_lang_Object with android
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -133,13 +113,7 @@ class com_amap_api_services_route_District extends java_lang_Object with android
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   //endregion
@@ -170,13 +144,7 @@ extension com_amap_api_services_route_District_Batch on List<com_amap_api_servic
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.District::getDistrictName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
   }
   
   
@@ -189,13 +157,7 @@ extension com_amap_api_services_route_District_Batch on List<com_amap_api_servic
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.District::setDistrictName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -208,13 +170,7 @@ extension com_amap_api_services_route_District_Batch on List<com_amap_api_servic
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.District::getDistrictAdcode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
   }
   
   
@@ -227,13 +183,7 @@ extension com_amap_api_services_route_District_Batch on List<com_amap_api_servic
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.District::setDistrictAdcode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   //endregion

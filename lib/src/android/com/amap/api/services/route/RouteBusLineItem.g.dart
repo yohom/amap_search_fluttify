@@ -24,8 +24,8 @@ class com_amap_api_services_route_RouteBusLineItem extends com_amap_api_services
 
   //region creators
   static Future<com_amap_api_services_route_RouteBusLineItem> create__() async {
-    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_services_route_RouteBusLineItem__', );
-    final object = com_amap_api_services_route_RouteBusLineItem()..refId = refId;
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createcom_amap_api_services_route_RouteBusLineItem__', );
+    final object = com_amap_api_services_route_RouteBusLineItem()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class com_amap_api_services_route_RouteBusLineItem extends com_amap_api_services
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchcom_amap_api_services_route_RouteBusLineItem__', {'length': length});
-  
-    final List<com_amap_api_services_route_RouteBusLineItem> typedResult = resultBatch.map((result) => com_amap_api_services_route_RouteBusLineItem()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchcom_amap_api_services_route_RouteBusLineItem__', {'length': length});
+    return resultBatch.map((it) => com_amap_api_services_route_RouteBusLineItem()..refId = it.refId).toList();
   }
   
   //endregion
@@ -64,13 +62,7 @@ class com_amap_api_services_route_RouteBusLineItem extends com_amap_api_services
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__ == null ? null : (com_amap_api_services_busline_BusStationItem()..refId = __result__);
-      return __return__;
-    }
+    return __result__ == null ? null : (com_amap_api_services_busline_BusStationItem()..refId = __result__.refId);
   }
   
   
@@ -87,13 +79,7 @@ class com_amap_api_services_route_RouteBusLineItem extends com_amap_api_services
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -110,13 +96,7 @@ class com_amap_api_services_route_RouteBusLineItem extends com_amap_api_services
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__ == null ? null : (com_amap_api_services_busline_BusStationItem()..refId = __result__);
-      return __return__;
-    }
+    return __result__ == null ? null : (com_amap_api_services_busline_BusStationItem()..refId = __result__.refId);
   }
   
   
@@ -133,13 +113,7 @@ class com_amap_api_services_route_RouteBusLineItem extends com_amap_api_services
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -156,13 +130,7 @@ class com_amap_api_services_route_RouteBusLineItem extends com_amap_api_services
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_core_LatLonPoint()..refId = __it__))?.toList();
-      return __return__;
-    }
+    return (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_core_LatLonPoint()..refId = __it__.refId))?.toList();
   }
   
   
@@ -179,13 +147,7 @@ class com_amap_api_services_route_RouteBusLineItem extends com_amap_api_services
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -202,13 +164,7 @@ class com_amap_api_services_route_RouteBusLineItem extends com_amap_api_services
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -225,13 +181,7 @@ class com_amap_api_services_route_RouteBusLineItem extends com_amap_api_services
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -248,13 +198,7 @@ class com_amap_api_services_route_RouteBusLineItem extends com_amap_api_services
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_busline_BusStationItem()..refId = __it__))?.toList();
-      return __return__;
-    }
+    return (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_busline_BusStationItem()..refId = __it__.refId))?.toList();
   }
   
   
@@ -271,13 +215,7 @@ class com_amap_api_services_route_RouteBusLineItem extends com_amap_api_services
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -294,13 +232,7 @@ class com_amap_api_services_route_RouteBusLineItem extends com_amap_api_services
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -317,13 +249,7 @@ class com_amap_api_services_route_RouteBusLineItem extends com_amap_api_services
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   //endregion
@@ -354,13 +280,7 @@ extension com_amap_api_services_route_RouteBusLineItem_Batch on List<com_amap_ap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteBusLineItem::getDepartureBusStation_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__ == null ? null : (com_amap_api_services_busline_BusStationItem()..refId = __result__)).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_services_busline_BusStationItem()..refId = __result__.refId)).toList();
   }
   
   
@@ -373,13 +293,7 @@ extension com_amap_api_services_route_RouteBusLineItem_Batch on List<com_amap_ap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteBusLineItem::setDepartureBusStation_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -392,13 +306,7 @@ extension com_amap_api_services_route_RouteBusLineItem_Batch on List<com_amap_ap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteBusLineItem::getArrivalBusStation_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__ == null ? null : (com_amap_api_services_busline_BusStationItem()..refId = __result__)).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_services_busline_BusStationItem()..refId = __result__.refId)).toList();
   }
   
   
@@ -411,13 +319,7 @@ extension com_amap_api_services_route_RouteBusLineItem_Batch on List<com_amap_ap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteBusLineItem::setArrivalBusStation_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -430,13 +332,7 @@ extension com_amap_api_services_route_RouteBusLineItem_Batch on List<com_amap_ap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteBusLineItem::getPolyline_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_core_LatLonPoint()..refId = __it__))?.toList()).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_core_LatLonPoint()..refId = __it__.refId))?.toList()).toList();
   }
   
   
@@ -449,13 +345,7 @@ extension com_amap_api_services_route_RouteBusLineItem_Batch on List<com_amap_ap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteBusLineItem::setPolyline_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -468,13 +358,7 @@ extension com_amap_api_services_route_RouteBusLineItem_Batch on List<com_amap_ap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteBusLineItem::getPassStationNum_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
   }
   
   
@@ -487,13 +371,7 @@ extension com_amap_api_services_route_RouteBusLineItem_Batch on List<com_amap_ap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteBusLineItem::setPassStationNum_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -506,13 +384,7 @@ extension com_amap_api_services_route_RouteBusLineItem_Batch on List<com_amap_ap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteBusLineItem::getPassStations_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_busline_BusStationItem()..refId = __it__))?.toList()).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_busline_BusStationItem()..refId = __it__.refId))?.toList()).toList();
   }
   
   
@@ -525,13 +397,7 @@ extension com_amap_api_services_route_RouteBusLineItem_Batch on List<com_amap_ap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteBusLineItem::setPassStations_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -544,13 +410,7 @@ extension com_amap_api_services_route_RouteBusLineItem_Batch on List<com_amap_ap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteBusLineItem::getDuration_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
   }
   
   
@@ -563,13 +423,7 @@ extension com_amap_api_services_route_RouteBusLineItem_Batch on List<com_amap_ap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteBusLineItem::setDuration_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   //endregion

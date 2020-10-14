@@ -24,8 +24,8 @@ class AMapDistanceResult extends AMapSearchObject with NSCoding, NSCopying {
 
   //region creators
   static Future<AMapDistanceResult> create__({ bool init = true /* ios only */ }) async {
-    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapDistanceResult', {'init': init});
-    final object = AMapDistanceResult()..refId = refId;
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapDistanceResult', {'init': init});
+    final object = AMapDistanceResult()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class AMapDistanceResult extends AMapSearchObject with NSCoding, NSCopying {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapDistanceResult', {'length': length, 'init': init});
-  
-    final List<AMapDistanceResult> typedResult = resultBatch.map((result) => AMapDistanceResult()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapDistanceResult', {'length': length, 'init': init});
+    return resultBatch.map((it) => AMapDistanceResult()..refId = it.refId).toList();
   }
   
   //endregion

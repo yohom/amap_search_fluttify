@@ -24,8 +24,8 @@ class AMapDistrictSearchResponse extends AMapSearchObject with NSCoding, NSCopyi
 
   //region creators
   static Future<AMapDistrictSearchResponse> create__({ bool init = true /* ios only */ }) async {
-    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapDistrictSearchResponse', {'init': init});
-    final object = AMapDistrictSearchResponse()..refId = refId;
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapDistrictSearchResponse', {'init': init});
+    final object = AMapDistrictSearchResponse()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class AMapDistrictSearchResponse extends AMapSearchObject with NSCoding, NSCopyi
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapDistrictSearchResponse', {'length': length, 'init': init});
-  
-    final List<AMapDistrictSearchResponse> typedResult = resultBatch.map((result) => AMapDistrictSearchResponse()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapDistrictSearchResponse', {'length': length, 'init': init});
+    return resultBatch.map((it) => AMapDistrictSearchResponse()..refId = it.refId).toList();
   }
   
   //endregion
@@ -49,7 +47,7 @@ class AMapDistrictSearchResponse extends AMapSearchObject with NSCoding, NSCopyi
   
   Future<List<AMapDistrict>> get_districts() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapDistrictSearchResponse::get_districts", {'__this__': this});
-    return (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapDistrict()..refId = __it__))?.toList();
+    return (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (AMapDistrict()..refId = __it__.refId))?.toList();
   }
   
   //endregion
@@ -91,7 +89,7 @@ extension AMapDistrictSearchResponse_Batch on List<AMapDistrictSearchResponse> {
   Future<List<List<AMapDistrict>>> get_districts_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapDistrictSearchResponse::get_districts_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapDistrict()..refId = __it__))?.toList()).toList();
+    final typedResult = (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (AMapDistrict()..refId = __it__.refId))?.toList()).toList();
     return typedResult;
   }
   

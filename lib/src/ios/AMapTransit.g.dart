@@ -24,8 +24,8 @@ class AMapTransit extends AMapSearchObject with NSCoding, NSCopying {
 
   //region creators
   static Future<AMapTransit> create__({ bool init = true /* ios only */ }) async {
-    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapTransit', {'init': init});
-    final object = AMapTransit()..refId = refId;
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapTransit', {'init': init});
+    final object = AMapTransit()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class AMapTransit extends AMapSearchObject with NSCoding, NSCopying {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapTransit', {'length': length, 'init': init});
-  
-    final List<AMapTransit> typedResult = resultBatch.map((result) => AMapTransit()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapTransit', {'length': length, 'init': init});
+    return resultBatch.map((it) => AMapTransit()..refId = it.refId).toList();
   }
   
   //endregion
@@ -64,7 +62,7 @@ class AMapTransit extends AMapSearchObject with NSCoding, NSCopying {
   
   Future<List<AMapSegment>> get_segments() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapTransit::get_segments", {'__this__': this});
-    return (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapSegment()..refId = __it__))?.toList();
+    return (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (AMapSegment()..refId = __it__.refId))?.toList();
   }
   
   Future<int> get_distance() async {
@@ -156,7 +154,7 @@ extension AMapTransit_Batch on List<AMapTransit> {
   Future<List<List<AMapSegment>>> get_segments_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTransit::get_segments_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapSegment()..refId = __it__))?.toList()).toList();
+    final typedResult = (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (AMapSegment()..refId = __it__.refId))?.toList()).toList();
     return typedResult;
   }
   

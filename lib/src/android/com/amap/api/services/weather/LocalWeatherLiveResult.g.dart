@@ -49,13 +49,7 @@ class com_amap_api_services_weather_LocalWeatherLiveResult extends java_lang_Obj
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__ == null ? null : (com_amap_api_services_weather_LocalWeatherLiveResult()..refId = __result__);
-      return __return__;
-    }
+    return __result__ == null ? null : (com_amap_api_services_weather_LocalWeatherLiveResult()..refId = __result__.refId);
   }
   
   
@@ -72,13 +66,7 @@ class com_amap_api_services_weather_LocalWeatherLiveResult extends java_lang_Obj
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__ == null ? null : (com_amap_api_services_weather_WeatherSearchQuery()..refId = __result__);
-      return __return__;
-    }
+    return __result__ == null ? null : (com_amap_api_services_weather_WeatherSearchQuery()..refId = __result__.refId);
   }
   
   
@@ -95,13 +83,7 @@ class com_amap_api_services_weather_LocalWeatherLiveResult extends java_lang_Obj
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__ == null ? null : (com_amap_api_services_weather_LocalWeatherLive()..refId = __result__);
-      return __return__;
-    }
+    return __result__ == null ? null : (com_amap_api_services_weather_LocalWeatherLive()..refId = __result__.refId);
   }
   
   //endregion
@@ -132,13 +114,7 @@ extension com_amap_api_services_weather_LocalWeatherLiveResult_Batch on List<com
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.weather.LocalWeatherLiveResult::createPagedResult_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__ == null ? null : (com_amap_api_services_weather_LocalWeatherLiveResult()..refId = __result__)).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_services_weather_LocalWeatherLiveResult()..refId = __result__.refId)).toList();
   }
   
   
@@ -151,13 +127,7 @@ extension com_amap_api_services_weather_LocalWeatherLiveResult_Batch on List<com
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.weather.LocalWeatherLiveResult::getWeatherLiveQuery_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__ == null ? null : (com_amap_api_services_weather_WeatherSearchQuery()..refId = __result__)).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_services_weather_WeatherSearchQuery()..refId = __result__.refId)).toList();
   }
   
   
@@ -170,13 +140,7 @@ extension com_amap_api_services_weather_LocalWeatherLiveResult_Batch on List<com
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.weather.LocalWeatherLiveResult::getLiveResult_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__ == null ? null : (com_amap_api_services_weather_LocalWeatherLive()..refId = __result__)).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_services_weather_LocalWeatherLive()..refId = __result__.refId)).toList();
   }
   
   //endregion

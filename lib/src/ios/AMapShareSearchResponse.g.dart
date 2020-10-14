@@ -24,8 +24,8 @@ class AMapShareSearchResponse extends AMapSearchObject with NSCoding, NSCopying 
 
   //region creators
   static Future<AMapShareSearchResponse> create__({ bool init = true /* ios only */ }) async {
-    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapShareSearchResponse', {'init': init});
-    final object = AMapShareSearchResponse()..refId = refId;
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapShareSearchResponse', {'init': init});
+    final object = AMapShareSearchResponse()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class AMapShareSearchResponse extends AMapSearchObject with NSCoding, NSCopying 
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapShareSearchResponse', {'length': length, 'init': init});
-  
-    final List<AMapShareSearchResponse> typedResult = resultBatch.map((result) => AMapShareSearchResponse()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapShareSearchResponse', {'length': length, 'init': init});
+    return resultBatch.map((it) => AMapShareSearchResponse()..refId = it.refId).toList();
   }
   
   //endregion

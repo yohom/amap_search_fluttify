@@ -24,8 +24,8 @@ class AMapBusLineIDSearchRequest extends AMapBusLineBaseSearchRequest with NSCod
 
   //region creators
   static Future<AMapBusLineIDSearchRequest> create__({ bool init = true /* ios only */ }) async {
-    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapBusLineIDSearchRequest', {'init': init});
-    final object = AMapBusLineIDSearchRequest()..refId = refId;
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapBusLineIDSearchRequest', {'init': init});
+    final object = AMapBusLineIDSearchRequest()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class AMapBusLineIDSearchRequest extends AMapBusLineBaseSearchRequest with NSCod
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapBusLineIDSearchRequest', {'length': length, 'init': init});
-  
-    final List<AMapBusLineIDSearchRequest> typedResult = resultBatch.map((result) => AMapBusLineIDSearchRequest()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapBusLineIDSearchRequest', {'length': length, 'init': init});
+    return resultBatch.map((it) => AMapBusLineIDSearchRequest()..refId = it.refId).toList();
   }
   
   //endregion

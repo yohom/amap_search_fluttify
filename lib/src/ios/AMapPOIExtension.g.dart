@@ -24,8 +24,8 @@ class AMapPOIExtension extends AMapSearchObject with NSCoding, NSCopying {
 
   //region creators
   static Future<AMapPOIExtension> create__({ bool init = true /* ios only */ }) async {
-    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapPOIExtension', {'init': init});
-    final object = AMapPOIExtension()..refId = refId;
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapPOIExtension', {'init': init});
+    final object = AMapPOIExtension()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class AMapPOIExtension extends AMapSearchObject with NSCoding, NSCopying {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapPOIExtension', {'length': length, 'init': init});
-  
-    final List<AMapPOIExtension> typedResult = resultBatch.map((result) => AMapPOIExtension()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapPOIExtension', {'length': length, 'init': init});
+    return resultBatch.map((it) => AMapPOIExtension()..refId = it.refId).toList();
   }
   
   //endregion

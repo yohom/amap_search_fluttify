@@ -50,9 +50,7 @@ mixin _Community on _Holder {
   }) {
     assert(page > 0 && page < 100, '页数范围为1-100');
     assert(pageSize > 0 && pageSize < 50, '每页大小范围为1-50');
-    // 会在listener中关闭
-    // ignore: close_sinks
-    final _controller = Completer<List<Poi>>.sync();
+    final completer = Completer<List<Poi>>.sync();
 
     platform(
       android: (pool) async {
@@ -73,7 +71,7 @@ mixin _Community on _Holder {
 
         // 设置回调
         await _androidPoiSearch
-            .setOnPoiSearchListener(_AndroidSearchListener(_controller));
+            .setOnPoiSearchListener(_AndroidSearchListener(completer));
 
         // 开始搜索
         await _androidPoiSearch.searchPOIAsyn();
@@ -85,7 +83,7 @@ mixin _Community on _Holder {
         _iosSearch = await AMapSearchAPI.create__();
 
         // 设置回调
-        await _iosSearch.set_delegate(_IOSSearchListener(_controller));
+        await _iosSearch.set_delegate(_IOSSearchListener(completer));
 
         // 创建请求对象
         final request = await AMapPOIKeywordsSearchRequest.create__();
@@ -105,7 +103,7 @@ mixin _Community on _Holder {
         pool..add(request);
       },
     );
-    return _controller.future;
+    return completer.future;
   }
 
   /// 周边搜索poi
@@ -200,6 +198,47 @@ mixin _Community on _Holder {
     return _controller.future;
   }
 
+  /// id搜索poi
+  Future<Poi> searchPoiId(String id) {
+    return platform(
+      android: (pool) async {
+        // 获取android上下文
+        final context = await android_app_Activity.get();
+
+        // 创建搜索对象
+        _androidPoiSearch = await com_amap_api_services_poisearch_PoiSearch
+            .create__android_content_Context__com_amap_api_services_poisearch_PoiSearch_Query(
+                context, null);
+
+        // 开始搜索
+        final result = await _androidPoiSearch.searchPOIId(id);
+
+        pool..add(context);
+        return await PoiX.fromAndroid(result);
+      },
+      ios: (pool) async {
+        final completer = Completer<List<Poi>>.sync();
+
+        _iosSearch = await AMapSearchAPI.create__();
+
+        // 设置回调
+        await _iosSearch.set_delegate(_IOSSearchListener(completer));
+
+        // 创建周边搜索请求
+        final request = await AMapPOIIDSearchRequest.create__();
+        // 设置关键字
+        await request.set_uid(id);
+        await request.set_requireExtension(true);
+
+        // 开始搜索
+        await _iosSearch.AMapPOIIDSearch(request);
+
+        pool..add(request);
+        return completer.future.then((value) => value.first);
+      },
+    );
+  }
+
   /// 输入内容自动提示
   ///
   /// 输入关键字[keyword], 并且限制所在城市[city]
@@ -207,8 +246,6 @@ mixin _Community on _Holder {
     String keyword, {
     String city = '',
   }) async {
-    // 会在listener中关闭
-    // ignore: close_sinks
     final _controller = Completer<List<InputTip>>.sync();
 
     await platform(

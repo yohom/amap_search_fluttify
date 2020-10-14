@@ -24,8 +24,8 @@ class AMapIndoorData extends AMapSearchObject with NSCoding, NSCopying {
 
   //region creators
   static Future<AMapIndoorData> create__({ bool init = true /* ios only */ }) async {
-    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapIndoorData', {'init': init});
-    final object = AMapIndoorData()..refId = refId;
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapIndoorData', {'init': init});
+    final object = AMapIndoorData()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class AMapIndoorData extends AMapSearchObject with NSCoding, NSCopying {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapIndoorData', {'length': length, 'init': init});
-  
-    final List<AMapIndoorData> typedResult = resultBatch.map((result) => AMapIndoorData()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapIndoorData', {'length': length, 'init': init});
+    return resultBatch.map((it) => AMapIndoorData()..refId = it.refId).toList();
   }
   
   //endregion

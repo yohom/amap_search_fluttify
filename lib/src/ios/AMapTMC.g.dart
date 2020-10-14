@@ -24,8 +24,8 @@ class AMapTMC extends AMapSearchObject with NSCoding, NSCopying {
 
   //region creators
   static Future<AMapTMC> create__({ bool init = true /* ios only */ }) async {
-    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapTMC', {'init': init});
-    final object = AMapTMC()..refId = refId;
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapTMC', {'init': init});
+    final object = AMapTMC()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class AMapTMC extends AMapSearchObject with NSCoding, NSCopying {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapTMC', {'length': length, 'init': init});
-  
-    final List<AMapTMC> typedResult = resultBatch.map((result) => AMapTMC()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapTMC', {'length': length, 'init': init});
+    return resultBatch.map((it) => AMapTMC()..refId = it.refId).toList();
   }
   
   //endregion

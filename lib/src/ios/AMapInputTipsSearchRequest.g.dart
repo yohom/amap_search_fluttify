@@ -24,8 +24,8 @@ class AMapInputTipsSearchRequest extends AMapSearchObject with NSCoding, NSCopyi
 
   //region creators
   static Future<AMapInputTipsSearchRequest> create__({ bool init = true /* ios only */ }) async {
-    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapInputTipsSearchRequest', {'init': init});
-    final object = AMapInputTipsSearchRequest()..refId = refId;
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapInputTipsSearchRequest', {'init': init});
+    final object = AMapInputTipsSearchRequest()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class AMapInputTipsSearchRequest extends AMapSearchObject with NSCoding, NSCopyi
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapInputTipsSearchRequest', {'length': length, 'init': init});
-  
-    final List<AMapInputTipsSearchRequest> typedResult = resultBatch.map((result) => AMapInputTipsSearchRequest()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapInputTipsSearchRequest', {'length': length, 'init': init});
+    return resultBatch.map((it) => AMapInputTipsSearchRequest()..refId = it.refId).toList();
   }
   
   //endregion

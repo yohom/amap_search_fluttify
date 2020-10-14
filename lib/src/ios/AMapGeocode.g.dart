@@ -24,8 +24,8 @@ class AMapGeocode extends AMapSearchObject with NSCoding, NSCopying {
 
   //region creators
   static Future<AMapGeocode> create__({ bool init = true /* ios only */ }) async {
-    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapGeocode', {'init': init});
-    final object = AMapGeocode()..refId = refId;
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapGeocode', {'init': init});
+    final object = AMapGeocode()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class AMapGeocode extends AMapSearchObject with NSCoding, NSCopying {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapGeocode', {'length': length, 'init': init});
-  
-    final List<AMapGeocode> typedResult = resultBatch.map((result) => AMapGeocode()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapGeocode', {'length': length, 'init': init});
+    return resultBatch.map((it) => AMapGeocode()..refId = it.refId).toList();
   }
   
   //endregion
@@ -89,7 +87,7 @@ class AMapGeocode extends AMapSearchObject with NSCoding, NSCopying {
   
   Future<AMapGeoPoint> get_location() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapGeocode::get_location", {'__this__': this});
-    return __result__ == null ? null : (AMapGeoPoint()..refId = __result__);
+    return __result__ == null ? null : (AMapGeoPoint()..refId = __result__.refId);
   }
   
   Future<String> get_level() async {
@@ -246,7 +244,7 @@ extension AMapGeocode_Batch on List<AMapGeocode> {
   Future<List<AMapGeoPoint>> get_location_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapGeocode::get_location_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__ == null ? null : (AMapGeoPoint()..refId = __result__)).toList();
+    final typedResult = (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (AMapGeoPoint()..refId = __result__.refId)).toList();
     return typedResult;
   }
   

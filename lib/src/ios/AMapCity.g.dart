@@ -24,8 +24,8 @@ class AMapCity extends AMapSearchObject with NSCoding, NSCopying {
 
   //region creators
   static Future<AMapCity> create__({ bool init = true /* ios only */ }) async {
-    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapCity', {'init': init});
-    final object = AMapCity()..refId = refId;
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapCity', {'init': init});
+    final object = AMapCity()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class AMapCity extends AMapSearchObject with NSCoding, NSCopying {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapCity', {'length': length, 'init': init});
-  
-    final List<AMapCity> typedResult = resultBatch.map((result) => AMapCity()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapCity', {'length': length, 'init': init});
+    return resultBatch.map((it) => AMapCity()..refId = it.refId).toList();
   }
   
   //endregion
@@ -64,7 +62,7 @@ class AMapCity extends AMapSearchObject with NSCoding, NSCopying {
   
   Future<List<AMapDistrict>> get_districts() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapCity::get_districts", {'__this__': this});
-    return (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapDistrict()..refId = __it__))?.toList();
+    return (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (AMapDistrict()..refId = __it__.refId))?.toList();
   }
   
   //endregion
@@ -145,7 +143,7 @@ extension AMapCity_Batch on List<AMapCity> {
   Future<List<List<AMapDistrict>>> get_districts_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapCity::get_districts_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapDistrict()..refId = __it__))?.toList()).toList();
+    final typedResult = (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (AMapDistrict()..refId = __it__.refId))?.toList()).toList();
     return typedResult;
   }
   

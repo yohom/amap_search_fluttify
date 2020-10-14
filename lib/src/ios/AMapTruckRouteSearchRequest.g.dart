@@ -24,8 +24,8 @@ class AMapTruckRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCodi
 
   //region creators
   static Future<AMapTruckRouteSearchRequest> create__({ bool init = true /* ios only */ }) async {
-    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapTruckRouteSearchRequest', {'init': init});
-    final object = AMapTruckRouteSearchRequest()..refId = refId;
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapTruckRouteSearchRequest', {'init': init});
+    final object = AMapTruckRouteSearchRequest()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class AMapTruckRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCodi
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapTruckRouteSearchRequest', {'length': length, 'init': init});
-  
-    final List<AMapTruckRouteSearchRequest> typedResult = resultBatch.map((result) => AMapTruckRouteSearchRequest()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapTruckRouteSearchRequest', {'length': length, 'init': init});
+    return resultBatch.map((it) => AMapTruckRouteSearchRequest()..refId = it.refId).toList();
   }
   
   //endregion
@@ -49,7 +47,7 @@ class AMapTruckRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCodi
   
   Future<List<AMapGeoPoint>> get_waypoints() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapTruckRouteSearchRequest::get_waypoints", {'__this__': this});
-    return (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapGeoPoint()..refId = __it__))?.toList();
+    return (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (AMapGeoPoint()..refId = __it__.refId))?.toList();
   }
   
   Future<String> get_originId() async {
@@ -223,7 +221,7 @@ extension AMapTruckRouteSearchRequest_Batch on List<AMapTruckRouteSearchRequest>
   Future<List<List<AMapGeoPoint>>> get_waypoints_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTruckRouteSearchRequest::get_waypoints_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapGeoPoint()..refId = __it__))?.toList()).toList();
+    final typedResult = (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (AMapGeoPoint()..refId = __it__.refId))?.toList()).toList();
     return typedResult;
   }
   
@@ -272,7 +270,7 @@ extension AMapTruckRouteSearchRequest_Batch on List<AMapTruckRouteSearchRequest>
   Future<List<AMapTruckSizeType>> get_size_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTruckRouteSearchRequest::get_size_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as int).toAMapTruckSizeType()).toList();
+    final typedResult = (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as int).toAMapTruckSizeType()).toList();
     return typedResult;
   }
   

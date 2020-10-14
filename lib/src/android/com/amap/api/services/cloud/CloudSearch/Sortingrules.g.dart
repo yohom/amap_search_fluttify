@@ -25,14 +25,14 @@ class com_amap_api_services_cloud_CloudSearch_Sortingrules extends java_lang_Obj
 
   //region creators
   static Future<com_amap_api_services_cloud_CloudSearch_Sortingrules> create__String__boolean(String var1, bool var2) async {
-    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_Sortingrules__String__boolean', {"var1": var1, "var2": var2});
-    final object = com_amap_api_services_cloud_CloudSearch_Sortingrules()..refId = refId;
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_Sortingrules__String__boolean', {"var1": var1, "var2": var2});
+    final object = com_amap_api_services_cloud_CloudSearch_Sortingrules()..refId = __result__.refId;
     return object;
   }
   
   static Future<com_amap_api_services_cloud_CloudSearch_Sortingrules> create__int(int var1) async {
-    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_Sortingrules__int', {"var1": var1});
-    final object = com_amap_api_services_cloud_CloudSearch_Sortingrules()..refId = refId;
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_Sortingrules__int', {"var1": var1});
+    final object = com_amap_api_services_cloud_CloudSearch_Sortingrules()..refId = __result__.refId;
     return object;
   }
   
@@ -40,20 +40,16 @@ class com_amap_api_services_cloud_CloudSearch_Sortingrules extends java_lang_Obj
     if (var1.length != var2.length) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchcom_amap_api_services_cloud_CloudSearch_Sortingrules__String__boolean', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]);
-  
-    final List<com_amap_api_services_cloud_CloudSearch_Sortingrules> typedResult = resultBatch.map((result) => com_amap_api_services_cloud_CloudSearch_Sortingrules()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchcom_amap_api_services_cloud_CloudSearch_Sortingrules__String__boolean', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]);
+    return resultBatch.map((it) => com_amap_api_services_cloud_CloudSearch_Sortingrules()..refId = it.refId).toList();
   }
   
   static Future<List<com_amap_api_services_cloud_CloudSearch_Sortingrules>> create_batch__int(List<int> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchcom_amap_api_services_cloud_CloudSearch_Sortingrules__int', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]);
-  
-    final List<com_amap_api_services_cloud_CloudSearch_Sortingrules> typedResult = resultBatch.map((result) => com_amap_api_services_cloud_CloudSearch_Sortingrules()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchcom_amap_api_services_cloud_CloudSearch_Sortingrules__int', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]);
+    return resultBatch.map((it) => com_amap_api_services_cloud_CloudSearch_Sortingrules()..refId = it.refId).toList();
   }
   
   //endregion

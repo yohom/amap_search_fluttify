@@ -24,8 +24,8 @@ class AMapCloudPOIIDSearchRequest extends AMapCloudSearchBaseRequest with NSCodi
 
   //region creators
   static Future<AMapCloudPOIIDSearchRequest> create__({ bool init = true /* ios only */ }) async {
-    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapCloudPOIIDSearchRequest', {'init': init});
-    final object = AMapCloudPOIIDSearchRequest()..refId = refId;
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapCloudPOIIDSearchRequest', {'init': init});
+    final object = AMapCloudPOIIDSearchRequest()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class AMapCloudPOIIDSearchRequest extends AMapCloudSearchBaseRequest with NSCodi
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapCloudPOIIDSearchRequest', {'length': length, 'init': init});
-  
-    final List<AMapCloudPOIIDSearchRequest> typedResult = resultBatch.map((result) => AMapCloudPOIIDSearchRequest()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapCloudPOIIDSearchRequest', {'length': length, 'init': init});
+    return resultBatch.map((it) => AMapCloudPOIIDSearchRequest()..refId = it.refId).toList();
   }
   
   //endregion

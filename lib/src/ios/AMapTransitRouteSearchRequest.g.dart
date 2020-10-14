@@ -24,8 +24,8 @@ class AMapTransitRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCo
 
   //region creators
   static Future<AMapTransitRouteSearchRequest> create__({ bool init = true /* ios only */ }) async {
-    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapTransitRouteSearchRequest', {'init': init});
-    final object = AMapTransitRouteSearchRequest()..refId = refId;
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapTransitRouteSearchRequest', {'init': init});
+    final object = AMapTransitRouteSearchRequest()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class AMapTransitRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCo
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapTransitRouteSearchRequest', {'length': length, 'init': init});
-  
-    final List<AMapTransitRouteSearchRequest> typedResult = resultBatch.map((result) => AMapTransitRouteSearchRequest()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapTransitRouteSearchRequest', {'length': length, 'init': init});
+    return resultBatch.map((it) => AMapTransitRouteSearchRequest()..refId = it.refId).toList();
   }
   
   //endregion

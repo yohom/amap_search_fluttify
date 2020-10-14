@@ -24,8 +24,8 @@ class AMapRailwayStation extends AMapSearchObject with NSCoding, NSCopying {
 
   //region creators
   static Future<AMapRailwayStation> create__({ bool init = true /* ios only */ }) async {
-    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapRailwayStation', {'init': init});
-    final object = AMapRailwayStation()..refId = refId;
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapRailwayStation', {'init': init});
+    final object = AMapRailwayStation()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class AMapRailwayStation extends AMapSearchObject with NSCoding, NSCopying {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapRailwayStation', {'length': length, 'init': init});
-  
-    final List<AMapRailwayStation> typedResult = resultBatch.map((result) => AMapRailwayStation()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapRailwayStation', {'length': length, 'init': init});
+    return resultBatch.map((it) => AMapRailwayStation()..refId = it.refId).toList();
   }
   
   //endregion
@@ -54,7 +52,7 @@ class AMapRailwayStation extends AMapSearchObject with NSCoding, NSCopying {
   
   Future<AMapGeoPoint> get_location() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapRailwayStation::get_location", {'__this__': this});
-    return __result__ == null ? null : (AMapGeoPoint()..refId = __result__);
+    return __result__ == null ? null : (AMapGeoPoint()..refId = __result__.refId);
   }
   
   Future<String> get_adcode() async {
@@ -164,7 +162,7 @@ extension AMapRailwayStation_Batch on List<AMapRailwayStation> {
   Future<List<AMapGeoPoint>> get_location_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRailwayStation::get_location_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__ == null ? null : (AMapGeoPoint()..refId = __result__)).toList();
+    final typedResult = (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (AMapGeoPoint()..refId = __result__.refId)).toList();
     return typedResult;
   }
   

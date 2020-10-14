@@ -24,8 +24,8 @@ class AMapRoadTrafficSearchBaseRequest extends AMapSearchObject with NSCoding, N
 
   //region creators
   static Future<AMapRoadTrafficSearchBaseRequest> create__({ bool init = true /* ios only */ }) async {
-    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapRoadTrafficSearchBaseRequest', {'init': init});
-    final object = AMapRoadTrafficSearchBaseRequest()..refId = refId;
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapRoadTrafficSearchBaseRequest', {'init': init});
+    final object = AMapRoadTrafficSearchBaseRequest()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class AMapRoadTrafficSearchBaseRequest extends AMapSearchObject with NSCoding, N
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapRoadTrafficSearchBaseRequest', {'length': length, 'init': init});
-  
-    final List<AMapRoadTrafficSearchBaseRequest> typedResult = resultBatch.map((result) => AMapRoadTrafficSearchBaseRequest()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapRoadTrafficSearchBaseRequest', {'length': length, 'init': init});
+    return resultBatch.map((it) => AMapRoadTrafficSearchBaseRequest()..refId = it.refId).toList();
   }
   
   //endregion

@@ -24,8 +24,8 @@ class AMapWalkingRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCo
 
   //region creators
   static Future<AMapWalkingRouteSearchRequest> create__({ bool init = true /* ios only */ }) async {
-    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapWalkingRouteSearchRequest', {'init': init});
-    final object = AMapWalkingRouteSearchRequest()..refId = refId;
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapWalkingRouteSearchRequest', {'init': init});
+    final object = AMapWalkingRouteSearchRequest()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class AMapWalkingRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCo
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapWalkingRouteSearchRequest', {'length': length, 'init': init});
-  
-    final List<AMapWalkingRouteSearchRequest> typedResult = resultBatch.map((result) => AMapWalkingRouteSearchRequest()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapWalkingRouteSearchRequest', {'length': length, 'init': init});
+    return resultBatch.map((it) => AMapWalkingRouteSearchRequest()..refId = it.refId).toList();
   }
   
   //endregion

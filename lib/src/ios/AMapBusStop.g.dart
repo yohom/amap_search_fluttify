@@ -24,8 +24,8 @@ class AMapBusStop extends AMapSearchObject with NSCoding, NSCopying {
 
   //region creators
   static Future<AMapBusStop> create__({ bool init = true /* ios only */ }) async {
-    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapBusStop', {'init': init});
-    final object = AMapBusStop()..refId = refId;
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapBusStop', {'init': init});
+    final object = AMapBusStop()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class AMapBusStop extends AMapSearchObject with NSCoding, NSCopying {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapBusStop', {'length': length, 'init': init});
-  
-    final List<AMapBusStop> typedResult = resultBatch.map((result) => AMapBusStop()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapBusStop', {'length': length, 'init': init});
+    return resultBatch.map((it) => AMapBusStop()..refId = it.refId).toList();
   }
   
   //endregion
@@ -64,12 +62,12 @@ class AMapBusStop extends AMapSearchObject with NSCoding, NSCopying {
   
   Future<AMapGeoPoint> get_location() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapBusStop::get_location", {'__this__': this});
-    return __result__ == null ? null : (AMapGeoPoint()..refId = __result__);
+    return __result__ == null ? null : (AMapGeoPoint()..refId = __result__.refId);
   }
   
   Future<List<AMapBusLine>> get_buslines() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapBusStop::get_buslines", {'__this__': this});
-    return (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapBusLine()..refId = __it__))?.toList();
+    return (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (AMapBusLine()..refId = __it__.refId))?.toList();
   }
   
   Future<String> get_sequence() async {
@@ -167,14 +165,14 @@ extension AMapBusStop_Batch on List<AMapBusStop> {
   Future<List<AMapGeoPoint>> get_location_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapBusStop::get_location_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__ == null ? null : (AMapGeoPoint()..refId = __result__)).toList();
+    final typedResult = (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (AMapGeoPoint()..refId = __result__.refId)).toList();
     return typedResult;
   }
   
   Future<List<List<AMapBusLine>>> get_buslines_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapBusStop::get_buslines_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapBusLine()..refId = __it__))?.toList()).toList();
+    final typedResult = (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (AMapBusLine()..refId = __it__.refId))?.toList()).toList();
     return typedResult;
   }
   

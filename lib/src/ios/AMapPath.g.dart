@@ -24,8 +24,8 @@ class AMapPath extends AMapSearchObject with NSCoding, NSCopying {
 
   //region creators
   static Future<AMapPath> create__({ bool init = true /* ios only */ }) async {
-    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapPath', {'init': init});
-    final object = AMapPath()..refId = refId;
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapPath', {'init': init});
+    final object = AMapPath()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class AMapPath extends AMapSearchObject with NSCoding, NSCopying {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapPath', {'length': length, 'init': init});
-  
-    final List<AMapPath> typedResult = resultBatch.map((result) => AMapPath()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapPath', {'length': length, 'init': init});
+    return resultBatch.map((it) => AMapPath()..refId = it.refId).toList();
   }
   
   //endregion
@@ -59,7 +57,7 @@ class AMapPath extends AMapSearchObject with NSCoding, NSCopying {
   
   Future<List<AMapStep>> get_steps() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapPath::get_steps", {'__this__': this});
-    return (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapStep()..refId = __it__))?.toList();
+    return (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (AMapStep()..refId = __it__.refId))?.toList();
   }
   
   Future<double> get_tolls() async {
@@ -171,7 +169,7 @@ extension AMapPath_Batch on List<AMapPath> {
   Future<List<List<AMapStep>>> get_steps_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapPath::get_steps_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapStep()..refId = __it__))?.toList()).toList();
+    final typedResult = (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (AMapStep()..refId = __it__.refId))?.toList()).toList();
     return typedResult;
   }
   

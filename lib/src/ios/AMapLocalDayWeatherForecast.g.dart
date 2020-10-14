@@ -24,8 +24,8 @@ class AMapLocalDayWeatherForecast extends AMapSearchObject with NSCoding, NSCopy
 
   //region creators
   static Future<AMapLocalDayWeatherForecast> create__({ bool init = true /* ios only */ }) async {
-    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapLocalDayWeatherForecast', {'init': init});
-    final object = AMapLocalDayWeatherForecast()..refId = refId;
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapLocalDayWeatherForecast', {'init': init});
+    final object = AMapLocalDayWeatherForecast()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class AMapLocalDayWeatherForecast extends AMapSearchObject with NSCoding, NSCopy
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapLocalDayWeatherForecast', {'length': length, 'init': init});
-  
-    final List<AMapLocalDayWeatherForecast> typedResult = resultBatch.map((result) => AMapLocalDayWeatherForecast()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapLocalDayWeatherForecast', {'length': length, 'init': init});
+    return resultBatch.map((it) => AMapLocalDayWeatherForecast()..refId = it.refId).toList();
   }
   
   //endregion

@@ -24,8 +24,8 @@ class com_amap_api_services_route_TruckStep extends java_lang_Object with androi
 
   //region creators
   static Future<com_amap_api_services_route_TruckStep> create__() async {
-    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_services_route_TruckStep__', );
-    final object = com_amap_api_services_route_TruckStep()..refId = refId;
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createcom_amap_api_services_route_TruckStep__', );
+    final object = com_amap_api_services_route_TruckStep()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class com_amap_api_services_route_TruckStep extends java_lang_Object with androi
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchcom_amap_api_services_route_TruckStep__', {'length': length});
-  
-    final List<com_amap_api_services_route_TruckStep> typedResult = resultBatch.map((result) => com_amap_api_services_route_TruckStep()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchcom_amap_api_services_route_TruckStep__', {'length': length});
+    return resultBatch.map((it) => com_amap_api_services_route_TruckStep()..refId = it.refId).toList();
   }
   
   //endregion
@@ -64,13 +62,7 @@ class com_amap_api_services_route_TruckStep extends java_lang_Object with androi
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -87,13 +79,7 @@ class com_amap_api_services_route_TruckStep extends java_lang_Object with androi
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -110,13 +96,7 @@ class com_amap_api_services_route_TruckStep extends java_lang_Object with androi
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -133,13 +113,7 @@ class com_amap_api_services_route_TruckStep extends java_lang_Object with androi
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -156,13 +130,7 @@ class com_amap_api_services_route_TruckStep extends java_lang_Object with androi
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -179,13 +147,7 @@ class com_amap_api_services_route_TruckStep extends java_lang_Object with androi
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -202,13 +164,7 @@ class com_amap_api_services_route_TruckStep extends java_lang_Object with androi
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -225,13 +181,7 @@ class com_amap_api_services_route_TruckStep extends java_lang_Object with androi
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -248,13 +198,7 @@ class com_amap_api_services_route_TruckStep extends java_lang_Object with androi
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -271,13 +215,7 @@ class com_amap_api_services_route_TruckStep extends java_lang_Object with androi
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -294,13 +232,7 @@ class com_amap_api_services_route_TruckStep extends java_lang_Object with androi
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -317,13 +249,7 @@ class com_amap_api_services_route_TruckStep extends java_lang_Object with androi
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -340,13 +266,7 @@ class com_amap_api_services_route_TruckStep extends java_lang_Object with androi
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -363,13 +283,7 @@ class com_amap_api_services_route_TruckStep extends java_lang_Object with androi
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -386,13 +300,7 @@ class com_amap_api_services_route_TruckStep extends java_lang_Object with androi
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -409,13 +317,7 @@ class com_amap_api_services_route_TruckStep extends java_lang_Object with androi
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -432,13 +334,7 @@ class com_amap_api_services_route_TruckStep extends java_lang_Object with androi
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -455,13 +351,7 @@ class com_amap_api_services_route_TruckStep extends java_lang_Object with androi
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -478,13 +368,7 @@ class com_amap_api_services_route_TruckStep extends java_lang_Object with androi
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -501,13 +385,7 @@ class com_amap_api_services_route_TruckStep extends java_lang_Object with androi
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -524,13 +402,7 @@ class com_amap_api_services_route_TruckStep extends java_lang_Object with androi
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -547,13 +419,7 @@ class com_amap_api_services_route_TruckStep extends java_lang_Object with androi
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_core_LatLonPoint()..refId = __it__))?.toList();
-      return __return__;
-    }
+    return (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_core_LatLonPoint()..refId = __it__.refId))?.toList();
   }
   
   
@@ -570,13 +436,7 @@ class com_amap_api_services_route_TruckStep extends java_lang_Object with androi
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -593,13 +453,7 @@ class com_amap_api_services_route_TruckStep extends java_lang_Object with androi
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = __result__;
-      return __return__;
-    }
+    return __result__;
   }
   
   
@@ -616,13 +470,7 @@ class com_amap_api_services_route_TruckStep extends java_lang_Object with androi
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_route_RouteSearchCity()..refId = __it__))?.toList();
-      return __return__;
-    }
+    return (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_route_RouteSearchCity()..refId = __it__.refId))?.toList();
   }
   
   
@@ -639,13 +487,7 @@ class com_amap_api_services_route_TruckStep extends java_lang_Object with androi
     // handle native call
   
   
-    // convert native result to dart side object
-    if (__result__ == null) {
-      return null;
-    } else {
-      final __return__ = (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_route_TMC()..refId = __it__))?.toList();
-      return __return__;
-    }
+    return (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_route_TMC()..refId = __it__.refId))?.toList();
   }
   
   //endregion
@@ -676,13 +518,7 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TruckStep::setInstruction_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -695,13 +531,7 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TruckStep::setOrientation_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -714,13 +544,7 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TruckStep::setRoad_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -733,13 +557,7 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TruckStep::setTolls_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -752,13 +570,7 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TruckStep::setDistance_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -771,13 +583,7 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TruckStep::setTollDistance_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -790,13 +596,7 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TruckStep::setTollRoad_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -809,13 +609,7 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TruckStep::setDuration_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -828,13 +622,7 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TruckStep::setPolyline_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -847,13 +635,7 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TruckStep::setAction_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -866,13 +648,7 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TruckStep::setAssistantAction_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -885,13 +661,7 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TruckStep::setRouteSearchCityList_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -904,13 +674,7 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TruckStep::setTMCs_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
   }
   
   
@@ -923,13 +687,7 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TruckStep::getInstruction_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
   }
   
   
@@ -942,13 +700,7 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TruckStep::getOrientation_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
   }
   
   
@@ -961,13 +713,7 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TruckStep::getRoad_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
   }
   
   
@@ -980,13 +726,7 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TruckStep::getTolls_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
   }
   
   
@@ -999,13 +739,7 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TruckStep::getDistance_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
   }
   
   
@@ -1018,13 +752,7 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TruckStep::getTollDistance_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
   }
   
   
@@ -1037,13 +765,7 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TruckStep::getTollRoad_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
   }
   
   
@@ -1056,13 +778,7 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TruckStep::getDuration_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
   }
   
   
@@ -1075,13 +791,7 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TruckStep::getPolyline_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_core_LatLonPoint()..refId = __it__))?.toList()).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_core_LatLonPoint()..refId = __it__.refId))?.toList()).toList();
   }
   
   
@@ -1094,13 +804,7 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TruckStep::getAction_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
   }
   
   
@@ -1113,13 +817,7 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TruckStep::getAssistantAction_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
   }
   
   
@@ -1132,13 +830,7 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TruckStep::getRouteSearchCityList_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_route_RouteSearchCity()..refId = __it__))?.toList()).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_route_RouteSearchCity()..refId = __it__.refId))?.toList()).toList();
   }
   
   
@@ -1151,13 +843,7 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TruckStep::getTMCs_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    // convert native result to dart side object
-    if (resultBatch == null) {
-      return null;
-    } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_route_TMC()..refId = __it__))?.toList()).toList();
-      return typedResult;
-    }
+    return (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_route_TMC()..refId = __it__.refId))?.toList()).toList();
   }
   
   //endregion

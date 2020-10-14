@@ -1,6 +1,76 @@
 part of 'amap_search.dart';
 
-extension RoadListX on List<Road> {
+class PoiX {
+  static Future<Poi> fromAndroid(com_amap_api_services_core_PoiItem poi) async {
+    final address = await poi.getSnippet();
+    final title = await poi.getTitle();
+    final latLng = await poi.getLatLonPoint();
+    final latitude = await latLng.getLatitude();
+    final longitude = await latLng.getLongitude();
+    final cityName = await poi.getCityName();
+    final cityCode = await poi.getCityCode();
+    final provinceName = await poi.getProvinceName();
+    final provinceCode = await poi.getProvinceCode();
+    final tel = await poi.getTel();
+    final poiId = await poi.getPoiId();
+    final businessArea = await poi.getBusinessArea();
+    final distance = await poi.getDistance();
+    final adName = await poi.getAdName();
+    final adCode = await poi.getAdCode();
+
+    return Poi(
+      address: address,
+      title: title,
+      cityName: cityName,
+      cityCode: cityCode,
+      provinceName: provinceName,
+      provinceCode: provinceCode,
+      tel: tel,
+      poiId: poiId,
+      businessArea: businessArea,
+      distance: distance,
+      adName: adName,
+      adCode: adCode,
+      latLng: LatLng(latitude, longitude),
+    );
+  }
+
+  static Future<Poi> fromIOS(AMapPOI poi) async {
+    final address = await poi.get_address();
+    final title = await poi.get_name();
+    final latLng = await poi.get_location();
+    final latitude = await latLng.get_latitude();
+    final longitude = await latLng.get_longitude();
+    final cityName = await poi.get_city();
+    final cityCode = await poi.get_citycode();
+    final provinceName = await poi.get_province();
+    final provinceCode = await poi.get_pcode();
+    final tel = await poi.get_tel();
+    final poiId = await poi.get_uid();
+    final businessArea = await poi.get_businessArea();
+    final distance = await poi.get_distance();
+    final adName = await poi.get_district();
+    final adCode = await poi.get_adcode();
+
+    return Poi(
+      address: address,
+      title: title,
+      cityName: cityName,
+      cityCode: cityCode,
+      provinceName: provinceName,
+      provinceCode: provinceCode,
+      tel: tel,
+      poiId: poiId,
+      businessArea: businessArea,
+      distance: distance,
+      adName: adName,
+      adCode: adCode,
+      latLng: LatLng(latitude, longitude),
+    );
+  }
+}
+
+class RoadListX {
   static Future<List<Road>> fromAndroid(
     List<com_amap_api_services_geocoder_RegeocodeRoad> roadList,
   ) async {
@@ -48,7 +118,7 @@ extension RoadListX on List<Road> {
   }
 }
 
-extension AoiListX on List<Aoi> {
+class AoiListX {
   static Future<List<Aoi>> fromAndroid(
     List<com_amap_api_services_geocoder_AoiItem> aoiList,
   ) async {
@@ -96,7 +166,7 @@ extension AoiListX on List<Aoi> {
   }
 }
 
-extension PoiListX on List<Poi> {
+class PoiListX {
   static Future<List<Poi>> fromAndroid(
     List<com_amap_api_services_core_PoiItem> poiList,
   ) async {
@@ -174,7 +244,7 @@ extension PoiListX on List<Poi> {
   }
 }
 
-extension InputTipListX on List<InputTip> {
+class InputTipListX {
   static Future<List<InputTip>> fromAndroid(
     List<com_amap_api_services_help_Tip> inputTipList,
   ) async {
@@ -193,7 +263,9 @@ extension InputTipListX on List<InputTip> {
           poiId: idBatch[i],
           address: addressBatch[i],
           district: districtBatch[i],
-          coordinate: LatLng(latitudeBatch[i], longitudeBatch[i]),
+          coordinate: latitudeBatch[i] == null || longitudeBatch[i] == null
+              ? null
+              : LatLng(latitudeBatch[i], longitudeBatch[i]),
         )
     ];
   }

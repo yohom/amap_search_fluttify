@@ -24,8 +24,8 @@ class AMapDistrictSearchRequest extends AMapSearchObject with NSCoding, NSCopyin
 
   //region creators
   static Future<AMapDistrictSearchRequest> create__({ bool init = true /* ios only */ }) async {
-    final refId = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapDistrictSearchRequest', {'init': init});
-    final object = AMapDistrictSearchRequest()..refId = refId;
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapDistrictSearchRequest', {'init': init});
+    final object = AMapDistrictSearchRequest()..refId = __result__.refId;
     return object;
   }
   
@@ -33,10 +33,8 @@ class AMapDistrictSearchRequest extends AMapSearchObject with NSCoding, NSCopyin
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapDistrictSearchRequest', {'length': length, 'init': init});
-  
-    final List<AMapDistrictSearchRequest> typedResult = resultBatch.map((result) => AMapDistrictSearchRequest()..refId = result).toList();
-    return typedResult;
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapDistrictSearchRequest', {'length': length, 'init': init});
+    return resultBatch.map((it) => AMapDistrictSearchRequest()..refId = it.refId).toList();
   }
   
   //endregion
