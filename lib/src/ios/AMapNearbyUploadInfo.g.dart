@@ -44,12 +44,12 @@ class AMapNearbyUploadInfo extends NSObject with NSCopying {
   //region getters
   Future<String> get_userID() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapNearbyUploadInfo::get_userID", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<AMapSearchCoordinateType> get_coordinateType() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapNearbyUploadInfo::get_coordinateType", {'__this__': this});
-    return __result__ == null ? null : ((__result__ as int).toAMapSearchCoordinateType());
+    return (__result__ as int).toAMapSearchCoordinateType();
   }
   
   Future<CLLocationCoordinate2D> get_coordinate() async {
@@ -109,7 +109,7 @@ extension AMapNearbyUploadInfo_Batch on List<AMapNearbyUploadInfo> {
   Future<List<CLLocationCoordinate2D>> get_coordinate_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapNearbyUploadInfo::get_coordinate_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => CLLocationCoordinate2D()..refId = __result__).toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__ == null ? null : (CLLocationCoordinate2D()..refId = __result__)).toList();
     return typedResult;
   }
   

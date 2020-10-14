@@ -44,12 +44,12 @@ class AMapFutureRouteSearchResponse extends AMapSearchObject with NSCoding, NSCo
   //region getters
   Future<List<AMapPath>> get_paths() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapFutureRouteSearchResponse::get_paths", {'__this__': this});
-    return __result__ == null ? null : ((__result__ as List).cast<String>().map((__it__) => AMapPath()..refId = __it__).toList());
+    return (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapPath()..refId = __it__))?.toList();
   }
   
   Future<List<AMapFutureTimeInfo>> get_timeInfos() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapFutureRouteSearchResponse::get_timeInfos", {'__this__': this});
-    return __result__ == null ? null : ((__result__ as List).cast<String>().map((__it__) => AMapFutureTimeInfo()..refId = __it__).toList());
+    return (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapFutureTimeInfo()..refId = __it__))?.toList();
   }
   
   //endregion
@@ -84,14 +84,14 @@ extension AMapFutureRouteSearchResponse_Batch on List<AMapFutureRouteSearchRespo
   Future<List<List<AMapPath>>> get_paths_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapFutureRouteSearchResponse::get_paths_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => AMapPath()..refId = __it__).toList()).toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapPath()..refId = __it__))?.toList()).toList();
     return typedResult;
   }
   
   Future<List<List<AMapFutureTimeInfo>>> get_timeInfos_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapFutureRouteSearchResponse::get_timeInfos_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => AMapFutureTimeInfo()..refId = __it__).toList()).toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapFutureTimeInfo()..refId = __it__))?.toList()).toList();
     return typedResult;
   }
   

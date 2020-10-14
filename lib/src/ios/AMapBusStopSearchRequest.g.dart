@@ -44,22 +44,22 @@ class AMapBusStopSearchRequest extends AMapSearchObject with NSCoding, NSCopying
   //region getters
   Future<String> get_keywords() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapBusStopSearchRequest::get_keywords", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_city() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapBusStopSearchRequest::get_city", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<int> get_offset() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapBusStopSearchRequest::get_offset", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<int> get_page() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapBusStopSearchRequest::get_page", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   //endregion

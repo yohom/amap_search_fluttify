@@ -44,17 +44,17 @@ class AMapPOIKeywordsSearchRequest extends AMapPOISearchBaseRequest with NSCodin
   //region getters
   Future<String> get_keywords() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOIKeywordsSearchRequest::get_keywords", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_city() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOIKeywordsSearchRequest::get_city", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<bool> get_cityLimit() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOIKeywordsSearchRequest::get_cityLimit", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<AMapGeoPoint> get_location() async {
@@ -127,7 +127,7 @@ extension AMapPOIKeywordsSearchRequest_Batch on List<AMapPOIKeywordsSearchReques
   Future<List<AMapGeoPoint>> get_location_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOIKeywordsSearchRequest::get_location_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapGeoPoint()..refId = __result__).toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__ == null ? null : (AMapGeoPoint()..refId = __result__)).toList();
     return typedResult;
   }
   

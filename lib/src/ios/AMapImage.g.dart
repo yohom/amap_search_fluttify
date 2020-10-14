@@ -44,12 +44,12 @@ class AMapImage extends AMapSearchObject with NSCoding, NSCopying {
   //region getters
   Future<String> get_title() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapImage::get_title", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_url() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapImage::get_url", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   //endregion

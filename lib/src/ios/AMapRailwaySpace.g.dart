@@ -44,12 +44,12 @@ class AMapRailwaySpace extends AMapSearchObject with NSCoding, NSCopying {
   //region getters
   Future<String> get_code() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapRailwaySpace::get_code", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<double> get_cost() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapRailwaySpace::get_cost", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   //endregion

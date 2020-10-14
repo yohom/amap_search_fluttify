@@ -44,47 +44,47 @@ class AMapGeocode extends AMapSearchObject with NSCoding, NSCopying {
   //region getters
   Future<String> get_formattedAddress() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapGeocode::get_formattedAddress", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_province() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapGeocode::get_province", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_city() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapGeocode::get_city", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_citycode() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapGeocode::get_citycode", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_district() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapGeocode::get_district", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_adcode() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapGeocode::get_adcode", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_township() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapGeocode::get_township", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_neighborhood() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapGeocode::get_neighborhood", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_building() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapGeocode::get_building", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<AMapGeoPoint> get_location() async {
@@ -94,7 +94,7 @@ class AMapGeocode extends AMapSearchObject with NSCoding, NSCopying {
   
   Future<String> get_level() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapGeocode::get_level", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   //endregion
@@ -246,7 +246,7 @@ extension AMapGeocode_Batch on List<AMapGeocode> {
   Future<List<AMapGeoPoint>> get_location_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapGeocode::get_location_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => AMapGeoPoint()..refId = __result__).toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__ == null ? null : (AMapGeoPoint()..refId = __result__)).toList();
     return typedResult;
   }
   

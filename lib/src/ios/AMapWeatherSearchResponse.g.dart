@@ -44,12 +44,12 @@ class AMapWeatherSearchResponse extends AMapSearchObject with NSCoding, NSCopyin
   //region getters
   Future<List<AMapLocalWeatherLive>> get_lives() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapWeatherSearchResponse::get_lives", {'__this__': this});
-    return __result__ == null ? null : ((__result__ as List).cast<String>().map((__it__) => AMapLocalWeatherLive()..refId = __it__).toList());
+    return (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapLocalWeatherLive()..refId = __it__))?.toList();
   }
   
   Future<List<AMapLocalWeatherForecast>> get_forecasts() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapWeatherSearchResponse::get_forecasts", {'__this__': this});
-    return __result__ == null ? null : ((__result__ as List).cast<String>().map((__it__) => AMapLocalWeatherForecast()..refId = __it__).toList());
+    return (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapLocalWeatherForecast()..refId = __it__))?.toList();
   }
   
   //endregion
@@ -84,14 +84,14 @@ extension AMapWeatherSearchResponse_Batch on List<AMapWeatherSearchResponse> {
   Future<List<List<AMapLocalWeatherLive>>> get_lives_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapWeatherSearchResponse::get_lives_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => AMapLocalWeatherLive()..refId = __it__).toList()).toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapLocalWeatherLive()..refId = __it__))?.toList()).toList();
     return typedResult;
   }
   
   Future<List<List<AMapLocalWeatherForecast>>> get_forecasts_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapWeatherSearchResponse::get_forecasts_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => AMapLocalWeatherForecast()..refId = __it__).toList()).toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapLocalWeatherForecast()..refId = __it__))?.toList()).toList();
     return typedResult;
   }
   

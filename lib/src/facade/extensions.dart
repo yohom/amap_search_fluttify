@@ -214,7 +214,9 @@ extension InputTipListX on List<InputTip> {
           poiId: idBatch[i],
           address: addressBatch[i],
           district: districtBatch[i],
-          coordinate: LatLng(latitudeBatch[i], longitudeBatch[i]),
+          coordinate: latitudeBatch[i] == null || longitudeBatch[i] == null
+              ? null
+              : LatLng(latitudeBatch[i], longitudeBatch[i]),
         )
     ];
   }

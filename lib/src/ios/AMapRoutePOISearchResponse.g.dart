@@ -44,12 +44,12 @@ class AMapRoutePOISearchResponse extends AMapSearchObject with NSCoding, NSCopyi
   //region getters
   Future<int> get_count() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoutePOISearchResponse::get_count", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<List<AMapRoutePOI>> get_pois() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoutePOISearchResponse::get_pois", {'__this__': this});
-    return __result__ == null ? null : ((__result__ as List).cast<String>().map((__it__) => AMapRoutePOI()..refId = __it__).toList());
+    return (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapRoutePOI()..refId = __it__))?.toList();
   }
   
   //endregion
@@ -91,7 +91,7 @@ extension AMapRoutePOISearchResponse_Batch on List<AMapRoutePOISearchResponse> {
   Future<List<List<AMapRoutePOI>>> get_pois_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoutePOISearchResponse::get_pois_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => AMapRoutePOI()..refId = __it__).toList()).toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapRoutePOI()..refId = __it__))?.toList()).toList();
     return typedResult;
   }
   

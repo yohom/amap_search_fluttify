@@ -68,7 +68,7 @@ class com_amap_api_services_help_Inputtips extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = com_amap_api_services_help_InputtipsQuery()..refId = __result__;
+      final __return__ = __result__ == null ? null : (com_amap_api_services_help_InputtipsQuery()..refId = __result__);
       return __return__;
     }
   }
@@ -181,7 +181,7 @@ class com_amap_api_services_help_Inputtips extends java_lang_Object  {
     if (__result__ == null) {
       return null;
     } else {
-      final __return__ = (__result__ as List).cast<String>().map((__it__) => com_amap_api_services_help_Tip()..refId = __it__).toList();
+      final __return__ = (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_help_Tip()..refId = __it__))?.toList();
       return __return__;
     }
   }
@@ -264,7 +264,7 @@ extension com_amap_api_services_help_Inputtips_Batch on List<com_amap_api_servic
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => com_amap_api_services_help_InputtipsQuery()..refId = __result__).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__ == null ? null : (com_amap_api_services_help_InputtipsQuery()..refId = __result__)).toList();
       return typedResult;
     }
   }
@@ -321,7 +321,7 @@ extension com_amap_api_services_help_Inputtips_Batch on List<com_amap_api_servic
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => com_amap_api_services_help_Tip()..refId = __it__).toList()).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_help_Tip()..refId = __it__))?.toList()).toList();
       return typedResult;
     }
   }

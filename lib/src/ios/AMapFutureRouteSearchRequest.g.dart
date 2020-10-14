@@ -44,62 +44,62 @@ class AMapFutureRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCod
   //region getters
   Future<String> get_beginTime() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapFutureRouteSearchRequest::get_beginTime", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<int> get_interval() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapFutureRouteSearchRequest::get_interval", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<int> get_timeCount() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapFutureRouteSearchRequest::get_timeCount", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<int> get_strategy() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapFutureRouteSearchRequest::get_strategy", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_originId() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapFutureRouteSearchRequest::get_originId", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_destinationId() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapFutureRouteSearchRequest::get_destinationId", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_origintype() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapFutureRouteSearchRequest::get_origintype", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_destinationtype() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapFutureRouteSearchRequest::get_destinationtype", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_parentId() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapFutureRouteSearchRequest::get_parentId", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_plateProvince() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapFutureRouteSearchRequest::get_plateProvince", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_plateNumber() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapFutureRouteSearchRequest::get_plateNumber", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<int> get_cartype() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapFutureRouteSearchRequest::get_cartype", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   //endregion

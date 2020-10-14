@@ -24,9 +24,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapAOI* ref = (AMapAOI*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 AMapGeoPoint* result = ref.location;
@@ -34,7 +35,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -48,9 +49,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapAOI* ref = (AMapAOI*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 CGFloat result = ref.area;
@@ -58,7 +60,7 @@ extern BOOL enableLog;
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -72,9 +74,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapRoad* ref = (AMapRoad*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.uid;
@@ -82,7 +85,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -96,9 +99,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapRoad* ref = (AMapRoad*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.name;
@@ -106,7 +110,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -120,9 +124,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapRoad* ref = (AMapRoad*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSInteger result = ref.distance;
@@ -130,7 +135,7 @@ extern BOOL enableLog;
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -144,9 +149,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapRoad* ref = (AMapRoad*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.direction;
@@ -154,7 +160,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -168,9 +174,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapRoad* ref = (AMapRoad*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 AMapGeoPoint* result = ref.location;
@@ -178,7 +185,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -192,9 +199,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapRoadInter* ref = (AMapRoadInter*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSInteger result = ref.distance;
@@ -202,7 +210,7 @@ extern BOOL enableLog;
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -216,9 +224,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapRoadInter* ref = (AMapRoadInter*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.direction;
@@ -226,7 +235,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -240,9 +249,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapRoadInter* ref = (AMapRoadInter*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 AMapGeoPoint* result = ref.location;
@@ -250,7 +260,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -264,9 +274,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapRoadInter* ref = (AMapRoadInter*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.firstId;
@@ -274,7 +285,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -288,9 +299,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapRoadInter* ref = (AMapRoadInter*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.firstName;
@@ -298,7 +310,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -312,9 +324,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapRoadInter* ref = (AMapRoadInter*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.secondId;
@@ -322,7 +335,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -336,9 +349,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapRoadInter* ref = (AMapRoadInter*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.secondName;
@@ -346,7 +360,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -360,9 +374,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapStreetNumber* ref = (AMapStreetNumber*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.street;
@@ -370,7 +385,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -384,9 +399,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapStreetNumber* ref = (AMapStreetNumber*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.number;
@@ -394,7 +410,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -408,9 +424,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapStreetNumber* ref = (AMapStreetNumber*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 AMapGeoPoint* result = ref.location;
@@ -418,7 +435,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -432,9 +449,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapStreetNumber* ref = (AMapStreetNumber*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSInteger result = ref.distance;
@@ -442,7 +460,7 @@ extern BOOL enableLog;
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -456,9 +474,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapStreetNumber* ref = (AMapStreetNumber*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.direction;
@@ -466,7 +485,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -480,9 +499,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapBusinessArea* ref = (AMapBusinessArea*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.name;
@@ -490,7 +510,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -504,9 +524,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapBusinessArea* ref = (AMapBusinessArea*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 AMapGeoPoint* result = ref.location;
@@ -514,7 +535,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -528,9 +549,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapAddressComponent* ref = (AMapAddressComponent*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.country;
@@ -538,7 +560,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -552,9 +574,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapAddressComponent* ref = (AMapAddressComponent*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.province;
@@ -562,7 +585,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -576,9 +599,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapAddressComponent* ref = (AMapAddressComponent*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.city;
@@ -586,7 +610,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -600,9 +624,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapAddressComponent* ref = (AMapAddressComponent*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.citycode;
@@ -610,7 +635,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -624,9 +649,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapAddressComponent* ref = (AMapAddressComponent*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.district;
@@ -634,7 +660,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -648,9 +674,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapAddressComponent* ref = (AMapAddressComponent*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.adcode;
@@ -658,7 +685,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -672,9 +699,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapAddressComponent* ref = (AMapAddressComponent*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.township;
@@ -682,7 +710,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -696,9 +724,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapAddressComponent* ref = (AMapAddressComponent*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.towncode;
@@ -706,7 +735,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -720,9 +749,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapAddressComponent* ref = (AMapAddressComponent*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.neighborhood;
@@ -730,7 +760,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -744,9 +774,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapAddressComponent* ref = (AMapAddressComponent*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.building;
@@ -754,7 +785,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -768,9 +799,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapAddressComponent* ref = (AMapAddressComponent*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 AMapStreetNumber* result = ref.streetNumber;
@@ -778,7 +810,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -792,9 +824,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapAddressComponent* ref = (AMapAddressComponent*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSArray<AMapBusinessArea*>* result = ref.businessAreas;
@@ -802,7 +835,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -816,9 +849,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapReGeocode* ref = (AMapReGeocode*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.formattedAddress;
@@ -826,7 +860,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -840,9 +874,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapReGeocode* ref = (AMapReGeocode*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 AMapAddressComponent* result = ref.addressComponent;
@@ -850,7 +885,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -864,9 +899,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapReGeocode* ref = (AMapReGeocode*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSArray<AMapRoad*>* result = ref.roads;
@@ -874,7 +910,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -888,9 +924,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapReGeocode* ref = (AMapReGeocode*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSArray<AMapRoadInter*>* result = ref.roadinters;
@@ -898,7 +935,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -912,9 +949,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapReGeocode* ref = (AMapReGeocode*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSArray<AMapPOI*>* result = ref.pois;
@@ -922,7 +960,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -936,9 +974,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapReGeocode* ref = (AMapReGeocode*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSArray<AMapAOI*>* result = ref.aois;
@@ -946,7 +985,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -960,9 +999,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapGeocode* ref = (AMapGeocode*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.formattedAddress;
@@ -970,7 +1010,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -984,9 +1024,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapGeocode* ref = (AMapGeocode*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.province;
@@ -994,7 +1035,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1008,9 +1049,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapGeocode* ref = (AMapGeocode*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.city;
@@ -1018,7 +1060,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1032,9 +1074,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapGeocode* ref = (AMapGeocode*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.citycode;
@@ -1042,7 +1085,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1056,9 +1099,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapGeocode* ref = (AMapGeocode*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.district;
@@ -1066,7 +1110,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1080,9 +1124,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapGeocode* ref = (AMapGeocode*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.adcode;
@@ -1090,7 +1135,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1104,9 +1149,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapGeocode* ref = (AMapGeocode*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.township;
@@ -1114,7 +1160,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1128,9 +1174,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapGeocode* ref = (AMapGeocode*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.neighborhood;
@@ -1138,7 +1185,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1152,9 +1199,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapGeocode* ref = (AMapGeocode*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.building;
@@ -1162,7 +1210,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1176,9 +1224,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapGeocode* ref = (AMapGeocode*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 AMapGeoPoint* result = ref.location;
@@ -1186,7 +1235,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1200,9 +1249,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapGeocode* ref = (AMapGeocode*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.level;
@@ -1210,7 +1260,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1224,9 +1274,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapBusStop* ref = (AMapBusStop*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.uid;
@@ -1234,7 +1285,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1248,9 +1299,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapBusStop* ref = (AMapBusStop*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.adcode;
@@ -1258,7 +1310,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1272,9 +1324,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapBusStop* ref = (AMapBusStop*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.name;
@@ -1282,7 +1335,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1296,9 +1349,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapBusStop* ref = (AMapBusStop*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.citycode;
@@ -1306,7 +1360,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1320,9 +1374,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapBusStop* ref = (AMapBusStop*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 AMapGeoPoint* result = ref.location;
@@ -1330,7 +1385,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1344,9 +1399,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapBusStop* ref = (AMapBusStop*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSArray<AMapBusLine*>* result = ref.buslines;
@@ -1354,7 +1410,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1368,9 +1424,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapBusStop* ref = (AMapBusStop*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.sequence;
@@ -1378,7 +1435,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1392,9 +1449,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapBusLine* ref = (AMapBusLine*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.uid;
@@ -1402,7 +1460,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1416,9 +1474,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapBusLine* ref = (AMapBusLine*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.type;
@@ -1426,7 +1485,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1440,9 +1499,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapBusLine* ref = (AMapBusLine*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.name;
@@ -1450,7 +1510,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1464,9 +1524,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapBusLine* ref = (AMapBusLine*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.polyline;
@@ -1474,7 +1535,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1488,9 +1549,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapBusLine* ref = (AMapBusLine*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.citycode;
@@ -1498,7 +1560,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1512,9 +1574,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapBusLine* ref = (AMapBusLine*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.startStop;
@@ -1522,7 +1585,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1536,9 +1599,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapBusLine* ref = (AMapBusLine*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.endStop;
@@ -1546,7 +1610,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1560,9 +1624,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapBusLine* ref = (AMapBusLine*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 AMapGeoPoint* result = ref.location;
@@ -1570,7 +1635,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1584,9 +1649,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapBusLine* ref = (AMapBusLine*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.startTime;
@@ -1594,7 +1660,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1608,9 +1674,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapBusLine* ref = (AMapBusLine*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.endTime;
@@ -1618,7 +1685,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1632,9 +1699,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapBusLine* ref = (AMapBusLine*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.company;
@@ -1642,7 +1710,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1656,9 +1724,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapBusLine* ref = (AMapBusLine*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 CGFloat result = ref.distance;
@@ -1666,7 +1735,7 @@ extern BOOL enableLog;
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1680,9 +1749,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapBusLine* ref = (AMapBusLine*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 CGFloat result = ref.basicPrice;
@@ -1690,7 +1760,7 @@ extern BOOL enableLog;
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1704,9 +1774,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapBusLine* ref = (AMapBusLine*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 CGFloat result = ref.totalPrice;
@@ -1714,7 +1785,7 @@ extern BOOL enableLog;
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1728,9 +1799,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapBusLine* ref = (AMapBusLine*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 AMapGeoPolygon* result = ref.bounds;
@@ -1738,7 +1810,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1752,9 +1824,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapBusLine* ref = (AMapBusLine*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSArray<AMapBusStop*>* result = ref.busStops;
@@ -1762,7 +1835,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1776,9 +1849,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapBusLine* ref = (AMapBusLine*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 AMapBusStop* result = ref.departureStop;
@@ -1786,7 +1860,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1800,9 +1874,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapBusLine* ref = (AMapBusLine*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 AMapBusStop* result = ref.arrivalStop;
@@ -1810,7 +1885,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1824,9 +1899,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapBusLine* ref = (AMapBusLine*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSArray<AMapBusStop*>* result = ref.viaBusStops;
@@ -1834,7 +1910,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1848,9 +1924,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapBusLine* ref = (AMapBusLine*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSInteger result = ref.duration;
@@ -1858,7 +1935,7 @@ extern BOOL enableLog;
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1872,9 +1949,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapDistrict* ref = (AMapDistrict*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.adcode;
@@ -1882,7 +1960,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1896,9 +1974,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapDistrict* ref = (AMapDistrict*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.citycode;
@@ -1906,7 +1985,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1920,9 +1999,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapDistrict* ref = (AMapDistrict*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.name;
@@ -1930,7 +2010,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1944,9 +2024,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapDistrict* ref = (AMapDistrict*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.level;
@@ -1954,7 +2035,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1968,9 +2049,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapDistrict* ref = (AMapDistrict*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 AMapGeoPoint* result = ref.center;
@@ -1978,7 +2060,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -1992,9 +2074,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapDistrict* ref = (AMapDistrict*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSArray<AMapDistrict*>* result = ref.districts;
@@ -2002,7 +2085,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -2016,9 +2099,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapDistrict* ref = (AMapDistrict*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSArray<NSString*>* result = ref.polylines;
@@ -2026,7 +2110,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -2040,9 +2124,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapTMC* ref = (AMapTMC*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSInteger result = ref.distance;
@@ -2050,7 +2135,7 @@ extern BOOL enableLog;
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -2064,9 +2149,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapTMC* ref = (AMapTMC*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.status;
@@ -2074,7 +2160,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -2088,9 +2174,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapTMC* ref = (AMapTMC*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.polyline;
@@ -2098,7 +2185,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -2112,9 +2199,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapStep* ref = (AMapStep*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.instruction;
@@ -2122,7 +2210,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -2136,9 +2224,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapStep* ref = (AMapStep*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.orientation;
@@ -2146,7 +2235,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -2160,9 +2249,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapStep* ref = (AMapStep*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.road;
@@ -2170,7 +2260,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -2184,9 +2274,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapStep* ref = (AMapStep*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSInteger result = ref.distance;
@@ -2194,7 +2285,7 @@ extern BOOL enableLog;
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -2208,9 +2299,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapStep* ref = (AMapStep*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSInteger result = ref.duration;
@@ -2218,7 +2310,7 @@ extern BOOL enableLog;
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -2232,9 +2324,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapStep* ref = (AMapStep*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.polyline;
@@ -2242,7 +2335,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -2256,9 +2349,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapStep* ref = (AMapStep*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.action;
@@ -2266,7 +2360,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -2280,9 +2374,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapStep* ref = (AMapStep*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.assistantAction;
@@ -2290,7 +2385,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -2304,9 +2399,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapStep* ref = (AMapStep*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 CGFloat result = ref.tolls;
@@ -2314,7 +2410,7 @@ extern BOOL enableLog;
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -2328,9 +2424,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapStep* ref = (AMapStep*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSInteger result = ref.tollDistance;
@@ -2338,7 +2435,7 @@ extern BOOL enableLog;
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -2352,9 +2449,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapStep* ref = (AMapStep*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.tollRoad;
@@ -2362,7 +2460,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -2376,9 +2474,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapStep* ref = (AMapStep*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSArray<AMapCity*>* result = ref.cities;
@@ -2386,7 +2485,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -2400,9 +2499,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapStep* ref = (AMapStep*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSArray<AMapTMC*>* result = ref.tmcs;
@@ -2410,7 +2510,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -2424,9 +2524,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapPath* ref = (AMapPath*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSInteger result = ref.distance;
@@ -2434,7 +2535,7 @@ extern BOOL enableLog;
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -2448,9 +2549,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapPath* ref = (AMapPath*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSInteger result = ref.duration;
@@ -2458,7 +2560,7 @@ extern BOOL enableLog;
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -2472,9 +2574,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapPath* ref = (AMapPath*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.strategy;
@@ -2482,7 +2585,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -2496,9 +2599,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapPath* ref = (AMapPath*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSArray<AMapStep*>* result = ref.steps;
@@ -2506,7 +2610,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -2520,9 +2624,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapPath* ref = (AMapPath*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 CGFloat result = ref.tolls;
@@ -2530,7 +2635,7 @@ extern BOOL enableLog;
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -2544,9 +2649,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapPath* ref = (AMapPath*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSInteger result = ref.tollDistance;
@@ -2554,7 +2660,7 @@ extern BOOL enableLog;
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -2568,9 +2674,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapPath* ref = (AMapPath*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSInteger result = ref.totalTrafficLights;
@@ -2578,7 +2685,7 @@ extern BOOL enableLog;
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -2592,9 +2699,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapPath* ref = (AMapPath*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSInteger result = ref.restriction;
@@ -2602,7 +2710,7 @@ extern BOOL enableLog;
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -2616,9 +2724,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapFutureTimeInfoElement* ref = (AMapFutureTimeInfoElement*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSInteger result = ref.duration;
@@ -2626,7 +2735,7 @@ extern BOOL enableLog;
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -2640,9 +2749,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapFutureTimeInfoElement* ref = (AMapFutureTimeInfoElement*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSInteger result = ref.pathindex;
@@ -2650,7 +2760,7 @@ extern BOOL enableLog;
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -2664,9 +2774,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapFutureTimeInfoElement* ref = (AMapFutureTimeInfoElement*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSInteger result = ref.restriction;
@@ -2674,7 +2785,7 @@ extern BOOL enableLog;
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -2688,9 +2799,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapFutureTimeInfoElement* ref = (AMapFutureTimeInfoElement*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSArray<AMapTMC*>* result = ref.tmcs;
@@ -2698,7 +2810,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -2712,9 +2824,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapFutureTimeInfo* ref = (AMapFutureTimeInfo*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.startTime;
@@ -2722,7 +2835,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -2736,9 +2849,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapFutureTimeInfo* ref = (AMapFutureTimeInfo*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSArray<AMapFutureTimeInfoElement*>* result = ref.elements;
@@ -2746,7 +2860,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -2760,9 +2874,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapWalking* ref = (AMapWalking*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 AMapGeoPoint* result = ref.origin;
@@ -2770,7 +2885,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -2784,9 +2899,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapWalking* ref = (AMapWalking*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 AMapGeoPoint* result = ref.destination;
@@ -2794,7 +2910,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -2808,9 +2924,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapWalking* ref = (AMapWalking*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSInteger result = ref.distance;
@@ -2818,7 +2935,7 @@ extern BOOL enableLog;
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -2832,9 +2949,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapWalking* ref = (AMapWalking*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSInteger result = ref.duration;
@@ -2842,7 +2960,7 @@ extern BOOL enableLog;
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -2856,9 +2974,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapWalking* ref = (AMapWalking*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSArray<AMapStep*>* result = ref.steps;
@@ -2866,7 +2985,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -2880,9 +2999,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapTaxi* ref = (AMapTaxi*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 AMapGeoPoint* result = ref.origin;
@@ -2890,7 +3010,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -2904,9 +3024,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapTaxi* ref = (AMapTaxi*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 AMapGeoPoint* result = ref.destination;
@@ -2914,7 +3035,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -2928,9 +3049,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapTaxi* ref = (AMapTaxi*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSInteger result = ref.distance;
@@ -2938,7 +3060,7 @@ extern BOOL enableLog;
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -2952,9 +3074,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapTaxi* ref = (AMapTaxi*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSInteger result = ref.duration;
@@ -2962,7 +3085,7 @@ extern BOOL enableLog;
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -2976,9 +3099,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapTaxi* ref = (AMapTaxi*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.sname;
@@ -2986,7 +3110,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3000,9 +3124,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapTaxi* ref = (AMapTaxi*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.tname;
@@ -3010,7 +3135,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3024,9 +3149,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapRailwayStation* ref = (AMapRailwayStation*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.uid;
@@ -3034,7 +3160,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3048,9 +3174,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapRailwayStation* ref = (AMapRailwayStation*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.name;
@@ -3058,7 +3185,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3072,9 +3199,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapRailwayStation* ref = (AMapRailwayStation*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 AMapGeoPoint* result = ref.location;
@@ -3082,7 +3210,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3096,9 +3224,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapRailwayStation* ref = (AMapRailwayStation*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.adcode;
@@ -3106,7 +3235,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3120,9 +3249,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapRailwayStation* ref = (AMapRailwayStation*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.time;
@@ -3130,7 +3260,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3144,9 +3274,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapRailwayStation* ref = (AMapRailwayStation*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSInteger result = ref.wait;
@@ -3154,7 +3285,7 @@ extern BOOL enableLog;
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3168,9 +3299,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapRailwayStation* ref = (AMapRailwayStation*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 BOOL result = ref.isStart;
@@ -3178,7 +3310,7 @@ extern BOOL enableLog;
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3192,9 +3324,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapRailwayStation* ref = (AMapRailwayStation*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 BOOL result = ref.isEnd;
@@ -3202,7 +3335,7 @@ extern BOOL enableLog;
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3216,9 +3349,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapRailwaySpace* ref = (AMapRailwaySpace*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.code;
@@ -3226,7 +3360,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3240,9 +3374,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapRailwaySpace* ref = (AMapRailwaySpace*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 CGFloat result = ref.cost;
@@ -3250,7 +3385,7 @@ extern BOOL enableLog;
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3264,9 +3399,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapRailway* ref = (AMapRailway*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.uid;
@@ -3274,7 +3410,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3288,9 +3424,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapRailway* ref = (AMapRailway*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.name;
@@ -3298,7 +3435,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3312,9 +3449,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapRailway* ref = (AMapRailway*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.trip;
@@ -3322,7 +3460,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3336,9 +3474,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapRailway* ref = (AMapRailway*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.type;
@@ -3346,7 +3485,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3360,9 +3499,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapRailway* ref = (AMapRailway*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSInteger result = ref.distance;
@@ -3370,7 +3510,7 @@ extern BOOL enableLog;
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3384,9 +3524,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapRailway* ref = (AMapRailway*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSInteger result = ref.time;
@@ -3394,7 +3535,7 @@ extern BOOL enableLog;
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3408,9 +3549,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapRailway* ref = (AMapRailway*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 AMapRailwayStation* result = ref.departureStation;
@@ -3418,7 +3560,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3432,9 +3574,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapRailway* ref = (AMapRailway*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 AMapRailwayStation* result = ref.arrivalStation;
@@ -3442,7 +3585,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3456,9 +3599,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapRailway* ref = (AMapRailway*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSArray<AMapRailwaySpace*>* result = ref.spaces;
@@ -3466,7 +3610,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3480,9 +3624,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapRailway* ref = (AMapRailway*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSArray<AMapRailwayStation*>* result = ref.viaStops;
@@ -3490,7 +3635,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3504,9 +3649,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapRailway* ref = (AMapRailway*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSArray<AMapRailway*>* result = ref.alters;
@@ -3514,7 +3660,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3528,9 +3674,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapSegment* ref = (AMapSegment*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 AMapWalking* result = ref.walking;
@@ -3538,7 +3685,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3552,9 +3699,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapSegment* ref = (AMapSegment*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSArray<AMapBusLine*>* result = ref.buslines;
@@ -3562,7 +3710,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3576,9 +3724,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapSegment* ref = (AMapSegment*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 AMapTaxi* result = ref.taxi;
@@ -3586,7 +3735,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3600,9 +3749,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapSegment* ref = (AMapSegment*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 AMapRailway* result = ref.railway;
@@ -3610,7 +3760,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3624,9 +3774,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapSegment* ref = (AMapSegment*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.enterName;
@@ -3634,7 +3785,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3648,9 +3799,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapSegment* ref = (AMapSegment*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 AMapGeoPoint* result = ref.enterLocation;
@@ -3658,7 +3810,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3672,9 +3824,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapSegment* ref = (AMapSegment*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.exitName;
@@ -3682,7 +3835,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3696,9 +3849,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapSegment* ref = (AMapSegment*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 AMapGeoPoint* result = ref.exitLocation;
@@ -3706,7 +3860,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3720,9 +3874,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapTransit* ref = (AMapTransit*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 CGFloat result = ref.cost;
@@ -3730,7 +3885,7 @@ extern BOOL enableLog;
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3744,9 +3899,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapTransit* ref = (AMapTransit*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSInteger result = ref.duration;
@@ -3754,7 +3910,7 @@ extern BOOL enableLog;
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3768,9 +3924,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapTransit* ref = (AMapTransit*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 BOOL result = ref.nightflag;
@@ -3778,7 +3935,7 @@ extern BOOL enableLog;
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3792,9 +3949,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapTransit* ref = (AMapTransit*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSInteger result = ref.walkingDistance;
@@ -3802,7 +3960,7 @@ extern BOOL enableLog;
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3816,9 +3974,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapTransit* ref = (AMapTransit*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSArray<AMapSegment*>* result = ref.segments;
@@ -3826,7 +3985,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3840,9 +3999,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapTransit* ref = (AMapTransit*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSInteger result = ref.distance;
@@ -3850,7 +4010,7 @@ extern BOOL enableLog;
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3864,9 +4024,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapRoute* ref = (AMapRoute*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 AMapGeoPoint* result = ref.origin;
@@ -3874,7 +4035,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3888,9 +4049,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapRoute* ref = (AMapRoute*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 AMapGeoPoint* result = ref.destination;
@@ -3898,7 +4060,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3912,9 +4074,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapRoute* ref = (AMapRoute*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 CGFloat result = ref.taxiCost;
@@ -3922,7 +4085,7 @@ extern BOOL enableLog;
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3936,9 +4099,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapRoute* ref = (AMapRoute*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSArray<AMapPath*>* result = ref.paths;
@@ -3946,7 +4110,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3960,9 +4124,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapRoute* ref = (AMapRoute*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSArray<AMapTransit*>* result = ref.transits;
@@ -3970,7 +4135,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -3984,9 +4149,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapDistanceResult* ref = (AMapDistanceResult*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSInteger result = ref.originID;
@@ -3994,7 +4160,7 @@ extern BOOL enableLog;
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -4008,9 +4174,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapDistanceResult* ref = (AMapDistanceResult*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSInteger result = ref.destID;
@@ -4018,7 +4185,7 @@ extern BOOL enableLog;
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -4032,9 +4199,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapDistanceResult* ref = (AMapDistanceResult*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSInteger result = ref.distance;
@@ -4042,7 +4210,7 @@ extern BOOL enableLog;
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -4056,9 +4224,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapDistanceResult* ref = (AMapDistanceResult*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSInteger result = ref.duration;
@@ -4066,7 +4235,7 @@ extern BOOL enableLog;
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -4080,9 +4249,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapDistanceResult* ref = (AMapDistanceResult*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.info;
@@ -4090,7 +4260,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -4104,9 +4274,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapDistanceResult* ref = (AMapDistanceResult*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSInteger result = ref.code;
@@ -4114,7 +4285,7 @@ extern BOOL enableLog;
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -4128,9 +4299,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.adcode;
@@ -4138,7 +4310,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -4152,9 +4324,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.province;
@@ -4162,7 +4335,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -4176,9 +4349,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.city;
@@ -4186,7 +4360,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -4200,9 +4374,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.weather;
@@ -4210,7 +4385,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -4224,9 +4399,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.temperature;
@@ -4234,7 +4410,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -4248,9 +4424,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.windDirection;
@@ -4258,7 +4435,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -4272,9 +4449,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.windPower;
@@ -4282,7 +4460,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -4296,9 +4474,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.humidity;
@@ -4306,7 +4485,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -4320,9 +4499,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.reportTime;
@@ -4330,7 +4510,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -4344,9 +4524,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.date;
@@ -4354,7 +4535,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -4368,9 +4549,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.week;
@@ -4378,7 +4560,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -4392,9 +4574,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.dayWeather;
@@ -4402,7 +4585,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -4416,9 +4599,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.nightWeather;
@@ -4426,7 +4610,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -4440,9 +4624,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.dayTemp;
@@ -4450,7 +4635,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -4464,9 +4649,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.nightTemp;
@@ -4474,7 +4660,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -4488,9 +4674,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.dayWind;
@@ -4498,7 +4685,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -4512,9 +4699,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.nightWind;
@@ -4522,7 +4710,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -4536,9 +4724,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.dayPower;
@@ -4546,7 +4735,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -4560,9 +4749,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.nightPower;
@@ -4570,7 +4760,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -4584,9 +4774,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapLocalWeatherForecast* ref = (AMapLocalWeatherForecast*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.adcode;
@@ -4594,7 +4785,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -4608,9 +4799,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapLocalWeatherForecast* ref = (AMapLocalWeatherForecast*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.province;
@@ -4618,7 +4810,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -4632,9 +4824,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapLocalWeatherForecast* ref = (AMapLocalWeatherForecast*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.city;
@@ -4642,7 +4835,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -4656,9 +4849,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapLocalWeatherForecast* ref = (AMapLocalWeatherForecast*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.reportTime;
@@ -4666,7 +4860,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -4680,9 +4874,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapLocalWeatherForecast* ref = (AMapLocalWeatherForecast*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSArray<AMapLocalDayWeatherForecast*>* result = ref.casts;
@@ -4690,7 +4885,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -4704,9 +4899,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapNearbyUserInfo* ref = (AMapNearbyUserInfo*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.userID;
@@ -4714,7 +4910,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -4728,9 +4924,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapNearbyUserInfo* ref = (AMapNearbyUserInfo*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 AMapGeoPoint* result = ref.location;
@@ -4738,7 +4935,7 @@ extern BOOL enableLog;
                 // return a ref
                 NSObject* __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -4752,9 +4949,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapNearbyUserInfo* ref = (AMapNearbyUserInfo*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 CGFloat result = ref.distance;
@@ -4762,7 +4960,7 @@ extern BOOL enableLog;
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -4776,9 +4974,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapNearbyUserInfo* ref = (AMapNearbyUserInfo*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSTimeInterval result = ref.updatetime;
@@ -4786,7 +4985,7 @@ extern BOOL enableLog;
                 // 返回值: Value
                 NSObject* __result__ = @(result);
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);
@@ -4800,9 +4999,10 @@ extern BOOL enableLog;
         
                 // ref object
                 AMapTrafficEvaluation* ref = (AMapTrafficEvaluation*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
                 if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
+                    [resultList addObject: [NSNull null]];
+                    continue;
                 }
         
                 NSString* result = ref.evaluationDescription;
@@ -4810,7 +5010,7 @@ extern BOOL enableLog;
                 // 返回值: jsonable
                 id __result__ = result;
         
-                [resultList addObject:__result__];
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
         
             methodResult(resultList);

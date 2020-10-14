@@ -44,12 +44,12 @@ class AMapFutureTimeInfo extends AMapSearchObject with NSCoding, NSCopying {
   //region getters
   Future<String> get_startTime() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapFutureTimeInfo::get_startTime", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<List<AMapFutureTimeInfoElement>> get_elements() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapFutureTimeInfo::get_elements", {'__this__': this});
-    return __result__ == null ? null : ((__result__ as List).cast<String>().map((__it__) => AMapFutureTimeInfoElement()..refId = __it__).toList());
+    return (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapFutureTimeInfoElement()..refId = __it__))?.toList();
   }
   
   //endregion
@@ -91,7 +91,7 @@ extension AMapFutureTimeInfo_Batch on List<AMapFutureTimeInfo> {
   Future<List<List<AMapFutureTimeInfoElement>>> get_elements_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapFutureTimeInfo::get_elements_batch", [for (final __item__ in this) {'__this__': __item__}]);
   
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List).cast<String>().map((__it__) => AMapFutureTimeInfoElement()..refId = __it__).toList()).toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => (__result__ as List)?.cast<String>()?.map((__it__) => __it__ == null ? null : (AMapFutureTimeInfoElement()..refId = __it__))?.toList()).toList();
     return typedResult;
   }
   

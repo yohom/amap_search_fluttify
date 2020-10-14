@@ -44,32 +44,32 @@ class AMapTrafficEvaluation extends AMapSearchObject with NSCoding, NSCopying {
   //region getters
   Future<String> get_evaluationDescription() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapTrafficEvaluation::get_evaluationDescription", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<int> get_status() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapTrafficEvaluation::get_status", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_expedite() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapTrafficEvaluation::get_expedite", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_congested() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapTrafficEvaluation::get_congested", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_blocked() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapTrafficEvaluation::get_blocked", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   Future<String> get_unknown() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapTrafficEvaluation::get_unknown", {'__this__': this});
-    return __result__ == null ? null : (__result__);
+    return __result__;
   }
   
   //endregion
