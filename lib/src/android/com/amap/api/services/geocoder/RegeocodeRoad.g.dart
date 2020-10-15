@@ -24,17 +24,14 @@ class com_amap_api_services_geocoder_RegeocodeRoad extends java_lang_Object with
 
   //region creators
   static Future<com_amap_api_services_geocoder_RegeocodeRoad> create__() async {
-    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createcom_amap_api_services_geocoder_RegeocodeRoad__', );
-    final object = com_amap_api_services_geocoder_RegeocodeRoad()..refId = __result__.refId;
-    return object;
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_services_geocoder_RegeocodeRoad__', );
   }
   
   static Future<List<com_amap_api_services_geocoder_RegeocodeRoad>> create_batch__(int length) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchcom_amap_api_services_geocoder_RegeocodeRoad__', {'length': length});
-    return resultBatch.map((it) => com_amap_api_services_geocoder_RegeocodeRoad()..refId = it.refId).toList();
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchcom_amap_api_services_geocoder_RegeocodeRoad__', {'length': length});
   }
   
   //endregion
@@ -198,7 +195,7 @@ class com_amap_api_services_geocoder_RegeocodeRoad extends java_lang_Object with
     // handle native call
   
   
-    return __result__ == null ? null : (com_amap_api_services_core_LatLonPoint()..refId = __result__.refId);
+    return __result__;
   }
   
   
@@ -259,7 +256,7 @@ extension com_amap_api_services_geocoder_RegeocodeRoad_Batch on List<com_amap_ap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.RegeocodeRoad::setId_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -285,7 +282,7 @@ extension com_amap_api_services_geocoder_RegeocodeRoad_Batch on List<com_amap_ap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.RegeocodeRoad::setName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -311,7 +308,7 @@ extension com_amap_api_services_geocoder_RegeocodeRoad_Batch on List<com_amap_ap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.RegeocodeRoad::setDistance_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -337,7 +334,7 @@ extension com_amap_api_services_geocoder_RegeocodeRoad_Batch on List<com_amap_ap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.RegeocodeRoad::setDirection_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -350,7 +347,7 @@ extension com_amap_api_services_geocoder_RegeocodeRoad_Batch on List<com_amap_ap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.RegeocodeRoad::getLatLngPoint_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_services_core_LatLonPoint()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<com_amap_api_services_core_LatLonPoint>().map((__result__) => __result__).toList();
   }
   
   
@@ -363,7 +360,7 @@ extension com_amap_api_services_geocoder_RegeocodeRoad_Batch on List<com_amap_ap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.RegeocodeRoad::setLatLngPoint_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   //endregion

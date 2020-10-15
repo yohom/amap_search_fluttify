@@ -24,17 +24,14 @@ class AMapRoadTrafficSearchBaseRequest extends AMapSearchObject with NSCoding, N
 
   //region creators
   static Future<AMapRoadTrafficSearchBaseRequest> create__({ bool init = true /* ios only */ }) async {
-    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapRoadTrafficSearchBaseRequest', {'init': init});
-    final object = AMapRoadTrafficSearchBaseRequest()..refId = __result__.refId;
-    return object;
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapRoadTrafficSearchBaseRequest', {'init': init});
   }
   
   static Future<List<AMapRoadTrafficSearchBaseRequest>> create_batch__(int length, { bool init = true /* ios only */ }) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapRoadTrafficSearchBaseRequest', {'length': length, 'init': init});
-    return resultBatch.map((it) => AMapRoadTrafficSearchBaseRequest()..refId = it.refId).toList();
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapRoadTrafficSearchBaseRequest', {'length': length, 'init': init});
   }
   
   //endregion
@@ -81,16 +78,12 @@ extension AMapRoadTrafficSearchBaseRequest_Batch on List<AMapRoadTrafficSearchBa
   //region getters
   Future<List<int>> get_level_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoadTrafficSearchBaseRequest::get_level_batch", [for (final __item__ in this) {'__this__': __item__}]);
-  
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    return typedResult;
+    return (resultBatch as List).map((__result__) => __result__).toList();
   }
   
   Future<List<bool>> get_requireExtension_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoadTrafficSearchBaseRequest::get_requireExtension_batch", [for (final __item__ in this) {'__this__': __item__}]);
-  
-    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-    return typedResult;
+    return (resultBatch as List).map((__result__) => __result__).toList();
   }
   
   //endregion

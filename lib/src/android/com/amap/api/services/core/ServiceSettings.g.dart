@@ -120,7 +120,7 @@ class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
     // handle native call
   
   
-    return __result__ == null ? null : (com_amap_api_services_core_ServiceSettings()..refId = __result__.refId);
+    return __result__;
   }
   
   
@@ -279,7 +279,7 @@ extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.ServiceSettings::setConnectionTimeOut_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -292,7 +292,7 @@ extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.ServiceSettings::setSoTimeOut_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -305,7 +305,7 @@ extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.ServiceSettings::getInstance_batch', );
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_services_core_ServiceSettings()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<com_amap_api_services_core_ServiceSettings>().map((__result__) => __result__).toList();
   }
   
   
@@ -318,7 +318,7 @@ extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.ServiceSettings::setLanguage_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -331,7 +331,7 @@ extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.ServiceSettings::setProtocol_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -370,7 +370,7 @@ extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.ServiceSettings::setApiKey_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -383,7 +383,7 @@ extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.ServiceSettings::destroyInnerAsynThreadPool_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   //endregion

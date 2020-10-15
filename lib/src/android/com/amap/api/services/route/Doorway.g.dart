@@ -24,17 +24,14 @@ class com_amap_api_services_route_Doorway extends java_lang_Object with android_
 
   //region creators
   static Future<com_amap_api_services_route_Doorway> create__() async {
-    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createcom_amap_api_services_route_Doorway__', );
-    final object = com_amap_api_services_route_Doorway()..refId = __result__.refId;
-    return object;
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_services_route_Doorway__', );
   }
   
   static Future<List<com_amap_api_services_route_Doorway>> create_batch__(int length) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchcom_amap_api_services_route_Doorway__', {'length': length});
-    return resultBatch.map((it) => com_amap_api_services_route_Doorway()..refId = it.refId).toList();
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchcom_amap_api_services_route_Doorway__', {'length': length});
   }
   
   //endregion
@@ -96,7 +93,7 @@ class com_amap_api_services_route_Doorway extends java_lang_Object with android_
     // handle native call
   
   
-    return __result__ == null ? null : (com_amap_api_services_core_LatLonPoint()..refId = __result__.refId);
+    return __result__;
   }
   
   
@@ -157,7 +154,7 @@ extension com_amap_api_services_route_Doorway_Batch on List<com_amap_api_service
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.Doorway::setName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -170,7 +167,7 @@ extension com_amap_api_services_route_Doorway_Batch on List<com_amap_api_service
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.Doorway::getLatLonPoint_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_services_core_LatLonPoint()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<com_amap_api_services_core_LatLonPoint>().map((__result__) => __result__).toList();
   }
   
   
@@ -183,7 +180,7 @@ extension com_amap_api_services_route_Doorway_Batch on List<com_amap_api_service
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.Doorway::setLatLonPoint_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   //endregion

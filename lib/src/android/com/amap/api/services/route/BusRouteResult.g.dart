@@ -24,17 +24,14 @@ class com_amap_api_services_route_BusRouteResult extends com_amap_api_services_r
 
   //region creators
   static Future<com_amap_api_services_route_BusRouteResult> create__() async {
-    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createcom_amap_api_services_route_BusRouteResult__', );
-    final object = com_amap_api_services_route_BusRouteResult()..refId = __result__.refId;
-    return object;
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_services_route_BusRouteResult__', );
   }
   
   static Future<List<com_amap_api_services_route_BusRouteResult>> create_batch__(int length) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchcom_amap_api_services_route_BusRouteResult__', {'length': length});
-    return resultBatch.map((it) => com_amap_api_services_route_BusRouteResult()..refId = it.refId).toList();
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchcom_amap_api_services_route_BusRouteResult__', {'length': length});
   }
   
   //endregion
@@ -96,7 +93,7 @@ class com_amap_api_services_route_BusRouteResult extends com_amap_api_services_r
     // handle native call
   
   
-    return (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_route_BusPath()..refId = __it__.refId))?.toList();
+    return (__result__ as List)?.cast<com_amap_api_services_route_BusPath>();
   }
   
   
@@ -130,7 +127,7 @@ class com_amap_api_services_route_BusRouteResult extends com_amap_api_services_r
     // handle native call
   
   
-    return __result__ == null ? null : (com_amap_api_services_route_RouteSearch_BusRouteQuery()..refId = __result__.refId);
+    return __result__;
   }
   
   
@@ -191,7 +188,7 @@ extension com_amap_api_services_route_BusRouteResult_Batch on List<com_amap_api_
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.BusRouteResult::setTaxiCost_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -204,7 +201,7 @@ extension com_amap_api_services_route_BusRouteResult_Batch on List<com_amap_api_
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.BusRouteResult::getPaths_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_route_BusPath()..refId = __it__.refId))?.toList()).toList();
+    return (resultBatch as List).cast<List<com_amap_api_services_route_BusPath>>().map((__result__) => (__result__ as List)?.cast<com_amap_api_services_route_BusPath>()).toList();
   }
   
   
@@ -217,7 +214,7 @@ extension com_amap_api_services_route_BusRouteResult_Batch on List<com_amap_api_
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.BusRouteResult::setPaths_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -230,7 +227,7 @@ extension com_amap_api_services_route_BusRouteResult_Batch on List<com_amap_api_
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.BusRouteResult::getBusQuery_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_services_route_RouteSearch_BusRouteQuery()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<com_amap_api_services_route_RouteSearch_BusRouteQuery>().map((__result__) => __result__).toList();
   }
   
   
@@ -243,7 +240,7 @@ extension com_amap_api_services_route_BusRouteResult_Batch on List<com_amap_api_
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.BusRouteResult::setBusQuery_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   //endregion

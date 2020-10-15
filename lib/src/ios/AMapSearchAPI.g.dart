@@ -24,17 +24,14 @@ class AMapSearchAPI extends NSObject  {
 
   //region creators
   static Future<AMapSearchAPI> create__({ bool init = true /* ios only */ }) async {
-    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapSearchAPI', {'init': init});
-    final object = AMapSearchAPI()..refId = __result__.refId;
-    return object;
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapSearchAPI', {'init': init});
   }
   
   static Future<List<AMapSearchAPI>> create_batch__(int length, { bool init = true /* ios only */ }) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapSearchAPI', {'length': length, 'init': init});
-    return resultBatch.map((it) => AMapSearchAPI()..refId = it.refId).toList();
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapSearchAPI', {'length': length, 'init': init});
   }
   
   //endregion
@@ -56,7 +53,7 @@ class AMapSearchAPI extends NSObject  {
   Future<void> set_delegate(AMapSearchDelegate delegate) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::set_delegate', <String, dynamic>{'__this__': this, });
   
-    MethodChannel('AMapSearchDelegate::Callback', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify')))
+    MethodChannel('AMapSearchDelegate::Callback', kAmapSearchFluttifyCodec)
       .setMethodCallHandler((methodCall) async {
         try {
           final args = methodCall.arguments as Map;
@@ -68,7 +65,7 @@ class AMapSearchAPI extends NSObject  {
               }
           
               // handle the native call
-              delegate?.AMapSearchRequest_didFailWithError(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<dynamic>(), TypeOpAmapSearchFluttifyIOS((args['error'] as Object))?.as__<NSError>());
+              delegate?.AMapSearchRequest_didFailWithError(args['request'], args['error']);
               break;
             case 'Callback::AMapSearchDelegate::onPOISearchDone_response':
               // print log
@@ -77,7 +74,7 @@ class AMapSearchAPI extends NSObject  {
               }
           
               // handle the native call
-              delegate?.onPOISearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapPOISearchBaseRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapPOISearchResponse>());
+              delegate?.onPOISearchDone_response(args['request'], args['response']);
               break;
             case 'Callback::AMapSearchDelegate::onRoutePOISearchDone_response':
               // print log
@@ -86,7 +83,7 @@ class AMapSearchAPI extends NSObject  {
               }
           
               // handle the native call
-              delegate?.onRoutePOISearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapRoutePOISearchRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapRoutePOISearchResponse>());
+              delegate?.onRoutePOISearchDone_response(args['request'], args['response']);
               break;
             case 'Callback::AMapSearchDelegate::onGeocodeSearchDone_response':
               // print log
@@ -95,7 +92,7 @@ class AMapSearchAPI extends NSObject  {
               }
           
               // handle the native call
-              delegate?.onGeocodeSearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapGeocodeSearchRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapGeocodeSearchResponse>());
+              delegate?.onGeocodeSearchDone_response(args['request'], args['response']);
               break;
             case 'Callback::AMapSearchDelegate::onReGeocodeSearchDone_response':
               // print log
@@ -104,7 +101,7 @@ class AMapSearchAPI extends NSObject  {
               }
           
               // handle the native call
-              delegate?.onReGeocodeSearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapReGeocodeSearchRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapReGeocodeSearchResponse>());
+              delegate?.onReGeocodeSearchDone_response(args['request'], args['response']);
               break;
             case 'Callback::AMapSearchDelegate::onInputTipsSearchDone_response':
               // print log
@@ -113,7 +110,7 @@ class AMapSearchAPI extends NSObject  {
               }
           
               // handle the native call
-              delegate?.onInputTipsSearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapInputTipsSearchRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapInputTipsSearchResponse>());
+              delegate?.onInputTipsSearchDone_response(args['request'], args['response']);
               break;
             case 'Callback::AMapSearchDelegate::onBusStopSearchDone_response':
               // print log
@@ -122,7 +119,7 @@ class AMapSearchAPI extends NSObject  {
               }
           
               // handle the native call
-              delegate?.onBusStopSearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapBusStopSearchRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapBusStopSearchResponse>());
+              delegate?.onBusStopSearchDone_response(args['request'], args['response']);
               break;
             case 'Callback::AMapSearchDelegate::onBusLineSearchDone_response':
               // print log
@@ -131,7 +128,7 @@ class AMapSearchAPI extends NSObject  {
               }
           
               // handle the native call
-              delegate?.onBusLineSearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapBusLineBaseSearchRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapBusLineSearchResponse>());
+              delegate?.onBusLineSearchDone_response(args['request'], args['response']);
               break;
             case 'Callback::AMapSearchDelegate::onDistrictSearchDone_response':
               // print log
@@ -140,7 +137,7 @@ class AMapSearchAPI extends NSObject  {
               }
           
               // handle the native call
-              delegate?.onDistrictSearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapDistrictSearchRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapDistrictSearchResponse>());
+              delegate?.onDistrictSearchDone_response(args['request'], args['response']);
               break;
             case 'Callback::AMapSearchDelegate::onRouteSearchDone_response':
               // print log
@@ -149,7 +146,7 @@ class AMapSearchAPI extends NSObject  {
               }
           
               // handle the native call
-              delegate?.onRouteSearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapRouteSearchBaseRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapRouteSearchResponse>());
+              delegate?.onRouteSearchDone_response(args['request'], args['response']);
               break;
             case 'Callback::AMapSearchDelegate::onFutureRouteSearchDone_response':
               // print log
@@ -158,7 +155,7 @@ class AMapSearchAPI extends NSObject  {
               }
           
               // handle the native call
-              delegate?.onFutureRouteSearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapRouteSearchBaseRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapFutureRouteSearchResponse>());
+              delegate?.onFutureRouteSearchDone_response(args['request'], args['response']);
               break;
             case 'Callback::AMapSearchDelegate::onDistanceSearchDone_response':
               // print log
@@ -167,7 +164,7 @@ class AMapSearchAPI extends NSObject  {
               }
           
               // handle the native call
-              delegate?.onDistanceSearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapDistanceSearchRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapDistanceSearchResponse>());
+              delegate?.onDistanceSearchDone_response(args['request'], args['response']);
               break;
             case 'Callback::AMapSearchDelegate::onWeatherSearchDone_response':
               // print log
@@ -176,7 +173,7 @@ class AMapSearchAPI extends NSObject  {
               }
           
               // handle the native call
-              delegate?.onWeatherSearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapWeatherSearchRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapWeatherSearchResponse>());
+              delegate?.onWeatherSearchDone_response(args['request'], args['response']);
               break;
             case 'Callback::AMapSearchDelegate::onRoadTrafficSearchDone_response':
               // print log
@@ -185,7 +182,7 @@ class AMapSearchAPI extends NSObject  {
               }
           
               // handle the native call
-              delegate?.onRoadTrafficSearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapRoadTrafficSearchBaseRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapRoadTrafficSearchResponse>());
+              delegate?.onRoadTrafficSearchDone_response(args['request'], args['response']);
               break;
             case 'Callback::AMapSearchDelegate::onNearbySearchDone_response':
               // print log
@@ -194,7 +191,7 @@ class AMapSearchAPI extends NSObject  {
               }
           
               // handle the native call
-              delegate?.onNearbySearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapNearbySearchRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapNearbySearchResponse>());
+              delegate?.onNearbySearchDone_response(args['request'], args['response']);
               break;
             case 'Callback::AMapSearchDelegate::onCloudSearchDone_response':
               // print log
@@ -203,7 +200,7 @@ class AMapSearchAPI extends NSObject  {
               }
           
               // handle the native call
-              delegate?.onCloudSearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapCloudSearchBaseRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapCloudPOISearchResponse>());
+              delegate?.onCloudSearchDone_response(args['request'], args['response']);
               break;
             case 'Callback::AMapSearchDelegate::onShareSearchDone_response':
               // print log
@@ -212,7 +209,7 @@ class AMapSearchAPI extends NSObject  {
               }
           
               // handle the native call
-              delegate?.onShareSearchDone_response(TypeOpAmapSearchFluttifyIOS((args['request'] as Object))?.as__<AMapShareSearchBaseRequest>(), TypeOpAmapSearchFluttifyIOS((args['response'] as Object))?.as__<AMapShareSearchResponse>());
+              delegate?.onShareSearchDone_response(args['request'], args['response']);
               break;
             default:
               break;
@@ -253,7 +250,7 @@ class AMapSearchAPI extends NSObject  {
     // handle native call
   
   
-    return __result__ == null ? null : (AMapSearchAPI()..refId = __result__.refId);
+    return __result__;
   }
   
   
@@ -812,16 +809,12 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   //region getters
   Future<List<int>> get_timeout_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapSearchAPI::get_timeout_batch", [for (final __item__ in this) {'__this__': __item__}]);
-  
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    return typedResult;
+    return (resultBatch as List).map((__result__) => __result__).toList();
   }
   
   Future<List<AMapSearchLanguage>> get_language_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapSearchAPI::get_language_batch", [for (final __item__ in this) {'__this__': __item__}]);
-  
-    final typedResult = (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as int).toAMapSearchLanguage()).toList();
-    return typedResult;
+    return (resultBatch as List).map((__result__) => (__result__ as int).toAMapSearchLanguage()).toList();
   }
   
   //endregion
@@ -852,7 +845,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::init_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (AMapSearchAPI()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<AMapSearchAPI>().map((__result__) => __result__).toList();
   }
   
   
@@ -865,7 +858,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::cancelAllRequests_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -878,7 +871,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapPOIIDSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -891,7 +884,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapPOIKeywordsSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -904,7 +897,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapPOIAroundSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -917,7 +910,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapPOIPolygonSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -930,7 +923,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapRoutePOISearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -943,7 +936,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapGeocodeSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -956,7 +949,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapReGoecodeSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -969,7 +962,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapInputTipsSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -982,7 +975,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapBusStopSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -995,7 +988,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapBusLineIDSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1008,7 +1001,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapBusLineNameSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1021,7 +1014,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapDistrictSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1034,7 +1027,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapDrivingRouteSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1047,7 +1040,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapWalkingRouteSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1060,7 +1053,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapTransitRouteSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1073,7 +1066,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapRidingRouteSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1086,7 +1079,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapTruckRouteSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1099,7 +1092,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapFutureRouteSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1112,7 +1105,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapWeatherSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1125,7 +1118,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapRoadTrafficSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1138,7 +1131,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapRoadTrafficCircleSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1151,7 +1144,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapDistanceSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1164,7 +1157,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapNearbySearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1177,7 +1170,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapCloudPOIAroundSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1190,7 +1183,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapCloudPOIPolygonSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1203,7 +1196,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapCloudPOIIDSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1216,7 +1209,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapCloudPOILocalSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1229,7 +1222,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapLocationShareSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1242,7 +1235,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapPOIShareSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1255,7 +1248,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapRouteShareSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1268,7 +1261,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapNavigationShareSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   //endregion

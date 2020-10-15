@@ -24,17 +24,14 @@ class AMapCloudPOIAroundSearchRequest extends AMapCloudSearchBaseRequest with NS
 
   //region creators
   static Future<AMapCloudPOIAroundSearchRequest> create__({ bool init = true /* ios only */ }) async {
-    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapCloudPOIAroundSearchRequest', {'init': init});
-    final object = AMapCloudPOIAroundSearchRequest()..refId = __result__.refId;
-    return object;
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapCloudPOIAroundSearchRequest', {'init': init});
   }
   
   static Future<List<AMapCloudPOIAroundSearchRequest>> create_batch__(int length, { bool init = true /* ios only */ }) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapCloudPOIAroundSearchRequest', {'length': length, 'init': init});
-    return resultBatch.map((it) => AMapCloudPOIAroundSearchRequest()..refId = it.refId).toList();
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapCloudPOIAroundSearchRequest', {'length': length, 'init': init});
   }
   
   //endregion
@@ -42,7 +39,7 @@ class AMapCloudPOIAroundSearchRequest extends AMapCloudSearchBaseRequest with NS
   //region getters
   Future<AMapGeoPoint> get_center() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudPOIAroundSearchRequest::get_center", {'__this__': this});
-    return __result__ == null ? null : (AMapGeoPoint()..refId = __result__.refId);
+    return __result__;
   }
   
   Future<int> get_radius() async {
@@ -92,23 +89,17 @@ extension AMapCloudPOIAroundSearchRequest_Batch on List<AMapCloudPOIAroundSearch
   //region getters
   Future<List<AMapGeoPoint>> get_center_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudPOIAroundSearchRequest::get_center_batch", [for (final __item__ in this) {'__this__': __item__}]);
-  
-    final typedResult = (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (AMapGeoPoint()..refId = __result__.refId)).toList();
-    return typedResult;
+    return (resultBatch as List).map((__result__) => __result__).toList();
   }
   
   Future<List<int>> get_radius_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudPOIAroundSearchRequest::get_radius_batch", [for (final __item__ in this) {'__this__': __item__}]);
-  
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    return typedResult;
+    return (resultBatch as List).map((__result__) => __result__).toList();
   }
   
   Future<List<String>> get_keywords_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudPOIAroundSearchRequest::get_keywords_batch", [for (final __item__ in this) {'__this__': __item__}]);
-  
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    return typedResult;
+    return (resultBatch as List).map((__result__) => __result__).toList();
   }
   
   //endregion

@@ -24,17 +24,14 @@ class AMapBusLineSearchResponse extends AMapSearchObject with NSCoding, NSCopyin
 
   //region creators
   static Future<AMapBusLineSearchResponse> create__({ bool init = true /* ios only */ }) async {
-    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapBusLineSearchResponse', {'init': init});
-    final object = AMapBusLineSearchResponse()..refId = __result__.refId;
-    return object;
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapBusLineSearchResponse', {'init': init});
   }
   
   static Future<List<AMapBusLineSearchResponse>> create_batch__(int length, { bool init = true /* ios only */ }) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapBusLineSearchResponse', {'length': length, 'init': init});
-    return resultBatch.map((it) => AMapBusLineSearchResponse()..refId = it.refId).toList();
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapBusLineSearchResponse', {'length': length, 'init': init});
   }
   
   //endregion
@@ -47,12 +44,12 @@ class AMapBusLineSearchResponse extends AMapSearchObject with NSCoding, NSCopyin
   
   Future<AMapSuggestion> get_suggestion() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapBusLineSearchResponse::get_suggestion", {'__this__': this});
-    return __result__ == null ? null : (AMapSuggestion()..refId = __result__.refId);
+    return __result__;
   }
   
   Future<List<AMapBusLine>> get_buslines() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapBusLineSearchResponse::get_buslines", {'__this__': this});
-    return (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (AMapBusLine()..refId = __it__.refId))?.toList();
+    return (__result__ as List)?.cast<AMapBusLine>();
   }
   
   //endregion
@@ -92,23 +89,17 @@ extension AMapBusLineSearchResponse_Batch on List<AMapBusLineSearchResponse> {
   //region getters
   Future<List<int>> get_count_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapBusLineSearchResponse::get_count_batch", [for (final __item__ in this) {'__this__': __item__}]);
-  
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    return typedResult;
+    return (resultBatch as List).map((__result__) => __result__).toList();
   }
   
   Future<List<AMapSuggestion>> get_suggestion_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapBusLineSearchResponse::get_suggestion_batch", [for (final __item__ in this) {'__this__': __item__}]);
-  
-    final typedResult = (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (AMapSuggestion()..refId = __result__.refId)).toList();
-    return typedResult;
+    return (resultBatch as List).map((__result__) => __result__).toList();
   }
   
   Future<List<List<AMapBusLine>>> get_buslines_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapBusLineSearchResponse::get_buslines_batch", [for (final __item__ in this) {'__this__': __item__}]);
-  
-    final typedResult = (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (AMapBusLine()..refId = __it__.refId))?.toList()).toList();
-    return typedResult;
+    return (resultBatch as List).map((__result__) => (__result__ as List)?.cast<AMapBusLine>()).toList();
   }
   
   //endregion

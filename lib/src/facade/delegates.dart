@@ -239,17 +239,13 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
   ) async {
     await super.onRouteSearchDone_response(request, response);
     dynamic route;
-    if (await TypeOpAmapSearchFluttifyIOS(request)
-        .is__<AMapDrivingRouteSearchRequest>()) {
+    if (await AmapSearchFluttifyIOSIs<AMapDrivingRouteSearchRequest>(request)) {
       route = DriveRouteResult.ios(await response.get_route());
-    } else if (await TypeOpAmapSearchFluttifyIOS(request)
-        .is__<AMapWalkingRouteSearchRequest>()) {
+    } else if (await AmapSearchFluttifyIOSIs<AMapWalkingRouteSearchRequest>(request)) {
       route = WalkRouteResult.ios(await response.get_route());
-    } else if (await TypeOpAmapSearchFluttifyIOS(request)
-        .is__<AMapBusLineBaseSearchRequest>()) {
+    } else if (await AmapSearchFluttifyIOSIs<AMapBusLineBaseSearchRequest>(request)) {
       route = BusRouteResult.ios(await response.get_route());
-    } else if (await TypeOpAmapSearchFluttifyIOS(request)
-        .is__<AMapRidingRouteSearchRequest>()) {
+    } else if (await AmapSearchFluttifyIOSIs<AMapRidingRouteSearchRequest>(request)) {
       route = RideRouteResult.ios(await response.get_route());
     }
     _completer?.complete(route);

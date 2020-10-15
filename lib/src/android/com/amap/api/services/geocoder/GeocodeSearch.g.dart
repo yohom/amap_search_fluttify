@@ -25,17 +25,14 @@ class com_amap_api_services_geocoder_GeocodeSearch extends java_lang_Object  {
 
   //region creators
   static Future<com_amap_api_services_geocoder_GeocodeSearch> create__android_content_Context(android_content_Context var1) async {
-    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createcom_amap_api_services_geocoder_GeocodeSearch__android_content_Context', {"var1": var1});
-    final object = com_amap_api_services_geocoder_GeocodeSearch()..refId = __result__.refId;
-    return object;
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_services_geocoder_GeocodeSearch__android_content_Context', {"var1": var1});
   }
   
   static Future<List<com_amap_api_services_geocoder_GeocodeSearch>> create_batch__android_content_Context(List<android_content_Context> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchcom_amap_api_services_geocoder_GeocodeSearch__android_content_Context', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]);
-    return resultBatch.map((it) => com_amap_api_services_geocoder_GeocodeSearch()..refId = it.refId).toList();
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchcom_amap_api_services_geocoder_GeocodeSearch__android_content_Context', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]);
   }
   
   //endregion
@@ -63,7 +60,7 @@ class com_amap_api_services_geocoder_GeocodeSearch extends java_lang_Object  {
     // handle native call
   
   
-    return __result__ == null ? null : (com_amap_api_services_geocoder_RegeocodeAddress()..refId = __result__.refId);
+    return __result__;
   }
   
   
@@ -80,7 +77,7 @@ class com_amap_api_services_geocoder_GeocodeSearch extends java_lang_Object  {
     // handle native call
   
   
-    return (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_geocoder_GeocodeAddress()..refId = __it__.refId))?.toList();
+    return (__result__ as List)?.cast<com_amap_api_services_geocoder_GeocodeAddress>();
   }
   
   
@@ -95,7 +92,7 @@ class com_amap_api_services_geocoder_GeocodeSearch extends java_lang_Object  {
   
   
     // handle native call
-    MethodChannel('com.amap.api.services.geocoder.GeocodeSearch::setOnGeocodeSearchListener::Callback@$refId', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify')))
+    MethodChannel('com.amap.api.services.geocoder.GeocodeSearch::setOnGeocodeSearchListener::Callback@$refId', kAmapSearchFluttifyCodec)
         .setMethodCallHandler((methodCall) async {
           try {
             final args = methodCall.arguments as Map;
@@ -107,7 +104,7 @@ class com_amap_api_services_geocoder_GeocodeSearch extends java_lang_Object  {
                 }
           
                 // handle the native call
-                var1?.onRegeocodeSearched(TypeOpAmapSearchFluttifyAndroid((args['var1'] as Object))?.as__<com_amap_api_services_geocoder_RegeocodeResult>(), args['var2']);
+                var1?.onRegeocodeSearched(args['var1'], args['var2']);
                 break;
               case 'Callback::com.amap.api.services.geocoder.GeocodeSearch.OnGeocodeSearchListener::onGeocodeSearched':
                 // print log
@@ -116,7 +113,7 @@ class com_amap_api_services_geocoder_GeocodeSearch extends java_lang_Object  {
                 }
           
                 // handle the native call
-                var1?.onGeocodeSearched(TypeOpAmapSearchFluttifyAndroid((args['var1'] as Object))?.as__<com_amap_api_services_geocoder_GeocodeResult>(), args['var2']);
+                var1?.onGeocodeSearched(args['var1'], args['var2']);
                 break;
               default:
                 break;
@@ -192,7 +189,7 @@ extension com_amap_api_services_geocoder_GeocodeSearch_Batch on List<com_amap_ap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.GeocodeSearch::getFromLocation_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_services_geocoder_RegeocodeAddress()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<com_amap_api_services_geocoder_RegeocodeAddress>().map((__result__) => __result__).toList();
   }
   
   
@@ -205,7 +202,7 @@ extension com_amap_api_services_geocoder_GeocodeSearch_Batch on List<com_amap_ap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.GeocodeSearch::getFromLocationName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_geocoder_GeocodeAddress()..refId = __it__.refId))?.toList()).toList();
+    return (resultBatch as List).cast<List<com_amap_api_services_geocoder_GeocodeAddress>>().map((__result__) => (__result__ as List)?.cast<com_amap_api_services_geocoder_GeocodeAddress>()).toList();
   }
   
   
@@ -218,7 +215,7 @@ extension com_amap_api_services_geocoder_GeocodeSearch_Batch on List<com_amap_ap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.GeocodeSearch::getFromLocationAsyn_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -231,7 +228,7 @@ extension com_amap_api_services_geocoder_GeocodeSearch_Batch on List<com_amap_ap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.GeocodeSearch::getFromLocationNameAsyn_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   //endregion

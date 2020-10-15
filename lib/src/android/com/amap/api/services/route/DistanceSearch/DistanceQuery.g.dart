@@ -24,17 +24,14 @@ class com_amap_api_services_route_DistanceSearch_DistanceQuery extends java_lang
 
   //region creators
   static Future<com_amap_api_services_route_DistanceSearch_DistanceQuery> create__() async {
-    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createcom_amap_api_services_route_DistanceSearch_DistanceQuery__', );
-    final object = com_amap_api_services_route_DistanceSearch_DistanceQuery()..refId = __result__.refId;
-    return object;
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_services_route_DistanceSearch_DistanceQuery__', );
   }
   
   static Future<List<com_amap_api_services_route_DistanceSearch_DistanceQuery>> create_batch__(int length) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchcom_amap_api_services_route_DistanceSearch_DistanceQuery__', {'length': length});
-    return resultBatch.map((it) => com_amap_api_services_route_DistanceSearch_DistanceQuery()..refId = it.refId).toList();
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchcom_amap_api_services_route_DistanceSearch_DistanceQuery__', {'length': length});
   }
   
   //endregion
@@ -62,7 +59,7 @@ class com_amap_api_services_route_DistanceSearch_DistanceQuery extends java_lang
     // handle native call
   
   
-    return __result__ == null ? null : (com_amap_api_services_route_DistanceSearch_DistanceQuery()..refId = __result__.refId);
+    return __result__;
   }
   
   
@@ -96,7 +93,7 @@ class com_amap_api_services_route_DistanceSearch_DistanceQuery extends java_lang
     // handle native call
   
   
-    return (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_core_LatLonPoint()..refId = __it__.refId))?.toList();
+    return (__result__ as List)?.cast<com_amap_api_services_core_LatLonPoint>();
   }
   
   
@@ -113,7 +110,7 @@ class com_amap_api_services_route_DistanceSearch_DistanceQuery extends java_lang
     // handle native call
   
   
-    return __result__ == null ? null : (com_amap_api_services_core_LatLonPoint()..refId = __result__.refId);
+    return __result__;
   }
   
   
@@ -212,7 +209,7 @@ extension com_amap_api_services_route_DistanceSearch_DistanceQuery_Batch on List
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.DistanceSearch.DistanceQuery::clone_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_services_route_DistanceSearch_DistanceQuery()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<com_amap_api_services_route_DistanceSearch_DistanceQuery>().map((__result__) => __result__).toList();
   }
   
   
@@ -238,7 +235,7 @@ extension com_amap_api_services_route_DistanceSearch_DistanceQuery_Batch on List
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.DistanceSearch.DistanceQuery::getOrigins_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_core_LatLonPoint()..refId = __it__.refId))?.toList()).toList();
+    return (resultBatch as List).cast<List<com_amap_api_services_core_LatLonPoint>>().map((__result__) => (__result__ as List)?.cast<com_amap_api_services_core_LatLonPoint>()).toList();
   }
   
   
@@ -251,7 +248,7 @@ extension com_amap_api_services_route_DistanceSearch_DistanceQuery_Batch on List
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.DistanceSearch.DistanceQuery::getDestination_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_services_core_LatLonPoint()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<com_amap_api_services_core_LatLonPoint>().map((__result__) => __result__).toList();
   }
   
   
@@ -264,7 +261,7 @@ extension com_amap_api_services_route_DistanceSearch_DistanceQuery_Batch on List
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.DistanceSearch.DistanceQuery::setType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -277,7 +274,7 @@ extension com_amap_api_services_route_DistanceSearch_DistanceQuery_Batch on List
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.DistanceSearch.DistanceQuery::setOrigins_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -290,7 +287,7 @@ extension com_amap_api_services_route_DistanceSearch_DistanceQuery_Batch on List
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.DistanceSearch.DistanceQuery::addOrigins_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -303,7 +300,7 @@ extension com_amap_api_services_route_DistanceSearch_DistanceQuery_Batch on List
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.DistanceSearch.DistanceQuery::setDestination_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   //endregion

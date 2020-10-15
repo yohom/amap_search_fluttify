@@ -24,31 +24,25 @@ class com_amap_api_services_route_RouteSearch_DrivePlanQuery extends java_lang_O
 
   //region creators
   static Future<com_amap_api_services_route_RouteSearch_DrivePlanQuery> create__com_amap_api_services_route_RouteSearch_FromAndTo__int__int__int(com_amap_api_services_route_RouteSearch_FromAndTo var1, int var2, int var3, int var4) async {
-    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createcom_amap_api_services_route_RouteSearch_DrivePlanQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__int__int', {"var1": var1, "var2": var2, "var3": var3, "var4": var4});
-    final object = com_amap_api_services_route_RouteSearch_DrivePlanQuery()..refId = __result__.refId;
-    return object;
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_services_route_RouteSearch_DrivePlanQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__int__int', {"var1": var1, "var2": var2, "var3": var3, "var4": var4});
   }
   
   static Future<com_amap_api_services_route_RouteSearch_DrivePlanQuery> create__() async {
-    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createcom_amap_api_services_route_RouteSearch_DrivePlanQuery__', );
-    final object = com_amap_api_services_route_RouteSearch_DrivePlanQuery()..refId = __result__.refId;
-    return object;
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_services_route_RouteSearch_DrivePlanQuery__', );
   }
   
   static Future<List<com_amap_api_services_route_RouteSearch_DrivePlanQuery>> create_batch__com_amap_api_services_route_RouteSearch_FromAndTo__int__int__int(List<com_amap_api_services_route_RouteSearch_FromAndTo> var1, List<int> var2, List<int> var3, List<int> var4) async {
     if (var1.length != var2.length || var2.length != var3.length || var3.length != var4.length) {
       return Future.error('all args must have same length!');
     }
-    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchcom_amap_api_services_route_RouteSearch_DrivePlanQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__int__int', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "var4": var4[__i__]}]);
-    return resultBatch.map((it) => com_amap_api_services_route_RouteSearch_DrivePlanQuery()..refId = it.refId).toList();
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchcom_amap_api_services_route_RouteSearch_DrivePlanQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__int__int', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "var4": var4[__i__]}]);
   }
   
   static Future<List<com_amap_api_services_route_RouteSearch_DrivePlanQuery>> create_batch__(int length) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchcom_amap_api_services_route_RouteSearch_DrivePlanQuery__', {'length': length});
-    return resultBatch.map((it) => com_amap_api_services_route_RouteSearch_DrivePlanQuery()..refId = it.refId).toList();
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchcom_amap_api_services_route_RouteSearch_DrivePlanQuery__', {'length': length});
   }
   
   //endregion
@@ -76,7 +70,7 @@ class com_amap_api_services_route_RouteSearch_DrivePlanQuery extends java_lang_O
     // handle native call
   
   
-    return __result__ == null ? null : (com_amap_api_services_route_RouteSearch_FromAndTo()..refId = __result__.refId);
+    return __result__;
   }
   
   
@@ -195,7 +189,7 @@ class com_amap_api_services_route_RouteSearch_DrivePlanQuery extends java_lang_O
     // handle native call
   
   
-    return __result__ == null ? null : (com_amap_api_services_route_RouteSearch_DrivePlanQuery()..refId = __result__.refId);
+    return __result__;
   }
   
   
@@ -277,7 +271,7 @@ extension com_amap_api_services_route_RouteSearch_DrivePlanQuery_Batch on List<c
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteSearch.DrivePlanQuery::getFromAndTo_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_services_route_RouteSearch_FromAndTo()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<com_amap_api_services_route_RouteSearch_FromAndTo>().map((__result__) => __result__).toList();
   }
   
   
@@ -368,7 +362,7 @@ extension com_amap_api_services_route_RouteSearch_DrivePlanQuery_Batch on List<c
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteSearch.DrivePlanQuery::clone_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_services_route_RouteSearch_DrivePlanQuery()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<com_amap_api_services_route_RouteSearch_DrivePlanQuery>().map((__result__) => __result__).toList();
   }
   
   
@@ -381,7 +375,7 @@ extension com_amap_api_services_route_RouteSearch_DrivePlanQuery_Batch on List<c
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteSearch.DrivePlanQuery::setDestParentPoiID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -394,7 +388,7 @@ extension com_amap_api_services_route_RouteSearch_DrivePlanQuery_Batch on List<c
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteSearch.DrivePlanQuery::setMode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -407,7 +401,7 @@ extension com_amap_api_services_route_RouteSearch_DrivePlanQuery_Batch on List<c
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteSearch.DrivePlanQuery::setCarType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   //endregion

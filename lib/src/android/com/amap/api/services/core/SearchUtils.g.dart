@@ -24,17 +24,14 @@ class com_amap_api_services_core_SearchUtils extends java_lang_Object  {
 
   //region creators
   static Future<com_amap_api_services_core_SearchUtils> create__() async {
-    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createcom_amap_api_services_core_SearchUtils__', );
-    final object = com_amap_api_services_core_SearchUtils()..refId = __result__.refId;
-    return object;
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_services_core_SearchUtils__', );
   }
   
   static Future<List<com_amap_api_services_core_SearchUtils>> create_batch__(int length) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchcom_amap_api_services_core_SearchUtils__', {'length': length});
-    return resultBatch.map((it) => com_amap_api_services_core_SearchUtils()..refId = it.refId).toList();
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchcom_amap_api_services_core_SearchUtils__', {'length': length});
   }
   
   //endregion

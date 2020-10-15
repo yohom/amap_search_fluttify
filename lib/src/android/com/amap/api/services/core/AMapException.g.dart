@@ -128,45 +128,36 @@ class com_amap_api_services_core_AMapException extends java_lang_Object  {
 
   //region creators
   static Future<com_amap_api_services_core_AMapException> create__String(String var1) async {
-    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createcom_amap_api_services_core_AMapException__String', {"var1": var1});
-    final object = com_amap_api_services_core_AMapException()..refId = __result__.refId;
-    return object;
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_services_core_AMapException__String', {"var1": var1});
   }
   
   static Future<com_amap_api_services_core_AMapException> create__String__int__String(String var1, int var2, String var3) async {
-    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createcom_amap_api_services_core_AMapException__String__int__String', {"var1": var1, "var2": var2, "var3": var3});
-    final object = com_amap_api_services_core_AMapException()..refId = __result__.refId;
-    return object;
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_services_core_AMapException__String__int__String', {"var1": var1, "var2": var2, "var3": var3});
   }
   
   static Future<com_amap_api_services_core_AMapException> create__() async {
-    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createcom_amap_api_services_core_AMapException__', );
-    final object = com_amap_api_services_core_AMapException()..refId = __result__.refId;
-    return object;
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_services_core_AMapException__', );
   }
   
   static Future<List<com_amap_api_services_core_AMapException>> create_batch__String(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchcom_amap_api_services_core_AMapException__String', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]);
-    return resultBatch.map((it) => com_amap_api_services_core_AMapException()..refId = it.refId).toList();
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchcom_amap_api_services_core_AMapException__String', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]);
   }
   
   static Future<List<com_amap_api_services_core_AMapException>> create_batch__String__int__String(List<String> var1, List<int> var2, List<String> var3) async {
     if (var1.length != var2.length || var2.length != var3.length) {
       return Future.error('all args must have same length!');
     }
-    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchcom_amap_api_services_core_AMapException__String__int__String', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__]}]);
-    return resultBatch.map((it) => com_amap_api_services_core_AMapException()..refId = it.refId).toList();
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchcom_amap_api_services_core_AMapException__String__int__String', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__]}]);
   }
   
   static Future<List<com_amap_api_services_core_AMapException>> create_batch__(int length) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchcom_amap_api_services_core_AMapException__', {'length': length});
-    return resultBatch.map((it) => com_amap_api_services_core_AMapException()..refId = it.refId).toList();
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchcom_amap_api_services_core_AMapException__', {'length': length});
   }
   
   //endregion

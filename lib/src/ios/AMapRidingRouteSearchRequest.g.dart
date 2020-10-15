@@ -24,17 +24,14 @@ class AMapRidingRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCod
 
   //region creators
   static Future<AMapRidingRouteSearchRequest> create__({ bool init = true /* ios only */ }) async {
-    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapRidingRouteSearchRequest', {'init': init});
-    final object = AMapRidingRouteSearchRequest()..refId = __result__.refId;
-    return object;
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapRidingRouteSearchRequest', {'init': init});
   }
   
   static Future<List<AMapRidingRouteSearchRequest>> create_batch__(int length, { bool init = true /* ios only */ }) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapRidingRouteSearchRequest', {'length': length, 'init': init});
-    return resultBatch.map((it) => AMapRidingRouteSearchRequest()..refId = it.refId).toList();
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapRidingRouteSearchRequest', {'length': length, 'init': init});
   }
   
   //endregion
@@ -70,9 +67,7 @@ extension AMapRidingRouteSearchRequest_Batch on List<AMapRidingRouteSearchReques
   //region getters
   Future<List<int>> get_type_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRidingRouteSearchRequest::get_type_batch", [for (final __item__ in this) {'__this__': __item__}]);
-  
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    return typedResult;
+    return (resultBatch as List).map((__result__) => __result__).toList();
   }
   
   //endregion

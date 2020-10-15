@@ -24,17 +24,14 @@ class AMapSuggestion extends AMapSearchObject with NSCoding, NSCopying {
 
   //region creators
   static Future<AMapSuggestion> create__({ bool init = true /* ios only */ }) async {
-    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapSuggestion', {'init': init});
-    final object = AMapSuggestion()..refId = __result__.refId;
-    return object;
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapSuggestion', {'init': init});
   }
   
   static Future<List<AMapSuggestion>> create_batch__(int length, { bool init = true /* ios only */ }) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapSuggestion', {'length': length, 'init': init});
-    return resultBatch.map((it) => AMapSuggestion()..refId = it.refId).toList();
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapSuggestion', {'length': length, 'init': init});
   }
   
   //endregion
@@ -47,7 +44,7 @@ class AMapSuggestion extends AMapSearchObject with NSCoding, NSCopying {
   
   Future<List<AMapCity>> get_cities() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapSuggestion::get_cities", {'__this__': this});
-    return (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (AMapCity()..refId = __it__.refId))?.toList();
+    return (__result__ as List)?.cast<AMapCity>();
   }
   
   //endregion
@@ -81,16 +78,12 @@ extension AMapSuggestion_Batch on List<AMapSuggestion> {
   //region getters
   Future<List<List<String>>> get_keywords_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapSuggestion::get_keywords_batch", [for (final __item__ in this) {'__this__': __item__}]);
-  
-    final typedResult = (resultBatch as List).cast<List<String>>().map((__result__) => (__result__ as List).cast<String>()).toList();
-    return typedResult;
+    return (resultBatch as List).map((__result__) => (__result__ as List).cast<String>()).toList();
   }
   
   Future<List<List<AMapCity>>> get_cities_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapSuggestion::get_cities_batch", [for (final __item__ in this) {'__this__': __item__}]);
-  
-    final typedResult = (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (AMapCity()..refId = __it__.refId))?.toList()).toList();
-    return typedResult;
+    return (resultBatch as List).map((__result__) => (__result__ as List)?.cast<AMapCity>()).toList();
   }
   
   //endregion

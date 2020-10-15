@@ -7,7 +7,7 @@ packages:
       name: amap_core_fluttify
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.14.0-dev.0"
+    version: "0.14.0-dev.2"
   amap_search_fluttify:
     dependency: "direct dev"
     description:
@@ -91,7 +91,7 @@ packages:
       name: core_location_fluttify
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.6.0-dev.0"
+    version: "0.6.0-dev.1"
   crypto:
     dependency: transitive
     description:
@@ -178,12 +178,12 @@ packages:
     source: sdk
     version: "0.0.0"
   foundation_fluttify:
-    dependency: transitive
+    dependency: "direct overridden"
     description:
-      name: foundation_fluttify
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.11.0-dev.1"
+      path: "/Users/yohom/Github/Me/All/fluttify/fluttify_infra/foundation_fluttify"
+      relative: false
+    source: path
+    version: "0.11.0-dev.8"
   http:
     dependency: transitive
     description:
@@ -281,7 +281,7 @@ packages:
       name: path_provider
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.6.18"
+    version: "1.6.21"
   path_provider_linux:
     dependency: transitive
     description:
@@ -379,7 +379,7 @@ packages:
       name: sensors
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.4.2+5"
+    version: "0.4.2+6"
   sky_engine:
     dependency: transitive
     description: flutter

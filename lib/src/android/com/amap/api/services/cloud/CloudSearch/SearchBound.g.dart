@@ -27,59 +27,47 @@ class com_amap_api_services_cloud_CloudSearch_SearchBound extends java_lang_Obje
 
   //region creators
   static Future<com_amap_api_services_cloud_CloudSearch_SearchBound> create__com_amap_api_services_core_LatLonPoint__int(com_amap_api_services_core_LatLonPoint var1, int var2) async {
-    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_SearchBound__com_amap_api_services_core_LatLonPoint__int', {"var1": var1, "var2": var2});
-    final object = com_amap_api_services_cloud_CloudSearch_SearchBound()..refId = __result__.refId;
-    return object;
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_SearchBound__com_amap_api_services_core_LatLonPoint__int', {"var1": var1, "var2": var2});
   }
   
   static Future<com_amap_api_services_cloud_CloudSearch_SearchBound> create__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint(com_amap_api_services_core_LatLonPoint var1, com_amap_api_services_core_LatLonPoint var2) async {
-    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_SearchBound__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint', {"var1": var1, "var2": var2});
-    final object = com_amap_api_services_cloud_CloudSearch_SearchBound()..refId = __result__.refId;
-    return object;
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_SearchBound__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint', {"var1": var1, "var2": var2});
   }
   
   static Future<com_amap_api_services_cloud_CloudSearch_SearchBound> create__List_java_util_List_com_amap_api_services_core_LatLonPoint__(List<com_amap_api_services_core_LatLonPoint> var1) async {
-    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_SearchBound__java_util_List_com_amap_api_services_core_LatLonPoint_', {"var1": var1});
-    final object = com_amap_api_services_cloud_CloudSearch_SearchBound()..refId = __result__.refId;
-    return object;
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_SearchBound__java_util_List_com_amap_api_services_core_LatLonPoint_', {"var1": var1});
   }
   
   static Future<com_amap_api_services_cloud_CloudSearch_SearchBound> create__String(String var1) async {
-    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_SearchBound__String', {"var1": var1});
-    final object = com_amap_api_services_cloud_CloudSearch_SearchBound()..refId = __result__.refId;
-    return object;
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_SearchBound__String', {"var1": var1});
   }
   
   static Future<List<com_amap_api_services_cloud_CloudSearch_SearchBound>> create_batch__com_amap_api_services_core_LatLonPoint__int(List<com_amap_api_services_core_LatLonPoint> var1, List<int> var2) async {
     if (var1.length != var2.length) {
       return Future.error('all args must have same length!');
     }
-    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchcom_amap_api_services_cloud_CloudSearch_SearchBound__com_amap_api_services_core_LatLonPoint__int', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]);
-    return resultBatch.map((it) => com_amap_api_services_cloud_CloudSearch_SearchBound()..refId = it.refId).toList();
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchcom_amap_api_services_cloud_CloudSearch_SearchBound__com_amap_api_services_core_LatLonPoint__int', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]);
   }
   
   static Future<List<com_amap_api_services_cloud_CloudSearch_SearchBound>> create_batch__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint(List<com_amap_api_services_core_LatLonPoint> var1, List<com_amap_api_services_core_LatLonPoint> var2) async {
     if (var1.length != var2.length) {
       return Future.error('all args must have same length!');
     }
-    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchcom_amap_api_services_cloud_CloudSearch_SearchBound__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]);
-    return resultBatch.map((it) => com_amap_api_services_cloud_CloudSearch_SearchBound()..refId = it.refId).toList();
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchcom_amap_api_services_cloud_CloudSearch_SearchBound__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]);
   }
   
   static Future<List<com_amap_api_services_cloud_CloudSearch_SearchBound>> create_batch__List_java_util_List_com_amap_api_services_core_LatLonPoint__(List<List<com_amap_api_services_core_LatLonPoint>> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchcom_amap_api_services_cloud_CloudSearch_SearchBound__java_util_List_com_amap_api_services_core_LatLonPoint_', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]);
-    return resultBatch.map((it) => com_amap_api_services_cloud_CloudSearch_SearchBound()..refId = it.refId).toList();
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchcom_amap_api_services_cloud_CloudSearch_SearchBound__java_util_List_com_amap_api_services_core_LatLonPoint_', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]);
   }
   
   static Future<List<com_amap_api_services_cloud_CloudSearch_SearchBound>> create_batch__String(List<String> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchcom_amap_api_services_cloud_CloudSearch_SearchBound__String', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]);
-    return resultBatch.map((it) => com_amap_api_services_cloud_CloudSearch_SearchBound()..refId = it.refId).toList();
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchcom_amap_api_services_cloud_CloudSearch_SearchBound__String', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]);
   }
   
   //endregion
@@ -107,7 +95,7 @@ class com_amap_api_services_cloud_CloudSearch_SearchBound extends java_lang_Obje
     // handle native call
   
   
-    return __result__ == null ? null : (com_amap_api_services_core_LatLonPoint()..refId = __result__.refId);
+    return __result__;
   }
   
   
@@ -124,7 +112,7 @@ class com_amap_api_services_cloud_CloudSearch_SearchBound extends java_lang_Obje
     // handle native call
   
   
-    return __result__ == null ? null : (com_amap_api_services_core_LatLonPoint()..refId = __result__.refId);
+    return __result__;
   }
   
   
@@ -141,7 +129,7 @@ class com_amap_api_services_cloud_CloudSearch_SearchBound extends java_lang_Obje
     // handle native call
   
   
-    return __result__ == null ? null : (com_amap_api_services_core_LatLonPoint()..refId = __result__.refId);
+    return __result__;
   }
   
   
@@ -209,7 +197,7 @@ class com_amap_api_services_cloud_CloudSearch_SearchBound extends java_lang_Obje
     // handle native call
   
   
-    return (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_core_LatLonPoint()..refId = __it__.refId))?.toList();
+    return (__result__ as List)?.cast<com_amap_api_services_core_LatLonPoint>();
   }
   
   
@@ -226,7 +214,7 @@ class com_amap_api_services_cloud_CloudSearch_SearchBound extends java_lang_Obje
     // handle native call
   
   
-    return __result__ == null ? null : (com_amap_api_services_cloud_CloudSearch_SearchBound()..refId = __result__.refId);
+    return __result__;
   }
   
   //endregion
@@ -257,7 +245,7 @@ extension com_amap_api_services_cloud_CloudSearch_SearchBound_Batch on List<com_
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.cloud.CloudSearch.SearchBound::getLowerLeft_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_services_core_LatLonPoint()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<com_amap_api_services_core_LatLonPoint>().map((__result__) => __result__).toList();
   }
   
   
@@ -270,7 +258,7 @@ extension com_amap_api_services_cloud_CloudSearch_SearchBound_Batch on List<com_
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.cloud.CloudSearch.SearchBound::getUpperRight_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_services_core_LatLonPoint()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<com_amap_api_services_core_LatLonPoint>().map((__result__) => __result__).toList();
   }
   
   
@@ -283,7 +271,7 @@ extension com_amap_api_services_cloud_CloudSearch_SearchBound_Batch on List<com_
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.cloud.CloudSearch.SearchBound::getCenter_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_services_core_LatLonPoint()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<com_amap_api_services_core_LatLonPoint>().map((__result__) => __result__).toList();
   }
   
   
@@ -335,7 +323,7 @@ extension com_amap_api_services_cloud_CloudSearch_SearchBound_Batch on List<com_
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.cloud.CloudSearch.SearchBound::getPolyGonList_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_core_LatLonPoint()..refId = __it__.refId))?.toList()).toList();
+    return (resultBatch as List).cast<List<com_amap_api_services_core_LatLonPoint>>().map((__result__) => (__result__ as List)?.cast<com_amap_api_services_core_LatLonPoint>()).toList();
   }
   
   
@@ -348,7 +336,7 @@ extension com_amap_api_services_cloud_CloudSearch_SearchBound_Batch on List<com_
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.cloud.CloudSearch.SearchBound::clone_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_services_cloud_CloudSearch_SearchBound()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<com_amap_api_services_cloud_CloudSearch_SearchBound>().map((__result__) => __result__).toList();
   }
   
   //endregion

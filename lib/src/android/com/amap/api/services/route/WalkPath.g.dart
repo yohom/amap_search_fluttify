@@ -24,17 +24,14 @@ class com_amap_api_services_route_WalkPath extends com_amap_api_services_route_P
 
   //region creators
   static Future<com_amap_api_services_route_WalkPath> create__() async {
-    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createcom_amap_api_services_route_WalkPath__', );
-    final object = com_amap_api_services_route_WalkPath()..refId = __result__.refId;
-    return object;
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_services_route_WalkPath__', );
   }
   
   static Future<List<com_amap_api_services_route_WalkPath>> create_batch__(int length) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchcom_amap_api_services_route_WalkPath__', {'length': length});
-    return resultBatch.map((it) => com_amap_api_services_route_WalkPath()..refId = it.refId).toList();
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchcom_amap_api_services_route_WalkPath__', {'length': length});
   }
   
   //endregion
@@ -62,7 +59,7 @@ class com_amap_api_services_route_WalkPath extends com_amap_api_services_route_P
     // handle native call
   
   
-    return (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_route_WalkStep()..refId = __it__.refId))?.toList();
+    return (__result__ as List)?.cast<com_amap_api_services_route_WalkStep>();
   }
   
   
@@ -110,7 +107,7 @@ extension com_amap_api_services_route_WalkPath_Batch on List<com_amap_api_servic
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.WalkPath::getSteps_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_route_WalkStep()..refId = __it__.refId))?.toList()).toList();
+    return (resultBatch as List).cast<List<com_amap_api_services_route_WalkStep>>().map((__result__) => (__result__ as List)?.cast<com_amap_api_services_route_WalkStep>()).toList();
   }
   
   
@@ -123,7 +120,7 @@ extension com_amap_api_services_route_WalkPath_Batch on List<com_amap_api_servic
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.WalkPath::setSteps_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   //endregion
