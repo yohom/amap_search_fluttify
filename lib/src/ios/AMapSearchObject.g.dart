@@ -24,17 +24,14 @@ class AMapSearchObject extends NSObject with NSCoding, NSCopying {
 
   //region creators
   static Future<AMapSearchObject> create__({ bool init = true /* ios only */ }) async {
-    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapSearchObject', {'init': init});
-    final object = AMapSearchObject()..refId = __result__.refId;
-    return object;
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapSearchObject', {'init': init});
   }
   
   static Future<List<AMapSearchObject>> create_batch__(int length, { bool init = true /* ios only */ }) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapSearchObject', {'length': length, 'init': init});
-    return resultBatch.map((it) => AMapSearchObject()..refId = it.refId).toList();
+    return kAmapSearchFluttifyChannel.invokeListMethod<AMapSearchObject>('ObjectFactory::create_batchAMapSearchObject', {'length': length, 'init': init});
   }
   
   //endregion

@@ -24,17 +24,14 @@ class AMapTransit extends AMapSearchObject with NSCoding, NSCopying {
 
   //region creators
   static Future<AMapTransit> create__({ bool init = true /* ios only */ }) async {
-    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapTransit', {'init': init});
-    final object = AMapTransit()..refId = __result__.refId;
-    return object;
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapTransit', {'init': init});
   }
   
   static Future<List<AMapTransit>> create_batch__(int length, { bool init = true /* ios only */ }) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapTransit', {'length': length, 'init': init});
-    return resultBatch.map((it) => AMapTransit()..refId = it.refId).toList();
+    return kAmapSearchFluttifyChannel.invokeListMethod<AMapTransit>('ObjectFactory::create_batchAMapTransit', {'length': length, 'init': init});
   }
   
   //endregion
@@ -62,7 +59,7 @@ class AMapTransit extends AMapSearchObject with NSCoding, NSCopying {
   
   Future<List<AMapSegment>> get_segments() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapTransit::get_segments", {'__this__': this});
-    return (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (AMapSegment()..refId = __it__.refId))?.toList();
+    return (__result__ as List)?.cast<AMapSegment>();
   }
   
   Future<int> get_distance() async {
@@ -125,44 +122,32 @@ extension AMapTransit_Batch on List<AMapTransit> {
   //region getters
   Future<List<double>> get_cost_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTransit::get_cost_batch", [for (final __item__ in this) {'__this__': __item__}]);
-  
-    final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
-    return typedResult;
+    return (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
   }
   
   Future<List<int>> get_duration_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTransit::get_duration_batch", [for (final __item__ in this) {'__this__': __item__}]);
-  
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    return typedResult;
+    return (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
   }
   
   Future<List<bool>> get_nightflag_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTransit::get_nightflag_batch", [for (final __item__ in this) {'__this__': __item__}]);
-  
-    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-    return typedResult;
+    return (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
   }
   
   Future<List<int>> get_walkingDistance_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTransit::get_walkingDistance_batch", [for (final __item__ in this) {'__this__': __item__}]);
-  
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    return typedResult;
+    return (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
   }
   
   Future<List<List<AMapSegment>>> get_segments_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTransit::get_segments_batch", [for (final __item__ in this) {'__this__': __item__}]);
-  
-    final typedResult = (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (AMapSegment()..refId = __it__.refId))?.toList()).toList();
-    return typedResult;
+    return (resultBatch as List).cast<List<AMapSegment>>().map((__result__) => (__result__ as List)?.cast<AMapSegment>()).toList();
   }
   
   Future<List<int>> get_distance_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTransit::get_distance_batch", [for (final __item__ in this) {'__this__': __item__}]);
-  
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    return typedResult;
+    return (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
   }
   
   //endregion

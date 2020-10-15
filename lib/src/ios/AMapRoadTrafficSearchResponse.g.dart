@@ -24,17 +24,14 @@ class AMapRoadTrafficSearchResponse extends AMapSearchObject with NSCoding, NSCo
 
   //region creators
   static Future<AMapRoadTrafficSearchResponse> create__({ bool init = true /* ios only */ }) async {
-    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapRoadTrafficSearchResponse', {'init': init});
-    final object = AMapRoadTrafficSearchResponse()..refId = __result__.refId;
-    return object;
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapRoadTrafficSearchResponse', {'init': init});
   }
   
   static Future<List<AMapRoadTrafficSearchResponse>> create_batch__(int length, { bool init = true /* ios only */ }) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapRoadTrafficSearchResponse', {'length': length, 'init': init});
-    return resultBatch.map((it) => AMapRoadTrafficSearchResponse()..refId = it.refId).toList();
+    return kAmapSearchFluttifyChannel.invokeListMethod<AMapRoadTrafficSearchResponse>('ObjectFactory::create_batchAMapRoadTrafficSearchResponse', {'length': length, 'init': init});
   }
   
   //endregion
@@ -42,7 +39,7 @@ class AMapRoadTrafficSearchResponse extends AMapSearchObject with NSCoding, NSCo
   //region getters
   Future<AMapTrafficInfo> get_trafficInfo() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoadTrafficSearchResponse::get_trafficInfo", {'__this__': this});
-    return __result__ == null ? null : (AMapTrafficInfo()..refId = __result__.refId);
+    return __result__;
   }
   
   //endregion
@@ -70,9 +67,7 @@ extension AMapRoadTrafficSearchResponse_Batch on List<AMapRoadTrafficSearchRespo
   //region getters
   Future<List<AMapTrafficInfo>> get_trafficInfo_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoadTrafficSearchResponse::get_trafficInfo_batch", [for (final __item__ in this) {'__this__': __item__}]);
-  
-    final typedResult = (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (AMapTrafficInfo()..refId = __result__.refId)).toList();
-    return typedResult;
+    return (resultBatch as List).cast<AMapTrafficInfo>().map((__result__) => __result__).toList();
   }
   
   //endregion

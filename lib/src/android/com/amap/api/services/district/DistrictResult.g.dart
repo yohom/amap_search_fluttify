@@ -24,31 +24,25 @@ class com_amap_api_services_district_DistrictResult extends java_lang_Object wit
 
   //region creators
   static Future<com_amap_api_services_district_DistrictResult> create__com_amap_api_services_district_DistrictSearchQuery__List_java_util_ArrayList_com_amap_api_services_district_DistrictItem__(com_amap_api_services_district_DistrictSearchQuery var1, List<com_amap_api_services_district_DistrictItem> var2) async {
-    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createcom_amap_api_services_district_DistrictResult__com_amap_api_services_district_DistrictSearchQuery__java_util_ArrayList_com_amap_api_services_district_DistrictItem_', {"var1": var1, "var2": var2});
-    final object = com_amap_api_services_district_DistrictResult()..refId = __result__.refId;
-    return object;
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_services_district_DistrictResult__com_amap_api_services_district_DistrictSearchQuery__java_util_ArrayList_com_amap_api_services_district_DistrictItem_', {"var1": var1, "var2": var2});
   }
   
   static Future<com_amap_api_services_district_DistrictResult> create__() async {
-    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createcom_amap_api_services_district_DistrictResult__', );
-    final object = com_amap_api_services_district_DistrictResult()..refId = __result__.refId;
-    return object;
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_services_district_DistrictResult__', );
   }
   
   static Future<List<com_amap_api_services_district_DistrictResult>> create_batch__com_amap_api_services_district_DistrictSearchQuery__List_java_util_ArrayList_com_amap_api_services_district_DistrictItem__(List<com_amap_api_services_district_DistrictSearchQuery> var1, List<List<com_amap_api_services_district_DistrictItem>> var2) async {
     if (var1.length != var2.length) {
       return Future.error('all args must have same length!');
     }
-    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchcom_amap_api_services_district_DistrictResult__com_amap_api_services_district_DistrictSearchQuery__java_util_ArrayList_com_amap_api_services_district_DistrictItem_', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]);
-    return resultBatch.map((it) => com_amap_api_services_district_DistrictResult()..refId = it.refId).toList();
+    return kAmapSearchFluttifyChannel.invokeListMethod<com_amap_api_services_district_DistrictResult>('ObjectFactory::create_batchcom_amap_api_services_district_DistrictResult__com_amap_api_services_district_DistrictSearchQuery__java_util_ArrayList_com_amap_api_services_district_DistrictItem_', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]);
   }
   
   static Future<List<com_amap_api_services_district_DistrictResult>> create_batch__(int length) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchcom_amap_api_services_district_DistrictResult__', {'length': length});
-    return resultBatch.map((it) => com_amap_api_services_district_DistrictResult()..refId = it.refId).toList();
+    return kAmapSearchFluttifyChannel.invokeListMethod<com_amap_api_services_district_DistrictResult>('ObjectFactory::create_batchcom_amap_api_services_district_DistrictResult__', {'length': length});
   }
   
   //endregion
@@ -76,7 +70,7 @@ class com_amap_api_services_district_DistrictResult extends java_lang_Object wit
     // handle native call
   
   
-    return (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_district_DistrictItem()..refId = __it__.refId))?.toList();
+    return (__result__ as List)?.cast<com_amap_api_services_district_DistrictItem>();
   }
   
   
@@ -110,7 +104,7 @@ class com_amap_api_services_district_DistrictResult extends java_lang_Object wit
     // handle native call
   
   
-    return __result__ == null ? null : (com_amap_api_services_district_DistrictSearchQuery()..refId = __result__.refId);
+    return __result__;
   }
   
   
@@ -178,7 +172,7 @@ class com_amap_api_services_district_DistrictResult extends java_lang_Object wit
     // handle native call
   
   
-    return __result__ == null ? null : (com_amap_api_services_core_AMapException()..refId = __result__.refId);
+    return __result__;
   }
   
   
@@ -226,7 +220,7 @@ extension com_amap_api_services_district_DistrictResult_Batch on List<com_amap_a
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.district.DistrictResult::getDistrict_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_district_DistrictItem()..refId = __it__.refId))?.toList()).toList();
+    return (resultBatch as List).cast<List<com_amap_api_services_district_DistrictItem>>().map((__result__) => (__result__ as List)?.cast<com_amap_api_services_district_DistrictItem>()).toList();
   }
   
   
@@ -239,7 +233,7 @@ extension com_amap_api_services_district_DistrictResult_Batch on List<com_amap_a
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.district.DistrictResult::setDistrict_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -252,7 +246,7 @@ extension com_amap_api_services_district_DistrictResult_Batch on List<com_amap_a
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.district.DistrictResult::getQuery_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_services_district_DistrictSearchQuery()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<com_amap_api_services_district_DistrictSearchQuery>().map((__result__) => __result__).toList();
   }
   
   
@@ -265,7 +259,7 @@ extension com_amap_api_services_district_DistrictResult_Batch on List<com_amap_a
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.district.DistrictResult::setQuery_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -291,7 +285,7 @@ extension com_amap_api_services_district_DistrictResult_Batch on List<com_amap_a
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.district.DistrictResult::setPageCount_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -304,7 +298,7 @@ extension com_amap_api_services_district_DistrictResult_Batch on List<com_amap_a
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.district.DistrictResult::getAMapException_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_services_core_AMapException()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<com_amap_api_services_core_AMapException>().map((__result__) => __result__).toList();
   }
   
   
@@ -317,7 +311,7 @@ extension com_amap_api_services_district_DistrictResult_Batch on List<com_amap_a
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.district.DistrictResult::setAMapException_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   //endregion

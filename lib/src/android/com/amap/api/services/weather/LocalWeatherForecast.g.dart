@@ -24,17 +24,14 @@ class com_amap_api_services_weather_LocalWeatherForecast extends java_lang_Objec
 
   //region creators
   static Future<com_amap_api_services_weather_LocalWeatherForecast> create__() async {
-    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createcom_amap_api_services_weather_LocalWeatherForecast__', );
-    final object = com_amap_api_services_weather_LocalWeatherForecast()..refId = __result__.refId;
-    return object;
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_services_weather_LocalWeatherForecast__', );
   }
   
   static Future<List<com_amap_api_services_weather_LocalWeatherForecast>> create_batch__(int length) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchcom_amap_api_services_weather_LocalWeatherForecast__', {'length': length});
-    return resultBatch.map((it) => com_amap_api_services_weather_LocalWeatherForecast()..refId = it.refId).toList();
+    return kAmapSearchFluttifyChannel.invokeListMethod<com_amap_api_services_weather_LocalWeatherForecast>('ObjectFactory::create_batchcom_amap_api_services_weather_LocalWeatherForecast__', {'length': length});
   }
   
   //endregion
@@ -198,7 +195,7 @@ class com_amap_api_services_weather_LocalWeatherForecast extends java_lang_Objec
     // handle native call
   
   
-    return (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_weather_LocalDayWeatherForecast()..refId = __it__.refId))?.toList();
+    return (__result__ as List)?.cast<com_amap_api_services_weather_LocalDayWeatherForecast>();
   }
   
   
@@ -259,7 +256,7 @@ extension com_amap_api_services_weather_LocalWeatherForecast_Batch on List<com_a
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.weather.LocalWeatherForecast::setProvince_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -285,7 +282,7 @@ extension com_amap_api_services_weather_LocalWeatherForecast_Batch on List<com_a
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.weather.LocalWeatherForecast::setCity_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -311,7 +308,7 @@ extension com_amap_api_services_weather_LocalWeatherForecast_Batch on List<com_a
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.weather.LocalWeatherForecast::setAdCode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -337,7 +334,7 @@ extension com_amap_api_services_weather_LocalWeatherForecast_Batch on List<com_a
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.weather.LocalWeatherForecast::setReportTime_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -350,7 +347,7 @@ extension com_amap_api_services_weather_LocalWeatherForecast_Batch on List<com_a
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.weather.LocalWeatherForecast::getWeatherForecast_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_weather_LocalDayWeatherForecast()..refId = __it__.refId))?.toList()).toList();
+    return (resultBatch as List).cast<List<com_amap_api_services_weather_LocalDayWeatherForecast>>().map((__result__) => (__result__ as List)?.cast<com_amap_api_services_weather_LocalDayWeatherForecast>()).toList();
   }
   
   
@@ -363,7 +360,7 @@ extension com_amap_api_services_weather_LocalWeatherForecast_Batch on List<com_a
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.weather.LocalWeatherForecast::setWeatherForecast_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   //endregion

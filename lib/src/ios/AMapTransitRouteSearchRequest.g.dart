@@ -24,17 +24,14 @@ class AMapTransitRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCo
 
   //region creators
   static Future<AMapTransitRouteSearchRequest> create__({ bool init = true /* ios only */ }) async {
-    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapTransitRouteSearchRequest', {'init': init});
-    final object = AMapTransitRouteSearchRequest()..refId = __result__.refId;
-    return object;
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapTransitRouteSearchRequest', {'init': init});
   }
   
   static Future<List<AMapTransitRouteSearchRequest>> create_batch__(int length, { bool init = true /* ios only */ }) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapTransitRouteSearchRequest', {'length': length, 'init': init});
-    return resultBatch.map((it) => AMapTransitRouteSearchRequest()..refId = it.refId).toList();
+    return kAmapSearchFluttifyChannel.invokeListMethod<AMapTransitRouteSearchRequest>('ObjectFactory::create_batchAMapTransitRouteSearchRequest', {'length': length, 'init': init});
   }
   
   //endregion
@@ -114,37 +111,27 @@ extension AMapTransitRouteSearchRequest_Batch on List<AMapTransitRouteSearchRequ
   //region getters
   Future<List<int>> get_strategy_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTransitRouteSearchRequest::get_strategy_batch", [for (final __item__ in this) {'__this__': __item__}]);
-  
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    return typedResult;
+    return (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
   }
   
   Future<List<String>> get_city_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTransitRouteSearchRequest::get_city_batch", [for (final __item__ in this) {'__this__': __item__}]);
-  
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    return typedResult;
+    return (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
   }
   
   Future<List<String>> get_destinationCity_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTransitRouteSearchRequest::get_destinationCity_batch", [for (final __item__ in this) {'__this__': __item__}]);
-  
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    return typedResult;
+    return (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
   }
   
   Future<List<bool>> get_nightflag_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTransitRouteSearchRequest::get_nightflag_batch", [for (final __item__ in this) {'__this__': __item__}]);
-  
-    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-    return typedResult;
+    return (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
   }
   
   Future<List<bool>> get_requireExtension_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTransitRouteSearchRequest::get_requireExtension_batch", [for (final __item__ in this) {'__this__': __item__}]);
-  
-    final typedResult = (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
-    return typedResult;
+    return (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
   }
   
   //endregion

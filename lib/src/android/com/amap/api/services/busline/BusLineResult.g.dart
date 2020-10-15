@@ -49,7 +49,7 @@ class com_amap_api_services_busline_BusLineResult extends java_lang_Object  {
     // handle native call
   
   
-    return __result__ == null ? null : (com_amap_api_services_busline_BusLineResult()..refId = __result__.refId);
+    return __result__;
   }
   
   
@@ -83,7 +83,7 @@ class com_amap_api_services_busline_BusLineResult extends java_lang_Object  {
     // handle native call
   
   
-    return __result__ == null ? null : (com_amap_api_services_busline_BusLineQuery()..refId = __result__.refId);
+    return __result__;
   }
   
   
@@ -117,7 +117,7 @@ class com_amap_api_services_busline_BusLineResult extends java_lang_Object  {
     // handle native call
   
   
-    return (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_core_SuggestionCity()..refId = __it__.refId))?.toList();
+    return (__result__ as List)?.cast<com_amap_api_services_core_SuggestionCity>();
   }
   
   
@@ -134,7 +134,7 @@ class com_amap_api_services_busline_BusLineResult extends java_lang_Object  {
     // handle native call
   
   
-    return (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_busline_BusLineItem()..refId = __it__.refId))?.toList();
+    return (__result__ as List)?.cast<com_amap_api_services_busline_BusLineItem>();
   }
   
   //endregion
@@ -165,7 +165,7 @@ extension com_amap_api_services_busline_BusLineResult_Batch on List<com_amap_api
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.busline.BusLineResult::createPagedResult_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "var4": var4[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_services_busline_BusLineResult()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<com_amap_api_services_busline_BusLineResult>().map((__result__) => __result__).toList();
   }
   
   
@@ -191,7 +191,7 @@ extension com_amap_api_services_busline_BusLineResult_Batch on List<com_amap_api
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.busline.BusLineResult::getQuery_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_services_busline_BusLineQuery()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<com_amap_api_services_busline_BusLineQuery>().map((__result__) => __result__).toList();
   }
   
   
@@ -217,7 +217,7 @@ extension com_amap_api_services_busline_BusLineResult_Batch on List<com_amap_api
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.busline.BusLineResult::getSearchSuggestionCities_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_core_SuggestionCity()..refId = __it__.refId))?.toList()).toList();
+    return (resultBatch as List).cast<List<com_amap_api_services_core_SuggestionCity>>().map((__result__) => (__result__ as List)?.cast<com_amap_api_services_core_SuggestionCity>()).toList();
   }
   
   
@@ -230,7 +230,7 @@ extension com_amap_api_services_busline_BusLineResult_Batch on List<com_amap_api
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.busline.BusLineResult::getBusLines_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_busline_BusLineItem()..refId = __it__.refId))?.toList()).toList();
+    return (resultBatch as List).cast<List<com_amap_api_services_busline_BusLineItem>>().map((__result__) => (__result__ as List)?.cast<com_amap_api_services_busline_BusLineItem>()).toList();
   }
   
   //endregion

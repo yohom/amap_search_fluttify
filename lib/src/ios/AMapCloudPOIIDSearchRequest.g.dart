@@ -24,17 +24,14 @@ class AMapCloudPOIIDSearchRequest extends AMapCloudSearchBaseRequest with NSCodi
 
   //region creators
   static Future<AMapCloudPOIIDSearchRequest> create__({ bool init = true /* ios only */ }) async {
-    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapCloudPOIIDSearchRequest', {'init': init});
-    final object = AMapCloudPOIIDSearchRequest()..refId = __result__.refId;
-    return object;
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapCloudPOIIDSearchRequest', {'init': init});
   }
   
   static Future<List<AMapCloudPOIIDSearchRequest>> create_batch__(int length, { bool init = true /* ios only */ }) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapCloudPOIIDSearchRequest', {'length': length, 'init': init});
-    return resultBatch.map((it) => AMapCloudPOIIDSearchRequest()..refId = it.refId).toList();
+    return kAmapSearchFluttifyChannel.invokeListMethod<AMapCloudPOIIDSearchRequest>('ObjectFactory::create_batchAMapCloudPOIIDSearchRequest', {'length': length, 'init': init});
   }
   
   //endregion
@@ -70,9 +67,7 @@ extension AMapCloudPOIIDSearchRequest_Batch on List<AMapCloudPOIIDSearchRequest>
   //region getters
   Future<List<int>> get_uid_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudPOIIDSearchRequest::get_uid_batch", [for (final __item__ in this) {'__this__': __item__}]);
-  
-    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
-    return typedResult;
+    return (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
   }
   
   //endregion

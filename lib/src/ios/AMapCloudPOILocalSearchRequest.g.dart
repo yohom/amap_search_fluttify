@@ -24,17 +24,14 @@ class AMapCloudPOILocalSearchRequest extends AMapCloudSearchBaseRequest with NSC
 
   //region creators
   static Future<AMapCloudPOILocalSearchRequest> create__({ bool init = true /* ios only */ }) async {
-    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapCloudPOILocalSearchRequest', {'init': init});
-    final object = AMapCloudPOILocalSearchRequest()..refId = __result__.refId;
-    return object;
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapCloudPOILocalSearchRequest', {'init': init});
   }
   
   static Future<List<AMapCloudPOILocalSearchRequest>> create_batch__(int length, { bool init = true /* ios only */ }) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapCloudPOILocalSearchRequest', {'length': length, 'init': init});
-    return resultBatch.map((it) => AMapCloudPOILocalSearchRequest()..refId = it.refId).toList();
+    return kAmapSearchFluttifyChannel.invokeListMethod<AMapCloudPOILocalSearchRequest>('ObjectFactory::create_batchAMapCloudPOILocalSearchRequest', {'length': length, 'init': init});
   }
   
   //endregion
@@ -81,16 +78,12 @@ extension AMapCloudPOILocalSearchRequest_Batch on List<AMapCloudPOILocalSearchRe
   //region getters
   Future<List<String>> get_keywords_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudPOILocalSearchRequest::get_keywords_batch", [for (final __item__ in this) {'__this__': __item__}]);
-  
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    return typedResult;
+    return (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
   }
   
   Future<List<String>> get_city_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudPOILocalSearchRequest::get_city_batch", [for (final __item__ in this) {'__this__': __item__}]);
-  
-    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
-    return typedResult;
+    return (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
   }
   
   //endregion

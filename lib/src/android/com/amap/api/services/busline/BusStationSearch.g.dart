@@ -24,17 +24,14 @@ class com_amap_api_services_busline_BusStationSearch extends java_lang_Object  {
 
   //region creators
   static Future<com_amap_api_services_busline_BusStationSearch> create__android_content_Context__com_amap_api_services_busline_BusStationQuery(android_content_Context var1, com_amap_api_services_busline_BusStationQuery var2) async {
-    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createcom_amap_api_services_busline_BusStationSearch__android_content_Context__com_amap_api_services_busline_BusStationQuery', {"var1": var1, "var2": var2});
-    final object = com_amap_api_services_busline_BusStationSearch()..refId = __result__.refId;
-    return object;
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_services_busline_BusStationSearch__android_content_Context__com_amap_api_services_busline_BusStationQuery', {"var1": var1, "var2": var2});
   }
   
   static Future<List<com_amap_api_services_busline_BusStationSearch>> create_batch__android_content_Context__com_amap_api_services_busline_BusStationQuery(List<android_content_Context> var1, List<com_amap_api_services_busline_BusStationQuery> var2) async {
     if (var1.length != var2.length) {
       return Future.error('all args must have same length!');
     }
-    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchcom_amap_api_services_busline_BusStationSearch__android_content_Context__com_amap_api_services_busline_BusStationQuery', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]);
-    return resultBatch.map((it) => com_amap_api_services_busline_BusStationSearch()..refId = it.refId).toList();
+    return kAmapSearchFluttifyChannel.invokeListMethod<com_amap_api_services_busline_BusStationSearch>('ObjectFactory::create_batchcom_amap_api_services_busline_BusStationSearch__android_content_Context__com_amap_api_services_busline_BusStationQuery', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]);
   }
   
   //endregion
@@ -62,7 +59,7 @@ class com_amap_api_services_busline_BusStationSearch extends java_lang_Object  {
     // handle native call
   
   
-    return __result__ == null ? null : (com_amap_api_services_busline_BusStationResult()..refId = __result__.refId);
+    return __result__;
   }
   
   
@@ -77,7 +74,7 @@ class com_amap_api_services_busline_BusStationSearch extends java_lang_Object  {
   
   
     // handle native call
-    MethodChannel('com.amap.api.services.busline.BusStationSearch::setOnBusStationSearchListener::Callback@$refId', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify')))
+    MethodChannel('com.amap.api.services.busline.BusStationSearch::setOnBusStationSearchListener::Callback@$refId', kAmapSearchFluttifyCodec)
         .setMethodCallHandler((methodCall) async {
           try {
             final args = methodCall.arguments as Map;
@@ -89,7 +86,7 @@ class com_amap_api_services_busline_BusStationSearch extends java_lang_Object  {
                 }
           
                 // handle the native call
-                var1?.onBusStationSearched(TypeOpAmapSearchFluttifyAndroid((args['var1'] as Object))?.as__<com_amap_api_services_busline_BusStationResult>(), args['var2']);
+                var1?.onBusStationSearched(args['var1'], args['var2']);
                 break;
               default:
                 break;
@@ -151,7 +148,7 @@ class com_amap_api_services_busline_BusStationSearch extends java_lang_Object  {
     // handle native call
   
   
-    return __result__ == null ? null : (com_amap_api_services_busline_BusStationQuery()..refId = __result__.refId);
+    return __result__;
   }
   
   //endregion
@@ -182,7 +179,7 @@ extension com_amap_api_services_busline_BusStationSearch_Batch on List<com_amap_
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.busline.BusStationSearch::searchBusStation_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_services_busline_BusStationResult()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<com_amap_api_services_busline_BusStationResult>().map((__result__) => __result__).toList();
   }
   
   
@@ -195,7 +192,7 @@ extension com_amap_api_services_busline_BusStationSearch_Batch on List<com_amap_
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.busline.BusStationSearch::searchBusStationAsyn_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -208,7 +205,7 @@ extension com_amap_api_services_busline_BusStationSearch_Batch on List<com_amap_
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.busline.BusStationSearch::setQuery_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -221,7 +218,7 @@ extension com_amap_api_services_busline_BusStationSearch_Batch on List<com_amap_
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.busline.BusStationSearch::getQuery_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_services_busline_BusStationQuery()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<com_amap_api_services_busline_BusStationQuery>().map((__result__) => __result__).toList();
   }
   
   //endregion

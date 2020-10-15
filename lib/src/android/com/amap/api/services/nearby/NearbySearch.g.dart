@@ -50,7 +50,7 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
     // handle native call
   
   
-    return __result__ == null ? null : (com_amap_api_services_nearby_NearbySearch()..refId = __result__.refId);
+    return __result__;
   }
   
   
@@ -65,7 +65,7 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
   
   
     // handle native call
-    MethodChannel('com.amap.api.services.nearby.NearbySearch::addNearbyListener::Callback@$refId', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify')))
+    MethodChannel('com.amap.api.services.nearby.NearbySearch::addNearbyListener::Callback@$refId', kAmapSearchFluttifyCodec)
         .setMethodCallHandler((methodCall) async {
           try {
             final args = methodCall.arguments as Map;
@@ -86,7 +86,7 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
                 }
           
                 // handle the native call
-                var1?.onNearbyInfoSearched(TypeOpAmapSearchFluttifyAndroid((args['var1'] as Object))?.as__<com_amap_api_services_nearby_NearbySearchResult>(), args['var2']);
+                var1?.onNearbyInfoSearched(args['var1'], args['var2']);
                 break;
               case 'Callback::com.amap.api.services.nearby.NearbySearch.NearbyListener::onNearbyInfoUploaded':
                 // print log
@@ -121,7 +121,7 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
   
   
     // handle native call
-    MethodChannel('com.amap.api.services.nearby.NearbySearch::removeNearbyListener::Callback@$refId', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify')))
+    MethodChannel('com.amap.api.services.nearby.NearbySearch::removeNearbyListener::Callback@$refId', kAmapSearchFluttifyCodec)
         .setMethodCallHandler((methodCall) async {
           try {
             final args = methodCall.arguments as Map;
@@ -142,7 +142,7 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
                 }
           
                 // handle the native call
-                var1?.onNearbyInfoSearched(TypeOpAmapSearchFluttifyAndroid((args['var1'] as Object))?.as__<com_amap_api_services_nearby_NearbySearchResult>(), args['var2']);
+                var1?.onNearbyInfoSearched(args['var1'], args['var2']);
                 break;
               case 'Callback::com.amap.api.services.nearby.NearbySearch.NearbyListener::onNearbyInfoUploaded':
                 // print log
@@ -211,7 +211,7 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
   
   
     // handle native call
-    MethodChannel('com.amap.api.services.nearby.NearbySearch::startUploadNearbyInfoAuto::Callback@$refId', StandardMethodCodec(FluttifyMessageCodec('amap_search_fluttify')))
+    MethodChannel('com.amap.api.services.nearby.NearbySearch::startUploadNearbyInfoAuto::Callback@$refId', kAmapSearchFluttifyCodec)
         .setMethodCallHandler((methodCall) async {
           try {
             final args = methodCall.arguments as Map;
@@ -302,7 +302,7 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
     // handle native call
   
   
-    return __result__ == null ? null : (com_amap_api_services_nearby_NearbySearchResult()..refId = __result__.refId);
+    return __result__;
   }
   
   
@@ -350,7 +350,7 @@ extension com_amap_api_services_nearby_NearbySearch_Batch on List<com_amap_api_s
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.NearbySearch::getInstance_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_services_nearby_NearbySearch()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<com_amap_api_services_nearby_NearbySearch>().map((__result__) => __result__).toList();
   }
   
   
@@ -363,7 +363,7 @@ extension com_amap_api_services_nearby_NearbySearch_Batch on List<com_amap_api_s
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.NearbySearch::clearUserInfoAsyn_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -376,7 +376,7 @@ extension com_amap_api_services_nearby_NearbySearch_Batch on List<com_amap_api_s
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.NearbySearch::setUserID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -389,7 +389,7 @@ extension com_amap_api_services_nearby_NearbySearch_Batch on List<com_amap_api_s
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.NearbySearch::stopUploadNearbyInfoAuto_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -402,7 +402,7 @@ extension com_amap_api_services_nearby_NearbySearch_Batch on List<com_amap_api_s
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.NearbySearch::uploadNearbyInfoAsyn_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -415,7 +415,7 @@ extension com_amap_api_services_nearby_NearbySearch_Batch on List<com_amap_api_s
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.NearbySearch::searchNearbyInfoAsyn_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -428,7 +428,7 @@ extension com_amap_api_services_nearby_NearbySearch_Batch on List<com_amap_api_s
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.NearbySearch::searchNearbyInfo_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_services_nearby_NearbySearchResult()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<com_amap_api_services_nearby_NearbySearchResult>().map((__result__) => __result__).toList();
   }
   
   
@@ -441,7 +441,7 @@ extension com_amap_api_services_nearby_NearbySearch_Batch on List<com_amap_api_s
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.NearbySearch::destroy_batch', );
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   //endregion

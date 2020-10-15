@@ -24,31 +24,25 @@ class com_amap_api_services_poisearch_Photo extends java_lang_Object with androi
 
   //region creators
   static Future<com_amap_api_services_poisearch_Photo> create__() async {
-    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createcom_amap_api_services_poisearch_Photo__', );
-    final object = com_amap_api_services_poisearch_Photo()..refId = __result__.refId;
-    return object;
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_services_poisearch_Photo__', );
   }
   
   static Future<com_amap_api_services_poisearch_Photo> create__String__String(String var1, String var2) async {
-    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createcom_amap_api_services_poisearch_Photo__String__String', {"var1": var1, "var2": var2});
-    final object = com_amap_api_services_poisearch_Photo()..refId = __result__.refId;
-    return object;
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_services_poisearch_Photo__String__String', {"var1": var1, "var2": var2});
   }
   
   static Future<List<com_amap_api_services_poisearch_Photo>> create_batch__(int length) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchcom_amap_api_services_poisearch_Photo__', {'length': length});
-    return resultBatch.map((it) => com_amap_api_services_poisearch_Photo()..refId = it.refId).toList();
+    return kAmapSearchFluttifyChannel.invokeListMethod<com_amap_api_services_poisearch_Photo>('ObjectFactory::create_batchcom_amap_api_services_poisearch_Photo__', {'length': length});
   }
   
   static Future<List<com_amap_api_services_poisearch_Photo>> create_batch__String__String(List<String> var1, List<String> var2) async {
     if (var1.length != var2.length) {
       return Future.error('all args must have same length!');
     }
-    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchcom_amap_api_services_poisearch_Photo__String__String', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]);
-    return resultBatch.map((it) => com_amap_api_services_poisearch_Photo()..refId = it.refId).toList();
+    return kAmapSearchFluttifyChannel.invokeListMethod<com_amap_api_services_poisearch_Photo>('ObjectFactory::create_batchcom_amap_api_services_poisearch_Photo__String__String', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]);
   }
   
   //endregion
@@ -171,7 +165,7 @@ extension com_amap_api_services_poisearch_Photo_Batch on List<com_amap_api_servi
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.poisearch.Photo::setTitle_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -197,7 +191,7 @@ extension com_amap_api_services_poisearch_Photo_Batch on List<com_amap_api_servi
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.poisearch.Photo::setUrl_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   //endregion

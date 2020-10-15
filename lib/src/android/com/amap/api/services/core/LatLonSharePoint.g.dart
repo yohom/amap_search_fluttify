@@ -24,17 +24,14 @@ class com_amap_api_services_core_LatLonSharePoint extends com_amap_api_services_
 
   //region creators
   static Future<com_amap_api_services_core_LatLonSharePoint> create__double__double__String(double var1, double var3, String var5) async {
-    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createcom_amap_api_services_core_LatLonSharePoint__double__double__String', {"var1": var1, "var3": var3, "var5": var5});
-    final object = com_amap_api_services_core_LatLonSharePoint()..refId = __result__.refId;
-    return object;
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_services_core_LatLonSharePoint__double__double__String', {"var1": var1, "var3": var3, "var5": var5});
   }
   
   static Future<List<com_amap_api_services_core_LatLonSharePoint>> create_batch__double__double__String(List<double> var1, List<double> var3, List<String> var5) async {
     if (var1.length != var3.length || var3.length != var5.length) {
       return Future.error('all args must have same length!');
     }
-    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchcom_amap_api_services_core_LatLonSharePoint__double__double__String', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var3": var3[__i__], "var5": var5[__i__]}]);
-    return resultBatch.map((it) => com_amap_api_services_core_LatLonSharePoint()..refId = it.refId).toList();
+    return kAmapSearchFluttifyChannel.invokeListMethod<com_amap_api_services_core_LatLonSharePoint>('ObjectFactory::create_batchcom_amap_api_services_core_LatLonSharePoint__double__double__String', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var3": var3[__i__], "var5": var5[__i__]}]);
   }
   
   //endregion
@@ -123,7 +120,7 @@ extension com_amap_api_services_core_LatLonSharePoint_Batch on List<com_amap_api
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.LatLonSharePoint::setSharePointName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   //endregion

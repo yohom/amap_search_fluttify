@@ -24,17 +24,14 @@ class com_amap_api_services_traffic_TrafficStatusEvaluation extends java_lang_Ob
 
   //region creators
   static Future<com_amap_api_services_traffic_TrafficStatusEvaluation> create__() async {
-    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createcom_amap_api_services_traffic_TrafficStatusEvaluation__', );
-    final object = com_amap_api_services_traffic_TrafficStatusEvaluation()..refId = __result__.refId;
-    return object;
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_services_traffic_TrafficStatusEvaluation__', );
   }
   
   static Future<List<com_amap_api_services_traffic_TrafficStatusEvaluation>> create_batch__(int length) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchcom_amap_api_services_traffic_TrafficStatusEvaluation__', {'length': length});
-    return resultBatch.map((it) => com_amap_api_services_traffic_TrafficStatusEvaluation()..refId = it.refId).toList();
+    return kAmapSearchFluttifyChannel.invokeListMethod<com_amap_api_services_traffic_TrafficStatusEvaluation>('ObjectFactory::create_batchcom_amap_api_services_traffic_TrafficStatusEvaluation__', {'length': length});
   }
   
   //endregion
@@ -293,7 +290,7 @@ extension com_amap_api_services_traffic_TrafficStatusEvaluation_Batch on List<co
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.traffic.TrafficStatusEvaluation::setExpedite_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -319,7 +316,7 @@ extension com_amap_api_services_traffic_TrafficStatusEvaluation_Batch on List<co
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.traffic.TrafficStatusEvaluation::setCongested_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -345,7 +342,7 @@ extension com_amap_api_services_traffic_TrafficStatusEvaluation_Batch on List<co
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.traffic.TrafficStatusEvaluation::setBlocked_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -371,7 +368,7 @@ extension com_amap_api_services_traffic_TrafficStatusEvaluation_Batch on List<co
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.traffic.TrafficStatusEvaluation::setUnknown_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -397,7 +394,7 @@ extension com_amap_api_services_traffic_TrafficStatusEvaluation_Batch on List<co
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.traffic.TrafficStatusEvaluation::setStatus_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -423,7 +420,7 @@ extension com_amap_api_services_traffic_TrafficStatusEvaluation_Batch on List<co
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.traffic.TrafficStatusEvaluation::setDescription_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   //endregion

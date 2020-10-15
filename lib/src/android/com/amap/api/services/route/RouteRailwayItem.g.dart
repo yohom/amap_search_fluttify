@@ -24,17 +24,14 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
 
   //region creators
   static Future<com_amap_api_services_route_RouteRailwayItem> create__() async {
-    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createcom_amap_api_services_route_RouteRailwayItem__', );
-    final object = com_amap_api_services_route_RouteRailwayItem()..refId = __result__.refId;
-    return object;
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_services_route_RouteRailwayItem__', );
   }
   
   static Future<List<com_amap_api_services_route_RouteRailwayItem>> create_batch__(int length) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchcom_amap_api_services_route_RouteRailwayItem__', {'length': length});
-    return resultBatch.map((it) => com_amap_api_services_route_RouteRailwayItem()..refId = it.refId).toList();
+    return kAmapSearchFluttifyChannel.invokeListMethod<com_amap_api_services_route_RouteRailwayItem>('ObjectFactory::create_batchcom_amap_api_services_route_RouteRailwayItem__', {'length': length});
   }
   
   //endregion
@@ -130,7 +127,7 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
     // handle native call
   
   
-    return __result__ == null ? null : (com_amap_api_services_route_RailwayStationItem()..refId = __result__.refId);
+    return __result__;
   }
   
   
@@ -147,7 +144,7 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
     // handle native call
   
   
-    return __result__ == null ? null : (com_amap_api_services_route_RailwayStationItem()..refId = __result__.refId);
+    return __result__;
   }
   
   
@@ -164,7 +161,7 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
     // handle native call
   
   
-    return (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_route_RailwayStationItem()..refId = __it__.refId))?.toList();
+    return (__result__ as List)?.cast<com_amap_api_services_route_RailwayStationItem>();
   }
   
   
@@ -181,7 +178,7 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
     // handle native call
   
   
-    return (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_route_Railway()..refId = __it__.refId))?.toList();
+    return (__result__ as List)?.cast<com_amap_api_services_route_Railway>();
   }
   
   
@@ -198,7 +195,7 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
     // handle native call
   
   
-    return (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_route_RailwaySpace()..refId = __it__.refId))?.toList();
+    return (__result__ as List)?.cast<com_amap_api_services_route_RailwaySpace>();
   }
   
   
@@ -434,7 +431,7 @@ extension com_amap_api_services_route_RouteRailwayItem_Batch on List<com_amap_ap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteRailwayItem::getDeparturestop_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_services_route_RailwayStationItem()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<com_amap_api_services_route_RailwayStationItem>().map((__result__) => __result__).toList();
   }
   
   
@@ -447,7 +444,7 @@ extension com_amap_api_services_route_RouteRailwayItem_Batch on List<com_amap_ap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteRailwayItem::getArrivalstop_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_services_route_RailwayStationItem()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<com_amap_api_services_route_RailwayStationItem>().map((__result__) => __result__).toList();
   }
   
   
@@ -460,7 +457,7 @@ extension com_amap_api_services_route_RouteRailwayItem_Batch on List<com_amap_ap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteRailwayItem::getViastops_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_route_RailwayStationItem()..refId = __it__.refId))?.toList()).toList();
+    return (resultBatch as List).cast<List<com_amap_api_services_route_RailwayStationItem>>().map((__result__) => (__result__ as List)?.cast<com_amap_api_services_route_RailwayStationItem>()).toList();
   }
   
   
@@ -473,7 +470,7 @@ extension com_amap_api_services_route_RouteRailwayItem_Batch on List<com_amap_ap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteRailwayItem::getAlters_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_route_Railway()..refId = __it__.refId))?.toList()).toList();
+    return (resultBatch as List).cast<List<com_amap_api_services_route_Railway>>().map((__result__) => (__result__ as List)?.cast<com_amap_api_services_route_Railway>()).toList();
   }
   
   
@@ -486,7 +483,7 @@ extension com_amap_api_services_route_RouteRailwayItem_Batch on List<com_amap_ap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteRailwayItem::getSpaces_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_route_RailwaySpace()..refId = __it__.refId))?.toList()).toList();
+    return (resultBatch as List).cast<List<com_amap_api_services_route_RailwaySpace>>().map((__result__) => (__result__ as List)?.cast<com_amap_api_services_route_RailwaySpace>()).toList();
   }
   
   
@@ -499,7 +496,7 @@ extension com_amap_api_services_route_RouteRailwayItem_Batch on List<com_amap_ap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteRailwayItem::setTime_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -512,7 +509,7 @@ extension com_amap_api_services_route_RouteRailwayItem_Batch on List<com_amap_ap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteRailwayItem::setTrip_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -525,7 +522,7 @@ extension com_amap_api_services_route_RouteRailwayItem_Batch on List<com_amap_ap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteRailwayItem::setDistance_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -538,7 +535,7 @@ extension com_amap_api_services_route_RouteRailwayItem_Batch on List<com_amap_ap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteRailwayItem::setType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -551,7 +548,7 @@ extension com_amap_api_services_route_RouteRailwayItem_Batch on List<com_amap_ap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteRailwayItem::setDeparturestop_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -564,7 +561,7 @@ extension com_amap_api_services_route_RouteRailwayItem_Batch on List<com_amap_ap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteRailwayItem::setArrivalstop_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -577,7 +574,7 @@ extension com_amap_api_services_route_RouteRailwayItem_Batch on List<com_amap_ap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteRailwayItem::setViastops_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -590,7 +587,7 @@ extension com_amap_api_services_route_RouteRailwayItem_Batch on List<com_amap_ap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteRailwayItem::setAlters_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -603,7 +600,7 @@ extension com_amap_api_services_route_RouteRailwayItem_Batch on List<com_amap_ap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteRailwayItem::setSpaces_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   //endregion

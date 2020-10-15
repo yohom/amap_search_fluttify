@@ -24,17 +24,14 @@ class AMapWeatherSearchResponse extends AMapSearchObject with NSCoding, NSCopyin
 
   //region creators
   static Future<AMapWeatherSearchResponse> create__({ bool init = true /* ios only */ }) async {
-    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createAMapWeatherSearchResponse', {'init': init});
-    final object = AMapWeatherSearchResponse()..refId = __result__.refId;
-    return object;
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapWeatherSearchResponse', {'init': init});
   }
   
   static Future<List<AMapWeatherSearchResponse>> create_batch__(int length, { bool init = true /* ios only */ }) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchAMapWeatherSearchResponse', {'length': length, 'init': init});
-    return resultBatch.map((it) => AMapWeatherSearchResponse()..refId = it.refId).toList();
+    return kAmapSearchFluttifyChannel.invokeListMethod<AMapWeatherSearchResponse>('ObjectFactory::create_batchAMapWeatherSearchResponse', {'length': length, 'init': init});
   }
   
   //endregion
@@ -42,12 +39,12 @@ class AMapWeatherSearchResponse extends AMapSearchObject with NSCoding, NSCopyin
   //region getters
   Future<List<AMapLocalWeatherLive>> get_lives() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapWeatherSearchResponse::get_lives", {'__this__': this});
-    return (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (AMapLocalWeatherLive()..refId = __it__.refId))?.toList();
+    return (__result__ as List)?.cast<AMapLocalWeatherLive>();
   }
   
   Future<List<AMapLocalWeatherForecast>> get_forecasts() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapWeatherSearchResponse::get_forecasts", {'__this__': this});
-    return (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (AMapLocalWeatherForecast()..refId = __it__.refId))?.toList();
+    return (__result__ as List)?.cast<AMapLocalWeatherForecast>();
   }
   
   //endregion
@@ -81,16 +78,12 @@ extension AMapWeatherSearchResponse_Batch on List<AMapWeatherSearchResponse> {
   //region getters
   Future<List<List<AMapLocalWeatherLive>>> get_lives_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapWeatherSearchResponse::get_lives_batch", [for (final __item__ in this) {'__this__': __item__}]);
-  
-    final typedResult = (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (AMapLocalWeatherLive()..refId = __it__.refId))?.toList()).toList();
-    return typedResult;
+    return (resultBatch as List).cast<List<AMapLocalWeatherLive>>().map((__result__) => (__result__ as List)?.cast<AMapLocalWeatherLive>()).toList();
   }
   
   Future<List<List<AMapLocalWeatherForecast>>> get_forecasts_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapWeatherSearchResponse::get_forecasts_batch", [for (final __item__ in this) {'__this__': __item__}]);
-  
-    final typedResult = (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (AMapLocalWeatherForecast()..refId = __it__.refId))?.toList()).toList();
-    return typedResult;
+    return (resultBatch as List).cast<List<AMapLocalWeatherForecast>>().map((__result__) => (__result__ as List)?.cast<AMapLocalWeatherForecast>()).toList();
   }
   
   //endregion

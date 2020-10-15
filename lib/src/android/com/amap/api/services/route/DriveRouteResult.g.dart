@@ -24,17 +24,14 @@ class com_amap_api_services_route_DriveRouteResult extends com_amap_api_services
 
   //region creators
   static Future<com_amap_api_services_route_DriveRouteResult> create__() async {
-    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createcom_amap_api_services_route_DriveRouteResult__', );
-    final object = com_amap_api_services_route_DriveRouteResult()..refId = __result__.refId;
-    return object;
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_services_route_DriveRouteResult__', );
   }
   
   static Future<List<com_amap_api_services_route_DriveRouteResult>> create_batch__(int length) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchcom_amap_api_services_route_DriveRouteResult__', {'length': length});
-    return resultBatch.map((it) => com_amap_api_services_route_DriveRouteResult()..refId = it.refId).toList();
+    return kAmapSearchFluttifyChannel.invokeListMethod<com_amap_api_services_route_DriveRouteResult>('ObjectFactory::create_batchcom_amap_api_services_route_DriveRouteResult__', {'length': length});
   }
   
   //endregion
@@ -96,7 +93,7 @@ class com_amap_api_services_route_DriveRouteResult extends com_amap_api_services
     // handle native call
   
   
-    return (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_route_DrivePath()..refId = __it__.refId))?.toList();
+    return (__result__ as List)?.cast<com_amap_api_services_route_DrivePath>();
   }
   
   
@@ -130,7 +127,7 @@ class com_amap_api_services_route_DriveRouteResult extends com_amap_api_services
     // handle native call
   
   
-    return __result__ == null ? null : (com_amap_api_services_route_RouteSearch_DriveRouteQuery()..refId = __result__.refId);
+    return __result__;
   }
   
   
@@ -191,7 +188,7 @@ extension com_amap_api_services_route_DriveRouteResult_Batch on List<com_amap_ap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.DriveRouteResult::setTaxiCost_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -204,7 +201,7 @@ extension com_amap_api_services_route_DriveRouteResult_Batch on List<com_amap_ap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.DriveRouteResult::getPaths_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_route_DrivePath()..refId = __it__.refId))?.toList()).toList();
+    return (resultBatch as List).cast<List<com_amap_api_services_route_DrivePath>>().map((__result__) => (__result__ as List)?.cast<com_amap_api_services_route_DrivePath>()).toList();
   }
   
   
@@ -217,7 +214,7 @@ extension com_amap_api_services_route_DriveRouteResult_Batch on List<com_amap_ap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.DriveRouteResult::setPaths_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -230,7 +227,7 @@ extension com_amap_api_services_route_DriveRouteResult_Batch on List<com_amap_ap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.DriveRouteResult::getDriveQuery_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_services_route_RouteSearch_DriveRouteQuery()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<com_amap_api_services_route_RouteSearch_DriveRouteQuery>().map((__result__) => __result__).toList();
   }
   
   
@@ -243,7 +240,7 @@ extension com_amap_api_services_route_DriveRouteResult_Batch on List<com_amap_ap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.DriveRouteResult::setDriveQuery_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   //endregion

@@ -24,17 +24,14 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
 
   //region creators
   static Future<com_amap_api_services_geocoder_RegeocodeAddress> create__() async {
-    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createcom_amap_api_services_geocoder_RegeocodeAddress__', );
-    final object = com_amap_api_services_geocoder_RegeocodeAddress()..refId = __result__.refId;
-    return object;
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_services_geocoder_RegeocodeAddress__', );
   }
   
   static Future<List<com_amap_api_services_geocoder_RegeocodeAddress>> create_batch__(int length) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchcom_amap_api_services_geocoder_RegeocodeAddress__', {'length': length});
-    return resultBatch.map((it) => com_amap_api_services_geocoder_RegeocodeAddress()..refId = it.refId).toList();
+    return kAmapSearchFluttifyChannel.invokeListMethod<com_amap_api_services_geocoder_RegeocodeAddress>('ObjectFactory::create_batchcom_amap_api_services_geocoder_RegeocodeAddress__', {'length': length});
   }
   
   //endregion
@@ -368,7 +365,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     // handle native call
   
   
-    return __result__ == null ? null : (com_amap_api_services_geocoder_StreetNumber()..refId = __result__.refId);
+    return __result__;
   }
   
   
@@ -402,7 +399,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     // handle native call
   
   
-    return (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_geocoder_RegeocodeRoad()..refId = __it__.refId))?.toList();
+    return (__result__ as List)?.cast<com_amap_api_services_geocoder_RegeocodeRoad>();
   }
   
   
@@ -436,7 +433,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     // handle native call
   
   
-    return (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_core_PoiItem()..refId = __it__.refId))?.toList();
+    return (__result__ as List)?.cast<com_amap_api_services_core_PoiItem>();
   }
   
   
@@ -470,7 +467,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     // handle native call
   
   
-    return (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_road_Crossroad()..refId = __it__.refId))?.toList();
+    return (__result__ as List)?.cast<com_amap_api_services_road_Crossroad>();
   }
   
   
@@ -504,7 +501,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     // handle native call
   
   
-    return (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_geocoder_BusinessArea()..refId = __it__.refId))?.toList();
+    return (__result__ as List)?.cast<com_amap_api_services_geocoder_BusinessArea>();
   }
   
   
@@ -538,7 +535,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     // handle native call
   
   
-    return (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_geocoder_AoiItem()..refId = __it__.refId))?.toList();
+    return (__result__ as List)?.cast<com_amap_api_services_geocoder_AoiItem>();
   }
   
   
@@ -667,7 +664,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.RegeocodeAddress::setFormatAddress_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -693,7 +690,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.RegeocodeAddress::setProvince_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -719,7 +716,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.RegeocodeAddress::setCity_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -745,7 +742,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.RegeocodeAddress::setCityCode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -771,7 +768,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.RegeocodeAddress::setAdCode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -797,7 +794,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.RegeocodeAddress::setDistrict_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -823,7 +820,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.RegeocodeAddress::setTownship_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -849,7 +846,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.RegeocodeAddress::setNeighborhood_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -875,7 +872,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.RegeocodeAddress::setBuilding_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -888,7 +885,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.RegeocodeAddress::getStreetNumber_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_services_geocoder_StreetNumber()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<com_amap_api_services_geocoder_StreetNumber>().map((__result__) => __result__).toList();
   }
   
   
@@ -901,7 +898,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.RegeocodeAddress::setStreetNumber_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -914,7 +911,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.RegeocodeAddress::getRoads_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_geocoder_RegeocodeRoad()..refId = __it__.refId))?.toList()).toList();
+    return (resultBatch as List).cast<List<com_amap_api_services_geocoder_RegeocodeRoad>>().map((__result__) => (__result__ as List)?.cast<com_amap_api_services_geocoder_RegeocodeRoad>()).toList();
   }
   
   
@@ -927,7 +924,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.RegeocodeAddress::setRoads_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -940,7 +937,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.RegeocodeAddress::getPois_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_core_PoiItem()..refId = __it__.refId))?.toList()).toList();
+    return (resultBatch as List).cast<List<com_amap_api_services_core_PoiItem>>().map((__result__) => (__result__ as List)?.cast<com_amap_api_services_core_PoiItem>()).toList();
   }
   
   
@@ -953,7 +950,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.RegeocodeAddress::setPois_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -966,7 +963,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.RegeocodeAddress::getCrossroads_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_road_Crossroad()..refId = __it__.refId))?.toList()).toList();
+    return (resultBatch as List).cast<List<com_amap_api_services_road_Crossroad>>().map((__result__) => (__result__ as List)?.cast<com_amap_api_services_road_Crossroad>()).toList();
   }
   
   
@@ -979,7 +976,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.RegeocodeAddress::setCrossroads_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -992,7 +989,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.RegeocodeAddress::getBusinessAreas_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_geocoder_BusinessArea()..refId = __it__.refId))?.toList()).toList();
+    return (resultBatch as List).cast<List<com_amap_api_services_geocoder_BusinessArea>>().map((__result__) => (__result__ as List)?.cast<com_amap_api_services_geocoder_BusinessArea>()).toList();
   }
   
   
@@ -1005,7 +1002,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.RegeocodeAddress::setBusinessAreas_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1018,7 +1015,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.RegeocodeAddress::getAois_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_geocoder_AoiItem()..refId = __it__.refId))?.toList()).toList();
+    return (resultBatch as List).cast<List<com_amap_api_services_geocoder_AoiItem>>().map((__result__) => (__result__ as List)?.cast<com_amap_api_services_geocoder_AoiItem>()).toList();
   }
   
   
@@ -1031,7 +1028,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.RegeocodeAddress::setAois_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1057,7 +1054,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.RegeocodeAddress::setTowncode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1070,7 +1067,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.RegeocodeAddress::setCountry_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   

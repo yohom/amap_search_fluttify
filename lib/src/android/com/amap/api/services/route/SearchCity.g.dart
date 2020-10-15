@@ -24,17 +24,14 @@ class com_amap_api_services_route_SearchCity extends java_lang_Object with andro
 
   //region creators
   static Future<com_amap_api_services_route_SearchCity> create__() async {
-    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createcom_amap_api_services_route_SearchCity__', );
-    final object = com_amap_api_services_route_SearchCity()..refId = __result__.refId;
-    return object;
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_services_route_SearchCity__', );
   }
   
   static Future<List<com_amap_api_services_route_SearchCity>> create_batch__(int length) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchcom_amap_api_services_route_SearchCity__', {'length': length});
-    return resultBatch.map((it) => com_amap_api_services_route_SearchCity()..refId = it.refId).toList();
+    return kAmapSearchFluttifyChannel.invokeListMethod<com_amap_api_services_route_SearchCity>('ObjectFactory::create_batchcom_amap_api_services_route_SearchCity__', {'length': length});
   }
   
   //endregion
@@ -191,7 +188,7 @@ extension com_amap_api_services_route_SearchCity_Batch on List<com_amap_api_serv
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.SearchCity::setSearchCityName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -217,7 +214,7 @@ extension com_amap_api_services_route_SearchCity_Batch on List<com_amap_api_serv
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.SearchCity::setSearchCitycode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -243,7 +240,7 @@ extension com_amap_api_services_route_SearchCity_Batch on List<com_amap_api_serv
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.SearchCity::setSearchCityhAdCode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   //endregion

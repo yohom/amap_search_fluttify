@@ -24,17 +24,14 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
 
   //region creators
   static Future<com_amap_api_services_core_PoiItem> create__String__com_amap_api_services_core_LatLonPoint__String__String(String var1, com_amap_api_services_core_LatLonPoint var2, String var3, String var4) async {
-    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod<Ref>('ObjectFactory::createcom_amap_api_services_core_PoiItem__String__com_amap_api_services_core_LatLonPoint__String__String', {"var1": var1, "var2": var2, "var3": var3, "var4": var4});
-    final object = com_amap_api_services_core_PoiItem()..refId = __result__.refId;
-    return object;
+    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_services_core_PoiItem__String__com_amap_api_services_core_LatLonPoint__String__String', {"var1": var1, "var2": var2, "var3": var3, "var4": var4});
   }
   
   static Future<List<com_amap_api_services_core_PoiItem>> create_batch__String__com_amap_api_services_core_LatLonPoint__String__String(List<String> var1, List<com_amap_api_services_core_LatLonPoint> var2, List<String> var3, List<String> var4) async {
     if (var1.length != var2.length || var2.length != var3.length || var3.length != var4.length) {
       return Future.error('all args must have same length!');
     }
-    final resultBatch = await kAmapSearchFluttifyChannel.invokeListMethod<Ref>('ObjectFactory::create_batchcom_amap_api_services_core_PoiItem__String__com_amap_api_services_core_LatLonPoint__String__String', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "var4": var4[__i__]}]);
-    return resultBatch.map((it) => com_amap_api_services_core_PoiItem()..refId = it.refId).toList();
+    return kAmapSearchFluttifyChannel.invokeListMethod<com_amap_api_services_core_PoiItem>('ObjectFactory::create_batchcom_amap_api_services_core_PoiItem__String__com_amap_api_services_core_LatLonPoint__String__String', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "var4": var4[__i__]}]);
   }
   
   //endregion
@@ -385,7 +382,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     // handle native call
   
   
-    return __result__ == null ? null : (com_amap_api_services_core_LatLonPoint()..refId = __result__.refId);
+    return __result__;
   }
   
   
@@ -436,7 +433,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     // handle native call
   
   
-    return __result__ == null ? null : (com_amap_api_services_core_LatLonPoint()..refId = __result__.refId);
+    return __result__;
   }
   
   
@@ -470,7 +467,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     // handle native call
   
   
-    return __result__ == null ? null : (com_amap_api_services_core_LatLonPoint()..refId = __result__.refId);
+    return __result__;
   }
   
   
@@ -759,7 +756,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     // handle native call
   
   
-    return (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_poisearch_SubPoiItem()..refId = __it__.refId))?.toList();
+    return (__result__ as List)?.cast<com_amap_api_services_poisearch_SubPoiItem>();
   }
   
   
@@ -776,7 +773,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     // handle native call
   
   
-    return __result__ == null ? null : (com_amap_api_services_poisearch_IndoorData()..refId = __result__.refId);
+    return __result__;
   }
   
   
@@ -810,7 +807,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     // handle native call
   
   
-    return (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_poisearch_Photo()..refId = __it__.refId))?.toList();
+    return (__result__ as List)?.cast<com_amap_api_services_poisearch_Photo>();
   }
   
   
@@ -844,7 +841,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     // handle native call
   
   
-    return __result__ == null ? null : (com_amap_api_services_poisearch_PoiItemExtension()..refId = __result__.refId);
+    return __result__;
   }
   
   
@@ -973,7 +970,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.PoiItem::setBusinessArea_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -999,7 +996,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.PoiItem::setAdName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1025,7 +1022,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.PoiItem::setCityName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1051,7 +1048,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.PoiItem::setProvinceName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1077,7 +1074,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.PoiItem::setTypeDes_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1103,7 +1100,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.PoiItem::setTel_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1129,7 +1126,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.PoiItem::setAdCode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1168,7 +1165,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.PoiItem::setDistance_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1207,7 +1204,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.PoiItem::getLatLonPoint_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_services_core_LatLonPoint()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<com_amap_api_services_core_LatLonPoint>().map((__result__) => __result__).toList();
   }
   
   
@@ -1233,7 +1230,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.PoiItem::setCityCode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1246,7 +1243,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.PoiItem::getEnter_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_services_core_LatLonPoint()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<com_amap_api_services_core_LatLonPoint>().map((__result__) => __result__).toList();
   }
   
   
@@ -1259,7 +1256,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.PoiItem::setEnter_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1272,7 +1269,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.PoiItem::getExit_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_services_core_LatLonPoint()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<com_amap_api_services_core_LatLonPoint>().map((__result__) => __result__).toList();
   }
   
   
@@ -1285,7 +1282,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.PoiItem::setExit_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1311,7 +1308,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.PoiItem::setWebsite_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1337,7 +1334,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.PoiItem::setPostcode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1363,7 +1360,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.PoiItem::setEmail_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1389,7 +1386,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.PoiItem::setDirection_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1402,7 +1399,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.PoiItem::setIndoorMap_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1428,7 +1425,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.PoiItem::setProvinceCode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1454,7 +1451,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.PoiItem::setParkingType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1480,7 +1477,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.PoiItem::setSubPois_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1493,7 +1490,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.PoiItem::getSubPois_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_poisearch_SubPoiItem()..refId = __it__.refId))?.toList()).toList();
+    return (resultBatch as List).cast<List<com_amap_api_services_poisearch_SubPoiItem>>().map((__result__) => (__result__ as List)?.cast<com_amap_api_services_poisearch_SubPoiItem>()).toList();
   }
   
   
@@ -1506,7 +1503,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.PoiItem::getIndoorData_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_services_poisearch_IndoorData()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<com_amap_api_services_poisearch_IndoorData>().map((__result__) => __result__).toList();
   }
   
   
@@ -1519,7 +1516,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.PoiItem::setIndoorDate_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1532,7 +1529,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.PoiItem::getPhotos_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => (__result__ as List)?.cast<Ref>()?.map((__it__) => __it__ == null ? null : (com_amap_api_services_poisearch_Photo()..refId = __it__.refId))?.toList()).toList();
+    return (resultBatch as List).cast<List<com_amap_api_services_poisearch_Photo>>().map((__result__) => (__result__ as List)?.cast<com_amap_api_services_poisearch_Photo>()).toList();
   }
   
   
@@ -1545,7 +1542,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.PoiItem::setPhotos_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1558,7 +1555,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.PoiItem::getPoiExtension_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__ == null ? null : (com_amap_api_services_poisearch_PoiItemExtension()..refId = __result__.refId)).toList();
+    return (resultBatch as List).cast<com_amap_api_services_poisearch_PoiItemExtension>().map((__result__) => __result__).toList();
   }
   
   
@@ -1571,7 +1568,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.PoiItem::setPoiExtension_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1597,7 +1594,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.PoiItem::setTypeCode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   
@@ -1623,7 +1620,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.PoiItem::setShopID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<Ref>().map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
   }
   
   //endregion
