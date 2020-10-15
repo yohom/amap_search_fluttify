@@ -36,14 +36,14 @@ class com_amap_api_services_weather_WeatherSearchQuery extends java_lang_Object 
     if (var1.length != var2.length) {
       return Future.error('all args must have same length!');
     }
-    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchcom_amap_api_services_weather_WeatherSearchQuery__String__int', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]);
+    return kAmapSearchFluttifyChannel.invokeListMethod<com_amap_api_services_weather_WeatherSearchQuery>('ObjectFactory::create_batchcom_amap_api_services_weather_WeatherSearchQuery__String__int', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]);
   }
   
   static Future<List<com_amap_api_services_weather_WeatherSearchQuery>> create_batch__(int length) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchcom_amap_api_services_weather_WeatherSearchQuery__', {'length': length});
+    return kAmapSearchFluttifyChannel.invokeListMethod<com_amap_api_services_weather_WeatherSearchQuery>('ObjectFactory::create_batchcom_amap_api_services_weather_WeatherSearchQuery__', {'length': length});
   }
   
   //endregion

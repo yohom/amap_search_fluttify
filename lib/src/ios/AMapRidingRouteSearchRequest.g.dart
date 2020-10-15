@@ -31,7 +31,7 @@ class AMapRidingRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCod
     if (false) {
       return Future.error('all args must have same length!');
     }
-    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapRidingRouteSearchRequest', {'length': length, 'init': init});
+    return kAmapSearchFluttifyChannel.invokeListMethod<AMapRidingRouteSearchRequest>('ObjectFactory::create_batchAMapRidingRouteSearchRequest', {'length': length, 'init': init});
   }
   
   //endregion
@@ -67,7 +67,7 @@ extension AMapRidingRouteSearchRequest_Batch on List<AMapRidingRouteSearchReques
   //region getters
   Future<List<int>> get_type_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRidingRouteSearchRequest::get_type_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
   }
   
   //endregion

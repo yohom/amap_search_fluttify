@@ -31,7 +31,7 @@ class AMapDistanceSearchResponse extends AMapSearchObject with NSCoding, NSCopyi
     if (false) {
       return Future.error('all args must have same length!');
     }
-    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapDistanceSearchResponse', {'length': length, 'init': init});
+    return kAmapSearchFluttifyChannel.invokeListMethod<AMapDistanceSearchResponse>('ObjectFactory::create_batchAMapDistanceSearchResponse', {'length': length, 'init': init});
   }
   
   //endregion
@@ -67,7 +67,7 @@ extension AMapDistanceSearchResponse_Batch on List<AMapDistanceSearchResponse> {
   //region getters
   Future<List<List<AMapDistanceResult>>> get_results_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapDistanceSearchResponse::get_results_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => (__result__ as List)?.cast<AMapDistanceResult>()).toList();
+    return (resultBatch as List).cast<List<AMapDistanceResult>>().map((__result__) => (__result__ as List)?.cast<AMapDistanceResult>()).toList();
   }
   
   //endregion

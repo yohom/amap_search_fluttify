@@ -31,7 +31,7 @@ class AMapRoadTrafficSearchResponse extends AMapSearchObject with NSCoding, NSCo
     if (false) {
       return Future.error('all args must have same length!');
     }
-    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapRoadTrafficSearchResponse', {'length': length, 'init': init});
+    return kAmapSearchFluttifyChannel.invokeListMethod<AMapRoadTrafficSearchResponse>('ObjectFactory::create_batchAMapRoadTrafficSearchResponse', {'length': length, 'init': init});
   }
   
   //endregion
@@ -67,7 +67,7 @@ extension AMapRoadTrafficSearchResponse_Batch on List<AMapRoadTrafficSearchRespo
   //region getters
   Future<List<AMapTrafficInfo>> get_trafficInfo_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoadTrafficSearchResponse::get_trafficInfo_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<AMapTrafficInfo>().map((__result__) => __result__).toList();
   }
   
   //endregion

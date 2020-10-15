@@ -36,14 +36,14 @@ class com_amap_api_services_cloud_CloudSearch_Sortingrules extends java_lang_Obj
     if (var1.length != var2.length) {
       return Future.error('all args must have same length!');
     }
-    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchcom_amap_api_services_cloud_CloudSearch_Sortingrules__String__boolean', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]);
+    return kAmapSearchFluttifyChannel.invokeListMethod<com_amap_api_services_cloud_CloudSearch_Sortingrules>('ObjectFactory::create_batchcom_amap_api_services_cloud_CloudSearch_Sortingrules__String__boolean', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]);
   }
   
   static Future<List<com_amap_api_services_cloud_CloudSearch_Sortingrules>> create_batch__int(List<int> var1) async {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchcom_amap_api_services_cloud_CloudSearch_Sortingrules__int', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]);
+    return kAmapSearchFluttifyChannel.invokeListMethod<com_amap_api_services_cloud_CloudSearch_Sortingrules>('ObjectFactory::create_batchcom_amap_api_services_cloud_CloudSearch_Sortingrules__int', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]);
   }
   
   //endregion

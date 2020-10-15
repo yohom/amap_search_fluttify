@@ -31,7 +31,7 @@ class AMapShareSearchBaseRequest extends AMapSearchObject with NSCoding, NSCopyi
     if (false) {
       return Future.error('all args must have same length!');
     }
-    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapShareSearchBaseRequest', {'length': length, 'init': init});
+    return kAmapSearchFluttifyChannel.invokeListMethod<AMapShareSearchBaseRequest>('ObjectFactory::create_batchAMapShareSearchBaseRequest', {'length': length, 'init': init});
   }
   
   //endregion

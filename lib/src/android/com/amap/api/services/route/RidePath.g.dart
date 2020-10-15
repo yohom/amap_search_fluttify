@@ -31,7 +31,7 @@ class com_amap_api_services_route_RidePath extends com_amap_api_services_route_P
     if (false) {
       return Future.error('all args must have same length!');
     }
-    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchcom_amap_api_services_route_RidePath__', {'length': length});
+    return kAmapSearchFluttifyChannel.invokeListMethod<com_amap_api_services_route_RidePath>('ObjectFactory::create_batchcom_amap_api_services_route_RidePath__', {'length': length});
   }
   
   //endregion

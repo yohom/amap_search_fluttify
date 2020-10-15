@@ -31,7 +31,7 @@ class AMapSearchObject extends NSObject with NSCoding, NSCopying {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapSearchObject', {'length': length, 'init': init});
+    return kAmapSearchFluttifyChannel.invokeListMethod<AMapSearchObject>('ObjectFactory::create_batchAMapSearchObject', {'length': length, 'init': init});
   }
   
   //endregion

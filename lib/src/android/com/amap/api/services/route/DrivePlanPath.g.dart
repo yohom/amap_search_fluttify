@@ -31,7 +31,7 @@ class com_amap_api_services_route_DrivePlanPath extends java_lang_Object with an
     if (false) {
       return Future.error('all args must have same length!');
     }
-    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchcom_amap_api_services_route_DrivePlanPath__', {'length': length});
+    return kAmapSearchFluttifyChannel.invokeListMethod<com_amap_api_services_route_DrivePlanPath>('ObjectFactory::create_batchcom_amap_api_services_route_DrivePlanPath__', {'length': length});
   }
   
   //endregion

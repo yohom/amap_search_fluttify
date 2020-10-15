@@ -31,7 +31,7 @@ class com_amap_api_services_nearby_NearbyInfo extends java_lang_Object  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchcom_amap_api_services_nearby_NearbyInfo__', {'length': length});
+    return kAmapSearchFluttifyChannel.invokeListMethod<com_amap_api_services_nearby_NearbyInfo>('ObjectFactory::create_batchcom_amap_api_services_nearby_NearbyInfo__', {'length': length});
   }
   
   //endregion

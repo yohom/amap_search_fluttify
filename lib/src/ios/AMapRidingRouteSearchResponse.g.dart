@@ -31,7 +31,7 @@ class AMapRidingRouteSearchResponse extends AMapRouteSearchResponse with NSCodin
     if (false) {
       return Future.error('all args must have same length!');
     }
-    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapRidingRouteSearchResponse', {'length': length, 'init': init});
+    return kAmapSearchFluttifyChannel.invokeListMethod<AMapRidingRouteSearchResponse>('ObjectFactory::create_batchAMapRidingRouteSearchResponse', {'length': length, 'init': init});
   }
   
   //endregion

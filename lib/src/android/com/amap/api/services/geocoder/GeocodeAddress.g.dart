@@ -31,7 +31,7 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
     if (false) {
       return Future.error('all args must have same length!');
     }
-    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchcom_amap_api_services_geocoder_GeocodeAddress__', {'length': length});
+    return kAmapSearchFluttifyChannel.invokeListMethod<com_amap_api_services_geocoder_GeocodeAddress>('ObjectFactory::create_batchcom_amap_api_services_geocoder_GeocodeAddress__', {'length': length});
   }
   
   //endregion

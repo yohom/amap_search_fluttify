@@ -31,7 +31,7 @@ class com_amap_api_services_route_Doorway extends java_lang_Object with android_
     if (false) {
       return Future.error('all args must have same length!');
     }
-    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchcom_amap_api_services_route_Doorway__', {'length': length});
+    return kAmapSearchFluttifyChannel.invokeListMethod<com_amap_api_services_route_Doorway>('ObjectFactory::create_batchcom_amap_api_services_route_Doorway__', {'length': length});
   }
   
   //endregion

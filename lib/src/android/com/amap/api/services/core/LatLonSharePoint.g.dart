@@ -31,7 +31,7 @@ class com_amap_api_services_core_LatLonSharePoint extends com_amap_api_services_
     if (var1.length != var3.length || var3.length != var5.length) {
       return Future.error('all args must have same length!');
     }
-    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchcom_amap_api_services_core_LatLonSharePoint__double__double__String', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var3": var3[__i__], "var5": var5[__i__]}]);
+    return kAmapSearchFluttifyChannel.invokeListMethod<com_amap_api_services_core_LatLonSharePoint>('ObjectFactory::create_batchcom_amap_api_services_core_LatLonSharePoint__double__double__String', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var3": var3[__i__], "var5": var5[__i__]}]);
   }
   
   //endregion
