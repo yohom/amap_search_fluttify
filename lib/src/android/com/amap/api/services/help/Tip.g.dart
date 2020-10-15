@@ -31,7 +31,7 @@ class com_amap_api_services_help_Tip extends java_lang_Object with android_os_Pa
     if (false) {
       return Future.error('all args must have same length!');
     }
-    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchcom_amap_api_services_help_Tip__', {'length': length});
+    return kAmapSearchFluttifyChannel.invokeListMethod<com_amap_api_services_help_Tip>('ObjectFactory::create_batchcom_amap_api_services_help_Tip__', {'length': length});
   }
   
   //endregion

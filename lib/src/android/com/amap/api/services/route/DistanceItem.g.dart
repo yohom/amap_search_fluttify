@@ -31,7 +31,7 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
     if (false) {
       return Future.error('all args must have same length!');
     }
-    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchcom_amap_api_services_route_DistanceItem__', {'length': length});
+    return kAmapSearchFluttifyChannel.invokeListMethod<com_amap_api_services_route_DistanceItem>('ObjectFactory::create_batchcom_amap_api_services_route_DistanceItem__', {'length': length});
   }
   
   //endregion
@@ -275,17 +275,17 @@ extension com_amap_api_services_route_DistanceItem_Batch on List<com_amap_api_se
   //region getters
   Future<List<int>> get_ERROR_CODE_NO_DRIVE_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("com.amap.api.services.route.DistanceItem::get_ERROR_CODE_NO_DRIVE_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
   }
   
   Future<List<int>> get_ERROR_CODE_TOO_FAR_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("com.amap.api.services.route.DistanceItem::get_ERROR_CODE_TOO_FAR_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
   }
   
   Future<List<int>> get_ERROR_CODE_NOT_IN_CHINA_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("com.amap.api.services.route.DistanceItem::get_ERROR_CODE_NOT_IN_CHINA_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
   }
   
   //endregion

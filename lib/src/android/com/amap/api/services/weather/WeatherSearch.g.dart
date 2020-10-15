@@ -31,7 +31,7 @@ class com_amap_api_services_weather_WeatherSearch extends java_lang_Object  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchcom_amap_api_services_weather_WeatherSearch__android_content_Context', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]);
+    return kAmapSearchFluttifyChannel.invokeListMethod<com_amap_api_services_weather_WeatherSearch>('ObjectFactory::create_batchcom_amap_api_services_weather_WeatherSearch__android_content_Context', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]);
   }
   
   //endregion

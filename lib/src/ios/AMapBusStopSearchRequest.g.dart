@@ -31,7 +31,7 @@ class AMapBusStopSearchRequest extends AMapSearchObject with NSCoding, NSCopying
     if (false) {
       return Future.error('all args must have same length!');
     }
-    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapBusStopSearchRequest', {'length': length, 'init': init});
+    return kAmapSearchFluttifyChannel.invokeListMethod<AMapBusStopSearchRequest>('ObjectFactory::create_batchAMapBusStopSearchRequest', {'length': length, 'init': init});
   }
   
   //endregion
@@ -100,22 +100,22 @@ extension AMapBusStopSearchRequest_Batch on List<AMapBusStopSearchRequest> {
   //region getters
   Future<List<String>> get_keywords_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapBusStopSearchRequest::get_keywords_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
   }
   
   Future<List<String>> get_city_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapBusStopSearchRequest::get_city_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
   }
   
   Future<List<int>> get_offset_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapBusStopSearchRequest::get_offset_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
   }
   
   Future<List<int>> get_page_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapBusStopSearchRequest::get_page_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
   }
   
   //endregion

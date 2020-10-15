@@ -31,7 +31,7 @@ class AMapNavigationShareSearchRequest extends AMapShareSearchBaseRequest with N
     if (false) {
       return Future.error('all args must have same length!');
     }
-    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapNavigationShareSearchRequest', {'length': length, 'init': init});
+    return kAmapSearchFluttifyChannel.invokeListMethod<AMapNavigationShareSearchRequest>('ObjectFactory::create_batchAMapNavigationShareSearchRequest', {'length': length, 'init': init});
   }
   
   //endregion
@@ -89,17 +89,17 @@ extension AMapNavigationShareSearchRequest_Batch on List<AMapNavigationShareSear
   //region getters
   Future<List<int>> get_strategy_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapNavigationShareSearchRequest::get_strategy_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
   }
   
   Future<List<AMapGeoPoint>> get_startCoordinate_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapNavigationShareSearchRequest::get_startCoordinate_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<AMapGeoPoint>().map((__result__) => __result__).toList();
   }
   
   Future<List<AMapGeoPoint>> get_destinationCoordinate_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapNavigationShareSearchRequest::get_destinationCoordinate_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<AMapGeoPoint>().map((__result__) => __result__).toList();
   }
   
   //endregion

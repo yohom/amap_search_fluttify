@@ -31,7 +31,7 @@ class AMapSegment extends AMapSearchObject with NSCoding, NSCopying {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapSegment', {'length': length, 'init': init});
+    return kAmapSearchFluttifyChannel.invokeListMethod<AMapSegment>('ObjectFactory::create_batchAMapSegment', {'length': length, 'init': init});
   }
   
   //endregion
@@ -144,42 +144,42 @@ extension AMapSegment_Batch on List<AMapSegment> {
   //region getters
   Future<List<AMapWalking>> get_walking_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapSegment::get_walking_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<AMapWalking>().map((__result__) => __result__).toList();
   }
   
   Future<List<List<AMapBusLine>>> get_buslines_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapSegment::get_buslines_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => (__result__ as List)?.cast<AMapBusLine>()).toList();
+    return (resultBatch as List).cast<List<AMapBusLine>>().map((__result__) => (__result__ as List)?.cast<AMapBusLine>()).toList();
   }
   
   Future<List<AMapTaxi>> get_taxi_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapSegment::get_taxi_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<AMapTaxi>().map((__result__) => __result__).toList();
   }
   
   Future<List<AMapRailway>> get_railway_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapSegment::get_railway_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<AMapRailway>().map((__result__) => __result__).toList();
   }
   
   Future<List<String>> get_enterName_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapSegment::get_enterName_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
   }
   
   Future<List<AMapGeoPoint>> get_enterLocation_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapSegment::get_enterLocation_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<AMapGeoPoint>().map((__result__) => __result__).toList();
   }
   
   Future<List<String>> get_exitName_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapSegment::get_exitName_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
   }
   
   Future<List<AMapGeoPoint>> get_exitLocation_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapSegment::get_exitLocation_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<AMapGeoPoint>().map((__result__) => __result__).toList();
   }
   
   //endregion

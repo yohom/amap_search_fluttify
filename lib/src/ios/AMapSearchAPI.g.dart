@@ -31,7 +31,7 @@ class AMapSearchAPI extends NSObject  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapSearchAPI', {'length': length, 'init': init});
+    return kAmapSearchFluttifyChannel.invokeListMethod<AMapSearchAPI>('ObjectFactory::create_batchAMapSearchAPI', {'length': length, 'init': init});
   }
   
   //endregion
@@ -809,12 +809,12 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   //region getters
   Future<List<int>> get_timeout_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapSearchAPI::get_timeout_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
   }
   
   Future<List<AMapSearchLanguage>> get_language_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapSearchAPI::get_language_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => (__result__ as int).toAMapSearchLanguage()).toList();
+    return (resultBatch as List).cast<AMapSearchLanguage>().map((__result__) => (__result__ as int).toAMapSearchLanguage()).toList();
   }
   
   //endregion

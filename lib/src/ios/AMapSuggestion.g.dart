@@ -31,7 +31,7 @@ class AMapSuggestion extends AMapSearchObject with NSCoding, NSCopying {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapSuggestion', {'length': length, 'init': init});
+    return kAmapSearchFluttifyChannel.invokeListMethod<AMapSuggestion>('ObjectFactory::create_batchAMapSuggestion', {'length': length, 'init': init});
   }
   
   //endregion
@@ -78,12 +78,12 @@ extension AMapSuggestion_Batch on List<AMapSuggestion> {
   //region getters
   Future<List<List<String>>> get_keywords_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapSuggestion::get_keywords_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => (__result__ as List).cast<String>()).toList();
+    return (resultBatch as List).cast<List<String>>().map((__result__) => (__result__ as List).cast<String>()).toList();
   }
   
   Future<List<List<AMapCity>>> get_cities_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapSuggestion::get_cities_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => (__result__ as List)?.cast<AMapCity>()).toList();
+    return (resultBatch as List).cast<List<AMapCity>>().map((__result__) => (__result__ as List)?.cast<AMapCity>()).toList();
   }
   
   //endregion

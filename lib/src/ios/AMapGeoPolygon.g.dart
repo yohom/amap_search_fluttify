@@ -31,7 +31,7 @@ class AMapGeoPolygon extends AMapSearchObject with NSCoding, NSCopying {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapGeoPolygon', {'length': length, 'init': init});
+    return kAmapSearchFluttifyChannel.invokeListMethod<AMapGeoPolygon>('ObjectFactory::create_batchAMapGeoPolygon', {'length': length, 'init': init});
   }
   
   //endregion
@@ -83,7 +83,7 @@ extension AMapGeoPolygon_Batch on List<AMapGeoPolygon> {
   //region getters
   Future<List<List<AMapGeoPoint>>> get_points_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapGeoPolygon::get_points_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => (__result__ as List)?.cast<AMapGeoPoint>()).toList();
+    return (resultBatch as List).cast<List<AMapGeoPoint>>().map((__result__) => (__result__ as List)?.cast<AMapGeoPoint>()).toList();
   }
   
   //endregion

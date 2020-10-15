@@ -31,7 +31,7 @@ class AMapShareSearchResponse extends AMapSearchObject with NSCoding, NSCopying 
     if (false) {
       return Future.error('all args must have same length!');
     }
-    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapShareSearchResponse', {'length': length, 'init': init});
+    return kAmapSearchFluttifyChannel.invokeListMethod<AMapShareSearchResponse>('ObjectFactory::create_batchAMapShareSearchResponse', {'length': length, 'init': init});
   }
   
   //endregion
@@ -67,7 +67,7 @@ extension AMapShareSearchResponse_Batch on List<AMapShareSearchResponse> {
   //region getters
   Future<List<String>> get_shareURL_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapShareSearchResponse::get_shareURL_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
   }
   
   //endregion

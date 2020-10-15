@@ -31,7 +31,7 @@ class AMapPath extends AMapSearchObject with NSCoding, NSCopying {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapPath', {'length': length, 'init': init});
+    return kAmapSearchFluttifyChannel.invokeListMethod<AMapPath>('ObjectFactory::create_batchAMapPath', {'length': length, 'init': init});
   }
   
   //endregion
@@ -144,42 +144,42 @@ extension AMapPath_Batch on List<AMapPath> {
   //region getters
   Future<List<int>> get_distance_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapPath::get_distance_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
   }
   
   Future<List<int>> get_duration_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapPath::get_duration_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
   }
   
   Future<List<String>> get_strategy_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapPath::get_strategy_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
   }
   
   Future<List<List<AMapStep>>> get_steps_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapPath::get_steps_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => (__result__ as List)?.cast<AMapStep>()).toList();
+    return (resultBatch as List).cast<List<AMapStep>>().map((__result__) => (__result__ as List)?.cast<AMapStep>()).toList();
   }
   
   Future<List<double>> get_tolls_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapPath::get_tolls_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
   }
   
   Future<List<int>> get_tollDistance_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapPath::get_tollDistance_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
   }
   
   Future<List<int>> get_totalTrafficLights_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapPath::get_totalTrafficLights_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
   }
   
   Future<List<int>> get_restriction_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapPath::get_restriction_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
   }
   
   //endregion

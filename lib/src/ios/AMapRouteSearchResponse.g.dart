@@ -31,7 +31,7 @@ class AMapRouteSearchResponse extends AMapSearchObject with NSCoding, NSCopying 
     if (false) {
       return Future.error('all args must have same length!');
     }
-    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapRouteSearchResponse', {'length': length, 'init': init});
+    return kAmapSearchFluttifyChannel.invokeListMethod<AMapRouteSearchResponse>('ObjectFactory::create_batchAMapRouteSearchResponse', {'length': length, 'init': init});
   }
   
   //endregion
@@ -78,12 +78,12 @@ extension AMapRouteSearchResponse_Batch on List<AMapRouteSearchResponse> {
   //region getters
   Future<List<int>> get_count_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRouteSearchResponse::get_count_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
   }
   
   Future<List<AMapRoute>> get_route_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRouteSearchResponse::get_route_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<AMapRoute>().map((__result__) => __result__).toList();
   }
   
   //endregion

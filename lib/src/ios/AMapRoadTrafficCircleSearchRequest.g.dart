@@ -31,7 +31,7 @@ class AMapRoadTrafficCircleSearchRequest extends AMapRoadTrafficSearchBaseReques
     if (false) {
       return Future.error('all args must have same length!');
     }
-    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapRoadTrafficCircleSearchRequest', {'length': length, 'init': init});
+    return kAmapSearchFluttifyChannel.invokeListMethod<AMapRoadTrafficCircleSearchRequest>('ObjectFactory::create_batchAMapRoadTrafficCircleSearchRequest', {'length': length, 'init': init});
   }
   
   //endregion
@@ -78,12 +78,12 @@ extension AMapRoadTrafficCircleSearchRequest_Batch on List<AMapRoadTrafficCircle
   //region getters
   Future<List<AMapGeoPoint>> get_location_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoadTrafficCircleSearchRequest::get_location_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<AMapGeoPoint>().map((__result__) => __result__).toList();
   }
   
   Future<List<int>> get_radius_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoadTrafficCircleSearchRequest::get_radius_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
   }
   
   //endregion

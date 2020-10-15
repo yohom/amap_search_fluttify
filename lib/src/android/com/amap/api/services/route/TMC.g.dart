@@ -31,7 +31,7 @@ class com_amap_api_services_route_TMC extends java_lang_Object with android_os_P
     if (false) {
       return Future.error('all args must have same length!');
     }
-    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchcom_amap_api_services_route_TMC__', {'length': length});
+    return kAmapSearchFluttifyChannel.invokeListMethod<com_amap_api_services_route_TMC>('ObjectFactory::create_batchcom_amap_api_services_route_TMC__', {'length': length});
   }
   
   //endregion

@@ -31,7 +31,7 @@ class AMapTrafficInfo extends AMapSearchObject with NSCoding, NSCopying {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapTrafficInfo', {'length': length, 'init': init});
+    return kAmapSearchFluttifyChannel.invokeListMethod<AMapTrafficInfo>('ObjectFactory::create_batchAMapTrafficInfo', {'length': length, 'init': init});
   }
   
   //endregion
@@ -89,17 +89,17 @@ extension AMapTrafficInfo_Batch on List<AMapTrafficInfo> {
   //region getters
   Future<List<String>> get_statusDescription_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTrafficInfo::get_statusDescription_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
   }
   
   Future<List<AMapTrafficEvaluation>> get_evaluation_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTrafficInfo::get_evaluation_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<AMapTrafficEvaluation>().map((__result__) => __result__).toList();
   }
   
   Future<List<List<AMapTrafficRoad>>> get_roads_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTrafficInfo::get_roads_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => (__result__ as List)?.cast<AMapTrafficRoad>()).toList();
+    return (resultBatch as List).cast<List<AMapTrafficRoad>>().map((__result__) => (__result__ as List)?.cast<AMapTrafficRoad>()).toList();
   }
   
   //endregion

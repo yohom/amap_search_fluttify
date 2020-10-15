@@ -31,7 +31,7 @@ class AMapGeoPoint extends AMapSearchObject with NSCoding, NSCopying {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapGeoPoint', {'length': length, 'init': init});
+    return kAmapSearchFluttifyChannel.invokeListMethod<AMapGeoPoint>('ObjectFactory::create_batchAMapGeoPoint', {'length': length, 'init': init});
   }
   
   //endregion
@@ -94,12 +94,12 @@ extension AMapGeoPoint_Batch on List<AMapGeoPoint> {
   //region getters
   Future<List<double>> get_latitude_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapGeoPoint::get_latitude_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
   }
   
   Future<List<double>> get_longitude_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapGeoPoint::get_longitude_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
   }
   
   //endregion

@@ -31,7 +31,7 @@ class AMapFutureTimeInfo extends AMapSearchObject with NSCoding, NSCopying {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapFutureTimeInfo', {'length': length, 'init': init});
+    return kAmapSearchFluttifyChannel.invokeListMethod<AMapFutureTimeInfo>('ObjectFactory::create_batchAMapFutureTimeInfo', {'length': length, 'init': init});
   }
   
   //endregion
@@ -78,12 +78,12 @@ extension AMapFutureTimeInfo_Batch on List<AMapFutureTimeInfo> {
   //region getters
   Future<List<String>> get_startTime_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapFutureTimeInfo::get_startTime_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
   }
   
   Future<List<List<AMapFutureTimeInfoElement>>> get_elements_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapFutureTimeInfo::get_elements_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => (__result__ as List)?.cast<AMapFutureTimeInfoElement>()).toList();
+    return (resultBatch as List).cast<List<AMapFutureTimeInfoElement>>().map((__result__) => (__result__ as List)?.cast<AMapFutureTimeInfoElement>()).toList();
   }
   
   //endregion

@@ -31,7 +31,7 @@ class AMapDistrictSearchResponse extends AMapSearchObject with NSCoding, NSCopyi
     if (false) {
       return Future.error('all args must have same length!');
     }
-    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapDistrictSearchResponse', {'length': length, 'init': init});
+    return kAmapSearchFluttifyChannel.invokeListMethod<AMapDistrictSearchResponse>('ObjectFactory::create_batchAMapDistrictSearchResponse', {'length': length, 'init': init});
   }
   
   //endregion
@@ -78,12 +78,12 @@ extension AMapDistrictSearchResponse_Batch on List<AMapDistrictSearchResponse> {
   //region getters
   Future<List<int>> get_count_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapDistrictSearchResponse::get_count_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
   }
   
   Future<List<List<AMapDistrict>>> get_districts_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapDistrictSearchResponse::get_districts_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => (__result__ as List)?.cast<AMapDistrict>()).toList();
+    return (resultBatch as List).cast<List<AMapDistrict>>().map((__result__) => (__result__ as List)?.cast<AMapDistrict>()).toList();
   }
   
   //endregion

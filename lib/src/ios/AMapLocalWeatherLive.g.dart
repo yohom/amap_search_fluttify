@@ -31,7 +31,7 @@ class AMapLocalWeatherLive extends AMapSearchObject with NSCoding, NSCopying {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::create_batchAMapLocalWeatherLive', {'length': length, 'init': init});
+    return kAmapSearchFluttifyChannel.invokeListMethod<AMapLocalWeatherLive>('ObjectFactory::create_batchAMapLocalWeatherLive', {'length': length, 'init': init});
   }
   
   //endregion
@@ -155,47 +155,47 @@ extension AMapLocalWeatherLive_Batch on List<AMapLocalWeatherLive> {
   //region getters
   Future<List<String>> get_adcode_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapLocalWeatherLive::get_adcode_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
   }
   
   Future<List<String>> get_province_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapLocalWeatherLive::get_province_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
   }
   
   Future<List<String>> get_city_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapLocalWeatherLive::get_city_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
   }
   
   Future<List<String>> get_weather_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapLocalWeatherLive::get_weather_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
   }
   
   Future<List<String>> get_temperature_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapLocalWeatherLive::get_temperature_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
   }
   
   Future<List<String>> get_windDirection_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapLocalWeatherLive::get_windDirection_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
   }
   
   Future<List<String>> get_windPower_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapLocalWeatherLive::get_windPower_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
   }
   
   Future<List<String>> get_humidity_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapLocalWeatherLive::get_humidity_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
   }
   
   Future<List<String>> get_reportTime_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapLocalWeatherLive::get_reportTime_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).toList();
+    return (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
   }
   
   //endregion
