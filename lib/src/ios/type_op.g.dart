@@ -644,8 +644,8 @@ T AmapSearchFluttifyIOSAs<T>(dynamic __this__) {
   } else if (T == NSOperation) {
     return (NSOperation()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (AmapCoreFluttifyIOSAs(__this__) != null) {
-    return AmapCoreFluttifyIOSAs(__this__);
+  else if (AmapCoreFluttifyIOSAs<T>(__this__) != null) {
+    return AmapCoreFluttifyIOSAs<T>(__this__);
   }
   else {
     return null;

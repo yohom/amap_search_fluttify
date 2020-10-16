@@ -799,8 +799,8 @@ T AmapSearchFluttifyAndroidAs<T>(dynamic __this__) {
   } else if (T == android_util_Pair) {
     return (android_util_Pair()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (AmapCoreFluttifyAndroidAs(__this__) != null) {
-    return AmapCoreFluttifyAndroidAs(__this__);
+  else if (AmapCoreFluttifyAndroidAs<T>(__this__) != null) {
+    return AmapCoreFluttifyAndroidAs<T>(__this__);
   }
   else {
     return null;
