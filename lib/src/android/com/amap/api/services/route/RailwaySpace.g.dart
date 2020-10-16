@@ -24,14 +24,22 @@ class com_amap_api_services_route_RailwaySpace extends java_lang_Object with and
 
   //region creators
   static Future<com_amap_api_services_route_RailwaySpace> create__String__float(String var1, double var2) async {
-    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_services_route_RailwaySpace__String__float', {"var1": var1, "var2": var2});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
+      'ObjectFactory::createcom_amap_api_services_route_RailwaySpace__String__float',
+      {"var1": var1, "var2": var2}
+    );
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RailwaySpace>(__result__);
   }
   
   static Future<List<com_amap_api_services_route_RailwaySpace>> create_batch__String__float(List<String> var1, List<double> var2) async {
-    if (var1.length != var2.length) {
-      return Future.error('all args must have same length!');
-    }
-    return kAmapSearchFluttifyChannel.invokeListMethod<com_amap_api_services_route_RailwaySpace>('ObjectFactory::create_batchcom_amap_api_services_route_RailwaySpace__String__float', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]);
+    assert(var1.length == var2.length);
+    final __result_batch__ = await  kAmapSearchFluttifyChannel.invokeListMethod(
+      'ObjectFactory::create_batchcom_amap_api_services_route_RailwaySpace__String__float',
+      [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]
+    );
+    return __result_batch__
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RailwaySpace>(it))
+        .toList();
   }
   
   //endregion
@@ -99,28 +107,24 @@ extension com_amap_api_services_route_RailwaySpace_Batch on List<com_amap_api_se
   //region methods
   
   Future<List<String>> getCode_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RailwaySpace::getCode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
   }
   
   
   Future<List<double>> getCost_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RailwaySpace::getCost_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<double>().toList();
   }
   
   //endregion

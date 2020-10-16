@@ -24,14 +24,22 @@ class AMapRoadTrafficCircleSearchRequest extends AMapRoadTrafficSearchBaseReques
 
   //region creators
   static Future<AMapRoadTrafficCircleSearchRequest> create__({ bool init = true /* ios only */ }) async {
-    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapRoadTrafficCircleSearchRequest', {'init': init});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
+      'ObjectFactory::createAMapRoadTrafficCircleSearchRequest',
+      {'init': init}
+    );
+    return AmapSearchFluttifyIOSAs<AMapRoadTrafficCircleSearchRequest>(__result__);
   }
   
   static Future<List<AMapRoadTrafficCircleSearchRequest>> create_batch__(int length, { bool init = true /* ios only */ }) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
-    return kAmapSearchFluttifyChannel.invokeListMethod<AMapRoadTrafficCircleSearchRequest>('ObjectFactory::create_batchAMapRoadTrafficCircleSearchRequest', {'length': length, 'init': init});
+    assert(true);
+    final __result_batch__ = await  kAmapSearchFluttifyChannel.invokeListMethod(
+      'ObjectFactory::create_batchAMapRoadTrafficCircleSearchRequest',
+      {'length': length, 'init': init}
+    );
+    return __result_batch__
+        .map((it) => AmapSearchFluttifyIOSAs<AMapRoadTrafficCircleSearchRequest>(it))
+        .toList();
   }
   
   //endregion
@@ -39,7 +47,7 @@ class AMapRoadTrafficCircleSearchRequest extends AMapRoadTrafficSearchBaseReques
   //region getters
   Future<AMapGeoPoint> get_location() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoadTrafficCircleSearchRequest::get_location", {'__this__': this});
-    return __result__;
+    return AmapSearchFluttifyIOSAs<AMapGeoPoint>(__result__);
   }
   
   Future<int> get_radius() async {
@@ -78,12 +86,12 @@ extension AMapRoadTrafficCircleSearchRequest_Batch on List<AMapRoadTrafficCircle
   //region getters
   Future<List<AMapGeoPoint>> get_location_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoadTrafficCircleSearchRequest::get_location_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).cast<AMapGeoPoint>().map((__result__) => __result__).toList();
+    return (resultBatch as List)?.map((__result__) => AmapSearchFluttifyIOSAs<AMapGeoPoint>(__result__))?.cast<AMapGeoPoint>()?.toList();
   }
   
   Future<List<int>> get_radius_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoadTrafficCircleSearchRequest::get_radius_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<int>()?.toList();
   }
   
   //endregion

@@ -24,14 +24,22 @@ class com_amap_api_services_weather_WeatherSearch extends java_lang_Object  {
 
   //region creators
   static Future<com_amap_api_services_weather_WeatherSearch> create__android_content_Context(android_content_Context var1) async {
-    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_services_weather_WeatherSearch__android_content_Context', {"var1": var1});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
+      'ObjectFactory::createcom_amap_api_services_weather_WeatherSearch__android_content_Context',
+      {"var1": var1}
+    );
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_weather_WeatherSearch>(__result__);
   }
   
   static Future<List<com_amap_api_services_weather_WeatherSearch>> create_batch__android_content_Context(List<android_content_Context> var1) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
-    return kAmapSearchFluttifyChannel.invokeListMethod<com_amap_api_services_weather_WeatherSearch>('ObjectFactory::create_batchcom_amap_api_services_weather_WeatherSearch__android_content_Context', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]);
+    assert(true);
+    final __result_batch__ = await  kAmapSearchFluttifyChannel.invokeListMethod(
+      'ObjectFactory::create_batchcom_amap_api_services_weather_WeatherSearch__android_content_Context',
+      [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]
+    );
+    return __result_batch__
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_weather_WeatherSearch>(it))
+        .toList();
   }
   
   //endregion
@@ -59,7 +67,7 @@ class com_amap_api_services_weather_WeatherSearch extends java_lang_Object  {
     // handle native call
   
   
-    return __result__;
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_weather_WeatherSearchQuery>(__result__);
   }
   
   
@@ -108,7 +116,7 @@ class com_amap_api_services_weather_WeatherSearch extends java_lang_Object  {
   
   
     // handle native call
-    MethodChannel('com.amap.api.services.weather.WeatherSearch::setOnWeatherSearchListener::Callback@$refId', kAmapSearchFluttifyCodec)
+    MethodChannel('com.amap.api.services.weather.WeatherSearch::setOnWeatherSearchListener::Callback@$refId', kAmapSearchFluttifyMethodCodec)
         .setMethodCallHandler((methodCall) async {
           try {
             final args = methodCall.arguments as Map;
@@ -120,7 +128,7 @@ class com_amap_api_services_weather_WeatherSearch extends java_lang_Object  {
                 }
           
                 // handle the native call
-                var1?.onWeatherLiveSearched(args['var1'], args['var2']);
+                var1?.onWeatherLiveSearched(AmapSearchFluttifyAndroidAs(args['var1']), args['var2']);
                 break;
               case 'Callback::com.amap.api.services.weather.WeatherSearch.OnWeatherSearchListener::onWeatherForecastSearched':
                 // print log
@@ -129,7 +137,7 @@ class com_amap_api_services_weather_WeatherSearch extends java_lang_Object  {
                 }
           
                 // handle the native call
-                var1?.onWeatherForecastSearched(args['var1'], args['var2']);
+                var1?.onWeatherForecastSearched(AmapSearchFluttifyAndroidAs(args['var1']), args['var2']);
                 break;
               default:
                 break;
@@ -163,41 +171,35 @@ extension com_amap_api_services_weather_WeatherSearch_Batch on List<com_amap_api
   //region methods
   
   Future<List<com_amap_api_services_weather_WeatherSearchQuery>> getQuery_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.weather.WeatherSearch::getQuery_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<com_amap_api_services_weather_WeatherSearchQuery>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_weather_WeatherSearchQuery>(__result__)).cast<com_amap_api_services_weather_WeatherSearchQuery>().toList();
   }
   
   
   Future<List<void>> setQuery_batch(List<com_amap_api_services_weather_WeatherSearchQuery> var1) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.weather.WeatherSearch::setQuery_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   Future<List<void>> searchWeatherAsyn_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.weather.WeatherSearch::searchWeatherAsyn_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   //endregion

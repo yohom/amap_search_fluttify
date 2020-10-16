@@ -24,14 +24,22 @@ class com_amap_api_services_geocoder_GeocodeResult extends java_lang_Object  {
 
   //region creators
   static Future<com_amap_api_services_geocoder_GeocodeResult> create__com_amap_api_services_geocoder_GeocodeQuery__List_java_util_List_com_amap_api_services_geocoder_GeocodeAddress__(com_amap_api_services_geocoder_GeocodeQuery var1, List<com_amap_api_services_geocoder_GeocodeAddress> var2) async {
-    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_services_geocoder_GeocodeResult__com_amap_api_services_geocoder_GeocodeQuery__java_util_List_com_amap_api_services_geocoder_GeocodeAddress_', {"var1": var1, "var2": var2});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
+      'ObjectFactory::createcom_amap_api_services_geocoder_GeocodeResult__com_amap_api_services_geocoder_GeocodeQuery__java_util_List_com_amap_api_services_geocoder_GeocodeAddress_',
+      {"var1": var1, "var2": var2}
+    );
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_geocoder_GeocodeResult>(__result__);
   }
   
   static Future<List<com_amap_api_services_geocoder_GeocodeResult>> create_batch__com_amap_api_services_geocoder_GeocodeQuery__List_java_util_List_com_amap_api_services_geocoder_GeocodeAddress__(List<com_amap_api_services_geocoder_GeocodeQuery> var1, List<List<com_amap_api_services_geocoder_GeocodeAddress>> var2) async {
-    if (var1.length != var2.length) {
-      return Future.error('all args must have same length!');
-    }
-    return kAmapSearchFluttifyChannel.invokeListMethod<com_amap_api_services_geocoder_GeocodeResult>('ObjectFactory::create_batchcom_amap_api_services_geocoder_GeocodeResult__com_amap_api_services_geocoder_GeocodeQuery__java_util_List_com_amap_api_services_geocoder_GeocodeAddress_', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]);
+    assert(var1.length == var2.length);
+    final __result_batch__ = await  kAmapSearchFluttifyChannel.invokeListMethod(
+      'ObjectFactory::create_batchcom_amap_api_services_geocoder_GeocodeResult__com_amap_api_services_geocoder_GeocodeQuery__java_util_List_com_amap_api_services_geocoder_GeocodeAddress_',
+      [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]
+    );
+    return __result_batch__
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_geocoder_GeocodeResult>(it))
+        .toList();
   }
   
   //endregion
@@ -59,7 +67,7 @@ class com_amap_api_services_geocoder_GeocodeResult extends java_lang_Object  {
     // handle native call
   
   
-    return __result__;
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_geocoder_GeocodeQuery>(__result__);
   }
   
   
@@ -93,7 +101,7 @@ class com_amap_api_services_geocoder_GeocodeResult extends java_lang_Object  {
     // handle native call
   
   
-    return (__result__ as List)?.cast<com_amap_api_services_geocoder_GeocodeAddress>();
+    return (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_geocoder_GeocodeAddress>(it))?.toList();
   }
   
   
@@ -133,54 +141,46 @@ extension com_amap_api_services_geocoder_GeocodeResult_Batch on List<com_amap_ap
   //region methods
   
   Future<List<com_amap_api_services_geocoder_GeocodeQuery>> getGeocodeQuery_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.GeocodeResult::getGeocodeQuery_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<com_amap_api_services_geocoder_GeocodeQuery>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_geocoder_GeocodeQuery>(__result__)).cast<com_amap_api_services_geocoder_GeocodeQuery>().toList();
   }
   
   
   Future<List<void>> setGeocodeQuery_batch(List<com_amap_api_services_geocoder_GeocodeQuery> var1) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.GeocodeResult::setGeocodeQuery_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   Future<List<List<com_amap_api_services_geocoder_GeocodeAddress>>> getGeocodeAddressList_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.GeocodeResult::getGeocodeAddressList_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<List<com_amap_api_services_geocoder_GeocodeAddress>>().map((__result__) => (__result__ as List)?.cast<com_amap_api_services_geocoder_GeocodeAddress>()).toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_geocoder_GeocodeAddress>(it))?.toList()).cast<List<com_amap_api_services_geocoder_GeocodeAddress>>().toList();
   }
   
   
   Future<List<void>> setGeocodeAddressList_batch(List<List<com_amap_api_services_geocoder_GeocodeAddress>> var1) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.GeocodeResult::setGeocodeAddressList_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   //endregion

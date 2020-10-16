@@ -24,14 +24,22 @@ class com_amap_api_services_route_BusStep extends java_lang_Object with android_
 
   //region creators
   static Future<com_amap_api_services_route_BusStep> create__() async {
-    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_services_route_BusStep__', );
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
+      'ObjectFactory::createcom_amap_api_services_route_BusStep__',
+    
+    );
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_BusStep>(__result__);
   }
   
   static Future<List<com_amap_api_services_route_BusStep>> create_batch__(int length) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
-    return kAmapSearchFluttifyChannel.invokeListMethod<com_amap_api_services_route_BusStep>('ObjectFactory::create_batchcom_amap_api_services_route_BusStep__', {'length': length});
+    assert(true);
+    final __result_batch__ = await  kAmapSearchFluttifyChannel.invokeListMethod(
+      'ObjectFactory::create_batchcom_amap_api_services_route_BusStep__',
+      {'length': length}
+    );
+    return __result_batch__
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_BusStep>(it))
+        .toList();
   }
   
   //endregion
@@ -59,7 +67,7 @@ class com_amap_api_services_route_BusStep extends java_lang_Object with android_
     // handle native call
   
   
-    return __result__;
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RouteBusWalkItem>(__result__);
   }
   
   
@@ -93,7 +101,7 @@ class com_amap_api_services_route_BusStep extends java_lang_Object with android_
     // handle native call
   
   
-    return __result__;
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RouteBusLineItem>(__result__);
   }
   
   
@@ -110,7 +118,7 @@ class com_amap_api_services_route_BusStep extends java_lang_Object with android_
     // handle native call
   
   
-    return (__result__ as List)?.cast<com_amap_api_services_route_RouteBusLineItem>();
+    return (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RouteBusLineItem>(it))?.toList();
   }
   
   @deprecated
@@ -161,7 +169,7 @@ class com_amap_api_services_route_BusStep extends java_lang_Object with android_
     // handle native call
   
   
-    return __result__;
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_Doorway>(__result__);
   }
   
   
@@ -195,7 +203,7 @@ class com_amap_api_services_route_BusStep extends java_lang_Object with android_
     // handle native call
   
   
-    return __result__;
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_Doorway>(__result__);
   }
   
   
@@ -229,7 +237,7 @@ class com_amap_api_services_route_BusStep extends java_lang_Object with android_
     // handle native call
   
   
-    return __result__;
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RouteRailwayItem>(__result__);
   }
   
   
@@ -263,7 +271,7 @@ class com_amap_api_services_route_BusStep extends java_lang_Object with android_
     // handle native call
   
   
-    return __result__;
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_TaxiItem>(__result__);
   }
   
   
@@ -303,184 +311,156 @@ extension com_amap_api_services_route_BusStep_Batch on List<com_amap_api_service
   //region methods
   
   Future<List<com_amap_api_services_route_RouteBusWalkItem>> getWalk_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.BusStep::getWalk_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<com_amap_api_services_route_RouteBusWalkItem>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RouteBusWalkItem>(__result__)).cast<com_amap_api_services_route_RouteBusWalkItem>().toList();
   }
   
   
   Future<List<void>> setWalk_batch(List<com_amap_api_services_route_RouteBusWalkItem> var1) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.BusStep::setWalk_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   @deprecated
   Future<List<com_amap_api_services_route_RouteBusLineItem>> getBusLine_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.BusStep::getBusLine_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<com_amap_api_services_route_RouteBusLineItem>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RouteBusLineItem>(__result__)).cast<com_amap_api_services_route_RouteBusLineItem>().toList();
   }
   
   
   Future<List<List<com_amap_api_services_route_RouteBusLineItem>>> getBusLines_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.BusStep::getBusLines_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<List<com_amap_api_services_route_RouteBusLineItem>>().map((__result__) => (__result__ as List)?.cast<com_amap_api_services_route_RouteBusLineItem>()).toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RouteBusLineItem>(it))?.toList()).cast<List<com_amap_api_services_route_RouteBusLineItem>>().toList();
   }
   
   @deprecated
   Future<List<void>> setBusLine_batch(List<com_amap_api_services_route_RouteBusLineItem> var1) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.BusStep::setBusLine_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   Future<List<void>> setBusLines_batch(List<List<com_amap_api_services_route_RouteBusLineItem>> var1) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.BusStep::setBusLines_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   Future<List<com_amap_api_services_route_Doorway>> getEntrance_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.BusStep::getEntrance_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<com_amap_api_services_route_Doorway>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_Doorway>(__result__)).cast<com_amap_api_services_route_Doorway>().toList();
   }
   
   
   Future<List<void>> setEntrance_batch(List<com_amap_api_services_route_Doorway> var1) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.BusStep::setEntrance_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   Future<List<com_amap_api_services_route_Doorway>> getExit_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.BusStep::getExit_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<com_amap_api_services_route_Doorway>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_Doorway>(__result__)).cast<com_amap_api_services_route_Doorway>().toList();
   }
   
   
   Future<List<void>> setExit_batch(List<com_amap_api_services_route_Doorway> var1) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.BusStep::setExit_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   Future<List<com_amap_api_services_route_RouteRailwayItem>> getRailway_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.BusStep::getRailway_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<com_amap_api_services_route_RouteRailwayItem>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RouteRailwayItem>(__result__)).cast<com_amap_api_services_route_RouteRailwayItem>().toList();
   }
   
   
   Future<List<void>> setRailway_batch(List<com_amap_api_services_route_RouteRailwayItem> var1) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.BusStep::setRailway_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   Future<List<com_amap_api_services_route_TaxiItem>> getTaxi_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.BusStep::getTaxi_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<com_amap_api_services_route_TaxiItem>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_TaxiItem>(__result__)).cast<com_amap_api_services_route_TaxiItem>().toList();
   }
   
   
   Future<List<void>> setTaxi_batch(List<com_amap_api_services_route_TaxiItem> var1) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.BusStep::setTaxi_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   //endregion

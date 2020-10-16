@@ -24,14 +24,22 @@ class AMapDistanceSearchResponse extends AMapSearchObject with NSCoding, NSCopyi
 
   //region creators
   static Future<AMapDistanceSearchResponse> create__({ bool init = true /* ios only */ }) async {
-    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapDistanceSearchResponse', {'init': init});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
+      'ObjectFactory::createAMapDistanceSearchResponse',
+      {'init': init}
+    );
+    return AmapSearchFluttifyIOSAs<AMapDistanceSearchResponse>(__result__);
   }
   
   static Future<List<AMapDistanceSearchResponse>> create_batch__(int length, { bool init = true /* ios only */ }) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
-    return kAmapSearchFluttifyChannel.invokeListMethod<AMapDistanceSearchResponse>('ObjectFactory::create_batchAMapDistanceSearchResponse', {'length': length, 'init': init});
+    assert(true);
+    final __result_batch__ = await  kAmapSearchFluttifyChannel.invokeListMethod(
+      'ObjectFactory::create_batchAMapDistanceSearchResponse',
+      {'length': length, 'init': init}
+    );
+    return __result_batch__
+        .map((it) => AmapSearchFluttifyIOSAs<AMapDistanceSearchResponse>(it))
+        .toList();
   }
   
   //endregion
@@ -39,7 +47,7 @@ class AMapDistanceSearchResponse extends AMapSearchObject with NSCoding, NSCopyi
   //region getters
   Future<List<AMapDistanceResult>> get_results() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapDistanceSearchResponse::get_results", {'__this__': this});
-    return (__result__ as List)?.cast<AMapDistanceResult>();
+    return (__result__ as List)?.map((it) => AmapSearchFluttifyIOSAs<AMapDistanceResult>(it))?.toList();
   }
   
   //endregion
@@ -67,7 +75,7 @@ extension AMapDistanceSearchResponse_Batch on List<AMapDistanceSearchResponse> {
   //region getters
   Future<List<List<AMapDistanceResult>>> get_results_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapDistanceSearchResponse::get_results_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).cast<List<AMapDistanceResult>>().map((__result__) => (__result__ as List)?.cast<AMapDistanceResult>()).toList();
+    return (resultBatch as List)?.map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyIOSAs<AMapDistanceResult>(it))?.toList())?.cast<List<AMapDistanceResult>>()?.toList();
   }
   
   //endregion

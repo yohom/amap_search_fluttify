@@ -24,14 +24,22 @@ class AMapCloudPOISearchResponse extends AMapSearchObject with NSCoding, NSCopyi
 
   //region creators
   static Future<AMapCloudPOISearchResponse> create__({ bool init = true /* ios only */ }) async {
-    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapCloudPOISearchResponse', {'init': init});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
+      'ObjectFactory::createAMapCloudPOISearchResponse',
+      {'init': init}
+    );
+    return AmapSearchFluttifyIOSAs<AMapCloudPOISearchResponse>(__result__);
   }
   
   static Future<List<AMapCloudPOISearchResponse>> create_batch__(int length, { bool init = true /* ios only */ }) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
-    return kAmapSearchFluttifyChannel.invokeListMethod<AMapCloudPOISearchResponse>('ObjectFactory::create_batchAMapCloudPOISearchResponse', {'length': length, 'init': init});
+    assert(true);
+    final __result_batch__ = await  kAmapSearchFluttifyChannel.invokeListMethod(
+      'ObjectFactory::create_batchAMapCloudPOISearchResponse',
+      {'length': length, 'init': init}
+    );
+    return __result_batch__
+        .map((it) => AmapSearchFluttifyIOSAs<AMapCloudPOISearchResponse>(it))
+        .toList();
   }
   
   //endregion
@@ -44,7 +52,7 @@ class AMapCloudPOISearchResponse extends AMapSearchObject with NSCoding, NSCopyi
   
   Future<List<AMapCloudPOI>> get_POIs() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudPOISearchResponse::get_POIs", {'__this__': this});
-    return (__result__ as List)?.cast<AMapCloudPOI>();
+    return (__result__ as List)?.map((it) => AmapSearchFluttifyIOSAs<AMapCloudPOI>(it))?.toList();
   }
   
   //endregion
@@ -78,12 +86,12 @@ extension AMapCloudPOISearchResponse_Batch on List<AMapCloudPOISearchResponse> {
   //region getters
   Future<List<int>> get_count_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudPOISearchResponse::get_count_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<int>()?.toList();
   }
   
   Future<List<List<AMapCloudPOI>>> get_POIs_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudPOISearchResponse::get_POIs_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).cast<List<AMapCloudPOI>>().map((__result__) => (__result__ as List)?.cast<AMapCloudPOI>()).toList();
+    return (resultBatch as List)?.map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyIOSAs<AMapCloudPOI>(it))?.toList())?.cast<List<AMapCloudPOI>>()?.toList();
   }
   
   //endregion

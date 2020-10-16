@@ -24,14 +24,22 @@ class AMapRidingRouteSearchResponse extends AMapRouteSearchResponse with NSCodin
 
   //region creators
   static Future<AMapRidingRouteSearchResponse> create__({ bool init = true /* ios only */ }) async {
-    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapRidingRouteSearchResponse', {'init': init});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
+      'ObjectFactory::createAMapRidingRouteSearchResponse',
+      {'init': init}
+    );
+    return AmapSearchFluttifyIOSAs<AMapRidingRouteSearchResponse>(__result__);
   }
   
   static Future<List<AMapRidingRouteSearchResponse>> create_batch__(int length, { bool init = true /* ios only */ }) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
-    return kAmapSearchFluttifyChannel.invokeListMethod<AMapRidingRouteSearchResponse>('ObjectFactory::create_batchAMapRidingRouteSearchResponse', {'length': length, 'init': init});
+    assert(true);
+    final __result_batch__ = await  kAmapSearchFluttifyChannel.invokeListMethod(
+      'ObjectFactory::create_batchAMapRidingRouteSearchResponse',
+      {'length': length, 'init': init}
+    );
+    return __result_batch__
+        .map((it) => AmapSearchFluttifyIOSAs<AMapRidingRouteSearchResponse>(it))
+        .toList();
   }
   
   //endregion

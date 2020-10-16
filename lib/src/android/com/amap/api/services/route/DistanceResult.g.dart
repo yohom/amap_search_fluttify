@@ -24,14 +24,22 @@ class com_amap_api_services_route_DistanceResult extends java_lang_Object with a
 
   //region creators
   static Future<com_amap_api_services_route_DistanceResult> create__() async {
-    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_services_route_DistanceResult__', );
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
+      'ObjectFactory::createcom_amap_api_services_route_DistanceResult__',
+    
+    );
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_DistanceResult>(__result__);
   }
   
   static Future<List<com_amap_api_services_route_DistanceResult>> create_batch__(int length) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
-    return kAmapSearchFluttifyChannel.invokeListMethod<com_amap_api_services_route_DistanceResult>('ObjectFactory::create_batchcom_amap_api_services_route_DistanceResult__', {'length': length});
+    assert(true);
+    final __result_batch__ = await  kAmapSearchFluttifyChannel.invokeListMethod(
+      'ObjectFactory::create_batchcom_amap_api_services_route_DistanceResult__',
+      {'length': length}
+    );
+    return __result_batch__
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_DistanceResult>(it))
+        .toList();
   }
   
   //endregion
@@ -76,7 +84,7 @@ class com_amap_api_services_route_DistanceResult extends java_lang_Object with a
     // handle native call
   
   
-    return __result__;
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_DistanceSearch_DistanceQuery>(__result__);
   }
   
   
@@ -93,7 +101,7 @@ class com_amap_api_services_route_DistanceResult extends java_lang_Object with a
     // handle native call
   
   
-    return (__result__ as List)?.cast<com_amap_api_services_route_DistanceItem>();
+    return (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_DistanceItem>(it))?.toList();
   }
   
   
@@ -133,54 +141,46 @@ extension com_amap_api_services_route_DistanceResult_Batch on List<com_amap_api_
   //region methods
   
   Future<List<void>> setDistanceQuery_batch(List<com_amap_api_services_route_DistanceSearch_DistanceQuery> var1) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.DistanceResult::setDistanceQuery_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   Future<List<com_amap_api_services_route_DistanceSearch_DistanceQuery>> getDistanceQuery_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.DistanceResult::getDistanceQuery_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<com_amap_api_services_route_DistanceSearch_DistanceQuery>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_DistanceSearch_DistanceQuery>(__result__)).cast<com_amap_api_services_route_DistanceSearch_DistanceQuery>().toList();
   }
   
   
   Future<List<List<com_amap_api_services_route_DistanceItem>>> getDistanceResults_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.DistanceResult::getDistanceResults_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<List<com_amap_api_services_route_DistanceItem>>().map((__result__) => (__result__ as List)?.cast<com_amap_api_services_route_DistanceItem>()).toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_DistanceItem>(it))?.toList()).cast<List<com_amap_api_services_route_DistanceItem>>().toList();
   }
   
   
   Future<List<void>> setDistanceResults_batch(List<List<com_amap_api_services_route_DistanceItem>> var1) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.DistanceResult::setDistanceResults_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   //endregion

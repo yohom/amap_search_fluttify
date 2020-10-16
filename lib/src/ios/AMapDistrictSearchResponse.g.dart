@@ -24,14 +24,22 @@ class AMapDistrictSearchResponse extends AMapSearchObject with NSCoding, NSCopyi
 
   //region creators
   static Future<AMapDistrictSearchResponse> create__({ bool init = true /* ios only */ }) async {
-    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapDistrictSearchResponse', {'init': init});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
+      'ObjectFactory::createAMapDistrictSearchResponse',
+      {'init': init}
+    );
+    return AmapSearchFluttifyIOSAs<AMapDistrictSearchResponse>(__result__);
   }
   
   static Future<List<AMapDistrictSearchResponse>> create_batch__(int length, { bool init = true /* ios only */ }) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
-    return kAmapSearchFluttifyChannel.invokeListMethod<AMapDistrictSearchResponse>('ObjectFactory::create_batchAMapDistrictSearchResponse', {'length': length, 'init': init});
+    assert(true);
+    final __result_batch__ = await  kAmapSearchFluttifyChannel.invokeListMethod(
+      'ObjectFactory::create_batchAMapDistrictSearchResponse',
+      {'length': length, 'init': init}
+    );
+    return __result_batch__
+        .map((it) => AmapSearchFluttifyIOSAs<AMapDistrictSearchResponse>(it))
+        .toList();
   }
   
   //endregion
@@ -44,7 +52,7 @@ class AMapDistrictSearchResponse extends AMapSearchObject with NSCoding, NSCopyi
   
   Future<List<AMapDistrict>> get_districts() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapDistrictSearchResponse::get_districts", {'__this__': this});
-    return (__result__ as List)?.cast<AMapDistrict>();
+    return (__result__ as List)?.map((it) => AmapSearchFluttifyIOSAs<AMapDistrict>(it))?.toList();
   }
   
   //endregion
@@ -78,12 +86,12 @@ extension AMapDistrictSearchResponse_Batch on List<AMapDistrictSearchResponse> {
   //region getters
   Future<List<int>> get_count_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapDistrictSearchResponse::get_count_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<int>()?.toList();
   }
   
   Future<List<List<AMapDistrict>>> get_districts_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapDistrictSearchResponse::get_districts_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).cast<List<AMapDistrict>>().map((__result__) => (__result__ as List)?.cast<AMapDistrict>()).toList();
+    return (resultBatch as List)?.map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyIOSAs<AMapDistrict>(it))?.toList())?.cast<List<AMapDistrict>>()?.toList();
   }
   
   //endregion

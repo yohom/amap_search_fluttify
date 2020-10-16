@@ -103,14 +103,22 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
 
   //region creators
   static Future<com_amap_api_services_route_RouteSearch> create__android_content_Context(android_content_Context var1) async {
-    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_services_route_RouteSearch__android_content_Context', {"var1": var1});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
+      'ObjectFactory::createcom_amap_api_services_route_RouteSearch__android_content_Context',
+      {"var1": var1}
+    );
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RouteSearch>(__result__);
   }
   
   static Future<List<com_amap_api_services_route_RouteSearch>> create_batch__android_content_Context(List<android_content_Context> var1) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
-    return kAmapSearchFluttifyChannel.invokeListMethod<com_amap_api_services_route_RouteSearch>('ObjectFactory::create_batchcom_amap_api_services_route_RouteSearch__android_content_Context', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]);
+    assert(true);
+    final __result_batch__ = await  kAmapSearchFluttifyChannel.invokeListMethod(
+      'ObjectFactory::create_batchcom_amap_api_services_route_RouteSearch__android_content_Context',
+      [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]
+    );
+    return __result_batch__
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RouteSearch>(it))
+        .toList();
   }
   
   //endregion
@@ -136,7 +144,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
   
   
     // handle native call
-    MethodChannel('com.amap.api.services.route.RouteSearch::setRouteSearchListener::Callback@$refId', kAmapSearchFluttifyCodec)
+    MethodChannel('com.amap.api.services.route.RouteSearch::setRouteSearchListener::Callback@$refId', kAmapSearchFluttifyMethodCodec)
         .setMethodCallHandler((methodCall) async {
           try {
             final args = methodCall.arguments as Map;
@@ -148,7 +156,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
                 }
           
                 // handle the native call
-                var1?.onBusRouteSearched(args['var1'], args['var2']);
+                var1?.onBusRouteSearched(AmapSearchFluttifyAndroidAs(args['var1']), args['var2']);
                 break;
               case 'Callback::com.amap.api.services.route.RouteSearch.OnRouteSearchListener::onDriveRouteSearched':
                 // print log
@@ -157,7 +165,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
                 }
           
                 // handle the native call
-                var1?.onDriveRouteSearched(args['var1'], args['var2']);
+                var1?.onDriveRouteSearched(AmapSearchFluttifyAndroidAs(args['var1']), args['var2']);
                 break;
               case 'Callback::com.amap.api.services.route.RouteSearch.OnRouteSearchListener::onWalkRouteSearched':
                 // print log
@@ -166,7 +174,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
                 }
           
                 // handle the native call
-                var1?.onWalkRouteSearched(args['var1'], args['var2']);
+                var1?.onWalkRouteSearched(AmapSearchFluttifyAndroidAs(args['var1']), args['var2']);
                 break;
               case 'Callback::com.amap.api.services.route.RouteSearch.OnRouteSearchListener::onRideRouteSearched':
                 // print log
@@ -175,7 +183,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
                 }
           
                 // handle the native call
-                var1?.onRideRouteSearched(args['var1'], args['var2']);
+                var1?.onRideRouteSearched(AmapSearchFluttifyAndroidAs(args['var1']), args['var2']);
                 break;
               default:
                 break;
@@ -201,7 +209,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
   
   
     // handle native call
-    MethodChannel('com.amap.api.services.route.RouteSearch::setOnTruckRouteSearchListener::Callback@$refId', kAmapSearchFluttifyCodec)
+    MethodChannel('com.amap.api.services.route.RouteSearch::setOnTruckRouteSearchListener::Callback@$refId', kAmapSearchFluttifyMethodCodec)
         .setMethodCallHandler((methodCall) async {
           try {
             final args = methodCall.arguments as Map;
@@ -213,7 +221,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
                 }
           
                 // handle the native call
-                var1?.onTruckRouteSearched(args['var1'], args['var2']);
+                var1?.onTruckRouteSearched(AmapSearchFluttifyAndroidAs(args['var1']), args['var2']);
                 break;
               default:
                 break;
@@ -239,7 +247,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
   
   
     // handle native call
-    MethodChannel('com.amap.api.services.route.RouteSearch::setOnRoutePlanSearchListener::Callback@$refId', kAmapSearchFluttifyCodec)
+    MethodChannel('com.amap.api.services.route.RouteSearch::setOnRoutePlanSearchListener::Callback@$refId', kAmapSearchFluttifyMethodCodec)
         .setMethodCallHandler((methodCall) async {
           try {
             final args = methodCall.arguments as Map;
@@ -251,7 +259,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
                 }
           
                 // handle the native call
-                var1?.onDriveRoutePlanSearched(args['var1'], args['var2']);
+                var1?.onDriveRoutePlanSearched(AmapSearchFluttifyAndroidAs(args['var1']), args['var2']);
                 break;
               default:
                 break;
@@ -279,7 +287,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
     // handle native call
   
   
-    return __result__;
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_WalkRouteResult>(__result__);
   }
   
   
@@ -313,7 +321,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
     // handle native call
   
   
-    return __result__;
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_BusRouteResult>(__result__);
   }
   
   
@@ -347,7 +355,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
     // handle native call
   
   
-    return __result__;
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_DriveRouteResult>(__result__);
   }
   
   
@@ -398,7 +406,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
     // handle native call
   
   
-    return __result__;
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RideRouteResult>(__result__);
   }
   
   
@@ -415,7 +423,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
     // handle native call
   
   
-    return __result__;
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_TruckRouteRestult>(__result__);
   }
   
   
@@ -449,7 +457,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
     // handle native call
   
   
-    return __result__;
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_DriveRoutePlanResult>(__result__);
   }
   
   
@@ -489,158 +497,134 @@ extension com_amap_api_services_route_RouteSearch_Batch on List<com_amap_api_ser
   //region methods
   
   Future<List<com_amap_api_services_route_WalkRouteResult>> calculateWalkRoute_batch(List<com_amap_api_services_route_RouteSearch_WalkRouteQuery> var1) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteSearch::calculateWalkRoute_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<com_amap_api_services_route_WalkRouteResult>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_WalkRouteResult>(__result__)).cast<com_amap_api_services_route_WalkRouteResult>().toList();
   }
   
   
   Future<List<void>> calculateWalkRouteAsyn_batch(List<com_amap_api_services_route_RouteSearch_WalkRouteQuery> var1) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteSearch::calculateWalkRouteAsyn_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   Future<List<com_amap_api_services_route_BusRouteResult>> calculateBusRoute_batch(List<com_amap_api_services_route_RouteSearch_BusRouteQuery> var1) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteSearch::calculateBusRoute_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<com_amap_api_services_route_BusRouteResult>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_BusRouteResult>(__result__)).cast<com_amap_api_services_route_BusRouteResult>().toList();
   }
   
   
   Future<List<void>> calculateBusRouteAsyn_batch(List<com_amap_api_services_route_RouteSearch_BusRouteQuery> var1) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteSearch::calculateBusRouteAsyn_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   Future<List<com_amap_api_services_route_DriveRouteResult>> calculateDriveRoute_batch(List<com_amap_api_services_route_RouteSearch_DriveRouteQuery> var1) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteSearch::calculateDriveRoute_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<com_amap_api_services_route_DriveRouteResult>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_DriveRouteResult>(__result__)).cast<com_amap_api_services_route_DriveRouteResult>().toList();
   }
   
   
   Future<List<void>> calculateDriveRouteAsyn_batch(List<com_amap_api_services_route_RouteSearch_DriveRouteQuery> var1) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteSearch::calculateDriveRouteAsyn_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   Future<List<void>> calculateRideRouteAsyn_batch(List<com_amap_api_services_route_RouteSearch_RideRouteQuery> var1) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteSearch::calculateRideRouteAsyn_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   Future<List<com_amap_api_services_route_RideRouteResult>> calculateRideRoute_batch(List<com_amap_api_services_route_RouteSearch_RideRouteQuery> var1) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteSearch::calculateRideRoute_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<com_amap_api_services_route_RideRouteResult>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RideRouteResult>(__result__)).cast<com_amap_api_services_route_RideRouteResult>().toList();
   }
   
   
   Future<List<com_amap_api_services_route_TruckRouteRestult>> calculateTruckRoute_batch(List<com_amap_api_services_route_RouteSearch_TruckRouteQuery> var1) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteSearch::calculateTruckRoute_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<com_amap_api_services_route_TruckRouteRestult>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_TruckRouteRestult>(__result__)).cast<com_amap_api_services_route_TruckRouteRestult>().toList();
   }
   
   
   Future<List<void>> calculateTruckRouteAsyn_batch(List<com_amap_api_services_route_RouteSearch_TruckRouteQuery> var1) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteSearch::calculateTruckRouteAsyn_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   Future<List<com_amap_api_services_route_DriveRoutePlanResult>> calculateDrivePlan_batch(List<com_amap_api_services_route_RouteSearch_DrivePlanQuery> var1) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteSearch::calculateDrivePlan_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<com_amap_api_services_route_DriveRoutePlanResult>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_DriveRoutePlanResult>(__result__)).cast<com_amap_api_services_route_DriveRoutePlanResult>().toList();
   }
   
   
   Future<List<void>> calculateDrivePlanAsyn_batch(List<com_amap_api_services_route_RouteSearch_DrivePlanQuery> var1) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteSearch::calculateDrivePlanAsyn_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   //endregion

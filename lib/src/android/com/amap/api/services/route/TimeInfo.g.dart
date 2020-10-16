@@ -24,14 +24,22 @@ class com_amap_api_services_route_TimeInfo extends java_lang_Object with android
 
   //region creators
   static Future<com_amap_api_services_route_TimeInfo> create__() async {
-    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_services_route_TimeInfo__', );
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
+      'ObjectFactory::createcom_amap_api_services_route_TimeInfo__',
+    
+    );
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_TimeInfo>(__result__);
   }
   
   static Future<List<com_amap_api_services_route_TimeInfo>> create_batch__(int length) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
-    return kAmapSearchFluttifyChannel.invokeListMethod<com_amap_api_services_route_TimeInfo>('ObjectFactory::create_batchcom_amap_api_services_route_TimeInfo__', {'length': length});
+    assert(true);
+    final __result_batch__ = await  kAmapSearchFluttifyChannel.invokeListMethod(
+      'ObjectFactory::create_batchcom_amap_api_services_route_TimeInfo__',
+      {'length': length}
+    );
+    return __result_batch__
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_TimeInfo>(it))
+        .toList();
   }
   
   //endregion
@@ -93,7 +101,7 @@ class com_amap_api_services_route_TimeInfo extends java_lang_Object with android
     // handle native call
   
   
-    return (__result__ as List)?.cast<com_amap_api_services_route_TimeInfosElement>();
+    return (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_TimeInfosElement>(it))?.toList();
   }
   
   
@@ -133,54 +141,46 @@ extension com_amap_api_services_route_TimeInfo_Batch on List<com_amap_api_servic
   //region methods
   
   Future<List<int>> getStartTime_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TimeInfo::getStartTime_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<int>().toList();
   }
   
   
   Future<List<void>> setStartTime_batch(List<int> var1) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TimeInfo::setStartTime_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   Future<List<List<com_amap_api_services_route_TimeInfosElement>>> getElements_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TimeInfo::getElements_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<List<com_amap_api_services_route_TimeInfosElement>>().map((__result__) => (__result__ as List)?.cast<com_amap_api_services_route_TimeInfosElement>()).toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_TimeInfosElement>(it))?.toList()).cast<List<com_amap_api_services_route_TimeInfosElement>>().toList();
   }
   
   
   Future<List<void>> setElements_batch(List<List<com_amap_api_services_route_TimeInfosElement>> var1) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TimeInfo::setElements_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   //endregion

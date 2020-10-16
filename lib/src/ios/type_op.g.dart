@@ -14,6 +14,7 @@ import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
 // type check
+@optionalTypeArgs
 Future<bool> AmapSearchFluttifyIOSIs<T>(dynamic __this__) async {
   final typeName = T.toString();
   if (RegExp(r'^(List<)?(String|int|double)(>)?|(Map<String,(String|int|double)>)$').hasMatch(typeName)) {
@@ -431,6 +432,26 @@ Future<bool> AmapSearchFluttifyIOSIs<T>(dynamic __this__) async {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapSearchAPI', {'__this__': __this__});
     return result;
   }
+  else if (T == AMapURLSearch) {
+    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapURLSearch', {'__this__': __this__});
+    return result;
+  }
+  else if (T == AMapNaviConfig) {
+    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapNaviConfig', {'__this__': __this__});
+    return result;
+  }
+  else if (T == AMapRouteConfig) {
+    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapRouteConfig', {'__this__': __this__});
+    return result;
+  }
+  else if (T == AMapPOIConfig) {
+    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapPOIConfig', {'__this__': __this__});
+    return result;
+  }
+  else if (T == AMapServices) {
+    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapServices', {'__this__': __this__});
+    return result;
+  }
   else if (T == CLLocation) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfCLLocation', {'__this__': __this__});
     return result;
@@ -503,373 +524,401 @@ Future<bool> AmapSearchFluttifyIOSIs<T>(dynamic __this__) async {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfNSOperation', {'__this__': __this__});
     return result;
   }
+  else {
+    return false;
+  }
 }
 
 // type cast
-dynamic AmapSearchFluttifyIOSAs(dynamic __this__, String typeName) {
-  // 占位用
-  if (false) { }
-  else if (typeName == 'AMapPOISearchBaseRequest') {
-    return AMapPOISearchBaseRequest()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+// 给一个可选的泛型, 如果没有指定泛型就返回dynamic
+@optionalTypeArgs
+T AmapSearchFluttifyIOSAs<T>(dynamic __this__) {
+  final typeName = T.toString();
+
+  if (__this__ == null) {
+    return null;
+  } else if (RegExp(r'^(List<)?(String|int|double)(>)?|(Map<String,(String|int|double)>)$').hasMatch(typeName)) {
+    return __this__ as T;
   }
-  else if (typeName == 'AMapPOIIDSearchRequest') {
-    return AMapPOIIDSearchRequest()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapPOISearchBaseRequest) {
+    return (AMapPOISearchBaseRequest()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapPOIKeywordsSearchRequest') {
-    return AMapPOIKeywordsSearchRequest()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapPOIIDSearchRequest) {
+    return (AMapPOIIDSearchRequest()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapPOIAroundSearchRequest') {
-    return AMapPOIAroundSearchRequest()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapPOIKeywordsSearchRequest) {
+    return (AMapPOIKeywordsSearchRequest()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapPOIPolygonSearchRequest') {
-    return AMapPOIPolygonSearchRequest()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapPOIAroundSearchRequest) {
+    return (AMapPOIAroundSearchRequest()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapPOISearchResponse') {
-    return AMapPOISearchResponse()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapPOIPolygonSearchRequest) {
+    return (AMapPOIPolygonSearchRequest()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapRoutePOISearchRequest') {
-    return AMapRoutePOISearchRequest()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapPOISearchResponse) {
+    return (AMapPOISearchResponse()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapRoutePOISearchResponse') {
-    return AMapRoutePOISearchResponse()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapRoutePOISearchRequest) {
+    return (AMapRoutePOISearchRequest()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapInputTipsSearchRequest') {
-    return AMapInputTipsSearchRequest()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapRoutePOISearchResponse) {
+    return (AMapRoutePOISearchResponse()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapInputTipsSearchResponse') {
-    return AMapInputTipsSearchResponse()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapInputTipsSearchRequest) {
+    return (AMapInputTipsSearchRequest()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapGeocodeSearchRequest') {
-    return AMapGeocodeSearchRequest()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapInputTipsSearchResponse) {
+    return (AMapInputTipsSearchResponse()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapGeocodeSearchResponse') {
-    return AMapGeocodeSearchResponse()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapGeocodeSearchRequest) {
+    return (AMapGeocodeSearchRequest()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapReGeocodeSearchRequest') {
-    return AMapReGeocodeSearchRequest()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapGeocodeSearchResponse) {
+    return (AMapGeocodeSearchResponse()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapReGeocodeSearchResponse') {
-    return AMapReGeocodeSearchResponse()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapReGeocodeSearchRequest) {
+    return (AMapReGeocodeSearchRequest()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapBusStopSearchRequest') {
-    return AMapBusStopSearchRequest()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapReGeocodeSearchResponse) {
+    return (AMapReGeocodeSearchResponse()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapBusStopSearchResponse') {
-    return AMapBusStopSearchResponse()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapBusStopSearchRequest) {
+    return (AMapBusStopSearchRequest()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapBusLineBaseSearchRequest') {
-    return AMapBusLineBaseSearchRequest()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapBusStopSearchResponse) {
+    return (AMapBusStopSearchResponse()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapBusLineNameSearchRequest') {
-    return AMapBusLineNameSearchRequest()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapBusLineBaseSearchRequest) {
+    return (AMapBusLineBaseSearchRequest()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapBusLineIDSearchRequest') {
-    return AMapBusLineIDSearchRequest()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapBusLineNameSearchRequest) {
+    return (AMapBusLineNameSearchRequest()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapBusLineSearchResponse') {
-    return AMapBusLineSearchResponse()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapBusLineIDSearchRequest) {
+    return (AMapBusLineIDSearchRequest()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapDistrictSearchRequest') {
-    return AMapDistrictSearchRequest()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapBusLineSearchResponse) {
+    return (AMapBusLineSearchResponse()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapDistrictSearchResponse') {
-    return AMapDistrictSearchResponse()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapDistrictSearchRequest) {
+    return (AMapDistrictSearchRequest()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapRouteSearchBaseRequest') {
-    return AMapRouteSearchBaseRequest()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapDistrictSearchResponse) {
+    return (AMapDistrictSearchResponse()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapDrivingRouteSearchRequest') {
-    return AMapDrivingRouteSearchRequest()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapRouteSearchBaseRequest) {
+    return (AMapRouteSearchBaseRequest()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapWalkingRouteSearchRequest') {
-    return AMapWalkingRouteSearchRequest()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapDrivingRouteSearchRequest) {
+    return (AMapDrivingRouteSearchRequest()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapTransitRouteSearchRequest') {
-    return AMapTransitRouteSearchRequest()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapWalkingRouteSearchRequest) {
+    return (AMapWalkingRouteSearchRequest()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapRidingRouteSearchRequest') {
-    return AMapRidingRouteSearchRequest()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapTransitRouteSearchRequest) {
+    return (AMapTransitRouteSearchRequest()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapRouteSearchResponse') {
-    return AMapRouteSearchResponse()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapRidingRouteSearchRequest) {
+    return (AMapRidingRouteSearchRequest()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapRidingRouteSearchResponse') {
-    return AMapRidingRouteSearchResponse()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapRouteSearchResponse) {
+    return (AMapRouteSearchResponse()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapTruckRouteSearchRequest') {
-    return AMapTruckRouteSearchRequest()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapRidingRouteSearchResponse) {
+    return (AMapRidingRouteSearchResponse()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapDistanceSearchRequest') {
-    return AMapDistanceSearchRequest()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapTruckRouteSearchRequest) {
+    return (AMapTruckRouteSearchRequest()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapDistanceSearchResponse') {
-    return AMapDistanceSearchResponse()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapDistanceSearchRequest) {
+    return (AMapDistanceSearchRequest()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapWeatherSearchRequest') {
-    return AMapWeatherSearchRequest()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapDistanceSearchResponse) {
+    return (AMapDistanceSearchResponse()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapWeatherSearchResponse') {
-    return AMapWeatherSearchResponse()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapWeatherSearchRequest) {
+    return (AMapWeatherSearchRequest()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapRoadTrafficSearchBaseRequest') {
-    return AMapRoadTrafficSearchBaseRequest()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapWeatherSearchResponse) {
+    return (AMapWeatherSearchResponse()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapRoadTrafficSearchRequest') {
-    return AMapRoadTrafficSearchRequest()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapRoadTrafficSearchBaseRequest) {
+    return (AMapRoadTrafficSearchBaseRequest()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapRoadTrafficCircleSearchRequest') {
-    return AMapRoadTrafficCircleSearchRequest()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapRoadTrafficSearchRequest) {
+    return (AMapRoadTrafficSearchRequest()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapRoadTrafficSearchResponse') {
-    return AMapRoadTrafficSearchResponse()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapRoadTrafficCircleSearchRequest) {
+    return (AMapRoadTrafficCircleSearchRequest()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapNearbySearchRequest') {
-    return AMapNearbySearchRequest()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapRoadTrafficSearchResponse) {
+    return (AMapRoadTrafficSearchResponse()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapNearbySearchResponse') {
-    return AMapNearbySearchResponse()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapNearbySearchRequest) {
+    return (AMapNearbySearchRequest()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapCloudSearchBaseRequest') {
-    return AMapCloudSearchBaseRequest()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapNearbySearchResponse) {
+    return (AMapNearbySearchResponse()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapCloudPOIAroundSearchRequest') {
-    return AMapCloudPOIAroundSearchRequest()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapCloudSearchBaseRequest) {
+    return (AMapCloudSearchBaseRequest()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapCloudPOIPolygonSearchRequest') {
-    return AMapCloudPOIPolygonSearchRequest()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapCloudPOIAroundSearchRequest) {
+    return (AMapCloudPOIAroundSearchRequest()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapCloudPOIIDSearchRequest') {
-    return AMapCloudPOIIDSearchRequest()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapCloudPOIPolygonSearchRequest) {
+    return (AMapCloudPOIPolygonSearchRequest()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapCloudPOILocalSearchRequest') {
-    return AMapCloudPOILocalSearchRequest()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapCloudPOIIDSearchRequest) {
+    return (AMapCloudPOIIDSearchRequest()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapCloudPOISearchResponse') {
-    return AMapCloudPOISearchResponse()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapCloudPOILocalSearchRequest) {
+    return (AMapCloudPOILocalSearchRequest()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapShareSearchBaseRequest') {
-    return AMapShareSearchBaseRequest()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapCloudPOISearchResponse) {
+    return (AMapCloudPOISearchResponse()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapLocationShareSearchRequest') {
-    return AMapLocationShareSearchRequest()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapShareSearchBaseRequest) {
+    return (AMapShareSearchBaseRequest()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapPOIShareSearchRequest') {
-    return AMapPOIShareSearchRequest()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapLocationShareSearchRequest) {
+    return (AMapLocationShareSearchRequest()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapRouteShareSearchRequest') {
-    return AMapRouteShareSearchRequest()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapPOIShareSearchRequest) {
+    return (AMapPOIShareSearchRequest()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapNavigationShareSearchRequest') {
-    return AMapNavigationShareSearchRequest()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapRouteShareSearchRequest) {
+    return (AMapRouteShareSearchRequest()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapShareSearchResponse') {
-    return AMapShareSearchResponse()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapNavigationShareSearchRequest) {
+    return (AMapNavigationShareSearchRequest()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapFutureRouteSearchRequest') {
-    return AMapFutureRouteSearchRequest()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapShareSearchResponse) {
+    return (AMapShareSearchResponse()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapFutureRouteSearchResponse') {
-    return AMapFutureRouteSearchResponse()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapFutureRouteSearchRequest) {
+    return (AMapFutureRouteSearchRequest()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapSearchObject') {
-    return AMapSearchObject()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapFutureRouteSearchResponse) {
+    return (AMapFutureRouteSearchResponse()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapGeoPoint') {
-    return AMapGeoPoint()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapSearchObject) {
+    return (AMapSearchObject()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapGeoPolygon') {
-    return AMapGeoPolygon()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapGeoPoint) {
+    return (AMapGeoPoint()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapCity') {
-    return AMapCity()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapGeoPolygon) {
+    return (AMapGeoPolygon()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapSuggestion') {
-    return AMapSuggestion()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapCity) {
+    return (AMapCity()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapTip') {
-    return AMapTip()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapSuggestion) {
+    return (AMapSuggestion()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapImage') {
-    return AMapImage()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapTip) {
+    return (AMapTip()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapPOIExtension') {
-    return AMapPOIExtension()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapImage) {
+    return (AMapImage()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapIndoorData') {
-    return AMapIndoorData()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapPOIExtension) {
+    return (AMapPOIExtension()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapSubPOI') {
-    return AMapSubPOI()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapIndoorData) {
+    return (AMapIndoorData()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapRoutePOI') {
-    return AMapRoutePOI()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapSubPOI) {
+    return (AMapSubPOI()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapPOI') {
-    return AMapPOI()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapRoutePOI) {
+    return (AMapRoutePOI()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapAOI') {
-    return AMapAOI()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapPOI) {
+    return (AMapPOI()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapRoad') {
-    return AMapRoad()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapAOI) {
+    return (AMapAOI()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapRoadInter') {
-    return AMapRoadInter()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapRoad) {
+    return (AMapRoad()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapStreetNumber') {
-    return AMapStreetNumber()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapRoadInter) {
+    return (AMapRoadInter()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapBusinessArea') {
-    return AMapBusinessArea()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapStreetNumber) {
+    return (AMapStreetNumber()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapAddressComponent') {
-    return AMapAddressComponent()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapBusinessArea) {
+    return (AMapBusinessArea()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapReGeocode') {
-    return AMapReGeocode()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapAddressComponent) {
+    return (AMapAddressComponent()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapGeocode') {
-    return AMapGeocode()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapReGeocode) {
+    return (AMapReGeocode()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapBusStop') {
-    return AMapBusStop()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapGeocode) {
+    return (AMapGeocode()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapBusLine') {
-    return AMapBusLine()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapBusStop) {
+    return (AMapBusStop()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapDistrict') {
-    return AMapDistrict()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapBusLine) {
+    return (AMapBusLine()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapTMC') {
-    return AMapTMC()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapDistrict) {
+    return (AMapDistrict()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapStep') {
-    return AMapStep()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapTMC) {
+    return (AMapTMC()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapPath') {
-    return AMapPath()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapStep) {
+    return (AMapStep()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapFutureTimeInfoElement') {
-    return AMapFutureTimeInfoElement()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapPath) {
+    return (AMapPath()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapFutureTimeInfo') {
-    return AMapFutureTimeInfo()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapFutureTimeInfoElement) {
+    return (AMapFutureTimeInfoElement()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapWalking') {
-    return AMapWalking()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapFutureTimeInfo) {
+    return (AMapFutureTimeInfo()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapTaxi') {
-    return AMapTaxi()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapWalking) {
+    return (AMapWalking()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapRailwayStation') {
-    return AMapRailwayStation()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapTaxi) {
+    return (AMapTaxi()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapRailwaySpace') {
-    return AMapRailwaySpace()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapRailwayStation) {
+    return (AMapRailwayStation()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapRailway') {
-    return AMapRailway()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapRailwaySpace) {
+    return (AMapRailwaySpace()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapSegment') {
-    return AMapSegment()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapRailway) {
+    return (AMapRailway()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapTransit') {
-    return AMapTransit()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapSegment) {
+    return (AMapSegment()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapRoute') {
-    return AMapRoute()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapTransit) {
+    return (AMapTransit()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapDistanceResult') {
-    return AMapDistanceResult()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapRoute) {
+    return (AMapRoute()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapLocalWeatherLive') {
-    return AMapLocalWeatherLive()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapDistanceResult) {
+    return (AMapDistanceResult()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapLocalDayWeatherForecast') {
-    return AMapLocalDayWeatherForecast()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapLocalWeatherLive) {
+    return (AMapLocalWeatherLive()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapLocalWeatherForecast') {
-    return AMapLocalWeatherForecast()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapLocalDayWeatherForecast) {
+    return (AMapLocalDayWeatherForecast()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapNearbyUserInfo') {
-    return AMapNearbyUserInfo()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapLocalWeatherForecast) {
+    return (AMapLocalWeatherForecast()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapTrafficEvaluation') {
-    return AMapTrafficEvaluation()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapNearbyUserInfo) {
+    return (AMapNearbyUserInfo()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapTrafficRoad') {
-    return AMapTrafficRoad()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapTrafficEvaluation) {
+    return (AMapTrafficEvaluation()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapTrafficInfo') {
-    return AMapTrafficInfo()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapTrafficRoad) {
+    return (AMapTrafficRoad()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapCloudImage') {
-    return AMapCloudImage()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapTrafficInfo) {
+    return (AMapTrafficInfo()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapCloudPOI') {
-    return AMapCloudPOI()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapCloudImage) {
+    return (AMapCloudImage()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapNearbyUploadInfo') {
-    return AMapNearbyUploadInfo()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapCloudPOI) {
+    return (AMapCloudPOI()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapNearbySearchManager') {
-    return AMapNearbySearchManager()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapNearbyUploadInfo) {
+    return (AMapNearbyUploadInfo()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'AMapSearchAPI') {
-    return AMapSearchAPI()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapNearbySearchManager) {
+    return (AMapNearbySearchManager()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'CLLocation') {
-    return CLLocation()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapSearchAPI) {
+    return (AMapSearchAPI()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'CLHeading') {
-    return CLHeading()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapURLSearch) {
+    return (AMapURLSearch()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'CGRect') {
-    return CGRect()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapNaviConfig) {
+    return (AMapNaviConfig()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'CGPoint') {
-    return CGPoint()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapRouteConfig) {
+    return (AMapRouteConfig()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'CGSize') {
-    return CGSize()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapPOIConfig) {
+    return (AMapPOIConfig()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'UIEdgeInsets') {
-    return UIEdgeInsets()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == AMapServices) {
+    return (AMapServices()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'CLLocationCoordinate2D') {
-    return CLLocationCoordinate2D()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == CLLocation) {
+    return (CLLocation()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'CLLocationManager') {
-    return CLLocationManager()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == CLHeading) {
+    return (CLHeading()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'NSError') {
-    return NSError()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == CGRect) {
+    return (CGRect()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'NSCoding') {
-    return NSCoding.subInstance()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == CGPoint) {
+    return (CGPoint()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'NSCopying') {
-    return NSCopying.subInstance()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == CGSize) {
+    return (CGSize()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'UIView') {
-    return UIView()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == UIEdgeInsets) {
+    return (UIEdgeInsets()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'UIViewController') {
-    return UIViewController()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == CLLocationCoordinate2D) {
+    return (CLLocationCoordinate2D()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'UIControl') {
-    return UIControl()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == CLLocationManager) {
+    return (CLLocationManager()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'UIImage') {
-    return UIImage()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == NSError) {
+    return (NSError()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'UIColor') {
-    return UIColor()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == NSCoding) {
+    return (NSCoding.subInstance()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'NSData') {
-    return NSData()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == NSCopying) {
+    return (NSCopying.subInstance()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (typeName == 'NSOperation') {
-    return NSOperation()..refId = (__this__ is Ref ? (__this__ as Ref).refId : __this__ as String);
+  else if (T == UIView) {
+    return (UIView()..refId = (__this__ as Ref).refId) as T;
+  }
+  else if (T == UIViewController) {
+    return (UIViewController()..refId = (__this__ as Ref).refId) as T;
+  }
+  else if (T == UIControl) {
+    return (UIControl()..refId = (__this__ as Ref).refId) as T;
+  }
+  else if (T == UIImage) {
+    return (UIImage()..refId = (__this__ as Ref).refId) as T;
+  }
+  else if (T == UIColor) {
+    return (UIColor()..refId = (__this__ as Ref).refId) as T;
+  }
+  else if (T == NSData) {
+    return (NSData()..refId = (__this__ as Ref).refId) as T;
+  }
+  else if (T == NSOperation) {
+    return (NSOperation()..refId = (__this__ as Ref).refId) as T;
+  }
+  else {
+    return null;
   }
 }

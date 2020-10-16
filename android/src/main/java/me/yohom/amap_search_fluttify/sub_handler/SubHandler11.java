@@ -2255,11 +2255,6 @@ public class SubHandler11 {
                 // create target object
                 com.amap.api.services.traffic.TrafficStatusInfo __obj__ = new com.amap.api.services.traffic.TrafficStatusInfo();
             
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
                 __methodResult__.success(__obj__);
             });
             // factory
@@ -2273,11 +2268,6 @@ public class SubHandler11 {
             
                 // create target object
                 com.amap.api.services.traffic.TrafficStatusResult __obj__ = new com.amap.api.services.traffic.TrafficStatusResult();
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
             
                 __methodResult__.success(__obj__);
             });
@@ -2293,11 +2283,6 @@ public class SubHandler11 {
             
                 // create target object
                 com.amap.api.services.traffic.TrafficSearch __obj__ = new com.amap.api.services.traffic.TrafficSearch(var1);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
             
                 __methodResult__.success(__obj__);
             });
@@ -2318,11 +2303,6 @@ public class SubHandler11 {
                 // create target object
                 com.amap.api.services.traffic.RoadTrafficQuery __obj__ = new com.amap.api.services.traffic.RoadTrafficQuery(var1, var2, var3.intValue());
             
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
                 __methodResult__.success(__obj__);
             });
             // factory
@@ -2342,11 +2322,6 @@ public class SubHandler11 {
                 // create target object
                 com.amap.api.services.traffic.CircleTrafficQuery __obj__ = new com.amap.api.services.traffic.CircleTrafficQuery(var1, var2.intValue(), var3.intValue());
             
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
                 __methodResult__.success(__obj__);
             });
             // factory
@@ -2361,11 +2336,6 @@ public class SubHandler11 {
                 // create target object
                 com.amap.api.services.traffic.TrafficStatusEvaluation __obj__ = new com.amap.api.services.traffic.TrafficStatusEvaluation();
             
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
                 __methodResult__.success(__obj__);
             });
             // factory
@@ -2379,11 +2349,6 @@ public class SubHandler11 {
             
                 // create target object
                 com.amap.api.services.busline.BusLineItem __obj__ = new com.amap.api.services.busline.BusLineItem();
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
             
                 __methodResult__.success(__obj__);
             });
@@ -2402,11 +2367,6 @@ public class SubHandler11 {
                 // create target object
                 com.amap.api.services.busline.BusStationSearch __obj__ = new com.amap.api.services.busline.BusStationSearch(var1, var2);
             
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
                 __methodResult__.success(__obj__);
             });
             // factory
@@ -2423,11 +2383,6 @@ public class SubHandler11 {
             
                 // create target object
                 com.amap.api.services.busline.BusLineSearch __obj__ = new com.amap.api.services.busline.BusLineSearch(var1, var2);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
             
                 __methodResult__.success(__obj__);
             });
@@ -2448,11 +2403,6 @@ public class SubHandler11 {
                 // create target object
                 com.amap.api.services.busline.BusLineQuery __obj__ = new com.amap.api.services.busline.BusLineQuery(var1, var2, var3);
             
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
                 __methodResult__.success(__obj__);
             });
             // factory
@@ -2466,11 +2416,6 @@ public class SubHandler11 {
             
                 // create target object
                 com.amap.api.services.busline.BusStationItem __obj__ = new com.amap.api.services.busline.BusStationItem();
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
             
                 __methodResult__.success(__obj__);
             });
@@ -2489,11 +2434,6 @@ public class SubHandler11 {
                 // create target object
                 com.amap.api.services.busline.BusStationQuery __obj__ = new com.amap.api.services.busline.BusStationQuery(var1, var2);
             
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
                 __methodResult__.success(__obj__);
             });
             // factory
@@ -2508,11 +2448,6 @@ public class SubHandler11 {
             
                 // create target object
                 com.amap.api.services.core.AMapException __obj__ = new com.amap.api.services.core.AMapException(var1);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
             
                 __methodResult__.success(__obj__);
             });
@@ -2533,11 +2468,6 @@ public class SubHandler11 {
                 // create target object
                 com.amap.api.services.core.AMapException __obj__ = new com.amap.api.services.core.AMapException(var1, var2.intValue(), var3);
             
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
                 __methodResult__.success(__obj__);
             });
             // factory
@@ -2552,11 +2482,6 @@ public class SubHandler11 {
                 // create target object
                 com.amap.api.services.core.AMapException __obj__ = new com.amap.api.services.core.AMapException();
             
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
                 __methodResult__.success(__obj__);
             });
             // factory
@@ -2570,11 +2495,6 @@ public class SubHandler11 {
             
                 // create target object
                 com.amap.api.services.core.SearchUtils __obj__ = new com.amap.api.services.core.SearchUtils();
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
             
                 __methodResult__.success(__obj__);
             });
@@ -2595,11 +2515,6 @@ public class SubHandler11 {
                 // create target object
                 com.amap.api.services.core.LatLonSharePoint __obj__ = new com.amap.api.services.core.LatLonSharePoint(var1.doubleValue(), var3.doubleValue(), var5);
             
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
                 __methodResult__.success(__obj__);
             });
             // factory
@@ -2616,11 +2531,6 @@ public class SubHandler11 {
             
                 // create target object
                 com.amap.api.services.core.LatLonPoint __obj__ = new com.amap.api.services.core.LatLonPoint(var1.doubleValue(), var3.doubleValue());
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
             
                 __methodResult__.success(__obj__);
             });
@@ -2643,11 +2553,6 @@ public class SubHandler11 {
                 // create target object
                 com.amap.api.services.core.PoiItem __obj__ = new com.amap.api.services.core.PoiItem(var1, var2, var3, var4);
             
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
                 __methodResult__.success(__obj__);
             });
             // factory
@@ -2669,11 +2574,6 @@ public class SubHandler11 {
                 // create target object
                 com.amap.api.services.core.SuggestionCity __obj__ = new com.amap.api.services.core.SuggestionCity(var1, var2, var3, var4.intValue());
             
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
                 __methodResult__.success(__obj__);
             });
             // factory
@@ -2687,11 +2587,6 @@ public class SubHandler11 {
             
                 // create target object
                 com.amap.api.services.poisearch.Photo __obj__ = new com.amap.api.services.poisearch.Photo();
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
             
                 __methodResult__.success(__obj__);
             });
@@ -2709,11 +2604,6 @@ public class SubHandler11 {
             
                 // create target object
                 com.amap.api.services.poisearch.Photo __obj__ = new com.amap.api.services.poisearch.Photo(var1, var2);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
             
                 __methodResult__.success(__obj__);
             });
@@ -2736,11 +2626,6 @@ public class SubHandler11 {
                 // create target object
                 com.amap.api.services.poisearch.SubPoiItem __obj__ = new com.amap.api.services.poisearch.SubPoiItem(var1, var2, var3, var4);
             
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
                 __methodResult__.success(__obj__);
             });
             // factory
@@ -2758,11 +2643,6 @@ public class SubHandler11 {
                 // create target object
                 com.amap.api.services.poisearch.PoiItemExtension __obj__ = new com.amap.api.services.poisearch.PoiItemExtension(var1, var2);
             
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
                 __methodResult__.success(__obj__);
             });
             // factory
@@ -2779,11 +2659,6 @@ public class SubHandler11 {
             
                 // create target object
                 com.amap.api.services.poisearch.PoiSearch.SearchBound __obj__ = new com.amap.api.services.poisearch.PoiSearch.SearchBound(var1, var2.intValue());
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
             
                 __methodResult__.success(__obj__);
             });
@@ -2804,11 +2679,6 @@ public class SubHandler11 {
                 // create target object
                 com.amap.api.services.poisearch.PoiSearch.SearchBound __obj__ = new com.amap.api.services.poisearch.PoiSearch.SearchBound(var1, var2.intValue(), var3);
             
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
                 __methodResult__.success(__obj__);
             });
             // factory
@@ -2826,11 +2696,6 @@ public class SubHandler11 {
                 // create target object
                 com.amap.api.services.poisearch.PoiSearch.SearchBound __obj__ = new com.amap.api.services.poisearch.PoiSearch.SearchBound(var1, var2);
             
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
-            
                 __methodResult__.success(__obj__);
             });
             // factory
@@ -2845,11 +2710,6 @@ public class SubHandler11 {
             
                 // create target object
                 com.amap.api.services.poisearch.PoiSearch.SearchBound __obj__ = new com.amap.api.services.poisearch.PoiSearch.SearchBound(var1);
-            
-                // print current HEAP
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "HEAP: " + getHEAP());
-                }
             
                 __methodResult__.success(__obj__);
             });

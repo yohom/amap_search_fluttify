@@ -24,14 +24,22 @@ class com_amap_api_services_poisearch_PoiItemExtension extends java_lang_Object 
 
   //region creators
   static Future<com_amap_api_services_poisearch_PoiItemExtension> create__String__String(String var1, String var2) async {
-    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_services_poisearch_PoiItemExtension__String__String', {"var1": var1, "var2": var2});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
+      'ObjectFactory::createcom_amap_api_services_poisearch_PoiItemExtension__String__String',
+      {"var1": var1, "var2": var2}
+    );
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_poisearch_PoiItemExtension>(__result__);
   }
   
   static Future<List<com_amap_api_services_poisearch_PoiItemExtension>> create_batch__String__String(List<String> var1, List<String> var2) async {
-    if (var1.length != var2.length) {
-      return Future.error('all args must have same length!');
-    }
-    return kAmapSearchFluttifyChannel.invokeListMethod<com_amap_api_services_poisearch_PoiItemExtension>('ObjectFactory::create_batchcom_amap_api_services_poisearch_PoiItemExtension__String__String', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]);
+    assert(var1.length == var2.length);
+    final __result_batch__ = await  kAmapSearchFluttifyChannel.invokeListMethod(
+      'ObjectFactory::create_batchcom_amap_api_services_poisearch_PoiItemExtension__String__String',
+      [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]
+    );
+    return __result_batch__
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_poisearch_PoiItemExtension>(it))
+        .toList();
   }
   
   //endregion
@@ -99,28 +107,24 @@ extension com_amap_api_services_poisearch_PoiItemExtension_Batch on List<com_ama
   //region methods
   
   Future<List<String>> getOpentime_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.poisearch.PoiItemExtension::getOpentime_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
   }
   
   
   Future<List<String>> getmRating_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.poisearch.PoiItemExtension::getmRating_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
   }
   
   //endregion

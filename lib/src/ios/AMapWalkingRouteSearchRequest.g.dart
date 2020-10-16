@@ -24,14 +24,22 @@ class AMapWalkingRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCo
 
   //region creators
   static Future<AMapWalkingRouteSearchRequest> create__({ bool init = true /* ios only */ }) async {
-    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapWalkingRouteSearchRequest', {'init': init});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
+      'ObjectFactory::createAMapWalkingRouteSearchRequest',
+      {'init': init}
+    );
+    return AmapSearchFluttifyIOSAs<AMapWalkingRouteSearchRequest>(__result__);
   }
   
   static Future<List<AMapWalkingRouteSearchRequest>> create_batch__(int length, { bool init = true /* ios only */ }) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
-    return kAmapSearchFluttifyChannel.invokeListMethod<AMapWalkingRouteSearchRequest>('ObjectFactory::create_batchAMapWalkingRouteSearchRequest', {'length': length, 'init': init});
+    assert(true);
+    final __result_batch__ = await  kAmapSearchFluttifyChannel.invokeListMethod(
+      'ObjectFactory::create_batchAMapWalkingRouteSearchRequest',
+      {'length': length, 'init': init}
+    );
+    return __result_batch__
+        .map((it) => AmapSearchFluttifyIOSAs<AMapWalkingRouteSearchRequest>(it))
+        .toList();
   }
   
   //endregion
@@ -67,7 +75,7 @@ extension AMapWalkingRouteSearchRequest_Batch on List<AMapWalkingRouteSearchRequ
   //region getters
   Future<List<int>> get_multipath_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapWalkingRouteSearchRequest::get_multipath_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<int>()?.toList();
   }
   
   //endregion

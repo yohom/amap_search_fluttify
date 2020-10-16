@@ -24,14 +24,22 @@ class AMapBusStopSearchResponse extends AMapSearchObject with NSCoding, NSCopyin
 
   //region creators
   static Future<AMapBusStopSearchResponse> create__({ bool init = true /* ios only */ }) async {
-    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapBusStopSearchResponse', {'init': init});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
+      'ObjectFactory::createAMapBusStopSearchResponse',
+      {'init': init}
+    );
+    return AmapSearchFluttifyIOSAs<AMapBusStopSearchResponse>(__result__);
   }
   
   static Future<List<AMapBusStopSearchResponse>> create_batch__(int length, { bool init = true /* ios only */ }) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
-    return kAmapSearchFluttifyChannel.invokeListMethod<AMapBusStopSearchResponse>('ObjectFactory::create_batchAMapBusStopSearchResponse', {'length': length, 'init': init});
+    assert(true);
+    final __result_batch__ = await  kAmapSearchFluttifyChannel.invokeListMethod(
+      'ObjectFactory::create_batchAMapBusStopSearchResponse',
+      {'length': length, 'init': init}
+    );
+    return __result_batch__
+        .map((it) => AmapSearchFluttifyIOSAs<AMapBusStopSearchResponse>(it))
+        .toList();
   }
   
   //endregion
@@ -44,12 +52,12 @@ class AMapBusStopSearchResponse extends AMapSearchObject with NSCoding, NSCopyin
   
   Future<AMapSuggestion> get_suggestion() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapBusStopSearchResponse::get_suggestion", {'__this__': this});
-    return __result__;
+    return AmapSearchFluttifyIOSAs<AMapSuggestion>(__result__);
   }
   
   Future<List<AMapBusStop>> get_busstops() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapBusStopSearchResponse::get_busstops", {'__this__': this});
-    return (__result__ as List)?.cast<AMapBusStop>();
+    return (__result__ as List)?.map((it) => AmapSearchFluttifyIOSAs<AMapBusStop>(it))?.toList();
   }
   
   //endregion
@@ -89,17 +97,17 @@ extension AMapBusStopSearchResponse_Batch on List<AMapBusStopSearchResponse> {
   //region getters
   Future<List<int>> get_count_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapBusStopSearchResponse::get_count_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<int>()?.toList();
   }
   
   Future<List<AMapSuggestion>> get_suggestion_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapBusStopSearchResponse::get_suggestion_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).cast<AMapSuggestion>().map((__result__) => __result__).toList();
+    return (resultBatch as List)?.map((__result__) => AmapSearchFluttifyIOSAs<AMapSuggestion>(__result__))?.cast<AMapSuggestion>()?.toList();
   }
   
   Future<List<List<AMapBusStop>>> get_busstops_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapBusStopSearchResponse::get_busstops_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).cast<List<AMapBusStop>>().map((__result__) => (__result__ as List)?.cast<AMapBusStop>()).toList();
+    return (resultBatch as List)?.map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyIOSAs<AMapBusStop>(it))?.toList())?.cast<List<AMapBusStop>>()?.toList();
   }
   
   //endregion

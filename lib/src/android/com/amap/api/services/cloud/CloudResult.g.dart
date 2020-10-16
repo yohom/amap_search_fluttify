@@ -49,7 +49,7 @@ class com_amap_api_services_cloud_CloudResult extends java_lang_Object  {
     // handle native call
   
   
-    return __result__;
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudResult>(__result__);
   }
   
   
@@ -83,7 +83,7 @@ class com_amap_api_services_cloud_CloudResult extends java_lang_Object  {
     // handle native call
   
   
-    return __result__;
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudSearch_Query>(__result__);
   }
   
   
@@ -100,7 +100,7 @@ class com_amap_api_services_cloud_CloudResult extends java_lang_Object  {
     // handle native call
   
   
-    return __result__;
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudSearch_SearchBound>(__result__);
   }
   
   
@@ -117,7 +117,7 @@ class com_amap_api_services_cloud_CloudResult extends java_lang_Object  {
     // handle native call
   
   
-    return (__result__ as List)?.cast<com_amap_api_services_cloud_CloudItem>();
+    return (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudItem>(it))?.toList();
   }
   
   
@@ -157,80 +157,68 @@ extension com_amap_api_services_cloud_CloudResult_Batch on List<com_amap_api_ser
   //region methods
   
   static Future<List<com_amap_api_services_cloud_CloudResult>> createPagedResult_batch(List<com_amap_api_services_cloud_CloudSearch_Query> var0, List<int> var1, List<com_amap_api_services_cloud_CloudSearch_SearchBound> var2, List<int> var3, List<List<com_amap_api_services_cloud_CloudItem>> var4) async {
-    if (var0.length != var1.length || var1.length != var2.length || var2.length != var3.length || var3.length != var4.length) {
-      return Future.error('all args must have same length!');
-    }
+    assert(var0.length == var1.length && var1.length == var2.length && var2.length == var3.length && var3.length == var4.length);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.cloud.CloudResult::createPagedResult_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "var4": var4[__i__]}]);
   
   
-    return (resultBatch as List).cast<com_amap_api_services_cloud_CloudResult>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudResult>(__result__)).cast<com_amap_api_services_cloud_CloudResult>().toList();
   }
   
   
   Future<List<int>> getPageCount_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.cloud.CloudResult::getPageCount_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<int>().toList();
   }
   
   
   Future<List<com_amap_api_services_cloud_CloudSearch_Query>> getQuery_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.cloud.CloudResult::getQuery_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<com_amap_api_services_cloud_CloudSearch_Query>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudSearch_Query>(__result__)).cast<com_amap_api_services_cloud_CloudSearch_Query>().toList();
   }
   
   
   Future<List<com_amap_api_services_cloud_CloudSearch_SearchBound>> getBound_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.cloud.CloudResult::getBound_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<com_amap_api_services_cloud_CloudSearch_SearchBound>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudSearch_SearchBound>(__result__)).cast<com_amap_api_services_cloud_CloudSearch_SearchBound>().toList();
   }
   
   
   Future<List<List<com_amap_api_services_cloud_CloudItem>>> getClouds_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.cloud.CloudResult::getClouds_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<List<com_amap_api_services_cloud_CloudItem>>().map((__result__) => (__result__ as List)?.cast<com_amap_api_services_cloud_CloudItem>()).toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudItem>(it))?.toList()).cast<List<com_amap_api_services_cloud_CloudItem>>().toList();
   }
   
   
   Future<List<int>> getTotalCount_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.cloud.CloudResult::getTotalCount_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<int>().toList();
   }
   
   //endregion

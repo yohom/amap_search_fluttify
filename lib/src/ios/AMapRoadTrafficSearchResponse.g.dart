@@ -24,14 +24,22 @@ class AMapRoadTrafficSearchResponse extends AMapSearchObject with NSCoding, NSCo
 
   //region creators
   static Future<AMapRoadTrafficSearchResponse> create__({ bool init = true /* ios only */ }) async {
-    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapRoadTrafficSearchResponse', {'init': init});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
+      'ObjectFactory::createAMapRoadTrafficSearchResponse',
+      {'init': init}
+    );
+    return AmapSearchFluttifyIOSAs<AMapRoadTrafficSearchResponse>(__result__);
   }
   
   static Future<List<AMapRoadTrafficSearchResponse>> create_batch__(int length, { bool init = true /* ios only */ }) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
-    return kAmapSearchFluttifyChannel.invokeListMethod<AMapRoadTrafficSearchResponse>('ObjectFactory::create_batchAMapRoadTrafficSearchResponse', {'length': length, 'init': init});
+    assert(true);
+    final __result_batch__ = await  kAmapSearchFluttifyChannel.invokeListMethod(
+      'ObjectFactory::create_batchAMapRoadTrafficSearchResponse',
+      {'length': length, 'init': init}
+    );
+    return __result_batch__
+        .map((it) => AmapSearchFluttifyIOSAs<AMapRoadTrafficSearchResponse>(it))
+        .toList();
   }
   
   //endregion
@@ -39,7 +47,7 @@ class AMapRoadTrafficSearchResponse extends AMapSearchObject with NSCoding, NSCo
   //region getters
   Future<AMapTrafficInfo> get_trafficInfo() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoadTrafficSearchResponse::get_trafficInfo", {'__this__': this});
-    return __result__;
+    return AmapSearchFluttifyIOSAs<AMapTrafficInfo>(__result__);
   }
   
   //endregion
@@ -67,7 +75,7 @@ extension AMapRoadTrafficSearchResponse_Batch on List<AMapRoadTrafficSearchRespo
   //region getters
   Future<List<AMapTrafficInfo>> get_trafficInfo_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoadTrafficSearchResponse::get_trafficInfo_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).cast<AMapTrafficInfo>().map((__result__) => __result__).toList();
+    return (resultBatch as List)?.map((__result__) => AmapSearchFluttifyIOSAs<AMapTrafficInfo>(__result__))?.cast<AMapTrafficInfo>()?.toList();
   }
   
   //endregion
