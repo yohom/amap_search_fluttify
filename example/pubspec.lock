@@ -7,14 +7,14 @@ packages:
       name: amap_core_fluttify
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.14.0-dev.4"
+    version: "0.14.0-dev.5"
   amap_search_fluttify:
     dependency: "direct dev"
     description:
       path: ".."
       relative: true
     source: path
-    version: "0.16.0-dev.3"
+    version: "0.16.0-dev.4"
   args:
     dependency: transitive
     description:
