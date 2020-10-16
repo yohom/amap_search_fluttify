@@ -24,14 +24,22 @@ class AMapDistanceSearchRequest extends AMapSearchObject with NSCoding, NSCopyin
 
   //region creators
   static Future<AMapDistanceSearchRequest> create__({ bool init = true /* ios only */ }) async {
-    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapDistanceSearchRequest', {'init': init});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
+      'ObjectFactory::createAMapDistanceSearchRequest',
+      {'init': init}
+    );
+    return AmapSearchFluttifyIOSAs<AMapDistanceSearchRequest>(__result__);
   }
   
   static Future<List<AMapDistanceSearchRequest>> create_batch__(int length, { bool init = true /* ios only */ }) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
-    return kAmapSearchFluttifyChannel.invokeListMethod<AMapDistanceSearchRequest>('ObjectFactory::create_batchAMapDistanceSearchRequest', {'length': length, 'init': init});
+    assert(true);
+    final __result_batch__ = await  kAmapSearchFluttifyChannel.invokeListMethod(
+      'ObjectFactory::create_batchAMapDistanceSearchRequest',
+      {'length': length, 'init': init}
+    );
+    return __result_batch__
+        .map((it) => AmapSearchFluttifyIOSAs<AMapDistanceSearchRequest>(it))
+        .toList();
   }
   
   //endregion
@@ -39,12 +47,12 @@ class AMapDistanceSearchRequest extends AMapSearchObject with NSCoding, NSCopyin
   //region getters
   Future<List<AMapGeoPoint>> get_origins() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapDistanceSearchRequest::get_origins", {'__this__': this});
-    return (__result__ as List)?.cast<AMapGeoPoint>();
+    return (__result__ as List)?.map((it) => AmapSearchFluttifyIOSAs<AMapGeoPoint>(it))?.toList();
   }
   
   Future<AMapGeoPoint> get_destination() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapDistanceSearchRequest::get_destination", {'__this__': this});
-    return __result__;
+    return AmapSearchFluttifyIOSAs<AMapGeoPoint>(__result__);
   }
   
   Future<int> get_type() async {
@@ -89,17 +97,17 @@ extension AMapDistanceSearchRequest_Batch on List<AMapDistanceSearchRequest> {
   //region getters
   Future<List<List<AMapGeoPoint>>> get_origins_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapDistanceSearchRequest::get_origins_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).cast<List<AMapGeoPoint>>().map((__result__) => (__result__ as List)?.cast<AMapGeoPoint>()).toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyIOSAs<AMapGeoPoint>(it))?.toList()).cast<List<AMapGeoPoint>>().toList();
   }
   
   Future<List<AMapGeoPoint>> get_destination_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapDistanceSearchRequest::get_destination_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).cast<AMapGeoPoint>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyIOSAs<AMapGeoPoint>(__result__)).cast<AMapGeoPoint>().toList();
   }
   
   Future<List<int>> get_type_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapDistanceSearchRequest::get_type_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<int>().toList();
   }
   
   //endregion

@@ -24,14 +24,22 @@ class AMapImage extends AMapSearchObject with NSCoding, NSCopying {
 
   //region creators
   static Future<AMapImage> create__({ bool init = true /* ios only */ }) async {
-    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapImage', {'init': init});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
+      'ObjectFactory::createAMapImage',
+      {'init': init}
+    );
+    return AmapSearchFluttifyIOSAs<AMapImage>(__result__);
   }
   
   static Future<List<AMapImage>> create_batch__(int length, { bool init = true /* ios only */ }) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
-    return kAmapSearchFluttifyChannel.invokeListMethod<AMapImage>('ObjectFactory::create_batchAMapImage', {'length': length, 'init': init});
+    assert(true);
+    final __result_batch__ = await  kAmapSearchFluttifyChannel.invokeListMethod(
+      'ObjectFactory::create_batchAMapImage',
+      {'length': length, 'init': init}
+    );
+    return __result_batch__
+        .map((it) => AmapSearchFluttifyIOSAs<AMapImage>(it))
+        .toList();
   }
   
   //endregion
@@ -78,12 +86,12 @@ extension AMapImage_Batch on List<AMapImage> {
   //region getters
   Future<List<String>> get_title_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapImage::get_title_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
   }
   
   Future<List<String>> get_url_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapImage::get_url_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
   }
   
   //endregion

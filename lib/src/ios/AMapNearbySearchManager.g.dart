@@ -49,7 +49,7 @@ class AMapNearbySearchManager extends NSObject  {
   Future<void> set_delegate(AMapNearbySearchManagerDelegate delegate) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapNearbySearchManager::set_delegate', <String, dynamic>{'__this__': this, });
   
-    MethodChannel('AMapNearbySearchManagerDelegate::Callback', kAmapSearchFluttifyCodec)
+    MethodChannel('AMapNearbySearchManagerDelegate::Callback', kAmapSearchFluttifyMethodCodec)
       .setMethodCallHandler((methodCall) async {
         try {
           final args = methodCall.arguments as Map;
@@ -61,7 +61,7 @@ class AMapNearbySearchManager extends NSObject  {
               }
           
               // handle the native call
-              delegate?.nearbyInfoForUploading(args['manager']);
+              delegate?.nearbyInfoForUploading(AmapSearchFluttifyIOSAs(args['manager']));
               break;
             case 'Callback::AMapNearbySearchManagerDelegate::onNearbyInfoUploadedWithError':
               // print log
@@ -70,7 +70,7 @@ class AMapNearbySearchManager extends NSObject  {
               }
           
               // handle the native call
-              delegate?.onNearbyInfoUploadedWithError(args['error']);
+              delegate?.onNearbyInfoUploadedWithError(AmapSearchFluttifyIOSAs(args['error']));
               break;
             case 'Callback::AMapNearbySearchManagerDelegate::onUserInfoClearedWithError':
               // print log
@@ -79,7 +79,7 @@ class AMapNearbySearchManager extends NSObject  {
               }
           
               // handle the native call
-              delegate?.onUserInfoClearedWithError(args['error']);
+              delegate?.onUserInfoClearedWithError(AmapSearchFluttifyIOSAs(args['error']));
               break;
             default:
               break;
@@ -108,7 +108,7 @@ class AMapNearbySearchManager extends NSObject  {
     // handle native call
   
   
-    return __result__;
+    return AmapSearchFluttifyIOSAs<AMapNearbySearchManager>(__result__);
   }
   
   
@@ -191,12 +191,12 @@ extension AMapNearbySearchManager_Batch on List<AMapNearbySearchManager> {
   //region getters
   Future<List<double>> get_uploadTimeInterval_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapNearbySearchManager::get_uploadTimeInterval_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<double>().toList();
   }
   
   Future<List<bool>> get_isAutoUploading_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapNearbySearchManager::get_isAutoUploading_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<bool>().toList();
   }
   
   //endregion
@@ -213,67 +213,57 @@ extension AMapNearbySearchManager_Batch on List<AMapNearbySearchManager> {
   //region methods
   
   static Future<List<AMapNearbySearchManager>> sharedInstance_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapNearbySearchManager::sharedInstance_batch', );
   
   
-    return (resultBatch as List).cast<AMapNearbySearchManager>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyIOSAs<AMapNearbySearchManager>(__result__)).cast<AMapNearbySearchManager>().toList();
   }
   
   
   Future<List<void>> startAutoUploadNearbyInfo_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapNearbySearchManager::startAutoUploadNearbyInfo_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   Future<List<void>> stopAutoUploadNearbyInfo_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapNearbySearchManager::stopAutoUploadNearbyInfo_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   Future<List<bool>> uploadNearbyInfo_batch(List<AMapNearbyUploadInfo> info) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapNearbySearchManager::uploadNearbyInfo_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"info": info[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<bool>().toList();
   }
   
   
   Future<List<bool>> clearUserInfoWithID_batch(List<String> userID) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapNearbySearchManager::clearUserInfoWithID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"userID": userID[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<bool>().toList();
   }
   
   //endregion

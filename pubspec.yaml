@@ -11,7 +11,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  amap_core_fluttify: ^0.14.0-dev.2
+  amap_core_fluttify: ^0.14.0-dev.4
   
   foundation_fluttify: ^0.11.0-dev.8
   core_location_fluttify: ^0.6.0-dev.1

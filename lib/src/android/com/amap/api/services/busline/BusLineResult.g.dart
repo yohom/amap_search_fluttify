@@ -49,7 +49,7 @@ class com_amap_api_services_busline_BusLineResult extends java_lang_Object  {
     // handle native call
   
   
-    return __result__;
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_busline_BusLineResult>(__result__);
   }
   
   
@@ -83,7 +83,7 @@ class com_amap_api_services_busline_BusLineResult extends java_lang_Object  {
     // handle native call
   
   
-    return __result__;
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_busline_BusLineQuery>(__result__);
   }
   
   
@@ -117,7 +117,7 @@ class com_amap_api_services_busline_BusLineResult extends java_lang_Object  {
     // handle native call
   
   
-    return (__result__ as List)?.cast<com_amap_api_services_core_SuggestionCity>();
+    return (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_SuggestionCity>(it))?.toList();
   }
   
   
@@ -134,7 +134,7 @@ class com_amap_api_services_busline_BusLineResult extends java_lang_Object  {
     // handle native call
   
   
-    return (__result__ as List)?.cast<com_amap_api_services_busline_BusLineItem>();
+    return (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_busline_BusLineItem>(it))?.toList();
   }
   
   //endregion
@@ -157,80 +157,68 @@ extension com_amap_api_services_busline_BusLineResult_Batch on List<com_amap_api
   //region methods
   
   static Future<List<com_amap_api_services_busline_BusLineResult>> createPagedResult_batch(List<com_amap_api_services_busline_BusLineQuery> var0, List<int> var1, List<List<com_amap_api_services_core_SuggestionCity>> var2, List<List<String>> var3, List<List<com_amap_api_services_busline_BusLineItem>> var4) async {
-    if (var0.length != var1.length || var1.length != var2.length || var2.length != var3.length || var3.length != var4.length) {
-      return Future.error('all args must have same length!');
-    }
+    assert(var0.length == var1.length && var1.length == var2.length && var2.length == var3.length && var3.length == var4.length);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.busline.BusLineResult::createPagedResult_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "var4": var4[__i__]}]);
   
   
-    return (resultBatch as List).cast<com_amap_api_services_busline_BusLineResult>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_busline_BusLineResult>(__result__)).cast<com_amap_api_services_busline_BusLineResult>().toList();
   }
   
   
   Future<List<int>> getPageCount_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.busline.BusLineResult::getPageCount_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<int>().toList();
   }
   
   
   Future<List<com_amap_api_services_busline_BusLineQuery>> getQuery_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.busline.BusLineResult::getQuery_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<com_amap_api_services_busline_BusLineQuery>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_busline_BusLineQuery>(__result__)).cast<com_amap_api_services_busline_BusLineQuery>().toList();
   }
   
   
   Future<List<List<String>>> getSearchSuggestionKeywords_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.busline.BusLineResult::getSearchSuggestionKeywords_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<List<String>>().map((__result__) => (__result__ as List).cast<String>()).toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List).cast<String>()).cast<List<String>>().toList();
   }
   
   
   Future<List<List<com_amap_api_services_core_SuggestionCity>>> getSearchSuggestionCities_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.busline.BusLineResult::getSearchSuggestionCities_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<List<com_amap_api_services_core_SuggestionCity>>().map((__result__) => (__result__ as List)?.cast<com_amap_api_services_core_SuggestionCity>()).toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_SuggestionCity>(it))?.toList()).cast<List<com_amap_api_services_core_SuggestionCity>>().toList();
   }
   
   
   Future<List<List<com_amap_api_services_busline_BusLineItem>>> getBusLines_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.busline.BusLineResult::getBusLines_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<List<com_amap_api_services_busline_BusLineItem>>().map((__result__) => (__result__ as List)?.cast<com_amap_api_services_busline_BusLineItem>()).toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_busline_BusLineItem>(it))?.toList()).cast<List<com_amap_api_services_busline_BusLineItem>>().toList();
   }
   
   //endregion

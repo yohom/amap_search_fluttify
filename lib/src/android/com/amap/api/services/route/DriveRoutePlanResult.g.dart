@@ -24,14 +24,22 @@ class com_amap_api_services_route_DriveRoutePlanResult extends com_amap_api_serv
 
   //region creators
   static Future<com_amap_api_services_route_DriveRoutePlanResult> create__() async {
-    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_services_route_DriveRoutePlanResult__', );
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
+      'ObjectFactory::createcom_amap_api_services_route_DriveRoutePlanResult__',
+    
+    );
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_DriveRoutePlanResult>(__result__);
   }
   
   static Future<List<com_amap_api_services_route_DriveRoutePlanResult>> create_batch__(int length) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
-    return kAmapSearchFluttifyChannel.invokeListMethod<com_amap_api_services_route_DriveRoutePlanResult>('ObjectFactory::create_batchcom_amap_api_services_route_DriveRoutePlanResult__', {'length': length});
+    assert(true);
+    final __result_batch__ = await  kAmapSearchFluttifyChannel.invokeListMethod(
+      'ObjectFactory::create_batchcom_amap_api_services_route_DriveRoutePlanResult__',
+      {'length': length}
+    );
+    return __result_batch__
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_DriveRoutePlanResult>(it))
+        .toList();
   }
   
   //endregion
@@ -59,7 +67,7 @@ class com_amap_api_services_route_DriveRoutePlanResult extends com_amap_api_serv
     // handle native call
   
   
-    return (__result__ as List)?.cast<com_amap_api_services_route_DrivePlanPath>();
+    return (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_DrivePlanPath>(it))?.toList();
   }
   
   
@@ -93,7 +101,7 @@ class com_amap_api_services_route_DriveRoutePlanResult extends com_amap_api_serv
     // handle native call
   
   
-    return (__result__ as List)?.cast<com_amap_api_services_route_TimeInfo>();
+    return (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_TimeInfo>(it))?.toList();
   }
   
   
@@ -150,67 +158,57 @@ extension com_amap_api_services_route_DriveRoutePlanResult_Batch on List<com_ama
   //region methods
   
   Future<List<List<com_amap_api_services_route_DrivePlanPath>>> getPaths_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.DriveRoutePlanResult::getPaths_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<List<com_amap_api_services_route_DrivePlanPath>>().map((__result__) => (__result__ as List)?.cast<com_amap_api_services_route_DrivePlanPath>()).toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_DrivePlanPath>(it))?.toList()).cast<List<com_amap_api_services_route_DrivePlanPath>>().toList();
   }
   
   
   Future<List<void>> setPaths_batch(List<List<com_amap_api_services_route_DrivePlanPath>> var1) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.DriveRoutePlanResult::setPaths_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   Future<List<List<com_amap_api_services_route_TimeInfo>>> getTimeInfos_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.DriveRoutePlanResult::getTimeInfos_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<List<com_amap_api_services_route_TimeInfo>>().map((__result__) => (__result__ as List)?.cast<com_amap_api_services_route_TimeInfo>()).toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_TimeInfo>(it))?.toList()).cast<List<com_amap_api_services_route_TimeInfo>>().toList();
   }
   
   
   Future<List<void>> setTimeInfos_batch(List<List<com_amap_api_services_route_TimeInfo>> var1) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.DriveRoutePlanResult::setTimeInfos_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   Future<List<void>> setDrivePlanQuery_batch(List<com_amap_api_services_route_RouteSearch_DrivePlanQuery> var1) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.DriveRoutePlanResult::setDrivePlanQuery_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   //endregion

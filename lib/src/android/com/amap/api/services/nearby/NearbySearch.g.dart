@@ -50,7 +50,7 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
     // handle native call
   
   
-    return __result__;
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_nearby_NearbySearch>(__result__);
   }
   
   
@@ -65,7 +65,7 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
   
   
     // handle native call
-    MethodChannel('com.amap.api.services.nearby.NearbySearch::addNearbyListener::Callback@$refId', kAmapSearchFluttifyCodec)
+    MethodChannel('com.amap.api.services.nearby.NearbySearch::addNearbyListener::Callback@$refId', kAmapSearchFluttifyMethodCodec)
         .setMethodCallHandler((methodCall) async {
           try {
             final args = methodCall.arguments as Map;
@@ -86,7 +86,7 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
                 }
           
                 // handle the native call
-                var1?.onNearbyInfoSearched(args['var1'], args['var2']);
+                var1?.onNearbyInfoSearched(AmapSearchFluttifyAndroidAs(args['var1']), args['var2']);
                 break;
               case 'Callback::com.amap.api.services.nearby.NearbySearch.NearbyListener::onNearbyInfoUploaded':
                 // print log
@@ -121,7 +121,7 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
   
   
     // handle native call
-    MethodChannel('com.amap.api.services.nearby.NearbySearch::removeNearbyListener::Callback@$refId', kAmapSearchFluttifyCodec)
+    MethodChannel('com.amap.api.services.nearby.NearbySearch::removeNearbyListener::Callback@$refId', kAmapSearchFluttifyMethodCodec)
         .setMethodCallHandler((methodCall) async {
           try {
             final args = methodCall.arguments as Map;
@@ -142,7 +142,7 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
                 }
           
                 // handle the native call
-                var1?.onNearbyInfoSearched(args['var1'], args['var2']);
+                var1?.onNearbyInfoSearched(AmapSearchFluttifyAndroidAs(args['var1']), args['var2']);
                 break;
               case 'Callback::com.amap.api.services.nearby.NearbySearch.NearbyListener::onNearbyInfoUploaded':
                 // print log
@@ -211,7 +211,7 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
   
   
     // handle native call
-    MethodChannel('com.amap.api.services.nearby.NearbySearch::startUploadNearbyInfoAuto::Callback@$refId', kAmapSearchFluttifyCodec)
+    MethodChannel('com.amap.api.services.nearby.NearbySearch::startUploadNearbyInfoAuto::Callback@$refId', kAmapSearchFluttifyMethodCodec)
         .setMethodCallHandler((methodCall) async {
           try {
             final args = methodCall.arguments as Map;
@@ -302,7 +302,7 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
     // handle native call
   
   
-    return __result__;
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_nearby_NearbySearchResult>(__result__);
   }
   
   
@@ -342,106 +342,90 @@ extension com_amap_api_services_nearby_NearbySearch_Batch on List<com_amap_api_s
   //region methods
   
   static Future<List<com_amap_api_services_nearby_NearbySearch>> getInstance_batch(List<android_content_Context> var0) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.NearbySearch::getInstance_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
-    return (resultBatch as List).cast<com_amap_api_services_nearby_NearbySearch>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_nearby_NearbySearch>(__result__)).cast<com_amap_api_services_nearby_NearbySearch>().toList();
   }
   
   
   Future<List<void>> clearUserInfoAsyn_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.NearbySearch::clearUserInfoAsyn_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   Future<List<void>> setUserID_batch(List<String> var1) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.NearbySearch::setUserID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   Future<List<void>> stopUploadNearbyInfoAuto_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.NearbySearch::stopUploadNearbyInfoAuto_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   Future<List<void>> uploadNearbyInfoAsyn_batch(List<com_amap_api_services_nearby_UploadInfo> var1) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.NearbySearch::uploadNearbyInfoAsyn_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   Future<List<void>> searchNearbyInfoAsyn_batch(List<com_amap_api_services_nearby_NearbySearch_NearbyQuery> var1) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.NearbySearch::searchNearbyInfoAsyn_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   Future<List<com_amap_api_services_nearby_NearbySearchResult>> searchNearbyInfo_batch(List<com_amap_api_services_nearby_NearbySearch_NearbyQuery> var1) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.NearbySearch::searchNearbyInfo_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<com_amap_api_services_nearby_NearbySearchResult>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_nearby_NearbySearchResult>(__result__)).cast<com_amap_api_services_nearby_NearbySearchResult>().toList();
   }
   
   
   static Future<List<void>> destroy_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.NearbySearch::destroy_batch', );
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   //endregion

@@ -24,14 +24,22 @@ class com_amap_api_services_cloud_CloudSearch extends java_lang_Object  {
 
   //region creators
   static Future<com_amap_api_services_cloud_CloudSearch> create__android_content_Context(android_content_Context var1) async {
-    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_services_cloud_CloudSearch__android_content_Context', {"var1": var1});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
+      'ObjectFactory::createcom_amap_api_services_cloud_CloudSearch__android_content_Context',
+      {"var1": var1}
+    );
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudSearch>(__result__);
   }
   
   static Future<List<com_amap_api_services_cloud_CloudSearch>> create_batch__android_content_Context(List<android_content_Context> var1) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
-    return kAmapSearchFluttifyChannel.invokeListMethod<com_amap_api_services_cloud_CloudSearch>('ObjectFactory::create_batchcom_amap_api_services_cloud_CloudSearch__android_content_Context', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]);
+    assert(true);
+    final __result_batch__ = await  kAmapSearchFluttifyChannel.invokeListMethod(
+      'ObjectFactory::create_batchcom_amap_api_services_cloud_CloudSearch__android_content_Context',
+      [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]
+    );
+    return __result_batch__
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudSearch>(it))
+        .toList();
   }
   
   //endregion
@@ -57,7 +65,7 @@ class com_amap_api_services_cloud_CloudSearch extends java_lang_Object  {
   
   
     // handle native call
-    MethodChannel('com.amap.api.services.cloud.CloudSearch::setOnCloudSearchListener::Callback@$refId', kAmapSearchFluttifyCodec)
+    MethodChannel('com.amap.api.services.cloud.CloudSearch::setOnCloudSearchListener::Callback@$refId', kAmapSearchFluttifyMethodCodec)
         .setMethodCallHandler((methodCall) async {
           try {
             final args = methodCall.arguments as Map;
@@ -69,7 +77,7 @@ class com_amap_api_services_cloud_CloudSearch extends java_lang_Object  {
                 }
           
                 // handle the native call
-                var1?.onCloudSearched(args['var1'], args['var2']);
+                var1?.onCloudSearched(AmapSearchFluttifyAndroidAs(args['var1']), args['var2']);
                 break;
               case 'Callback::com.amap.api.services.cloud.CloudSearch.OnCloudSearchListener::onCloudItemDetailSearched':
                 // print log
@@ -78,7 +86,7 @@ class com_amap_api_services_cloud_CloudSearch extends java_lang_Object  {
                 }
           
                 // handle the native call
-                var1?.onCloudItemDetailSearched(args['var1'], args['var2']);
+                var1?.onCloudItemDetailSearched(AmapSearchFluttifyAndroidAs(args['var1']), args['var2']);
                 break;
               default:
                 break;
@@ -146,28 +154,24 @@ extension com_amap_api_services_cloud_CloudSearch_Batch on List<com_amap_api_ser
   //region methods
   
   Future<List<void>> searchCloudAsyn_batch(List<com_amap_api_services_cloud_CloudSearch_Query> var1) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.cloud.CloudSearch::searchCloudAsyn_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   Future<List<void>> searchCloudDetailAsyn_batch(List<String> var1, List<String> var2) async {
-    if (var1.length != var2.length) {
-      return Future.error('all args must have same length!');
-    }
+    assert(var1.length == var2.length);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.cloud.CloudSearch::searchCloudDetailAsyn_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   //endregion

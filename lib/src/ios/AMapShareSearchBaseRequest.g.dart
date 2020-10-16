@@ -24,14 +24,22 @@ class AMapShareSearchBaseRequest extends AMapSearchObject with NSCoding, NSCopyi
 
   //region creators
   static Future<AMapShareSearchBaseRequest> create__({ bool init = true /* ios only */ }) async {
-    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapShareSearchBaseRequest', {'init': init});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
+      'ObjectFactory::createAMapShareSearchBaseRequest',
+      {'init': init}
+    );
+    return AmapSearchFluttifyIOSAs<AMapShareSearchBaseRequest>(__result__);
   }
   
   static Future<List<AMapShareSearchBaseRequest>> create_batch__(int length, { bool init = true /* ios only */ }) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
-    return kAmapSearchFluttifyChannel.invokeListMethod<AMapShareSearchBaseRequest>('ObjectFactory::create_batchAMapShareSearchBaseRequest', {'length': length, 'init': init});
+    assert(true);
+    final __result_batch__ = await  kAmapSearchFluttifyChannel.invokeListMethod(
+      'ObjectFactory::create_batchAMapShareSearchBaseRequest',
+      {'length': length, 'init': init}
+    );
+    return __result_batch__
+        .map((it) => AmapSearchFluttifyIOSAs<AMapShareSearchBaseRequest>(it))
+        .toList();
   }
   
   //endregion

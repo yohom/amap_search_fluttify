@@ -24,14 +24,22 @@ class AMapRoadTrafficSearchBaseRequest extends AMapSearchObject with NSCoding, N
 
   //region creators
   static Future<AMapRoadTrafficSearchBaseRequest> create__({ bool init = true /* ios only */ }) async {
-    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapRoadTrafficSearchBaseRequest', {'init': init});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
+      'ObjectFactory::createAMapRoadTrafficSearchBaseRequest',
+      {'init': init}
+    );
+    return AmapSearchFluttifyIOSAs<AMapRoadTrafficSearchBaseRequest>(__result__);
   }
   
   static Future<List<AMapRoadTrafficSearchBaseRequest>> create_batch__(int length, { bool init = true /* ios only */ }) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
-    return kAmapSearchFluttifyChannel.invokeListMethod<AMapRoadTrafficSearchBaseRequest>('ObjectFactory::create_batchAMapRoadTrafficSearchBaseRequest', {'length': length, 'init': init});
+    assert(true);
+    final __result_batch__ = await  kAmapSearchFluttifyChannel.invokeListMethod(
+      'ObjectFactory::create_batchAMapRoadTrafficSearchBaseRequest',
+      {'length': length, 'init': init}
+    );
+    return __result_batch__
+        .map((it) => AmapSearchFluttifyIOSAs<AMapRoadTrafficSearchBaseRequest>(it))
+        .toList();
   }
   
   //endregion
@@ -78,12 +86,12 @@ extension AMapRoadTrafficSearchBaseRequest_Batch on List<AMapRoadTrafficSearchBa
   //region getters
   Future<List<int>> get_level_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoadTrafficSearchBaseRequest::get_level_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<int>().toList();
   }
   
   Future<List<bool>> get_requireExtension_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoadTrafficSearchBaseRequest::get_requireExtension_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).cast<bool>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<bool>().toList();
   }
   
   //endregion

@@ -24,14 +24,22 @@ class AMapSearchObject extends NSObject with NSCoding, NSCopying {
 
   //region creators
   static Future<AMapSearchObject> create__({ bool init = true /* ios only */ }) async {
-    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapSearchObject', {'init': init});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
+      'ObjectFactory::createAMapSearchObject',
+      {'init': init}
+    );
+    return AmapSearchFluttifyIOSAs<AMapSearchObject>(__result__);
   }
   
   static Future<List<AMapSearchObject>> create_batch__(int length, { bool init = true /* ios only */ }) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
-    return kAmapSearchFluttifyChannel.invokeListMethod<AMapSearchObject>('ObjectFactory::create_batchAMapSearchObject', {'length': length, 'init': init});
+    assert(true);
+    final __result_batch__ = await  kAmapSearchFluttifyChannel.invokeListMethod(
+      'ObjectFactory::create_batchAMapSearchObject',
+      {'length': length, 'init': init}
+    );
+    return __result_batch__
+        .map((it) => AmapSearchFluttifyIOSAs<AMapSearchObject>(it))
+        .toList();
   }
   
   //endregion
@@ -82,15 +90,13 @@ extension AMapSearchObject_Batch on List<AMapSearchObject> {
   //region methods
   
   Future<List<String>> formattedDescription_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchObject::formattedDescription_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
   }
   
   //endregion

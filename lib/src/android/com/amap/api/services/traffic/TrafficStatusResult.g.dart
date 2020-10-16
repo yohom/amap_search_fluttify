@@ -24,14 +24,22 @@ class com_amap_api_services_traffic_TrafficStatusResult extends java_lang_Object
 
   //region creators
   static Future<com_amap_api_services_traffic_TrafficStatusResult> create__() async {
-    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createcom_amap_api_services_traffic_TrafficStatusResult__', );
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
+      'ObjectFactory::createcom_amap_api_services_traffic_TrafficStatusResult__',
+    
+    );
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_traffic_TrafficStatusResult>(__result__);
   }
   
   static Future<List<com_amap_api_services_traffic_TrafficStatusResult>> create_batch__(int length) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
-    return kAmapSearchFluttifyChannel.invokeListMethod<com_amap_api_services_traffic_TrafficStatusResult>('ObjectFactory::create_batchcom_amap_api_services_traffic_TrafficStatusResult__', {'length': length});
+    assert(true);
+    final __result_batch__ = await  kAmapSearchFluttifyChannel.invokeListMethod(
+      'ObjectFactory::create_batchcom_amap_api_services_traffic_TrafficStatusResult__',
+      {'length': length}
+    );
+    return __result_batch__
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_traffic_TrafficStatusResult>(it))
+        .toList();
   }
   
   //endregion
@@ -93,7 +101,7 @@ class com_amap_api_services_traffic_TrafficStatusResult extends java_lang_Object
     // handle native call
   
   
-    return __result__;
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_traffic_TrafficStatusEvaluation>(__result__);
   }
   
   
@@ -127,7 +135,7 @@ class com_amap_api_services_traffic_TrafficStatusResult extends java_lang_Object
     // handle native call
   
   
-    return (__result__ as List)?.cast<com_amap_api_services_traffic_TrafficStatusInfo>();
+    return (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_traffic_TrafficStatusInfo>(it))?.toList();
   }
   
   
@@ -167,80 +175,68 @@ extension com_amap_api_services_traffic_TrafficStatusResult_Batch on List<com_am
   //region methods
   
   Future<List<String>> getDescription_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.traffic.TrafficStatusResult::getDescription_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
   }
   
   
   Future<List<void>> setDescription_batch(List<String> var1) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.traffic.TrafficStatusResult::setDescription_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   Future<List<com_amap_api_services_traffic_TrafficStatusEvaluation>> getEvaluation_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.traffic.TrafficStatusResult::getEvaluation_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<com_amap_api_services_traffic_TrafficStatusEvaluation>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_traffic_TrafficStatusEvaluation>(__result__)).cast<com_amap_api_services_traffic_TrafficStatusEvaluation>().toList();
   }
   
   
   Future<List<void>> setEvaluation_batch(List<com_amap_api_services_traffic_TrafficStatusEvaluation> var1) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.traffic.TrafficStatusResult::setEvaluation_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   Future<List<List<com_amap_api_services_traffic_TrafficStatusInfo>>> getRoads_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.traffic.TrafficStatusResult::getRoads_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<List<com_amap_api_services_traffic_TrafficStatusInfo>>().map((__result__) => (__result__ as List)?.cast<com_amap_api_services_traffic_TrafficStatusInfo>()).toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_traffic_TrafficStatusInfo>(it))?.toList()).cast<List<com_amap_api_services_traffic_TrafficStatusInfo>>().toList();
   }
   
   
   Future<List<void>> setRoads_batch(List<List<com_amap_api_services_traffic_TrafficStatusInfo>> var1) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.traffic.TrafficStatusResult::setRoads_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   //endregion

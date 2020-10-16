@@ -24,14 +24,22 @@ class AMapSearchAPI extends NSObject  {
 
   //region creators
   static Future<AMapSearchAPI> create__({ bool init = true /* ios only */ }) async {
-    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapSearchAPI', {'init': init});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
+      'ObjectFactory::createAMapSearchAPI',
+      {'init': init}
+    );
+    return AmapSearchFluttifyIOSAs<AMapSearchAPI>(__result__);
   }
   
   static Future<List<AMapSearchAPI>> create_batch__(int length, { bool init = true /* ios only */ }) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
-    return kAmapSearchFluttifyChannel.invokeListMethod<AMapSearchAPI>('ObjectFactory::create_batchAMapSearchAPI', {'length': length, 'init': init});
+    assert(true);
+    final __result_batch__ = await  kAmapSearchFluttifyChannel.invokeListMethod(
+      'ObjectFactory::create_batchAMapSearchAPI',
+      {'length': length, 'init': init}
+    );
+    return __result_batch__
+        .map((it) => AmapSearchFluttifyIOSAs<AMapSearchAPI>(it))
+        .toList();
   }
   
   //endregion
@@ -53,7 +61,7 @@ class AMapSearchAPI extends NSObject  {
   Future<void> set_delegate(AMapSearchDelegate delegate) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::set_delegate', <String, dynamic>{'__this__': this, });
   
-    MethodChannel('AMapSearchDelegate::Callback', kAmapSearchFluttifyCodec)
+    MethodChannel('AMapSearchDelegate::Callback', kAmapSearchFluttifyMethodCodec)
       .setMethodCallHandler((methodCall) async {
         try {
           final args = methodCall.arguments as Map;
@@ -65,7 +73,7 @@ class AMapSearchAPI extends NSObject  {
               }
           
               // handle the native call
-              delegate?.AMapSearchRequest_didFailWithError(args['request'], args['error']);
+              delegate?.AMapSearchRequest_didFailWithError(AmapSearchFluttifyIOSAs(args['request']), AmapSearchFluttifyIOSAs(args['error']));
               break;
             case 'Callback::AMapSearchDelegate::onPOISearchDone_response':
               // print log
@@ -74,7 +82,7 @@ class AMapSearchAPI extends NSObject  {
               }
           
               // handle the native call
-              delegate?.onPOISearchDone_response(args['request'], args['response']);
+              delegate?.onPOISearchDone_response(AmapSearchFluttifyIOSAs(args['request']), AmapSearchFluttifyIOSAs(args['response']));
               break;
             case 'Callback::AMapSearchDelegate::onRoutePOISearchDone_response':
               // print log
@@ -83,7 +91,7 @@ class AMapSearchAPI extends NSObject  {
               }
           
               // handle the native call
-              delegate?.onRoutePOISearchDone_response(args['request'], args['response']);
+              delegate?.onRoutePOISearchDone_response(AmapSearchFluttifyIOSAs(args['request']), AmapSearchFluttifyIOSAs(args['response']));
               break;
             case 'Callback::AMapSearchDelegate::onGeocodeSearchDone_response':
               // print log
@@ -92,7 +100,7 @@ class AMapSearchAPI extends NSObject  {
               }
           
               // handle the native call
-              delegate?.onGeocodeSearchDone_response(args['request'], args['response']);
+              delegate?.onGeocodeSearchDone_response(AmapSearchFluttifyIOSAs(args['request']), AmapSearchFluttifyIOSAs(args['response']));
               break;
             case 'Callback::AMapSearchDelegate::onReGeocodeSearchDone_response':
               // print log
@@ -101,7 +109,7 @@ class AMapSearchAPI extends NSObject  {
               }
           
               // handle the native call
-              delegate?.onReGeocodeSearchDone_response(args['request'], args['response']);
+              delegate?.onReGeocodeSearchDone_response(AmapSearchFluttifyIOSAs(args['request']), AmapSearchFluttifyIOSAs(args['response']));
               break;
             case 'Callback::AMapSearchDelegate::onInputTipsSearchDone_response':
               // print log
@@ -110,7 +118,7 @@ class AMapSearchAPI extends NSObject  {
               }
           
               // handle the native call
-              delegate?.onInputTipsSearchDone_response(args['request'], args['response']);
+              delegate?.onInputTipsSearchDone_response(AmapSearchFluttifyIOSAs(args['request']), AmapSearchFluttifyIOSAs(args['response']));
               break;
             case 'Callback::AMapSearchDelegate::onBusStopSearchDone_response':
               // print log
@@ -119,7 +127,7 @@ class AMapSearchAPI extends NSObject  {
               }
           
               // handle the native call
-              delegate?.onBusStopSearchDone_response(args['request'], args['response']);
+              delegate?.onBusStopSearchDone_response(AmapSearchFluttifyIOSAs(args['request']), AmapSearchFluttifyIOSAs(args['response']));
               break;
             case 'Callback::AMapSearchDelegate::onBusLineSearchDone_response':
               // print log
@@ -128,7 +136,7 @@ class AMapSearchAPI extends NSObject  {
               }
           
               // handle the native call
-              delegate?.onBusLineSearchDone_response(args['request'], args['response']);
+              delegate?.onBusLineSearchDone_response(AmapSearchFluttifyIOSAs(args['request']), AmapSearchFluttifyIOSAs(args['response']));
               break;
             case 'Callback::AMapSearchDelegate::onDistrictSearchDone_response':
               // print log
@@ -137,7 +145,7 @@ class AMapSearchAPI extends NSObject  {
               }
           
               // handle the native call
-              delegate?.onDistrictSearchDone_response(args['request'], args['response']);
+              delegate?.onDistrictSearchDone_response(AmapSearchFluttifyIOSAs(args['request']), AmapSearchFluttifyIOSAs(args['response']));
               break;
             case 'Callback::AMapSearchDelegate::onRouteSearchDone_response':
               // print log
@@ -146,7 +154,7 @@ class AMapSearchAPI extends NSObject  {
               }
           
               // handle the native call
-              delegate?.onRouteSearchDone_response(args['request'], args['response']);
+              delegate?.onRouteSearchDone_response(AmapSearchFluttifyIOSAs(args['request']), AmapSearchFluttifyIOSAs(args['response']));
               break;
             case 'Callback::AMapSearchDelegate::onFutureRouteSearchDone_response':
               // print log
@@ -155,7 +163,7 @@ class AMapSearchAPI extends NSObject  {
               }
           
               // handle the native call
-              delegate?.onFutureRouteSearchDone_response(args['request'], args['response']);
+              delegate?.onFutureRouteSearchDone_response(AmapSearchFluttifyIOSAs(args['request']), AmapSearchFluttifyIOSAs(args['response']));
               break;
             case 'Callback::AMapSearchDelegate::onDistanceSearchDone_response':
               // print log
@@ -164,7 +172,7 @@ class AMapSearchAPI extends NSObject  {
               }
           
               // handle the native call
-              delegate?.onDistanceSearchDone_response(args['request'], args['response']);
+              delegate?.onDistanceSearchDone_response(AmapSearchFluttifyIOSAs(args['request']), AmapSearchFluttifyIOSAs(args['response']));
               break;
             case 'Callback::AMapSearchDelegate::onWeatherSearchDone_response':
               // print log
@@ -173,7 +181,7 @@ class AMapSearchAPI extends NSObject  {
               }
           
               // handle the native call
-              delegate?.onWeatherSearchDone_response(args['request'], args['response']);
+              delegate?.onWeatherSearchDone_response(AmapSearchFluttifyIOSAs(args['request']), AmapSearchFluttifyIOSAs(args['response']));
               break;
             case 'Callback::AMapSearchDelegate::onRoadTrafficSearchDone_response':
               // print log
@@ -182,7 +190,7 @@ class AMapSearchAPI extends NSObject  {
               }
           
               // handle the native call
-              delegate?.onRoadTrafficSearchDone_response(args['request'], args['response']);
+              delegate?.onRoadTrafficSearchDone_response(AmapSearchFluttifyIOSAs(args['request']), AmapSearchFluttifyIOSAs(args['response']));
               break;
             case 'Callback::AMapSearchDelegate::onNearbySearchDone_response':
               // print log
@@ -191,7 +199,7 @@ class AMapSearchAPI extends NSObject  {
               }
           
               // handle the native call
-              delegate?.onNearbySearchDone_response(args['request'], args['response']);
+              delegate?.onNearbySearchDone_response(AmapSearchFluttifyIOSAs(args['request']), AmapSearchFluttifyIOSAs(args['response']));
               break;
             case 'Callback::AMapSearchDelegate::onCloudSearchDone_response':
               // print log
@@ -200,7 +208,7 @@ class AMapSearchAPI extends NSObject  {
               }
           
               // handle the native call
-              delegate?.onCloudSearchDone_response(args['request'], args['response']);
+              delegate?.onCloudSearchDone_response(AmapSearchFluttifyIOSAs(args['request']), AmapSearchFluttifyIOSAs(args['response']));
               break;
             case 'Callback::AMapSearchDelegate::onShareSearchDone_response':
               // print log
@@ -209,7 +217,7 @@ class AMapSearchAPI extends NSObject  {
               }
           
               // handle the native call
-              delegate?.onShareSearchDone_response(args['request'], args['response']);
+              delegate?.onShareSearchDone_response(AmapSearchFluttifyIOSAs(args['request']), AmapSearchFluttifyIOSAs(args['response']));
               break;
             default:
               break;
@@ -250,7 +258,7 @@ class AMapSearchAPI extends NSObject  {
     // handle native call
   
   
-    return __result__;
+    return AmapSearchFluttifyIOSAs<AMapSearchAPI>(__result__);
   }
   
   
@@ -809,12 +817,12 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   //region getters
   Future<List<int>> get_timeout_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapSearchAPI::get_timeout_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<int>().toList();
   }
   
   Future<List<AMapSearchLanguage>> get_language_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapSearchAPI::get_language_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).cast<AMapSearchLanguage>().map((__result__) => (__result__ as int).toAMapSearchLanguage()).toList();
+    return (resultBatch as List).map((__result__) => (__result__ as int).toAMapSearchLanguage()).cast<AMapSearchLanguage>().toList();
   }
   
   //endregion
@@ -837,431 +845,365 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   //region methods
   
   Future<List<AMapSearchAPI>> init_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::init_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<AMapSearchAPI>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyIOSAs<AMapSearchAPI>(__result__)).cast<AMapSearchAPI>().toList();
   }
   
   
   Future<List<void>> cancelAllRequests_batch() async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::cancelAllRequests_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   Future<List<void>> AMapPOIIDSearch_batch(List<AMapPOIIDSearchRequest> request) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapPOIIDSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   Future<List<void>> AMapPOIKeywordsSearch_batch(List<AMapPOIKeywordsSearchRequest> request) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapPOIKeywordsSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   Future<List<void>> AMapPOIAroundSearch_batch(List<AMapPOIAroundSearchRequest> request) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapPOIAroundSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   Future<List<void>> AMapPOIPolygonSearch_batch(List<AMapPOIPolygonSearchRequest> request) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapPOIPolygonSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   Future<List<void>> AMapRoutePOISearch_batch(List<AMapRoutePOISearchRequest> request) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapRoutePOISearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   Future<List<void>> AMapGeocodeSearch_batch(List<AMapGeocodeSearchRequest> request) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapGeocodeSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   Future<List<void>> AMapReGoecodeSearch_batch(List<AMapReGeocodeSearchRequest> request) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapReGoecodeSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   Future<List<void>> AMapInputTipsSearch_batch(List<AMapInputTipsSearchRequest> request) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapInputTipsSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   Future<List<void>> AMapBusStopSearch_batch(List<AMapBusStopSearchRequest> request) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapBusStopSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   Future<List<void>> AMapBusLineIDSearch_batch(List<AMapBusLineIDSearchRequest> request) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapBusLineIDSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   Future<List<void>> AMapBusLineNameSearch_batch(List<AMapBusLineNameSearchRequest> request) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapBusLineNameSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   Future<List<void>> AMapDistrictSearch_batch(List<AMapDistrictSearchRequest> request) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapDistrictSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   Future<List<void>> AMapDrivingRouteSearch_batch(List<AMapDrivingRouteSearchRequest> request) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapDrivingRouteSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   Future<List<void>> AMapWalkingRouteSearch_batch(List<AMapWalkingRouteSearchRequest> request) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapWalkingRouteSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   Future<List<void>> AMapTransitRouteSearch_batch(List<AMapTransitRouteSearchRequest> request) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapTransitRouteSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   Future<List<void>> AMapRidingRouteSearch_batch(List<AMapRidingRouteSearchRequest> request) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapRidingRouteSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   Future<List<void>> AMapTruckRouteSearch_batch(List<AMapTruckRouteSearchRequest> request) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapTruckRouteSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   Future<List<void>> AMapFutureRouteSearch_batch(List<AMapFutureRouteSearchRequest> request) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapFutureRouteSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   Future<List<void>> AMapWeatherSearch_batch(List<AMapWeatherSearchRequest> request) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapWeatherSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   Future<List<void>> AMapRoadTrafficSearch_batch(List<AMapRoadTrafficSearchRequest> request) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapRoadTrafficSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   Future<List<void>> AMapRoadTrafficCircleSearch_batch(List<AMapRoadTrafficCircleSearchRequest> request) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapRoadTrafficCircleSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   Future<List<void>> AMapDistanceSearch_batch(List<AMapDistanceSearchRequest> request) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapDistanceSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   Future<List<void>> AMapNearbySearch_batch(List<AMapNearbySearchRequest> request) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapNearbySearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   Future<List<void>> AMapCloudPOIAroundSearch_batch(List<AMapCloudPOIAroundSearchRequest> request) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapCloudPOIAroundSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   Future<List<void>> AMapCloudPOIPolygonSearch_batch(List<AMapCloudPOIPolygonSearchRequest> request) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapCloudPOIPolygonSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   Future<List<void>> AMapCloudPOIIDSearch_batch(List<AMapCloudPOIIDSearchRequest> request) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapCloudPOIIDSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   Future<List<void>> AMapCloudPOILocalSearch_batch(List<AMapCloudPOILocalSearchRequest> request) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapCloudPOILocalSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   Future<List<void>> AMapLocationShareSearch_batch(List<AMapLocationShareSearchRequest> request) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapLocationShareSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   Future<List<void>> AMapPOIShareSearch_batch(List<AMapPOIShareSearchRequest> request) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapPOIShareSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   Future<List<void>> AMapRouteShareSearch_batch(List<AMapRouteShareSearchRequest> request) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapRouteShareSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   
   Future<List<void>> AMapNavigationShareSearch_batch(List<AMapNavigationShareSearchRequest> request) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
+    assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchAPI::AMapNavigationShareSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).cast<void>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
   //endregion

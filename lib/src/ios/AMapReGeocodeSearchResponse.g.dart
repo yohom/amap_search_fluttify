@@ -24,14 +24,22 @@ class AMapReGeocodeSearchResponse extends AMapSearchObject with NSCoding, NSCopy
 
   //region creators
   static Future<AMapReGeocodeSearchResponse> create__({ bool init = true /* ios only */ }) async {
-    return kAmapSearchFluttifyChannel.invokeMethod('ObjectFactory::createAMapReGeocodeSearchResponse', {'init': init});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
+      'ObjectFactory::createAMapReGeocodeSearchResponse',
+      {'init': init}
+    );
+    return AmapSearchFluttifyIOSAs<AMapReGeocodeSearchResponse>(__result__);
   }
   
   static Future<List<AMapReGeocodeSearchResponse>> create_batch__(int length, { bool init = true /* ios only */ }) async {
-    if (false) {
-      return Future.error('all args must have same length!');
-    }
-    return kAmapSearchFluttifyChannel.invokeListMethod<AMapReGeocodeSearchResponse>('ObjectFactory::create_batchAMapReGeocodeSearchResponse', {'length': length, 'init': init});
+    assert(true);
+    final __result_batch__ = await  kAmapSearchFluttifyChannel.invokeListMethod(
+      'ObjectFactory::create_batchAMapReGeocodeSearchResponse',
+      {'length': length, 'init': init}
+    );
+    return __result_batch__
+        .map((it) => AmapSearchFluttifyIOSAs<AMapReGeocodeSearchResponse>(it))
+        .toList();
   }
   
   //endregion
@@ -39,7 +47,7 @@ class AMapReGeocodeSearchResponse extends AMapSearchObject with NSCoding, NSCopy
   //region getters
   Future<AMapReGeocode> get_regeocode() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapReGeocodeSearchResponse::get_regeocode", {'__this__': this});
-    return __result__;
+    return AmapSearchFluttifyIOSAs<AMapReGeocode>(__result__);
   }
   
   //endregion
@@ -67,7 +75,7 @@ extension AMapReGeocodeSearchResponse_Batch on List<AMapReGeocodeSearchResponse>
   //region getters
   Future<List<AMapReGeocode>> get_regeocode_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapReGeocodeSearchResponse::get_regeocode_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).cast<AMapReGeocode>().map((__result__) => __result__).toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyIOSAs<AMapReGeocode>(__result__)).cast<AMapReGeocode>().toList();
   }
   
   //endregion

@@ -12,9 +12,9 @@ dependencies:
   permission_handler: ^5.0.0
   decorated_flutter: ^0.18.0
 
-dependency_overrides:
-  foundation_fluttify:
-    path: /Users/yohom/Github/Me/All/fluttify/fluttify_infra/foundation_fluttify
+#dependency_overrides:
+#  foundation_fluttify:
+#    path: /Users/yohom/Github/Me/All/fluttify/fluttify_infra/foundation_fluttify
 #  amap_core_fluttify:
 #    path: /Users/yohom/Github/Me/All/fluttify/amap/amap_core_fluttify/output-project/amap_core_fluttify
 #  core_location_fluttify:
