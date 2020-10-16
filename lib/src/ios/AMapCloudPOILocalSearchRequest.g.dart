@@ -86,12 +86,12 @@ extension AMapCloudPOILocalSearchRequest_Batch on List<AMapCloudPOILocalSearchRe
   //region getters
   Future<List<String>> get_keywords_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudPOILocalSearchRequest::get_keywords_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
   }
   
   Future<List<String>> get_city_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudPOILocalSearchRequest::get_city_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
   }
   
   //endregion

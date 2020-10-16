@@ -97,17 +97,17 @@ extension AMapBusStopSearchResponse_Batch on List<AMapBusStopSearchResponse> {
   //region getters
   Future<List<int>> get_count_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapBusStopSearchResponse::get_count_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).cast<int>().toList();
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<int>()?.toList();
   }
   
   Future<List<AMapSuggestion>> get_suggestion_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapBusStopSearchResponse::get_suggestion_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => AmapSearchFluttifyIOSAs<AMapSuggestion>(__result__)).cast<AMapSuggestion>().toList();
+    return (resultBatch as List)?.map((__result__) => AmapSearchFluttifyIOSAs<AMapSuggestion>(__result__))?.cast<AMapSuggestion>()?.toList();
   }
   
   Future<List<List<AMapBusStop>>> get_busstops_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapBusStopSearchResponse::get_busstops_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyIOSAs<AMapBusStop>(it))?.toList()).cast<List<AMapBusStop>>().toList();
+    return (resultBatch as List)?.map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyIOSAs<AMapBusStop>(it))?.toList())?.cast<List<AMapBusStop>>()?.toList();
   }
   
   //endregion

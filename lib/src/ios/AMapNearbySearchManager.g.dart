@@ -191,12 +191,12 @@ extension AMapNearbySearchManager_Batch on List<AMapNearbySearchManager> {
   //region getters
   Future<List<double>> get_uploadTimeInterval_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapNearbySearchManager::get_uploadTimeInterval_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).cast<double>().toList();
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<double>()?.toList();
   }
   
   Future<List<bool>> get_isAutoUploading_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapNearbySearchManager::get_isAutoUploading_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).cast<bool>().toList();
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<bool>()?.toList();
   }
   
   //endregion

@@ -97,17 +97,17 @@ extension AMapTrafficInfo_Batch on List<AMapTrafficInfo> {
   //region getters
   Future<List<String>> get_statusDescription_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTrafficInfo::get_statusDescription_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
   }
   
   Future<List<AMapTrafficEvaluation>> get_evaluation_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTrafficInfo::get_evaluation_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => AmapSearchFluttifyIOSAs<AMapTrafficEvaluation>(__result__)).cast<AMapTrafficEvaluation>().toList();
+    return (resultBatch as List)?.map((__result__) => AmapSearchFluttifyIOSAs<AMapTrafficEvaluation>(__result__))?.cast<AMapTrafficEvaluation>()?.toList();
   }
   
   Future<List<List<AMapTrafficRoad>>> get_roads_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTrafficInfo::get_roads_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyIOSAs<AMapTrafficRoad>(it))?.toList()).cast<List<AMapTrafficRoad>>().toList();
+    return (resultBatch as List)?.map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyIOSAs<AMapTrafficRoad>(it))?.toList())?.cast<List<AMapTrafficRoad>>()?.toList();
   }
   
   //endregion

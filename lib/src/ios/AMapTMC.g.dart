@@ -97,17 +97,17 @@ extension AMapTMC_Batch on List<AMapTMC> {
   //region getters
   Future<List<int>> get_distance_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTMC::get_distance_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).cast<int>().toList();
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<int>()?.toList();
   }
   
   Future<List<String>> get_status_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTMC::get_status_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
   }
   
   Future<List<String>> get_polyline_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTMC::get_polyline_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
   }
   
   //endregion

@@ -283,17 +283,17 @@ extension com_amap_api_services_route_DistanceItem_Batch on List<com_amap_api_se
   //region getters
   Future<List<int>> get_ERROR_CODE_NO_DRIVE_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("com.amap.api.services.route.DistanceItem::get_ERROR_CODE_NO_DRIVE_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).cast<int>().toList();
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<int>()?.toList();
   }
   
   Future<List<int>> get_ERROR_CODE_TOO_FAR_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("com.amap.api.services.route.DistanceItem::get_ERROR_CODE_TOO_FAR_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).cast<int>().toList();
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<int>()?.toList();
   }
   
   Future<List<int>> get_ERROR_CODE_NOT_IN_CHINA_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("com.amap.api.services.route.DistanceItem::get_ERROR_CODE_NOT_IN_CHINA_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).cast<int>().toList();
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<int>()?.toList();
   }
   
   //endregion

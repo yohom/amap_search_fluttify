@@ -108,22 +108,22 @@ extension AMapPOIAroundSearchRequest_Batch on List<AMapPOIAroundSearchRequest> {
   //region getters
   Future<List<String>> get_keywords_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOIAroundSearchRequest::get_keywords_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
   }
   
   Future<List<AMapGeoPoint>> get_location_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOIAroundSearchRequest::get_location_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => AmapSearchFluttifyIOSAs<AMapGeoPoint>(__result__)).cast<AMapGeoPoint>().toList();
+    return (resultBatch as List)?.map((__result__) => AmapSearchFluttifyIOSAs<AMapGeoPoint>(__result__))?.cast<AMapGeoPoint>()?.toList();
   }
   
   Future<List<int>> get_radius_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOIAroundSearchRequest::get_radius_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).cast<int>().toList();
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<int>()?.toList();
   }
   
   Future<List<String>> get_city_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOIAroundSearchRequest::get_city_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
   }
   
   //endregion

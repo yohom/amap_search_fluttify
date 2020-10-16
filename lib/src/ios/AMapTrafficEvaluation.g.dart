@@ -130,32 +130,32 @@ extension AMapTrafficEvaluation_Batch on List<AMapTrafficEvaluation> {
   //region getters
   Future<List<String>> get_evaluationDescription_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTrafficEvaluation::get_evaluationDescription_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
   }
   
   Future<List<int>> get_status_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTrafficEvaluation::get_status_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).cast<int>().toList();
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<int>()?.toList();
   }
   
   Future<List<String>> get_expedite_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTrafficEvaluation::get_expedite_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
   }
   
   Future<List<String>> get_congested_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTrafficEvaluation::get_congested_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
   }
   
   Future<List<String>> get_blocked_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTrafficEvaluation::get_blocked_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
   }
   
   Future<List<String>> get_unknown_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTrafficEvaluation::get_unknown_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
   }
   
   //endregion

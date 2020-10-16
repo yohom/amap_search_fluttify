@@ -86,12 +86,12 @@ extension AMapNearbySearchResponse_Batch on List<AMapNearbySearchResponse> {
   //region getters
   Future<List<int>> get_count_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapNearbySearchResponse::get_count_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).cast<int>().toList();
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<int>()?.toList();
   }
   
   Future<List<List<AMapNearbyUserInfo>>> get_infos_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapNearbySearchResponse::get_infos_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyIOSAs<AMapNearbyUserInfo>(it))?.toList()).cast<List<AMapNearbyUserInfo>>().toList();
+    return (resultBatch as List)?.map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyIOSAs<AMapNearbyUserInfo>(it))?.toList())?.cast<List<AMapNearbyUserInfo>>()?.toList();
   }
   
   //endregion

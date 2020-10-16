@@ -141,37 +141,37 @@ extension AMapRoutePOISearchRequest_Batch on List<AMapRoutePOISearchRequest> {
   //region getters
   Future<List<AMapGeoPoint>> get_origin_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoutePOISearchRequest::get_origin_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => AmapSearchFluttifyIOSAs<AMapGeoPoint>(__result__)).cast<AMapGeoPoint>().toList();
+    return (resultBatch as List)?.map((__result__) => AmapSearchFluttifyIOSAs<AMapGeoPoint>(__result__))?.cast<AMapGeoPoint>()?.toList();
   }
   
   Future<List<AMapGeoPoint>> get_destination_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoutePOISearchRequest::get_destination_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => AmapSearchFluttifyIOSAs<AMapGeoPoint>(__result__)).cast<AMapGeoPoint>().toList();
+    return (resultBatch as List)?.map((__result__) => AmapSearchFluttifyIOSAs<AMapGeoPoint>(__result__))?.cast<AMapGeoPoint>()?.toList();
   }
   
   Future<List<AMapRoutePOISearchType>> get_searchType_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoutePOISearchRequest::get_searchType_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => (__result__ as int).toAMapRoutePOISearchType()).cast<AMapRoutePOISearchType>().toList();
+    return (resultBatch as List)?.map((__result__) => (__result__ as int).toAMapRoutePOISearchType())?.cast<AMapRoutePOISearchType>()?.toList();
   }
   
   Future<List<int>> get_strategy_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoutePOISearchRequest::get_strategy_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).cast<int>().toList();
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<int>()?.toList();
   }
   
   Future<List<int>> get_range_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoutePOISearchRequest::get_range_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).cast<int>().toList();
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<int>()?.toList();
   }
   
   Future<List<String>> get_polylineStr_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoutePOISearchRequest::get_polylineStr_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
   }
   
   Future<List<List<AMapGeoPoint>>> get_polyline_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoutePOISearchRequest::get_polyline_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyIOSAs<AMapGeoPoint>(it))?.toList()).cast<List<AMapGeoPoint>>().toList();
+    return (resultBatch as List)?.map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyIOSAs<AMapGeoPoint>(it))?.toList())?.cast<List<AMapGeoPoint>>()?.toList();
   }
   
   //endregion

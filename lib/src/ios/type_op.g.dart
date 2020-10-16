@@ -534,7 +534,10 @@ Future<bool> AmapSearchFluttifyIOSIs<T>(dynamic __this__) async {
 @optionalTypeArgs
 T AmapSearchFluttifyIOSAs<T>(dynamic __this__) {
   final typeName = T.toString();
-  if (RegExp(r'^(List<)?(String|int|double)(>)?|(Map<String,(String|int|double)>)$').hasMatch(typeName)) {
+
+  if (__this__ == null) {
+    return null;
+  } else if (RegExp(r'^(List<)?(String|int|double)(>)?|(Map<String,(String|int|double)>)$').hasMatch(typeName)) {
     return __this__ as T;
   }
   else if (T == AMapPOISearchBaseRequest) {

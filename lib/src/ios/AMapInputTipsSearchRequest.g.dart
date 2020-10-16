@@ -119,27 +119,27 @@ extension AMapInputTipsSearchRequest_Batch on List<AMapInputTipsSearchRequest> {
   //region getters
   Future<List<String>> get_keywords_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapInputTipsSearchRequest::get_keywords_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
   }
   
   Future<List<String>> get_city_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapInputTipsSearchRequest::get_city_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
   }
   
   Future<List<String>> get_types_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapInputTipsSearchRequest::get_types_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
   }
   
   Future<List<bool>> get_cityLimit_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapInputTipsSearchRequest::get_cityLimit_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).cast<bool>().toList();
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<bool>()?.toList();
   }
   
   Future<List<String>> get_location_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapInputTipsSearchRequest::get_location_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
   }
   
   //endregion

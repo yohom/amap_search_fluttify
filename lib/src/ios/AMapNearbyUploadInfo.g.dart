@@ -97,17 +97,17 @@ extension AMapNearbyUploadInfo_Batch on List<AMapNearbyUploadInfo> {
   //region getters
   Future<List<String>> get_userID_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapNearbyUploadInfo::get_userID_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
   }
   
   Future<List<AMapSearchCoordinateType>> get_coordinateType_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapNearbyUploadInfo::get_coordinateType_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => (__result__ as int).toAMapSearchCoordinateType()).cast<AMapSearchCoordinateType>().toList();
+    return (resultBatch as List)?.map((__result__) => (__result__ as int).toAMapSearchCoordinateType())?.cast<AMapSearchCoordinateType>()?.toList();
   }
   
   Future<List<CLLocationCoordinate2D>> get_coordinate_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapNearbyUploadInfo::get_coordinate_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => AmapSearchFluttifyIOSAs<CLLocationCoordinate2D>(__result__)).cast<CLLocationCoordinate2D>().toList();
+    return (resultBatch as List)?.map((__result__) => AmapSearchFluttifyIOSAs<CLLocationCoordinate2D>(__result__))?.cast<CLLocationCoordinate2D>()?.toList();
   }
   
   //endregion

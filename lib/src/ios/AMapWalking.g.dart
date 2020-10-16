@@ -119,27 +119,27 @@ extension AMapWalking_Batch on List<AMapWalking> {
   //region getters
   Future<List<AMapGeoPoint>> get_origin_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapWalking::get_origin_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => AmapSearchFluttifyIOSAs<AMapGeoPoint>(__result__)).cast<AMapGeoPoint>().toList();
+    return (resultBatch as List)?.map((__result__) => AmapSearchFluttifyIOSAs<AMapGeoPoint>(__result__))?.cast<AMapGeoPoint>()?.toList();
   }
   
   Future<List<AMapGeoPoint>> get_destination_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapWalking::get_destination_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => AmapSearchFluttifyIOSAs<AMapGeoPoint>(__result__)).cast<AMapGeoPoint>().toList();
+    return (resultBatch as List)?.map((__result__) => AmapSearchFluttifyIOSAs<AMapGeoPoint>(__result__))?.cast<AMapGeoPoint>()?.toList();
   }
   
   Future<List<int>> get_distance_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapWalking::get_distance_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).cast<int>().toList();
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<int>()?.toList();
   }
   
   Future<List<int>> get_duration_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapWalking::get_duration_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).cast<int>().toList();
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<int>()?.toList();
   }
   
   Future<List<List<AMapStep>>> get_steps_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapWalking::get_steps_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyIOSAs<AMapStep>(it))?.toList()).cast<List<AMapStep>>().toList();
+    return (resultBatch as List)?.map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyIOSAs<AMapStep>(it))?.toList())?.cast<List<AMapStep>>()?.toList();
   }
   
   //endregion

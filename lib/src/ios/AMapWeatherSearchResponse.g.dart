@@ -86,12 +86,12 @@ extension AMapWeatherSearchResponse_Batch on List<AMapWeatherSearchResponse> {
   //region getters
   Future<List<List<AMapLocalWeatherLive>>> get_lives_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapWeatherSearchResponse::get_lives_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyIOSAs<AMapLocalWeatherLive>(it))?.toList()).cast<List<AMapLocalWeatherLive>>().toList();
+    return (resultBatch as List)?.map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyIOSAs<AMapLocalWeatherLive>(it))?.toList())?.cast<List<AMapLocalWeatherLive>>()?.toList();
   }
   
   Future<List<List<AMapLocalWeatherForecast>>> get_forecasts_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapWeatherSearchResponse::get_forecasts_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyIOSAs<AMapLocalWeatherForecast>(it))?.toList()).cast<List<AMapLocalWeatherForecast>>().toList();
+    return (resultBatch as List)?.map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyIOSAs<AMapLocalWeatherForecast>(it))?.toList())?.cast<List<AMapLocalWeatherForecast>>()?.toList();
   }
   
   //endregion

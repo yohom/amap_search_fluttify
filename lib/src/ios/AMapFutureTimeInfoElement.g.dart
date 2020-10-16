@@ -108,22 +108,22 @@ extension AMapFutureTimeInfoElement_Batch on List<AMapFutureTimeInfoElement> {
   //region getters
   Future<List<int>> get_duration_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapFutureTimeInfoElement::get_duration_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).cast<int>().toList();
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<int>()?.toList();
   }
   
   Future<List<int>> get_pathindex_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapFutureTimeInfoElement::get_pathindex_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).cast<int>().toList();
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<int>()?.toList();
   }
   
   Future<List<int>> get_restriction_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapFutureTimeInfoElement::get_restriction_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).cast<int>().toList();
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<int>()?.toList();
   }
   
   Future<List<List<AMapTMC>>> get_tmcs_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapFutureTimeInfoElement::get_tmcs_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyIOSAs<AMapTMC>(it))?.toList()).cast<List<AMapTMC>>().toList();
+    return (resultBatch as List)?.map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyIOSAs<AMapTMC>(it))?.toList())?.cast<List<AMapTMC>>()?.toList();
   }
   
   //endregion

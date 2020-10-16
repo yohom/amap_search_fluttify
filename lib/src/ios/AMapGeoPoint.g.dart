@@ -102,12 +102,12 @@ extension AMapGeoPoint_Batch on List<AMapGeoPoint> {
   //region getters
   Future<List<double>> get_latitude_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapGeoPoint::get_latitude_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).cast<double>().toList();
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<double>()?.toList();
   }
   
   Future<List<double>> get_longitude_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapGeoPoint::get_longitude_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).cast<double>().toList();
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<double>()?.toList();
   }
   
   //endregion

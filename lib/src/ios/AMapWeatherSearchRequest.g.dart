@@ -86,12 +86,12 @@ extension AMapWeatherSearchRequest_Batch on List<AMapWeatherSearchRequest> {
   //region getters
   Future<List<String>> get_city_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapWeatherSearchRequest::get_city_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
   }
   
   Future<List<AMapWeatherType>> get_type_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapWeatherSearchRequest::get_type_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => (__result__ as int).toAMapWeatherType()).cast<AMapWeatherType>().toList();
+    return (resultBatch as List)?.map((__result__) => (__result__ as int).toAMapWeatherType())?.cast<AMapWeatherType>()?.toList();
   }
   
   //endregion
