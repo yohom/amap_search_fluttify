@@ -130,32 +130,32 @@ extension AMapReGeocode_Batch on List<AMapReGeocode> {
   //region getters
   Future<List<String>> get_formattedAddress_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapReGeocode::get_formattedAddress_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
   }
   
   Future<List<AMapAddressComponent>> get_addressComponent_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapReGeocode::get_addressComponent_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => AmapSearchFluttifyIOSAs<AMapAddressComponent>(__result__)).cast<AMapAddressComponent>().toList();
+    return (resultBatch as List)?.map((__result__) => AmapSearchFluttifyIOSAs<AMapAddressComponent>(__result__))?.cast<AMapAddressComponent>()?.toList();
   }
   
   Future<List<List<AMapRoad>>> get_roads_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapReGeocode::get_roads_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyIOSAs<AMapRoad>(it))?.toList()).cast<List<AMapRoad>>().toList();
+    return (resultBatch as List)?.map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyIOSAs<AMapRoad>(it))?.toList())?.cast<List<AMapRoad>>()?.toList();
   }
   
   Future<List<List<AMapRoadInter>>> get_roadinters_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapReGeocode::get_roadinters_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyIOSAs<AMapRoadInter>(it))?.toList()).cast<List<AMapRoadInter>>().toList();
+    return (resultBatch as List)?.map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyIOSAs<AMapRoadInter>(it))?.toList())?.cast<List<AMapRoadInter>>()?.toList();
   }
   
   Future<List<List<AMapPOI>>> get_pois_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapReGeocode::get_pois_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyIOSAs<AMapPOI>(it))?.toList()).cast<List<AMapPOI>>().toList();
+    return (resultBatch as List)?.map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyIOSAs<AMapPOI>(it))?.toList())?.cast<List<AMapPOI>>()?.toList();
   }
   
   Future<List<List<AMapAOI>>> get_aois_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapReGeocode::get_aois_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyIOSAs<AMapAOI>(it))?.toList()).cast<List<AMapAOI>>().toList();
+    return (resultBatch as List)?.map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyIOSAs<AMapAOI>(it))?.toList())?.cast<List<AMapAOI>>()?.toList();
   }
   
   //endregion

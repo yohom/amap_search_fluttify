@@ -75,7 +75,7 @@ extension AMapDistanceSearchResponse_Batch on List<AMapDistanceSearchResponse> {
   //region getters
   Future<List<List<AMapDistanceResult>>> get_results_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapDistanceSearchResponse::get_results_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyIOSAs<AMapDistanceResult>(it))?.toList()).cast<List<AMapDistanceResult>>().toList();
+    return (resultBatch as List)?.map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyIOSAs<AMapDistanceResult>(it))?.toList())?.cast<List<AMapDistanceResult>>()?.toList();
   }
   
   //endregion

@@ -817,12 +817,12 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   //region getters
   Future<List<int>> get_timeout_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapSearchAPI::get_timeout_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).cast<int>().toList();
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<int>()?.toList();
   }
   
   Future<List<AMapSearchLanguage>> get_language_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapSearchAPI::get_language_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => (__result__ as int).toAMapSearchLanguage()).cast<AMapSearchLanguage>().toList();
+    return (resultBatch as List)?.map((__result__) => (__result__ as int).toAMapSearchLanguage())?.cast<AMapSearchLanguage>()?.toList();
   }
   
   //endregion

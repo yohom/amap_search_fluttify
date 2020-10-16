@@ -86,12 +86,12 @@ extension AMapFutureRouteSearchResponse_Batch on List<AMapFutureRouteSearchRespo
   //region getters
   Future<List<List<AMapPath>>> get_paths_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapFutureRouteSearchResponse::get_paths_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyIOSAs<AMapPath>(it))?.toList()).cast<List<AMapPath>>().toList();
+    return (resultBatch as List)?.map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyIOSAs<AMapPath>(it))?.toList())?.cast<List<AMapPath>>()?.toList();
   }
   
   Future<List<List<AMapFutureTimeInfo>>> get_timeInfos_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapFutureRouteSearchResponse::get_timeInfos_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyIOSAs<AMapFutureTimeInfo>(it))?.toList()).cast<List<AMapFutureTimeInfo>>().toList();
+    return (resultBatch as List)?.map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyIOSAs<AMapFutureTimeInfo>(it))?.toList())?.cast<List<AMapFutureTimeInfo>>()?.toList();
   }
   
   //endregion

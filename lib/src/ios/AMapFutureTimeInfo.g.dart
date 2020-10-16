@@ -86,12 +86,12 @@ extension AMapFutureTimeInfo_Batch on List<AMapFutureTimeInfo> {
   //region getters
   Future<List<String>> get_startTime_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapFutureTimeInfo::get_startTime_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
   }
   
   Future<List<List<AMapFutureTimeInfoElement>>> get_elements_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapFutureTimeInfo::get_elements_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyIOSAs<AMapFutureTimeInfoElement>(it))?.toList()).cast<List<AMapFutureTimeInfoElement>>().toList();
+    return (resultBatch as List)?.map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyIOSAs<AMapFutureTimeInfoElement>(it))?.toList())?.cast<List<AMapFutureTimeInfoElement>>()?.toList();
   }
   
   //endregion

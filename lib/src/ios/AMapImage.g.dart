@@ -86,12 +86,12 @@ extension AMapImage_Batch on List<AMapImage> {
   //region getters
   Future<List<String>> get_title_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapImage::get_title_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
   }
   
   Future<List<String>> get_url_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapImage::get_url_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
   }
   
   //endregion
