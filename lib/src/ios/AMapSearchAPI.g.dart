@@ -220,6 +220,7 @@ class AMapSearchAPI extends NSObject  {
               delegate?.onShareSearchDone_response(AmapSearchFluttifyIOSAs(args['request']), AmapSearchFluttifyIOSAs(args['response']));
               break;
             default:
+              throw MissingPluginException('方法${methodCall.method}未实现');
               break;
           }
         } catch (e) {

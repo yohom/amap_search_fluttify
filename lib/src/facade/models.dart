@@ -1271,121 +1271,148 @@ class BusStationItem with _ToFutureString {
 }
 
 /// 地区列表 model
-class District with _ToFutureString {
-  District.android(this._androidModel);
+class District {
+  static Future<District> android(
+    com_amap_api_services_district_DistrictResult model,
+  ) async {
+    final result = District();
 
-  District.ios(this._iosModel);
+    result._districtList = [
+      for (final item in await model.getDistrict())
+        await DistrictItem.android(item)
+    ];
 
-  com_amap_api_services_district_DistrictResult _androidModel;
-  AMapDistrictSearchResponse _iosModel;
-
-  /// 区域列表
-  Future<List<DistrictItem>> get districtList {
-    return platform(
-      android: (pool) async {
-        final districts = await _androidModel.getDistrict();
-        return [for (final item in districts) DistrictItem.android(item)];
-      },
-      ios: (pool) async {
-        final districts = await _iosModel.get_districts();
-        return [for (final item in districts) DistrictItem.ios(item)];
-      },
-    );
+    return result;
   }
 
+  static Future<District> ios(
+    AMapDistrictSearchResponse model,
+  ) async {
+    final result = District();
+
+    result._districtList = [
+      for (final item in await model.get_districts())
+        await DistrictItem.ios(item)
+    ];
+
+    return result;
+  }
+
+  /// 区域列表
+  List<DistrictItem> _districtList;
+
+  List<DistrictItem> get districtList => _districtList;
+
   @override
-  Future<String> toFutureString() async {
-    return 'District{districtList: ${await _expandToString(districtList)}}';
+  String toString() {
+    return 'District{_districtList: $_districtList}';
   }
 }
 
 /// 地区 model
-class DistrictItem with _ToFutureString {
-  DistrictItem.android(this._androidModel);
+class DistrictItem {
+  static Future<DistrictItem> android(
+    com_amap_api_services_district_DistrictItem model,
+  ) async {
+    final result = DistrictItem();
 
-  DistrictItem.ios(this._iosModel);
+    final center = await model.getCenter();
+    final rawBoundary = await model.districtBoundary();
+    final subDistrictList = await model.getSubDistrict();
 
-  com_amap_api_services_district_DistrictItem _androidModel;
-  AMapDistrict _iosModel;
+    result
+      .._name = await model.getName()
+      .._cityCode = await model.getCitycode()
+      .._adCode = await model.getAdcode()
+      .._center = LatLng(
+        await center.getLatitude(),
+        await center.getLongitude(),
+      )
+      .._boundary = [
+        for (final rawDistrict in rawBoundary)
+          for (final rawBoundary in rawDistrict.split('|'))
+            [
+              for (final rawLatLng in rawBoundary.split(';'))
+                LatLng(
+                  double.parse(rawLatLng.split(',')[1]),
+                  double.parse(rawLatLng.split(',')[0]),
+                )
+            ]
+      ]
+      .._subDistrictList = [
+        for (final district in subDistrictList)
+          await DistrictItem.android(district)
+      ];
+
+    return result;
+  }
+
+  static Future<DistrictItem> ios(AMapDistrict model) async {
+    final result = DistrictItem();
+
+    final center = await model.get_center();
+    final rawDistrictList = await model.get_polylines() ?? [];
+    final subDistrictList = await model.get_districts();
+
+    result
+      .._name = await model.get_name()
+      .._cityCode = await model.get_citycode()
+      .._adCode = await model.get_adcode()
+      .._center = LatLng(
+        await center.get_latitude(),
+        await center.get_longitude(),
+      )
+      .._boundary = [
+        for (final rawDistrict in rawDistrictList)
+          for (final rawBoundary in rawDistrict.split('|'))
+            [
+              for (final rawLatLng in rawBoundary.split(';'))
+                LatLng(
+                  double.parse(rawLatLng.split(',')[1]),
+                  double.parse(rawLatLng.split(',')[0]),
+                )
+            ]
+      ]
+      .._subDistrictList = [
+        for (final district in subDistrictList) await DistrictItem.ios(district)
+      ];
+
+    return result;
+  }
 
   /// 名称
-  Future<String> get name {
-    return platform(
-      android: (pool) => _androidModel.getName(),
-      ios: (pool) => _iosModel.get_name(),
-    );
-  }
+  String _name;
+
+  String get name => _name;
 
   /// 城市编码
-  Future<String> get cityCode {
-    return platform(
-      android: (pool) => _androidModel.getCitycode(),
-      ios: (pool) => _iosModel.get_citycode(),
-    );
-  }
+  String _cityCode;
+
+  String get cityCode => _cityCode;
 
   /// 邮政编码
-  Future<String> get adCode {
-    return platform(
-      android: (pool) => _androidModel.getAdcode(),
-      ios: (pool) => _iosModel.get_adcode(),
-    );
-  }
+  String _adCode;
+
+  String get adCode => _adCode;
 
   /// 中心点
-  Future<LatLng> get center {
-    return platform(
-      android: (pool) async {
-        final center = await _androidModel.getCenter();
-        return LatLng(await center.getLatitude(), await center.getLongitude());
-      },
-      ios: (pool) async {
-        final center = await _iosModel.get_center();
-        return LatLng(
-          await center.get_latitude(),
-          await center.get_longitude(),
-        );
-      },
-    );
-  }
+  LatLng _center;
+
+  LatLng get center => _center;
 
   /// 边界
-  Future<List<List<LatLng>>> get boundary {
-    return platform(
-      android: (pool) async {
-        final rawDistrictList = await _androidModel.districtBoundary();
-        return [
-          for (final rawDistrict in rawDistrictList)
-            for (final rawBoundary in rawDistrict.split('|'))
-              [
-                for (final rawLatLng in rawBoundary.split(';'))
-                  LatLng(
-                    double.parse(rawLatLng.split(',')[1]),
-                    double.parse(rawLatLng.split(',')[0]),
-                  )
-              ]
-        ];
-      },
-      ios: (pool) async {
-        final rawDistrictList = await _iosModel.get_polylines();
-        return [
-          for (final rawDistrict in rawDistrictList)
-            for (final rawBoundary in rawDistrict.split('|'))
-              [
-                for (final rawLatLng in rawBoundary.split(';'))
-                  LatLng(
-                    double.parse(rawLatLng.split(',')[1]),
-                    double.parse(rawLatLng.split(',')[0]),
-                  )
-              ]
-        ];
-      },
-    );
-  }
+  List<List<LatLng>> _boundary;
+
+  List<List<LatLng>> get boundary => _boundary;
+
+  /// 子区域列表
+  List<DistrictItem> _subDistrictList;
+
+  List<DistrictItem> get subDistrictList => _subDistrictList;
 
   @override
-  Future<String> toFutureString() async {
-    return 'DistrictItem{name: ${await name}, cityCode: ${await cityCode}, adCode: ${await adCode}, center: ${await center}, boundary: ${await boundary}';
+  String toString() {
+    return 'DistrictItem{名称: $_name, 城市编码: $_cityCode, 邮政编码: $_adCode, 中心点: $_center, 子区域: $_subDistrictList}\n';
   }
 }
 

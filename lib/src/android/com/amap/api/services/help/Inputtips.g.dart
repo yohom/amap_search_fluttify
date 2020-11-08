@@ -95,7 +95,7 @@ class com_amap_api_services_help_Inputtips extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.help.Inputtips::setInputtipsListener', {"__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.help.Inputtips::setInputtipsListener', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -114,6 +114,7 @@ class com_amap_api_services_help_Inputtips extends java_lang_Object  {
                 var1?.onGetInputtips((args['var1'] as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_help_Tip>(it))?.toList(), args['var2']);
                 break;
               default:
+                throw MissingPluginException('方法${methodCall.method}未实现');
                 break;
             }
           } catch (e) {

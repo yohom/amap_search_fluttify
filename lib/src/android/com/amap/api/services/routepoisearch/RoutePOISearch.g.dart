@@ -69,7 +69,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearch extends java_lang_Obje
     }
   
     // invoke native method
-    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.routepoisearch.RoutePOISearch::setPoiSearchListener', {"__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.routepoisearch.RoutePOISearch::setPoiSearchListener', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -88,6 +88,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearch extends java_lang_Obje
                 var1?.onRoutePoiSearched(AmapSearchFluttifyAndroidAs(args['var1']), args['var2']);
                 break;
               default:
+                throw MissingPluginException('方法${methodCall.method}未实现');
                 break;
             }
           } catch (e) {

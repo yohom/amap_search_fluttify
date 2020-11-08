@@ -61,7 +61,7 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.NearbySearch::addNearbyListener', {"__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.NearbySearch::addNearbyListener', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -98,6 +98,7 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
                 var1?.onNearbyInfoUploaded(args['var1']);
                 break;
               default:
+                throw MissingPluginException('方法${methodCall.method}未实现');
                 break;
             }
           } catch (e) {
@@ -117,7 +118,7 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.NearbySearch::removeNearbyListener', {"__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.NearbySearch::removeNearbyListener', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -154,6 +155,7 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
                 var1?.onNearbyInfoUploaded(args['var1']);
                 break;
               default:
+                throw MissingPluginException('方法${methodCall.method}未实现');
                 break;
             }
           } catch (e) {
@@ -207,7 +209,7 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.NearbySearch::startUploadNearbyInfoAuto', {"var2": var2, "__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.NearbySearch::startUploadNearbyInfoAuto', {"var1": var1, "var2": var2, "__this__": this});
   
   
     // handle native call
@@ -226,6 +228,7 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
                 var1?.OnUploadInfoCallback();
                 break;
               default:
+                throw MissingPluginException('方法${methodCall.method}未实现');
                 break;
             }
           } catch (e) {

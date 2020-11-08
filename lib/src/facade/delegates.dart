@@ -122,7 +122,7 @@ class _AndroidSearchListener extends java_lang_Object
   Future<void> onDistrictSearched(
       com_amap_api_services_district_DistrictResult var1) async {
     await super.onDistrictSearched(var1);
-    _completer?.complete(District.android(var1));
+    _completer?.complete(await District.android(var1));
   }
 
   @override
@@ -241,11 +241,14 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
     dynamic route;
     if (await AmapSearchFluttifyIOSIs<AMapDrivingRouteSearchRequest>(request)) {
       route = DriveRouteResult.ios(await response.get_route());
-    } else if (await AmapSearchFluttifyIOSIs<AMapWalkingRouteSearchRequest>(request)) {
+    } else if (await AmapSearchFluttifyIOSIs<AMapWalkingRouteSearchRequest>(
+        request)) {
       route = WalkRouteResult.ios(await response.get_route());
-    } else if (await AmapSearchFluttifyIOSIs<AMapBusLineBaseSearchRequest>(request)) {
+    } else if (await AmapSearchFluttifyIOSIs<AMapBusLineBaseSearchRequest>(
+        request)) {
       route = BusRouteResult.ios(await response.get_route());
-    } else if (await AmapSearchFluttifyIOSIs<AMapRidingRouteSearchRequest>(request)) {
+    } else if (await AmapSearchFluttifyIOSIs<AMapRidingRouteSearchRequest>(
+        request)) {
       route = RideRouteResult.ios(await response.get_route());
     }
     _completer?.complete(route);
@@ -266,7 +269,7 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
     AMapDistrictSearchResponse response,
   ) async {
     await super.onDistrictSearchDone_response(request, response);
-    _completer?.complete(District.ios(response));
+    _completer?.complete(await District.ios(response));
   }
 
   @override

@@ -134,7 +134,7 @@ class com_amap_api_services_poisearch_PoiResult extends java_lang_Object  {
     // handle native call
   
   
-    return (__result__ as List).cast<String>();
+    return (__result__ as List)?.cast<String>();
   }
   
   
@@ -235,7 +235,7 @@ extension com_amap_api_services_poisearch_PoiResult_Batch on List<com_amap_api_s
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.poisearch.PoiResult::getSearchSuggestionKeywords_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => (__result__ as List).cast<String>()).cast<List<String>>().toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List)?.cast<String>()).cast<List<String>>().toList();
   }
   
   

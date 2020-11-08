@@ -47,7 +47,7 @@ class AMapSuggestion extends AMapSearchObject with NSCoding, NSCopying {
   //region getters
   Future<List<String>> get_keywords() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapSuggestion::get_keywords", {'__this__': this});
-    return (__result__ as List).cast<String>();
+    return (__result__ as List)?.cast<String>();
   }
   
   Future<List<AMapCity>> get_cities() async {
@@ -86,7 +86,7 @@ extension AMapSuggestion_Batch on List<AMapSuggestion> {
   //region getters
   Future<List<List<String>>> get_keywords_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapSuggestion::get_keywords_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => (__result__ as List).cast<String>())?.cast<List<String>>()?.toList();
+    return (resultBatch as List)?.map((__result__) => (__result__ as List)?.cast<String>())?.cast<List<String>>()?.toList();
   }
   
   Future<List<List<AMapCity>>> get_cities_batch() async {

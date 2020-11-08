@@ -52,7 +52,7 @@ class AMapCloudSearchBaseRequest extends AMapSearchObject with NSCoding, NSCopyi
   
   Future<List<String>> get_filter() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudSearchBaseRequest::get_filter", {'__this__': this});
-    return (__result__ as List).cast<String>();
+    return (__result__ as List)?.cast<String>();
   }
   
   Future<String> get_sortFields() async {
@@ -135,7 +135,7 @@ extension AMapCloudSearchBaseRequest_Batch on List<AMapCloudSearchBaseRequest> {
   
   Future<List<List<String>>> get_filter_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudSearchBaseRequest::get_filter_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => (__result__ as List).cast<String>())?.cast<List<String>>()?.toList();
+    return (resultBatch as List)?.map((__result__) => (__result__ as List)?.cast<String>())?.cast<List<String>>()?.toList();
   }
   
   Future<List<String>> get_sortFields_batch() async {

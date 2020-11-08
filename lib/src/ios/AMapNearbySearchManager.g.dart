@@ -82,6 +82,7 @@ class AMapNearbySearchManager extends NSObject  {
               delegate?.onUserInfoClearedWithError(AmapSearchFluttifyIOSAs(args['error']));
               break;
             default:
+              throw MissingPluginException('方法${methodCall.method}未实现');
               break;
           }
         } catch (e) {
