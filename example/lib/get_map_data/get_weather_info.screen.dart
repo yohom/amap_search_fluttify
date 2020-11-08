@@ -29,7 +29,7 @@ class _GetWeatherInfoScreenState extends State<GetWeatherInfoScreen> {
             onPressed: () async {
               final district = await AmapSearch.instance
                   .searchDistrict(_keywordController.text);
-              _district = await district.toFutureString();
+              _district = await district.toString();
               setState(() {});
             },
             child: Text('搜索'),

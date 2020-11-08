@@ -84,7 +84,7 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.share.ShareSearch::setOnShareSearchListener', {"__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.share.ShareSearch::setOnShareSearchListener', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -148,6 +148,7 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
                 var1?.onDrivingRouteShareUrlSearched(args['var1'], args['var2']);
                 break;
               default:
+                throw MissingPluginException('方法${methodCall.method}未实现');
                 break;
             }
           } catch (e) {

@@ -30,8 +30,9 @@ class _GetDistrictInfoScreenState extends State<GetDistrictInfoScreen> {
               final district = await AmapSearch.instance.searchDistrict(
                 _keywordController.text,
                 showBoundary: true,
+                showChild: true,
               );
-              _district = await district.toFutureString();
+              _district = await district.toString();
               setState(() {});
             },
             child: Text('搜索'),

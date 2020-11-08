@@ -894,6 +894,7 @@ mixin _Community on _Holder {
   Future<District> searchDistrict(
     String district, {
     bool showBoundary = false,
+    bool showChild = false,
   }) async {
     // 会在listener中关闭
     // ignore: close_sinks
@@ -906,6 +907,8 @@ mixin _Community on _Holder {
             await com_amap_api_services_district_DistrictSearchQuery.create__();
         // 关键字
         await query.setKeywords(district);
+        // 是否显示子区域
+        await query.setShowChild(showChild);
         // 是否获取边界信息
         await query.setShowBoundary(showBoundary);
 

@@ -31,7 +31,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.strategy = strategy;
+                ref.strategy = strategy;;
                 methodResult(@"success");
             }
         
@@ -53,7 +53,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.waypoints = waypoints;
+                ref.waypoints = waypoints;;
                 methodResult(@"success");
             }
         
@@ -75,7 +75,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.originId = originId;
+                ref.originId = originId;;
                 methodResult(@"success");
             }
         
@@ -97,7 +97,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.destinationId = destinationId;
+                ref.destinationId = destinationId;;
                 methodResult(@"success");
             }
         
@@ -119,7 +119,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.origintype = origintype;
+                ref.origintype = origintype;;
                 methodResult(@"success");
             }
         
@@ -141,7 +141,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.destinationtype = destinationtype;
+                ref.destinationtype = destinationtype;;
                 methodResult(@"success");
             }
         
@@ -163,7 +163,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.plateProvince = plateProvince;
+                ref.plateProvince = plateProvince;;
                 methodResult(@"success");
             }
         
@@ -185,7 +185,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.plateNumber = plateNumber;
+                ref.plateNumber = plateNumber;;
                 methodResult(@"success");
             }
         
@@ -207,7 +207,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.size = size;
+                ref.size = size;;
                 methodResult(@"success");
             }
         
@@ -229,7 +229,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.height = height;
+                ref.height = height;;
                 methodResult(@"success");
             }
         
@@ -251,7 +251,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.width = width;
+                ref.width = width;;
                 methodResult(@"success");
             }
         
@@ -273,7 +273,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.load = load;
+                ref.load = load;;
                 methodResult(@"success");
             }
         
@@ -295,7 +295,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.weight = weight;
+                ref.weight = weight;;
                 methodResult(@"success");
             }
         
@@ -317,7 +317,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.axis = axis;
+                ref.axis = axis;;
                 methodResult(@"success");
             }
         
@@ -339,7 +339,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.origins = origins;
+                ref.origins = origins;;
                 methodResult(@"success");
             }
         
@@ -361,7 +361,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.destination = destination;
+                ref.destination = destination;;
                 methodResult(@"success");
             }
         
@@ -383,7 +383,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.type = type;
+                ref.type = type;;
                 methodResult(@"success");
             }
         
@@ -405,7 +405,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.results = results;
+                ref.results = results;;
                 methodResult(@"success");
             }
         
@@ -427,7 +427,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.city = city;
+                ref.city = city;;
                 methodResult(@"success");
             }
         
@@ -449,7 +449,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.type = type;
+                ref.type = type;;
                 methodResult(@"success");
             }
         
@@ -471,7 +471,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.lives = lives;
+                ref.lives = lives;;
                 methodResult(@"success");
             }
         
@@ -493,7 +493,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.forecasts = forecasts;
+                ref.forecasts = forecasts;;
                 methodResult(@"success");
             }
         
@@ -515,7 +515,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.level = level;
+                ref.level = level;;
                 methodResult(@"success");
             }
         
@@ -537,7 +537,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.requireExtension = requireExtension;
+                ref.requireExtension = requireExtension;;
                 methodResult(@"success");
             }
         
@@ -559,7 +559,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.roadName = roadName;
+                ref.roadName = roadName;;
                 methodResult(@"success");
             }
         
@@ -581,7 +581,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.adcode = adcode;
+                ref.adcode = adcode;;
                 methodResult(@"success");
             }
         
@@ -603,7 +603,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.location = location;
+                ref.location = location;;
                 methodResult(@"success");
             }
         
@@ -625,7 +625,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.radius = radius;
+                ref.radius = radius;;
                 methodResult(@"success");
             }
         
@@ -647,7 +647,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.trafficInfo = trafficInfo;
+                ref.trafficInfo = trafficInfo;;
                 methodResult(@"success");
             }
         
@@ -669,7 +669,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.center = center;
+                ref.center = center;;
                 methodResult(@"success");
             }
         
@@ -691,7 +691,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.radius = radius;
+                ref.radius = radius;;
                 methodResult(@"success");
             }
         
@@ -713,7 +713,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.searchType = searchType;
+                ref.searchType = searchType;;
                 methodResult(@"success");
             }
         
@@ -735,7 +735,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.timeRange = timeRange;
+                ref.timeRange = timeRange;;
                 methodResult(@"success");
             }
         
@@ -757,7 +757,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.limit = limit;
+                ref.limit = limit;;
                 methodResult(@"success");
             }
         
@@ -779,7 +779,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.count = count;
+                ref.count = count;;
                 methodResult(@"success");
             }
         
@@ -801,7 +801,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.infos = infos;
+                ref.infos = infos;;
                 methodResult(@"success");
             }
         
@@ -823,7 +823,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.tableID = tableID;
+                ref.tableID = tableID;;
                 methodResult(@"success");
             }
         
@@ -845,7 +845,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.filter = filter;
+                ref.filter = filter;;
                 methodResult(@"success");
             }
         
@@ -867,7 +867,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.sortFields = sortFields;
+                ref.sortFields = sortFields;;
                 methodResult(@"success");
             }
         
@@ -889,7 +889,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.sortType = sortType;
+                ref.sortType = sortType;;
                 methodResult(@"success");
             }
         
@@ -911,7 +911,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.offset = offset;
+                ref.offset = offset;;
                 methodResult(@"success");
             }
         
@@ -933,7 +933,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.page = page;
+                ref.page = page;;
                 methodResult(@"success");
             }
         
@@ -955,7 +955,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.center = center;
+                ref.center = center;;
                 methodResult(@"success");
             }
         
@@ -977,7 +977,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.radius = radius;
+                ref.radius = radius;;
                 methodResult(@"success");
             }
         
@@ -999,7 +999,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.keywords = keywords;
+                ref.keywords = keywords;;
                 methodResult(@"success");
             }
         
@@ -1021,7 +1021,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.polygon = polygon;
+                ref.polygon = polygon;;
                 methodResult(@"success");
             }
         
@@ -1043,7 +1043,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.keywords = keywords;
+                ref.keywords = keywords;;
                 methodResult(@"success");
             }
         
@@ -1065,7 +1065,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.uid = uid;
+                ref.uid = uid;;
                 methodResult(@"success");
             }
         
@@ -1087,7 +1087,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.keywords = keywords;
+                ref.keywords = keywords;;
                 methodResult(@"success");
             }
         
@@ -1109,7 +1109,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.city = city;
+                ref.city = city;;
                 methodResult(@"success");
             }
         
@@ -1131,7 +1131,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.count = count;
+                ref.count = count;;
                 methodResult(@"success");
             }
         
@@ -1153,7 +1153,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.POIs = POIs;
+                ref.POIs = POIs;;
                 methodResult(@"success");
             }
         
@@ -1175,7 +1175,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.location = location;
+                ref.location = location;;
                 methodResult(@"success");
             }
         
@@ -1197,7 +1197,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.name = name;
+                ref.name = name;;
                 methodResult(@"success");
             }
         
@@ -1219,7 +1219,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.uid = uid;
+                ref.uid = uid;;
                 methodResult(@"success");
             }
         
@@ -1241,7 +1241,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.location = location;
+                ref.location = location;;
                 methodResult(@"success");
             }
         
@@ -1263,7 +1263,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.name = name;
+                ref.name = name;;
                 methodResult(@"success");
             }
         
@@ -1285,7 +1285,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.address = address;
+                ref.address = address;;
                 methodResult(@"success");
             }
         
@@ -1307,7 +1307,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.strategy = strategy;
+                ref.strategy = strategy;;
                 methodResult(@"success");
             }
         
@@ -1329,7 +1329,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.type = type;
+                ref.type = type;;
                 methodResult(@"success");
             }
         
@@ -1351,7 +1351,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.startCoordinate = startCoordinate;
+                ref.startCoordinate = startCoordinate;;
                 methodResult(@"success");
             }
         
@@ -1373,7 +1373,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.destinationCoordinate = destinationCoordinate;
+                ref.destinationCoordinate = destinationCoordinate;;
                 methodResult(@"success");
             }
         
@@ -1395,7 +1395,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.startName = startName;
+                ref.startName = startName;;
                 methodResult(@"success");
             }
         
@@ -1417,7 +1417,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.destinationName = destinationName;
+                ref.destinationName = destinationName;;
                 methodResult(@"success");
             }
         
@@ -1439,7 +1439,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.strategy = strategy;
+                ref.strategy = strategy;;
                 methodResult(@"success");
             }
         
@@ -1461,7 +1461,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.startCoordinate = startCoordinate;
+                ref.startCoordinate = startCoordinate;;
                 methodResult(@"success");
             }
         
@@ -1483,7 +1483,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.destinationCoordinate = destinationCoordinate;
+                ref.destinationCoordinate = destinationCoordinate;;
                 methodResult(@"success");
             }
         
@@ -1505,7 +1505,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.shareURL = shareURL;
+                ref.shareURL = shareURL;;
                 methodResult(@"success");
             }
         
@@ -1527,7 +1527,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.beginTime = beginTime;
+                ref.beginTime = beginTime;;
                 methodResult(@"success");
             }
         
@@ -1549,7 +1549,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.interval = interval;
+                ref.interval = interval;;
                 methodResult(@"success");
             }
         
@@ -1571,7 +1571,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.timeCount = timeCount;
+                ref.timeCount = timeCount;;
                 methodResult(@"success");
             }
         
@@ -1593,7 +1593,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.strategy = strategy;
+                ref.strategy = strategy;;
                 methodResult(@"success");
             }
         
@@ -1615,7 +1615,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.originId = originId;
+                ref.originId = originId;;
                 methodResult(@"success");
             }
         
@@ -1637,7 +1637,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.destinationId = destinationId;
+                ref.destinationId = destinationId;;
                 methodResult(@"success");
             }
         
@@ -1659,7 +1659,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.origintype = origintype;
+                ref.origintype = origintype;;
                 methodResult(@"success");
             }
         
@@ -1681,7 +1681,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.destinationtype = destinationtype;
+                ref.destinationtype = destinationtype;;
                 methodResult(@"success");
             }
         
@@ -1703,7 +1703,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.parentId = parentId;
+                ref.parentId = parentId;;
                 methodResult(@"success");
             }
         
@@ -1725,7 +1725,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.plateProvince = plateProvince;
+                ref.plateProvince = plateProvince;;
                 methodResult(@"success");
             }
         
@@ -1747,7 +1747,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.plateNumber = plateNumber;
+                ref.plateNumber = plateNumber;;
                 methodResult(@"success");
             }
         
@@ -1769,7 +1769,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.cartype = cartype;
+                ref.cartype = cartype;;
                 methodResult(@"success");
             }
         
@@ -1791,7 +1791,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.paths = paths;
+                ref.paths = paths;;
                 methodResult(@"success");
             }
         
@@ -1813,7 +1813,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.timeInfos = timeInfos;
+                ref.timeInfos = timeInfos;;
                 methodResult(@"success");
             }
         
@@ -1835,7 +1835,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.latitude = latitude;
+                ref.latitude = latitude;;
                 methodResult(@"success");
             }
         
@@ -1857,7 +1857,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.longitude = longitude;
+                ref.longitude = longitude;;
                 methodResult(@"success");
             }
         
@@ -1879,7 +1879,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.points = points;
+                ref.points = points;;
                 methodResult(@"success");
             }
         
@@ -1901,7 +1901,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.city = city;
+                ref.city = city;;
                 methodResult(@"success");
             }
         
@@ -1923,7 +1923,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.citycode = citycode;
+                ref.citycode = citycode;;
                 methodResult(@"success");
             }
         
@@ -1945,7 +1945,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.adcode = adcode;
+                ref.adcode = adcode;;
                 methodResult(@"success");
             }
         
@@ -1967,7 +1967,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.num = num;
+                ref.num = num;;
                 methodResult(@"success");
             }
         
@@ -1989,7 +1989,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.districts = districts;
+                ref.districts = districts;;
                 methodResult(@"success");
             }
         
@@ -2011,7 +2011,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.keywords = keywords;
+                ref.keywords = keywords;;
                 methodResult(@"success");
             }
         
@@ -2033,7 +2033,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.cities = cities;
+                ref.cities = cities;;
                 methodResult(@"success");
             }
         
@@ -2055,7 +2055,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.uid = uid;
+                ref.uid = uid;;
                 methodResult(@"success");
             }
         
@@ -2077,7 +2077,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.name = name;
+                ref.name = name;;
                 methodResult(@"success");
             }
         
@@ -2099,7 +2099,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.adcode = adcode;
+                ref.adcode = adcode;;
                 methodResult(@"success");
             }
         
@@ -2121,7 +2121,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.district = district;
+                ref.district = district;;
                 methodResult(@"success");
             }
         
@@ -2143,7 +2143,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.address = address;
+                ref.address = address;;
                 methodResult(@"success");
             }
         
@@ -2165,7 +2165,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.location = location;
+                ref.location = location;;
                 methodResult(@"success");
             }
         
@@ -2187,7 +2187,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.typecode = typecode;
+                ref.typecode = typecode;;
                 methodResult(@"success");
             }
         
@@ -2209,7 +2209,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.title = title;
+                ref.title = title;;
                 methodResult(@"success");
             }
         
@@ -2231,7 +2231,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.url = url;
+                ref.url = url;;
                 methodResult(@"success");
             }
         
@@ -2253,7 +2253,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.rating = rating;
+                ref.rating = rating;;
                 methodResult(@"success");
             }
         
@@ -2275,7 +2275,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.cost = cost;
+                ref.cost = cost;;
                 methodResult(@"success");
             }
         
@@ -2297,7 +2297,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.openTime = openTime;
+                ref.openTime = openTime;;
                 methodResult(@"success");
             }
         
@@ -2319,7 +2319,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.floor = floor;
+                ref.floor = floor;;
                 methodResult(@"success");
             }
         
@@ -2341,7 +2341,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.floorName = floorName;
+                ref.floorName = floorName;;
                 methodResult(@"success");
             }
         
@@ -2363,7 +2363,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.pid = pid;
+                ref.pid = pid;;
                 methodResult(@"success");
             }
         
@@ -2385,7 +2385,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.uid = uid;
+                ref.uid = uid;;
                 methodResult(@"success");
             }
         
@@ -2407,7 +2407,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.name = name;
+                ref.name = name;;
                 methodResult(@"success");
             }
         
@@ -2429,7 +2429,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.sname = sname;
+                ref.sname = sname;;
                 methodResult(@"success");
             }
         
@@ -2451,7 +2451,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.location = location;
+                ref.location = location;;
                 methodResult(@"success");
             }
         
@@ -2473,7 +2473,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.address = address;
+                ref.address = address;;
                 methodResult(@"success");
             }
         
@@ -2495,7 +2495,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.distance = distance;
+                ref.distance = distance;;
                 methodResult(@"success");
             }
         
@@ -2517,7 +2517,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.subtype = subtype;
+                ref.subtype = subtype;;
                 methodResult(@"success");
             }
         
@@ -2539,7 +2539,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.uid = uid;
+                ref.uid = uid;;
                 methodResult(@"success");
             }
         
@@ -2561,7 +2561,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.name = name;
+                ref.name = name;;
                 methodResult(@"success");
             }
         
@@ -2583,7 +2583,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.location = location;
+                ref.location = location;;
                 methodResult(@"success");
             }
         
@@ -2605,7 +2605,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.distance = distance;
+                ref.distance = distance;;
                 methodResult(@"success");
             }
         
@@ -2627,7 +2627,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.duration = duration;
+                ref.duration = duration;;
                 methodResult(@"success");
             }
         
@@ -2649,7 +2649,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.uid = uid;
+                ref.uid = uid;;
                 methodResult(@"success");
             }
         
@@ -2671,7 +2671,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.name = name;
+                ref.name = name;;
                 methodResult(@"success");
             }
         
@@ -2693,7 +2693,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.type = type;
+                ref.type = type;;
                 methodResult(@"success");
             }
         
@@ -2715,7 +2715,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.typecode = typecode;
+                ref.typecode = typecode;;
                 methodResult(@"success");
             }
         
@@ -2737,7 +2737,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.location = location;
+                ref.location = location;;
                 methodResult(@"success");
             }
         
@@ -2759,7 +2759,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.address = address;
+                ref.address = address;;
                 methodResult(@"success");
             }
         
@@ -2781,7 +2781,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.tel = tel;
+                ref.tel = tel;;
                 methodResult(@"success");
             }
         
@@ -2803,7 +2803,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.distance = distance;
+                ref.distance = distance;;
                 methodResult(@"success");
             }
         
@@ -2825,7 +2825,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.parkingType = parkingType;
+                ref.parkingType = parkingType;;
                 methodResult(@"success");
             }
         
@@ -2847,7 +2847,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.shopID = shopID;
+                ref.shopID = shopID;;
                 methodResult(@"success");
             }
         
@@ -2869,7 +2869,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.postcode = postcode;
+                ref.postcode = postcode;;
                 methodResult(@"success");
             }
         
@@ -2891,7 +2891,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.website = website;
+                ref.website = website;;
                 methodResult(@"success");
             }
         
@@ -2913,7 +2913,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.email = email;
+                ref.email = email;;
                 methodResult(@"success");
             }
         
@@ -2935,7 +2935,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.province = province;
+                ref.province = province;;
                 methodResult(@"success");
             }
         
@@ -2957,7 +2957,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.pcode = pcode;
+                ref.pcode = pcode;;
                 methodResult(@"success");
             }
         
@@ -2979,7 +2979,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.city = city;
+                ref.city = city;;
                 methodResult(@"success");
             }
         
@@ -3001,7 +3001,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.citycode = citycode;
+                ref.citycode = citycode;;
                 methodResult(@"success");
             }
         
@@ -3023,7 +3023,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.district = district;
+                ref.district = district;;
                 methodResult(@"success");
             }
         
@@ -3045,7 +3045,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.adcode = adcode;
+                ref.adcode = adcode;;
                 methodResult(@"success");
             }
         
@@ -3067,7 +3067,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.gridcode = gridcode;
+                ref.gridcode = gridcode;;
                 methodResult(@"success");
             }
         
@@ -3089,7 +3089,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.enterLocation = enterLocation;
+                ref.enterLocation = enterLocation;;
                 methodResult(@"success");
             }
         
@@ -3111,7 +3111,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.exitLocation = exitLocation;
+                ref.exitLocation = exitLocation;;
                 methodResult(@"success");
             }
         
@@ -3133,7 +3133,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.direction = direction;
+                ref.direction = direction;;
                 methodResult(@"success");
             }
         
@@ -3155,7 +3155,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.hasIndoorMap = hasIndoorMap;
+                ref.hasIndoorMap = hasIndoorMap;;
                 methodResult(@"success");
             }
         
@@ -3177,7 +3177,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.businessArea = businessArea;
+                ref.businessArea = businessArea;;
                 methodResult(@"success");
             }
         
@@ -3199,7 +3199,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.indoorData = indoorData;
+                ref.indoorData = indoorData;;
                 methodResult(@"success");
             }
         
@@ -3221,7 +3221,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.subPOIs = subPOIs;
+                ref.subPOIs = subPOIs;;
                 methodResult(@"success");
             }
         
@@ -3243,7 +3243,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.images = images;
+                ref.images = images;;
                 methodResult(@"success");
             }
         
@@ -3265,7 +3265,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.extensionInfo = extensionInfo;
+                ref.extensionInfo = extensionInfo;;
                 methodResult(@"success");
             }
         
@@ -3287,7 +3287,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.uid = uid;
+                ref.uid = uid;;
                 methodResult(@"success");
             }
         
@@ -3309,7 +3309,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.name = name;
+                ref.name = name;;
                 methodResult(@"success");
             }
         
@@ -3331,7 +3331,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.adcode = adcode;
+                ref.adcode = adcode;;
                 methodResult(@"success");
             }
         
@@ -3353,7 +3353,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.location = location;
+                ref.location = location;;
                 methodResult(@"success");
             }
         
@@ -3375,7 +3375,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.area = area;
+                ref.area = area;;
                 methodResult(@"success");
             }
         
@@ -3397,7 +3397,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.uid = uid;
+                ref.uid = uid;;
                 methodResult(@"success");
             }
         
@@ -3419,7 +3419,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.name = name;
+                ref.name = name;;
                 methodResult(@"success");
             }
         
@@ -3441,7 +3441,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.distance = distance;
+                ref.distance = distance;;
                 methodResult(@"success");
             }
         
@@ -3463,7 +3463,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.direction = direction;
+                ref.direction = direction;;
                 methodResult(@"success");
             }
         
@@ -3485,7 +3485,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.location = location;
+                ref.location = location;;
                 methodResult(@"success");
             }
         
@@ -3507,7 +3507,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.distance = distance;
+                ref.distance = distance;;
                 methodResult(@"success");
             }
         
@@ -3529,7 +3529,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.direction = direction;
+                ref.direction = direction;;
                 methodResult(@"success");
             }
         
@@ -3551,7 +3551,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.location = location;
+                ref.location = location;;
                 methodResult(@"success");
             }
         
@@ -3573,7 +3573,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.firstId = firstId;
+                ref.firstId = firstId;;
                 methodResult(@"success");
             }
         
@@ -3595,7 +3595,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.firstName = firstName;
+                ref.firstName = firstName;;
                 methodResult(@"success");
             }
         
@@ -3617,7 +3617,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.secondId = secondId;
+                ref.secondId = secondId;;
                 methodResult(@"success");
             }
         
@@ -3639,7 +3639,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.secondName = secondName;
+                ref.secondName = secondName;;
                 methodResult(@"success");
             }
         
@@ -3661,7 +3661,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.street = street;
+                ref.street = street;;
                 methodResult(@"success");
             }
         
@@ -3683,7 +3683,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.number = number;
+                ref.number = number;;
                 methodResult(@"success");
             }
         
@@ -3705,7 +3705,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.location = location;
+                ref.location = location;;
                 methodResult(@"success");
             }
         
@@ -3727,7 +3727,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.distance = distance;
+                ref.distance = distance;;
                 methodResult(@"success");
             }
         
@@ -3749,7 +3749,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.direction = direction;
+                ref.direction = direction;;
                 methodResult(@"success");
             }
         
@@ -3771,7 +3771,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.name = name;
+                ref.name = name;;
                 methodResult(@"success");
             }
         
@@ -3793,7 +3793,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.location = location;
+                ref.location = location;;
                 methodResult(@"success");
             }
         
@@ -3815,7 +3815,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.country = country;
+                ref.country = country;;
                 methodResult(@"success");
             }
         
@@ -3837,7 +3837,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.province = province;
+                ref.province = province;;
                 methodResult(@"success");
             }
         
@@ -3859,7 +3859,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.city = city;
+                ref.city = city;;
                 methodResult(@"success");
             }
         
@@ -3881,7 +3881,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.citycode = citycode;
+                ref.citycode = citycode;;
                 methodResult(@"success");
             }
         
@@ -3903,7 +3903,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.district = district;
+                ref.district = district;;
                 methodResult(@"success");
             }
         
@@ -3925,7 +3925,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.adcode = adcode;
+                ref.adcode = adcode;;
                 methodResult(@"success");
             }
         
@@ -3947,7 +3947,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.township = township;
+                ref.township = township;;
                 methodResult(@"success");
             }
         
@@ -3969,7 +3969,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.towncode = towncode;
+                ref.towncode = towncode;;
                 methodResult(@"success");
             }
         
@@ -3991,7 +3991,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.neighborhood = neighborhood;
+                ref.neighborhood = neighborhood;;
                 methodResult(@"success");
             }
         
@@ -4013,7 +4013,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.building = building;
+                ref.building = building;;
                 methodResult(@"success");
             }
         
@@ -4035,7 +4035,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.streetNumber = streetNumber;
+                ref.streetNumber = streetNumber;;
                 methodResult(@"success");
             }
         
@@ -4057,7 +4057,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.businessAreas = businessAreas;
+                ref.businessAreas = businessAreas;;
                 methodResult(@"success");
             }
         
@@ -4079,7 +4079,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.formattedAddress = formattedAddress;
+                ref.formattedAddress = formattedAddress;;
                 methodResult(@"success");
             }
         
@@ -4101,7 +4101,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.addressComponent = addressComponent;
+                ref.addressComponent = addressComponent;;
                 methodResult(@"success");
             }
         
@@ -4123,7 +4123,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.roads = roads;
+                ref.roads = roads;;
                 methodResult(@"success");
             }
         
@@ -4145,7 +4145,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.roadinters = roadinters;
+                ref.roadinters = roadinters;;
                 methodResult(@"success");
             }
         
@@ -4167,7 +4167,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.pois = pois;
+                ref.pois = pois;;
                 methodResult(@"success");
             }
         
@@ -4189,7 +4189,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.aois = aois;
+                ref.aois = aois;;
                 methodResult(@"success");
             }
         
@@ -4211,7 +4211,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.formattedAddress = formattedAddress;
+                ref.formattedAddress = formattedAddress;;
                 methodResult(@"success");
             }
         
@@ -4233,7 +4233,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.province = province;
+                ref.province = province;;
                 methodResult(@"success");
             }
         
@@ -4255,7 +4255,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.city = city;
+                ref.city = city;;
                 methodResult(@"success");
             }
         
@@ -4277,7 +4277,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.citycode = citycode;
+                ref.citycode = citycode;;
                 methodResult(@"success");
             }
         
@@ -4299,7 +4299,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.district = district;
+                ref.district = district;;
                 methodResult(@"success");
             }
         
@@ -4321,7 +4321,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.adcode = adcode;
+                ref.adcode = adcode;;
                 methodResult(@"success");
             }
         
@@ -4343,7 +4343,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.township = township;
+                ref.township = township;;
                 methodResult(@"success");
             }
         
@@ -4365,7 +4365,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.neighborhood = neighborhood;
+                ref.neighborhood = neighborhood;;
                 methodResult(@"success");
             }
         
@@ -4387,7 +4387,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.building = building;
+                ref.building = building;;
                 methodResult(@"success");
             }
         
@@ -4409,7 +4409,7 @@ extern BOOL enableLog;
                     return;
                 }
         
-                ref.location = location;
+                ref.location = location;;
                 methodResult(@"success");
             }
         

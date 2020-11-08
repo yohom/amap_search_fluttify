@@ -140,7 +140,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteSearch::setRouteSearchListener', {"__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteSearch::setRouteSearchListener', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -186,6 +186,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
                 var1?.onRideRouteSearched(AmapSearchFluttifyAndroidAs(args['var1']), args['var2']);
                 break;
               default:
+                throw MissingPluginException('方法${methodCall.method}未实现');
                 break;
             }
           } catch (e) {
@@ -205,7 +206,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteSearch::setOnTruckRouteSearchListener', {"__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteSearch::setOnTruckRouteSearchListener', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -224,6 +225,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
                 var1?.onTruckRouteSearched(AmapSearchFluttifyAndroidAs(args['var1']), args['var2']);
                 break;
               default:
+                throw MissingPluginException('方法${methodCall.method}未实现');
                 break;
             }
           } catch (e) {
@@ -243,7 +245,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
     }
   
     // invoke native method
-    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteSearch::setOnRoutePlanSearchListener', {"__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteSearch::setOnRoutePlanSearchListener', {"var1": var1, "__this__": this});
   
   
     // handle native call
@@ -262,6 +264,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
                 var1?.onDriveRoutePlanSearched(AmapSearchFluttifyAndroidAs(args['var1']), args['var2']);
                 break;
               default:
+                throw MissingPluginException('方法${methodCall.method}未实现');
                 break;
             }
           } catch (e) {
