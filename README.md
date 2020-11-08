@@ -2,24 +2,8 @@
 
 [![pub package](https://img.shields.io/pub/v/amap_search_fluttify.svg)](https://pub.Flutter-io.cn/packages/amap_search_fluttify)
 ![CI](https://github.com/fluttify-project/amap_search_fluttify/workflows/CI/badge.svg)
-[![Gitter](https://badges.gitter.im/fluttify_project/community.svg)](https://gitter.im/fluttify_project/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 高德地图`搜索`组件. Dart接口基于[Fluttify](https://github.com/yohom/fluttify-core-example)引擎生成. [接口文档](https://pub.flutter-io.cn/documentation/amap_search_fluttify/latest/).
-
-## 技术支持
-- 请参考 [technical-support-plan](https://github.com/fluttify-project/technical-support-plan) 进行操作, 技术支持工单将以最高优先级处理.
-
-## Fluttify网站
-- Fluttify系列插件的生成引擎[fluttify.com](http://fluttify.com/#/)网站已上线, 欢迎各位来试用, 目前网站仍然处于早期阶段, 如果有什么建议可以在[反馈仓库](https://github.com/fluttify-project/fluttify-feedback/issues/new)中提issue.
-- 如何使用网站?
-  1. 使用github账号登录网站, 我需要知道是谁在使用我的网站;
-  2. 填写原生SDK相关的信息, 填写maven坐标和cocoapods名称的时候会进行联网自动补全;
-  3. 提交请求, 目前默认获取目标SDK的最新版本来生成插件;
-  4. 请求完成后会往github账号关联的邮箱地址发一份邮件, 产物插件便在邮件的附件中; 
-- 网站前端使用flutter for web编写(目前产物可能会比较大, 随着flutter官方的优化这些问题会逐步改善), 部署在github pages上, 所以首次访问可能会异常的慢, 请耐心等待或者多试几次. 
-
-## 接外包
-**本人承接外包项目(地图类app优先), 有意者请联系qq 382146139.**
 
 ## DEMO 与 社区
 
@@ -140,10 +124,6 @@ final routeResult = await AmapSearch.instance.searchWalkRoute(
                 ),
               );
 ```
-
-| 微信支持 | 支付宝支持 |
-| :----------: | :----------: |
-| <img src="https://github.com/fluttify-project/fluttify-core-example/blob/develop/other/WechatIMG111.jpeg?raw=true" height="300"> | <img src="https://github.com/fluttify-project/fluttify-core-example/blob/develop/other/1557492318.jpg?raw=true" height="300"> |
 
 ## LICENSE
 > Copyright 2020 yohom
