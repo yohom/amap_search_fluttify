@@ -4,11 +4,12 @@
 
 #import "SubHandler11.h"
 #import "FluttifyMessageCodec.h"
+#import <AMapSearchKit/AMapSearchKit.h>
 
 // Dart端一次方法调用所存在的栈, 只有当MethodChannel传递参数受限时, 再启用这个容器
 extern NSMutableDictionary<NSString*, NSObject*>* STACK;
 // Dart端随机存取对象的容器
-extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
+extern NSMutableDictionary<NSString*, NSObject*>* HEAP;
 // 日志打印开关
 extern BOOL enableLog;
 
@@ -16,6 +17,166 @@ extern BOOL enableLog;
 - (NSDictionary<NSString*, Handler>*) getSubHandler11 {
     __weak __typeof(self)weakSelf = self;
     return @{
+        @"ObjectFactory::create_batchAMapPOIPolygonSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
+        
+            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
+            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
+            for (NSUInteger __i__ = 0; __i__ < [length integerValue]; __i__++) {
+                AMapPOIPolygonSearchRequest* __this__;
+                if ([init boolValue]) {
+                    __this__ = [[AMapPOIPolygonSearchRequest alloc] init];
+                } else {
+                    __this__ = [AMapPOIPolygonSearchRequest alloc];
+                }
+                [resultList addObject:__this__];
+            }
+        
+            methodResult(resultList);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::create_batchAMapPOISearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
+        
+            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
+            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
+            for (NSUInteger __i__ = 0; __i__ < [length integerValue]; __i__++) {
+                AMapPOISearchResponse* __this__;
+                if ([init boolValue]) {
+                    __this__ = [[AMapPOISearchResponse alloc] init];
+                } else {
+                    __this__ = [AMapPOISearchResponse alloc];
+                }
+                [resultList addObject:__this__];
+            }
+        
+            methodResult(resultList);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::create_batchAMapRoutePOISearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
+        
+            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
+            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
+            for (NSUInteger __i__ = 0; __i__ < [length integerValue]; __i__++) {
+                AMapRoutePOISearchRequest* __this__;
+                if ([init boolValue]) {
+                    __this__ = [[AMapRoutePOISearchRequest alloc] init];
+                } else {
+                    __this__ = [AMapRoutePOISearchRequest alloc];
+                }
+                [resultList addObject:__this__];
+            }
+        
+            methodResult(resultList);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::create_batchAMapRoutePOISearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
+        
+            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
+            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
+            for (NSUInteger __i__ = 0; __i__ < [length integerValue]; __i__++) {
+                AMapRoutePOISearchResponse* __this__;
+                if ([init boolValue]) {
+                    __this__ = [[AMapRoutePOISearchResponse alloc] init];
+                } else {
+                    __this__ = [AMapRoutePOISearchResponse alloc];
+                }
+                [resultList addObject:__this__];
+            }
+        
+            methodResult(resultList);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::create_batchAMapInputTipsSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
+        
+            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
+            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
+            for (NSUInteger __i__ = 0; __i__ < [length integerValue]; __i__++) {
+                AMapInputTipsSearchRequest* __this__;
+                if ([init boolValue]) {
+                    __this__ = [[AMapInputTipsSearchRequest alloc] init];
+                } else {
+                    __this__ = [AMapInputTipsSearchRequest alloc];
+                }
+                [resultList addObject:__this__];
+            }
+        
+            methodResult(resultList);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::create_batchAMapInputTipsSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
+        
+            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
+            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
+            for (NSUInteger __i__ = 0; __i__ < [length integerValue]; __i__++) {
+                AMapInputTipsSearchResponse* __this__;
+                if ([init boolValue]) {
+                    __this__ = [[AMapInputTipsSearchResponse alloc] init];
+                } else {
+                    __this__ = [AMapInputTipsSearchResponse alloc];
+                }
+                [resultList addObject:__this__];
+            }
+        
+            methodResult(resultList);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::create_batchAMapGeocodeSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
+        
+            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
+            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
+            for (NSUInteger __i__ = 0; __i__ < [length integerValue]; __i__++) {
+                AMapGeocodeSearchRequest* __this__;
+                if ([init boolValue]) {
+                    __this__ = [[AMapGeocodeSearchRequest alloc] init];
+                } else {
+                    __this__ = [AMapGeocodeSearchRequest alloc];
+                }
+                [resultList addObject:__this__];
+            }
+        
+            methodResult(resultList);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::create_batchAMapGeocodeSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
+        
+            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
+            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
+            for (NSUInteger __i__ = 0; __i__ < [length integerValue]; __i__++) {
+                AMapGeocodeSearchResponse* __this__;
+                if ([init boolValue]) {
+                    __this__ = [[AMapGeocodeSearchResponse alloc] init];
+                } else {
+                    __this__ = [AMapGeocodeSearchResponse alloc];
+                }
+                [resultList addObject:__this__];
+            }
+        
+            methodResult(resultList);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
         @"ObjectFactory::create_batchAMapReGeocodeSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
@@ -447,86 +608,6 @@ extern BOOL enableLog;
                     __this__ = [[AMapWeatherSearchResponse alloc] init];
                 } else {
                     __this__ = [AMapWeatherSearchResponse alloc];
-                }
-                [resultList addObject:__this__];
-            }
-        
-            methodResult(resultList);
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::create_batchAMapRoadTrafficSearchBaseRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
-        
-            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
-            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
-            for (NSUInteger __i__ = 0; __i__ < [length integerValue]; __i__++) {
-                AMapRoadTrafficSearchBaseRequest* __this__;
-                if ([init boolValue]) {
-                    __this__ = [[AMapRoadTrafficSearchBaseRequest alloc] init];
-                } else {
-                    __this__ = [AMapRoadTrafficSearchBaseRequest alloc];
-                }
-                [resultList addObject:__this__];
-            }
-        
-            methodResult(resultList);
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::create_batchAMapRoadTrafficSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
-        
-            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
-            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
-            for (NSUInteger __i__ = 0; __i__ < [length integerValue]; __i__++) {
-                AMapRoadTrafficSearchRequest* __this__;
-                if ([init boolValue]) {
-                    __this__ = [[AMapRoadTrafficSearchRequest alloc] init];
-                } else {
-                    __this__ = [AMapRoadTrafficSearchRequest alloc];
-                }
-                [resultList addObject:__this__];
-            }
-        
-            methodResult(resultList);
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::create_batchAMapRoadTrafficCircleSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
-        
-            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
-            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
-            for (NSUInteger __i__ = 0; __i__ < [length integerValue]; __i__++) {
-                AMapRoadTrafficCircleSearchRequest* __this__;
-                if ([init boolValue]) {
-                    __this__ = [[AMapRoadTrafficCircleSearchRequest alloc] init];
-                } else {
-                    __this__ = [AMapRoadTrafficCircleSearchRequest alloc];
-                }
-                [resultList addObject:__this__];
-            }
-        
-            methodResult(resultList);
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::create_batchAMapRoadTrafficSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
-        
-            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
-            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
-            for (NSUInteger __i__ = 0; __i__ < [length integerValue]; __i__++) {
-                AMapRoadTrafficSearchResponse* __this__;
-                if ([init boolValue]) {
-                    __this__ = [[AMapRoadTrafficSearchResponse alloc] init];
-                } else {
-                    __this__ = [AMapRoadTrafficSearchResponse alloc];
                 }
                 [resultList addObject:__this__];
             }

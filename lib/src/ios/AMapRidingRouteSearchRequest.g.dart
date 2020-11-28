@@ -50,11 +50,22 @@ class AMapRidingRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCod
     return __result__;
   }
   
+  Future<bool> get_requireExtension() async {
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapRidingRouteSearchRequest::get_requireExtension", {'__this__': this});
+    return __result__;
+  }
+  
   //endregion
 
   //region setters
   Future<void> set_type(int type) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRidingRouteSearchRequest::set_type', <String, dynamic>{'__this__': this, "type": type});
+  
+  
+  }
+  
+  Future<void> set_requireExtension(bool requireExtension) async {
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapRidingRouteSearchRequest::set_requireExtension', <String, dynamic>{'__this__': this, "requireExtension": requireExtension});
   
   
   }
@@ -78,11 +89,22 @@ extension AMapRidingRouteSearchRequest_Batch on List<AMapRidingRouteSearchReques
     return (resultBatch as List)?.map((__result__) => __result__)?.cast<int>()?.toList();
   }
   
+  Future<List<bool>> get_requireExtension_batch() async {
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRidingRouteSearchRequest::get_requireExtension_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<bool>()?.toList();
+  }
+  
   //endregion
 
   //region setters
   Future<void> set_type_batch(List<int> type) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRidingRouteSearchRequest::set_type_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "type": type[__i__]}]);
+  
+  
+  }
+  
+  Future<void> set_requireExtension_batch(List<bool> requireExtension) async {
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapRidingRouteSearchRequest::set_requireExtension_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "requireExtension": requireExtension[__i__]}]);
   
   
   }

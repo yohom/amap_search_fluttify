@@ -65,6 +65,11 @@ class AMapReGeocodeSearchRequest extends AMapSearchObject with NSCoding, NSCopyi
     return __result__;
   }
   
+  Future<String> get_mode() async {
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapReGeocodeSearchRequest::get_mode", {'__this__': this});
+    return __result__;
+  }
+  
   //endregion
 
   //region setters
@@ -88,6 +93,12 @@ class AMapReGeocodeSearchRequest extends AMapSearchObject with NSCoding, NSCopyi
   
   Future<void> set_poitype(String poitype) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapReGeocodeSearchRequest::set_poitype', <String, dynamic>{'__this__': this, "poitype": poitype});
+  
+  
+  }
+  
+  Future<void> set_mode(String mode) async {
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapReGeocodeSearchRequest::set_mode', <String, dynamic>{'__this__': this, "mode": mode});
   
   
   }
@@ -126,6 +137,11 @@ extension AMapReGeocodeSearchRequest_Batch on List<AMapReGeocodeSearchRequest> {
     return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
   }
   
+  Future<List<String>> get_mode_batch() async {
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapReGeocodeSearchRequest::get_mode_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
+  }
+  
   //endregion
 
   //region setters
@@ -149,6 +165,12 @@ extension AMapReGeocodeSearchRequest_Batch on List<AMapReGeocodeSearchRequest> {
   
   Future<void> set_poitype_batch(List<String> poitype) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapReGeocodeSearchRequest::set_poitype_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "poitype": poitype[__i__]}]);
+  
+  
+  }
+  
+  Future<void> set_mode_batch(List<String> mode) async {
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapReGeocodeSearchRequest::set_mode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "mode": mode[__i__]}]);
   
   
   }

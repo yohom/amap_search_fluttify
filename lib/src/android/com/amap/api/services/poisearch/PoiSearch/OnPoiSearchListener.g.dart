@@ -26,10 +26,10 @@ mixin com_amap_api_services_poisearch_PoiSearch_OnPoiSearchListener on java_lang
 
   
 
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> onPoiSearched(com_amap_api_services_poisearch_PoiResult var1, int var2) {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> onPoiItemSearched(com_amap_api_services_core_PoiItem var1, int var2) {}
   
 }

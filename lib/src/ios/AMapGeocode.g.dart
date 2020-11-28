@@ -100,6 +100,16 @@ class AMapGeocode extends AMapSearchObject with NSCoding, NSCopying {
     return __result__;
   }
   
+  Future<String> get_country() async {
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapGeocode::get_country", {'__this__': this});
+    return __result__;
+  }
+  
+  Future<String> get_postcode() async {
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapGeocode::get_postcode", {'__this__': this});
+    return __result__;
+  }
+  
   //endregion
 
   //region setters
@@ -165,6 +175,18 @@ class AMapGeocode extends AMapSearchObject with NSCoding, NSCopying {
   
   Future<void> set_level(String level) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapGeocode::set_level', <String, dynamic>{'__this__': this, "level": level});
+  
+  
+  }
+  
+  Future<void> set_country(String country) async {
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapGeocode::set_country', <String, dynamic>{'__this__': this, "country": country});
+  
+  
+  }
+  
+  Future<void> set_postcode(String postcode) async {
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapGeocode::set_postcode', <String, dynamic>{'__this__': this, "postcode": postcode});
   
   
   }
@@ -238,6 +260,16 @@ extension AMapGeocode_Batch on List<AMapGeocode> {
     return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
   }
   
+  Future<List<String>> get_country_batch() async {
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapGeocode::get_country_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
+  }
+  
+  Future<List<String>> get_postcode_batch() async {
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapGeocode::get_postcode_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
+  }
+  
   //endregion
 
   //region setters
@@ -303,6 +335,18 @@ extension AMapGeocode_Batch on List<AMapGeocode> {
   
   Future<void> set_level_batch(List<String> level) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapGeocode::set_level_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "level": level[__i__]}]);
+  
+  
+  }
+  
+  Future<void> set_country_batch(List<String> country) async {
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapGeocode::set_country_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "country": country[__i__]}]);
+  
+  
+  }
+  
+  Future<void> set_postcode_batch(List<String> postcode) async {
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapGeocode::set_postcode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "postcode": postcode[__i__]}]);
   
   
   }

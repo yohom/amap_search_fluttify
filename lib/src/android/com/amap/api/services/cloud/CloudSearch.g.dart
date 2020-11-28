@@ -77,7 +77,7 @@ class com_amap_api_services_cloud_CloudSearch extends java_lang_Object  {
                 }
           
                 // handle the native call
-                var1?.onCloudSearched(AmapSearchFluttifyAndroidAs(args['var1']), args['var2']);
+                await var1?.onCloudSearched(AmapSearchFluttifyAndroidAs(args['var1']), args['var2']);
                 break;
               case 'Callback::com.amap.api.services.cloud.CloudSearch.OnCloudSearchListener::onCloudItemDetailSearched':
                 // print log
@@ -86,7 +86,7 @@ class com_amap_api_services_cloud_CloudSearch extends java_lang_Object  {
                 }
           
                 // handle the native call
-                var1?.onCloudItemDetailSearched(AmapSearchFluttifyAndroidAs(args['var1']), args['var2']);
+                await var1?.onCloudItemDetailSearched(AmapSearchFluttifyAndroidAs(args['var1']), args['var2']);
                 break;
               default:
                 throw MissingPluginException('方法${methodCall.method}未实现');

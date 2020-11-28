@@ -26,37 +26,37 @@ mixin com_amap_api_services_interfaces_IPoiSearch on java_lang_Object {
 
   
 
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> setOnPoiSearchListener(com_amap_api_services_poisearch_PoiSearch_OnPoiSearchListener var1) {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> setLanguage(String var1) {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<String> getLanguage() {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<com_amap_api_services_poisearch_PoiResult> searchPOI() {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> searchPOIAsyn() {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<com_amap_api_services_core_PoiItem> searchPOIId(String var1) {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> searchPOIIdAsyn(String var1) {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> setQuery(com_amap_api_services_poisearch_PoiSearch_Query var1) {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> setBound(com_amap_api_services_poisearch_PoiSearch_SearchBound var1) {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<com_amap_api_services_poisearch_PoiSearch_Query> getQuery() {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<com_amap_api_services_poisearch_PoiSearch_SearchBound> getBound() {}
   
 }

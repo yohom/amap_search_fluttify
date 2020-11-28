@@ -19,7 +19,8 @@ class com_amap_api_services_busline_BusLineSearch extends java_lang_Object  {
   @override
   final String tag__ = 'amap_search_fluttify';
 
-  
+  static final String EXTENSIONS_ALL = "all";
+  static final String EXTENSIONS_BASE = "base";
   //endregion
 
   //region creators
@@ -94,7 +95,7 @@ class com_amap_api_services_busline_BusLineSearch extends java_lang_Object  {
                 }
           
                 // handle the native call
-                var1?.onBusLineSearched(AmapSearchFluttifyAndroidAs(args['var1']), args['var2']);
+                await var1?.onBusLineSearched(AmapSearchFluttifyAndroidAs(args['var1']), args['var2']);
                 break;
               default:
                 throw MissingPluginException('方法${methodCall.method}未实现');

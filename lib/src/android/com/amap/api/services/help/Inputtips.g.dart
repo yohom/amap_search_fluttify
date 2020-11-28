@@ -111,7 +111,7 @@ class com_amap_api_services_help_Inputtips extends java_lang_Object  {
                 }
           
                 // handle the native call
-                var1?.onGetInputtips((args['var1'] as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_help_Tip>(it))?.toList(), args['var2']);
+                await var1?.onGetInputtips((args['var1'] as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_help_Tip>(it))?.toList(), args['var2']);
                 break;
               default:
                 throw MissingPluginException('方法${methodCall.method}未实现');

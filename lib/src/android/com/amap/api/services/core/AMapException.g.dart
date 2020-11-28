@@ -69,6 +69,11 @@ class com_amap_api_services_core_AMapException extends java_lang_Object  {
   static final String AMAP_ROUTE_FAIL = "路线计算失败，通常是由于道路连通关系导致";
   static final String AMAP_OVER_DIRECTION_RANGE = "起点终点距离过长";
   static final String AMAP_SHARE_LICENSE_IS_EXPIRED = "短串分享认证失败";
+  static final String AMAP_CLIENT_OVER_PASSBY_MAX_COUNT_EXCEPTION = "途经点个数超限";
+  static final String AMAP_CLIENT_OVER_PASSAREA_MAX_COUNT_EXCEPTION = "避让区域个数超限";
+  static final String AMAP_CLIENT_OVER_PASSAREA_MAX_AREA_EXCEPTION = "避让区域大小超限";
+  static final String AMAP_CLIENT_OVER_PASSAREA_ITEM_POINT_COUNT_EXCEPTION = "避让区域点个数超限";
+  static final String AMAP_CLIENT_OVER_KEYWORD_LEN_MAX_COUNT_EXCEPTION = "关键字过长";
   static final String AMAP_SHARE_FAILURE = "短串请求失败";
   static final String AMAP_SHARE_SIGNATURE_FAILURE = "用户签名未通过";
   static final int CODE_AMAP_SIGNATURE_ERROR = 1001;
@@ -98,6 +103,11 @@ class com_amap_api_services_core_AMapException extends java_lang_Object  {
   static final int CODE_AMAP_CLIENT_URL_EXCEPTION = 1803;
   static final int CODE_AMAP_CLIENT_UNKNOWHOST_EXCEPTION = 1804;
   static final int CODE_AMAP_CLIENT_NETWORK_EXCEPTION = 1806;
+  static final int CODE_AMAP_CLIENT_OVER_PASSBY_MAX_COUNT_EXCEPTION = 1809;
+  static final int CODE_AMAP_CLIENT_OVER_PASSAREA_MAX_COUNT_EXCEPTION = 1810;
+  static final int CODE_AMAP_CLIENT_OVER_PASSAREA_MAX_AREA_EXCEPTION = 1811;
+  static final int CODE_AMAP_CLIENT_OVER_PASSAREA_ITEM_POINT_COUNT_EXCEPTION = 1812;
+  static final int CODE_AMAP_CLIENT_OVER_KEYWORD_LEN_MAX_COUNT_EXCEPTION = 1813;
   static final int CODE_AMAP_CLIENT_UNKNOWN_ERROR = 1900;
   static final int CODE_AMAP_CLIENT_INVALID_PARAMETER = 1901;
   static final int CODE_AMAP_CLIENT_IO_EXCEPTION = 1902;
@@ -143,6 +153,14 @@ class com_amap_api_services_core_AMapException extends java_lang_Object  {
     return AmapSearchFluttifyAndroidAs<com_amap_api_services_core_AMapException>(__result__);
   }
   
+  static Future<com_amap_api_services_core_AMapException> create__String__int__String__int(String var1, int var2, String var3, int var4) async {
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
+      'ObjectFactory::createcom_amap_api_services_core_AMapException__String__int__String__int',
+      {"var1": var1, "var2": var2, "var3": var3, "var4": var4}
+    );
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_core_AMapException>(__result__);
+  }
+  
   static Future<com_amap_api_services_core_AMapException> create__() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_core_AMapException__',
@@ -167,6 +185,17 @@ class com_amap_api_services_core_AMapException extends java_lang_Object  {
     final __result_batch__ = await  kAmapSearchFluttifyChannel.invokeListMethod(
       'ObjectFactory::create_batchcom_amap_api_services_core_AMapException__String__int__String',
       [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__]}]
+    );
+    return __result_batch__
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_AMapException>(it))
+        .toList();
+  }
+  
+  static Future<List<com_amap_api_services_core_AMapException>> create_batch__String__int__String__int(List<String> var1, List<int> var2, List<String> var3, List<int> var4) async {
+    assert(var1.length == var2.length && var2.length == var3.length && var3.length == var4.length);
+    final __result_batch__ = await  kAmapSearchFluttifyChannel.invokeListMethod(
+      'ObjectFactory::create_batchcom_amap_api_services_core_AMapException__String__int__String__int',
+      [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "var4": var4[__i__]}]
     );
     return __result_batch__
         .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_AMapException>(it))

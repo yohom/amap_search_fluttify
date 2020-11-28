@@ -26,7 +26,7 @@ mixin com_amap_api_services_nearby_UploadInfoCallback on java_lang_Object {
 
   
 
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<com_amap_api_services_nearby_UploadInfo> OnUploadInfoCallback() {}
   
 }

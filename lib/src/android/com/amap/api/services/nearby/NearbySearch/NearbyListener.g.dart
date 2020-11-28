@@ -26,13 +26,13 @@ mixin com_amap_api_services_nearby_NearbySearch_NearbyListener on java_lang_Obje
 
   
 
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> onUserInfoCleared(int var1) {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> onNearbyInfoSearched(com_amap_api_services_nearby_NearbySearchResult var1, int var2) {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> onNearbyInfoUploaded(int var1) {}
   
 }

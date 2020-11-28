@@ -34,6 +34,11 @@ enum AMapSearchErrorCode {
   AMapSearchErrorCannotConnectToHost /* 1805 */,
   AMapSearchErrorNotConnectedToInternet /* 1806 */,
   AMapSearchErrorCancelled /* 1807 */,
+  AMapSearchErrorOverPassPointCount /* 1809 */,
+  AMapSearchErrorOverPassAreaMaxCount /* 1810 */,
+  AMapSearchErrorOverPassAreaMaxArea /* 1811 */,
+  AMapSearchErrorOverPassAreaPointCount /* 1812 */,
+  AMapSearchErrorOverPassKeyWordLenth /* 1813 */,
   AMapSearchErrorTableIDNotExist /* 2000 */,
   AMapSearchErrorIDNotExist /* 2001 */,
   AMapSearchErrorServiceMaintenance /* 2002 */,
@@ -81,6 +86,11 @@ extension AMapSearchErrorCodeToX on AMapSearchErrorCode {
       case AMapSearchErrorCode.AMapSearchErrorCannotConnectToHost: return 1805;
       case AMapSearchErrorCode.AMapSearchErrorNotConnectedToInternet: return 1806;
       case AMapSearchErrorCode.AMapSearchErrorCancelled: return 1807;
+      case AMapSearchErrorCode.AMapSearchErrorOverPassPointCount: return 1809;
+      case AMapSearchErrorCode.AMapSearchErrorOverPassAreaMaxCount: return 1810;
+      case AMapSearchErrorCode.AMapSearchErrorOverPassAreaMaxArea: return 1811;
+      case AMapSearchErrorCode.AMapSearchErrorOverPassAreaPointCount: return 1812;
+      case AMapSearchErrorCode.AMapSearchErrorOverPassKeyWordLenth: return 1813;
       case AMapSearchErrorCode.AMapSearchErrorTableIDNotExist: return 2000;
       case AMapSearchErrorCode.AMapSearchErrorIDNotExist: return 2001;
       case AMapSearchErrorCode.AMapSearchErrorServiceMaintenance: return 2002;
@@ -131,6 +141,11 @@ extension AMapSearchErrorCodeFromX on int {
       case 1805: return AMapSearchErrorCode.AMapSearchErrorCannotConnectToHost;
       case 1806: return AMapSearchErrorCode.AMapSearchErrorNotConnectedToInternet;
       case 1807: return AMapSearchErrorCode.AMapSearchErrorCancelled;
+      case 1809: return AMapSearchErrorCode.AMapSearchErrorOverPassPointCount;
+      case 1810: return AMapSearchErrorCode.AMapSearchErrorOverPassAreaMaxCount;
+      case 1811: return AMapSearchErrorCode.AMapSearchErrorOverPassAreaMaxArea;
+      case 1812: return AMapSearchErrorCode.AMapSearchErrorOverPassAreaPointCount;
+      case 1813: return AMapSearchErrorCode.AMapSearchErrorOverPassKeyWordLenth;
       case 2000: return AMapSearchErrorCode.AMapSearchErrorTableIDNotExist;
       case 2001: return AMapSearchErrorCode.AMapSearchErrorIDNotExist;
       case 2002: return AMapSearchErrorCode.AMapSearchErrorServiceMaintenance;

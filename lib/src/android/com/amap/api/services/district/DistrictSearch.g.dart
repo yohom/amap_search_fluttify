@@ -162,7 +162,7 @@ class com_amap_api_services_district_DistrictSearch extends java_lang_Object  {
                 }
           
                 // handle the native call
-                var1?.onDistrictSearched(AmapSearchFluttifyAndroidAs(args['var1']));
+                await var1?.onDistrictSearched(AmapSearchFluttifyAndroidAs(args['var1']));
                 break;
               default:
                 throw MissingPluginException('方法${methodCall.method}未实现');

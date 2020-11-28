@@ -26,22 +26,22 @@ mixin com_amap_api_services_interfaces_IDistrictSearch on java_lang_Object {
 
   
 
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<com_amap_api_services_district_DistrictSearchQuery> getQuery() {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> setQuery(com_amap_api_services_district_DistrictSearchQuery var1) {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> searchDistrictAsyn() {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> searchDistrictAnsy() {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> setOnDistrictSearchListener(com_amap_api_services_district_DistrictSearch_OnDistrictSearchListener var1) {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<com_amap_api_services_district_DistrictResult> searchDistrict() {}
   
 }

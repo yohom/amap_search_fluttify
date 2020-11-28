@@ -26,34 +26,34 @@ mixin com_amap_api_services_interfaces_INearbySearch on java_lang_Object {
 
   
 
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> addNearbyListener(com_amap_api_services_nearby_NearbySearch_NearbyListener var1) {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> removeNearbyListener(com_amap_api_services_nearby_NearbySearch_NearbyListener var1) {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> clearUserInfoAsyn() {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> setUserID(String var1) {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> startUploadNearbyInfoAuto(com_amap_api_services_nearby_UploadInfoCallback var1, int var2) {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> stopUploadNearbyInfoAuto() {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> uploadNearbyInfoAsyn(com_amap_api_services_nearby_UploadInfo var1) {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> searchNearbyInfoAsyn(com_amap_api_services_nearby_NearbySearch_NearbyQuery var1) {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<com_amap_api_services_nearby_NearbySearchResult> searchNearbyInfo(com_amap_api_services_nearby_NearbySearch_NearbyQuery var1) {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> destroy() {}
   
 }

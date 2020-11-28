@@ -21,6 +21,9 @@ class com_amap_api_services_route_DistanceSearch extends java_lang_Object  {
 
   static final int TYPE_DISTANCE = 0;
   static final int TYPE_DRIVING_DISTANCE = 1;
+  static final int TYPE_WALK_DISTANCE = 3;
+  static final String EXTENSIONS_ALL = "all";
+  static final String EXTENSIONS_BASE = "base";
   //endregion
 
   //region creators
@@ -78,7 +81,7 @@ class com_amap_api_services_route_DistanceSearch extends java_lang_Object  {
                 }
           
                 // handle the native call
-                var1?.onDistanceSearched(AmapSearchFluttifyAndroidAs(args['var1']), args['var2']);
+                await var1?.onDistanceSearched(AmapSearchFluttifyAndroidAs(args['var1']), args['var2']);
                 break;
               default:
                 throw MissingPluginException('方法${methodCall.method}未实现');

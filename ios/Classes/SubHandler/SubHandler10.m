@@ -4,11 +4,12 @@
 
 #import "SubHandler10.h"
 #import "FluttifyMessageCodec.h"
+#import <AMapSearchKit/AMapSearchKit.h>
 
 // Dart端一次方法调用所存在的栈, 只有当MethodChannel传递参数受限时, 再启用这个容器
 extern NSMutableDictionary<NSString*, NSObject*>* STACK;
 // Dart端随机存取对象的容器
-extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
+extern NSMutableDictionary<NSString*, NSObject*>* HEAP;
 // 日志打印开关
 extern BOOL enableLog;
 
@@ -16,6 +17,134 @@ extern BOOL enableLog;
 - (NSDictionary<NSString*, Handler>*) getSubHandler10 {
     __weak __typeof(self)weakSelf = self;
     return @{
+        @"RefClass::isKindOfAMapPOIIDSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapPOIIDSearchRequest class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapPOIKeywordsSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapPOIKeywordsSearchRequest class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapPOIAroundSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapPOIAroundSearchRequest class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapPOIPolygonSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapPOIPolygonSearchRequest class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapPOISearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapPOISearchResponse class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapRoutePOISearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapRoutePOISearchRequest class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapRoutePOISearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapRoutePOISearchResponse class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapInputTipsSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapInputTipsSearchRequest class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapInputTipsSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapInputTipsSearchResponse class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapGeocodeSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapGeocodeSearchRequest class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapGeocodeSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapGeocodeSearchResponse class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapReGeocodeSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapReGeocodeSearchRequest class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapReGeocodeSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapReGeocodeSearchResponse class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapBusStopSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapBusStopSearchRequest class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapBusStopSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapBusStopSearchResponse class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapBusLineBaseSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapBusLineBaseSearchRequest class]];
+            methodResult(@(isTargetType));
+        },
+        
         @"RefClass::isKindOfAMapBusLineNameSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
             NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
@@ -149,38 +278,6 @@ extern BOOL enableLog;
             NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
         
             BOOL isTargetType = [__this__ isKindOfClass:[AMapWeatherSearchResponse class]];
-            methodResult(@(isTargetType));
-        },
-        
-        @"RefClass::isKindOfAMapRoadTrafficSearchBaseRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // 引用对象
-            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
-        
-            BOOL isTargetType = [__this__ isKindOfClass:[AMapRoadTrafficSearchBaseRequest class]];
-            methodResult(@(isTargetType));
-        },
-        
-        @"RefClass::isKindOfAMapRoadTrafficSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // 引用对象
-            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
-        
-            BOOL isTargetType = [__this__ isKindOfClass:[AMapRoadTrafficSearchRequest class]];
-            methodResult(@(isTargetType));
-        },
-        
-        @"RefClass::isKindOfAMapRoadTrafficCircleSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // 引用对象
-            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
-        
-            BOOL isTargetType = [__this__ isKindOfClass:[AMapRoadTrafficCircleSearchRequest class]];
-            methodResult(@(isTargetType));
-        },
-        
-        @"RefClass::isKindOfAMapRoadTrafficSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // 引用对象
-            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
-        
-            BOOL isTargetType = [__this__ isKindOfClass:[AMapRoadTrafficSearchResponse class]];
             methodResult(@(isTargetType));
         },
         
@@ -1309,78 +1406,6 @@ extern BOOL enableLog;
                 __this__ = [[AMapWeatherSearchResponse alloc] init];
             } else {
                 __this__ = [AMapWeatherSearchResponse alloc];
-            }
-        
-            methodResult(__this__);
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapRoadTrafficSearchBaseRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapRoadTrafficSearchBaseRequest");
-            }
-        
-            AMapRoadTrafficSearchBaseRequest* __this__;
-            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
-                __this__ = [[AMapRoadTrafficSearchBaseRequest alloc] init];
-            } else {
-                __this__ = [AMapRoadTrafficSearchBaseRequest alloc];
-            }
-        
-            methodResult(__this__);
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapRoadTrafficSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapRoadTrafficSearchRequest");
-            }
-        
-            AMapRoadTrafficSearchRequest* __this__;
-            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
-                __this__ = [[AMapRoadTrafficSearchRequest alloc] init];
-            } else {
-                __this__ = [AMapRoadTrafficSearchRequest alloc];
-            }
-        
-            methodResult(__this__);
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapRoadTrafficCircleSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapRoadTrafficCircleSearchRequest");
-            }
-        
-            AMapRoadTrafficCircleSearchRequest* __this__;
-            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
-                __this__ = [[AMapRoadTrafficCircleSearchRequest alloc] init];
-            } else {
-                __this__ = [AMapRoadTrafficCircleSearchRequest alloc];
-            }
-        
-            methodResult(__this__);
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapRoadTrafficSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapRoadTrafficSearchResponse");
-            }
-        
-            AMapRoadTrafficSearchResponse* __this__;
-            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
-                __this__ = [[AMapRoadTrafficSearchResponse alloc] init];
-            } else {
-                __this__ = [AMapRoadTrafficSearchResponse alloc];
             }
         
             methodResult(__this__);
@@ -2611,166 +2636,6 @@ extern BOOL enableLog;
                     __this__ = [[AMapPOIAroundSearchRequest alloc] init];
                 } else {
                     __this__ = [AMapPOIAroundSearchRequest alloc];
-                }
-                [resultList addObject:__this__];
-            }
-        
-            methodResult(resultList);
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::create_batchAMapPOIPolygonSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
-        
-            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
-            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
-            for (NSUInteger __i__ = 0; __i__ < [length integerValue]; __i__++) {
-                AMapPOIPolygonSearchRequest* __this__;
-                if ([init boolValue]) {
-                    __this__ = [[AMapPOIPolygonSearchRequest alloc] init];
-                } else {
-                    __this__ = [AMapPOIPolygonSearchRequest alloc];
-                }
-                [resultList addObject:__this__];
-            }
-        
-            methodResult(resultList);
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::create_batchAMapPOISearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
-        
-            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
-            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
-            for (NSUInteger __i__ = 0; __i__ < [length integerValue]; __i__++) {
-                AMapPOISearchResponse* __this__;
-                if ([init boolValue]) {
-                    __this__ = [[AMapPOISearchResponse alloc] init];
-                } else {
-                    __this__ = [AMapPOISearchResponse alloc];
-                }
-                [resultList addObject:__this__];
-            }
-        
-            methodResult(resultList);
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::create_batchAMapRoutePOISearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
-        
-            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
-            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
-            for (NSUInteger __i__ = 0; __i__ < [length integerValue]; __i__++) {
-                AMapRoutePOISearchRequest* __this__;
-                if ([init boolValue]) {
-                    __this__ = [[AMapRoutePOISearchRequest alloc] init];
-                } else {
-                    __this__ = [AMapRoutePOISearchRequest alloc];
-                }
-                [resultList addObject:__this__];
-            }
-        
-            methodResult(resultList);
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::create_batchAMapRoutePOISearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
-        
-            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
-            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
-            for (NSUInteger __i__ = 0; __i__ < [length integerValue]; __i__++) {
-                AMapRoutePOISearchResponse* __this__;
-                if ([init boolValue]) {
-                    __this__ = [[AMapRoutePOISearchResponse alloc] init];
-                } else {
-                    __this__ = [AMapRoutePOISearchResponse alloc];
-                }
-                [resultList addObject:__this__];
-            }
-        
-            methodResult(resultList);
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::create_batchAMapInputTipsSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
-        
-            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
-            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
-            for (NSUInteger __i__ = 0; __i__ < [length integerValue]; __i__++) {
-                AMapInputTipsSearchRequest* __this__;
-                if ([init boolValue]) {
-                    __this__ = [[AMapInputTipsSearchRequest alloc] init];
-                } else {
-                    __this__ = [AMapInputTipsSearchRequest alloc];
-                }
-                [resultList addObject:__this__];
-            }
-        
-            methodResult(resultList);
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::create_batchAMapInputTipsSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
-        
-            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
-            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
-            for (NSUInteger __i__ = 0; __i__ < [length integerValue]; __i__++) {
-                AMapInputTipsSearchResponse* __this__;
-                if ([init boolValue]) {
-                    __this__ = [[AMapInputTipsSearchResponse alloc] init];
-                } else {
-                    __this__ = [AMapInputTipsSearchResponse alloc];
-                }
-                [resultList addObject:__this__];
-            }
-        
-            methodResult(resultList);
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::create_batchAMapGeocodeSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
-        
-            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
-            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
-            for (NSUInteger __i__ = 0; __i__ < [length integerValue]; __i__++) {
-                AMapGeocodeSearchRequest* __this__;
-                if ([init boolValue]) {
-                    __this__ = [[AMapGeocodeSearchRequest alloc] init];
-                } else {
-                    __this__ = [AMapGeocodeSearchRequest alloc];
-                }
-                [resultList addObject:__this__];
-            }
-        
-            methodResult(resultList);
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::create_batchAMapGeocodeSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
-        
-            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
-            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
-            for (NSUInteger __i__ = 0; __i__ < [length integerValue]; __i__++) {
-                AMapGeocodeSearchResponse* __this__;
-                if ([init boolValue]) {
-                    __this__ = [[AMapGeocodeSearchResponse alloc] init];
-                } else {
-                    __this__ = [AMapGeocodeSearchResponse alloc];
                 }
                 [resultList addObject:__this__];
             }

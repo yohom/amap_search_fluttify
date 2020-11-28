@@ -77,7 +77,7 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
                 }
           
                 // handle the native call
-                var1?.onUserInfoCleared(args['var1']);
+                await var1?.onUserInfoCleared(args['var1']);
                 break;
               case 'Callback::com.amap.api.services.nearby.NearbySearch.NearbyListener::onNearbyInfoSearched':
                 // print log
@@ -86,7 +86,7 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
                 }
           
                 // handle the native call
-                var1?.onNearbyInfoSearched(AmapSearchFluttifyAndroidAs(args['var1']), args['var2']);
+                await var1?.onNearbyInfoSearched(AmapSearchFluttifyAndroidAs(args['var1']), args['var2']);
                 break;
               case 'Callback::com.amap.api.services.nearby.NearbySearch.NearbyListener::onNearbyInfoUploaded':
                 // print log
@@ -95,7 +95,7 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
                 }
           
                 // handle the native call
-                var1?.onNearbyInfoUploaded(args['var1']);
+                await var1?.onNearbyInfoUploaded(args['var1']);
                 break;
               default:
                 throw MissingPluginException('方法${methodCall.method}未实现');
@@ -134,7 +134,7 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
                 }
           
                 // handle the native call
-                var1?.onUserInfoCleared(args['var1']);
+                await var1?.onUserInfoCleared(args['var1']);
                 break;
               case 'Callback::com.amap.api.services.nearby.NearbySearch.NearbyListener::onNearbyInfoSearched':
                 // print log
@@ -143,7 +143,7 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
                 }
           
                 // handle the native call
-                var1?.onNearbyInfoSearched(AmapSearchFluttifyAndroidAs(args['var1']), args['var2']);
+                await var1?.onNearbyInfoSearched(AmapSearchFluttifyAndroidAs(args['var1']), args['var2']);
                 break;
               case 'Callback::com.amap.api.services.nearby.NearbySearch.NearbyListener::onNearbyInfoUploaded':
                 // print log
@@ -152,7 +152,7 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
                 }
           
                 // handle the native call
-                var1?.onNearbyInfoUploaded(args['var1']);
+                await var1?.onNearbyInfoUploaded(args['var1']);
                 break;
               default:
                 throw MissingPluginException('方法${methodCall.method}未实现');
@@ -225,7 +225,7 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
                 }
           
                 // handle the native call
-                var1?.OnUploadInfoCallback();
+                await var1?.OnUploadInfoCallback();
                 break;
               default:
                 throw MissingPluginException('方法${methodCall.method}未实现');

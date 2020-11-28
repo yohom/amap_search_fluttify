@@ -54,6 +54,40 @@ class com_amap_api_services_route_Path extends java_lang_Object with android_os_
 
   //region methods
   
+  Future<List<com_amap_api_services_core_LatLonPoint>> getPolyline() async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: com.amap.api.services.route.Path@$refId::getPolyline([])');
+    }
+  
+    // invoke native method
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.Path::getPolyline', {"__this__": this});
+  
+  
+    // handle native call
+  
+  
+    return (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(it))?.toList();
+  }
+  
+  
+  Future<void> setPolyline(List<com_amap_api_services_core_LatLonPoint> var1) async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: com.amap.api.services.route.Path@$refId::setPolyline([])');
+    }
+  
+    // invoke native method
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.Path::setPolyline', {"var1": var1, "__this__": this});
+  
+  
+    // handle native call
+  
+  
+    return __result__;
+  }
+  
+  
   Future<double> getDistance() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -139,6 +173,28 @@ extension com_amap_api_services_route_Path_Batch on List<com_amap_api_services_r
   //endregion
 
   //region methods
+  
+  Future<List<List<com_amap_api_services_core_LatLonPoint>>> getPolyline_batch() async {
+    assert(true);
+  
+    // invoke native method
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.Path::getPolyline_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+  
+  
+    return (resultBatch as List).map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(it))?.toList()).cast<List<com_amap_api_services_core_LatLonPoint>>().toList();
+  }
+  
+  
+  Future<List<void>> setPolyline_batch(List<List<com_amap_api_services_core_LatLonPoint>> var1) async {
+    assert(true);
+  
+    // invoke native method
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.Path::setPolyline_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+  
+  
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
+  }
+  
   
   Future<List<double>> getDistance_batch() async {
     assert(true);

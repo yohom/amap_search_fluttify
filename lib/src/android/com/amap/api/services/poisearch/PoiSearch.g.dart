@@ -21,6 +21,8 @@ class com_amap_api_services_poisearch_PoiSearch extends java_lang_Object  {
 
   static final String ENGLISH = "en";
   static final String CHINESE = "zh-CN";
+  static final String EXTENSIONS_ALL = "all";
+  static final String EXTENSIONS_BASE = "base";
   //endregion
 
   //region creators
@@ -78,7 +80,7 @@ class com_amap_api_services_poisearch_PoiSearch extends java_lang_Object  {
                 }
           
                 // handle the native call
-                var1?.onPoiSearched(AmapSearchFluttifyAndroidAs(args['var1']), args['var2']);
+                await var1?.onPoiSearched(AmapSearchFluttifyAndroidAs(args['var1']), args['var2']);
                 break;
               case 'Callback::com.amap.api.services.poisearch.PoiSearch.OnPoiSearchListener::onPoiItemSearched':
                 // print log
@@ -87,7 +89,7 @@ class com_amap_api_services_poisearch_PoiSearch extends java_lang_Object  {
                 }
           
                 // handle the native call
-                var1?.onPoiItemSearched(AmapSearchFluttifyAndroidAs(args['var1']), args['var2']);
+                await var1?.onPoiItemSearched(AmapSearchFluttifyAndroidAs(args['var1']), args['var2']);
                 break;
               default:
                 throw MissingPluginException('方法${methodCall.method}未实现');

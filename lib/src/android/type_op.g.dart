@@ -21,25 +21,7 @@ Future<bool> AmapSearchFluttifyAndroidIs<T>(dynamic __this__) async {
   if (RegExp(r'^(List<)?(String|int|double)(>)?|(Map<String,(String|int|double)>)$').hasMatch(typeName)) {
     return __this__ is T;
   }
-  else if (T == com_amap_api_services_traffic_TrafficStatusInfo) {
-    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_traffic_TrafficStatusInfo', {'__this__': __this__});
-    return result;
-  } else if (T == com_amap_api_services_traffic_TrafficStatusResult) {
-    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_traffic_TrafficStatusResult', {'__this__': __this__});
-    return result;
-  } else if (T == com_amap_api_services_traffic_TrafficSearch) {
-    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_traffic_TrafficSearch', {'__this__': __this__});
-    return result;
-  } else if (T == com_amap_api_services_traffic_RoadTrafficQuery) {
-    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_traffic_RoadTrafficQuery', {'__this__': __this__});
-    return result;
-  } else if (T == com_amap_api_services_traffic_CircleTrafficQuery) {
-    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_traffic_CircleTrafficQuery', {'__this__': __this__});
-    return result;
-  } else if (T == com_amap_api_services_traffic_TrafficStatusEvaluation) {
-    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_traffic_TrafficStatusEvaluation', {'__this__': __this__});
-    return result;
-  } else if (T == com_amap_api_services_busline_BusLineItem) {
+  else if (T == com_amap_api_services_busline_BusLineItem) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_busline_BusLineItem', {'__this__': __this__});
     return result;
   } else if (T == com_amap_api_services_busline_BusStationResult) {
@@ -432,6 +414,12 @@ Future<bool> AmapSearchFluttifyAndroidIs<T>(dynamic __this__) async {
   } else if (T == android_view_SurfaceView) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_view_SurfaceView', {'__this__': __this__});
     return result;
+  } else if (T == android_view_SurfaceHolder) {
+    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_view_SurfaceHolder', {'__this__': __this__});
+    return result;
+  } else if (T == android_opengl_GLSurfaceView) {
+    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_opengl_GLSurfaceView', {'__this__': __this__});
+    return result;
   } else if (T == android_view_ViewGroup) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_view_ViewGroup', {'__this__': __this__});
     return result;
@@ -494,19 +482,7 @@ T AmapSearchFluttifyAndroidAs<T>(dynamic __this__) {
   } else if (RegExp(r'^(List<)?(String|int|double)(>)?|(Map<String,(String|int|double)>)$').hasMatch(typeName)) {
     return __this__ as T;
   }
-  else if (T == com_amap_api_services_traffic_TrafficStatusInfo) {
-    return (com_amap_api_services_traffic_TrafficStatusInfo()..refId = (__this__ as Ref).refId) as T;
-  } else if (T == com_amap_api_services_traffic_TrafficStatusResult) {
-    return (com_amap_api_services_traffic_TrafficStatusResult()..refId = (__this__ as Ref).refId) as T;
-  } else if (T == com_amap_api_services_traffic_TrafficSearch) {
-    return (com_amap_api_services_traffic_TrafficSearch()..refId = (__this__ as Ref).refId) as T;
-  } else if (T == com_amap_api_services_traffic_RoadTrafficQuery) {
-    return (com_amap_api_services_traffic_RoadTrafficQuery()..refId = (__this__ as Ref).refId) as T;
-  } else if (T == com_amap_api_services_traffic_CircleTrafficQuery) {
-    return (com_amap_api_services_traffic_CircleTrafficQuery()..refId = (__this__ as Ref).refId) as T;
-  } else if (T == com_amap_api_services_traffic_TrafficStatusEvaluation) {
-    return (com_amap_api_services_traffic_TrafficStatusEvaluation()..refId = (__this__ as Ref).refId) as T;
-  } else if (T == com_amap_api_services_busline_BusLineItem) {
+  else if (T == com_amap_api_services_busline_BusLineItem) {
     return (com_amap_api_services_busline_BusLineItem()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_amap_api_services_busline_BusStationResult) {
     return (com_amap_api_services_busline_BusStationResult()..refId = (__this__ as Ref).refId) as T;
@@ -768,6 +744,10 @@ T AmapSearchFluttifyAndroidAs<T>(dynamic __this__) {
     return (android_view_View()..refId = (__this__ as Ref).refId) as T;
   } else if (T == android_view_SurfaceView) {
     return (android_view_SurfaceView()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == android_view_SurfaceHolder) {
+    return (android_view_SurfaceHolder.subInstance()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == android_opengl_GLSurfaceView) {
+    return (android_opengl_GLSurfaceView()..refId = (__this__ as Ref).refId) as T;
   } else if (T == android_view_ViewGroup) {
     return (android_view_ViewGroup()..refId = (__this__ as Ref).refId) as T;
   } else if (T == android_graphics_Point) {

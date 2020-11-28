@@ -26,19 +26,19 @@ mixin com_amap_api_services_interfaces_IBusStationSearch on java_lang_Object {
 
   
 
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<com_amap_api_services_busline_BusStationResult> searchBusStation() {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> setOnBusStationSearchListener(com_amap_api_services_busline_BusStationSearch_OnBusStationSearchListener var1) {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> searchBusStationAsyn() {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> setQuery(com_amap_api_services_busline_BusStationQuery var1) {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<com_amap_api_services_busline_BusStationQuery> getQuery() {}
   
 }

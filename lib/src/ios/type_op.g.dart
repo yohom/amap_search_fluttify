@@ -123,18 +123,6 @@ Future<bool> AmapSearchFluttifyIOSIs<T>(dynamic __this__) async {
   } else if (T == AMapWeatherSearchResponse) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapWeatherSearchResponse', {'__this__': __this__});
     return result;
-  } else if (T == AMapRoadTrafficSearchBaseRequest) {
-    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapRoadTrafficSearchBaseRequest', {'__this__': __this__});
-    return result;
-  } else if (T == AMapRoadTrafficSearchRequest) {
-    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapRoadTrafficSearchRequest', {'__this__': __this__});
-    return result;
-  } else if (T == AMapRoadTrafficCircleSearchRequest) {
-    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapRoadTrafficCircleSearchRequest', {'__this__': __this__});
-    return result;
-  } else if (T == AMapRoadTrafficSearchResponse) {
-    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapRoadTrafficSearchResponse', {'__this__': __this__});
-    return result;
   } else if (T == AMapNearbySearchRequest) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapNearbySearchRequest', {'__this__': __this__});
     return result;
@@ -381,6 +369,9 @@ Future<bool> AmapSearchFluttifyIOSIs<T>(dynamic __this__) async {
   } else if (T == NSData) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfNSData', {'__this__': __this__});
     return result;
+  } else if (T == NSDate) {
+    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfNSDate', {'__this__': __this__});
+    return result;
   } else if (T == NSOperation) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfNSOperation', {'__this__': __this__});
     return result;
@@ -469,14 +460,6 @@ T AmapSearchFluttifyIOSAs<T>(dynamic __this__) {
     return (AMapWeatherSearchRequest()..refId = (__this__ as Ref).refId) as T;
   } else if (T == AMapWeatherSearchResponse) {
     return (AMapWeatherSearchResponse()..refId = (__this__ as Ref).refId) as T;
-  } else if (T == AMapRoadTrafficSearchBaseRequest) {
-    return (AMapRoadTrafficSearchBaseRequest()..refId = (__this__ as Ref).refId) as T;
-  } else if (T == AMapRoadTrafficSearchRequest) {
-    return (AMapRoadTrafficSearchRequest()..refId = (__this__ as Ref).refId) as T;
-  } else if (T == AMapRoadTrafficCircleSearchRequest) {
-    return (AMapRoadTrafficCircleSearchRequest()..refId = (__this__ as Ref).refId) as T;
-  } else if (T == AMapRoadTrafficSearchResponse) {
-    return (AMapRoadTrafficSearchResponse()..refId = (__this__ as Ref).refId) as T;
   } else if (T == AMapNearbySearchRequest) {
     return (AMapNearbySearchRequest()..refId = (__this__ as Ref).refId) as T;
   } else if (T == AMapNearbySearchResponse) {
@@ -641,6 +624,8 @@ T AmapSearchFluttifyIOSAs<T>(dynamic __this__) {
     return (UIColor()..refId = (__this__ as Ref).refId) as T;
   } else if (T == NSData) {
     return (NSData()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == NSDate) {
+    return (NSDate()..refId = (__this__ as Ref).refId) as T;
   } else if (T == NSOperation) {
     return (NSOperation()..refId = (__this__ as Ref).refId) as T;
   }

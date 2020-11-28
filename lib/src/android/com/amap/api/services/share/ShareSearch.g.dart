@@ -100,7 +100,7 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
                 }
           
                 // handle the native call
-                var1?.onPoiShareUrlSearched(args['var1'], args['var2']);
+                await var1?.onPoiShareUrlSearched(args['var1'], args['var2']);
                 break;
               case 'Callback::com.amap.api.services.share.ShareSearch.OnShareSearchListener::onLocationShareUrlSearched':
                 // print log
@@ -109,7 +109,7 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
                 }
           
                 // handle the native call
-                var1?.onLocationShareUrlSearched(args['var1'], args['var2']);
+                await var1?.onLocationShareUrlSearched(args['var1'], args['var2']);
                 break;
               case 'Callback::com.amap.api.services.share.ShareSearch.OnShareSearchListener::onNaviShareUrlSearched':
                 // print log
@@ -118,7 +118,7 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
                 }
           
                 // handle the native call
-                var1?.onNaviShareUrlSearched(args['var1'], args['var2']);
+                await var1?.onNaviShareUrlSearched(args['var1'], args['var2']);
                 break;
               case 'Callback::com.amap.api.services.share.ShareSearch.OnShareSearchListener::onBusRouteShareUrlSearched':
                 // print log
@@ -127,7 +127,7 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
                 }
           
                 // handle the native call
-                var1?.onBusRouteShareUrlSearched(args['var1'], args['var2']);
+                await var1?.onBusRouteShareUrlSearched(args['var1'], args['var2']);
                 break;
               case 'Callback::com.amap.api.services.share.ShareSearch.OnShareSearchListener::onWalkRouteShareUrlSearched':
                 // print log
@@ -136,7 +136,7 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
                 }
           
                 // handle the native call
-                var1?.onWalkRouteShareUrlSearched(args['var1'], args['var2']);
+                await var1?.onWalkRouteShareUrlSearched(args['var1'], args['var2']);
                 break;
               case 'Callback::com.amap.api.services.share.ShareSearch.OnShareSearchListener::onDrivingRouteShareUrlSearched':
                 // print log
@@ -145,7 +145,7 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
                 }
           
                 // handle the native call
-                var1?.onDrivingRouteShareUrlSearched(args['var1'], args['var2']);
+                await var1?.onDrivingRouteShareUrlSearched(args['var1'], args['var2']);
                 break;
               default:
                 throw MissingPluginException('方法${methodCall.method}未实现');
