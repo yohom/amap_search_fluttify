@@ -85,6 +85,11 @@ class AMapPath extends AMapSearchObject with NSCoding, NSCopying {
     return __result__;
   }
   
+  Future<String> get_polyline() async {
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapPath::get_polyline", {'__this__': this});
+    return __result__;
+  }
+  
   //endregion
 
   //region setters
@@ -132,6 +137,12 @@ class AMapPath extends AMapSearchObject with NSCoding, NSCopying {
   
   Future<void> set_restriction(int restriction) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapPath::set_restriction', <String, dynamic>{'__this__': this, "restriction": restriction});
+  
+  
+  }
+  
+  Future<void> set_polyline(String polyline) async {
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapPath::set_polyline', <String, dynamic>{'__this__': this, "polyline": polyline});
   
   
   }
@@ -190,6 +201,11 @@ extension AMapPath_Batch on List<AMapPath> {
     return (resultBatch as List)?.map((__result__) => __result__)?.cast<int>()?.toList();
   }
   
+  Future<List<String>> get_polyline_batch() async {
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapPath::get_polyline_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
+  }
+  
   //endregion
 
   //region setters
@@ -237,6 +253,12 @@ extension AMapPath_Batch on List<AMapPath> {
   
   Future<void> set_restriction_batch(List<int> restriction) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapPath::set_restriction_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "restriction": restriction[__i__]}]);
+  
+  
+  }
+  
+  Future<void> set_polyline_batch(List<String> polyline) async {
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapPath::set_polyline_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "polyline": polyline[__i__]}]);
   
   
   }

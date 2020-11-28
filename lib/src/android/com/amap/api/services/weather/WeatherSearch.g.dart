@@ -128,7 +128,7 @@ class com_amap_api_services_weather_WeatherSearch extends java_lang_Object  {
                 }
           
                 // handle the native call
-                var1?.onWeatherLiveSearched(AmapSearchFluttifyAndroidAs(args['var1']), args['var2']);
+                await var1?.onWeatherLiveSearched(AmapSearchFluttifyAndroidAs(args['var1']), args['var2']);
                 break;
               case 'Callback::com.amap.api.services.weather.WeatherSearch.OnWeatherSearchListener::onWeatherForecastSearched':
                 // print log
@@ -137,7 +137,7 @@ class com_amap_api_services_weather_WeatherSearch extends java_lang_Object  {
                 }
           
                 // handle the native call
-                var1?.onWeatherForecastSearched(AmapSearchFluttifyAndroidAs(args['var1']), args['var2']);
+                await var1?.onWeatherForecastSearched(AmapSearchFluttifyAndroidAs(args['var1']), args['var2']);
                 break;
               default:
                 throw MissingPluginException('方法${methodCall.method}未实现');

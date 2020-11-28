@@ -110,6 +110,11 @@ class AMapDrivingRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCo
     return __result__;
   }
   
+  Future<AMapDrivingRouteExcludeType> get_exclude() async {
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapDrivingRouteSearchRequest::get_exclude", {'__this__': this});
+    return (__result__ as int).toAMapDrivingRouteExcludeType();
+  }
+  
   //endregion
 
   //region setters
@@ -187,6 +192,12 @@ class AMapDrivingRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCo
   
   Future<void> set_cartype(int cartype) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapDrivingRouteSearchRequest::set_cartype', <String, dynamic>{'__this__': this, "cartype": cartype});
+  
+  
+  }
+  
+  Future<void> set_exclude(AMapDrivingRouteExcludeType exclude) async {
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapDrivingRouteSearchRequest::set_exclude', <String, dynamic>{'__this__': this, "exclude": exclude.toValue()});
   
   
   }
@@ -270,6 +281,11 @@ extension AMapDrivingRouteSearchRequest_Batch on List<AMapDrivingRouteSearchRequ
     return (resultBatch as List)?.map((__result__) => __result__)?.cast<int>()?.toList();
   }
   
+  Future<List<AMapDrivingRouteExcludeType>> get_exclude_batch() async {
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapDrivingRouteSearchRequest::get_exclude_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    return (resultBatch as List)?.map((__result__) => (__result__ as int).toAMapDrivingRouteExcludeType())?.cast<AMapDrivingRouteExcludeType>()?.toList();
+  }
+  
   //endregion
 
   //region setters
@@ -347,6 +363,12 @@ extension AMapDrivingRouteSearchRequest_Batch on List<AMapDrivingRouteSearchRequ
   
   Future<void> set_cartype_batch(List<int> cartype) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapDrivingRouteSearchRequest::set_cartype_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "cartype": cartype[__i__]}]);
+  
+  
+  }
+  
+  Future<void> set_exclude_batch(List<AMapDrivingRouteExcludeType> exclude) async {
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapDrivingRouteSearchRequest::set_exclude_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "exclude": exclude[__i__].toValue()}]);
   
   
   }

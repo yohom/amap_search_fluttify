@@ -4,11 +4,12 @@
 
 #import "SubHandler6.h"
 #import "FluttifyMessageCodec.h"
+#import <AMapSearchKit/AMapSearchKit.h>
 
 // Dart端一次方法调用所存在的栈, 只有当MethodChannel传递参数受限时, 再启用这个容器
 extern NSMutableDictionary<NSString*, NSObject*>* STACK;
 // Dart端随机存取对象的容器
-extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
+extern NSMutableDictionary<NSString*, NSObject*>* HEAP;
 // 日志打印开关
 extern BOOL enableLog;
 
@@ -16,6 +17,153 @@ extern BOOL enableLog;
 - (NSDictionary<NSString*, Handler>*) getSubHandler6 {
     __weak __typeof(self)weakSelf = self;
     return @{
+        @"AMapFutureRouteSearchRequest::set_interval": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapFutureRouteSearchRequest::set_interval");
+            }
+        
+            // args
+            // jsonable arg
+            NSInteger interval = [args[@"interval"] longValue];
+        
+            // ref
+            AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            ref.interval = interval;
+            methodResult(@"success");
+        },
+        
+        @"AMapFutureRouteSearchRequest::set_timeCount": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapFutureRouteSearchRequest::set_timeCount");
+            }
+        
+            // args
+            // jsonable arg
+            NSInteger timeCount = [args[@"timeCount"] longValue];
+        
+            // ref
+            AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            ref.timeCount = timeCount;
+            methodResult(@"success");
+        },
+        
+        @"AMapFutureRouteSearchRequest::set_strategy": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapFutureRouteSearchRequest::set_strategy");
+            }
+        
+            // args
+            // jsonable arg
+            NSInteger strategy = [args[@"strategy"] longValue];
+        
+            // ref
+            AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            ref.strategy = strategy;
+            methodResult(@"success");
+        },
+        
+        @"AMapFutureRouteSearchRequest::set_originId": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapFutureRouteSearchRequest::set_originId");
+            }
+        
+            // args
+            // jsonable arg
+            NSString* originId = (NSString*) args[@"originId"];
+        
+            // ref
+            AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            ref.originId = originId;
+            methodResult(@"success");
+        },
+        
+        @"AMapFutureRouteSearchRequest::set_destinationId": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapFutureRouteSearchRequest::set_destinationId");
+            }
+        
+            // args
+            // jsonable arg
+            NSString* destinationId = (NSString*) args[@"destinationId"];
+        
+            // ref
+            AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            ref.destinationId = destinationId;
+            methodResult(@"success");
+        },
+        
+        @"AMapFutureRouteSearchRequest::set_origintype": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapFutureRouteSearchRequest::set_origintype");
+            }
+        
+            // args
+            // jsonable arg
+            NSString* origintype = (NSString*) args[@"origintype"];
+        
+            // ref
+            AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            ref.origintype = origintype;
+            methodResult(@"success");
+        },
+        
+        @"AMapFutureRouteSearchRequest::set_destinationtype": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapFutureRouteSearchRequest::set_destinationtype");
+            }
+        
+            // args
+            // jsonable arg
+            NSString* destinationtype = (NSString*) args[@"destinationtype"];
+        
+            // ref
+            AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            ref.destinationtype = destinationtype;
+            methodResult(@"success");
+        },
+        
         @"AMapFutureRouteSearchRequest::set_parentId": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // print log
             if (enableLog) {
@@ -2053,6 +2201,27 @@ extern BOOL enableLog;
             methodResult(@"success");
         },
         
+        @"AMapAddressComponent::set_countryCode": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapAddressComponent::set_countryCode");
+            }
+        
+            // args
+            // jsonable arg
+            NSString* countryCode = (NSString*) args[@"countryCode"];
+        
+            // ref
+            AMapAddressComponent* ref = (AMapAddressComponent*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            ref.countryCode = countryCode;
+            methodResult(@"success");
+        },
+        
         @"AMapAddressComponent::set_province": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // print log
             if (enableLog) {
@@ -2638,6 +2807,48 @@ extern BOOL enableLog;
             }
         
             ref.level = level;
+            methodResult(@"success");
+        },
+        
+        @"AMapGeocode::set_country": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapGeocode::set_country");
+            }
+        
+            // args
+            // jsonable arg
+            NSString* country = (NSString*) args[@"country"];
+        
+            // ref
+            AMapGeocode* ref = (AMapGeocode*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            ref.country = country;
+            methodResult(@"success");
+        },
+        
+        @"AMapGeocode::set_postcode": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapGeocode::set_postcode");
+            }
+        
+            // args
+            // jsonable arg
+            NSString* postcode = (NSString*) args[@"postcode"];
+        
+            // ref
+            AMapGeocode* ref = (AMapGeocode*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            ref.postcode = postcode;
             methodResult(@"success");
         },
         
@@ -3859,6 +4070,27 @@ extern BOOL enableLog;
             methodResult(@"success");
         },
         
+        @"AMapPath::set_polyline": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapPath::set_polyline");
+            }
+        
+            // args
+            // jsonable arg
+            NSString* polyline = (NSString*) args[@"polyline"];
+        
+            // ref
+            AMapPath* ref = (AMapPath*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            ref.polyline = polyline;
+            methodResult(@"success");
+        },
+        
         @"AMapFutureTimeInfoElement::set_duration": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // print log
             if (enableLog) {
@@ -3982,237 +4214,6 @@ extern BOOL enableLog;
             }
         
             ref.elements = elements;
-            methodResult(@"success");
-        },
-        
-        @"AMapWalking::set_origin": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapWalking::set_origin");
-            }
-        
-            // args
-            // ref arg
-            AMapGeoPoint* origin = (AMapGeoPoint*) (args[@"origin"] == [NSNull null] ? nil : args[@"origin"]);
-        
-            // ref
-            AMapWalking* ref = (AMapWalking*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            ref.origin = origin;
-            methodResult(@"success");
-        },
-        
-        @"AMapWalking::set_destination": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapWalking::set_destination");
-            }
-        
-            // args
-            // ref arg
-            AMapGeoPoint* destination = (AMapGeoPoint*) (args[@"destination"] == [NSNull null] ? nil : args[@"destination"]);
-        
-            // ref
-            AMapWalking* ref = (AMapWalking*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            ref.destination = destination;
-            methodResult(@"success");
-        },
-        
-        @"AMapWalking::set_distance": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapWalking::set_distance");
-            }
-        
-            // args
-            // jsonable arg
-            NSInteger distance = [args[@"distance"] longValue];
-        
-            // ref
-            AMapWalking* ref = (AMapWalking*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            ref.distance = distance;
-            methodResult(@"success");
-        },
-        
-        @"AMapWalking::set_duration": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapWalking::set_duration");
-            }
-        
-            // args
-            // jsonable arg
-            NSInteger duration = [args[@"duration"] longValue];
-        
-            // ref
-            AMapWalking* ref = (AMapWalking*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            ref.duration = duration;
-            methodResult(@"success");
-        },
-        
-        @"AMapWalking::set_steps": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapWalking::set_steps");
-            }
-        
-            // args
-            // list arg
-            NSArray<AMapStep*>* steps = (NSArray<AMapStep*>*) args[@"steps"];
-        
-            // ref
-            AMapWalking* ref = (AMapWalking*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            ref.steps = steps;
-            methodResult(@"success");
-        },
-        
-        @"AMapTaxi::set_origin": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapTaxi::set_origin");
-            }
-        
-            // args
-            // ref arg
-            AMapGeoPoint* origin = (AMapGeoPoint*) (args[@"origin"] == [NSNull null] ? nil : args[@"origin"]);
-        
-            // ref
-            AMapTaxi* ref = (AMapTaxi*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            ref.origin = origin;
-            methodResult(@"success");
-        },
-        
-        @"AMapTaxi::set_destination": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapTaxi::set_destination");
-            }
-        
-            // args
-            // ref arg
-            AMapGeoPoint* destination = (AMapGeoPoint*) (args[@"destination"] == [NSNull null] ? nil : args[@"destination"]);
-        
-            // ref
-            AMapTaxi* ref = (AMapTaxi*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            ref.destination = destination;
-            methodResult(@"success");
-        },
-        
-        @"AMapTaxi::set_distance": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapTaxi::set_distance");
-            }
-        
-            // args
-            // jsonable arg
-            NSInteger distance = [args[@"distance"] longValue];
-        
-            // ref
-            AMapTaxi* ref = (AMapTaxi*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            ref.distance = distance;
-            methodResult(@"success");
-        },
-        
-        @"AMapTaxi::set_duration": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapTaxi::set_duration");
-            }
-        
-            // args
-            // jsonable arg
-            NSInteger duration = [args[@"duration"] longValue];
-        
-            // ref
-            AMapTaxi* ref = (AMapTaxi*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            ref.duration = duration;
-            methodResult(@"success");
-        },
-        
-        @"AMapTaxi::set_sname": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapTaxi::set_sname");
-            }
-        
-            // args
-            // jsonable arg
-            NSString* sname = (NSString*) args[@"sname"];
-        
-            // ref
-            AMapTaxi* ref = (AMapTaxi*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            ref.sname = sname;
-            methodResult(@"success");
-        },
-        
-        @"AMapTaxi::set_tname": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapTaxi::set_tname");
-            }
-        
-            // args
-            // jsonable arg
-            NSString* tname = (NSString*) args[@"tname"];
-        
-            // ref
-            AMapTaxi* ref = (AMapTaxi*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            ref.tname = tname;
             methodResult(@"success");
         },
         

@@ -26,25 +26,25 @@ mixin com_amap_api_services_interfaces_IInputtipsSearch on java_lang_Object {
 
   
 
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<com_amap_api_services_help_InputtipsQuery> getQuery() {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> setQuery(com_amap_api_services_help_InputtipsQuery var1) {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> setInputtipsListener(com_amap_api_services_help_Inputtips_InputtipsListener var1) {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> requestInputtipsAsyn() {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<List<com_amap_api_services_help_Tip>> requestInputtips() {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> requestInputtips__String__String(String var1, String var2) {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> requestInputtips__String__String__String(String var1, String var2, String var3) {}
   
 }

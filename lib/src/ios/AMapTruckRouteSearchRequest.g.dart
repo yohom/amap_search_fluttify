@@ -115,6 +115,11 @@ class AMapTruckRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCodi
     return __result__;
   }
   
+  Future<bool> get_requireExtension() async {
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapTruckRouteSearchRequest::get_requireExtension", {'__this__': this});
+    return __result__;
+  }
+  
   //endregion
 
   //region setters
@@ -198,6 +203,12 @@ class AMapTruckRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCodi
   
   Future<void> set_axis(int axis) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapTruckRouteSearchRequest::set_axis', <String, dynamic>{'__this__': this, "axis": axis});
+  
+  
+  }
+  
+  Future<void> set_requireExtension(bool requireExtension) async {
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapTruckRouteSearchRequest::set_requireExtension', <String, dynamic>{'__this__': this, "requireExtension": requireExtension});
   
   
   }
@@ -286,6 +297,11 @@ extension AMapTruckRouteSearchRequest_Batch on List<AMapTruckRouteSearchRequest>
     return (resultBatch as List)?.map((__result__) => __result__)?.cast<int>()?.toList();
   }
   
+  Future<List<bool>> get_requireExtension_batch() async {
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTruckRouteSearchRequest::get_requireExtension_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<bool>()?.toList();
+  }
+  
   //endregion
 
   //region setters
@@ -369,6 +385,12 @@ extension AMapTruckRouteSearchRequest_Batch on List<AMapTruckRouteSearchRequest>
   
   Future<void> set_axis_batch(List<int> axis) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapTruckRouteSearchRequest::set_axis_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "axis": axis[__i__]}]);
+  
+  
+  }
+  
+  Future<void> set_requireExtension_batch(List<bool> requireExtension) async {
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapTruckRouteSearchRequest::set_requireExtension_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "requireExtension": requireExtension[__i__]}]);
   
   
   }

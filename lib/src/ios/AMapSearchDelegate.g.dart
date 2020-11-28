@@ -26,55 +26,52 @@ mixin AMapSearchDelegate on NSObject {
 
   
 
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> AMapSearchRequest_didFailWithError(dynamic request, NSError error) {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> onPOISearchDone_response(AMapPOISearchBaseRequest request, AMapPOISearchResponse response) {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> onRoutePOISearchDone_response(AMapRoutePOISearchRequest request, AMapRoutePOISearchResponse response) {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> onGeocodeSearchDone_response(AMapGeocodeSearchRequest request, AMapGeocodeSearchResponse response) {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> onReGeocodeSearchDone_response(AMapReGeocodeSearchRequest request, AMapReGeocodeSearchResponse response) {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> onInputTipsSearchDone_response(AMapInputTipsSearchRequest request, AMapInputTipsSearchResponse response) {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> onBusStopSearchDone_response(AMapBusStopSearchRequest request, AMapBusStopSearchResponse response) {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> onBusLineSearchDone_response(AMapBusLineBaseSearchRequest request, AMapBusLineSearchResponse response) {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> onDistrictSearchDone_response(AMapDistrictSearchRequest request, AMapDistrictSearchResponse response) {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> onRouteSearchDone_response(AMapRouteSearchBaseRequest request, AMapRouteSearchResponse response) {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> onFutureRouteSearchDone_response(AMapRouteSearchBaseRequest request, AMapFutureRouteSearchResponse response) {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> onDistanceSearchDone_response(AMapDistanceSearchRequest request, AMapDistanceSearchResponse response) {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> onWeatherSearchDone_response(AMapWeatherSearchRequest request, AMapWeatherSearchResponse response) {}
   
-  @mustCallSuper
-  Future<void> onRoadTrafficSearchDone_response(AMapRoadTrafficSearchBaseRequest request, AMapRoadTrafficSearchResponse response) {}
-  
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> onNearbySearchDone_response(AMapNearbySearchRequest request, AMapNearbySearchResponse response) {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> onCloudSearchDone_response(AMapCloudSearchBaseRequest request, AMapCloudPOISearchResponse response) {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> onShareSearchDone_response(AMapShareSearchBaseRequest request, AMapShareSearchResponse response) {}
   
 }

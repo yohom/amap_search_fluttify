@@ -21,6 +21,8 @@ class com_amap_api_services_geocoder_GeocodeSearch extends java_lang_Object  {
 
   static final String GPS = "gps";
   static final String AMAP = "autonavi";
+  static final String EXTENSIONS_ALL = "all";
+  static final String EXTENSIONS_BASE = "base";
   //endregion
 
   //region creators
@@ -112,7 +114,7 @@ class com_amap_api_services_geocoder_GeocodeSearch extends java_lang_Object  {
                 }
           
                 // handle the native call
-                var1?.onRegeocodeSearched(AmapSearchFluttifyAndroidAs(args['var1']), args['var2']);
+                await var1?.onRegeocodeSearched(AmapSearchFluttifyAndroidAs(args['var1']), args['var2']);
                 break;
               case 'Callback::com.amap.api.services.geocoder.GeocodeSearch.OnGeocodeSearchListener::onGeocodeSearched':
                 // print log
@@ -121,7 +123,7 @@ class com_amap_api_services_geocoder_GeocodeSearch extends java_lang_Object  {
                 }
           
                 // handle the native call
-                var1?.onGeocodeSearched(AmapSearchFluttifyAndroidAs(args['var1']), args['var2']);
+                await var1?.onGeocodeSearched(AmapSearchFluttifyAndroidAs(args['var1']), args['var2']);
                 break;
               default:
                 throw MissingPluginException('方法${methodCall.method}未实现');

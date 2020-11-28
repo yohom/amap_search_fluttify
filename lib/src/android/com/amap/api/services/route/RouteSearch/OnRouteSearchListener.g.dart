@@ -26,16 +26,16 @@ mixin com_amap_api_services_route_RouteSearch_OnRouteSearchListener on java_lang
 
   
 
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> onBusRouteSearched(com_amap_api_services_route_BusRouteResult var1, int var2) {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> onDriveRouteSearched(com_amap_api_services_route_DriveRouteResult var1, int var2) {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> onWalkRouteSearched(com_amap_api_services_route_WalkRouteResult var1, int var2) {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> onRideRouteSearched(com_amap_api_services_route_RideRouteResult var1, int var2) {}
   
 }

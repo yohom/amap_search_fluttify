@@ -61,7 +61,7 @@ class AMapNearbySearchManager extends NSObject  {
               }
           
               // handle the native call
-              delegate?.nearbyInfoForUploading(AmapSearchFluttifyIOSAs(args['manager']));
+              await delegate?.nearbyInfoForUploading(AmapSearchFluttifyIOSAs(args['manager']));
               break;
             case 'Callback::AMapNearbySearchManagerDelegate::onNearbyInfoUploadedWithError':
               // print log
@@ -70,7 +70,7 @@ class AMapNearbySearchManager extends NSObject  {
               }
           
               // handle the native call
-              delegate?.onNearbyInfoUploadedWithError(AmapSearchFluttifyIOSAs(args['error']));
+              await delegate?.onNearbyInfoUploadedWithError(AmapSearchFluttifyIOSAs(args['error']));
               break;
             case 'Callback::AMapNearbySearchManagerDelegate::onUserInfoClearedWithError':
               // print log
@@ -79,7 +79,7 @@ class AMapNearbySearchManager extends NSObject  {
               }
           
               // handle the native call
-              delegate?.onUserInfoClearedWithError(AmapSearchFluttifyIOSAs(args['error']));
+              await delegate?.onUserInfoClearedWithError(AmapSearchFluttifyIOSAs(args['error']));
               break;
             default:
               throw MissingPluginException('方法${methodCall.method}未实现');
@@ -146,7 +146,7 @@ class AMapNearbySearchManager extends NSObject  {
     return __result__;
   }
   
-  
+  @deprecated
   Future<bool> uploadNearbyInfo(AMapNearbyUploadInfo info) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -163,7 +163,7 @@ class AMapNearbySearchManager extends NSObject  {
     return __result__;
   }
   
-  
+  @deprecated
   Future<bool> clearUserInfoWithID(String userID) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -245,7 +245,7 @@ extension AMapNearbySearchManager_Batch on List<AMapNearbySearchManager> {
     return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
-  
+  @deprecated
   Future<List<bool>> uploadNearbyInfo_batch(List<AMapNearbyUploadInfo> info) async {
     assert(true);
   
@@ -256,7 +256,7 @@ extension AMapNearbySearchManager_Batch on List<AMapNearbySearchManager> {
     return (resultBatch as List).map((__result__) => __result__).cast<bool>().toList();
   }
   
-  
+  @deprecated
   Future<List<bool>> clearUserInfoWithID_batch(List<String> userID) async {
     assert(true);
   

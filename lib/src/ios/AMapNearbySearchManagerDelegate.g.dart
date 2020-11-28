@@ -26,13 +26,13 @@ mixin AMapNearbySearchManagerDelegate on NSObject {
 
   
 
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<AMapNearbyUploadInfo> nearbyInfoForUploading(AMapNearbySearchManager manager) {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> onNearbyInfoUploadedWithError(NSError error) {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> onUserInfoClearedWithError(NSError error) {}
   
 }

@@ -65,6 +65,11 @@ class AMapPOIAroundSearchRequest extends AMapPOISearchBaseRequest with NSCoding,
     return __result__;
   }
   
+  Future<bool> get_special() async {
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOIAroundSearchRequest::get_special", {'__this__': this});
+    return __result__;
+  }
+  
   //endregion
 
   //region setters
@@ -88,6 +93,12 @@ class AMapPOIAroundSearchRequest extends AMapPOISearchBaseRequest with NSCoding,
   
   Future<void> set_city(String city) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapPOIAroundSearchRequest::set_city', <String, dynamic>{'__this__': this, "city": city});
+  
+  
+  }
+  
+  Future<void> set_special(bool special) async {
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapPOIAroundSearchRequest::set_special', <String, dynamic>{'__this__': this, "special": special});
   
   
   }
@@ -126,6 +137,11 @@ extension AMapPOIAroundSearchRequest_Batch on List<AMapPOIAroundSearchRequest> {
     return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
   }
   
+  Future<List<bool>> get_special_batch() async {
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOIAroundSearchRequest::get_special_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<bool>()?.toList();
+  }
+  
   //endregion
 
   //region setters
@@ -149,6 +165,12 @@ extension AMapPOIAroundSearchRequest_Batch on List<AMapPOIAroundSearchRequest> {
   
   Future<void> set_city_batch(List<String> city) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapPOIAroundSearchRequest::set_city_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "city": city[__i__]}]);
+  
+  
+  }
+  
+  Future<void> set_special_batch(List<bool> special) async {
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapPOIAroundSearchRequest::set_special_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "special": special[__i__]}]);
   
   
   }

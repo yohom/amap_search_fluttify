@@ -189,6 +189,74 @@ class com_amap_api_services_geocoder_RegeocodeQuery extends java_lang_Object  {
     return __result__;
   }
   
+  
+  Future<String> getMode() async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: com.amap.api.services.geocoder.RegeocodeQuery@$refId::getMode([])');
+    }
+  
+    // invoke native method
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.RegeocodeQuery::getMode', {"__this__": this});
+  
+  
+    // handle native call
+  
+  
+    return __result__;
+  }
+  
+  
+  Future<void> setMode(String var1) async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: com.amap.api.services.geocoder.RegeocodeQuery@$refId::setMode([\'var1\':$var1])');
+    }
+  
+    // invoke native method
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.RegeocodeQuery::setMode', {"var1": var1, "__this__": this});
+  
+  
+    // handle native call
+  
+  
+    return __result__;
+  }
+  
+  
+  Future<String> getExtensions() async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: com.amap.api.services.geocoder.RegeocodeQuery@$refId::getExtensions([])');
+    }
+  
+    // invoke native method
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.RegeocodeQuery::getExtensions', {"__this__": this});
+  
+  
+    // handle native call
+  
+  
+    return __result__;
+  }
+  
+  
+  Future<void> setExtensions(String var1) async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: com.amap.api.services.geocoder.RegeocodeQuery@$refId::setExtensions([\'var1\':$var1])');
+    }
+  
+    // invoke native method
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.RegeocodeQuery::setExtensions', {"var1": var1, "__this__": this});
+  
+  
+    // handle native call
+  
+  
+    return __result__;
+  }
+  
   //endregion
 
   @override
@@ -290,6 +358,50 @@ extension com_amap_api_services_geocoder_RegeocodeQuery_Batch on List<com_amap_a
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.RegeocodeQuery::setPoiType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+  
+  
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
+  }
+  
+  
+  Future<List<String>> getMode_batch() async {
+    assert(true);
+  
+    // invoke native method
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.RegeocodeQuery::getMode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+  
+  
+    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+  }
+  
+  
+  Future<List<void>> setMode_batch(List<String> var1) async {
+    assert(true);
+  
+    // invoke native method
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.RegeocodeQuery::setMode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+  
+  
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
+  }
+  
+  
+  Future<List<String>> getExtensions_batch() async {
+    assert(true);
+  
+    // invoke native method
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.RegeocodeQuery::getExtensions_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+  
+  
+    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+  }
+  
+  
+  Future<List<void>> setExtensions_batch(List<String> var1) async {
+    assert(true);
+  
+    // invoke native method
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.RegeocodeQuery::setExtensions_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();

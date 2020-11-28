@@ -50,6 +50,11 @@ class AMapAddressComponent extends AMapSearchObject with NSCoding, NSCopying {
     return __result__;
   }
   
+  Future<String> get_countryCode() async {
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapAddressComponent::get_countryCode", {'__this__': this});
+    return __result__;
+  }
+  
   Future<String> get_province() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapAddressComponent::get_province", {'__this__': this});
     return __result__;
@@ -110,6 +115,12 @@ class AMapAddressComponent extends AMapSearchObject with NSCoding, NSCopying {
   //region setters
   Future<void> set_country(String country) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapAddressComponent::set_country', <String, dynamic>{'__this__': this, "country": country});
+  
+  
+  }
+  
+  Future<void> set_countryCode(String countryCode) async {
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapAddressComponent::set_countryCode', <String, dynamic>{'__this__': this, "countryCode": countryCode});
   
   
   }
@@ -199,6 +210,11 @@ extension AMapAddressComponent_Batch on List<AMapAddressComponent> {
     return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
   }
   
+  Future<List<String>> get_countryCode_batch() async {
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapAddressComponent::get_countryCode_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
+  }
+  
   Future<List<String>> get_province_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapAddressComponent::get_province_batch", [for (final __item__ in this) {'__this__': __item__}]);
     return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
@@ -259,6 +275,12 @@ extension AMapAddressComponent_Batch on List<AMapAddressComponent> {
   //region setters
   Future<void> set_country_batch(List<String> country) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapAddressComponent::set_country_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "country": country[__i__]}]);
+  
+  
+  }
+  
+  Future<void> set_countryCode_batch(List<String> countryCode) async {
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapAddressComponent::set_countryCode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "countryCode": countryCode[__i__]}]);
   
   
   }

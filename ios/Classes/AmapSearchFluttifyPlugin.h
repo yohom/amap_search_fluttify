@@ -3,11 +3,10 @@
 //////////////////////////////////////////////////////////
 
 #import <Flutter/Flutter.h>
-#import <AMapSearchKit/AMapSearchKit.h>
 
 typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, id, FlutterResult);
 
-@interface AmapSearchFluttifyPlugin : NSObject<AMapNearbySearchManagerDelegate, AMapSearchDelegate, FlutterPlugin>
+@interface AmapSearchFluttifyPlugin : NSObject<FlutterPlugin>
 
 - (instancetype) initWithFlutterPluginRegistrar: (NSObject <FlutterPluginRegistrar> *) registrar;
 

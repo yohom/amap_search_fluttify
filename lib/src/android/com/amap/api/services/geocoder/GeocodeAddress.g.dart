@@ -393,6 +393,74 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
     return __result__;
   }
   
+  
+  Future<String> getCountry() async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::getCountry([])');
+    }
+  
+    // invoke native method
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.GeocodeAddress::getCountry', {"__this__": this});
+  
+  
+    // handle native call
+  
+  
+    return __result__;
+  }
+  
+  
+  Future<void> setCountry(String var1) async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::setCountry([\'var1\':$var1])');
+    }
+  
+    // invoke native method
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.GeocodeAddress::setCountry', {"var1": var1, "__this__": this});
+  
+  
+    // handle native call
+  
+  
+    return __result__;
+  }
+  
+  
+  Future<String> getPostcode() async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::getPostcode([])');
+    }
+  
+    // invoke native method
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.GeocodeAddress::getPostcode', {"__this__": this});
+  
+  
+    // handle native call
+  
+  
+    return __result__;
+  }
+  
+  
+  Future<void> setPostcode(String var1) async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::setPostcode([\'var1\':$var1])');
+    }
+  
+    // invoke native method
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.GeocodeAddress::setPostcode', {"var1": var1, "__this__": this});
+  
+  
+    // handle native call
+  
+  
+    return __result__;
+  }
+  
   //endregion
 
   @override
@@ -626,6 +694,50 @@ extension com_amap_api_services_geocoder_GeocodeAddress_Batch on List<com_amap_a
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.GeocodeAddress::setLevel_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+  
+  
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
+  }
+  
+  
+  Future<List<String>> getCountry_batch() async {
+    assert(true);
+  
+    // invoke native method
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.GeocodeAddress::getCountry_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+  
+  
+    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+  }
+  
+  
+  Future<List<void>> setCountry_batch(List<String> var1) async {
+    assert(true);
+  
+    // invoke native method
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.GeocodeAddress::setCountry_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+  
+  
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
+  }
+  
+  
+  Future<List<String>> getPostcode_batch() async {
+    assert(true);
+  
+    // invoke native method
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.GeocodeAddress::getPostcode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+  
+  
+    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+  }
+  
+  
+  Future<List<void>> setPostcode_batch(List<String> var1) async {
+    assert(true);
+  
+    // invoke native method
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.GeocodeAddress::setPostcode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
     return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();

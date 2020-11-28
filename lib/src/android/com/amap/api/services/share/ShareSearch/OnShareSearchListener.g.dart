@@ -26,22 +26,22 @@ mixin com_amap_api_services_share_ShareSearch_OnShareSearchListener on java_lang
 
   
 
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> onPoiShareUrlSearched(String var1, int var2) {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> onLocationShareUrlSearched(String var1, int var2) {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> onNaviShareUrlSearched(String var1, int var2) {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> onBusRouteShareUrlSearched(String var1, int var2) {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> onWalkRouteShareUrlSearched(String var1, int var2) {}
   
-  @mustCallSuper
+  /* @mustCallSuper */
   Future<void> onDrivingRouteShareUrlSearched(String var1, int var2) {}
   
 }

@@ -99,6 +99,11 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
   static final int DRIVEING_PLAN_AVOID_CONGESTION_CHOICE_HIGHWAY = 9;
   static final int DRIVEING_PLAN_FASTEST_SHORTEST = 10;
   static final int DRIVEING_PLAN_AVOID_CONGESTION_FASTEST_SAVE_MONEY = 11;
+  static final String DRIVING_EXCLUDE_TOLL = "toll";
+  static final String DRIVING_EXCLUDE_MOTORWAY = "motorway";
+  static final String DRIVING_EXCLUDE_FERRY = "ferry";
+  static final String EXTENSIONS_ALL = "all";
+  static final String EXTENSIONS_BASE = "base";
   //endregion
 
   //region creators
@@ -156,7 +161,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
                 }
           
                 // handle the native call
-                var1?.onBusRouteSearched(AmapSearchFluttifyAndroidAs(args['var1']), args['var2']);
+                await var1?.onBusRouteSearched(AmapSearchFluttifyAndroidAs(args['var1']), args['var2']);
                 break;
               case 'Callback::com.amap.api.services.route.RouteSearch.OnRouteSearchListener::onDriveRouteSearched':
                 // print log
@@ -165,7 +170,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
                 }
           
                 // handle the native call
-                var1?.onDriveRouteSearched(AmapSearchFluttifyAndroidAs(args['var1']), args['var2']);
+                await var1?.onDriveRouteSearched(AmapSearchFluttifyAndroidAs(args['var1']), args['var2']);
                 break;
               case 'Callback::com.amap.api.services.route.RouteSearch.OnRouteSearchListener::onWalkRouteSearched':
                 // print log
@@ -174,7 +179,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
                 }
           
                 // handle the native call
-                var1?.onWalkRouteSearched(AmapSearchFluttifyAndroidAs(args['var1']), args['var2']);
+                await var1?.onWalkRouteSearched(AmapSearchFluttifyAndroidAs(args['var1']), args['var2']);
                 break;
               case 'Callback::com.amap.api.services.route.RouteSearch.OnRouteSearchListener::onRideRouteSearched':
                 // print log
@@ -183,7 +188,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
                 }
           
                 // handle the native call
-                var1?.onRideRouteSearched(AmapSearchFluttifyAndroidAs(args['var1']), args['var2']);
+                await var1?.onRideRouteSearched(AmapSearchFluttifyAndroidAs(args['var1']), args['var2']);
                 break;
               default:
                 throw MissingPluginException('方法${methodCall.method}未实现');
@@ -222,7 +227,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
                 }
           
                 // handle the native call
-                var1?.onTruckRouteSearched(AmapSearchFluttifyAndroidAs(args['var1']), args['var2']);
+                await var1?.onTruckRouteSearched(AmapSearchFluttifyAndroidAs(args['var1']), args['var2']);
                 break;
               default:
                 throw MissingPluginException('方法${methodCall.method}未实现');
@@ -261,7 +266,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
                 }
           
                 // handle the native call
-                var1?.onDriveRoutePlanSearched(AmapSearchFluttifyAndroidAs(args['var1']), args['var2']);
+                await var1?.onDriveRoutePlanSearched(AmapSearchFluttifyAndroidAs(args['var1']), args['var2']);
                 break;
               default:
                 throw MissingPluginException('方法${methodCall.method}未实现');

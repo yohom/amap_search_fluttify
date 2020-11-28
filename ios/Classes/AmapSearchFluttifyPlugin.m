@@ -18,13 +18,16 @@
 #import "SubHandler/SubHandler11.h"
 #import "SubHandler/Custom/SubHandlerCustom.h"
 #import "FluttifyMessageCodec.h"
+#import <AMapSearchKit/AMapSearchKit.h>
 
 // Dart端一次方法调用所存在的栈, 只有当MethodChannel传递参数受限时, 再启用这个容器
 extern NSMutableDictionary<NSString*, NSObject*>* STACK;
 // Dart端随机存取对象的容器
-extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
+extern NSMutableDictionary<NSString*, NSObject*>* HEAP;
 // 日志打印开关
 extern BOOL enableLog;
+
+@interface AmapSearchFluttifyPlugin (_Delegate) <AMapNearbySearchManagerDelegate, AMapSearchDelegate> @end
 
 @implementation AmapSearchFluttifyPlugin {
   NSMutableDictionary<NSString*, Handler>* _handlerMap;
@@ -447,29 +450,6 @@ extern BOOL enableLog;
 
   dispatch_async(dispatch_get_main_queue(), ^{
     [channel invokeMethod:@"Callback::AMapSearchDelegate::onWeatherSearchDone_response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
-  });
-  
-}
-
-- (void)onRoadTrafficSearchDone : (AMapRoadTrafficSearchBaseRequest*)request response: (AMapRoadTrafficSearchResponse*)response
-{
-  FlutterMethodChannel *channel = [FlutterMethodChannel
-        methodChannelWithName:@"AMapSearchDelegate::Callback"
-              binaryMessenger:[_registrar messenger]
-                        codec:[FlutterStandardMethodCodec codecWithReaderWriter:[[FluttifyReaderWriter alloc] init]]];
-  // print log
-  if (enableLog) {
-    NSLog(@"AMapSearchDelegate::onRoadTrafficSearchDone_response");
-  }
-
-  // convert to jsonable arg
-  // ref callback arg
-  AMapRoadTrafficSearchBaseRequest* argrequest = request;
-  // ref callback arg
-  AMapRoadTrafficSearchResponse* argresponse = response;
-
-  dispatch_async(dispatch_get_main_queue(), ^{
-    [channel invokeMethod:@"Callback::AMapSearchDelegate::onRoadTrafficSearchDone_response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
   });
   
 }

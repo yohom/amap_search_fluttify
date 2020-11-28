@@ -55,6 +55,11 @@ class AMapGeocodeSearchRequest extends AMapSearchObject with NSCoding, NSCopying
     return __result__;
   }
   
+  Future<String> get_country() async {
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapGeocodeSearchRequest::get_country", {'__this__': this});
+    return __result__;
+  }
+  
   //endregion
 
   //region setters
@@ -66,6 +71,12 @@ class AMapGeocodeSearchRequest extends AMapSearchObject with NSCoding, NSCopying
   
   Future<void> set_city(String city) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapGeocodeSearchRequest::set_city', <String, dynamic>{'__this__': this, "city": city});
+  
+  
+  }
+  
+  Future<void> set_country(String country) async {
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapGeocodeSearchRequest::set_country', <String, dynamic>{'__this__': this, "country": country});
   
   
   }
@@ -94,6 +105,11 @@ extension AMapGeocodeSearchRequest_Batch on List<AMapGeocodeSearchRequest> {
     return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
   }
   
+  Future<List<String>> get_country_batch() async {
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapGeocodeSearchRequest::get_country_batch", [for (final __item__ in this) {'__this__': __item__}]);
+    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
+  }
+  
   //endregion
 
   //region setters
@@ -105,6 +121,12 @@ extension AMapGeocodeSearchRequest_Batch on List<AMapGeocodeSearchRequest> {
   
   Future<void> set_city_batch(List<String> city) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapGeocodeSearchRequest::set_city_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "city": city[__i__]}]);
+  
+  
+  }
+  
+  Future<void> set_country_batch(List<String> country) async {
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapGeocodeSearchRequest::set_country_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'__this__': this[__i__], "country": country[__i__]}]);
   
   
   }
