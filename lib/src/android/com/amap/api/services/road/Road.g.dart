@@ -28,7 +28,7 @@ class com_amap_api_services_road_Road extends java_lang_Object with android_os_P
       'ObjectFactory::createcom_amap_api_services_road_Road__',
     
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_road_Road>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_road_Road>(__result__)!;
   }
   
   static Future<com_amap_api_services_road_Road> create__String__String(String var1, String var2) async {
@@ -36,7 +36,7 @@ class com_amap_api_services_road_Road extends java_lang_Object with android_os_P
       'ObjectFactory::createcom_amap_api_services_road_Road__String__String',
       {"var1": var1, "var2": var2}
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_road_Road>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_road_Road>(__result__)!;
   }
   
   static Future<List<com_amap_api_services_road_Road>> create_batch__(int length) async {
@@ -45,8 +45,8 @@ class com_amap_api_services_road_Road extends java_lang_Object with android_os_P
       'ObjectFactory::create_batchcom_amap_api_services_road_Road__',
       {'length': length}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_road_Road>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_road_Road>(it)!)
         .toList();
   }
   
@@ -56,8 +56,8 @@ class com_amap_api_services_road_Road extends java_lang_Object with android_os_P
       'ObjectFactory::create_batchcom_amap_api_services_road_Road__String__String',
       [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_road_Road>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_road_Road>(it)!)
         .toList();
   }
   
@@ -107,7 +107,7 @@ class com_amap_api_services_road_Road extends java_lang_Object with android_os_P
   }
   
   
-  Future<String> getCityCode() async {
+  Future<String?> getCityCode() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.road.Road@$refId::getCityCode([])');
@@ -141,7 +141,7 @@ class com_amap_api_services_road_Road extends java_lang_Object with android_os_P
   }
   
   
-  Future<double> getRoadWidth() async {
+  Future<double?> getRoadWidth() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.road.Road@$refId::getRoadWidth([])');
@@ -175,7 +175,7 @@ class com_amap_api_services_road_Road extends java_lang_Object with android_os_P
   }
   
   
-  Future<String> getType() async {
+  Future<String?> getType() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.road.Road@$refId::getType([])');
@@ -209,7 +209,7 @@ class com_amap_api_services_road_Road extends java_lang_Object with android_os_P
   }
   
   
-  Future<com_amap_api_services_core_LatLonPoint> getCenterPoint() async {
+  Future<com_amap_api_services_core_LatLonPoint?> getCenterPoint() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.road.Road@$refId::getCenterPoint([])');
@@ -243,7 +243,7 @@ class com_amap_api_services_road_Road extends java_lang_Object with android_os_P
   }
   
   
-  Future<String> getId() async {
+  Future<String?> getId() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.road.Road@$refId::getId([])');
@@ -260,7 +260,7 @@ class com_amap_api_services_road_Road extends java_lang_Object with android_os_P
   }
   
   
-  Future<String> getName() async {
+  Future<String?> getName() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.road.Road@$refId::getName([])');
@@ -295,7 +295,7 @@ extension com_amap_api_services_road_Road_Batch on List<com_amap_api_services_ro
 
   //region methods
   
-  Future<List<void>> setId_batch(List<String> var1) async {
+  Future<List<void>?> setId_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -306,7 +306,7 @@ extension com_amap_api_services_road_Road_Batch on List<com_amap_api_services_ro
   }
   
   
-  Future<List<void>> setName_batch(List<String> var1) async {
+  Future<List<void>?> setName_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -317,7 +317,7 @@ extension com_amap_api_services_road_Road_Batch on List<com_amap_api_services_ro
   }
   
   
-  Future<List<String>> getCityCode_batch() async {
+  Future<List<String?>?> getCityCode_batch() async {
     assert(true);
   
     // invoke native method
@@ -328,7 +328,7 @@ extension com_amap_api_services_road_Road_Batch on List<com_amap_api_services_ro
   }
   
   
-  Future<List<void>> setCityCode_batch(List<String> var1) async {
+  Future<List<void>?> setCityCode_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -339,7 +339,7 @@ extension com_amap_api_services_road_Road_Batch on List<com_amap_api_services_ro
   }
   
   
-  Future<List<double>> getRoadWidth_batch() async {
+  Future<List<double?>?> getRoadWidth_batch() async {
     assert(true);
   
     // invoke native method
@@ -350,7 +350,7 @@ extension com_amap_api_services_road_Road_Batch on List<com_amap_api_services_ro
   }
   
   
-  Future<List<void>> setRoadWidth_batch(List<double> var1) async {
+  Future<List<void>?> setRoadWidth_batch(List<double> var1) async {
     assert(true);
   
     // invoke native method
@@ -361,7 +361,7 @@ extension com_amap_api_services_road_Road_Batch on List<com_amap_api_services_ro
   }
   
   
-  Future<List<String>> getType_batch() async {
+  Future<List<String?>?> getType_batch() async {
     assert(true);
   
     // invoke native method
@@ -372,7 +372,7 @@ extension com_amap_api_services_road_Road_Batch on List<com_amap_api_services_ro
   }
   
   
-  Future<List<void>> setType_batch(List<String> var1) async {
+  Future<List<void>?> setType_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -383,7 +383,7 @@ extension com_amap_api_services_road_Road_Batch on List<com_amap_api_services_ro
   }
   
   
-  Future<List<com_amap_api_services_core_LatLonPoint>> getCenterPoint_batch() async {
+  Future<List<com_amap_api_services_core_LatLonPoint?>?> getCenterPoint_batch() async {
     assert(true);
   
     // invoke native method
@@ -394,7 +394,7 @@ extension com_amap_api_services_road_Road_Batch on List<com_amap_api_services_ro
   }
   
   
-  Future<List<void>> setCenterPoint_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
+  Future<List<void>?> setCenterPoint_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
     assert(true);
   
     // invoke native method
@@ -405,7 +405,7 @@ extension com_amap_api_services_road_Road_Batch on List<com_amap_api_services_ro
   }
   
   
-  Future<List<String>> getId_batch() async {
+  Future<List<String?>?> getId_batch() async {
     assert(true);
   
     // invoke native method
@@ -416,7 +416,7 @@ extension com_amap_api_services_road_Road_Batch on List<com_amap_api_services_ro
   }
   
   
-  Future<List<String>> getName_batch() async {
+  Future<List<String?>?> getName_batch() async {
     assert(true);
   
     // invoke native method

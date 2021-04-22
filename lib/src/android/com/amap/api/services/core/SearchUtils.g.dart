@@ -28,7 +28,7 @@ class com_amap_api_services_core_SearchUtils extends java_lang_Object  {
       'ObjectFactory::createcom_amap_api_services_core_SearchUtils__',
     
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_core_SearchUtils>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_core_SearchUtils>(__result__)!;
   }
   
   static Future<List<com_amap_api_services_core_SearchUtils>> create_batch__(int length) async {
@@ -37,8 +37,8 @@ class com_amap_api_services_core_SearchUtils extends java_lang_Object  {
       'ObjectFactory::create_batchcom_amap_api_services_core_SearchUtils__',
       {'length': length}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_SearchUtils>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_SearchUtils>(it)!)
         .toList();
   }
   
@@ -54,7 +54,7 @@ class com_amap_api_services_core_SearchUtils extends java_lang_Object  {
 
   //region methods
   
-  static Future<String> getSHA1(android_content_Context var0) async {
+  static Future<String?> getSHA1(android_content_Context var0) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.SearchUtils::getSHA1([])');
@@ -71,7 +71,7 @@ class com_amap_api_services_core_SearchUtils extends java_lang_Object  {
   }
   
   
-  static Future<String> getPkgName(android_content_Context var0) async {
+  static Future<String?> getPkgName(android_content_Context var0) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.SearchUtils::getPkgName([])');
@@ -88,7 +88,7 @@ class com_amap_api_services_core_SearchUtils extends java_lang_Object  {
   }
   
   
-  static Future<String> getVersion() async {
+  static Future<String?> getVersion() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.SearchUtils::getVersion([])');
@@ -123,7 +123,7 @@ extension com_amap_api_services_core_SearchUtils_Batch on List<com_amap_api_serv
 
   //region methods
   
-  static Future<List<String>> getSHA1_batch(List<android_content_Context> var0) async {
+  static Future<List<String?>?> getSHA1_batch(List<android_content_Context> var0) async {
     assert(true);
   
     // invoke native method
@@ -134,7 +134,7 @@ extension com_amap_api_services_core_SearchUtils_Batch on List<com_amap_api_serv
   }
   
   
-  static Future<List<String>> getPkgName_batch(List<android_content_Context> var0) async {
+  static Future<List<String?>?> getPkgName_batch(List<android_content_Context> var0) async {
     assert(true);
   
     // invoke native method
@@ -145,7 +145,7 @@ extension com_amap_api_services_core_SearchUtils_Batch on List<com_amap_api_serv
   }
   
   
-  static Future<List<String>> getVersion_batch() async {
+  static Future<List<String?>?> getVersion_batch() async {
     assert(true);
   
     // invoke native method

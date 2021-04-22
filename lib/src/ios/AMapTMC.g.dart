@@ -28,7 +28,7 @@ class AMapTMC extends AMapSearchObject with NSCoding, NSCopying {
       'ObjectFactory::createAMapTMC',
       {'init': init}
     );
-    return AmapSearchFluttifyIOSAs<AMapTMC>(__result__);
+    return AmapSearchFluttifyIOSAs<AMapTMC>(__result__)!;
   }
   
   static Future<List<AMapTMC>> create_batch__(int length, { bool init = true /* ios only */ }) async {
@@ -37,25 +37,25 @@ class AMapTMC extends AMapSearchObject with NSCoding, NSCopying {
       'ObjectFactory::create_batchAMapTMC',
       {'length': length, 'init': init}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyIOSAs<AMapTMC>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyIOSAs<AMapTMC>(it)!)
         .toList();
   }
   
   //endregion
 
   //region getters
-  Future<int> get_distance() async {
+  Future<int?> get_distance() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapTMC::get_distance", {'__this__': this});
     return __result__;
   }
   
-  Future<String> get_status() async {
+  Future<String?> get_status() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapTMC::get_status", {'__this__': this});
     return __result__;
   }
   
-  Future<String> get_polyline() async {
+  Future<String?> get_polyline() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapTMC::get_polyline", {'__this__': this});
     return __result__;
   }
@@ -95,19 +95,19 @@ class AMapTMC extends AMapSearchObject with NSCoding, NSCopying {
 
 extension AMapTMC_Batch on List<AMapTMC> {
   //region getters
-  Future<List<int>> get_distance_batch() async {
+  Future<List<int?>?> get_distance_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTMC::get_distance_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<int>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<int?>().toList();
   }
   
-  Future<List<String>> get_status_batch() async {
+  Future<List<String?>?> get_status_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTMC::get_status_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<String>> get_polyline_batch() async {
+  Future<List<String?>?> get_polyline_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTMC::get_polyline_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
   }
   
   //endregion

@@ -28,7 +28,7 @@ class AMapRoadInter extends AMapSearchObject with NSCoding, NSCopying {
       'ObjectFactory::createAMapRoadInter',
       {'init': init}
     );
-    return AmapSearchFluttifyIOSAs<AMapRoadInter>(__result__);
+    return AmapSearchFluttifyIOSAs<AMapRoadInter>(__result__)!;
   }
   
   static Future<List<AMapRoadInter>> create_batch__(int length, { bool init = true /* ios only */ }) async {
@@ -37,45 +37,45 @@ class AMapRoadInter extends AMapSearchObject with NSCoding, NSCopying {
       'ObjectFactory::create_batchAMapRoadInter',
       {'length': length, 'init': init}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyIOSAs<AMapRoadInter>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyIOSAs<AMapRoadInter>(it)!)
         .toList();
   }
   
   //endregion
 
   //region getters
-  Future<int> get_distance() async {
+  Future<int?> get_distance() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoadInter::get_distance", {'__this__': this});
     return __result__;
   }
   
-  Future<String> get_direction() async {
+  Future<String?> get_direction() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoadInter::get_direction", {'__this__': this});
     return __result__;
   }
   
-  Future<AMapGeoPoint> get_location() async {
+  Future<AMapGeoPoint?> get_location() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoadInter::get_location", {'__this__': this});
     return AmapSearchFluttifyIOSAs<AMapGeoPoint>(__result__);
   }
   
-  Future<String> get_firstId() async {
+  Future<String?> get_firstId() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoadInter::get_firstId", {'__this__': this});
     return __result__;
   }
   
-  Future<String> get_firstName() async {
+  Future<String?> get_firstName() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoadInter::get_firstName", {'__this__': this});
     return __result__;
   }
   
-  Future<String> get_secondId() async {
+  Future<String?> get_secondId() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoadInter::get_secondId", {'__this__': this});
     return __result__;
   }
   
-  Future<String> get_secondName() async {
+  Future<String?> get_secondName() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoadInter::get_secondName", {'__this__': this});
     return __result__;
   }
@@ -139,39 +139,39 @@ class AMapRoadInter extends AMapSearchObject with NSCoding, NSCopying {
 
 extension AMapRoadInter_Batch on List<AMapRoadInter> {
   //region getters
-  Future<List<int>> get_distance_batch() async {
+  Future<List<int?>?> get_distance_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoadInter::get_distance_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<int>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<int?>().toList();
   }
   
-  Future<List<String>> get_direction_batch() async {
+  Future<List<String?>?> get_direction_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoadInter::get_direction_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<AMapGeoPoint>> get_location_batch() async {
+  Future<List<AMapGeoPoint?>?> get_location_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoadInter::get_location_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => AmapSearchFluttifyIOSAs<AMapGeoPoint>(__result__))?.cast<AMapGeoPoint>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => AmapSearchFluttifyIOSAs<AMapGeoPoint>(__result__)).cast<AMapGeoPoint?>().toList();
   }
   
-  Future<List<String>> get_firstId_batch() async {
+  Future<List<String?>?> get_firstId_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoadInter::get_firstId_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<String>> get_firstName_batch() async {
+  Future<List<String?>?> get_firstName_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoadInter::get_firstName_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<String>> get_secondId_batch() async {
+  Future<List<String?>?> get_secondId_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoadInter::get_secondId_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<String>> get_secondName_batch() async {
+  Future<List<String?>?> get_secondName_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoadInter::get_secondName_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
   }
   
   //endregion

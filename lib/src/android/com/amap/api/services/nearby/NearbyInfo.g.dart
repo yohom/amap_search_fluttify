@@ -28,7 +28,7 @@ class com_amap_api_services_nearby_NearbyInfo extends java_lang_Object  {
       'ObjectFactory::createcom_amap_api_services_nearby_NearbyInfo__',
     
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_nearby_NearbyInfo>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_nearby_NearbyInfo>(__result__)!;
   }
   
   static Future<List<com_amap_api_services_nearby_NearbyInfo>> create_batch__(int length) async {
@@ -37,8 +37,8 @@ class com_amap_api_services_nearby_NearbyInfo extends java_lang_Object  {
       'ObjectFactory::create_batchcom_amap_api_services_nearby_NearbyInfo__',
       {'length': length}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_nearby_NearbyInfo>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_nearby_NearbyInfo>(it)!)
         .toList();
   }
   
@@ -71,7 +71,7 @@ class com_amap_api_services_nearby_NearbyInfo extends java_lang_Object  {
   }
   
   
-  Future<String> getUserID() async {
+  Future<String?> getUserID() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.nearby.NearbyInfo@$refId::getUserID([])');
@@ -88,7 +88,7 @@ class com_amap_api_services_nearby_NearbyInfo extends java_lang_Object  {
   }
   
   
-  Future<com_amap_api_services_core_LatLonPoint> getPoint() async {
+  Future<com_amap_api_services_core_LatLonPoint?> getPoint() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.nearby.NearbyInfo@$refId::getPoint([])');
@@ -139,7 +139,7 @@ class com_amap_api_services_nearby_NearbyInfo extends java_lang_Object  {
   }
   
   
-  Future<int> getTimeStamp() async {
+  Future<int?> getTimeStamp() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.nearby.NearbyInfo@$refId::getTimeStamp([])');
@@ -173,7 +173,7 @@ class com_amap_api_services_nearby_NearbyInfo extends java_lang_Object  {
   }
   
   
-  Future<int> getDistance() async {
+  Future<int?> getDistance() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.nearby.NearbyInfo@$refId::getDistance([])');
@@ -207,7 +207,7 @@ class com_amap_api_services_nearby_NearbyInfo extends java_lang_Object  {
   }
   
   
-  Future<int> getDrivingDistance() async {
+  Future<int?> getDrivingDistance() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.nearby.NearbyInfo@$refId::getDrivingDistance([])');
@@ -242,7 +242,7 @@ extension com_amap_api_services_nearby_NearbyInfo_Batch on List<com_amap_api_ser
 
   //region methods
   
-  Future<List<void>> setUserID_batch(List<String> var1) async {
+  Future<List<void>?> setUserID_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -253,7 +253,7 @@ extension com_amap_api_services_nearby_NearbyInfo_Batch on List<com_amap_api_ser
   }
   
   
-  Future<List<String>> getUserID_batch() async {
+  Future<List<String?>?> getUserID_batch() async {
     assert(true);
   
     // invoke native method
@@ -264,7 +264,7 @@ extension com_amap_api_services_nearby_NearbyInfo_Batch on List<com_amap_api_ser
   }
   
   
-  Future<List<com_amap_api_services_core_LatLonPoint>> getPoint_batch() async {
+  Future<List<com_amap_api_services_core_LatLonPoint?>?> getPoint_batch() async {
     assert(true);
   
     // invoke native method
@@ -275,7 +275,7 @@ extension com_amap_api_services_nearby_NearbyInfo_Batch on List<com_amap_api_ser
   }
   
   
-  Future<List<void>> setPoint_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
+  Future<List<void>?> setPoint_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
     assert(true);
   
     // invoke native method
@@ -286,7 +286,7 @@ extension com_amap_api_services_nearby_NearbyInfo_Batch on List<com_amap_api_ser
   }
   
   
-  Future<List<void>> setTimeStamp_batch(List<int> var1) async {
+  Future<List<void>?> setTimeStamp_batch(List<int> var1) async {
     assert(true);
   
     // invoke native method
@@ -297,7 +297,7 @@ extension com_amap_api_services_nearby_NearbyInfo_Batch on List<com_amap_api_ser
   }
   
   
-  Future<List<int>> getTimeStamp_batch() async {
+  Future<List<int?>?> getTimeStamp_batch() async {
     assert(true);
   
     // invoke native method
@@ -308,7 +308,7 @@ extension com_amap_api_services_nearby_NearbyInfo_Batch on List<com_amap_api_ser
   }
   
   
-  Future<List<void>> setDistance_batch(List<int> var1) async {
+  Future<List<void>?> setDistance_batch(List<int> var1) async {
     assert(true);
   
     // invoke native method
@@ -319,7 +319,7 @@ extension com_amap_api_services_nearby_NearbyInfo_Batch on List<com_amap_api_ser
   }
   
   
-  Future<List<int>> getDistance_batch() async {
+  Future<List<int?>?> getDistance_batch() async {
     assert(true);
   
     // invoke native method
@@ -330,7 +330,7 @@ extension com_amap_api_services_nearby_NearbyInfo_Batch on List<com_amap_api_ser
   }
   
   
-  Future<List<void>> setDrivingDistance_batch(List<int> var1) async {
+  Future<List<void>?> setDrivingDistance_batch(List<int> var1) async {
     assert(true);
   
     // invoke native method
@@ -341,7 +341,7 @@ extension com_amap_api_services_nearby_NearbyInfo_Batch on List<com_amap_api_ser
   }
   
   
-  Future<List<int>> getDrivingDistance_batch() async {
+  Future<List<int?>?> getDrivingDistance_batch() async {
     assert(true);
   
     // invoke native method

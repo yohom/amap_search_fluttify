@@ -28,7 +28,7 @@ class com_amap_api_services_route_DrivePath extends com_amap_api_services_route_
       'ObjectFactory::createcom_amap_api_services_route_DrivePath__',
     
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_DrivePath>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_DrivePath>(__result__)!;
   }
   
   static Future<List<com_amap_api_services_route_DrivePath>> create_batch__(int length) async {
@@ -37,8 +37,8 @@ class com_amap_api_services_route_DrivePath extends com_amap_api_services_route_
       'ObjectFactory::create_batchcom_amap_api_services_route_DrivePath__',
       {'length': length}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_DrivePath>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_DrivePath>(it)!)
         .toList();
   }
   
@@ -54,7 +54,7 @@ class com_amap_api_services_route_DrivePath extends com_amap_api_services_route_
 
   //region methods
   
-  Future<String> getStrategy() async {
+  Future<String?> getStrategy() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.DrivePath@$refId::getStrategy([])');
@@ -88,7 +88,7 @@ class com_amap_api_services_route_DrivePath extends com_amap_api_services_route_
   }
   
   
-  Future<double> getTolls() async {
+  Future<double?> getTolls() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.DrivePath@$refId::getTolls([])');
@@ -122,7 +122,7 @@ class com_amap_api_services_route_DrivePath extends com_amap_api_services_route_
   }
   
   
-  Future<double> getTollDistance() async {
+  Future<double?> getTollDistance() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.DrivePath@$refId::getTollDistance([])');
@@ -156,7 +156,7 @@ class com_amap_api_services_route_DrivePath extends com_amap_api_services_route_
   }
   
   
-  Future<int> getTotalTrafficlights() async {
+  Future<int?> getTotalTrafficlights() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.DrivePath@$refId::getTotalTrafficlights([])');
@@ -190,7 +190,7 @@ class com_amap_api_services_route_DrivePath extends com_amap_api_services_route_
   }
   
   
-  Future<List<com_amap_api_services_route_DriveStep>> getSteps() async {
+  Future<List<com_amap_api_services_route_DriveStep>?> getSteps() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.DrivePath@$refId::getSteps([])');
@@ -203,7 +203,7 @@ class com_amap_api_services_route_DrivePath extends com_amap_api_services_route_
     // handle native call
   
   
-    return (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_DriveStep>(it))?.toList();
+    return (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_DriveStep>(it)!).toList();
   }
   
   
@@ -224,7 +224,7 @@ class com_amap_api_services_route_DrivePath extends com_amap_api_services_route_
   }
   
   
-  Future<int> getRestriction() async {
+  Future<int?> getRestriction() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.DrivePath@$refId::getRestriction([])');
@@ -276,7 +276,7 @@ extension com_amap_api_services_route_DrivePath_Batch on List<com_amap_api_servi
 
   //region methods
   
-  Future<List<String>> getStrategy_batch() async {
+  Future<List<String?>?> getStrategy_batch() async {
     assert(true);
   
     // invoke native method
@@ -287,7 +287,7 @@ extension com_amap_api_services_route_DrivePath_Batch on List<com_amap_api_servi
   }
   
   
-  Future<List<void>> setStrategy_batch(List<String> var1) async {
+  Future<List<void>?> setStrategy_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -298,7 +298,7 @@ extension com_amap_api_services_route_DrivePath_Batch on List<com_amap_api_servi
   }
   
   
-  Future<List<double>> getTolls_batch() async {
+  Future<List<double?>?> getTolls_batch() async {
     assert(true);
   
     // invoke native method
@@ -309,7 +309,7 @@ extension com_amap_api_services_route_DrivePath_Batch on List<com_amap_api_servi
   }
   
   
-  Future<List<void>> setTolls_batch(List<double> var1) async {
+  Future<List<void>?> setTolls_batch(List<double> var1) async {
     assert(true);
   
     // invoke native method
@@ -320,7 +320,7 @@ extension com_amap_api_services_route_DrivePath_Batch on List<com_amap_api_servi
   }
   
   
-  Future<List<double>> getTollDistance_batch() async {
+  Future<List<double?>?> getTollDistance_batch() async {
     assert(true);
   
     // invoke native method
@@ -331,7 +331,7 @@ extension com_amap_api_services_route_DrivePath_Batch on List<com_amap_api_servi
   }
   
   
-  Future<List<void>> setTollDistance_batch(List<double> var1) async {
+  Future<List<void>?> setTollDistance_batch(List<double> var1) async {
     assert(true);
   
     // invoke native method
@@ -342,7 +342,7 @@ extension com_amap_api_services_route_DrivePath_Batch on List<com_amap_api_servi
   }
   
   
-  Future<List<int>> getTotalTrafficlights_batch() async {
+  Future<List<int?>?> getTotalTrafficlights_batch() async {
     assert(true);
   
     // invoke native method
@@ -353,7 +353,7 @@ extension com_amap_api_services_route_DrivePath_Batch on List<com_amap_api_servi
   }
   
   
-  Future<List<void>> setTotalTrafficlights_batch(List<int> var1) async {
+  Future<List<void>?> setTotalTrafficlights_batch(List<int> var1) async {
     assert(true);
   
     // invoke native method
@@ -364,18 +364,18 @@ extension com_amap_api_services_route_DrivePath_Batch on List<com_amap_api_servi
   }
   
   
-  Future<List<List<com_amap_api_services_route_DriveStep>>> getSteps_batch() async {
+  Future<List<List<com_amap_api_services_route_DriveStep>?>?> getSteps_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.DrivePath::getSteps_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_DriveStep>(it))?.toList()).cast<List<com_amap_api_services_route_DriveStep>>().toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_DriveStep>(it)!).toList()).cast<List<com_amap_api_services_route_DriveStep>>().toList();
   }
   
   
-  Future<List<void>> setSteps_batch(List<List<com_amap_api_services_route_DriveStep>> var1) async {
+  Future<List<void>?> setSteps_batch(List<List<com_amap_api_services_route_DriveStep>> var1) async {
     assert(true);
   
     // invoke native method
@@ -386,7 +386,7 @@ extension com_amap_api_services_route_DrivePath_Batch on List<com_amap_api_servi
   }
   
   
-  Future<List<int>> getRestriction_batch() async {
+  Future<List<int?>?> getRestriction_batch() async {
     assert(true);
   
     // invoke native method
@@ -397,7 +397,7 @@ extension com_amap_api_services_route_DrivePath_Batch on List<com_amap_api_servi
   }
   
   
-  Future<List<void>> setRestriction_batch(List<int> var1) async {
+  Future<List<void>?> setRestriction_batch(List<int> var1) async {
     assert(true);
   
     // invoke native method

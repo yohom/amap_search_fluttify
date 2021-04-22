@@ -28,7 +28,7 @@ class com_amap_api_services_route_RouteSearch_DrivePlanQuery extends java_lang_O
       'ObjectFactory::createcom_amap_api_services_route_RouteSearch_DrivePlanQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__int__int',
       {"var1": var1, "var2": var2, "var3": var3, "var4": var4}
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RouteSearch_DrivePlanQuery>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RouteSearch_DrivePlanQuery>(__result__)!;
   }
   
   static Future<com_amap_api_services_route_RouteSearch_DrivePlanQuery> create__() async {
@@ -36,7 +36,7 @@ class com_amap_api_services_route_RouteSearch_DrivePlanQuery extends java_lang_O
       'ObjectFactory::createcom_amap_api_services_route_RouteSearch_DrivePlanQuery__',
     
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RouteSearch_DrivePlanQuery>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RouteSearch_DrivePlanQuery>(__result__)!;
   }
   
   static Future<List<com_amap_api_services_route_RouteSearch_DrivePlanQuery>> create_batch__com_amap_api_services_route_RouteSearch_FromAndTo__int__int__int(List<com_amap_api_services_route_RouteSearch_FromAndTo> var1, List<int> var2, List<int> var3, List<int> var4) async {
@@ -45,8 +45,8 @@ class com_amap_api_services_route_RouteSearch_DrivePlanQuery extends java_lang_O
       'ObjectFactory::create_batchcom_amap_api_services_route_RouteSearch_DrivePlanQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__int__int',
       [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "var4": var4[__i__]}]
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RouteSearch_DrivePlanQuery>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RouteSearch_DrivePlanQuery>(it)!)
         .toList();
   }
   
@@ -56,8 +56,8 @@ class com_amap_api_services_route_RouteSearch_DrivePlanQuery extends java_lang_O
       'ObjectFactory::create_batchcom_amap_api_services_route_RouteSearch_DrivePlanQuery__',
       {'length': length}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RouteSearch_DrivePlanQuery>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RouteSearch_DrivePlanQuery>(it)!)
         .toList();
   }
   
@@ -73,7 +73,7 @@ class com_amap_api_services_route_RouteSearch_DrivePlanQuery extends java_lang_O
 
   //region methods
   
-  Future<com_amap_api_services_route_RouteSearch_FromAndTo> getFromAndTo() async {
+  Future<com_amap_api_services_route_RouteSearch_FromAndTo?> getFromAndTo() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::getFromAndTo([])');
@@ -90,7 +90,7 @@ class com_amap_api_services_route_RouteSearch_DrivePlanQuery extends java_lang_O
   }
   
   
-  Future<String> getDestParentPoiID() async {
+  Future<String?> getDestParentPoiID() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::getDestParentPoiID([])');
@@ -107,7 +107,7 @@ class com_amap_api_services_route_RouteSearch_DrivePlanQuery extends java_lang_O
   }
   
   
-  Future<int> getMode() async {
+  Future<int?> getMode() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::getMode([])');
@@ -124,7 +124,7 @@ class com_amap_api_services_route_RouteSearch_DrivePlanQuery extends java_lang_O
   }
   
   
-  Future<int> getCarType() async {
+  Future<int?> getCarType() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::getCarType([])');
@@ -141,7 +141,7 @@ class com_amap_api_services_route_RouteSearch_DrivePlanQuery extends java_lang_O
   }
   
   
-  Future<int> getFirstTime() async {
+  Future<int?> getFirstTime() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::getFirstTime([])');
@@ -158,7 +158,7 @@ class com_amap_api_services_route_RouteSearch_DrivePlanQuery extends java_lang_O
   }
   
   
-  Future<int> getInterval() async {
+  Future<int?> getInterval() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::getInterval([])');
@@ -175,7 +175,7 @@ class com_amap_api_services_route_RouteSearch_DrivePlanQuery extends java_lang_O
   }
   
   
-  Future<int> getCount() async {
+  Future<int?> getCount() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::getCount([])');
@@ -192,7 +192,7 @@ class com_amap_api_services_route_RouteSearch_DrivePlanQuery extends java_lang_O
   }
   
   
-  Future<com_amap_api_services_route_RouteSearch_DrivePlanQuery> clone() async {
+  Future<com_amap_api_services_route_RouteSearch_DrivePlanQuery?> clone() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::clone([])');
@@ -278,7 +278,7 @@ extension com_amap_api_services_route_RouteSearch_DrivePlanQuery_Batch on List<c
 
   //region methods
   
-  Future<List<com_amap_api_services_route_RouteSearch_FromAndTo>> getFromAndTo_batch() async {
+  Future<List<com_amap_api_services_route_RouteSearch_FromAndTo?>?> getFromAndTo_batch() async {
     assert(true);
   
     // invoke native method
@@ -289,7 +289,7 @@ extension com_amap_api_services_route_RouteSearch_DrivePlanQuery_Batch on List<c
   }
   
   
-  Future<List<String>> getDestParentPoiID_batch() async {
+  Future<List<String?>?> getDestParentPoiID_batch() async {
     assert(true);
   
     // invoke native method
@@ -300,7 +300,7 @@ extension com_amap_api_services_route_RouteSearch_DrivePlanQuery_Batch on List<c
   }
   
   
-  Future<List<int>> getMode_batch() async {
+  Future<List<int?>?> getMode_batch() async {
     assert(true);
   
     // invoke native method
@@ -311,7 +311,7 @@ extension com_amap_api_services_route_RouteSearch_DrivePlanQuery_Batch on List<c
   }
   
   
-  Future<List<int>> getCarType_batch() async {
+  Future<List<int?>?> getCarType_batch() async {
     assert(true);
   
     // invoke native method
@@ -322,7 +322,7 @@ extension com_amap_api_services_route_RouteSearch_DrivePlanQuery_Batch on List<c
   }
   
   
-  Future<List<int>> getFirstTime_batch() async {
+  Future<List<int?>?> getFirstTime_batch() async {
     assert(true);
   
     // invoke native method
@@ -333,7 +333,7 @@ extension com_amap_api_services_route_RouteSearch_DrivePlanQuery_Batch on List<c
   }
   
   
-  Future<List<int>> getInterval_batch() async {
+  Future<List<int?>?> getInterval_batch() async {
     assert(true);
   
     // invoke native method
@@ -344,7 +344,7 @@ extension com_amap_api_services_route_RouteSearch_DrivePlanQuery_Batch on List<c
   }
   
   
-  Future<List<int>> getCount_batch() async {
+  Future<List<int?>?> getCount_batch() async {
     assert(true);
   
     // invoke native method
@@ -355,7 +355,7 @@ extension com_amap_api_services_route_RouteSearch_DrivePlanQuery_Batch on List<c
   }
   
   
-  Future<List<com_amap_api_services_route_RouteSearch_DrivePlanQuery>> clone_batch() async {
+  Future<List<com_amap_api_services_route_RouteSearch_DrivePlanQuery?>?> clone_batch() async {
     assert(true);
   
     // invoke native method
@@ -366,7 +366,7 @@ extension com_amap_api_services_route_RouteSearch_DrivePlanQuery_Batch on List<c
   }
   
   
-  Future<List<void>> setDestParentPoiID_batch(List<String> var1) async {
+  Future<List<void>?> setDestParentPoiID_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -377,7 +377,7 @@ extension com_amap_api_services_route_RouteSearch_DrivePlanQuery_Batch on List<c
   }
   
   
-  Future<List<void>> setMode_batch(List<int> var1) async {
+  Future<List<void>?> setMode_batch(List<int> var1) async {
     assert(true);
   
     // invoke native method
@@ -388,7 +388,7 @@ extension com_amap_api_services_route_RouteSearch_DrivePlanQuery_Batch on List<c
   }
   
   
-  Future<List<void>> setCarType_batch(List<int> var1) async {
+  Future<List<void>?> setCarType_batch(List<int> var1) async {
     assert(true);
   
     // invoke native method

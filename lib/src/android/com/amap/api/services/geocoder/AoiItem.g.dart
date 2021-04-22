@@ -28,7 +28,7 @@ class com_amap_api_services_geocoder_AoiItem extends java_lang_Object with andro
       'ObjectFactory::createcom_amap_api_services_geocoder_AoiItem__',
     
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_geocoder_AoiItem>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_geocoder_AoiItem>(__result__)!;
   }
   
   static Future<List<com_amap_api_services_geocoder_AoiItem>> create_batch__(int length) async {
@@ -37,8 +37,8 @@ class com_amap_api_services_geocoder_AoiItem extends java_lang_Object with andro
       'ObjectFactory::create_batchcom_amap_api_services_geocoder_AoiItem__',
       {'length': length}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_geocoder_AoiItem>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_geocoder_AoiItem>(it)!)
         .toList();
   }
   
@@ -54,7 +54,7 @@ class com_amap_api_services_geocoder_AoiItem extends java_lang_Object with andro
 
   //region methods
   
-  Future<String> getAoiId() async {
+  Future<String?> getAoiId() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.AoiItem@$refId::getAoiId([])');
@@ -71,7 +71,7 @@ class com_amap_api_services_geocoder_AoiItem extends java_lang_Object with andro
   }
   
   
-  Future<String> getAoiName() async {
+  Future<String?> getAoiName() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.AoiItem@$refId::getAoiName([])');
@@ -88,7 +88,7 @@ class com_amap_api_services_geocoder_AoiItem extends java_lang_Object with andro
   }
   
   
-  Future<String> getAdCode() async {
+  Future<String?> getAdCode() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.AoiItem@$refId::getAdCode([])');
@@ -105,7 +105,7 @@ class com_amap_api_services_geocoder_AoiItem extends java_lang_Object with andro
   }
   
   
-  Future<com_amap_api_services_core_LatLonPoint> getAoiCenterPoint() async {
+  Future<com_amap_api_services_core_LatLonPoint?> getAoiCenterPoint() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.AoiItem@$refId::getAoiCenterPoint([])');
@@ -122,7 +122,7 @@ class com_amap_api_services_geocoder_AoiItem extends java_lang_Object with andro
   }
   
   
-  Future<double> getAoiArea() async {
+  Future<double?> getAoiArea() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.AoiItem@$refId::getAoiArea([])');
@@ -242,7 +242,7 @@ extension com_amap_api_services_geocoder_AoiItem_Batch on List<com_amap_api_serv
 
   //region methods
   
-  Future<List<String>> getAoiId_batch() async {
+  Future<List<String?>?> getAoiId_batch() async {
     assert(true);
   
     // invoke native method
@@ -253,7 +253,7 @@ extension com_amap_api_services_geocoder_AoiItem_Batch on List<com_amap_api_serv
   }
   
   
-  Future<List<String>> getAoiName_batch() async {
+  Future<List<String?>?> getAoiName_batch() async {
     assert(true);
   
     // invoke native method
@@ -264,7 +264,7 @@ extension com_amap_api_services_geocoder_AoiItem_Batch on List<com_amap_api_serv
   }
   
   
-  Future<List<String>> getAdCode_batch() async {
+  Future<List<String?>?> getAdCode_batch() async {
     assert(true);
   
     // invoke native method
@@ -275,7 +275,7 @@ extension com_amap_api_services_geocoder_AoiItem_Batch on List<com_amap_api_serv
   }
   
   
-  Future<List<com_amap_api_services_core_LatLonPoint>> getAoiCenterPoint_batch() async {
+  Future<List<com_amap_api_services_core_LatLonPoint?>?> getAoiCenterPoint_batch() async {
     assert(true);
   
     // invoke native method
@@ -286,7 +286,7 @@ extension com_amap_api_services_geocoder_AoiItem_Batch on List<com_amap_api_serv
   }
   
   
-  Future<List<double>> getAoiArea_batch() async {
+  Future<List<double?>?> getAoiArea_batch() async {
     assert(true);
   
     // invoke native method
@@ -297,7 +297,7 @@ extension com_amap_api_services_geocoder_AoiItem_Batch on List<com_amap_api_serv
   }
   
   
-  Future<List<void>> setId_batch(List<String> var1) async {
+  Future<List<void>?> setId_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -308,7 +308,7 @@ extension com_amap_api_services_geocoder_AoiItem_Batch on List<com_amap_api_serv
   }
   
   
-  Future<List<void>> setName_batch(List<String> var1) async {
+  Future<List<void>?> setName_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -319,7 +319,7 @@ extension com_amap_api_services_geocoder_AoiItem_Batch on List<com_amap_api_serv
   }
   
   
-  Future<List<void>> setAdcode_batch(List<String> var1) async {
+  Future<List<void>?> setAdcode_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -330,7 +330,7 @@ extension com_amap_api_services_geocoder_AoiItem_Batch on List<com_amap_api_serv
   }
   
   
-  Future<List<void>> setLocation_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
+  Future<List<void>?> setLocation_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
     assert(true);
   
     // invoke native method
@@ -341,7 +341,7 @@ extension com_amap_api_services_geocoder_AoiItem_Batch on List<com_amap_api_serv
   }
   
   
-  Future<List<void>> setArea_batch(List<double> var1) async {
+  Future<List<void>?> setArea_batch(List<double> var1) async {
     assert(true);
   
     // invoke native method

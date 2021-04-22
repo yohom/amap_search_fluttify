@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 const kSpaceZero = 0.0;
 const kSpaceTiny = 1.0;
 const kSpaceSmall = 4.0;
-const kSpaceNormal = 8.0;
+const kSpace8 = 8.0;
 const kSpaceLittleBig = 12.0;
-const kSpaceBig = 16.0;
+const kSpace16 = 16.0;
 const kSpaceLarge = 24.0;
 const kSpaceHuge = 32.0;
 const kSpaceGiant = 64.0;
@@ -18,13 +18,12 @@ const SPACE_TINY_HORIZONTAL = SizedBox(width: kSpaceTiny, height: kSpaceZero);
 const SPACE_TINY_VERTICAL = SizedBox(width: kSpaceZero, height: kSpaceTiny);
 
 const SPACE_SMALL = SizedBox(width: kSpaceSmall, height: kSpaceSmall);
-const SPACE_SMALL_HORIZONTAL = SizedBox(width: kSpaceSmall, height: kSpaceZero);
+const SPACE_4_HORIZONTAL = SizedBox(width: kSpaceSmall, height: kSpaceZero);
 const SPACE_SMALL_VERTICAL = SizedBox(width: kSpaceZero, height: kSpaceSmall);
 
-const SPACE_NORMAL = SizedBox(width: kSpaceNormal, height: kSpaceNormal);
-const SPACE_NORMAL_HORIZONTAL =
-    SizedBox(width: kSpaceNormal, height: kSpaceZero);
-const SPACE_NORMAL_VERTICAL = SizedBox(width: kSpaceZero, height: kSpaceNormal);
+const SPACE_NORMAL = SizedBox(width: kSpace8, height: kSpace8);
+const SPACE_NORMAL_HORIZONTAL = SizedBox(width: kSpace8, height: kSpaceZero);
+const SPACE_NORMAL_VERTICAL = SizedBox(width: kSpaceZero, height: kSpace8);
 
 const SPACE_LITTLE_BIG =
     SizedBox(width: kSpaceLittleBig, height: kSpaceLittleBig);
@@ -33,9 +32,9 @@ const SPACE_LITTLE_BIG_HORIZONTAL =
 const SPACE_LITTLE_BIG_VERTICAL =
     SizedBox(width: kSpaceZero, height: kSpaceLittleBig);
 
-const SPACE_BIG = SizedBox(width: kSpaceBig, height: kSpaceBig);
-const SPACE_BIG_HORIZONTAL = SizedBox(width: kSpaceBig, height: kSpaceZero);
-const SPACE_BIG_VERTICAL = SizedBox(width: kSpaceZero, height: kSpaceBig);
+const SPACE_BIG = SizedBox(width: kSpace16, height: kSpace16);
+const SPACE_BIG_HORIZONTAL = SizedBox(width: kSpace16, height: kSpaceZero);
+const SPACE_BIG_VERTICAL = SizedBox(width: kSpaceZero, height: kSpace16);
 
 const SPACE_LARGE = SizedBox(width: kSpaceLarge, height: kSpaceLarge);
 const SPACE_LARGE_HORIZONTAL = SizedBox(width: kSpaceLarge, height: kSpaceZero);
@@ -53,7 +52,7 @@ const kDividerTiny = Divider(height: kSpaceTiny);
 const kDividerSmall = Divider(height: kSpaceSmall);
 const kDividerNormal = Divider();
 const kDividerLittleBig = Divider(height: kSpaceLittleBig);
-const kDividerBig = Divider(height: kSpaceBig);
+const kDividerBig = Divider(height: kSpace16);
 const kDividerLarge = Divider(height: kSpaceLarge);
 const kDividerHuge = Divider(height: kSpaceHuge);
 const kDividerGiant = Divider(height: kSpaceGiant);

@@ -28,7 +28,7 @@ class com_amap_api_services_weather_LocalWeatherForecast extends java_lang_Objec
       'ObjectFactory::createcom_amap_api_services_weather_LocalWeatherForecast__',
     
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_weather_LocalWeatherForecast>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_weather_LocalWeatherForecast>(__result__)!;
   }
   
   static Future<List<com_amap_api_services_weather_LocalWeatherForecast>> create_batch__(int length) async {
@@ -37,8 +37,8 @@ class com_amap_api_services_weather_LocalWeatherForecast extends java_lang_Objec
       'ObjectFactory::create_batchcom_amap_api_services_weather_LocalWeatherForecast__',
       {'length': length}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_weather_LocalWeatherForecast>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_weather_LocalWeatherForecast>(it)!)
         .toList();
   }
   
@@ -54,7 +54,7 @@ class com_amap_api_services_weather_LocalWeatherForecast extends java_lang_Objec
 
   //region methods
   
-  Future<String> getProvince() async {
+  Future<String?> getProvince() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.weather.LocalWeatherForecast@$refId::getProvince([])');
@@ -88,7 +88,7 @@ class com_amap_api_services_weather_LocalWeatherForecast extends java_lang_Objec
   }
   
   
-  Future<String> getCity() async {
+  Future<String?> getCity() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.weather.LocalWeatherForecast@$refId::getCity([])');
@@ -122,7 +122,7 @@ class com_amap_api_services_weather_LocalWeatherForecast extends java_lang_Objec
   }
   
   
-  Future<String> getAdCode() async {
+  Future<String?> getAdCode() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.weather.LocalWeatherForecast@$refId::getAdCode([])');
@@ -156,7 +156,7 @@ class com_amap_api_services_weather_LocalWeatherForecast extends java_lang_Objec
   }
   
   
-  Future<String> getReportTime() async {
+  Future<String?> getReportTime() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.weather.LocalWeatherForecast@$refId::getReportTime([])');
@@ -190,7 +190,7 @@ class com_amap_api_services_weather_LocalWeatherForecast extends java_lang_Objec
   }
   
   
-  Future<List<com_amap_api_services_weather_LocalDayWeatherForecast>> getWeatherForecast() async {
+  Future<List<com_amap_api_services_weather_LocalDayWeatherForecast>?> getWeatherForecast() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.weather.LocalWeatherForecast@$refId::getWeatherForecast([])');
@@ -203,7 +203,7 @@ class com_amap_api_services_weather_LocalWeatherForecast extends java_lang_Objec
     // handle native call
   
   
-    return (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_weather_LocalDayWeatherForecast>(it))?.toList();
+    return (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_weather_LocalDayWeatherForecast>(it)!).toList();
   }
   
   
@@ -242,7 +242,7 @@ extension com_amap_api_services_weather_LocalWeatherForecast_Batch on List<com_a
 
   //region methods
   
-  Future<List<String>> getProvince_batch() async {
+  Future<List<String?>?> getProvince_batch() async {
     assert(true);
   
     // invoke native method
@@ -253,7 +253,7 @@ extension com_amap_api_services_weather_LocalWeatherForecast_Batch on List<com_a
   }
   
   
-  Future<List<void>> setProvince_batch(List<String> var1) async {
+  Future<List<void>?> setProvince_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -264,7 +264,7 @@ extension com_amap_api_services_weather_LocalWeatherForecast_Batch on List<com_a
   }
   
   
-  Future<List<String>> getCity_batch() async {
+  Future<List<String?>?> getCity_batch() async {
     assert(true);
   
     // invoke native method
@@ -275,7 +275,7 @@ extension com_amap_api_services_weather_LocalWeatherForecast_Batch on List<com_a
   }
   
   
-  Future<List<void>> setCity_batch(List<String> var1) async {
+  Future<List<void>?> setCity_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -286,7 +286,7 @@ extension com_amap_api_services_weather_LocalWeatherForecast_Batch on List<com_a
   }
   
   
-  Future<List<String>> getAdCode_batch() async {
+  Future<List<String?>?> getAdCode_batch() async {
     assert(true);
   
     // invoke native method
@@ -297,7 +297,7 @@ extension com_amap_api_services_weather_LocalWeatherForecast_Batch on List<com_a
   }
   
   
-  Future<List<void>> setAdCode_batch(List<String> var1) async {
+  Future<List<void>?> setAdCode_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -308,7 +308,7 @@ extension com_amap_api_services_weather_LocalWeatherForecast_Batch on List<com_a
   }
   
   
-  Future<List<String>> getReportTime_batch() async {
+  Future<List<String?>?> getReportTime_batch() async {
     assert(true);
   
     // invoke native method
@@ -319,7 +319,7 @@ extension com_amap_api_services_weather_LocalWeatherForecast_Batch on List<com_a
   }
   
   
-  Future<List<void>> setReportTime_batch(List<String> var1) async {
+  Future<List<void>?> setReportTime_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -330,18 +330,18 @@ extension com_amap_api_services_weather_LocalWeatherForecast_Batch on List<com_a
   }
   
   
-  Future<List<List<com_amap_api_services_weather_LocalDayWeatherForecast>>> getWeatherForecast_batch() async {
+  Future<List<List<com_amap_api_services_weather_LocalDayWeatherForecast>?>?> getWeatherForecast_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.weather.LocalWeatherForecast::getWeatherForecast_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_weather_LocalDayWeatherForecast>(it))?.toList()).cast<List<com_amap_api_services_weather_LocalDayWeatherForecast>>().toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_weather_LocalDayWeatherForecast>(it)!).toList()).cast<List<com_amap_api_services_weather_LocalDayWeatherForecast>>().toList();
   }
   
   
-  Future<List<void>> setWeatherForecast_batch(List<List<com_amap_api_services_weather_LocalDayWeatherForecast>> var1) async {
+  Future<List<void>?> setWeatherForecast_batch(List<List<com_amap_api_services_weather_LocalDayWeatherForecast>> var1) async {
     assert(true);
   
     // invoke native method

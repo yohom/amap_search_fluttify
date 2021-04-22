@@ -28,7 +28,7 @@ class AMapReGeocodeSearchResponse extends AMapSearchObject with NSCoding, NSCopy
       'ObjectFactory::createAMapReGeocodeSearchResponse',
       {'init': init}
     );
-    return AmapSearchFluttifyIOSAs<AMapReGeocodeSearchResponse>(__result__);
+    return AmapSearchFluttifyIOSAs<AMapReGeocodeSearchResponse>(__result__)!;
   }
   
   static Future<List<AMapReGeocodeSearchResponse>> create_batch__(int length, { bool init = true /* ios only */ }) async {
@@ -37,15 +37,15 @@ class AMapReGeocodeSearchResponse extends AMapSearchObject with NSCoding, NSCopy
       'ObjectFactory::create_batchAMapReGeocodeSearchResponse',
       {'length': length, 'init': init}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyIOSAs<AMapReGeocodeSearchResponse>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyIOSAs<AMapReGeocodeSearchResponse>(it)!)
         .toList();
   }
   
   //endregion
 
   //region getters
-  Future<AMapReGeocode> get_regeocode() async {
+  Future<AMapReGeocode?> get_regeocode() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapReGeocodeSearchResponse::get_regeocode", {'__this__': this});
     return AmapSearchFluttifyIOSAs<AMapReGeocode>(__result__);
   }
@@ -73,9 +73,9 @@ class AMapReGeocodeSearchResponse extends AMapSearchObject with NSCoding, NSCopy
 
 extension AMapReGeocodeSearchResponse_Batch on List<AMapReGeocodeSearchResponse> {
   //region getters
-  Future<List<AMapReGeocode>> get_regeocode_batch() async {
+  Future<List<AMapReGeocode?>?> get_regeocode_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapReGeocodeSearchResponse::get_regeocode_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => AmapSearchFluttifyIOSAs<AMapReGeocode>(__result__))?.cast<AMapReGeocode>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => AmapSearchFluttifyIOSAs<AMapReGeocode>(__result__)).cast<AMapReGeocode?>().toList();
   }
   
   //endregion

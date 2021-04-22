@@ -28,7 +28,7 @@ class AMapShareSearchBaseRequest extends AMapSearchObject with NSCoding, NSCopyi
       'ObjectFactory::createAMapShareSearchBaseRequest',
       {'init': init}
     );
-    return AmapSearchFluttifyIOSAs<AMapShareSearchBaseRequest>(__result__);
+    return AmapSearchFluttifyIOSAs<AMapShareSearchBaseRequest>(__result__)!;
   }
   
   static Future<List<AMapShareSearchBaseRequest>> create_batch__(int length, { bool init = true /* ios only */ }) async {
@@ -37,8 +37,8 @@ class AMapShareSearchBaseRequest extends AMapSearchObject with NSCoding, NSCopyi
       'ObjectFactory::create_batchAMapShareSearchBaseRequest',
       {'length': length, 'init': init}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyIOSAs<AMapShareSearchBaseRequest>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyIOSAs<AMapShareSearchBaseRequest>(it)!)
         .toList();
   }
   

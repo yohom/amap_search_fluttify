@@ -31,7 +31,7 @@ class com_amap_api_services_cloud_CloudSearch_SearchBound extends java_lang_Obje
       'ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_SearchBound__com_amap_api_services_core_LatLonPoint__int',
       {"var1": var1, "var2": var2}
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudSearch_SearchBound>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudSearch_SearchBound>(__result__)!;
   }
   
   static Future<com_amap_api_services_cloud_CloudSearch_SearchBound> create__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint(com_amap_api_services_core_LatLonPoint var1, com_amap_api_services_core_LatLonPoint var2) async {
@@ -39,7 +39,7 @@ class com_amap_api_services_cloud_CloudSearch_SearchBound extends java_lang_Obje
       'ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_SearchBound__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint',
       {"var1": var1, "var2": var2}
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudSearch_SearchBound>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudSearch_SearchBound>(__result__)!;
   }
   
   static Future<com_amap_api_services_cloud_CloudSearch_SearchBound> create__List_java_util_List_com_amap_api_services_core_LatLonPoint__(List<com_amap_api_services_core_LatLonPoint> var1) async {
@@ -47,7 +47,7 @@ class com_amap_api_services_cloud_CloudSearch_SearchBound extends java_lang_Obje
       'ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_SearchBound__java_util_List_com_amap_api_services_core_LatLonPoint_',
       {"var1": var1}
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudSearch_SearchBound>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudSearch_SearchBound>(__result__)!;
   }
   
   static Future<com_amap_api_services_cloud_CloudSearch_SearchBound> create__String(String var1) async {
@@ -55,7 +55,7 @@ class com_amap_api_services_cloud_CloudSearch_SearchBound extends java_lang_Obje
       'ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_SearchBound__String',
       {"var1": var1}
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudSearch_SearchBound>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudSearch_SearchBound>(__result__)!;
   }
   
   static Future<List<com_amap_api_services_cloud_CloudSearch_SearchBound>> create_batch__com_amap_api_services_core_LatLonPoint__int(List<com_amap_api_services_core_LatLonPoint> var1, List<int> var2) async {
@@ -64,8 +64,8 @@ class com_amap_api_services_cloud_CloudSearch_SearchBound extends java_lang_Obje
       'ObjectFactory::create_batchcom_amap_api_services_cloud_CloudSearch_SearchBound__com_amap_api_services_core_LatLonPoint__int',
       [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudSearch_SearchBound>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudSearch_SearchBound>(it)!)
         .toList();
   }
   
@@ -75,8 +75,8 @@ class com_amap_api_services_cloud_CloudSearch_SearchBound extends java_lang_Obje
       'ObjectFactory::create_batchcom_amap_api_services_cloud_CloudSearch_SearchBound__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint',
       [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudSearch_SearchBound>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudSearch_SearchBound>(it)!)
         .toList();
   }
   
@@ -86,8 +86,8 @@ class com_amap_api_services_cloud_CloudSearch_SearchBound extends java_lang_Obje
       'ObjectFactory::create_batchcom_amap_api_services_cloud_CloudSearch_SearchBound__java_util_List_com_amap_api_services_core_LatLonPoint_',
       [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudSearch_SearchBound>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudSearch_SearchBound>(it)!)
         .toList();
   }
   
@@ -97,8 +97,8 @@ class com_amap_api_services_cloud_CloudSearch_SearchBound extends java_lang_Obje
       'ObjectFactory::create_batchcom_amap_api_services_cloud_CloudSearch_SearchBound__String',
       [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudSearch_SearchBound>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudSearch_SearchBound>(it)!)
         .toList();
   }
   
@@ -114,7 +114,7 @@ class com_amap_api_services_cloud_CloudSearch_SearchBound extends java_lang_Obje
 
   //region methods
   
-  Future<com_amap_api_services_core_LatLonPoint> getLowerLeft() async {
+  Future<com_amap_api_services_core_LatLonPoint?> getLowerLeft() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudSearch.SearchBound@$refId::getLowerLeft([])');
@@ -131,7 +131,7 @@ class com_amap_api_services_cloud_CloudSearch_SearchBound extends java_lang_Obje
   }
   
   
-  Future<com_amap_api_services_core_LatLonPoint> getUpperRight() async {
+  Future<com_amap_api_services_core_LatLonPoint?> getUpperRight() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudSearch.SearchBound@$refId::getUpperRight([])');
@@ -148,7 +148,7 @@ class com_amap_api_services_cloud_CloudSearch_SearchBound extends java_lang_Obje
   }
   
   
-  Future<com_amap_api_services_core_LatLonPoint> getCenter() async {
+  Future<com_amap_api_services_core_LatLonPoint?> getCenter() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudSearch.SearchBound@$refId::getCenter([])');
@@ -165,7 +165,7 @@ class com_amap_api_services_cloud_CloudSearch_SearchBound extends java_lang_Obje
   }
   
   
-  Future<int> getRange() async {
+  Future<int?> getRange() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudSearch.SearchBound@$refId::getRange([])');
@@ -182,7 +182,7 @@ class com_amap_api_services_cloud_CloudSearch_SearchBound extends java_lang_Obje
   }
   
   
-  Future<String> getShape() async {
+  Future<String?> getShape() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudSearch.SearchBound@$refId::getShape([])');
@@ -199,7 +199,7 @@ class com_amap_api_services_cloud_CloudSearch_SearchBound extends java_lang_Obje
   }
   
   
-  Future<String> getCity() async {
+  Future<String?> getCity() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudSearch.SearchBound@$refId::getCity([])');
@@ -216,7 +216,7 @@ class com_amap_api_services_cloud_CloudSearch_SearchBound extends java_lang_Obje
   }
   
   
-  Future<List<com_amap_api_services_core_LatLonPoint>> getPolyGonList() async {
+  Future<List<com_amap_api_services_core_LatLonPoint>?> getPolyGonList() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudSearch.SearchBound@$refId::getPolyGonList([])');
@@ -229,11 +229,11 @@ class com_amap_api_services_cloud_CloudSearch_SearchBound extends java_lang_Obje
     // handle native call
   
   
-    return (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(it))?.toList();
+    return (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(it)!).toList();
   }
   
   
-  Future<com_amap_api_services_cloud_CloudSearch_SearchBound> clone() async {
+  Future<com_amap_api_services_cloud_CloudSearch_SearchBound?> clone() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudSearch.SearchBound@$refId::clone([])');
@@ -268,7 +268,7 @@ extension com_amap_api_services_cloud_CloudSearch_SearchBound_Batch on List<com_
 
   //region methods
   
-  Future<List<com_amap_api_services_core_LatLonPoint>> getLowerLeft_batch() async {
+  Future<List<com_amap_api_services_core_LatLonPoint?>?> getLowerLeft_batch() async {
     assert(true);
   
     // invoke native method
@@ -279,7 +279,7 @@ extension com_amap_api_services_cloud_CloudSearch_SearchBound_Batch on List<com_
   }
   
   
-  Future<List<com_amap_api_services_core_LatLonPoint>> getUpperRight_batch() async {
+  Future<List<com_amap_api_services_core_LatLonPoint?>?> getUpperRight_batch() async {
     assert(true);
   
     // invoke native method
@@ -290,7 +290,7 @@ extension com_amap_api_services_cloud_CloudSearch_SearchBound_Batch on List<com_
   }
   
   
-  Future<List<com_amap_api_services_core_LatLonPoint>> getCenter_batch() async {
+  Future<List<com_amap_api_services_core_LatLonPoint?>?> getCenter_batch() async {
     assert(true);
   
     // invoke native method
@@ -301,7 +301,7 @@ extension com_amap_api_services_cloud_CloudSearch_SearchBound_Batch on List<com_
   }
   
   
-  Future<List<int>> getRange_batch() async {
+  Future<List<int?>?> getRange_batch() async {
     assert(true);
   
     // invoke native method
@@ -312,7 +312,7 @@ extension com_amap_api_services_cloud_CloudSearch_SearchBound_Batch on List<com_
   }
   
   
-  Future<List<String>> getShape_batch() async {
+  Future<List<String?>?> getShape_batch() async {
     assert(true);
   
     // invoke native method
@@ -323,7 +323,7 @@ extension com_amap_api_services_cloud_CloudSearch_SearchBound_Batch on List<com_
   }
   
   
-  Future<List<String>> getCity_batch() async {
+  Future<List<String?>?> getCity_batch() async {
     assert(true);
   
     // invoke native method
@@ -334,18 +334,18 @@ extension com_amap_api_services_cloud_CloudSearch_SearchBound_Batch on List<com_
   }
   
   
-  Future<List<List<com_amap_api_services_core_LatLonPoint>>> getPolyGonList_batch() async {
+  Future<List<List<com_amap_api_services_core_LatLonPoint>?>?> getPolyGonList_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.cloud.CloudSearch.SearchBound::getPolyGonList_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(it))?.toList()).cast<List<com_amap_api_services_core_LatLonPoint>>().toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(it)!).toList()).cast<List<com_amap_api_services_core_LatLonPoint>>().toList();
   }
   
   
-  Future<List<com_amap_api_services_cloud_CloudSearch_SearchBound>> clone_batch() async {
+  Future<List<com_amap_api_services_cloud_CloudSearch_SearchBound?>?> clone_batch() async {
     assert(true);
   
     // invoke native method

@@ -28,7 +28,7 @@ class com_amap_api_services_core_SuggestionCity extends java_lang_Object  {
       'ObjectFactory::createcom_amap_api_services_core_SuggestionCity__String__String__String__int',
       {"var1": var1, "var2": var2, "var3": var3, "var4": var4}
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_core_SuggestionCity>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_core_SuggestionCity>(__result__)!;
   }
   
   static Future<List<com_amap_api_services_core_SuggestionCity>> create_batch__String__String__String__int(List<String> var1, List<String> var2, List<String> var3, List<int> var4) async {
@@ -37,8 +37,8 @@ class com_amap_api_services_core_SuggestionCity extends java_lang_Object  {
       'ObjectFactory::create_batchcom_amap_api_services_core_SuggestionCity__String__String__String__int',
       [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "var4": var4[__i__]}]
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_SuggestionCity>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_SuggestionCity>(it)!)
         .toList();
   }
   
@@ -54,7 +54,7 @@ class com_amap_api_services_core_SuggestionCity extends java_lang_Object  {
 
   //region methods
   
-  Future<String> getCityName() async {
+  Future<String?> getCityName() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.SuggestionCity@$refId::getCityName([])');
@@ -88,7 +88,7 @@ class com_amap_api_services_core_SuggestionCity extends java_lang_Object  {
   }
   
   
-  Future<String> getCityCode() async {
+  Future<String?> getCityCode() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.SuggestionCity@$refId::getCityCode([])');
@@ -122,7 +122,7 @@ class com_amap_api_services_core_SuggestionCity extends java_lang_Object  {
   }
   
   
-  Future<String> getAdCode() async {
+  Future<String?> getAdCode() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.SuggestionCity@$refId::getAdCode([])');
@@ -156,7 +156,7 @@ class com_amap_api_services_core_SuggestionCity extends java_lang_Object  {
   }
   
   
-  Future<int> getSuggestionNum() async {
+  Future<int?> getSuggestionNum() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.SuggestionCity@$refId::getSuggestionNum([])');
@@ -208,7 +208,7 @@ extension com_amap_api_services_core_SuggestionCity_Batch on List<com_amap_api_s
 
   //region methods
   
-  Future<List<String>> getCityName_batch() async {
+  Future<List<String?>?> getCityName_batch() async {
     assert(true);
   
     // invoke native method
@@ -219,7 +219,7 @@ extension com_amap_api_services_core_SuggestionCity_Batch on List<com_amap_api_s
   }
   
   
-  Future<List<void>> setCityName_batch(List<String> var1) async {
+  Future<List<void>?> setCityName_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -230,7 +230,7 @@ extension com_amap_api_services_core_SuggestionCity_Batch on List<com_amap_api_s
   }
   
   
-  Future<List<String>> getCityCode_batch() async {
+  Future<List<String?>?> getCityCode_batch() async {
     assert(true);
   
     // invoke native method
@@ -241,7 +241,7 @@ extension com_amap_api_services_core_SuggestionCity_Batch on List<com_amap_api_s
   }
   
   
-  Future<List<void>> setCityCode_batch(List<String> var1) async {
+  Future<List<void>?> setCityCode_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -252,7 +252,7 @@ extension com_amap_api_services_core_SuggestionCity_Batch on List<com_amap_api_s
   }
   
   
-  Future<List<String>> getAdCode_batch() async {
+  Future<List<String?>?> getAdCode_batch() async {
     assert(true);
   
     // invoke native method
@@ -263,7 +263,7 @@ extension com_amap_api_services_core_SuggestionCity_Batch on List<com_amap_api_s
   }
   
   
-  Future<List<void>> setAdCode_batch(List<String> var1) async {
+  Future<List<void>?> setAdCode_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -274,7 +274,7 @@ extension com_amap_api_services_core_SuggestionCity_Batch on List<com_amap_api_s
   }
   
   
-  Future<List<int>> getSuggestionNum_batch() async {
+  Future<List<int?>?> getSuggestionNum_batch() async {
     assert(true);
   
     // invoke native method
@@ -285,7 +285,7 @@ extension com_amap_api_services_core_SuggestionCity_Batch on List<com_amap_api_s
   }
   
   
-  Future<List<void>> setSuggestionNum_batch(List<int> var1) async {
+  Future<List<void>?> setSuggestionNum_batch(List<int> var1) async {
     assert(true);
   
     // invoke native method

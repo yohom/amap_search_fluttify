@@ -28,7 +28,7 @@ class com_amap_api_services_weather_WeatherSearch extends java_lang_Object  {
       'ObjectFactory::createcom_amap_api_services_weather_WeatherSearch__android_content_Context',
       {"var1": var1}
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_weather_WeatherSearch>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_weather_WeatherSearch>(__result__)!;
   }
   
   static Future<List<com_amap_api_services_weather_WeatherSearch>> create_batch__android_content_Context(List<android_content_Context> var1) async {
@@ -37,8 +37,8 @@ class com_amap_api_services_weather_WeatherSearch extends java_lang_Object  {
       'ObjectFactory::create_batchcom_amap_api_services_weather_WeatherSearch__android_content_Context',
       [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_weather_WeatherSearch>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_weather_WeatherSearch>(it)!)
         .toList();
   }
   
@@ -54,7 +54,7 @@ class com_amap_api_services_weather_WeatherSearch extends java_lang_Object  {
 
   //region methods
   
-  Future<com_amap_api_services_weather_WeatherSearchQuery> getQuery() async {
+  Future<com_amap_api_services_weather_WeatherSearchQuery?> getQuery() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.weather.WeatherSearch@$refId::getQuery([])');
@@ -144,7 +144,7 @@ class com_amap_api_services_weather_WeatherSearch extends java_lang_Object  {
                 break;
             }
           } catch (e) {
-            debugPrint(e);
+            debugPrint(e.toString());
             rethrow;
           }
         });
@@ -171,7 +171,7 @@ extension com_amap_api_services_weather_WeatherSearch_Batch on List<com_amap_api
 
   //region methods
   
-  Future<List<com_amap_api_services_weather_WeatherSearchQuery>> getQuery_batch() async {
+  Future<List<com_amap_api_services_weather_WeatherSearchQuery?>?> getQuery_batch() async {
     assert(true);
   
     // invoke native method
@@ -182,7 +182,7 @@ extension com_amap_api_services_weather_WeatherSearch_Batch on List<com_amap_api
   }
   
   
-  Future<List<void>> setQuery_batch(List<com_amap_api_services_weather_WeatherSearchQuery> var1) async {
+  Future<List<void>?> setQuery_batch(List<com_amap_api_services_weather_WeatherSearchQuery> var1) async {
     assert(true);
   
     // invoke native method
@@ -193,7 +193,7 @@ extension com_amap_api_services_weather_WeatherSearch_Batch on List<com_amap_api
   }
   
   
-  Future<List<void>> searchWeatherAsyn_batch() async {
+  Future<List<void>?> searchWeatherAsyn_batch() async {
     assert(true);
   
     // invoke native method

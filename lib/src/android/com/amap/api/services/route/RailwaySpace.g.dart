@@ -28,7 +28,7 @@ class com_amap_api_services_route_RailwaySpace extends java_lang_Object with and
       'ObjectFactory::createcom_amap_api_services_route_RailwaySpace__String__float',
       {"var1": var1, "var2": var2}
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RailwaySpace>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RailwaySpace>(__result__)!;
   }
   
   static Future<List<com_amap_api_services_route_RailwaySpace>> create_batch__String__float(List<String> var1, List<double> var2) async {
@@ -37,8 +37,8 @@ class com_amap_api_services_route_RailwaySpace extends java_lang_Object with and
       'ObjectFactory::create_batchcom_amap_api_services_route_RailwaySpace__String__float',
       [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RailwaySpace>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RailwaySpace>(it)!)
         .toList();
   }
   
@@ -54,7 +54,7 @@ class com_amap_api_services_route_RailwaySpace extends java_lang_Object with and
 
   //region methods
   
-  Future<String> getCode() async {
+  Future<String?> getCode() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RailwaySpace@$refId::getCode([])');
@@ -71,7 +71,7 @@ class com_amap_api_services_route_RailwaySpace extends java_lang_Object with and
   }
   
   
-  Future<double> getCost() async {
+  Future<double?> getCost() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RailwaySpace@$refId::getCost([])');
@@ -106,7 +106,7 @@ extension com_amap_api_services_route_RailwaySpace_Batch on List<com_amap_api_se
 
   //region methods
   
-  Future<List<String>> getCode_batch() async {
+  Future<List<String?>?> getCode_batch() async {
     assert(true);
   
     // invoke native method
@@ -117,7 +117,7 @@ extension com_amap_api_services_route_RailwaySpace_Batch on List<com_amap_api_se
   }
   
   
-  Future<List<double>> getCost_batch() async {
+  Future<List<double?>?> getCost_batch() async {
     assert(true);
   
     // invoke native method

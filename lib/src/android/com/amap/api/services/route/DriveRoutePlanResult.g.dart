@@ -28,7 +28,7 @@ class com_amap_api_services_route_DriveRoutePlanResult extends com_amap_api_serv
       'ObjectFactory::createcom_amap_api_services_route_DriveRoutePlanResult__',
     
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_DriveRoutePlanResult>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_DriveRoutePlanResult>(__result__)!;
   }
   
   static Future<List<com_amap_api_services_route_DriveRoutePlanResult>> create_batch__(int length) async {
@@ -37,8 +37,8 @@ class com_amap_api_services_route_DriveRoutePlanResult extends com_amap_api_serv
       'ObjectFactory::create_batchcom_amap_api_services_route_DriveRoutePlanResult__',
       {'length': length}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_DriveRoutePlanResult>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_DriveRoutePlanResult>(it)!)
         .toList();
   }
   
@@ -54,7 +54,7 @@ class com_amap_api_services_route_DriveRoutePlanResult extends com_amap_api_serv
 
   //region methods
   
-  Future<List<com_amap_api_services_route_DrivePlanPath>> getPaths() async {
+  Future<List<com_amap_api_services_route_DrivePlanPath>?> getPaths() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.DriveRoutePlanResult@$refId::getPaths([])');
@@ -67,7 +67,7 @@ class com_amap_api_services_route_DriveRoutePlanResult extends com_amap_api_serv
     // handle native call
   
   
-    return (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_DrivePlanPath>(it))?.toList();
+    return (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_DrivePlanPath>(it)!).toList();
   }
   
   
@@ -88,7 +88,7 @@ class com_amap_api_services_route_DriveRoutePlanResult extends com_amap_api_serv
   }
   
   
-  Future<List<com_amap_api_services_route_TimeInfo>> getTimeInfos() async {
+  Future<List<com_amap_api_services_route_TimeInfo>?> getTimeInfos() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.DriveRoutePlanResult@$refId::getTimeInfos([])');
@@ -101,7 +101,7 @@ class com_amap_api_services_route_DriveRoutePlanResult extends com_amap_api_serv
     // handle native call
   
   
-    return (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_TimeInfo>(it))?.toList();
+    return (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_TimeInfo>(it)!).toList();
   }
   
   
@@ -157,18 +157,18 @@ extension com_amap_api_services_route_DriveRoutePlanResult_Batch on List<com_ama
 
   //region methods
   
-  Future<List<List<com_amap_api_services_route_DrivePlanPath>>> getPaths_batch() async {
+  Future<List<List<com_amap_api_services_route_DrivePlanPath>?>?> getPaths_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.DriveRoutePlanResult::getPaths_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_DrivePlanPath>(it))?.toList()).cast<List<com_amap_api_services_route_DrivePlanPath>>().toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_DrivePlanPath>(it)!).toList()).cast<List<com_amap_api_services_route_DrivePlanPath>>().toList();
   }
   
   
-  Future<List<void>> setPaths_batch(List<List<com_amap_api_services_route_DrivePlanPath>> var1) async {
+  Future<List<void>?> setPaths_batch(List<List<com_amap_api_services_route_DrivePlanPath>> var1) async {
     assert(true);
   
     // invoke native method
@@ -179,18 +179,18 @@ extension com_amap_api_services_route_DriveRoutePlanResult_Batch on List<com_ama
   }
   
   
-  Future<List<List<com_amap_api_services_route_TimeInfo>>> getTimeInfos_batch() async {
+  Future<List<List<com_amap_api_services_route_TimeInfo>?>?> getTimeInfos_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.DriveRoutePlanResult::getTimeInfos_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_TimeInfo>(it))?.toList()).cast<List<com_amap_api_services_route_TimeInfo>>().toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_TimeInfo>(it)!).toList()).cast<List<com_amap_api_services_route_TimeInfo>>().toList();
   }
   
   
-  Future<List<void>> setTimeInfos_batch(List<List<com_amap_api_services_route_TimeInfo>> var1) async {
+  Future<List<void>?> setTimeInfos_batch(List<List<com_amap_api_services_route_TimeInfo>> var1) async {
     assert(true);
   
     // invoke native method
@@ -201,7 +201,7 @@ extension com_amap_api_services_route_DriveRoutePlanResult_Batch on List<com_ama
   }
   
   
-  Future<List<void>> setDrivePlanQuery_batch(List<com_amap_api_services_route_RouteSearch_DrivePlanQuery> var1) async {
+  Future<List<void>?> setDrivePlanQuery_batch(List<com_amap_api_services_route_RouteSearch_DrivePlanQuery> var1) async {
     assert(true);
   
     // invoke native method

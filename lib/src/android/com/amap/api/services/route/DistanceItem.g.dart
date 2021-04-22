@@ -28,7 +28,7 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
       'ObjectFactory::createcom_amap_api_services_route_DistanceItem__',
     
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_DistanceItem>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_DistanceItem>(__result__)!;
   }
   
   static Future<List<com_amap_api_services_route_DistanceItem>> create_batch__(int length) async {
@@ -37,25 +37,25 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
       'ObjectFactory::create_batchcom_amap_api_services_route_DistanceItem__',
       {'length': length}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_DistanceItem>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_DistanceItem>(it)!)
         .toList();
   }
   
   //endregion
 
   //region getters
-  Future<int> get_ERROR_CODE_NO_DRIVE() async {
+  Future<int?> get_ERROR_CODE_NO_DRIVE() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("com.amap.api.services.route.DistanceItem::get_ERROR_CODE_NO_DRIVE", {'__this__': this});
     return __result__;
   }
   
-  Future<int> get_ERROR_CODE_TOO_FAR() async {
+  Future<int?> get_ERROR_CODE_TOO_FAR() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("com.amap.api.services.route.DistanceItem::get_ERROR_CODE_TOO_FAR", {'__this__': this});
     return __result__;
   }
   
-  Future<int> get_ERROR_CODE_NOT_IN_CHINA() async {
+  Future<int?> get_ERROR_CODE_NOT_IN_CHINA() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("com.amap.api.services.route.DistanceItem::get_ERROR_CODE_NOT_IN_CHINA", {'__this__': this});
     return __result__;
   }
@@ -68,7 +68,7 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
 
   //region methods
   
-  Future<int> getOriginId() async {
+  Future<int?> getOriginId() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.DistanceItem@$refId::getOriginId([])');
@@ -85,7 +85,7 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
   }
   
   
-  Future<int> getDestId() async {
+  Future<int?> getDestId() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.DistanceItem@$refId::getDestId([])');
@@ -102,7 +102,7 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
   }
   
   
-  Future<double> getDistance() async {
+  Future<double?> getDistance() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.DistanceItem@$refId::getDistance([])');
@@ -119,7 +119,7 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
   }
   
   
-  Future<double> getDuration() async {
+  Future<double?> getDuration() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.DistanceItem@$refId::getDuration([])');
@@ -136,7 +136,7 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
   }
   
   
-  Future<String> getErrorInfo() async {
+  Future<String?> getErrorInfo() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.DistanceItem@$refId::getErrorInfo([])');
@@ -153,7 +153,7 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
   }
   
   
-  Future<int> getErrorCode() async {
+  Future<int?> getErrorCode() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.DistanceItem@$refId::getErrorCode([])');
@@ -281,19 +281,19 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
 
 extension com_amap_api_services_route_DistanceItem_Batch on List<com_amap_api_services_route_DistanceItem> {
   //region getters
-  Future<List<int>> get_ERROR_CODE_NO_DRIVE_batch() async {
+  Future<List<int?>?> get_ERROR_CODE_NO_DRIVE_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("com.amap.api.services.route.DistanceItem::get_ERROR_CODE_NO_DRIVE_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<int>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<int?>().toList();
   }
   
-  Future<List<int>> get_ERROR_CODE_TOO_FAR_batch() async {
+  Future<List<int?>?> get_ERROR_CODE_TOO_FAR_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("com.amap.api.services.route.DistanceItem::get_ERROR_CODE_TOO_FAR_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<int>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<int?>().toList();
   }
   
-  Future<List<int>> get_ERROR_CODE_NOT_IN_CHINA_batch() async {
+  Future<List<int?>?> get_ERROR_CODE_NOT_IN_CHINA_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("com.amap.api.services.route.DistanceItem::get_ERROR_CODE_NOT_IN_CHINA_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<int>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<int?>().toList();
   }
   
   //endregion
@@ -304,7 +304,7 @@ extension com_amap_api_services_route_DistanceItem_Batch on List<com_amap_api_se
 
   //region methods
   
-  Future<List<int>> getOriginId_batch() async {
+  Future<List<int?>?> getOriginId_batch() async {
     assert(true);
   
     // invoke native method
@@ -315,7 +315,7 @@ extension com_amap_api_services_route_DistanceItem_Batch on List<com_amap_api_se
   }
   
   
-  Future<List<int>> getDestId_batch() async {
+  Future<List<int?>?> getDestId_batch() async {
     assert(true);
   
     // invoke native method
@@ -326,7 +326,7 @@ extension com_amap_api_services_route_DistanceItem_Batch on List<com_amap_api_se
   }
   
   
-  Future<List<double>> getDistance_batch() async {
+  Future<List<double?>?> getDistance_batch() async {
     assert(true);
   
     // invoke native method
@@ -337,7 +337,7 @@ extension com_amap_api_services_route_DistanceItem_Batch on List<com_amap_api_se
   }
   
   
-  Future<List<double>> getDuration_batch() async {
+  Future<List<double?>?> getDuration_batch() async {
     assert(true);
   
     // invoke native method
@@ -348,7 +348,7 @@ extension com_amap_api_services_route_DistanceItem_Batch on List<com_amap_api_se
   }
   
   
-  Future<List<String>> getErrorInfo_batch() async {
+  Future<List<String?>?> getErrorInfo_batch() async {
     assert(true);
   
     // invoke native method
@@ -359,7 +359,7 @@ extension com_amap_api_services_route_DistanceItem_Batch on List<com_amap_api_se
   }
   
   
-  Future<List<int>> getErrorCode_batch() async {
+  Future<List<int?>?> getErrorCode_batch() async {
     assert(true);
   
     // invoke native method
@@ -370,7 +370,7 @@ extension com_amap_api_services_route_DistanceItem_Batch on List<com_amap_api_se
   }
   
   
-  Future<List<void>> setOriginId_batch(List<int> var1) async {
+  Future<List<void>?> setOriginId_batch(List<int> var1) async {
     assert(true);
   
     // invoke native method
@@ -381,7 +381,7 @@ extension com_amap_api_services_route_DistanceItem_Batch on List<com_amap_api_se
   }
   
   
-  Future<List<void>> setDestId_batch(List<int> var1) async {
+  Future<List<void>?> setDestId_batch(List<int> var1) async {
     assert(true);
   
     // invoke native method
@@ -392,7 +392,7 @@ extension com_amap_api_services_route_DistanceItem_Batch on List<com_amap_api_se
   }
   
   
-  Future<List<void>> setDistance_batch(List<double> var1) async {
+  Future<List<void>?> setDistance_batch(List<double> var1) async {
     assert(true);
   
     // invoke native method
@@ -403,7 +403,7 @@ extension com_amap_api_services_route_DistanceItem_Batch on List<com_amap_api_se
   }
   
   
-  Future<List<void>> setDuration_batch(List<double> var1) async {
+  Future<List<void>?> setDuration_batch(List<double> var1) async {
     assert(true);
   
     // invoke native method
@@ -414,7 +414,7 @@ extension com_amap_api_services_route_DistanceItem_Batch on List<com_amap_api_se
   }
   
   
-  Future<List<void>> setErrorInfo_batch(List<String> var1) async {
+  Future<List<void>?> setErrorInfo_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -425,7 +425,7 @@ extension com_amap_api_services_route_DistanceItem_Batch on List<com_amap_api_se
   }
   
   
-  Future<List<void>> setErrorCode_batch(List<int> var1) async {
+  Future<List<void>?> setErrorCode_batch(List<int> var1) async {
     assert(true);
   
     // invoke native method

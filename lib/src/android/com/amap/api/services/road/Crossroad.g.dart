@@ -28,7 +28,7 @@ class com_amap_api_services_road_Crossroad extends com_amap_api_services_road_Ro
       'ObjectFactory::createcom_amap_api_services_road_Crossroad__',
     
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_road_Crossroad>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_road_Crossroad>(__result__)!;
   }
   
   static Future<List<com_amap_api_services_road_Crossroad>> create_batch__(int length) async {
@@ -37,8 +37,8 @@ class com_amap_api_services_road_Crossroad extends com_amap_api_services_road_Ro
       'ObjectFactory::create_batchcom_amap_api_services_road_Crossroad__',
       {'length': length}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_road_Crossroad>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_road_Crossroad>(it)!)
         .toList();
   }
   
@@ -54,7 +54,7 @@ class com_amap_api_services_road_Crossroad extends com_amap_api_services_road_Ro
 
   //region methods
   
-  Future<double> getDistance() async {
+  Future<double?> getDistance() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::getDistance([])');
@@ -88,7 +88,7 @@ class com_amap_api_services_road_Crossroad extends com_amap_api_services_road_Ro
   }
   
   
-  Future<String> getDirection() async {
+  Future<String?> getDirection() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::getDirection([])');
@@ -122,7 +122,7 @@ class com_amap_api_services_road_Crossroad extends com_amap_api_services_road_Ro
   }
   
   
-  Future<String> getFirstRoadId() async {
+  Future<String?> getFirstRoadId() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::getFirstRoadId([])');
@@ -156,7 +156,7 @@ class com_amap_api_services_road_Crossroad extends com_amap_api_services_road_Ro
   }
   
   
-  Future<String> getFirstRoadName() async {
+  Future<String?> getFirstRoadName() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::getFirstRoadName([])');
@@ -190,7 +190,7 @@ class com_amap_api_services_road_Crossroad extends com_amap_api_services_road_Ro
   }
   
   
-  Future<String> getSecondRoadId() async {
+  Future<String?> getSecondRoadId() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::getSecondRoadId([])');
@@ -224,7 +224,7 @@ class com_amap_api_services_road_Crossroad extends com_amap_api_services_road_Ro
   }
   
   
-  Future<String> getSecondRoadName() async {
+  Future<String?> getSecondRoadName() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::getSecondRoadName([])');
@@ -276,7 +276,7 @@ extension com_amap_api_services_road_Crossroad_Batch on List<com_amap_api_servic
 
   //region methods
   
-  Future<List<double>> getDistance_batch() async {
+  Future<List<double?>?> getDistance_batch() async {
     assert(true);
   
     // invoke native method
@@ -287,7 +287,7 @@ extension com_amap_api_services_road_Crossroad_Batch on List<com_amap_api_servic
   }
   
   
-  Future<List<void>> setDistance_batch(List<double> var1) async {
+  Future<List<void>?> setDistance_batch(List<double> var1) async {
     assert(true);
   
     // invoke native method
@@ -298,7 +298,7 @@ extension com_amap_api_services_road_Crossroad_Batch on List<com_amap_api_servic
   }
   
   
-  Future<List<String>> getDirection_batch() async {
+  Future<List<String?>?> getDirection_batch() async {
     assert(true);
   
     // invoke native method
@@ -309,7 +309,7 @@ extension com_amap_api_services_road_Crossroad_Batch on List<com_amap_api_servic
   }
   
   
-  Future<List<void>> setDirection_batch(List<String> var1) async {
+  Future<List<void>?> setDirection_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -320,7 +320,7 @@ extension com_amap_api_services_road_Crossroad_Batch on List<com_amap_api_servic
   }
   
   
-  Future<List<String>> getFirstRoadId_batch() async {
+  Future<List<String?>?> getFirstRoadId_batch() async {
     assert(true);
   
     // invoke native method
@@ -331,7 +331,7 @@ extension com_amap_api_services_road_Crossroad_Batch on List<com_amap_api_servic
   }
   
   
-  Future<List<void>> setFirstRoadId_batch(List<String> var1) async {
+  Future<List<void>?> setFirstRoadId_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -342,7 +342,7 @@ extension com_amap_api_services_road_Crossroad_Batch on List<com_amap_api_servic
   }
   
   
-  Future<List<String>> getFirstRoadName_batch() async {
+  Future<List<String?>?> getFirstRoadName_batch() async {
     assert(true);
   
     // invoke native method
@@ -353,7 +353,7 @@ extension com_amap_api_services_road_Crossroad_Batch on List<com_amap_api_servic
   }
   
   
-  Future<List<void>> setFirstRoadName_batch(List<String> var1) async {
+  Future<List<void>?> setFirstRoadName_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -364,7 +364,7 @@ extension com_amap_api_services_road_Crossroad_Batch on List<com_amap_api_servic
   }
   
   
-  Future<List<String>> getSecondRoadId_batch() async {
+  Future<List<String?>?> getSecondRoadId_batch() async {
     assert(true);
   
     // invoke native method
@@ -375,7 +375,7 @@ extension com_amap_api_services_road_Crossroad_Batch on List<com_amap_api_servic
   }
   
   
-  Future<List<void>> setSecondRoadId_batch(List<String> var1) async {
+  Future<List<void>?> setSecondRoadId_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -386,7 +386,7 @@ extension com_amap_api_services_road_Crossroad_Batch on List<com_amap_api_servic
   }
   
   
-  Future<List<String>> getSecondRoadName_batch() async {
+  Future<List<String?>?> getSecondRoadName_batch() async {
     assert(true);
   
     // invoke native method
@@ -397,7 +397,7 @@ extension com_amap_api_services_road_Crossroad_Batch on List<com_amap_api_servic
   }
   
   
-  Future<List<void>> setSecondRoadName_batch(List<String> var1) async {
+  Future<List<void>?> setSecondRoadName_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method

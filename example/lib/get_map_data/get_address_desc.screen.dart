@@ -7,7 +7,7 @@ class GetAddressDescScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomPadding: false,
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(title: Text('获取地址描述数据')),
       body: ListView(
         children: <Widget>[
@@ -42,10 +42,10 @@ class _AddressEncodeScreenState extends State<AddressEncodeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomPadding: false,
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(title: Text('地理编码（地址转坐标）')),
       body: DecoratedColumn(
-        padding: EdgeInsets.all(kSpaceBig),
+        padding: EdgeInsets.all(kSpace16),
         children: <Widget>[
           TextFormField(
             controller: _keywordController,
@@ -90,10 +90,10 @@ class _AddressDecodeScreenState extends State<AddressDecodeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomPadding: false,
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(title: Text('逆地理编码（坐标转地址）')),
       body: DecoratedColumn(
-        padding: EdgeInsets.all(kSpaceBig),
+        padding: EdgeInsets.all(kSpace16),
         children: <Widget>[
           DecoratedRow(
             children: <Widget>[

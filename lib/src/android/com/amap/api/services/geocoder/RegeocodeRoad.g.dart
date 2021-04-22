@@ -28,7 +28,7 @@ class com_amap_api_services_geocoder_RegeocodeRoad extends java_lang_Object with
       'ObjectFactory::createcom_amap_api_services_geocoder_RegeocodeRoad__',
     
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_geocoder_RegeocodeRoad>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_geocoder_RegeocodeRoad>(__result__)!;
   }
   
   static Future<List<com_amap_api_services_geocoder_RegeocodeRoad>> create_batch__(int length) async {
@@ -37,8 +37,8 @@ class com_amap_api_services_geocoder_RegeocodeRoad extends java_lang_Object with
       'ObjectFactory::create_batchcom_amap_api_services_geocoder_RegeocodeRoad__',
       {'length': length}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_geocoder_RegeocodeRoad>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_geocoder_RegeocodeRoad>(it)!)
         .toList();
   }
   
@@ -54,7 +54,7 @@ class com_amap_api_services_geocoder_RegeocodeRoad extends java_lang_Object with
 
   //region methods
   
-  Future<String> getId() async {
+  Future<String?> getId() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.RegeocodeRoad@$refId::getId([])');
@@ -88,7 +88,7 @@ class com_amap_api_services_geocoder_RegeocodeRoad extends java_lang_Object with
   }
   
   
-  Future<String> getName() async {
+  Future<String?> getName() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.RegeocodeRoad@$refId::getName([])');
@@ -122,7 +122,7 @@ class com_amap_api_services_geocoder_RegeocodeRoad extends java_lang_Object with
   }
   
   
-  Future<double> getDistance() async {
+  Future<double?> getDistance() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.RegeocodeRoad@$refId::getDistance([])');
@@ -156,7 +156,7 @@ class com_amap_api_services_geocoder_RegeocodeRoad extends java_lang_Object with
   }
   
   
-  Future<String> getDirection() async {
+  Future<String?> getDirection() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.RegeocodeRoad@$refId::getDirection([])');
@@ -190,7 +190,7 @@ class com_amap_api_services_geocoder_RegeocodeRoad extends java_lang_Object with
   }
   
   
-  Future<com_amap_api_services_core_LatLonPoint> getLatLngPoint() async {
+  Future<com_amap_api_services_core_LatLonPoint?> getLatLngPoint() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.RegeocodeRoad@$refId::getLatLngPoint([])');
@@ -242,7 +242,7 @@ extension com_amap_api_services_geocoder_RegeocodeRoad_Batch on List<com_amap_ap
 
   //region methods
   
-  Future<List<String>> getId_batch() async {
+  Future<List<String?>?> getId_batch() async {
     assert(true);
   
     // invoke native method
@@ -253,7 +253,7 @@ extension com_amap_api_services_geocoder_RegeocodeRoad_Batch on List<com_amap_ap
   }
   
   
-  Future<List<void>> setId_batch(List<String> var1) async {
+  Future<List<void>?> setId_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -264,7 +264,7 @@ extension com_amap_api_services_geocoder_RegeocodeRoad_Batch on List<com_amap_ap
   }
   
   
-  Future<List<String>> getName_batch() async {
+  Future<List<String?>?> getName_batch() async {
     assert(true);
   
     // invoke native method
@@ -275,7 +275,7 @@ extension com_amap_api_services_geocoder_RegeocodeRoad_Batch on List<com_amap_ap
   }
   
   
-  Future<List<void>> setName_batch(List<String> var1) async {
+  Future<List<void>?> setName_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -286,7 +286,7 @@ extension com_amap_api_services_geocoder_RegeocodeRoad_Batch on List<com_amap_ap
   }
   
   
-  Future<List<double>> getDistance_batch() async {
+  Future<List<double?>?> getDistance_batch() async {
     assert(true);
   
     // invoke native method
@@ -297,7 +297,7 @@ extension com_amap_api_services_geocoder_RegeocodeRoad_Batch on List<com_amap_ap
   }
   
   
-  Future<List<void>> setDistance_batch(List<double> var1) async {
+  Future<List<void>?> setDistance_batch(List<double> var1) async {
     assert(true);
   
     // invoke native method
@@ -308,7 +308,7 @@ extension com_amap_api_services_geocoder_RegeocodeRoad_Batch on List<com_amap_ap
   }
   
   
-  Future<List<String>> getDirection_batch() async {
+  Future<List<String?>?> getDirection_batch() async {
     assert(true);
   
     // invoke native method
@@ -319,7 +319,7 @@ extension com_amap_api_services_geocoder_RegeocodeRoad_Batch on List<com_amap_ap
   }
   
   
-  Future<List<void>> setDirection_batch(List<String> var1) async {
+  Future<List<void>?> setDirection_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -330,7 +330,7 @@ extension com_amap_api_services_geocoder_RegeocodeRoad_Batch on List<com_amap_ap
   }
   
   
-  Future<List<com_amap_api_services_core_LatLonPoint>> getLatLngPoint_batch() async {
+  Future<List<com_amap_api_services_core_LatLonPoint?>?> getLatLngPoint_batch() async {
     assert(true);
   
     // invoke native method
@@ -341,7 +341,7 @@ extension com_amap_api_services_geocoder_RegeocodeRoad_Batch on List<com_amap_ap
   }
   
   
-  Future<List<void>> setLatLngPoint_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
+  Future<List<void>?> setLatLngPoint_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
     assert(true);
   
     // invoke native method

@@ -28,7 +28,7 @@ class com_amap_api_services_district_DistrictSearch extends java_lang_Object  {
       'ObjectFactory::createcom_amap_api_services_district_DistrictSearch__android_content_Context',
       {"var1": var1}
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_district_DistrictSearch>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_district_DistrictSearch>(__result__)!;
   }
   
   static Future<List<com_amap_api_services_district_DistrictSearch>> create_batch__android_content_Context(List<android_content_Context> var1) async {
@@ -37,8 +37,8 @@ class com_amap_api_services_district_DistrictSearch extends java_lang_Object  {
       'ObjectFactory::create_batchcom_amap_api_services_district_DistrictSearch__android_content_Context',
       [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_district_DistrictSearch>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_district_DistrictSearch>(it)!)
         .toList();
   }
   
@@ -54,7 +54,7 @@ class com_amap_api_services_district_DistrictSearch extends java_lang_Object  {
 
   //region methods
   
-  Future<com_amap_api_services_district_DistrictSearchQuery> getQuery() async {
+  Future<com_amap_api_services_district_DistrictSearchQuery?> getQuery() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.district.DistrictSearch@$refId::getQuery([])');
@@ -88,7 +88,7 @@ class com_amap_api_services_district_DistrictSearch extends java_lang_Object  {
   }
   
   
-  Future<com_amap_api_services_district_DistrictResult> searchDistrict() async {
+  Future<com_amap_api_services_district_DistrictResult?> searchDistrict() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.district.DistrictSearch@$refId::searchDistrict([])');
@@ -169,7 +169,7 @@ class com_amap_api_services_district_DistrictSearch extends java_lang_Object  {
                 break;
             }
           } catch (e) {
-            debugPrint(e);
+            debugPrint(e.toString());
             rethrow;
           }
         });
@@ -196,7 +196,7 @@ extension com_amap_api_services_district_DistrictSearch_Batch on List<com_amap_a
 
   //region methods
   
-  Future<List<com_amap_api_services_district_DistrictSearchQuery>> getQuery_batch() async {
+  Future<List<com_amap_api_services_district_DistrictSearchQuery?>?> getQuery_batch() async {
     assert(true);
   
     // invoke native method
@@ -207,7 +207,7 @@ extension com_amap_api_services_district_DistrictSearch_Batch on List<com_amap_a
   }
   
   
-  Future<List<void>> setQuery_batch(List<com_amap_api_services_district_DistrictSearchQuery> var1) async {
+  Future<List<void>?> setQuery_batch(List<com_amap_api_services_district_DistrictSearchQuery> var1) async {
     assert(true);
   
     // invoke native method
@@ -218,7 +218,7 @@ extension com_amap_api_services_district_DistrictSearch_Batch on List<com_amap_a
   }
   
   
-  Future<List<com_amap_api_services_district_DistrictResult>> searchDistrict_batch() async {
+  Future<List<com_amap_api_services_district_DistrictResult?>?> searchDistrict_batch() async {
     assert(true);
   
     // invoke native method
@@ -229,7 +229,7 @@ extension com_amap_api_services_district_DistrictSearch_Batch on List<com_amap_a
   }
   
   
-  Future<List<void>> searchDistrictAsyn_batch() async {
+  Future<List<void>?> searchDistrictAsyn_batch() async {
     assert(true);
   
     // invoke native method
@@ -240,7 +240,7 @@ extension com_amap_api_services_district_DistrictSearch_Batch on List<com_amap_a
   }
   
   
-  Future<List<void>> searchDistrictAnsy_batch() async {
+  Future<List<void>?> searchDistrictAnsy_batch() async {
     assert(true);
   
     // invoke native method

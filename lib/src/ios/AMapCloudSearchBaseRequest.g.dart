@@ -28,7 +28,7 @@ class AMapCloudSearchBaseRequest extends AMapSearchObject with NSCoding, NSCopyi
       'ObjectFactory::createAMapCloudSearchBaseRequest',
       {'init': init}
     );
-    return AmapSearchFluttifyIOSAs<AMapCloudSearchBaseRequest>(__result__);
+    return AmapSearchFluttifyIOSAs<AMapCloudSearchBaseRequest>(__result__)!;
   }
   
   static Future<List<AMapCloudSearchBaseRequest>> create_batch__(int length, { bool init = true /* ios only */ }) async {
@@ -37,40 +37,40 @@ class AMapCloudSearchBaseRequest extends AMapSearchObject with NSCoding, NSCopyi
       'ObjectFactory::create_batchAMapCloudSearchBaseRequest',
       {'length': length, 'init': init}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyIOSAs<AMapCloudSearchBaseRequest>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyIOSAs<AMapCloudSearchBaseRequest>(it)!)
         .toList();
   }
   
   //endregion
 
   //region getters
-  Future<String> get_tableID() async {
+  Future<String?> get_tableID() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudSearchBaseRequest::get_tableID", {'__this__': this});
     return __result__;
   }
   
-  Future<List<String>> get_filter() async {
+  Future<List<String>?> get_filter() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudSearchBaseRequest::get_filter", {'__this__': this});
     return (__result__ as List)?.cast<String>();
   }
   
-  Future<String> get_sortFields() async {
+  Future<String?> get_sortFields() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudSearchBaseRequest::get_sortFields", {'__this__': this});
     return __result__;
   }
   
-  Future<AMapCloudSortType> get_sortType() async {
+  Future<AMapCloudSortType?> get_sortType() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudSearchBaseRequest::get_sortType", {'__this__': this});
     return (__result__ as int).toAMapCloudSortType();
   }
   
-  Future<int> get_offset() async {
+  Future<int?> get_offset() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudSearchBaseRequest::get_offset", {'__this__': this});
     return __result__;
   }
   
-  Future<int> get_page() async {
+  Future<int?> get_page() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudSearchBaseRequest::get_page", {'__this__': this});
     return __result__;
   }
@@ -128,34 +128,34 @@ class AMapCloudSearchBaseRequest extends AMapSearchObject with NSCoding, NSCopyi
 
 extension AMapCloudSearchBaseRequest_Batch on List<AMapCloudSearchBaseRequest> {
   //region getters
-  Future<List<String>> get_tableID_batch() async {
+  Future<List<String?>?> get_tableID_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudSearchBaseRequest::get_tableID_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<List<String>>> get_filter_batch() async {
+  Future<List<List<String>?>?> get_filter_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudSearchBaseRequest::get_filter_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => (__result__ as List)?.cast<String>())?.cast<List<String>>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => (__result__ as List)?.cast<String>()).cast<List<String>?>().toList();
   }
   
-  Future<List<String>> get_sortFields_batch() async {
+  Future<List<String?>?> get_sortFields_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudSearchBaseRequest::get_sortFields_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<AMapCloudSortType>> get_sortType_batch() async {
+  Future<List<AMapCloudSortType?>?> get_sortType_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudSearchBaseRequest::get_sortType_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => (__result__ as int).toAMapCloudSortType())?.cast<AMapCloudSortType>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => (__result__ as int).toAMapCloudSortType()).cast<AMapCloudSortType?>().toList();
   }
   
-  Future<List<int>> get_offset_batch() async {
+  Future<List<int?>?> get_offset_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudSearchBaseRequest::get_offset_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<int>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<int?>().toList();
   }
   
-  Future<List<int>> get_page_batch() async {
+  Future<List<int?>?> get_page_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudSearchBaseRequest::get_page_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<int>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<int?>().toList();
   }
   
   //endregion

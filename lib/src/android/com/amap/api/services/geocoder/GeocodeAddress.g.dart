@@ -28,7 +28,7 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
       'ObjectFactory::createcom_amap_api_services_geocoder_GeocodeAddress__',
     
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_geocoder_GeocodeAddress>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_geocoder_GeocodeAddress>(__result__)!;
   }
   
   static Future<List<com_amap_api_services_geocoder_GeocodeAddress>> create_batch__(int length) async {
@@ -37,8 +37,8 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
       'ObjectFactory::create_batchcom_amap_api_services_geocoder_GeocodeAddress__',
       {'length': length}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_geocoder_GeocodeAddress>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_geocoder_GeocodeAddress>(it)!)
         .toList();
   }
   
@@ -54,7 +54,7 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
 
   //region methods
   
-  Future<String> getFormatAddress() async {
+  Future<String?> getFormatAddress() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::getFormatAddress([])');
@@ -88,7 +88,7 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
   }
   
   
-  Future<String> getProvince() async {
+  Future<String?> getProvince() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::getProvince([])');
@@ -122,7 +122,7 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
   }
   
   
-  Future<String> getCity() async {
+  Future<String?> getCity() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::getCity([])');
@@ -156,7 +156,7 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
   }
   
   
-  Future<String> getDistrict() async {
+  Future<String?> getDistrict() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::getDistrict([])');
@@ -190,7 +190,7 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
   }
   
   
-  Future<String> getTownship() async {
+  Future<String?> getTownship() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::getTownship([])');
@@ -224,7 +224,7 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
   }
   
   
-  Future<String> getNeighborhood() async {
+  Future<String?> getNeighborhood() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::getNeighborhood([])');
@@ -258,7 +258,7 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
   }
   
   
-  Future<String> getBuilding() async {
+  Future<String?> getBuilding() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::getBuilding([])');
@@ -292,7 +292,7 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
   }
   
   
-  Future<String> getAdcode() async {
+  Future<String?> getAdcode() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::getAdcode([])');
@@ -326,7 +326,7 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
   }
   
   
-  Future<com_amap_api_services_core_LatLonPoint> getLatLonPoint() async {
+  Future<com_amap_api_services_core_LatLonPoint?> getLatLonPoint() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::getLatLonPoint([])');
@@ -360,7 +360,7 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
   }
   
   
-  Future<String> getLevel() async {
+  Future<String?> getLevel() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::getLevel([])');
@@ -394,7 +394,7 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
   }
   
   
-  Future<String> getCountry() async {
+  Future<String?> getCountry() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::getCountry([])');
@@ -428,7 +428,7 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
   }
   
   
-  Future<String> getPostcode() async {
+  Future<String?> getPostcode() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::getPostcode([])');
@@ -480,7 +480,7 @@ extension com_amap_api_services_geocoder_GeocodeAddress_Batch on List<com_amap_a
 
   //region methods
   
-  Future<List<String>> getFormatAddress_batch() async {
+  Future<List<String?>?> getFormatAddress_batch() async {
     assert(true);
   
     // invoke native method
@@ -491,7 +491,7 @@ extension com_amap_api_services_geocoder_GeocodeAddress_Batch on List<com_amap_a
   }
   
   
-  Future<List<void>> setFormatAddress_batch(List<String> var1) async {
+  Future<List<void>?> setFormatAddress_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -502,7 +502,7 @@ extension com_amap_api_services_geocoder_GeocodeAddress_Batch on List<com_amap_a
   }
   
   
-  Future<List<String>> getProvince_batch() async {
+  Future<List<String?>?> getProvince_batch() async {
     assert(true);
   
     // invoke native method
@@ -513,7 +513,7 @@ extension com_amap_api_services_geocoder_GeocodeAddress_Batch on List<com_amap_a
   }
   
   
-  Future<List<void>> setProvince_batch(List<String> var1) async {
+  Future<List<void>?> setProvince_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -524,7 +524,7 @@ extension com_amap_api_services_geocoder_GeocodeAddress_Batch on List<com_amap_a
   }
   
   
-  Future<List<String>> getCity_batch() async {
+  Future<List<String?>?> getCity_batch() async {
     assert(true);
   
     // invoke native method
@@ -535,7 +535,7 @@ extension com_amap_api_services_geocoder_GeocodeAddress_Batch on List<com_amap_a
   }
   
   
-  Future<List<void>> setCity_batch(List<String> var1) async {
+  Future<List<void>?> setCity_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -546,7 +546,7 @@ extension com_amap_api_services_geocoder_GeocodeAddress_Batch on List<com_amap_a
   }
   
   
-  Future<List<String>> getDistrict_batch() async {
+  Future<List<String?>?> getDistrict_batch() async {
     assert(true);
   
     // invoke native method
@@ -557,7 +557,7 @@ extension com_amap_api_services_geocoder_GeocodeAddress_Batch on List<com_amap_a
   }
   
   
-  Future<List<void>> setDistrict_batch(List<String> var1) async {
+  Future<List<void>?> setDistrict_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -568,7 +568,7 @@ extension com_amap_api_services_geocoder_GeocodeAddress_Batch on List<com_amap_a
   }
   
   
-  Future<List<String>> getTownship_batch() async {
+  Future<List<String?>?> getTownship_batch() async {
     assert(true);
   
     // invoke native method
@@ -579,7 +579,7 @@ extension com_amap_api_services_geocoder_GeocodeAddress_Batch on List<com_amap_a
   }
   
   
-  Future<List<void>> setTownship_batch(List<String> var1) async {
+  Future<List<void>?> setTownship_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -590,7 +590,7 @@ extension com_amap_api_services_geocoder_GeocodeAddress_Batch on List<com_amap_a
   }
   
   
-  Future<List<String>> getNeighborhood_batch() async {
+  Future<List<String?>?> getNeighborhood_batch() async {
     assert(true);
   
     // invoke native method
@@ -601,7 +601,7 @@ extension com_amap_api_services_geocoder_GeocodeAddress_Batch on List<com_amap_a
   }
   
   
-  Future<List<void>> setNeighborhood_batch(List<String> var1) async {
+  Future<List<void>?> setNeighborhood_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -612,7 +612,7 @@ extension com_amap_api_services_geocoder_GeocodeAddress_Batch on List<com_amap_a
   }
   
   
-  Future<List<String>> getBuilding_batch() async {
+  Future<List<String?>?> getBuilding_batch() async {
     assert(true);
   
     // invoke native method
@@ -623,7 +623,7 @@ extension com_amap_api_services_geocoder_GeocodeAddress_Batch on List<com_amap_a
   }
   
   
-  Future<List<void>> setBuilding_batch(List<String> var1) async {
+  Future<List<void>?> setBuilding_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -634,7 +634,7 @@ extension com_amap_api_services_geocoder_GeocodeAddress_Batch on List<com_amap_a
   }
   
   
-  Future<List<String>> getAdcode_batch() async {
+  Future<List<String?>?> getAdcode_batch() async {
     assert(true);
   
     // invoke native method
@@ -645,7 +645,7 @@ extension com_amap_api_services_geocoder_GeocodeAddress_Batch on List<com_amap_a
   }
   
   
-  Future<List<void>> setAdcode_batch(List<String> var1) async {
+  Future<List<void>?> setAdcode_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -656,7 +656,7 @@ extension com_amap_api_services_geocoder_GeocodeAddress_Batch on List<com_amap_a
   }
   
   
-  Future<List<com_amap_api_services_core_LatLonPoint>> getLatLonPoint_batch() async {
+  Future<List<com_amap_api_services_core_LatLonPoint?>?> getLatLonPoint_batch() async {
     assert(true);
   
     // invoke native method
@@ -667,7 +667,7 @@ extension com_amap_api_services_geocoder_GeocodeAddress_Batch on List<com_amap_a
   }
   
   
-  Future<List<void>> setLatLonPoint_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
+  Future<List<void>?> setLatLonPoint_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
     assert(true);
   
     // invoke native method
@@ -678,7 +678,7 @@ extension com_amap_api_services_geocoder_GeocodeAddress_Batch on List<com_amap_a
   }
   
   
-  Future<List<String>> getLevel_batch() async {
+  Future<List<String?>?> getLevel_batch() async {
     assert(true);
   
     // invoke native method
@@ -689,7 +689,7 @@ extension com_amap_api_services_geocoder_GeocodeAddress_Batch on List<com_amap_a
   }
   
   
-  Future<List<void>> setLevel_batch(List<String> var1) async {
+  Future<List<void>?> setLevel_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -700,7 +700,7 @@ extension com_amap_api_services_geocoder_GeocodeAddress_Batch on List<com_amap_a
   }
   
   
-  Future<List<String>> getCountry_batch() async {
+  Future<List<String?>?> getCountry_batch() async {
     assert(true);
   
     // invoke native method
@@ -711,7 +711,7 @@ extension com_amap_api_services_geocoder_GeocodeAddress_Batch on List<com_amap_a
   }
   
   
-  Future<List<void>> setCountry_batch(List<String> var1) async {
+  Future<List<void>?> setCountry_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -722,7 +722,7 @@ extension com_amap_api_services_geocoder_GeocodeAddress_Batch on List<com_amap_a
   }
   
   
-  Future<List<String>> getPostcode_batch() async {
+  Future<List<String?>?> getPostcode_batch() async {
     assert(true);
   
     // invoke native method
@@ -733,7 +733,7 @@ extension com_amap_api_services_geocoder_GeocodeAddress_Batch on List<com_amap_a
   }
   
   
-  Future<List<void>> setPostcode_batch(List<String> var1) async {
+  Future<List<void>?> setPostcode_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method

@@ -1,3 +1,4 @@
+//@dart=2.9
 // ignore_for_file: non_constant_identifier_names
 part of 'amap_search.dart';
 

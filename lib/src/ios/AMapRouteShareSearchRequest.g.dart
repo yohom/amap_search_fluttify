@@ -28,7 +28,7 @@ class AMapRouteShareSearchRequest extends AMapShareSearchBaseRequest with NSCodi
       'ObjectFactory::createAMapRouteShareSearchRequest',
       {'init': init}
     );
-    return AmapSearchFluttifyIOSAs<AMapRouteShareSearchRequest>(__result__);
+    return AmapSearchFluttifyIOSAs<AMapRouteShareSearchRequest>(__result__)!;
   }
   
   static Future<List<AMapRouteShareSearchRequest>> create_batch__(int length, { bool init = true /* ios only */ }) async {
@@ -37,40 +37,40 @@ class AMapRouteShareSearchRequest extends AMapShareSearchBaseRequest with NSCodi
       'ObjectFactory::create_batchAMapRouteShareSearchRequest',
       {'length': length, 'init': init}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyIOSAs<AMapRouteShareSearchRequest>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyIOSAs<AMapRouteShareSearchRequest>(it)!)
         .toList();
   }
   
   //endregion
 
   //region getters
-  Future<int> get_strategy() async {
+  Future<int?> get_strategy() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapRouteShareSearchRequest::get_strategy", {'__this__': this});
     return __result__;
   }
   
-  Future<int> get_type() async {
+  Future<int?> get_type() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapRouteShareSearchRequest::get_type", {'__this__': this});
     return __result__;
   }
   
-  Future<AMapGeoPoint> get_startCoordinate() async {
+  Future<AMapGeoPoint?> get_startCoordinate() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapRouteShareSearchRequest::get_startCoordinate", {'__this__': this});
     return AmapSearchFluttifyIOSAs<AMapGeoPoint>(__result__);
   }
   
-  Future<AMapGeoPoint> get_destinationCoordinate() async {
+  Future<AMapGeoPoint?> get_destinationCoordinate() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapRouteShareSearchRequest::get_destinationCoordinate", {'__this__': this});
     return AmapSearchFluttifyIOSAs<AMapGeoPoint>(__result__);
   }
   
-  Future<String> get_startName() async {
+  Future<String?> get_startName() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapRouteShareSearchRequest::get_startName", {'__this__': this});
     return __result__;
   }
   
-  Future<String> get_destinationName() async {
+  Future<String?> get_destinationName() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapRouteShareSearchRequest::get_destinationName", {'__this__': this});
     return __result__;
   }
@@ -128,34 +128,34 @@ class AMapRouteShareSearchRequest extends AMapShareSearchBaseRequest with NSCodi
 
 extension AMapRouteShareSearchRequest_Batch on List<AMapRouteShareSearchRequest> {
   //region getters
-  Future<List<int>> get_strategy_batch() async {
+  Future<List<int?>?> get_strategy_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRouteShareSearchRequest::get_strategy_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<int>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<int?>().toList();
   }
   
-  Future<List<int>> get_type_batch() async {
+  Future<List<int?>?> get_type_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRouteShareSearchRequest::get_type_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<int>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<int?>().toList();
   }
   
-  Future<List<AMapGeoPoint>> get_startCoordinate_batch() async {
+  Future<List<AMapGeoPoint?>?> get_startCoordinate_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRouteShareSearchRequest::get_startCoordinate_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => AmapSearchFluttifyIOSAs<AMapGeoPoint>(__result__))?.cast<AMapGeoPoint>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => AmapSearchFluttifyIOSAs<AMapGeoPoint>(__result__)).cast<AMapGeoPoint?>().toList();
   }
   
-  Future<List<AMapGeoPoint>> get_destinationCoordinate_batch() async {
+  Future<List<AMapGeoPoint?>?> get_destinationCoordinate_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRouteShareSearchRequest::get_destinationCoordinate_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => AmapSearchFluttifyIOSAs<AMapGeoPoint>(__result__))?.cast<AMapGeoPoint>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => AmapSearchFluttifyIOSAs<AMapGeoPoint>(__result__)).cast<AMapGeoPoint?>().toList();
   }
   
-  Future<List<String>> get_startName_batch() async {
+  Future<List<String?>?> get_startName_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRouteShareSearchRequest::get_startName_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<String>> get_destinationName_batch() async {
+  Future<List<String?>?> get_destinationName_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRouteShareSearchRequest::get_destinationName_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
   }
   
   //endregion

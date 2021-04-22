@@ -28,7 +28,7 @@ class AMapTrafficEvaluation extends AMapSearchObject with NSCoding, NSCopying {
       'ObjectFactory::createAMapTrafficEvaluation',
       {'init': init}
     );
-    return AmapSearchFluttifyIOSAs<AMapTrafficEvaluation>(__result__);
+    return AmapSearchFluttifyIOSAs<AMapTrafficEvaluation>(__result__)!;
   }
   
   static Future<List<AMapTrafficEvaluation>> create_batch__(int length, { bool init = true /* ios only */ }) async {
@@ -37,40 +37,40 @@ class AMapTrafficEvaluation extends AMapSearchObject with NSCoding, NSCopying {
       'ObjectFactory::create_batchAMapTrafficEvaluation',
       {'length': length, 'init': init}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyIOSAs<AMapTrafficEvaluation>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyIOSAs<AMapTrafficEvaluation>(it)!)
         .toList();
   }
   
   //endregion
 
   //region getters
-  Future<String> get_evaluationDescription() async {
+  Future<String?> get_evaluationDescription() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapTrafficEvaluation::get_evaluationDescription", {'__this__': this});
     return __result__;
   }
   
-  Future<int> get_status() async {
+  Future<int?> get_status() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapTrafficEvaluation::get_status", {'__this__': this});
     return __result__;
   }
   
-  Future<String> get_expedite() async {
+  Future<String?> get_expedite() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapTrafficEvaluation::get_expedite", {'__this__': this});
     return __result__;
   }
   
-  Future<String> get_congested() async {
+  Future<String?> get_congested() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapTrafficEvaluation::get_congested", {'__this__': this});
     return __result__;
   }
   
-  Future<String> get_blocked() async {
+  Future<String?> get_blocked() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapTrafficEvaluation::get_blocked", {'__this__': this});
     return __result__;
   }
   
-  Future<String> get_unknown() async {
+  Future<String?> get_unknown() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapTrafficEvaluation::get_unknown", {'__this__': this});
     return __result__;
   }
@@ -128,34 +128,34 @@ class AMapTrafficEvaluation extends AMapSearchObject with NSCoding, NSCopying {
 
 extension AMapTrafficEvaluation_Batch on List<AMapTrafficEvaluation> {
   //region getters
-  Future<List<String>> get_evaluationDescription_batch() async {
+  Future<List<String?>?> get_evaluationDescription_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTrafficEvaluation::get_evaluationDescription_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<int>> get_status_batch() async {
+  Future<List<int?>?> get_status_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTrafficEvaluation::get_status_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<int>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<int?>().toList();
   }
   
-  Future<List<String>> get_expedite_batch() async {
+  Future<List<String?>?> get_expedite_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTrafficEvaluation::get_expedite_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<String>> get_congested_batch() async {
+  Future<List<String?>?> get_congested_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTrafficEvaluation::get_congested_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<String>> get_blocked_batch() async {
+  Future<List<String?>?> get_blocked_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTrafficEvaluation::get_blocked_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<String>> get_unknown_batch() async {
+  Future<List<String?>?> get_unknown_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTrafficEvaluation::get_unknown_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
   }
   
   //endregion

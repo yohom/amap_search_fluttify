@@ -8,7 +8,7 @@ class FutureText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PreferredFutureBuilder<String>(
+    return SingleSubscriber<String>(
       future: data,
       showLoading: false,
       builder: (data) => Text(data),

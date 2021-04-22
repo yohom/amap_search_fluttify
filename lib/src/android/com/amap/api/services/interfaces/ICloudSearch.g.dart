@@ -26,14 +26,11 @@ mixin com_amap_api_services_interfaces_ICloudSearch on java_lang_Object {
 
   
 
-  /* @mustCallSuper */
-  Future<void> setOnCloudSearchListener(com_amap_api_services_cloud_CloudSearch_OnCloudSearchListener var1) {}
+  Future<void> setOnCloudSearchListener(com_amap_api_services_cloud_CloudSearch_OnCloudSearchListener var1) async {}
   
-  /* @mustCallSuper */
-  Future<void> searchCloudAsyn(com_amap_api_services_cloud_CloudSearch_Query var1) {}
+  Future<void> searchCloudAsyn(com_amap_api_services_cloud_CloudSearch_Query var1) async {}
   
-  /* @mustCallSuper */
-  Future<void> searchCloudDetailAsyn(String var1, String var2) {}
+  Future<void> searchCloudDetailAsyn(String var1, String var2) async {}
   
 }
 

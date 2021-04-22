@@ -28,7 +28,7 @@ class AMapGeocodeSearchResponse extends AMapSearchObject with NSCoding, NSCopyin
       'ObjectFactory::createAMapGeocodeSearchResponse',
       {'init': init}
     );
-    return AmapSearchFluttifyIOSAs<AMapGeocodeSearchResponse>(__result__);
+    return AmapSearchFluttifyIOSAs<AMapGeocodeSearchResponse>(__result__)!;
   }
   
   static Future<List<AMapGeocodeSearchResponse>> create_batch__(int length, { bool init = true /* ios only */ }) async {
@@ -37,22 +37,22 @@ class AMapGeocodeSearchResponse extends AMapSearchObject with NSCoding, NSCopyin
       'ObjectFactory::create_batchAMapGeocodeSearchResponse',
       {'length': length, 'init': init}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyIOSAs<AMapGeocodeSearchResponse>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyIOSAs<AMapGeocodeSearchResponse>(it)!)
         .toList();
   }
   
   //endregion
 
   //region getters
-  Future<int> get_count() async {
+  Future<int?> get_count() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapGeocodeSearchResponse::get_count", {'__this__': this});
     return __result__;
   }
   
-  Future<List<AMapGeocode>> get_geocodes() async {
+  Future<List<AMapGeocode>?> get_geocodes() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapGeocodeSearchResponse::get_geocodes", {'__this__': this});
-    return (__result__ as List)?.map((it) => AmapSearchFluttifyIOSAs<AMapGeocode>(it))?.toList();
+    return (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapGeocode>(it)!).toList();
   }
   
   //endregion
@@ -84,14 +84,14 @@ class AMapGeocodeSearchResponse extends AMapSearchObject with NSCoding, NSCopyin
 
 extension AMapGeocodeSearchResponse_Batch on List<AMapGeocodeSearchResponse> {
   //region getters
-  Future<List<int>> get_count_batch() async {
+  Future<List<int?>?> get_count_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapGeocodeSearchResponse::get_count_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<int>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<int?>().toList();
   }
   
-  Future<List<List<AMapGeocode>>> get_geocodes_batch() async {
+  Future<List<List<AMapGeocode>?>?> get_geocodes_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapGeocodeSearchResponse::get_geocodes_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyIOSAs<AMapGeocode>(it))?.toList())?.cast<List<AMapGeocode>>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapGeocode>(it)!).toList()).cast<List<AMapGeocode>?>().toList();
   }
   
   //endregion

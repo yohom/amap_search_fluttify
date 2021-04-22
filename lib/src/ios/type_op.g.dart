@@ -13,7 +13,6 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
 import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 
-// ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
 // type check
 @optionalTypeArgs
 Future<bool> AmapSearchFluttifyIOSIs<T>(dynamic __this__) async {
@@ -363,6 +362,9 @@ Future<bool> AmapSearchFluttifyIOSIs<T>(dynamic __this__) async {
   } else if (T == UIImage) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfUIImage', {'__this__': __this__});
     return result;
+  } else if (T == UIImageView) {
+    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfUIImageView', {'__this__': __this__});
+    return result;
   } else if (T == UIColor) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfUIColor', {'__this__': __this__});
     return result;
@@ -384,7 +386,7 @@ Future<bool> AmapSearchFluttifyIOSIs<T>(dynamic __this__) async {
 // type cast
 // 给一个可选的泛型, 如果没有指定泛型就返回dynamic
 @optionalTypeArgs
-T AmapSearchFluttifyIOSAs<T>(dynamic __this__) {
+T? AmapSearchFluttifyIOSAs<T>(dynamic __this__) {
   final typeName = T.toString();
 
   if (__this__ == null) {
@@ -620,6 +622,8 @@ T AmapSearchFluttifyIOSAs<T>(dynamic __this__) {
     return (UIControl()..refId = (__this__ as Ref).refId) as T;
   } else if (T == UIImage) {
     return (UIImage()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == UIImageView) {
+    return (UIImageView()..refId = (__this__ as Ref).refId) as T;
   } else if (T == UIColor) {
     return (UIColor()..refId = (__this__ as Ref).refId) as T;
   } else if (T == NSData) {
@@ -633,6 +637,6 @@ T AmapSearchFluttifyIOSAs<T>(dynamic __this__) {
     return AmapCoreFluttifyIOSAs<T>(__this__);
   }
   else {
-    return null;
+    return __this__;
   }
 }

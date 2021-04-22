@@ -28,7 +28,7 @@ class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
       'ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_Query__String__String__com_amap_api_services_cloud_CloudSearch_SearchBound',
       {"var1": var1, "var2": var2, "var3": var3}
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudSearch_Query>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudSearch_Query>(__result__)!;
   }
   
   static Future<List<com_amap_api_services_cloud_CloudSearch_Query>> create_batch__String__String__com_amap_api_services_cloud_CloudSearch_SearchBound(List<String> var1, List<String> var2, List<com_amap_api_services_cloud_CloudSearch_SearchBound> var3) async {
@@ -37,8 +37,8 @@ class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
       'ObjectFactory::create_batchcom_amap_api_services_cloud_CloudSearch_Query__String__String__com_amap_api_services_cloud_CloudSearch_SearchBound',
       [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__]}]
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudSearch_Query>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudSearch_Query>(it)!)
         .toList();
   }
   
@@ -54,7 +54,7 @@ class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
 
   //region methods
   
-  Future<String> getQueryString() async {
+  Future<String?> getQueryString() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudSearch.Query@$refId::getQueryString([])');
@@ -88,7 +88,7 @@ class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
   }
   
   
-  Future<String> getTableID() async {
+  Future<String?> getTableID() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudSearch.Query@$refId::getTableID([])');
@@ -105,7 +105,7 @@ class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
   }
   
   
-  Future<int> getPageNum() async {
+  Future<int?> getPageNum() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudSearch.Query@$refId::getPageNum([])');
@@ -156,7 +156,7 @@ class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
   }
   
   
-  Future<int> getPageSize() async {
+  Future<int?> getPageSize() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudSearch.Query@$refId::getPageSize([])');
@@ -190,7 +190,7 @@ class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
   }
   
   
-  Future<com_amap_api_services_cloud_CloudSearch_SearchBound> getBound() async {
+  Future<com_amap_api_services_cloud_CloudSearch_SearchBound?> getBound() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudSearch.Query@$refId::getBound([])');
@@ -224,7 +224,7 @@ class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
   }
   
   
-  Future<String> getFilterString() async {
+  Future<String?> getFilterString() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudSearch.Query@$refId::getFilterString([])');
@@ -258,7 +258,7 @@ class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
   }
   
   
-  Future<String> getFilterNumString() async {
+  Future<String?> getFilterNumString() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudSearch.Query@$refId::getFilterNumString([])');
@@ -292,7 +292,7 @@ class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
   }
   
   
-  Future<com_amap_api_services_cloud_CloudSearch_Sortingrules> getSortingrules() async {
+  Future<com_amap_api_services_cloud_CloudSearch_Sortingrules?> getSortingrules() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudSearch.Query@$refId::getSortingrules([])');
@@ -309,7 +309,7 @@ class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
   }
   
   
-  Future<bool> queryEquals(com_amap_api_services_cloud_CloudSearch_Query var1) async {
+  Future<bool?> queryEquals(com_amap_api_services_cloud_CloudSearch_Query var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudSearch.Query@$refId::queryEquals([])');
@@ -326,7 +326,7 @@ class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
   }
   
   
-  Future<com_amap_api_services_cloud_CloudSearch_Query> clone() async {
+  Future<com_amap_api_services_cloud_CloudSearch_Query?> clone() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudSearch.Query@$refId::clone([])');
@@ -361,7 +361,7 @@ extension com_amap_api_services_cloud_CloudSearch_Query_Batch on List<com_amap_a
 
   //region methods
   
-  Future<List<String>> getQueryString_batch() async {
+  Future<List<String?>?> getQueryString_batch() async {
     assert(true);
   
     // invoke native method
@@ -372,7 +372,7 @@ extension com_amap_api_services_cloud_CloudSearch_Query_Batch on List<com_amap_a
   }
   
   
-  Future<List<void>> setTableID_batch(List<String> var1) async {
+  Future<List<void>?> setTableID_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -383,7 +383,7 @@ extension com_amap_api_services_cloud_CloudSearch_Query_Batch on List<com_amap_a
   }
   
   
-  Future<List<String>> getTableID_batch() async {
+  Future<List<String?>?> getTableID_batch() async {
     assert(true);
   
     // invoke native method
@@ -394,7 +394,7 @@ extension com_amap_api_services_cloud_CloudSearch_Query_Batch on List<com_amap_a
   }
   
   
-  Future<List<int>> getPageNum_batch() async {
+  Future<List<int?>?> getPageNum_batch() async {
     assert(true);
   
     // invoke native method
@@ -405,7 +405,7 @@ extension com_amap_api_services_cloud_CloudSearch_Query_Batch on List<com_amap_a
   }
   
   
-  Future<List<void>> setPageNum_batch(List<int> var1) async {
+  Future<List<void>?> setPageNum_batch(List<int> var1) async {
     assert(true);
   
     // invoke native method
@@ -416,7 +416,7 @@ extension com_amap_api_services_cloud_CloudSearch_Query_Batch on List<com_amap_a
   }
   
   
-  Future<List<void>> setPageSize_batch(List<int> var1) async {
+  Future<List<void>?> setPageSize_batch(List<int> var1) async {
     assert(true);
   
     // invoke native method
@@ -427,7 +427,7 @@ extension com_amap_api_services_cloud_CloudSearch_Query_Batch on List<com_amap_a
   }
   
   
-  Future<List<int>> getPageSize_batch() async {
+  Future<List<int?>?> getPageSize_batch() async {
     assert(true);
   
     // invoke native method
@@ -438,7 +438,7 @@ extension com_amap_api_services_cloud_CloudSearch_Query_Batch on List<com_amap_a
   }
   
   
-  Future<List<void>> setBound_batch(List<com_amap_api_services_cloud_CloudSearch_SearchBound> var1) async {
+  Future<List<void>?> setBound_batch(List<com_amap_api_services_cloud_CloudSearch_SearchBound> var1) async {
     assert(true);
   
     // invoke native method
@@ -449,7 +449,7 @@ extension com_amap_api_services_cloud_CloudSearch_Query_Batch on List<com_amap_a
   }
   
   
-  Future<List<com_amap_api_services_cloud_CloudSearch_SearchBound>> getBound_batch() async {
+  Future<List<com_amap_api_services_cloud_CloudSearch_SearchBound?>?> getBound_batch() async {
     assert(true);
   
     // invoke native method
@@ -460,7 +460,7 @@ extension com_amap_api_services_cloud_CloudSearch_Query_Batch on List<com_amap_a
   }
   
   
-  Future<List<void>> addFilterString_batch(List<String> var1, List<String> var2) async {
+  Future<List<void>?> addFilterString_batch(List<String> var1, List<String> var2) async {
     assert(var1.length == var2.length);
   
     // invoke native method
@@ -471,7 +471,7 @@ extension com_amap_api_services_cloud_CloudSearch_Query_Batch on List<com_amap_a
   }
   
   
-  Future<List<String>> getFilterString_batch() async {
+  Future<List<String?>?> getFilterString_batch() async {
     assert(true);
   
     // invoke native method
@@ -482,7 +482,7 @@ extension com_amap_api_services_cloud_CloudSearch_Query_Batch on List<com_amap_a
   }
   
   
-  Future<List<void>> addFilterNum_batch(List<String> var1, List<String> var2, List<String> var3) async {
+  Future<List<void>?> addFilterNum_batch(List<String> var1, List<String> var2, List<String> var3) async {
     assert(var1.length == var2.length && var2.length == var3.length);
   
     // invoke native method
@@ -493,7 +493,7 @@ extension com_amap_api_services_cloud_CloudSearch_Query_Batch on List<com_amap_a
   }
   
   
-  Future<List<String>> getFilterNumString_batch() async {
+  Future<List<String?>?> getFilterNumString_batch() async {
     assert(true);
   
     // invoke native method
@@ -504,7 +504,7 @@ extension com_amap_api_services_cloud_CloudSearch_Query_Batch on List<com_amap_a
   }
   
   
-  Future<List<void>> setSortingrules_batch(List<com_amap_api_services_cloud_CloudSearch_Sortingrules> var1) async {
+  Future<List<void>?> setSortingrules_batch(List<com_amap_api_services_cloud_CloudSearch_Sortingrules> var1) async {
     assert(true);
   
     // invoke native method
@@ -515,7 +515,7 @@ extension com_amap_api_services_cloud_CloudSearch_Query_Batch on List<com_amap_a
   }
   
   
-  Future<List<com_amap_api_services_cloud_CloudSearch_Sortingrules>> getSortingrules_batch() async {
+  Future<List<com_amap_api_services_cloud_CloudSearch_Sortingrules?>?> getSortingrules_batch() async {
     assert(true);
   
     // invoke native method
@@ -526,7 +526,7 @@ extension com_amap_api_services_cloud_CloudSearch_Query_Batch on List<com_amap_a
   }
   
   
-  Future<List<bool>> queryEquals_batch(List<com_amap_api_services_cloud_CloudSearch_Query> var1) async {
+  Future<List<bool?>?> queryEquals_batch(List<com_amap_api_services_cloud_CloudSearch_Query> var1) async {
     assert(true);
   
     // invoke native method
@@ -537,7 +537,7 @@ extension com_amap_api_services_cloud_CloudSearch_Query_Batch on List<com_amap_a
   }
   
   
-  Future<List<com_amap_api_services_cloud_CloudSearch_Query>> clone_batch() async {
+  Future<List<com_amap_api_services_cloud_CloudSearch_Query?>?> clone_batch() async {
     assert(true);
   
     // invoke native method

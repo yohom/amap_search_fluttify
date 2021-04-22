@@ -28,7 +28,7 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
       'ObjectFactory::createcom_amap_api_services_busline_BusLineItem__',
     
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_busline_BusLineItem>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_busline_BusLineItem>(__result__)!;
   }
   
   static Future<List<com_amap_api_services_busline_BusLineItem>> create_batch__(int length) async {
@@ -37,8 +37,8 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
       'ObjectFactory::create_batchcom_amap_api_services_busline_BusLineItem__',
       {'length': length}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_busline_BusLineItem>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_busline_BusLineItem>(it)!)
         .toList();
   }
   
@@ -54,7 +54,7 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
 
   //region methods
   
-  Future<double> getDistance() async {
+  Future<double?> getDistance() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.busline.BusLineItem@$refId::getDistance([])');
@@ -88,7 +88,7 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
   }
   
   
-  Future<String> getBusLineName() async {
+  Future<String?> getBusLineName() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.busline.BusLineItem@$refId::getBusLineName([])');
@@ -122,7 +122,7 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
   }
   
   
-  Future<String> getBusLineType() async {
+  Future<String?> getBusLineType() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.busline.BusLineItem@$refId::getBusLineType([])');
@@ -156,7 +156,7 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
   }
   
   
-  Future<String> getCityCode() async {
+  Future<String?> getCityCode() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.busline.BusLineItem@$refId::getCityCode([])');
@@ -190,7 +190,7 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
   }
   
   
-  Future<List<com_amap_api_services_core_LatLonPoint>> getDirectionsCoordinates() async {
+  Future<List<com_amap_api_services_core_LatLonPoint>?> getDirectionsCoordinates() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.busline.BusLineItem@$refId::getDirectionsCoordinates([])');
@@ -203,7 +203,7 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
     // handle native call
   
   
-    return (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(it))?.toList();
+    return (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(it)!).toList();
   }
   
   
@@ -224,7 +224,7 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
   }
   
   
-  Future<List<com_amap_api_services_core_LatLonPoint>> getBounds() async {
+  Future<List<com_amap_api_services_core_LatLonPoint>?> getBounds() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.busline.BusLineItem@$refId::getBounds([])');
@@ -237,7 +237,7 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
     // handle native call
   
   
-    return (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(it))?.toList();
+    return (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(it)!).toList();
   }
   
   
@@ -258,7 +258,7 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
   }
   
   
-  Future<String> getBusLineId() async {
+  Future<String?> getBusLineId() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.busline.BusLineItem@$refId::getBusLineId([])');
@@ -292,7 +292,7 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
   }
   
   
-  Future<String> getOriginatingStation() async {
+  Future<String?> getOriginatingStation() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.busline.BusLineItem@$refId::getOriginatingStation([])');
@@ -326,7 +326,7 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
   }
   
   
-  Future<String> getTerminalStation() async {
+  Future<String?> getTerminalStation() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.busline.BusLineItem@$refId::getTerminalStation([])');
@@ -360,7 +360,7 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
   }
   
   
-  Future<String> getBusCompany() async {
+  Future<String?> getBusCompany() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.busline.BusLineItem@$refId::getBusCompany([])');
@@ -394,7 +394,7 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
   }
   
   
-  Future<double> getBasicPrice() async {
+  Future<double?> getBasicPrice() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.busline.BusLineItem@$refId::getBasicPrice([])');
@@ -428,7 +428,7 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
   }
   
   
-  Future<double> getTotalPrice() async {
+  Future<double?> getTotalPrice() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.busline.BusLineItem@$refId::getTotalPrice([])');
@@ -462,7 +462,7 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
   }
   
   
-  Future<List<com_amap_api_services_busline_BusStationItem>> getBusStations() async {
+  Future<List<com_amap_api_services_busline_BusStationItem>?> getBusStations() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.busline.BusLineItem@$refId::getBusStations([])');
@@ -475,7 +475,7 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
     // handle native call
   
   
-    return (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_busline_BusStationItem>(it))?.toList();
+    return (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_busline_BusStationItem>(it)!).toList();
   }
   
   
@@ -514,7 +514,7 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
 
   //region methods
   
-  Future<List<double>> getDistance_batch() async {
+  Future<List<double?>?> getDistance_batch() async {
     assert(true);
   
     // invoke native method
@@ -525,7 +525,7 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
   }
   
   
-  Future<List<void>> setDistance_batch(List<double> var1) async {
+  Future<List<void>?> setDistance_batch(List<double> var1) async {
     assert(true);
   
     // invoke native method
@@ -536,7 +536,7 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
   }
   
   
-  Future<List<String>> getBusLineName_batch() async {
+  Future<List<String?>?> getBusLineName_batch() async {
     assert(true);
   
     // invoke native method
@@ -547,7 +547,7 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
   }
   
   
-  Future<List<void>> setBusLineName_batch(List<String> var1) async {
+  Future<List<void>?> setBusLineName_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -558,7 +558,7 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
   }
   
   
-  Future<List<String>> getBusLineType_batch() async {
+  Future<List<String?>?> getBusLineType_batch() async {
     assert(true);
   
     // invoke native method
@@ -569,7 +569,7 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
   }
   
   
-  Future<List<void>> setBusLineType_batch(List<String> var1) async {
+  Future<List<void>?> setBusLineType_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -580,7 +580,7 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
   }
   
   
-  Future<List<String>> getCityCode_batch() async {
+  Future<List<String?>?> getCityCode_batch() async {
     assert(true);
   
     // invoke native method
@@ -591,7 +591,7 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
   }
   
   
-  Future<List<void>> setCityCode_batch(List<String> var1) async {
+  Future<List<void>?> setCityCode_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -602,18 +602,18 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
   }
   
   
-  Future<List<List<com_amap_api_services_core_LatLonPoint>>> getDirectionsCoordinates_batch() async {
+  Future<List<List<com_amap_api_services_core_LatLonPoint>?>?> getDirectionsCoordinates_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.busline.BusLineItem::getDirectionsCoordinates_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(it))?.toList()).cast<List<com_amap_api_services_core_LatLonPoint>>().toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(it)!).toList()).cast<List<com_amap_api_services_core_LatLonPoint>>().toList();
   }
   
   
-  Future<List<void>> setDirectionsCoordinates_batch(List<List<com_amap_api_services_core_LatLonPoint>> var1) async {
+  Future<List<void>?> setDirectionsCoordinates_batch(List<List<com_amap_api_services_core_LatLonPoint>> var1) async {
     assert(true);
   
     // invoke native method
@@ -624,18 +624,18 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
   }
   
   
-  Future<List<List<com_amap_api_services_core_LatLonPoint>>> getBounds_batch() async {
+  Future<List<List<com_amap_api_services_core_LatLonPoint>?>?> getBounds_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.busline.BusLineItem::getBounds_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(it))?.toList()).cast<List<com_amap_api_services_core_LatLonPoint>>().toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(it)!).toList()).cast<List<com_amap_api_services_core_LatLonPoint>>().toList();
   }
   
   
-  Future<List<void>> setBounds_batch(List<List<com_amap_api_services_core_LatLonPoint>> var1) async {
+  Future<List<void>?> setBounds_batch(List<List<com_amap_api_services_core_LatLonPoint>> var1) async {
     assert(true);
   
     // invoke native method
@@ -646,7 +646,7 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
   }
   
   
-  Future<List<String>> getBusLineId_batch() async {
+  Future<List<String?>?> getBusLineId_batch() async {
     assert(true);
   
     // invoke native method
@@ -657,7 +657,7 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
   }
   
   
-  Future<List<void>> setBusLineId_batch(List<String> var1) async {
+  Future<List<void>?> setBusLineId_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -668,7 +668,7 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
   }
   
   
-  Future<List<String>> getOriginatingStation_batch() async {
+  Future<List<String?>?> getOriginatingStation_batch() async {
     assert(true);
   
     // invoke native method
@@ -679,7 +679,7 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
   }
   
   
-  Future<List<void>> setOriginatingStation_batch(List<String> var1) async {
+  Future<List<void>?> setOriginatingStation_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -690,7 +690,7 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
   }
   
   
-  Future<List<String>> getTerminalStation_batch() async {
+  Future<List<String?>?> getTerminalStation_batch() async {
     assert(true);
   
     // invoke native method
@@ -701,7 +701,7 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
   }
   
   
-  Future<List<void>> setTerminalStation_batch(List<String> var1) async {
+  Future<List<void>?> setTerminalStation_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -712,7 +712,7 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
   }
   
   
-  Future<List<String>> getBusCompany_batch() async {
+  Future<List<String?>?> getBusCompany_batch() async {
     assert(true);
   
     // invoke native method
@@ -723,7 +723,7 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
   }
   
   
-  Future<List<void>> setBusCompany_batch(List<String> var1) async {
+  Future<List<void>?> setBusCompany_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -734,7 +734,7 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
   }
   
   
-  Future<List<double>> getBasicPrice_batch() async {
+  Future<List<double?>?> getBasicPrice_batch() async {
     assert(true);
   
     // invoke native method
@@ -745,7 +745,7 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
   }
   
   
-  Future<List<void>> setBasicPrice_batch(List<double> var1) async {
+  Future<List<void>?> setBasicPrice_batch(List<double> var1) async {
     assert(true);
   
     // invoke native method
@@ -756,7 +756,7 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
   }
   
   
-  Future<List<double>> getTotalPrice_batch() async {
+  Future<List<double?>?> getTotalPrice_batch() async {
     assert(true);
   
     // invoke native method
@@ -767,7 +767,7 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
   }
   
   
-  Future<List<void>> setTotalPrice_batch(List<double> var1) async {
+  Future<List<void>?> setTotalPrice_batch(List<double> var1) async {
     assert(true);
   
     // invoke native method
@@ -778,18 +778,18 @@ extension com_amap_api_services_busline_BusLineItem_Batch on List<com_amap_api_s
   }
   
   
-  Future<List<List<com_amap_api_services_busline_BusStationItem>>> getBusStations_batch() async {
+  Future<List<List<com_amap_api_services_busline_BusStationItem>?>?> getBusStations_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.busline.BusLineItem::getBusStations_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_busline_BusStationItem>(it))?.toList()).cast<List<com_amap_api_services_busline_BusStationItem>>().toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_busline_BusStationItem>(it)!).toList()).cast<List<com_amap_api_services_busline_BusStationItem>>().toList();
   }
   
   
-  Future<List<void>> setBusStations_batch(List<List<com_amap_api_services_busline_BusStationItem>> var1) async {
+  Future<List<void>?> setBusStations_batch(List<List<com_amap_api_services_busline_BusStationItem>> var1) async {
     assert(true);
   
     // invoke native method

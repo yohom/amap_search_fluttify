@@ -36,7 +36,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearch extends java_lang_Obje
       'ObjectFactory::createcom_amap_api_services_routepoisearch_RoutePOISearch__android_content_Context__com_amap_api_services_routepoisearch_RoutePOISearchQuery',
       {"var1": var1, "var2": var2}
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_routepoisearch_RoutePOISearch>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_routepoisearch_RoutePOISearch>(__result__)!;
   }
   
   static Future<List<com_amap_api_services_routepoisearch_RoutePOISearch>> create_batch__android_content_Context__com_amap_api_services_routepoisearch_RoutePOISearchQuery(List<android_content_Context> var1, List<com_amap_api_services_routepoisearch_RoutePOISearchQuery> var2) async {
@@ -45,8 +45,8 @@ class com_amap_api_services_routepoisearch_RoutePOISearch extends java_lang_Obje
       'ObjectFactory::create_batchcom_amap_api_services_routepoisearch_RoutePOISearch__android_content_Context__com_amap_api_services_routepoisearch_RoutePOISearchQuery',
       [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_routepoisearch_RoutePOISearch>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_routepoisearch_RoutePOISearch>(it)!)
         .toList();
   }
   
@@ -92,7 +92,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearch extends java_lang_Obje
                 break;
             }
           } catch (e) {
-            debugPrint(e);
+            debugPrint(e.toString());
             rethrow;
           }
         });
@@ -135,7 +135,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearch extends java_lang_Obje
   }
   
   
-  Future<com_amap_api_services_routepoisearch_RoutePOISearchResult> searchRoutePOI() async {
+  Future<com_amap_api_services_routepoisearch_RoutePOISearchResult?> searchRoutePOI() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOISearch@$refId::searchRoutePOI([])');
@@ -170,7 +170,7 @@ extension com_amap_api_services_routepoisearch_RoutePOISearch_Batch on List<com_
 
   //region methods
   
-  Future<List<void>> setQuery_batch(List<com_amap_api_services_routepoisearch_RoutePOISearchQuery> var1) async {
+  Future<List<void>?> setQuery_batch(List<com_amap_api_services_routepoisearch_RoutePOISearchQuery> var1) async {
     assert(true);
   
     // invoke native method
@@ -181,7 +181,7 @@ extension com_amap_api_services_routepoisearch_RoutePOISearch_Batch on List<com_
   }
   
   
-  Future<List<void>> searchRoutePOIAsyn_batch() async {
+  Future<List<void>?> searchRoutePOIAsyn_batch() async {
     assert(true);
   
     // invoke native method
@@ -192,7 +192,7 @@ extension com_amap_api_services_routepoisearch_RoutePOISearch_Batch on List<com_
   }
   
   
-  Future<List<com_amap_api_services_routepoisearch_RoutePOISearchResult>> searchRoutePOI_batch() async {
+  Future<List<com_amap_api_services_routepoisearch_RoutePOISearchResult?>?> searchRoutePOI_batch() async {
     assert(true);
   
     // invoke native method

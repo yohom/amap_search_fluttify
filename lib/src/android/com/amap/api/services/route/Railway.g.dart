@@ -28,7 +28,7 @@ class com_amap_api_services_route_Railway extends java_lang_Object with android_
       'ObjectFactory::createcom_amap_api_services_route_Railway__',
     
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_Railway>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_Railway>(__result__)!;
   }
   
   static Future<List<com_amap_api_services_route_Railway>> create_batch__(int length) async {
@@ -37,8 +37,8 @@ class com_amap_api_services_route_Railway extends java_lang_Object with android_
       'ObjectFactory::create_batchcom_amap_api_services_route_Railway__',
       {'length': length}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_Railway>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_Railway>(it)!)
         .toList();
   }
   
@@ -54,7 +54,7 @@ class com_amap_api_services_route_Railway extends java_lang_Object with android_
 
   //region methods
   
-  Future<String> getID() async {
+  Future<String?> getID() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.Railway@$refId::getID([])');
@@ -71,7 +71,7 @@ class com_amap_api_services_route_Railway extends java_lang_Object with android_
   }
   
   
-  Future<String> getName() async {
+  Future<String?> getName() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.Railway@$refId::getName([])');
@@ -140,7 +140,7 @@ extension com_amap_api_services_route_Railway_Batch on List<com_amap_api_service
 
   //region methods
   
-  Future<List<String>> getID_batch() async {
+  Future<List<String?>?> getID_batch() async {
     assert(true);
   
     // invoke native method
@@ -151,7 +151,7 @@ extension com_amap_api_services_route_Railway_Batch on List<com_amap_api_service
   }
   
   
-  Future<List<String>> getName_batch() async {
+  Future<List<String?>?> getName_batch() async {
     assert(true);
   
     // invoke native method
@@ -162,7 +162,7 @@ extension com_amap_api_services_route_Railway_Batch on List<com_amap_api_service
   }
   
   
-  Future<List<void>> setID_batch(List<String> var1) async {
+  Future<List<void>?> setID_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -173,7 +173,7 @@ extension com_amap_api_services_route_Railway_Batch on List<com_amap_api_service
   }
   
   
-  Future<List<void>> setName_batch(List<String> var1) async {
+  Future<List<void>?> setName_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method

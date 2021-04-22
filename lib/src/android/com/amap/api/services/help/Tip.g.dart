@@ -28,7 +28,7 @@ class com_amap_api_services_help_Tip extends java_lang_Object with android_os_Pa
       'ObjectFactory::createcom_amap_api_services_help_Tip__',
     
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_help_Tip>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_help_Tip>(__result__)!;
   }
   
   static Future<List<com_amap_api_services_help_Tip>> create_batch__(int length) async {
@@ -37,8 +37,8 @@ class com_amap_api_services_help_Tip extends java_lang_Object with android_os_Pa
       'ObjectFactory::create_batchcom_amap_api_services_help_Tip__',
       {'length': length}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_help_Tip>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_help_Tip>(it)!)
         .toList();
   }
   
@@ -54,7 +54,7 @@ class com_amap_api_services_help_Tip extends java_lang_Object with android_os_Pa
 
   //region methods
   
-  Future<String> getPoiID() async {
+  Future<String?> getPoiID() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.help.Tip@$refId::getPoiID([])');
@@ -88,7 +88,7 @@ class com_amap_api_services_help_Tip extends java_lang_Object with android_os_Pa
   }
   
   
-  Future<com_amap_api_services_core_LatLonPoint> getPoint() async {
+  Future<com_amap_api_services_core_LatLonPoint?> getPoint() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.help.Tip@$refId::getPoint([])');
@@ -122,7 +122,7 @@ class com_amap_api_services_help_Tip extends java_lang_Object with android_os_Pa
   }
   
   
-  Future<String> getName() async {
+  Future<String?> getName() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.help.Tip@$refId::getName([])');
@@ -156,7 +156,7 @@ class com_amap_api_services_help_Tip extends java_lang_Object with android_os_Pa
   }
   
   
-  Future<String> getDistrict() async {
+  Future<String?> getDistrict() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.help.Tip@$refId::getDistrict([])');
@@ -190,7 +190,7 @@ class com_amap_api_services_help_Tip extends java_lang_Object with android_os_Pa
   }
   
   
-  Future<String> getAdcode() async {
+  Future<String?> getAdcode() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.help.Tip@$refId::getAdcode([])');
@@ -224,7 +224,7 @@ class com_amap_api_services_help_Tip extends java_lang_Object with android_os_Pa
   }
   
   
-  Future<String> getAddress() async {
+  Future<String?> getAddress() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.help.Tip@$refId::getAddress([])');
@@ -275,7 +275,7 @@ class com_amap_api_services_help_Tip extends java_lang_Object with android_os_Pa
   }
   
   
-  Future<String> getTypeCode() async {
+  Future<String?> getTypeCode() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.help.Tip@$refId::getTypeCode([])');
@@ -310,7 +310,7 @@ extension com_amap_api_services_help_Tip_Batch on List<com_amap_api_services_hel
 
   //region methods
   
-  Future<List<String>> getPoiID_batch() async {
+  Future<List<String?>?> getPoiID_batch() async {
     assert(true);
   
     // invoke native method
@@ -321,7 +321,7 @@ extension com_amap_api_services_help_Tip_Batch on List<com_amap_api_services_hel
   }
   
   
-  Future<List<void>> setID_batch(List<String> var1) async {
+  Future<List<void>?> setID_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -332,7 +332,7 @@ extension com_amap_api_services_help_Tip_Batch on List<com_amap_api_services_hel
   }
   
   
-  Future<List<com_amap_api_services_core_LatLonPoint>> getPoint_batch() async {
+  Future<List<com_amap_api_services_core_LatLonPoint?>?> getPoint_batch() async {
     assert(true);
   
     // invoke native method
@@ -343,7 +343,7 @@ extension com_amap_api_services_help_Tip_Batch on List<com_amap_api_services_hel
   }
   
   
-  Future<List<void>> setPostion_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
+  Future<List<void>?> setPostion_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
     assert(true);
   
     // invoke native method
@@ -354,7 +354,7 @@ extension com_amap_api_services_help_Tip_Batch on List<com_amap_api_services_hel
   }
   
   
-  Future<List<String>> getName_batch() async {
+  Future<List<String?>?> getName_batch() async {
     assert(true);
   
     // invoke native method
@@ -365,7 +365,7 @@ extension com_amap_api_services_help_Tip_Batch on List<com_amap_api_services_hel
   }
   
   
-  Future<List<void>> setName_batch(List<String> var1) async {
+  Future<List<void>?> setName_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -376,7 +376,7 @@ extension com_amap_api_services_help_Tip_Batch on List<com_amap_api_services_hel
   }
   
   
-  Future<List<String>> getDistrict_batch() async {
+  Future<List<String?>?> getDistrict_batch() async {
     assert(true);
   
     // invoke native method
@@ -387,7 +387,7 @@ extension com_amap_api_services_help_Tip_Batch on List<com_amap_api_services_hel
   }
   
   
-  Future<List<void>> setDistrict_batch(List<String> var1) async {
+  Future<List<void>?> setDistrict_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -398,7 +398,7 @@ extension com_amap_api_services_help_Tip_Batch on List<com_amap_api_services_hel
   }
   
   
-  Future<List<String>> getAdcode_batch() async {
+  Future<List<String?>?> getAdcode_batch() async {
     assert(true);
   
     // invoke native method
@@ -409,7 +409,7 @@ extension com_amap_api_services_help_Tip_Batch on List<com_amap_api_services_hel
   }
   
   
-  Future<List<void>> setAdcode_batch(List<String> var1) async {
+  Future<List<void>?> setAdcode_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -420,7 +420,7 @@ extension com_amap_api_services_help_Tip_Batch on List<com_amap_api_services_hel
   }
   
   
-  Future<List<String>> getAddress_batch() async {
+  Future<List<String?>?> getAddress_batch() async {
     assert(true);
   
     // invoke native method
@@ -431,7 +431,7 @@ extension com_amap_api_services_help_Tip_Batch on List<com_amap_api_services_hel
   }
   
   
-  Future<List<void>> setAddress_batch(List<String> var1) async {
+  Future<List<void>?> setAddress_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -442,7 +442,7 @@ extension com_amap_api_services_help_Tip_Batch on List<com_amap_api_services_hel
   }
   
   
-  Future<List<void>> setTypeCode_batch(List<String> var1) async {
+  Future<List<void>?> setTypeCode_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -453,7 +453,7 @@ extension com_amap_api_services_help_Tip_Batch on List<com_amap_api_services_hel
   }
   
   
-  Future<List<String>> getTypeCode_batch() async {
+  Future<List<String?>?> getTypeCode_batch() async {
     assert(true);
   
     // invoke native method

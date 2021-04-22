@@ -28,7 +28,7 @@ class com_amap_api_services_route_Path extends java_lang_Object with android_os_
       'ObjectFactory::createcom_amap_api_services_route_Path__',
     
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_Path>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_Path>(__result__)!;
   }
   
   static Future<List<com_amap_api_services_route_Path>> create_batch__(int length) async {
@@ -37,8 +37,8 @@ class com_amap_api_services_route_Path extends java_lang_Object with android_os_
       'ObjectFactory::create_batchcom_amap_api_services_route_Path__',
       {'length': length}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_Path>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_Path>(it)!)
         .toList();
   }
   
@@ -54,7 +54,7 @@ class com_amap_api_services_route_Path extends java_lang_Object with android_os_
 
   //region methods
   
-  Future<List<com_amap_api_services_core_LatLonPoint>> getPolyline() async {
+  Future<List<com_amap_api_services_core_LatLonPoint>?> getPolyline() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.Path@$refId::getPolyline([])');
@@ -67,7 +67,7 @@ class com_amap_api_services_route_Path extends java_lang_Object with android_os_
     // handle native call
   
   
-    return (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(it))?.toList();
+    return (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(it)!).toList();
   }
   
   
@@ -88,7 +88,7 @@ class com_amap_api_services_route_Path extends java_lang_Object with android_os_
   }
   
   
-  Future<double> getDistance() async {
+  Future<double?> getDistance() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.Path@$refId::getDistance([])');
@@ -122,7 +122,7 @@ class com_amap_api_services_route_Path extends java_lang_Object with android_os_
   }
   
   
-  Future<int> getDuration() async {
+  Future<int?> getDuration() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.Path@$refId::getDuration([])');
@@ -174,18 +174,18 @@ extension com_amap_api_services_route_Path_Batch on List<com_amap_api_services_r
 
   //region methods
   
-  Future<List<List<com_amap_api_services_core_LatLonPoint>>> getPolyline_batch() async {
+  Future<List<List<com_amap_api_services_core_LatLonPoint>?>?> getPolyline_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.Path::getPolyline_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(it))?.toList()).cast<List<com_amap_api_services_core_LatLonPoint>>().toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(it)!).toList()).cast<List<com_amap_api_services_core_LatLonPoint>>().toList();
   }
   
   
-  Future<List<void>> setPolyline_batch(List<List<com_amap_api_services_core_LatLonPoint>> var1) async {
+  Future<List<void>?> setPolyline_batch(List<List<com_amap_api_services_core_LatLonPoint>> var1) async {
     assert(true);
   
     // invoke native method
@@ -196,7 +196,7 @@ extension com_amap_api_services_route_Path_Batch on List<com_amap_api_services_r
   }
   
   
-  Future<List<double>> getDistance_batch() async {
+  Future<List<double?>?> getDistance_batch() async {
     assert(true);
   
     // invoke native method
@@ -207,7 +207,7 @@ extension com_amap_api_services_route_Path_Batch on List<com_amap_api_services_r
   }
   
   
-  Future<List<void>> setDistance_batch(List<double> var1) async {
+  Future<List<void>?> setDistance_batch(List<double> var1) async {
     assert(true);
   
     // invoke native method
@@ -218,7 +218,7 @@ extension com_amap_api_services_route_Path_Batch on List<com_amap_api_services_r
   }
   
   
-  Future<List<int>> getDuration_batch() async {
+  Future<List<int?>?> getDuration_batch() async {
     assert(true);
   
     // invoke native method
@@ -229,7 +229,7 @@ extension com_amap_api_services_route_Path_Batch on List<com_amap_api_services_r
   }
   
   
-  Future<List<void>> setDuration_batch(List<int> var1) async {
+  Future<List<void>?> setDuration_batch(List<int> var1) async {
     assert(true);
   
     // invoke native method

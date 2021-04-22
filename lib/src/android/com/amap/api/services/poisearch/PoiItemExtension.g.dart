@@ -28,7 +28,7 @@ class com_amap_api_services_poisearch_PoiItemExtension extends java_lang_Object 
       'ObjectFactory::createcom_amap_api_services_poisearch_PoiItemExtension__String__String',
       {"var1": var1, "var2": var2}
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_poisearch_PoiItemExtension>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_poisearch_PoiItemExtension>(__result__)!;
   }
   
   static Future<List<com_amap_api_services_poisearch_PoiItemExtension>> create_batch__String__String(List<String> var1, List<String> var2) async {
@@ -37,8 +37,8 @@ class com_amap_api_services_poisearch_PoiItemExtension extends java_lang_Object 
       'ObjectFactory::create_batchcom_amap_api_services_poisearch_PoiItemExtension__String__String',
       [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_poisearch_PoiItemExtension>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_poisearch_PoiItemExtension>(it)!)
         .toList();
   }
   
@@ -54,7 +54,7 @@ class com_amap_api_services_poisearch_PoiItemExtension extends java_lang_Object 
 
   //region methods
   
-  Future<String> getOpentime() async {
+  Future<String?> getOpentime() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.poisearch.PoiItemExtension@$refId::getOpentime([])');
@@ -71,7 +71,7 @@ class com_amap_api_services_poisearch_PoiItemExtension extends java_lang_Object 
   }
   
   
-  Future<String> getmRating() async {
+  Future<String?> getmRating() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.poisearch.PoiItemExtension@$refId::getmRating([])');
@@ -106,7 +106,7 @@ extension com_amap_api_services_poisearch_PoiItemExtension_Batch on List<com_ama
 
   //region methods
   
-  Future<List<String>> getOpentime_batch() async {
+  Future<List<String?>?> getOpentime_batch() async {
     assert(true);
   
     // invoke native method
@@ -117,7 +117,7 @@ extension com_amap_api_services_poisearch_PoiItemExtension_Batch on List<com_ama
   }
   
   
-  Future<List<String>> getmRating_batch() async {
+  Future<List<String?>?> getmRating_batch() async {
     assert(true);
   
     // invoke native method

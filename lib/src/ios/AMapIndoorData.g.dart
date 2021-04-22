@@ -28,7 +28,7 @@ class AMapIndoorData extends AMapSearchObject with NSCoding, NSCopying {
       'ObjectFactory::createAMapIndoorData',
       {'init': init}
     );
-    return AmapSearchFluttifyIOSAs<AMapIndoorData>(__result__);
+    return AmapSearchFluttifyIOSAs<AMapIndoorData>(__result__)!;
   }
   
   static Future<List<AMapIndoorData>> create_batch__(int length, { bool init = true /* ios only */ }) async {
@@ -37,25 +37,25 @@ class AMapIndoorData extends AMapSearchObject with NSCoding, NSCopying {
       'ObjectFactory::create_batchAMapIndoorData',
       {'length': length, 'init': init}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyIOSAs<AMapIndoorData>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyIOSAs<AMapIndoorData>(it)!)
         .toList();
   }
   
   //endregion
 
   //region getters
-  Future<int> get_floor() async {
+  Future<int?> get_floor() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapIndoorData::get_floor", {'__this__': this});
     return __result__;
   }
   
-  Future<String> get_floorName() async {
+  Future<String?> get_floorName() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapIndoorData::get_floorName", {'__this__': this});
     return __result__;
   }
   
-  Future<String> get_pid() async {
+  Future<String?> get_pid() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapIndoorData::get_pid", {'__this__': this});
     return __result__;
   }
@@ -95,19 +95,19 @@ class AMapIndoorData extends AMapSearchObject with NSCoding, NSCopying {
 
 extension AMapIndoorData_Batch on List<AMapIndoorData> {
   //region getters
-  Future<List<int>> get_floor_batch() async {
+  Future<List<int?>?> get_floor_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapIndoorData::get_floor_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<int>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<int?>().toList();
   }
   
-  Future<List<String>> get_floorName_batch() async {
+  Future<List<String?>?> get_floorName_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapIndoorData::get_floorName_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<String>> get_pid_batch() async {
+  Future<List<String?>?> get_pid_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapIndoorData::get_pid_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
   }
   
   //endregion

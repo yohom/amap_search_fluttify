@@ -28,7 +28,7 @@ class com_amap_api_services_nearby_UploadInfo extends java_lang_Object  {
       'ObjectFactory::createcom_amap_api_services_nearby_UploadInfo__',
     
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_nearby_UploadInfo>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_nearby_UploadInfo>(__result__)!;
   }
   
   static Future<List<com_amap_api_services_nearby_UploadInfo>> create_batch__(int length) async {
@@ -37,8 +37,8 @@ class com_amap_api_services_nearby_UploadInfo extends java_lang_Object  {
       'ObjectFactory::create_batchcom_amap_api_services_nearby_UploadInfo__',
       {'length': length}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_nearby_UploadInfo>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_nearby_UploadInfo>(it)!)
         .toList();
   }
   
@@ -71,7 +71,7 @@ class com_amap_api_services_nearby_UploadInfo extends java_lang_Object  {
   }
   
   
-  Future<com_amap_api_services_core_LatLonPoint> getPoint() async {
+  Future<com_amap_api_services_core_LatLonPoint?> getPoint() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.nearby.UploadInfo@$refId::getPoint([])');
@@ -105,7 +105,7 @@ class com_amap_api_services_nearby_UploadInfo extends java_lang_Object  {
   }
   
   
-  Future<String> getUserID() async {
+  Future<String?> getUserID() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.nearby.UploadInfo@$refId::getUserID([])');
@@ -122,7 +122,7 @@ class com_amap_api_services_nearby_UploadInfo extends java_lang_Object  {
   }
   
   
-  Future<int> getCoordType() async {
+  Future<int?> getCoordType() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.nearby.UploadInfo@$refId::getCoordType([])');
@@ -174,7 +174,7 @@ extension com_amap_api_services_nearby_UploadInfo_Batch on List<com_amap_api_ser
 
   //region methods
   
-  Future<List<void>> setPoint_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
+  Future<List<void>?> setPoint_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
     assert(true);
   
     // invoke native method
@@ -185,7 +185,7 @@ extension com_amap_api_services_nearby_UploadInfo_Batch on List<com_amap_api_ser
   }
   
   
-  Future<List<com_amap_api_services_core_LatLonPoint>> getPoint_batch() async {
+  Future<List<com_amap_api_services_core_LatLonPoint?>?> getPoint_batch() async {
     assert(true);
   
     // invoke native method
@@ -196,7 +196,7 @@ extension com_amap_api_services_nearby_UploadInfo_Batch on List<com_amap_api_ser
   }
   
   
-  Future<List<void>> setUserID_batch(List<String> var1) async {
+  Future<List<void>?> setUserID_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -207,7 +207,7 @@ extension com_amap_api_services_nearby_UploadInfo_Batch on List<com_amap_api_ser
   }
   
   
-  Future<List<String>> getUserID_batch() async {
+  Future<List<String?>?> getUserID_batch() async {
     assert(true);
   
     // invoke native method
@@ -218,7 +218,7 @@ extension com_amap_api_services_nearby_UploadInfo_Batch on List<com_amap_api_ser
   }
   
   
-  Future<List<int>> getCoordType_batch() async {
+  Future<List<int?>?> getCoordType_batch() async {
     assert(true);
   
     // invoke native method
@@ -229,7 +229,7 @@ extension com_amap_api_services_nearby_UploadInfo_Batch on List<com_amap_api_ser
   }
   
   
-  Future<List<void>> setCoordType_batch(List<int> var1) async {
+  Future<List<void>?> setCoordType_batch(List<int> var1) async {
     assert(true);
   
     // invoke native method

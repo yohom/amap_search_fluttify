@@ -28,7 +28,7 @@ class com_amap_api_services_route_RideRouteResult extends com_amap_api_services_
       'ObjectFactory::createcom_amap_api_services_route_RideRouteResult__',
     
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RideRouteResult>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RideRouteResult>(__result__)!;
   }
   
   static Future<List<com_amap_api_services_route_RideRouteResult>> create_batch__(int length) async {
@@ -37,8 +37,8 @@ class com_amap_api_services_route_RideRouteResult extends com_amap_api_services_
       'ObjectFactory::create_batchcom_amap_api_services_route_RideRouteResult__',
       {'length': length}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RideRouteResult>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RideRouteResult>(it)!)
         .toList();
   }
   
@@ -54,7 +54,7 @@ class com_amap_api_services_route_RideRouteResult extends com_amap_api_services_
 
   //region methods
   
-  Future<List<com_amap_api_services_route_RidePath>> getPaths() async {
+  Future<List<com_amap_api_services_route_RidePath>?> getPaths() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RideRouteResult@$refId::getPaths([])');
@@ -67,7 +67,7 @@ class com_amap_api_services_route_RideRouteResult extends com_amap_api_services_
     // handle native call
   
   
-    return (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RidePath>(it))?.toList();
+    return (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RidePath>(it)!).toList();
   }
   
   
@@ -88,7 +88,7 @@ class com_amap_api_services_route_RideRouteResult extends com_amap_api_services_
   }
   
   
-  Future<com_amap_api_services_route_RouteSearch_RideRouteQuery> getRideQuery() async {
+  Future<com_amap_api_services_route_RouteSearch_RideRouteQuery?> getRideQuery() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RideRouteResult@$refId::getRideQuery([])');
@@ -140,18 +140,18 @@ extension com_amap_api_services_route_RideRouteResult_Batch on List<com_amap_api
 
   //region methods
   
-  Future<List<List<com_amap_api_services_route_RidePath>>> getPaths_batch() async {
+  Future<List<List<com_amap_api_services_route_RidePath>?>?> getPaths_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RideRouteResult::getPaths_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RidePath>(it))?.toList()).cast<List<com_amap_api_services_route_RidePath>>().toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RidePath>(it)!).toList()).cast<List<com_amap_api_services_route_RidePath>>().toList();
   }
   
   
-  Future<List<void>> setPaths_batch(List<List<com_amap_api_services_route_RidePath>> var1) async {
+  Future<List<void>?> setPaths_batch(List<List<com_amap_api_services_route_RidePath>> var1) async {
     assert(true);
   
     // invoke native method
@@ -162,7 +162,7 @@ extension com_amap_api_services_route_RideRouteResult_Batch on List<com_amap_api
   }
   
   
-  Future<List<com_amap_api_services_route_RouteSearch_RideRouteQuery>> getRideQuery_batch() async {
+  Future<List<com_amap_api_services_route_RouteSearch_RideRouteQuery?>?> getRideQuery_batch() async {
     assert(true);
   
     // invoke native method
@@ -173,7 +173,7 @@ extension com_amap_api_services_route_RideRouteResult_Batch on List<com_amap_api
   }
   
   
-  Future<List<void>> setRideQuery_batch(List<com_amap_api_services_route_RouteSearch_RideRouteQuery> var1) async {
+  Future<List<void>?> setRideQuery_batch(List<com_amap_api_services_route_RouteSearch_RideRouteQuery> var1) async {
     assert(true);
   
     // invoke native method

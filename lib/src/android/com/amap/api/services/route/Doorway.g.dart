@@ -28,7 +28,7 @@ class com_amap_api_services_route_Doorway extends java_lang_Object with android_
       'ObjectFactory::createcom_amap_api_services_route_Doorway__',
     
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_Doorway>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_Doorway>(__result__)!;
   }
   
   static Future<List<com_amap_api_services_route_Doorway>> create_batch__(int length) async {
@@ -37,8 +37,8 @@ class com_amap_api_services_route_Doorway extends java_lang_Object with android_
       'ObjectFactory::create_batchcom_amap_api_services_route_Doorway__',
       {'length': length}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_Doorway>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_Doorway>(it)!)
         .toList();
   }
   
@@ -54,7 +54,7 @@ class com_amap_api_services_route_Doorway extends java_lang_Object with android_
 
   //region methods
   
-  Future<String> getName() async {
+  Future<String?> getName() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.Doorway@$refId::getName([])');
@@ -88,7 +88,7 @@ class com_amap_api_services_route_Doorway extends java_lang_Object with android_
   }
   
   
-  Future<com_amap_api_services_core_LatLonPoint> getLatLonPoint() async {
+  Future<com_amap_api_services_core_LatLonPoint?> getLatLonPoint() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.Doorway@$refId::getLatLonPoint([])');
@@ -140,7 +140,7 @@ extension com_amap_api_services_route_Doorway_Batch on List<com_amap_api_service
 
   //region methods
   
-  Future<List<String>> getName_batch() async {
+  Future<List<String?>?> getName_batch() async {
     assert(true);
   
     // invoke native method
@@ -151,7 +151,7 @@ extension com_amap_api_services_route_Doorway_Batch on List<com_amap_api_service
   }
   
   
-  Future<List<void>> setName_batch(List<String> var1) async {
+  Future<List<void>?> setName_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -162,7 +162,7 @@ extension com_amap_api_services_route_Doorway_Batch on List<com_amap_api_service
   }
   
   
-  Future<List<com_amap_api_services_core_LatLonPoint>> getLatLonPoint_batch() async {
+  Future<List<com_amap_api_services_core_LatLonPoint?>?> getLatLonPoint_batch() async {
     assert(true);
   
     // invoke native method
@@ -173,7 +173,7 @@ extension com_amap_api_services_route_Doorway_Batch on List<com_amap_api_service
   }
   
   
-  Future<List<void>> setLatLonPoint_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
+  Future<List<void>?> setLatLonPoint_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
     assert(true);
   
     // invoke native method

@@ -26,11 +26,9 @@ mixin com_amap_api_services_weather_WeatherSearch_OnWeatherSearchListener on jav
 
   
 
-  /* @mustCallSuper */
-  Future<void> onWeatherLiveSearched(com_amap_api_services_weather_LocalWeatherLiveResult var1, int var2) {}
+  Future<void> onWeatherLiveSearched(com_amap_api_services_weather_LocalWeatherLiveResult var1, int var2) async {}
   
-  /* @mustCallSuper */
-  Future<void> onWeatherForecastSearched(com_amap_api_services_weather_LocalWeatherForecastResult var1, int var2) {}
+  Future<void> onWeatherForecastSearched(com_amap_api_services_weather_LocalWeatherForecastResult var1, int var2) async {}
   
 }
 

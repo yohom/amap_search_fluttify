@@ -28,7 +28,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearchQuery extends java_lang
       'ObjectFactory::createcom_amap_api_services_routepoisearch_RoutePOISearchQuery__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint__int__com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType__int',
       {"var1": var1, "var2": var2, "var3": var3, "var4": var4, "var5": var5}
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_routepoisearch_RoutePOISearchQuery>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_routepoisearch_RoutePOISearchQuery>(__result__)!;
   }
   
   static Future<com_amap_api_services_routepoisearch_RoutePOISearchQuery> create__List_java_util_List_com_amap_api_services_core_LatLonPoint____com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType__int(List<com_amap_api_services_core_LatLonPoint> var1, com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType var2, int var3) async {
@@ -36,7 +36,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearchQuery extends java_lang
       'ObjectFactory::createcom_amap_api_services_routepoisearch_RoutePOISearchQuery__java_util_List_com_amap_api_services_core_LatLonPoint___com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType__int',
       {"var1": var1, "var2": var2, "var3": var3}
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_routepoisearch_RoutePOISearchQuery>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_routepoisearch_RoutePOISearchQuery>(__result__)!;
   }
   
   static Future<List<com_amap_api_services_routepoisearch_RoutePOISearchQuery>> create_batch__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint__int__com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType__int(List<com_amap_api_services_core_LatLonPoint> var1, List<com_amap_api_services_core_LatLonPoint> var2, List<int> var3, List<com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType> var4, List<int> var5) async {
@@ -45,8 +45,8 @@ class com_amap_api_services_routepoisearch_RoutePOISearchQuery extends java_lang
       'ObjectFactory::create_batchcom_amap_api_services_routepoisearch_RoutePOISearchQuery__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint__int__com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType__int',
       [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "var4": var4[__i__], "var5": var5[__i__]}]
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_routepoisearch_RoutePOISearchQuery>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_routepoisearch_RoutePOISearchQuery>(it)!)
         .toList();
   }
   
@@ -56,8 +56,8 @@ class com_amap_api_services_routepoisearch_RoutePOISearchQuery extends java_lang
       'ObjectFactory::create_batchcom_amap_api_services_routepoisearch_RoutePOISearchQuery__java_util_List_com_amap_api_services_core_LatLonPoint___com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType__int',
       [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__]}]
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_routepoisearch_RoutePOISearchQuery>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_routepoisearch_RoutePOISearchQuery>(it)!)
         .toList();
   }
   
@@ -73,7 +73,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearchQuery extends java_lang
 
   //region methods
   
-  Future<com_amap_api_services_core_LatLonPoint> getFrom() async {
+  Future<com_amap_api_services_core_LatLonPoint?> getFrom() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOISearchQuery@$refId::getFrom([])');
@@ -90,7 +90,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearchQuery extends java_lang
   }
   
   
-  Future<com_amap_api_services_core_LatLonPoint> getTo() async {
+  Future<com_amap_api_services_core_LatLonPoint?> getTo() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOISearchQuery@$refId::getTo([])');
@@ -107,7 +107,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearchQuery extends java_lang
   }
   
   
-  Future<int> getMode() async {
+  Future<int?> getMode() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOISearchQuery@$refId::getMode([])');
@@ -124,7 +124,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearchQuery extends java_lang
   }
   
   
-  Future<com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType> getSearchType() async {
+  Future<com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType?> getSearchType() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOISearchQuery@$refId::getSearchType([])');
@@ -141,7 +141,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearchQuery extends java_lang
   }
   
   
-  Future<int> getRange() async {
+  Future<int?> getRange() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOISearchQuery@$refId::getRange([])');
@@ -158,7 +158,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearchQuery extends java_lang
   }
   
   
-  Future<List<com_amap_api_services_core_LatLonPoint>> getPolylines() async {
+  Future<List<com_amap_api_services_core_LatLonPoint>?> getPolylines() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOISearchQuery@$refId::getPolylines([])');
@@ -171,11 +171,11 @@ class com_amap_api_services_routepoisearch_RoutePOISearchQuery extends java_lang
     // handle native call
   
   
-    return (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(it))?.toList();
+    return (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(it)!).toList();
   }
   
   
-  Future<com_amap_api_services_routepoisearch_RoutePOISearchQuery> clone() async {
+  Future<com_amap_api_services_routepoisearch_RoutePOISearchQuery?> clone() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOISearchQuery@$refId::clone([])');
@@ -210,7 +210,7 @@ extension com_amap_api_services_routepoisearch_RoutePOISearchQuery_Batch on List
 
   //region methods
   
-  Future<List<com_amap_api_services_core_LatLonPoint>> getFrom_batch() async {
+  Future<List<com_amap_api_services_core_LatLonPoint?>?> getFrom_batch() async {
     assert(true);
   
     // invoke native method
@@ -221,7 +221,7 @@ extension com_amap_api_services_routepoisearch_RoutePOISearchQuery_Batch on List
   }
   
   
-  Future<List<com_amap_api_services_core_LatLonPoint>> getTo_batch() async {
+  Future<List<com_amap_api_services_core_LatLonPoint?>?> getTo_batch() async {
     assert(true);
   
     // invoke native method
@@ -232,7 +232,7 @@ extension com_amap_api_services_routepoisearch_RoutePOISearchQuery_Batch on List
   }
   
   
-  Future<List<int>> getMode_batch() async {
+  Future<List<int?>?> getMode_batch() async {
     assert(true);
   
     // invoke native method
@@ -243,7 +243,7 @@ extension com_amap_api_services_routepoisearch_RoutePOISearchQuery_Batch on List
   }
   
   
-  Future<List<com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType>> getSearchType_batch() async {
+  Future<List<com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType?>?> getSearchType_batch() async {
     assert(true);
   
     // invoke native method
@@ -254,7 +254,7 @@ extension com_amap_api_services_routepoisearch_RoutePOISearchQuery_Batch on List
   }
   
   
-  Future<List<int>> getRange_batch() async {
+  Future<List<int?>?> getRange_batch() async {
     assert(true);
   
     // invoke native method
@@ -265,18 +265,18 @@ extension com_amap_api_services_routepoisearch_RoutePOISearchQuery_Batch on List
   }
   
   
-  Future<List<List<com_amap_api_services_core_LatLonPoint>>> getPolylines_batch() async {
+  Future<List<List<com_amap_api_services_core_LatLonPoint>?>?> getPolylines_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.routepoisearch.RoutePOISearchQuery::getPolylines_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(it))?.toList()).cast<List<com_amap_api_services_core_LatLonPoint>>().toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(it)!).toList()).cast<List<com_amap_api_services_core_LatLonPoint>>().toList();
   }
   
   
-  Future<List<com_amap_api_services_routepoisearch_RoutePOISearchQuery>> clone_batch() async {
+  Future<List<com_amap_api_services_routepoisearch_RoutePOISearchQuery?>?> clone_batch() async {
     assert(true);
   
     // invoke native method

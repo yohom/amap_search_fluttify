@@ -26,20 +26,15 @@ mixin com_amap_api_services_interfaces_IBusStationSearch on java_lang_Object {
 
   
 
-  /* @mustCallSuper */
-  Future<com_amap_api_services_busline_BusStationResult> searchBusStation() {}
+  Future<com_amap_api_services_busline_BusStationResult?> searchBusStation() async {}
   
-  /* @mustCallSuper */
-  Future<void> setOnBusStationSearchListener(com_amap_api_services_busline_BusStationSearch_OnBusStationSearchListener var1) {}
+  Future<void> setOnBusStationSearchListener(com_amap_api_services_busline_BusStationSearch_OnBusStationSearchListener var1) async {}
   
-  /* @mustCallSuper */
-  Future<void> searchBusStationAsyn() {}
+  Future<void> searchBusStationAsyn() async {}
   
-  /* @mustCallSuper */
-  Future<void> setQuery(com_amap_api_services_busline_BusStationQuery var1) {}
+  Future<void> setQuery(com_amap_api_services_busline_BusStationQuery var1) async {}
   
-  /* @mustCallSuper */
-  Future<com_amap_api_services_busline_BusStationQuery> getQuery() {}
+  Future<com_amap_api_services_busline_BusStationQuery?> getQuery() async {}
   
 }
 

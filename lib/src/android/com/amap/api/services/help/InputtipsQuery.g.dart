@@ -28,7 +28,7 @@ class com_amap_api_services_help_InputtipsQuery extends java_lang_Object  {
       'ObjectFactory::createcom_amap_api_services_help_InputtipsQuery__String__String',
       {"var1": var1, "var2": var2}
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_help_InputtipsQuery>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_help_InputtipsQuery>(__result__)!;
   }
   
   static Future<List<com_amap_api_services_help_InputtipsQuery>> create_batch__String__String(List<String> var1, List<String> var2) async {
@@ -37,8 +37,8 @@ class com_amap_api_services_help_InputtipsQuery extends java_lang_Object  {
       'ObjectFactory::create_batchcom_amap_api_services_help_InputtipsQuery__String__String',
       [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_help_InputtipsQuery>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_help_InputtipsQuery>(it)!)
         .toList();
   }
   
@@ -54,7 +54,7 @@ class com_amap_api_services_help_InputtipsQuery extends java_lang_Object  {
 
   //region methods
   
-  Future<String> getKeyword() async {
+  Future<String?> getKeyword() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.help.InputtipsQuery@$refId::getKeyword([])');
@@ -71,7 +71,7 @@ class com_amap_api_services_help_InputtipsQuery extends java_lang_Object  {
   }
   
   
-  Future<String> getCity() async {
+  Future<String?> getCity() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.help.InputtipsQuery@$refId::getCity([])');
@@ -105,7 +105,7 @@ class com_amap_api_services_help_InputtipsQuery extends java_lang_Object  {
   }
   
   
-  Future<String> getType() async {
+  Future<String?> getType() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.help.InputtipsQuery@$refId::getType([])');
@@ -139,7 +139,7 @@ class com_amap_api_services_help_InputtipsQuery extends java_lang_Object  {
   }
   
   
-  Future<bool> getCityLimit() async {
+  Future<bool?> getCityLimit() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.help.InputtipsQuery@$refId::getCityLimit([])');
@@ -173,7 +173,7 @@ class com_amap_api_services_help_InputtipsQuery extends java_lang_Object  {
   }
   
   
-  Future<com_amap_api_services_core_LatLonPoint> getLocation() async {
+  Future<com_amap_api_services_core_LatLonPoint?> getLocation() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.help.InputtipsQuery@$refId::getLocation([])');
@@ -208,7 +208,7 @@ extension com_amap_api_services_help_InputtipsQuery_Batch on List<com_amap_api_s
 
   //region methods
   
-  Future<List<String>> getKeyword_batch() async {
+  Future<List<String?>?> getKeyword_batch() async {
     assert(true);
   
     // invoke native method
@@ -219,7 +219,7 @@ extension com_amap_api_services_help_InputtipsQuery_Batch on List<com_amap_api_s
   }
   
   
-  Future<List<String>> getCity_batch() async {
+  Future<List<String?>?> getCity_batch() async {
     assert(true);
   
     // invoke native method
@@ -230,7 +230,7 @@ extension com_amap_api_services_help_InputtipsQuery_Batch on List<com_amap_api_s
   }
   
   
-  Future<List<void>> setType_batch(List<String> var1) async {
+  Future<List<void>?> setType_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -241,7 +241,7 @@ extension com_amap_api_services_help_InputtipsQuery_Batch on List<com_amap_api_s
   }
   
   
-  Future<List<String>> getType_batch() async {
+  Future<List<String?>?> getType_batch() async {
     assert(true);
   
     // invoke native method
@@ -252,7 +252,7 @@ extension com_amap_api_services_help_InputtipsQuery_Batch on List<com_amap_api_s
   }
   
   
-  Future<List<void>> setCityLimit_batch(List<bool> var1) async {
+  Future<List<void>?> setCityLimit_batch(List<bool> var1) async {
     assert(true);
   
     // invoke native method
@@ -263,7 +263,7 @@ extension com_amap_api_services_help_InputtipsQuery_Batch on List<com_amap_api_s
   }
   
   
-  Future<List<bool>> getCityLimit_batch() async {
+  Future<List<bool?>?> getCityLimit_batch() async {
     assert(true);
   
     // invoke native method
@@ -274,7 +274,7 @@ extension com_amap_api_services_help_InputtipsQuery_Batch on List<com_amap_api_s
   }
   
   
-  Future<List<void>> setLocation_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
+  Future<List<void>?> setLocation_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
     assert(true);
   
     // invoke native method
@@ -285,7 +285,7 @@ extension com_amap_api_services_help_InputtipsQuery_Batch on List<com_amap_api_s
   }
   
   
-  Future<List<com_amap_api_services_core_LatLonPoint>> getLocation_batch() async {
+  Future<List<com_amap_api_services_core_LatLonPoint?>?> getLocation_batch() async {
     assert(true);
   
     // invoke native method

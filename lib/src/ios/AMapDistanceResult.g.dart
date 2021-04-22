@@ -28,7 +28,7 @@ class AMapDistanceResult extends AMapSearchObject with NSCoding, NSCopying {
       'ObjectFactory::createAMapDistanceResult',
       {'init': init}
     );
-    return AmapSearchFluttifyIOSAs<AMapDistanceResult>(__result__);
+    return AmapSearchFluttifyIOSAs<AMapDistanceResult>(__result__)!;
   }
   
   static Future<List<AMapDistanceResult>> create_batch__(int length, { bool init = true /* ios only */ }) async {
@@ -37,40 +37,40 @@ class AMapDistanceResult extends AMapSearchObject with NSCoding, NSCopying {
       'ObjectFactory::create_batchAMapDistanceResult',
       {'length': length, 'init': init}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyIOSAs<AMapDistanceResult>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyIOSAs<AMapDistanceResult>(it)!)
         .toList();
   }
   
   //endregion
 
   //region getters
-  Future<int> get_originID() async {
+  Future<int?> get_originID() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapDistanceResult::get_originID", {'__this__': this});
     return __result__;
   }
   
-  Future<int> get_destID() async {
+  Future<int?> get_destID() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapDistanceResult::get_destID", {'__this__': this});
     return __result__;
   }
   
-  Future<int> get_distance() async {
+  Future<int?> get_distance() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapDistanceResult::get_distance", {'__this__': this});
     return __result__;
   }
   
-  Future<int> get_duration() async {
+  Future<int?> get_duration() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapDistanceResult::get_duration", {'__this__': this});
     return __result__;
   }
   
-  Future<String> get_info() async {
+  Future<String?> get_info() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapDistanceResult::get_info", {'__this__': this});
     return __result__;
   }
   
-  Future<int> get_code() async {
+  Future<int?> get_code() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapDistanceResult::get_code", {'__this__': this});
     return __result__;
   }
@@ -128,34 +128,34 @@ class AMapDistanceResult extends AMapSearchObject with NSCoding, NSCopying {
 
 extension AMapDistanceResult_Batch on List<AMapDistanceResult> {
   //region getters
-  Future<List<int>> get_originID_batch() async {
+  Future<List<int?>?> get_originID_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapDistanceResult::get_originID_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<int>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<int?>().toList();
   }
   
-  Future<List<int>> get_destID_batch() async {
+  Future<List<int?>?> get_destID_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapDistanceResult::get_destID_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<int>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<int?>().toList();
   }
   
-  Future<List<int>> get_distance_batch() async {
+  Future<List<int?>?> get_distance_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapDistanceResult::get_distance_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<int>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<int?>().toList();
   }
   
-  Future<List<int>> get_duration_batch() async {
+  Future<List<int?>?> get_duration_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapDistanceResult::get_duration_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<int>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<int?>().toList();
   }
   
-  Future<List<String>> get_info_batch() async {
+  Future<List<String?>?> get_info_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapDistanceResult::get_info_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<int>> get_code_batch() async {
+  Future<List<int?>?> get_code_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapDistanceResult::get_code_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<int>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<int?>().toList();
   }
   
   //endregion

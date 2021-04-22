@@ -28,7 +28,7 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends java_lang_
       'ObjectFactory::createcom_amap_api_services_route_RouteSearch_DriveRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__java_util_List_com_amap_api_services_core_LatLonPoint___java_util_List_java_util_List_com_amap_api_services_core_LatLonPoint____String',
       {"var1": var1, "var2": var2, "var3": var3, "var4": var4, "var5": var5}
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RouteSearch_DriveRouteQuery>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RouteSearch_DriveRouteQuery>(__result__)!;
   }
   
   static Future<com_amap_api_services_route_RouteSearch_DriveRouteQuery> create__() async {
@@ -36,7 +36,7 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends java_lang_
       'ObjectFactory::createcom_amap_api_services_route_RouteSearch_DriveRouteQuery__',
     
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RouteSearch_DriveRouteQuery>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RouteSearch_DriveRouteQuery>(__result__)!;
   }
   
   static Future<List<com_amap_api_services_route_RouteSearch_DriveRouteQuery>> create_batch__com_amap_api_services_route_RouteSearch_FromAndTo__int__List_java_util_List_com_amap_api_services_core_LatLonPoint____List_List_java_util_List_java_util_List_com_amap_api_services_core_LatLonPoint______String(List<com_amap_api_services_route_RouteSearch_FromAndTo> var1, List<int> var2, List<List<com_amap_api_services_core_LatLonPoint>> var3, List<List<List<com_amap_api_services_core_LatLonPoint>>> var4, List<String> var5) async {
@@ -45,8 +45,8 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends java_lang_
       'ObjectFactory::create_batchcom_amap_api_services_route_RouteSearch_DriveRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__java_util_List_com_amap_api_services_core_LatLonPoint___java_util_List_java_util_List_com_amap_api_services_core_LatLonPoint____String',
       [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "var4": var4[__i__], "var5": var5[__i__]}]
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RouteSearch_DriveRouteQuery>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RouteSearch_DriveRouteQuery>(it)!)
         .toList();
   }
   
@@ -56,8 +56,8 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends java_lang_
       'ObjectFactory::create_batchcom_amap_api_services_route_RouteSearch_DriveRouteQuery__',
       {'length': length}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RouteSearch_DriveRouteQuery>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RouteSearch_DriveRouteQuery>(it)!)
         .toList();
   }
   
@@ -73,7 +73,7 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends java_lang_
 
   //region methods
   
-  Future<com_amap_api_services_route_RouteSearch_FromAndTo> getFromAndTo() async {
+  Future<com_amap_api_services_route_RouteSearch_FromAndTo?> getFromAndTo() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::getFromAndTo([])');
@@ -90,7 +90,7 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends java_lang_
   }
   
   
-  Future<int> getMode() async {
+  Future<int?> getMode() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::getMode([])');
@@ -107,7 +107,7 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends java_lang_
   }
   
   
-  Future<int> getCarType() async {
+  Future<int?> getCarType() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::getCarType([])');
@@ -124,7 +124,7 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends java_lang_
   }
   
   
-  Future<List<com_amap_api_services_core_LatLonPoint>> getPassedByPoints() async {
+  Future<List<com_amap_api_services_core_LatLonPoint>?> getPassedByPoints() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::getPassedByPoints([])');
@@ -137,11 +137,11 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends java_lang_
     // handle native call
   
   
-    return (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(it))?.toList();
+    return (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(it)!).toList();
   }
   
   
-  Future<String> getAvoidRoad() async {
+  Future<String?> getAvoidRoad() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::getAvoidRoad([])');
@@ -158,7 +158,7 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends java_lang_
   }
   
   
-  Future<String> getPassedPointStr() async {
+  Future<String?> getPassedPointStr() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::getPassedPointStr([])');
@@ -175,7 +175,7 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends java_lang_
   }
   
   
-  Future<bool> hasPassPoint() async {
+  Future<bool?> hasPassPoint() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::hasPassPoint([])');
@@ -192,7 +192,7 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends java_lang_
   }
   
   
-  Future<String> getAvoidpolygonsStr() async {
+  Future<String?> getAvoidpolygonsStr() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::getAvoidpolygonsStr([])');
@@ -209,7 +209,7 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends java_lang_
   }
   
   
-  Future<bool> hasAvoidpolygons() async {
+  Future<bool?> hasAvoidpolygons() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::hasAvoidpolygons([])');
@@ -226,7 +226,7 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends java_lang_
   }
   
   
-  Future<bool> hasAvoidRoad() async {
+  Future<bool?> hasAvoidRoad() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::hasAvoidRoad([])');
@@ -243,7 +243,7 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends java_lang_
   }
   
   
-  Future<String> getExclude() async {
+  Future<String?> getExclude() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::getExclude([])');
@@ -277,7 +277,7 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends java_lang_
   }
   
   
-  Future<String> getExtensions() async {
+  Future<String?> getExtensions() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::getExtensions([])');
@@ -311,7 +311,7 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends java_lang_
   }
   
   
-  Future<com_amap_api_services_route_RouteSearch_DriveRouteQuery> clone() async {
+  Future<com_amap_api_services_route_RouteSearch_DriveRouteQuery?> clone() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::clone([])');
@@ -328,7 +328,7 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends java_lang_
   }
   
   
-  Future<bool> isUseFerry() async {
+  Future<bool?> isUseFerry() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::isUseFerry([])');
@@ -397,7 +397,7 @@ extension com_amap_api_services_route_RouteSearch_DriveRouteQuery_Batch on List<
 
   //region methods
   
-  Future<List<com_amap_api_services_route_RouteSearch_FromAndTo>> getFromAndTo_batch() async {
+  Future<List<com_amap_api_services_route_RouteSearch_FromAndTo?>?> getFromAndTo_batch() async {
     assert(true);
   
     // invoke native method
@@ -408,7 +408,7 @@ extension com_amap_api_services_route_RouteSearch_DriveRouteQuery_Batch on List<
   }
   
   
-  Future<List<int>> getMode_batch() async {
+  Future<List<int?>?> getMode_batch() async {
     assert(true);
   
     // invoke native method
@@ -419,7 +419,7 @@ extension com_amap_api_services_route_RouteSearch_DriveRouteQuery_Batch on List<
   }
   
   
-  Future<List<int>> getCarType_batch() async {
+  Future<List<int?>?> getCarType_batch() async {
     assert(true);
   
     // invoke native method
@@ -430,18 +430,18 @@ extension com_amap_api_services_route_RouteSearch_DriveRouteQuery_Batch on List<
   }
   
   
-  Future<List<List<com_amap_api_services_core_LatLonPoint>>> getPassedByPoints_batch() async {
+  Future<List<List<com_amap_api_services_core_LatLonPoint>?>?> getPassedByPoints_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteSearch.DriveRouteQuery::getPassedByPoints_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(it))?.toList()).cast<List<com_amap_api_services_core_LatLonPoint>>().toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(it)!).toList()).cast<List<com_amap_api_services_core_LatLonPoint>>().toList();
   }
   
   
-  Future<List<String>> getAvoidRoad_batch() async {
+  Future<List<String?>?> getAvoidRoad_batch() async {
     assert(true);
   
     // invoke native method
@@ -452,7 +452,7 @@ extension com_amap_api_services_route_RouteSearch_DriveRouteQuery_Batch on List<
   }
   
   
-  Future<List<String>> getPassedPointStr_batch() async {
+  Future<List<String?>?> getPassedPointStr_batch() async {
     assert(true);
   
     // invoke native method
@@ -463,7 +463,7 @@ extension com_amap_api_services_route_RouteSearch_DriveRouteQuery_Batch on List<
   }
   
   
-  Future<List<bool>> hasPassPoint_batch() async {
+  Future<List<bool?>?> hasPassPoint_batch() async {
     assert(true);
   
     // invoke native method
@@ -474,7 +474,7 @@ extension com_amap_api_services_route_RouteSearch_DriveRouteQuery_Batch on List<
   }
   
   
-  Future<List<String>> getAvoidpolygonsStr_batch() async {
+  Future<List<String?>?> getAvoidpolygonsStr_batch() async {
     assert(true);
   
     // invoke native method
@@ -485,7 +485,7 @@ extension com_amap_api_services_route_RouteSearch_DriveRouteQuery_Batch on List<
   }
   
   
-  Future<List<bool>> hasAvoidpolygons_batch() async {
+  Future<List<bool?>?> hasAvoidpolygons_batch() async {
     assert(true);
   
     // invoke native method
@@ -496,7 +496,7 @@ extension com_amap_api_services_route_RouteSearch_DriveRouteQuery_Batch on List<
   }
   
   
-  Future<List<bool>> hasAvoidRoad_batch() async {
+  Future<List<bool?>?> hasAvoidRoad_batch() async {
     assert(true);
   
     // invoke native method
@@ -507,7 +507,7 @@ extension com_amap_api_services_route_RouteSearch_DriveRouteQuery_Batch on List<
   }
   
   
-  Future<List<String>> getExclude_batch() async {
+  Future<List<String?>?> getExclude_batch() async {
     assert(true);
   
     // invoke native method
@@ -518,7 +518,7 @@ extension com_amap_api_services_route_RouteSearch_DriveRouteQuery_Batch on List<
   }
   
   
-  Future<List<void>> setExclude_batch(List<String> var1) async {
+  Future<List<void>?> setExclude_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -529,7 +529,7 @@ extension com_amap_api_services_route_RouteSearch_DriveRouteQuery_Batch on List<
   }
   
   
-  Future<List<String>> getExtensions_batch() async {
+  Future<List<String?>?> getExtensions_batch() async {
     assert(true);
   
     // invoke native method
@@ -540,7 +540,7 @@ extension com_amap_api_services_route_RouteSearch_DriveRouteQuery_Batch on List<
   }
   
   
-  Future<List<void>> setExtensions_batch(List<String> var1) async {
+  Future<List<void>?> setExtensions_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -551,7 +551,7 @@ extension com_amap_api_services_route_RouteSearch_DriveRouteQuery_Batch on List<
   }
   
   
-  Future<List<com_amap_api_services_route_RouteSearch_DriveRouteQuery>> clone_batch() async {
+  Future<List<com_amap_api_services_route_RouteSearch_DriveRouteQuery?>?> clone_batch() async {
     assert(true);
   
     // invoke native method
@@ -562,7 +562,7 @@ extension com_amap_api_services_route_RouteSearch_DriveRouteQuery_Batch on List<
   }
   
   
-  Future<List<bool>> isUseFerry_batch() async {
+  Future<List<bool?>?> isUseFerry_batch() async {
     assert(true);
   
     // invoke native method
@@ -573,7 +573,7 @@ extension com_amap_api_services_route_RouteSearch_DriveRouteQuery_Batch on List<
   }
   
   
-  Future<List<void>> setUseFerry_batch(List<bool> var1) async {
+  Future<List<void>?> setUseFerry_batch(List<bool> var1) async {
     assert(true);
   
     // invoke native method
@@ -584,7 +584,7 @@ extension com_amap_api_services_route_RouteSearch_DriveRouteQuery_Batch on List<
   }
   
   
-  Future<List<void>> setCarType_batch(List<int> var1) async {
+  Future<List<void>?> setCarType_batch(List<int> var1) async {
     assert(true);
   
     // invoke native method

@@ -29,7 +29,7 @@ class com_amap_api_services_cloud_CloudSearch_Sortingrules extends java_lang_Obj
       'ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_Sortingrules__String__boolean',
       {"var1": var1, "var2": var2}
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudSearch_Sortingrules>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudSearch_Sortingrules>(__result__)!;
   }
   
   static Future<com_amap_api_services_cloud_CloudSearch_Sortingrules> create__int(int var1) async {
@@ -37,7 +37,7 @@ class com_amap_api_services_cloud_CloudSearch_Sortingrules extends java_lang_Obj
       'ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_Sortingrules__int',
       {"var1": var1}
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudSearch_Sortingrules>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudSearch_Sortingrules>(__result__)!;
   }
   
   static Future<List<com_amap_api_services_cloud_CloudSearch_Sortingrules>> create_batch__String__boolean(List<String> var1, List<bool> var2) async {
@@ -46,8 +46,8 @@ class com_amap_api_services_cloud_CloudSearch_Sortingrules extends java_lang_Obj
       'ObjectFactory::create_batchcom_amap_api_services_cloud_CloudSearch_Sortingrules__String__boolean',
       [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudSearch_Sortingrules>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudSearch_Sortingrules>(it)!)
         .toList();
   }
   
@@ -57,8 +57,8 @@ class com_amap_api_services_cloud_CloudSearch_Sortingrules extends java_lang_Obj
       'ObjectFactory::create_batchcom_amap_api_services_cloud_CloudSearch_Sortingrules__int',
       [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudSearch_Sortingrules>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudSearch_Sortingrules>(it)!)
         .toList();
   }
   

@@ -28,7 +28,7 @@ class AMapRoutePOISearchResponse extends AMapSearchObject with NSCoding, NSCopyi
       'ObjectFactory::createAMapRoutePOISearchResponse',
       {'init': init}
     );
-    return AmapSearchFluttifyIOSAs<AMapRoutePOISearchResponse>(__result__);
+    return AmapSearchFluttifyIOSAs<AMapRoutePOISearchResponse>(__result__)!;
   }
   
   static Future<List<AMapRoutePOISearchResponse>> create_batch__(int length, { bool init = true /* ios only */ }) async {
@@ -37,22 +37,22 @@ class AMapRoutePOISearchResponse extends AMapSearchObject with NSCoding, NSCopyi
       'ObjectFactory::create_batchAMapRoutePOISearchResponse',
       {'length': length, 'init': init}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyIOSAs<AMapRoutePOISearchResponse>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyIOSAs<AMapRoutePOISearchResponse>(it)!)
         .toList();
   }
   
   //endregion
 
   //region getters
-  Future<int> get_count() async {
+  Future<int?> get_count() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoutePOISearchResponse::get_count", {'__this__': this});
     return __result__;
   }
   
-  Future<List<AMapRoutePOI>> get_pois() async {
+  Future<List<AMapRoutePOI>?> get_pois() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoutePOISearchResponse::get_pois", {'__this__': this});
-    return (__result__ as List)?.map((it) => AmapSearchFluttifyIOSAs<AMapRoutePOI>(it))?.toList();
+    return (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapRoutePOI>(it)!).toList();
   }
   
   //endregion
@@ -84,14 +84,14 @@ class AMapRoutePOISearchResponse extends AMapSearchObject with NSCoding, NSCopyi
 
 extension AMapRoutePOISearchResponse_Batch on List<AMapRoutePOISearchResponse> {
   //region getters
-  Future<List<int>> get_count_batch() async {
+  Future<List<int?>?> get_count_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoutePOISearchResponse::get_count_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<int>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<int?>().toList();
   }
   
-  Future<List<List<AMapRoutePOI>>> get_pois_batch() async {
+  Future<List<List<AMapRoutePOI>?>?> get_pois_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoutePOISearchResponse::get_pois_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyIOSAs<AMapRoutePOI>(it))?.toList())?.cast<List<AMapRoutePOI>>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapRoutePOI>(it)!).toList()).cast<List<AMapRoutePOI>?>().toList();
   }
   
   //endregion

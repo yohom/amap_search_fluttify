@@ -16,10 +16,10 @@ class _GetWeatherInfoScreenState extends State<GetWeatherInfoScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomPadding: false,
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(title: Text('获取天气数据')),
       body: DecoratedColumn(
-        padding: EdgeInsets.all(kSpaceBig),
+        padding: EdgeInsets.all(kSpace16),
         children: <Widget>[
           TextFormField(
             controller: _keywordController,

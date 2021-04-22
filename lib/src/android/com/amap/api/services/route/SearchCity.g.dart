@@ -28,7 +28,7 @@ class com_amap_api_services_route_SearchCity extends java_lang_Object with andro
       'ObjectFactory::createcom_amap_api_services_route_SearchCity__',
     
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_SearchCity>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_SearchCity>(__result__)!;
   }
   
   static Future<List<com_amap_api_services_route_SearchCity>> create_batch__(int length) async {
@@ -37,8 +37,8 @@ class com_amap_api_services_route_SearchCity extends java_lang_Object with andro
       'ObjectFactory::create_batchcom_amap_api_services_route_SearchCity__',
       {'length': length}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_SearchCity>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_SearchCity>(it)!)
         .toList();
   }
   
@@ -54,7 +54,7 @@ class com_amap_api_services_route_SearchCity extends java_lang_Object with andro
 
   //region methods
   
-  Future<String> getSearchCityName() async {
+  Future<String?> getSearchCityName() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.SearchCity@$refId::getSearchCityName([])');
@@ -88,7 +88,7 @@ class com_amap_api_services_route_SearchCity extends java_lang_Object with andro
   }
   
   
-  Future<String> getSearchCitycode() async {
+  Future<String?> getSearchCitycode() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.SearchCity@$refId::getSearchCitycode([])');
@@ -122,7 +122,7 @@ class com_amap_api_services_route_SearchCity extends java_lang_Object with andro
   }
   
   
-  Future<String> getSearchCityAdCode() async {
+  Future<String?> getSearchCityAdCode() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.SearchCity@$refId::getSearchCityAdCode([])');
@@ -174,7 +174,7 @@ extension com_amap_api_services_route_SearchCity_Batch on List<com_amap_api_serv
 
   //region methods
   
-  Future<List<String>> getSearchCityName_batch() async {
+  Future<List<String?>?> getSearchCityName_batch() async {
     assert(true);
   
     // invoke native method
@@ -185,7 +185,7 @@ extension com_amap_api_services_route_SearchCity_Batch on List<com_amap_api_serv
   }
   
   
-  Future<List<void>> setSearchCityName_batch(List<String> var1) async {
+  Future<List<void>?> setSearchCityName_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -196,7 +196,7 @@ extension com_amap_api_services_route_SearchCity_Batch on List<com_amap_api_serv
   }
   
   
-  Future<List<String>> getSearchCitycode_batch() async {
+  Future<List<String?>?> getSearchCitycode_batch() async {
     assert(true);
   
     // invoke native method
@@ -207,7 +207,7 @@ extension com_amap_api_services_route_SearchCity_Batch on List<com_amap_api_serv
   }
   
   
-  Future<List<void>> setSearchCitycode_batch(List<String> var1) async {
+  Future<List<void>?> setSearchCitycode_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -218,7 +218,7 @@ extension com_amap_api_services_route_SearchCity_Batch on List<com_amap_api_serv
   }
   
   
-  Future<List<String>> getSearchCityAdCode_batch() async {
+  Future<List<String?>?> getSearchCityAdCode_batch() async {
     assert(true);
   
     // invoke native method
@@ -229,7 +229,7 @@ extension com_amap_api_services_route_SearchCity_Batch on List<com_amap_api_serv
   }
   
   
-  Future<List<void>> setSearchCityhAdCode_batch(List<String> var1) async {
+  Future<List<void>?> setSearchCityhAdCode_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method

@@ -28,7 +28,7 @@ class com_amap_api_services_nearby_NearbySearchResult extends java_lang_Object  
       'ObjectFactory::createcom_amap_api_services_nearby_NearbySearchResult__',
     
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_nearby_NearbySearchResult>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_nearby_NearbySearchResult>(__result__)!;
   }
   
   static Future<List<com_amap_api_services_nearby_NearbySearchResult>> create_batch__(int length) async {
@@ -37,8 +37,8 @@ class com_amap_api_services_nearby_NearbySearchResult extends java_lang_Object  
       'ObjectFactory::create_batchcom_amap_api_services_nearby_NearbySearchResult__',
       {'length': length}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_nearby_NearbySearchResult>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_nearby_NearbySearchResult>(it)!)
         .toList();
   }
   
@@ -54,7 +54,7 @@ class com_amap_api_services_nearby_NearbySearchResult extends java_lang_Object  
 
   //region methods
   
-  Future<List<com_amap_api_services_nearby_NearbyInfo>> getNearbyInfoList() async {
+  Future<List<com_amap_api_services_nearby_NearbyInfo>?> getNearbyInfoList() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.nearby.NearbySearchResult@$refId::getNearbyInfoList([])');
@@ -67,11 +67,11 @@ class com_amap_api_services_nearby_NearbySearchResult extends java_lang_Object  
     // handle native call
   
   
-    return (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_nearby_NearbyInfo>(it))?.toList();
+    return (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_nearby_NearbyInfo>(it)!).toList();
   }
   
   
-  Future<int> getTotalNum() async {
+  Future<int?> getTotalNum() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.nearby.NearbySearchResult@$refId::getTotalNum([])');
@@ -123,18 +123,18 @@ extension com_amap_api_services_nearby_NearbySearchResult_Batch on List<com_amap
 
   //region methods
   
-  Future<List<List<com_amap_api_services_nearby_NearbyInfo>>> getNearbyInfoList_batch() async {
+  Future<List<List<com_amap_api_services_nearby_NearbyInfo>?>?> getNearbyInfoList_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.NearbySearchResult::getNearbyInfoList_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_nearby_NearbyInfo>(it))?.toList()).cast<List<com_amap_api_services_nearby_NearbyInfo>>().toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_nearby_NearbyInfo>(it)!).toList()).cast<List<com_amap_api_services_nearby_NearbyInfo>>().toList();
   }
   
   
-  Future<List<int>> getTotalNum_batch() async {
+  Future<List<int?>?> getTotalNum_batch() async {
     assert(true);
   
     // invoke native method
@@ -145,7 +145,7 @@ extension com_amap_api_services_nearby_NearbySearchResult_Batch on List<com_amap
   }
   
   
-  Future<List<void>> setNearbyInfoList_batch(List<List<com_amap_api_services_nearby_NearbyInfo>> var1) async {
+  Future<List<void>?> setNearbyInfoList_batch(List<List<com_amap_api_services_nearby_NearbyInfo>> var1) async {
     assert(true);
   
     // invoke native method

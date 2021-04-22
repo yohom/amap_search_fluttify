@@ -28,7 +28,7 @@ class AMapTrafficRoad extends AMapSearchObject with NSCoding, NSCopying {
       'ObjectFactory::createAMapTrafficRoad',
       {'init': init}
     );
-    return AmapSearchFluttifyIOSAs<AMapTrafficRoad>(__result__);
+    return AmapSearchFluttifyIOSAs<AMapTrafficRoad>(__result__)!;
   }
   
   static Future<List<AMapTrafficRoad>> create_batch__(int length, { bool init = true /* ios only */ }) async {
@@ -37,40 +37,40 @@ class AMapTrafficRoad extends AMapSearchObject with NSCoding, NSCopying {
       'ObjectFactory::create_batchAMapTrafficRoad',
       {'length': length, 'init': init}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyIOSAs<AMapTrafficRoad>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyIOSAs<AMapTrafficRoad>(it)!)
         .toList();
   }
   
   //endregion
 
   //region getters
-  Future<String> get_name() async {
+  Future<String?> get_name() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapTrafficRoad::get_name", {'__this__': this});
     return __result__;
   }
   
-  Future<int> get_status() async {
+  Future<int?> get_status() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapTrafficRoad::get_status", {'__this__': this});
     return __result__;
   }
   
-  Future<String> get_direction() async {
+  Future<String?> get_direction() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapTrafficRoad::get_direction", {'__this__': this});
     return __result__;
   }
   
-  Future<double> get_angle() async {
+  Future<double?> get_angle() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapTrafficRoad::get_angle", {'__this__': this});
     return __result__;
   }
   
-  Future<double> get_speed() async {
+  Future<double?> get_speed() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapTrafficRoad::get_speed", {'__this__': this});
     return __result__;
   }
   
-  Future<String> get_polyline() async {
+  Future<String?> get_polyline() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapTrafficRoad::get_polyline", {'__this__': this});
     return __result__;
   }
@@ -128,34 +128,34 @@ class AMapTrafficRoad extends AMapSearchObject with NSCoding, NSCopying {
 
 extension AMapTrafficRoad_Batch on List<AMapTrafficRoad> {
   //region getters
-  Future<List<String>> get_name_batch() async {
+  Future<List<String?>?> get_name_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTrafficRoad::get_name_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<int>> get_status_batch() async {
+  Future<List<int?>?> get_status_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTrafficRoad::get_status_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<int>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<int?>().toList();
   }
   
-  Future<List<String>> get_direction_batch() async {
+  Future<List<String?>?> get_direction_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTrafficRoad::get_direction_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<double>> get_angle_batch() async {
+  Future<List<double?>?> get_angle_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTrafficRoad::get_angle_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<double>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<double?>().toList();
   }
   
-  Future<List<double>> get_speed_batch() async {
+  Future<List<double?>?> get_speed_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTrafficRoad::get_speed_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<double>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<double?>().toList();
   }
   
-  Future<List<String>> get_polyline_batch() async {
+  Future<List<String?>?> get_polyline_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTrafficRoad::get_polyline_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
   }
   
   //endregion

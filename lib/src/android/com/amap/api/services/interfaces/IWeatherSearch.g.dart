@@ -26,17 +26,13 @@ mixin com_amap_api_services_interfaces_IWeatherSearch on java_lang_Object {
 
   
 
-  /* @mustCallSuper */
-  Future<com_amap_api_services_weather_WeatherSearchQuery> getQuery() {}
+  Future<com_amap_api_services_weather_WeatherSearchQuery?> getQuery() async {}
   
-  /* @mustCallSuper */
-  Future<void> setQuery(com_amap_api_services_weather_WeatherSearchQuery var1) {}
+  Future<void> setQuery(com_amap_api_services_weather_WeatherSearchQuery var1) async {}
   
-  /* @mustCallSuper */
-  Future<void> searchWeatherAsyn() {}
+  Future<void> searchWeatherAsyn() async {}
   
-  /* @mustCallSuper */
-  Future<void> setOnWeatherSearchListener(com_amap_api_services_weather_WeatherSearch_OnWeatherSearchListener var1) {}
+  Future<void> setOnWeatherSearchListener(com_amap_api_services_weather_WeatherSearch_OnWeatherSearchListener var1) async {}
   
 }
 

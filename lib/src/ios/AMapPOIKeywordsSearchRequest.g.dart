@@ -28,7 +28,7 @@ class AMapPOIKeywordsSearchRequest extends AMapPOISearchBaseRequest with NSCodin
       'ObjectFactory::createAMapPOIKeywordsSearchRequest',
       {'init': init}
     );
-    return AmapSearchFluttifyIOSAs<AMapPOIKeywordsSearchRequest>(__result__);
+    return AmapSearchFluttifyIOSAs<AMapPOIKeywordsSearchRequest>(__result__)!;
   }
   
   static Future<List<AMapPOIKeywordsSearchRequest>> create_batch__(int length, { bool init = true /* ios only */ }) async {
@@ -37,30 +37,30 @@ class AMapPOIKeywordsSearchRequest extends AMapPOISearchBaseRequest with NSCodin
       'ObjectFactory::create_batchAMapPOIKeywordsSearchRequest',
       {'length': length, 'init': init}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyIOSAs<AMapPOIKeywordsSearchRequest>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyIOSAs<AMapPOIKeywordsSearchRequest>(it)!)
         .toList();
   }
   
   //endregion
 
   //region getters
-  Future<String> get_keywords() async {
+  Future<String?> get_keywords() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOIKeywordsSearchRequest::get_keywords", {'__this__': this});
     return __result__;
   }
   
-  Future<String> get_city() async {
+  Future<String?> get_city() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOIKeywordsSearchRequest::get_city", {'__this__': this});
     return __result__;
   }
   
-  Future<bool> get_cityLimit() async {
+  Future<bool?> get_cityLimit() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOIKeywordsSearchRequest::get_cityLimit", {'__this__': this});
     return __result__;
   }
   
-  Future<AMapGeoPoint> get_location() async {
+  Future<AMapGeoPoint?> get_location() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOIKeywordsSearchRequest::get_location", {'__this__': this});
     return AmapSearchFluttifyIOSAs<AMapGeoPoint>(__result__);
   }
@@ -106,24 +106,24 @@ class AMapPOIKeywordsSearchRequest extends AMapPOISearchBaseRequest with NSCodin
 
 extension AMapPOIKeywordsSearchRequest_Batch on List<AMapPOIKeywordsSearchRequest> {
   //region getters
-  Future<List<String>> get_keywords_batch() async {
+  Future<List<String?>?> get_keywords_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOIKeywordsSearchRequest::get_keywords_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<String>> get_city_batch() async {
+  Future<List<String?>?> get_city_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOIKeywordsSearchRequest::get_city_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<bool>> get_cityLimit_batch() async {
+  Future<List<bool?>?> get_cityLimit_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOIKeywordsSearchRequest::get_cityLimit_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<bool>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<bool?>().toList();
   }
   
-  Future<List<AMapGeoPoint>> get_location_batch() async {
+  Future<List<AMapGeoPoint?>?> get_location_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOIKeywordsSearchRequest::get_location_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => AmapSearchFluttifyIOSAs<AMapGeoPoint>(__result__))?.cast<AMapGeoPoint>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => AmapSearchFluttifyIOSAs<AMapGeoPoint>(__result__)).cast<AMapGeoPoint?>().toList();
   }
   
   //endregion

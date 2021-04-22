@@ -28,7 +28,7 @@ class com_amap_api_services_route_RailwayStationItem extends java_lang_Object wi
       'ObjectFactory::createcom_amap_api_services_route_RailwayStationItem__',
     
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RailwayStationItem>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RailwayStationItem>(__result__)!;
   }
   
   static Future<List<com_amap_api_services_route_RailwayStationItem>> create_batch__(int length) async {
@@ -37,8 +37,8 @@ class com_amap_api_services_route_RailwayStationItem extends java_lang_Object wi
       'ObjectFactory::create_batchcom_amap_api_services_route_RailwayStationItem__',
       {'length': length}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RailwayStationItem>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RailwayStationItem>(it)!)
         .toList();
   }
   
@@ -54,7 +54,7 @@ class com_amap_api_services_route_RailwayStationItem extends java_lang_Object wi
 
   //region methods
   
-  Future<String> getID() async {
+  Future<String?> getID() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::getID([])');
@@ -71,7 +71,7 @@ class com_amap_api_services_route_RailwayStationItem extends java_lang_Object wi
   }
   
   
-  Future<String> getName() async {
+  Future<String?> getName() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::getName([])');
@@ -88,7 +88,7 @@ class com_amap_api_services_route_RailwayStationItem extends java_lang_Object wi
   }
   
   
-  Future<com_amap_api_services_core_LatLonPoint> getLocation() async {
+  Future<com_amap_api_services_core_LatLonPoint?> getLocation() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::getLocation([])');
@@ -105,7 +105,7 @@ class com_amap_api_services_route_RailwayStationItem extends java_lang_Object wi
   }
   
   
-  Future<String> getAdcode() async {
+  Future<String?> getAdcode() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::getAdcode([])');
@@ -122,7 +122,7 @@ class com_amap_api_services_route_RailwayStationItem extends java_lang_Object wi
   }
   
   
-  Future<String> getTime() async {
+  Future<String?> getTime() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::getTime([])');
@@ -139,7 +139,7 @@ class com_amap_api_services_route_RailwayStationItem extends java_lang_Object wi
   }
   
   
-  Future<bool> isStart() async {
+  Future<bool?> isStart() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::isStart([])');
@@ -156,7 +156,7 @@ class com_amap_api_services_route_RailwayStationItem extends java_lang_Object wi
   }
   
   
-  Future<bool> isEnd() async {
+  Future<bool?> isEnd() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::isEnd([])');
@@ -173,7 +173,7 @@ class com_amap_api_services_route_RailwayStationItem extends java_lang_Object wi
   }
   
   
-  Future<double> getWait() async {
+  Future<double?> getWait() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::getWait([])');
@@ -344,7 +344,7 @@ extension com_amap_api_services_route_RailwayStationItem_Batch on List<com_amap_
 
   //region methods
   
-  Future<List<String>> getID_batch() async {
+  Future<List<String?>?> getID_batch() async {
     assert(true);
   
     // invoke native method
@@ -355,7 +355,7 @@ extension com_amap_api_services_route_RailwayStationItem_Batch on List<com_amap_
   }
   
   
-  Future<List<String>> getName_batch() async {
+  Future<List<String?>?> getName_batch() async {
     assert(true);
   
     // invoke native method
@@ -366,7 +366,7 @@ extension com_amap_api_services_route_RailwayStationItem_Batch on List<com_amap_
   }
   
   
-  Future<List<com_amap_api_services_core_LatLonPoint>> getLocation_batch() async {
+  Future<List<com_amap_api_services_core_LatLonPoint?>?> getLocation_batch() async {
     assert(true);
   
     // invoke native method
@@ -377,7 +377,7 @@ extension com_amap_api_services_route_RailwayStationItem_Batch on List<com_amap_
   }
   
   
-  Future<List<String>> getAdcode_batch() async {
+  Future<List<String?>?> getAdcode_batch() async {
     assert(true);
   
     // invoke native method
@@ -388,7 +388,7 @@ extension com_amap_api_services_route_RailwayStationItem_Batch on List<com_amap_
   }
   
   
-  Future<List<String>> getTime_batch() async {
+  Future<List<String?>?> getTime_batch() async {
     assert(true);
   
     // invoke native method
@@ -399,7 +399,7 @@ extension com_amap_api_services_route_RailwayStationItem_Batch on List<com_amap_
   }
   
   
-  Future<List<bool>> isStart_batch() async {
+  Future<List<bool?>?> isStart_batch() async {
     assert(true);
   
     // invoke native method
@@ -410,7 +410,7 @@ extension com_amap_api_services_route_RailwayStationItem_Batch on List<com_amap_
   }
   
   
-  Future<List<bool>> isEnd_batch() async {
+  Future<List<bool?>?> isEnd_batch() async {
     assert(true);
   
     // invoke native method
@@ -421,7 +421,7 @@ extension com_amap_api_services_route_RailwayStationItem_Batch on List<com_amap_
   }
   
   
-  Future<List<double>> getWait_batch() async {
+  Future<List<double?>?> getWait_batch() async {
     assert(true);
   
     // invoke native method
@@ -432,7 +432,7 @@ extension com_amap_api_services_route_RailwayStationItem_Batch on List<com_amap_
   }
   
   
-  Future<List<void>> setID_batch(List<String> var1) async {
+  Future<List<void>?> setID_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -443,7 +443,7 @@ extension com_amap_api_services_route_RailwayStationItem_Batch on List<com_amap_
   }
   
   
-  Future<List<void>> setName_batch(List<String> var1) async {
+  Future<List<void>?> setName_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -454,7 +454,7 @@ extension com_amap_api_services_route_RailwayStationItem_Batch on List<com_amap_
   }
   
   
-  Future<List<void>> setLocation_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
+  Future<List<void>?> setLocation_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
     assert(true);
   
     // invoke native method
@@ -465,7 +465,7 @@ extension com_amap_api_services_route_RailwayStationItem_Batch on List<com_amap_
   }
   
   
-  Future<List<void>> setAdcode_batch(List<String> var1) async {
+  Future<List<void>?> setAdcode_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -476,7 +476,7 @@ extension com_amap_api_services_route_RailwayStationItem_Batch on List<com_amap_
   }
   
   
-  Future<List<void>> setTime_batch(List<String> var1) async {
+  Future<List<void>?> setTime_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -487,7 +487,7 @@ extension com_amap_api_services_route_RailwayStationItem_Batch on List<com_amap_
   }
   
   
-  Future<List<void>> setisStart_batch(List<bool> var1) async {
+  Future<List<void>?> setisStart_batch(List<bool> var1) async {
     assert(true);
   
     // invoke native method
@@ -498,7 +498,7 @@ extension com_amap_api_services_route_RailwayStationItem_Batch on List<com_amap_
   }
   
   
-  Future<List<void>> setisEnd_batch(List<bool> var1) async {
+  Future<List<void>?> setisEnd_batch(List<bool> var1) async {
     assert(true);
   
     // invoke native method
@@ -509,7 +509,7 @@ extension com_amap_api_services_route_RailwayStationItem_Batch on List<com_amap_
   }
   
   
-  Future<List<void>> setWait_batch(List<double> var1) async {
+  Future<List<void>?> setWait_batch(List<double> var1) async {
     assert(true);
   
     // invoke native method

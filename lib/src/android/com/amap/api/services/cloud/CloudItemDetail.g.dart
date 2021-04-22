@@ -28,7 +28,7 @@ class com_amap_api_services_cloud_CloudItemDetail extends com_amap_api_services_
       'ObjectFactory::createcom_amap_api_services_cloud_CloudItemDetail__String__com_amap_api_services_core_LatLonPoint__String__String',
       {"var1": var1, "var2": var2, "var3": var3, "var4": var4}
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudItemDetail>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudItemDetail>(__result__)!;
   }
   
   static Future<List<com_amap_api_services_cloud_CloudItemDetail>> create_batch__String__com_amap_api_services_core_LatLonPoint__String__String(List<String> var1, List<com_amap_api_services_core_LatLonPoint> var2, List<String> var3, List<String> var4) async {
@@ -37,8 +37,8 @@ class com_amap_api_services_cloud_CloudItemDetail extends com_amap_api_services_
       'ObjectFactory::create_batchcom_amap_api_services_cloud_CloudItemDetail__String__com_amap_api_services_core_LatLonPoint__String__String',
       [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "var4": var4[__i__]}]
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudItemDetail>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudItemDetail>(it)!)
         .toList();
   }
   

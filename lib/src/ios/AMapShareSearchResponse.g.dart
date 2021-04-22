@@ -28,7 +28,7 @@ class AMapShareSearchResponse extends AMapSearchObject with NSCoding, NSCopying 
       'ObjectFactory::createAMapShareSearchResponse',
       {'init': init}
     );
-    return AmapSearchFluttifyIOSAs<AMapShareSearchResponse>(__result__);
+    return AmapSearchFluttifyIOSAs<AMapShareSearchResponse>(__result__)!;
   }
   
   static Future<List<AMapShareSearchResponse>> create_batch__(int length, { bool init = true /* ios only */ }) async {
@@ -37,15 +37,15 @@ class AMapShareSearchResponse extends AMapSearchObject with NSCoding, NSCopying 
       'ObjectFactory::create_batchAMapShareSearchResponse',
       {'length': length, 'init': init}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyIOSAs<AMapShareSearchResponse>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyIOSAs<AMapShareSearchResponse>(it)!)
         .toList();
   }
   
   //endregion
 
   //region getters
-  Future<String> get_shareURL() async {
+  Future<String?> get_shareURL() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapShareSearchResponse::get_shareURL", {'__this__': this});
     return __result__;
   }
@@ -73,9 +73,9 @@ class AMapShareSearchResponse extends AMapSearchObject with NSCoding, NSCopying 
 
 extension AMapShareSearchResponse_Batch on List<AMapShareSearchResponse> {
   //region getters
-  Future<List<String>> get_shareURL_batch() async {
+  Future<List<String?>?> get_shareURL_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapShareSearchResponse::get_shareURL_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
   }
   
   //endregion

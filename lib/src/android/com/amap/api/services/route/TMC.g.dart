@@ -28,7 +28,7 @@ class com_amap_api_services_route_TMC extends java_lang_Object with android_os_P
       'ObjectFactory::createcom_amap_api_services_route_TMC__',
     
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_TMC>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_TMC>(__result__)!;
   }
   
   static Future<List<com_amap_api_services_route_TMC>> create_batch__(int length) async {
@@ -37,8 +37,8 @@ class com_amap_api_services_route_TMC extends java_lang_Object with android_os_P
       'ObjectFactory::create_batchcom_amap_api_services_route_TMC__',
       {'length': length}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_TMC>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_TMC>(it)!)
         .toList();
   }
   
@@ -54,7 +54,7 @@ class com_amap_api_services_route_TMC extends java_lang_Object with android_os_P
 
   //region methods
   
-  Future<int> getDistance() async {
+  Future<int?> getDistance() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.TMC@$refId::getDistance([])');
@@ -71,7 +71,7 @@ class com_amap_api_services_route_TMC extends java_lang_Object with android_os_P
   }
   
   
-  Future<String> getStatus() async {
+  Future<String?> getStatus() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.TMC@$refId::getStatus([])');
@@ -122,7 +122,7 @@ class com_amap_api_services_route_TMC extends java_lang_Object with android_os_P
   }
   
   
-  Future<List<com_amap_api_services_core_LatLonPoint>> getPolyline() async {
+  Future<List<com_amap_api_services_core_LatLonPoint>?> getPolyline() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.TMC@$refId::getPolyline([])');
@@ -135,7 +135,7 @@ class com_amap_api_services_route_TMC extends java_lang_Object with android_os_P
     // handle native call
   
   
-    return (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(it))?.toList();
+    return (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(it)!).toList();
   }
   
   
@@ -174,7 +174,7 @@ extension com_amap_api_services_route_TMC_Batch on List<com_amap_api_services_ro
 
   //region methods
   
-  Future<List<int>> getDistance_batch() async {
+  Future<List<int?>?> getDistance_batch() async {
     assert(true);
   
     // invoke native method
@@ -185,7 +185,7 @@ extension com_amap_api_services_route_TMC_Batch on List<com_amap_api_services_ro
   }
   
   
-  Future<List<String>> getStatus_batch() async {
+  Future<List<String?>?> getStatus_batch() async {
     assert(true);
   
     // invoke native method
@@ -196,7 +196,7 @@ extension com_amap_api_services_route_TMC_Batch on List<com_amap_api_services_ro
   }
   
   
-  Future<List<void>> setDistance_batch(List<int> var1) async {
+  Future<List<void>?> setDistance_batch(List<int> var1) async {
     assert(true);
   
     // invoke native method
@@ -207,7 +207,7 @@ extension com_amap_api_services_route_TMC_Batch on List<com_amap_api_services_ro
   }
   
   
-  Future<List<void>> setStatus_batch(List<String> var1) async {
+  Future<List<void>?> setStatus_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -218,18 +218,18 @@ extension com_amap_api_services_route_TMC_Batch on List<com_amap_api_services_ro
   }
   
   
-  Future<List<List<com_amap_api_services_core_LatLonPoint>>> getPolyline_batch() async {
+  Future<List<List<com_amap_api_services_core_LatLonPoint>?>?> getPolyline_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TMC::getPolyline_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(it))?.toList()).cast<List<com_amap_api_services_core_LatLonPoint>>().toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(it)!).toList()).cast<List<com_amap_api_services_core_LatLonPoint>>().toList();
   }
   
   
-  Future<List<void>> setPolyline_batch(List<List<com_amap_api_services_core_LatLonPoint>> var1) async {
+  Future<List<void>?> setPolyline_batch(List<List<com_amap_api_services_core_LatLonPoint>> var1) async {
     assert(true);
   
     // invoke native method

@@ -28,7 +28,7 @@ class com_amap_api_services_share_ShareSearch_ShareBusRouteQuery extends java_la
       'ObjectFactory::createcom_amap_api_services_share_ShareSearch_ShareBusRouteQuery__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int',
       {"var1": var1, "var2": var2}
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_share_ShareSearch_ShareBusRouteQuery>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_share_ShareSearch_ShareBusRouteQuery>(__result__)!;
   }
   
   static Future<List<com_amap_api_services_share_ShareSearch_ShareBusRouteQuery>> create_batch__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int(List<com_amap_api_services_share_ShareSearch_ShareFromAndTo> var1, List<int> var2) async {
@@ -37,8 +37,8 @@ class com_amap_api_services_share_ShareSearch_ShareBusRouteQuery extends java_la
       'ObjectFactory::create_batchcom_amap_api_services_share_ShareSearch_ShareBusRouteQuery__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int',
       [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_share_ShareSearch_ShareBusRouteQuery>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_share_ShareSearch_ShareBusRouteQuery>(it)!)
         .toList();
   }
   
@@ -54,7 +54,7 @@ class com_amap_api_services_share_ShareSearch_ShareBusRouteQuery extends java_la
 
   //region methods
   
-  Future<int> getBusMode() async {
+  Future<int?> getBusMode() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.share.ShareSearch.ShareBusRouteQuery@$refId::getBusMode([])');
@@ -71,7 +71,7 @@ class com_amap_api_services_share_ShareSearch_ShareBusRouteQuery extends java_la
   }
   
   
-  Future<com_amap_api_services_share_ShareSearch_ShareFromAndTo> getShareFromAndTo() async {
+  Future<com_amap_api_services_share_ShareSearch_ShareFromAndTo?> getShareFromAndTo() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.share.ShareSearch.ShareBusRouteQuery@$refId::getShareFromAndTo([])');
@@ -106,7 +106,7 @@ extension com_amap_api_services_share_ShareSearch_ShareBusRouteQuery_Batch on Li
 
   //region methods
   
-  Future<List<int>> getBusMode_batch() async {
+  Future<List<int?>?> getBusMode_batch() async {
     assert(true);
   
     // invoke native method
@@ -117,7 +117,7 @@ extension com_amap_api_services_share_ShareSearch_ShareBusRouteQuery_Batch on Li
   }
   
   
-  Future<List<com_amap_api_services_share_ShareSearch_ShareFromAndTo>> getShareFromAndTo_batch() async {
+  Future<List<com_amap_api_services_share_ShareSearch_ShareFromAndTo?>?> getShareFromAndTo_batch() async {
     assert(true);
   
     // invoke native method

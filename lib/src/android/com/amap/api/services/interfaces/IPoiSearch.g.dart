@@ -26,38 +26,27 @@ mixin com_amap_api_services_interfaces_IPoiSearch on java_lang_Object {
 
   
 
-  /* @mustCallSuper */
-  Future<void> setOnPoiSearchListener(com_amap_api_services_poisearch_PoiSearch_OnPoiSearchListener var1) {}
+  Future<void> setOnPoiSearchListener(com_amap_api_services_poisearch_PoiSearch_OnPoiSearchListener var1) async {}
   
-  /* @mustCallSuper */
-  Future<void> setLanguage(String var1) {}
+  Future<void> setLanguage(String var1) async {}
   
-  /* @mustCallSuper */
-  Future<String> getLanguage() {}
+  Future<String?> getLanguage() async {}
   
-  /* @mustCallSuper */
-  Future<com_amap_api_services_poisearch_PoiResult> searchPOI() {}
+  Future<com_amap_api_services_poisearch_PoiResult?> searchPOI() async {}
   
-  /* @mustCallSuper */
-  Future<void> searchPOIAsyn() {}
+  Future<void> searchPOIAsyn() async {}
   
-  /* @mustCallSuper */
-  Future<com_amap_api_services_core_PoiItem> searchPOIId(String var1) {}
+  Future<com_amap_api_services_core_PoiItem?> searchPOIId(String var1) async {}
   
-  /* @mustCallSuper */
-  Future<void> searchPOIIdAsyn(String var1) {}
+  Future<void> searchPOIIdAsyn(String var1) async {}
   
-  /* @mustCallSuper */
-  Future<void> setQuery(com_amap_api_services_poisearch_PoiSearch_Query var1) {}
+  Future<void> setQuery(com_amap_api_services_poisearch_PoiSearch_Query var1) async {}
   
-  /* @mustCallSuper */
-  Future<void> setBound(com_amap_api_services_poisearch_PoiSearch_SearchBound var1) {}
+  Future<void> setBound(com_amap_api_services_poisearch_PoiSearch_SearchBound var1) async {}
   
-  /* @mustCallSuper */
-  Future<com_amap_api_services_poisearch_PoiSearch_Query> getQuery() {}
+  Future<com_amap_api_services_poisearch_PoiSearch_Query?> getQuery() async {}
   
-  /* @mustCallSuper */
-  Future<com_amap_api_services_poisearch_PoiSearch_SearchBound> getBound() {}
+  Future<com_amap_api_services_poisearch_PoiSearch_SearchBound?> getBound() async {}
   
 }
 
