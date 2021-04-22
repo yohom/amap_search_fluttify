@@ -23,7 +23,7 @@ class com_amap_api_services_route_RouteSearch_RideRouteQuery extends java_lang_O
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_route_RouteSearch_RideRouteQuery> create__com_amap_api_services_route_RouteSearch_FromAndTo__int(com_amap_api_services_route_RouteSearch_FromAndTo var1, int var2) async {
+  static Future<com_amap_api_services_route_RouteSearch_RideRouteQuery> create__com_amap_api_services_route_RouteSearch_FromAndTo__int(com_amap_api_services_route_RouteSearch_FromAndTo? var1, int? var2) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_route_RouteSearch_RideRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int',
       {"var1": var1, "var2": var2}
@@ -31,7 +31,7 @@ class com_amap_api_services_route_RouteSearch_RideRouteQuery extends java_lang_O
     return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RouteSearch_RideRouteQuery>(__result__)!;
   }
   
-  static Future<com_amap_api_services_route_RouteSearch_RideRouteQuery> create__com_amap_api_services_route_RouteSearch_FromAndTo(com_amap_api_services_route_RouteSearch_FromAndTo var1) async {
+  static Future<com_amap_api_services_route_RouteSearch_RideRouteQuery> create__com_amap_api_services_route_RouteSearch_FromAndTo(com_amap_api_services_route_RouteSearch_FromAndTo? var1) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_route_RouteSearch_RideRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo',
       {"var1": var1}
@@ -143,7 +143,7 @@ class com_amap_api_services_route_RouteSearch_RideRouteQuery extends java_lang_O
   }
   
   
-  Future<void> setExtensions(String var1) async {
+  Future<void> setExtensions(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.RideRouteQuery@$refId::setExtensions([\'var1\':$var1])');

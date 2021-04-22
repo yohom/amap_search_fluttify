@@ -54,7 +54,7 @@ class com_amap_api_services_nearby_NearbyInfo extends java_lang_Object  {
 
   //region methods
   
-  Future<void> setUserID(String var1) async {
+  Future<void> setUserID(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.nearby.NearbyInfo@$refId::setUserID([\'var1\':$var1])');
@@ -105,7 +105,7 @@ class com_amap_api_services_nearby_NearbyInfo extends java_lang_Object  {
   }
   
   
-  Future<void> setPoint(com_amap_api_services_core_LatLonPoint var1) async {
+  Future<void> setPoint(com_amap_api_services_core_LatLonPoint? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.nearby.NearbyInfo@$refId::setPoint([])');
@@ -122,7 +122,7 @@ class com_amap_api_services_nearby_NearbyInfo extends java_lang_Object  {
   }
   
   
-  Future<void> setTimeStamp(int var1) async {
+  Future<void> setTimeStamp(int? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.nearby.NearbyInfo@$refId::setTimeStamp([\'var1\':$var1])');
@@ -156,7 +156,7 @@ class com_amap_api_services_nearby_NearbyInfo extends java_lang_Object  {
   }
   
   
-  Future<void> setDistance(int var1) async {
+  Future<void> setDistance(int? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.nearby.NearbyInfo@$refId::setDistance([\'var1\':$var1])');
@@ -190,7 +190,7 @@ class com_amap_api_services_nearby_NearbyInfo extends java_lang_Object  {
   }
   
   
-  Future<void> setDrivingDistance(int var1) async {
+  Future<void> setDrivingDistance(int? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.nearby.NearbyInfo@$refId::setDrivingDistance([\'var1\':$var1])');

@@ -71,7 +71,7 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
   }
   
   
-  Future<void> setDistance(double var1) async {
+  Future<void> setDistance(double? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.busline.BusLineItem@$refId::setDistance([\'var1\':$var1])');
@@ -105,7 +105,7 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
   }
   
   
-  Future<void> setBusLineName(String var1) async {
+  Future<void> setBusLineName(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.busline.BusLineItem@$refId::setBusLineName([\'var1\':$var1])');
@@ -139,7 +139,7 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
   }
   
   
-  Future<void> setBusLineType(String var1) async {
+  Future<void> setBusLineType(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.busline.BusLineItem@$refId::setBusLineType([\'var1\':$var1])');
@@ -173,7 +173,7 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
   }
   
   
-  Future<void> setCityCode(String var1) async {
+  Future<void> setCityCode(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.busline.BusLineItem@$refId::setCityCode([\'var1\':$var1])');
@@ -207,7 +207,7 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
   }
   
   
-  Future<void> setDirectionsCoordinates(List<com_amap_api_services_core_LatLonPoint> var1) async {
+  Future<void> setDirectionsCoordinates(List<com_amap_api_services_core_LatLonPoint>? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.busline.BusLineItem@$refId::setDirectionsCoordinates([])');
@@ -241,7 +241,7 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
   }
   
   
-  Future<void> setBounds(List<com_amap_api_services_core_LatLonPoint> var1) async {
+  Future<void> setBounds(List<com_amap_api_services_core_LatLonPoint>? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.busline.BusLineItem@$refId::setBounds([])');
@@ -275,7 +275,7 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
   }
   
   
-  Future<void> setBusLineId(String var1) async {
+  Future<void> setBusLineId(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.busline.BusLineItem@$refId::setBusLineId([\'var1\':$var1])');
@@ -309,7 +309,7 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
   }
   
   
-  Future<void> setOriginatingStation(String var1) async {
+  Future<void> setOriginatingStation(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.busline.BusLineItem@$refId::setOriginatingStation([\'var1\':$var1])');
@@ -343,7 +343,7 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
   }
   
   
-  Future<void> setTerminalStation(String var1) async {
+  Future<void> setTerminalStation(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.busline.BusLineItem@$refId::setTerminalStation([\'var1\':$var1])');
@@ -377,7 +377,7 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
   }
   
   
-  Future<void> setBusCompany(String var1) async {
+  Future<void> setBusCompany(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.busline.BusLineItem@$refId::setBusCompany([\'var1\':$var1])');
@@ -411,7 +411,7 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
   }
   
   
-  Future<void> setBasicPrice(double var1) async {
+  Future<void> setBasicPrice(double? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.busline.BusLineItem@$refId::setBasicPrice([\'var1\':$var1])');
@@ -445,7 +445,7 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
   }
   
   
-  Future<void> setTotalPrice(double var1) async {
+  Future<void> setTotalPrice(double? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.busline.BusLineItem@$refId::setTotalPrice([\'var1\':$var1])');
@@ -479,7 +479,7 @@ class com_amap_api_services_busline_BusLineItem extends java_lang_Object with an
   }
   
   
-  Future<void> setBusStations(List<com_amap_api_services_busline_BusStationItem> var1) async {
+  Future<void> setBusStations(List<com_amap_api_services_busline_BusStationItem>? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.busline.BusLineItem@$refId::setBusStations([])');

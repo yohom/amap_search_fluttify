@@ -23,7 +23,7 @@ class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_cloud_CloudSearch_Query> create__String__String__com_amap_api_services_cloud_CloudSearch_SearchBound(String var1, String var2, com_amap_api_services_cloud_CloudSearch_SearchBound var3) async {
+  static Future<com_amap_api_services_cloud_CloudSearch_Query> create__String__String__com_amap_api_services_cloud_CloudSearch_SearchBound(String? var1, String? var2, com_amap_api_services_cloud_CloudSearch_SearchBound? var3) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_Query__String__String__com_amap_api_services_cloud_CloudSearch_SearchBound',
       {"var1": var1, "var2": var2, "var3": var3}
@@ -71,7 +71,7 @@ class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
   }
   
   
-  Future<void> setTableID(String var1) async {
+  Future<void> setTableID(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudSearch.Query@$refId::setTableID([\'var1\':$var1])');
@@ -122,7 +122,7 @@ class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
   }
   
   
-  Future<void> setPageNum(int var1) async {
+  Future<void> setPageNum(int? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudSearch.Query@$refId::setPageNum([\'var1\':$var1])');
@@ -139,7 +139,7 @@ class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
   }
   
   
-  Future<void> setPageSize(int var1) async {
+  Future<void> setPageSize(int? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudSearch.Query@$refId::setPageSize([\'var1\':$var1])');
@@ -173,7 +173,7 @@ class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
   }
   
   
-  Future<void> setBound(com_amap_api_services_cloud_CloudSearch_SearchBound var1) async {
+  Future<void> setBound(com_amap_api_services_cloud_CloudSearch_SearchBound? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudSearch.Query@$refId::setBound([])');
@@ -207,7 +207,7 @@ class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
   }
   
   
-  Future<void> addFilterString(String var1, String var2) async {
+  Future<void> addFilterString(String? var1, String? var2) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudSearch.Query@$refId::addFilterString([\'var1\':$var1, \'var2\':$var2])');
@@ -241,7 +241,7 @@ class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
   }
   
   
-  Future<void> addFilterNum(String var1, String var2, String var3) async {
+  Future<void> addFilterNum(String? var1, String? var2, String? var3) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudSearch.Query@$refId::addFilterNum([\'var1\':$var1, \'var2\':$var2, \'var3\':$var3])');
@@ -275,7 +275,7 @@ class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
   }
   
   
-  Future<void> setSortingrules(com_amap_api_services_cloud_CloudSearch_Sortingrules var1) async {
+  Future<void> setSortingrules(com_amap_api_services_cloud_CloudSearch_Sortingrules? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudSearch.Query@$refId::setSortingrules([])');
@@ -309,7 +309,7 @@ class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
   }
   
   
-  Future<bool?> queryEquals(com_amap_api_services_cloud_CloudSearch_Query var1) async {
+  Future<bool?> queryEquals(com_amap_api_services_cloud_CloudSearch_Query? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudSearch.Query@$refId::queryEquals([])');

@@ -23,7 +23,7 @@ class com_amap_api_services_poisearch_PoiItemExtension extends java_lang_Object 
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_poisearch_PoiItemExtension> create__String__String(String var1, String var2) async {
+  static Future<com_amap_api_services_poisearch_PoiItemExtension> create__String__String(String? var1, String? var2) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_poisearch_PoiItemExtension__String__String',
       {"var1": var1, "var2": var2}

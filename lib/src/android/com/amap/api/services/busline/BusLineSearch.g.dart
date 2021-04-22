@@ -24,7 +24,7 @@ class com_amap_api_services_busline_BusLineSearch extends java_lang_Object  {
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_busline_BusLineSearch> create__android_content_Context__com_amap_api_services_busline_BusLineQuery(android_content_Context var1, com_amap_api_services_busline_BusLineQuery var2) async {
+  static Future<com_amap_api_services_busline_BusLineSearch> create__android_content_Context__com_amap_api_services_busline_BusLineQuery(android_content_Context? var1, com_amap_api_services_busline_BusLineQuery? var2) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_busline_BusLineSearch__android_content_Context__com_amap_api_services_busline_BusLineQuery',
       {"var1": var1, "var2": var2}
@@ -72,7 +72,7 @@ class com_amap_api_services_busline_BusLineSearch extends java_lang_Object  {
   }
   
   
-  Future<void> setOnBusLineSearchListener(com_amap_api_services_busline_BusLineSearch_OnBusLineSearchListener var1) async {
+  Future<void> setOnBusLineSearchListener(com_amap_api_services_busline_BusLineSearch_OnBusLineSearchListener? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.busline.BusLineSearch@$refId::setOnBusLineSearchListener([])');
@@ -128,7 +128,7 @@ class com_amap_api_services_busline_BusLineSearch extends java_lang_Object  {
   }
   
   
-  Future<void> setQuery(com_amap_api_services_busline_BusLineQuery var1) async {
+  Future<void> setQuery(com_amap_api_services_busline_BusLineQuery? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.busline.BusLineSearch@$refId::setQuery([])');

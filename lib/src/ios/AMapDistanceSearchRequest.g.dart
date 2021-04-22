@@ -86,7 +86,7 @@ class AMapDistanceSearchRequest extends AMapSearchObject with NSCoding, NSCopyin
   }
   
   Future<void> set_type(AMapDistanceSearchType type) async {
-    await kAmapSearchFluttifyChannel.invokeMethod('AMapDistanceSearchRequest::set_type', <String, dynamic>{'__this__': this, "type": type.toValue()});
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapDistanceSearchRequest::set_type', <String, dynamic>{'__this__': this, "type": type?.toValue()});
   
   
   }

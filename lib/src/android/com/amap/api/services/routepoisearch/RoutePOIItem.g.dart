@@ -71,7 +71,7 @@ class com_amap_api_services_routepoisearch_RoutePOIItem extends java_lang_Object
   }
   
   
-  Future<void> setID(String var1) async {
+  Future<void> setID(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOIItem@$refId::setID([\'var1\':$var1])');
@@ -105,7 +105,7 @@ class com_amap_api_services_routepoisearch_RoutePOIItem extends java_lang_Object
   }
   
   
-  Future<void> setTitle(String var1) async {
+  Future<void> setTitle(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOIItem@$refId::setTitle([\'var1\':$var1])');
@@ -139,7 +139,7 @@ class com_amap_api_services_routepoisearch_RoutePOIItem extends java_lang_Object
   }
   
   
-  Future<void> setPoint(com_amap_api_services_core_LatLonPoint var1) async {
+  Future<void> setPoint(com_amap_api_services_core_LatLonPoint? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOIItem@$refId::setPoint([])');
@@ -173,7 +173,7 @@ class com_amap_api_services_routepoisearch_RoutePOIItem extends java_lang_Object
   }
   
   
-  Future<void> setDistance(double var1) async {
+  Future<void> setDistance(double? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOIItem@$refId::setDistance([\'var1\':$var1])');
@@ -207,7 +207,7 @@ class com_amap_api_services_routepoisearch_RoutePOIItem extends java_lang_Object
   }
   
   
-  Future<void> setDuration(double var1) async {
+  Future<void> setDuration(double? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOIItem@$refId::setDuration([\'var1\':$var1])');

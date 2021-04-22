@@ -86,7 +86,7 @@ class AMapNearbySearchRequest extends AMapSearchObject with NSCoding, NSCopying 
   }
   
   Future<void> set_searchType(AMapNearbySearchType searchType) async {
-    await kAmapSearchFluttifyChannel.invokeMethod('AMapNearbySearchRequest::set_searchType', <String, dynamic>{'__this__': this, "searchType": searchType.toValue()});
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapNearbySearchRequest::set_searchType', <String, dynamic>{'__this__': this, "searchType": searchType?.toValue()});
   
   
   }

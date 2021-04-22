@@ -36,7 +36,7 @@ class com_amap_api_services_weather_LocalWeatherForecastResult extends java_lang
 
   //region methods
   
-  static Future<com_amap_api_services_weather_LocalWeatherForecastResult?> createPagedResult(com_amap_api_services_weather_WeatherSearchQuery var0, com_amap_api_services_weather_LocalWeatherForecast var1) async {
+  static Future<com_amap_api_services_weather_LocalWeatherForecastResult?> createPagedResult(com_amap_api_services_weather_WeatherSearchQuery? var0, com_amap_api_services_weather_LocalWeatherForecast? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.weather.LocalWeatherForecastResult::createPagedResult([])');

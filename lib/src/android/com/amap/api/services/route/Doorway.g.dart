@@ -71,7 +71,7 @@ class com_amap_api_services_route_Doorway extends java_lang_Object with android_
   }
   
   
-  Future<void> setName(String var1) async {
+  Future<void> setName(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.Doorway@$refId::setName([\'var1\':$var1])');
@@ -105,7 +105,7 @@ class com_amap_api_services_route_Doorway extends java_lang_Object with android_
   }
   
   
-  Future<void> setLatLonPoint(com_amap_api_services_core_LatLonPoint var1) async {
+  Future<void> setLatLonPoint(com_amap_api_services_core_LatLonPoint? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.Doorway@$refId::setLatLonPoint([])');

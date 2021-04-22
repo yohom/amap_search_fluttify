@@ -172,7 +172,7 @@ class AMapTruckRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCodi
   }
   
   Future<void> set_size(AMapTruckSizeType size) async {
-    await kAmapSearchFluttifyChannel.invokeMethod('AMapTruckRouteSearchRequest::set_size', <String, dynamic>{'__this__': this, "size": size.toValue()});
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapTruckRouteSearchRequest::set_size', <String, dynamic>{'__this__': this, "size": size?.toValue()});
   
   
   }

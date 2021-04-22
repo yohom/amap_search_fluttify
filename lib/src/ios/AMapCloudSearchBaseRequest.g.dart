@@ -97,7 +97,7 @@ class AMapCloudSearchBaseRequest extends AMapSearchObject with NSCoding, NSCopyi
   }
   
   Future<void> set_sortType(AMapCloudSortType sortType) async {
-    await kAmapSearchFluttifyChannel.invokeMethod('AMapCloudSearchBaseRequest::set_sortType', <String, dynamic>{'__this__': this, "sortType": sortType.toValue()});
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapCloudSearchBaseRequest::set_sortType', <String, dynamic>{'__this__': this, "sortType": sortType?.toValue()});
   
   
   }

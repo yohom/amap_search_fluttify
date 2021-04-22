@@ -23,7 +23,7 @@ class com_amap_api_services_geocoder_GeocodeQuery extends java_lang_Object  {
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_geocoder_GeocodeQuery> create__String__String(String var1, String var2) async {
+  static Future<com_amap_api_services_geocoder_GeocodeQuery> create__String__String(String? var1, String? var2) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_geocoder_GeocodeQuery__String__String',
       {"var1": var1, "var2": var2}
@@ -71,7 +71,7 @@ class com_amap_api_services_geocoder_GeocodeQuery extends java_lang_Object  {
   }
   
   
-  Future<void> setLocationName(String var1) async {
+  Future<void> setLocationName(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeQuery@$refId::setLocationName([\'var1\':$var1])');
@@ -105,7 +105,7 @@ class com_amap_api_services_geocoder_GeocodeQuery extends java_lang_Object  {
   }
   
   
-  Future<void> setCity(String var1) async {
+  Future<void> setCity(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeQuery@$refId::setCity([\'var1\':$var1])');
@@ -139,7 +139,7 @@ class com_amap_api_services_geocoder_GeocodeQuery extends java_lang_Object  {
   }
   
   
-  Future<void> setCountry(String var1) async {
+  Future<void> setCountry(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeQuery@$refId::setCountry([\'var1\':$var1])');

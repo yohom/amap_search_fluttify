@@ -70,7 +70,7 @@ class AMapNearbyUploadInfo extends NSObject with NSCopying {
   }
   
   Future<void> set_coordinateType(AMapSearchCoordinateType coordinateType) async {
-    await kAmapSearchFluttifyChannel.invokeMethod('AMapNearbyUploadInfo::set_coordinateType', <String, dynamic>{'__this__': this, "coordinateType": coordinateType.toValue()});
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapNearbyUploadInfo::set_coordinateType', <String, dynamic>{'__this__': this, "coordinateType": coordinateType?.toValue()});
   
   
   }

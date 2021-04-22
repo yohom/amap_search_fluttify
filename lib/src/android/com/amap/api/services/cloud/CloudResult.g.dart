@@ -36,7 +36,7 @@ class com_amap_api_services_cloud_CloudResult extends java_lang_Object  {
 
   //region methods
   
-  static Future<com_amap_api_services_cloud_CloudResult?> createPagedResult(com_amap_api_services_cloud_CloudSearch_Query var0, int var1, com_amap_api_services_cloud_CloudSearch_SearchBound var2, int var3, List<com_amap_api_services_cloud_CloudItem> var4) async {
+  static Future<com_amap_api_services_cloud_CloudResult?> createPagedResult(com_amap_api_services_cloud_CloudSearch_Query? var0, int? var1, com_amap_api_services_cloud_CloudSearch_SearchBound? var2, int? var3, List<com_amap_api_services_cloud_CloudItem>? var4) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudResult::createPagedResult([\'var1\':$var1, \'var3\':$var3])');

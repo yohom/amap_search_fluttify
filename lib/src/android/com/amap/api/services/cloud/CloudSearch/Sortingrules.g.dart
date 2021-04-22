@@ -24,7 +24,7 @@ class com_amap_api_services_cloud_CloudSearch_Sortingrules extends java_lang_Obj
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_cloud_CloudSearch_Sortingrules> create__String__boolean(String var1, bool var2) async {
+  static Future<com_amap_api_services_cloud_CloudSearch_Sortingrules> create__String__boolean(String? var1, bool? var2) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_Sortingrules__String__boolean',
       {"var1": var1, "var2": var2}
@@ -32,7 +32,7 @@ class com_amap_api_services_cloud_CloudSearch_Sortingrules extends java_lang_Obj
     return AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudSearch_Sortingrules>(__result__)!;
   }
   
-  static Future<com_amap_api_services_cloud_CloudSearch_Sortingrules> create__int(int var1) async {
+  static Future<com_amap_api_services_cloud_CloudSearch_Sortingrules> create__int(int? var1) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_Sortingrules__int',
       {"var1": var1}

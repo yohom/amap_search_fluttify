@@ -23,7 +23,7 @@ class com_amap_api_services_poisearch_SubPoiItem extends java_lang_Object with a
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_poisearch_SubPoiItem> create__String__com_amap_api_services_core_LatLonPoint__String__String(String var1, com_amap_api_services_core_LatLonPoint var2, String var3, String var4) async {
+  static Future<com_amap_api_services_poisearch_SubPoiItem> create__String__com_amap_api_services_core_LatLonPoint__String__String(String? var1, com_amap_api_services_core_LatLonPoint? var2, String? var3, String? var4) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_poisearch_SubPoiItem__String__com_amap_api_services_core_LatLonPoint__String__String',
       {"var1": var1, "var2": var2, "var3": var3, "var4": var4}
@@ -71,7 +71,7 @@ class com_amap_api_services_poisearch_SubPoiItem extends java_lang_Object with a
   }
   
   
-  Future<void> setPoiId(String var1) async {
+  Future<void> setPoiId(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.poisearch.SubPoiItem@$refId::setPoiId([\'var1\':$var1])');
@@ -105,7 +105,7 @@ class com_amap_api_services_poisearch_SubPoiItem extends java_lang_Object with a
   }
   
   
-  Future<void> setTitle(String var1) async {
+  Future<void> setTitle(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.poisearch.SubPoiItem@$refId::setTitle([\'var1\':$var1])');
@@ -139,7 +139,7 @@ class com_amap_api_services_poisearch_SubPoiItem extends java_lang_Object with a
   }
   
   
-  Future<void> setSubName(String var1) async {
+  Future<void> setSubName(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.poisearch.SubPoiItem@$refId::setSubName([\'var1\':$var1])');
@@ -173,7 +173,7 @@ class com_amap_api_services_poisearch_SubPoiItem extends java_lang_Object with a
   }
   
   
-  Future<void> setDistance(int var1) async {
+  Future<void> setDistance(int? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.poisearch.SubPoiItem@$refId::setDistance([\'var1\':$var1])');
@@ -207,7 +207,7 @@ class com_amap_api_services_poisearch_SubPoiItem extends java_lang_Object with a
   }
   
   
-  Future<void> setLatLonPoint(com_amap_api_services_core_LatLonPoint var1) async {
+  Future<void> setLatLonPoint(com_amap_api_services_core_LatLonPoint? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.poisearch.SubPoiItem@$refId::setLatLonPoint([])');
@@ -241,7 +241,7 @@ class com_amap_api_services_poisearch_SubPoiItem extends java_lang_Object with a
   }
   
   
-  Future<void> setSnippet(String var1) async {
+  Future<void> setSnippet(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.poisearch.SubPoiItem@$refId::setSnippet([\'var1\':$var1])');
@@ -275,7 +275,7 @@ class com_amap_api_services_poisearch_SubPoiItem extends java_lang_Object with a
   }
   
   
-  Future<void> setSubTypeDes(String var1) async {
+  Future<void> setSubTypeDes(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.poisearch.SubPoiItem@$refId::setSubTypeDes([\'var1\':$var1])');

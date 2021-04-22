@@ -26,7 +26,7 @@ class com_amap_api_services_geocoder_GeocodeSearch extends java_lang_Object  {
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_geocoder_GeocodeSearch> create__android_content_Context(android_content_Context var1) async {
+  static Future<com_amap_api_services_geocoder_GeocodeSearch> create__android_content_Context(android_content_Context? var1) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_geocoder_GeocodeSearch__android_content_Context',
       {"var1": var1}
@@ -57,7 +57,7 @@ class com_amap_api_services_geocoder_GeocodeSearch extends java_lang_Object  {
 
   //region methods
   
-  Future<com_amap_api_services_geocoder_RegeocodeAddress?> getFromLocation(com_amap_api_services_geocoder_RegeocodeQuery var1) async {
+  Future<com_amap_api_services_geocoder_RegeocodeAddress?> getFromLocation(com_amap_api_services_geocoder_RegeocodeQuery? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeSearch@$refId::getFromLocation([])');
@@ -74,7 +74,7 @@ class com_amap_api_services_geocoder_GeocodeSearch extends java_lang_Object  {
   }
   
   
-  Future<List<com_amap_api_services_geocoder_GeocodeAddress>?> getFromLocationName(com_amap_api_services_geocoder_GeocodeQuery var1) async {
+  Future<List<com_amap_api_services_geocoder_GeocodeAddress>?> getFromLocationName(com_amap_api_services_geocoder_GeocodeQuery? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeSearch@$refId::getFromLocationName([])');
@@ -91,7 +91,7 @@ class com_amap_api_services_geocoder_GeocodeSearch extends java_lang_Object  {
   }
   
   
-  Future<void> setOnGeocodeSearchListener(com_amap_api_services_geocoder_GeocodeSearch_OnGeocodeSearchListener var1) async {
+  Future<void> setOnGeocodeSearchListener(com_amap_api_services_geocoder_GeocodeSearch_OnGeocodeSearchListener? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeSearch@$refId::setOnGeocodeSearchListener([])');
@@ -139,7 +139,7 @@ class com_amap_api_services_geocoder_GeocodeSearch extends java_lang_Object  {
   }
   
   
-  Future<void> getFromLocationAsyn(com_amap_api_services_geocoder_RegeocodeQuery var1) async {
+  Future<void> getFromLocationAsyn(com_amap_api_services_geocoder_RegeocodeQuery? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeSearch@$refId::getFromLocationAsyn([])');
@@ -156,7 +156,7 @@ class com_amap_api_services_geocoder_GeocodeSearch extends java_lang_Object  {
   }
   
   
-  Future<void> getFromLocationNameAsyn(com_amap_api_services_geocoder_GeocodeQuery var1) async {
+  Future<void> getFromLocationNameAsyn(com_amap_api_services_geocoder_GeocodeQuery? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeSearch@$refId::getFromLocationNameAsyn([])');

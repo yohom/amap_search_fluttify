@@ -26,7 +26,7 @@ mixin com_amap_api_services_busline_BusStationSearch_OnBusStationSearchListener 
 
   
 
-  Future<void> onBusStationSearched(com_amap_api_services_busline_BusStationResult var1, int var2) async {}
+  Future<void> onBusStationSearched(com_amap_api_services_busline_BusStationResult? var1, int? var2) async {}
   
 }
 

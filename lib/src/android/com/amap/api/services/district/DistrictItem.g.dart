@@ -31,7 +31,7 @@ class com_amap_api_services_district_DistrictItem extends java_lang_Object with 
     return AmapSearchFluttifyAndroidAs<com_amap_api_services_district_DistrictItem>(__result__)!;
   }
   
-  static Future<com_amap_api_services_district_DistrictItem> create__String__String__String__com_amap_api_services_core_LatLonPoint__String(String var1, String var2, String var3, com_amap_api_services_core_LatLonPoint var4, String var5) async {
+  static Future<com_amap_api_services_district_DistrictItem> create__String__String__String__com_amap_api_services_core_LatLonPoint__String(String? var1, String? var2, String? var3, com_amap_api_services_core_LatLonPoint? var4, String? var5) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_district_DistrictItem__String__String__String__com_amap_api_services_core_LatLonPoint__String',
       {"var1": var1, "var2": var2, "var3": var3, "var4": var4, "var5": var5}
@@ -73,14 +73,14 @@ class com_amap_api_services_district_DistrictItem extends java_lang_Object with 
 
   //region methods
   
-  Future<void> setDistrictBoundary(List<String> var1) async {
+  Future<void> setDistrictBoundary(List<String>? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.district.DistrictItem@$refId::setDistrictBoundary([\'var1\':$var1])');
     }
   
     // invoke native method
-    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.district.DistrictItem::setDistrictBoundary', {"var1": Array.ofList(var1), "__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.district.DistrictItem::setDistrictBoundary', {"var1": Array.ofList(var1 ?? []), "__this__": this});
   
   
     // handle native call
@@ -124,7 +124,7 @@ class com_amap_api_services_district_DistrictItem extends java_lang_Object with 
   }
   
   
-  Future<void> setCitycode(String var1) async {
+  Future<void> setCitycode(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.district.DistrictItem@$refId::setCitycode([\'var1\':$var1])');
@@ -158,7 +158,7 @@ class com_amap_api_services_district_DistrictItem extends java_lang_Object with 
   }
   
   
-  Future<void> setAdcode(String var1) async {
+  Future<void> setAdcode(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.district.DistrictItem@$refId::setAdcode([\'var1\':$var1])');
@@ -192,7 +192,7 @@ class com_amap_api_services_district_DistrictItem extends java_lang_Object with 
   }
   
   
-  Future<void> setName(String var1) async {
+  Future<void> setName(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.district.DistrictItem@$refId::setName([\'var1\':$var1])');
@@ -226,7 +226,7 @@ class com_amap_api_services_district_DistrictItem extends java_lang_Object with 
   }
   
   
-  Future<void> setCenter(com_amap_api_services_core_LatLonPoint var1) async {
+  Future<void> setCenter(com_amap_api_services_core_LatLonPoint? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.district.DistrictItem@$refId::setCenter([])');
@@ -260,7 +260,7 @@ class com_amap_api_services_district_DistrictItem extends java_lang_Object with 
   }
   
   
-  Future<void> setLevel(String var1) async {
+  Future<void> setLevel(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.district.DistrictItem@$refId::setLevel([\'var1\':$var1])');
@@ -294,7 +294,7 @@ class com_amap_api_services_district_DistrictItem extends java_lang_Object with 
   }
   
   
-  Future<void> setSubDistrict(List<com_amap_api_services_district_DistrictItem> var1) async {
+  Future<void> setSubDistrict(List<com_amap_api_services_district_DistrictItem>? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.district.DistrictItem@$refId::setSubDistrict([])');

@@ -65,7 +65,7 @@ class AMapWeatherSearchRequest extends AMapSearchObject with NSCoding, NSCopying
   }
   
   Future<void> set_type(AMapWeatherType type) async {
-    await kAmapSearchFluttifyChannel.invokeMethod('AMapWeatherSearchRequest::set_type', <String, dynamic>{'__this__': this, "type": type.toValue()});
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapWeatherSearchRequest::set_type', <String, dynamic>{'__this__': this, "type": type?.toValue()});
   
   
   }

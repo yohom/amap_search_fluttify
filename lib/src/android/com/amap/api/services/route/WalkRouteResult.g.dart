@@ -71,7 +71,7 @@ class com_amap_api_services_route_WalkRouteResult extends com_amap_api_services_
   }
   
   
-  Future<void> setPaths(List<com_amap_api_services_route_WalkPath> var1) async {
+  Future<void> setPaths(List<com_amap_api_services_route_WalkPath>? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.WalkRouteResult@$refId::setPaths([])');
@@ -105,7 +105,7 @@ class com_amap_api_services_route_WalkRouteResult extends com_amap_api_services_
   }
   
   
-  Future<void> setWalkQuery(com_amap_api_services_route_RouteSearch_WalkRouteQuery var1) async {
+  Future<void> setWalkQuery(com_amap_api_services_route_RouteSearch_WalkRouteQuery? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.WalkRouteResult@$refId::setWalkQuery([])');

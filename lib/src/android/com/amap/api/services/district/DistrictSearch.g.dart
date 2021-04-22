@@ -23,7 +23,7 @@ class com_amap_api_services_district_DistrictSearch extends java_lang_Object  {
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_district_DistrictSearch> create__android_content_Context(android_content_Context var1) async {
+  static Future<com_amap_api_services_district_DistrictSearch> create__android_content_Context(android_content_Context? var1) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_district_DistrictSearch__android_content_Context',
       {"var1": var1}
@@ -71,7 +71,7 @@ class com_amap_api_services_district_DistrictSearch extends java_lang_Object  {
   }
   
   
-  Future<void> setQuery(com_amap_api_services_district_DistrictSearchQuery var1) async {
+  Future<void> setQuery(com_amap_api_services_district_DistrictSearchQuery? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.district.DistrictSearch@$refId::setQuery([])');
@@ -139,7 +139,7 @@ class com_amap_api_services_district_DistrictSearch extends java_lang_Object  {
   }
   
   
-  Future<void> setOnDistrictSearchListener(com_amap_api_services_district_DistrictSearch_OnDistrictSearchListener var1) async {
+  Future<void> setOnDistrictSearchListener(com_amap_api_services_district_DistrictSearch_OnDistrictSearchListener? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.district.DistrictSearch@$refId::setOnDistrictSearchListener([])');

@@ -36,7 +36,7 @@ class com_amap_api_services_busline_BusLineResult extends java_lang_Object  {
 
   //region methods
   
-  static Future<com_amap_api_services_busline_BusLineResult?> createPagedResult(com_amap_api_services_busline_BusLineQuery var0, int var1, List<com_amap_api_services_core_SuggestionCity> var2, List<String> var3, List<com_amap_api_services_busline_BusLineItem> var4) async {
+  static Future<com_amap_api_services_busline_BusLineResult?> createPagedResult(com_amap_api_services_busline_BusLineQuery? var0, int? var1, List<com_amap_api_services_core_SuggestionCity>? var2, List<String>? var3, List<com_amap_api_services_busline_BusLineItem>? var4) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.busline.BusLineResult::createPagedResult([\'var1\':$var1, \'var3\':$var3])');

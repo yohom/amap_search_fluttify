@@ -24,7 +24,7 @@ class com_amap_api_services_weather_WeatherSearchQuery extends java_lang_Object 
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_weather_WeatherSearchQuery> create__String__int(String var1, int var2) async {
+  static Future<com_amap_api_services_weather_WeatherSearchQuery> create__String__int(String? var1, int? var2) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_weather_WeatherSearchQuery__String__int',
       {"var1": var1, "var2": var2}

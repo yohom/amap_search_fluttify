@@ -23,7 +23,7 @@ class com_amap_api_services_share_ShareSearch_ShareFromAndTo extends java_lang_O
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_share_ShareSearch_ShareFromAndTo> create__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint(com_amap_api_services_core_LatLonPoint var1, com_amap_api_services_core_LatLonPoint var2) async {
+  static Future<com_amap_api_services_share_ShareSearch_ShareFromAndTo> create__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint(com_amap_api_services_core_LatLonPoint? var1, com_amap_api_services_core_LatLonPoint? var2) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_share_ShareSearch_ShareFromAndTo__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint',
       {"var1": var1, "var2": var2}
@@ -54,7 +54,7 @@ class com_amap_api_services_share_ShareSearch_ShareFromAndTo extends java_lang_O
 
   //region methods
   
-  Future<void> setFromName(String var1) async {
+  Future<void> setFromName(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.share.ShareSearch.ShareFromAndTo@$refId::setFromName([\'var1\':$var1])');
@@ -71,7 +71,7 @@ class com_amap_api_services_share_ShareSearch_ShareFromAndTo extends java_lang_O
   }
   
   
-  Future<void> setToName(String var1) async {
+  Future<void> setToName(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.share.ShareSearch.ShareFromAndTo@$refId::setToName([\'var1\':$var1])');

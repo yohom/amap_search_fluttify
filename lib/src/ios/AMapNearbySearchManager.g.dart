@@ -147,7 +147,7 @@ class AMapNearbySearchManager extends NSObject  {
   }
   
   @deprecated
-  Future<bool?> uploadNearbyInfo(AMapNearbyUploadInfo info) async {
+  Future<bool?> uploadNearbyInfo(AMapNearbyUploadInfo? info) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: AMapNearbySearchManager@$refId::uploadNearbyInfo([])');
@@ -164,7 +164,7 @@ class AMapNearbySearchManager extends NSObject  {
   }
   
   @deprecated
-  Future<bool?> clearUserInfoWithID(String userID) async {
+  Future<bool?> clearUserInfoWithID(String? userID) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: AMapNearbySearchManager@$refId::clearUserInfoWithID([\'userID\':$userID])');

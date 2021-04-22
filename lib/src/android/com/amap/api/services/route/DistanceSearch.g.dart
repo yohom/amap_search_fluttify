@@ -27,7 +27,7 @@ class com_amap_api_services_route_DistanceSearch extends java_lang_Object  {
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_route_DistanceSearch> create__android_content_Context(android_content_Context var1) async {
+  static Future<com_amap_api_services_route_DistanceSearch> create__android_content_Context(android_content_Context? var1) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_route_DistanceSearch__android_content_Context',
       {"var1": var1}
@@ -58,7 +58,7 @@ class com_amap_api_services_route_DistanceSearch extends java_lang_Object  {
 
   //region methods
   
-  Future<void> setDistanceSearchListener(com_amap_api_services_route_DistanceSearch_OnDistanceSearchListener var1) async {
+  Future<void> setDistanceSearchListener(com_amap_api_services_route_DistanceSearch_OnDistanceSearchListener? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.DistanceSearch@$refId::setDistanceSearchListener([])');
@@ -97,7 +97,7 @@ class com_amap_api_services_route_DistanceSearch extends java_lang_Object  {
   }
   
   
-  Future<com_amap_api_services_route_DistanceResult?> calculateRouteDistance(com_amap_api_services_route_DistanceSearch_DistanceQuery var1) async {
+  Future<com_amap_api_services_route_DistanceResult?> calculateRouteDistance(com_amap_api_services_route_DistanceSearch_DistanceQuery? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.DistanceSearch@$refId::calculateRouteDistance([])');
@@ -114,7 +114,7 @@ class com_amap_api_services_route_DistanceSearch extends java_lang_Object  {
   }
   
   
-  Future<void> calculateRouteDistanceAsyn(com_amap_api_services_route_DistanceSearch_DistanceQuery var1) async {
+  Future<void> calculateRouteDistanceAsyn(com_amap_api_services_route_DistanceSearch_DistanceQuery? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.DistanceSearch@$refId::calculateRouteDistanceAsyn([])');

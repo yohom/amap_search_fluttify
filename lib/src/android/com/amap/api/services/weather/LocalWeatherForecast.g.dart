@@ -71,7 +71,7 @@ class com_amap_api_services_weather_LocalWeatherForecast extends java_lang_Objec
   }
   
   
-  Future<void> setProvince(String var1) async {
+  Future<void> setProvince(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.weather.LocalWeatherForecast@$refId::setProvince([\'var1\':$var1])');
@@ -105,7 +105,7 @@ class com_amap_api_services_weather_LocalWeatherForecast extends java_lang_Objec
   }
   
   
-  Future<void> setCity(String var1) async {
+  Future<void> setCity(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.weather.LocalWeatherForecast@$refId::setCity([\'var1\':$var1])');
@@ -139,7 +139,7 @@ class com_amap_api_services_weather_LocalWeatherForecast extends java_lang_Objec
   }
   
   
-  Future<void> setAdCode(String var1) async {
+  Future<void> setAdCode(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.weather.LocalWeatherForecast@$refId::setAdCode([\'var1\':$var1])');
@@ -173,7 +173,7 @@ class com_amap_api_services_weather_LocalWeatherForecast extends java_lang_Objec
   }
   
   
-  Future<void> setReportTime(String var1) async {
+  Future<void> setReportTime(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.weather.LocalWeatherForecast@$refId::setReportTime([\'var1\':$var1])');
@@ -207,7 +207,7 @@ class com_amap_api_services_weather_LocalWeatherForecast extends java_lang_Objec
   }
   
   
-  Future<void> setWeatherForecast(List<com_amap_api_services_weather_LocalDayWeatherForecast> var1) async {
+  Future<void> setWeatherForecast(List<com_amap_api_services_weather_LocalDayWeatherForecast>? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.weather.LocalWeatherForecast@$refId::setWeatherForecast([])');

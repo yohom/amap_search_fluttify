@@ -23,7 +23,7 @@ class com_amap_api_services_cloud_CloudItemDetail extends com_amap_api_services_
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_cloud_CloudItemDetail> create__String__com_amap_api_services_core_LatLonPoint__String__String(String var1, com_amap_api_services_core_LatLonPoint var2, String var3, String var4) async {
+  static Future<com_amap_api_services_cloud_CloudItemDetail> create__String__com_amap_api_services_core_LatLonPoint__String__String(String? var1, com_amap_api_services_core_LatLonPoint? var2, String? var3, String? var4) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_cloud_CloudItemDetail__String__com_amap_api_services_core_LatLonPoint__String__String',
       {"var1": var1, "var2": var2, "var3": var3, "var4": var4}

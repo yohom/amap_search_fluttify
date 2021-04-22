@@ -26,9 +26,9 @@ mixin com_amap_api_services_geocoder_GeocodeSearch_OnGeocodeSearchListener on ja
 
   
 
-  Future<void> onRegeocodeSearched(com_amap_api_services_geocoder_RegeocodeResult var1, int var2) async {}
+  Future<void> onRegeocodeSearched(com_amap_api_services_geocoder_RegeocodeResult? var1, int? var2) async {}
   
-  Future<void> onGeocodeSearched(com_amap_api_services_geocoder_GeocodeResult var1, int var2) async {}
+  Future<void> onGeocodeSearched(com_amap_api_services_geocoder_GeocodeResult? var1, int? var2) async {}
   
 }
 

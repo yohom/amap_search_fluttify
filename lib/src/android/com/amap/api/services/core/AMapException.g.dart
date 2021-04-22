@@ -137,7 +137,7 @@ class com_amap_api_services_core_AMapException extends java_lang_Object  {
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_core_AMapException> create__String(String var1) async {
+  static Future<com_amap_api_services_core_AMapException> create__String(String? var1) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_core_AMapException__String',
       {"var1": var1}
@@ -145,7 +145,7 @@ class com_amap_api_services_core_AMapException extends java_lang_Object  {
     return AmapSearchFluttifyAndroidAs<com_amap_api_services_core_AMapException>(__result__)!;
   }
   
-  static Future<com_amap_api_services_core_AMapException> create__String__int__String(String var1, int var2, String var3) async {
+  static Future<com_amap_api_services_core_AMapException> create__String__int__String(String? var1, int? var2, String? var3) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_core_AMapException__String__int__String',
       {"var1": var1, "var2": var2, "var3": var3}
@@ -153,7 +153,7 @@ class com_amap_api_services_core_AMapException extends java_lang_Object  {
     return AmapSearchFluttifyAndroidAs<com_amap_api_services_core_AMapException>(__result__)!;
   }
   
-  static Future<com_amap_api_services_core_AMapException> create__String__int__String__int(String var1, int var2, String var3, int var4) async {
+  static Future<com_amap_api_services_core_AMapException> create__String__int__String__int(String? var1, int? var2, String? var3, int? var4) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_core_AMapException__String__int__String__int',
       {"var1": var1, "var2": var2, "var3": var3, "var4": var4}

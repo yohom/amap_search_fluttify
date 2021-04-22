@@ -71,7 +71,7 @@ class com_amap_api_services_route_WalkPath extends com_amap_api_services_route_P
   }
   
   
-  Future<void> setSteps(List<com_amap_api_services_route_WalkStep> var1) async {
+  Future<void> setSteps(List<com_amap_api_services_route_WalkStep>? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.WalkPath@$refId::setSteps([])');

@@ -54,7 +54,7 @@ class com_amap_api_services_route_TruckPath extends java_lang_Object with androi
 
   //region methods
   
-  Future<void> setDistance(double var1) async {
+  Future<void> setDistance(double? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.TruckPath@$refId::setDistance([\'var1\':$var1])');
@@ -71,7 +71,7 @@ class com_amap_api_services_route_TruckPath extends java_lang_Object with androi
   }
   
   
-  Future<void> setDuration(int var1) async {
+  Future<void> setDuration(int? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.TruckPath@$refId::setDuration([\'var1\':$var1])');
@@ -88,7 +88,7 @@ class com_amap_api_services_route_TruckPath extends java_lang_Object with androi
   }
   
   
-  Future<void> setStrategy(String var1) async {
+  Future<void> setStrategy(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.TruckPath@$refId::setStrategy([\'var1\':$var1])');
@@ -105,7 +105,7 @@ class com_amap_api_services_route_TruckPath extends java_lang_Object with androi
   }
   
   
-  Future<void> setTolls(double var1) async {
+  Future<void> setTolls(double? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.TruckPath@$refId::setTolls([\'var1\':$var1])');
@@ -122,7 +122,7 @@ class com_amap_api_services_route_TruckPath extends java_lang_Object with androi
   }
   
   
-  Future<void> setTollDistance(double var1) async {
+  Future<void> setTollDistance(double? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.TruckPath@$refId::setTollDistance([\'var1\':$var1])');
@@ -139,7 +139,7 @@ class com_amap_api_services_route_TruckPath extends java_lang_Object with androi
   }
   
   
-  Future<void> setTotalTrafficlights(int var1) async {
+  Future<void> setTotalTrafficlights(int? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.TruckPath@$refId::setTotalTrafficlights([\'var1\':$var1])');
@@ -156,7 +156,7 @@ class com_amap_api_services_route_TruckPath extends java_lang_Object with androi
   }
   
   
-  Future<void> setRestriction(int var1) async {
+  Future<void> setRestriction(int? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.TruckPath@$refId::setRestriction([\'var1\':$var1])');
@@ -173,7 +173,7 @@ class com_amap_api_services_route_TruckPath extends java_lang_Object with androi
   }
   
   
-  Future<void> setSteps(List<com_amap_api_services_route_TruckStep> var1) async {
+  Future<void> setSteps(List<com_amap_api_services_route_TruckStep>? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.TruckPath@$refId::setSteps([])');

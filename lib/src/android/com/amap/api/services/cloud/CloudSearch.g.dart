@@ -23,7 +23,7 @@ class com_amap_api_services_cloud_CloudSearch extends java_lang_Object  {
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_cloud_CloudSearch> create__android_content_Context(android_content_Context var1) async {
+  static Future<com_amap_api_services_cloud_CloudSearch> create__android_content_Context(android_content_Context? var1) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_cloud_CloudSearch__android_content_Context',
       {"var1": var1}
@@ -54,7 +54,7 @@ class com_amap_api_services_cloud_CloudSearch extends java_lang_Object  {
 
   //region methods
   
-  Future<void> setOnCloudSearchListener(com_amap_api_services_cloud_CloudSearch_OnCloudSearchListener var1) async {
+  Future<void> setOnCloudSearchListener(com_amap_api_services_cloud_CloudSearch_OnCloudSearchListener? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudSearch@$refId::setOnCloudSearchListener([])');
@@ -102,7 +102,7 @@ class com_amap_api_services_cloud_CloudSearch extends java_lang_Object  {
   }
   
   
-  Future<void> searchCloudAsyn(com_amap_api_services_cloud_CloudSearch_Query var1) async {
+  Future<void> searchCloudAsyn(com_amap_api_services_cloud_CloudSearch_Query? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudSearch@$refId::searchCloudAsyn([])');
@@ -119,7 +119,7 @@ class com_amap_api_services_cloud_CloudSearch extends java_lang_Object  {
   }
   
   
-  Future<void> searchCloudDetailAsyn(String var1, String var2) async {
+  Future<void> searchCloudDetailAsyn(String? var1, String? var2) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudSearch@$refId::searchCloudDetailAsyn([\'var1\':$var1, \'var2\':$var2])');

@@ -71,7 +71,7 @@ class com_amap_api_services_route_DrivePath extends com_amap_api_services_route_
   }
   
   
-  Future<void> setStrategy(String var1) async {
+  Future<void> setStrategy(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.DrivePath@$refId::setStrategy([\'var1\':$var1])');
@@ -105,7 +105,7 @@ class com_amap_api_services_route_DrivePath extends com_amap_api_services_route_
   }
   
   
-  Future<void> setTolls(double var1) async {
+  Future<void> setTolls(double? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.DrivePath@$refId::setTolls([\'var1\':$var1])');
@@ -139,7 +139,7 @@ class com_amap_api_services_route_DrivePath extends com_amap_api_services_route_
   }
   
   
-  Future<void> setTollDistance(double var1) async {
+  Future<void> setTollDistance(double? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.DrivePath@$refId::setTollDistance([\'var1\':$var1])');
@@ -173,7 +173,7 @@ class com_amap_api_services_route_DrivePath extends com_amap_api_services_route_
   }
   
   
-  Future<void> setTotalTrafficlights(int var1) async {
+  Future<void> setTotalTrafficlights(int? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.DrivePath@$refId::setTotalTrafficlights([\'var1\':$var1])');
@@ -207,7 +207,7 @@ class com_amap_api_services_route_DrivePath extends com_amap_api_services_route_
   }
   
   
-  Future<void> setSteps(List<com_amap_api_services_route_DriveStep> var1) async {
+  Future<void> setSteps(List<com_amap_api_services_route_DriveStep>? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.DrivePath@$refId::setSteps([])');
@@ -241,7 +241,7 @@ class com_amap_api_services_route_DrivePath extends com_amap_api_services_route_
   }
   
   
-  Future<void> setRestriction(int var1) async {
+  Future<void> setRestriction(int? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.DrivePath@$refId::setRestriction([\'var1\':$var1])');

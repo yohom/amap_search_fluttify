@@ -71,7 +71,7 @@ class com_amap_api_services_route_RouteResult extends java_lang_Object with andr
   }
   
   
-  Future<void> setStartPos(com_amap_api_services_core_LatLonPoint var1) async {
+  Future<void> setStartPos(com_amap_api_services_core_LatLonPoint? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteResult@$refId::setStartPos([])');
@@ -105,7 +105,7 @@ class com_amap_api_services_route_RouteResult extends java_lang_Object with andr
   }
   
   
-  Future<void> setTargetPos(com_amap_api_services_core_LatLonPoint var1) async {
+  Future<void> setTargetPos(com_amap_api_services_core_LatLonPoint? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteResult@$refId::setTargetPos([])');

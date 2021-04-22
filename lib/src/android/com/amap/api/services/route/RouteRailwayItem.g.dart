@@ -207,7 +207,7 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
   }
   
   
-  Future<void> setTime(String var1) async {
+  Future<void> setTime(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteRailwayItem@$refId::setTime([\'var1\':$var1])');
@@ -224,7 +224,7 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
   }
   
   
-  Future<void> setTrip(String var1) async {
+  Future<void> setTrip(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteRailwayItem@$refId::setTrip([\'var1\':$var1])');
@@ -241,7 +241,7 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
   }
   
   
-  Future<void> setDistance(double var1) async {
+  Future<void> setDistance(double? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteRailwayItem@$refId::setDistance([\'var1\':$var1])');
@@ -258,7 +258,7 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
   }
   
   
-  Future<void> setType(String var1) async {
+  Future<void> setType(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteRailwayItem@$refId::setType([\'var1\':$var1])');
@@ -275,7 +275,7 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
   }
   
   
-  Future<void> setDeparturestop(com_amap_api_services_route_RailwayStationItem var1) async {
+  Future<void> setDeparturestop(com_amap_api_services_route_RailwayStationItem? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteRailwayItem@$refId::setDeparturestop([])');
@@ -292,7 +292,7 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
   }
   
   
-  Future<void> setArrivalstop(com_amap_api_services_route_RailwayStationItem var1) async {
+  Future<void> setArrivalstop(com_amap_api_services_route_RailwayStationItem? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteRailwayItem@$refId::setArrivalstop([])');
@@ -309,7 +309,7 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
   }
   
   
-  Future<void> setViastops(List<com_amap_api_services_route_RailwayStationItem> var1) async {
+  Future<void> setViastops(List<com_amap_api_services_route_RailwayStationItem>? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteRailwayItem@$refId::setViastops([])');
@@ -326,7 +326,7 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
   }
   
   
-  Future<void> setAlters(List<com_amap_api_services_route_Railway> var1) async {
+  Future<void> setAlters(List<com_amap_api_services_route_Railway>? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteRailwayItem@$refId::setAlters([])');
@@ -343,7 +343,7 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
   }
   
   
-  Future<void> setSpaces(List<com_amap_api_services_route_RailwaySpace> var1) async {
+  Future<void> setSpaces(List<com_amap_api_services_route_RailwaySpace>? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteRailwayItem@$refId::setSpaces([])');

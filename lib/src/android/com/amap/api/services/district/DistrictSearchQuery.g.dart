@@ -35,7 +35,7 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
     return AmapSearchFluttifyAndroidAs<com_amap_api_services_district_DistrictSearchQuery>(__result__)!;
   }
   
-  static Future<com_amap_api_services_district_DistrictSearchQuery> create__String__String__int(String var1, String var2, int var3) async {
+  static Future<com_amap_api_services_district_DistrictSearchQuery> create__String__String__int(String? var1, String? var2, int? var3) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_district_DistrictSearchQuery__String__String__int',
       {"var1": var1, "var2": var2, "var3": var3}
@@ -43,7 +43,7 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
     return AmapSearchFluttifyAndroidAs<com_amap_api_services_district_DistrictSearchQuery>(__result__)!;
   }
   
-  static Future<com_amap_api_services_district_DistrictSearchQuery> create__String__String__int__boolean__int(String var1, String var2, int var3, bool var4, int var5) async {
+  static Future<com_amap_api_services_district_DistrictSearchQuery> create__String__String__int__boolean__int(String? var1, String? var2, int? var3, bool? var4, int? var5) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_district_DistrictSearchQuery__String__String__int__boolean__int',
       {"var1": var1, "var2": var2, "var3": var3, "var4": var4, "var5": var5}
@@ -96,7 +96,7 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
 
   //region methods
   
-  Future<void> setShowBoundary(bool var1) async {
+  Future<void> setShowBoundary(bool? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::setShowBoundary([\'var1\':$var1])');
@@ -147,7 +147,7 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
   }
   
   
-  Future<void> setPageNum(int var1) async {
+  Future<void> setPageNum(int? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::setPageNum([\'var1\':$var1])');
@@ -181,7 +181,7 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
   }
   
   
-  Future<void> setPageSize(int var1) async {
+  Future<void> setPageSize(int? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::setPageSize([\'var1\':$var1])');
@@ -215,7 +215,7 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
   }
   
   
-  Future<void> setKeywords(String var1) async {
+  Future<void> setKeywords(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::setKeywords([\'var1\':$var1])');
@@ -249,7 +249,7 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
   }
   
   
-  Future<void> setKeywordsLevel(String var1) async {
+  Future<void> setKeywordsLevel(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::setKeywordsLevel([\'var1\':$var1])');
@@ -283,7 +283,7 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
   }
   
   
-  Future<void> setShowChild(bool var1) async {
+  Future<void> setShowChild(bool? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::setShowChild([\'var1\':$var1])');
@@ -317,7 +317,7 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
   }
   
   
-  Future<void> setSubDistrict(int var1) async {
+  Future<void> setSubDistrict(int? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::setSubDistrict([\'var1\':$var1])');
@@ -351,7 +351,7 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
   }
   
   
-  Future<void> setShowBusinessArea(bool var1) async {
+  Future<void> setShowBusinessArea(bool? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::setShowBusinessArea([\'var1\':$var1])');
@@ -402,7 +402,7 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
   }
   
   
-  Future<bool?> weakEquals(com_amap_api_services_district_DistrictSearchQuery var1) async {
+  Future<bool?> weakEquals(com_amap_api_services_district_DistrictSearchQuery? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::weakEquals([])');

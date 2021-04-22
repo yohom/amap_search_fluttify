@@ -23,7 +23,7 @@ class com_amap_api_services_share_ShareSearch_ShareWalkRouteQuery extends java_l
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_share_ShareSearch_ShareWalkRouteQuery> create__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int(com_amap_api_services_share_ShareSearch_ShareFromAndTo var1, int var2) async {
+  static Future<com_amap_api_services_share_ShareSearch_ShareWalkRouteQuery> create__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int(com_amap_api_services_share_ShareSearch_ShareFromAndTo? var1, int? var2) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_share_ShareSearch_ShareWalkRouteQuery__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int',
       {"var1": var1, "var2": var2}

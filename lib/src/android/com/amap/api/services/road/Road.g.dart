@@ -31,7 +31,7 @@ class com_amap_api_services_road_Road extends java_lang_Object with android_os_P
     return AmapSearchFluttifyAndroidAs<com_amap_api_services_road_Road>(__result__)!;
   }
   
-  static Future<com_amap_api_services_road_Road> create__String__String(String var1, String var2) async {
+  static Future<com_amap_api_services_road_Road> create__String__String(String? var1, String? var2) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_road_Road__String__String',
       {"var1": var1, "var2": var2}
@@ -73,7 +73,7 @@ class com_amap_api_services_road_Road extends java_lang_Object with android_os_P
 
   //region methods
   
-  Future<void> setId(String var1) async {
+  Future<void> setId(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.road.Road@$refId::setId([\'var1\':$var1])');
@@ -90,7 +90,7 @@ class com_amap_api_services_road_Road extends java_lang_Object with android_os_P
   }
   
   
-  Future<void> setName(String var1) async {
+  Future<void> setName(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.road.Road@$refId::setName([\'var1\':$var1])');
@@ -124,7 +124,7 @@ class com_amap_api_services_road_Road extends java_lang_Object with android_os_P
   }
   
   
-  Future<void> setCityCode(String var1) async {
+  Future<void> setCityCode(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.road.Road@$refId::setCityCode([\'var1\':$var1])');
@@ -158,7 +158,7 @@ class com_amap_api_services_road_Road extends java_lang_Object with android_os_P
   }
   
   
-  Future<void> setRoadWidth(double var1) async {
+  Future<void> setRoadWidth(double? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.road.Road@$refId::setRoadWidth([\'var1\':$var1])');
@@ -192,7 +192,7 @@ class com_amap_api_services_road_Road extends java_lang_Object with android_os_P
   }
   
   
-  Future<void> setType(String var1) async {
+  Future<void> setType(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.road.Road@$refId::setType([\'var1\':$var1])');
@@ -226,7 +226,7 @@ class com_amap_api_services_road_Road extends java_lang_Object with android_os_P
   }
   
   
-  Future<void> setCenterPoint(com_amap_api_services_core_LatLonPoint var1) async {
+  Future<void> setCenterPoint(com_amap_api_services_core_LatLonPoint? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.road.Road@$refId::setCenterPoint([])');

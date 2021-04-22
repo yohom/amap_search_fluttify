@@ -63,7 +63,7 @@ class AMapGeoPolygon extends AMapSearchObject with NSCoding, NSCopying {
 
   //region methods
   
-  static Future<AMapGeoPolygon?> polygonWithPoints(List<dynamic> points) async {
+  static Future<AMapGeoPolygon?> polygonWithPoints(List<dynamic>? points) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: AMapGeoPolygon::polygonWithPoints([])');

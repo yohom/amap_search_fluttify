@@ -28,17 +28,17 @@ mixin com_amap_api_services_interfaces_IInputtipsSearch on java_lang_Object {
 
   Future<com_amap_api_services_help_InputtipsQuery?> getQuery() async {}
   
-  Future<void> setQuery(com_amap_api_services_help_InputtipsQuery var1) async {}
+  Future<void> setQuery(com_amap_api_services_help_InputtipsQuery? var1) async {}
   
-  Future<void> setInputtipsListener(com_amap_api_services_help_Inputtips_InputtipsListener var1) async {}
+  Future<void> setInputtipsListener(com_amap_api_services_help_Inputtips_InputtipsListener? var1) async {}
   
   Future<void> requestInputtipsAsyn() async {}
   
   Future<List<com_amap_api_services_help_Tip>?> requestInputtips() async {}
   
-  Future<void> requestInputtips__String__String(String var1, String var2) async {}
+  Future<void> requestInputtips__String__String(String? var1, String? var2) async {}
   
-  Future<void> requestInputtips__String__String__String(String var1, String var2, String var3) async {}
+  Future<void> requestInputtips__String__String__String(String? var1, String? var2, String? var3) async {}
   
 }
 

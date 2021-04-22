@@ -71,7 +71,7 @@ class com_amap_api_services_route_RouteBusWalkItem extends com_amap_api_services
   }
   
   
-  Future<void> setOrigin(com_amap_api_services_core_LatLonPoint var1) async {
+  Future<void> setOrigin(com_amap_api_services_core_LatLonPoint? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteBusWalkItem@$refId::setOrigin([])');
@@ -105,7 +105,7 @@ class com_amap_api_services_route_RouteBusWalkItem extends com_amap_api_services
   }
   
   
-  Future<void> setDestination(com_amap_api_services_core_LatLonPoint var1) async {
+  Future<void> setDestination(com_amap_api_services_core_LatLonPoint? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteBusWalkItem@$refId::setDestination([])');

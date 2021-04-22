@@ -36,7 +36,7 @@ class com_amap_api_services_poisearch_PoiResult extends java_lang_Object  {
 
   //region methods
   
-  static Future<com_amap_api_services_poisearch_PoiResult?> createPagedResult(com_amap_api_services_poisearch_PoiSearch_Query var0, com_amap_api_services_poisearch_PoiSearch_SearchBound var1, List<String> var2, List<com_amap_api_services_core_SuggestionCity> var3, int var4, int var5, List<com_amap_api_services_core_PoiItem> var6) async {
+  static Future<com_amap_api_services_poisearch_PoiResult?> createPagedResult(com_amap_api_services_poisearch_PoiSearch_Query? var0, com_amap_api_services_poisearch_PoiSearch_SearchBound? var1, List<String>? var2, List<com_amap_api_services_core_SuggestionCity>? var3, int? var4, int? var5, List<com_amap_api_services_core_PoiItem>? var6) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.poisearch.PoiResult::createPagedResult([\'var2\':$var2, \'var4\':$var4, \'var5\':$var5])');

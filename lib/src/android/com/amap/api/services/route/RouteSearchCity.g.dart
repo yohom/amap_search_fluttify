@@ -71,7 +71,7 @@ class com_amap_api_services_route_RouteSearchCity extends com_amap_api_services_
   }
   
   
-  Future<void> setDistricts(List<com_amap_api_services_route_District> var1) async {
+  Future<void> setDistricts(List<com_amap_api_services_route_District>? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearchCity@$refId::setDistricts([])');

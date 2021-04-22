@@ -26,7 +26,7 @@ class com_amap_api_services_cloud_CloudSearch_SearchBound extends java_lang_Obje
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_cloud_CloudSearch_SearchBound> create__com_amap_api_services_core_LatLonPoint__int(com_amap_api_services_core_LatLonPoint var1, int var2) async {
+  static Future<com_amap_api_services_cloud_CloudSearch_SearchBound> create__com_amap_api_services_core_LatLonPoint__int(com_amap_api_services_core_LatLonPoint? var1, int? var2) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_SearchBound__com_amap_api_services_core_LatLonPoint__int',
       {"var1": var1, "var2": var2}
@@ -34,7 +34,7 @@ class com_amap_api_services_cloud_CloudSearch_SearchBound extends java_lang_Obje
     return AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudSearch_SearchBound>(__result__)!;
   }
   
-  static Future<com_amap_api_services_cloud_CloudSearch_SearchBound> create__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint(com_amap_api_services_core_LatLonPoint var1, com_amap_api_services_core_LatLonPoint var2) async {
+  static Future<com_amap_api_services_cloud_CloudSearch_SearchBound> create__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint(com_amap_api_services_core_LatLonPoint? var1, com_amap_api_services_core_LatLonPoint? var2) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_SearchBound__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint',
       {"var1": var1, "var2": var2}
@@ -42,7 +42,7 @@ class com_amap_api_services_cloud_CloudSearch_SearchBound extends java_lang_Obje
     return AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudSearch_SearchBound>(__result__)!;
   }
   
-  static Future<com_amap_api_services_cloud_CloudSearch_SearchBound> create__List_java_util_List_com_amap_api_services_core_LatLonPoint__(List<com_amap_api_services_core_LatLonPoint> var1) async {
+  static Future<com_amap_api_services_cloud_CloudSearch_SearchBound> create__List_java_util_List_com_amap_api_services_core_LatLonPoint__(List<com_amap_api_services_core_LatLonPoint>? var1) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_SearchBound__java_util_List_com_amap_api_services_core_LatLonPoint_',
       {"var1": var1}
@@ -50,7 +50,7 @@ class com_amap_api_services_cloud_CloudSearch_SearchBound extends java_lang_Obje
     return AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudSearch_SearchBound>(__result__)!;
   }
   
-  static Future<com_amap_api_services_cloud_CloudSearch_SearchBound> create__String(String var1) async {
+  static Future<com_amap_api_services_cloud_CloudSearch_SearchBound> create__String(String? var1) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_SearchBound__String',
       {"var1": var1}

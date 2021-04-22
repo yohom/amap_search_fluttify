@@ -23,7 +23,7 @@ class com_amap_api_services_district_DistrictResult extends java_lang_Object wit
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_district_DistrictResult> create__com_amap_api_services_district_DistrictSearchQuery__List_java_util_ArrayList_com_amap_api_services_district_DistrictItem__(com_amap_api_services_district_DistrictSearchQuery var1, List<com_amap_api_services_district_DistrictItem> var2) async {
+  static Future<com_amap_api_services_district_DistrictResult> create__com_amap_api_services_district_DistrictSearchQuery__List_java_util_ArrayList_com_amap_api_services_district_DistrictItem__(com_amap_api_services_district_DistrictSearchQuery? var1, List<com_amap_api_services_district_DistrictItem>? var2) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_district_DistrictResult__com_amap_api_services_district_DistrictSearchQuery__java_util_ArrayList_com_amap_api_services_district_DistrictItem_',
       {"var1": var1, "var2": var2}
@@ -90,7 +90,7 @@ class com_amap_api_services_district_DistrictResult extends java_lang_Object wit
   }
   
   
-  Future<void> setDistrict(List<com_amap_api_services_district_DistrictItem> var1) async {
+  Future<void> setDistrict(List<com_amap_api_services_district_DistrictItem>? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.district.DistrictResult@$refId::setDistrict([])');
@@ -124,7 +124,7 @@ class com_amap_api_services_district_DistrictResult extends java_lang_Object wit
   }
   
   
-  Future<void> setQuery(com_amap_api_services_district_DistrictSearchQuery var1) async {
+  Future<void> setQuery(com_amap_api_services_district_DistrictSearchQuery? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.district.DistrictResult@$refId::setQuery([])');
@@ -158,7 +158,7 @@ class com_amap_api_services_district_DistrictResult extends java_lang_Object wit
   }
   
   
-  Future<void> setPageCount(int var1) async {
+  Future<void> setPageCount(int? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.district.DistrictResult@$refId::setPageCount([\'var1\':$var1])');
@@ -192,7 +192,7 @@ class com_amap_api_services_district_DistrictResult extends java_lang_Object wit
   }
   
   
-  Future<void> setAMapException(com_amap_api_services_core_AMapException var1) async {
+  Future<void> setAMapException(com_amap_api_services_core_AMapException? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.district.DistrictResult@$refId::setAMapException([])');

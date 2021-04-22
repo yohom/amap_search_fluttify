@@ -31,7 +31,7 @@ class com_amap_api_services_poisearch_Photo extends java_lang_Object with androi
     return AmapSearchFluttifyAndroidAs<com_amap_api_services_poisearch_Photo>(__result__)!;
   }
   
-  static Future<com_amap_api_services_poisearch_Photo> create__String__String(String var1, String var2) async {
+  static Future<com_amap_api_services_poisearch_Photo> create__String__String(String? var1, String? var2) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_poisearch_Photo__String__String',
       {"var1": var1, "var2": var2}
@@ -90,7 +90,7 @@ class com_amap_api_services_poisearch_Photo extends java_lang_Object with androi
   }
   
   
-  Future<void> setTitle(String var1) async {
+  Future<void> setTitle(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.poisearch.Photo@$refId::setTitle([\'var1\':$var1])');
@@ -124,7 +124,7 @@ class com_amap_api_services_poisearch_Photo extends java_lang_Object with androi
   }
   
   
-  Future<void> setUrl(String var1) async {
+  Future<void> setUrl(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.poisearch.Photo@$refId::setUrl([\'var1\':$var1])');

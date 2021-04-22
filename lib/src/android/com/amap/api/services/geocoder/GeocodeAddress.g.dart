@@ -71,7 +71,7 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
   }
   
   
-  Future<void> setFormatAddress(String var1) async {
+  Future<void> setFormatAddress(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::setFormatAddress([\'var1\':$var1])');
@@ -105,7 +105,7 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
   }
   
   
-  Future<void> setProvince(String var1) async {
+  Future<void> setProvince(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::setProvince([\'var1\':$var1])');
@@ -139,7 +139,7 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
   }
   
   
-  Future<void> setCity(String var1) async {
+  Future<void> setCity(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::setCity([\'var1\':$var1])');
@@ -173,7 +173,7 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
   }
   
   
-  Future<void> setDistrict(String var1) async {
+  Future<void> setDistrict(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::setDistrict([\'var1\':$var1])');
@@ -207,7 +207,7 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
   }
   
   
-  Future<void> setTownship(String var1) async {
+  Future<void> setTownship(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::setTownship([\'var1\':$var1])');
@@ -241,7 +241,7 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
   }
   
   
-  Future<void> setNeighborhood(String var1) async {
+  Future<void> setNeighborhood(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::setNeighborhood([\'var1\':$var1])');
@@ -275,7 +275,7 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
   }
   
   
-  Future<void> setBuilding(String var1) async {
+  Future<void> setBuilding(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::setBuilding([\'var1\':$var1])');
@@ -309,7 +309,7 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
   }
   
   
-  Future<void> setAdcode(String var1) async {
+  Future<void> setAdcode(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::setAdcode([\'var1\':$var1])');
@@ -343,7 +343,7 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
   }
   
   
-  Future<void> setLatLonPoint(com_amap_api_services_core_LatLonPoint var1) async {
+  Future<void> setLatLonPoint(com_amap_api_services_core_LatLonPoint? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::setLatLonPoint([])');
@@ -377,7 +377,7 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
   }
   
   
-  Future<void> setLevel(String var1) async {
+  Future<void> setLevel(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::setLevel([\'var1\':$var1])');
@@ -411,7 +411,7 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
   }
   
   
-  Future<void> setCountry(String var1) async {
+  Future<void> setCountry(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::setCountry([\'var1\':$var1])');
@@ -445,7 +445,7 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
   }
   
   
-  Future<void> setPostcode(String var1) async {
+  Future<void> setPostcode(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::setPostcode([\'var1\':$var1])');

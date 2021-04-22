@@ -23,7 +23,7 @@ class com_amap_api_services_cloud_CloudItem extends java_lang_Object with androi
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_cloud_CloudItem> create__String__com_amap_api_services_core_LatLonPoint__String__String(String var1, com_amap_api_services_core_LatLonPoint var2, String var3, String var4) async {
+  static Future<com_amap_api_services_cloud_CloudItem> create__String__com_amap_api_services_core_LatLonPoint__String__String(String? var1, com_amap_api_services_core_LatLonPoint? var2, String? var3, String? var4) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_cloud_CloudItem__String__com_amap_api_services_core_LatLonPoint__String__String',
       {"var1": var1, "var2": var2, "var3": var3, "var4": var4}
@@ -88,7 +88,7 @@ class com_amap_api_services_cloud_CloudItem extends java_lang_Object with androi
   }
   
   
-  Future<void> setDistance(int var1) async {
+  Future<void> setDistance(int? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::setDistance([\'var1\':$var1])');
@@ -173,7 +173,7 @@ class com_amap_api_services_cloud_CloudItem extends java_lang_Object with androi
   }
   
   
-  Future<void> setCreatetime(String var1) async {
+  Future<void> setCreatetime(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::setCreatetime([\'var1\':$var1])');
@@ -207,7 +207,7 @@ class com_amap_api_services_cloud_CloudItem extends java_lang_Object with androi
   }
   
   
-  Future<void> setUpdatetime(String var1) async {
+  Future<void> setUpdatetime(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::setUpdatetime([\'var1\':$var1])');
@@ -241,7 +241,7 @@ class com_amap_api_services_cloud_CloudItem extends java_lang_Object with androi
   }
   
   
-  Future<void> setCustomfield(Map<String,String> var1) async {
+  Future<void> setCustomfield(Map<String,String>? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::setCustomfield([\'var1\':$var1])');
@@ -275,7 +275,7 @@ class com_amap_api_services_cloud_CloudItem extends java_lang_Object with androi
   }
   
   
-  Future<void> setmCloudImage(List<com_amap_api_services_cloud_CloudImage> var1) async {
+  Future<void> setmCloudImage(List<com_amap_api_services_cloud_CloudImage>? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::setmCloudImage([])');

@@ -71,7 +71,7 @@ class com_amap_api_services_route_DriveStep extends java_lang_Object with androi
   }
   
   
-  Future<void> setInstruction(String var1) async {
+  Future<void> setInstruction(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::setInstruction([\'var1\':$var1])');
@@ -105,7 +105,7 @@ class com_amap_api_services_route_DriveStep extends java_lang_Object with androi
   }
   
   
-  Future<void> setOrientation(String var1) async {
+  Future<void> setOrientation(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::setOrientation([\'var1\':$var1])');
@@ -139,7 +139,7 @@ class com_amap_api_services_route_DriveStep extends java_lang_Object with androi
   }
   
   
-  Future<void> setRoad(String var1) async {
+  Future<void> setRoad(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::setRoad([\'var1\':$var1])');
@@ -173,7 +173,7 @@ class com_amap_api_services_route_DriveStep extends java_lang_Object with androi
   }
   
   
-  Future<void> setDistance(double var1) async {
+  Future<void> setDistance(double? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::setDistance([\'var1\':$var1])');
@@ -207,7 +207,7 @@ class com_amap_api_services_route_DriveStep extends java_lang_Object with androi
   }
   
   
-  Future<void> setTolls(double var1) async {
+  Future<void> setTolls(double? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::setTolls([\'var1\':$var1])');
@@ -241,7 +241,7 @@ class com_amap_api_services_route_DriveStep extends java_lang_Object with androi
   }
   
   
-  Future<void> setTollDistance(double var1) async {
+  Future<void> setTollDistance(double? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::setTollDistance([\'var1\':$var1])');
@@ -275,7 +275,7 @@ class com_amap_api_services_route_DriveStep extends java_lang_Object with androi
   }
   
   
-  Future<void> setTollRoad(String var1) async {
+  Future<void> setTollRoad(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::setTollRoad([\'var1\':$var1])');
@@ -309,7 +309,7 @@ class com_amap_api_services_route_DriveStep extends java_lang_Object with androi
   }
   
   
-  Future<void> setDuration(double var1) async {
+  Future<void> setDuration(double? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::setDuration([\'var1\':$var1])');
@@ -343,7 +343,7 @@ class com_amap_api_services_route_DriveStep extends java_lang_Object with androi
   }
   
   
-  Future<void> setPolyline(List<com_amap_api_services_core_LatLonPoint> var1) async {
+  Future<void> setPolyline(List<com_amap_api_services_core_LatLonPoint>? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::setPolyline([])');
@@ -377,7 +377,7 @@ class com_amap_api_services_route_DriveStep extends java_lang_Object with androi
   }
   
   
-  Future<void> setAction(String var1) async {
+  Future<void> setAction(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::setAction([\'var1\':$var1])');
@@ -411,7 +411,7 @@ class com_amap_api_services_route_DriveStep extends java_lang_Object with androi
   }
   
   
-  Future<void> setAssistantAction(String var1) async {
+  Future<void> setAssistantAction(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::setAssistantAction([\'var1\':$var1])');
@@ -445,7 +445,7 @@ class com_amap_api_services_route_DriveStep extends java_lang_Object with androi
   }
   
   
-  Future<void> setRouteSearchCityList(List<com_amap_api_services_route_RouteSearchCity> var1) async {
+  Future<void> setRouteSearchCityList(List<com_amap_api_services_route_RouteSearchCity>? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::setRouteSearchCityList([])');
@@ -479,7 +479,7 @@ class com_amap_api_services_route_DriveStep extends java_lang_Object with androi
   }
   
   
-  Future<void> setTMCs(List<com_amap_api_services_route_TMC> var1) async {
+  Future<void> setTMCs(List<com_amap_api_services_route_TMC>? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.DriveStep@$refId::setTMCs([])');

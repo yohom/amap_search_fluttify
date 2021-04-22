@@ -28,11 +28,11 @@ mixin com_amap_api_services_interfaces_IBusLineSearch on java_lang_Object {
 
   Future<com_amap_api_services_busline_BusLineResult?> searchBusLine() async {}
   
-  Future<void> setOnBusLineSearchListener(com_amap_api_services_busline_BusLineSearch_OnBusLineSearchListener var1) async {}
+  Future<void> setOnBusLineSearchListener(com_amap_api_services_busline_BusLineSearch_OnBusLineSearchListener? var1) async {}
   
   Future<void> searchBusLineAsyn() async {}
   
-  Future<void> setQuery(com_amap_api_services_busline_BusLineQuery var1) async {}
+  Future<void> setQuery(com_amap_api_services_busline_BusLineQuery? var1) async {}
   
   Future<com_amap_api_services_busline_BusLineQuery?> getQuery() async {}
   

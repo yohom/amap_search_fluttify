@@ -26,9 +26,9 @@ mixin com_amap_api_services_interfaces_IPoiSearch on java_lang_Object {
 
   
 
-  Future<void> setOnPoiSearchListener(com_amap_api_services_poisearch_PoiSearch_OnPoiSearchListener var1) async {}
+  Future<void> setOnPoiSearchListener(com_amap_api_services_poisearch_PoiSearch_OnPoiSearchListener? var1) async {}
   
-  Future<void> setLanguage(String var1) async {}
+  Future<void> setLanguage(String? var1) async {}
   
   Future<String?> getLanguage() async {}
   
@@ -36,13 +36,13 @@ mixin com_amap_api_services_interfaces_IPoiSearch on java_lang_Object {
   
   Future<void> searchPOIAsyn() async {}
   
-  Future<com_amap_api_services_core_PoiItem?> searchPOIId(String var1) async {}
+  Future<com_amap_api_services_core_PoiItem?> searchPOIId(String? var1) async {}
   
-  Future<void> searchPOIIdAsyn(String var1) async {}
+  Future<void> searchPOIIdAsyn(String? var1) async {}
   
-  Future<void> setQuery(com_amap_api_services_poisearch_PoiSearch_Query var1) async {}
+  Future<void> setQuery(com_amap_api_services_poisearch_PoiSearch_Query? var1) async {}
   
-  Future<void> setBound(com_amap_api_services_poisearch_PoiSearch_SearchBound var1) async {}
+  Future<void> setBound(com_amap_api_services_poisearch_PoiSearch_SearchBound? var1) async {}
   
   Future<com_amap_api_services_poisearch_PoiSearch_Query?> getQuery() async {}
   

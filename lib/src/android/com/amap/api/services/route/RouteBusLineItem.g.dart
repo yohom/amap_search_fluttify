@@ -71,7 +71,7 @@ class com_amap_api_services_route_RouteBusLineItem extends com_amap_api_services
   }
   
   
-  Future<void> setDepartureBusStation(com_amap_api_services_busline_BusStationItem var1) async {
+  Future<void> setDepartureBusStation(com_amap_api_services_busline_BusStationItem? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteBusLineItem@$refId::setDepartureBusStation([])');
@@ -105,7 +105,7 @@ class com_amap_api_services_route_RouteBusLineItem extends com_amap_api_services
   }
   
   
-  Future<void> setArrivalBusStation(com_amap_api_services_busline_BusStationItem var1) async {
+  Future<void> setArrivalBusStation(com_amap_api_services_busline_BusStationItem? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteBusLineItem@$refId::setArrivalBusStation([])');
@@ -139,7 +139,7 @@ class com_amap_api_services_route_RouteBusLineItem extends com_amap_api_services
   }
   
   
-  Future<void> setPolyline(List<com_amap_api_services_core_LatLonPoint> var1) async {
+  Future<void> setPolyline(List<com_amap_api_services_core_LatLonPoint>? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteBusLineItem@$refId::setPolyline([])');
@@ -173,7 +173,7 @@ class com_amap_api_services_route_RouteBusLineItem extends com_amap_api_services
   }
   
   
-  Future<void> setPassStationNum(int var1) async {
+  Future<void> setPassStationNum(int? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteBusLineItem@$refId::setPassStationNum([\'var1\':$var1])');
@@ -207,7 +207,7 @@ class com_amap_api_services_route_RouteBusLineItem extends com_amap_api_services
   }
   
   
-  Future<void> setPassStations(List<com_amap_api_services_busline_BusStationItem> var1) async {
+  Future<void> setPassStations(List<com_amap_api_services_busline_BusStationItem>? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteBusLineItem@$refId::setPassStations([])');
@@ -241,7 +241,7 @@ class com_amap_api_services_route_RouteBusLineItem extends com_amap_api_services
   }
   
   
-  Future<void> setDuration(double var1) async {
+  Future<void> setDuration(double? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteBusLineItem@$refId::setDuration([\'var1\':$var1])');

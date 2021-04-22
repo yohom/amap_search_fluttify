@@ -190,7 +190,7 @@ class com_amap_api_services_route_RailwayStationItem extends java_lang_Object wi
   }
   
   
-  Future<void> setID(String var1) async {
+  Future<void> setID(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::setID([\'var1\':$var1])');
@@ -207,7 +207,7 @@ class com_amap_api_services_route_RailwayStationItem extends java_lang_Object wi
   }
   
   
-  Future<void> setName(String var1) async {
+  Future<void> setName(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::setName([\'var1\':$var1])');
@@ -224,7 +224,7 @@ class com_amap_api_services_route_RailwayStationItem extends java_lang_Object wi
   }
   
   
-  Future<void> setLocation(com_amap_api_services_core_LatLonPoint var1) async {
+  Future<void> setLocation(com_amap_api_services_core_LatLonPoint? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::setLocation([])');
@@ -241,7 +241,7 @@ class com_amap_api_services_route_RailwayStationItem extends java_lang_Object wi
   }
   
   
-  Future<void> setAdcode(String var1) async {
+  Future<void> setAdcode(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::setAdcode([\'var1\':$var1])');
@@ -258,7 +258,7 @@ class com_amap_api_services_route_RailwayStationItem extends java_lang_Object wi
   }
   
   
-  Future<void> setTime(String var1) async {
+  Future<void> setTime(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::setTime([\'var1\':$var1])');
@@ -275,7 +275,7 @@ class com_amap_api_services_route_RailwayStationItem extends java_lang_Object wi
   }
   
   
-  Future<void> setisStart(bool var1) async {
+  Future<void> setisStart(bool? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::setisStart([\'var1\':$var1])');
@@ -292,7 +292,7 @@ class com_amap_api_services_route_RailwayStationItem extends java_lang_Object wi
   }
   
   
-  Future<void> setisEnd(bool var1) async {
+  Future<void> setisEnd(bool? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::setisEnd([\'var1\':$var1])');
@@ -309,7 +309,7 @@ class com_amap_api_services_route_RailwayStationItem extends java_lang_Object wi
   }
   
   
-  Future<void> setWait(double var1) async {
+  Future<void> setWait(double? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::setWait([\'var1\':$var1])');

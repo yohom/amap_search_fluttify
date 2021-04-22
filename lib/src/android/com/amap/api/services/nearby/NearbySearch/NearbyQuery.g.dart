@@ -54,7 +54,7 @@ class com_amap_api_services_nearby_NearbySearch_NearbyQuery extends java_lang_Ob
 
   //region methods
   
-  Future<void> setCenterPoint(com_amap_api_services_core_LatLonPoint var1) async {
+  Future<void> setCenterPoint(com_amap_api_services_core_LatLonPoint? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.nearby.NearbySearch.NearbyQuery@$refId::setCenterPoint([])');
@@ -105,7 +105,7 @@ class com_amap_api_services_nearby_NearbySearch_NearbyQuery extends java_lang_Ob
   }
   
   
-  Future<void> setRadius(int var1) async {
+  Future<void> setRadius(int? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.nearby.NearbySearch.NearbyQuery@$refId::setRadius([\'var1\':$var1])');
@@ -122,14 +122,14 @@ class com_amap_api_services_nearby_NearbySearch_NearbyQuery extends java_lang_Ob
   }
   
   
-  Future<void> setType(com_amap_api_services_nearby_NearbySearchFunctionType var1) async {
+  Future<void> setType(com_amap_api_services_nearby_NearbySearchFunctionType? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.nearby.NearbySearch.NearbyQuery@$refId::setType([])');
     }
   
     // invoke native method
-    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.NearbySearch.NearbyQuery::setType', {"var1": var1.toValue(), "__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.NearbySearch.NearbyQuery::setType', {"var1": var1?.toValue(), "__this__": this});
   
   
     // handle native call
@@ -156,7 +156,7 @@ class com_amap_api_services_nearby_NearbySearch_NearbyQuery extends java_lang_Ob
   }
   
   
-  Future<void> setCoordType(int var1) async {
+  Future<void> setCoordType(int? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.nearby.NearbySearch.NearbyQuery@$refId::setCoordType([\'var1\':$var1])');
@@ -190,7 +190,7 @@ class com_amap_api_services_nearby_NearbySearch_NearbyQuery extends java_lang_Ob
   }
   
   
-  Future<void> setTimeRange(int var1) async {
+  Future<void> setTimeRange(int? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.nearby.NearbySearch.NearbyQuery@$refId::setTimeRange([\'var1\':$var1])');

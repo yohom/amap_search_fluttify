@@ -23,7 +23,7 @@ class com_amap_api_services_route_RouteSearch_TruckRouteQuery extends java_lang_
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_route_RouteSearch_TruckRouteQuery> create__com_amap_api_services_route_RouteSearch_FromAndTo__int__List_java_util_List_com_amap_api_services_core_LatLonPoint____int(com_amap_api_services_route_RouteSearch_FromAndTo var1, int var2, List<com_amap_api_services_core_LatLonPoint> var3, int var4) async {
+  static Future<com_amap_api_services_route_RouteSearch_TruckRouteQuery> create__com_amap_api_services_route_RouteSearch_FromAndTo__int__List_java_util_List_com_amap_api_services_core_LatLonPoint____int(com_amap_api_services_route_RouteSearch_FromAndTo? var1, int? var2, List<com_amap_api_services_core_LatLonPoint>? var3, int? var4) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_route_RouteSearch_TruckRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__java_util_List_com_amap_api_services_core_LatLonPoint___int',
       {"var1": var1, "var2": var2, "var3": var3, "var4": var4}
@@ -54,7 +54,7 @@ class com_amap_api_services_route_RouteSearch_TruckRouteQuery extends java_lang_
 
   //region methods
   
-  Future<void> setMode(int var1) async {
+  Future<void> setMode(int? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::setMode([\'var1\':$var1])');
@@ -71,7 +71,7 @@ class com_amap_api_services_route_RouteSearch_TruckRouteQuery extends java_lang_
   }
   
   
-  Future<void> setTruckSize(int var1) async {
+  Future<void> setTruckSize(int? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::setTruckSize([\'var1\':$var1])');
@@ -88,7 +88,7 @@ class com_amap_api_services_route_RouteSearch_TruckRouteQuery extends java_lang_
   }
   
   
-  Future<void> setTruckHeight(double var1) async {
+  Future<void> setTruckHeight(double? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::setTruckHeight([\'var1\':$var1])');
@@ -105,7 +105,7 @@ class com_amap_api_services_route_RouteSearch_TruckRouteQuery extends java_lang_
   }
   
   
-  Future<void> setTruckWidth(double var1) async {
+  Future<void> setTruckWidth(double? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::setTruckWidth([\'var1\':$var1])');
@@ -122,7 +122,7 @@ class com_amap_api_services_route_RouteSearch_TruckRouteQuery extends java_lang_
   }
   
   
-  Future<void> setTruckLoad(double var1) async {
+  Future<void> setTruckLoad(double? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::setTruckLoad([\'var1\':$var1])');
@@ -139,7 +139,7 @@ class com_amap_api_services_route_RouteSearch_TruckRouteQuery extends java_lang_
   }
   
   
-  Future<void> setTruckWeight(double var1) async {
+  Future<void> setTruckWeight(double? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::setTruckWeight([\'var1\':$var1])');
@@ -156,7 +156,7 @@ class com_amap_api_services_route_RouteSearch_TruckRouteQuery extends java_lang_
   }
   
   
-  Future<void> setTruckAxis(double var1) async {
+  Future<void> setTruckAxis(double? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::setTruckAxis([\'var1\':$var1])');
@@ -224,7 +224,7 @@ class com_amap_api_services_route_RouteSearch_TruckRouteQuery extends java_lang_
   }
   
   
-  Future<void> setExtensions(String var1) async {
+  Future<void> setExtensions(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::setExtensions([\'var1\':$var1])');

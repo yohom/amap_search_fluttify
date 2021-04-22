@@ -54,7 +54,7 @@ class com_amap_api_services_nearby_UploadInfo extends java_lang_Object  {
 
   //region methods
   
-  Future<void> setPoint(com_amap_api_services_core_LatLonPoint var1) async {
+  Future<void> setPoint(com_amap_api_services_core_LatLonPoint? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.nearby.UploadInfo@$refId::setPoint([])');
@@ -88,7 +88,7 @@ class com_amap_api_services_nearby_UploadInfo extends java_lang_Object  {
   }
   
   
-  Future<void> setUserID(String var1) async {
+  Future<void> setUserID(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.nearby.UploadInfo@$refId::setUserID([\'var1\':$var1])');
@@ -139,7 +139,7 @@ class com_amap_api_services_nearby_UploadInfo extends java_lang_Object  {
   }
   
   
-  Future<void> setCoordType(int var1) async {
+  Future<void> setCoordType(int? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.nearby.UploadInfo@$refId::setCoordType([\'var1\':$var1])');

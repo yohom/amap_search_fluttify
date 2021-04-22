@@ -96,7 +96,7 @@ class AMapRoutePOISearchRequest extends AMapSearchObject with NSCoding, NSCopyin
   }
   
   Future<void> set_searchType(AMapRoutePOISearchType searchType) async {
-    await kAmapSearchFluttifyChannel.invokeMethod('AMapRoutePOISearchRequest::set_searchType', <String, dynamic>{'__this__': this, "searchType": searchType.toValue()});
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapRoutePOISearchRequest::set_searchType', <String, dynamic>{'__this__': this, "searchType": searchType?.toValue()});
   
   
   }

@@ -23,7 +23,7 @@ class com_amap_api_services_help_Inputtips extends java_lang_Object  {
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_help_Inputtips> create__android_content_Context__com_amap_api_services_help_InputtipsQuery(android_content_Context var1, com_amap_api_services_help_InputtipsQuery var2) async {
+  static Future<com_amap_api_services_help_Inputtips> create__android_content_Context__com_amap_api_services_help_InputtipsQuery(android_content_Context? var1, com_amap_api_services_help_InputtipsQuery? var2) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_help_Inputtips__android_content_Context__com_amap_api_services_help_InputtipsQuery',
       {"var1": var1, "var2": var2}
@@ -71,7 +71,7 @@ class com_amap_api_services_help_Inputtips extends java_lang_Object  {
   }
   
   
-  Future<void> setQuery(com_amap_api_services_help_InputtipsQuery var1) async {
+  Future<void> setQuery(com_amap_api_services_help_InputtipsQuery? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.help.Inputtips@$refId::setQuery([])');
@@ -88,7 +88,7 @@ class com_amap_api_services_help_Inputtips extends java_lang_Object  {
   }
   
   
-  Future<void> setInputtipsListener(com_amap_api_services_help_Inputtips_InputtipsListener var1) async {
+  Future<void> setInputtipsListener(com_amap_api_services_help_Inputtips_InputtipsListener? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.help.Inputtips@$refId::setInputtipsListener([])');
@@ -161,7 +161,7 @@ class com_amap_api_services_help_Inputtips extends java_lang_Object  {
   }
   
   
-  Future<void> requestInputtips__String__String(String var1, String var2) async {
+  Future<void> requestInputtips__String__String(String? var1, String? var2) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.help.Inputtips@$refId::requestInputtips([\'var1\':$var1, \'var2\':$var2])');
@@ -178,7 +178,7 @@ class com_amap_api_services_help_Inputtips extends java_lang_Object  {
   }
   
   
-  Future<void> requestInputtips__String__String__String(String var1, String var2, String var3) async {
+  Future<void> requestInputtips__String__String__String(String? var1, String? var2, String? var3) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.help.Inputtips@$refId::requestInputtips([\'var1\':$var1, \'var2\':$var2, \'var3\':$var3])');

@@ -71,7 +71,7 @@ class com_amap_api_services_route_RideRouteResult extends com_amap_api_services_
   }
   
   
-  Future<void> setPaths(List<com_amap_api_services_route_RidePath> var1) async {
+  Future<void> setPaths(List<com_amap_api_services_route_RidePath>? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RideRouteResult@$refId::setPaths([])');
@@ -105,7 +105,7 @@ class com_amap_api_services_route_RideRouteResult extends com_amap_api_services_
   }
   
   
-  Future<void> setRideQuery(com_amap_api_services_route_RouteSearch_RideRouteQuery var1) async {
+  Future<void> setRideQuery(com_amap_api_services_route_RouteSearch_RideRouteQuery? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RideRouteResult@$refId::setRideQuery([])');

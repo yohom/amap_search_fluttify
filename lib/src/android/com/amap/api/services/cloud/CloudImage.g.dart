@@ -23,7 +23,7 @@ class com_amap_api_services_cloud_CloudImage extends java_lang_Object with andro
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_cloud_CloudImage> create__String__String__String(String var1, String var2, String var3) async {
+  static Future<com_amap_api_services_cloud_CloudImage> create__String__String__String(String? var1, String? var2, String? var3) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_cloud_CloudImage__String__String__String',
       {"var1": var1, "var2": var2, "var3": var3}
@@ -71,7 +71,7 @@ class com_amap_api_services_cloud_CloudImage extends java_lang_Object with andro
   }
   
   
-  Future<void> setId(String var1) async {
+  Future<void> setId(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudImage@$refId::setId([\'var1\':$var1])');
@@ -105,7 +105,7 @@ class com_amap_api_services_cloud_CloudImage extends java_lang_Object with andro
   }
   
   
-  Future<void> setPreurl(String var1) async {
+  Future<void> setPreurl(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudImage@$refId::setPreurl([\'var1\':$var1])');
@@ -139,7 +139,7 @@ class com_amap_api_services_cloud_CloudImage extends java_lang_Object with andro
   }
   
   
-  Future<void> setUrl(String var1) async {
+  Future<void> setUrl(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudImage@$refId::setUrl([\'var1\':$var1])');

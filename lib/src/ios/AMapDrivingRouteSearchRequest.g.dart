@@ -197,7 +197,7 @@ class AMapDrivingRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCo
   }
   
   Future<void> set_exclude(AMapDrivingRouteExcludeType exclude) async {
-    await kAmapSearchFluttifyChannel.invokeMethod('AMapDrivingRouteSearchRequest::set_exclude', <String, dynamic>{'__this__': this, "exclude": exclude.toValue()});
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapDrivingRouteSearchRequest::set_exclude', <String, dynamic>{'__this__': this, "exclude": exclude?.toValue()});
   
   
   }

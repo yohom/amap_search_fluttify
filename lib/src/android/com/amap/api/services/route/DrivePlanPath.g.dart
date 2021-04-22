@@ -71,7 +71,7 @@ class com_amap_api_services_route_DrivePlanPath extends java_lang_Object with an
   }
   
   
-  Future<void> setDistance(double var1) async {
+  Future<void> setDistance(double? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.DrivePlanPath@$refId::setDistance([\'var1\':$var1])');
@@ -105,7 +105,7 @@ class com_amap_api_services_route_DrivePlanPath extends java_lang_Object with an
   }
   
   
-  Future<void> setTrafficLights(int var1) async {
+  Future<void> setTrafficLights(int? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.DrivePlanPath@$refId::setTrafficLights([\'var1\':$var1])');
@@ -139,7 +139,7 @@ class com_amap_api_services_route_DrivePlanPath extends java_lang_Object with an
   }
   
   
-  Future<void> setSteps(List<com_amap_api_services_route_DrivePlanStep> var1) async {
+  Future<void> setSteps(List<com_amap_api_services_route_DrivePlanStep>? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.DrivePlanPath@$refId::setSteps([])');

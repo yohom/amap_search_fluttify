@@ -139,7 +139,7 @@ class com_amap_api_services_geocoder_AoiItem extends java_lang_Object with andro
   }
   
   
-  Future<void> setId(String var1) async {
+  Future<void> setId(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.AoiItem@$refId::setId([\'var1\':$var1])');
@@ -156,7 +156,7 @@ class com_amap_api_services_geocoder_AoiItem extends java_lang_Object with andro
   }
   
   
-  Future<void> setName(String var1) async {
+  Future<void> setName(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.AoiItem@$refId::setName([\'var1\':$var1])');
@@ -173,7 +173,7 @@ class com_amap_api_services_geocoder_AoiItem extends java_lang_Object with andro
   }
   
   
-  Future<void> setAdcode(String var1) async {
+  Future<void> setAdcode(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.AoiItem@$refId::setAdcode([\'var1\':$var1])');
@@ -190,7 +190,7 @@ class com_amap_api_services_geocoder_AoiItem extends java_lang_Object with andro
   }
   
   
-  Future<void> setLocation(com_amap_api_services_core_LatLonPoint var1) async {
+  Future<void> setLocation(com_amap_api_services_core_LatLonPoint? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.AoiItem@$refId::setLocation([])');
@@ -207,7 +207,7 @@ class com_amap_api_services_geocoder_AoiItem extends java_lang_Object with andro
   }
   
   
-  Future<void> setArea(double var1) async {
+  Future<void> setArea(double? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.AoiItem@$refId::setArea([\'var1\':$var1])');

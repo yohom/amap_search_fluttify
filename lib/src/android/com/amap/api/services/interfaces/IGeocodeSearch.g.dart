@@ -26,15 +26,15 @@ mixin com_amap_api_services_interfaces_IGeocodeSearch on java_lang_Object {
 
   
 
-  Future<com_amap_api_services_geocoder_RegeocodeAddress?> getFromLocation(com_amap_api_services_geocoder_RegeocodeQuery var1) async {}
+  Future<com_amap_api_services_geocoder_RegeocodeAddress?> getFromLocation(com_amap_api_services_geocoder_RegeocodeQuery? var1) async {}
   
-  Future<List<com_amap_api_services_geocoder_GeocodeAddress>?> getFromLocationName(com_amap_api_services_geocoder_GeocodeQuery var1) async {}
+  Future<List<com_amap_api_services_geocoder_GeocodeAddress>?> getFromLocationName(com_amap_api_services_geocoder_GeocodeQuery? var1) async {}
   
-  Future<void> setOnGeocodeSearchListener(com_amap_api_services_geocoder_GeocodeSearch_OnGeocodeSearchListener var1) async {}
+  Future<void> setOnGeocodeSearchListener(com_amap_api_services_geocoder_GeocodeSearch_OnGeocodeSearchListener? var1) async {}
   
-  Future<void> getFromLocationAsyn(com_amap_api_services_geocoder_RegeocodeQuery var1) async {}
+  Future<void> getFromLocationAsyn(com_amap_api_services_geocoder_RegeocodeQuery? var1) async {}
   
-  Future<void> getFromLocationNameAsyn(com_amap_api_services_geocoder_GeocodeQuery var1) async {}
+  Future<void> getFromLocationNameAsyn(com_amap_api_services_geocoder_GeocodeQuery? var1) async {}
   
 }
 

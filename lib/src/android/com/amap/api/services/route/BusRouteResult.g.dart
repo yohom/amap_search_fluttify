@@ -71,7 +71,7 @@ class com_amap_api_services_route_BusRouteResult extends com_amap_api_services_r
   }
   
   
-  Future<void> setTaxiCost(double var1) async {
+  Future<void> setTaxiCost(double? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.BusRouteResult@$refId::setTaxiCost([\'var1\':$var1])');
@@ -105,7 +105,7 @@ class com_amap_api_services_route_BusRouteResult extends com_amap_api_services_r
   }
   
   
-  Future<void> setPaths(List<com_amap_api_services_route_BusPath> var1) async {
+  Future<void> setPaths(List<com_amap_api_services_route_BusPath>? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.BusRouteResult@$refId::setPaths([])');
@@ -139,7 +139,7 @@ class com_amap_api_services_route_BusRouteResult extends com_amap_api_services_r
   }
   
   
-  Future<void> setBusQuery(com_amap_api_services_route_RouteSearch_BusRouteQuery var1) async {
+  Future<void> setBusQuery(com_amap_api_services_route_RouteSearch_BusRouteQuery? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.BusRouteResult@$refId::setBusQuery([])');

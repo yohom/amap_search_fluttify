@@ -23,7 +23,7 @@ class com_amap_api_services_core_LatLonSharePoint extends com_amap_api_services_
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_core_LatLonSharePoint> create__double__double__String(double var1, double var3, String var5) async {
+  static Future<com_amap_api_services_core_LatLonSharePoint> create__double__double__String(double? var1, double? var3, String? var5) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_core_LatLonSharePoint__double__double__String',
       {"var1": var1, "var3": var3, "var5": var5}
@@ -71,7 +71,7 @@ class com_amap_api_services_core_LatLonSharePoint extends com_amap_api_services_
   }
   
   
-  Future<void> setSharePointName(String var1) async {
+  Future<void> setSharePointName(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.LatLonSharePoint@$refId::setSharePointName([\'var1\':$var1])');

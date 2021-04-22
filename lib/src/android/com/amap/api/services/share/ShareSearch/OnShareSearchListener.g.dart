@@ -26,17 +26,17 @@ mixin com_amap_api_services_share_ShareSearch_OnShareSearchListener on java_lang
 
   
 
-  Future<void> onPoiShareUrlSearched(String var1, int var2) async {}
+  Future<void> onPoiShareUrlSearched(String? var1, int? var2) async {}
   
-  Future<void> onLocationShareUrlSearched(String var1, int var2) async {}
+  Future<void> onLocationShareUrlSearched(String? var1, int? var2) async {}
   
-  Future<void> onNaviShareUrlSearched(String var1, int var2) async {}
+  Future<void> onNaviShareUrlSearched(String? var1, int? var2) async {}
   
-  Future<void> onBusRouteShareUrlSearched(String var1, int var2) async {}
+  Future<void> onBusRouteShareUrlSearched(String? var1, int? var2) async {}
   
-  Future<void> onWalkRouteShareUrlSearched(String var1, int var2) async {}
+  Future<void> onWalkRouteShareUrlSearched(String? var1, int? var2) async {}
   
-  Future<void> onDrivingRouteShareUrlSearched(String var1, int var2) async {}
+  Future<void> onDrivingRouteShareUrlSearched(String? var1, int? var2) async {}
   
 }
 

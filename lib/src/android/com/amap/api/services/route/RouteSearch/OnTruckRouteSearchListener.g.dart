@@ -26,7 +26,7 @@ mixin com_amap_api_services_route_RouteSearch_OnTruckRouteSearchListener on java
 
   
 
-  Future<void> onTruckRouteSearched(com_amap_api_services_route_TruckRouteRestult var1, int var2) async {}
+  Future<void> onTruckRouteSearched(com_amap_api_services_route_TruckRouteRestult? var1, int? var2) async {}
   
 }
 

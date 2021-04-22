@@ -88,7 +88,7 @@ class com_amap_api_services_nearby_NearbySearchResult extends java_lang_Object  
   }
   
   
-  Future<void> setNearbyInfoList(List<com_amap_api_services_nearby_NearbyInfo> var1) async {
+  Future<void> setNearbyInfoList(List<com_amap_api_services_nearby_NearbyInfo>? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.nearby.NearbySearchResult@$refId::setNearbyInfoList([])');

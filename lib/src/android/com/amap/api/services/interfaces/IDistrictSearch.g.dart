@@ -28,13 +28,13 @@ mixin com_amap_api_services_interfaces_IDistrictSearch on java_lang_Object {
 
   Future<com_amap_api_services_district_DistrictSearchQuery?> getQuery() async {}
   
-  Future<void> setQuery(com_amap_api_services_district_DistrictSearchQuery var1) async {}
+  Future<void> setQuery(com_amap_api_services_district_DistrictSearchQuery? var1) async {}
   
   Future<void> searchDistrictAsyn() async {}
   
   Future<void> searchDistrictAnsy() async {}
   
-  Future<void> setOnDistrictSearchListener(com_amap_api_services_district_DistrictSearch_OnDistrictSearchListener var1) async {}
+  Future<void> setOnDistrictSearchListener(com_amap_api_services_district_DistrictSearch_OnDistrictSearchListener? var1) async {}
   
   Future<com_amap_api_services_district_DistrictResult?> searchDistrict() async {}
   

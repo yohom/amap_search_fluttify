@@ -71,7 +71,7 @@ class com_amap_api_services_help_Tip extends java_lang_Object with android_os_Pa
   }
   
   
-  Future<void> setID(String var1) async {
+  Future<void> setID(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.help.Tip@$refId::setID([\'var1\':$var1])');
@@ -105,7 +105,7 @@ class com_amap_api_services_help_Tip extends java_lang_Object with android_os_Pa
   }
   
   
-  Future<void> setPostion(com_amap_api_services_core_LatLonPoint var1) async {
+  Future<void> setPostion(com_amap_api_services_core_LatLonPoint? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.help.Tip@$refId::setPostion([])');
@@ -139,7 +139,7 @@ class com_amap_api_services_help_Tip extends java_lang_Object with android_os_Pa
   }
   
   
-  Future<void> setName(String var1) async {
+  Future<void> setName(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.help.Tip@$refId::setName([\'var1\':$var1])');
@@ -173,7 +173,7 @@ class com_amap_api_services_help_Tip extends java_lang_Object with android_os_Pa
   }
   
   
-  Future<void> setDistrict(String var1) async {
+  Future<void> setDistrict(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.help.Tip@$refId::setDistrict([\'var1\':$var1])');
@@ -207,7 +207,7 @@ class com_amap_api_services_help_Tip extends java_lang_Object with android_os_Pa
   }
   
   
-  Future<void> setAdcode(String var1) async {
+  Future<void> setAdcode(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.help.Tip@$refId::setAdcode([\'var1\':$var1])');
@@ -241,7 +241,7 @@ class com_amap_api_services_help_Tip extends java_lang_Object with android_os_Pa
   }
   
   
-  Future<void> setAddress(String var1) async {
+  Future<void> setAddress(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.help.Tip@$refId::setAddress([\'var1\':$var1])');
@@ -258,7 +258,7 @@ class com_amap_api_services_help_Tip extends java_lang_Object with android_os_Pa
   }
   
   
-  Future<void> setTypeCode(String var1) async {
+  Future<void> setTypeCode(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.help.Tip@$refId::setTypeCode([\'var1\':$var1])');

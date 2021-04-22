@@ -23,7 +23,7 @@ class com_amap_api_services_busline_BusLineQuery extends java_lang_Object  {
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_busline_BusLineQuery> create__String__com_amap_api_services_busline_BusLineQuery_SearchType__String(String var1, com_amap_api_services_busline_BusLineQuery_SearchType var2, String var3) async {
+  static Future<com_amap_api_services_busline_BusLineQuery> create__String__com_amap_api_services_busline_BusLineQuery_SearchType__String(String? var1, com_amap_api_services_busline_BusLineQuery_SearchType? var2, String? var3) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_busline_BusLineQuery__String__com_amap_api_services_busline_BusLineQuery_SearchType__String',
       {"var1": var1, "var2": var2, "var3": var3}
@@ -88,7 +88,7 @@ class com_amap_api_services_busline_BusLineQuery extends java_lang_Object  {
   }
   
   
-  Future<void> setQueryString(String var1) async {
+  Future<void> setQueryString(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.busline.BusLineQuery@$refId::setQueryString([\'var1\':$var1])');
@@ -122,7 +122,7 @@ class com_amap_api_services_busline_BusLineQuery extends java_lang_Object  {
   }
   
   
-  Future<void> setCity(String var1) async {
+  Future<void> setCity(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.busline.BusLineQuery@$refId::setCity([\'var1\':$var1])');
@@ -156,7 +156,7 @@ class com_amap_api_services_busline_BusLineQuery extends java_lang_Object  {
   }
   
   
-  Future<void> setPageSize(int var1) async {
+  Future<void> setPageSize(int? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.busline.BusLineQuery@$refId::setPageSize([\'var1\':$var1])');
@@ -190,7 +190,7 @@ class com_amap_api_services_busline_BusLineQuery extends java_lang_Object  {
   }
   
   
-  Future<void> setPageNumber(int var1) async {
+  Future<void> setPageNumber(int? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.busline.BusLineQuery@$refId::setPageNumber([\'var1\':$var1])');
@@ -207,14 +207,14 @@ class com_amap_api_services_busline_BusLineQuery extends java_lang_Object  {
   }
   
   
-  Future<void> setCategory(com_amap_api_services_busline_BusLineQuery_SearchType var1) async {
+  Future<void> setCategory(com_amap_api_services_busline_BusLineQuery_SearchType? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.busline.BusLineQuery@$refId::setCategory([])');
     }
   
     // invoke native method
-    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.busline.BusLineQuery::setCategory', {"var1": var1.toValue(), "__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.busline.BusLineQuery::setCategory', {"var1": var1?.toValue(), "__this__": this});
   
   
     // handle native call
@@ -241,7 +241,7 @@ class com_amap_api_services_busline_BusLineQuery extends java_lang_Object  {
   }
   
   
-  Future<void> setExtensions(String var1) async {
+  Future<void> setExtensions(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.busline.BusLineQuery@$refId::setExtensions([\'var1\':$var1])');
@@ -275,7 +275,7 @@ class com_amap_api_services_busline_BusLineQuery extends java_lang_Object  {
   }
   
   
-  Future<bool?> weakEquals(com_amap_api_services_busline_BusLineQuery var1) async {
+  Future<bool?> weakEquals(com_amap_api_services_busline_BusLineQuery? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.busline.BusLineQuery@$refId::weakEquals([])');

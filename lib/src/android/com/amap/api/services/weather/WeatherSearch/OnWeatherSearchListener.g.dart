@@ -26,9 +26,9 @@ mixin com_amap_api_services_weather_WeatherSearch_OnWeatherSearchListener on jav
 
   
 
-  Future<void> onWeatherLiveSearched(com_amap_api_services_weather_LocalWeatherLiveResult var1, int var2) async {}
+  Future<void> onWeatherLiveSearched(com_amap_api_services_weather_LocalWeatherLiveResult? var1, int? var2) async {}
   
-  Future<void> onWeatherForecastSearched(com_amap_api_services_weather_LocalWeatherForecastResult var1, int var2) async {}
+  Future<void> onWeatherForecastSearched(com_amap_api_services_weather_LocalWeatherForecastResult? var1, int? var2) async {}
   
 }
 

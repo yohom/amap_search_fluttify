@@ -71,7 +71,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
   }
   
   
-  Future<void> setDate(String var1) async {
+  Future<void> setDate(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::setDate([\'var1\':$var1])');
@@ -105,7 +105,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
   }
   
   
-  Future<void> setWeek(String var1) async {
+  Future<void> setWeek(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::setWeek([\'var1\':$var1])');
@@ -139,7 +139,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
   }
   
   
-  Future<void> setDayWeather(String var1) async {
+  Future<void> setDayWeather(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::setDayWeather([\'var1\':$var1])');
@@ -173,7 +173,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
   }
   
   
-  Future<void> setNightWeather(String var1) async {
+  Future<void> setNightWeather(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::setNightWeather([\'var1\':$var1])');
@@ -207,7 +207,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
   }
   
   
-  Future<void> setDayTemp(String var1) async {
+  Future<void> setDayTemp(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::setDayTemp([\'var1\':$var1])');
@@ -241,7 +241,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
   }
   
   
-  Future<void> setNightTemp(String var1) async {
+  Future<void> setNightTemp(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::setNightTemp([\'var1\':$var1])');
@@ -275,7 +275,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
   }
   
   
-  Future<void> setDayWindDirection(String var1) async {
+  Future<void> setDayWindDirection(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::setDayWindDirection([\'var1\':$var1])');
@@ -309,7 +309,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
   }
   
   
-  Future<void> setNightWindDirection(String var1) async {
+  Future<void> setNightWindDirection(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::setNightWindDirection([\'var1\':$var1])');
@@ -343,7 +343,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
   }
   
   
-  Future<void> setDayWindPower(String var1) async {
+  Future<void> setDayWindPower(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::setDayWindPower([\'var1\':$var1])');
@@ -377,7 +377,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
   }
   
   
-  Future<void> setNightWindPower(String var1) async {
+  Future<void> setNightWindPower(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::setNightWindPower([\'var1\':$var1])');

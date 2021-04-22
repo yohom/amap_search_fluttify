@@ -23,7 +23,7 @@ class com_amap_api_services_route_RouteSearch_DrivePlanQuery extends java_lang_O
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_route_RouteSearch_DrivePlanQuery> create__com_amap_api_services_route_RouteSearch_FromAndTo__int__int__int(com_amap_api_services_route_RouteSearch_FromAndTo var1, int var2, int var3, int var4) async {
+  static Future<com_amap_api_services_route_RouteSearch_DrivePlanQuery> create__com_amap_api_services_route_RouteSearch_FromAndTo__int__int__int(com_amap_api_services_route_RouteSearch_FromAndTo? var1, int? var2, int? var3, int? var4) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_route_RouteSearch_DrivePlanQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__int__int',
       {"var1": var1, "var2": var2, "var3": var3, "var4": var4}
@@ -209,7 +209,7 @@ class com_amap_api_services_route_RouteSearch_DrivePlanQuery extends java_lang_O
   }
   
   
-  Future<void> setDestParentPoiID(String var1) async {
+  Future<void> setDestParentPoiID(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::setDestParentPoiID([\'var1\':$var1])');
@@ -226,7 +226,7 @@ class com_amap_api_services_route_RouteSearch_DrivePlanQuery extends java_lang_O
   }
   
   
-  Future<void> setMode(int var1) async {
+  Future<void> setMode(int? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::setMode([\'var1\':$var1])');
@@ -243,7 +243,7 @@ class com_amap_api_services_route_RouteSearch_DrivePlanQuery extends java_lang_O
   }
   
   
-  Future<void> setCarType(int var1) async {
+  Future<void> setCarType(int? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::setCarType([\'var1\':$var1])');

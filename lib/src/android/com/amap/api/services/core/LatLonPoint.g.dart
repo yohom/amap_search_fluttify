@@ -23,7 +23,7 @@ class com_amap_api_services_core_LatLonPoint extends java_lang_Object with andro
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_core_LatLonPoint> create__double__double(double var1, double var3) async {
+  static Future<com_amap_api_services_core_LatLonPoint> create__double__double(double? var1, double? var3) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_core_LatLonPoint__double__double',
       {"var1": var1, "var3": var3}
@@ -71,7 +71,7 @@ class com_amap_api_services_core_LatLonPoint extends java_lang_Object with andro
   }
   
   
-  Future<void> setLongitude(double var1) async {
+  Future<void> setLongitude(double? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.LatLonPoint@$refId::setLongitude([\'var1\':$var1])');
@@ -105,7 +105,7 @@ class com_amap_api_services_core_LatLonPoint extends java_lang_Object with andro
   }
   
   
-  Future<void> setLatitude(double var1) async {
+  Future<void> setLatitude(double? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.LatLonPoint@$refId::setLatitude([\'var1\':$var1])');

@@ -156,7 +156,7 @@ class com_amap_api_services_route_TaxiItem extends java_lang_Object with android
   }
   
   
-  Future<void> setOrigin(com_amap_api_services_core_LatLonPoint var1) async {
+  Future<void> setOrigin(com_amap_api_services_core_LatLonPoint? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.TaxiItem@$refId::setOrigin([])');
@@ -173,7 +173,7 @@ class com_amap_api_services_route_TaxiItem extends java_lang_Object with android
   }
   
   
-  Future<void> setDestination(com_amap_api_services_core_LatLonPoint var1) async {
+  Future<void> setDestination(com_amap_api_services_core_LatLonPoint? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.TaxiItem@$refId::setDestination([])');
@@ -190,7 +190,7 @@ class com_amap_api_services_route_TaxiItem extends java_lang_Object with android
   }
   
   
-  Future<void> setDistance(double var1) async {
+  Future<void> setDistance(double? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.TaxiItem@$refId::setDistance([\'var1\':$var1])');
@@ -207,7 +207,7 @@ class com_amap_api_services_route_TaxiItem extends java_lang_Object with android
   }
   
   
-  Future<void> setDuration(double var1) async {
+  Future<void> setDuration(double? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.TaxiItem@$refId::setDuration([\'var1\':$var1])');
@@ -224,7 +224,7 @@ class com_amap_api_services_route_TaxiItem extends java_lang_Object with android
   }
   
   
-  Future<void> setSname(String var1) async {
+  Future<void> setSname(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.TaxiItem@$refId::setSname([\'var1\':$var1])');
@@ -241,7 +241,7 @@ class com_amap_api_services_route_TaxiItem extends java_lang_Object with android
   }
   
   
-  Future<void> setTname(String var1) async {
+  Future<void> setTname(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.TaxiItem@$refId::setTname([\'var1\':$var1])');

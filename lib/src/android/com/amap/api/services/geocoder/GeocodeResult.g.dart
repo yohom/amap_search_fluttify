@@ -23,7 +23,7 @@ class com_amap_api_services_geocoder_GeocodeResult extends java_lang_Object  {
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_geocoder_GeocodeResult> create__com_amap_api_services_geocoder_GeocodeQuery__List_java_util_List_com_amap_api_services_geocoder_GeocodeAddress__(com_amap_api_services_geocoder_GeocodeQuery var1, List<com_amap_api_services_geocoder_GeocodeAddress> var2) async {
+  static Future<com_amap_api_services_geocoder_GeocodeResult> create__com_amap_api_services_geocoder_GeocodeQuery__List_java_util_List_com_amap_api_services_geocoder_GeocodeAddress__(com_amap_api_services_geocoder_GeocodeQuery? var1, List<com_amap_api_services_geocoder_GeocodeAddress>? var2) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_geocoder_GeocodeResult__com_amap_api_services_geocoder_GeocodeQuery__java_util_List_com_amap_api_services_geocoder_GeocodeAddress_',
       {"var1": var1, "var2": var2}
@@ -71,7 +71,7 @@ class com_amap_api_services_geocoder_GeocodeResult extends java_lang_Object  {
   }
   
   
-  Future<void> setGeocodeQuery(com_amap_api_services_geocoder_GeocodeQuery var1) async {
+  Future<void> setGeocodeQuery(com_amap_api_services_geocoder_GeocodeQuery? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeResult@$refId::setGeocodeQuery([])');
@@ -105,7 +105,7 @@ class com_amap_api_services_geocoder_GeocodeResult extends java_lang_Object  {
   }
   
   
-  Future<void> setGeocodeAddressList(List<com_amap_api_services_geocoder_GeocodeAddress> var1) async {
+  Future<void> setGeocodeAddressList(List<com_amap_api_services_geocoder_GeocodeAddress>? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeResult@$refId::setGeocodeAddressList([])');

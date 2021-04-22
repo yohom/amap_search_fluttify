@@ -71,7 +71,7 @@ class com_amap_api_services_route_BusPath extends com_amap_api_services_route_Pa
   }
   
   
-  Future<void> setCost(double var1) async {
+  Future<void> setCost(double? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.BusPath@$refId::setCost([\'var1\':$var1])');
@@ -105,7 +105,7 @@ class com_amap_api_services_route_BusPath extends com_amap_api_services_route_Pa
   }
   
   
-  Future<void> setNightBus(bool var1) async {
+  Future<void> setNightBus(bool? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.BusPath@$refId::setNightBus([\'var1\':$var1])');
@@ -139,7 +139,7 @@ class com_amap_api_services_route_BusPath extends com_amap_api_services_route_Pa
   }
   
   
-  Future<void> setWalkDistance(double var1) async {
+  Future<void> setWalkDistance(double? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.BusPath@$refId::setWalkDistance([\'var1\':$var1])');
@@ -173,7 +173,7 @@ class com_amap_api_services_route_BusPath extends com_amap_api_services_route_Pa
   }
   
   
-  Future<void> setBusDistance(double var1) async {
+  Future<void> setBusDistance(double? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.BusPath@$refId::setBusDistance([\'var1\':$var1])');
@@ -207,7 +207,7 @@ class com_amap_api_services_route_BusPath extends com_amap_api_services_route_Pa
   }
   
   
-  Future<void> setSteps(List<com_amap_api_services_route_BusStep> var1) async {
+  Future<void> setSteps(List<com_amap_api_services_route_BusStep>? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.BusPath@$refId::setSteps([])');

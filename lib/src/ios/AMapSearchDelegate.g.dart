@@ -26,37 +26,37 @@ mixin AMapSearchDelegate on NSObject {
 
   
 
-  Future<void> AMapSearchRequest_didFailWithError(dynamic request, NSError error) async {}
+  Future<void> AMapSearchRequest_didFailWithError(dynamic? request, NSError? error) async {}
   
-  Future<void> onPOISearchDone_response(AMapPOISearchBaseRequest request, AMapPOISearchResponse response) async {}
+  Future<void> onPOISearchDone_response(AMapPOISearchBaseRequest? request, AMapPOISearchResponse? response) async {}
   
-  Future<void> onRoutePOISearchDone_response(AMapRoutePOISearchRequest request, AMapRoutePOISearchResponse response) async {}
+  Future<void> onRoutePOISearchDone_response(AMapRoutePOISearchRequest? request, AMapRoutePOISearchResponse? response) async {}
   
-  Future<void> onGeocodeSearchDone_response(AMapGeocodeSearchRequest request, AMapGeocodeSearchResponse response) async {}
+  Future<void> onGeocodeSearchDone_response(AMapGeocodeSearchRequest? request, AMapGeocodeSearchResponse? response) async {}
   
-  Future<void> onReGeocodeSearchDone_response(AMapReGeocodeSearchRequest request, AMapReGeocodeSearchResponse response) async {}
+  Future<void> onReGeocodeSearchDone_response(AMapReGeocodeSearchRequest? request, AMapReGeocodeSearchResponse? response) async {}
   
-  Future<void> onInputTipsSearchDone_response(AMapInputTipsSearchRequest request, AMapInputTipsSearchResponse response) async {}
+  Future<void> onInputTipsSearchDone_response(AMapInputTipsSearchRequest? request, AMapInputTipsSearchResponse? response) async {}
   
-  Future<void> onBusStopSearchDone_response(AMapBusStopSearchRequest request, AMapBusStopSearchResponse response) async {}
+  Future<void> onBusStopSearchDone_response(AMapBusStopSearchRequest? request, AMapBusStopSearchResponse? response) async {}
   
-  Future<void> onBusLineSearchDone_response(AMapBusLineBaseSearchRequest request, AMapBusLineSearchResponse response) async {}
+  Future<void> onBusLineSearchDone_response(AMapBusLineBaseSearchRequest? request, AMapBusLineSearchResponse? response) async {}
   
-  Future<void> onDistrictSearchDone_response(AMapDistrictSearchRequest request, AMapDistrictSearchResponse response) async {}
+  Future<void> onDistrictSearchDone_response(AMapDistrictSearchRequest? request, AMapDistrictSearchResponse? response) async {}
   
-  Future<void> onRouteSearchDone_response(AMapRouteSearchBaseRequest request, AMapRouteSearchResponse response) async {}
+  Future<void> onRouteSearchDone_response(AMapRouteSearchBaseRequest? request, AMapRouteSearchResponse? response) async {}
   
-  Future<void> onFutureRouteSearchDone_response(AMapRouteSearchBaseRequest request, AMapFutureRouteSearchResponse response) async {}
+  Future<void> onFutureRouteSearchDone_response(AMapRouteSearchBaseRequest? request, AMapFutureRouteSearchResponse? response) async {}
   
-  Future<void> onDistanceSearchDone_response(AMapDistanceSearchRequest request, AMapDistanceSearchResponse response) async {}
+  Future<void> onDistanceSearchDone_response(AMapDistanceSearchRequest? request, AMapDistanceSearchResponse? response) async {}
   
-  Future<void> onWeatherSearchDone_response(AMapWeatherSearchRequest request, AMapWeatherSearchResponse response) async {}
+  Future<void> onWeatherSearchDone_response(AMapWeatherSearchRequest? request, AMapWeatherSearchResponse? response) async {}
   
-  Future<void> onNearbySearchDone_response(AMapNearbySearchRequest request, AMapNearbySearchResponse response) async {}
+  Future<void> onNearbySearchDone_response(AMapNearbySearchRequest? request, AMapNearbySearchResponse? response) async {}
   
-  Future<void> onCloudSearchDone_response(AMapCloudSearchBaseRequest request, AMapCloudPOISearchResponse response) async {}
+  Future<void> onCloudSearchDone_response(AMapCloudSearchBaseRequest? request, AMapCloudPOISearchResponse? response) async {}
   
-  Future<void> onShareSearchDone_response(AMapShareSearchBaseRequest request, AMapShareSearchResponse response) async {}
+  Future<void> onShareSearchDone_response(AMapShareSearchBaseRequest? request, AMapShareSearchResponse? response) async {}
   
 }
 

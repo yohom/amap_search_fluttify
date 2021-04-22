@@ -71,7 +71,7 @@ class com_amap_api_services_route_DriveRoutePlanResult extends com_amap_api_serv
   }
   
   
-  Future<void> setPaths(List<com_amap_api_services_route_DrivePlanPath> var1) async {
+  Future<void> setPaths(List<com_amap_api_services_route_DrivePlanPath>? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.DriveRoutePlanResult@$refId::setPaths([])');
@@ -105,7 +105,7 @@ class com_amap_api_services_route_DriveRoutePlanResult extends com_amap_api_serv
   }
   
   
-  Future<void> setTimeInfos(List<com_amap_api_services_route_TimeInfo> var1) async {
+  Future<void> setTimeInfos(List<com_amap_api_services_route_TimeInfo>? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.DriveRoutePlanResult@$refId::setTimeInfos([])');
@@ -122,7 +122,7 @@ class com_amap_api_services_route_DriveRoutePlanResult extends com_amap_api_serv
   }
   
   
-  Future<void> setDrivePlanQuery(com_amap_api_services_route_RouteSearch_DrivePlanQuery var1) async {
+  Future<void> setDrivePlanQuery(com_amap_api_services_route_RouteSearch_DrivePlanQuery? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.DriveRoutePlanResult@$refId::setDrivePlanQuery([])');

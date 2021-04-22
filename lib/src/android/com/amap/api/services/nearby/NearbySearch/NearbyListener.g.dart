@@ -26,11 +26,11 @@ mixin com_amap_api_services_nearby_NearbySearch_NearbyListener on java_lang_Obje
 
   
 
-  Future<void> onUserInfoCleared(int var1) async {}
+  Future<void> onUserInfoCleared(int? var1) async {}
   
-  Future<void> onNearbyInfoSearched(com_amap_api_services_nearby_NearbySearchResult var1, int var2) async {}
+  Future<void> onNearbyInfoSearched(com_amap_api_services_nearby_NearbySearchResult? var1, int? var2) async {}
   
-  Future<void> onNearbyInfoUploaded(int var1) async {}
+  Future<void> onNearbyInfoUploaded(int? var1) async {}
   
 }
 

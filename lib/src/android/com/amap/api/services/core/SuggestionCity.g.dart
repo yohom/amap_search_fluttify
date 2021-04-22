@@ -23,7 +23,7 @@ class com_amap_api_services_core_SuggestionCity extends java_lang_Object  {
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_core_SuggestionCity> create__String__String__String__int(String var1, String var2, String var3, int var4) async {
+  static Future<com_amap_api_services_core_SuggestionCity> create__String__String__String__int(String? var1, String? var2, String? var3, int? var4) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_core_SuggestionCity__String__String__String__int',
       {"var1": var1, "var2": var2, "var3": var3, "var4": var4}
@@ -71,7 +71,7 @@ class com_amap_api_services_core_SuggestionCity extends java_lang_Object  {
   }
   
   
-  Future<void> setCityName(String var1) async {
+  Future<void> setCityName(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.SuggestionCity@$refId::setCityName([\'var1\':$var1])');
@@ -105,7 +105,7 @@ class com_amap_api_services_core_SuggestionCity extends java_lang_Object  {
   }
   
   
-  Future<void> setCityCode(String var1) async {
+  Future<void> setCityCode(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.SuggestionCity@$refId::setCityCode([\'var1\':$var1])');
@@ -139,7 +139,7 @@ class com_amap_api_services_core_SuggestionCity extends java_lang_Object  {
   }
   
   
-  Future<void> setAdCode(String var1) async {
+  Future<void> setAdCode(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.SuggestionCity@$refId::setAdCode([\'var1\':$var1])');
@@ -173,7 +173,7 @@ class com_amap_api_services_core_SuggestionCity extends java_lang_Object  {
   }
   
   
-  Future<void> setSuggestionNum(int var1) async {
+  Future<void> setSuggestionNum(int? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.SuggestionCity@$refId::setSuggestionNum([\'var1\':$var1])');

@@ -23,7 +23,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearchQuery extends java_lang
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_routepoisearch_RoutePOISearchQuery> create__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint__int__com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType__int(com_amap_api_services_core_LatLonPoint var1, com_amap_api_services_core_LatLonPoint var2, int var3, com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType var4, int var5) async {
+  static Future<com_amap_api_services_routepoisearch_RoutePOISearchQuery> create__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint__int__com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType__int(com_amap_api_services_core_LatLonPoint? var1, com_amap_api_services_core_LatLonPoint? var2, int? var3, com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType? var4, int? var5) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_routepoisearch_RoutePOISearchQuery__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint__int__com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType__int',
       {"var1": var1, "var2": var2, "var3": var3, "var4": var4, "var5": var5}
@@ -31,7 +31,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearchQuery extends java_lang
     return AmapSearchFluttifyAndroidAs<com_amap_api_services_routepoisearch_RoutePOISearchQuery>(__result__)!;
   }
   
-  static Future<com_amap_api_services_routepoisearch_RoutePOISearchQuery> create__List_java_util_List_com_amap_api_services_core_LatLonPoint____com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType__int(List<com_amap_api_services_core_LatLonPoint> var1, com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType var2, int var3) async {
+  static Future<com_amap_api_services_routepoisearch_RoutePOISearchQuery> create__List_java_util_List_com_amap_api_services_core_LatLonPoint____com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType__int(List<com_amap_api_services_core_LatLonPoint>? var1, com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType? var2, int? var3) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_routepoisearch_RoutePOISearchQuery__java_util_List_com_amap_api_services_core_LatLonPoint___com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType__int',
       {"var1": var1, "var2": var2, "var3": var3}

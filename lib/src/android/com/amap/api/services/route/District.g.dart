@@ -71,7 +71,7 @@ class com_amap_api_services_route_District extends java_lang_Object with android
   }
   
   
-  Future<void> setDistrictName(String var1) async {
+  Future<void> setDistrictName(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.District@$refId::setDistrictName([\'var1\':$var1])');
@@ -105,7 +105,7 @@ class com_amap_api_services_route_District extends java_lang_Object with android
   }
   
   
-  Future<void> setDistrictAdcode(String var1) async {
+  Future<void> setDistrictAdcode(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.District@$refId::setDistrictAdcode([\'var1\':$var1])');

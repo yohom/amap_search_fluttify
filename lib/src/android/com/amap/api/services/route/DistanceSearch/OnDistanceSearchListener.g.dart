@@ -26,7 +26,7 @@ mixin com_amap_api_services_route_DistanceSearch_OnDistanceSearchListener on jav
 
   
 
-  Future<void> onDistanceSearched(com_amap_api_services_route_DistanceResult var1, int var2) async {}
+  Future<void> onDistanceSearched(com_amap_api_services_route_DistanceResult? var1, int? var2) async {}
   
 }
 

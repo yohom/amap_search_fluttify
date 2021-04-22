@@ -23,7 +23,7 @@ class com_amap_api_services_weather_WeatherSearch extends java_lang_Object  {
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_weather_WeatherSearch> create__android_content_Context(android_content_Context var1) async {
+  static Future<com_amap_api_services_weather_WeatherSearch> create__android_content_Context(android_content_Context? var1) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_weather_WeatherSearch__android_content_Context',
       {"var1": var1}
@@ -71,7 +71,7 @@ class com_amap_api_services_weather_WeatherSearch extends java_lang_Object  {
   }
   
   
-  Future<void> setQuery(com_amap_api_services_weather_WeatherSearchQuery var1) async {
+  Future<void> setQuery(com_amap_api_services_weather_WeatherSearchQuery? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.weather.WeatherSearch@$refId::setQuery([])');
@@ -105,7 +105,7 @@ class com_amap_api_services_weather_WeatherSearch extends java_lang_Object  {
   }
   
   
-  Future<void> setOnWeatherSearchListener(com_amap_api_services_weather_WeatherSearch_OnWeatherSearchListener var1) async {
+  Future<void> setOnWeatherSearchListener(com_amap_api_services_weather_WeatherSearch_OnWeatherSearchListener? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.weather.WeatherSearch@$refId::setOnWeatherSearchListener([])');

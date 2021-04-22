@@ -71,7 +71,7 @@ class com_amap_api_services_road_Crossroad extends com_amap_api_services_road_Ro
   }
   
   
-  Future<void> setDistance(double var1) async {
+  Future<void> setDistance(double? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::setDistance([\'var1\':$var1])');
@@ -105,7 +105,7 @@ class com_amap_api_services_road_Crossroad extends com_amap_api_services_road_Ro
   }
   
   
-  Future<void> setDirection(String var1) async {
+  Future<void> setDirection(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::setDirection([\'var1\':$var1])');
@@ -139,7 +139,7 @@ class com_amap_api_services_road_Crossroad extends com_amap_api_services_road_Ro
   }
   
   
-  Future<void> setFirstRoadId(String var1) async {
+  Future<void> setFirstRoadId(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::setFirstRoadId([\'var1\':$var1])');
@@ -173,7 +173,7 @@ class com_amap_api_services_road_Crossroad extends com_amap_api_services_road_Ro
   }
   
   
-  Future<void> setFirstRoadName(String var1) async {
+  Future<void> setFirstRoadName(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::setFirstRoadName([\'var1\':$var1])');
@@ -207,7 +207,7 @@ class com_amap_api_services_road_Crossroad extends com_amap_api_services_road_Ro
   }
   
   
-  Future<void> setSecondRoadId(String var1) async {
+  Future<void> setSecondRoadId(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::setSecondRoadId([\'var1\':$var1])');
@@ -241,7 +241,7 @@ class com_amap_api_services_road_Crossroad extends com_amap_api_services_road_Ro
   }
   
   
-  Future<void> setSecondRoadName(String var1) async {
+  Future<void> setSecondRoadName(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::setSecondRoadName([\'var1\':$var1])');

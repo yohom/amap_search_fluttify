@@ -73,7 +73,7 @@ class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
   }
   
   
-  Future<void> setConnectionTimeOut(int var1) async {
+  Future<void> setConnectionTimeOut(int? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.ServiceSettings@$refId::setConnectionTimeOut([\'var1\':$var1])');
@@ -90,7 +90,7 @@ class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
   }
   
   
-  Future<void> setSoTimeOut(int var1) async {
+  Future<void> setSoTimeOut(int? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.ServiceSettings@$refId::setSoTimeOut([\'var1\':$var1])');
@@ -124,7 +124,7 @@ class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
   }
   
   
-  Future<void> setLanguage(String var1) async {
+  Future<void> setLanguage(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.ServiceSettings@$refId::setLanguage([\'var1\':$var1])');
@@ -141,7 +141,7 @@ class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
   }
   
   
-  Future<void> setProtocol(int var1) async {
+  Future<void> setProtocol(int? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.ServiceSettings@$refId::setProtocol([\'var1\':$var1])');
@@ -192,7 +192,7 @@ class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
   }
   
   
-  Future<void> setApiKey(String var1) async {
+  Future<void> setApiKey(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.ServiceSettings@$refId::setApiKey([\'var1\':$var1])');
