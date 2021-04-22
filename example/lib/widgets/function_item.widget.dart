@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 class FunctionItem extends StatelessWidget {
   const FunctionItem({
-    Key key,
-    @required this.label,
-    @required this.sublabel,
-    @required this.target,
+    Key? key,
+    required this.label,
+    required this.sublabel,
+    required this.target,
   }) : super(key: key);
 
   final String label;

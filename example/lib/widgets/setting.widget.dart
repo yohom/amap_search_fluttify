@@ -6,9 +6,9 @@ const kDividerTiny = const Divider(height: 1);
 /// 连续设置
 class ContinuousSetting extends StatefulWidget {
   const ContinuousSetting({
-    Key key,
-    @required this.head,
-    @required this.onChanged,
+    Key? key,
+    required this.head,
+    required this.onChanged,
     this.min = 0,
     this.max = 1,
   }) : super(key: key);
@@ -23,7 +23,7 @@ class ContinuousSetting extends StatefulWidget {
 }
 
 class _ContinuousSettingState extends State<ContinuousSetting> {
-  double _value;
+  late double _value;
 
   @override
   void initState() {
@@ -66,10 +66,10 @@ class _ContinuousSettingState extends State<ContinuousSetting> {
 /// 离散设置
 class DiscreteSetting extends StatelessWidget {
   const DiscreteSetting({
-    Key key,
-    @required this.head,
-    @required this.options,
-    @required this.onSelected,
+    Key? key,
+    required this.head,
+    required this.options,
+    required this.onSelected,
   }) : super(key: key);
 
   final String head;
@@ -104,13 +104,13 @@ class DiscreteSetting extends StatelessWidget {
 /// 颜色设置
 class ColorSetting extends StatelessWidget {
   const ColorSetting({
-    Key key,
-    @required this.head,
-    @required this.onSelected,
+    Key? key,
+    required this.head,
+    required this.onSelected,
   }) : super(key: key);
 
   final String head;
-  final ValueChanged<Color> onSelected;
+  final ValueChanged<Color?> onSelected;
 
   @override
   Widget build(BuildContext context) {
@@ -118,7 +118,7 @@ class ColorSetting extends StatelessWidget {
       head: head,
       options: ['绿色', '红色', '黄色'],
       onSelected: (value) {
-        Color color;
+        Color? color;
         switch (value) {
           case '绿色':
             color = Colors.green.withOpacity(0.6);
@@ -140,9 +140,9 @@ class ColorSetting extends StatelessWidget {
 /// 二元设置
 class BooleanSetting extends StatefulWidget {
   const BooleanSetting({
-    Key key,
-    @required this.head,
-    @required this.onSelected,
+    Key? key,
+    required this.head,
+    required this.onSelected,
     this.selected = false,
   }) : super(key: key);
 
@@ -155,7 +155,7 @@ class BooleanSetting extends StatefulWidget {
 }
 
 class _BooleanSettingState extends State<BooleanSetting> {
-  bool _selected;
+  late bool _selected;
 
   @override
   void initState() {
@@ -190,9 +190,9 @@ class TextSetting extends StatelessWidget {
   final String hintString;
 
   const TextSetting({
-    Key key,
-    @required this.leadingString,
-    @required this.hintString,
+    Key? key,
+    required this.leadingString,
+    required this.hintString,
   }) : super(key: key);
 
   @override

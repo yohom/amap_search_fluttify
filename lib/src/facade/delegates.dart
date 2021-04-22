@@ -1,4 +1,3 @@
-
 // ignore_for_file: non_constant_identifier_names
 part of 'amap_search.dart';
 
@@ -23,7 +22,8 @@ class _AndroidSearchListener extends java_lang_Object
     int? var2,
   ) async {
     await super.onPoiSearched(var1, var2);
-    _completer.complete(await PoiListX.fromAndroid(await (var1!.getPois() as FutureOr<List<com_amap_api_services_core_PoiItem>>)));
+    _completer.complete(await PoiListX.fromAndroid(await (var1!.getPois()
+        as FutureOr<List<com_amap_api_services_core_PoiItem>>)));
   }
 
   @override
@@ -41,8 +41,10 @@ class _AndroidSearchListener extends java_lang_Object
     int? var2,
   ) async {
     await super.onGeocodeSearched(var1, var2);
-    final geocodeList = await (var1!.getGeocodeAddressList() as FutureOr<List<com_amap_api_services_geocoder_GeocodeAddress>>);
-    final coordinateBatch = await (geocodeList.getLatLonPoint_batch() as FutureOr<List<com_amap_api_services_core_LatLonPoint?>>);
+    final geocodeList = await (var1!.getGeocodeAddressList()
+        as FutureOr<List<com_amap_api_services_geocoder_GeocodeAddress>>);
+    final coordinateBatch = await (geocodeList.getLatLonPoint_batch()
+        as FutureOr<List<com_amap_api_services_core_LatLonPoint?>>);
     final latitudeBatch = await coordinateBatch.getLatitude_batch();
     final longitudeBatch = await coordinateBatch.getLongitude_batch();
     final geocode = [
@@ -56,7 +58,8 @@ class _AndroidSearchListener extends java_lang_Object
   Future<void> onRegeocodeSearched(
       com_amap_api_services_geocoder_RegeocodeResult? var1, int? var2) async {
     await super.onRegeocodeSearched(var1, var2);
-    final result = await (var1!.getRegeocodeAddress() as FutureOr<com_amap_api_services_geocoder_RegeocodeAddress>);
+    final result = await (var1!.getRegeocodeAddress()
+        as FutureOr<com_amap_api_services_geocoder_RegeocodeAddress>);
 
     _completer.complete(ReGeocode(
       provinceName: await result.getProvince(),
@@ -70,9 +73,12 @@ class _AndroidSearchListener extends java_lang_Object
       building: await result.getBuilding(),
       country: await result.getCountry(),
       formatAddress: await result.getFormatAddress(),
-      roads: await RoadListX.fromAndroid(await (result.getRoads() as FutureOr<List<com_amap_api_services_geocoder_RegeocodeRoad>>)),
-      aoiList: await AoiListX.fromAndroid(await (result.getAois() as FutureOr<List<com_amap_api_services_geocoder_AoiItem>>)),
-      poiList: await PoiListX.fromAndroid(await (result.getPois() as FutureOr<List<com_amap_api_services_core_PoiItem>>)),
+      roads: await RoadListX.fromAndroid(await (result.getRoads()
+          as FutureOr<List<com_amap_api_services_geocoder_RegeocodeRoad>>)),
+      aoiList: await AoiListX.fromAndroid(await (result.getAois()
+          as FutureOr<List<com_amap_api_services_geocoder_AoiItem>>)),
+      poiList: await PoiListX.fromAndroid(await (result.getPois()
+          as FutureOr<List<com_amap_api_services_core_PoiItem>>)),
     ));
   }
 
@@ -166,7 +172,8 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
     AMapPOISearchResponse? response,
   ) async {
     await super.onPOISearchDone_response(request, response);
-    _completer.complete(await PoiListX.fromIOS(await (response!.get_pois() as FutureOr<List<AMapPOI>>)));
+    _completer.complete(await PoiListX.fromIOS(
+        await (response!.get_pois() as FutureOr<List<AMapPOI>>)));
   }
 
   @override
@@ -175,8 +182,8 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
     AMapInputTipsSearchResponse? response,
   ) async {
     await super.onInputTipsSearchDone_response(request, response);
-    _completer
-        ?.complete(await InputTipListX.fromIOS(await (response!.get_tips() as FutureOr<List<AMapTip>>)));
+    _completer.complete(await InputTipListX.fromIOS(
+        await (response!.get_tips() as FutureOr<List<AMapTip>>)));
   }
 
   @override
@@ -194,8 +201,10 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
     AMapGeocodeSearchResponse? response,
   ) async {
     await super.onGeocodeSearchDone_response(request, response);
-    final geocodeList = await (response!.get_geocodes() as FutureOr<List<AMapGeocode>>);
-    final coordinateBatch = await (geocodeList.get_location_batch() as FutureOr<List<AMapGeoPoint?>>);
+    final geocodeList =
+        await (response!.get_geocodes() as FutureOr<List<AMapGeocode>>);
+    final coordinateBatch = await (geocodeList.get_location_batch()
+        as FutureOr<List<AMapGeoPoint?>>);
     final latitudeBatch = await coordinateBatch.get_latitude_batch();
     final longitudeBatch = await coordinateBatch.get_longitude_batch();
     final geocode = [
@@ -213,7 +222,8 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
     await super.onReGeocodeSearchDone_response(request, response);
 
     final result = await (response!.get_regeocode() as FutureOr<AMapReGeocode>);
-    final addressComponent = await (result.get_addressComponent() as FutureOr<AMapAddressComponent>);
+    final addressComponent =
+        await (result.get_addressComponent() as FutureOr<AMapAddressComponent>);
 
     _completer.complete(ReGeocode(
       provinceName: await addressComponent.get_province(),
@@ -227,9 +237,12 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
       building: await addressComponent.get_building(),
       country: await addressComponent.get_country(),
       formatAddress: await result.get_formattedAddress(),
-      roads: await RoadListX.fromIOS(await (result.get_roads() as FutureOr<List<AMapRoad>>)),
-      aoiList: await AoiListX.fromIOS(await (result.get_aois() as FutureOr<List<AMapAOI>>)),
-      poiList: await PoiListX.fromIOS(await (result.get_pois() as FutureOr<List<AMapPOI>>)),
+      roads: await RoadListX.fromIOS(
+          await (result.get_roads() as FutureOr<List<AMapRoad>>)),
+      aoiList: await AoiListX.fromIOS(
+          await (result.get_aois() as FutureOr<List<AMapAOI>>)),
+      poiList: await PoiListX.fromIOS(
+          await (result.get_pois() as FutureOr<List<AMapPOI>>)),
     ));
   }
 

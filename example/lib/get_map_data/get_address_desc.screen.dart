@@ -85,7 +85,7 @@ class _AddressDecodeScreenState extends State<AddressDecodeScreen> {
   final _lngController = TextEditingController(text: '116.3053');
   final _radiusController = TextEditingController(text: '200.0');
 
-  ReGeocode _reGeocode;
+  ReGeocode? _reGeocode;
 
   @override
   Widget build(BuildContext context) {

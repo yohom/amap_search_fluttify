@@ -77,7 +77,7 @@ class AMapDistrict extends AMapSearchObject with NSCoding, NSCopying {
   
   Future<List<String>?> get_polylines() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapDistrict::get_polylines", {'__this__': this});
-    return (__result__ as List)?.cast<String>();
+    return (__result__ as List?)?.cast<String>();
   }
   
   //endregion
@@ -171,7 +171,7 @@ extension AMapDistrict_Batch on List<AMapDistrict?> {
   
   Future<List<List<String>?>?> get_polylines_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapDistrict::get_polylines_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => (__result__ as List)?.cast<String>()).cast<List<String>?>().toList();
+    return (resultBatch as List?)?.map((__result__) => (__result__ as List?)?.cast<String>()).cast<List<String>?>().toList();
   }
   
   //endregion

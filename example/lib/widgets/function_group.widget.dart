@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 class FunctionGroup extends StatelessWidget {
   const FunctionGroup({
-    Key key,
-    @required this.headLabel,
+    Key? key,
+    required this.headLabel,
     this.children = const [],
   }) : super(key: key);
 
