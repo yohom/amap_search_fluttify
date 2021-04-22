@@ -82,7 +82,7 @@ class AMapWeatherSearchResponse extends AMapSearchObject with NSCoding, NSCopyin
   }
 }
 
-extension AMapWeatherSearchResponse_Batch on List<AMapWeatherSearchResponse> {
+extension AMapWeatherSearchResponse_Batch on List<AMapWeatherSearchResponse?> {
   //region getters
   Future<List<List<AMapLocalWeatherLive>?>?> get_lives_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapWeatherSearchResponse::get_lives_batch", [for (final __item__ in this) {'__this__': __item__}]);

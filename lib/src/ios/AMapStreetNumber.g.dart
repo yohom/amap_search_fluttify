@@ -115,7 +115,7 @@ class AMapStreetNumber extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapStreetNumber_Batch on List<AMapStreetNumber> {
+extension AMapStreetNumber_Batch on List<AMapStreetNumber?> {
   //region getters
   Future<List<String?>?> get_street_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapStreetNumber::get_street_batch", [for (final __item__ in this) {'__this__': __item__}]);

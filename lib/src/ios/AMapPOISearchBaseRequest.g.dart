@@ -137,7 +137,7 @@ class AMapPOISearchBaseRequest extends AMapSearchObject with NSCoding, NSCopying
   }
 }
 
-extension AMapPOISearchBaseRequest_Batch on List<AMapPOISearchBaseRequest> {
+extension AMapPOISearchBaseRequest_Batch on List<AMapPOISearchBaseRequest?> {
   //region getters
   Future<List<String?>?> get_types_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOISearchBaseRequest::get_types_batch", [for (final __item__ in this) {'__this__': __item__}]);

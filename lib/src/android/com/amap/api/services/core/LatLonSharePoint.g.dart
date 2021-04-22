@@ -95,7 +95,7 @@ class com_amap_api_services_core_LatLonSharePoint extends com_amap_api_services_
   }
 }
 
-extension com_amap_api_services_core_LatLonSharePoint_Batch on List<com_amap_api_services_core_LatLonSharePoint> {
+extension com_amap_api_services_core_LatLonSharePoint_Batch on List<com_amap_api_services_core_LatLonSharePoint?> {
   //region getters
   
   //endregion

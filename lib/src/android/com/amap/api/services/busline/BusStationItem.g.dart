@@ -265,7 +265,7 @@ class com_amap_api_services_busline_BusStationItem extends java_lang_Object with
   }
 }
 
-extension com_amap_api_services_busline_BusStationItem_Batch on List<com_amap_api_services_busline_BusStationItem> {
+extension com_amap_api_services_busline_BusStationItem_Batch on List<com_amap_api_services_busline_BusStationItem?> {
   //region getters
   
   //endregion

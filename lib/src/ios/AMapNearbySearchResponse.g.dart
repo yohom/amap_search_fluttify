@@ -82,7 +82,7 @@ class AMapNearbySearchResponse extends AMapSearchObject with NSCoding, NSCopying
   }
 }
 
-extension AMapNearbySearchResponse_Batch on List<AMapNearbySearchResponse> {
+extension AMapNearbySearchResponse_Batch on List<AMapNearbySearchResponse?> {
   //region getters
   Future<List<int?>?> get_count_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapNearbySearchResponse::get_count_batch", [for (final __item__ in this) {'__this__': __item__}]);

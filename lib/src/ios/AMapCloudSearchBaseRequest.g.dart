@@ -126,7 +126,7 @@ class AMapCloudSearchBaseRequest extends AMapSearchObject with NSCoding, NSCopyi
   }
 }
 
-extension AMapCloudSearchBaseRequest_Batch on List<AMapCloudSearchBaseRequest> {
+extension AMapCloudSearchBaseRequest_Batch on List<AMapCloudSearchBaseRequest?> {
   //region getters
   Future<List<String?>?> get_tableID_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudSearchBaseRequest::get_tableID_batch", [for (final __item__ in this) {'__this__': __item__}]);

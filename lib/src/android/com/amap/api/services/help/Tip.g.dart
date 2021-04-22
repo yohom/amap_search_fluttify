@@ -299,7 +299,7 @@ class com_amap_api_services_help_Tip extends java_lang_Object with android_os_Pa
   }
 }
 
-extension com_amap_api_services_help_Tip_Batch on List<com_amap_api_services_help_Tip> {
+extension com_amap_api_services_help_Tip_Batch on List<com_amap_api_services_help_Tip?> {
   //region getters
   
   //endregion

@@ -202,7 +202,7 @@ class com_amap_api_services_help_Inputtips extends java_lang_Object  {
   }
 }
 
-extension com_amap_api_services_help_Inputtips_Batch on List<com_amap_api_services_help_Inputtips> {
+extension com_amap_api_services_help_Inputtips_Batch on List<com_amap_api_services_help_Inputtips?> {
   //region getters
   
   //endregion

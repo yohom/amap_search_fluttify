@@ -115,7 +115,7 @@ class AMapWalking extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapWalking_Batch on List<AMapWalking> {
+extension AMapWalking_Batch on List<AMapWalking?> {
   //region getters
   Future<List<AMapGeoPoint?>?> get_origin_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapWalking::get_origin_batch", [for (final __item__ in this) {'__this__': __item__}]);

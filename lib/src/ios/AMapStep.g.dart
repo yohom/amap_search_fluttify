@@ -203,7 +203,7 @@ class AMapStep extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapStep_Batch on List<AMapStep> {
+extension AMapStep_Batch on List<AMapStep?> {
   //region getters
   Future<List<String?>?> get_instruction_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapStep::get_instruction_batch", [for (final __item__ in this) {'__this__': __item__}]);

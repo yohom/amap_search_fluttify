@@ -82,7 +82,7 @@ class AMapFutureRouteSearchResponse extends AMapSearchObject with NSCoding, NSCo
   }
 }
 
-extension AMapFutureRouteSearchResponse_Batch on List<AMapFutureRouteSearchResponse> {
+extension AMapFutureRouteSearchResponse_Batch on List<AMapFutureRouteSearchResponse?> {
   //region getters
   Future<List<List<AMapPath>?>?> get_paths_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapFutureRouteSearchResponse::get_paths_batch", [for (final __item__ in this) {'__this__': __item__}]);

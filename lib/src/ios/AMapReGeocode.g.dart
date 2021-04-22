@@ -126,7 +126,7 @@ class AMapReGeocode extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapReGeocode_Batch on List<AMapReGeocode> {
+extension AMapReGeocode_Batch on List<AMapReGeocode?> {
   //region getters
   Future<List<String?>?> get_formattedAddress_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapReGeocode::get_formattedAddress_batch", [for (final __item__ in this) {'__this__': __item__}]);

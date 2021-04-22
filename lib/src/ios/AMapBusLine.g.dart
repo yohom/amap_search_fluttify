@@ -280,7 +280,7 @@ class AMapBusLine extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapBusLine_Batch on List<AMapBusLine> {
+extension AMapBusLine_Batch on List<AMapBusLine?> {
   //region getters
   Future<List<String?>?> get_uid_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapBusLine::get_uid_batch", [for (final __item__ in this) {'__this__': __item__}]);

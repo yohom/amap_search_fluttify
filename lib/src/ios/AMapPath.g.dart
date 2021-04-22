@@ -159,7 +159,7 @@ class AMapPath extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapPath_Batch on List<AMapPath> {
+extension AMapPath_Batch on List<AMapPath?> {
   //region getters
   Future<List<int?>?> get_distance_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapPath::get_distance_batch", [for (final __item__ in this) {'__this__': __item__}]);

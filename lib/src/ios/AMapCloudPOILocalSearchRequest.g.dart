@@ -82,7 +82,7 @@ class AMapCloudPOILocalSearchRequest extends AMapCloudSearchBaseRequest with NSC
   }
 }
 
-extension AMapCloudPOILocalSearchRequest_Batch on List<AMapCloudPOILocalSearchRequest> {
+extension AMapCloudPOILocalSearchRequest_Batch on List<AMapCloudPOILocalSearchRequest?> {
   //region getters
   Future<List<String?>?> get_keywords_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudPOILocalSearchRequest::get_keywords_batch", [for (final __item__ in this) {'__this__': __item__}]);

@@ -93,7 +93,7 @@ class AMapTrafficInfo extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapTrafficInfo_Batch on List<AMapTrafficInfo> {
+extension AMapTrafficInfo_Batch on List<AMapTrafficInfo?> {
   //region getters
   Future<List<String?>?> get_statusDescription_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTrafficInfo::get_statusDescription_batch", [for (final __item__ in this) {'__this__': __item__}]);

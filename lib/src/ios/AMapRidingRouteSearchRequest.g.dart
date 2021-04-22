@@ -82,7 +82,7 @@ class AMapRidingRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCod
   }
 }
 
-extension AMapRidingRouteSearchRequest_Batch on List<AMapRidingRouteSearchRequest> {
+extension AMapRidingRouteSearchRequest_Batch on List<AMapRidingRouteSearchRequest?> {
   //region getters
   Future<List<int?>?> get_type_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRidingRouteSearchRequest::get_type_batch", [for (final __item__ in this) {'__this__': __item__}]);

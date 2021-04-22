@@ -95,7 +95,7 @@ class com_amap_api_services_route_RailwaySpace extends java_lang_Object with and
   }
 }
 
-extension com_amap_api_services_route_RailwaySpace_Batch on List<com_amap_api_services_route_RailwaySpace> {
+extension com_amap_api_services_route_RailwaySpace_Batch on List<com_amap_api_services_route_RailwaySpace?> {
   //region getters
   
   //endregion

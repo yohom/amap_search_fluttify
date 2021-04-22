@@ -137,7 +137,7 @@ class AMapDistrict extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapDistrict_Batch on List<AMapDistrict> {
+extension AMapDistrict_Batch on List<AMapDistrict?> {
   //region getters
   Future<List<String?>?> get_adcode_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapDistrict::get_adcode_batch", [for (final __item__ in this) {'__this__': __item__}]);

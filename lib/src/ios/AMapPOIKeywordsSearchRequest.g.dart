@@ -104,7 +104,7 @@ class AMapPOIKeywordsSearchRequest extends AMapPOISearchBaseRequest with NSCodin
   }
 }
 
-extension AMapPOIKeywordsSearchRequest_Batch on List<AMapPOIKeywordsSearchRequest> {
+extension AMapPOIKeywordsSearchRequest_Batch on List<AMapPOIKeywordsSearchRequest?> {
   //region getters
   Future<List<String?>?> get_keywords_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOIKeywordsSearchRequest::get_keywords_batch", [for (final __item__ in this) {'__this__': __item__}]);

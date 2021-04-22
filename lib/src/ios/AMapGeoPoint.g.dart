@@ -98,7 +98,7 @@ class AMapGeoPoint extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapGeoPoint_Batch on List<AMapGeoPoint> {
+extension AMapGeoPoint_Batch on List<AMapGeoPoint?> {
   //region getters
   Future<List<double?>?> get_latitude_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapGeoPoint::get_latitude_batch", [for (final __item__ in this) {'__this__': __item__}]);

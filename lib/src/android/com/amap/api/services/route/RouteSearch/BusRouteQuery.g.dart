@@ -233,7 +233,7 @@ class com_amap_api_services_route_RouteSearch_BusRouteQuery extends java_lang_Ob
   }
 }
 
-extension com_amap_api_services_route_RouteSearch_BusRouteQuery_Batch on List<com_amap_api_services_route_RouteSearch_BusRouteQuery> {
+extension com_amap_api_services_route_RouteSearch_BusRouteQuery_Batch on List<com_amap_api_services_route_RouteSearch_BusRouteQuery?> {
   //region getters
   
   //endregion

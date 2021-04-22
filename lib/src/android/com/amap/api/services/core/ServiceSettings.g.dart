@@ -233,7 +233,7 @@ class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
   }
 }
 
-extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_services_core_ServiceSettings> {
+extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_services_core_ServiceSettings?> {
   //region getters
   
   //endregion

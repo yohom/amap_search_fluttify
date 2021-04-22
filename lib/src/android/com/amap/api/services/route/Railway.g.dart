@@ -129,7 +129,7 @@ class com_amap_api_services_route_Railway extends java_lang_Object with android_
   }
 }
 
-extension com_amap_api_services_route_Railway_Batch on List<com_amap_api_services_route_Railway> {
+extension com_amap_api_services_route_Railway_Batch on List<com_amap_api_services_route_Railway?> {
   //region getters
   
   //endregion

@@ -62,7 +62,7 @@ class AMapRidingRouteSearchResponse extends AMapRouteSearchResponse with NSCodin
   }
 }
 
-extension AMapRidingRouteSearchResponse_Batch on List<AMapRidingRouteSearchResponse> {
+extension AMapRidingRouteSearchResponse_Batch on List<AMapRidingRouteSearchResponse?> {
   //region getters
   
   //endregion

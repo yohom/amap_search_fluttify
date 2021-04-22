@@ -214,7 +214,7 @@ class AMapDrivingRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCo
   }
 }
 
-extension AMapDrivingRouteSearchRequest_Batch on List<AMapDrivingRouteSearchRequest> {
+extension AMapDrivingRouteSearchRequest_Batch on List<AMapDrivingRouteSearchRequest?> {
   //region getters
   Future<List<int?>?> get_strategy_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapDrivingRouteSearchRequest::get_strategy_batch", [for (final __item__ in this) {'__this__': __item__}]);

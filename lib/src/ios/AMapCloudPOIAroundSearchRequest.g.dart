@@ -93,7 +93,7 @@ class AMapCloudPOIAroundSearchRequest extends AMapCloudSearchBaseRequest with NS
   }
 }
 
-extension AMapCloudPOIAroundSearchRequest_Batch on List<AMapCloudPOIAroundSearchRequest> {
+extension AMapCloudPOIAroundSearchRequest_Batch on List<AMapCloudPOIAroundSearchRequest?> {
   //region getters
   Future<List<AMapGeoPoint?>?> get_center_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudPOIAroundSearchRequest::get_center_batch", [for (final __item__ in this) {'__this__': __item__}]);

@@ -163,7 +163,7 @@ class com_amap_api_services_geocoder_GeocodeQuery extends java_lang_Object  {
   }
 }
 
-extension com_amap_api_services_geocoder_GeocodeQuery_Batch on List<com_amap_api_services_geocoder_GeocodeQuery> {
+extension com_amap_api_services_geocoder_GeocodeQuery_Batch on List<com_amap_api_services_geocoder_GeocodeQuery?> {
   //region getters
   
   //endregion

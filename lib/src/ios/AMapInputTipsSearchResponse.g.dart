@@ -82,7 +82,7 @@ class AMapInputTipsSearchResponse extends AMapSearchObject with NSCoding, NSCopy
   }
 }
 
-extension AMapInputTipsSearchResponse_Batch on List<AMapInputTipsSearchResponse> {
+extension AMapInputTipsSearchResponse_Batch on List<AMapInputTipsSearchResponse?> {
   //region getters
   Future<List<int?>?> get_count_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapInputTipsSearchResponse::get_count_batch", [for (final __item__ in this) {'__this__': __item__}]);

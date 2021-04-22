@@ -129,7 +129,7 @@ class com_amap_api_services_geocoder_RegeocodeResult extends java_lang_Object  {
   }
 }
 
-extension com_amap_api_services_geocoder_RegeocodeResult_Batch on List<com_amap_api_services_geocoder_RegeocodeResult> {
+extension com_amap_api_services_geocoder_RegeocodeResult_Batch on List<com_amap_api_services_geocoder_RegeocodeResult?> {
   //region getters
   
   //endregion

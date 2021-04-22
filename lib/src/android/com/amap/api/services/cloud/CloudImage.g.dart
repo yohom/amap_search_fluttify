@@ -163,7 +163,7 @@ class com_amap_api_services_cloud_CloudImage extends java_lang_Object with andro
   }
 }
 
-extension com_amap_api_services_cloud_CloudImage_Batch on List<com_amap_api_services_cloud_CloudImage> {
+extension com_amap_api_services_cloud_CloudImage_Batch on List<com_amap_api_services_cloud_CloudImage?> {
   //region getters
   
   //endregion

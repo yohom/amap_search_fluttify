@@ -1,13 +1,13 @@
-//@dart=2.9
+
 part of 'amap_search.dart';
 
 class PoiX {
   static Future<Poi> fromAndroid(com_amap_api_services_core_PoiItem poi) async {
     final address = await poi.getSnippet();
     final title = await poi.getTitle();
-    final latLng = await poi.getLatLonPoint();
-    final latitude = await latLng.getLatitude();
-    final longitude = await latLng.getLongitude();
+    final latLng = await (poi.getLatLonPoint() as FutureOr<com_amap_api_services_core_LatLonPoint>);
+    final latitude = await (latLng.getLatitude() as FutureOr<double>);
+    final longitude = await (latLng.getLongitude() as FutureOr<double>);
     final cityName = await poi.getCityName();
     final cityCode = await poi.getCityCode();
     final provinceName = await poi.getProvinceName();
@@ -39,9 +39,9 @@ class PoiX {
   static Future<Poi> fromIOS(AMapPOI poi) async {
     final address = await poi.get_address();
     final title = await poi.get_name();
-    final latLng = await poi.get_location();
-    final latitude = await latLng.get_latitude();
-    final longitude = await latLng.get_longitude();
+    final latLng = await (poi.get_location() as FutureOr<AMapGeoPoint>);
+    final latitude = await (latLng.get_latitude() as FutureOr<double>);
+    final longitude = await (latLng.get_longitude() as FutureOr<double>);
     final cityName = await poi.get_city();
     final cityCode = await poi.get_citycode();
     final provinceName = await poi.get_province();
@@ -80,18 +80,18 @@ class RoadListX {
     final distanceBatch = await roadList.getDistance_batch();
     final directionBatch = await roadList.getDirection_batch();
 
-    final coordinateBatch = await roadList.getLatLngPoint_batch();
+    final coordinateBatch = await (roadList.getLatLngPoint_batch() as FutureOr<List<com_amap_api_services_core_LatLonPoint?>>);
     final latitudeBatch = await coordinateBatch.getLatitude_batch();
     final longitudeBatch = await coordinateBatch.getLongitude_batch();
 
     return <Road>[
       for (int i = 0; i < roadList.length; i++)
         Road(
-          id: idBatch[i],
-          name: nameBatch[i],
-          distance: distanceBatch[i],
-          direction: directionBatch[i],
-          coordinate: LatLng(latitudeBatch[i], longitudeBatch[i]),
+          id: idBatch![i],
+          name: nameBatch![i],
+          distance: distanceBatch![i],
+          direction: directionBatch![i],
+          coordinate: LatLng(latitudeBatch![i]!, longitudeBatch![i]!),
         )
     ];
   }
@@ -102,18 +102,18 @@ class RoadListX {
     final distanceBatch = await roadList.get_distance_batch();
     final directionBatch = await roadList.get_direction_batch();
 
-    final coordinateBatch = await roadList.get_location_batch();
+    final coordinateBatch = await (roadList.get_location_batch() as FutureOr<List<AMapGeoPoint?>>);
     final latitudeBatch = await coordinateBatch.get_latitude_batch();
     final longitudeBatch = await coordinateBatch.get_longitude_batch();
 
     return <Road>[
       for (int i = 0; i < roadList.length; i++)
         Road(
-          id: idBatch[i],
-          name: nameBatch[i],
-          distance: distanceBatch[i].toDouble(),
-          direction: directionBatch[i],
-          coordinate: LatLng(latitudeBatch[i], longitudeBatch[i]),
+          id: idBatch![i],
+          name: nameBatch![i],
+          distance: distanceBatch![i]!.toDouble(),
+          direction: directionBatch![i],
+          coordinate: LatLng(latitudeBatch![i]!, longitudeBatch![i]!),
         )
     ];
   }
@@ -128,18 +128,18 @@ class AoiListX {
     final idBatch = await aoiList.getAoiId_batch();
     final nameBatch = await aoiList.getAoiName_batch();
 
-    final coordinateBatch = await aoiList.getAoiCenterPoint_batch();
+    final coordinateBatch = await (aoiList.getAoiCenterPoint_batch() as FutureOr<List<com_amap_api_services_core_LatLonPoint?>>);
     final latitudeBatch = await coordinateBatch.getLatitude_batch();
     final longitudeBatch = await coordinateBatch.getLongitude_batch();
 
     return <Aoi>[
       for (int i = 0; i < aoiList.length; i++)
         Aoi(
-          adcode: adcodeBatch[i],
-          area: areaBatch[i],
-          id: idBatch[i],
-          name: nameBatch[i],
-          centerPoint: LatLng(latitudeBatch[i], longitudeBatch[i]),
+          adcode: adcodeBatch![i],
+          area: areaBatch![i],
+          id: idBatch![i],
+          name: nameBatch![i],
+          centerPoint: LatLng(latitudeBatch![i]!, longitudeBatch![i]!),
         )
     ];
   }
@@ -150,18 +150,18 @@ class AoiListX {
     final idBatch = await aoiList.get_uid_batch();
     final nameBatch = await aoiList.get_name_batch();
 
-    final coordinateBatch = await aoiList.get_location_batch();
+    final coordinateBatch = await (aoiList.get_location_batch() as FutureOr<List<AMapGeoPoint?>>);
     final latitudeBatch = await coordinateBatch.get_latitude_batch();
     final longitudeBatch = await coordinateBatch.get_longitude_batch();
 
     return <Aoi>[
       for (int i = 0; i < aoiList.length; i++)
         Aoi(
-          adcode: adcodeBatch[i],
-          area: areaBatch[i],
-          id: idBatch[i],
-          name: nameBatch[i],
-          centerPoint: LatLng(latitudeBatch[i], longitudeBatch[i]),
+          adcode: adcodeBatch![i],
+          area: areaBatch![i],
+          id: idBatch![i],
+          name: nameBatch![i],
+          centerPoint: LatLng(latitudeBatch![i]!, longitudeBatch![i]!),
         )
     ];
   }
@@ -173,7 +173,7 @@ class PoiListX {
   ) async {
     final addressBatch = await poiList.getSnippet_batch();
     final titleBatch = await poiList.getTitle_batch();
-    final latLngBatch = await poiList.getLatLonPoint_batch();
+    final latLngBatch = await (poiList.getLatLonPoint_batch() as FutureOr<List<com_amap_api_services_core_LatLonPoint?>>);
     final latitudeBatch = await latLngBatch.getLatitude_batch();
     final longitudeBatch = await latLngBatch.getLongitude_batch();
     final cityNameBatch = await poiList.getCityName_batch();
@@ -190,19 +190,19 @@ class PoiListX {
     return <Poi>[
       for (int i = 0; i < poiList.length; i++)
         Poi(
-          address: addressBatch[i],
-          title: titleBatch[i],
-          latLng: LatLng(latitudeBatch[i], longitudeBatch[i]),
-          cityName: cityNameBatch[i],
-          cityCode: cityCodeBatch[i],
-          provinceName: provinceNameBatch[i],
-          provinceCode: provinceCodeBatch[i],
-          tel: telBatch[i],
-          poiId: poiIdBatch[i],
-          businessArea: businessAreaBatch[i],
-          distance: distanceBatch[i],
-          adName: adNameBatch[i],
-          adCode: adCodeBatch[i],
+          address: addressBatch![i],
+          title: titleBatch![i],
+          latLng: LatLng(latitudeBatch![i]!, longitudeBatch![i]!),
+          cityName: cityNameBatch![i],
+          cityCode: cityCodeBatch![i],
+          provinceName: provinceNameBatch![i],
+          provinceCode: provinceCodeBatch![i],
+          tel: telBatch![i],
+          poiId: poiIdBatch![i],
+          businessArea: businessAreaBatch![i],
+          distance: distanceBatch![i],
+          adName: adNameBatch![i],
+          adCode: adCodeBatch![i],
         )
     ];
   }
@@ -210,7 +210,7 @@ class PoiListX {
   static Future<List<Poi>> fromIOS(List<AMapPOI> poiList) async {
     final addressBatch = await poiList.get_address_batch();
     final titleBatch = await poiList.get_name_batch();
-    final latLngBatch = await poiList.get_location_batch();
+    final latLngBatch = await (poiList.get_location_batch() as FutureOr<List<AMapGeoPoint?>>);
     final latitudeBatch = await latLngBatch.get_latitude_batch();
     final longitudeBatch = await latLngBatch.get_longitude_batch();
     final cityNameBatch = await poiList.get_city_batch();
@@ -227,19 +227,19 @@ class PoiListX {
     return <Poi>[
       for (int i = 0; i < poiList.length; i++)
         Poi(
-          address: addressBatch[i],
-          title: titleBatch[i],
-          latLng: LatLng(latitudeBatch[i], longitudeBatch[i]),
-          cityName: cityNameBatch[i],
-          cityCode: cityCodeBatch[i],
-          provinceName: provinceNameBatch[i],
-          provinceCode: provinceCodeBatch[i],
-          tel: telBatch[i],
-          poiId: poiIdBatch[i],
-          businessArea: businessAreaBatch[i],
-          distance: distanceBatch[i],
-          adName: adNameBatch[i],
-          adCode: adCodeBatch[i],
+          address: addressBatch![i],
+          title: titleBatch![i],
+          latLng: LatLng(latitudeBatch![i]!, longitudeBatch![i]!),
+          cityName: cityNameBatch![i],
+          cityCode: cityCodeBatch![i],
+          provinceName: provinceNameBatch![i],
+          provinceCode: provinceCodeBatch![i],
+          tel: telBatch![i],
+          poiId: poiIdBatch![i],
+          businessArea: businessAreaBatch![i],
+          distance: distanceBatch![i],
+          adName: adNameBatch![i],
+          adCode: adCodeBatch![i],
         )
     ];
   }
@@ -253,20 +253,20 @@ class InputTipListX {
     final idBatch = await inputTipList.getPoiID_batch();
     final addressBatch = await inputTipList.getAddress_batch();
     final districtBatch = await inputTipList.getDistrict_batch();
-    final coordinateBatch = await inputTipList.getPoint_batch();
+    final coordinateBatch = await (inputTipList.getPoint_batch() as FutureOr<List<com_amap_api_services_core_LatLonPoint?>>);
     final latitudeBatch = await coordinateBatch.getLatitude_batch();
     final longitudeBatch = await coordinateBatch.getLongitude_batch();
 
     return <InputTip>[
       for (int i = 0; i < inputTipList.length; i++)
         InputTip(
-          name: nameBatch[i],
-          poiId: idBatch[i],
-          address: addressBatch[i],
-          district: districtBatch[i],
-          coordinate: latitudeBatch[i] == null || longitudeBatch[i] == null
+          name: nameBatch![i],
+          poiId: idBatch![i],
+          address: addressBatch![i],
+          district: districtBatch![i],
+          coordinate: latitudeBatch![i] == null || longitudeBatch![i] == null
               ? null
-              : LatLng(latitudeBatch[i], longitudeBatch[i]),
+              : LatLng(latitudeBatch[i]!, longitudeBatch[i]!),
         )
     ];
   }
@@ -276,20 +276,20 @@ class InputTipListX {
     final idBatch = await inputTipList.get_uid_batch();
     final addressBatch = await inputTipList.get_address_batch();
     final districtBatch = await inputTipList.get_district_batch();
-    final coordinateBatch = await inputTipList.get_location_batch();
+    final coordinateBatch = await (inputTipList.get_location_batch() as FutureOr<List<AMapGeoPoint?>>);
     final latitudeBatch = await coordinateBatch.get_latitude_batch();
     final longitudeBatch = await coordinateBatch.get_longitude_batch();
 
     return <InputTip>[
       for (int i = 0; i < inputTipList.length; i++)
         InputTip(
-          name: nameBatch[i],
-          poiId: idBatch[i],
-          address: addressBatch[i],
-          district: districtBatch[i],
-          coordinate: latitudeBatch[i] == null || longitudeBatch[i] == null
+          name: nameBatch![i],
+          poiId: idBatch![i],
+          address: addressBatch![i],
+          district: districtBatch![i],
+          coordinate: latitudeBatch![i] == null || longitudeBatch![i] == null
               ? null
-              : LatLng(latitudeBatch[i], longitudeBatch[i]),
+              : LatLng(latitudeBatch[i]!, longitudeBatch[i]!),
         )
     ];
   }

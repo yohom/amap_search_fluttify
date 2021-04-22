@@ -104,7 +104,7 @@ class AMapPOIShareSearchRequest extends AMapShareSearchBaseRequest with NSCoding
   }
 }
 
-extension AMapPOIShareSearchRequest_Batch on List<AMapPOIShareSearchRequest> {
+extension AMapPOIShareSearchRequest_Batch on List<AMapPOIShareSearchRequest?> {
   //region getters
   Future<List<String?>?> get_uid_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOIShareSearchRequest::get_uid_batch", [for (final __item__ in this) {'__this__': __item__}]);

@@ -82,7 +82,7 @@ class AMapPOIPolygonSearchRequest extends AMapPOISearchBaseRequest with NSCoding
   }
 }
 
-extension AMapPOIPolygonSearchRequest_Batch on List<AMapPOIPolygonSearchRequest> {
+extension AMapPOIPolygonSearchRequest_Batch on List<AMapPOIPolygonSearchRequest?> {
   //region getters
   Future<List<String?>?> get_keywords_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOIPolygonSearchRequest::get_keywords_batch", [for (final __item__ in this) {'__this__': __item__}]);

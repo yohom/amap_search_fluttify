@@ -231,7 +231,7 @@ class com_amap_api_services_busline_BusStationQuery extends java_lang_Object  {
   }
 }
 
-extension com_amap_api_services_busline_BusStationQuery_Batch on List<com_amap_api_services_busline_BusStationQuery> {
+extension com_amap_api_services_busline_BusStationQuery_Batch on List<com_amap_api_services_busline_BusStationQuery?> {
   //region getters
   
   //endregion

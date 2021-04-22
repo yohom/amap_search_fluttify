@@ -126,7 +126,7 @@ class AMapTrafficEvaluation extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapTrafficEvaluation_Batch on List<AMapTrafficEvaluation> {
+extension AMapTrafficEvaluation_Batch on List<AMapTrafficEvaluation?> {
   //region getters
   Future<List<String?>?> get_evaluationDescription_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTrafficEvaluation::get_evaluationDescription_batch", [for (final __item__ in this) {'__this__': __item__}]);

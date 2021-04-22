@@ -82,7 +82,7 @@ class AMapLocationShareSearchRequest extends AMapShareSearchBaseRequest with NSC
   }
 }
 
-extension AMapLocationShareSearchRequest_Batch on List<AMapLocationShareSearchRequest> {
+extension AMapLocationShareSearchRequest_Batch on List<AMapLocationShareSearchRequest?> {
   //region getters
   Future<List<AMapGeoPoint?>?> get_location_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapLocationShareSearchRequest::get_location_batch", [for (final __item__ in this) {'__this__': __item__}]);

@@ -115,7 +115,7 @@ class AMapLocalWeatherForecast extends AMapSearchObject with NSCoding, NSCopying
   }
 }
 
-extension AMapLocalWeatherForecast_Batch on List<AMapLocalWeatherForecast> {
+extension AMapLocalWeatherForecast_Batch on List<AMapLocalWeatherForecast?> {
   //region getters
   Future<List<String?>?> get_adcode_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapLocalWeatherForecast::get_adcode_batch", [for (final __item__ in this) {'__this__': __item__}]);

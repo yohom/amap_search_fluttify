@@ -231,7 +231,7 @@ class com_amap_api_services_geocoder_RegeocodeRoad extends java_lang_Object with
   }
 }
 
-extension com_amap_api_services_geocoder_RegeocodeRoad_Batch on List<com_amap_api_services_geocoder_RegeocodeRoad> {
+extension com_amap_api_services_geocoder_RegeocodeRoad_Batch on List<com_amap_api_services_geocoder_RegeocodeRoad?> {
   //region getters
   
   //endregion

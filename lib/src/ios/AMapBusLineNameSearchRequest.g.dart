@@ -71,7 +71,7 @@ class AMapBusLineNameSearchRequest extends AMapBusLineBaseSearchRequest with NSC
   }
 }
 
-extension AMapBusLineNameSearchRequest_Batch on List<AMapBusLineNameSearchRequest> {
+extension AMapBusLineNameSearchRequest_Batch on List<AMapBusLineNameSearchRequest?> {
   //region getters
   Future<List<String?>?> get_keywords_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapBusLineNameSearchRequest::get_keywords_batch", [for (final __item__ in this) {'__this__': __item__}]);

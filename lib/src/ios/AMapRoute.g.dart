@@ -115,7 +115,7 @@ class AMapRoute extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapRoute_Batch on List<AMapRoute> {
+extension AMapRoute_Batch on List<AMapRoute?> {
   //region getters
   Future<List<AMapGeoPoint?>?> get_origin_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoute::get_origin_batch", [for (final __item__ in this) {'__this__': __item__}]);

@@ -115,7 +115,7 @@ class AMapCity extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapCity_Batch on List<AMapCity> {
+extension AMapCity_Batch on List<AMapCity?> {
   //region getters
   Future<List<String?>?> get_city_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapCity::get_city_batch", [for (final __item__ in this) {'__this__': __item__}]);

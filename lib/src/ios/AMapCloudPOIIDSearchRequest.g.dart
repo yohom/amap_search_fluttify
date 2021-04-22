@@ -71,7 +71,7 @@ class AMapCloudPOIIDSearchRequest extends AMapCloudSearchBaseRequest with NSCodi
   }
 }
 
-extension AMapCloudPOIIDSearchRequest_Batch on List<AMapCloudPOIIDSearchRequest> {
+extension AMapCloudPOIIDSearchRequest_Batch on List<AMapCloudPOIIDSearchRequest?> {
   //region getters
   Future<List<int?>?> get_uid_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudPOIIDSearchRequest::get_uid_batch", [for (final __item__ in this) {'__this__': __item__}]);

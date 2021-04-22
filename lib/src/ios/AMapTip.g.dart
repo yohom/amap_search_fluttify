@@ -137,7 +137,7 @@ class AMapTip extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapTip_Batch on List<AMapTip> {
+extension AMapTip_Batch on List<AMapTip?> {
   //region getters
   Future<List<String?>?> get_uid_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTip::get_uid_batch", [for (final __item__ in this) {'__this__': __item__}]);

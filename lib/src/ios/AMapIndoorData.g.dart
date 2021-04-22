@@ -93,7 +93,7 @@ class AMapIndoorData extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapIndoorData_Batch on List<AMapIndoorData> {
+extension AMapIndoorData_Batch on List<AMapIndoorData?> {
   //region getters
   Future<List<int?>?> get_floor_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapIndoorData::get_floor_batch", [for (final __item__ in this) {'__this__': __item__}]);

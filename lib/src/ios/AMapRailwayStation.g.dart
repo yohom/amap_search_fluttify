@@ -148,7 +148,7 @@ class AMapRailwayStation extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapRailwayStation_Batch on List<AMapRailwayStation> {
+extension AMapRailwayStation_Batch on List<AMapRailwayStation?> {
   //region getters
   Future<List<String?>?> get_uid_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRailwayStation::get_uid_batch", [for (final __item__ in this) {'__this__': __item__}]);

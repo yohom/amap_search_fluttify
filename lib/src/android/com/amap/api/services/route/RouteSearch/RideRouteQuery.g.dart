@@ -184,7 +184,7 @@ class com_amap_api_services_route_RouteSearch_RideRouteQuery extends java_lang_O
   }
 }
 
-extension com_amap_api_services_route_RouteSearch_RideRouteQuery_Batch on List<com_amap_api_services_route_RouteSearch_RideRouteQuery> {
+extension com_amap_api_services_route_RouteSearch_RideRouteQuery_Batch on List<com_amap_api_services_route_RouteSearch_RideRouteQuery?> {
   //region getters
   
   //endregion

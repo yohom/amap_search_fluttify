@@ -503,7 +503,7 @@ class com_amap_api_services_route_DriveStep extends java_lang_Object with androi
   }
 }
 
-extension com_amap_api_services_route_DriveStep_Batch on List<com_amap_api_services_route_DriveStep> {
+extension com_amap_api_services_route_DriveStep_Batch on List<com_amap_api_services_route_DriveStep?> {
   //region getters
   
   //endregion

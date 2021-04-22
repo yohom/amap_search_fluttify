@@ -115,7 +115,7 @@ class AMapRoutePOI extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapRoutePOI_Batch on List<AMapRoutePOI> {
+extension AMapRoutePOI_Batch on List<AMapRoutePOI?> {
   //region getters
   Future<List<String?>?> get_uid_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoutePOI::get_uid_batch", [for (final __item__ in this) {'__this__': __item__}]);

@@ -82,7 +82,7 @@ class AMapFutureTimeInfo extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapFutureTimeInfo_Batch on List<AMapFutureTimeInfo> {
+extension AMapFutureTimeInfo_Batch on List<AMapFutureTimeInfo?> {
   //region getters
   Future<List<String?>?> get_startTime_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapFutureTimeInfo::get_startTime_batch", [for (final __item__ in this) {'__this__': __item__}]);

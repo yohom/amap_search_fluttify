@@ -129,7 +129,7 @@ class com_amap_api_services_route_Doorway extends java_lang_Object with android_
   }
 }
 
-extension com_amap_api_services_route_Doorway_Batch on List<com_amap_api_services_route_Doorway> {
+extension com_amap_api_services_route_Doorway_Batch on List<com_amap_api_services_route_Doorway?> {
   //region getters
   
   //endregion

@@ -203,7 +203,7 @@ class AMapAddressComponent extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapAddressComponent_Batch on List<AMapAddressComponent> {
+extension AMapAddressComponent_Batch on List<AMapAddressComponent?> {
   //region getters
   Future<List<String?>?> get_country_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapAddressComponent::get_country_batch", [for (final __item__ in this) {'__this__': __item__}]);

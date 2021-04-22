@@ -104,7 +104,7 @@ class AMapBusStopSearchRequest extends AMapSearchObject with NSCoding, NSCopying
   }
 }
 
-extension AMapBusStopSearchRequest_Batch on List<AMapBusStopSearchRequest> {
+extension AMapBusStopSearchRequest_Batch on List<AMapBusStopSearchRequest?> {
   //region getters
   Future<List<String?>?> get_keywords_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapBusStopSearchRequest::get_keywords_batch", [for (final __item__ in this) {'__this__': __item__}]);

@@ -265,7 +265,7 @@ class com_amap_api_services_route_RouteBusLineItem extends com_amap_api_services
   }
 }
 
-extension com_amap_api_services_route_RouteBusLineItem_Batch on List<com_amap_api_services_route_RouteBusLineItem> {
+extension com_amap_api_services_route_RouteBusLineItem_Batch on List<com_amap_api_services_route_RouteBusLineItem?> {
   //region getters
   
   //endregion

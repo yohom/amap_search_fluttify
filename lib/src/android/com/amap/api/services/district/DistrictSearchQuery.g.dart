@@ -443,7 +443,7 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
   }
 }
 
-extension com_amap_api_services_district_DistrictSearchQuery_Batch on List<com_amap_api_services_district_DistrictSearchQuery> {
+extension com_amap_api_services_district_DistrictSearchQuery_Batch on List<com_amap_api_services_district_DistrictSearchQuery?> {
   //region getters
   
   //endregion

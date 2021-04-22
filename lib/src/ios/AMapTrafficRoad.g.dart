@@ -126,7 +126,7 @@ class AMapTrafficRoad extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapTrafficRoad_Batch on List<AMapTrafficRoad> {
+extension AMapTrafficRoad_Batch on List<AMapTrafficRoad?> {
   //region getters
   Future<List<String?>?> get_name_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTrafficRoad::get_name_batch", [for (final __item__ in this) {'__this__': __item__}]);

@@ -146,7 +146,7 @@ class com_amap_api_services_core_LatLonPoint extends java_lang_Object with andro
   }
 }
 
-extension com_amap_api_services_core_LatLonPoint_Batch on List<com_amap_api_services_core_LatLonPoint> {
+extension com_amap_api_services_core_LatLonPoint_Batch on List<com_amap_api_services_core_LatLonPoint?> {
   //region getters
   
   //endregion

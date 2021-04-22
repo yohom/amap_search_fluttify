@@ -231,7 +231,7 @@ class com_amap_api_services_geocoder_AoiItem extends java_lang_Object with andro
   }
 }
 
-extension com_amap_api_services_geocoder_AoiItem_Batch on List<com_amap_api_services_geocoder_AoiItem> {
+extension com_amap_api_services_geocoder_AoiItem_Batch on List<com_amap_api_services_geocoder_AoiItem?> {
   //region getters
   
   //endregion

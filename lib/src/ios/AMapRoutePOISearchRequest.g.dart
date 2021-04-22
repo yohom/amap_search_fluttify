@@ -137,7 +137,7 @@ class AMapRoutePOISearchRequest extends AMapSearchObject with NSCoding, NSCopyin
   }
 }
 
-extension AMapRoutePOISearchRequest_Batch on List<AMapRoutePOISearchRequest> {
+extension AMapRoutePOISearchRequest_Batch on List<AMapRoutePOISearchRequest?> {
   //region getters
   Future<List<AMapGeoPoint?>?> get_origin_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoutePOISearchRequest::get_origin_batch", [for (final __item__ in this) {'__this__': __item__}]);

@@ -1,4 +1,3 @@
-//@dart=2.9
 // ignore_for_file: non_constant_identifier_names
 import 'dart:async';
 
@@ -28,15 +27,15 @@ class AmapSearch extends _Holder with _Community {
 }
 
 class _Holder {
-  AMapSearchAPI _iosSearch;
-  com_amap_api_services_poisearch_PoiSearch _androidPoiSearch;
-  com_amap_api_services_help_Inputtips _androidInputTip;
-  com_amap_api_services_geocoder_GeocodeSearch _androidGeocodeSearch;
-  com_amap_api_services_route_RouteSearch _androidRouteSearch;
-  com_amap_api_services_busline_BusStationSearch _androidBusStationSearch;
-  com_amap_api_services_district_DistrictSearch _androidDistrictSearch;
-  com_amap_api_services_weather_WeatherSearch _androidWeatherSearch;
-  com_amap_api_services_cloud_CloudSearch _androidCloudSearch;
+  late AMapSearchAPI _iosSearch;
+  late com_amap_api_services_poisearch_PoiSearch _androidPoiSearch;
+  late com_amap_api_services_help_Inputtips _androidInputTip;
+  late com_amap_api_services_geocoder_GeocodeSearch _androidGeocodeSearch;
+  late com_amap_api_services_route_RouteSearch _androidRouteSearch;
+  late com_amap_api_services_busline_BusStationSearch _androidBusStationSearch;
+  late com_amap_api_services_district_DistrictSearch _androidDistrictSearch;
+  late com_amap_api_services_weather_WeatherSearch _androidWeatherSearch;
+  late com_amap_api_services_cloud_CloudSearch _androidCloudSearch;
 }
 
 mixin _Community on _Holder {
@@ -212,7 +211,8 @@ mixin _Community on _Holder {
                 context, null);
 
         // 开始搜索
-        final result = await _androidPoiSearch.searchPOIId(id);
+        final result = await (_androidPoiSearch.searchPOIId(id)
+            as FutureOr<com_amap_api_services_core_PoiItem>);
 
         pool..add(context);
         return await PoiX.fromAndroid(result);
@@ -431,8 +431,8 @@ mixin _Community on _Holder {
   ///
   /// 指定起点[from]和终点[to], 并指定途经点[passedByPoints]和避开道路名称[avoidRoad]进行搜索
   Future<DriveRouteResult> searchDriveRoute({
-    @required LatLng from,
-    @required LatLng to,
+    required LatLng from,
+    required LatLng to,
     List<LatLng> passedByPoints = const [],
     String avoidRoad = '',
   }) async {
@@ -560,9 +560,9 @@ mixin _Community on _Holder {
   /// 指定起点[from]和终点[to]进行计算, 还可以指定计算路径的模式[mode], 默认为最快捷. [city]指定所在城市
   /// [nightflag]是否计算夜班车，默认为不计算，0：不计算，1：计算
   Future<BusRouteResult> searchBusRoute({
-    @required LatLng from,
-    @required LatLng to,
-    @required String city,
+    required LatLng from,
+    required LatLng to,
+    required String city,
     int mode = 0,
     int nightflag = 0,
   }) async {
@@ -653,8 +653,8 @@ mixin _Community on _Holder {
   ///
   /// 指定起点[from]和终点[to]进行计算, 还可以指定计算路径的模式[mode]. SDK提供两种模式：RouteSearch.WALK_DEFAULT 和 RouteSearch.WALK_MULTI_PATH
   Future<WalkRouteResult> searchWalkRoute({
-    @required LatLng from,
-    @required LatLng to,
+    required LatLng from,
+    required LatLng to,
     int mode = 0,
   }) async {
     // 会在listener中关闭
@@ -740,8 +740,8 @@ mixin _Community on _Holder {
 
   /// 骑行路径规划
   Future<RideRouteResult> searchRideRoute({
-    @required LatLng from,
-    @required LatLng to,
+    required LatLng from,
+    required LatLng to,
     int mode = 0,
   }) async {
     // 会在listener中关闭
@@ -829,8 +829,8 @@ mixin _Community on _Holder {
 
   /// 获取公交信息
   Future<BusStation> searchBusStation({
-    @required String stationName,
-    @required String city,
+    required String stationName,
+    required String city,
   }) async {
     // 会在listener中关闭
     // ignore: close_sinks
@@ -1022,13 +1022,6 @@ mixin _Community on _Holder {
     LatLng center,
     int radius,
   ) async {
-    assert(tableId != null);
-    assert(keyword != null);
-    assert(center != null);
-    assert(radius != null);
-
-    // 会在listener中关闭
-    // ignore: close_sinks
     final _controller = Completer<Cloud>();
 
     await platform(
@@ -1073,8 +1066,8 @@ mixin _Community on _Holder {
         // 关键字
         await request.set_keywords(keyword);
         // 中心点
-        final centerPoint = await AMapGeoPoint.locationWithLatitude_longitude(
-            center.latitude, center.longitude);
+        final centerPoint = await (AMapGeoPoint.locationWithLatitude_longitude(
+            center.latitude, center.longitude) as FutureOr<AMapGeoPoint>);
         await request.set_center(centerPoint);
         await request.set_radius(radius);
 
@@ -1094,13 +1087,13 @@ mixin _Community on _Holder {
     await gGlobalReleasePool.where(isCurrentPlugin).release_batch();
     gGlobalReleasePool.removeWhere(isCurrentPlugin);
 
-    await _iosSearch?.release__();
-    await _androidPoiSearch?.release__();
-    await _androidInputTip?.release__();
-    await _androidGeocodeSearch?.release__();
-    await _androidRouteSearch?.release__();
-    await _androidBusStationSearch?.release__();
-    await _androidDistrictSearch?.release__();
-    await _androidWeatherSearch?.release__();
+    await _iosSearch.release__();
+    await _androidPoiSearch.release__();
+    await _androidInputTip.release__();
+    await _androidGeocodeSearch.release__();
+    await _androidRouteSearch.release__();
+    await _androidBusStationSearch.release__();
+    await _androidDistrictSearch.release__();
+    await _androidWeatherSearch.release__();
   }
 }

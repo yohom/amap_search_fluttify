@@ -93,7 +93,7 @@ class AMapPOIExtension extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapPOIExtension_Batch on List<AMapPOIExtension> {
+extension AMapPOIExtension_Batch on List<AMapPOIExtension?> {
   //region getters
   Future<List<double?>?> get_rating_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOIExtension::get_rating_batch", [for (final __item__ in this) {'__this__': __item__}]);

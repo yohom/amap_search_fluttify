@@ -129,7 +129,7 @@ class com_amap_api_services_route_RouteResult extends java_lang_Object with andr
   }
 }
 
-extension com_amap_api_services_route_RouteResult_Batch on List<com_amap_api_services_route_RouteResult> {
+extension com_amap_api_services_route_RouteResult_Batch on List<com_amap_api_services_route_RouteResult?> {
   //region getters
   
   //endregion

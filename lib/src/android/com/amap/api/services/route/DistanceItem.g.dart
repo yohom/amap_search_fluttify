@@ -279,7 +279,7 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
   }
 }
 
-extension com_amap_api_services_route_DistanceItem_Batch on List<com_amap_api_services_route_DistanceItem> {
+extension com_amap_api_services_route_DistanceItem_Batch on List<com_amap_api_services_route_DistanceItem?> {
   //region getters
   Future<List<int?>?> get_ERROR_CODE_NO_DRIVE_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("com.amap.api.services.route.DistanceItem::get_ERROR_CODE_NO_DRIVE_batch", [for (final __item__ in this) {'__this__': __item__}]);

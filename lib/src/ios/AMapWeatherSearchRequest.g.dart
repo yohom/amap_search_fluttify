@@ -82,7 +82,7 @@ class AMapWeatherSearchRequest extends AMapSearchObject with NSCoding, NSCopying
   }
 }
 
-extension AMapWeatherSearchRequest_Batch on List<AMapWeatherSearchRequest> {
+extension AMapWeatherSearchRequest_Batch on List<AMapWeatherSearchRequest?> {
   //region getters
   Future<List<String?>?> get_city_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapWeatherSearchRequest::get_city_batch", [for (final __item__ in this) {'__this__': __item__}]);

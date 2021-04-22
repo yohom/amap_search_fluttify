@@ -945,7 +945,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   }
 }
 
-extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services_core_PoiItem> {
+extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services_core_PoiItem?> {
   //region getters
   
   //endregion

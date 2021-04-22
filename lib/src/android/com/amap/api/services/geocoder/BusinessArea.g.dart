@@ -129,7 +129,7 @@ class com_amap_api_services_geocoder_BusinessArea extends java_lang_Object with 
   }
 }
 
-extension com_amap_api_services_geocoder_BusinessArea_Batch on List<com_amap_api_services_geocoder_BusinessArea> {
+extension com_amap_api_services_geocoder_BusinessArea_Batch on List<com_amap_api_services_geocoder_BusinessArea?> {
   //region getters
   
   //endregion

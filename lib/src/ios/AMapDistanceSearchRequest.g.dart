@@ -115,7 +115,7 @@ class AMapDistanceSearchRequest extends AMapSearchObject with NSCoding, NSCopyin
   }
 }
 
-extension AMapDistanceSearchRequest_Batch on List<AMapDistanceSearchRequest> {
+extension AMapDistanceSearchRequest_Batch on List<AMapDistanceSearchRequest?> {
   //region getters
   Future<List<List<AMapGeoPoint>?>?> get_origins_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapDistanceSearchRequest::get_origins_batch", [for (final __item__ in this) {'__this__': __item__}]);

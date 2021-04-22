@@ -71,7 +71,7 @@ class AMapBusLineIDSearchRequest extends AMapBusLineBaseSearchRequest with NSCod
   }
 }
 
-extension AMapBusLineIDSearchRequest_Batch on List<AMapBusLineIDSearchRequest> {
+extension AMapBusLineIDSearchRequest_Batch on List<AMapBusLineIDSearchRequest?> {
   //region getters
   Future<List<String?>?> get_uid_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapBusLineIDSearchRequest::get_uid_batch", [for (final __item__ in this) {'__this__': __item__}]);

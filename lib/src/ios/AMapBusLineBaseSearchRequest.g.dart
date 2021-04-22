@@ -104,7 +104,7 @@ class AMapBusLineBaseSearchRequest extends AMapSearchObject with NSCoding, NSCop
   }
 }
 
-extension AMapBusLineBaseSearchRequest_Batch on List<AMapBusLineBaseSearchRequest> {
+extension AMapBusLineBaseSearchRequest_Batch on List<AMapBusLineBaseSearchRequest?> {
   //region getters
   Future<List<String?>?> get_city_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapBusLineBaseSearchRequest::get_city_batch", [for (final __item__ in this) {'__this__': __item__}]);

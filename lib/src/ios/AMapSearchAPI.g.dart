@@ -771,7 +771,7 @@ class AMapSearchAPI extends NSObject  {
   }
 }
 
-extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
+extension AMapSearchAPI_Batch on List<AMapSearchAPI?> {
   //region getters
   Future<List<int?>?> get_timeout_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapSearchAPI::get_timeout_batch", [for (final __item__ in this) {'__this__': __item__}]);

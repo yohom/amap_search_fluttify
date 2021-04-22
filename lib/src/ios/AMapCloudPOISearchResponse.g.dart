@@ -82,7 +82,7 @@ class AMapCloudPOISearchResponse extends AMapSearchObject with NSCoding, NSCopyi
   }
 }
 
-extension AMapCloudPOISearchResponse_Batch on List<AMapCloudPOISearchResponse> {
+extension AMapCloudPOISearchResponse_Batch on List<AMapCloudPOISearchResponse?> {
   //region getters
   Future<List<int?>?> get_count_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudPOISearchResponse::get_count_batch", [for (final __item__ in this) {'__this__': __item__}]);

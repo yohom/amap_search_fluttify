@@ -93,7 +93,7 @@ class AMapNearbyUploadInfo extends NSObject with NSCopying {
   }
 }
 
-extension AMapNearbyUploadInfo_Batch on List<AMapNearbyUploadInfo> {
+extension AMapNearbyUploadInfo_Batch on List<AMapNearbyUploadInfo?> {
   //region getters
   Future<List<String?>?> get_userID_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapNearbyUploadInfo::get_userID_batch", [for (final __item__ in this) {'__this__': __item__}]);

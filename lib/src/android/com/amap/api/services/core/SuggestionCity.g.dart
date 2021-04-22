@@ -197,7 +197,7 @@ class com_amap_api_services_core_SuggestionCity extends java_lang_Object  {
   }
 }
 
-extension com_amap_api_services_core_SuggestionCity_Batch on List<com_amap_api_services_core_SuggestionCity> {
+extension com_amap_api_services_core_SuggestionCity_Batch on List<com_amap_api_services_core_SuggestionCity?> {
   //region getters
   
   //endregion

@@ -503,7 +503,7 @@ class com_amap_api_services_route_TruckStep extends java_lang_Object with androi
   }
 }
 
-extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_services_route_TruckStep> {
+extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_services_route_TruckStep?> {
   //region getters
   
   //endregion

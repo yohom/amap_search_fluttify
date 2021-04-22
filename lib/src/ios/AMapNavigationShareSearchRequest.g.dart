@@ -93,7 +93,7 @@ class AMapNavigationShareSearchRequest extends AMapShareSearchBaseRequest with N
   }
 }
 
-extension AMapNavigationShareSearchRequest_Batch on List<AMapNavigationShareSearchRequest> {
+extension AMapNavigationShareSearchRequest_Batch on List<AMapNavigationShareSearchRequest?> {
   //region getters
   Future<List<int?>?> get_strategy_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapNavigationShareSearchRequest::get_strategy_batch", [for (final __item__ in this) {'__this__': __item__}]);

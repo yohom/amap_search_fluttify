@@ -488,7 +488,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   }
 }
 
-extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap_api_services_poisearch_PoiSearch_Query> {
+extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap_api_services_poisearch_PoiSearch_Query?> {
   //region getters
   
   //endregion

@@ -129,7 +129,7 @@ class com_amap_api_services_route_TimeInfo extends java_lang_Object with android
   }
 }
 
-extension com_amap_api_services_route_TimeInfo_Batch on List<com_amap_api_services_route_TimeInfo> {
+extension com_amap_api_services_route_TimeInfo_Batch on List<com_amap_api_services_route_TimeInfo?> {
   //region getters
   
   //endregion

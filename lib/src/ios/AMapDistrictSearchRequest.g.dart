@@ -93,7 +93,7 @@ class AMapDistrictSearchRequest extends AMapSearchObject with NSCoding, NSCopyin
   }
 }
 
-extension AMapDistrictSearchRequest_Batch on List<AMapDistrictSearchRequest> {
+extension AMapDistrictSearchRequest_Batch on List<AMapDistrictSearchRequest?> {
   //region getters
   Future<List<String?>?> get_keywords_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapDistrictSearchRequest::get_keywords_batch", [for (final __item__ in this) {'__this__': __item__}]);

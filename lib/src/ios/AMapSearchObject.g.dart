@@ -78,7 +78,7 @@ class AMapSearchObject extends NSObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapSearchObject_Batch on List<AMapSearchObject> {
+extension AMapSearchObject_Batch on List<AMapSearchObject?> {
   //region getters
   
   //endregion

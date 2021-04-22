@@ -163,7 +163,7 @@ class com_amap_api_services_share_ShareSearch_ShareFromAndTo extends java_lang_O
   }
 }
 
-extension com_amap_api_services_share_ShareSearch_ShareFromAndTo_Batch on List<com_amap_api_services_share_ShareSearch_ShareFromAndTo> {
+extension com_amap_api_services_share_ShareSearch_ShareFromAndTo_Batch on List<com_amap_api_services_share_ShareSearch_ShareFromAndTo?> {
   //region getters
   
   //endregion

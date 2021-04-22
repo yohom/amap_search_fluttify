@@ -95,7 +95,7 @@ class com_amap_api_services_route_WalkPath extends com_amap_api_services_route_P
   }
 }
 
-extension com_amap_api_services_route_WalkPath_Batch on List<com_amap_api_services_route_WalkPath> {
+extension com_amap_api_services_route_WalkPath_Batch on List<com_amap_api_services_route_WalkPath?> {
   //region getters
   
   //endregion

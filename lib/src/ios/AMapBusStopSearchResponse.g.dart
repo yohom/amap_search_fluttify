@@ -93,7 +93,7 @@ class AMapBusStopSearchResponse extends AMapSearchObject with NSCoding, NSCopyin
   }
 }
 
-extension AMapBusStopSearchResponse_Batch on List<AMapBusStopSearchResponse> {
+extension AMapBusStopSearchResponse_Batch on List<AMapBusStopSearchResponse?> {
   //region getters
   Future<List<int?>?> get_count_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapBusStopSearchResponse::get_count_batch", [for (final __item__ in this) {'__this__': __item__}]);

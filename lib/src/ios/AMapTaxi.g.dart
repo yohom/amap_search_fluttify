@@ -126,7 +126,7 @@ class AMapTaxi extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapTaxi_Batch on List<AMapTaxi> {
+extension AMapTaxi_Batch on List<AMapTaxi?> {
   //region getters
   Future<List<AMapGeoPoint?>?> get_origin_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTaxi::get_origin_batch", [for (final __item__ in this) {'__this__': __item__}]);

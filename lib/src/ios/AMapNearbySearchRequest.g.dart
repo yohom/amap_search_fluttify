@@ -115,7 +115,7 @@ class AMapNearbySearchRequest extends AMapSearchObject with NSCoding, NSCopying 
   }
 }
 
-extension AMapNearbySearchRequest_Batch on List<AMapNearbySearchRequest> {
+extension AMapNearbySearchRequest_Batch on List<AMapNearbySearchRequest?> {
   //region getters
   Future<List<AMapGeoPoint?>?> get_center_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapNearbySearchRequest::get_center_batch", [for (final __item__ in this) {'__this__': __item__}]);

@@ -115,7 +115,7 @@ class AMapAOI extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapAOI_Batch on List<AMapAOI> {
+extension AMapAOI_Batch on List<AMapAOI?> {
   //region getters
   Future<List<String?>?> get_uid_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapAOI::get_uid_batch", [for (final __item__ in this) {'__this__': __item__}]);

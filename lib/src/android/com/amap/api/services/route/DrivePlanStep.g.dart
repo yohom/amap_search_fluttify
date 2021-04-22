@@ -231,7 +231,7 @@ class com_amap_api_services_route_DrivePlanStep extends java_lang_Object with an
   }
 }
 
-extension com_amap_api_services_route_DrivePlanStep_Batch on List<com_amap_api_services_route_DrivePlanStep> {
+extension com_amap_api_services_route_DrivePlanStep_Batch on List<com_amap_api_services_route_DrivePlanStep?> {
   //region getters
   
   //endregion

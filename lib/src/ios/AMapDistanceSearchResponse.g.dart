@@ -71,7 +71,7 @@ class AMapDistanceSearchResponse extends AMapSearchObject with NSCoding, NSCopyi
   }
 }
 
-extension AMapDistanceSearchResponse_Batch on List<AMapDistanceSearchResponse> {
+extension AMapDistanceSearchResponse_Batch on List<AMapDistanceSearchResponse?> {
   //region getters
   Future<List<List<AMapDistanceResult>?>?> get_results_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapDistanceSearchResponse::get_results_batch", [for (final __item__ in this) {'__this__': __item__}]);

@@ -71,7 +71,7 @@ class AMapReGeocodeSearchResponse extends AMapSearchObject with NSCoding, NSCopy
   }
 }
 
-extension AMapReGeocodeSearchResponse_Batch on List<AMapReGeocodeSearchResponse> {
+extension AMapReGeocodeSearchResponse_Batch on List<AMapReGeocodeSearchResponse?> {
   //region getters
   Future<List<AMapReGeocode?>?> get_regeocode_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapReGeocodeSearchResponse::get_regeocode_batch", [for (final __item__ in this) {'__this__': __item__}]);

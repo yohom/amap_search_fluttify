@@ -180,7 +180,7 @@ class com_amap_api_services_geocoder_GeocodeSearch extends java_lang_Object  {
   }
 }
 
-extension com_amap_api_services_geocoder_GeocodeSearch_Batch on List<com_amap_api_services_geocoder_GeocodeSearch> {
+extension com_amap_api_services_geocoder_GeocodeSearch_Batch on List<com_amap_api_services_geocoder_GeocodeSearch?> {
   //region getters
   
   //endregion

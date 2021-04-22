@@ -62,7 +62,7 @@ class com_amap_api_services_cloud_CloudItemDetail extends com_amap_api_services_
   }
 }
 
-extension com_amap_api_services_cloud_CloudItemDetail_Batch on List<com_amap_api_services_cloud_CloudItemDetail> {
+extension com_amap_api_services_cloud_CloudItemDetail_Batch on List<com_amap_api_services_cloud_CloudItemDetail?> {
   //region getters
   
   //endregion

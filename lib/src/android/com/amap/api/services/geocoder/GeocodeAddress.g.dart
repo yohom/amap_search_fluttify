@@ -469,7 +469,7 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
   }
 }
 
-extension com_amap_api_services_geocoder_GeocodeAddress_Batch on List<com_amap_api_services_geocoder_GeocodeAddress> {
+extension com_amap_api_services_geocoder_GeocodeAddress_Batch on List<com_amap_api_services_geocoder_GeocodeAddress?> {
   //region getters
   
   //endregion

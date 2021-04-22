@@ -115,7 +115,7 @@ class AMapTransitRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCo
   }
 }
 
-extension AMapTransitRouteSearchRequest_Batch on List<AMapTransitRouteSearchRequest> {
+extension AMapTransitRouteSearchRequest_Batch on List<AMapTransitRouteSearchRequest?> {
   //region getters
   Future<List<int?>?> get_strategy_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTransitRouteSearchRequest::get_strategy_batch", [for (final __item__ in this) {'__this__': __item__}]);

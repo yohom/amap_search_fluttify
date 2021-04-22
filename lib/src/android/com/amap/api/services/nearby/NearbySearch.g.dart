@@ -333,7 +333,7 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
   }
 }
 
-extension com_amap_api_services_nearby_NearbySearch_Batch on List<com_amap_api_services_nearby_NearbySearch> {
+extension com_amap_api_services_nearby_NearbySearch_Batch on List<com_amap_api_services_nearby_NearbySearch?> {
   //region getters
   
   //endregion

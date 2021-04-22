@@ -159,7 +159,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearch extends java_lang_Obje
   }
 }
 
-extension com_amap_api_services_routepoisearch_RoutePOISearch_Batch on List<com_amap_api_services_routepoisearch_RoutePOISearch> {
+extension com_amap_api_services_routepoisearch_RoutePOISearch_Batch on List<com_amap_api_services_routepoisearch_RoutePOISearch?> {
   //region getters
   
   //endregion

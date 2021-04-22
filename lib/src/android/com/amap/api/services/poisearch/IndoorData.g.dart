@@ -163,7 +163,7 @@ class com_amap_api_services_poisearch_IndoorData extends java_lang_Object with a
   }
 }
 
-extension com_amap_api_services_poisearch_IndoorData_Batch on List<com_amap_api_services_poisearch_IndoorData> {
+extension com_amap_api_services_poisearch_IndoorData_Batch on List<com_amap_api_services_poisearch_IndoorData?> {
   //region getters
   
   //endregion

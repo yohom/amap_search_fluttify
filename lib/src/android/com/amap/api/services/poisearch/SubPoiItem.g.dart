@@ -299,7 +299,7 @@ class com_amap_api_services_poisearch_SubPoiItem extends java_lang_Object with a
   }
 }
 
-extension com_amap_api_services_poisearch_SubPoiItem_Batch on List<com_amap_api_services_poisearch_SubPoiItem> {
+extension com_amap_api_services_poisearch_SubPoiItem_Batch on List<com_amap_api_services_poisearch_SubPoiItem?> {
   //region getters
   
   //endregion

@@ -82,7 +82,7 @@ class AMapRouteSearchResponse extends AMapSearchObject with NSCoding, NSCopying 
   }
 }
 
-extension AMapRouteSearchResponse_Batch on List<AMapRouteSearchResponse> {
+extension AMapRouteSearchResponse_Batch on List<AMapRouteSearchResponse?> {
   //region getters
   Future<List<int?>?> get_count_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRouteSearchResponse::get_count_batch", [for (final __item__ in this) {'__this__': __item__}]);

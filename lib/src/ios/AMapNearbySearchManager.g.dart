@@ -188,7 +188,7 @@ class AMapNearbySearchManager extends NSObject  {
   }
 }
 
-extension AMapNearbySearchManager_Batch on List<AMapNearbySearchManager> {
+extension AMapNearbySearchManager_Batch on List<AMapNearbySearchManager?> {
   //region getters
   Future<List<double?>?> get_uploadTimeInterval_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapNearbySearchManager::get_uploadTimeInterval_batch", [for (final __item__ in this) {'__this__': __item__}]);

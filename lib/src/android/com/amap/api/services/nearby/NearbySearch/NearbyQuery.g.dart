@@ -231,7 +231,7 @@ class com_amap_api_services_nearby_NearbySearch_NearbyQuery extends java_lang_Ob
   }
 }
 
-extension com_amap_api_services_nearby_NearbySearch_NearbyQuery_Batch on List<com_amap_api_services_nearby_NearbySearch_NearbyQuery> {
+extension com_amap_api_services_nearby_NearbySearch_NearbyQuery_Batch on List<com_amap_api_services_nearby_NearbySearch_NearbyQuery?> {
   //region getters
   
   //endregion

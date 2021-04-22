@@ -265,7 +265,7 @@ class com_amap_api_services_route_TaxiItem extends java_lang_Object with android
   }
 }
 
-extension com_amap_api_services_route_TaxiItem_Batch on List<com_amap_api_services_route_TaxiItem> {
+extension com_amap_api_services_route_TaxiItem_Batch on List<com_amap_api_services_route_TaxiItem?> {
   //region getters
   
   //endregion

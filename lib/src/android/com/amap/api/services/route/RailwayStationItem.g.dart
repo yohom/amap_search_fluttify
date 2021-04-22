@@ -333,7 +333,7 @@ class com_amap_api_services_route_RailwayStationItem extends java_lang_Object wi
   }
 }
 
-extension com_amap_api_services_route_RailwayStationItem_Batch on List<com_amap_api_services_route_RailwayStationItem> {
+extension com_amap_api_services_route_RailwayStationItem_Batch on List<com_amap_api_services_route_RailwayStationItem?> {
   //region getters
   
   //endregion

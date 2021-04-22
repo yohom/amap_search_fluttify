@@ -146,7 +146,7 @@ class com_amap_api_services_route_DriveRoutePlanResult extends com_amap_api_serv
   }
 }
 
-extension com_amap_api_services_route_DriveRoutePlanResult_Batch on List<com_amap_api_services_route_DriveRoutePlanResult> {
+extension com_amap_api_services_route_DriveRoutePlanResult_Batch on List<com_amap_api_services_route_DriveRoutePlanResult?> {
   //region getters
   
   //endregion

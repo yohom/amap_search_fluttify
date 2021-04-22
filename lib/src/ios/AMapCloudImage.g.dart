@@ -93,7 +93,7 @@ class AMapCloudImage extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapCloudImage_Batch on List<AMapCloudImage> {
+extension AMapCloudImage_Batch on List<AMapCloudImage?> {
   //region getters
   Future<List<String?>?> get_uid_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudImage::get_uid_batch", [for (final __item__ in this) {'__this__': __item__}]);

@@ -71,7 +71,7 @@ class AMapWalkingRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCo
   }
 }
 
-extension AMapWalkingRouteSearchRequest_Batch on List<AMapWalkingRouteSearchRequest> {
+extension AMapWalkingRouteSearchRequest_Batch on List<AMapWalkingRouteSearchRequest?> {
   //region getters
   Future<List<int?>?> get_multipath_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapWalkingRouteSearchRequest::get_multipath_batch", [for (final __item__ in this) {'__this__': __item__}]);

@@ -115,7 +115,7 @@ class AMapInputTipsSearchRequest extends AMapSearchObject with NSCoding, NSCopyi
   }
 }
 
-extension AMapInputTipsSearchRequest_Batch on List<AMapInputTipsSearchRequest> {
+extension AMapInputTipsSearchRequest_Batch on List<AMapInputTipsSearchRequest?> {
   //region getters
   Future<List<String?>?> get_keywords_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapInputTipsSearchRequest::get_keywords_batch", [for (final __item__ in this) {'__this__': __item__}]);

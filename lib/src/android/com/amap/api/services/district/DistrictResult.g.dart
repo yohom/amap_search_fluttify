@@ -216,7 +216,7 @@ class com_amap_api_services_district_DistrictResult extends java_lang_Object wit
   }
 }
 
-extension com_amap_api_services_district_DistrictResult_Batch on List<com_amap_api_services_district_DistrictResult> {
+extension com_amap_api_services_district_DistrictResult_Batch on List<com_amap_api_services_district_DistrictResult?> {
   //region getters
   
   //endregion

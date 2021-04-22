@@ -71,7 +71,7 @@ class AMapShareSearchResponse extends AMapSearchObject with NSCoding, NSCopying 
   }
 }
 
-extension AMapShareSearchResponse_Batch on List<AMapShareSearchResponse> {
+extension AMapShareSearchResponse_Batch on List<AMapShareSearchResponse?> {
   //region getters
   Future<List<String?>?> get_shareURL_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapShareSearchResponse::get_shareURL_batch", [for (final __item__ in this) {'__this__': __item__}]);

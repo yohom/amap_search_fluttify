@@ -231,7 +231,7 @@ class com_amap_api_services_geocoder_StreetNumber extends java_lang_Object with 
   }
 }
 
-extension com_amap_api_services_geocoder_StreetNumber_Batch on List<com_amap_api_services_geocoder_StreetNumber> {
+extension com_amap_api_services_geocoder_StreetNumber_Batch on List<com_amap_api_services_geocoder_StreetNumber?> {
   //region getters
   
   //endregion

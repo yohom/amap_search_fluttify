@@ -225,7 +225,7 @@ class AMapTruckRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCodi
   }
 }
 
-extension AMapTruckRouteSearchRequest_Batch on List<AMapTruckRouteSearchRequest> {
+extension AMapTruckRouteSearchRequest_Batch on List<AMapTruckRouteSearchRequest?> {
   //region getters
   Future<List<int?>?> get_strategy_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTruckRouteSearchRequest::get_strategy_batch", [for (final __item__ in this) {'__this__': __item__}]);

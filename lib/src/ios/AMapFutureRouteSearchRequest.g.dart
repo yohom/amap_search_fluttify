@@ -192,7 +192,7 @@ class AMapFutureRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCod
   }
 }
 
-extension AMapFutureRouteSearchRequest_Batch on List<AMapFutureRouteSearchRequest> {
+extension AMapFutureRouteSearchRequest_Batch on List<AMapFutureRouteSearchRequest?> {
   //region getters
   Future<List<String?>?> get_beginTime_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapFutureRouteSearchRequest::get_beginTime_batch", [for (final __item__ in this) {'__this__': __item__}]);

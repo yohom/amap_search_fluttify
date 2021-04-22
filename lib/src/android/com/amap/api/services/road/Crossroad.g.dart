@@ -265,7 +265,7 @@ class com_amap_api_services_road_Crossroad extends com_amap_api_services_road_Ro
   }
 }
 
-extension com_amap_api_services_road_Crossroad_Batch on List<com_amap_api_services_road_Crossroad> {
+extension com_amap_api_services_road_Crossroad_Batch on List<com_amap_api_services_road_Crossroad?> {
   //region getters
   
   //endregion

@@ -170,7 +170,7 @@ class AMapLocalDayWeatherForecast extends AMapSearchObject with NSCoding, NSCopy
   }
 }
 
-extension AMapLocalDayWeatherForecast_Batch on List<AMapLocalDayWeatherForecast> {
+extension AMapLocalDayWeatherForecast_Batch on List<AMapLocalDayWeatherForecast?> {
   //region getters
   Future<List<String?>?> get_date_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapLocalDayWeatherForecast::get_date_batch", [for (final __item__ in this) {'__this__': __item__}]);

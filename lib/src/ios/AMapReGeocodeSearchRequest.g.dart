@@ -115,7 +115,7 @@ class AMapReGeocodeSearchRequest extends AMapSearchObject with NSCoding, NSCopyi
   }
 }
 
-extension AMapReGeocodeSearchRequest_Batch on List<AMapReGeocodeSearchRequest> {
+extension AMapReGeocodeSearchRequest_Batch on List<AMapReGeocodeSearchRequest?> {
   //region getters
   Future<List<bool?>?> get_requireExtension_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapReGeocodeSearchRequest::get_requireExtension_batch", [for (final __item__ in this) {'__this__': __item__}]);

@@ -82,7 +82,7 @@ class AMapBusinessArea extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapBusinessArea_Batch on List<AMapBusinessArea> {
+extension AMapBusinessArea_Batch on List<AMapBusinessArea?> {
   //region getters
   Future<List<String?>?> get_name_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapBusinessArea::get_name_batch", [for (final __item__ in this) {'__this__': __item__}]);

@@ -62,7 +62,7 @@ class AMapShareSearchBaseRequest extends AMapSearchObject with NSCoding, NSCopyi
   }
 }
 
-extension AMapShareSearchBaseRequest_Batch on List<AMapShareSearchBaseRequest> {
+extension AMapShareSearchBaseRequest_Batch on List<AMapShareSearchBaseRequest?> {
   //region getters
   
   //endregion

@@ -300,7 +300,7 @@ class com_amap_api_services_core_AMapException extends java_lang_Object  {
   }
 }
 
-extension com_amap_api_services_core_AMapException_Batch on List<com_amap_api_services_core_AMapException> {
+extension com_amap_api_services_core_AMapException_Batch on List<com_amap_api_services_core_AMapException?> {
   //region getters
   
   //endregion

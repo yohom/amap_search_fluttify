@@ -163,7 +163,7 @@ class com_amap_api_services_route_Path extends java_lang_Object with android_os_
   }
 }
 
-extension com_amap_api_services_route_Path_Batch on List<com_amap_api_services_route_Path> {
+extension com_amap_api_services_route_Path_Batch on List<com_amap_api_services_route_Path?> {
   //region getters
   
   //endregion

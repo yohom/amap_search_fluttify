@@ -129,7 +129,7 @@ class com_amap_api_services_route_DistanceResult extends java_lang_Object with a
   }
 }
 
-extension com_amap_api_services_route_DistanceResult_Batch on List<com_amap_api_services_route_DistanceResult> {
+extension com_amap_api_services_route_DistanceResult_Batch on List<com_amap_api_services_route_DistanceResult?> {
   //region getters
   
   //endregion

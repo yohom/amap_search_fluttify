@@ -126,7 +126,7 @@ class AMapTransit extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapTransit_Batch on List<AMapTransit> {
+extension AMapTransit_Batch on List<AMapTransit?> {
   //region getters
   Future<List<double?>?> get_cost_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTransit::get_cost_batch", [for (final __item__ in this) {'__this__': __item__}]);

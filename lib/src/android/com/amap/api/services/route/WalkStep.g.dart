@@ -333,7 +333,7 @@ class com_amap_api_services_route_WalkStep extends java_lang_Object with android
   }
 }
 
-extension com_amap_api_services_route_WalkStep_Batch on List<com_amap_api_services_route_WalkStep> {
+extension com_amap_api_services_route_WalkStep_Batch on List<com_amap_api_services_route_WalkStep?> {
   //region getters
   
   //endregion

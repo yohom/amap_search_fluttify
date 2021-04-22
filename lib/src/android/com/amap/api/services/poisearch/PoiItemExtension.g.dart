@@ -95,7 +95,7 @@ class com_amap_api_services_poisearch_PoiItemExtension extends java_lang_Object 
   }
 }
 
-extension com_amap_api_services_poisearch_PoiItemExtension_Batch on List<com_amap_api_services_poisearch_PoiItemExtension> {
+extension com_amap_api_services_poisearch_PoiItemExtension_Batch on List<com_amap_api_services_poisearch_PoiItemExtension?> {
   //region getters
   
   //endregion

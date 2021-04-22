@@ -95,7 +95,7 @@ class com_amap_api_services_share_ShareSearch_ShareBusRouteQuery extends java_la
   }
 }
 
-extension com_amap_api_services_share_ShareSearch_ShareBusRouteQuery_Batch on List<com_amap_api_services_share_ShareSearch_ShareBusRouteQuery> {
+extension com_amap_api_services_share_ShareSearch_ShareBusRouteQuery_Batch on List<com_amap_api_services_share_ShareSearch_ShareBusRouteQuery?> {
   //region getters
   
   //endregion

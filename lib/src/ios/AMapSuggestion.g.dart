@@ -82,7 +82,7 @@ class AMapSuggestion extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapSuggestion_Batch on List<AMapSuggestion> {
+extension AMapSuggestion_Batch on List<AMapSuggestion?> {
   //region getters
   Future<List<List<String>?>?> get_keywords_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapSuggestion::get_keywords_batch", [for (final __item__ in this) {'__this__': __item__}]);

@@ -159,7 +159,7 @@ class AMapCloudPOI extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapCloudPOI_Batch on List<AMapCloudPOI> {
+extension AMapCloudPOI_Batch on List<AMapCloudPOI?> {
   //region getters
   Future<List<int?>?> get_uid_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudPOI::get_uid_batch", [for (final __item__ in this) {'__this__': __item__}]);

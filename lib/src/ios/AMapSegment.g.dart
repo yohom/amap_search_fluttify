@@ -148,7 +148,7 @@ class AMapSegment extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapSegment_Batch on List<AMapSegment> {
+extension AMapSegment_Batch on List<AMapSegment?> {
   //region getters
   Future<List<AMapWalking?>?> get_walking_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapSegment::get_walking_batch", [for (final __item__ in this) {'__this__': __item__}]);

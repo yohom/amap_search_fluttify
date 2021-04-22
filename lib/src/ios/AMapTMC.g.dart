@@ -93,7 +93,7 @@ class AMapTMC extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapTMC_Batch on List<AMapTMC> {
+extension AMapTMC_Batch on List<AMapTMC?> {
   //region getters
   Future<List<int?>?> get_distance_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTMC::get_distance_batch", [for (final __item__ in this) {'__this__': __item__}]);

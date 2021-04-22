@@ -265,7 +265,7 @@ class com_amap_api_services_route_DistanceSearch_DistanceQuery extends java_lang
   }
 }
 
-extension com_amap_api_services_route_DistanceSearch_DistanceQuery_Batch on List<com_amap_api_services_route_DistanceSearch_DistanceQuery> {
+extension com_amap_api_services_route_DistanceSearch_DistanceQuery_Batch on List<com_amap_api_services_route_DistanceSearch_DistanceQuery?> {
   //region getters
   
   //endregion

@@ -257,7 +257,7 @@ class com_amap_api_services_cloud_CloudSearch_SearchBound extends java_lang_Obje
   }
 }
 
-extension com_amap_api_services_cloud_CloudSearch_SearchBound_Batch on List<com_amap_api_services_cloud_CloudSearch_SearchBound> {
+extension com_amap_api_services_cloud_CloudSearch_SearchBound_Batch on List<com_amap_api_services_cloud_CloudSearch_SearchBound?> {
   //region getters
   
   //endregion

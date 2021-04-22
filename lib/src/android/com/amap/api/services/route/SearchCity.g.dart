@@ -163,7 +163,7 @@ class com_amap_api_services_route_SearchCity extends java_lang_Object with andro
   }
 }
 
-extension com_amap_api_services_route_SearchCity_Batch on List<com_amap_api_services_route_SearchCity> {
+extension com_amap_api_services_route_SearchCity_Batch on List<com_amap_api_services_route_SearchCity?> {
   //region getters
   
   //endregion

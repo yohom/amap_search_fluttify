@@ -401,7 +401,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
   }
 }
 
-extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<com_amap_api_services_weather_LocalDayWeatherForecast> {
+extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<com_amap_api_services_weather_LocalDayWeatherForecast?> {
   //region getters
   
   //endregion

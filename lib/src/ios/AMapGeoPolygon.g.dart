@@ -87,7 +87,7 @@ class AMapGeoPolygon extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapGeoPolygon_Batch on List<AMapGeoPolygon> {
+extension AMapGeoPolygon_Batch on List<AMapGeoPolygon?> {
   //region getters
   Future<List<List<AMapGeoPoint>?>?> get_points_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapGeoPolygon::get_points_batch", [for (final __item__ in this) {'__this__': __item__}]);
