@@ -20,7 +20,7 @@
     <!--允许程序访问CellID或WiFi热点来获取粗略的位置-->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <application
-        android:name="io.flutter.app.FlutterApplication"
+        android:name="${applicationName}"
         android:label="amap_search_fluttify_example"
         android:networkSecurityConfig="@xml/network_security_config"
         android:icon="@mipmap/ic_launcher">
@@ -48,4 +48,5 @@
             </intent-filter>
         </activity>
     </application>
+    <meta-data android:name="flutterEmbedding" android:value="2"/>
 </manifest>

@@ -24,7 +24,7 @@ class FunctionGroup extends StatelessWidget {
                 padding:
                     const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                 child: Text(headLabel,
-                    style: Theme.of(context).textTheme.headline),
+                    style: Theme.of(context).textTheme.headline6),
               ),
               Divider(height: 1, indent: 16),
             ],

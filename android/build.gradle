@@ -4,37 +4,37 @@ version '1.0-SNAPSHOT'
 buildscript {
     repositories {
         google()
-        jcenter()
-        maven { url 'http://download.flutter.io' }
+        mavenCentral()
+        maven { url 'https://download.flutter.io' }
         maven { url "https://oss.sonatype.org/content/groups/public" }
-        maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
+        maven { url "https://maven.aliyun.com/nexus/content/groups/public/" }
         maven { url "https://dl.bintray.com/aweme-open-sdk-team/public" }
-        maven { url 'http://developer.huawei.com/repo/' }
-        maven { url "http://repo.baichuan-android.taobao.com/content/groups/BaichuanRepositories/" }
+        maven { url 'https://developer.huawei.com/repo/' }
+        maven { url "https://repo.baichuan-android.taobao.com/content/groups/BaichuanRepositories/" }
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.5.0'
+        classpath 'com.android.tools.build:gradle:7.1.2'
     }
 }
 
 rootProject.allprojects {
     repositories {
         google()
-        jcenter()
-        maven { url 'http://download.flutter.io' }
+        mavenCentral()
+        maven { url 'https://download.flutter.io' }
         maven { url "https://oss.sonatype.org/content/groups/public" }
-        maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
+        maven { url "https://maven.aliyun.com/nexus/content/groups/public/" }
         maven { url "https://dl.bintray.com/aweme-open-sdk-team/public" }
-        maven { url 'http://developer.huawei.com/repo/' }
-        maven { url "http://repo.baichuan-android.taobao.com/content/groups/BaichuanRepositories/" }
+        maven { url 'https://developer.huawei.com/repo/' }
+        maven { url "https://repo.baichuan-android.taobao.com/content/groups/BaichuanRepositories/" }
     }
 }
 
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 31
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
