@@ -28,7 +28,7 @@ class com_amap_api_services_geocoder_BusinessArea extends java_lang_Object with 
       'ObjectFactory::createcom_amap_api_services_geocoder_BusinessArea__',
     
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_geocoder_BusinessArea>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_geocoder_BusinessArea>(__result__)!;
   }
   
   static Future<List<com_amap_api_services_geocoder_BusinessArea>> create_batch__(int length) async {
@@ -37,8 +37,8 @@ class com_amap_api_services_geocoder_BusinessArea extends java_lang_Object with 
       'ObjectFactory::create_batchcom_amap_api_services_geocoder_BusinessArea__',
       {'length': length}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_geocoder_BusinessArea>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_geocoder_BusinessArea>(it)!)
         .toList();
   }
   
@@ -54,7 +54,7 @@ class com_amap_api_services_geocoder_BusinessArea extends java_lang_Object with 
 
   //region methods
   
-  Future<com_amap_api_services_core_LatLonPoint> getCenterPoint() async {
+  Future<com_amap_api_services_core_LatLonPoint?> getCenterPoint() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.BusinessArea@$refId::getCenterPoint([])');
@@ -71,7 +71,7 @@ class com_amap_api_services_geocoder_BusinessArea extends java_lang_Object with 
   }
   
   
-  Future<void> setCenterPoint(com_amap_api_services_core_LatLonPoint var1) async {
+  Future<void> setCenterPoint(com_amap_api_services_core_LatLonPoint? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.BusinessArea@$refId::setCenterPoint([])');
@@ -88,7 +88,7 @@ class com_amap_api_services_geocoder_BusinessArea extends java_lang_Object with 
   }
   
   
-  Future<String> getName() async {
+  Future<String?> getName() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.BusinessArea@$refId::getName([])');
@@ -105,7 +105,7 @@ class com_amap_api_services_geocoder_BusinessArea extends java_lang_Object with 
   }
   
   
-  Future<void> setName(String var1) async {
+  Future<void> setName(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.BusinessArea@$refId::setName([\'var1\':$var1])');
@@ -129,7 +129,7 @@ class com_amap_api_services_geocoder_BusinessArea extends java_lang_Object with 
   }
 }
 
-extension com_amap_api_services_geocoder_BusinessArea_Batch on List<com_amap_api_services_geocoder_BusinessArea> {
+extension com_amap_api_services_geocoder_BusinessArea_Batch on List<com_amap_api_services_geocoder_BusinessArea?> {
   //region getters
   
   //endregion
@@ -140,7 +140,7 @@ extension com_amap_api_services_geocoder_BusinessArea_Batch on List<com_amap_api
 
   //region methods
   
-  Future<List<com_amap_api_services_core_LatLonPoint>> getCenterPoint_batch() async {
+  Future<List<com_amap_api_services_core_LatLonPoint?>?> getCenterPoint_batch() async {
     assert(true);
   
     // invoke native method
@@ -151,7 +151,7 @@ extension com_amap_api_services_geocoder_BusinessArea_Batch on List<com_amap_api
   }
   
   
-  Future<List<void>> setCenterPoint_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
+  Future<List<void>?> setCenterPoint_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
     assert(true);
   
     // invoke native method
@@ -162,7 +162,7 @@ extension com_amap_api_services_geocoder_BusinessArea_Batch on List<com_amap_api
   }
   
   
-  Future<List<String>> getName_batch() async {
+  Future<List<String?>?> getName_batch() async {
     assert(true);
   
     // invoke native method
@@ -173,7 +173,7 @@ extension com_amap_api_services_geocoder_BusinessArea_Batch on List<com_amap_api
   }
   
   
-  Future<List<void>> setName_batch(List<String> var1) async {
+  Future<List<void>?> setName_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method

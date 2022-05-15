@@ -28,7 +28,7 @@ class AMapNearbySearchRequest extends AMapSearchObject with NSCoding, NSCopying 
       'ObjectFactory::createAMapNearbySearchRequest',
       {'init': init}
     );
-    return AmapSearchFluttifyIOSAs<AMapNearbySearchRequest>(__result__);
+    return AmapSearchFluttifyIOSAs<AMapNearbySearchRequest>(__result__)!;
   }
   
   static Future<List<AMapNearbySearchRequest>> create_batch__(int length, { bool init = true /* ios only */ }) async {
@@ -37,35 +37,35 @@ class AMapNearbySearchRequest extends AMapSearchObject with NSCoding, NSCopying 
       'ObjectFactory::create_batchAMapNearbySearchRequest',
       {'length': length, 'init': init}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyIOSAs<AMapNearbySearchRequest>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyIOSAs<AMapNearbySearchRequest>(it)!)
         .toList();
   }
   
   //endregion
 
   //region getters
-  Future<AMapGeoPoint> get_center() async {
+  Future<AMapGeoPoint?> get_center() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapNearbySearchRequest::get_center", {'__this__': this});
     return AmapSearchFluttifyIOSAs<AMapGeoPoint>(__result__);
   }
   
-  Future<int> get_radius() async {
+  Future<int?> get_radius() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapNearbySearchRequest::get_radius", {'__this__': this});
     return __result__;
   }
   
-  Future<AMapNearbySearchType> get_searchType() async {
+  Future<AMapNearbySearchType?> get_searchType() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapNearbySearchRequest::get_searchType", {'__this__': this});
     return (__result__ as int).toAMapNearbySearchType();
   }
   
-  Future<int> get_timeRange() async {
+  Future<int?> get_timeRange() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapNearbySearchRequest::get_timeRange", {'__this__': this});
     return __result__;
   }
   
-  Future<int> get_limit() async {
+  Future<int?> get_limit() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapNearbySearchRequest::get_limit", {'__this__': this});
     return __result__;
   }
@@ -86,7 +86,7 @@ class AMapNearbySearchRequest extends AMapSearchObject with NSCoding, NSCopying 
   }
   
   Future<void> set_searchType(AMapNearbySearchType searchType) async {
-    await kAmapSearchFluttifyChannel.invokeMethod('AMapNearbySearchRequest::set_searchType', <String, dynamic>{'__this__': this, "searchType": searchType.toValue()});
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapNearbySearchRequest::set_searchType', <String, dynamic>{'__this__': this, "searchType": searchType?.toValue()});
   
   
   }
@@ -115,31 +115,31 @@ class AMapNearbySearchRequest extends AMapSearchObject with NSCoding, NSCopying 
   }
 }
 
-extension AMapNearbySearchRequest_Batch on List<AMapNearbySearchRequest> {
+extension AMapNearbySearchRequest_Batch on List<AMapNearbySearchRequest?> {
   //region getters
-  Future<List<AMapGeoPoint>> get_center_batch() async {
+  Future<List<AMapGeoPoint?>?> get_center_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapNearbySearchRequest::get_center_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => AmapSearchFluttifyIOSAs<AMapGeoPoint>(__result__))?.cast<AMapGeoPoint>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => AmapSearchFluttifyIOSAs<AMapGeoPoint>(__result__)).cast<AMapGeoPoint?>().toList();
   }
   
-  Future<List<int>> get_radius_batch() async {
+  Future<List<int?>?> get_radius_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapNearbySearchRequest::get_radius_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<int>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<int?>().toList();
   }
   
-  Future<List<AMapNearbySearchType>> get_searchType_batch() async {
+  Future<List<AMapNearbySearchType?>?> get_searchType_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapNearbySearchRequest::get_searchType_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => (__result__ as int).toAMapNearbySearchType())?.cast<AMapNearbySearchType>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => (__result__ as int).toAMapNearbySearchType()).cast<AMapNearbySearchType?>().toList();
   }
   
-  Future<List<int>> get_timeRange_batch() async {
+  Future<List<int?>?> get_timeRange_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapNearbySearchRequest::get_timeRange_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<int>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<int?>().toList();
   }
   
-  Future<List<int>> get_limit_batch() async {
+  Future<List<int?>?> get_limit_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapNearbySearchRequest::get_limit_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<int>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<int?>().toList();
   }
   
   //endregion

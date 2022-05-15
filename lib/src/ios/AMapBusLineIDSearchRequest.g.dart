@@ -28,7 +28,7 @@ class AMapBusLineIDSearchRequest extends AMapBusLineBaseSearchRequest with NSCod
       'ObjectFactory::createAMapBusLineIDSearchRequest',
       {'init': init}
     );
-    return AmapSearchFluttifyIOSAs<AMapBusLineIDSearchRequest>(__result__);
+    return AmapSearchFluttifyIOSAs<AMapBusLineIDSearchRequest>(__result__)!;
   }
   
   static Future<List<AMapBusLineIDSearchRequest>> create_batch__(int length, { bool init = true /* ios only */ }) async {
@@ -37,15 +37,15 @@ class AMapBusLineIDSearchRequest extends AMapBusLineBaseSearchRequest with NSCod
       'ObjectFactory::create_batchAMapBusLineIDSearchRequest',
       {'length': length, 'init': init}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyIOSAs<AMapBusLineIDSearchRequest>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyIOSAs<AMapBusLineIDSearchRequest>(it)!)
         .toList();
   }
   
   //endregion
 
   //region getters
-  Future<String> get_uid() async {
+  Future<String?> get_uid() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapBusLineIDSearchRequest::get_uid", {'__this__': this});
     return __result__;
   }
@@ -71,11 +71,11 @@ class AMapBusLineIDSearchRequest extends AMapBusLineBaseSearchRequest with NSCod
   }
 }
 
-extension AMapBusLineIDSearchRequest_Batch on List<AMapBusLineIDSearchRequest> {
+extension AMapBusLineIDSearchRequest_Batch on List<AMapBusLineIDSearchRequest?> {
   //region getters
-  Future<List<String>> get_uid_batch() async {
+  Future<List<String?>?> get_uid_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapBusLineIDSearchRequest::get_uid_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
   }
   
   //endregion

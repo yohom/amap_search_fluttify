@@ -23,12 +23,12 @@ class com_amap_api_services_geocoder_GeocodeQuery extends java_lang_Object  {
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_geocoder_GeocodeQuery> create__String__String(String var1, String var2) async {
+  static Future<com_amap_api_services_geocoder_GeocodeQuery> create__String__String(String? var1, String? var2) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_geocoder_GeocodeQuery__String__String',
       {"var1": var1, "var2": var2}
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_geocoder_GeocodeQuery>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_geocoder_GeocodeQuery>(__result__)!;
   }
   
   static Future<List<com_amap_api_services_geocoder_GeocodeQuery>> create_batch__String__String(List<String> var1, List<String> var2) async {
@@ -37,8 +37,8 @@ class com_amap_api_services_geocoder_GeocodeQuery extends java_lang_Object  {
       'ObjectFactory::create_batchcom_amap_api_services_geocoder_GeocodeQuery__String__String',
       [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_geocoder_GeocodeQuery>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_geocoder_GeocodeQuery>(it)!)
         .toList();
   }
   
@@ -54,7 +54,7 @@ class com_amap_api_services_geocoder_GeocodeQuery extends java_lang_Object  {
 
   //region methods
   
-  Future<String> getLocationName() async {
+  Future<String?> getLocationName() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeQuery@$refId::getLocationName([])');
@@ -71,7 +71,7 @@ class com_amap_api_services_geocoder_GeocodeQuery extends java_lang_Object  {
   }
   
   
-  Future<void> setLocationName(String var1) async {
+  Future<void> setLocationName(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeQuery@$refId::setLocationName([\'var1\':$var1])');
@@ -88,7 +88,7 @@ class com_amap_api_services_geocoder_GeocodeQuery extends java_lang_Object  {
   }
   
   
-  Future<String> getCity() async {
+  Future<String?> getCity() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeQuery@$refId::getCity([])');
@@ -105,7 +105,7 @@ class com_amap_api_services_geocoder_GeocodeQuery extends java_lang_Object  {
   }
   
   
-  Future<void> setCity(String var1) async {
+  Future<void> setCity(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeQuery@$refId::setCity([\'var1\':$var1])');
@@ -122,7 +122,7 @@ class com_amap_api_services_geocoder_GeocodeQuery extends java_lang_Object  {
   }
   
   
-  Future<String> getCountry() async {
+  Future<String?> getCountry() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeQuery@$refId::getCountry([])');
@@ -139,7 +139,7 @@ class com_amap_api_services_geocoder_GeocodeQuery extends java_lang_Object  {
   }
   
   
-  Future<void> setCountry(String var1) async {
+  Future<void> setCountry(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeQuery@$refId::setCountry([\'var1\':$var1])');
@@ -163,7 +163,7 @@ class com_amap_api_services_geocoder_GeocodeQuery extends java_lang_Object  {
   }
 }
 
-extension com_amap_api_services_geocoder_GeocodeQuery_Batch on List<com_amap_api_services_geocoder_GeocodeQuery> {
+extension com_amap_api_services_geocoder_GeocodeQuery_Batch on List<com_amap_api_services_geocoder_GeocodeQuery?> {
   //region getters
   
   //endregion
@@ -174,7 +174,7 @@ extension com_amap_api_services_geocoder_GeocodeQuery_Batch on List<com_amap_api
 
   //region methods
   
-  Future<List<String>> getLocationName_batch() async {
+  Future<List<String?>?> getLocationName_batch() async {
     assert(true);
   
     // invoke native method
@@ -185,7 +185,7 @@ extension com_amap_api_services_geocoder_GeocodeQuery_Batch on List<com_amap_api
   }
   
   
-  Future<List<void>> setLocationName_batch(List<String> var1) async {
+  Future<List<void>?> setLocationName_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -196,7 +196,7 @@ extension com_amap_api_services_geocoder_GeocodeQuery_Batch on List<com_amap_api
   }
   
   
-  Future<List<String>> getCity_batch() async {
+  Future<List<String?>?> getCity_batch() async {
     assert(true);
   
     // invoke native method
@@ -207,7 +207,7 @@ extension com_amap_api_services_geocoder_GeocodeQuery_Batch on List<com_amap_api
   }
   
   
-  Future<List<void>> setCity_batch(List<String> var1) async {
+  Future<List<void>?> setCity_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -218,7 +218,7 @@ extension com_amap_api_services_geocoder_GeocodeQuery_Batch on List<com_amap_api
   }
   
   
-  Future<List<String>> getCountry_batch() async {
+  Future<List<String?>?> getCountry_batch() async {
     assert(true);
   
     // invoke native method
@@ -229,7 +229,7 @@ extension com_amap_api_services_geocoder_GeocodeQuery_Batch on List<com_amap_api
   }
   
   
-  Future<List<void>> setCountry_batch(List<String> var1) async {
+  Future<List<void>?> setCountry_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method

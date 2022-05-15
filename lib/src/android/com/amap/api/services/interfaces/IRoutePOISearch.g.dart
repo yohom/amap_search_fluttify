@@ -26,20 +26,15 @@ mixin com_amap_api_services_interfaces_IRoutePOISearch on java_lang_Object {
 
   
 
-  /* @mustCallSuper */
-  Future<void> setRoutePOISearchListener(com_amap_api_services_routepoisearch_RoutePOISearch_OnRoutePOISearchListener var1) {}
+  Future<void> setRoutePOISearchListener(com_amap_api_services_routepoisearch_RoutePOISearch_OnRoutePOISearchListener? var1) async {}
   
-  /* @mustCallSuper */
-  Future<void> searchRoutePOIAsyn() {}
+  Future<void> searchRoutePOIAsyn() async {}
   
-  /* @mustCallSuper */
-  Future<com_amap_api_services_routepoisearch_RoutePOISearchResult> searchRoutePOI() {}
+  Future<com_amap_api_services_routepoisearch_RoutePOISearchResult?> searchRoutePOI() async {}
   
-  /* @mustCallSuper */
-  Future<void> setQuery(com_amap_api_services_routepoisearch_RoutePOISearchQuery var1) {}
+  Future<void> setQuery(com_amap_api_services_routepoisearch_RoutePOISearchQuery? var1) async {}
   
-  /* @mustCallSuper */
-  Future<com_amap_api_services_routepoisearch_RoutePOISearchQuery> getQuery() {}
+  Future<com_amap_api_services_routepoisearch_RoutePOISearchQuery?> getQuery() async {}
   
 }
 

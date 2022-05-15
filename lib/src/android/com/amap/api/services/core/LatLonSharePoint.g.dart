@@ -23,12 +23,12 @@ class com_amap_api_services_core_LatLonSharePoint extends com_amap_api_services_
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_core_LatLonSharePoint> create__double__double__String(double var1, double var3, String var5) async {
+  static Future<com_amap_api_services_core_LatLonSharePoint> create__double__double__String(double? var1, double? var3, String? var5) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_core_LatLonSharePoint__double__double__String',
       {"var1": var1, "var3": var3, "var5": var5}
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonSharePoint>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonSharePoint>(__result__)!;
   }
   
   static Future<List<com_amap_api_services_core_LatLonSharePoint>> create_batch__double__double__String(List<double> var1, List<double> var3, List<String> var5) async {
@@ -37,8 +37,8 @@ class com_amap_api_services_core_LatLonSharePoint extends com_amap_api_services_
       'ObjectFactory::create_batchcom_amap_api_services_core_LatLonSharePoint__double__double__String',
       [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var3": var3[__i__], "var5": var5[__i__]}]
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonSharePoint>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonSharePoint>(it)!)
         .toList();
   }
   
@@ -54,7 +54,7 @@ class com_amap_api_services_core_LatLonSharePoint extends com_amap_api_services_
 
   //region methods
   
-  Future<String> getSharePointName() async {
+  Future<String?> getSharePointName() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.LatLonSharePoint@$refId::getSharePointName([])');
@@ -71,7 +71,7 @@ class com_amap_api_services_core_LatLonSharePoint extends com_amap_api_services_
   }
   
   
-  Future<void> setSharePointName(String var1) async {
+  Future<void> setSharePointName(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.LatLonSharePoint@$refId::setSharePointName([\'var1\':$var1])');
@@ -95,7 +95,7 @@ class com_amap_api_services_core_LatLonSharePoint extends com_amap_api_services_
   }
 }
 
-extension com_amap_api_services_core_LatLonSharePoint_Batch on List<com_amap_api_services_core_LatLonSharePoint> {
+extension com_amap_api_services_core_LatLonSharePoint_Batch on List<com_amap_api_services_core_LatLonSharePoint?> {
   //region getters
   
   //endregion
@@ -106,7 +106,7 @@ extension com_amap_api_services_core_LatLonSharePoint_Batch on List<com_amap_api
 
   //region methods
   
-  Future<List<String>> getSharePointName_batch() async {
+  Future<List<String?>?> getSharePointName_batch() async {
     assert(true);
   
     // invoke native method
@@ -117,7 +117,7 @@ extension com_amap_api_services_core_LatLonSharePoint_Batch on List<com_amap_api
   }
   
   
-  Future<List<void>> setSharePointName_batch(List<String> var1) async {
+  Future<List<void>?> setSharePointName_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method

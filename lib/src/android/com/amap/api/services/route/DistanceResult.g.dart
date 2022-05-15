@@ -28,7 +28,7 @@ class com_amap_api_services_route_DistanceResult extends java_lang_Object with a
       'ObjectFactory::createcom_amap_api_services_route_DistanceResult__',
     
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_DistanceResult>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_DistanceResult>(__result__)!;
   }
   
   static Future<List<com_amap_api_services_route_DistanceResult>> create_batch__(int length) async {
@@ -37,8 +37,8 @@ class com_amap_api_services_route_DistanceResult extends java_lang_Object with a
       'ObjectFactory::create_batchcom_amap_api_services_route_DistanceResult__',
       {'length': length}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_DistanceResult>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_DistanceResult>(it)!)
         .toList();
   }
   
@@ -54,7 +54,7 @@ class com_amap_api_services_route_DistanceResult extends java_lang_Object with a
 
   //region methods
   
-  Future<void> setDistanceQuery(com_amap_api_services_route_DistanceSearch_DistanceQuery var1) async {
+  Future<void> setDistanceQuery(com_amap_api_services_route_DistanceSearch_DistanceQuery? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.DistanceResult@$refId::setDistanceQuery([])');
@@ -71,7 +71,7 @@ class com_amap_api_services_route_DistanceResult extends java_lang_Object with a
   }
   
   
-  Future<com_amap_api_services_route_DistanceSearch_DistanceQuery> getDistanceQuery() async {
+  Future<com_amap_api_services_route_DistanceSearch_DistanceQuery?> getDistanceQuery() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.DistanceResult@$refId::getDistanceQuery([])');
@@ -88,7 +88,7 @@ class com_amap_api_services_route_DistanceResult extends java_lang_Object with a
   }
   
   
-  Future<List<com_amap_api_services_route_DistanceItem>> getDistanceResults() async {
+  Future<List<com_amap_api_services_route_DistanceItem>?> getDistanceResults() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.DistanceResult@$refId::getDistanceResults([])');
@@ -101,11 +101,11 @@ class com_amap_api_services_route_DistanceResult extends java_lang_Object with a
     // handle native call
   
   
-    return (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_DistanceItem>(it))?.toList();
+    return (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_DistanceItem>(it)!).toList();
   }
   
   
-  Future<void> setDistanceResults(List<com_amap_api_services_route_DistanceItem> var1) async {
+  Future<void> setDistanceResults(List<com_amap_api_services_route_DistanceItem>? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.DistanceResult@$refId::setDistanceResults([])');
@@ -129,7 +129,7 @@ class com_amap_api_services_route_DistanceResult extends java_lang_Object with a
   }
 }
 
-extension com_amap_api_services_route_DistanceResult_Batch on List<com_amap_api_services_route_DistanceResult> {
+extension com_amap_api_services_route_DistanceResult_Batch on List<com_amap_api_services_route_DistanceResult?> {
   //region getters
   
   //endregion
@@ -140,7 +140,7 @@ extension com_amap_api_services_route_DistanceResult_Batch on List<com_amap_api_
 
   //region methods
   
-  Future<List<void>> setDistanceQuery_batch(List<com_amap_api_services_route_DistanceSearch_DistanceQuery> var1) async {
+  Future<List<void>?> setDistanceQuery_batch(List<com_amap_api_services_route_DistanceSearch_DistanceQuery> var1) async {
     assert(true);
   
     // invoke native method
@@ -151,7 +151,7 @@ extension com_amap_api_services_route_DistanceResult_Batch on List<com_amap_api_
   }
   
   
-  Future<List<com_amap_api_services_route_DistanceSearch_DistanceQuery>> getDistanceQuery_batch() async {
+  Future<List<com_amap_api_services_route_DistanceSearch_DistanceQuery?>?> getDistanceQuery_batch() async {
     assert(true);
   
     // invoke native method
@@ -162,18 +162,18 @@ extension com_amap_api_services_route_DistanceResult_Batch on List<com_amap_api_
   }
   
   
-  Future<List<List<com_amap_api_services_route_DistanceItem>>> getDistanceResults_batch() async {
+  Future<List<List<com_amap_api_services_route_DistanceItem>?>?> getDistanceResults_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.DistanceResult::getDistanceResults_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_DistanceItem>(it))?.toList()).cast<List<com_amap_api_services_route_DistanceItem>>().toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_DistanceItem>(it)!).toList()).cast<List<com_amap_api_services_route_DistanceItem>>().toList();
   }
   
   
-  Future<List<void>> setDistanceResults_batch(List<List<com_amap_api_services_route_DistanceItem>> var1) async {
+  Future<List<void>?> setDistanceResults_batch(List<List<com_amap_api_services_route_DistanceItem>> var1) async {
     assert(true);
   
     // invoke native method

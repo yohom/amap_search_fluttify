@@ -23,12 +23,12 @@ class com_amap_api_services_share_ShareSearch_ShareFromAndTo extends java_lang_O
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_share_ShareSearch_ShareFromAndTo> create__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint(com_amap_api_services_core_LatLonPoint var1, com_amap_api_services_core_LatLonPoint var2) async {
+  static Future<com_amap_api_services_share_ShareSearch_ShareFromAndTo> create__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint(com_amap_api_services_core_LatLonPoint? var1, com_amap_api_services_core_LatLonPoint? var2) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_share_ShareSearch_ShareFromAndTo__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint',
       {"var1": var1, "var2": var2}
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_share_ShareSearch_ShareFromAndTo>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_share_ShareSearch_ShareFromAndTo>(__result__)!;
   }
   
   static Future<List<com_amap_api_services_share_ShareSearch_ShareFromAndTo>> create_batch__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint(List<com_amap_api_services_core_LatLonPoint> var1, List<com_amap_api_services_core_LatLonPoint> var2) async {
@@ -37,8 +37,8 @@ class com_amap_api_services_share_ShareSearch_ShareFromAndTo extends java_lang_O
       'ObjectFactory::create_batchcom_amap_api_services_share_ShareSearch_ShareFromAndTo__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint',
       [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_share_ShareSearch_ShareFromAndTo>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_share_ShareSearch_ShareFromAndTo>(it)!)
         .toList();
   }
   
@@ -54,7 +54,7 @@ class com_amap_api_services_share_ShareSearch_ShareFromAndTo extends java_lang_O
 
   //region methods
   
-  Future<void> setFromName(String var1) async {
+  Future<void> setFromName(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.share.ShareSearch.ShareFromAndTo@$refId::setFromName([\'var1\':$var1])');
@@ -71,7 +71,7 @@ class com_amap_api_services_share_ShareSearch_ShareFromAndTo extends java_lang_O
   }
   
   
-  Future<void> setToName(String var1) async {
+  Future<void> setToName(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.share.ShareSearch.ShareFromAndTo@$refId::setToName([\'var1\':$var1])');
@@ -88,7 +88,7 @@ class com_amap_api_services_share_ShareSearch_ShareFromAndTo extends java_lang_O
   }
   
   
-  Future<com_amap_api_services_core_LatLonPoint> getFrom() async {
+  Future<com_amap_api_services_core_LatLonPoint?> getFrom() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.share.ShareSearch.ShareFromAndTo@$refId::getFrom([])');
@@ -105,7 +105,7 @@ class com_amap_api_services_share_ShareSearch_ShareFromAndTo extends java_lang_O
   }
   
   
-  Future<com_amap_api_services_core_LatLonPoint> getTo() async {
+  Future<com_amap_api_services_core_LatLonPoint?> getTo() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.share.ShareSearch.ShareFromAndTo@$refId::getTo([])');
@@ -122,7 +122,7 @@ class com_amap_api_services_share_ShareSearch_ShareFromAndTo extends java_lang_O
   }
   
   
-  Future<String> getFromName() async {
+  Future<String?> getFromName() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.share.ShareSearch.ShareFromAndTo@$refId::getFromName([])');
@@ -139,7 +139,7 @@ class com_amap_api_services_share_ShareSearch_ShareFromAndTo extends java_lang_O
   }
   
   
-  Future<String> getToName() async {
+  Future<String?> getToName() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.share.ShareSearch.ShareFromAndTo@$refId::getToName([])');
@@ -163,7 +163,7 @@ class com_amap_api_services_share_ShareSearch_ShareFromAndTo extends java_lang_O
   }
 }
 
-extension com_amap_api_services_share_ShareSearch_ShareFromAndTo_Batch on List<com_amap_api_services_share_ShareSearch_ShareFromAndTo> {
+extension com_amap_api_services_share_ShareSearch_ShareFromAndTo_Batch on List<com_amap_api_services_share_ShareSearch_ShareFromAndTo?> {
   //region getters
   
   //endregion
@@ -174,7 +174,7 @@ extension com_amap_api_services_share_ShareSearch_ShareFromAndTo_Batch on List<c
 
   //region methods
   
-  Future<List<void>> setFromName_batch(List<String> var1) async {
+  Future<List<void>?> setFromName_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -185,7 +185,7 @@ extension com_amap_api_services_share_ShareSearch_ShareFromAndTo_Batch on List<c
   }
   
   
-  Future<List<void>> setToName_batch(List<String> var1) async {
+  Future<List<void>?> setToName_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -196,7 +196,7 @@ extension com_amap_api_services_share_ShareSearch_ShareFromAndTo_Batch on List<c
   }
   
   
-  Future<List<com_amap_api_services_core_LatLonPoint>> getFrom_batch() async {
+  Future<List<com_amap_api_services_core_LatLonPoint?>?> getFrom_batch() async {
     assert(true);
   
     // invoke native method
@@ -207,7 +207,7 @@ extension com_amap_api_services_share_ShareSearch_ShareFromAndTo_Batch on List<c
   }
   
   
-  Future<List<com_amap_api_services_core_LatLonPoint>> getTo_batch() async {
+  Future<List<com_amap_api_services_core_LatLonPoint?>?> getTo_batch() async {
     assert(true);
   
     // invoke native method
@@ -218,7 +218,7 @@ extension com_amap_api_services_share_ShareSearch_ShareFromAndTo_Batch on List<c
   }
   
   
-  Future<List<String>> getFromName_batch() async {
+  Future<List<String?>?> getFromName_batch() async {
     assert(true);
   
     // invoke native method
@@ -229,7 +229,7 @@ extension com_amap_api_services_share_ShareSearch_ShareFromAndTo_Batch on List<c
   }
   
   
-  Future<List<String>> getToName_batch() async {
+  Future<List<String?>?> getToName_batch() async {
     assert(true);
   
     // invoke native method

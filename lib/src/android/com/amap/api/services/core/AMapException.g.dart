@@ -137,28 +137,28 @@ class com_amap_api_services_core_AMapException extends java_lang_Object  {
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_core_AMapException> create__String(String var1) async {
+  static Future<com_amap_api_services_core_AMapException> create__String(String? var1) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_core_AMapException__String',
       {"var1": var1}
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_core_AMapException>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_core_AMapException>(__result__)!;
   }
   
-  static Future<com_amap_api_services_core_AMapException> create__String__int__String(String var1, int var2, String var3) async {
+  static Future<com_amap_api_services_core_AMapException> create__String__int__String(String? var1, int? var2, String? var3) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_core_AMapException__String__int__String',
       {"var1": var1, "var2": var2, "var3": var3}
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_core_AMapException>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_core_AMapException>(__result__)!;
   }
   
-  static Future<com_amap_api_services_core_AMapException> create__String__int__String__int(String var1, int var2, String var3, int var4) async {
+  static Future<com_amap_api_services_core_AMapException> create__String__int__String__int(String? var1, int? var2, String? var3, int? var4) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_core_AMapException__String__int__String__int',
       {"var1": var1, "var2": var2, "var3": var3, "var4": var4}
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_core_AMapException>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_core_AMapException>(__result__)!;
   }
   
   static Future<com_amap_api_services_core_AMapException> create__() async {
@@ -166,7 +166,7 @@ class com_amap_api_services_core_AMapException extends java_lang_Object  {
       'ObjectFactory::createcom_amap_api_services_core_AMapException__',
     
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_core_AMapException>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_core_AMapException>(__result__)!;
   }
   
   static Future<List<com_amap_api_services_core_AMapException>> create_batch__String(List<String> var1) async {
@@ -175,8 +175,8 @@ class com_amap_api_services_core_AMapException extends java_lang_Object  {
       'ObjectFactory::create_batchcom_amap_api_services_core_AMapException__String',
       [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_AMapException>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_AMapException>(it)!)
         .toList();
   }
   
@@ -186,8 +186,8 @@ class com_amap_api_services_core_AMapException extends java_lang_Object  {
       'ObjectFactory::create_batchcom_amap_api_services_core_AMapException__String__int__String',
       [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__]}]
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_AMapException>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_AMapException>(it)!)
         .toList();
   }
   
@@ -197,8 +197,8 @@ class com_amap_api_services_core_AMapException extends java_lang_Object  {
       'ObjectFactory::create_batchcom_amap_api_services_core_AMapException__String__int__String__int',
       [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "var4": var4[__i__]}]
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_AMapException>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_AMapException>(it)!)
         .toList();
   }
   
@@ -208,8 +208,8 @@ class com_amap_api_services_core_AMapException extends java_lang_Object  {
       'ObjectFactory::create_batchcom_amap_api_services_core_AMapException__',
       {'length': length}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_AMapException>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_AMapException>(it)!)
         .toList();
   }
   
@@ -225,7 +225,7 @@ class com_amap_api_services_core_AMapException extends java_lang_Object  {
 
   //region methods
   
-  Future<int> getErrorLevel() async {
+  Future<int?> getErrorLevel() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.AMapException@$refId::getErrorLevel([])');
@@ -242,7 +242,7 @@ class com_amap_api_services_core_AMapException extends java_lang_Object  {
   }
   
   
-  Future<String> getErrorType() async {
+  Future<String?> getErrorType() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.AMapException@$refId::getErrorType([])');
@@ -259,7 +259,7 @@ class com_amap_api_services_core_AMapException extends java_lang_Object  {
   }
   
   
-  Future<String> getErrorMessage() async {
+  Future<String?> getErrorMessage() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.AMapException@$refId::getErrorMessage([])');
@@ -276,7 +276,7 @@ class com_amap_api_services_core_AMapException extends java_lang_Object  {
   }
   
   
-  Future<int> getErrorCode() async {
+  Future<int?> getErrorCode() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.AMapException@$refId::getErrorCode([])');
@@ -300,7 +300,7 @@ class com_amap_api_services_core_AMapException extends java_lang_Object  {
   }
 }
 
-extension com_amap_api_services_core_AMapException_Batch on List<com_amap_api_services_core_AMapException> {
+extension com_amap_api_services_core_AMapException_Batch on List<com_amap_api_services_core_AMapException?> {
   //region getters
   
   //endregion
@@ -311,7 +311,7 @@ extension com_amap_api_services_core_AMapException_Batch on List<com_amap_api_se
 
   //region methods
   
-  Future<List<int>> getErrorLevel_batch() async {
+  Future<List<int?>?> getErrorLevel_batch() async {
     assert(true);
   
     // invoke native method
@@ -322,7 +322,7 @@ extension com_amap_api_services_core_AMapException_Batch on List<com_amap_api_se
   }
   
   
-  Future<List<String>> getErrorType_batch() async {
+  Future<List<String?>?> getErrorType_batch() async {
     assert(true);
   
     // invoke native method
@@ -333,7 +333,7 @@ extension com_amap_api_services_core_AMapException_Batch on List<com_amap_api_se
   }
   
   
-  Future<List<String>> getErrorMessage_batch() async {
+  Future<List<String?>?> getErrorMessage_batch() async {
     assert(true);
   
     // invoke native method
@@ -344,7 +344,7 @@ extension com_amap_api_services_core_AMapException_Batch on List<com_amap_api_se
   }
   
   
-  Future<List<int>> getErrorCode_batch() async {
+  Future<List<int?>?> getErrorCode_batch() async {
     assert(true);
   
     // invoke native method

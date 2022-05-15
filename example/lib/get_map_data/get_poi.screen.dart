@@ -8,7 +8,7 @@ class GetPoiScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomPadding: false,
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(title: Text('获取POI数据')),
       body: ListView(
         children: <Widget>[
@@ -49,10 +49,10 @@ class _KeywordPoiScreenState extends State<KeywordPoiScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomPadding: false,
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(title: Text('关键字检索POI')),
       body: DecoratedColumn(
-        padding: EdgeInsets.all(kSpaceBig),
+        padding: EdgeInsets.all(kSpace16),
         children: <Widget>[
           TextFormField(
             controller: _keywordController,
@@ -114,10 +114,10 @@ class _AroundPoiScreenState extends State<AroundPoiScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomPadding: false,
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(title: Text('周边检索POI')),
       body: DecoratedColumn(
-        padding: EdgeInsets.all(kSpaceBig),
+        padding: EdgeInsets.all(kSpace16),
         children: <Widget>[
           TextFormField(
             controller: _keywordController,
@@ -135,7 +135,7 @@ class _AroundPoiScreenState extends State<AroundPoiScreen> {
                   decoration: InputDecoration(hintText: '输入纬度'),
                 ),
               ),
-              SPACE_SMALL_HORIZONTAL,
+              SPACE_4_HORIZONTAL,
               Flexible(
                 child: TextField(
                   controller: _lngController,
@@ -201,10 +201,10 @@ class _InputTipScreenState extends State<InputTipScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomPadding: false,
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(title: Text('输入内容自动提示')),
       body: DecoratedColumn(
-        padding: EdgeInsets.all(kSpaceBig),
+        padding: EdgeInsets.all(kSpace16),
         children: <Widget>[
           TextFormField(
             controller: _keywordController,

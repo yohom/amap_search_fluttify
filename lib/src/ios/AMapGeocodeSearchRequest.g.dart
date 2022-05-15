@@ -28,7 +28,7 @@ class AMapGeocodeSearchRequest extends AMapSearchObject with NSCoding, NSCopying
       'ObjectFactory::createAMapGeocodeSearchRequest',
       {'init': init}
     );
-    return AmapSearchFluttifyIOSAs<AMapGeocodeSearchRequest>(__result__);
+    return AmapSearchFluttifyIOSAs<AMapGeocodeSearchRequest>(__result__)!;
   }
   
   static Future<List<AMapGeocodeSearchRequest>> create_batch__(int length, { bool init = true /* ios only */ }) async {
@@ -37,25 +37,25 @@ class AMapGeocodeSearchRequest extends AMapSearchObject with NSCoding, NSCopying
       'ObjectFactory::create_batchAMapGeocodeSearchRequest',
       {'length': length, 'init': init}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyIOSAs<AMapGeocodeSearchRequest>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyIOSAs<AMapGeocodeSearchRequest>(it)!)
         .toList();
   }
   
   //endregion
 
   //region getters
-  Future<String> get_address() async {
+  Future<String?> get_address() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapGeocodeSearchRequest::get_address", {'__this__': this});
     return __result__;
   }
   
-  Future<String> get_city() async {
+  Future<String?> get_city() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapGeocodeSearchRequest::get_city", {'__this__': this});
     return __result__;
   }
   
-  Future<String> get_country() async {
+  Future<String?> get_country() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapGeocodeSearchRequest::get_country", {'__this__': this});
     return __result__;
   }
@@ -93,21 +93,21 @@ class AMapGeocodeSearchRequest extends AMapSearchObject with NSCoding, NSCopying
   }
 }
 
-extension AMapGeocodeSearchRequest_Batch on List<AMapGeocodeSearchRequest> {
+extension AMapGeocodeSearchRequest_Batch on List<AMapGeocodeSearchRequest?> {
   //region getters
-  Future<List<String>> get_address_batch() async {
+  Future<List<String?>?> get_address_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapGeocodeSearchRequest::get_address_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<String>> get_city_batch() async {
+  Future<List<String?>?> get_city_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapGeocodeSearchRequest::get_city_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<String>> get_country_batch() async {
+  Future<List<String?>?> get_country_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapGeocodeSearchRequest::get_country_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
   }
   
   //endregion

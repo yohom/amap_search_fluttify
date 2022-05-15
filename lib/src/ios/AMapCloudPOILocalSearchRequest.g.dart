@@ -28,7 +28,7 @@ class AMapCloudPOILocalSearchRequest extends AMapCloudSearchBaseRequest with NSC
       'ObjectFactory::createAMapCloudPOILocalSearchRequest',
       {'init': init}
     );
-    return AmapSearchFluttifyIOSAs<AMapCloudPOILocalSearchRequest>(__result__);
+    return AmapSearchFluttifyIOSAs<AMapCloudPOILocalSearchRequest>(__result__)!;
   }
   
   static Future<List<AMapCloudPOILocalSearchRequest>> create_batch__(int length, { bool init = true /* ios only */ }) async {
@@ -37,20 +37,20 @@ class AMapCloudPOILocalSearchRequest extends AMapCloudSearchBaseRequest with NSC
       'ObjectFactory::create_batchAMapCloudPOILocalSearchRequest',
       {'length': length, 'init': init}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyIOSAs<AMapCloudPOILocalSearchRequest>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyIOSAs<AMapCloudPOILocalSearchRequest>(it)!)
         .toList();
   }
   
   //endregion
 
   //region getters
-  Future<String> get_keywords() async {
+  Future<String?> get_keywords() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudPOILocalSearchRequest::get_keywords", {'__this__': this});
     return __result__;
   }
   
-  Future<String> get_city() async {
+  Future<String?> get_city() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudPOILocalSearchRequest::get_city", {'__this__': this});
     return __result__;
   }
@@ -82,16 +82,16 @@ class AMapCloudPOILocalSearchRequest extends AMapCloudSearchBaseRequest with NSC
   }
 }
 
-extension AMapCloudPOILocalSearchRequest_Batch on List<AMapCloudPOILocalSearchRequest> {
+extension AMapCloudPOILocalSearchRequest_Batch on List<AMapCloudPOILocalSearchRequest?> {
   //region getters
-  Future<List<String>> get_keywords_batch() async {
+  Future<List<String?>?> get_keywords_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudPOILocalSearchRequest::get_keywords_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<String>> get_city_batch() async {
+  Future<List<String?>?> get_city_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudPOILocalSearchRequest::get_city_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
   }
   
   //endregion

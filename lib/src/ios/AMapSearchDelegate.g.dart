@@ -26,53 +26,37 @@ mixin AMapSearchDelegate on NSObject {
 
   
 
-  /* @mustCallSuper */
-  Future<void> AMapSearchRequest_didFailWithError(dynamic request, NSError error) {}
+  Future<void> AMapSearchRequest_didFailWithError(dynamic? request, NSError? error) async {}
   
-  /* @mustCallSuper */
-  Future<void> onPOISearchDone_response(AMapPOISearchBaseRequest request, AMapPOISearchResponse response) {}
+  Future<void> onPOISearchDone_response(AMapPOISearchBaseRequest? request, AMapPOISearchResponse? response) async {}
   
-  /* @mustCallSuper */
-  Future<void> onRoutePOISearchDone_response(AMapRoutePOISearchRequest request, AMapRoutePOISearchResponse response) {}
+  Future<void> onRoutePOISearchDone_response(AMapRoutePOISearchRequest? request, AMapRoutePOISearchResponse? response) async {}
   
-  /* @mustCallSuper */
-  Future<void> onGeocodeSearchDone_response(AMapGeocodeSearchRequest request, AMapGeocodeSearchResponse response) {}
+  Future<void> onGeocodeSearchDone_response(AMapGeocodeSearchRequest? request, AMapGeocodeSearchResponse? response) async {}
   
-  /* @mustCallSuper */
-  Future<void> onReGeocodeSearchDone_response(AMapReGeocodeSearchRequest request, AMapReGeocodeSearchResponse response) {}
+  Future<void> onReGeocodeSearchDone_response(AMapReGeocodeSearchRequest? request, AMapReGeocodeSearchResponse? response) async {}
   
-  /* @mustCallSuper */
-  Future<void> onInputTipsSearchDone_response(AMapInputTipsSearchRequest request, AMapInputTipsSearchResponse response) {}
+  Future<void> onInputTipsSearchDone_response(AMapInputTipsSearchRequest? request, AMapInputTipsSearchResponse? response) async {}
   
-  /* @mustCallSuper */
-  Future<void> onBusStopSearchDone_response(AMapBusStopSearchRequest request, AMapBusStopSearchResponse response) {}
+  Future<void> onBusStopSearchDone_response(AMapBusStopSearchRequest? request, AMapBusStopSearchResponse? response) async {}
   
-  /* @mustCallSuper */
-  Future<void> onBusLineSearchDone_response(AMapBusLineBaseSearchRequest request, AMapBusLineSearchResponse response) {}
+  Future<void> onBusLineSearchDone_response(AMapBusLineBaseSearchRequest? request, AMapBusLineSearchResponse? response) async {}
   
-  /* @mustCallSuper */
-  Future<void> onDistrictSearchDone_response(AMapDistrictSearchRequest request, AMapDistrictSearchResponse response) {}
+  Future<void> onDistrictSearchDone_response(AMapDistrictSearchRequest? request, AMapDistrictSearchResponse? response) async {}
   
-  /* @mustCallSuper */
-  Future<void> onRouteSearchDone_response(AMapRouteSearchBaseRequest request, AMapRouteSearchResponse response) {}
+  Future<void> onRouteSearchDone_response(AMapRouteSearchBaseRequest? request, AMapRouteSearchResponse? response) async {}
   
-  /* @mustCallSuper */
-  Future<void> onFutureRouteSearchDone_response(AMapRouteSearchBaseRequest request, AMapFutureRouteSearchResponse response) {}
+  Future<void> onFutureRouteSearchDone_response(AMapRouteSearchBaseRequest? request, AMapFutureRouteSearchResponse? response) async {}
   
-  /* @mustCallSuper */
-  Future<void> onDistanceSearchDone_response(AMapDistanceSearchRequest request, AMapDistanceSearchResponse response) {}
+  Future<void> onDistanceSearchDone_response(AMapDistanceSearchRequest? request, AMapDistanceSearchResponse? response) async {}
   
-  /* @mustCallSuper */
-  Future<void> onWeatherSearchDone_response(AMapWeatherSearchRequest request, AMapWeatherSearchResponse response) {}
+  Future<void> onWeatherSearchDone_response(AMapWeatherSearchRequest? request, AMapWeatherSearchResponse? response) async {}
   
-  /* @mustCallSuper */
-  Future<void> onNearbySearchDone_response(AMapNearbySearchRequest request, AMapNearbySearchResponse response) {}
+  Future<void> onNearbySearchDone_response(AMapNearbySearchRequest? request, AMapNearbySearchResponse? response) async {}
   
-  /* @mustCallSuper */
-  Future<void> onCloudSearchDone_response(AMapCloudSearchBaseRequest request, AMapCloudPOISearchResponse response) {}
+  Future<void> onCloudSearchDone_response(AMapCloudSearchBaseRequest? request, AMapCloudPOISearchResponse? response) async {}
   
-  /* @mustCallSuper */
-  Future<void> onShareSearchDone_response(AMapShareSearchBaseRequest request, AMapShareSearchResponse response) {}
+  Future<void> onShareSearchDone_response(AMapShareSearchBaseRequest? request, AMapShareSearchResponse? response) async {}
   
 }
 

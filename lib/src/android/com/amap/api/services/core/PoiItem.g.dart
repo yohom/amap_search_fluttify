@@ -23,12 +23,12 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_core_PoiItem> create__String__com_amap_api_services_core_LatLonPoint__String__String(String var1, com_amap_api_services_core_LatLonPoint var2, String var3, String var4) async {
+  static Future<com_amap_api_services_core_PoiItem> create__String__com_amap_api_services_core_LatLonPoint__String__String(String? var1, com_amap_api_services_core_LatLonPoint? var2, String? var3, String? var4) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_core_PoiItem__String__com_amap_api_services_core_LatLonPoint__String__String',
       {"var1": var1, "var2": var2, "var3": var3, "var4": var4}
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_core_PoiItem>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_core_PoiItem>(__result__)!;
   }
   
   static Future<List<com_amap_api_services_core_PoiItem>> create_batch__String__com_amap_api_services_core_LatLonPoint__String__String(List<String> var1, List<com_amap_api_services_core_LatLonPoint> var2, List<String> var3, List<String> var4) async {
@@ -37,8 +37,8 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
       'ObjectFactory::create_batchcom_amap_api_services_core_PoiItem__String__com_amap_api_services_core_LatLonPoint__String__String',
       [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "var4": var4[__i__]}]
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_PoiItem>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_PoiItem>(it)!)
         .toList();
   }
   
@@ -54,7 +54,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
 
   //region methods
   
-  Future<String> getBusinessArea() async {
+  Future<String?> getBusinessArea() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getBusinessArea([])');
@@ -71,7 +71,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   }
   
   
-  Future<void> setBusinessArea(String var1) async {
+  Future<void> setBusinessArea(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setBusinessArea([\'var1\':$var1])');
@@ -88,7 +88,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   }
   
   
-  Future<String> getAdName() async {
+  Future<String?> getAdName() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getAdName([])');
@@ -105,7 +105,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   }
   
   
-  Future<void> setAdName(String var1) async {
+  Future<void> setAdName(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setAdName([\'var1\':$var1])');
@@ -122,7 +122,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   }
   
   
-  Future<String> getCityName() async {
+  Future<String?> getCityName() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getCityName([])');
@@ -139,7 +139,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   }
   
   
-  Future<void> setCityName(String var1) async {
+  Future<void> setCityName(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setCityName([\'var1\':$var1])');
@@ -156,7 +156,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   }
   
   
-  Future<String> getProvinceName() async {
+  Future<String?> getProvinceName() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getProvinceName([])');
@@ -173,7 +173,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   }
   
   
-  Future<void> setProvinceName(String var1) async {
+  Future<void> setProvinceName(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setProvinceName([\'var1\':$var1])');
@@ -190,7 +190,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   }
   
   
-  Future<String> getTypeDes() async {
+  Future<String?> getTypeDes() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getTypeDes([])');
@@ -207,7 +207,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   }
   
   
-  Future<void> setTypeDes(String var1) async {
+  Future<void> setTypeDes(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setTypeDes([\'var1\':$var1])');
@@ -224,7 +224,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   }
   
   
-  Future<String> getTel() async {
+  Future<String?> getTel() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getTel([])');
@@ -241,7 +241,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   }
   
   
-  Future<void> setTel(String var1) async {
+  Future<void> setTel(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setTel([\'var1\':$var1])');
@@ -258,7 +258,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   }
   
   
-  Future<String> getAdCode() async {
+  Future<String?> getAdCode() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getAdCode([])');
@@ -275,7 +275,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   }
   
   
-  Future<void> setAdCode(String var1) async {
+  Future<void> setAdCode(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setAdCode([\'var1\':$var1])');
@@ -292,7 +292,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   }
   
   
-  Future<String> getPoiId() async {
+  Future<String?> getPoiId() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getPoiId([])');
@@ -309,7 +309,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   }
   
   
-  Future<int> getDistance() async {
+  Future<int?> getDistance() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getDistance([])');
@@ -326,7 +326,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   }
   
   
-  Future<void> setDistance(int var1) async {
+  Future<void> setDistance(int? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setDistance([\'var1\':$var1])');
@@ -343,7 +343,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   }
   
   
-  Future<String> getTitle() async {
+  Future<String?> getTitle() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getTitle([])');
@@ -360,7 +360,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   }
   
   
-  Future<String> getSnippet() async {
+  Future<String?> getSnippet() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getSnippet([])');
@@ -377,7 +377,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   }
   
   
-  Future<com_amap_api_services_core_LatLonPoint> getLatLonPoint() async {
+  Future<com_amap_api_services_core_LatLonPoint?> getLatLonPoint() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getLatLonPoint([])');
@@ -394,7 +394,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   }
   
   
-  Future<String> getCityCode() async {
+  Future<String?> getCityCode() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getCityCode([])');
@@ -411,7 +411,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   }
   
   
-  Future<void> setCityCode(String var1) async {
+  Future<void> setCityCode(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setCityCode([\'var1\':$var1])');
@@ -428,7 +428,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   }
   
   
-  Future<com_amap_api_services_core_LatLonPoint> getEnter() async {
+  Future<com_amap_api_services_core_LatLonPoint?> getEnter() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getEnter([])');
@@ -445,7 +445,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   }
   
   
-  Future<void> setEnter(com_amap_api_services_core_LatLonPoint var1) async {
+  Future<void> setEnter(com_amap_api_services_core_LatLonPoint? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setEnter([])');
@@ -462,7 +462,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   }
   
   
-  Future<com_amap_api_services_core_LatLonPoint> getExit() async {
+  Future<com_amap_api_services_core_LatLonPoint?> getExit() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getExit([])');
@@ -479,7 +479,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   }
   
   
-  Future<void> setExit(com_amap_api_services_core_LatLonPoint var1) async {
+  Future<void> setExit(com_amap_api_services_core_LatLonPoint? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setExit([])');
@@ -496,7 +496,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   }
   
   
-  Future<String> getWebsite() async {
+  Future<String?> getWebsite() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getWebsite([])');
@@ -513,7 +513,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   }
   
   
-  Future<void> setWebsite(String var1) async {
+  Future<void> setWebsite(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setWebsite([\'var1\':$var1])');
@@ -530,7 +530,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   }
   
   
-  Future<String> getPostcode() async {
+  Future<String?> getPostcode() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getPostcode([])');
@@ -547,7 +547,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   }
   
   
-  Future<void> setPostcode(String var1) async {
+  Future<void> setPostcode(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setPostcode([\'var1\':$var1])');
@@ -564,7 +564,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   }
   
   
-  Future<String> getEmail() async {
+  Future<String?> getEmail() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getEmail([])');
@@ -581,7 +581,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   }
   
   
-  Future<void> setEmail(String var1) async {
+  Future<void> setEmail(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setEmail([\'var1\':$var1])');
@@ -598,7 +598,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   }
   
   
-  Future<String> getDirection() async {
+  Future<String?> getDirection() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getDirection([])');
@@ -615,7 +615,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   }
   
   
-  Future<void> setDirection(String var1) async {
+  Future<void> setDirection(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setDirection([\'var1\':$var1])');
@@ -632,7 +632,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   }
   
   
-  Future<void> setIndoorMap(bool var1) async {
+  Future<void> setIndoorMap(bool? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setIndoorMap([\'var1\':$var1])');
@@ -649,7 +649,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   }
   
   
-  Future<bool> isIndoorMap() async {
+  Future<bool?> isIndoorMap() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::isIndoorMap([])');
@@ -666,7 +666,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   }
   
   
-  Future<void> setProvinceCode(String var1) async {
+  Future<void> setProvinceCode(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setProvinceCode([\'var1\':$var1])');
@@ -683,7 +683,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   }
   
   
-  Future<String> getProvinceCode() async {
+  Future<String?> getProvinceCode() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getProvinceCode([])');
@@ -700,7 +700,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   }
   
   
-  Future<void> setParkingType(String var1) async {
+  Future<void> setParkingType(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setParkingType([\'var1\':$var1])');
@@ -717,7 +717,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   }
   
   
-  Future<String> getParkingType() async {
+  Future<String?> getParkingType() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getParkingType([])');
@@ -734,7 +734,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   }
   
   
-  Future<void> setSubPois(List<com_amap_api_services_poisearch_SubPoiItem> var1) async {
+  Future<void> setSubPois(List<com_amap_api_services_poisearch_SubPoiItem>? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setSubPois([])');
@@ -751,7 +751,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   }
   
   
-  Future<List<com_amap_api_services_poisearch_SubPoiItem>> getSubPois() async {
+  Future<List<com_amap_api_services_poisearch_SubPoiItem>?> getSubPois() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getSubPois([])');
@@ -764,11 +764,11 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     // handle native call
   
   
-    return (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_poisearch_SubPoiItem>(it))?.toList();
+    return (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_poisearch_SubPoiItem>(it)!).toList();
   }
   
   
-  Future<com_amap_api_services_poisearch_IndoorData> getIndoorData() async {
+  Future<com_amap_api_services_poisearch_IndoorData?> getIndoorData() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getIndoorData([])');
@@ -785,7 +785,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   }
   
   
-  Future<void> setIndoorDate(com_amap_api_services_poisearch_IndoorData var1) async {
+  Future<void> setIndoorDate(com_amap_api_services_poisearch_IndoorData? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setIndoorDate([])');
@@ -802,7 +802,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   }
   
   
-  Future<List<com_amap_api_services_poisearch_Photo>> getPhotos() async {
+  Future<List<com_amap_api_services_poisearch_Photo>?> getPhotos() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getPhotos([])');
@@ -815,11 +815,11 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     // handle native call
   
   
-    return (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_poisearch_Photo>(it))?.toList();
+    return (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_poisearch_Photo>(it)!).toList();
   }
   
   
-  Future<void> setPhotos(List<com_amap_api_services_poisearch_Photo> var1) async {
+  Future<void> setPhotos(List<com_amap_api_services_poisearch_Photo>? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setPhotos([])');
@@ -836,7 +836,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   }
   
   
-  Future<com_amap_api_services_poisearch_PoiItemExtension> getPoiExtension() async {
+  Future<com_amap_api_services_poisearch_PoiItemExtension?> getPoiExtension() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getPoiExtension([])');
@@ -853,7 +853,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   }
   
   
-  Future<void> setPoiExtension(com_amap_api_services_poisearch_PoiItemExtension var1) async {
+  Future<void> setPoiExtension(com_amap_api_services_poisearch_PoiItemExtension? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setPoiExtension([])');
@@ -870,7 +870,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   }
   
   
-  Future<String> getTypeCode() async {
+  Future<String?> getTypeCode() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getTypeCode([])');
@@ -887,7 +887,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   }
   
   
-  Future<void> setTypeCode(String var1) async {
+  Future<void> setTypeCode(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setTypeCode([\'var1\':$var1])');
@@ -904,7 +904,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   }
   
   
-  Future<String> getShopID() async {
+  Future<String?> getShopID() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getShopID([])');
@@ -921,7 +921,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   }
   
   
-  Future<void> setShopID(String var1) async {
+  Future<void> setShopID(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setShopID([\'var1\':$var1])');
@@ -945,7 +945,7 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   }
 }
 
-extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services_core_PoiItem> {
+extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services_core_PoiItem?> {
   //region getters
   
   //endregion
@@ -956,7 +956,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
 
   //region methods
   
-  Future<List<String>> getBusinessArea_batch() async {
+  Future<List<String?>?> getBusinessArea_batch() async {
     assert(true);
   
     // invoke native method
@@ -967,7 +967,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   
-  Future<List<void>> setBusinessArea_batch(List<String> var1) async {
+  Future<List<void>?> setBusinessArea_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -978,7 +978,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   
-  Future<List<String>> getAdName_batch() async {
+  Future<List<String?>?> getAdName_batch() async {
     assert(true);
   
     // invoke native method
@@ -989,7 +989,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   
-  Future<List<void>> setAdName_batch(List<String> var1) async {
+  Future<List<void>?> setAdName_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -1000,7 +1000,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   
-  Future<List<String>> getCityName_batch() async {
+  Future<List<String?>?> getCityName_batch() async {
     assert(true);
   
     // invoke native method
@@ -1011,7 +1011,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   
-  Future<List<void>> setCityName_batch(List<String> var1) async {
+  Future<List<void>?> setCityName_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -1022,7 +1022,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   
-  Future<List<String>> getProvinceName_batch() async {
+  Future<List<String?>?> getProvinceName_batch() async {
     assert(true);
   
     // invoke native method
@@ -1033,7 +1033,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   
-  Future<List<void>> setProvinceName_batch(List<String> var1) async {
+  Future<List<void>?> setProvinceName_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -1044,7 +1044,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   
-  Future<List<String>> getTypeDes_batch() async {
+  Future<List<String?>?> getTypeDes_batch() async {
     assert(true);
   
     // invoke native method
@@ -1055,7 +1055,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   
-  Future<List<void>> setTypeDes_batch(List<String> var1) async {
+  Future<List<void>?> setTypeDes_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -1066,7 +1066,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   
-  Future<List<String>> getTel_batch() async {
+  Future<List<String?>?> getTel_batch() async {
     assert(true);
   
     // invoke native method
@@ -1077,7 +1077,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   
-  Future<List<void>> setTel_batch(List<String> var1) async {
+  Future<List<void>?> setTel_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -1088,7 +1088,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   
-  Future<List<String>> getAdCode_batch() async {
+  Future<List<String?>?> getAdCode_batch() async {
     assert(true);
   
     // invoke native method
@@ -1099,7 +1099,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   
-  Future<List<void>> setAdCode_batch(List<String> var1) async {
+  Future<List<void>?> setAdCode_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -1110,7 +1110,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   
-  Future<List<String>> getPoiId_batch() async {
+  Future<List<String?>?> getPoiId_batch() async {
     assert(true);
   
     // invoke native method
@@ -1121,7 +1121,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   
-  Future<List<int>> getDistance_batch() async {
+  Future<List<int?>?> getDistance_batch() async {
     assert(true);
   
     // invoke native method
@@ -1132,7 +1132,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   
-  Future<List<void>> setDistance_batch(List<int> var1) async {
+  Future<List<void>?> setDistance_batch(List<int> var1) async {
     assert(true);
   
     // invoke native method
@@ -1143,7 +1143,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   
-  Future<List<String>> getTitle_batch() async {
+  Future<List<String?>?> getTitle_batch() async {
     assert(true);
   
     // invoke native method
@@ -1154,7 +1154,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   
-  Future<List<String>> getSnippet_batch() async {
+  Future<List<String?>?> getSnippet_batch() async {
     assert(true);
   
     // invoke native method
@@ -1165,7 +1165,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   
-  Future<List<com_amap_api_services_core_LatLonPoint>> getLatLonPoint_batch() async {
+  Future<List<com_amap_api_services_core_LatLonPoint?>?> getLatLonPoint_batch() async {
     assert(true);
   
     // invoke native method
@@ -1176,7 +1176,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   
-  Future<List<String>> getCityCode_batch() async {
+  Future<List<String?>?> getCityCode_batch() async {
     assert(true);
   
     // invoke native method
@@ -1187,7 +1187,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   
-  Future<List<void>> setCityCode_batch(List<String> var1) async {
+  Future<List<void>?> setCityCode_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -1198,7 +1198,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   
-  Future<List<com_amap_api_services_core_LatLonPoint>> getEnter_batch() async {
+  Future<List<com_amap_api_services_core_LatLonPoint?>?> getEnter_batch() async {
     assert(true);
   
     // invoke native method
@@ -1209,7 +1209,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   
-  Future<List<void>> setEnter_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
+  Future<List<void>?> setEnter_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
     assert(true);
   
     // invoke native method
@@ -1220,7 +1220,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   
-  Future<List<com_amap_api_services_core_LatLonPoint>> getExit_batch() async {
+  Future<List<com_amap_api_services_core_LatLonPoint?>?> getExit_batch() async {
     assert(true);
   
     // invoke native method
@@ -1231,7 +1231,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   
-  Future<List<void>> setExit_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
+  Future<List<void>?> setExit_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
     assert(true);
   
     // invoke native method
@@ -1242,7 +1242,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   
-  Future<List<String>> getWebsite_batch() async {
+  Future<List<String?>?> getWebsite_batch() async {
     assert(true);
   
     // invoke native method
@@ -1253,7 +1253,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   
-  Future<List<void>> setWebsite_batch(List<String> var1) async {
+  Future<List<void>?> setWebsite_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -1264,7 +1264,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   
-  Future<List<String>> getPostcode_batch() async {
+  Future<List<String?>?> getPostcode_batch() async {
     assert(true);
   
     // invoke native method
@@ -1275,7 +1275,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   
-  Future<List<void>> setPostcode_batch(List<String> var1) async {
+  Future<List<void>?> setPostcode_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -1286,7 +1286,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   
-  Future<List<String>> getEmail_batch() async {
+  Future<List<String?>?> getEmail_batch() async {
     assert(true);
   
     // invoke native method
@@ -1297,7 +1297,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   
-  Future<List<void>> setEmail_batch(List<String> var1) async {
+  Future<List<void>?> setEmail_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -1308,7 +1308,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   
-  Future<List<String>> getDirection_batch() async {
+  Future<List<String?>?> getDirection_batch() async {
     assert(true);
   
     // invoke native method
@@ -1319,7 +1319,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   
-  Future<List<void>> setDirection_batch(List<String> var1) async {
+  Future<List<void>?> setDirection_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -1330,7 +1330,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   
-  Future<List<void>> setIndoorMap_batch(List<bool> var1) async {
+  Future<List<void>?> setIndoorMap_batch(List<bool> var1) async {
     assert(true);
   
     // invoke native method
@@ -1341,7 +1341,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   
-  Future<List<bool>> isIndoorMap_batch() async {
+  Future<List<bool?>?> isIndoorMap_batch() async {
     assert(true);
   
     // invoke native method
@@ -1352,7 +1352,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   
-  Future<List<void>> setProvinceCode_batch(List<String> var1) async {
+  Future<List<void>?> setProvinceCode_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -1363,7 +1363,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   
-  Future<List<String>> getProvinceCode_batch() async {
+  Future<List<String?>?> getProvinceCode_batch() async {
     assert(true);
   
     // invoke native method
@@ -1374,7 +1374,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   
-  Future<List<void>> setParkingType_batch(List<String> var1) async {
+  Future<List<void>?> setParkingType_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -1385,7 +1385,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   
-  Future<List<String>> getParkingType_batch() async {
+  Future<List<String?>?> getParkingType_batch() async {
     assert(true);
   
     // invoke native method
@@ -1396,7 +1396,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   
-  Future<List<void>> setSubPois_batch(List<List<com_amap_api_services_poisearch_SubPoiItem>> var1) async {
+  Future<List<void>?> setSubPois_batch(List<List<com_amap_api_services_poisearch_SubPoiItem>> var1) async {
     assert(true);
   
     // invoke native method
@@ -1407,18 +1407,18 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   
-  Future<List<List<com_amap_api_services_poisearch_SubPoiItem>>> getSubPois_batch() async {
+  Future<List<List<com_amap_api_services_poisearch_SubPoiItem>?>?> getSubPois_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.PoiItem::getSubPois_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_poisearch_SubPoiItem>(it))?.toList()).cast<List<com_amap_api_services_poisearch_SubPoiItem>>().toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_poisearch_SubPoiItem>(it)!).toList()).cast<List<com_amap_api_services_poisearch_SubPoiItem>>().toList();
   }
   
   
-  Future<List<com_amap_api_services_poisearch_IndoorData>> getIndoorData_batch() async {
+  Future<List<com_amap_api_services_poisearch_IndoorData?>?> getIndoorData_batch() async {
     assert(true);
   
     // invoke native method
@@ -1429,7 +1429,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   
-  Future<List<void>> setIndoorDate_batch(List<com_amap_api_services_poisearch_IndoorData> var1) async {
+  Future<List<void>?> setIndoorDate_batch(List<com_amap_api_services_poisearch_IndoorData> var1) async {
     assert(true);
   
     // invoke native method
@@ -1440,18 +1440,18 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   
-  Future<List<List<com_amap_api_services_poisearch_Photo>>> getPhotos_batch() async {
+  Future<List<List<com_amap_api_services_poisearch_Photo>?>?> getPhotos_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.PoiItem::getPhotos_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_poisearch_Photo>(it))?.toList()).cast<List<com_amap_api_services_poisearch_Photo>>().toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_poisearch_Photo>(it)!).toList()).cast<List<com_amap_api_services_poisearch_Photo>>().toList();
   }
   
   
-  Future<List<void>> setPhotos_batch(List<List<com_amap_api_services_poisearch_Photo>> var1) async {
+  Future<List<void>?> setPhotos_batch(List<List<com_amap_api_services_poisearch_Photo>> var1) async {
     assert(true);
   
     // invoke native method
@@ -1462,7 +1462,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   
-  Future<List<com_amap_api_services_poisearch_PoiItemExtension>> getPoiExtension_batch() async {
+  Future<List<com_amap_api_services_poisearch_PoiItemExtension?>?> getPoiExtension_batch() async {
     assert(true);
   
     // invoke native method
@@ -1473,7 +1473,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   
-  Future<List<void>> setPoiExtension_batch(List<com_amap_api_services_poisearch_PoiItemExtension> var1) async {
+  Future<List<void>?> setPoiExtension_batch(List<com_amap_api_services_poisearch_PoiItemExtension> var1) async {
     assert(true);
   
     // invoke native method
@@ -1484,7 +1484,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   
-  Future<List<String>> getTypeCode_batch() async {
+  Future<List<String?>?> getTypeCode_batch() async {
     assert(true);
   
     // invoke native method
@@ -1495,7 +1495,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   
-  Future<List<void>> setTypeCode_batch(List<String> var1) async {
+  Future<List<void>?> setTypeCode_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -1506,7 +1506,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   
-  Future<List<String>> getShopID_batch() async {
+  Future<List<String?>?> getShopID_batch() async {
     assert(true);
   
     // invoke native method
@@ -1517,7 +1517,7 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   
-  Future<List<void>> setShopID_batch(List<String> var1) async {
+  Future<List<void>?> setShopID_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method

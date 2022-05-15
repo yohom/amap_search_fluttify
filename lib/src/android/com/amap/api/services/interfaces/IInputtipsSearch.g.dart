@@ -26,26 +26,19 @@ mixin com_amap_api_services_interfaces_IInputtipsSearch on java_lang_Object {
 
   
 
-  /* @mustCallSuper */
-  Future<com_amap_api_services_help_InputtipsQuery> getQuery() {}
+  Future<com_amap_api_services_help_InputtipsQuery?> getQuery() async {}
   
-  /* @mustCallSuper */
-  Future<void> setQuery(com_amap_api_services_help_InputtipsQuery var1) {}
+  Future<void> setQuery(com_amap_api_services_help_InputtipsQuery? var1) async {}
   
-  /* @mustCallSuper */
-  Future<void> setInputtipsListener(com_amap_api_services_help_Inputtips_InputtipsListener var1) {}
+  Future<void> setInputtipsListener(com_amap_api_services_help_Inputtips_InputtipsListener? var1) async {}
   
-  /* @mustCallSuper */
-  Future<void> requestInputtipsAsyn() {}
+  Future<void> requestInputtipsAsyn() async {}
   
-  /* @mustCallSuper */
-  Future<List<com_amap_api_services_help_Tip>> requestInputtips() {}
+  Future<List<com_amap_api_services_help_Tip>?> requestInputtips() async {}
   
-  /* @mustCallSuper */
-  Future<void> requestInputtips__String__String(String var1, String var2) {}
+  Future<void> requestInputtips__String__String(String? var1, String? var2) async {}
   
-  /* @mustCallSuper */
-  Future<void> requestInputtips__String__String__String(String var1, String var2, String var3) {}
+  Future<void> requestInputtips__String__String__String(String? var1, String? var2, String? var3) async {}
   
 }
 

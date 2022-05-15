@@ -36,7 +36,7 @@ class com_amap_api_services_cloud_CloudResult extends java_lang_Object  {
 
   //region methods
   
-  static Future<com_amap_api_services_cloud_CloudResult> createPagedResult(com_amap_api_services_cloud_CloudSearch_Query var0, int var1, com_amap_api_services_cloud_CloudSearch_SearchBound var2, int var3, List<com_amap_api_services_cloud_CloudItem> var4) async {
+  static Future<com_amap_api_services_cloud_CloudResult?> createPagedResult(com_amap_api_services_cloud_CloudSearch_Query? var0, int? var1, com_amap_api_services_cloud_CloudSearch_SearchBound? var2, int? var3, List<com_amap_api_services_cloud_CloudItem>? var4) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudResult::createPagedResult([\'var1\':$var1, \'var3\':$var3])');
@@ -53,7 +53,7 @@ class com_amap_api_services_cloud_CloudResult extends java_lang_Object  {
   }
   
   
-  Future<int> getPageCount() async {
+  Future<int?> getPageCount() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudResult@$refId::getPageCount([])');
@@ -70,7 +70,7 @@ class com_amap_api_services_cloud_CloudResult extends java_lang_Object  {
   }
   
   
-  Future<com_amap_api_services_cloud_CloudSearch_Query> getQuery() async {
+  Future<com_amap_api_services_cloud_CloudSearch_Query?> getQuery() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudResult@$refId::getQuery([])');
@@ -87,7 +87,7 @@ class com_amap_api_services_cloud_CloudResult extends java_lang_Object  {
   }
   
   
-  Future<com_amap_api_services_cloud_CloudSearch_SearchBound> getBound() async {
+  Future<com_amap_api_services_cloud_CloudSearch_SearchBound?> getBound() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudResult@$refId::getBound([])');
@@ -104,7 +104,7 @@ class com_amap_api_services_cloud_CloudResult extends java_lang_Object  {
   }
   
   
-  Future<List<com_amap_api_services_cloud_CloudItem>> getClouds() async {
+  Future<List<com_amap_api_services_cloud_CloudItem>?> getClouds() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudResult@$refId::getClouds([])');
@@ -117,11 +117,11 @@ class com_amap_api_services_cloud_CloudResult extends java_lang_Object  {
     // handle native call
   
   
-    return (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudItem>(it))?.toList();
+    return (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudItem>(it)!).toList();
   }
   
   
-  Future<int> getTotalCount() async {
+  Future<int?> getTotalCount() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudResult@$refId::getTotalCount([])');
@@ -145,7 +145,7 @@ class com_amap_api_services_cloud_CloudResult extends java_lang_Object  {
   }
 }
 
-extension com_amap_api_services_cloud_CloudResult_Batch on List<com_amap_api_services_cloud_CloudResult> {
+extension com_amap_api_services_cloud_CloudResult_Batch on List<com_amap_api_services_cloud_CloudResult?> {
   //region getters
   
   //endregion
@@ -156,7 +156,7 @@ extension com_amap_api_services_cloud_CloudResult_Batch on List<com_amap_api_ser
 
   //region methods
   
-  static Future<List<com_amap_api_services_cloud_CloudResult>> createPagedResult_batch(List<com_amap_api_services_cloud_CloudSearch_Query> var0, List<int> var1, List<com_amap_api_services_cloud_CloudSearch_SearchBound> var2, List<int> var3, List<List<com_amap_api_services_cloud_CloudItem>> var4) async {
+  static Future<List<com_amap_api_services_cloud_CloudResult?>?> createPagedResult_batch(List<com_amap_api_services_cloud_CloudSearch_Query> var0, List<int> var1, List<com_amap_api_services_cloud_CloudSearch_SearchBound> var2, List<int> var3, List<List<com_amap_api_services_cloud_CloudItem>> var4) async {
     assert(var0.length == var1.length && var1.length == var2.length && var2.length == var3.length && var3.length == var4.length);
   
     // invoke native method
@@ -167,7 +167,7 @@ extension com_amap_api_services_cloud_CloudResult_Batch on List<com_amap_api_ser
   }
   
   
-  Future<List<int>> getPageCount_batch() async {
+  Future<List<int?>?> getPageCount_batch() async {
     assert(true);
   
     // invoke native method
@@ -178,7 +178,7 @@ extension com_amap_api_services_cloud_CloudResult_Batch on List<com_amap_api_ser
   }
   
   
-  Future<List<com_amap_api_services_cloud_CloudSearch_Query>> getQuery_batch() async {
+  Future<List<com_amap_api_services_cloud_CloudSearch_Query?>?> getQuery_batch() async {
     assert(true);
   
     // invoke native method
@@ -189,7 +189,7 @@ extension com_amap_api_services_cloud_CloudResult_Batch on List<com_amap_api_ser
   }
   
   
-  Future<List<com_amap_api_services_cloud_CloudSearch_SearchBound>> getBound_batch() async {
+  Future<List<com_amap_api_services_cloud_CloudSearch_SearchBound?>?> getBound_batch() async {
     assert(true);
   
     // invoke native method
@@ -200,18 +200,18 @@ extension com_amap_api_services_cloud_CloudResult_Batch on List<com_amap_api_ser
   }
   
   
-  Future<List<List<com_amap_api_services_cloud_CloudItem>>> getClouds_batch() async {
+  Future<List<List<com_amap_api_services_cloud_CloudItem>?>?> getClouds_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.cloud.CloudResult::getClouds_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudItem>(it))?.toList()).cast<List<com_amap_api_services_cloud_CloudItem>>().toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudItem>(it)!).toList()).cast<List<com_amap_api_services_cloud_CloudItem>>().toList();
   }
   
   
-  Future<List<int>> getTotalCount_batch() async {
+  Future<List<int?>?> getTotalCount_batch() async {
     assert(true);
   
     // invoke native method

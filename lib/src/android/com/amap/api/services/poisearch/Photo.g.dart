@@ -28,15 +28,15 @@ class com_amap_api_services_poisearch_Photo extends java_lang_Object with androi
       'ObjectFactory::createcom_amap_api_services_poisearch_Photo__',
     
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_poisearch_Photo>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_poisearch_Photo>(__result__)!;
   }
   
-  static Future<com_amap_api_services_poisearch_Photo> create__String__String(String var1, String var2) async {
+  static Future<com_amap_api_services_poisearch_Photo> create__String__String(String? var1, String? var2) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_poisearch_Photo__String__String',
       {"var1": var1, "var2": var2}
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_poisearch_Photo>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_poisearch_Photo>(__result__)!;
   }
   
   static Future<List<com_amap_api_services_poisearch_Photo>> create_batch__(int length) async {
@@ -45,8 +45,8 @@ class com_amap_api_services_poisearch_Photo extends java_lang_Object with androi
       'ObjectFactory::create_batchcom_amap_api_services_poisearch_Photo__',
       {'length': length}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_poisearch_Photo>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_poisearch_Photo>(it)!)
         .toList();
   }
   
@@ -56,8 +56,8 @@ class com_amap_api_services_poisearch_Photo extends java_lang_Object with androi
       'ObjectFactory::create_batchcom_amap_api_services_poisearch_Photo__String__String',
       [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_poisearch_Photo>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_poisearch_Photo>(it)!)
         .toList();
   }
   
@@ -73,7 +73,7 @@ class com_amap_api_services_poisearch_Photo extends java_lang_Object with androi
 
   //region methods
   
-  Future<String> getTitle() async {
+  Future<String?> getTitle() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.poisearch.Photo@$refId::getTitle([])');
@@ -90,7 +90,7 @@ class com_amap_api_services_poisearch_Photo extends java_lang_Object with androi
   }
   
   
-  Future<void> setTitle(String var1) async {
+  Future<void> setTitle(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.poisearch.Photo@$refId::setTitle([\'var1\':$var1])');
@@ -107,7 +107,7 @@ class com_amap_api_services_poisearch_Photo extends java_lang_Object with androi
   }
   
   
-  Future<String> getUrl() async {
+  Future<String?> getUrl() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.poisearch.Photo@$refId::getUrl([])');
@@ -124,7 +124,7 @@ class com_amap_api_services_poisearch_Photo extends java_lang_Object with androi
   }
   
   
-  Future<void> setUrl(String var1) async {
+  Future<void> setUrl(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.poisearch.Photo@$refId::setUrl([\'var1\':$var1])');
@@ -148,7 +148,7 @@ class com_amap_api_services_poisearch_Photo extends java_lang_Object with androi
   }
 }
 
-extension com_amap_api_services_poisearch_Photo_Batch on List<com_amap_api_services_poisearch_Photo> {
+extension com_amap_api_services_poisearch_Photo_Batch on List<com_amap_api_services_poisearch_Photo?> {
   //region getters
   
   //endregion
@@ -159,7 +159,7 @@ extension com_amap_api_services_poisearch_Photo_Batch on List<com_amap_api_servi
 
   //region methods
   
-  Future<List<String>> getTitle_batch() async {
+  Future<List<String?>?> getTitle_batch() async {
     assert(true);
   
     // invoke native method
@@ -170,7 +170,7 @@ extension com_amap_api_services_poisearch_Photo_Batch on List<com_amap_api_servi
   }
   
   
-  Future<List<void>> setTitle_batch(List<String> var1) async {
+  Future<List<void>?> setTitle_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -181,7 +181,7 @@ extension com_amap_api_services_poisearch_Photo_Batch on List<com_amap_api_servi
   }
   
   
-  Future<List<String>> getUrl_batch() async {
+  Future<List<String?>?> getUrl_batch() async {
     assert(true);
   
     // invoke native method
@@ -192,7 +192,7 @@ extension com_amap_api_services_poisearch_Photo_Batch on List<com_amap_api_servi
   }
   
   
-  Future<List<void>> setUrl_batch(List<String> var1) async {
+  Future<List<void>?> setUrl_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method

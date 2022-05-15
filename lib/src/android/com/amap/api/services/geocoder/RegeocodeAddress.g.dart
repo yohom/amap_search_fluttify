@@ -28,7 +28,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
       'ObjectFactory::createcom_amap_api_services_geocoder_RegeocodeAddress__',
     
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_geocoder_RegeocodeAddress>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_geocoder_RegeocodeAddress>(__result__)!;
   }
   
   static Future<List<com_amap_api_services_geocoder_RegeocodeAddress>> create_batch__(int length) async {
@@ -37,8 +37,8 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
       'ObjectFactory::create_batchcom_amap_api_services_geocoder_RegeocodeAddress__',
       {'length': length}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_geocoder_RegeocodeAddress>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_geocoder_RegeocodeAddress>(it)!)
         .toList();
   }
   
@@ -54,7 +54,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
 
   //region methods
   
-  Future<String> getFormatAddress() async {
+  Future<String?> getFormatAddress() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.RegeocodeAddress@$refId::getFormatAddress([])');
@@ -71,7 +71,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
   }
   
   
-  Future<void> setFormatAddress(String var1) async {
+  Future<void> setFormatAddress(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.RegeocodeAddress@$refId::setFormatAddress([\'var1\':$var1])');
@@ -88,7 +88,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
   }
   
   
-  Future<String> getProvince() async {
+  Future<String?> getProvince() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.RegeocodeAddress@$refId::getProvince([])');
@@ -105,7 +105,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
   }
   
   
-  Future<void> setProvince(String var1) async {
+  Future<void> setProvince(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.RegeocodeAddress@$refId::setProvince([\'var1\':$var1])');
@@ -122,7 +122,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
   }
   
   
-  Future<String> getCity() async {
+  Future<String?> getCity() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.RegeocodeAddress@$refId::getCity([])');
@@ -139,7 +139,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
   }
   
   
-  Future<void> setCity(String var1) async {
+  Future<void> setCity(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.RegeocodeAddress@$refId::setCity([\'var1\':$var1])');
@@ -156,7 +156,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
   }
   
   
-  Future<String> getCityCode() async {
+  Future<String?> getCityCode() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.RegeocodeAddress@$refId::getCityCode([])');
@@ -173,7 +173,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
   }
   
   
-  Future<void> setCityCode(String var1) async {
+  Future<void> setCityCode(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.RegeocodeAddress@$refId::setCityCode([\'var1\':$var1])');
@@ -190,7 +190,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
   }
   
   
-  Future<String> getAdCode() async {
+  Future<String?> getAdCode() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.RegeocodeAddress@$refId::getAdCode([])');
@@ -207,7 +207,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
   }
   
   
-  Future<void> setAdCode(String var1) async {
+  Future<void> setAdCode(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.RegeocodeAddress@$refId::setAdCode([\'var1\':$var1])');
@@ -224,7 +224,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
   }
   
   
-  Future<String> getDistrict() async {
+  Future<String?> getDistrict() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.RegeocodeAddress@$refId::getDistrict([])');
@@ -241,7 +241,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
   }
   
   
-  Future<void> setDistrict(String var1) async {
+  Future<void> setDistrict(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.RegeocodeAddress@$refId::setDistrict([\'var1\':$var1])');
@@ -258,7 +258,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
   }
   
   
-  Future<String> getTownship() async {
+  Future<String?> getTownship() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.RegeocodeAddress@$refId::getTownship([])');
@@ -275,7 +275,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
   }
   
   
-  Future<void> setTownship(String var1) async {
+  Future<void> setTownship(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.RegeocodeAddress@$refId::setTownship([\'var1\':$var1])');
@@ -292,7 +292,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
   }
   
   
-  Future<String> getNeighborhood() async {
+  Future<String?> getNeighborhood() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.RegeocodeAddress@$refId::getNeighborhood([])');
@@ -309,7 +309,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
   }
   
   
-  Future<void> setNeighborhood(String var1) async {
+  Future<void> setNeighborhood(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.RegeocodeAddress@$refId::setNeighborhood([\'var1\':$var1])');
@@ -326,7 +326,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
   }
   
   
-  Future<String> getBuilding() async {
+  Future<String?> getBuilding() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.RegeocodeAddress@$refId::getBuilding([])');
@@ -343,7 +343,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
   }
   
   
-  Future<void> setBuilding(String var1) async {
+  Future<void> setBuilding(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.RegeocodeAddress@$refId::setBuilding([\'var1\':$var1])');
@@ -360,7 +360,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
   }
   
   
-  Future<com_amap_api_services_geocoder_StreetNumber> getStreetNumber() async {
+  Future<com_amap_api_services_geocoder_StreetNumber?> getStreetNumber() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.RegeocodeAddress@$refId::getStreetNumber([])');
@@ -377,7 +377,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
   }
   
   
-  Future<void> setStreetNumber(com_amap_api_services_geocoder_StreetNumber var1) async {
+  Future<void> setStreetNumber(com_amap_api_services_geocoder_StreetNumber? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.RegeocodeAddress@$refId::setStreetNumber([])');
@@ -394,7 +394,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
   }
   
   
-  Future<List<com_amap_api_services_geocoder_RegeocodeRoad>> getRoads() async {
+  Future<List<com_amap_api_services_geocoder_RegeocodeRoad>?> getRoads() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.RegeocodeAddress@$refId::getRoads([])');
@@ -407,11 +407,11 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     // handle native call
   
   
-    return (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_geocoder_RegeocodeRoad>(it))?.toList();
+    return (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_geocoder_RegeocodeRoad>(it)!).toList();
   }
   
   
-  Future<void> setRoads(List<com_amap_api_services_geocoder_RegeocodeRoad> var1) async {
+  Future<void> setRoads(List<com_amap_api_services_geocoder_RegeocodeRoad>? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.RegeocodeAddress@$refId::setRoads([])');
@@ -428,7 +428,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
   }
   
   
-  Future<List<com_amap_api_services_core_PoiItem>> getPois() async {
+  Future<List<com_amap_api_services_core_PoiItem>?> getPois() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.RegeocodeAddress@$refId::getPois([])');
@@ -441,11 +441,11 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     // handle native call
   
   
-    return (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_PoiItem>(it))?.toList();
+    return (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_PoiItem>(it)!).toList();
   }
   
   
-  Future<void> setPois(List<com_amap_api_services_core_PoiItem> var1) async {
+  Future<void> setPois(List<com_amap_api_services_core_PoiItem>? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.RegeocodeAddress@$refId::setPois([])');
@@ -462,7 +462,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
   }
   
   
-  Future<List<com_amap_api_services_road_Crossroad>> getCrossroads() async {
+  Future<List<com_amap_api_services_road_Crossroad>?> getCrossroads() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.RegeocodeAddress@$refId::getCrossroads([])');
@@ -475,11 +475,11 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     // handle native call
   
   
-    return (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_road_Crossroad>(it))?.toList();
+    return (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_road_Crossroad>(it)!).toList();
   }
   
   
-  Future<void> setCrossroads(List<com_amap_api_services_road_Crossroad> var1) async {
+  Future<void> setCrossroads(List<com_amap_api_services_road_Crossroad>? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.RegeocodeAddress@$refId::setCrossroads([])');
@@ -496,7 +496,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
   }
   
   
-  Future<List<com_amap_api_services_geocoder_BusinessArea>> getBusinessAreas() async {
+  Future<List<com_amap_api_services_geocoder_BusinessArea>?> getBusinessAreas() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.RegeocodeAddress@$refId::getBusinessAreas([])');
@@ -509,11 +509,11 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     // handle native call
   
   
-    return (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_geocoder_BusinessArea>(it))?.toList();
+    return (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_geocoder_BusinessArea>(it)!).toList();
   }
   
   
-  Future<void> setBusinessAreas(List<com_amap_api_services_geocoder_BusinessArea> var1) async {
+  Future<void> setBusinessAreas(List<com_amap_api_services_geocoder_BusinessArea>? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.RegeocodeAddress@$refId::setBusinessAreas([])');
@@ -530,7 +530,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
   }
   
   
-  Future<List<com_amap_api_services_geocoder_AoiItem>> getAois() async {
+  Future<List<com_amap_api_services_geocoder_AoiItem>?> getAois() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.RegeocodeAddress@$refId::getAois([])');
@@ -543,11 +543,11 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     // handle native call
   
   
-    return (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_geocoder_AoiItem>(it))?.toList();
+    return (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_geocoder_AoiItem>(it)!).toList();
   }
   
   
-  Future<void> setAois(List<com_amap_api_services_geocoder_AoiItem> var1) async {
+  Future<void> setAois(List<com_amap_api_services_geocoder_AoiItem>? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.RegeocodeAddress@$refId::setAois([])');
@@ -564,7 +564,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
   }
   
   
-  Future<String> getTowncode() async {
+  Future<String?> getTowncode() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.RegeocodeAddress@$refId::getTowncode([])');
@@ -581,7 +581,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
   }
   
   
-  Future<void> setTowncode(String var1) async {
+  Future<void> setTowncode(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.RegeocodeAddress@$refId::setTowncode([\'var1\':$var1])');
@@ -598,7 +598,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
   }
   
   
-  Future<void> setCountry(String var1) async {
+  Future<void> setCountry(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.RegeocodeAddress@$refId::setCountry([\'var1\':$var1])');
@@ -615,7 +615,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
   }
   
   
-  Future<String> getCountry() async {
+  Future<String?> getCountry() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.RegeocodeAddress@$refId::getCountry([])');
@@ -632,7 +632,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
   }
   
   
-  Future<String> getCountryCode() async {
+  Future<String?> getCountryCode() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.RegeocodeAddress@$refId::getCountryCode([])');
@@ -649,7 +649,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
   }
   
   
-  Future<void> setCountryCode(String var1) async {
+  Future<void> setCountryCode(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.RegeocodeAddress@$refId::setCountryCode([\'var1\':$var1])');
@@ -673,7 +673,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
   }
 }
 
-extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap_api_services_geocoder_RegeocodeAddress> {
+extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap_api_services_geocoder_RegeocodeAddress?> {
   //region getters
   
   //endregion
@@ -684,7 +684,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
 
   //region methods
   
-  Future<List<String>> getFormatAddress_batch() async {
+  Future<List<String?>?> getFormatAddress_batch() async {
     assert(true);
   
     // invoke native method
@@ -695,7 +695,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
   }
   
   
-  Future<List<void>> setFormatAddress_batch(List<String> var1) async {
+  Future<List<void>?> setFormatAddress_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -706,7 +706,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
   }
   
   
-  Future<List<String>> getProvince_batch() async {
+  Future<List<String?>?> getProvince_batch() async {
     assert(true);
   
     // invoke native method
@@ -717,7 +717,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
   }
   
   
-  Future<List<void>> setProvince_batch(List<String> var1) async {
+  Future<List<void>?> setProvince_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -728,7 +728,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
   }
   
   
-  Future<List<String>> getCity_batch() async {
+  Future<List<String?>?> getCity_batch() async {
     assert(true);
   
     // invoke native method
@@ -739,7 +739,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
   }
   
   
-  Future<List<void>> setCity_batch(List<String> var1) async {
+  Future<List<void>?> setCity_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -750,7 +750,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
   }
   
   
-  Future<List<String>> getCityCode_batch() async {
+  Future<List<String?>?> getCityCode_batch() async {
     assert(true);
   
     // invoke native method
@@ -761,7 +761,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
   }
   
   
-  Future<List<void>> setCityCode_batch(List<String> var1) async {
+  Future<List<void>?> setCityCode_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -772,7 +772,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
   }
   
   
-  Future<List<String>> getAdCode_batch() async {
+  Future<List<String?>?> getAdCode_batch() async {
     assert(true);
   
     // invoke native method
@@ -783,7 +783,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
   }
   
   
-  Future<List<void>> setAdCode_batch(List<String> var1) async {
+  Future<List<void>?> setAdCode_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -794,7 +794,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
   }
   
   
-  Future<List<String>> getDistrict_batch() async {
+  Future<List<String?>?> getDistrict_batch() async {
     assert(true);
   
     // invoke native method
@@ -805,7 +805,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
   }
   
   
-  Future<List<void>> setDistrict_batch(List<String> var1) async {
+  Future<List<void>?> setDistrict_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -816,7 +816,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
   }
   
   
-  Future<List<String>> getTownship_batch() async {
+  Future<List<String?>?> getTownship_batch() async {
     assert(true);
   
     // invoke native method
@@ -827,7 +827,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
   }
   
   
-  Future<List<void>> setTownship_batch(List<String> var1) async {
+  Future<List<void>?> setTownship_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -838,7 +838,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
   }
   
   
-  Future<List<String>> getNeighborhood_batch() async {
+  Future<List<String?>?> getNeighborhood_batch() async {
     assert(true);
   
     // invoke native method
@@ -849,7 +849,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
   }
   
   
-  Future<List<void>> setNeighborhood_batch(List<String> var1) async {
+  Future<List<void>?> setNeighborhood_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -860,7 +860,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
   }
   
   
-  Future<List<String>> getBuilding_batch() async {
+  Future<List<String?>?> getBuilding_batch() async {
     assert(true);
   
     // invoke native method
@@ -871,7 +871,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
   }
   
   
-  Future<List<void>> setBuilding_batch(List<String> var1) async {
+  Future<List<void>?> setBuilding_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -882,7 +882,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
   }
   
   
-  Future<List<com_amap_api_services_geocoder_StreetNumber>> getStreetNumber_batch() async {
+  Future<List<com_amap_api_services_geocoder_StreetNumber?>?> getStreetNumber_batch() async {
     assert(true);
   
     // invoke native method
@@ -893,7 +893,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
   }
   
   
-  Future<List<void>> setStreetNumber_batch(List<com_amap_api_services_geocoder_StreetNumber> var1) async {
+  Future<List<void>?> setStreetNumber_batch(List<com_amap_api_services_geocoder_StreetNumber> var1) async {
     assert(true);
   
     // invoke native method
@@ -904,18 +904,18 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
   }
   
   
-  Future<List<List<com_amap_api_services_geocoder_RegeocodeRoad>>> getRoads_batch() async {
+  Future<List<List<com_amap_api_services_geocoder_RegeocodeRoad>?>?> getRoads_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.RegeocodeAddress::getRoads_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_geocoder_RegeocodeRoad>(it))?.toList()).cast<List<com_amap_api_services_geocoder_RegeocodeRoad>>().toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_geocoder_RegeocodeRoad>(it)!).toList()).cast<List<com_amap_api_services_geocoder_RegeocodeRoad>>().toList();
   }
   
   
-  Future<List<void>> setRoads_batch(List<List<com_amap_api_services_geocoder_RegeocodeRoad>> var1) async {
+  Future<List<void>?> setRoads_batch(List<List<com_amap_api_services_geocoder_RegeocodeRoad>> var1) async {
     assert(true);
   
     // invoke native method
@@ -926,18 +926,18 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
   }
   
   
-  Future<List<List<com_amap_api_services_core_PoiItem>>> getPois_batch() async {
+  Future<List<List<com_amap_api_services_core_PoiItem>?>?> getPois_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.RegeocodeAddress::getPois_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_PoiItem>(it))?.toList()).cast<List<com_amap_api_services_core_PoiItem>>().toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_PoiItem>(it)!).toList()).cast<List<com_amap_api_services_core_PoiItem>>().toList();
   }
   
   
-  Future<List<void>> setPois_batch(List<List<com_amap_api_services_core_PoiItem>> var1) async {
+  Future<List<void>?> setPois_batch(List<List<com_amap_api_services_core_PoiItem>> var1) async {
     assert(true);
   
     // invoke native method
@@ -948,18 +948,18 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
   }
   
   
-  Future<List<List<com_amap_api_services_road_Crossroad>>> getCrossroads_batch() async {
+  Future<List<List<com_amap_api_services_road_Crossroad>?>?> getCrossroads_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.RegeocodeAddress::getCrossroads_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_road_Crossroad>(it))?.toList()).cast<List<com_amap_api_services_road_Crossroad>>().toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_road_Crossroad>(it)!).toList()).cast<List<com_amap_api_services_road_Crossroad>>().toList();
   }
   
   
-  Future<List<void>> setCrossroads_batch(List<List<com_amap_api_services_road_Crossroad>> var1) async {
+  Future<List<void>?> setCrossroads_batch(List<List<com_amap_api_services_road_Crossroad>> var1) async {
     assert(true);
   
     // invoke native method
@@ -970,18 +970,18 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
   }
   
   
-  Future<List<List<com_amap_api_services_geocoder_BusinessArea>>> getBusinessAreas_batch() async {
+  Future<List<List<com_amap_api_services_geocoder_BusinessArea>?>?> getBusinessAreas_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.RegeocodeAddress::getBusinessAreas_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_geocoder_BusinessArea>(it))?.toList()).cast<List<com_amap_api_services_geocoder_BusinessArea>>().toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_geocoder_BusinessArea>(it)!).toList()).cast<List<com_amap_api_services_geocoder_BusinessArea>>().toList();
   }
   
   
-  Future<List<void>> setBusinessAreas_batch(List<List<com_amap_api_services_geocoder_BusinessArea>> var1) async {
+  Future<List<void>?> setBusinessAreas_batch(List<List<com_amap_api_services_geocoder_BusinessArea>> var1) async {
     assert(true);
   
     // invoke native method
@@ -992,18 +992,18 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
   }
   
   
-  Future<List<List<com_amap_api_services_geocoder_AoiItem>>> getAois_batch() async {
+  Future<List<List<com_amap_api_services_geocoder_AoiItem>?>?> getAois_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.RegeocodeAddress::getAois_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_geocoder_AoiItem>(it))?.toList()).cast<List<com_amap_api_services_geocoder_AoiItem>>().toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_geocoder_AoiItem>(it)!).toList()).cast<List<com_amap_api_services_geocoder_AoiItem>>().toList();
   }
   
   
-  Future<List<void>> setAois_batch(List<List<com_amap_api_services_geocoder_AoiItem>> var1) async {
+  Future<List<void>?> setAois_batch(List<List<com_amap_api_services_geocoder_AoiItem>> var1) async {
     assert(true);
   
     // invoke native method
@@ -1014,7 +1014,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
   }
   
   
-  Future<List<String>> getTowncode_batch() async {
+  Future<List<String?>?> getTowncode_batch() async {
     assert(true);
   
     // invoke native method
@@ -1025,7 +1025,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
   }
   
   
-  Future<List<void>> setTowncode_batch(List<String> var1) async {
+  Future<List<void>?> setTowncode_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -1036,7 +1036,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
   }
   
   
-  Future<List<void>> setCountry_batch(List<String> var1) async {
+  Future<List<void>?> setCountry_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -1047,7 +1047,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
   }
   
   
-  Future<List<String>> getCountry_batch() async {
+  Future<List<String?>?> getCountry_batch() async {
     assert(true);
   
     // invoke native method
@@ -1058,7 +1058,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
   }
   
   
-  Future<List<String>> getCountryCode_batch() async {
+  Future<List<String?>?> getCountryCode_batch() async {
     assert(true);
   
     // invoke native method
@@ -1069,7 +1069,7 @@ extension com_amap_api_services_geocoder_RegeocodeAddress_Batch on List<com_amap
   }
   
   
-  Future<List<void>> setCountryCode_batch(List<String> var1) async {
+  Future<List<void>?> setCountryCode_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method

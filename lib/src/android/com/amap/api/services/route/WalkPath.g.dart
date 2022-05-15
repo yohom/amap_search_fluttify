@@ -28,7 +28,7 @@ class com_amap_api_services_route_WalkPath extends com_amap_api_services_route_P
       'ObjectFactory::createcom_amap_api_services_route_WalkPath__',
     
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_WalkPath>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_WalkPath>(__result__)!;
   }
   
   static Future<List<com_amap_api_services_route_WalkPath>> create_batch__(int length) async {
@@ -37,8 +37,8 @@ class com_amap_api_services_route_WalkPath extends com_amap_api_services_route_P
       'ObjectFactory::create_batchcom_amap_api_services_route_WalkPath__',
       {'length': length}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_WalkPath>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_WalkPath>(it)!)
         .toList();
   }
   
@@ -54,7 +54,7 @@ class com_amap_api_services_route_WalkPath extends com_amap_api_services_route_P
 
   //region methods
   
-  Future<List<com_amap_api_services_route_WalkStep>> getSteps() async {
+  Future<List<com_amap_api_services_route_WalkStep>?> getSteps() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.WalkPath@$refId::getSteps([])');
@@ -67,11 +67,11 @@ class com_amap_api_services_route_WalkPath extends com_amap_api_services_route_P
     // handle native call
   
   
-    return (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_WalkStep>(it))?.toList();
+    return (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_WalkStep>(it)!).toList();
   }
   
   
-  Future<void> setSteps(List<com_amap_api_services_route_WalkStep> var1) async {
+  Future<void> setSteps(List<com_amap_api_services_route_WalkStep>? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.WalkPath@$refId::setSteps([])');
@@ -95,7 +95,7 @@ class com_amap_api_services_route_WalkPath extends com_amap_api_services_route_P
   }
 }
 
-extension com_amap_api_services_route_WalkPath_Batch on List<com_amap_api_services_route_WalkPath> {
+extension com_amap_api_services_route_WalkPath_Batch on List<com_amap_api_services_route_WalkPath?> {
   //region getters
   
   //endregion
@@ -106,18 +106,18 @@ extension com_amap_api_services_route_WalkPath_Batch on List<com_amap_api_servic
 
   //region methods
   
-  Future<List<List<com_amap_api_services_route_WalkStep>>> getSteps_batch() async {
+  Future<List<List<com_amap_api_services_route_WalkStep>?>?> getSteps_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.WalkPath::getSteps_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_WalkStep>(it))?.toList()).cast<List<com_amap_api_services_route_WalkStep>>().toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_WalkStep>(it)!).toList()).cast<List<com_amap_api_services_route_WalkStep>>().toList();
   }
   
   
-  Future<List<void>> setSteps_batch(List<List<com_amap_api_services_route_WalkStep>> var1) async {
+  Future<List<void>?> setSteps_batch(List<List<com_amap_api_services_route_WalkStep>> var1) async {
     assert(true);
   
     // invoke native method

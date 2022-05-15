@@ -28,7 +28,7 @@ class com_amap_api_services_route_RoutePlanResult extends java_lang_Object with 
       'ObjectFactory::createcom_amap_api_services_route_RoutePlanResult__',
     
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RoutePlanResult>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RoutePlanResult>(__result__)!;
   }
   
   static Future<List<com_amap_api_services_route_RoutePlanResult>> create_batch__(int length) async {
@@ -37,8 +37,8 @@ class com_amap_api_services_route_RoutePlanResult extends java_lang_Object with 
       'ObjectFactory::create_batchcom_amap_api_services_route_RoutePlanResult__',
       {'length': length}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RoutePlanResult>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RoutePlanResult>(it)!)
         .toList();
   }
   
@@ -54,7 +54,7 @@ class com_amap_api_services_route_RoutePlanResult extends java_lang_Object with 
 
   //region methods
   
-  Future<com_amap_api_services_core_LatLonPoint> getStartPos() async {
+  Future<com_amap_api_services_core_LatLonPoint?> getStartPos() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RoutePlanResult@$refId::getStartPos([])');
@@ -71,7 +71,7 @@ class com_amap_api_services_route_RoutePlanResult extends java_lang_Object with 
   }
   
   
-  Future<void> setStartPos(com_amap_api_services_core_LatLonPoint var1) async {
+  Future<void> setStartPos(com_amap_api_services_core_LatLonPoint? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RoutePlanResult@$refId::setStartPos([])');
@@ -88,7 +88,7 @@ class com_amap_api_services_route_RoutePlanResult extends java_lang_Object with 
   }
   
   
-  Future<com_amap_api_services_core_LatLonPoint> getTargetPos() async {
+  Future<com_amap_api_services_core_LatLonPoint?> getTargetPos() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RoutePlanResult@$refId::getTargetPos([])');
@@ -105,7 +105,7 @@ class com_amap_api_services_route_RoutePlanResult extends java_lang_Object with 
   }
   
   
-  Future<void> setTargetPos(com_amap_api_services_core_LatLonPoint var1) async {
+  Future<void> setTargetPos(com_amap_api_services_core_LatLonPoint? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RoutePlanResult@$refId::setTargetPos([])');
@@ -129,7 +129,7 @@ class com_amap_api_services_route_RoutePlanResult extends java_lang_Object with 
   }
 }
 
-extension com_amap_api_services_route_RoutePlanResult_Batch on List<com_amap_api_services_route_RoutePlanResult> {
+extension com_amap_api_services_route_RoutePlanResult_Batch on List<com_amap_api_services_route_RoutePlanResult?> {
   //region getters
   
   //endregion
@@ -140,7 +140,7 @@ extension com_amap_api_services_route_RoutePlanResult_Batch on List<com_amap_api
 
   //region methods
   
-  Future<List<com_amap_api_services_core_LatLonPoint>> getStartPos_batch() async {
+  Future<List<com_amap_api_services_core_LatLonPoint?>?> getStartPos_batch() async {
     assert(true);
   
     // invoke native method
@@ -151,7 +151,7 @@ extension com_amap_api_services_route_RoutePlanResult_Batch on List<com_amap_api
   }
   
   
-  Future<List<void>> setStartPos_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
+  Future<List<void>?> setStartPos_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
     assert(true);
   
     // invoke native method
@@ -162,7 +162,7 @@ extension com_amap_api_services_route_RoutePlanResult_Batch on List<com_amap_api
   }
   
   
-  Future<List<com_amap_api_services_core_LatLonPoint>> getTargetPos_batch() async {
+  Future<List<com_amap_api_services_core_LatLonPoint?>?> getTargetPos_batch() async {
     assert(true);
   
     // invoke native method
@@ -173,7 +173,7 @@ extension com_amap_api_services_route_RoutePlanResult_Batch on List<com_amap_api
   }
   
   
-  Future<List<void>> setTargetPos_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
+  Future<List<void>?> setTargetPos_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
     assert(true);
   
     // invoke native method

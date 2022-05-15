@@ -28,7 +28,7 @@ class AMapSearchAPI extends NSObject  {
       'ObjectFactory::createAMapSearchAPI',
       {'init': init}
     );
-    return AmapSearchFluttifyIOSAs<AMapSearchAPI>(__result__);
+    return AmapSearchFluttifyIOSAs<AMapSearchAPI>(__result__)!;
   }
   
   static Future<List<AMapSearchAPI>> create_batch__(int length, { bool init = true /* ios only */ }) async {
@@ -37,20 +37,20 @@ class AMapSearchAPI extends NSObject  {
       'ObjectFactory::create_batchAMapSearchAPI',
       {'length': length, 'init': init}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyIOSAs<AMapSearchAPI>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyIOSAs<AMapSearchAPI>(it)!)
         .toList();
   }
   
   //endregion
 
   //region getters
-  Future<int> get_timeout() async {
+  Future<int?> get_timeout() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapSearchAPI::get_timeout", {'__this__': this});
     return __result__;
   }
   
-  Future<String> get_language() async {
+  Future<String?> get_language() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapSearchAPI::get_language", {'__this__': this});
     return __result__;
   }
@@ -215,7 +215,7 @@ class AMapSearchAPI extends NSObject  {
               break;
           }
         } catch (e) {
-          debugPrint(e);
+          debugPrint(e.toString());
           rethrow;
         }
       });
@@ -237,7 +237,7 @@ class AMapSearchAPI extends NSObject  {
 
   //region methods
   
-  Future<AMapSearchAPI> init() async {
+  Future<AMapSearchAPI?> init() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: AMapSearchAPI@$refId::init([])');
@@ -271,7 +271,7 @@ class AMapSearchAPI extends NSObject  {
   }
   
   
-  Future<void> AMapPOIIDSearch(AMapPOIIDSearchRequest request) async {
+  Future<void> AMapPOIIDSearch(AMapPOIIDSearchRequest? request) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: AMapSearchAPI@$refId::AMapPOIIDSearch([])');
@@ -288,7 +288,7 @@ class AMapSearchAPI extends NSObject  {
   }
   
   
-  Future<void> AMapPOIKeywordsSearch(AMapPOIKeywordsSearchRequest request) async {
+  Future<void> AMapPOIKeywordsSearch(AMapPOIKeywordsSearchRequest? request) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: AMapSearchAPI@$refId::AMapPOIKeywordsSearch([])');
@@ -305,7 +305,7 @@ class AMapSearchAPI extends NSObject  {
   }
   
   
-  Future<void> AMapPOIAroundSearch(AMapPOIAroundSearchRequest request) async {
+  Future<void> AMapPOIAroundSearch(AMapPOIAroundSearchRequest? request) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: AMapSearchAPI@$refId::AMapPOIAroundSearch([])');
@@ -322,7 +322,7 @@ class AMapSearchAPI extends NSObject  {
   }
   
   
-  Future<void> AMapPOIPolygonSearch(AMapPOIPolygonSearchRequest request) async {
+  Future<void> AMapPOIPolygonSearch(AMapPOIPolygonSearchRequest? request) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: AMapSearchAPI@$refId::AMapPOIPolygonSearch([])');
@@ -339,7 +339,7 @@ class AMapSearchAPI extends NSObject  {
   }
   
   
-  Future<void> AMapRoutePOISearch(AMapRoutePOISearchRequest request) async {
+  Future<void> AMapRoutePOISearch(AMapRoutePOISearchRequest? request) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: AMapSearchAPI@$refId::AMapRoutePOISearch([])');
@@ -356,7 +356,7 @@ class AMapSearchAPI extends NSObject  {
   }
   
   
-  Future<void> AMapGeocodeSearch(AMapGeocodeSearchRequest request) async {
+  Future<void> AMapGeocodeSearch(AMapGeocodeSearchRequest? request) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: AMapSearchAPI@$refId::AMapGeocodeSearch([])');
@@ -373,7 +373,7 @@ class AMapSearchAPI extends NSObject  {
   }
   
   
-  Future<void> AMapReGoecodeSearch(AMapReGeocodeSearchRequest request) async {
+  Future<void> AMapReGoecodeSearch(AMapReGeocodeSearchRequest? request) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: AMapSearchAPI@$refId::AMapReGoecodeSearch([])');
@@ -390,7 +390,7 @@ class AMapSearchAPI extends NSObject  {
   }
   
   
-  Future<void> AMapInputTipsSearch(AMapInputTipsSearchRequest request) async {
+  Future<void> AMapInputTipsSearch(AMapInputTipsSearchRequest? request) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: AMapSearchAPI@$refId::AMapInputTipsSearch([])');
@@ -407,7 +407,7 @@ class AMapSearchAPI extends NSObject  {
   }
   
   
-  Future<void> AMapBusStopSearch(AMapBusStopSearchRequest request) async {
+  Future<void> AMapBusStopSearch(AMapBusStopSearchRequest? request) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: AMapSearchAPI@$refId::AMapBusStopSearch([])');
@@ -424,7 +424,7 @@ class AMapSearchAPI extends NSObject  {
   }
   
   
-  Future<void> AMapBusLineIDSearch(AMapBusLineIDSearchRequest request) async {
+  Future<void> AMapBusLineIDSearch(AMapBusLineIDSearchRequest? request) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: AMapSearchAPI@$refId::AMapBusLineIDSearch([])');
@@ -441,7 +441,7 @@ class AMapSearchAPI extends NSObject  {
   }
   
   
-  Future<void> AMapBusLineNameSearch(AMapBusLineNameSearchRequest request) async {
+  Future<void> AMapBusLineNameSearch(AMapBusLineNameSearchRequest? request) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: AMapSearchAPI@$refId::AMapBusLineNameSearch([])');
@@ -458,7 +458,7 @@ class AMapSearchAPI extends NSObject  {
   }
   
   
-  Future<void> AMapDistrictSearch(AMapDistrictSearchRequest request) async {
+  Future<void> AMapDistrictSearch(AMapDistrictSearchRequest? request) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: AMapSearchAPI@$refId::AMapDistrictSearch([])');
@@ -475,7 +475,7 @@ class AMapSearchAPI extends NSObject  {
   }
   
   
-  Future<void> AMapDrivingRouteSearch(AMapDrivingRouteSearchRequest request) async {
+  Future<void> AMapDrivingRouteSearch(AMapDrivingRouteSearchRequest? request) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: AMapSearchAPI@$refId::AMapDrivingRouteSearch([])');
@@ -492,7 +492,7 @@ class AMapSearchAPI extends NSObject  {
   }
   
   
-  Future<void> AMapWalkingRouteSearch(AMapWalkingRouteSearchRequest request) async {
+  Future<void> AMapWalkingRouteSearch(AMapWalkingRouteSearchRequest? request) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: AMapSearchAPI@$refId::AMapWalkingRouteSearch([])');
@@ -509,7 +509,7 @@ class AMapSearchAPI extends NSObject  {
   }
   
   
-  Future<void> AMapTransitRouteSearch(AMapTransitRouteSearchRequest request) async {
+  Future<void> AMapTransitRouteSearch(AMapTransitRouteSearchRequest? request) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: AMapSearchAPI@$refId::AMapTransitRouteSearch([])');
@@ -526,7 +526,7 @@ class AMapSearchAPI extends NSObject  {
   }
   
   
-  Future<void> AMapRidingRouteSearch(AMapRidingRouteSearchRequest request) async {
+  Future<void> AMapRidingRouteSearch(AMapRidingRouteSearchRequest? request) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: AMapSearchAPI@$refId::AMapRidingRouteSearch([])');
@@ -543,7 +543,7 @@ class AMapSearchAPI extends NSObject  {
   }
   
   
-  Future<void> AMapTruckRouteSearch(AMapTruckRouteSearchRequest request) async {
+  Future<void> AMapTruckRouteSearch(AMapTruckRouteSearchRequest? request) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: AMapSearchAPI@$refId::AMapTruckRouteSearch([])');
@@ -560,7 +560,7 @@ class AMapSearchAPI extends NSObject  {
   }
   
   
-  Future<void> AMapFutureRouteSearch(AMapFutureRouteSearchRequest request) async {
+  Future<void> AMapFutureRouteSearch(AMapFutureRouteSearchRequest? request) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: AMapSearchAPI@$refId::AMapFutureRouteSearch([])');
@@ -577,7 +577,7 @@ class AMapSearchAPI extends NSObject  {
   }
   
   
-  Future<void> AMapWeatherSearch(AMapWeatherSearchRequest request) async {
+  Future<void> AMapWeatherSearch(AMapWeatherSearchRequest? request) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: AMapSearchAPI@$refId::AMapWeatherSearch([])');
@@ -594,7 +594,7 @@ class AMapSearchAPI extends NSObject  {
   }
   
   
-  Future<void> AMapDistanceSearch(AMapDistanceSearchRequest request) async {
+  Future<void> AMapDistanceSearch(AMapDistanceSearchRequest? request) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: AMapSearchAPI@$refId::AMapDistanceSearch([])');
@@ -611,7 +611,7 @@ class AMapSearchAPI extends NSObject  {
   }
   
   @deprecated
-  Future<void> AMapNearbySearch(AMapNearbySearchRequest request) async {
+  Future<void> AMapNearbySearch(AMapNearbySearchRequest? request) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: AMapSearchAPI@$refId::AMapNearbySearch([])');
@@ -628,7 +628,7 @@ class AMapSearchAPI extends NSObject  {
   }
   
   
-  Future<void> AMapCloudPOIAroundSearch(AMapCloudPOIAroundSearchRequest request) async {
+  Future<void> AMapCloudPOIAroundSearch(AMapCloudPOIAroundSearchRequest? request) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: AMapSearchAPI@$refId::AMapCloudPOIAroundSearch([])');
@@ -645,7 +645,7 @@ class AMapSearchAPI extends NSObject  {
   }
   
   
-  Future<void> AMapCloudPOIPolygonSearch(AMapCloudPOIPolygonSearchRequest request) async {
+  Future<void> AMapCloudPOIPolygonSearch(AMapCloudPOIPolygonSearchRequest? request) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: AMapSearchAPI@$refId::AMapCloudPOIPolygonSearch([])');
@@ -662,7 +662,7 @@ class AMapSearchAPI extends NSObject  {
   }
   
   
-  Future<void> AMapCloudPOIIDSearch(AMapCloudPOIIDSearchRequest request) async {
+  Future<void> AMapCloudPOIIDSearch(AMapCloudPOIIDSearchRequest? request) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: AMapSearchAPI@$refId::AMapCloudPOIIDSearch([])');
@@ -679,7 +679,7 @@ class AMapSearchAPI extends NSObject  {
   }
   
   
-  Future<void> AMapCloudPOILocalSearch(AMapCloudPOILocalSearchRequest request) async {
+  Future<void> AMapCloudPOILocalSearch(AMapCloudPOILocalSearchRequest? request) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: AMapSearchAPI@$refId::AMapCloudPOILocalSearch([])');
@@ -696,7 +696,7 @@ class AMapSearchAPI extends NSObject  {
   }
   
   
-  Future<void> AMapLocationShareSearch(AMapLocationShareSearchRequest request) async {
+  Future<void> AMapLocationShareSearch(AMapLocationShareSearchRequest? request) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: AMapSearchAPI@$refId::AMapLocationShareSearch([])');
@@ -713,7 +713,7 @@ class AMapSearchAPI extends NSObject  {
   }
   
   
-  Future<void> AMapPOIShareSearch(AMapPOIShareSearchRequest request) async {
+  Future<void> AMapPOIShareSearch(AMapPOIShareSearchRequest? request) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: AMapSearchAPI@$refId::AMapPOIShareSearch([])');
@@ -730,7 +730,7 @@ class AMapSearchAPI extends NSObject  {
   }
   
   
-  Future<void> AMapRouteShareSearch(AMapRouteShareSearchRequest request) async {
+  Future<void> AMapRouteShareSearch(AMapRouteShareSearchRequest? request) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: AMapSearchAPI@$refId::AMapRouteShareSearch([])');
@@ -747,7 +747,7 @@ class AMapSearchAPI extends NSObject  {
   }
   
   
-  Future<void> AMapNavigationShareSearch(AMapNavigationShareSearchRequest request) async {
+  Future<void> AMapNavigationShareSearch(AMapNavigationShareSearchRequest? request) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: AMapSearchAPI@$refId::AMapNavigationShareSearch([])');
@@ -771,16 +771,16 @@ class AMapSearchAPI extends NSObject  {
   }
 }
 
-extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
+extension AMapSearchAPI_Batch on List<AMapSearchAPI?> {
   //region getters
-  Future<List<int>> get_timeout_batch() async {
+  Future<List<int?>?> get_timeout_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapSearchAPI::get_timeout_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<int>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<int?>().toList();
   }
   
-  Future<List<String>> get_language_batch() async {
+  Future<List<String?>?> get_language_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapSearchAPI::get_language_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
   }
   
   //endregion
@@ -802,7 +802,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
 
   //region methods
   
-  Future<List<AMapSearchAPI>> init_batch() async {
+  Future<List<AMapSearchAPI?>?> init_batch() async {
     assert(true);
   
     // invoke native method
@@ -813,7 +813,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   
-  Future<List<void>> cancelAllRequests_batch() async {
+  Future<List<void>?> cancelAllRequests_batch() async {
     assert(true);
   
     // invoke native method
@@ -824,7 +824,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   
-  Future<List<void>> AMapPOIIDSearch_batch(List<AMapPOIIDSearchRequest> request) async {
+  Future<List<void>?> AMapPOIIDSearch_batch(List<AMapPOIIDSearchRequest> request) async {
     assert(true);
   
     // invoke native method
@@ -835,7 +835,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   
-  Future<List<void>> AMapPOIKeywordsSearch_batch(List<AMapPOIKeywordsSearchRequest> request) async {
+  Future<List<void>?> AMapPOIKeywordsSearch_batch(List<AMapPOIKeywordsSearchRequest> request) async {
     assert(true);
   
     // invoke native method
@@ -846,7 +846,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   
-  Future<List<void>> AMapPOIAroundSearch_batch(List<AMapPOIAroundSearchRequest> request) async {
+  Future<List<void>?> AMapPOIAroundSearch_batch(List<AMapPOIAroundSearchRequest> request) async {
     assert(true);
   
     // invoke native method
@@ -857,7 +857,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   
-  Future<List<void>> AMapPOIPolygonSearch_batch(List<AMapPOIPolygonSearchRequest> request) async {
+  Future<List<void>?> AMapPOIPolygonSearch_batch(List<AMapPOIPolygonSearchRequest> request) async {
     assert(true);
   
     // invoke native method
@@ -868,7 +868,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   
-  Future<List<void>> AMapRoutePOISearch_batch(List<AMapRoutePOISearchRequest> request) async {
+  Future<List<void>?> AMapRoutePOISearch_batch(List<AMapRoutePOISearchRequest> request) async {
     assert(true);
   
     // invoke native method
@@ -879,7 +879,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   
-  Future<List<void>> AMapGeocodeSearch_batch(List<AMapGeocodeSearchRequest> request) async {
+  Future<List<void>?> AMapGeocodeSearch_batch(List<AMapGeocodeSearchRequest> request) async {
     assert(true);
   
     // invoke native method
@@ -890,7 +890,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   
-  Future<List<void>> AMapReGoecodeSearch_batch(List<AMapReGeocodeSearchRequest> request) async {
+  Future<List<void>?> AMapReGoecodeSearch_batch(List<AMapReGeocodeSearchRequest> request) async {
     assert(true);
   
     // invoke native method
@@ -901,7 +901,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   
-  Future<List<void>> AMapInputTipsSearch_batch(List<AMapInputTipsSearchRequest> request) async {
+  Future<List<void>?> AMapInputTipsSearch_batch(List<AMapInputTipsSearchRequest> request) async {
     assert(true);
   
     // invoke native method
@@ -912,7 +912,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   
-  Future<List<void>> AMapBusStopSearch_batch(List<AMapBusStopSearchRequest> request) async {
+  Future<List<void>?> AMapBusStopSearch_batch(List<AMapBusStopSearchRequest> request) async {
     assert(true);
   
     // invoke native method
@@ -923,7 +923,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   
-  Future<List<void>> AMapBusLineIDSearch_batch(List<AMapBusLineIDSearchRequest> request) async {
+  Future<List<void>?> AMapBusLineIDSearch_batch(List<AMapBusLineIDSearchRequest> request) async {
     assert(true);
   
     // invoke native method
@@ -934,7 +934,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   
-  Future<List<void>> AMapBusLineNameSearch_batch(List<AMapBusLineNameSearchRequest> request) async {
+  Future<List<void>?> AMapBusLineNameSearch_batch(List<AMapBusLineNameSearchRequest> request) async {
     assert(true);
   
     // invoke native method
@@ -945,7 +945,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   
-  Future<List<void>> AMapDistrictSearch_batch(List<AMapDistrictSearchRequest> request) async {
+  Future<List<void>?> AMapDistrictSearch_batch(List<AMapDistrictSearchRequest> request) async {
     assert(true);
   
     // invoke native method
@@ -956,7 +956,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   
-  Future<List<void>> AMapDrivingRouteSearch_batch(List<AMapDrivingRouteSearchRequest> request) async {
+  Future<List<void>?> AMapDrivingRouteSearch_batch(List<AMapDrivingRouteSearchRequest> request) async {
     assert(true);
   
     // invoke native method
@@ -967,7 +967,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   
-  Future<List<void>> AMapWalkingRouteSearch_batch(List<AMapWalkingRouteSearchRequest> request) async {
+  Future<List<void>?> AMapWalkingRouteSearch_batch(List<AMapWalkingRouteSearchRequest> request) async {
     assert(true);
   
     // invoke native method
@@ -978,7 +978,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   
-  Future<List<void>> AMapTransitRouteSearch_batch(List<AMapTransitRouteSearchRequest> request) async {
+  Future<List<void>?> AMapTransitRouteSearch_batch(List<AMapTransitRouteSearchRequest> request) async {
     assert(true);
   
     // invoke native method
@@ -989,7 +989,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   
-  Future<List<void>> AMapRidingRouteSearch_batch(List<AMapRidingRouteSearchRequest> request) async {
+  Future<List<void>?> AMapRidingRouteSearch_batch(List<AMapRidingRouteSearchRequest> request) async {
     assert(true);
   
     // invoke native method
@@ -1000,7 +1000,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   
-  Future<List<void>> AMapTruckRouteSearch_batch(List<AMapTruckRouteSearchRequest> request) async {
+  Future<List<void>?> AMapTruckRouteSearch_batch(List<AMapTruckRouteSearchRequest> request) async {
     assert(true);
   
     // invoke native method
@@ -1011,7 +1011,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   
-  Future<List<void>> AMapFutureRouteSearch_batch(List<AMapFutureRouteSearchRequest> request) async {
+  Future<List<void>?> AMapFutureRouteSearch_batch(List<AMapFutureRouteSearchRequest> request) async {
     assert(true);
   
     // invoke native method
@@ -1022,7 +1022,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   
-  Future<List<void>> AMapWeatherSearch_batch(List<AMapWeatherSearchRequest> request) async {
+  Future<List<void>?> AMapWeatherSearch_batch(List<AMapWeatherSearchRequest> request) async {
     assert(true);
   
     // invoke native method
@@ -1033,7 +1033,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   
-  Future<List<void>> AMapDistanceSearch_batch(List<AMapDistanceSearchRequest> request) async {
+  Future<List<void>?> AMapDistanceSearch_batch(List<AMapDistanceSearchRequest> request) async {
     assert(true);
   
     // invoke native method
@@ -1044,7 +1044,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   @deprecated
-  Future<List<void>> AMapNearbySearch_batch(List<AMapNearbySearchRequest> request) async {
+  Future<List<void>?> AMapNearbySearch_batch(List<AMapNearbySearchRequest> request) async {
     assert(true);
   
     // invoke native method
@@ -1055,7 +1055,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   
-  Future<List<void>> AMapCloudPOIAroundSearch_batch(List<AMapCloudPOIAroundSearchRequest> request) async {
+  Future<List<void>?> AMapCloudPOIAroundSearch_batch(List<AMapCloudPOIAroundSearchRequest> request) async {
     assert(true);
   
     // invoke native method
@@ -1066,7 +1066,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   
-  Future<List<void>> AMapCloudPOIPolygonSearch_batch(List<AMapCloudPOIPolygonSearchRequest> request) async {
+  Future<List<void>?> AMapCloudPOIPolygonSearch_batch(List<AMapCloudPOIPolygonSearchRequest> request) async {
     assert(true);
   
     // invoke native method
@@ -1077,7 +1077,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   
-  Future<List<void>> AMapCloudPOIIDSearch_batch(List<AMapCloudPOIIDSearchRequest> request) async {
+  Future<List<void>?> AMapCloudPOIIDSearch_batch(List<AMapCloudPOIIDSearchRequest> request) async {
     assert(true);
   
     // invoke native method
@@ -1088,7 +1088,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   
-  Future<List<void>> AMapCloudPOILocalSearch_batch(List<AMapCloudPOILocalSearchRequest> request) async {
+  Future<List<void>?> AMapCloudPOILocalSearch_batch(List<AMapCloudPOILocalSearchRequest> request) async {
     assert(true);
   
     // invoke native method
@@ -1099,7 +1099,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   
-  Future<List<void>> AMapLocationShareSearch_batch(List<AMapLocationShareSearchRequest> request) async {
+  Future<List<void>?> AMapLocationShareSearch_batch(List<AMapLocationShareSearchRequest> request) async {
     assert(true);
   
     // invoke native method
@@ -1110,7 +1110,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   
-  Future<List<void>> AMapPOIShareSearch_batch(List<AMapPOIShareSearchRequest> request) async {
+  Future<List<void>?> AMapPOIShareSearch_batch(List<AMapPOIShareSearchRequest> request) async {
     assert(true);
   
     // invoke native method
@@ -1121,7 +1121,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   
-  Future<List<void>> AMapRouteShareSearch_batch(List<AMapRouteShareSearchRequest> request) async {
+  Future<List<void>?> AMapRouteShareSearch_batch(List<AMapRouteShareSearchRequest> request) async {
     assert(true);
   
     // invoke native method
@@ -1132,7 +1132,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   
-  Future<List<void>> AMapNavigationShareSearch_batch(List<AMapNavigationShareSearchRequest> request) async {
+  Future<List<void>?> AMapNavigationShareSearch_batch(List<AMapNavigationShareSearchRequest> request) async {
     assert(true);
   
     // invoke native method

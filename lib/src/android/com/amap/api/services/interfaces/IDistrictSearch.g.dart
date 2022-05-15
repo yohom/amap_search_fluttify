@@ -26,23 +26,17 @@ mixin com_amap_api_services_interfaces_IDistrictSearch on java_lang_Object {
 
   
 
-  /* @mustCallSuper */
-  Future<com_amap_api_services_district_DistrictSearchQuery> getQuery() {}
+  Future<com_amap_api_services_district_DistrictSearchQuery?> getQuery() async {}
   
-  /* @mustCallSuper */
-  Future<void> setQuery(com_amap_api_services_district_DistrictSearchQuery var1) {}
+  Future<void> setQuery(com_amap_api_services_district_DistrictSearchQuery? var1) async {}
   
-  /* @mustCallSuper */
-  Future<void> searchDistrictAsyn() {}
+  Future<void> searchDistrictAsyn() async {}
   
-  /* @mustCallSuper */
-  Future<void> searchDistrictAnsy() {}
+  Future<void> searchDistrictAnsy() async {}
   
-  /* @mustCallSuper */
-  Future<void> setOnDistrictSearchListener(com_amap_api_services_district_DistrictSearch_OnDistrictSearchListener var1) {}
+  Future<void> setOnDistrictSearchListener(com_amap_api_services_district_DistrictSearch_OnDistrictSearchListener? var1) async {}
   
-  /* @mustCallSuper */
-  Future<com_amap_api_services_district_DistrictResult> searchDistrict() {}
+  Future<com_amap_api_services_district_DistrictResult?> searchDistrict() async {}
   
 }
 

@@ -28,7 +28,7 @@ class AMapCloudPOI extends AMapSearchObject with NSCoding, NSCopying {
       'ObjectFactory::createAMapCloudPOI',
       {'init': init}
     );
-    return AmapSearchFluttifyIOSAs<AMapCloudPOI>(__result__);
+    return AmapSearchFluttifyIOSAs<AMapCloudPOI>(__result__)!;
   }
   
   static Future<List<AMapCloudPOI>> create_batch__(int length, { bool init = true /* ios only */ }) async {
@@ -37,57 +37,57 @@ class AMapCloudPOI extends AMapSearchObject with NSCoding, NSCopying {
       'ObjectFactory::create_batchAMapCloudPOI',
       {'length': length, 'init': init}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyIOSAs<AMapCloudPOI>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyIOSAs<AMapCloudPOI>(it)!)
         .toList();
   }
   
   //endregion
 
   //region getters
-  Future<int> get_uid() async {
+  Future<int?> get_uid() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudPOI::get_uid", {'__this__': this});
     return __result__;
   }
   
-  Future<String> get_name() async {
+  Future<String?> get_name() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudPOI::get_name", {'__this__': this});
     return __result__;
   }
   
-  Future<AMapGeoPoint> get_location() async {
+  Future<AMapGeoPoint?> get_location() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudPOI::get_location", {'__this__': this});
     return AmapSearchFluttifyIOSAs<AMapGeoPoint>(__result__);
   }
   
-  Future<String> get_address() async {
+  Future<String?> get_address() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudPOI::get_address", {'__this__': this});
     return __result__;
   }
   
-  Future<Map> get_customFields() async {
+  Future<Map?> get_customFields() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudPOI::get_customFields", {'__this__': this});
     return __result__;
   }
   
-  Future<String> get_createTime() async {
+  Future<String?> get_createTime() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudPOI::get_createTime", {'__this__': this});
     return __result__;
   }
   
-  Future<String> get_updateTime() async {
+  Future<String?> get_updateTime() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudPOI::get_updateTime", {'__this__': this});
     return __result__;
   }
   
-  Future<int> get_distance() async {
+  Future<int?> get_distance() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudPOI::get_distance", {'__this__': this});
     return __result__;
   }
   
-  Future<List<AMapCloudImage>> get_images() async {
+  Future<List<AMapCloudImage>?> get_images() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudPOI::get_images", {'__this__': this});
-    return (__result__ as List)?.map((it) => AmapSearchFluttifyIOSAs<AMapCloudImage>(it))?.toList();
+    return (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapCloudImage>(it)!).toList();
   }
   
   //endregion
@@ -159,51 +159,51 @@ class AMapCloudPOI extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapCloudPOI_Batch on List<AMapCloudPOI> {
+extension AMapCloudPOI_Batch on List<AMapCloudPOI?> {
   //region getters
-  Future<List<int>> get_uid_batch() async {
+  Future<List<int?>?> get_uid_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudPOI::get_uid_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<int>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<int?>().toList();
   }
   
-  Future<List<String>> get_name_batch() async {
+  Future<List<String?>?> get_name_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudPOI::get_name_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<AMapGeoPoint>> get_location_batch() async {
+  Future<List<AMapGeoPoint?>?> get_location_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudPOI::get_location_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => AmapSearchFluttifyIOSAs<AMapGeoPoint>(__result__))?.cast<AMapGeoPoint>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => AmapSearchFluttifyIOSAs<AMapGeoPoint>(__result__)).cast<AMapGeoPoint?>().toList();
   }
   
-  Future<List<String>> get_address_batch() async {
+  Future<List<String?>?> get_address_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudPOI::get_address_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<Map>> get_customFields_batch() async {
+  Future<List<Map?>?> get_customFields_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudPOI::get_customFields_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<Map>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<Map?>().toList();
   }
   
-  Future<List<String>> get_createTime_batch() async {
+  Future<List<String?>?> get_createTime_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudPOI::get_createTime_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<String>> get_updateTime_batch() async {
+  Future<List<String?>?> get_updateTime_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudPOI::get_updateTime_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<int>> get_distance_batch() async {
+  Future<List<int?>?> get_distance_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudPOI::get_distance_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<int>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<int?>().toList();
   }
   
-  Future<List<List<AMapCloudImage>>> get_images_batch() async {
+  Future<List<List<AMapCloudImage>?>?> get_images_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudPOI::get_images_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyIOSAs<AMapCloudImage>(it))?.toList())?.cast<List<AMapCloudImage>>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapCloudImage>(it)!).toList()).cast<List<AMapCloudImage>?>().toList();
   }
   
   //endregion

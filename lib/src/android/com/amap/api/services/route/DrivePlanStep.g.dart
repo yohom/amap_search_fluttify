@@ -28,7 +28,7 @@ class com_amap_api_services_route_DrivePlanStep extends java_lang_Object with an
       'ObjectFactory::createcom_amap_api_services_route_DrivePlanStep__',
     
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_DrivePlanStep>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_DrivePlanStep>(__result__)!;
   }
   
   static Future<List<com_amap_api_services_route_DrivePlanStep>> create_batch__(int length) async {
@@ -37,8 +37,8 @@ class com_amap_api_services_route_DrivePlanStep extends java_lang_Object with an
       'ObjectFactory::create_batchcom_amap_api_services_route_DrivePlanStep__',
       {'length': length}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_DrivePlanStep>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_DrivePlanStep>(it)!)
         .toList();
   }
   
@@ -54,7 +54,7 @@ class com_amap_api_services_route_DrivePlanStep extends java_lang_Object with an
 
   //region methods
   
-  Future<String> getRoad() async {
+  Future<String?> getRoad() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.DrivePlanStep@$refId::getRoad([])');
@@ -71,7 +71,7 @@ class com_amap_api_services_route_DrivePlanStep extends java_lang_Object with an
   }
   
   
-  Future<void> setAdCode(String var1) async {
+  Future<void> setAdCode(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.DrivePlanStep@$refId::setAdCode([\'var1\':$var1])');
@@ -88,7 +88,7 @@ class com_amap_api_services_route_DrivePlanStep extends java_lang_Object with an
   }
   
   
-  Future<String> getAdCode() async {
+  Future<String?> getAdCode() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.DrivePlanStep@$refId::getAdCode([])');
@@ -105,7 +105,7 @@ class com_amap_api_services_route_DrivePlanStep extends java_lang_Object with an
   }
   
   
-  Future<void> setRoad(String var1) async {
+  Future<void> setRoad(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.DrivePlanStep@$refId::setRoad([\'var1\':$var1])');
@@ -122,7 +122,7 @@ class com_amap_api_services_route_DrivePlanStep extends java_lang_Object with an
   }
   
   
-  Future<double> getDistance() async {
+  Future<double?> getDistance() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.DrivePlanStep@$refId::getDistance([])');
@@ -139,7 +139,7 @@ class com_amap_api_services_route_DrivePlanStep extends java_lang_Object with an
   }
   
   
-  Future<void> setDistance(double var1) async {
+  Future<void> setDistance(double? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.DrivePlanStep@$refId::setDistance([\'var1\':$var1])');
@@ -156,7 +156,7 @@ class com_amap_api_services_route_DrivePlanStep extends java_lang_Object with an
   }
   
   
-  Future<bool> getToll() async {
+  Future<bool?> getToll() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.DrivePlanStep@$refId::getToll([])');
@@ -173,7 +173,7 @@ class com_amap_api_services_route_DrivePlanStep extends java_lang_Object with an
   }
   
   
-  Future<void> setToll(bool var1) async {
+  Future<void> setToll(bool? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.DrivePlanStep@$refId::setToll([\'var1\':$var1])');
@@ -190,7 +190,7 @@ class com_amap_api_services_route_DrivePlanStep extends java_lang_Object with an
   }
   
   
-  Future<List<com_amap_api_services_core_LatLonPoint>> getPolyline() async {
+  Future<List<com_amap_api_services_core_LatLonPoint>?> getPolyline() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.DrivePlanStep@$refId::getPolyline([])');
@@ -203,11 +203,11 @@ class com_amap_api_services_route_DrivePlanStep extends java_lang_Object with an
     // handle native call
   
   
-    return (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(it))?.toList();
+    return (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(it)!).toList();
   }
   
   
-  Future<void> setPolyline(List<com_amap_api_services_core_LatLonPoint> var1) async {
+  Future<void> setPolyline(List<com_amap_api_services_core_LatLonPoint>? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.DrivePlanStep@$refId::setPolyline([])');
@@ -231,7 +231,7 @@ class com_amap_api_services_route_DrivePlanStep extends java_lang_Object with an
   }
 }
 
-extension com_amap_api_services_route_DrivePlanStep_Batch on List<com_amap_api_services_route_DrivePlanStep> {
+extension com_amap_api_services_route_DrivePlanStep_Batch on List<com_amap_api_services_route_DrivePlanStep?> {
   //region getters
   
   //endregion
@@ -242,7 +242,7 @@ extension com_amap_api_services_route_DrivePlanStep_Batch on List<com_amap_api_s
 
   //region methods
   
-  Future<List<String>> getRoad_batch() async {
+  Future<List<String?>?> getRoad_batch() async {
     assert(true);
   
     // invoke native method
@@ -253,7 +253,7 @@ extension com_amap_api_services_route_DrivePlanStep_Batch on List<com_amap_api_s
   }
   
   
-  Future<List<void>> setAdCode_batch(List<String> var1) async {
+  Future<List<void>?> setAdCode_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -264,7 +264,7 @@ extension com_amap_api_services_route_DrivePlanStep_Batch on List<com_amap_api_s
   }
   
   
-  Future<List<String>> getAdCode_batch() async {
+  Future<List<String?>?> getAdCode_batch() async {
     assert(true);
   
     // invoke native method
@@ -275,7 +275,7 @@ extension com_amap_api_services_route_DrivePlanStep_Batch on List<com_amap_api_s
   }
   
   
-  Future<List<void>> setRoad_batch(List<String> var1) async {
+  Future<List<void>?> setRoad_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -286,7 +286,7 @@ extension com_amap_api_services_route_DrivePlanStep_Batch on List<com_amap_api_s
   }
   
   
-  Future<List<double>> getDistance_batch() async {
+  Future<List<double?>?> getDistance_batch() async {
     assert(true);
   
     // invoke native method
@@ -297,7 +297,7 @@ extension com_amap_api_services_route_DrivePlanStep_Batch on List<com_amap_api_s
   }
   
   
-  Future<List<void>> setDistance_batch(List<double> var1) async {
+  Future<List<void>?> setDistance_batch(List<double> var1) async {
     assert(true);
   
     // invoke native method
@@ -308,7 +308,7 @@ extension com_amap_api_services_route_DrivePlanStep_Batch on List<com_amap_api_s
   }
   
   
-  Future<List<bool>> getToll_batch() async {
+  Future<List<bool?>?> getToll_batch() async {
     assert(true);
   
     // invoke native method
@@ -319,7 +319,7 @@ extension com_amap_api_services_route_DrivePlanStep_Batch on List<com_amap_api_s
   }
   
   
-  Future<List<void>> setToll_batch(List<bool> var1) async {
+  Future<List<void>?> setToll_batch(List<bool> var1) async {
     assert(true);
   
     // invoke native method
@@ -330,18 +330,18 @@ extension com_amap_api_services_route_DrivePlanStep_Batch on List<com_amap_api_s
   }
   
   
-  Future<List<List<com_amap_api_services_core_LatLonPoint>>> getPolyline_batch() async {
+  Future<List<List<com_amap_api_services_core_LatLonPoint>?>?> getPolyline_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.DrivePlanStep::getPolyline_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(it))?.toList()).cast<List<com_amap_api_services_core_LatLonPoint>>().toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(it)!).toList()).cast<List<com_amap_api_services_core_LatLonPoint>>().toList();
   }
   
   
-  Future<List<void>> setPolyline_batch(List<List<com_amap_api_services_core_LatLonPoint>> var1) async {
+  Future<List<void>?> setPolyline_batch(List<List<com_amap_api_services_core_LatLonPoint>> var1) async {
     assert(true);
   
     // invoke native method

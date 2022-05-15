@@ -5,6 +5,6 @@
 import 'package:flutter/services.dart';
 import '../facade/shared.g.dart';
 
-Future<String> get AMapSearchErrorDomain async {
+Future<String?> get AMapSearchErrorDomain async {
   return kAmapSearchFluttifyChannel.invokeMethod('getAMapSearchErrorDomain');
 }

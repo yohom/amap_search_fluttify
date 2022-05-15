@@ -28,7 +28,7 @@ class AMapImage extends AMapSearchObject with NSCoding, NSCopying {
       'ObjectFactory::createAMapImage',
       {'init': init}
     );
-    return AmapSearchFluttifyIOSAs<AMapImage>(__result__);
+    return AmapSearchFluttifyIOSAs<AMapImage>(__result__)!;
   }
   
   static Future<List<AMapImage>> create_batch__(int length, { bool init = true /* ios only */ }) async {
@@ -37,20 +37,20 @@ class AMapImage extends AMapSearchObject with NSCoding, NSCopying {
       'ObjectFactory::create_batchAMapImage',
       {'length': length, 'init': init}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyIOSAs<AMapImage>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyIOSAs<AMapImage>(it)!)
         .toList();
   }
   
   //endregion
 
   //region getters
-  Future<String> get_title() async {
+  Future<String?> get_title() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapImage::get_title", {'__this__': this});
     return __result__;
   }
   
-  Future<String> get_url() async {
+  Future<String?> get_url() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapImage::get_url", {'__this__': this});
     return __result__;
   }
@@ -82,16 +82,16 @@ class AMapImage extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapImage_Batch on List<AMapImage> {
+extension AMapImage_Batch on List<AMapImage?> {
   //region getters
-  Future<List<String>> get_title_batch() async {
+  Future<List<String?>?> get_title_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapImage::get_title_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<String>> get_url_batch() async {
+  Future<List<String?>?> get_url_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapImage::get_url_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
   }
   
   //endregion

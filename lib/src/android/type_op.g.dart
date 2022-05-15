@@ -13,7 +13,6 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
 import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 
-// ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
 // type check
 @optionalTypeArgs
 Future<bool> AmapSearchFluttifyAndroidIs<T>(dynamic __this__) async {
@@ -474,7 +473,7 @@ Future<bool> AmapSearchFluttifyAndroidIs<T>(dynamic __this__) async {
 // type cast
 // 给一个可选的泛型, 如果没有指定泛型就返回dynamic
 @optionalTypeArgs
-T AmapSearchFluttifyAndroidAs<T>(dynamic __this__) {
+T? AmapSearchFluttifyAndroidAs<T>(dynamic __this__) {
   final typeName = T.toString();
 
   if (__this__ == null) {
@@ -783,6 +782,6 @@ T AmapSearchFluttifyAndroidAs<T>(dynamic __this__) {
     return AmapCoreFluttifyAndroidAs<T>(__this__);
   }
   else {
-    return null;
+    return __this__;
   }
 }

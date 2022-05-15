@@ -26,8 +26,7 @@ mixin com_amap_api_services_routepoisearch_RoutePOISearch_OnRoutePOISearchListen
 
   
 
-  /* @mustCallSuper */
-  Future<void> onRoutePoiSearched(com_amap_api_services_routepoisearch_RoutePOISearchResult var1, int var2) {}
+  Future<void> onRoutePoiSearched(com_amap_api_services_routepoisearch_RoutePOISearchResult? var1, int? var2) async {}
   
 }
 

@@ -36,7 +36,7 @@ class com_amap_api_services_weather_LocalWeatherLiveResult extends java_lang_Obj
 
   //region methods
   
-  static Future<com_amap_api_services_weather_LocalWeatherLiveResult> createPagedResult(com_amap_api_services_weather_WeatherSearchQuery var0, com_amap_api_services_weather_LocalWeatherLive var1) async {
+  static Future<com_amap_api_services_weather_LocalWeatherLiveResult?> createPagedResult(com_amap_api_services_weather_WeatherSearchQuery? var0, com_amap_api_services_weather_LocalWeatherLive? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.weather.LocalWeatherLiveResult::createPagedResult([])');
@@ -53,7 +53,7 @@ class com_amap_api_services_weather_LocalWeatherLiveResult extends java_lang_Obj
   }
   
   
-  Future<com_amap_api_services_weather_WeatherSearchQuery> getWeatherLiveQuery() async {
+  Future<com_amap_api_services_weather_WeatherSearchQuery?> getWeatherLiveQuery() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.weather.LocalWeatherLiveResult@$refId::getWeatherLiveQuery([])');
@@ -70,7 +70,7 @@ class com_amap_api_services_weather_LocalWeatherLiveResult extends java_lang_Obj
   }
   
   
-  Future<com_amap_api_services_weather_LocalWeatherLive> getLiveResult() async {
+  Future<com_amap_api_services_weather_LocalWeatherLive?> getLiveResult() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.weather.LocalWeatherLiveResult@$refId::getLiveResult([])');
@@ -94,7 +94,7 @@ class com_amap_api_services_weather_LocalWeatherLiveResult extends java_lang_Obj
   }
 }
 
-extension com_amap_api_services_weather_LocalWeatherLiveResult_Batch on List<com_amap_api_services_weather_LocalWeatherLiveResult> {
+extension com_amap_api_services_weather_LocalWeatherLiveResult_Batch on List<com_amap_api_services_weather_LocalWeatherLiveResult?> {
   //region getters
   
   //endregion
@@ -105,7 +105,7 @@ extension com_amap_api_services_weather_LocalWeatherLiveResult_Batch on List<com
 
   //region methods
   
-  static Future<List<com_amap_api_services_weather_LocalWeatherLiveResult>> createPagedResult_batch(List<com_amap_api_services_weather_WeatherSearchQuery> var0, List<com_amap_api_services_weather_LocalWeatherLive> var1) async {
+  static Future<List<com_amap_api_services_weather_LocalWeatherLiveResult?>?> createPagedResult_batch(List<com_amap_api_services_weather_WeatherSearchQuery> var0, List<com_amap_api_services_weather_LocalWeatherLive> var1) async {
     assert(var0.length == var1.length);
   
     // invoke native method
@@ -116,7 +116,7 @@ extension com_amap_api_services_weather_LocalWeatherLiveResult_Batch on List<com
   }
   
   
-  Future<List<com_amap_api_services_weather_WeatherSearchQuery>> getWeatherLiveQuery_batch() async {
+  Future<List<com_amap_api_services_weather_WeatherSearchQuery?>?> getWeatherLiveQuery_batch() async {
     assert(true);
   
     // invoke native method
@@ -127,7 +127,7 @@ extension com_amap_api_services_weather_LocalWeatherLiveResult_Batch on List<com
   }
   
   
-  Future<List<com_amap_api_services_weather_LocalWeatherLive>> getLiveResult_batch() async {
+  Future<List<com_amap_api_services_weather_LocalWeatherLive?>?> getLiveResult_batch() async {
     assert(true);
   
     // invoke native method

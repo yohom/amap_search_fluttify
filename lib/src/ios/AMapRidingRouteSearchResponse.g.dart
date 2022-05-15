@@ -28,7 +28,7 @@ class AMapRidingRouteSearchResponse extends AMapRouteSearchResponse with NSCodin
       'ObjectFactory::createAMapRidingRouteSearchResponse',
       {'init': init}
     );
-    return AmapSearchFluttifyIOSAs<AMapRidingRouteSearchResponse>(__result__);
+    return AmapSearchFluttifyIOSAs<AMapRidingRouteSearchResponse>(__result__)!;
   }
   
   static Future<List<AMapRidingRouteSearchResponse>> create_batch__(int length, { bool init = true /* ios only */ }) async {
@@ -37,8 +37,8 @@ class AMapRidingRouteSearchResponse extends AMapRouteSearchResponse with NSCodin
       'ObjectFactory::create_batchAMapRidingRouteSearchResponse',
       {'length': length, 'init': init}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyIOSAs<AMapRidingRouteSearchResponse>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyIOSAs<AMapRidingRouteSearchResponse>(it)!)
         .toList();
   }
   
@@ -62,7 +62,7 @@ class AMapRidingRouteSearchResponse extends AMapRouteSearchResponse with NSCodin
   }
 }
 
-extension AMapRidingRouteSearchResponse_Batch on List<AMapRidingRouteSearchResponse> {
+extension AMapRidingRouteSearchResponse_Batch on List<AMapRidingRouteSearchResponse?> {
   //region getters
   
   //endregion

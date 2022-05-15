@@ -28,7 +28,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
       'ObjectFactory::createcom_amap_api_services_weather_LocalDayWeatherForecast__',
     
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_weather_LocalDayWeatherForecast>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_weather_LocalDayWeatherForecast>(__result__)!;
   }
   
   static Future<List<com_amap_api_services_weather_LocalDayWeatherForecast>> create_batch__(int length) async {
@@ -37,8 +37,8 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
       'ObjectFactory::create_batchcom_amap_api_services_weather_LocalDayWeatherForecast__',
       {'length': length}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_weather_LocalDayWeatherForecast>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_weather_LocalDayWeatherForecast>(it)!)
         .toList();
   }
   
@@ -54,7 +54,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
 
   //region methods
   
-  Future<String> getDate() async {
+  Future<String?> getDate() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::getDate([])');
@@ -71,7 +71,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
   }
   
   
-  Future<void> setDate(String var1) async {
+  Future<void> setDate(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::setDate([\'var1\':$var1])');
@@ -88,7 +88,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
   }
   
   
-  Future<String> getWeek() async {
+  Future<String?> getWeek() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::getWeek([])');
@@ -105,7 +105,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
   }
   
   
-  Future<void> setWeek(String var1) async {
+  Future<void> setWeek(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::setWeek([\'var1\':$var1])');
@@ -122,7 +122,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
   }
   
   
-  Future<String> getDayWeather() async {
+  Future<String?> getDayWeather() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::getDayWeather([])');
@@ -139,7 +139,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
   }
   
   
-  Future<void> setDayWeather(String var1) async {
+  Future<void> setDayWeather(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::setDayWeather([\'var1\':$var1])');
@@ -156,7 +156,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
   }
   
   
-  Future<String> getNightWeather() async {
+  Future<String?> getNightWeather() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::getNightWeather([])');
@@ -173,7 +173,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
   }
   
   
-  Future<void> setNightWeather(String var1) async {
+  Future<void> setNightWeather(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::setNightWeather([\'var1\':$var1])');
@@ -190,7 +190,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
   }
   
   
-  Future<String> getDayTemp() async {
+  Future<String?> getDayTemp() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::getDayTemp([])');
@@ -207,7 +207,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
   }
   
   
-  Future<void> setDayTemp(String var1) async {
+  Future<void> setDayTemp(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::setDayTemp([\'var1\':$var1])');
@@ -224,7 +224,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
   }
   
   
-  Future<String> getNightTemp() async {
+  Future<String?> getNightTemp() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::getNightTemp([])');
@@ -241,7 +241,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
   }
   
   
-  Future<void> setNightTemp(String var1) async {
+  Future<void> setNightTemp(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::setNightTemp([\'var1\':$var1])');
@@ -258,7 +258,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
   }
   
   
-  Future<String> getDayWindDirection() async {
+  Future<String?> getDayWindDirection() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::getDayWindDirection([])');
@@ -275,7 +275,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
   }
   
   
-  Future<void> setDayWindDirection(String var1) async {
+  Future<void> setDayWindDirection(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::setDayWindDirection([\'var1\':$var1])');
@@ -292,7 +292,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
   }
   
   
-  Future<String> getNightWindDirection() async {
+  Future<String?> getNightWindDirection() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::getNightWindDirection([])');
@@ -309,7 +309,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
   }
   
   
-  Future<void> setNightWindDirection(String var1) async {
+  Future<void> setNightWindDirection(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::setNightWindDirection([\'var1\':$var1])');
@@ -326,7 +326,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
   }
   
   
-  Future<String> getDayWindPower() async {
+  Future<String?> getDayWindPower() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::getDayWindPower([])');
@@ -343,7 +343,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
   }
   
   
-  Future<void> setDayWindPower(String var1) async {
+  Future<void> setDayWindPower(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::setDayWindPower([\'var1\':$var1])');
@@ -360,7 +360,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
   }
   
   
-  Future<String> getNightWindPower() async {
+  Future<String?> getNightWindPower() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::getNightWindPower([])');
@@ -377,7 +377,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
   }
   
   
-  Future<void> setNightWindPower(String var1) async {
+  Future<void> setNightWindPower(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::setNightWindPower([\'var1\':$var1])');
@@ -401,7 +401,7 @@ class com_amap_api_services_weather_LocalDayWeatherForecast extends java_lang_Ob
   }
 }
 
-extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<com_amap_api_services_weather_LocalDayWeatherForecast> {
+extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<com_amap_api_services_weather_LocalDayWeatherForecast?> {
   //region getters
   
   //endregion
@@ -412,7 +412,7 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
 
   //region methods
   
-  Future<List<String>> getDate_batch() async {
+  Future<List<String?>?> getDate_batch() async {
     assert(true);
   
     // invoke native method
@@ -423,7 +423,7 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
   }
   
   
-  Future<List<void>> setDate_batch(List<String> var1) async {
+  Future<List<void>?> setDate_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -434,7 +434,7 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
   }
   
   
-  Future<List<String>> getWeek_batch() async {
+  Future<List<String?>?> getWeek_batch() async {
     assert(true);
   
     // invoke native method
@@ -445,7 +445,7 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
   }
   
   
-  Future<List<void>> setWeek_batch(List<String> var1) async {
+  Future<List<void>?> setWeek_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -456,7 +456,7 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
   }
   
   
-  Future<List<String>> getDayWeather_batch() async {
+  Future<List<String?>?> getDayWeather_batch() async {
     assert(true);
   
     // invoke native method
@@ -467,7 +467,7 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
   }
   
   
-  Future<List<void>> setDayWeather_batch(List<String> var1) async {
+  Future<List<void>?> setDayWeather_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -478,7 +478,7 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
   }
   
   
-  Future<List<String>> getNightWeather_batch() async {
+  Future<List<String?>?> getNightWeather_batch() async {
     assert(true);
   
     // invoke native method
@@ -489,7 +489,7 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
   }
   
   
-  Future<List<void>> setNightWeather_batch(List<String> var1) async {
+  Future<List<void>?> setNightWeather_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -500,7 +500,7 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
   }
   
   
-  Future<List<String>> getDayTemp_batch() async {
+  Future<List<String?>?> getDayTemp_batch() async {
     assert(true);
   
     // invoke native method
@@ -511,7 +511,7 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
   }
   
   
-  Future<List<void>> setDayTemp_batch(List<String> var1) async {
+  Future<List<void>?> setDayTemp_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -522,7 +522,7 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
   }
   
   
-  Future<List<String>> getNightTemp_batch() async {
+  Future<List<String?>?> getNightTemp_batch() async {
     assert(true);
   
     // invoke native method
@@ -533,7 +533,7 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
   }
   
   
-  Future<List<void>> setNightTemp_batch(List<String> var1) async {
+  Future<List<void>?> setNightTemp_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -544,7 +544,7 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
   }
   
   
-  Future<List<String>> getDayWindDirection_batch() async {
+  Future<List<String?>?> getDayWindDirection_batch() async {
     assert(true);
   
     // invoke native method
@@ -555,7 +555,7 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
   }
   
   
-  Future<List<void>> setDayWindDirection_batch(List<String> var1) async {
+  Future<List<void>?> setDayWindDirection_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -566,7 +566,7 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
   }
   
   
-  Future<List<String>> getNightWindDirection_batch() async {
+  Future<List<String?>?> getNightWindDirection_batch() async {
     assert(true);
   
     // invoke native method
@@ -577,7 +577,7 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
   }
   
   
-  Future<List<void>> setNightWindDirection_batch(List<String> var1) async {
+  Future<List<void>?> setNightWindDirection_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -588,7 +588,7 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
   }
   
   
-  Future<List<String>> getDayWindPower_batch() async {
+  Future<List<String?>?> getDayWindPower_batch() async {
     assert(true);
   
     // invoke native method
@@ -599,7 +599,7 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
   }
   
   
-  Future<List<void>> setDayWindPower_batch(List<String> var1) async {
+  Future<List<void>?> setDayWindPower_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -610,7 +610,7 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
   }
   
   
-  Future<List<String>> getNightWindPower_batch() async {
+  Future<List<String?>?> getNightWindPower_batch() async {
     assert(true);
   
     // invoke native method
@@ -621,7 +621,7 @@ extension com_amap_api_services_weather_LocalDayWeatherForecast_Batch on List<co
   }
   
   
-  Future<List<void>> setNightWindPower_batch(List<String> var1) async {
+  Future<List<void>?> setNightWindPower_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method

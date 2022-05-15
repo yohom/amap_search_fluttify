@@ -28,7 +28,7 @@ class com_amap_api_services_route_District extends java_lang_Object with android
       'ObjectFactory::createcom_amap_api_services_route_District__',
     
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_District>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_District>(__result__)!;
   }
   
   static Future<List<com_amap_api_services_route_District>> create_batch__(int length) async {
@@ -37,8 +37,8 @@ class com_amap_api_services_route_District extends java_lang_Object with android
       'ObjectFactory::create_batchcom_amap_api_services_route_District__',
       {'length': length}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_District>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_District>(it)!)
         .toList();
   }
   
@@ -54,7 +54,7 @@ class com_amap_api_services_route_District extends java_lang_Object with android
 
   //region methods
   
-  Future<String> getDistrictName() async {
+  Future<String?> getDistrictName() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.District@$refId::getDistrictName([])');
@@ -71,7 +71,7 @@ class com_amap_api_services_route_District extends java_lang_Object with android
   }
   
   
-  Future<void> setDistrictName(String var1) async {
+  Future<void> setDistrictName(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.District@$refId::setDistrictName([\'var1\':$var1])');
@@ -88,7 +88,7 @@ class com_amap_api_services_route_District extends java_lang_Object with android
   }
   
   
-  Future<String> getDistrictAdcode() async {
+  Future<String?> getDistrictAdcode() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.District@$refId::getDistrictAdcode([])');
@@ -105,7 +105,7 @@ class com_amap_api_services_route_District extends java_lang_Object with android
   }
   
   
-  Future<void> setDistrictAdcode(String var1) async {
+  Future<void> setDistrictAdcode(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.District@$refId::setDistrictAdcode([\'var1\':$var1])');
@@ -129,7 +129,7 @@ class com_amap_api_services_route_District extends java_lang_Object with android
   }
 }
 
-extension com_amap_api_services_route_District_Batch on List<com_amap_api_services_route_District> {
+extension com_amap_api_services_route_District_Batch on List<com_amap_api_services_route_District?> {
   //region getters
   
   //endregion
@@ -140,7 +140,7 @@ extension com_amap_api_services_route_District_Batch on List<com_amap_api_servic
 
   //region methods
   
-  Future<List<String>> getDistrictName_batch() async {
+  Future<List<String?>?> getDistrictName_batch() async {
     assert(true);
   
     // invoke native method
@@ -151,7 +151,7 @@ extension com_amap_api_services_route_District_Batch on List<com_amap_api_servic
   }
   
   
-  Future<List<void>> setDistrictName_batch(List<String> var1) async {
+  Future<List<void>?> setDistrictName_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -162,7 +162,7 @@ extension com_amap_api_services_route_District_Batch on List<com_amap_api_servic
   }
   
   
-  Future<List<String>> getDistrictAdcode_batch() async {
+  Future<List<String?>?> getDistrictAdcode_batch() async {
     assert(true);
   
     // invoke native method
@@ -173,7 +173,7 @@ extension com_amap_api_services_route_District_Batch on List<com_amap_api_servic
   }
   
   
-  Future<List<void>> setDistrictAdcode_batch(List<String> var1) async {
+  Future<List<void>?> setDistrictAdcode_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method

@@ -28,7 +28,7 @@ class com_amap_api_services_route_RouteBusWalkItem extends com_amap_api_services
       'ObjectFactory::createcom_amap_api_services_route_RouteBusWalkItem__',
     
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RouteBusWalkItem>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RouteBusWalkItem>(__result__)!;
   }
   
   static Future<List<com_amap_api_services_route_RouteBusWalkItem>> create_batch__(int length) async {
@@ -37,8 +37,8 @@ class com_amap_api_services_route_RouteBusWalkItem extends com_amap_api_services
       'ObjectFactory::create_batchcom_amap_api_services_route_RouteBusWalkItem__',
       {'length': length}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RouteBusWalkItem>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RouteBusWalkItem>(it)!)
         .toList();
   }
   
@@ -54,7 +54,7 @@ class com_amap_api_services_route_RouteBusWalkItem extends com_amap_api_services
 
   //region methods
   
-  Future<com_amap_api_services_core_LatLonPoint> getOrigin() async {
+  Future<com_amap_api_services_core_LatLonPoint?> getOrigin() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteBusWalkItem@$refId::getOrigin([])');
@@ -71,7 +71,7 @@ class com_amap_api_services_route_RouteBusWalkItem extends com_amap_api_services
   }
   
   
-  Future<void> setOrigin(com_amap_api_services_core_LatLonPoint var1) async {
+  Future<void> setOrigin(com_amap_api_services_core_LatLonPoint? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteBusWalkItem@$refId::setOrigin([])');
@@ -88,7 +88,7 @@ class com_amap_api_services_route_RouteBusWalkItem extends com_amap_api_services
   }
   
   
-  Future<com_amap_api_services_core_LatLonPoint> getDestination() async {
+  Future<com_amap_api_services_core_LatLonPoint?> getDestination() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteBusWalkItem@$refId::getDestination([])');
@@ -105,7 +105,7 @@ class com_amap_api_services_route_RouteBusWalkItem extends com_amap_api_services
   }
   
   
-  Future<void> setDestination(com_amap_api_services_core_LatLonPoint var1) async {
+  Future<void> setDestination(com_amap_api_services_core_LatLonPoint? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteBusWalkItem@$refId::setDestination([])');
@@ -129,7 +129,7 @@ class com_amap_api_services_route_RouteBusWalkItem extends com_amap_api_services
   }
 }
 
-extension com_amap_api_services_route_RouteBusWalkItem_Batch on List<com_amap_api_services_route_RouteBusWalkItem> {
+extension com_amap_api_services_route_RouteBusWalkItem_Batch on List<com_amap_api_services_route_RouteBusWalkItem?> {
   //region getters
   
   //endregion
@@ -140,7 +140,7 @@ extension com_amap_api_services_route_RouteBusWalkItem_Batch on List<com_amap_ap
 
   //region methods
   
-  Future<List<com_amap_api_services_core_LatLonPoint>> getOrigin_batch() async {
+  Future<List<com_amap_api_services_core_LatLonPoint?>?> getOrigin_batch() async {
     assert(true);
   
     // invoke native method
@@ -151,7 +151,7 @@ extension com_amap_api_services_route_RouteBusWalkItem_Batch on List<com_amap_ap
   }
   
   
-  Future<List<void>> setOrigin_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
+  Future<List<void>?> setOrigin_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
     assert(true);
   
     // invoke native method
@@ -162,7 +162,7 @@ extension com_amap_api_services_route_RouteBusWalkItem_Batch on List<com_amap_ap
   }
   
   
-  Future<List<com_amap_api_services_core_LatLonPoint>> getDestination_batch() async {
+  Future<List<com_amap_api_services_core_LatLonPoint?>?> getDestination_batch() async {
     assert(true);
   
     // invoke native method
@@ -173,7 +173,7 @@ extension com_amap_api_services_route_RouteBusWalkItem_Batch on List<com_amap_ap
   }
   
   
-  Future<List<void>> setDestination_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
+  Future<List<void>?> setDestination_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
     assert(true);
   
     // invoke native method

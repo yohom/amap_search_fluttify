@@ -26,11 +26,9 @@ mixin com_amap_api_services_cloud_CloudSearch_OnCloudSearchListener on java_lang
 
   
 
-  /* @mustCallSuper */
-  Future<void> onCloudSearched(com_amap_api_services_cloud_CloudResult var1, int var2) {}
+  Future<void> onCloudSearched(com_amap_api_services_cloud_CloudResult? var1, int? var2) async {}
   
-  /* @mustCallSuper */
-  Future<void> onCloudItemDetailSearched(com_amap_api_services_cloud_CloudItemDetail var1, int var2) {}
+  Future<void> onCloudItemDetailSearched(com_amap_api_services_cloud_CloudItemDetail? var1, int? var2) async {}
   
 }
 

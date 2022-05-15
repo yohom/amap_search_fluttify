@@ -23,20 +23,20 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_poisearch_PoiSearch_Query> create__String__String(String var1, String var2) async {
+  static Future<com_amap_api_services_poisearch_PoiSearch_Query> create__String__String(String? var1, String? var2) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch_Query__String__String',
       {"var1": var1, "var2": var2}
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_poisearch_PoiSearch_Query>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_poisearch_PoiSearch_Query>(__result__)!;
   }
   
-  static Future<com_amap_api_services_poisearch_PoiSearch_Query> create__String__String__String(String var1, String var2, String var3) async {
+  static Future<com_amap_api_services_poisearch_PoiSearch_Query> create__String__String__String(String? var1, String? var2, String? var3) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch_Query__String__String__String',
       {"var1": var1, "var2": var2, "var3": var3}
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_poisearch_PoiSearch_Query>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_poisearch_PoiSearch_Query>(__result__)!;
   }
   
   static Future<List<com_amap_api_services_poisearch_PoiSearch_Query>> create_batch__String__String(List<String> var1, List<String> var2) async {
@@ -45,8 +45,8 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
       'ObjectFactory::create_batchcom_amap_api_services_poisearch_PoiSearch_Query__String__String',
       [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_poisearch_PoiSearch_Query>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_poisearch_PoiSearch_Query>(it)!)
         .toList();
   }
   
@@ -56,8 +56,8 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
       'ObjectFactory::create_batchcom_amap_api_services_poisearch_PoiSearch_Query__String__String__String',
       [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__]}]
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_poisearch_PoiSearch_Query>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_poisearch_PoiSearch_Query>(it)!)
         .toList();
   }
   
@@ -73,7 +73,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
 
   //region methods
   
-  Future<String> getBuilding() async {
+  Future<String?> getBuilding() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::getBuilding([])');
@@ -90,7 +90,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   }
   
   
-  Future<void> setBuilding(String var1) async {
+  Future<void> setBuilding(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::setBuilding([\'var1\':$var1])');
@@ -107,7 +107,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   }
   
   
-  Future<String> getQueryString() async {
+  Future<String?> getQueryString() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::getQueryString([])');
@@ -124,7 +124,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   }
   
   
-  Future<void> setQueryLanguage(String var1) async {
+  Future<void> setQueryLanguage(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::setQueryLanguage([\'var1\':$var1])');
@@ -141,7 +141,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   }
   
   
-  Future<String> getCategory() async {
+  Future<String?> getCategory() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::getCategory([])');
@@ -158,7 +158,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   }
   
   
-  Future<String> getCity() async {
+  Future<String?> getCity() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::getCity([])');
@@ -175,7 +175,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   }
   
   
-  Future<int> getPageNum() async {
+  Future<int?> getPageNum() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::getPageNum([])');
@@ -192,7 +192,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   }
   
   
-  Future<void> setPageNum(int var1) async {
+  Future<void> setPageNum(int? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::setPageNum([\'var1\':$var1])');
@@ -209,7 +209,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   }
   
   
-  Future<void> setPageSize(int var1) async {
+  Future<void> setPageSize(int? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::setPageSize([\'var1\':$var1])');
@@ -226,7 +226,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   }
   
   
-  Future<int> getPageSize() async {
+  Future<int?> getPageSize() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::getPageSize([])');
@@ -243,7 +243,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   }
   
   
-  Future<void> setCityLimit(bool var1) async {
+  Future<void> setCityLimit(bool? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::setCityLimit([\'var1\':$var1])');
@@ -260,7 +260,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   }
   
   
-  Future<bool> getCityLimit() async {
+  Future<bool?> getCityLimit() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::getCityLimit([])');
@@ -277,7 +277,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   }
   
   
-  Future<void> requireSubPois(bool var1) async {
+  Future<void> requireSubPois(bool? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::requireSubPois([\'var1\':$var1])');
@@ -294,7 +294,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   }
   
   
-  Future<bool> isRequireSubPois() async {
+  Future<bool?> isRequireSubPois() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::isRequireSubPois([])');
@@ -311,7 +311,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   }
   
   
-  Future<bool> isDistanceSort() async {
+  Future<bool?> isDistanceSort() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::isDistanceSort([])');
@@ -328,7 +328,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   }
   
   
-  Future<void> setDistanceSort(bool var1) async {
+  Future<void> setDistanceSort(bool? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::setDistanceSort([\'var1\':$var1])');
@@ -345,7 +345,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   }
   
   
-  Future<com_amap_api_services_core_LatLonPoint> getLocation() async {
+  Future<com_amap_api_services_core_LatLonPoint?> getLocation() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::getLocation([])');
@@ -362,7 +362,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   }
   
   
-  Future<void> setLocation(com_amap_api_services_core_LatLonPoint var1) async {
+  Future<void> setLocation(com_amap_api_services_core_LatLonPoint? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::setLocation([])');
@@ -379,7 +379,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   }
   
   
-  Future<bool> isSpecial() async {
+  Future<bool?> isSpecial() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::isSpecial([])');
@@ -396,7 +396,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   }
   
   
-  Future<void> setSpecial(bool var1) async {
+  Future<void> setSpecial(bool? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::setSpecial([\'var1\':$var1])');
@@ -413,7 +413,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   }
   
   
-  Future<String> getExtensions() async {
+  Future<String?> getExtensions() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::getExtensions([])');
@@ -430,7 +430,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   }
   
   
-  Future<void> setExtensions(String var1) async {
+  Future<void> setExtensions(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::setExtensions([\'var1\':$var1])');
@@ -447,7 +447,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   }
   
   
-  Future<bool> queryEquals(com_amap_api_services_poisearch_PoiSearch_Query var1) async {
+  Future<bool?> queryEquals(com_amap_api_services_poisearch_PoiSearch_Query? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::queryEquals([])');
@@ -464,7 +464,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   }
   
   
-  Future<com_amap_api_services_poisearch_PoiSearch_Query> clone() async {
+  Future<com_amap_api_services_poisearch_PoiSearch_Query?> clone() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::clone([])');
@@ -488,7 +488,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   }
 }
 
-extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap_api_services_poisearch_PoiSearch_Query> {
+extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap_api_services_poisearch_PoiSearch_Query?> {
   //region getters
   
   //endregion
@@ -499,7 +499,7 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
 
   //region methods
   
-  Future<List<String>> getBuilding_batch() async {
+  Future<List<String?>?> getBuilding_batch() async {
     assert(true);
   
     // invoke native method
@@ -510,7 +510,7 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
   }
   
   
-  Future<List<void>> setBuilding_batch(List<String> var1) async {
+  Future<List<void>?> setBuilding_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -521,7 +521,7 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
   }
   
   
-  Future<List<String>> getQueryString_batch() async {
+  Future<List<String?>?> getQueryString_batch() async {
     assert(true);
   
     // invoke native method
@@ -532,7 +532,7 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
   }
   
   
-  Future<List<void>> setQueryLanguage_batch(List<String> var1) async {
+  Future<List<void>?> setQueryLanguage_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -543,7 +543,7 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
   }
   
   
-  Future<List<String>> getCategory_batch() async {
+  Future<List<String?>?> getCategory_batch() async {
     assert(true);
   
     // invoke native method
@@ -554,7 +554,7 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
   }
   
   
-  Future<List<String>> getCity_batch() async {
+  Future<List<String?>?> getCity_batch() async {
     assert(true);
   
     // invoke native method
@@ -565,7 +565,7 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
   }
   
   
-  Future<List<int>> getPageNum_batch() async {
+  Future<List<int?>?> getPageNum_batch() async {
     assert(true);
   
     // invoke native method
@@ -576,7 +576,7 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
   }
   
   
-  Future<List<void>> setPageNum_batch(List<int> var1) async {
+  Future<List<void>?> setPageNum_batch(List<int> var1) async {
     assert(true);
   
     // invoke native method
@@ -587,7 +587,7 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
   }
   
   
-  Future<List<void>> setPageSize_batch(List<int> var1) async {
+  Future<List<void>?> setPageSize_batch(List<int> var1) async {
     assert(true);
   
     // invoke native method
@@ -598,7 +598,7 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
   }
   
   
-  Future<List<int>> getPageSize_batch() async {
+  Future<List<int?>?> getPageSize_batch() async {
     assert(true);
   
     // invoke native method
@@ -609,7 +609,7 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
   }
   
   
-  Future<List<void>> setCityLimit_batch(List<bool> var1) async {
+  Future<List<void>?> setCityLimit_batch(List<bool> var1) async {
     assert(true);
   
     // invoke native method
@@ -620,7 +620,7 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
   }
   
   
-  Future<List<bool>> getCityLimit_batch() async {
+  Future<List<bool?>?> getCityLimit_batch() async {
     assert(true);
   
     // invoke native method
@@ -631,7 +631,7 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
   }
   
   
-  Future<List<void>> requireSubPois_batch(List<bool> var1) async {
+  Future<List<void>?> requireSubPois_batch(List<bool> var1) async {
     assert(true);
   
     // invoke native method
@@ -642,7 +642,7 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
   }
   
   
-  Future<List<bool>> isRequireSubPois_batch() async {
+  Future<List<bool?>?> isRequireSubPois_batch() async {
     assert(true);
   
     // invoke native method
@@ -653,7 +653,7 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
   }
   
   
-  Future<List<bool>> isDistanceSort_batch() async {
+  Future<List<bool?>?> isDistanceSort_batch() async {
     assert(true);
   
     // invoke native method
@@ -664,7 +664,7 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
   }
   
   
-  Future<List<void>> setDistanceSort_batch(List<bool> var1) async {
+  Future<List<void>?> setDistanceSort_batch(List<bool> var1) async {
     assert(true);
   
     // invoke native method
@@ -675,7 +675,7 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
   }
   
   
-  Future<List<com_amap_api_services_core_LatLonPoint>> getLocation_batch() async {
+  Future<List<com_amap_api_services_core_LatLonPoint?>?> getLocation_batch() async {
     assert(true);
   
     // invoke native method
@@ -686,7 +686,7 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
   }
   
   
-  Future<List<void>> setLocation_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
+  Future<List<void>?> setLocation_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
     assert(true);
   
     // invoke native method
@@ -697,7 +697,7 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
   }
   
   
-  Future<List<bool>> isSpecial_batch() async {
+  Future<List<bool?>?> isSpecial_batch() async {
     assert(true);
   
     // invoke native method
@@ -708,7 +708,7 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
   }
   
   
-  Future<List<void>> setSpecial_batch(List<bool> var1) async {
+  Future<List<void>?> setSpecial_batch(List<bool> var1) async {
     assert(true);
   
     // invoke native method
@@ -719,7 +719,7 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
   }
   
   
-  Future<List<String>> getExtensions_batch() async {
+  Future<List<String?>?> getExtensions_batch() async {
     assert(true);
   
     // invoke native method
@@ -730,7 +730,7 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
   }
   
   
-  Future<List<void>> setExtensions_batch(List<String> var1) async {
+  Future<List<void>?> setExtensions_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -741,7 +741,7 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
   }
   
   
-  Future<List<bool>> queryEquals_batch(List<com_amap_api_services_poisearch_PoiSearch_Query> var1) async {
+  Future<List<bool?>?> queryEquals_batch(List<com_amap_api_services_poisearch_PoiSearch_Query> var1) async {
     assert(true);
   
     // invoke native method
@@ -752,7 +752,7 @@ extension com_amap_api_services_poisearch_PoiSearch_Query_Batch on List<com_amap
   }
   
   
-  Future<List<com_amap_api_services_poisearch_PoiSearch_Query>> clone_batch() async {
+  Future<List<com_amap_api_services_poisearch_PoiSearch_Query?>?> clone_batch() async {
     assert(true);
   
     // invoke native method

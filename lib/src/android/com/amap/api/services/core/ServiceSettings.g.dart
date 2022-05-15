@@ -39,7 +39,7 @@ class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
 
   //region methods
   
-  Future<int> getConnectionTimeOut() async {
+  Future<int?> getConnectionTimeOut() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.ServiceSettings@$refId::getConnectionTimeOut([])');
@@ -56,7 +56,7 @@ class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
   }
   
   
-  Future<int> getSoTimeOut() async {
+  Future<int?> getSoTimeOut() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.ServiceSettings@$refId::getSoTimeOut([])');
@@ -73,7 +73,7 @@ class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
   }
   
   
-  Future<void> setConnectionTimeOut(int var1) async {
+  Future<void> setConnectionTimeOut(int? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.ServiceSettings@$refId::setConnectionTimeOut([\'var1\':$var1])');
@@ -90,7 +90,7 @@ class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
   }
   
   
-  Future<void> setSoTimeOut(int var1) async {
+  Future<void> setSoTimeOut(int? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.ServiceSettings@$refId::setSoTimeOut([\'var1\':$var1])');
@@ -107,7 +107,7 @@ class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
   }
   
   
-  static Future<com_amap_api_services_core_ServiceSettings> getInstance() async {
+  static Future<com_amap_api_services_core_ServiceSettings?> getInstance() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.ServiceSettings::getInstance([])');
@@ -124,7 +124,7 @@ class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
   }
   
   
-  Future<void> setLanguage(String var1) async {
+  Future<void> setLanguage(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.ServiceSettings@$refId::setLanguage([\'var1\':$var1])');
@@ -141,7 +141,7 @@ class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
   }
   
   
-  Future<void> setProtocol(int var1) async {
+  Future<void> setProtocol(int? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.ServiceSettings@$refId::setProtocol([\'var1\':$var1])');
@@ -158,7 +158,7 @@ class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
   }
   
   
-  Future<String> getLanguage() async {
+  Future<String?> getLanguage() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.ServiceSettings@$refId::getLanguage([])');
@@ -175,7 +175,7 @@ class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
   }
   
   
-  Future<int> getProtocol() async {
+  Future<int?> getProtocol() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.ServiceSettings@$refId::getProtocol([])');
@@ -192,7 +192,7 @@ class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
   }
   
   
-  Future<void> setApiKey(String var1) async {
+  Future<void> setApiKey(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.ServiceSettings@$refId::setApiKey([\'var1\':$var1])');
@@ -233,7 +233,7 @@ class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
   }
 }
 
-extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_services_core_ServiceSettings> {
+extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_services_core_ServiceSettings?> {
   //region getters
   
   //endregion
@@ -244,7 +244,7 @@ extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_
 
   //region methods
   
-  Future<List<int>> getConnectionTimeOut_batch() async {
+  Future<List<int?>?> getConnectionTimeOut_batch() async {
     assert(true);
   
     // invoke native method
@@ -255,7 +255,7 @@ extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_
   }
   
   
-  Future<List<int>> getSoTimeOut_batch() async {
+  Future<List<int?>?> getSoTimeOut_batch() async {
     assert(true);
   
     // invoke native method
@@ -266,7 +266,7 @@ extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_
   }
   
   
-  Future<List<void>> setConnectionTimeOut_batch(List<int> var1) async {
+  Future<List<void>?> setConnectionTimeOut_batch(List<int> var1) async {
     assert(true);
   
     // invoke native method
@@ -277,7 +277,7 @@ extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_
   }
   
   
-  Future<List<void>> setSoTimeOut_batch(List<int> var1) async {
+  Future<List<void>?> setSoTimeOut_batch(List<int> var1) async {
     assert(true);
   
     // invoke native method
@@ -288,7 +288,7 @@ extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_
   }
   
   
-  static Future<List<com_amap_api_services_core_ServiceSettings>> getInstance_batch() async {
+  static Future<List<com_amap_api_services_core_ServiceSettings?>?> getInstance_batch() async {
     assert(true);
   
     // invoke native method
@@ -299,7 +299,7 @@ extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_
   }
   
   
-  Future<List<void>> setLanguage_batch(List<String> var1) async {
+  Future<List<void>?> setLanguage_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -310,7 +310,7 @@ extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_
   }
   
   
-  Future<List<void>> setProtocol_batch(List<int> var1) async {
+  Future<List<void>?> setProtocol_batch(List<int> var1) async {
     assert(true);
   
     // invoke native method
@@ -321,7 +321,7 @@ extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_
   }
   
   
-  Future<List<String>> getLanguage_batch() async {
+  Future<List<String?>?> getLanguage_batch() async {
     assert(true);
   
     // invoke native method
@@ -332,7 +332,7 @@ extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_
   }
   
   
-  Future<List<int>> getProtocol_batch() async {
+  Future<List<int?>?> getProtocol_batch() async {
     assert(true);
   
     // invoke native method
@@ -343,7 +343,7 @@ extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_
   }
   
   
-  Future<List<void>> setApiKey_batch(List<String> var1) async {
+  Future<List<void>?> setApiKey_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -354,7 +354,7 @@ extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_
   }
   
   
-  Future<List<void>> destroyInnerAsynThreadPool_batch() async {
+  Future<List<void>?> destroyInnerAsynThreadPool_batch() async {
     assert(true);
   
     // invoke native method

@@ -23,12 +23,12 @@ class com_amap_api_services_core_LatLonPoint extends java_lang_Object with andro
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_core_LatLonPoint> create__double__double(double var1, double var3) async {
+  static Future<com_amap_api_services_core_LatLonPoint> create__double__double(double? var1, double? var3) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_core_LatLonPoint__double__double',
       {"var1": var1, "var3": var3}
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(__result__)!;
   }
   
   static Future<List<com_amap_api_services_core_LatLonPoint>> create_batch__double__double(List<double> var1, List<double> var3) async {
@@ -37,8 +37,8 @@ class com_amap_api_services_core_LatLonPoint extends java_lang_Object with andro
       'ObjectFactory::create_batchcom_amap_api_services_core_LatLonPoint__double__double',
       [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var3": var3[__i__]}]
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(it)!)
         .toList();
   }
   
@@ -54,7 +54,7 @@ class com_amap_api_services_core_LatLonPoint extends java_lang_Object with andro
 
   //region methods
   
-  Future<double> getLongitude() async {
+  Future<double?> getLongitude() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.LatLonPoint@$refId::getLongitude([])');
@@ -71,7 +71,7 @@ class com_amap_api_services_core_LatLonPoint extends java_lang_Object with andro
   }
   
   
-  Future<void> setLongitude(double var1) async {
+  Future<void> setLongitude(double? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.LatLonPoint@$refId::setLongitude([\'var1\':$var1])');
@@ -88,7 +88,7 @@ class com_amap_api_services_core_LatLonPoint extends java_lang_Object with andro
   }
   
   
-  Future<double> getLatitude() async {
+  Future<double?> getLatitude() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.LatLonPoint@$refId::getLatitude([])');
@@ -105,7 +105,7 @@ class com_amap_api_services_core_LatLonPoint extends java_lang_Object with andro
   }
   
   
-  Future<void> setLatitude(double var1) async {
+  Future<void> setLatitude(double? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.LatLonPoint@$refId::setLatitude([\'var1\':$var1])');
@@ -122,7 +122,7 @@ class com_amap_api_services_core_LatLonPoint extends java_lang_Object with andro
   }
   
   
-  Future<com_amap_api_services_core_LatLonPoint> copy() async {
+  Future<com_amap_api_services_core_LatLonPoint?> copy() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.LatLonPoint@$refId::copy([])');
@@ -146,7 +146,7 @@ class com_amap_api_services_core_LatLonPoint extends java_lang_Object with andro
   }
 }
 
-extension com_amap_api_services_core_LatLonPoint_Batch on List<com_amap_api_services_core_LatLonPoint> {
+extension com_amap_api_services_core_LatLonPoint_Batch on List<com_amap_api_services_core_LatLonPoint?> {
   //region getters
   
   //endregion
@@ -157,7 +157,7 @@ extension com_amap_api_services_core_LatLonPoint_Batch on List<com_amap_api_serv
 
   //region methods
   
-  Future<List<double>> getLongitude_batch() async {
+  Future<List<double?>?> getLongitude_batch() async {
     assert(true);
   
     // invoke native method
@@ -168,7 +168,7 @@ extension com_amap_api_services_core_LatLonPoint_Batch on List<com_amap_api_serv
   }
   
   
-  Future<List<void>> setLongitude_batch(List<double> var1) async {
+  Future<List<void>?> setLongitude_batch(List<double> var1) async {
     assert(true);
   
     // invoke native method
@@ -179,7 +179,7 @@ extension com_amap_api_services_core_LatLonPoint_Batch on List<com_amap_api_serv
   }
   
   
-  Future<List<double>> getLatitude_batch() async {
+  Future<List<double?>?> getLatitude_batch() async {
     assert(true);
   
     // invoke native method
@@ -190,7 +190,7 @@ extension com_amap_api_services_core_LatLonPoint_Batch on List<com_amap_api_serv
   }
   
   
-  Future<List<void>> setLatitude_batch(List<double> var1) async {
+  Future<List<void>?> setLatitude_batch(List<double> var1) async {
     assert(true);
   
     // invoke native method
@@ -201,7 +201,7 @@ extension com_amap_api_services_core_LatLonPoint_Batch on List<com_amap_api_serv
   }
   
   
-  Future<List<com_amap_api_services_core_LatLonPoint>> copy_batch() async {
+  Future<List<com_amap_api_services_core_LatLonPoint?>?> copy_batch() async {
     assert(true);
   
     // invoke native method

@@ -23,12 +23,12 @@ class com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery extends jav
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery> create__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int(com_amap_api_services_share_ShareSearch_ShareFromAndTo var1, int var2) async {
+  static Future<com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery> create__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int(com_amap_api_services_share_ShareSearch_ShareFromAndTo? var1, int? var2) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int',
       {"var1": var1, "var2": var2}
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery>(__result__)!;
   }
   
   static Future<List<com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery>> create_batch__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int(List<com_amap_api_services_share_ShareSearch_ShareFromAndTo> var1, List<int> var2) async {
@@ -37,8 +37,8 @@ class com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery extends jav
       'ObjectFactory::create_batchcom_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int',
       [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery>(it)!)
         .toList();
   }
   
@@ -54,7 +54,7 @@ class com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery extends jav
 
   //region methods
   
-  Future<int> getDrivingMode() async {
+  Future<int?> getDrivingMode() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery@$refId::getDrivingMode([])');
@@ -71,7 +71,7 @@ class com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery extends jav
   }
   
   
-  Future<com_amap_api_services_share_ShareSearch_ShareFromAndTo> getShareFromAndTo() async {
+  Future<com_amap_api_services_share_ShareSearch_ShareFromAndTo?> getShareFromAndTo() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery@$refId::getShareFromAndTo([])');
@@ -95,7 +95,7 @@ class com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery extends jav
   }
 }
 
-extension com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery_Batch on List<com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery> {
+extension com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery_Batch on List<com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery?> {
   //region getters
   
   //endregion
@@ -106,7 +106,7 @@ extension com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery_Batch o
 
   //region methods
   
-  Future<List<int>> getDrivingMode_batch() async {
+  Future<List<int?>?> getDrivingMode_batch() async {
     assert(true);
   
     // invoke native method
@@ -117,7 +117,7 @@ extension com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery_Batch o
   }
   
   
-  Future<List<com_amap_api_services_share_ShareSearch_ShareFromAndTo>> getShareFromAndTo_batch() async {
+  Future<List<com_amap_api_services_share_ShareSearch_ShareFromAndTo?>?> getShareFromAndTo_batch() async {
     assert(true);
   
     // invoke native method

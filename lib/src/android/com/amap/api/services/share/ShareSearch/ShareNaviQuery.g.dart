@@ -23,12 +23,12 @@ class com_amap_api_services_share_ShareSearch_ShareNaviQuery extends java_lang_O
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_share_ShareSearch_ShareNaviQuery> create__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int(com_amap_api_services_share_ShareSearch_ShareFromAndTo var1, int var2) async {
+  static Future<com_amap_api_services_share_ShareSearch_ShareNaviQuery> create__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int(com_amap_api_services_share_ShareSearch_ShareFromAndTo? var1, int? var2) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_share_ShareSearch_ShareNaviQuery__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int',
       {"var1": var1, "var2": var2}
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_share_ShareSearch_ShareNaviQuery>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_share_ShareSearch_ShareNaviQuery>(__result__)!;
   }
   
   static Future<List<com_amap_api_services_share_ShareSearch_ShareNaviQuery>> create_batch__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int(List<com_amap_api_services_share_ShareSearch_ShareFromAndTo> var1, List<int> var2) async {
@@ -37,8 +37,8 @@ class com_amap_api_services_share_ShareSearch_ShareNaviQuery extends java_lang_O
       'ObjectFactory::create_batchcom_amap_api_services_share_ShareSearch_ShareNaviQuery__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int',
       [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_share_ShareSearch_ShareNaviQuery>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_share_ShareSearch_ShareNaviQuery>(it)!)
         .toList();
   }
   
@@ -54,7 +54,7 @@ class com_amap_api_services_share_ShareSearch_ShareNaviQuery extends java_lang_O
 
   //region methods
   
-  Future<com_amap_api_services_share_ShareSearch_ShareFromAndTo> getFromAndTo() async {
+  Future<com_amap_api_services_share_ShareSearch_ShareFromAndTo?> getFromAndTo() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.share.ShareSearch.ShareNaviQuery@$refId::getFromAndTo([])');
@@ -71,7 +71,7 @@ class com_amap_api_services_share_ShareSearch_ShareNaviQuery extends java_lang_O
   }
   
   
-  Future<int> getNaviMode() async {
+  Future<int?> getNaviMode() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.share.ShareSearch.ShareNaviQuery@$refId::getNaviMode([])');
@@ -95,7 +95,7 @@ class com_amap_api_services_share_ShareSearch_ShareNaviQuery extends java_lang_O
   }
 }
 
-extension com_amap_api_services_share_ShareSearch_ShareNaviQuery_Batch on List<com_amap_api_services_share_ShareSearch_ShareNaviQuery> {
+extension com_amap_api_services_share_ShareSearch_ShareNaviQuery_Batch on List<com_amap_api_services_share_ShareSearch_ShareNaviQuery?> {
   //region getters
   
   //endregion
@@ -106,7 +106,7 @@ extension com_amap_api_services_share_ShareSearch_ShareNaviQuery_Batch on List<c
 
   //region methods
   
-  Future<List<com_amap_api_services_share_ShareSearch_ShareFromAndTo>> getFromAndTo_batch() async {
+  Future<List<com_amap_api_services_share_ShareSearch_ShareFromAndTo?>?> getFromAndTo_batch() async {
     assert(true);
   
     // invoke native method
@@ -117,7 +117,7 @@ extension com_amap_api_services_share_ShareSearch_ShareNaviQuery_Batch on List<c
   }
   
   
-  Future<List<int>> getNaviMode_batch() async {
+  Future<List<int?>?> getNaviMode_batch() async {
     assert(true);
   
     // invoke native method

@@ -28,7 +28,7 @@ class AMapInputTipsSearchResponse extends AMapSearchObject with NSCoding, NSCopy
       'ObjectFactory::createAMapInputTipsSearchResponse',
       {'init': init}
     );
-    return AmapSearchFluttifyIOSAs<AMapInputTipsSearchResponse>(__result__);
+    return AmapSearchFluttifyIOSAs<AMapInputTipsSearchResponse>(__result__)!;
   }
   
   static Future<List<AMapInputTipsSearchResponse>> create_batch__(int length, { bool init = true /* ios only */ }) async {
@@ -37,22 +37,22 @@ class AMapInputTipsSearchResponse extends AMapSearchObject with NSCoding, NSCopy
       'ObjectFactory::create_batchAMapInputTipsSearchResponse',
       {'length': length, 'init': init}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyIOSAs<AMapInputTipsSearchResponse>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyIOSAs<AMapInputTipsSearchResponse>(it)!)
         .toList();
   }
   
   //endregion
 
   //region getters
-  Future<int> get_count() async {
+  Future<int?> get_count() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapInputTipsSearchResponse::get_count", {'__this__': this});
     return __result__;
   }
   
-  Future<List<AMapTip>> get_tips() async {
+  Future<List<AMapTip>?> get_tips() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapInputTipsSearchResponse::get_tips", {'__this__': this});
-    return (__result__ as List)?.map((it) => AmapSearchFluttifyIOSAs<AMapTip>(it))?.toList();
+    return (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapTip>(it)!).toList();
   }
   
   //endregion
@@ -82,16 +82,16 @@ class AMapInputTipsSearchResponse extends AMapSearchObject with NSCoding, NSCopy
   }
 }
 
-extension AMapInputTipsSearchResponse_Batch on List<AMapInputTipsSearchResponse> {
+extension AMapInputTipsSearchResponse_Batch on List<AMapInputTipsSearchResponse?> {
   //region getters
-  Future<List<int>> get_count_batch() async {
+  Future<List<int?>?> get_count_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapInputTipsSearchResponse::get_count_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<int>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<int?>().toList();
   }
   
-  Future<List<List<AMapTip>>> get_tips_batch() async {
+  Future<List<List<AMapTip>?>?> get_tips_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapInputTipsSearchResponse::get_tips_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyIOSAs<AMapTip>(it))?.toList())?.cast<List<AMapTip>>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapTip>(it)!).toList()).cast<List<AMapTip>?>().toList();
   }
   
   //endregion

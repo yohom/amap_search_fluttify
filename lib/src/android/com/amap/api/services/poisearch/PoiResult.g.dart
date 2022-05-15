@@ -36,7 +36,7 @@ class com_amap_api_services_poisearch_PoiResult extends java_lang_Object  {
 
   //region methods
   
-  static Future<com_amap_api_services_poisearch_PoiResult> createPagedResult(com_amap_api_services_poisearch_PoiSearch_Query var0, com_amap_api_services_poisearch_PoiSearch_SearchBound var1, List<String> var2, List<com_amap_api_services_core_SuggestionCity> var3, int var4, int var5, List<com_amap_api_services_core_PoiItem> var6) async {
+  static Future<com_amap_api_services_poisearch_PoiResult?> createPagedResult(com_amap_api_services_poisearch_PoiSearch_Query? var0, com_amap_api_services_poisearch_PoiSearch_SearchBound? var1, List<String>? var2, List<com_amap_api_services_core_SuggestionCity>? var3, int? var4, int? var5, List<com_amap_api_services_core_PoiItem>? var6) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.poisearch.PoiResult::createPagedResult([\'var2\':$var2, \'var4\':$var4, \'var5\':$var5])');
@@ -53,7 +53,7 @@ class com_amap_api_services_poisearch_PoiResult extends java_lang_Object  {
   }
   
   
-  Future<int> getPageCount() async {
+  Future<int?> getPageCount() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.poisearch.PoiResult@$refId::getPageCount([])');
@@ -70,7 +70,7 @@ class com_amap_api_services_poisearch_PoiResult extends java_lang_Object  {
   }
   
   
-  Future<com_amap_api_services_poisearch_PoiSearch_Query> getQuery() async {
+  Future<com_amap_api_services_poisearch_PoiSearch_Query?> getQuery() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.poisearch.PoiResult@$refId::getQuery([])');
@@ -87,7 +87,7 @@ class com_amap_api_services_poisearch_PoiResult extends java_lang_Object  {
   }
   
   
-  Future<com_amap_api_services_poisearch_PoiSearch_SearchBound> getBound() async {
+  Future<com_amap_api_services_poisearch_PoiSearch_SearchBound?> getBound() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.poisearch.PoiResult@$refId::getBound([])');
@@ -104,7 +104,7 @@ class com_amap_api_services_poisearch_PoiResult extends java_lang_Object  {
   }
   
   
-  Future<List<com_amap_api_services_core_PoiItem>> getPois() async {
+  Future<List<com_amap_api_services_core_PoiItem>?> getPois() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.poisearch.PoiResult@$refId::getPois([])');
@@ -117,11 +117,11 @@ class com_amap_api_services_poisearch_PoiResult extends java_lang_Object  {
     // handle native call
   
   
-    return (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_PoiItem>(it))?.toList();
+    return (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_PoiItem>(it)!).toList();
   }
   
   
-  Future<List<String>> getSearchSuggestionKeywords() async {
+  Future<List<String>?> getSearchSuggestionKeywords() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.poisearch.PoiResult@$refId::getSearchSuggestionKeywords([])');
@@ -134,11 +134,11 @@ class com_amap_api_services_poisearch_PoiResult extends java_lang_Object  {
     // handle native call
   
   
-    return (__result__ as List)?.cast<String>();
+    return (__result__ as List?)?.cast<String>();
   }
   
   
-  Future<List<com_amap_api_services_core_SuggestionCity>> getSearchSuggestionCitys() async {
+  Future<List<com_amap_api_services_core_SuggestionCity>?> getSearchSuggestionCitys() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.poisearch.PoiResult@$refId::getSearchSuggestionCitys([])');
@@ -151,7 +151,7 @@ class com_amap_api_services_poisearch_PoiResult extends java_lang_Object  {
     // handle native call
   
   
-    return (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_SuggestionCity>(it))?.toList();
+    return (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_SuggestionCity>(it)!).toList();
   }
   
   //endregion
@@ -162,7 +162,7 @@ class com_amap_api_services_poisearch_PoiResult extends java_lang_Object  {
   }
 }
 
-extension com_amap_api_services_poisearch_PoiResult_Batch on List<com_amap_api_services_poisearch_PoiResult> {
+extension com_amap_api_services_poisearch_PoiResult_Batch on List<com_amap_api_services_poisearch_PoiResult?> {
   //region getters
   
   //endregion
@@ -173,7 +173,7 @@ extension com_amap_api_services_poisearch_PoiResult_Batch on List<com_amap_api_s
 
   //region methods
   
-  static Future<List<com_amap_api_services_poisearch_PoiResult>> createPagedResult_batch(List<com_amap_api_services_poisearch_PoiSearch_Query> var0, List<com_amap_api_services_poisearch_PoiSearch_SearchBound> var1, List<List<String>> var2, List<List<com_amap_api_services_core_SuggestionCity>> var3, List<int> var4, List<int> var5, List<List<com_amap_api_services_core_PoiItem>> var6) async {
+  static Future<List<com_amap_api_services_poisearch_PoiResult?>?> createPagedResult_batch(List<com_amap_api_services_poisearch_PoiSearch_Query> var0, List<com_amap_api_services_poisearch_PoiSearch_SearchBound> var1, List<List<String>> var2, List<List<com_amap_api_services_core_SuggestionCity>> var3, List<int> var4, List<int> var5, List<List<com_amap_api_services_core_PoiItem>> var6) async {
     assert(var0.length == var1.length && var1.length == var2.length && var2.length == var3.length && var3.length == var4.length && var4.length == var5.length && var5.length == var6.length);
   
     // invoke native method
@@ -184,7 +184,7 @@ extension com_amap_api_services_poisearch_PoiResult_Batch on List<com_amap_api_s
   }
   
   
-  Future<List<int>> getPageCount_batch() async {
+  Future<List<int?>?> getPageCount_batch() async {
     assert(true);
   
     // invoke native method
@@ -195,7 +195,7 @@ extension com_amap_api_services_poisearch_PoiResult_Batch on List<com_amap_api_s
   }
   
   
-  Future<List<com_amap_api_services_poisearch_PoiSearch_Query>> getQuery_batch() async {
+  Future<List<com_amap_api_services_poisearch_PoiSearch_Query?>?> getQuery_batch() async {
     assert(true);
   
     // invoke native method
@@ -206,7 +206,7 @@ extension com_amap_api_services_poisearch_PoiResult_Batch on List<com_amap_api_s
   }
   
   
-  Future<List<com_amap_api_services_poisearch_PoiSearch_SearchBound>> getBound_batch() async {
+  Future<List<com_amap_api_services_poisearch_PoiSearch_SearchBound?>?> getBound_batch() async {
     assert(true);
   
     // invoke native method
@@ -217,36 +217,36 @@ extension com_amap_api_services_poisearch_PoiResult_Batch on List<com_amap_api_s
   }
   
   
-  Future<List<List<com_amap_api_services_core_PoiItem>>> getPois_batch() async {
+  Future<List<List<com_amap_api_services_core_PoiItem>?>?> getPois_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.poisearch.PoiResult::getPois_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_PoiItem>(it))?.toList()).cast<List<com_amap_api_services_core_PoiItem>>().toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_PoiItem>(it)!).toList()).cast<List<com_amap_api_services_core_PoiItem>>().toList();
   }
   
   
-  Future<List<List<String>>> getSearchSuggestionKeywords_batch() async {
+  Future<List<List<String>?>?> getSearchSuggestionKeywords_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.poisearch.PoiResult::getSearchSuggestionKeywords_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => (__result__ as List)?.cast<String>()).cast<List<String>>().toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List?)?.cast<String>()).cast<List<String>>().toList();
   }
   
   
-  Future<List<List<com_amap_api_services_core_SuggestionCity>>> getSearchSuggestionCitys_batch() async {
+  Future<List<List<com_amap_api_services_core_SuggestionCity>?>?> getSearchSuggestionCitys_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.poisearch.PoiResult::getSearchSuggestionCitys_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_SuggestionCity>(it))?.toList()).cast<List<com_amap_api_services_core_SuggestionCity>>().toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_SuggestionCity>(it)!).toList()).cast<List<com_amap_api_services_core_SuggestionCity>>().toList();
   }
   
   //endregion

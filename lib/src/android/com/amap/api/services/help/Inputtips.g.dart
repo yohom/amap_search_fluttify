@@ -23,12 +23,12 @@ class com_amap_api_services_help_Inputtips extends java_lang_Object  {
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_help_Inputtips> create__android_content_Context__com_amap_api_services_help_InputtipsQuery(android_content_Context var1, com_amap_api_services_help_InputtipsQuery var2) async {
+  static Future<com_amap_api_services_help_Inputtips> create__android_content_Context__com_amap_api_services_help_InputtipsQuery(android_content_Context? var1, com_amap_api_services_help_InputtipsQuery? var2) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_help_Inputtips__android_content_Context__com_amap_api_services_help_InputtipsQuery',
       {"var1": var1, "var2": var2}
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_help_Inputtips>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_help_Inputtips>(__result__)!;
   }
   
   static Future<List<com_amap_api_services_help_Inputtips>> create_batch__android_content_Context__com_amap_api_services_help_InputtipsQuery(List<android_content_Context> var1, List<com_amap_api_services_help_InputtipsQuery> var2) async {
@@ -37,8 +37,8 @@ class com_amap_api_services_help_Inputtips extends java_lang_Object  {
       'ObjectFactory::create_batchcom_amap_api_services_help_Inputtips__android_content_Context__com_amap_api_services_help_InputtipsQuery',
       [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_help_Inputtips>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_help_Inputtips>(it)!)
         .toList();
   }
   
@@ -54,7 +54,7 @@ class com_amap_api_services_help_Inputtips extends java_lang_Object  {
 
   //region methods
   
-  Future<com_amap_api_services_help_InputtipsQuery> getQuery() async {
+  Future<com_amap_api_services_help_InputtipsQuery?> getQuery() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.help.Inputtips@$refId::getQuery([])');
@@ -71,7 +71,7 @@ class com_amap_api_services_help_Inputtips extends java_lang_Object  {
   }
   
   
-  Future<void> setQuery(com_amap_api_services_help_InputtipsQuery var1) async {
+  Future<void> setQuery(com_amap_api_services_help_InputtipsQuery? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.help.Inputtips@$refId::setQuery([])');
@@ -88,7 +88,7 @@ class com_amap_api_services_help_Inputtips extends java_lang_Object  {
   }
   
   
-  Future<void> setInputtipsListener(com_amap_api_services_help_Inputtips_InputtipsListener var1) async {
+  Future<void> setInputtipsListener(com_amap_api_services_help_Inputtips_InputtipsListener? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.help.Inputtips@$refId::setInputtipsListener([])');
@@ -111,14 +111,14 @@ class com_amap_api_services_help_Inputtips extends java_lang_Object  {
                 }
           
                 // handle the native call
-                await var1?.onGetInputtips((args['var1'] as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_help_Tip>(it))?.toList(), args['var2']);
+                await var1?.onGetInputtips((args['var1'] as List).map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_help_Tip>(it)!).toList(), args['var2']);
                 break;
               default:
                 throw MissingPluginException('方法${methodCall.method}未实现');
                 break;
             }
           } catch (e) {
-            debugPrint(e);
+            debugPrint(e.toString());
             rethrow;
           }
         });
@@ -144,7 +144,7 @@ class com_amap_api_services_help_Inputtips extends java_lang_Object  {
   }
   
   
-  Future<List<com_amap_api_services_help_Tip>> requestInputtips() async {
+  Future<List<com_amap_api_services_help_Tip>?> requestInputtips() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.help.Inputtips@$refId::requestInputtips([])');
@@ -157,11 +157,11 @@ class com_amap_api_services_help_Inputtips extends java_lang_Object  {
     // handle native call
   
   
-    return (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_help_Tip>(it))?.toList();
+    return (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_help_Tip>(it)!).toList();
   }
   
   
-  Future<void> requestInputtips__String__String(String var1, String var2) async {
+  Future<void> requestInputtips__String__String(String? var1, String? var2) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.help.Inputtips@$refId::requestInputtips([\'var1\':$var1, \'var2\':$var2])');
@@ -178,7 +178,7 @@ class com_amap_api_services_help_Inputtips extends java_lang_Object  {
   }
   
   
-  Future<void> requestInputtips__String__String__String(String var1, String var2, String var3) async {
+  Future<void> requestInputtips__String__String__String(String? var1, String? var2, String? var3) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.help.Inputtips@$refId::requestInputtips([\'var1\':$var1, \'var2\':$var2, \'var3\':$var3])');
@@ -202,7 +202,7 @@ class com_amap_api_services_help_Inputtips extends java_lang_Object  {
   }
 }
 
-extension com_amap_api_services_help_Inputtips_Batch on List<com_amap_api_services_help_Inputtips> {
+extension com_amap_api_services_help_Inputtips_Batch on List<com_amap_api_services_help_Inputtips?> {
   //region getters
   
   //endregion
@@ -213,7 +213,7 @@ extension com_amap_api_services_help_Inputtips_Batch on List<com_amap_api_servic
 
   //region methods
   
-  Future<List<com_amap_api_services_help_InputtipsQuery>> getQuery_batch() async {
+  Future<List<com_amap_api_services_help_InputtipsQuery?>?> getQuery_batch() async {
     assert(true);
   
     // invoke native method
@@ -224,7 +224,7 @@ extension com_amap_api_services_help_Inputtips_Batch on List<com_amap_api_servic
   }
   
   
-  Future<List<void>> setQuery_batch(List<com_amap_api_services_help_InputtipsQuery> var1) async {
+  Future<List<void>?> setQuery_batch(List<com_amap_api_services_help_InputtipsQuery> var1) async {
     assert(true);
   
     // invoke native method
@@ -235,7 +235,7 @@ extension com_amap_api_services_help_Inputtips_Batch on List<com_amap_api_servic
   }
   
   
-  Future<List<void>> requestInputtipsAsyn_batch() async {
+  Future<List<void>?> requestInputtipsAsyn_batch() async {
     assert(true);
   
     // invoke native method
@@ -246,18 +246,18 @@ extension com_amap_api_services_help_Inputtips_Batch on List<com_amap_api_servic
   }
   
   
-  Future<List<List<com_amap_api_services_help_Tip>>> requestInputtips_batch() async {
+  Future<List<List<com_amap_api_services_help_Tip>?>?> requestInputtips_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.help.Inputtips::requestInputtips_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => (__result__ as List)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_help_Tip>(it))?.toList()).cast<List<com_amap_api_services_help_Tip>>().toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_help_Tip>(it)!).toList()).cast<List<com_amap_api_services_help_Tip>>().toList();
   }
   
   
-  Future<List<void>> requestInputtips__String__String_batch(List<String> var1, List<String> var2) async {
+  Future<List<void>?> requestInputtips__String__String_batch(List<String> var1, List<String> var2) async {
     assert(var1.length == var2.length);
   
     // invoke native method
@@ -268,7 +268,7 @@ extension com_amap_api_services_help_Inputtips_Batch on List<com_amap_api_servic
   }
   
   
-  Future<List<void>> requestInputtips__String__String__String_batch(List<String> var1, List<String> var2, List<String> var3) async {
+  Future<List<void>?> requestInputtips__String__String__String_batch(List<String> var1, List<String> var2, List<String> var3) async {
     assert(var1.length == var2.length && var2.length == var3.length);
   
     // invoke native method

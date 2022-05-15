@@ -23,12 +23,12 @@ class com_amap_api_services_geocoder_RegeocodeQuery extends java_lang_Object  {
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_geocoder_RegeocodeQuery> create__com_amap_api_services_core_LatLonPoint__float__String(com_amap_api_services_core_LatLonPoint var1, double var2, String var3) async {
+  static Future<com_amap_api_services_geocoder_RegeocodeQuery> create__com_amap_api_services_core_LatLonPoint__float__String(com_amap_api_services_core_LatLonPoint? var1, double? var2, String? var3) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_geocoder_RegeocodeQuery__com_amap_api_services_core_LatLonPoint__float__String',
       {"var1": var1, "var2": var2, "var3": var3}
     );
-    return AmapSearchFluttifyAndroidAs<com_amap_api_services_geocoder_RegeocodeQuery>(__result__);
+    return AmapSearchFluttifyAndroidAs<com_amap_api_services_geocoder_RegeocodeQuery>(__result__)!;
   }
   
   static Future<List<com_amap_api_services_geocoder_RegeocodeQuery>> create_batch__com_amap_api_services_core_LatLonPoint__float__String(List<com_amap_api_services_core_LatLonPoint> var1, List<double> var2, List<String> var3) async {
@@ -37,8 +37,8 @@ class com_amap_api_services_geocoder_RegeocodeQuery extends java_lang_Object  {
       'ObjectFactory::create_batchcom_amap_api_services_geocoder_RegeocodeQuery__com_amap_api_services_core_LatLonPoint__float__String',
       [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__]}]
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_geocoder_RegeocodeQuery>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_geocoder_RegeocodeQuery>(it)!)
         .toList();
   }
   
@@ -54,7 +54,7 @@ class com_amap_api_services_geocoder_RegeocodeQuery extends java_lang_Object  {
 
   //region methods
   
-  Future<com_amap_api_services_core_LatLonPoint> getPoint() async {
+  Future<com_amap_api_services_core_LatLonPoint?> getPoint() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.RegeocodeQuery@$refId::getPoint([])');
@@ -71,7 +71,7 @@ class com_amap_api_services_geocoder_RegeocodeQuery extends java_lang_Object  {
   }
   
   
-  Future<void> setPoint(com_amap_api_services_core_LatLonPoint var1) async {
+  Future<void> setPoint(com_amap_api_services_core_LatLonPoint? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.RegeocodeQuery@$refId::setPoint([])');
@@ -88,7 +88,7 @@ class com_amap_api_services_geocoder_RegeocodeQuery extends java_lang_Object  {
   }
   
   
-  Future<double> getRadius() async {
+  Future<double?> getRadius() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.RegeocodeQuery@$refId::getRadius([])');
@@ -105,7 +105,7 @@ class com_amap_api_services_geocoder_RegeocodeQuery extends java_lang_Object  {
   }
   
   
-  Future<void> setRadius(double var1) async {
+  Future<void> setRadius(double? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.RegeocodeQuery@$refId::setRadius([\'var1\':$var1])');
@@ -122,7 +122,7 @@ class com_amap_api_services_geocoder_RegeocodeQuery extends java_lang_Object  {
   }
   
   
-  Future<String> getLatLonType() async {
+  Future<String?> getLatLonType() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.RegeocodeQuery@$refId::getLatLonType([])');
@@ -139,7 +139,7 @@ class com_amap_api_services_geocoder_RegeocodeQuery extends java_lang_Object  {
   }
   
   
-  Future<void> setLatLonType(String var1) async {
+  Future<void> setLatLonType(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.RegeocodeQuery@$refId::setLatLonType([\'var1\':$var1])');
@@ -156,7 +156,7 @@ class com_amap_api_services_geocoder_RegeocodeQuery extends java_lang_Object  {
   }
   
   
-  Future<String> getPoiType() async {
+  Future<String?> getPoiType() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.RegeocodeQuery@$refId::getPoiType([])');
@@ -173,7 +173,7 @@ class com_amap_api_services_geocoder_RegeocodeQuery extends java_lang_Object  {
   }
   
   
-  Future<void> setPoiType(String var1) async {
+  Future<void> setPoiType(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.RegeocodeQuery@$refId::setPoiType([\'var1\':$var1])');
@@ -190,7 +190,7 @@ class com_amap_api_services_geocoder_RegeocodeQuery extends java_lang_Object  {
   }
   
   
-  Future<String> getMode() async {
+  Future<String?> getMode() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.RegeocodeQuery@$refId::getMode([])');
@@ -207,7 +207,7 @@ class com_amap_api_services_geocoder_RegeocodeQuery extends java_lang_Object  {
   }
   
   
-  Future<void> setMode(String var1) async {
+  Future<void> setMode(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.RegeocodeQuery@$refId::setMode([\'var1\':$var1])');
@@ -224,7 +224,7 @@ class com_amap_api_services_geocoder_RegeocodeQuery extends java_lang_Object  {
   }
   
   
-  Future<String> getExtensions() async {
+  Future<String?> getExtensions() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.RegeocodeQuery@$refId::getExtensions([])');
@@ -241,7 +241,7 @@ class com_amap_api_services_geocoder_RegeocodeQuery extends java_lang_Object  {
   }
   
   
-  Future<void> setExtensions(String var1) async {
+  Future<void> setExtensions(String? var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.RegeocodeQuery@$refId::setExtensions([\'var1\':$var1])');
@@ -265,7 +265,7 @@ class com_amap_api_services_geocoder_RegeocodeQuery extends java_lang_Object  {
   }
 }
 
-extension com_amap_api_services_geocoder_RegeocodeQuery_Batch on List<com_amap_api_services_geocoder_RegeocodeQuery> {
+extension com_amap_api_services_geocoder_RegeocodeQuery_Batch on List<com_amap_api_services_geocoder_RegeocodeQuery?> {
   //region getters
   
   //endregion
@@ -276,7 +276,7 @@ extension com_amap_api_services_geocoder_RegeocodeQuery_Batch on List<com_amap_a
 
   //region methods
   
-  Future<List<com_amap_api_services_core_LatLonPoint>> getPoint_batch() async {
+  Future<List<com_amap_api_services_core_LatLonPoint?>?> getPoint_batch() async {
     assert(true);
   
     // invoke native method
@@ -287,7 +287,7 @@ extension com_amap_api_services_geocoder_RegeocodeQuery_Batch on List<com_amap_a
   }
   
   
-  Future<List<void>> setPoint_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
+  Future<List<void>?> setPoint_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
     assert(true);
   
     // invoke native method
@@ -298,7 +298,7 @@ extension com_amap_api_services_geocoder_RegeocodeQuery_Batch on List<com_amap_a
   }
   
   
-  Future<List<double>> getRadius_batch() async {
+  Future<List<double?>?> getRadius_batch() async {
     assert(true);
   
     // invoke native method
@@ -309,7 +309,7 @@ extension com_amap_api_services_geocoder_RegeocodeQuery_Batch on List<com_amap_a
   }
   
   
-  Future<List<void>> setRadius_batch(List<double> var1) async {
+  Future<List<void>?> setRadius_batch(List<double> var1) async {
     assert(true);
   
     // invoke native method
@@ -320,7 +320,7 @@ extension com_amap_api_services_geocoder_RegeocodeQuery_Batch on List<com_amap_a
   }
   
   
-  Future<List<String>> getLatLonType_batch() async {
+  Future<List<String?>?> getLatLonType_batch() async {
     assert(true);
   
     // invoke native method
@@ -331,7 +331,7 @@ extension com_amap_api_services_geocoder_RegeocodeQuery_Batch on List<com_amap_a
   }
   
   
-  Future<List<void>> setLatLonType_batch(List<String> var1) async {
+  Future<List<void>?> setLatLonType_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -342,7 +342,7 @@ extension com_amap_api_services_geocoder_RegeocodeQuery_Batch on List<com_amap_a
   }
   
   
-  Future<List<String>> getPoiType_batch() async {
+  Future<List<String?>?> getPoiType_batch() async {
     assert(true);
   
     // invoke native method
@@ -353,7 +353,7 @@ extension com_amap_api_services_geocoder_RegeocodeQuery_Batch on List<com_amap_a
   }
   
   
-  Future<List<void>> setPoiType_batch(List<String> var1) async {
+  Future<List<void>?> setPoiType_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -364,7 +364,7 @@ extension com_amap_api_services_geocoder_RegeocodeQuery_Batch on List<com_amap_a
   }
   
   
-  Future<List<String>> getMode_batch() async {
+  Future<List<String?>?> getMode_batch() async {
     assert(true);
   
     // invoke native method
@@ -375,7 +375,7 @@ extension com_amap_api_services_geocoder_RegeocodeQuery_Batch on List<com_amap_a
   }
   
   
-  Future<List<void>> setMode_batch(List<String> var1) async {
+  Future<List<void>?> setMode_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -386,7 +386,7 @@ extension com_amap_api_services_geocoder_RegeocodeQuery_Batch on List<com_amap_a
   }
   
   
-  Future<List<String>> getExtensions_batch() async {
+  Future<List<String?>?> getExtensions_batch() async {
     assert(true);
   
     // invoke native method
@@ -397,7 +397,7 @@ extension com_amap_api_services_geocoder_RegeocodeQuery_Batch on List<com_amap_a
   }
   
   
-  Future<List<void>> setExtensions_batch(List<String> var1) async {
+  Future<List<void>?> setExtensions_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method

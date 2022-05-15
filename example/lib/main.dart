@@ -30,13 +30,16 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return ScopedReleasePool(child: MaterialApp(home: Home()));
+    return ScopedReleasePool(
+      tag: 'amap_search_demo',
+      child: MaterialApp(home: Home()),
+    );
   }
 }
 
 class Home extends StatelessWidget {
   const Home({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override

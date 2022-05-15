@@ -28,7 +28,7 @@ class AMapWeatherSearchRequest extends AMapSearchObject with NSCoding, NSCopying
       'ObjectFactory::createAMapWeatherSearchRequest',
       {'init': init}
     );
-    return AmapSearchFluttifyIOSAs<AMapWeatherSearchRequest>(__result__);
+    return AmapSearchFluttifyIOSAs<AMapWeatherSearchRequest>(__result__)!;
   }
   
   static Future<List<AMapWeatherSearchRequest>> create_batch__(int length, { bool init = true /* ios only */ }) async {
@@ -37,20 +37,20 @@ class AMapWeatherSearchRequest extends AMapSearchObject with NSCoding, NSCopying
       'ObjectFactory::create_batchAMapWeatherSearchRequest',
       {'length': length, 'init': init}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyIOSAs<AMapWeatherSearchRequest>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyIOSAs<AMapWeatherSearchRequest>(it)!)
         .toList();
   }
   
   //endregion
 
   //region getters
-  Future<String> get_city() async {
+  Future<String?> get_city() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapWeatherSearchRequest::get_city", {'__this__': this});
     return __result__;
   }
   
-  Future<AMapWeatherType> get_type() async {
+  Future<AMapWeatherType?> get_type() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapWeatherSearchRequest::get_type", {'__this__': this});
     return (__result__ as int).toAMapWeatherType();
   }
@@ -65,7 +65,7 @@ class AMapWeatherSearchRequest extends AMapSearchObject with NSCoding, NSCopying
   }
   
   Future<void> set_type(AMapWeatherType type) async {
-    await kAmapSearchFluttifyChannel.invokeMethod('AMapWeatherSearchRequest::set_type', <String, dynamic>{'__this__': this, "type": type.toValue()});
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapWeatherSearchRequest::set_type', <String, dynamic>{'__this__': this, "type": type?.toValue()});
   
   
   }
@@ -82,16 +82,16 @@ class AMapWeatherSearchRequest extends AMapSearchObject with NSCoding, NSCopying
   }
 }
 
-extension AMapWeatherSearchRequest_Batch on List<AMapWeatherSearchRequest> {
+extension AMapWeatherSearchRequest_Batch on List<AMapWeatherSearchRequest?> {
   //region getters
-  Future<List<String>> get_city_batch() async {
+  Future<List<String?>?> get_city_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapWeatherSearchRequest::get_city_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<AMapWeatherType>> get_type_batch() async {
+  Future<List<AMapWeatherType?>?> get_type_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapWeatherSearchRequest::get_type_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => (__result__ as int).toAMapWeatherType())?.cast<AMapWeatherType>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => (__result__ as int).toAMapWeatherType()).cast<AMapWeatherType?>().toList();
   }
   
   //endregion

@@ -28,7 +28,7 @@ class AMapCloudPOIPolygonSearchRequest extends AMapCloudSearchBaseRequest with N
       'ObjectFactory::createAMapCloudPOIPolygonSearchRequest',
       {'init': init}
     );
-    return AmapSearchFluttifyIOSAs<AMapCloudPOIPolygonSearchRequest>(__result__);
+    return AmapSearchFluttifyIOSAs<AMapCloudPOIPolygonSearchRequest>(__result__)!;
   }
   
   static Future<List<AMapCloudPOIPolygonSearchRequest>> create_batch__(int length, { bool init = true /* ios only */ }) async {
@@ -37,20 +37,20 @@ class AMapCloudPOIPolygonSearchRequest extends AMapCloudSearchBaseRequest with N
       'ObjectFactory::create_batchAMapCloudPOIPolygonSearchRequest',
       {'length': length, 'init': init}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyIOSAs<AMapCloudPOIPolygonSearchRequest>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyIOSAs<AMapCloudPOIPolygonSearchRequest>(it)!)
         .toList();
   }
   
   //endregion
 
   //region getters
-  Future<AMapGeoPolygon> get_polygon() async {
+  Future<AMapGeoPolygon?> get_polygon() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudPOIPolygonSearchRequest::get_polygon", {'__this__': this});
     return AmapSearchFluttifyIOSAs<AMapGeoPolygon>(__result__);
   }
   
-  Future<String> get_keywords() async {
+  Future<String?> get_keywords() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudPOIPolygonSearchRequest::get_keywords", {'__this__': this});
     return __result__;
   }
@@ -82,16 +82,16 @@ class AMapCloudPOIPolygonSearchRequest extends AMapCloudSearchBaseRequest with N
   }
 }
 
-extension AMapCloudPOIPolygonSearchRequest_Batch on List<AMapCloudPOIPolygonSearchRequest> {
+extension AMapCloudPOIPolygonSearchRequest_Batch on List<AMapCloudPOIPolygonSearchRequest?> {
   //region getters
-  Future<List<AMapGeoPolygon>> get_polygon_batch() async {
+  Future<List<AMapGeoPolygon?>?> get_polygon_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudPOIPolygonSearchRequest::get_polygon_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => AmapSearchFluttifyIOSAs<AMapGeoPolygon>(__result__))?.cast<AMapGeoPolygon>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => AmapSearchFluttifyIOSAs<AMapGeoPolygon>(__result__)).cast<AMapGeoPolygon?>().toList();
   }
   
-  Future<List<String>> get_keywords_batch() async {
+  Future<List<String?>?> get_keywords_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudPOIPolygonSearchRequest::get_keywords_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
   }
   
   //endregion

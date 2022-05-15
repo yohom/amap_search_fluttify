@@ -28,7 +28,7 @@ class AMapReGeocodeSearchRequest extends AMapSearchObject with NSCoding, NSCopyi
       'ObjectFactory::createAMapReGeocodeSearchRequest',
       {'init': init}
     );
-    return AmapSearchFluttifyIOSAs<AMapReGeocodeSearchRequest>(__result__);
+    return AmapSearchFluttifyIOSAs<AMapReGeocodeSearchRequest>(__result__)!;
   }
   
   static Future<List<AMapReGeocodeSearchRequest>> create_batch__(int length, { bool init = true /* ios only */ }) async {
@@ -37,35 +37,35 @@ class AMapReGeocodeSearchRequest extends AMapSearchObject with NSCoding, NSCopyi
       'ObjectFactory::create_batchAMapReGeocodeSearchRequest',
       {'length': length, 'init': init}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyIOSAs<AMapReGeocodeSearchRequest>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyIOSAs<AMapReGeocodeSearchRequest>(it)!)
         .toList();
   }
   
   //endregion
 
   //region getters
-  Future<bool> get_requireExtension() async {
+  Future<bool?> get_requireExtension() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapReGeocodeSearchRequest::get_requireExtension", {'__this__': this});
     return __result__;
   }
   
-  Future<AMapGeoPoint> get_location() async {
+  Future<AMapGeoPoint?> get_location() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapReGeocodeSearchRequest::get_location", {'__this__': this});
     return AmapSearchFluttifyIOSAs<AMapGeoPoint>(__result__);
   }
   
-  Future<int> get_radius() async {
+  Future<int?> get_radius() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapReGeocodeSearchRequest::get_radius", {'__this__': this});
     return __result__;
   }
   
-  Future<String> get_poitype() async {
+  Future<String?> get_poitype() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapReGeocodeSearchRequest::get_poitype", {'__this__': this});
     return __result__;
   }
   
-  Future<String> get_mode() async {
+  Future<String?> get_mode() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapReGeocodeSearchRequest::get_mode", {'__this__': this});
     return __result__;
   }
@@ -115,31 +115,31 @@ class AMapReGeocodeSearchRequest extends AMapSearchObject with NSCoding, NSCopyi
   }
 }
 
-extension AMapReGeocodeSearchRequest_Batch on List<AMapReGeocodeSearchRequest> {
+extension AMapReGeocodeSearchRequest_Batch on List<AMapReGeocodeSearchRequest?> {
   //region getters
-  Future<List<bool>> get_requireExtension_batch() async {
+  Future<List<bool?>?> get_requireExtension_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapReGeocodeSearchRequest::get_requireExtension_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<bool>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<bool?>().toList();
   }
   
-  Future<List<AMapGeoPoint>> get_location_batch() async {
+  Future<List<AMapGeoPoint?>?> get_location_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapReGeocodeSearchRequest::get_location_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => AmapSearchFluttifyIOSAs<AMapGeoPoint>(__result__))?.cast<AMapGeoPoint>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => AmapSearchFluttifyIOSAs<AMapGeoPoint>(__result__)).cast<AMapGeoPoint?>().toList();
   }
   
-  Future<List<int>> get_radius_batch() async {
+  Future<List<int?>?> get_radius_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapReGeocodeSearchRequest::get_radius_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<int>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<int?>().toList();
   }
   
-  Future<List<String>> get_poitype_batch() async {
+  Future<List<String?>?> get_poitype_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapReGeocodeSearchRequest::get_poitype_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<String>> get_mode_batch() async {
+  Future<List<String?>?> get_mode_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapReGeocodeSearchRequest::get_mode_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List)?.map((__result__) => __result__)?.cast<String>()?.toList();
+    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
   }
   
   //endregion

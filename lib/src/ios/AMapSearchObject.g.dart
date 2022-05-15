@@ -28,7 +28,7 @@ class AMapSearchObject extends NSObject with NSCoding, NSCopying {
       'ObjectFactory::createAMapSearchObject',
       {'init': init}
     );
-    return AmapSearchFluttifyIOSAs<AMapSearchObject>(__result__);
+    return AmapSearchFluttifyIOSAs<AMapSearchObject>(__result__)!;
   }
   
   static Future<List<AMapSearchObject>> create_batch__(int length, { bool init = true /* ios only */ }) async {
@@ -37,8 +37,8 @@ class AMapSearchObject extends NSObject with NSCoding, NSCopying {
       'ObjectFactory::create_batchAMapSearchObject',
       {'length': length, 'init': init}
     );
-    return __result_batch__
-        .map((it) => AmapSearchFluttifyIOSAs<AMapSearchObject>(it))
+    return __result_batch__!
+        .map((it) => AmapSearchFluttifyIOSAs<AMapSearchObject>(it)!)
         .toList();
   }
   
@@ -54,7 +54,7 @@ class AMapSearchObject extends NSObject with NSCoding, NSCopying {
 
   //region methods
   
-  Future<String> formattedDescription() async {
+  Future<String?> formattedDescription() async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: AMapSearchObject@$refId::formattedDescription([])');
@@ -78,7 +78,7 @@ class AMapSearchObject extends NSObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapSearchObject_Batch on List<AMapSearchObject> {
+extension AMapSearchObject_Batch on List<AMapSearchObject?> {
   //region getters
   
   //endregion
@@ -89,7 +89,7 @@ extension AMapSearchObject_Batch on List<AMapSearchObject> {
 
   //region methods
   
-  Future<List<String>> formattedDescription_batch() async {
+  Future<List<String?>?> formattedDescription_batch() async {
     assert(true);
   
     // invoke native method
