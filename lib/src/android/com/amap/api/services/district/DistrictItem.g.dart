@@ -77,6 +77,23 @@ class com_amap_api_services_district_DistrictItem extends java_lang_Object with 
 
   //region methods
   
+  Future<void> setDistrictBoundary(List<String> var1) async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: com.amap.api.services.district.DistrictItem@$refId::setDistrictBoundary([\'var1\':$var1])');
+    }
+  
+    // invoke native method
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.district.DistrictItem::setDistrictBoundary', {"var1": Array.ofList(var1), "__this__": this});
+  
+  
+    // handle native call
+  
+  
+    return __result__;
+  }
+  
+  
   Future<List<String>?> districtBoundary() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -90,7 +107,7 @@ class com_amap_api_services_district_DistrictItem extends java_lang_Object with 
     // handle native call
   
   
-    return (__result__ as List?)?.cast<String[>();
+    return (__result__ as List?)?.cast<String>();
   }
   
   
@@ -321,6 +338,17 @@ extension com_amap_api_services_district_DistrictItem_Batch on List<com_amap_api
 
   //region methods
   
+  Future<List<void>> setDistrictBoundary_batch(List<List<String>> var1) async {
+    assert(true);
+  
+    // invoke native method
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.district.DistrictItem::setDistrictBoundary_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
+  
+  
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
+  }
+  
+  
   Future<List<List<String>?>> districtBoundary_batch() async {
     assert(true);
   
@@ -328,7 +356,7 @@ extension com_amap_api_services_district_DistrictItem_Batch on List<com_amap_api
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.district.DistrictItem::districtBoundary_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => (__result__ as List?)?.cast<String[>()).cast<List<String>?>().toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List?)?.cast<String>()).cast<List<String>?>().toList();
   }
   
   

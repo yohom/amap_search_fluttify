@@ -11,7 +11,7 @@ enum AMapDrivingRouteShowFieldType {
   AMapDrivingRouteShowFieldTypeCities /* 1<<4 */,
   AMapDrivingRouteShowFieldTypePolyline /* 1<<5 */,
   AMapDrivingRouteShowFieldTypeNewEnergy /* 1<<6 */,
-  AMapDrivingRouteShowFieldTypeAll /* ~0U */
+  AMapDrivingRouteShowFieldTypeAll /* ~0 */
 }
 
 extension AMapDrivingRouteShowFieldTypeToX on AMapDrivingRouteShowFieldType {
@@ -24,7 +24,7 @@ extension AMapDrivingRouteShowFieldTypeToX on AMapDrivingRouteShowFieldType {
       case AMapDrivingRouteShowFieldType.AMapDrivingRouteShowFieldTypeCities: return 1<<4;
       case AMapDrivingRouteShowFieldType.AMapDrivingRouteShowFieldTypePolyline: return 1<<5;
       case AMapDrivingRouteShowFieldType.AMapDrivingRouteShowFieldTypeNewEnergy: return 1<<6;
-      case AMapDrivingRouteShowFieldType.AMapDrivingRouteShowFieldTypeAll: return ~0U;
+      case AMapDrivingRouteShowFieldType.AMapDrivingRouteShowFieldTypeAll: return ~0;
       default: return 0;
     }
   }
@@ -40,7 +40,7 @@ extension AMapDrivingRouteShowFieldTypeFromX on int {
       case 1<<4: return AMapDrivingRouteShowFieldType.AMapDrivingRouteShowFieldTypeCities;
       case 1<<5: return AMapDrivingRouteShowFieldType.AMapDrivingRouteShowFieldTypePolyline;
       case 1<<6: return AMapDrivingRouteShowFieldType.AMapDrivingRouteShowFieldTypeNewEnergy;
-      case ~0U: return AMapDrivingRouteShowFieldType.AMapDrivingRouteShowFieldTypeAll;
+      case ~0: return AMapDrivingRouteShowFieldType.AMapDrivingRouteShowFieldTypeAll;
       default: return AMapDrivingRouteShowFieldType.values[this + 1<<0];
     }
   }
