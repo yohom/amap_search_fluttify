@@ -12,11 +12,90 @@ import 'package:flutter/services.dart';
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
 
-
+class _com_amap_api_services_share_ShareSearch_OnShareSearchListener_SUB extends java_lang_Object with com_amap_api_services_share_ShareSearch_OnShareSearchListener {}
 
 mixin com_amap_api_services_share_ShareSearch_OnShareSearchListener on java_lang_Object {
   
 
+  static com_amap_api_services_share_ShareSearch_OnShareSearchListener subInstance() => _com_amap_api_services_share_ShareSearch_OnShareSearchListener_SUB();
+
+  static Future<com_amap_api_services_share_ShareSearch_OnShareSearchListener> anonymous__({void Function(String? var1, int? var2)? onPoiShareUrlSearched, void Function(String? var1, int? var2)? onLocationShareUrlSearched, void Function(String? var1, int? var2)? onNaviShareUrlSearched, void Function(String? var1, int? var2)? onBusRouteShareUrlSearched, void Function(String? var1, int? var2)? onWalkRouteShareUrlSearched, void Function(String? var1, int? var2)? onDrivingRouteShareUrlSearched}) async {
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.share.ShareSearch.OnShareSearchListener::createAnonymous__');
+  
+    final __object__ = AmapSearchFluttifyAndroidAs<com_amap_api_services_share_ShareSearch_OnShareSearchListener>(__result__)!;
+  
+    // handle callback
+    MethodChannel('com.amap.api.services.share.ShareSearch.OnShareSearchListener::Callback@${__object__.refId}', kAmapSearchFluttifyMethodCodec)
+        .setMethodCallHandler((methodCall) async {
+          try {
+            final args = methodCall.arguments as Map;
+            switch (methodCall.method) {
+              case 'Callback::onPoiShareUrlSearched::onPoiShareUrlSearched':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onPoiShareUrlSearched?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
+                }
+            
+                // handle the native call
+                onPoiShareUrlSearched?.call(args['var1'], args['var2']);
+                break;
+              case 'Callback::onLocationShareUrlSearched::onLocationShareUrlSearched':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onLocationShareUrlSearched?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
+                }
+            
+                // handle the native call
+                onLocationShareUrlSearched?.call(args['var1'], args['var2']);
+                break;
+              case 'Callback::onNaviShareUrlSearched::onNaviShareUrlSearched':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onNaviShareUrlSearched?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
+                }
+            
+                // handle the native call
+                onNaviShareUrlSearched?.call(args['var1'], args['var2']);
+                break;
+              case 'Callback::onBusRouteShareUrlSearched::onBusRouteShareUrlSearched':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onBusRouteShareUrlSearched?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
+                }
+            
+                // handle the native call
+                onBusRouteShareUrlSearched?.call(args['var1'], args['var2']);
+                break;
+              case 'Callback::onWalkRouteShareUrlSearched::onWalkRouteShareUrlSearched':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onWalkRouteShareUrlSearched?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
+                }
+            
+                // handle the native call
+                onWalkRouteShareUrlSearched?.call(args['var1'], args['var2']);
+                break;
+              case 'Callback::onDrivingRouteShareUrlSearched::onDrivingRouteShareUrlSearched':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onDrivingRouteShareUrlSearched?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
+                }
+            
+                // handle the native call
+                onDrivingRouteShareUrlSearched?.call(args['var1'], args['var2']);
+                break;
+              default:
+                throw MissingPluginException('方法${methodCall.method}未实现');
+                break;
+            }
+          } catch (e) {
+            debugPrint(e.toString());
+            rethrow;
+          }
+        });
+  
+    return __object__;
+  }
   
 
   @override

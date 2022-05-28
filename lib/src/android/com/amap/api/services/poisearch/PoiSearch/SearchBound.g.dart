@@ -26,7 +26,7 @@ class com_amap_api_services_poisearch_PoiSearch_SearchBound extends java_lang_Ob
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_poisearch_PoiSearch_SearchBound> create__com_amap_api_services_core_LatLonPoint__int(com_amap_api_services_core_LatLonPoint? var1, int? var2) async {
+  static Future<com_amap_api_services_poisearch_PoiSearch_SearchBound> create__com_amap_api_services_core_LatLonPoint__int(com_amap_api_services_core_LatLonPoint var1, int var2) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint__int',
       {"var1": var1, "var2": var2}
@@ -34,7 +34,7 @@ class com_amap_api_services_poisearch_PoiSearch_SearchBound extends java_lang_Ob
     return AmapSearchFluttifyAndroidAs<com_amap_api_services_poisearch_PoiSearch_SearchBound>(__result__)!;
   }
   
-  static Future<com_amap_api_services_poisearch_PoiSearch_SearchBound> create__com_amap_api_services_core_LatLonPoint__int__boolean(com_amap_api_services_core_LatLonPoint? var1, int? var2, bool? var3) async {
+  static Future<com_amap_api_services_poisearch_PoiSearch_SearchBound> create__com_amap_api_services_core_LatLonPoint__int__boolean(com_amap_api_services_core_LatLonPoint var1, int var2, bool var3) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint__int__boolean',
       {"var1": var1, "var2": var2, "var3": var3}
@@ -42,7 +42,7 @@ class com_amap_api_services_poisearch_PoiSearch_SearchBound extends java_lang_Ob
     return AmapSearchFluttifyAndroidAs<com_amap_api_services_poisearch_PoiSearch_SearchBound>(__result__)!;
   }
   
-  static Future<com_amap_api_services_poisearch_PoiSearch_SearchBound> create__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint(com_amap_api_services_core_LatLonPoint? var1, com_amap_api_services_core_LatLonPoint? var2) async {
+  static Future<com_amap_api_services_poisearch_PoiSearch_SearchBound> create__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint(com_amap_api_services_core_LatLonPoint var1, com_amap_api_services_core_LatLonPoint var2) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint',
       {"var1": var1, "var2": var2}
@@ -50,7 +50,7 @@ class com_amap_api_services_poisearch_PoiSearch_SearchBound extends java_lang_Ob
     return AmapSearchFluttifyAndroidAs<com_amap_api_services_poisearch_PoiSearch_SearchBound>(__result__)!;
   }
   
-  static Future<com_amap_api_services_poisearch_PoiSearch_SearchBound> create__List_java_util_List_com_amap_api_services_core_LatLonPoint__(List<com_amap_api_services_core_LatLonPoint>? var1) async {
+  static Future<com_amap_api_services_poisearch_PoiSearch_SearchBound> create__List_java_util_List_com_amap_api_services_core_LatLonPoint__(List<com_amap_api_services_core_LatLonPoint> var1) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch_SearchBound__java_util_List_com_amap_api_services_core_LatLonPoint_',
       {"var1": var1}
@@ -64,9 +64,11 @@ class com_amap_api_services_poisearch_PoiSearch_SearchBound extends java_lang_Ob
       'ObjectFactory::create_batchcom_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint__int',
       [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_poisearch_PoiSearch_SearchBound>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_poisearch_PoiSearch_SearchBound>(it))
+        .where((element) => element !=null)
+        .cast<com_amap_api_services_poisearch_PoiSearch_SearchBound>()
+        .toList() ?? <com_amap_api_services_poisearch_PoiSearch_SearchBound>[];
   }
   
   static Future<List<com_amap_api_services_poisearch_PoiSearch_SearchBound>> create_batch__com_amap_api_services_core_LatLonPoint__int__boolean(List<com_amap_api_services_core_LatLonPoint> var1, List<int> var2, List<bool> var3) async {
@@ -75,9 +77,11 @@ class com_amap_api_services_poisearch_PoiSearch_SearchBound extends java_lang_Ob
       'ObjectFactory::create_batchcom_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint__int__boolean',
       [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__]}]
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_poisearch_PoiSearch_SearchBound>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_poisearch_PoiSearch_SearchBound>(it))
+        .where((element) => element !=null)
+        .cast<com_amap_api_services_poisearch_PoiSearch_SearchBound>()
+        .toList() ?? <com_amap_api_services_poisearch_PoiSearch_SearchBound>[];
   }
   
   static Future<List<com_amap_api_services_poisearch_PoiSearch_SearchBound>> create_batch__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint(List<com_amap_api_services_core_LatLonPoint> var1, List<com_amap_api_services_core_LatLonPoint> var2) async {
@@ -86,9 +90,11 @@ class com_amap_api_services_poisearch_PoiSearch_SearchBound extends java_lang_Ob
       'ObjectFactory::create_batchcom_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint',
       [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_poisearch_PoiSearch_SearchBound>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_poisearch_PoiSearch_SearchBound>(it))
+        .where((element) => element !=null)
+        .cast<com_amap_api_services_poisearch_PoiSearch_SearchBound>()
+        .toList() ?? <com_amap_api_services_poisearch_PoiSearch_SearchBound>[];
   }
   
   static Future<List<com_amap_api_services_poisearch_PoiSearch_SearchBound>> create_batch__List_java_util_List_com_amap_api_services_core_LatLonPoint__(List<List<com_amap_api_services_core_LatLonPoint>> var1) async {
@@ -97,9 +103,11 @@ class com_amap_api_services_poisearch_PoiSearch_SearchBound extends java_lang_Ob
       'ObjectFactory::create_batchcom_amap_api_services_poisearch_PoiSearch_SearchBound__java_util_List_com_amap_api_services_core_LatLonPoint_',
       [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_poisearch_PoiSearch_SearchBound>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_poisearch_PoiSearch_SearchBound>(it))
+        .where((element) => element !=null)
+        .cast<com_amap_api_services_poisearch_PoiSearch_SearchBound>()
+        .toList() ?? <com_amap_api_services_poisearch_PoiSearch_SearchBound>[];
   }
   
   //endregion
@@ -229,7 +237,7 @@ class com_amap_api_services_poisearch_PoiSearch_SearchBound extends java_lang_Ob
     // handle native call
   
   
-    return (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(it)!).toList();
+    return (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(it)).where((e) => e != null).cast<com_amap_api_services_core_LatLonPoint>().toList();
   }
   
   
@@ -257,7 +265,12 @@ class com_amap_api_services_poisearch_PoiSearch_SearchBound extends java_lang_Ob
   }
 }
 
-extension com_amap_api_services_poisearch_PoiSearch_SearchBound_Batch on List<com_amap_api_services_poisearch_PoiSearch_SearchBound?> {
+extension com_amap_api_services_poisearch_PoiSearch_SearchBound_Batch on List<com_amap_api_services_poisearch_PoiSearch_SearchBound> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first.refId;
+  }
+
   //region getters
   
   //endregion
@@ -268,91 +281,91 @@ extension com_amap_api_services_poisearch_PoiSearch_SearchBound_Batch on List<co
 
   //region methods
   
-  Future<List<com_amap_api_services_core_LatLonPoint?>?> getLowerLeft_batch() async {
+  Future<List<com_amap_api_services_core_LatLonPoint?>> getLowerLeft_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.poisearch.PoiSearch.SearchBound::getLowerLeft_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(__result__)).cast<com_amap_api_services_core_LatLonPoint>().toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(__result__)).cast<com_amap_api_services_core_LatLonPoint?>().toList();
   }
   
   
-  Future<List<com_amap_api_services_core_LatLonPoint?>?> getUpperRight_batch() async {
+  Future<List<com_amap_api_services_core_LatLonPoint?>> getUpperRight_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.poisearch.PoiSearch.SearchBound::getUpperRight_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(__result__)).cast<com_amap_api_services_core_LatLonPoint>().toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(__result__)).cast<com_amap_api_services_core_LatLonPoint?>().toList();
   }
   
   
-  Future<List<com_amap_api_services_core_LatLonPoint?>?> getCenter_batch() async {
+  Future<List<com_amap_api_services_core_LatLonPoint?>> getCenter_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.poisearch.PoiSearch.SearchBound::getCenter_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(__result__)).cast<com_amap_api_services_core_LatLonPoint>().toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(__result__)).cast<com_amap_api_services_core_LatLonPoint?>().toList();
   }
   
   
-  Future<List<int?>?> getRange_batch() async {
+  Future<List<int?>> getRange_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.poisearch.PoiSearch.SearchBound::getRange_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<int>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
   }
   
   
-  Future<List<String?>?> getShape_batch() async {
+  Future<List<String?>> getShape_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.poisearch.PoiSearch.SearchBound::getShape_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   
-  Future<List<bool?>?> isDistanceSort_batch() async {
+  Future<List<bool?>> isDistanceSort_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.poisearch.PoiSearch.SearchBound::isDistanceSort_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<bool>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<bool?>().toList();
   }
   
   
-  Future<List<List<com_amap_api_services_core_LatLonPoint>?>?> getPolyGonList_batch() async {
+  Future<List<List<com_amap_api_services_core_LatLonPoint>?>> getPolyGonList_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.poisearch.PoiSearch.SearchBound::getPolyGonList_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(it)!).toList()).cast<List<com_amap_api_services_core_LatLonPoint>>().toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(it)).where((e) => e != null).cast<com_amap_api_services_core_LatLonPoint>().toList()).cast<List<com_amap_api_services_core_LatLonPoint>?>().toList();
   }
   
   
-  Future<List<com_amap_api_services_poisearch_PoiSearch_SearchBound?>?> clone_batch() async {
+  Future<List<com_amap_api_services_poisearch_PoiSearch_SearchBound?>> clone_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.poisearch.PoiSearch.SearchBound::clone_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_poisearch_PoiSearch_SearchBound>(__result__)).cast<com_amap_api_services_poisearch_PoiSearch_SearchBound>().toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_poisearch_PoiSearch_SearchBound>(__result__)).cast<com_amap_api_services_poisearch_PoiSearch_SearchBound?>().toList();
   }
   
   //endregion

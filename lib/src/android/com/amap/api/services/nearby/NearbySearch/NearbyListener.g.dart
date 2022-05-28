@@ -12,11 +12,63 @@ import 'package:flutter/services.dart';
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
 
-
+class _com_amap_api_services_nearby_NearbySearch_NearbyListener_SUB extends java_lang_Object with com_amap_api_services_nearby_NearbySearch_NearbyListener {}
 
 mixin com_amap_api_services_nearby_NearbySearch_NearbyListener on java_lang_Object {
   
 
+  static com_amap_api_services_nearby_NearbySearch_NearbyListener subInstance() => _com_amap_api_services_nearby_NearbySearch_NearbyListener_SUB();
+
+  static Future<com_amap_api_services_nearby_NearbySearch_NearbyListener> anonymous__({void Function(int? var1)? onUserInfoCleared, void Function(com_amap_api_services_nearby_NearbySearchResult? var1, int? var2)? onNearbyInfoSearched, void Function(int? var1)? onNearbyInfoUploaded}) async {
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.NearbySearch.NearbyListener::createAnonymous__');
+  
+    final __object__ = AmapSearchFluttifyAndroidAs<com_amap_api_services_nearby_NearbySearch_NearbyListener>(__result__)!;
+  
+    // handle callback
+    MethodChannel('com.amap.api.services.nearby.NearbySearch.NearbyListener::Callback@${__object__.refId}', kAmapSearchFluttifyMethodCodec)
+        .setMethodCallHandler((methodCall) async {
+          try {
+            final args = methodCall.arguments as Map;
+            switch (methodCall.method) {
+              case 'Callback::onUserInfoCleared::onUserInfoCleared':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onUserInfoCleared?.call([\'var1\':${args['var1']}])');
+                }
+            
+                // handle the native call
+                onUserInfoCleared?.call(args['var1']);
+                break;
+              case 'Callback::onNearbyInfoSearched::onNearbyInfoSearched':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onNearbyInfoSearched?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
+                }
+            
+                // handle the native call
+                onNearbyInfoSearched?.call(AmapSearchFluttifyAndroidAs<com_amap_api_services_nearby_NearbySearchResult>(args['var1']), args['var2']);
+                break;
+              case 'Callback::onNearbyInfoUploaded::onNearbyInfoUploaded':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onNearbyInfoUploaded?.call([\'var1\':${args['var1']}])');
+                }
+            
+                // handle the native call
+                onNearbyInfoUploaded?.call(args['var1']);
+                break;
+              default:
+                throw MissingPluginException('方法${methodCall.method}未实现');
+                break;
+            }
+          } catch (e) {
+            debugPrint(e.toString());
+            rethrow;
+          }
+        });
+  
+    return __object__;
+  }
   
 
   @override

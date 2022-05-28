@@ -37,9 +37,11 @@ class AMapPOIPolygonSearchRequest extends AMapPOISearchBaseRequest with NSCoding
       'ObjectFactory::create_batchAMapPOIPolygonSearchRequest',
       {'length': length, 'init': init}
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyIOSAs<AMapPOIPolygonSearchRequest>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyIOSAs<AMapPOIPolygonSearchRequest>(it))
+        .where((element) => element !=null)
+        .cast<AMapPOIPolygonSearchRequest>()
+        .toList() ?? <AMapPOIPolygonSearchRequest>[];
   }
   
   //endregion
@@ -82,16 +84,21 @@ class AMapPOIPolygonSearchRequest extends AMapPOISearchBaseRequest with NSCoding
   }
 }
 
-extension AMapPOIPolygonSearchRequest_Batch on List<AMapPOIPolygonSearchRequest?> {
+extension AMapPOIPolygonSearchRequest_Batch on List<AMapPOIPolygonSearchRequest> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first.refId;
+  }
+
   //region getters
-  Future<List<String?>?> get_keywords_batch() async {
+  Future<List<String?>> get_keywords_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOIPolygonSearchRequest::get_keywords_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<AMapGeoPolygon?>?> get_polygon_batch() async {
+  Future<List<AMapGeoPolygon?>> get_polygon_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOIPolygonSearchRequest::get_polygon_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => AmapSearchFluttifyIOSAs<AMapGeoPolygon>(__result__)).cast<AMapGeoPolygon?>().toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyIOSAs<AMapGeoPolygon>(__result__)).cast<AMapGeoPolygon?>().toList();
   }
   
   //endregion

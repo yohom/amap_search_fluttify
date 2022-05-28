@@ -37,9 +37,11 @@ class AMapCity extends AMapSearchObject with NSCoding, NSCopying {
       'ObjectFactory::create_batchAMapCity',
       {'length': length, 'init': init}
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyIOSAs<AMapCity>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyIOSAs<AMapCity>(it))
+        .where((element) => element !=null)
+        .cast<AMapCity>()
+        .toList() ?? <AMapCity>[];
   }
   
   //endregion
@@ -67,7 +69,7 @@ class AMapCity extends AMapSearchObject with NSCoding, NSCopying {
   
   Future<List<AMapDistrict>?> get_districts() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapCity::get_districts", {'__this__': this});
-    return (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapDistrict>(it)!).toList();
+    return (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapDistrict>(it)).where((e) => e != null).cast<AMapDistrict>().toList();
   }
   
   //endregion
@@ -115,31 +117,36 @@ class AMapCity extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapCity_Batch on List<AMapCity?> {
+extension AMapCity_Batch on List<AMapCity> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first.refId;
+  }
+
   //region getters
-  Future<List<String?>?> get_city_batch() async {
+  Future<List<String?>> get_city_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapCity::get_city_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<String?>?> get_citycode_batch() async {
+  Future<List<String?>> get_citycode_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapCity::get_citycode_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<String?>?> get_adcode_batch() async {
+  Future<List<String?>> get_adcode_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapCity::get_adcode_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<int?>?> get_num_batch() async {
+  Future<List<int?>> get_num_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapCity::get_num_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<int?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
   }
   
-  Future<List<List<AMapDistrict>?>?> get_districts_batch() async {
+  Future<List<List<AMapDistrict>?>> get_districts_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapCity::get_districts_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapDistrict>(it)!).toList()).cast<List<AMapDistrict>?>().toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapDistrict>(it)).where((e) => e != null).cast<AMapDistrict>().toList()).cast<List<AMapDistrict>?>().toList();
   }
   
   //endregion

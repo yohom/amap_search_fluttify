@@ -37,9 +37,11 @@ class com_amap_api_services_nearby_NearbySearchResult extends java_lang_Object  
       'ObjectFactory::create_batchcom_amap_api_services_nearby_NearbySearchResult__',
       {'length': length}
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_nearby_NearbySearchResult>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_nearby_NearbySearchResult>(it))
+        .where((element) => element !=null)
+        .cast<com_amap_api_services_nearby_NearbySearchResult>()
+        .toList() ?? <com_amap_api_services_nearby_NearbySearchResult>[];
   }
   
   //endregion
@@ -67,7 +69,7 @@ class com_amap_api_services_nearby_NearbySearchResult extends java_lang_Object  
     // handle native call
   
   
-    return (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_nearby_NearbyInfo>(it)!).toList();
+    return (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_nearby_NearbyInfo>(it)).where((e) => e != null).cast<com_amap_api_services_nearby_NearbyInfo>().toList();
   }
   
   
@@ -88,7 +90,7 @@ class com_amap_api_services_nearby_NearbySearchResult extends java_lang_Object  
   }
   
   
-  Future<void> setNearbyInfoList(List<com_amap_api_services_nearby_NearbyInfo>? var1) async {
+  Future<void> setNearbyInfoList(List<com_amap_api_services_nearby_NearbyInfo> var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.nearby.NearbySearchResult@$refId::setNearbyInfoList([])');
@@ -112,7 +114,12 @@ class com_amap_api_services_nearby_NearbySearchResult extends java_lang_Object  
   }
 }
 
-extension com_amap_api_services_nearby_NearbySearchResult_Batch on List<com_amap_api_services_nearby_NearbySearchResult?> {
+extension com_amap_api_services_nearby_NearbySearchResult_Batch on List<com_amap_api_services_nearby_NearbySearchResult> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first.refId;
+  }
+
   //region getters
   
   //endregion
@@ -123,29 +130,29 @@ extension com_amap_api_services_nearby_NearbySearchResult_Batch on List<com_amap
 
   //region methods
   
-  Future<List<List<com_amap_api_services_nearby_NearbyInfo>?>?> getNearbyInfoList_batch() async {
+  Future<List<List<com_amap_api_services_nearby_NearbyInfo>?>> getNearbyInfoList_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.NearbySearchResult::getNearbyInfoList_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_nearby_NearbyInfo>(it)!).toList()).cast<List<com_amap_api_services_nearby_NearbyInfo>>().toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_nearby_NearbyInfo>(it)).where((e) => e != null).cast<com_amap_api_services_nearby_NearbyInfo>().toList()).cast<List<com_amap_api_services_nearby_NearbyInfo>?>().toList();
   }
   
   
-  Future<List<int?>?> getTotalNum_batch() async {
+  Future<List<int?>> getTotalNum_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.NearbySearchResult::getTotalNum_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<int>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
   }
   
   
-  Future<List<void>?> setNearbyInfoList_batch(List<List<com_amap_api_services_nearby_NearbyInfo>> var1) async {
+  Future<List<void>> setNearbyInfoList_batch(List<List<com_amap_api_services_nearby_NearbyInfo>> var1) async {
     assert(true);
   
     // invoke native method

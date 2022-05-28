@@ -37,9 +37,11 @@ class AMapCloudImage extends AMapSearchObject with NSCoding, NSCopying {
       'ObjectFactory::create_batchAMapCloudImage',
       {'length': length, 'init': init}
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyIOSAs<AMapCloudImage>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyIOSAs<AMapCloudImage>(it))
+        .where((element) => element !=null)
+        .cast<AMapCloudImage>()
+        .toList() ?? <AMapCloudImage>[];
   }
   
   //endregion
@@ -93,21 +95,26 @@ class AMapCloudImage extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapCloudImage_Batch on List<AMapCloudImage?> {
+extension AMapCloudImage_Batch on List<AMapCloudImage> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first.refId;
+  }
+
   //region getters
-  Future<List<String?>?> get_uid_batch() async {
+  Future<List<String?>> get_uid_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudImage::get_uid_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<String?>?> get_preurl_batch() async {
+  Future<List<String?>> get_preurl_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudImage::get_preurl_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<String?>?> get_url_batch() async {
+  Future<List<String?>> get_url_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudImage::get_url_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   //endregion

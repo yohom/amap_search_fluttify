@@ -37,9 +37,11 @@ class AMapRidingRouteSearchResponse extends AMapRouteSearchResponse with NSCodin
       'ObjectFactory::create_batchAMapRidingRouteSearchResponse',
       {'length': length, 'init': init}
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyIOSAs<AMapRidingRouteSearchResponse>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyIOSAs<AMapRidingRouteSearchResponse>(it))
+        .where((element) => element !=null)
+        .cast<AMapRidingRouteSearchResponse>()
+        .toList() ?? <AMapRidingRouteSearchResponse>[];
   }
   
   //endregion
@@ -62,7 +64,12 @@ class AMapRidingRouteSearchResponse extends AMapRouteSearchResponse with NSCodin
   }
 }
 
-extension AMapRidingRouteSearchResponse_Batch on List<AMapRidingRouteSearchResponse?> {
+extension AMapRidingRouteSearchResponse_Batch on List<AMapRidingRouteSearchResponse> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first.refId;
+  }
+
   //region getters
   
   //endregion

@@ -37,9 +37,11 @@ class AMapBusinessArea extends AMapSearchObject with NSCoding, NSCopying {
       'ObjectFactory::create_batchAMapBusinessArea',
       {'length': length, 'init': init}
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyIOSAs<AMapBusinessArea>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyIOSAs<AMapBusinessArea>(it))
+        .where((element) => element !=null)
+        .cast<AMapBusinessArea>()
+        .toList() ?? <AMapBusinessArea>[];
   }
   
   //endregion
@@ -82,16 +84,21 @@ class AMapBusinessArea extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapBusinessArea_Batch on List<AMapBusinessArea?> {
+extension AMapBusinessArea_Batch on List<AMapBusinessArea> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first.refId;
+  }
+
   //region getters
-  Future<List<String?>?> get_name_batch() async {
+  Future<List<String?>> get_name_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapBusinessArea::get_name_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<AMapGeoPoint?>?> get_location_batch() async {
+  Future<List<AMapGeoPoint?>> get_location_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapBusinessArea::get_location_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => AmapSearchFluttifyIOSAs<AMapGeoPoint>(__result__)).cast<AMapGeoPoint?>().toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyIOSAs<AMapGeoPoint>(__result__)).cast<AMapGeoPoint?>().toList();
   }
   
   //endregion

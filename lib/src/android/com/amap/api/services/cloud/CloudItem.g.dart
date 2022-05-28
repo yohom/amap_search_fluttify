@@ -23,7 +23,7 @@ class com_amap_api_services_cloud_CloudItem extends java_lang_Object with androi
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_cloud_CloudItem> create__String__com_amap_api_services_core_LatLonPoint__String__String(String? var1, com_amap_api_services_core_LatLonPoint? var2, String? var3, String? var4) async {
+  static Future<com_amap_api_services_cloud_CloudItem> create__String__com_amap_api_services_core_LatLonPoint__String__String(String var1, com_amap_api_services_core_LatLonPoint var2, String var3, String var4) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_cloud_CloudItem__String__com_amap_api_services_core_LatLonPoint__String__String',
       {"var1": var1, "var2": var2, "var3": var3, "var4": var4}
@@ -37,9 +37,11 @@ class com_amap_api_services_cloud_CloudItem extends java_lang_Object with androi
       'ObjectFactory::create_batchcom_amap_api_services_cloud_CloudItem__String__com_amap_api_services_core_LatLonPoint__String__String',
       [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "var4": var4[__i__]}]
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudItem>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudItem>(it))
+        .where((element) => element !=null)
+        .cast<com_amap_api_services_cloud_CloudItem>()
+        .toList() ?? <com_amap_api_services_cloud_CloudItem>[];
   }
   
   //endregion
@@ -88,7 +90,7 @@ class com_amap_api_services_cloud_CloudItem extends java_lang_Object with androi
   }
   
   
-  Future<void> setDistance(int? var1) async {
+  Future<void> setDistance(int var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::setDistance([\'var1\':$var1])');
@@ -173,7 +175,7 @@ class com_amap_api_services_cloud_CloudItem extends java_lang_Object with androi
   }
   
   
-  Future<void> setCreatetime(String? var1) async {
+  Future<void> setCreatetime(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::setCreatetime([\'var1\':$var1])');
@@ -207,7 +209,7 @@ class com_amap_api_services_cloud_CloudItem extends java_lang_Object with androi
   }
   
   
-  Future<void> setUpdatetime(String? var1) async {
+  Future<void> setUpdatetime(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::setUpdatetime([\'var1\':$var1])');
@@ -241,7 +243,7 @@ class com_amap_api_services_cloud_CloudItem extends java_lang_Object with androi
   }
   
   
-  Future<void> setCustomfield(Map<String,String>? var1) async {
+  Future<void> setCustomfield(Map<String,String> var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::setCustomfield([\'var1\':$var1])');
@@ -271,11 +273,11 @@ class com_amap_api_services_cloud_CloudItem extends java_lang_Object with androi
     // handle native call
   
   
-    return (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudImage>(it)!).toList();
+    return (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudImage>(it)).where((e) => e != null).cast<com_amap_api_services_cloud_CloudImage>().toList();
   }
   
   
-  Future<void> setmCloudImage(List<com_amap_api_services_cloud_CloudImage>? var1) async {
+  Future<void> setmCloudImage(List<com_amap_api_services_cloud_CloudImage> var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::setmCloudImage([])');
@@ -299,7 +301,12 @@ class com_amap_api_services_cloud_CloudItem extends java_lang_Object with androi
   }
 }
 
-extension com_amap_api_services_cloud_CloudItem_Batch on List<com_amap_api_services_cloud_CloudItem?> {
+extension com_amap_api_services_cloud_CloudItem_Batch on List<com_amap_api_services_cloud_CloudItem> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first.refId;
+  }
+
   //region getters
   
   //endregion
@@ -310,29 +317,29 @@ extension com_amap_api_services_cloud_CloudItem_Batch on List<com_amap_api_servi
 
   //region methods
   
-  Future<List<String?>?> getID_batch() async {
+  Future<List<String?>> getID_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.cloud.CloudItem::getID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   
-  Future<List<int?>?> getDistance_batch() async {
+  Future<List<int?>> getDistance_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.cloud.CloudItem::getDistance_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<int>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
   }
   
   
-  Future<List<void>?> setDistance_batch(List<int> var1) async {
+  Future<List<void>> setDistance_batch(List<int> var1) async {
     assert(true);
   
     // invoke native method
@@ -343,51 +350,51 @@ extension com_amap_api_services_cloud_CloudItem_Batch on List<com_amap_api_servi
   }
   
   
-  Future<List<String?>?> getTitle_batch() async {
+  Future<List<String?>> getTitle_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.cloud.CloudItem::getTitle_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   
-  Future<List<String?>?> getSnippet_batch() async {
+  Future<List<String?>> getSnippet_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.cloud.CloudItem::getSnippet_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   
-  Future<List<com_amap_api_services_core_LatLonPoint?>?> getLatLonPoint_batch() async {
+  Future<List<com_amap_api_services_core_LatLonPoint?>> getLatLonPoint_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.cloud.CloudItem::getLatLonPoint_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(__result__)).cast<com_amap_api_services_core_LatLonPoint>().toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(__result__)).cast<com_amap_api_services_core_LatLonPoint?>().toList();
   }
   
   
-  Future<List<String?>?> getCreatetime_batch() async {
+  Future<List<String?>> getCreatetime_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.cloud.CloudItem::getCreatetime_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   
-  Future<List<void>?> setCreatetime_batch(List<String> var1) async {
+  Future<List<void>> setCreatetime_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -398,18 +405,18 @@ extension com_amap_api_services_cloud_CloudItem_Batch on List<com_amap_api_servi
   }
   
   
-  Future<List<String?>?> getUpdatetime_batch() async {
+  Future<List<String?>> getUpdatetime_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.cloud.CloudItem::getUpdatetime_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   
-  Future<List<void>?> setUpdatetime_batch(List<String> var1) async {
+  Future<List<void>> setUpdatetime_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -420,18 +427,18 @@ extension com_amap_api_services_cloud_CloudItem_Batch on List<com_amap_api_servi
   }
   
   
-  Future<List<Map<String,String>?>?> getCustomfield_batch() async {
+  Future<List<Map<String,String>?>> getCustomfield_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.cloud.CloudItem::getCustomfield_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<Map<String,String>>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<Map<String,String>?>().toList();
   }
   
   
-  Future<List<void>?> setCustomfield_batch(List<Map<String,String>> var1) async {
+  Future<List<void>> setCustomfield_batch(List<Map<String,String>> var1) async {
     assert(true);
   
     // invoke native method
@@ -442,18 +449,18 @@ extension com_amap_api_services_cloud_CloudItem_Batch on List<com_amap_api_servi
   }
   
   
-  Future<List<List<com_amap_api_services_cloud_CloudImage>?>?> getCloudImage_batch() async {
+  Future<List<List<com_amap_api_services_cloud_CloudImage>?>> getCloudImage_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.cloud.CloudItem::getCloudImage_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudImage>(it)!).toList()).cast<List<com_amap_api_services_cloud_CloudImage>>().toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudImage>(it)).where((e) => e != null).cast<com_amap_api_services_cloud_CloudImage>().toList()).cast<List<com_amap_api_services_cloud_CloudImage>?>().toList();
   }
   
   
-  Future<List<void>?> setmCloudImage_batch(List<List<com_amap_api_services_cloud_CloudImage>> var1) async {
+  Future<List<void>> setmCloudImage_batch(List<List<com_amap_api_services_cloud_CloudImage>> var1) async {
     assert(true);
   
     // invoke native method

@@ -37,9 +37,11 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
       'ObjectFactory::create_batchcom_amap_api_services_geocoder_GeocodeAddress__',
       {'length': length}
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_geocoder_GeocodeAddress>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_geocoder_GeocodeAddress>(it))
+        .where((element) => element !=null)
+        .cast<com_amap_api_services_geocoder_GeocodeAddress>()
+        .toList() ?? <com_amap_api_services_geocoder_GeocodeAddress>[];
   }
   
   //endregion
@@ -71,7 +73,7 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
   }
   
   
-  Future<void> setFormatAddress(String? var1) async {
+  Future<void> setFormatAddress(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::setFormatAddress([\'var1\':$var1])');
@@ -105,7 +107,7 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
   }
   
   
-  Future<void> setProvince(String? var1) async {
+  Future<void> setProvince(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::setProvince([\'var1\':$var1])');
@@ -139,7 +141,7 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
   }
   
   
-  Future<void> setCity(String? var1) async {
+  Future<void> setCity(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::setCity([\'var1\':$var1])');
@@ -173,7 +175,7 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
   }
   
   
-  Future<void> setDistrict(String? var1) async {
+  Future<void> setDistrict(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::setDistrict([\'var1\':$var1])');
@@ -207,7 +209,7 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
   }
   
   
-  Future<void> setTownship(String? var1) async {
+  Future<void> setTownship(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::setTownship([\'var1\':$var1])');
@@ -241,7 +243,7 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
   }
   
   
-  Future<void> setNeighborhood(String? var1) async {
+  Future<void> setNeighborhood(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::setNeighborhood([\'var1\':$var1])');
@@ -275,7 +277,7 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
   }
   
   
-  Future<void> setBuilding(String? var1) async {
+  Future<void> setBuilding(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::setBuilding([\'var1\':$var1])');
@@ -309,7 +311,7 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
   }
   
   
-  Future<void> setAdcode(String? var1) async {
+  Future<void> setAdcode(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::setAdcode([\'var1\':$var1])');
@@ -343,7 +345,7 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
   }
   
   
-  Future<void> setLatLonPoint(com_amap_api_services_core_LatLonPoint? var1) async {
+  Future<void> setLatLonPoint(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::setLatLonPoint([])');
@@ -377,7 +379,7 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
   }
   
   
-  Future<void> setLevel(String? var1) async {
+  Future<void> setLevel(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::setLevel([\'var1\':$var1])');
@@ -411,7 +413,7 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
   }
   
   
-  Future<void> setCountry(String? var1) async {
+  Future<void> setCountry(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::setCountry([\'var1\':$var1])');
@@ -445,7 +447,7 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
   }
   
   
-  Future<void> setPostcode(String? var1) async {
+  Future<void> setPostcode(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::setPostcode([\'var1\':$var1])');
@@ -469,7 +471,12 @@ class com_amap_api_services_geocoder_GeocodeAddress extends java_lang_Object wit
   }
 }
 
-extension com_amap_api_services_geocoder_GeocodeAddress_Batch on List<com_amap_api_services_geocoder_GeocodeAddress?> {
+extension com_amap_api_services_geocoder_GeocodeAddress_Batch on List<com_amap_api_services_geocoder_GeocodeAddress> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first.refId;
+  }
+
   //region getters
   
   //endregion
@@ -480,18 +487,18 @@ extension com_amap_api_services_geocoder_GeocodeAddress_Batch on List<com_amap_a
 
   //region methods
   
-  Future<List<String?>?> getFormatAddress_batch() async {
+  Future<List<String?>> getFormatAddress_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.GeocodeAddress::getFormatAddress_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   
-  Future<List<void>?> setFormatAddress_batch(List<String> var1) async {
+  Future<List<void>> setFormatAddress_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -502,18 +509,18 @@ extension com_amap_api_services_geocoder_GeocodeAddress_Batch on List<com_amap_a
   }
   
   
-  Future<List<String?>?> getProvince_batch() async {
+  Future<List<String?>> getProvince_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.GeocodeAddress::getProvince_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   
-  Future<List<void>?> setProvince_batch(List<String> var1) async {
+  Future<List<void>> setProvince_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -524,18 +531,18 @@ extension com_amap_api_services_geocoder_GeocodeAddress_Batch on List<com_amap_a
   }
   
   
-  Future<List<String?>?> getCity_batch() async {
+  Future<List<String?>> getCity_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.GeocodeAddress::getCity_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   
-  Future<List<void>?> setCity_batch(List<String> var1) async {
+  Future<List<void>> setCity_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -546,18 +553,18 @@ extension com_amap_api_services_geocoder_GeocodeAddress_Batch on List<com_amap_a
   }
   
   
-  Future<List<String?>?> getDistrict_batch() async {
+  Future<List<String?>> getDistrict_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.GeocodeAddress::getDistrict_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   
-  Future<List<void>?> setDistrict_batch(List<String> var1) async {
+  Future<List<void>> setDistrict_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -568,18 +575,18 @@ extension com_amap_api_services_geocoder_GeocodeAddress_Batch on List<com_amap_a
   }
   
   
-  Future<List<String?>?> getTownship_batch() async {
+  Future<List<String?>> getTownship_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.GeocodeAddress::getTownship_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   
-  Future<List<void>?> setTownship_batch(List<String> var1) async {
+  Future<List<void>> setTownship_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -590,18 +597,18 @@ extension com_amap_api_services_geocoder_GeocodeAddress_Batch on List<com_amap_a
   }
   
   
-  Future<List<String?>?> getNeighborhood_batch() async {
+  Future<List<String?>> getNeighborhood_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.GeocodeAddress::getNeighborhood_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   
-  Future<List<void>?> setNeighborhood_batch(List<String> var1) async {
+  Future<List<void>> setNeighborhood_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -612,18 +619,18 @@ extension com_amap_api_services_geocoder_GeocodeAddress_Batch on List<com_amap_a
   }
   
   
-  Future<List<String?>?> getBuilding_batch() async {
+  Future<List<String?>> getBuilding_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.GeocodeAddress::getBuilding_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   
-  Future<List<void>?> setBuilding_batch(List<String> var1) async {
+  Future<List<void>> setBuilding_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -634,18 +641,18 @@ extension com_amap_api_services_geocoder_GeocodeAddress_Batch on List<com_amap_a
   }
   
   
-  Future<List<String?>?> getAdcode_batch() async {
+  Future<List<String?>> getAdcode_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.GeocodeAddress::getAdcode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   
-  Future<List<void>?> setAdcode_batch(List<String> var1) async {
+  Future<List<void>> setAdcode_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -656,18 +663,18 @@ extension com_amap_api_services_geocoder_GeocodeAddress_Batch on List<com_amap_a
   }
   
   
-  Future<List<com_amap_api_services_core_LatLonPoint?>?> getLatLonPoint_batch() async {
+  Future<List<com_amap_api_services_core_LatLonPoint?>> getLatLonPoint_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.GeocodeAddress::getLatLonPoint_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(__result__)).cast<com_amap_api_services_core_LatLonPoint>().toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(__result__)).cast<com_amap_api_services_core_LatLonPoint?>().toList();
   }
   
   
-  Future<List<void>?> setLatLonPoint_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
+  Future<List<void>> setLatLonPoint_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
     assert(true);
   
     // invoke native method
@@ -678,18 +685,18 @@ extension com_amap_api_services_geocoder_GeocodeAddress_Batch on List<com_amap_a
   }
   
   
-  Future<List<String?>?> getLevel_batch() async {
+  Future<List<String?>> getLevel_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.GeocodeAddress::getLevel_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   
-  Future<List<void>?> setLevel_batch(List<String> var1) async {
+  Future<List<void>> setLevel_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -700,18 +707,18 @@ extension com_amap_api_services_geocoder_GeocodeAddress_Batch on List<com_amap_a
   }
   
   
-  Future<List<String?>?> getCountry_batch() async {
+  Future<List<String?>> getCountry_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.GeocodeAddress::getCountry_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   
-  Future<List<void>?> setCountry_batch(List<String> var1) async {
+  Future<List<void>> setCountry_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -722,18 +729,18 @@ extension com_amap_api_services_geocoder_GeocodeAddress_Batch on List<com_amap_a
   }
   
   
-  Future<List<String?>?> getPostcode_batch() async {
+  Future<List<String?>> getPostcode_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.GeocodeAddress::getPostcode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   
-  Future<List<void>?> setPostcode_batch(List<String> var1) async {
+  Future<List<void>> setPostcode_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method

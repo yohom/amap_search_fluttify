@@ -23,7 +23,7 @@ class com_amap_api_services_help_InputtipsQuery extends java_lang_Object  {
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_help_InputtipsQuery> create__String__String(String? var1, String? var2) async {
+  static Future<com_amap_api_services_help_InputtipsQuery> create__String__String(String var1, String var2) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_help_InputtipsQuery__String__String',
       {"var1": var1, "var2": var2}
@@ -37,9 +37,11 @@ class com_amap_api_services_help_InputtipsQuery extends java_lang_Object  {
       'ObjectFactory::create_batchcom_amap_api_services_help_InputtipsQuery__String__String',
       [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_help_InputtipsQuery>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_help_InputtipsQuery>(it))
+        .where((element) => element !=null)
+        .cast<com_amap_api_services_help_InputtipsQuery>()
+        .toList() ?? <com_amap_api_services_help_InputtipsQuery>[];
   }
   
   //endregion
@@ -88,7 +90,7 @@ class com_amap_api_services_help_InputtipsQuery extends java_lang_Object  {
   }
   
   
-  Future<void> setType(String? var1) async {
+  Future<void> setType(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.help.InputtipsQuery@$refId::setType([\'var1\':$var1])');
@@ -122,7 +124,7 @@ class com_amap_api_services_help_InputtipsQuery extends java_lang_Object  {
   }
   
   
-  Future<void> setCityLimit(bool? var1) async {
+  Future<void> setCityLimit(bool var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.help.InputtipsQuery@$refId::setCityLimit([\'var1\':$var1])');
@@ -156,7 +158,7 @@ class com_amap_api_services_help_InputtipsQuery extends java_lang_Object  {
   }
   
   
-  Future<void> setLocation(com_amap_api_services_core_LatLonPoint? var1) async {
+  Future<void> setLocation(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.help.InputtipsQuery@$refId::setLocation([])');
@@ -197,7 +199,12 @@ class com_amap_api_services_help_InputtipsQuery extends java_lang_Object  {
   }
 }
 
-extension com_amap_api_services_help_InputtipsQuery_Batch on List<com_amap_api_services_help_InputtipsQuery?> {
+extension com_amap_api_services_help_InputtipsQuery_Batch on List<com_amap_api_services_help_InputtipsQuery> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first.refId;
+  }
+
   //region getters
   
   //endregion
@@ -208,29 +215,29 @@ extension com_amap_api_services_help_InputtipsQuery_Batch on List<com_amap_api_s
 
   //region methods
   
-  Future<List<String?>?> getKeyword_batch() async {
+  Future<List<String?>> getKeyword_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.help.InputtipsQuery::getKeyword_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   
-  Future<List<String?>?> getCity_batch() async {
+  Future<List<String?>> getCity_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.help.InputtipsQuery::getCity_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   
-  Future<List<void>?> setType_batch(List<String> var1) async {
+  Future<List<void>> setType_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -241,18 +248,18 @@ extension com_amap_api_services_help_InputtipsQuery_Batch on List<com_amap_api_s
   }
   
   
-  Future<List<String?>?> getType_batch() async {
+  Future<List<String?>> getType_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.help.InputtipsQuery::getType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   
-  Future<List<void>?> setCityLimit_batch(List<bool> var1) async {
+  Future<List<void>> setCityLimit_batch(List<bool> var1) async {
     assert(true);
   
     // invoke native method
@@ -263,18 +270,18 @@ extension com_amap_api_services_help_InputtipsQuery_Batch on List<com_amap_api_s
   }
   
   
-  Future<List<bool?>?> getCityLimit_batch() async {
+  Future<List<bool?>> getCityLimit_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.help.InputtipsQuery::getCityLimit_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<bool>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<bool?>().toList();
   }
   
   
-  Future<List<void>?> setLocation_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
+  Future<List<void>> setLocation_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
     assert(true);
   
     // invoke native method
@@ -285,14 +292,14 @@ extension com_amap_api_services_help_InputtipsQuery_Batch on List<com_amap_api_s
   }
   
   
-  Future<List<com_amap_api_services_core_LatLonPoint?>?> getLocation_batch() async {
+  Future<List<com_amap_api_services_core_LatLonPoint?>> getLocation_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.help.InputtipsQuery::getLocation_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(__result__)).cast<com_amap_api_services_core_LatLonPoint>().toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(__result__)).cast<com_amap_api_services_core_LatLonPoint?>().toList();
   }
   
   //endregion

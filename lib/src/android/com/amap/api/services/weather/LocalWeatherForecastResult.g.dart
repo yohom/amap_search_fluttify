@@ -36,7 +36,7 @@ class com_amap_api_services_weather_LocalWeatherForecastResult extends java_lang
 
   //region methods
   
-  static Future<com_amap_api_services_weather_LocalWeatherForecastResult?> createPagedResult(com_amap_api_services_weather_WeatherSearchQuery? var0, com_amap_api_services_weather_LocalWeatherForecast? var1) async {
+  static Future<com_amap_api_services_weather_LocalWeatherForecastResult?> createPagedResult(com_amap_api_services_weather_WeatherSearchQuery var0, com_amap_api_services_weather_LocalWeatherForecast var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.weather.LocalWeatherForecastResult::createPagedResult([])');
@@ -94,7 +94,12 @@ class com_amap_api_services_weather_LocalWeatherForecastResult extends java_lang
   }
 }
 
-extension com_amap_api_services_weather_LocalWeatherForecastResult_Batch on List<com_amap_api_services_weather_LocalWeatherForecastResult?> {
+extension com_amap_api_services_weather_LocalWeatherForecastResult_Batch on List<com_amap_api_services_weather_LocalWeatherForecastResult> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first.refId;
+  }
+
   //region getters
   
   //endregion
@@ -105,36 +110,36 @@ extension com_amap_api_services_weather_LocalWeatherForecastResult_Batch on List
 
   //region methods
   
-  static Future<List<com_amap_api_services_weather_LocalWeatherForecastResult?>?> createPagedResult_batch(List<com_amap_api_services_weather_WeatherSearchQuery> var0, List<com_amap_api_services_weather_LocalWeatherForecast> var1) async {
+  static Future<List<com_amap_api_services_weather_LocalWeatherForecastResult?>> createPagedResult_batch(List<com_amap_api_services_weather_WeatherSearchQuery> var0, List<com_amap_api_services_weather_LocalWeatherForecast> var1) async {
     assert(var0.length == var1.length);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.weather.LocalWeatherForecastResult::createPagedResult_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_weather_LocalWeatherForecastResult>(__result__)).cast<com_amap_api_services_weather_LocalWeatherForecastResult>().toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_weather_LocalWeatherForecastResult>(__result__)).cast<com_amap_api_services_weather_LocalWeatherForecastResult?>().toList();
   }
   
   
-  Future<List<com_amap_api_services_weather_WeatherSearchQuery?>?> getWeatherForecastQuery_batch() async {
+  Future<List<com_amap_api_services_weather_WeatherSearchQuery?>> getWeatherForecastQuery_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.weather.LocalWeatherForecastResult::getWeatherForecastQuery_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_weather_WeatherSearchQuery>(__result__)).cast<com_amap_api_services_weather_WeatherSearchQuery>().toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_weather_WeatherSearchQuery>(__result__)).cast<com_amap_api_services_weather_WeatherSearchQuery?>().toList();
   }
   
   
-  Future<List<com_amap_api_services_weather_LocalWeatherForecast?>?> getForecastResult_batch() async {
+  Future<List<com_amap_api_services_weather_LocalWeatherForecast?>> getForecastResult_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.weather.LocalWeatherForecastResult::getForecastResult_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_weather_LocalWeatherForecast>(__result__)).cast<com_amap_api_services_weather_LocalWeatherForecast>().toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_weather_LocalWeatherForecast>(__result__)).cast<com_amap_api_services_weather_LocalWeatherForecast?>().toList();
   }
   
   //endregion

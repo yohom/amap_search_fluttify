@@ -37,9 +37,11 @@ class AMapWalking extends AMapSearchObject with NSCoding, NSCopying {
       'ObjectFactory::create_batchAMapWalking',
       {'length': length, 'init': init}
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyIOSAs<AMapWalking>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyIOSAs<AMapWalking>(it))
+        .where((element) => element !=null)
+        .cast<AMapWalking>()
+        .toList() ?? <AMapWalking>[];
   }
   
   //endregion
@@ -67,7 +69,7 @@ class AMapWalking extends AMapSearchObject with NSCoding, NSCopying {
   
   Future<List<AMapStep>?> get_steps() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapWalking::get_steps", {'__this__': this});
-    return (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapStep>(it)!).toList();
+    return (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapStep>(it)).where((e) => e != null).cast<AMapStep>().toList();
   }
   
   //endregion
@@ -115,31 +117,36 @@ class AMapWalking extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapWalking_Batch on List<AMapWalking?> {
+extension AMapWalking_Batch on List<AMapWalking> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first.refId;
+  }
+
   //region getters
-  Future<List<AMapGeoPoint?>?> get_origin_batch() async {
+  Future<List<AMapGeoPoint?>> get_origin_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapWalking::get_origin_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => AmapSearchFluttifyIOSAs<AMapGeoPoint>(__result__)).cast<AMapGeoPoint?>().toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyIOSAs<AMapGeoPoint>(__result__)).cast<AMapGeoPoint?>().toList();
   }
   
-  Future<List<AMapGeoPoint?>?> get_destination_batch() async {
+  Future<List<AMapGeoPoint?>> get_destination_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapWalking::get_destination_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => AmapSearchFluttifyIOSAs<AMapGeoPoint>(__result__)).cast<AMapGeoPoint?>().toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyIOSAs<AMapGeoPoint>(__result__)).cast<AMapGeoPoint?>().toList();
   }
   
-  Future<List<int?>?> get_distance_batch() async {
+  Future<List<int?>> get_distance_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapWalking::get_distance_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<int?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
   }
   
-  Future<List<int?>?> get_duration_batch() async {
+  Future<List<int?>> get_duration_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapWalking::get_duration_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<int?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
   }
   
-  Future<List<List<AMapStep>?>?> get_steps_batch() async {
+  Future<List<List<AMapStep>?>> get_steps_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapWalking::get_steps_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapStep>(it)!).toList()).cast<List<AMapStep>?>().toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapStep>(it)).where((e) => e != null).cast<AMapStep>().toList()).cast<List<AMapStep>?>().toList();
   }
   
   //endregion

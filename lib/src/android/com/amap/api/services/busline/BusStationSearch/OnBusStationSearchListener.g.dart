@@ -12,11 +12,45 @@ import 'package:flutter/services.dart';
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
 
-
+class _com_amap_api_services_busline_BusStationSearch_OnBusStationSearchListener_SUB extends java_lang_Object with com_amap_api_services_busline_BusStationSearch_OnBusStationSearchListener {}
 
 mixin com_amap_api_services_busline_BusStationSearch_OnBusStationSearchListener on java_lang_Object {
   
 
+  static com_amap_api_services_busline_BusStationSearch_OnBusStationSearchListener subInstance() => _com_amap_api_services_busline_BusStationSearch_OnBusStationSearchListener_SUB();
+
+  static Future<com_amap_api_services_busline_BusStationSearch_OnBusStationSearchListener> anonymous__({void Function(com_amap_api_services_busline_BusStationResult? var1, int? var2)? onBusStationSearched}) async {
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.busline.BusStationSearch.OnBusStationSearchListener::createAnonymous__');
+  
+    final __object__ = AmapSearchFluttifyAndroidAs<com_amap_api_services_busline_BusStationSearch_OnBusStationSearchListener>(__result__)!;
+  
+    // handle callback
+    MethodChannel('com.amap.api.services.busline.BusStationSearch.OnBusStationSearchListener::Callback@${__object__.refId}', kAmapSearchFluttifyMethodCodec)
+        .setMethodCallHandler((methodCall) async {
+          try {
+            final args = methodCall.arguments as Map;
+            switch (methodCall.method) {
+              case 'Callback::onBusStationSearched::onBusStationSearched':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onBusStationSearched?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
+                }
+            
+                // handle the native call
+                onBusStationSearched?.call(AmapSearchFluttifyAndroidAs<com_amap_api_services_busline_BusStationResult>(args['var1']), args['var2']);
+                break;
+              default:
+                throw MissingPluginException('方法${methodCall.method}未实现');
+                break;
+            }
+          } catch (e) {
+            debugPrint(e.toString());
+            rethrow;
+          }
+        });
+  
+    return __object__;
+  }
   
 
   @override

@@ -37,9 +37,11 @@ class AMapImage extends AMapSearchObject with NSCoding, NSCopying {
       'ObjectFactory::create_batchAMapImage',
       {'length': length, 'init': init}
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyIOSAs<AMapImage>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyIOSAs<AMapImage>(it))
+        .where((element) => element !=null)
+        .cast<AMapImage>()
+        .toList() ?? <AMapImage>[];
   }
   
   //endregion
@@ -82,16 +84,21 @@ class AMapImage extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapImage_Batch on List<AMapImage?> {
+extension AMapImage_Batch on List<AMapImage> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first.refId;
+  }
+
   //region getters
-  Future<List<String?>?> get_title_batch() async {
+  Future<List<String?>> get_title_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapImage::get_title_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<String?>?> get_url_batch() async {
+  Future<List<String?>> get_url_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapImage::get_url_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   //endregion

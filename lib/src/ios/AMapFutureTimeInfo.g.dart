@@ -37,9 +37,11 @@ class AMapFutureTimeInfo extends AMapSearchObject with NSCoding, NSCopying {
       'ObjectFactory::create_batchAMapFutureTimeInfo',
       {'length': length, 'init': init}
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyIOSAs<AMapFutureTimeInfo>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyIOSAs<AMapFutureTimeInfo>(it))
+        .where((element) => element !=null)
+        .cast<AMapFutureTimeInfo>()
+        .toList() ?? <AMapFutureTimeInfo>[];
   }
   
   //endregion
@@ -52,7 +54,7 @@ class AMapFutureTimeInfo extends AMapSearchObject with NSCoding, NSCopying {
   
   Future<List<AMapFutureTimeInfoElement>?> get_elements() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapFutureTimeInfo::get_elements", {'__this__': this});
-    return (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapFutureTimeInfoElement>(it)!).toList();
+    return (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapFutureTimeInfoElement>(it)).where((e) => e != null).cast<AMapFutureTimeInfoElement>().toList();
   }
   
   //endregion
@@ -82,16 +84,21 @@ class AMapFutureTimeInfo extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapFutureTimeInfo_Batch on List<AMapFutureTimeInfo?> {
+extension AMapFutureTimeInfo_Batch on List<AMapFutureTimeInfo> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first.refId;
+  }
+
   //region getters
-  Future<List<String?>?> get_startTime_batch() async {
+  Future<List<String?>> get_startTime_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapFutureTimeInfo::get_startTime_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<List<AMapFutureTimeInfoElement>?>?> get_elements_batch() async {
+  Future<List<List<AMapFutureTimeInfoElement>?>> get_elements_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapFutureTimeInfo::get_elements_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapFutureTimeInfoElement>(it)!).toList()).cast<List<AMapFutureTimeInfoElement>?>().toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapFutureTimeInfoElement>(it)).where((e) => e != null).cast<AMapFutureTimeInfoElement>().toList()).cast<List<AMapFutureTimeInfoElement>?>().toList();
   }
   
   //endregion

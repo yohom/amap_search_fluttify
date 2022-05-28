@@ -23,7 +23,7 @@ class com_amap_api_services_weather_WeatherSearch extends java_lang_Object  {
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_weather_WeatherSearch> create__android_content_Context(android_content_Context? var1) async {
+  static Future<com_amap_api_services_weather_WeatherSearch> create__android_content_Context(android_content_Context var1) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_weather_WeatherSearch__android_content_Context',
       {"var1": var1}
@@ -37,9 +37,11 @@ class com_amap_api_services_weather_WeatherSearch extends java_lang_Object  {
       'ObjectFactory::create_batchcom_amap_api_services_weather_WeatherSearch__android_content_Context',
       [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_weather_WeatherSearch>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_weather_WeatherSearch>(it))
+        .where((element) => element !=null)
+        .cast<com_amap_api_services_weather_WeatherSearch>()
+        .toList() ?? <com_amap_api_services_weather_WeatherSearch>[];
   }
   
   //endregion
@@ -71,7 +73,7 @@ class com_amap_api_services_weather_WeatherSearch extends java_lang_Object  {
   }
   
   
-  Future<void> setQuery(com_amap_api_services_weather_WeatherSearchQuery? var1) async {
+  Future<void> setQuery(com_amap_api_services_weather_WeatherSearchQuery var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.weather.WeatherSearch@$refId::setQuery([])');
@@ -105,7 +107,7 @@ class com_amap_api_services_weather_WeatherSearch extends java_lang_Object  {
   }
   
   
-  Future<void> setOnWeatherSearchListener(com_amap_api_services_weather_WeatherSearch_OnWeatherSearchListener? var1) async {
+  Future<void> setOnWeatherSearchListener(com_amap_api_services_weather_WeatherSearch_OnWeatherSearchListener var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.weather.WeatherSearch@$refId::setOnWeatherSearchListener([])');
@@ -116,38 +118,7 @@ class com_amap_api_services_weather_WeatherSearch extends java_lang_Object  {
   
   
     // handle native call
-    MethodChannel('com.amap.api.services.weather.WeatherSearch::setOnWeatherSearchListener::Callback@$refId', kAmapSearchFluttifyMethodCodec)
-        .setMethodCallHandler((methodCall) async {
-          try {
-            final args = methodCall.arguments as Map;
-            switch (methodCall.method) {
-              case 'Callback::com.amap.api.services.weather.WeatherSearch.OnWeatherSearchListener::onWeatherLiveSearched':
-                // print log
-                if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onWeatherLiveSearched([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
-                }
-          
-                // handle the native call
-                await var1?.onWeatherLiveSearched(AmapSearchFluttifyAndroidAs(args['var1']), args['var2']);
-                break;
-              case 'Callback::com.amap.api.services.weather.WeatherSearch.OnWeatherSearchListener::onWeatherForecastSearched':
-                // print log
-                if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onWeatherForecastSearched([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
-                }
-          
-                // handle the native call
-                await var1?.onWeatherForecastSearched(AmapSearchFluttifyAndroidAs(args['var1']), args['var2']);
-                break;
-              default:
-                throw MissingPluginException('方法${methodCall.method}未实现');
-                break;
-            }
-          } catch (e) {
-            debugPrint(e.toString());
-            rethrow;
-          }
-        });
+  
   
     return __result__;
   }
@@ -160,7 +131,12 @@ class com_amap_api_services_weather_WeatherSearch extends java_lang_Object  {
   }
 }
 
-extension com_amap_api_services_weather_WeatherSearch_Batch on List<com_amap_api_services_weather_WeatherSearch?> {
+extension com_amap_api_services_weather_WeatherSearch_Batch on List<com_amap_api_services_weather_WeatherSearch> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first.refId;
+  }
+
   //region getters
   
   //endregion
@@ -171,18 +147,18 @@ extension com_amap_api_services_weather_WeatherSearch_Batch on List<com_amap_api
 
   //region methods
   
-  Future<List<com_amap_api_services_weather_WeatherSearchQuery?>?> getQuery_batch() async {
+  Future<List<com_amap_api_services_weather_WeatherSearchQuery?>> getQuery_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.weather.WeatherSearch::getQuery_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_weather_WeatherSearchQuery>(__result__)).cast<com_amap_api_services_weather_WeatherSearchQuery>().toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_weather_WeatherSearchQuery>(__result__)).cast<com_amap_api_services_weather_WeatherSearchQuery?>().toList();
   }
   
   
-  Future<List<void>?> setQuery_batch(List<com_amap_api_services_weather_WeatherSearchQuery> var1) async {
+  Future<List<void>> setQuery_batch(List<com_amap_api_services_weather_WeatherSearchQuery> var1) async {
     assert(true);
   
     // invoke native method
@@ -193,7 +169,7 @@ extension com_amap_api_services_weather_WeatherSearch_Batch on List<com_amap_api
   }
   
   
-  Future<List<void>?> searchWeatherAsyn_batch() async {
+  Future<List<void>> searchWeatherAsyn_batch() async {
     assert(true);
   
     // invoke native method

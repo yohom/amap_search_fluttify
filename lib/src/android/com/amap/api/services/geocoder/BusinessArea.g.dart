@@ -37,9 +37,11 @@ class com_amap_api_services_geocoder_BusinessArea extends java_lang_Object with 
       'ObjectFactory::create_batchcom_amap_api_services_geocoder_BusinessArea__',
       {'length': length}
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_geocoder_BusinessArea>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_geocoder_BusinessArea>(it))
+        .where((element) => element !=null)
+        .cast<com_amap_api_services_geocoder_BusinessArea>()
+        .toList() ?? <com_amap_api_services_geocoder_BusinessArea>[];
   }
   
   //endregion
@@ -71,7 +73,7 @@ class com_amap_api_services_geocoder_BusinessArea extends java_lang_Object with 
   }
   
   
-  Future<void> setCenterPoint(com_amap_api_services_core_LatLonPoint? var1) async {
+  Future<void> setCenterPoint(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.BusinessArea@$refId::setCenterPoint([])');
@@ -105,7 +107,7 @@ class com_amap_api_services_geocoder_BusinessArea extends java_lang_Object with 
   }
   
   
-  Future<void> setName(String? var1) async {
+  Future<void> setName(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.geocoder.BusinessArea@$refId::setName([\'var1\':$var1])');
@@ -129,7 +131,12 @@ class com_amap_api_services_geocoder_BusinessArea extends java_lang_Object with 
   }
 }
 
-extension com_amap_api_services_geocoder_BusinessArea_Batch on List<com_amap_api_services_geocoder_BusinessArea?> {
+extension com_amap_api_services_geocoder_BusinessArea_Batch on List<com_amap_api_services_geocoder_BusinessArea> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first.refId;
+  }
+
   //region getters
   
   //endregion
@@ -140,18 +147,18 @@ extension com_amap_api_services_geocoder_BusinessArea_Batch on List<com_amap_api
 
   //region methods
   
-  Future<List<com_amap_api_services_core_LatLonPoint?>?> getCenterPoint_batch() async {
+  Future<List<com_amap_api_services_core_LatLonPoint?>> getCenterPoint_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.BusinessArea::getCenterPoint_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(__result__)).cast<com_amap_api_services_core_LatLonPoint>().toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(__result__)).cast<com_amap_api_services_core_LatLonPoint?>().toList();
   }
   
   
-  Future<List<void>?> setCenterPoint_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
+  Future<List<void>> setCenterPoint_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
     assert(true);
   
     // invoke native method
@@ -162,18 +169,18 @@ extension com_amap_api_services_geocoder_BusinessArea_Batch on List<com_amap_api
   }
   
   
-  Future<List<String?>?> getName_batch() async {
+  Future<List<String?>> getName_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.geocoder.BusinessArea::getName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   
-  Future<List<void>?> setName_batch(List<String> var1) async {
+  Future<List<void>> setName_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method

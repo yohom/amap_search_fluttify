@@ -37,9 +37,11 @@ class com_amap_api_services_nearby_UploadInfo extends java_lang_Object  {
       'ObjectFactory::create_batchcom_amap_api_services_nearby_UploadInfo__',
       {'length': length}
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_nearby_UploadInfo>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_nearby_UploadInfo>(it))
+        .where((element) => element !=null)
+        .cast<com_amap_api_services_nearby_UploadInfo>()
+        .toList() ?? <com_amap_api_services_nearby_UploadInfo>[];
   }
   
   //endregion
@@ -54,7 +56,7 @@ class com_amap_api_services_nearby_UploadInfo extends java_lang_Object  {
 
   //region methods
   
-  Future<void> setPoint(com_amap_api_services_core_LatLonPoint? var1) async {
+  Future<void> setPoint(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.nearby.UploadInfo@$refId::setPoint([])');
@@ -88,7 +90,7 @@ class com_amap_api_services_nearby_UploadInfo extends java_lang_Object  {
   }
   
   
-  Future<void> setUserID(String? var1) async {
+  Future<void> setUserID(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.nearby.UploadInfo@$refId::setUserID([\'var1\':$var1])');
@@ -139,7 +141,7 @@ class com_amap_api_services_nearby_UploadInfo extends java_lang_Object  {
   }
   
   
-  Future<void> setCoordType(int? var1) async {
+  Future<void> setCoordType(int var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.nearby.UploadInfo@$refId::setCoordType([\'var1\':$var1])');
@@ -163,7 +165,12 @@ class com_amap_api_services_nearby_UploadInfo extends java_lang_Object  {
   }
 }
 
-extension com_amap_api_services_nearby_UploadInfo_Batch on List<com_amap_api_services_nearby_UploadInfo?> {
+extension com_amap_api_services_nearby_UploadInfo_Batch on List<com_amap_api_services_nearby_UploadInfo> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first.refId;
+  }
+
   //region getters
   
   //endregion
@@ -174,7 +181,7 @@ extension com_amap_api_services_nearby_UploadInfo_Batch on List<com_amap_api_ser
 
   //region methods
   
-  Future<List<void>?> setPoint_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
+  Future<List<void>> setPoint_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
     assert(true);
   
     // invoke native method
@@ -185,18 +192,18 @@ extension com_amap_api_services_nearby_UploadInfo_Batch on List<com_amap_api_ser
   }
   
   
-  Future<List<com_amap_api_services_core_LatLonPoint?>?> getPoint_batch() async {
+  Future<List<com_amap_api_services_core_LatLonPoint?>> getPoint_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.UploadInfo::getPoint_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(__result__)).cast<com_amap_api_services_core_LatLonPoint>().toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(__result__)).cast<com_amap_api_services_core_LatLonPoint?>().toList();
   }
   
   
-  Future<List<void>?> setUserID_batch(List<String> var1) async {
+  Future<List<void>> setUserID_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -207,29 +214,29 @@ extension com_amap_api_services_nearby_UploadInfo_Batch on List<com_amap_api_ser
   }
   
   
-  Future<List<String?>?> getUserID_batch() async {
+  Future<List<String?>> getUserID_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.UploadInfo::getUserID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   
-  Future<List<int?>?> getCoordType_batch() async {
+  Future<List<int?>> getCoordType_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.UploadInfo::getCoordType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<int>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
   }
   
   
-  Future<List<void>?> setCoordType_batch(List<int> var1) async {
+  Future<List<void>> setCoordType_batch(List<int> var1) async {
     assert(true);
   
     // invoke native method

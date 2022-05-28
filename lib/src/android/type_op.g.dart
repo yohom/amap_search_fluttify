@@ -11,8 +11,9 @@ import 'package:amap_search_fluttify/src/android/android.export.g.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
-import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 
+
+// ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
 // type check
 @optionalTypeArgs
 Future<bool> AmapSearchFluttifyAndroidIs<T>(dynamic __this__) async {
@@ -20,7 +21,13 @@ Future<bool> AmapSearchFluttifyAndroidIs<T>(dynamic __this__) async {
   if (RegExp(r'^(List<)?(String|int|double)(>)?|(Map<String,(String|int|double)>)$').hasMatch(typeName)) {
     return __this__ is T;
   }
-  else if (T == com_amap_api_services_busline_BusLineItem) {
+  else if (T == com_amap_api_services_busline_BusLineSearch_OnBusLineSearchListener) {
+    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_busline_BusLineSearch_OnBusLineSearchListener', {'__this__': __this__});
+    return result;
+  } else if (T == com_amap_api_services_busline_BusStationSearch_OnBusStationSearchListener) {
+    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_busline_BusStationSearch_OnBusStationSearchListener', {'__this__': __this__});
+    return result;
+  } else if (T == com_amap_api_services_busline_BusLineItem) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_busline_BusLineItem', {'__this__': __this__});
     return result;
   } else if (T == com_amap_api_services_busline_BusStationResult) {
@@ -71,6 +78,9 @@ Future<bool> AmapSearchFluttifyAndroidIs<T>(dynamic __this__) async {
   } else if (T == com_amap_api_services_poisearch_SubPoiItem) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_poisearch_SubPoiItem', {'__this__': __this__});
     return result;
+  } else if (T == com_amap_api_services_poisearch_PoiSearch_OnPoiSearchListener) {
+    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_poisearch_PoiSearch_OnPoiSearchListener', {'__this__': __this__});
+    return result;
   } else if (T == com_amap_api_services_poisearch_PoiItemExtension) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_poisearch_PoiItemExtension', {'__this__': __this__});
     return result;
@@ -97,6 +107,9 @@ Future<bool> AmapSearchFluttifyAndroidIs<T>(dynamic __this__) async {
     return result;
   } else if (T == com_amap_api_services_route_DriveRoutePlanResult) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_route_DriveRoutePlanResult', {'__this__': __this__});
+    return result;
+  } else if (T == com_amap_api_services_route_RouteSearchV2_OnRoutePlanSearchListener) {
+    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RouteSearchV2_OnRoutePlanSearchListener', {'__this__': __this__});
     return result;
   } else if (T == com_amap_api_services_route_RouteSearch_TruckRouteQuery) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RouteSearch_TruckRouteQuery', {'__this__': __this__});
@@ -125,6 +138,9 @@ Future<bool> AmapSearchFluttifyAndroidIs<T>(dynamic __this__) async {
   } else if (T == com_amap_api_services_route_RoutePlanResult) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RoutePlanResult', {'__this__': __this__});
     return result;
+  } else if (T == com_amap_api_services_route_DistanceSearch_OnDistanceSearchListener) {
+    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_route_DistanceSearch_OnDistanceSearchListener', {'__this__': __this__});
+    return result;
   } else if (T == com_amap_api_services_route_RailwaySpace) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RailwaySpace', {'__this__': __this__});
     return result;
@@ -137,17 +153,38 @@ Future<bool> AmapSearchFluttifyAndroidIs<T>(dynamic __this__) async {
   } else if (T == com_amap_api_services_route_RouteSearch_DriveRouteQuery) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RouteSearch_DriveRouteQuery', {'__this__': __this__});
     return result;
+  } else if (T == com_amap_api_services_route_RouteSearchV2_NewEnergy) {
+    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RouteSearchV2_NewEnergy', {'__this__': __this__});
+    return result;
+  } else if (T == com_amap_api_services_route_RouteSearchV2_TransCost) {
+    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RouteSearchV2_TransCost', {'__this__': __this__});
+    return result;
   } else if (T == com_amap_api_services_route_RouteRailwayItem) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RouteRailwayItem', {'__this__': __this__});
     return result;
+  } else if (T == com_amap_api_services_route_RouteSearchV2) {
+    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RouteSearchV2', {'__this__': __this__});
+    return result;
+  } else if (T == com_amap_api_services_route_RouteSearchV2_SpeedCost) {
+    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RouteSearchV2_SpeedCost', {'__this__': __this__});
+    return result;
   } else if (T == com_amap_api_services_route_WalkStep) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_route_WalkStep', {'__this__': __this__});
+    return result;
+  } else if (T == com_amap_api_services_route_RouteSearchV2_CurveCost) {
+    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RouteSearchV2_CurveCost', {'__this__': __this__});
+    return result;
+  } else if (T == com_amap_api_services_route_RouteSearchV2_SlopeCost) {
+    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RouteSearchV2_SlopeCost', {'__this__': __this__});
     return result;
   } else if (T == com_amap_api_services_route_RailwayStationItem) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RailwayStationItem', {'__this__': __this__});
     return result;
   } else if (T == com_amap_api_services_route_RideRouteResult) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RideRouteResult', {'__this__': __this__});
+    return result;
+  } else if (T == com_amap_api_services_route_ChargeStationInfo) {
+    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_route_ChargeStationInfo', {'__this__': __this__});
     return result;
   } else if (T == com_amap_api_services_route_RouteSearch_FromAndTo) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RouteSearch_FromAndTo', {'__this__': __this__});
@@ -161,8 +198,26 @@ Future<bool> AmapSearchFluttifyAndroidIs<T>(dynamic __this__) async {
   } else if (T == com_amap_api_services_route_RideStep) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RideStep', {'__this__': __this__});
     return result;
+  } else if (T == com_amap_api_services_route_RouteSearchV2_DriveRouteQuery) {
+    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RouteSearchV2_DriveRouteQuery', {'__this__': __this__});
+    return result;
+  } else if (T == com_amap_api_services_route_RouteSearchV2_PowerTrainLoss) {
+    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RouteSearchV2_PowerTrainLoss', {'__this__': __this__});
+    return result;
   } else if (T == com_amap_api_services_route_RouteSearchCity) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RouteSearchCity', {'__this__': __this__});
+    return result;
+  } else if (T == com_amap_api_services_route_RouteSearch_OnRouteSearchListener) {
+    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RouteSearch_OnRouteSearchListener', {'__this__': __this__});
+    return result;
+  } else if (T == com_amap_api_services_route_RouteSearchV2_OnTruckRouteSearchListener) {
+    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RouteSearchV2_OnTruckRouteSearchListener', {'__this__': __this__});
+    return result;
+  } else if (T == com_amap_api_services_route_Navi) {
+    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_route_Navi', {'__this__': __this__});
+    return result;
+  } else if (T == com_amap_api_services_route_Cost) {
+    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_route_Cost', {'__this__': __this__});
     return result;
   } else if (T == com_amap_api_services_route_DistanceResult) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_route_DistanceResult', {'__this__': __this__});
@@ -173,6 +228,9 @@ Future<bool> AmapSearchFluttifyAndroidIs<T>(dynamic __this__) async {
   } else if (T == com_amap_api_services_route_District) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_route_District', {'__this__': __this__});
     return result;
+  } else if (T == com_amap_api_services_route_DriveRouteResultV2) {
+    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_route_DriveRouteResultV2', {'__this__': __this__});
+    return result;
   } else if (T == com_amap_api_services_route_WalkRouteResult) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_route_WalkRouteResult', {'__this__': __this__});
     return result;
@@ -182,11 +240,23 @@ Future<bool> AmapSearchFluttifyAndroidIs<T>(dynamic __this__) async {
   } else if (T == com_amap_api_services_route_SearchCity) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_route_SearchCity', {'__this__': __this__});
     return result;
+  } else if (T == com_amap_api_services_route_RouteSearch_OnRoutePlanSearchListener) {
+    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RouteSearch_OnRoutePlanSearchListener', {'__this__': __this__});
+    return result;
   } else if (T == com_amap_api_services_route_DistanceSearch) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_route_DistanceSearch', {'__this__': __this__});
     return result;
   } else if (T == com_amap_api_services_route_WalkPath) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_route_WalkPath', {'__this__': __this__});
+    return result;
+  } else if (T == com_amap_api_services_route_RouteSearchV2_OnRouteSearchListener) {
+    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RouteSearchV2_OnRouteSearchListener', {'__this__': __this__});
+    return result;
+  } else if (T == com_amap_api_services_route_ElecConsumeInfo) {
+    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_route_ElecConsumeInfo', {'__this__': __this__});
+    return result;
+  } else if (T == com_amap_api_services_route_DriveStepV2) {
+    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_route_DriveStepV2', {'__this__': __this__});
     return result;
   } else if (T == com_amap_api_services_route_RouteBusLineItem) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RouteBusLineItem', {'__this__': __this__});
@@ -194,11 +264,20 @@ Future<bool> AmapSearchFluttifyAndroidIs<T>(dynamic __this__) async {
   } else if (T == com_amap_api_services_route_RouteSearch_DrivePlanQuery) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RouteSearch_DrivePlanQuery', {'__this__': __this__});
     return result;
+  } else if (T == com_amap_api_services_route_RouteSearchV2_CustomCostMode) {
+    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RouteSearchV2_CustomCostMode', {'__this__': __this__});
+    return result;
   } else if (T == com_amap_api_services_route_DrivePlanStep) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_route_DrivePlanStep', {'__this__': __this__});
     return result;
+  } else if (T == com_amap_api_services_route_RouteSearchV2_ShowFields) {
+    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RouteSearchV2_ShowFields', {'__this__': __this__});
+    return result;
   } else if (T == com_amap_api_services_route_TimeInfo) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_route_TimeInfo', {'__this__': __this__});
+    return result;
+  } else if (T == com_amap_api_services_route_RouteSearchV2_FromAndTo) {
+    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RouteSearchV2_FromAndTo', {'__this__': __this__});
     return result;
   } else if (T == com_amap_api_services_route_DriveStep) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_route_DriveStep', {'__this__': __this__});
@@ -224,6 +303,12 @@ Future<bool> AmapSearchFluttifyAndroidIs<T>(dynamic __this__) async {
   } else if (T == com_amap_api_services_route_TimeInfosElement) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_route_TimeInfosElement', {'__this__': __this__});
     return result;
+  } else if (T == com_amap_api_services_route_RouteSearch_OnTruckRouteSearchListener) {
+    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_route_RouteSearch_OnTruckRouteSearchListener', {'__this__': __this__});
+    return result;
+  } else if (T == com_amap_api_services_route_DrivePathV2) {
+    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_route_DrivePathV2', {'__this__': __this__});
+    return result;
   } else if (T == com_amap_api_services_route_DistanceItem) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_route_DistanceItem', {'__this__': __this__});
     return result;
@@ -235,6 +320,12 @@ Future<bool> AmapSearchFluttifyAndroidIs<T>(dynamic __this__) async {
     return result;
   } else if (T == com_amap_api_services_road_Crossroad) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_road_Crossroad', {'__this__': __this__});
+    return result;
+  } else if (T == com_amap_api_services_nearby_NearbySearch_NearbyListener) {
+    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_nearby_NearbySearch_NearbyListener', {'__this__': __this__});
+    return result;
+  } else if (T == com_amap_api_services_nearby_UploadInfoCallback) {
+    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_nearby_UploadInfoCallback', {'__this__': __this__});
     return result;
   } else if (T == com_amap_api_services_nearby_NearbyInfo) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_nearby_NearbyInfo', {'__this__': __this__});
@@ -259,6 +350,9 @@ Future<bool> AmapSearchFluttifyAndroidIs<T>(dynamic __this__) async {
     return result;
   } else if (T == com_amap_api_services_routepoisearch_RoutePOISearchResult) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_routepoisearch_RoutePOISearchResult', {'__this__': __this__});
+    return result;
+  } else if (T == com_amap_api_services_routepoisearch_RoutePOISearch_OnRoutePOISearchListener) {
+    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_routepoisearch_RoutePOISearch_OnRoutePOISearchListener', {'__this__': __this__});
     return result;
   } else if (T == com_amap_api_services_routepoisearch_RoutePOISearchQuery) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_routepoisearch_RoutePOISearchQuery', {'__this__': __this__});
@@ -287,11 +381,17 @@ Future<bool> AmapSearchFluttifyAndroidIs<T>(dynamic __this__) async {
   } else if (T == com_amap_api_services_cloud_CloudItemDetail) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_cloud_CloudItemDetail', {'__this__': __this__});
     return result;
+  } else if (T == com_amap_api_services_cloud_CloudSearch_OnCloudSearchListener) {
+    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_cloud_CloudSearch_OnCloudSearchListener', {'__this__': __this__});
+    return result;
   } else if (T == com_amap_api_services_weather_LocalDayWeatherForecast) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_weather_LocalDayWeatherForecast', {'__this__': __this__});
     return result;
   } else if (T == com_amap_api_services_weather_WeatherSearchQuery) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_weather_WeatherSearchQuery', {'__this__': __this__});
+    return result;
+  } else if (T == com_amap_api_services_weather_WeatherSearch_OnWeatherSearchListener) {
+    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_weather_WeatherSearch_OnWeatherSearchListener', {'__this__': __this__});
     return result;
   } else if (T == com_amap_api_services_weather_LocalWeatherForecastResult) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_weather_LocalWeatherForecastResult', {'__this__': __this__});
@@ -326,6 +426,9 @@ Future<bool> AmapSearchFluttifyAndroidIs<T>(dynamic __this__) async {
   } else if (T == com_amap_api_services_geocoder_AoiItem) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_geocoder_AoiItem', {'__this__': __this__});
     return result;
+  } else if (T == com_amap_api_services_geocoder_GeocodeSearch_OnGeocodeSearchListener) {
+    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_geocoder_GeocodeSearch_OnGeocodeSearchListener', {'__this__': __this__});
+    return result;
   } else if (T == com_amap_api_services_geocoder_RegeocodeRoad) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_geocoder_RegeocodeRoad', {'__this__': __this__});
     return result;
@@ -353,6 +456,12 @@ Future<bool> AmapSearchFluttifyAndroidIs<T>(dynamic __this__) async {
   } else if (T == com_amap_api_services_district_DistrictItem) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_district_DistrictItem', {'__this__': __this__});
     return result;
+  } else if (T == com_amap_api_services_district_DistrictSearch_OnDistrictSearchListener) {
+    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_district_DistrictSearch_OnDistrictSearchListener', {'__this__': __this__});
+    return result;
+  } else if (T == com_amap_api_services_help_Inputtips_InputtipsListener) {
+    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_help_Inputtips_InputtipsListener', {'__this__': __this__});
+    return result;
   } else if (T == com_amap_api_services_help_Tip) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_help_Tip', {'__this__': __this__});
     return result;
@@ -379,6 +488,9 @@ Future<bool> AmapSearchFluttifyAndroidIs<T>(dynamic __this__) async {
     return result;
   } else if (T == com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery', {'__this__': __this__});
+    return result;
+  } else if (T == com_amap_api_services_share_ShareSearch_OnShareSearchListener) {
+    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfcom_amap_api_services_share_ShareSearch_OnShareSearchListener', {'__this__': __this__});
     return result;
   } else if (T == android_content_Context) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_content_Context', {'__this__': __this__});
@@ -419,6 +531,9 @@ Future<bool> AmapSearchFluttifyAndroidIs<T>(dynamic __this__) async {
   } else if (T == android_opengl_GLSurfaceView) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_opengl_GLSurfaceView', {'__this__': __this__});
     return result;
+  } else if (T == android_view_View_OnApplyWindowInsetsListener) {
+    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_view_View_OnApplyWindowInsetsListener', {'__this__': __this__});
+    return result;
   } else if (T == android_view_ViewGroup) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_view_ViewGroup', {'__this__': __this__});
     return result;
@@ -433,6 +548,9 @@ Future<bool> AmapSearchFluttifyAndroidIs<T>(dynamic __this__) async {
     return result;
   } else if (T == android_widget_ImageView) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_widget_ImageView', {'__this__': __this__});
+    return result;
+  } else if (T == java_io_Serializable) {
+    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfjava_io_Serializable', {'__this__': __this__});
     return result;
   } else if (T == java_io_File) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfjava_io_File', {'__this__': __this__});
@@ -481,7 +599,11 @@ T? AmapSearchFluttifyAndroidAs<T>(dynamic __this__) {
   } else if (RegExp(r'^(List<)?(String|int|double)(>)?|(Map<String,(String|int|double)>)$').hasMatch(typeName)) {
     return __this__ as T;
   }
-  else if (T == com_amap_api_services_busline_BusLineItem) {
+  else if (T == com_amap_api_services_busline_BusLineSearch_OnBusLineSearchListener) {
+    return (com_amap_api_services_busline_BusLineSearch_OnBusLineSearchListener.subInstance()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == com_amap_api_services_busline_BusStationSearch_OnBusStationSearchListener) {
+    return (com_amap_api_services_busline_BusStationSearch_OnBusStationSearchListener.subInstance()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == com_amap_api_services_busline_BusLineItem) {
     return (com_amap_api_services_busline_BusLineItem()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_amap_api_services_busline_BusStationResult) {
     return (com_amap_api_services_busline_BusStationResult()..refId = (__this__ as Ref).refId) as T;
@@ -515,6 +637,8 @@ T? AmapSearchFluttifyAndroidAs<T>(dynamic __this__) {
     return (com_amap_api_services_poisearch_Photo()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_amap_api_services_poisearch_SubPoiItem) {
     return (com_amap_api_services_poisearch_SubPoiItem()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == com_amap_api_services_poisearch_PoiSearch_OnPoiSearchListener) {
+    return (com_amap_api_services_poisearch_PoiSearch_OnPoiSearchListener.subInstance()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_amap_api_services_poisearch_PoiItemExtension) {
     return (com_amap_api_services_poisearch_PoiItemExtension()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_amap_api_services_poisearch_PoiSearch_SearchBound) {
@@ -533,6 +657,8 @@ T? AmapSearchFluttifyAndroidAs<T>(dynamic __this__) {
     return (com_amap_api_services_route_BusPath()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_amap_api_services_route_DriveRoutePlanResult) {
     return (com_amap_api_services_route_DriveRoutePlanResult()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == com_amap_api_services_route_RouteSearchV2_OnRoutePlanSearchListener) {
+    return (com_amap_api_services_route_RouteSearchV2_OnRoutePlanSearchListener.subInstance()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_amap_api_services_route_RouteSearch_TruckRouteQuery) {
     return (com_amap_api_services_route_RouteSearch_TruckRouteQuery()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_amap_api_services_route_TMC) {
@@ -551,6 +677,8 @@ T? AmapSearchFluttifyAndroidAs<T>(dynamic __this__) {
     return (com_amap_api_services_route_BusRouteResult()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_amap_api_services_route_RoutePlanResult) {
     return (com_amap_api_services_route_RoutePlanResult()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == com_amap_api_services_route_DistanceSearch_OnDistanceSearchListener) {
+    return (com_amap_api_services_route_DistanceSearch_OnDistanceSearchListener.subInstance()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_amap_api_services_route_RailwaySpace) {
     return (com_amap_api_services_route_RailwaySpace()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_amap_api_services_route_TruckRouteRestult) {
@@ -559,14 +687,28 @@ T? AmapSearchFluttifyAndroidAs<T>(dynamic __this__) {
     return (com_amap_api_services_route_RouteSearch_RideRouteQuery()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_amap_api_services_route_RouteSearch_DriveRouteQuery) {
     return (com_amap_api_services_route_RouteSearch_DriveRouteQuery()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == com_amap_api_services_route_RouteSearchV2_NewEnergy) {
+    return (com_amap_api_services_route_RouteSearchV2_NewEnergy()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == com_amap_api_services_route_RouteSearchV2_TransCost) {
+    return (com_amap_api_services_route_RouteSearchV2_TransCost()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_amap_api_services_route_RouteRailwayItem) {
     return (com_amap_api_services_route_RouteRailwayItem()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == com_amap_api_services_route_RouteSearchV2) {
+    return (com_amap_api_services_route_RouteSearchV2()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == com_amap_api_services_route_RouteSearchV2_SpeedCost) {
+    return (com_amap_api_services_route_RouteSearchV2_SpeedCost()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_amap_api_services_route_WalkStep) {
     return (com_amap_api_services_route_WalkStep()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == com_amap_api_services_route_RouteSearchV2_CurveCost) {
+    return (com_amap_api_services_route_RouteSearchV2_CurveCost()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == com_amap_api_services_route_RouteSearchV2_SlopeCost) {
+    return (com_amap_api_services_route_RouteSearchV2_SlopeCost()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_amap_api_services_route_RailwayStationItem) {
     return (com_amap_api_services_route_RailwayStationItem()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_amap_api_services_route_RideRouteResult) {
     return (com_amap_api_services_route_RideRouteResult()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == com_amap_api_services_route_ChargeStationInfo) {
+    return (com_amap_api_services_route_ChargeStationInfo()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_amap_api_services_route_RouteSearch_FromAndTo) {
     return (com_amap_api_services_route_RouteSearch_FromAndTo()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_amap_api_services_route_RidePath) {
@@ -575,32 +717,60 @@ T? AmapSearchFluttifyAndroidAs<T>(dynamic __this__) {
     return (com_amap_api_services_route_RouteSearch_BusRouteQuery()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_amap_api_services_route_RideStep) {
     return (com_amap_api_services_route_RideStep()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == com_amap_api_services_route_RouteSearchV2_DriveRouteQuery) {
+    return (com_amap_api_services_route_RouteSearchV2_DriveRouteQuery()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == com_amap_api_services_route_RouteSearchV2_PowerTrainLoss) {
+    return (com_amap_api_services_route_RouteSearchV2_PowerTrainLoss()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_amap_api_services_route_RouteSearchCity) {
     return (com_amap_api_services_route_RouteSearchCity()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == com_amap_api_services_route_RouteSearch_OnRouteSearchListener) {
+    return (com_amap_api_services_route_RouteSearch_OnRouteSearchListener.subInstance()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == com_amap_api_services_route_RouteSearchV2_OnTruckRouteSearchListener) {
+    return (com_amap_api_services_route_RouteSearchV2_OnTruckRouteSearchListener.subInstance()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == com_amap_api_services_route_Navi) {
+    return (com_amap_api_services_route_Navi()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == com_amap_api_services_route_Cost) {
+    return (com_amap_api_services_route_Cost()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_amap_api_services_route_DistanceResult) {
     return (com_amap_api_services_route_DistanceResult()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_amap_api_services_route_RouteSearch_WalkRouteQuery) {
     return (com_amap_api_services_route_RouteSearch_WalkRouteQuery()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_amap_api_services_route_District) {
     return (com_amap_api_services_route_District()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == com_amap_api_services_route_DriveRouteResultV2) {
+    return (com_amap_api_services_route_DriveRouteResultV2()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_amap_api_services_route_WalkRouteResult) {
     return (com_amap_api_services_route_WalkRouteResult()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_amap_api_services_route_DistanceSearch_DistanceQuery) {
     return (com_amap_api_services_route_DistanceSearch_DistanceQuery()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_amap_api_services_route_SearchCity) {
     return (com_amap_api_services_route_SearchCity()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == com_amap_api_services_route_RouteSearch_OnRoutePlanSearchListener) {
+    return (com_amap_api_services_route_RouteSearch_OnRoutePlanSearchListener.subInstance()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_amap_api_services_route_DistanceSearch) {
     return (com_amap_api_services_route_DistanceSearch()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_amap_api_services_route_WalkPath) {
     return (com_amap_api_services_route_WalkPath()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == com_amap_api_services_route_RouteSearchV2_OnRouteSearchListener) {
+    return (com_amap_api_services_route_RouteSearchV2_OnRouteSearchListener.subInstance()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == com_amap_api_services_route_ElecConsumeInfo) {
+    return (com_amap_api_services_route_ElecConsumeInfo()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == com_amap_api_services_route_DriveStepV2) {
+    return (com_amap_api_services_route_DriveStepV2()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_amap_api_services_route_RouteBusLineItem) {
     return (com_amap_api_services_route_RouteBusLineItem()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_amap_api_services_route_RouteSearch_DrivePlanQuery) {
     return (com_amap_api_services_route_RouteSearch_DrivePlanQuery()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == com_amap_api_services_route_RouteSearchV2_CustomCostMode) {
+    return (com_amap_api_services_route_RouteSearchV2_CustomCostMode()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_amap_api_services_route_DrivePlanStep) {
     return (com_amap_api_services_route_DrivePlanStep()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == com_amap_api_services_route_RouteSearchV2_ShowFields) {
+    return (com_amap_api_services_route_RouteSearchV2_ShowFields()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_amap_api_services_route_TimeInfo) {
     return (com_amap_api_services_route_TimeInfo()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == com_amap_api_services_route_RouteSearchV2_FromAndTo) {
+    return (com_amap_api_services_route_RouteSearchV2_FromAndTo()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_amap_api_services_route_DriveStep) {
     return (com_amap_api_services_route_DriveStep()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_amap_api_services_route_TruckStep) {
@@ -617,6 +787,10 @@ T? AmapSearchFluttifyAndroidAs<T>(dynamic __this__) {
     return (com_amap_api_services_route_DrivePlanPath()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_amap_api_services_route_TimeInfosElement) {
     return (com_amap_api_services_route_TimeInfosElement()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == com_amap_api_services_route_RouteSearch_OnTruckRouteSearchListener) {
+    return (com_amap_api_services_route_RouteSearch_OnTruckRouteSearchListener.subInstance()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == com_amap_api_services_route_DrivePathV2) {
+    return (com_amap_api_services_route_DrivePathV2()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_amap_api_services_route_DistanceItem) {
     return (com_amap_api_services_route_DistanceItem()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_amap_api_services_route_Path) {
@@ -625,6 +799,10 @@ T? AmapSearchFluttifyAndroidAs<T>(dynamic __this__) {
     return (com_amap_api_services_road_Road()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_amap_api_services_road_Crossroad) {
     return (com_amap_api_services_road_Crossroad()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == com_amap_api_services_nearby_NearbySearch_NearbyListener) {
+    return (com_amap_api_services_nearby_NearbySearch_NearbyListener.subInstance()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == com_amap_api_services_nearby_UploadInfoCallback) {
+    return (com_amap_api_services_nearby_UploadInfoCallback.subInstance()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_amap_api_services_nearby_NearbyInfo) {
     return (com_amap_api_services_nearby_NearbyInfo()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_amap_api_services_nearby_UploadInfo) {
@@ -641,6 +819,8 @@ T? AmapSearchFluttifyAndroidAs<T>(dynamic __this__) {
     return (com_amap_api_services_routepoisearch_RoutePOISearch()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_amap_api_services_routepoisearch_RoutePOISearchResult) {
     return (com_amap_api_services_routepoisearch_RoutePOISearchResult()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == com_amap_api_services_routepoisearch_RoutePOISearch_OnRoutePOISearchListener) {
+    return (com_amap_api_services_routepoisearch_RoutePOISearch_OnRoutePOISearchListener.subInstance()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_amap_api_services_routepoisearch_RoutePOISearchQuery) {
     return (com_amap_api_services_routepoisearch_RoutePOISearchQuery()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_amap_api_services_cloud_CloudItem) {
@@ -659,10 +839,14 @@ T? AmapSearchFluttifyAndroidAs<T>(dynamic __this__) {
     return (com_amap_api_services_cloud_CloudSearch_Sortingrules()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_amap_api_services_cloud_CloudItemDetail) {
     return (com_amap_api_services_cloud_CloudItemDetail()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == com_amap_api_services_cloud_CloudSearch_OnCloudSearchListener) {
+    return (com_amap_api_services_cloud_CloudSearch_OnCloudSearchListener.subInstance()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_amap_api_services_weather_LocalDayWeatherForecast) {
     return (com_amap_api_services_weather_LocalDayWeatherForecast()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_amap_api_services_weather_WeatherSearchQuery) {
     return (com_amap_api_services_weather_WeatherSearchQuery()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == com_amap_api_services_weather_WeatherSearch_OnWeatherSearchListener) {
+    return (com_amap_api_services_weather_WeatherSearch_OnWeatherSearchListener.subInstance()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_amap_api_services_weather_LocalWeatherForecastResult) {
     return (com_amap_api_services_weather_LocalWeatherForecastResult()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_amap_api_services_weather_LocalWeatherForecast) {
@@ -685,6 +869,8 @@ T? AmapSearchFluttifyAndroidAs<T>(dynamic __this__) {
     return (com_amap_api_services_geocoder_GeocodeResult()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_amap_api_services_geocoder_AoiItem) {
     return (com_amap_api_services_geocoder_AoiItem()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == com_amap_api_services_geocoder_GeocodeSearch_OnGeocodeSearchListener) {
+    return (com_amap_api_services_geocoder_GeocodeSearch_OnGeocodeSearchListener.subInstance()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_amap_api_services_geocoder_RegeocodeRoad) {
     return (com_amap_api_services_geocoder_RegeocodeRoad()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_amap_api_services_geocoder_GeocodeAddress) {
@@ -703,6 +889,10 @@ T? AmapSearchFluttifyAndroidAs<T>(dynamic __this__) {
     return (com_amap_api_services_district_DistrictResult()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_amap_api_services_district_DistrictItem) {
     return (com_amap_api_services_district_DistrictItem()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == com_amap_api_services_district_DistrictSearch_OnDistrictSearchListener) {
+    return (com_amap_api_services_district_DistrictSearch_OnDistrictSearchListener.subInstance()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == com_amap_api_services_help_Inputtips_InputtipsListener) {
+    return (com_amap_api_services_help_Inputtips_InputtipsListener.subInstance()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_amap_api_services_help_Tip) {
     return (com_amap_api_services_help_Tip()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_amap_api_services_help_InputtipsQuery) {
@@ -721,6 +911,8 @@ T? AmapSearchFluttifyAndroidAs<T>(dynamic __this__) {
     return (com_amap_api_services_share_ShareSearch_ShareWalkRouteQuery()..refId = (__this__ as Ref).refId) as T;
   } else if (T == com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery) {
     return (com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == com_amap_api_services_share_ShareSearch_OnShareSearchListener) {
+    return (com_amap_api_services_share_ShareSearch_OnShareSearchListener.subInstance()..refId = (__this__ as Ref).refId) as T;
   } else if (T == android_content_Context) {
     return (android_content_Context()..refId = (__this__ as Ref).refId) as T;
   } else if (T == android_content_Intent) {
@@ -747,6 +939,8 @@ T? AmapSearchFluttifyAndroidAs<T>(dynamic __this__) {
     return (android_view_SurfaceHolder.subInstance()..refId = (__this__ as Ref).refId) as T;
   } else if (T == android_opengl_GLSurfaceView) {
     return (android_opengl_GLSurfaceView()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == android_view_View_OnApplyWindowInsetsListener) {
+    return (android_view_View_OnApplyWindowInsetsListener.subInstance()..refId = (__this__ as Ref).refId) as T;
   } else if (T == android_view_ViewGroup) {
     return (android_view_ViewGroup()..refId = (__this__ as Ref).refId) as T;
   } else if (T == android_graphics_Point) {
@@ -757,6 +951,8 @@ T? AmapSearchFluttifyAndroidAs<T>(dynamic __this__) {
     return (android_graphics_Bitmap()..refId = (__this__ as Ref).refId) as T;
   } else if (T == android_widget_ImageView) {
     return (android_widget_ImageView()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == java_io_Serializable) {
+    return (java_io_Serializable.subInstance()..refId = (__this__ as Ref).refId) as T;
   } else if (T == java_io_File) {
     return (java_io_File()..refId = (__this__ as Ref).refId) as T;
   } else if (T == android_location_Location) {
@@ -778,9 +974,7 @@ T? AmapSearchFluttifyAndroidAs<T>(dynamic __this__) {
   } else if (T == android_util_Pair) {
     return (android_util_Pair()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (AmapCoreFluttifyAndroidAs<T>(__this__) != null) {
-    return AmapCoreFluttifyAndroidAs<T>(__this__);
-  }
+  
   else {
     return __this__;
   }

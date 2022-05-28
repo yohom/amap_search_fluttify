@@ -33,6 +33,62 @@ public class SubHandler1 {
     public static Map<String, Handler> getSubHandler(BinaryMessenger messenger) {
         return new HashMap<String, Handler>() {{
             // method
+            put("com.amap.api.services.poisearch.PoiSearch.SearchBound::getRange", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                com.amap.api.services.poisearch.PoiSearch.SearchBound __this__ = (com.amap.api.services.poisearch.PoiSearch.SearchBound) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.PoiSearch.SearchBound@" + __this__ + "::getRange(" + "" + ")");
+                }
+            
+                // invoke native method
+                Integer __result__ = null;
+                try {
+                    __result__ = __this__.getRange();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.amap.api.services.poisearch.PoiSearch.SearchBound::getShape", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                com.amap.api.services.poisearch.PoiSearch.SearchBound __this__ = (com.amap.api.services.poisearch.PoiSearch.SearchBound) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.PoiSearch.SearchBound@" + __this__ + "::getShape(" + "" + ")");
+                }
+            
+                // invoke native method
+                String __result__ = null;
+                try {
+                    __result__ = __this__.getShape();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
             put("com.amap.api.services.poisearch.PoiSearch.SearchBound::isDistanceSort", (__args__, __methodResult__) -> {
                 // args
             
@@ -328,7 +384,8 @@ public class SubHandler1 {
             // method
             put("com.amap.api.services.poisearch.PoiSearch::setOnPoiSearchListener", (__args__, __methodResult__) -> {
                 // args
-            
+                // ref arg
+                com.amap.api.services.poisearch.PoiSearch.OnPoiSearchListener var1 = (com.amap.api.services.poisearch.PoiSearch.OnPoiSearchListener) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.poisearch.PoiSearch __this__ = (com.amap.api.services.poisearch.PoiSearch) ((Map<String, Object>) __args__).get("__this__");
@@ -341,63 +398,7 @@ public class SubHandler1 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setOnPoiSearchListener(new com.amap.api.services.poisearch.PoiSearch.OnPoiSearchListener() {
-                        // method channel
-                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.poisearch.PoiSearch::setOnPoiSearchListener::Callback@" + __this__.getClass().getName() + ":" + System.identityHashCode(__this__), new StandardMethodCodec(new FluttifyMessageCodec()));
-                        android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
-            
-                        // call dart method
-                        @Override
-                        public void onPoiSearched(com.amap.api.services.poisearch.PoiResult var1, int var2) {
-                            // print log
-                            if (getEnableLog()) {
-                                Log.d("java-callback", "fluttify-java-callback: onPoiSearched(" + var1 + var2 + ")");
-                            }
-            
-                            // call dart method
-                            handler.post(new Runnable() {
-                                @Override
-                                public void run() {
-                                    callbackChannel.invokeMethod(
-                                        "Callback::com.amap.api.services.poisearch.PoiSearch.OnPoiSearchListener::onPoiSearched",
-                                        new HashMap<String, Object>() {{
-                                            put("var1", var1);
-                                            put("var2", var2);
-                                        }}
-                                    );
-                                }
-                            });
-            
-                            // method result
-            
-                        }
-            
-                        @Override
-                        public void onPoiItemSearched(com.amap.api.services.core.PoiItem var1, int var2) {
-                            // print log
-                            if (getEnableLog()) {
-                                Log.d("java-callback", "fluttify-java-callback: onPoiItemSearched(" + var1 + var2 + ")");
-                            }
-            
-                            // call dart method
-                            handler.post(new Runnable() {
-                                @Override
-                                public void run() {
-                                    callbackChannel.invokeMethod(
-                                        "Callback::com.amap.api.services.poisearch.PoiSearch.OnPoiSearchListener::onPoiItemSearched",
-                                        new HashMap<String, Object>() {{
-                                            put("var1", var1);
-                                            put("var2", var2);
-                                        }}
-                                    );
-                                }
-                            });
-            
-                            // method result
-            
-                        }
-            
-                });
+                    __this__.setOnPoiSearchListener(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3088,7 +3089,8 @@ public class SubHandler1 {
             // method
             put("com.amap.api.services.route.RouteSearch::setRouteSearchListener", (__args__, __methodResult__) -> {
                 // args
-            
+                // ref arg
+                com.amap.api.services.route.RouteSearch.OnRouteSearchListener var1 = (com.amap.api.services.route.RouteSearch.OnRouteSearchListener) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.route.RouteSearch __this__ = (com.amap.api.services.route.RouteSearch) ((Map<String, Object>) __args__).get("__this__");
@@ -3101,113 +3103,7 @@ public class SubHandler1 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setRouteSearchListener(new com.amap.api.services.route.RouteSearch.OnRouteSearchListener() {
-                        // method channel
-                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.route.RouteSearch::setRouteSearchListener::Callback@" + __this__.getClass().getName() + ":" + System.identityHashCode(__this__), new StandardMethodCodec(new FluttifyMessageCodec()));
-                        android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
-            
-                        // call dart method
-                        @Override
-                        public void onBusRouteSearched(com.amap.api.services.route.BusRouteResult var1, int var2) {
-                            // print log
-                            if (getEnableLog()) {
-                                Log.d("java-callback", "fluttify-java-callback: onBusRouteSearched(" + var1 + var2 + ")");
-                            }
-            
-                            // call dart method
-                            handler.post(new Runnable() {
-                                @Override
-                                public void run() {
-                                    callbackChannel.invokeMethod(
-                                        "Callback::com.amap.api.services.route.RouteSearch.OnRouteSearchListener::onBusRouteSearched",
-                                        new HashMap<String, Object>() {{
-                                            put("var1", var1);
-                                            put("var2", var2);
-                                        }}
-                                    );
-                                }
-                            });
-            
-                            // method result
-            
-                        }
-            
-                        @Override
-                        public void onDriveRouteSearched(com.amap.api.services.route.DriveRouteResult var1, int var2) {
-                            // print log
-                            if (getEnableLog()) {
-                                Log.d("java-callback", "fluttify-java-callback: onDriveRouteSearched(" + var1 + var2 + ")");
-                            }
-            
-                            // call dart method
-                            handler.post(new Runnable() {
-                                @Override
-                                public void run() {
-                                    callbackChannel.invokeMethod(
-                                        "Callback::com.amap.api.services.route.RouteSearch.OnRouteSearchListener::onDriveRouteSearched",
-                                        new HashMap<String, Object>() {{
-                                            put("var1", var1);
-                                            put("var2", var2);
-                                        }}
-                                    );
-                                }
-                            });
-            
-                            // method result
-            
-                        }
-            
-                        @Override
-                        public void onWalkRouteSearched(com.amap.api.services.route.WalkRouteResult var1, int var2) {
-                            // print log
-                            if (getEnableLog()) {
-                                Log.d("java-callback", "fluttify-java-callback: onWalkRouteSearched(" + var1 + var2 + ")");
-                            }
-            
-                            // call dart method
-                            handler.post(new Runnable() {
-                                @Override
-                                public void run() {
-                                    callbackChannel.invokeMethod(
-                                        "Callback::com.amap.api.services.route.RouteSearch.OnRouteSearchListener::onWalkRouteSearched",
-                                        new HashMap<String, Object>() {{
-                                            put("var1", var1);
-                                            put("var2", var2);
-                                        }}
-                                    );
-                                }
-                            });
-            
-                            // method result
-            
-                        }
-            
-                        @Override
-                        public void onRideRouteSearched(com.amap.api.services.route.RideRouteResult var1, int var2) {
-                            // print log
-                            if (getEnableLog()) {
-                                Log.d("java-callback", "fluttify-java-callback: onRideRouteSearched(" + var1 + var2 + ")");
-                            }
-            
-                            // call dart method
-                            handler.post(new Runnable() {
-                                @Override
-                                public void run() {
-                                    callbackChannel.invokeMethod(
-                                        "Callback::com.amap.api.services.route.RouteSearch.OnRouteSearchListener::onRideRouteSearched",
-                                        new HashMap<String, Object>() {{
-                                            put("var1", var1);
-                                            put("var2", var2);
-                                        }}
-                                    );
-                                }
-                            });
-            
-                            // method result
-            
-                        }
-            
-                });
+                    __this__.setRouteSearchListener(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3222,7 +3118,8 @@ public class SubHandler1 {
             // method
             put("com.amap.api.services.route.RouteSearch::setOnTruckRouteSearchListener", (__args__, __methodResult__) -> {
                 // args
-            
+                // ref arg
+                com.amap.api.services.route.RouteSearch.OnTruckRouteSearchListener var1 = (com.amap.api.services.route.RouteSearch.OnTruckRouteSearchListener) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.route.RouteSearch __this__ = (com.amap.api.services.route.RouteSearch) ((Map<String, Object>) __args__).get("__this__");
@@ -3235,38 +3132,7 @@ public class SubHandler1 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setOnTruckRouteSearchListener(new com.amap.api.services.route.RouteSearch.OnTruckRouteSearchListener() {
-                        // method channel
-                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.route.RouteSearch::setOnTruckRouteSearchListener::Callback@" + __this__.getClass().getName() + ":" + System.identityHashCode(__this__), new StandardMethodCodec(new FluttifyMessageCodec()));
-                        android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
-            
-                        // call dart method
-                        @Override
-                        public void onTruckRouteSearched(com.amap.api.services.route.TruckRouteRestult var1, int var2) {
-                            // print log
-                            if (getEnableLog()) {
-                                Log.d("java-callback", "fluttify-java-callback: onTruckRouteSearched(" + var1 + var2 + ")");
-                            }
-            
-                            // call dart method
-                            handler.post(new Runnable() {
-                                @Override
-                                public void run() {
-                                    callbackChannel.invokeMethod(
-                                        "Callback::com.amap.api.services.route.RouteSearch.OnTruckRouteSearchListener::onTruckRouteSearched",
-                                        new HashMap<String, Object>() {{
-                                            put("var1", var1);
-                                            put("var2", var2);
-                                        }}
-                                    );
-                                }
-                            });
-            
-                            // method result
-            
-                        }
-            
-                });
+                    __this__.setOnTruckRouteSearchListener(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -3281,7 +3147,8 @@ public class SubHandler1 {
             // method
             put("com.amap.api.services.route.RouteSearch::setOnRoutePlanSearchListener", (__args__, __methodResult__) -> {
                 // args
-            
+                // ref arg
+                com.amap.api.services.route.RouteSearch.OnRoutePlanSearchListener var1 = (com.amap.api.services.route.RouteSearch.OnRoutePlanSearchListener) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.route.RouteSearch __this__ = (com.amap.api.services.route.RouteSearch) ((Map<String, Object>) __args__).get("__this__");
@@ -3294,38 +3161,7 @@ public class SubHandler1 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setOnRoutePlanSearchListener(new com.amap.api.services.route.RouteSearch.OnRoutePlanSearchListener() {
-                        // method channel
-                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.route.RouteSearch::setOnRoutePlanSearchListener::Callback@" + __this__.getClass().getName() + ":" + System.identityHashCode(__this__), new StandardMethodCodec(new FluttifyMessageCodec()));
-                        android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
-            
-                        // call dart method
-                        @Override
-                        public void onDriveRoutePlanSearched(com.amap.api.services.route.DriveRoutePlanResult var1, int var2) {
-                            // print log
-                            if (getEnableLog()) {
-                                Log.d("java-callback", "fluttify-java-callback: onDriveRoutePlanSearched(" + var1 + var2 + ")");
-                            }
-            
-                            // call dart method
-                            handler.post(new Runnable() {
-                                @Override
-                                public void run() {
-                                    callbackChannel.invokeMethod(
-                                        "Callback::com.amap.api.services.route.RouteSearch.OnRoutePlanSearchListener::onDriveRoutePlanSearched",
-                                        new HashMap<String, Object>() {{
-                                            put("var1", var1);
-                                            put("var2", var2);
-                                        }}
-                                    );
-                                }
-                            });
-            
-                            // method result
-            
-                        }
-            
-                });
+                    __this__.setOnRoutePlanSearchListener(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -5645,22 +5481,22 @@ public class SubHandler1 {
                 __methodResult__.success(__result__);
             });
             // method
-            put("com.amap.api.services.route.RouteRailwayItem::getTime", (__args__, __methodResult__) -> {
+            put("com.amap.api.services.route.RouteSearchV2.NewEnergy::getKey", (__args__, __methodResult__) -> {
                 // args
             
             
                 // ref
-                com.amap.api.services.route.RouteRailwayItem __this__ = (com.amap.api.services.route.RouteRailwayItem) ((Map<String, Object>) __args__).get("__this__");
+                com.amap.api.services.route.RouteSearchV2.NewEnergy __this__ = (com.amap.api.services.route.RouteSearchV2.NewEnergy) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + __this__ + "::getTime(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearchV2.NewEnergy@" + __this__ + "::getKey(" + "" + ")");
                 }
             
                 // invoke native method
                 String __result__ = null;
                 try {
-                    __result__ = __this__.getTime();
+                    __result__ = __this__.getKey();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -5673,22 +5509,23 @@ public class SubHandler1 {
                 __methodResult__.success(__result__);
             });
             // method
-            put("com.amap.api.services.route.RouteRailwayItem::getTrip", (__args__, __methodResult__) -> {
+            put("com.amap.api.services.route.RouteSearchV2.NewEnergy::setKey", (__args__, __methodResult__) -> {
                 // args
-            
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                com.amap.api.services.route.RouteRailwayItem __this__ = (com.amap.api.services.route.RouteRailwayItem) ((Map<String, Object>) __args__).get("__this__");
+                com.amap.api.services.route.RouteSearchV2.NewEnergy __this__ = (com.amap.api.services.route.RouteSearchV2.NewEnergy) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + __this__ + "::getTrip(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearchV2.NewEnergy@" + __this__ + "::setKey(" + var1 + ")");
                 }
             
                 // invoke native method
-                String __result__ = null;
+                Void __result__ = null;
                 try {
-                    __result__ = __this__.getTrip();
+                    __this__.setKey(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -5701,22 +5538,79 @@ public class SubHandler1 {
                 __methodResult__.success(__result__);
             });
             // method
-            put("com.amap.api.services.route.RouteRailwayItem::getDistance", (__args__, __methodResult__) -> {
+            put("com.amap.api.services.route.RouteSearchV2.NewEnergy::getCustomCostMode", (__args__, __methodResult__) -> {
                 // args
             
             
                 // ref
-                com.amap.api.services.route.RouteRailwayItem __this__ = (com.amap.api.services.route.RouteRailwayItem) ((Map<String, Object>) __args__).get("__this__");
+                com.amap.api.services.route.RouteSearchV2.NewEnergy __this__ = (com.amap.api.services.route.RouteSearchV2.NewEnergy) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + __this__ + "::getDistance(" + "" + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearchV2.NewEnergy@" + __this__ + "::getCustomCostMode(" + "" + ")");
+                }
+            
+                // invoke native method
+                com.amap.api.services.route.RouteSearchV2.CustomCostMode __result__ = null;
+                try {
+                    __result__ = __this__.getCustomCostMode();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.amap.api.services.route.RouteSearchV2.NewEnergy::setCustomCostMode", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                com.amap.api.services.route.RouteSearchV2.CustomCostMode var1 = (com.amap.api.services.route.RouteSearchV2.CustomCostMode) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+                com.amap.api.services.route.RouteSearchV2.NewEnergy __this__ = (com.amap.api.services.route.RouteSearchV2.NewEnergy) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearchV2.NewEnergy@" + __this__ + "::setCustomCostMode(" + var1 + ")");
+                }
+            
+                // invoke native method
+                Void __result__ = null;
+                try {
+                    __this__.setCustomCostMode(var1);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.amap.api.services.route.RouteSearchV2.NewEnergy::getMaxVehicleCharge", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                com.amap.api.services.route.RouteSearchV2.NewEnergy __this__ = (com.amap.api.services.route.RouteSearchV2.NewEnergy) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearchV2.NewEnergy@" + __this__ + "::getMaxVehicleCharge(" + "" + ")");
                 }
             
                 // invoke native method
                 Float __result__ = null;
                 try {
-                    __result__ = __this__.getDistance();
+                    __result__ = __this__.getMaxVehicleCharge();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -5729,191 +5623,23 @@ public class SubHandler1 {
                 __methodResult__.success(__result__);
             });
             // method
-            put("com.amap.api.services.route.RouteRailwayItem::getType", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.amap.api.services.route.RouteRailwayItem __this__ = (com.amap.api.services.route.RouteRailwayItem) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + __this__ + "::getType(" + "" + ")");
-                }
-            
-                // invoke native method
-                String __result__ = null;
-                try {
-                    __result__ = __this__.getType();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.amap.api.services.route.RouteRailwayItem::getDeparturestop", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.amap.api.services.route.RouteRailwayItem __this__ = (com.amap.api.services.route.RouteRailwayItem) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + __this__ + "::getDeparturestop(" + "" + ")");
-                }
-            
-                // invoke native method
-                com.amap.api.services.route.RailwayStationItem __result__ = null;
-                try {
-                    __result__ = __this__.getDeparturestop();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.amap.api.services.route.RouteRailwayItem::getArrivalstop", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.amap.api.services.route.RouteRailwayItem __this__ = (com.amap.api.services.route.RouteRailwayItem) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + __this__ + "::getArrivalstop(" + "" + ")");
-                }
-            
-                // invoke native method
-                com.amap.api.services.route.RailwayStationItem __result__ = null;
-                try {
-                    __result__ = __this__.getArrivalstop();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.amap.api.services.route.RouteRailwayItem::getViastops", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.amap.api.services.route.RouteRailwayItem __this__ = (com.amap.api.services.route.RouteRailwayItem) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + __this__ + "::getViastops(" + "" + ")");
-                }
-            
-                // invoke native method
-                java.util.List<com.amap.api.services.route.RailwayStationItem> __result__ = null;
-                try {
-                    __result__ = __this__.getViastops();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.amap.api.services.route.RouteRailwayItem::getAlters", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.amap.api.services.route.RouteRailwayItem __this__ = (com.amap.api.services.route.RouteRailwayItem) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + __this__ + "::getAlters(" + "" + ")");
-                }
-            
-                // invoke native method
-                java.util.List<com.amap.api.services.route.Railway> __result__ = null;
-                try {
-                    __result__ = __this__.getAlters();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.amap.api.services.route.RouteRailwayItem::getSpaces", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.amap.api.services.route.RouteRailwayItem __this__ = (com.amap.api.services.route.RouteRailwayItem) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + __this__ + "::getSpaces(" + "" + ")");
-                }
-            
-                // invoke native method
-                java.util.List<com.amap.api.services.route.RailwaySpace> __result__ = null;
-                try {
-                    __result__ = __this__.getSpaces();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.amap.api.services.route.RouteRailwayItem::setTime", (__args__, __methodResult__) -> {
+            put("com.amap.api.services.route.RouteSearchV2.NewEnergy::setMaxVehicleCharge", (__args__, __methodResult__) -> {
                 // args
                 // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
-                com.amap.api.services.route.RouteRailwayItem __this__ = (com.amap.api.services.route.RouteRailwayItem) ((Map<String, Object>) __args__).get("__this__");
+                com.amap.api.services.route.RouteSearchV2.NewEnergy __this__ = (com.amap.api.services.route.RouteSearchV2.NewEnergy) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + __this__ + "::setTime(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearchV2.NewEnergy@" + __this__ + "::setMaxVehicleCharge(" + var1 + ")");
                 }
             
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setTime(var1);
+                    __this__.setMaxVehicleCharge(var1.floatValue());
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -5926,23 +5652,79 @@ public class SubHandler1 {
                 __methodResult__.success(__result__);
             });
             // method
-            put("com.amap.api.services.route.RouteRailwayItem::setTrip", (__args__, __methodResult__) -> {
+            put("com.amap.api.services.route.RouteSearchV2.NewEnergy::getVehicleCharge", (__args__, __methodResult__) -> {
                 // args
-                // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
             
                 // ref
-                com.amap.api.services.route.RouteRailwayItem __this__ = (com.amap.api.services.route.RouteRailwayItem) ((Map<String, Object>) __args__).get("__this__");
+                com.amap.api.services.route.RouteSearchV2.NewEnergy __this__ = (com.amap.api.services.route.RouteSearchV2.NewEnergy) ((Map<String, Object>) __args__).get("__this__");
             
                 // print log
                 if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + __this__ + "::setTrip(" + var1 + ")");
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearchV2.NewEnergy@" + __this__ + "::getVehicleCharge(" + "" + ")");
+                }
+            
+                // invoke native method
+                Float __result__ = null;
+                try {
+                    __result__ = __this__.getVehicleCharge();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.amap.api.services.route.RouteSearchV2.NewEnergy::setVehicleCharge", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+                com.amap.api.services.route.RouteSearchV2.NewEnergy __this__ = (com.amap.api.services.route.RouteSearchV2.NewEnergy) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearchV2.NewEnergy@" + __this__ + "::setVehicleCharge(" + var1 + ")");
                 }
             
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setTrip(var1);
+                    __this__.setVehicleCharge(var1.floatValue());
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.amap.api.services.route.RouteSearchV2.NewEnergy::getLoad", (__args__, __methodResult__) -> {
+                // args
+            
+            
+                // ref
+                com.amap.api.services.route.RouteSearchV2.NewEnergy __this__ = (com.amap.api.services.route.RouteSearchV2.NewEnergy) ((Map<String, Object>) __args__).get("__this__");
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearchV2.NewEnergy@" + __this__ + "::getLoad(" + "" + ")");
+                }
+            
+                // invoke native method
+                Float __result__ = null;
+                try {
+                    __result__ = __this__.getLoad();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {

@@ -37,9 +37,11 @@ class com_amap_api_services_route_TruckPath extends java_lang_Object with androi
       'ObjectFactory::create_batchcom_amap_api_services_route_TruckPath__',
       {'length': length}
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_TruckPath>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_TruckPath>(it))
+        .where((element) => element !=null)
+        .cast<com_amap_api_services_route_TruckPath>()
+        .toList() ?? <com_amap_api_services_route_TruckPath>[];
   }
   
   //endregion
@@ -54,7 +56,7 @@ class com_amap_api_services_route_TruckPath extends java_lang_Object with androi
 
   //region methods
   
-  Future<void> setDistance(double? var1) async {
+  Future<void> setDistance(double var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.TruckPath@$refId::setDistance([\'var1\':$var1])');
@@ -71,7 +73,7 @@ class com_amap_api_services_route_TruckPath extends java_lang_Object with androi
   }
   
   
-  Future<void> setDuration(int? var1) async {
+  Future<void> setDuration(int var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.TruckPath@$refId::setDuration([\'var1\':$var1])');
@@ -88,7 +90,7 @@ class com_amap_api_services_route_TruckPath extends java_lang_Object with androi
   }
   
   
-  Future<void> setStrategy(String? var1) async {
+  Future<void> setStrategy(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.TruckPath@$refId::setStrategy([\'var1\':$var1])');
@@ -105,7 +107,7 @@ class com_amap_api_services_route_TruckPath extends java_lang_Object with androi
   }
   
   
-  Future<void> setTolls(double? var1) async {
+  Future<void> setTolls(double var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.TruckPath@$refId::setTolls([\'var1\':$var1])');
@@ -122,7 +124,7 @@ class com_amap_api_services_route_TruckPath extends java_lang_Object with androi
   }
   
   
-  Future<void> setTollDistance(double? var1) async {
+  Future<void> setTollDistance(double var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.TruckPath@$refId::setTollDistance([\'var1\':$var1])');
@@ -139,7 +141,7 @@ class com_amap_api_services_route_TruckPath extends java_lang_Object with androi
   }
   
   
-  Future<void> setTotalTrafficlights(int? var1) async {
+  Future<void> setTotalTrafficlights(int var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.TruckPath@$refId::setTotalTrafficlights([\'var1\':$var1])');
@@ -156,7 +158,7 @@ class com_amap_api_services_route_TruckPath extends java_lang_Object with androi
   }
   
   
-  Future<void> setRestriction(int? var1) async {
+  Future<void> setRestriction(int var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.TruckPath@$refId::setRestriction([\'var1\':$var1])');
@@ -173,7 +175,7 @@ class com_amap_api_services_route_TruckPath extends java_lang_Object with androi
   }
   
   
-  Future<void> setSteps(List<com_amap_api_services_route_TruckStep>? var1) async {
+  Future<void> setSteps(List<com_amap_api_services_route_TruckStep> var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.TruckPath@$refId::setSteps([])');
@@ -322,7 +324,7 @@ class com_amap_api_services_route_TruckPath extends java_lang_Object with androi
     // handle native call
   
   
-    return (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_TruckStep>(it)!).toList();
+    return (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_TruckStep>(it)).where((e) => e != null).cast<com_amap_api_services_route_TruckStep>().toList();
   }
   
   //endregion
@@ -333,7 +335,12 @@ class com_amap_api_services_route_TruckPath extends java_lang_Object with androi
   }
 }
 
-extension com_amap_api_services_route_TruckPath_Batch on List<com_amap_api_services_route_TruckPath?> {
+extension com_amap_api_services_route_TruckPath_Batch on List<com_amap_api_services_route_TruckPath> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first.refId;
+  }
+
   //region getters
   
   //endregion
@@ -344,7 +351,7 @@ extension com_amap_api_services_route_TruckPath_Batch on List<com_amap_api_servi
 
   //region methods
   
-  Future<List<void>?> setDistance_batch(List<double> var1) async {
+  Future<List<void>> setDistance_batch(List<double> var1) async {
     assert(true);
   
     // invoke native method
@@ -355,7 +362,7 @@ extension com_amap_api_services_route_TruckPath_Batch on List<com_amap_api_servi
   }
   
   
-  Future<List<void>?> setDuration_batch(List<int> var1) async {
+  Future<List<void>> setDuration_batch(List<int> var1) async {
     assert(true);
   
     // invoke native method
@@ -366,7 +373,7 @@ extension com_amap_api_services_route_TruckPath_Batch on List<com_amap_api_servi
   }
   
   
-  Future<List<void>?> setStrategy_batch(List<String> var1) async {
+  Future<List<void>> setStrategy_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -377,7 +384,7 @@ extension com_amap_api_services_route_TruckPath_Batch on List<com_amap_api_servi
   }
   
   
-  Future<List<void>?> setTolls_batch(List<double> var1) async {
+  Future<List<void>> setTolls_batch(List<double> var1) async {
     assert(true);
   
     // invoke native method
@@ -388,7 +395,7 @@ extension com_amap_api_services_route_TruckPath_Batch on List<com_amap_api_servi
   }
   
   
-  Future<List<void>?> setTollDistance_batch(List<double> var1) async {
+  Future<List<void>> setTollDistance_batch(List<double> var1) async {
     assert(true);
   
     // invoke native method
@@ -399,7 +406,7 @@ extension com_amap_api_services_route_TruckPath_Batch on List<com_amap_api_servi
   }
   
   
-  Future<List<void>?> setTotalTrafficlights_batch(List<int> var1) async {
+  Future<List<void>> setTotalTrafficlights_batch(List<int> var1) async {
     assert(true);
   
     // invoke native method
@@ -410,7 +417,7 @@ extension com_amap_api_services_route_TruckPath_Batch on List<com_amap_api_servi
   }
   
   
-  Future<List<void>?> setRestriction_batch(List<int> var1) async {
+  Future<List<void>> setRestriction_batch(List<int> var1) async {
     assert(true);
   
     // invoke native method
@@ -421,7 +428,7 @@ extension com_amap_api_services_route_TruckPath_Batch on List<com_amap_api_servi
   }
   
   
-  Future<List<void>?> setSteps_batch(List<List<com_amap_api_services_route_TruckStep>> var1) async {
+  Future<List<void>> setSteps_batch(List<List<com_amap_api_services_route_TruckStep>> var1) async {
     assert(true);
   
     // invoke native method
@@ -432,91 +439,91 @@ extension com_amap_api_services_route_TruckPath_Batch on List<com_amap_api_servi
   }
   
   
-  Future<List<double?>?> getDistance_batch() async {
+  Future<List<double?>> getDistance_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TruckPath::getDistance_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<double>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<double?>().toList();
   }
   
   
-  Future<List<int?>?> getDuration_batch() async {
+  Future<List<int?>> getDuration_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TruckPath::getDuration_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<int>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
   }
   
   
-  Future<List<String?>?> getStrategy_batch() async {
+  Future<List<String?>> getStrategy_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TruckPath::getStrategy_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   
-  Future<List<double?>?> getTolls_batch() async {
+  Future<List<double?>> getTolls_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TruckPath::getTolls_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<double>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<double?>().toList();
   }
   
   
-  Future<List<double?>?> getTollDistance_batch() async {
+  Future<List<double?>> getTollDistance_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TruckPath::getTollDistance_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<double>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<double?>().toList();
   }
   
   
-  Future<List<int?>?> getTotalTrafficlights_batch() async {
+  Future<List<int?>> getTotalTrafficlights_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TruckPath::getTotalTrafficlights_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<int>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
   }
   
   
-  Future<List<int?>?> getRestriction_batch() async {
+  Future<List<int?>> getRestriction_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TruckPath::getRestriction_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<int>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
   }
   
   
-  Future<List<List<com_amap_api_services_route_TruckStep>?>?> getSteps_batch() async {
+  Future<List<List<com_amap_api_services_route_TruckStep>?>> getSteps_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TruckPath::getSteps_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_TruckStep>(it)!).toList()).cast<List<com_amap_api_services_route_TruckStep>>().toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_TruckStep>(it)).where((e) => e != null).cast<com_amap_api_services_route_TruckStep>().toList()).cast<List<com_amap_api_services_route_TruckStep>?>().toList();
   }
   
   //endregion

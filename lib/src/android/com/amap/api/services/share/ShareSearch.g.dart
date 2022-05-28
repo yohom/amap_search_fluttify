@@ -46,7 +46,7 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_share_ShareSearch> create__android_content_Context(android_content_Context? var1) async {
+  static Future<com_amap_api_services_share_ShareSearch> create__android_content_Context(android_content_Context var1) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_share_ShareSearch__android_content_Context',
       {"var1": var1}
@@ -60,9 +60,11 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
       'ObjectFactory::create_batchcom_amap_api_services_share_ShareSearch__android_content_Context',
       [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_share_ShareSearch>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_share_ShareSearch>(it))
+        .where((element) => element !=null)
+        .cast<com_amap_api_services_share_ShareSearch>()
+        .toList() ?? <com_amap_api_services_share_ShareSearch>[];
   }
   
   //endregion
@@ -77,7 +79,7 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
 
   //region methods
   
-  Future<void> setOnShareSearchListener(com_amap_api_services_share_ShareSearch_OnShareSearchListener? var1) async {
+  Future<void> setOnShareSearchListener(com_amap_api_services_share_ShareSearch_OnShareSearchListener var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.share.ShareSearch@$refId::setOnShareSearchListener([])');
@@ -88,80 +90,13 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
   
   
     // handle native call
-    MethodChannel('com.amap.api.services.share.ShareSearch::setOnShareSearchListener::Callback@$refId', kAmapSearchFluttifyMethodCodec)
-        .setMethodCallHandler((methodCall) async {
-          try {
-            final args = methodCall.arguments as Map;
-            switch (methodCall.method) {
-              case 'Callback::com.amap.api.services.share.ShareSearch.OnShareSearchListener::onPoiShareUrlSearched':
-                // print log
-                if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onPoiShareUrlSearched([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
-                }
-          
-                // handle the native call
-                await var1?.onPoiShareUrlSearched(args['var1'], args['var2']);
-                break;
-              case 'Callback::com.amap.api.services.share.ShareSearch.OnShareSearchListener::onLocationShareUrlSearched':
-                // print log
-                if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onLocationShareUrlSearched([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
-                }
-          
-                // handle the native call
-                await var1?.onLocationShareUrlSearched(args['var1'], args['var2']);
-                break;
-              case 'Callback::com.amap.api.services.share.ShareSearch.OnShareSearchListener::onNaviShareUrlSearched':
-                // print log
-                if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onNaviShareUrlSearched([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
-                }
-          
-                // handle the native call
-                await var1?.onNaviShareUrlSearched(args['var1'], args['var2']);
-                break;
-              case 'Callback::com.amap.api.services.share.ShareSearch.OnShareSearchListener::onBusRouteShareUrlSearched':
-                // print log
-                if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onBusRouteShareUrlSearched([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
-                }
-          
-                // handle the native call
-                await var1?.onBusRouteShareUrlSearched(args['var1'], args['var2']);
-                break;
-              case 'Callback::com.amap.api.services.share.ShareSearch.OnShareSearchListener::onWalkRouteShareUrlSearched':
-                // print log
-                if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onWalkRouteShareUrlSearched([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
-                }
-          
-                // handle the native call
-                await var1?.onWalkRouteShareUrlSearched(args['var1'], args['var2']);
-                break;
-              case 'Callback::com.amap.api.services.share.ShareSearch.OnShareSearchListener::onDrivingRouteShareUrlSearched':
-                // print log
-                if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onDrivingRouteShareUrlSearched([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
-                }
-          
-                // handle the native call
-                await var1?.onDrivingRouteShareUrlSearched(args['var1'], args['var2']);
-                break;
-              default:
-                throw MissingPluginException('方法${methodCall.method}未实现');
-                break;
-            }
-          } catch (e) {
-            debugPrint(e.toString());
-            rethrow;
-          }
-        });
+  
   
     return __result__;
   }
   
   
-  Future<void> searchPoiShareUrlAsyn(com_amap_api_services_core_PoiItem? var1) async {
+  Future<void> searchPoiShareUrlAsyn(com_amap_api_services_core_PoiItem var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.share.ShareSearch@$refId::searchPoiShareUrlAsyn([])');
@@ -178,7 +113,7 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
   }
   
   
-  Future<void> searchBusRouteShareUrlAsyn(com_amap_api_services_share_ShareSearch_ShareBusRouteQuery? var1) async {
+  Future<void> searchBusRouteShareUrlAsyn(com_amap_api_services_share_ShareSearch_ShareBusRouteQuery var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.share.ShareSearch@$refId::searchBusRouteShareUrlAsyn([])');
@@ -195,7 +130,7 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
   }
   
   
-  Future<void> searchWalkRouteShareUrlAsyn(com_amap_api_services_share_ShareSearch_ShareWalkRouteQuery? var1) async {
+  Future<void> searchWalkRouteShareUrlAsyn(com_amap_api_services_share_ShareSearch_ShareWalkRouteQuery var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.share.ShareSearch@$refId::searchWalkRouteShareUrlAsyn([])');
@@ -212,7 +147,7 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
   }
   
   
-  Future<void> searchDrivingRouteShareUrlAsyn(com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery? var1) async {
+  Future<void> searchDrivingRouteShareUrlAsyn(com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.share.ShareSearch@$refId::searchDrivingRouteShareUrlAsyn([])');
@@ -229,7 +164,7 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
   }
   
   
-  Future<void> searchNaviShareUrlAsyn(com_amap_api_services_share_ShareSearch_ShareNaviQuery? var1) async {
+  Future<void> searchNaviShareUrlAsyn(com_amap_api_services_share_ShareSearch_ShareNaviQuery var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.share.ShareSearch@$refId::searchNaviShareUrlAsyn([])');
@@ -246,7 +181,7 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
   }
   
   
-  Future<void> searchLocationShareUrlAsyn(com_amap_api_services_core_LatLonSharePoint? var1) async {
+  Future<void> searchLocationShareUrlAsyn(com_amap_api_services_core_LatLonSharePoint var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.share.ShareSearch@$refId::searchLocationShareUrlAsyn([])');
@@ -263,7 +198,7 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
   }
   
   
-  Future<String?> searchPoiShareUrl(com_amap_api_services_core_PoiItem? var1) async {
+  Future<String?> searchPoiShareUrl(com_amap_api_services_core_PoiItem var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.share.ShareSearch@$refId::searchPoiShareUrl([])');
@@ -280,7 +215,7 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
   }
   
   
-  Future<String?> searchNaviShareUrl(com_amap_api_services_share_ShareSearch_ShareNaviQuery? var1) async {
+  Future<String?> searchNaviShareUrl(com_amap_api_services_share_ShareSearch_ShareNaviQuery var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.share.ShareSearch@$refId::searchNaviShareUrl([])');
@@ -297,7 +232,7 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
   }
   
   
-  Future<String?> searchLocationShareUrl(com_amap_api_services_core_LatLonSharePoint? var1) async {
+  Future<String?> searchLocationShareUrl(com_amap_api_services_core_LatLonSharePoint var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.share.ShareSearch@$refId::searchLocationShareUrl([])');
@@ -314,7 +249,7 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
   }
   
   
-  Future<String?> searchBusRouteShareUrl(com_amap_api_services_share_ShareSearch_ShareBusRouteQuery? var1) async {
+  Future<String?> searchBusRouteShareUrl(com_amap_api_services_share_ShareSearch_ShareBusRouteQuery var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.share.ShareSearch@$refId::searchBusRouteShareUrl([])');
@@ -331,7 +266,7 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
   }
   
   
-  Future<String?> searchDrivingRouteShareUrl(com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery? var1) async {
+  Future<String?> searchDrivingRouteShareUrl(com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.share.ShareSearch@$refId::searchDrivingRouteShareUrl([])');
@@ -348,7 +283,7 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
   }
   
   
-  Future<String?> searchWalkRouteShareUrl(com_amap_api_services_share_ShareSearch_ShareWalkRouteQuery? var1) async {
+  Future<String?> searchWalkRouteShareUrl(com_amap_api_services_share_ShareSearch_ShareWalkRouteQuery var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.share.ShareSearch@$refId::searchWalkRouteShareUrl([])');
@@ -372,7 +307,12 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
   }
 }
 
-extension com_amap_api_services_share_ShareSearch_Batch on List<com_amap_api_services_share_ShareSearch?> {
+extension com_amap_api_services_share_ShareSearch_Batch on List<com_amap_api_services_share_ShareSearch> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first.refId;
+  }
+
   //region getters
   
   //endregion
@@ -383,7 +323,7 @@ extension com_amap_api_services_share_ShareSearch_Batch on List<com_amap_api_ser
 
   //region methods
   
-  Future<List<void>?> searchPoiShareUrlAsyn_batch(List<com_amap_api_services_core_PoiItem> var1) async {
+  Future<List<void>> searchPoiShareUrlAsyn_batch(List<com_amap_api_services_core_PoiItem> var1) async {
     assert(true);
   
     // invoke native method
@@ -394,7 +334,7 @@ extension com_amap_api_services_share_ShareSearch_Batch on List<com_amap_api_ser
   }
   
   
-  Future<List<void>?> searchBusRouteShareUrlAsyn_batch(List<com_amap_api_services_share_ShareSearch_ShareBusRouteQuery> var1) async {
+  Future<List<void>> searchBusRouteShareUrlAsyn_batch(List<com_amap_api_services_share_ShareSearch_ShareBusRouteQuery> var1) async {
     assert(true);
   
     // invoke native method
@@ -405,7 +345,7 @@ extension com_amap_api_services_share_ShareSearch_Batch on List<com_amap_api_ser
   }
   
   
-  Future<List<void>?> searchWalkRouteShareUrlAsyn_batch(List<com_amap_api_services_share_ShareSearch_ShareWalkRouteQuery> var1) async {
+  Future<List<void>> searchWalkRouteShareUrlAsyn_batch(List<com_amap_api_services_share_ShareSearch_ShareWalkRouteQuery> var1) async {
     assert(true);
   
     // invoke native method
@@ -416,7 +356,7 @@ extension com_amap_api_services_share_ShareSearch_Batch on List<com_amap_api_ser
   }
   
   
-  Future<List<void>?> searchDrivingRouteShareUrlAsyn_batch(List<com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery> var1) async {
+  Future<List<void>> searchDrivingRouteShareUrlAsyn_batch(List<com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery> var1) async {
     assert(true);
   
     // invoke native method
@@ -427,7 +367,7 @@ extension com_amap_api_services_share_ShareSearch_Batch on List<com_amap_api_ser
   }
   
   
-  Future<List<void>?> searchNaviShareUrlAsyn_batch(List<com_amap_api_services_share_ShareSearch_ShareNaviQuery> var1) async {
+  Future<List<void>> searchNaviShareUrlAsyn_batch(List<com_amap_api_services_share_ShareSearch_ShareNaviQuery> var1) async {
     assert(true);
   
     // invoke native method
@@ -438,7 +378,7 @@ extension com_amap_api_services_share_ShareSearch_Batch on List<com_amap_api_ser
   }
   
   
-  Future<List<void>?> searchLocationShareUrlAsyn_batch(List<com_amap_api_services_core_LatLonSharePoint> var1) async {
+  Future<List<void>> searchLocationShareUrlAsyn_batch(List<com_amap_api_services_core_LatLonSharePoint> var1) async {
     assert(true);
   
     // invoke native method
@@ -449,69 +389,69 @@ extension com_amap_api_services_share_ShareSearch_Batch on List<com_amap_api_ser
   }
   
   
-  Future<List<String?>?> searchPoiShareUrl_batch(List<com_amap_api_services_core_PoiItem> var1) async {
+  Future<List<String?>> searchPoiShareUrl_batch(List<com_amap_api_services_core_PoiItem> var1) async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.share.ShareSearch::searchPoiShareUrl_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   
-  Future<List<String?>?> searchNaviShareUrl_batch(List<com_amap_api_services_share_ShareSearch_ShareNaviQuery> var1) async {
+  Future<List<String?>> searchNaviShareUrl_batch(List<com_amap_api_services_share_ShareSearch_ShareNaviQuery> var1) async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.share.ShareSearch::searchNaviShareUrl_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   
-  Future<List<String?>?> searchLocationShareUrl_batch(List<com_amap_api_services_core_LatLonSharePoint> var1) async {
+  Future<List<String?>> searchLocationShareUrl_batch(List<com_amap_api_services_core_LatLonSharePoint> var1) async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.share.ShareSearch::searchLocationShareUrl_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   
-  Future<List<String?>?> searchBusRouteShareUrl_batch(List<com_amap_api_services_share_ShareSearch_ShareBusRouteQuery> var1) async {
+  Future<List<String?>> searchBusRouteShareUrl_batch(List<com_amap_api_services_share_ShareSearch_ShareBusRouteQuery> var1) async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.share.ShareSearch::searchBusRouteShareUrl_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   
-  Future<List<String?>?> searchDrivingRouteShareUrl_batch(List<com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery> var1) async {
+  Future<List<String?>> searchDrivingRouteShareUrl_batch(List<com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery> var1) async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.share.ShareSearch::searchDrivingRouteShareUrl_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   
-  Future<List<String?>?> searchWalkRouteShareUrl_batch(List<com_amap_api_services_share_ShareSearch_ShareWalkRouteQuery> var1) async {
+  Future<List<String?>> searchWalkRouteShareUrl_batch(List<com_amap_api_services_share_ShareSearch_ShareWalkRouteQuery> var1) async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.share.ShareSearch::searchWalkRouteShareUrl_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   //endregion

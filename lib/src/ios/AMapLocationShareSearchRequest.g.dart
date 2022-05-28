@@ -37,9 +37,11 @@ class AMapLocationShareSearchRequest extends AMapShareSearchBaseRequest with NSC
       'ObjectFactory::create_batchAMapLocationShareSearchRequest',
       {'length': length, 'init': init}
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyIOSAs<AMapLocationShareSearchRequest>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyIOSAs<AMapLocationShareSearchRequest>(it))
+        .where((element) => element !=null)
+        .cast<AMapLocationShareSearchRequest>()
+        .toList() ?? <AMapLocationShareSearchRequest>[];
   }
   
   //endregion
@@ -82,16 +84,21 @@ class AMapLocationShareSearchRequest extends AMapShareSearchBaseRequest with NSC
   }
 }
 
-extension AMapLocationShareSearchRequest_Batch on List<AMapLocationShareSearchRequest?> {
+extension AMapLocationShareSearchRequest_Batch on List<AMapLocationShareSearchRequest> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first.refId;
+  }
+
   //region getters
-  Future<List<AMapGeoPoint?>?> get_location_batch() async {
+  Future<List<AMapGeoPoint?>> get_location_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapLocationShareSearchRequest::get_location_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => AmapSearchFluttifyIOSAs<AMapGeoPoint>(__result__)).cast<AMapGeoPoint?>().toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyIOSAs<AMapGeoPoint>(__result__)).cast<AMapGeoPoint?>().toList();
   }
   
-  Future<List<String?>?> get_name_batch() async {
+  Future<List<String?>> get_name_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapLocationShareSearchRequest::get_name_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   //endregion

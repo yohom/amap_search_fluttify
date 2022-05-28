@@ -37,9 +37,11 @@ class AMapGeoPolygon extends AMapSearchObject with NSCoding, NSCopying {
       'ObjectFactory::create_batchAMapGeoPolygon',
       {'length': length, 'init': init}
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyIOSAs<AMapGeoPolygon>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyIOSAs<AMapGeoPolygon>(it))
+        .where((element) => element !=null)
+        .cast<AMapGeoPolygon>()
+        .toList() ?? <AMapGeoPolygon>[];
   }
   
   //endregion
@@ -47,7 +49,7 @@ class AMapGeoPolygon extends AMapSearchObject with NSCoding, NSCopying {
   //region getters
   Future<List<AMapGeoPoint>?> get_points() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapGeoPolygon::get_points", {'__this__': this});
-    return (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapGeoPoint>(it)!).toList();
+    return (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapGeoPoint>(it)).where((e) => e != null).cast<AMapGeoPoint>().toList();
   }
   
   //endregion
@@ -63,7 +65,7 @@ class AMapGeoPolygon extends AMapSearchObject with NSCoding, NSCopying {
 
   //region methods
   
-  static Future<AMapGeoPolygon?> polygonWithPoints(List<dynamic>? points) async {
+  static Future<AMapGeoPolygon?> polygonWithPoints(List<dynamic> points) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: AMapGeoPolygon::polygonWithPoints([])');
@@ -87,11 +89,16 @@ class AMapGeoPolygon extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapGeoPolygon_Batch on List<AMapGeoPolygon?> {
+extension AMapGeoPolygon_Batch on List<AMapGeoPolygon> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first.refId;
+  }
+
   //region getters
-  Future<List<List<AMapGeoPoint>?>?> get_points_batch() async {
+  Future<List<List<AMapGeoPoint>?>> get_points_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapGeoPolygon::get_points_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapGeoPoint>(it)!).toList()).cast<List<AMapGeoPoint>?>().toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapGeoPoint>(it)).where((e) => e != null).cast<AMapGeoPoint>().toList()).cast<List<AMapGeoPoint>?>().toList();
   }
   
   //endregion
@@ -107,14 +114,14 @@ extension AMapGeoPolygon_Batch on List<AMapGeoPolygon?> {
 
   //region methods
   
-  static Future<List<AMapGeoPolygon?>?> polygonWithPoints_batch(List<List<dynamic>> points) async {
+  static Future<List<AMapGeoPolygon?>> polygonWithPoints_batch(List<List<dynamic>> points) async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapGeoPolygon::polygonWithPoints_batch', [for (int __i__ = 0; __i__ < points.length; __i__++) {"points": points[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => AmapSearchFluttifyIOSAs<AMapGeoPolygon>(__result__)).cast<AMapGeoPolygon>().toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyIOSAs<AMapGeoPolygon>(__result__)).cast<AMapGeoPolygon?>().toList();
   }
   
   //endregion

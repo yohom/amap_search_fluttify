@@ -37,9 +37,11 @@ class com_amap_api_services_nearby_NearbySearch_NearbyQuery extends java_lang_Ob
       'ObjectFactory::create_batchcom_amap_api_services_nearby_NearbySearch_NearbyQuery__',
       {'length': length}
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_nearby_NearbySearch_NearbyQuery>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_nearby_NearbySearch_NearbyQuery>(it))
+        .where((element) => element !=null)
+        .cast<com_amap_api_services_nearby_NearbySearch_NearbyQuery>()
+        .toList() ?? <com_amap_api_services_nearby_NearbySearch_NearbyQuery>[];
   }
   
   //endregion
@@ -54,7 +56,7 @@ class com_amap_api_services_nearby_NearbySearch_NearbyQuery extends java_lang_Ob
 
   //region methods
   
-  Future<void> setCenterPoint(com_amap_api_services_core_LatLonPoint? var1) async {
+  Future<void> setCenterPoint(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.nearby.NearbySearch.NearbyQuery@$refId::setCenterPoint([])');
@@ -105,7 +107,7 @@ class com_amap_api_services_nearby_NearbySearch_NearbyQuery extends java_lang_Ob
   }
   
   
-  Future<void> setRadius(int? var1) async {
+  Future<void> setRadius(int var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.nearby.NearbySearch.NearbyQuery@$refId::setRadius([\'var1\':$var1])');
@@ -122,14 +124,14 @@ class com_amap_api_services_nearby_NearbySearch_NearbyQuery extends java_lang_Ob
   }
   
   
-  Future<void> setType(com_amap_api_services_nearby_NearbySearchFunctionType? var1) async {
+  Future<void> setType(com_amap_api_services_nearby_NearbySearchFunctionType var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.nearby.NearbySearch.NearbyQuery@$refId::setType([])');
     }
   
     // invoke native method
-    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.NearbySearch.NearbyQuery::setType', {"var1": var1?.toValue(), "__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.NearbySearch.NearbyQuery::setType', {"var1": var1.toValue(), "__this__": this});
   
   
     // handle native call
@@ -156,7 +158,7 @@ class com_amap_api_services_nearby_NearbySearch_NearbyQuery extends java_lang_Ob
   }
   
   
-  Future<void> setCoordType(int? var1) async {
+  Future<void> setCoordType(int var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.nearby.NearbySearch.NearbyQuery@$refId::setCoordType([\'var1\':$var1])');
@@ -190,7 +192,7 @@ class com_amap_api_services_nearby_NearbySearch_NearbyQuery extends java_lang_Ob
   }
   
   
-  Future<void> setTimeRange(int? var1) async {
+  Future<void> setTimeRange(int var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.nearby.NearbySearch.NearbyQuery@$refId::setTimeRange([\'var1\':$var1])');
@@ -231,7 +233,12 @@ class com_amap_api_services_nearby_NearbySearch_NearbyQuery extends java_lang_Ob
   }
 }
 
-extension com_amap_api_services_nearby_NearbySearch_NearbyQuery_Batch on List<com_amap_api_services_nearby_NearbySearch_NearbyQuery?> {
+extension com_amap_api_services_nearby_NearbySearch_NearbyQuery_Batch on List<com_amap_api_services_nearby_NearbySearch_NearbyQuery> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first.refId;
+  }
+
   //region getters
   
   //endregion
@@ -242,7 +249,7 @@ extension com_amap_api_services_nearby_NearbySearch_NearbyQuery_Batch on List<co
 
   //region methods
   
-  Future<List<void>?> setCenterPoint_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
+  Future<List<void>> setCenterPoint_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
     assert(true);
   
     // invoke native method
@@ -253,29 +260,29 @@ extension com_amap_api_services_nearby_NearbySearch_NearbyQuery_Batch on List<co
   }
   
   
-  Future<List<com_amap_api_services_core_LatLonPoint?>?> getCenterPoint_batch() async {
+  Future<List<com_amap_api_services_core_LatLonPoint?>> getCenterPoint_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.NearbySearch.NearbyQuery::getCenterPoint_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(__result__)).cast<com_amap_api_services_core_LatLonPoint>().toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(__result__)).cast<com_amap_api_services_core_LatLonPoint?>().toList();
   }
   
   
-  Future<List<int?>?> getRadius_batch() async {
+  Future<List<int?>> getRadius_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.NearbySearch.NearbyQuery::getRadius_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<int>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
   }
   
   
-  Future<List<void>?> setRadius_batch(List<int> var1) async {
+  Future<List<void>> setRadius_batch(List<int> var1) async {
     assert(true);
   
     // invoke native method
@@ -286,7 +293,7 @@ extension com_amap_api_services_nearby_NearbySearch_NearbyQuery_Batch on List<co
   }
   
   
-  Future<List<void>?> setType_batch(List<com_amap_api_services_nearby_NearbySearchFunctionType> var1) async {
+  Future<List<void>> setType_batch(List<com_amap_api_services_nearby_NearbySearchFunctionType> var1) async {
     assert(true);
   
     // invoke native method
@@ -297,18 +304,18 @@ extension com_amap_api_services_nearby_NearbySearch_NearbyQuery_Batch on List<co
   }
   
   
-  Future<List<int?>?> getType_batch() async {
+  Future<List<int?>> getType_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.NearbySearch.NearbyQuery::getType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<int>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
   }
   
   
-  Future<List<void>?> setCoordType_batch(List<int> var1) async {
+  Future<List<void>> setCoordType_batch(List<int> var1) async {
     assert(true);
   
     // invoke native method
@@ -319,18 +326,18 @@ extension com_amap_api_services_nearby_NearbySearch_NearbyQuery_Batch on List<co
   }
   
   
-  Future<List<int?>?> getCoordType_batch() async {
+  Future<List<int?>> getCoordType_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.NearbySearch.NearbyQuery::getCoordType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<int>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
   }
   
   
-  Future<List<void>?> setTimeRange_batch(List<int> var1) async {
+  Future<List<void>> setTimeRange_batch(List<int> var1) async {
     assert(true);
   
     // invoke native method
@@ -341,14 +348,14 @@ extension com_amap_api_services_nearby_NearbySearch_NearbyQuery_Batch on List<co
   }
   
   
-  Future<List<int?>?> getTimeRange_batch() async {
+  Future<List<int?>> getTimeRange_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.NearbySearch.NearbyQuery::getTimeRange_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<int>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
   }
   
   //endregion

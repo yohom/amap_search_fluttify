@@ -12,10 +12,12 @@ import 'package:flutter/services.dart';
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
 
-
+class _AMapSearchDelegate_SUB extends NSObject with AMapSearchDelegate {}
 
 mixin AMapSearchDelegate on NSObject {
   
+
+  static AMapSearchDelegate subInstance() => _AMapSearchDelegate_SUB();
 
   
 
@@ -26,7 +28,7 @@ mixin AMapSearchDelegate on NSObject {
 
   
 
-  Future<void> AMapSearchRequest_didFailWithError(dynamic? request, NSError? error) async {}
+  Future<void> AMapSearchRequest_didFailWithError(dynamic request, NSError? error) async {}
   
   Future<void> onPOISearchDone_response(AMapPOISearchBaseRequest? request, AMapPOISearchResponse? response) async {}
   

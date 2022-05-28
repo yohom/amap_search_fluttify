@@ -37,9 +37,11 @@ class AMapBusLineNameSearchRequest extends AMapBusLineBaseSearchRequest with NSC
       'ObjectFactory::create_batchAMapBusLineNameSearchRequest',
       {'length': length, 'init': init}
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyIOSAs<AMapBusLineNameSearchRequest>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyIOSAs<AMapBusLineNameSearchRequest>(it))
+        .where((element) => element !=null)
+        .cast<AMapBusLineNameSearchRequest>()
+        .toList() ?? <AMapBusLineNameSearchRequest>[];
   }
   
   //endregion
@@ -71,11 +73,16 @@ class AMapBusLineNameSearchRequest extends AMapBusLineBaseSearchRequest with NSC
   }
 }
 
-extension AMapBusLineNameSearchRequest_Batch on List<AMapBusLineNameSearchRequest?> {
+extension AMapBusLineNameSearchRequest_Batch on List<AMapBusLineNameSearchRequest> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first.refId;
+  }
+
   //region getters
-  Future<List<String?>?> get_keywords_batch() async {
+  Future<List<String?>> get_keywords_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapBusLineNameSearchRequest::get_keywords_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   //endregion

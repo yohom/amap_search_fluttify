@@ -37,9 +37,11 @@ class com_amap_api_services_route_TimeInfosElement extends java_lang_Object with
       'ObjectFactory::create_batchcom_amap_api_services_route_TimeInfosElement__',
       {'length': length}
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_TimeInfosElement>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_TimeInfosElement>(it))
+        .where((element) => element !=null)
+        .cast<com_amap_api_services_route_TimeInfosElement>()
+        .toList() ?? <com_amap_api_services_route_TimeInfosElement>[];
   }
   
   //endregion
@@ -71,7 +73,7 @@ class com_amap_api_services_route_TimeInfosElement extends java_lang_Object with
   }
   
   
-  Future<void> setPathindex(int? var1) async {
+  Future<void> setPathindex(int var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.TimeInfosElement@$refId::setPathindex([\'var1\':$var1])');
@@ -105,7 +107,7 @@ class com_amap_api_services_route_TimeInfosElement extends java_lang_Object with
   }
   
   
-  Future<void> setDuration(double? var1) async {
+  Future<void> setDuration(double var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.TimeInfosElement@$refId::setDuration([\'var1\':$var1])');
@@ -139,7 +141,7 @@ class com_amap_api_services_route_TimeInfosElement extends java_lang_Object with
   }
   
   
-  Future<void> setTolls(double? var1) async {
+  Future<void> setTolls(double var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.TimeInfosElement@$refId::setTolls([\'var1\':$var1])');
@@ -173,7 +175,7 @@ class com_amap_api_services_route_TimeInfosElement extends java_lang_Object with
   }
   
   
-  Future<void> setRestriction(int? var1) async {
+  Future<void> setRestriction(int var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.TimeInfosElement@$refId::setRestriction([\'var1\':$var1])');
@@ -190,7 +192,7 @@ class com_amap_api_services_route_TimeInfosElement extends java_lang_Object with
   }
   
   
-  Future<void> setTMCs(List<com_amap_api_services_route_TMC>? var1) async {
+  Future<void> setTMCs(List<com_amap_api_services_route_TMC> var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.TimeInfosElement@$refId::setTMCs([])');
@@ -220,7 +222,7 @@ class com_amap_api_services_route_TimeInfosElement extends java_lang_Object with
     // handle native call
   
   
-    return (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_TMC>(it)!).toList();
+    return (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_TMC>(it)).where((e) => e != null).cast<com_amap_api_services_route_TMC>().toList();
   }
   
   //endregion
@@ -231,7 +233,12 @@ class com_amap_api_services_route_TimeInfosElement extends java_lang_Object with
   }
 }
 
-extension com_amap_api_services_route_TimeInfosElement_Batch on List<com_amap_api_services_route_TimeInfosElement?> {
+extension com_amap_api_services_route_TimeInfosElement_Batch on List<com_amap_api_services_route_TimeInfosElement> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first.refId;
+  }
+
   //region getters
   
   //endregion
@@ -242,18 +249,18 @@ extension com_amap_api_services_route_TimeInfosElement_Batch on List<com_amap_ap
 
   //region methods
   
-  Future<List<int?>?> getPathindex_batch() async {
+  Future<List<int?>> getPathindex_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TimeInfosElement::getPathindex_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<int>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
   }
   
   
-  Future<List<void>?> setPathindex_batch(List<int> var1) async {
+  Future<List<void>> setPathindex_batch(List<int> var1) async {
     assert(true);
   
     // invoke native method
@@ -264,18 +271,18 @@ extension com_amap_api_services_route_TimeInfosElement_Batch on List<com_amap_ap
   }
   
   
-  Future<List<double?>?> getDuration_batch() async {
+  Future<List<double?>> getDuration_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TimeInfosElement::getDuration_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<double>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<double?>().toList();
   }
   
   
-  Future<List<void>?> setDuration_batch(List<double> var1) async {
+  Future<List<void>> setDuration_batch(List<double> var1) async {
     assert(true);
   
     // invoke native method
@@ -286,18 +293,18 @@ extension com_amap_api_services_route_TimeInfosElement_Batch on List<com_amap_ap
   }
   
   
-  Future<List<double?>?> getTolls_batch() async {
+  Future<List<double?>> getTolls_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TimeInfosElement::getTolls_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<double>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<double?>().toList();
   }
   
   
-  Future<List<void>?> setTolls_batch(List<double> var1) async {
+  Future<List<void>> setTolls_batch(List<double> var1) async {
     assert(true);
   
     // invoke native method
@@ -308,18 +315,18 @@ extension com_amap_api_services_route_TimeInfosElement_Batch on List<com_amap_ap
   }
   
   
-  Future<List<int?>?> getRestriction_batch() async {
+  Future<List<int?>> getRestriction_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TimeInfosElement::getRestriction_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<int>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
   }
   
   
-  Future<List<void>?> setRestriction_batch(List<int> var1) async {
+  Future<List<void>> setRestriction_batch(List<int> var1) async {
     assert(true);
   
     // invoke native method
@@ -330,7 +337,7 @@ extension com_amap_api_services_route_TimeInfosElement_Batch on List<com_amap_ap
   }
   
   
-  Future<List<void>?> setTMCs_batch(List<List<com_amap_api_services_route_TMC>> var1) async {
+  Future<List<void>> setTMCs_batch(List<List<com_amap_api_services_route_TMC>> var1) async {
     assert(true);
   
     // invoke native method
@@ -341,14 +348,14 @@ extension com_amap_api_services_route_TimeInfosElement_Batch on List<com_amap_ap
   }
   
   
-  Future<List<List<com_amap_api_services_route_TMC>?>?> getTMCs_batch() async {
+  Future<List<List<com_amap_api_services_route_TMC>?>> getTMCs_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TimeInfosElement::getTMCs_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_TMC>(it)!).toList()).cast<List<com_amap_api_services_route_TMC>>().toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_TMC>(it)).where((e) => e != null).cast<com_amap_api_services_route_TMC>().toList()).cast<List<com_amap_api_services_route_TMC>?>().toList();
   }
   
   //endregion

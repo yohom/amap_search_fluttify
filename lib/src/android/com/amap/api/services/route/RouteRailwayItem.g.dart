@@ -37,9 +37,11 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
       'ObjectFactory::create_batchcom_amap_api_services_route_RouteRailwayItem__',
       {'length': length}
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RouteRailwayItem>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RouteRailwayItem>(it))
+        .where((element) => element !=null)
+        .cast<com_amap_api_services_route_RouteRailwayItem>()
+        .toList() ?? <com_amap_api_services_route_RouteRailwayItem>[];
   }
   
   //endregion
@@ -169,7 +171,7 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
     // handle native call
   
   
-    return (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RailwayStationItem>(it)!).toList();
+    return (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RailwayStationItem>(it)).where((e) => e != null).cast<com_amap_api_services_route_RailwayStationItem>().toList();
   }
   
   
@@ -186,7 +188,7 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
     // handle native call
   
   
-    return (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_Railway>(it)!).toList();
+    return (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_Railway>(it)).where((e) => e != null).cast<com_amap_api_services_route_Railway>().toList();
   }
   
   
@@ -203,11 +205,11 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
     // handle native call
   
   
-    return (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RailwaySpace>(it)!).toList();
+    return (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RailwaySpace>(it)).where((e) => e != null).cast<com_amap_api_services_route_RailwaySpace>().toList();
   }
   
   
-  Future<void> setTime(String? var1) async {
+  Future<void> setTime(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteRailwayItem@$refId::setTime([\'var1\':$var1])');
@@ -224,7 +226,7 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
   }
   
   
-  Future<void> setTrip(String? var1) async {
+  Future<void> setTrip(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteRailwayItem@$refId::setTrip([\'var1\':$var1])');
@@ -241,7 +243,7 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
   }
   
   
-  Future<void> setDistance(double? var1) async {
+  Future<void> setDistance(double var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteRailwayItem@$refId::setDistance([\'var1\':$var1])');
@@ -258,7 +260,7 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
   }
   
   
-  Future<void> setType(String? var1) async {
+  Future<void> setType(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteRailwayItem@$refId::setType([\'var1\':$var1])');
@@ -275,7 +277,7 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
   }
   
   
-  Future<void> setDeparturestop(com_amap_api_services_route_RailwayStationItem? var1) async {
+  Future<void> setDeparturestop(com_amap_api_services_route_RailwayStationItem var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteRailwayItem@$refId::setDeparturestop([])');
@@ -292,7 +294,7 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
   }
   
   
-  Future<void> setArrivalstop(com_amap_api_services_route_RailwayStationItem? var1) async {
+  Future<void> setArrivalstop(com_amap_api_services_route_RailwayStationItem var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteRailwayItem@$refId::setArrivalstop([])');
@@ -309,7 +311,7 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
   }
   
   
-  Future<void> setViastops(List<com_amap_api_services_route_RailwayStationItem>? var1) async {
+  Future<void> setViastops(List<com_amap_api_services_route_RailwayStationItem> var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteRailwayItem@$refId::setViastops([])');
@@ -326,7 +328,7 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
   }
   
   
-  Future<void> setAlters(List<com_amap_api_services_route_Railway>? var1) async {
+  Future<void> setAlters(List<com_amap_api_services_route_Railway> var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteRailwayItem@$refId::setAlters([])');
@@ -343,7 +345,7 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
   }
   
   
-  Future<void> setSpaces(List<com_amap_api_services_route_RailwaySpace>? var1) async {
+  Future<void> setSpaces(List<com_amap_api_services_route_RailwaySpace> var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteRailwayItem@$refId::setSpaces([])');
@@ -367,7 +369,12 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
   }
 }
 
-extension com_amap_api_services_route_RouteRailwayItem_Batch on List<com_amap_api_services_route_RouteRailwayItem?> {
+extension com_amap_api_services_route_RouteRailwayItem_Batch on List<com_amap_api_services_route_RouteRailwayItem> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first.refId;
+  }
+
   //region getters
   
   //endregion
@@ -378,106 +385,106 @@ extension com_amap_api_services_route_RouteRailwayItem_Batch on List<com_amap_ap
 
   //region methods
   
-  Future<List<String?>?> getTime_batch() async {
+  Future<List<String?>> getTime_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteRailwayItem::getTime_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   
-  Future<List<String?>?> getTrip_batch() async {
+  Future<List<String?>> getTrip_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteRailwayItem::getTrip_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   
-  Future<List<double?>?> getDistance_batch() async {
+  Future<List<double?>> getDistance_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteRailwayItem::getDistance_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<double>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<double?>().toList();
   }
   
   
-  Future<List<String?>?> getType_batch() async {
+  Future<List<String?>> getType_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteRailwayItem::getType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   
-  Future<List<com_amap_api_services_route_RailwayStationItem?>?> getDeparturestop_batch() async {
+  Future<List<com_amap_api_services_route_RailwayStationItem?>> getDeparturestop_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteRailwayItem::getDeparturestop_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RailwayStationItem>(__result__)).cast<com_amap_api_services_route_RailwayStationItem>().toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RailwayStationItem>(__result__)).cast<com_amap_api_services_route_RailwayStationItem?>().toList();
   }
   
   
-  Future<List<com_amap_api_services_route_RailwayStationItem?>?> getArrivalstop_batch() async {
+  Future<List<com_amap_api_services_route_RailwayStationItem?>> getArrivalstop_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteRailwayItem::getArrivalstop_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RailwayStationItem>(__result__)).cast<com_amap_api_services_route_RailwayStationItem>().toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RailwayStationItem>(__result__)).cast<com_amap_api_services_route_RailwayStationItem?>().toList();
   }
   
   
-  Future<List<List<com_amap_api_services_route_RailwayStationItem>?>?> getViastops_batch() async {
+  Future<List<List<com_amap_api_services_route_RailwayStationItem>?>> getViastops_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteRailwayItem::getViastops_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RailwayStationItem>(it)!).toList()).cast<List<com_amap_api_services_route_RailwayStationItem>>().toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RailwayStationItem>(it)).where((e) => e != null).cast<com_amap_api_services_route_RailwayStationItem>().toList()).cast<List<com_amap_api_services_route_RailwayStationItem>?>().toList();
   }
   
   
-  Future<List<List<com_amap_api_services_route_Railway>?>?> getAlters_batch() async {
+  Future<List<List<com_amap_api_services_route_Railway>?>> getAlters_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteRailwayItem::getAlters_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_Railway>(it)!).toList()).cast<List<com_amap_api_services_route_Railway>>().toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_Railway>(it)).where((e) => e != null).cast<com_amap_api_services_route_Railway>().toList()).cast<List<com_amap_api_services_route_Railway>?>().toList();
   }
   
   
-  Future<List<List<com_amap_api_services_route_RailwaySpace>?>?> getSpaces_batch() async {
+  Future<List<List<com_amap_api_services_route_RailwaySpace>?>> getSpaces_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteRailwayItem::getSpaces_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RailwaySpace>(it)!).toList()).cast<List<com_amap_api_services_route_RailwaySpace>>().toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RailwaySpace>(it)).where((e) => e != null).cast<com_amap_api_services_route_RailwaySpace>().toList()).cast<List<com_amap_api_services_route_RailwaySpace>?>().toList();
   }
   
   
-  Future<List<void>?> setTime_batch(List<String> var1) async {
+  Future<List<void>> setTime_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -488,7 +495,7 @@ extension com_amap_api_services_route_RouteRailwayItem_Batch on List<com_amap_ap
   }
   
   
-  Future<List<void>?> setTrip_batch(List<String> var1) async {
+  Future<List<void>> setTrip_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -499,7 +506,7 @@ extension com_amap_api_services_route_RouteRailwayItem_Batch on List<com_amap_ap
   }
   
   
-  Future<List<void>?> setDistance_batch(List<double> var1) async {
+  Future<List<void>> setDistance_batch(List<double> var1) async {
     assert(true);
   
     // invoke native method
@@ -510,7 +517,7 @@ extension com_amap_api_services_route_RouteRailwayItem_Batch on List<com_amap_ap
   }
   
   
-  Future<List<void>?> setType_batch(List<String> var1) async {
+  Future<List<void>> setType_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -521,7 +528,7 @@ extension com_amap_api_services_route_RouteRailwayItem_Batch on List<com_amap_ap
   }
   
   
-  Future<List<void>?> setDeparturestop_batch(List<com_amap_api_services_route_RailwayStationItem> var1) async {
+  Future<List<void>> setDeparturestop_batch(List<com_amap_api_services_route_RailwayStationItem> var1) async {
     assert(true);
   
     // invoke native method
@@ -532,7 +539,7 @@ extension com_amap_api_services_route_RouteRailwayItem_Batch on List<com_amap_ap
   }
   
   
-  Future<List<void>?> setArrivalstop_batch(List<com_amap_api_services_route_RailwayStationItem> var1) async {
+  Future<List<void>> setArrivalstop_batch(List<com_amap_api_services_route_RailwayStationItem> var1) async {
     assert(true);
   
     // invoke native method
@@ -543,7 +550,7 @@ extension com_amap_api_services_route_RouteRailwayItem_Batch on List<com_amap_ap
   }
   
   
-  Future<List<void>?> setViastops_batch(List<List<com_amap_api_services_route_RailwayStationItem>> var1) async {
+  Future<List<void>> setViastops_batch(List<List<com_amap_api_services_route_RailwayStationItem>> var1) async {
     assert(true);
   
     // invoke native method
@@ -554,7 +561,7 @@ extension com_amap_api_services_route_RouteRailwayItem_Batch on List<com_amap_ap
   }
   
   
-  Future<List<void>?> setAlters_batch(List<List<com_amap_api_services_route_Railway>> var1) async {
+  Future<List<void>> setAlters_batch(List<List<com_amap_api_services_route_Railway>> var1) async {
     assert(true);
   
     // invoke native method
@@ -565,7 +572,7 @@ extension com_amap_api_services_route_RouteRailwayItem_Batch on List<com_amap_ap
   }
   
   
-  Future<List<void>?> setSpaces_batch(List<List<com_amap_api_services_route_RailwaySpace>> var1) async {
+  Future<List<void>> setSpaces_batch(List<List<com_amap_api_services_route_RailwaySpace>> var1) async {
     assert(true);
   
     // invoke native method

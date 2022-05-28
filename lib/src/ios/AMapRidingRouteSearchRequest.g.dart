@@ -37,9 +37,11 @@ class AMapRidingRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCod
       'ObjectFactory::create_batchAMapRidingRouteSearchRequest',
       {'length': length, 'init': init}
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyIOSAs<AMapRidingRouteSearchRequest>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyIOSAs<AMapRidingRouteSearchRequest>(it))
+        .where((element) => element !=null)
+        .cast<AMapRidingRouteSearchRequest>()
+        .toList() ?? <AMapRidingRouteSearchRequest>[];
   }
   
   //endregion
@@ -82,16 +84,21 @@ class AMapRidingRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCod
   }
 }
 
-extension AMapRidingRouteSearchRequest_Batch on List<AMapRidingRouteSearchRequest?> {
+extension AMapRidingRouteSearchRequest_Batch on List<AMapRidingRouteSearchRequest> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first.refId;
+  }
+
   //region getters
-  Future<List<int?>?> get_type_batch() async {
+  Future<List<int?>> get_type_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRidingRouteSearchRequest::get_type_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<int?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
   }
   
-  Future<List<bool?>?> get_requireExtension_batch() async {
+  Future<List<bool?>> get_requireExtension_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRidingRouteSearchRequest::get_requireExtension_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<bool?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<bool?>().toList();
   }
   
   //endregion

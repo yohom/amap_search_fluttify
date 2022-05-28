@@ -24,7 +24,7 @@ class com_amap_api_services_busline_BusLineSearch extends java_lang_Object  {
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_busline_BusLineSearch> create__android_content_Context__com_amap_api_services_busline_BusLineQuery(android_content_Context? var1, com_amap_api_services_busline_BusLineQuery? var2) async {
+  static Future<com_amap_api_services_busline_BusLineSearch> create__android_content_Context__com_amap_api_services_busline_BusLineQuery(android_content_Context var1, com_amap_api_services_busline_BusLineQuery var2) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_busline_BusLineSearch__android_content_Context__com_amap_api_services_busline_BusLineQuery',
       {"var1": var1, "var2": var2}
@@ -38,9 +38,11 @@ class com_amap_api_services_busline_BusLineSearch extends java_lang_Object  {
       'ObjectFactory::create_batchcom_amap_api_services_busline_BusLineSearch__android_content_Context__com_amap_api_services_busline_BusLineQuery',
       [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_busline_BusLineSearch>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_busline_BusLineSearch>(it))
+        .where((element) => element !=null)
+        .cast<com_amap_api_services_busline_BusLineSearch>()
+        .toList() ?? <com_amap_api_services_busline_BusLineSearch>[];
   }
   
   //endregion
@@ -72,7 +74,7 @@ class com_amap_api_services_busline_BusLineSearch extends java_lang_Object  {
   }
   
   
-  Future<void> setOnBusLineSearchListener(com_amap_api_services_busline_BusLineSearch_OnBusLineSearchListener? var1) async {
+  Future<void> setOnBusLineSearchListener(com_amap_api_services_busline_BusLineSearch_OnBusLineSearchListener var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.busline.BusLineSearch@$refId::setOnBusLineSearchListener([])');
@@ -83,29 +85,7 @@ class com_amap_api_services_busline_BusLineSearch extends java_lang_Object  {
   
   
     // handle native call
-    MethodChannel('com.amap.api.services.busline.BusLineSearch::setOnBusLineSearchListener::Callback@$refId', kAmapSearchFluttifyMethodCodec)
-        .setMethodCallHandler((methodCall) async {
-          try {
-            final args = methodCall.arguments as Map;
-            switch (methodCall.method) {
-              case 'Callback::com.amap.api.services.busline.BusLineSearch.OnBusLineSearchListener::onBusLineSearched':
-                // print log
-                if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onBusLineSearched([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
-                }
-          
-                // handle the native call
-                await var1?.onBusLineSearched(AmapSearchFluttifyAndroidAs(args['var1']), args['var2']);
-                break;
-              default:
-                throw MissingPluginException('方法${methodCall.method}未实现');
-                break;
-            }
-          } catch (e) {
-            debugPrint(e.toString());
-            rethrow;
-          }
-        });
+  
   
     return __result__;
   }
@@ -128,7 +108,7 @@ class com_amap_api_services_busline_BusLineSearch extends java_lang_Object  {
   }
   
   
-  Future<void> setQuery(com_amap_api_services_busline_BusLineQuery? var1) async {
+  Future<void> setQuery(com_amap_api_services_busline_BusLineQuery var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.busline.BusLineSearch@$refId::setQuery([])');
@@ -169,7 +149,12 @@ class com_amap_api_services_busline_BusLineSearch extends java_lang_Object  {
   }
 }
 
-extension com_amap_api_services_busline_BusLineSearch_Batch on List<com_amap_api_services_busline_BusLineSearch?> {
+extension com_amap_api_services_busline_BusLineSearch_Batch on List<com_amap_api_services_busline_BusLineSearch> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first.refId;
+  }
+
   //region getters
   
   //endregion
@@ -180,18 +165,18 @@ extension com_amap_api_services_busline_BusLineSearch_Batch on List<com_amap_api
 
   //region methods
   
-  Future<List<com_amap_api_services_busline_BusLineResult?>?> searchBusLine_batch() async {
+  Future<List<com_amap_api_services_busline_BusLineResult?>> searchBusLine_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.busline.BusLineSearch::searchBusLine_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_busline_BusLineResult>(__result__)).cast<com_amap_api_services_busline_BusLineResult>().toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_busline_BusLineResult>(__result__)).cast<com_amap_api_services_busline_BusLineResult?>().toList();
   }
   
   
-  Future<List<void>?> searchBusLineAsyn_batch() async {
+  Future<List<void>> searchBusLineAsyn_batch() async {
     assert(true);
   
     // invoke native method
@@ -202,7 +187,7 @@ extension com_amap_api_services_busline_BusLineSearch_Batch on List<com_amap_api
   }
   
   
-  Future<List<void>?> setQuery_batch(List<com_amap_api_services_busline_BusLineQuery> var1) async {
+  Future<List<void>> setQuery_batch(List<com_amap_api_services_busline_BusLineQuery> var1) async {
     assert(true);
   
     // invoke native method
@@ -213,14 +198,14 @@ extension com_amap_api_services_busline_BusLineSearch_Batch on List<com_amap_api
   }
   
   
-  Future<List<com_amap_api_services_busline_BusLineQuery?>?> getQuery_batch() async {
+  Future<List<com_amap_api_services_busline_BusLineQuery?>> getQuery_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.busline.BusLineSearch::getQuery_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_busline_BusLineQuery>(__result__)).cast<com_amap_api_services_busline_BusLineQuery>().toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_busline_BusLineQuery>(__result__)).cast<com_amap_api_services_busline_BusLineQuery?>().toList();
   }
   
   //endregion

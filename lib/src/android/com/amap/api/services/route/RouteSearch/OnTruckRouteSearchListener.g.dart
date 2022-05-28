@@ -12,11 +12,45 @@ import 'package:flutter/services.dart';
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
 
-
+class _com_amap_api_services_route_RouteSearch_OnTruckRouteSearchListener_SUB extends java_lang_Object with com_amap_api_services_route_RouteSearch_OnTruckRouteSearchListener {}
 
 mixin com_amap_api_services_route_RouteSearch_OnTruckRouteSearchListener on java_lang_Object {
   
 
+  static com_amap_api_services_route_RouteSearch_OnTruckRouteSearchListener subInstance() => _com_amap_api_services_route_RouteSearch_OnTruckRouteSearchListener_SUB();
+
+  static Future<com_amap_api_services_route_RouteSearch_OnTruckRouteSearchListener> anonymous__({void Function(com_amap_api_services_route_TruckRouteRestult? var1, int? var2)? onTruckRouteSearched}) async {
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteSearch.OnTruckRouteSearchListener::createAnonymous__');
+  
+    final __object__ = AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RouteSearch_OnTruckRouteSearchListener>(__result__)!;
+  
+    // handle callback
+    MethodChannel('com.amap.api.services.route.RouteSearch.OnTruckRouteSearchListener::Callback@${__object__.refId}', kAmapSearchFluttifyMethodCodec)
+        .setMethodCallHandler((methodCall) async {
+          try {
+            final args = methodCall.arguments as Map;
+            switch (methodCall.method) {
+              case 'Callback::onTruckRouteSearched::onTruckRouteSearched':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onTruckRouteSearched?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
+                }
+            
+                // handle the native call
+                onTruckRouteSearched?.call(AmapSearchFluttifyAndroidAs<com_amap_api_services_route_TruckRouteRestult>(args['var1']), args['var2']);
+                break;
+              default:
+                throw MissingPluginException('方法${methodCall.method}未实现');
+                break;
+            }
+          } catch (e) {
+            debugPrint(e.toString());
+            rethrow;
+          }
+        });
+  
+    return __object__;
+  }
   
 
   @override

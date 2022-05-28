@@ -37,9 +37,11 @@ class AMapSearchObject extends NSObject with NSCoding, NSCopying {
       'ObjectFactory::create_batchAMapSearchObject',
       {'length': length, 'init': init}
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyIOSAs<AMapSearchObject>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyIOSAs<AMapSearchObject>(it))
+        .where((element) => element !=null)
+        .cast<AMapSearchObject>()
+        .toList() ?? <AMapSearchObject>[];
   }
   
   //endregion
@@ -78,7 +80,12 @@ class AMapSearchObject extends NSObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapSearchObject_Batch on List<AMapSearchObject?> {
+extension AMapSearchObject_Batch on List<AMapSearchObject> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first.refId;
+  }
+
   //region getters
   
   //endregion
@@ -89,14 +96,14 @@ extension AMapSearchObject_Batch on List<AMapSearchObject?> {
 
   //region methods
   
-  Future<List<String?>?> formattedDescription_batch() async {
+  Future<List<String?>> formattedDescription_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchObject::formattedDescription_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   //endregion

@@ -37,9 +37,11 @@ class AMapPOIIDSearchRequest extends AMapPOISearchBaseRequest with NSCoding, NSC
       'ObjectFactory::create_batchAMapPOIIDSearchRequest',
       {'length': length, 'init': init}
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyIOSAs<AMapPOIIDSearchRequest>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyIOSAs<AMapPOIIDSearchRequest>(it))
+        .where((element) => element !=null)
+        .cast<AMapPOIIDSearchRequest>()
+        .toList() ?? <AMapPOIIDSearchRequest>[];
   }
   
   //endregion
@@ -71,11 +73,16 @@ class AMapPOIIDSearchRequest extends AMapPOISearchBaseRequest with NSCoding, NSC
   }
 }
 
-extension AMapPOIIDSearchRequest_Batch on List<AMapPOIIDSearchRequest?> {
+extension AMapPOIIDSearchRequest_Batch on List<AMapPOIIDSearchRequest> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first.refId;
+  }
+
   //region getters
-  Future<List<String?>?> get_uid_batch() async {
+  Future<List<String?>> get_uid_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOIIDSearchRequest::get_uid_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   //endregion

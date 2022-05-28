@@ -12,15 +12,15 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  amap_core_fluttify: ^0.16.0-dev.0
-
-  foundation_fluttify: ^0.13.0-dev.0
-  core_location_fluttify: ^0.7.0-dev.2
+  
+  
+  foundation_fluttify: ^0.13.0-dev.6
+  core_location_fluttify: ^0.7.0-dev.3
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  pedantic: ^1.9.2
+  flutter_lints: any
 
 flutter:
   plugin:

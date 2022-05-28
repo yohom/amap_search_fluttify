@@ -37,9 +37,11 @@ class AMapShareSearchBaseRequest extends AMapSearchObject with NSCoding, NSCopyi
       'ObjectFactory::create_batchAMapShareSearchBaseRequest',
       {'length': length, 'init': init}
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyIOSAs<AMapShareSearchBaseRequest>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyIOSAs<AMapShareSearchBaseRequest>(it))
+        .where((element) => element !=null)
+        .cast<AMapShareSearchBaseRequest>()
+        .toList() ?? <AMapShareSearchBaseRequest>[];
   }
   
   //endregion
@@ -62,7 +64,12 @@ class AMapShareSearchBaseRequest extends AMapSearchObject with NSCoding, NSCopyi
   }
 }
 
-extension AMapShareSearchBaseRequest_Batch on List<AMapShareSearchBaseRequest?> {
+extension AMapShareSearchBaseRequest_Batch on List<AMapShareSearchBaseRequest> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first.refId;
+  }
+
   //region getters
   
   //endregion

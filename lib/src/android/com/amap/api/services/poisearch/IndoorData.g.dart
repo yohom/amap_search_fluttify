@@ -23,7 +23,7 @@ class com_amap_api_services_poisearch_IndoorData extends java_lang_Object with a
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_poisearch_IndoorData> create__String__int__String(String? var1, int? var2, String? var3) async {
+  static Future<com_amap_api_services_poisearch_IndoorData> create__String__int__String(String var1, int var2, String var3) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_poisearch_IndoorData__String__int__String',
       {"var1": var1, "var2": var2, "var3": var3}
@@ -37,9 +37,11 @@ class com_amap_api_services_poisearch_IndoorData extends java_lang_Object with a
       'ObjectFactory::create_batchcom_amap_api_services_poisearch_IndoorData__String__int__String',
       [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__]}]
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_poisearch_IndoorData>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_poisearch_IndoorData>(it))
+        .where((element) => element !=null)
+        .cast<com_amap_api_services_poisearch_IndoorData>()
+        .toList() ?? <com_amap_api_services_poisearch_IndoorData>[];
   }
   
   //endregion
@@ -71,7 +73,7 @@ class com_amap_api_services_poisearch_IndoorData extends java_lang_Object with a
   }
   
   
-  Future<void> setPoiId(String? var1) async {
+  Future<void> setPoiId(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.poisearch.IndoorData@$refId::setPoiId([\'var1\':$var1])');
@@ -105,7 +107,7 @@ class com_amap_api_services_poisearch_IndoorData extends java_lang_Object with a
   }
   
   
-  Future<void> setFloor(int? var1) async {
+  Future<void> setFloor(int var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.poisearch.IndoorData@$refId::setFloor([\'var1\':$var1])');
@@ -139,7 +141,7 @@ class com_amap_api_services_poisearch_IndoorData extends java_lang_Object with a
   }
   
   
-  Future<void> setFloorName(String? var1) async {
+  Future<void> setFloorName(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.poisearch.IndoorData@$refId::setFloorName([\'var1\':$var1])');
@@ -163,7 +165,12 @@ class com_amap_api_services_poisearch_IndoorData extends java_lang_Object with a
   }
 }
 
-extension com_amap_api_services_poisearch_IndoorData_Batch on List<com_amap_api_services_poisearch_IndoorData?> {
+extension com_amap_api_services_poisearch_IndoorData_Batch on List<com_amap_api_services_poisearch_IndoorData> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first.refId;
+  }
+
   //region getters
   
   //endregion
@@ -174,18 +181,18 @@ extension com_amap_api_services_poisearch_IndoorData_Batch on List<com_amap_api_
 
   //region methods
   
-  Future<List<String?>?> getPoiId_batch() async {
+  Future<List<String?>> getPoiId_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.poisearch.IndoorData::getPoiId_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   
-  Future<List<void>?> setPoiId_batch(List<String> var1) async {
+  Future<List<void>> setPoiId_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -196,18 +203,18 @@ extension com_amap_api_services_poisearch_IndoorData_Batch on List<com_amap_api_
   }
   
   
-  Future<List<int?>?> getFloor_batch() async {
+  Future<List<int?>> getFloor_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.poisearch.IndoorData::getFloor_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<int>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
   }
   
   
-  Future<List<void>?> setFloor_batch(List<int> var1) async {
+  Future<List<void>> setFloor_batch(List<int> var1) async {
     assert(true);
   
     // invoke native method
@@ -218,18 +225,18 @@ extension com_amap_api_services_poisearch_IndoorData_Batch on List<com_amap_api_
   }
   
   
-  Future<List<String?>?> getFloorName_batch() async {
+  Future<List<String?>> getFloorName_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.poisearch.IndoorData::getFloorName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   
-  Future<List<void>?> setFloorName_batch(List<String> var1) async {
+  Future<List<void>> setFloorName_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method

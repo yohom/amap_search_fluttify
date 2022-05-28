@@ -5,6 +5,9 @@
 import 'package:flutter/services.dart';
 import '../facade/shared.g.dart';
 
+import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
+import 'package:amap_search_fluttify/src/android/android.export.g.dart';
+
 Future<String?> get AMapSearchErrorDomain async {
   return kAmapSearchFluttifyChannel.invokeMethod('getAMapSearchErrorDomain');
 }
