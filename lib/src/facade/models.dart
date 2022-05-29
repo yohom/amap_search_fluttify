@@ -1463,10 +1463,10 @@ Future<List<String>> _expandToString(Future<List<_ToFutureString>> source) {
   return source
       .asStream()
       .asyncExpand((it) => Stream.fromIterable(it))
-      .asyncMap((it) => it.toFutureString() ?? Future.value(''))
+      .asyncMap((it) => it.toFutureString())
       .toList();
 }
 
 Future<String> _toFutureString(Future<_ToFutureString> source) async {
-  return ((await source).toFutureString() ?? '') as FutureOr<String>;
+  return (await source).toFutureString();
 }
