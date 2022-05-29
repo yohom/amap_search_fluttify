@@ -139,10 +139,10 @@ class AMapRoadInter extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapRoadInter_Batch on List<AMapRoadInter> {
+extension AMapRoadInter_Batch on List<AMapRoadInter?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

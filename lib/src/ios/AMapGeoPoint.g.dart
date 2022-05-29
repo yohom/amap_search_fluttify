@@ -100,10 +100,10 @@ class AMapGeoPoint extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapGeoPoint_Batch on List<AMapGeoPoint> {
+extension AMapGeoPoint_Batch on List<AMapGeoPoint?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

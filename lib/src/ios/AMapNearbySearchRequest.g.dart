@@ -117,10 +117,10 @@ class AMapNearbySearchRequest extends AMapSearchObject with NSCoding, NSCopying 
   }
 }
 
-extension AMapNearbySearchRequest_Batch on List<AMapNearbySearchRequest> {
+extension AMapNearbySearchRequest_Batch on List<AMapNearbySearchRequest?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

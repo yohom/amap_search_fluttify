@@ -199,10 +199,10 @@ class com_amap_api_services_route_TruckRouteRestult extends java_lang_Object wit
   }
 }
 
-extension com_amap_api_services_route_TruckRouteRestult_Batch on List<com_amap_api_services_route_TruckRouteRestult> {
+extension com_amap_api_services_route_TruckRouteRestult_Batch on List<com_amap_api_services_route_TruckRouteRestult?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

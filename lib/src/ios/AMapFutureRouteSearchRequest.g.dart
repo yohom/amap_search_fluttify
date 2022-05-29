@@ -194,10 +194,10 @@ class AMapFutureRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCod
   }
 }
 
-extension AMapFutureRouteSearchRequest_Batch on List<AMapFutureRouteSearchRequest> {
+extension AMapFutureRouteSearchRequest_Batch on List<AMapFutureRouteSearchRequest?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

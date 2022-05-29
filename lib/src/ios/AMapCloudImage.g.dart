@@ -95,10 +95,10 @@ class AMapCloudImage extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapCloudImage_Batch on List<AMapCloudImage> {
+extension AMapCloudImage_Batch on List<AMapCloudImage?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

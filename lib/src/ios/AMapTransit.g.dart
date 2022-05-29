@@ -128,10 +128,10 @@ class AMapTransit extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapTransit_Batch on List<AMapTransit> {
+extension AMapTransit_Batch on List<AMapTransit?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

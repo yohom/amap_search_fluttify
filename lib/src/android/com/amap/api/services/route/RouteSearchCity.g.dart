@@ -97,10 +97,10 @@ class com_amap_api_services_route_RouteSearchCity extends com_amap_api_services_
   }
 }
 
-extension com_amap_api_services_route_RouteSearchCity_Batch on List<com_amap_api_services_route_RouteSearchCity> {
+extension com_amap_api_services_route_RouteSearchCity_Batch on List<com_amap_api_services_route_RouteSearchCity?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

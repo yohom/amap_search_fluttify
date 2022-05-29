@@ -84,10 +84,10 @@ class AMapRouteSearchBaseRequest extends AMapSearchObject with NSCoding, NSCopyi
   }
 }
 
-extension AMapRouteSearchBaseRequest_Batch on List<AMapRouteSearchBaseRequest> {
+extension AMapRouteSearchBaseRequest_Batch on List<AMapRouteSearchBaseRequest?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

@@ -128,10 +128,10 @@ class AMapTrafficRoad extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapTrafficRoad_Batch on List<AMapTrafficRoad> {
+extension AMapTrafficRoad_Batch on List<AMapTrafficRoad?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

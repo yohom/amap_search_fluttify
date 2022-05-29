@@ -106,10 +106,10 @@ class AMapBusLineBaseSearchRequest extends AMapSearchObject with NSCoding, NSCop
   }
 }
 
-extension AMapBusLineBaseSearchRequest_Batch on List<AMapBusLineBaseSearchRequest> {
+extension AMapBusLineBaseSearchRequest_Batch on List<AMapBusLineBaseSearchRequest?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

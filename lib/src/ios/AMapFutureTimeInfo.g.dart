@@ -84,10 +84,10 @@ class AMapFutureTimeInfo extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapFutureTimeInfo_Batch on List<AMapFutureTimeInfo> {
+extension AMapFutureTimeInfo_Batch on List<AMapFutureTimeInfo?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

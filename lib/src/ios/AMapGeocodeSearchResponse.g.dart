@@ -84,10 +84,10 @@ class AMapGeocodeSearchResponse extends AMapSearchObject with NSCoding, NSCopyin
   }
 }
 
-extension AMapGeocodeSearchResponse_Batch on List<AMapGeocodeSearchResponse> {
+extension AMapGeocodeSearchResponse_Batch on List<AMapGeocodeSearchResponse?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

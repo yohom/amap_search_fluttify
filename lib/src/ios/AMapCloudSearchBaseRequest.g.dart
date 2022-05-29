@@ -128,10 +128,10 @@ class AMapCloudSearchBaseRequest extends AMapSearchObject with NSCoding, NSCopyi
   }
 }
 
-extension AMapCloudSearchBaseRequest_Batch on List<AMapCloudSearchBaseRequest> {
+extension AMapCloudSearchBaseRequest_Batch on List<AMapCloudSearchBaseRequest?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

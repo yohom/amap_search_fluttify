@@ -95,10 +95,10 @@ class AMapCloudPOIAroundSearchRequest extends AMapCloudSearchBaseRequest with NS
   }
 }
 
-extension AMapCloudPOIAroundSearchRequest_Batch on List<AMapCloudPOIAroundSearchRequest> {
+extension AMapCloudPOIAroundSearchRequest_Batch on List<AMapCloudPOIAroundSearchRequest?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

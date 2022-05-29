@@ -318,10 +318,10 @@ class com_amap_api_services_route_RouteSearchV2_NewEnergy extends java_lang_Obje
   }
 }
 
-extension com_amap_api_services_route_RouteSearchV2_NewEnergy_Batch on List<com_amap_api_services_route_RouteSearchV2_NewEnergy> {
+extension com_amap_api_services_route_RouteSearchV2_NewEnergy_Batch on List<com_amap_api_services_route_RouteSearchV2_NewEnergy?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

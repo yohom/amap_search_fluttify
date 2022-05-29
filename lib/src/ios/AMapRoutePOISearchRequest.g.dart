@@ -139,10 +139,10 @@ class AMapRoutePOISearchRequest extends AMapSearchObject with NSCoding, NSCopyin
   }
 }
 
-extension AMapRoutePOISearchRequest_Batch on List<AMapRoutePOISearchRequest> {
+extension AMapRoutePOISearchRequest_Batch on List<AMapRoutePOISearchRequest?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

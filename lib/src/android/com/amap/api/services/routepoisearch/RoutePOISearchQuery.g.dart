@@ -203,10 +203,10 @@ class com_amap_api_services_routepoisearch_RoutePOISearchQuery extends java_lang
   }
 }
 
-extension com_amap_api_services_routepoisearch_RoutePOISearchQuery_Batch on List<com_amap_api_services_routepoisearch_RoutePOISearchQuery> {
+extension com_amap_api_services_routepoisearch_RoutePOISearchQuery_Batch on List<com_amap_api_services_routepoisearch_RoutePOISearchQuery?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

@@ -560,7 +560,7 @@ class DriveStep with _ToFutureString {
         final longitudeBatch = await polyline.getLongitude_batch();
         return [
           for (int i = 0; i < polyline.length; i++)
-            LatLng(latitudeBatch![i]!, longitudeBatch![i]!)
+            LatLng(latitudeBatch[i]!, longitudeBatch[i]!)
         ];
       },
       ios: (pool) async {
@@ -667,7 +667,7 @@ class WalkStep with _ToFutureString {
         final longitudeBatch = await polyline.getLongitude_batch();
         return [
           for (int i = 0; i < polyline.length; i++)
-            LatLng(latitudeBatch![i]!, longitudeBatch![i]!)
+            LatLng(latitudeBatch[i]!, longitudeBatch[i]!)
         ];
       },
       ios: (pool) async {
@@ -763,7 +763,7 @@ class RideStep with _ToFutureString {
         final longitudeBatch = await polyline.getLongitude_batch();
         return [
           for (int i = 0; i < polyline.length; i++)
-            LatLng(latitudeBatch![i]!, longitudeBatch![i]!)
+            LatLng(latitudeBatch[i]!, longitudeBatch[i]!)
         ];
       },
       ios: (pool) async {
@@ -1180,7 +1180,7 @@ class TMC with _ToFutureString {
         final longitudeBatch = await polyline.getLongitude_batch();
         return [
           for (int i = 0; i < polyline.length; i++)
-            LatLng(latitudeBatch![i]!, longitudeBatch![i]!)
+            LatLng(latitudeBatch[i]!, longitudeBatch[i]!)
         ];
       },
       ios: (pool) async {

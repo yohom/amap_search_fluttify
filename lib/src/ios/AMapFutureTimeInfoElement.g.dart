@@ -106,10 +106,10 @@ class AMapFutureTimeInfoElement extends AMapSearchObject with NSCoding, NSCopyin
   }
 }
 
-extension AMapFutureTimeInfoElement_Batch on List<AMapFutureTimeInfoElement> {
+extension AMapFutureTimeInfoElement_Batch on List<AMapFutureTimeInfoElement?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

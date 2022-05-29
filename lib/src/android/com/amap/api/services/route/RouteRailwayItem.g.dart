@@ -369,10 +369,10 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
   }
 }
 
-extension com_amap_api_services_route_RouteRailwayItem_Batch on List<com_amap_api_services_route_RouteRailwayItem> {
+extension com_amap_api_services_route_RouteRailwayItem_Batch on List<com_amap_api_services_route_RouteRailwayItem?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

@@ -73,10 +73,10 @@ class AMapWalkingRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCo
   }
 }
 
-extension AMapWalkingRouteSearchRequest_Batch on List<AMapWalkingRouteSearchRequest> {
+extension AMapWalkingRouteSearchRequest_Batch on List<AMapWalkingRouteSearchRequest?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

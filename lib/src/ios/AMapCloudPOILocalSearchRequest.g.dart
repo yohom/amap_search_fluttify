@@ -84,10 +84,10 @@ class AMapCloudPOILocalSearchRequest extends AMapCloudSearchBaseRequest with NSC
   }
 }
 
-extension AMapCloudPOILocalSearchRequest_Batch on List<AMapCloudPOILocalSearchRequest> {
+extension AMapCloudPOILocalSearchRequest_Batch on List<AMapCloudPOILocalSearchRequest?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

@@ -84,10 +84,10 @@ class AMapImage extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapImage_Batch on List<AMapImage> {
+extension AMapImage_Batch on List<AMapImage?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

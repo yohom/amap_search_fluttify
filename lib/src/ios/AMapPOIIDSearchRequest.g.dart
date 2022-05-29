@@ -73,10 +73,10 @@ class AMapPOIIDSearchRequest extends AMapPOISearchBaseRequest with NSCoding, NSC
   }
 }
 
-extension AMapPOIIDSearchRequest_Batch on List<AMapPOIIDSearchRequest> {
+extension AMapPOIIDSearchRequest_Batch on List<AMapPOIIDSearchRequest?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

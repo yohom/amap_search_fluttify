@@ -307,10 +307,10 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
   }
 }
 
-extension com_amap_api_services_share_ShareSearch_Batch on List<com_amap_api_services_share_ShareSearch> {
+extension com_amap_api_services_share_ShareSearch_Batch on List<com_amap_api_services_share_ShareSearch?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

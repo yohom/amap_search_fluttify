@@ -84,10 +84,10 @@ class AMapCloudPOIPolygonSearchRequest extends AMapCloudSearchBaseRequest with N
   }
 }
 
-extension AMapCloudPOIPolygonSearchRequest_Batch on List<AMapCloudPOIPolygonSearchRequest> {
+extension AMapCloudPOIPolygonSearchRequest_Batch on List<AMapCloudPOIPolygonSearchRequest?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

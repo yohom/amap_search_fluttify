@@ -86,10 +86,10 @@ class com_amap_api_services_cloud_CloudSearch_Sortingrules extends java_lang_Obj
   }
 }
 
-extension com_amap_api_services_cloud_CloudSearch_Sortingrules_Batch on List<com_amap_api_services_cloud_CloudSearch_Sortingrules> {
+extension com_amap_api_services_cloud_CloudSearch_Sortingrules_Batch on List<com_amap_api_services_cloud_CloudSearch_Sortingrules?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

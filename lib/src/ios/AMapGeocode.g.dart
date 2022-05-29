@@ -205,10 +205,10 @@ class AMapGeocode extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapGeocode_Batch on List<AMapGeocode> {
+extension AMapGeocode_Batch on List<AMapGeocode?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

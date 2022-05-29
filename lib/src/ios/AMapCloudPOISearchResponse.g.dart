@@ -84,10 +84,10 @@ class AMapCloudPOISearchResponse extends AMapSearchObject with NSCoding, NSCopyi
   }
 }
 
-extension AMapCloudPOISearchResponse_Batch on List<AMapCloudPOISearchResponse> {
+extension AMapCloudPOISearchResponse_Batch on List<AMapCloudPOISearchResponse?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

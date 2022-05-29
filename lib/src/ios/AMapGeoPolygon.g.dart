@@ -89,10 +89,10 @@ class AMapGeoPolygon extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapGeoPolygon_Batch on List<AMapGeoPolygon> {
+extension AMapGeoPolygon_Batch on List<AMapGeoPolygon?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

@@ -80,10 +80,10 @@ class AMapServices extends NSObject  {
   }
 }
 
-extension AMapServices_Batch on List<AMapServices> {
+extension AMapServices_Batch on List<AMapServices?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

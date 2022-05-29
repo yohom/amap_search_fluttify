@@ -84,10 +84,10 @@ class AMapSuggestion extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapSuggestion_Batch on List<AMapSuggestion> {
+extension AMapSuggestion_Batch on List<AMapSuggestion?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

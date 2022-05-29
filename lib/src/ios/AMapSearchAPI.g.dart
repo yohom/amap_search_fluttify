@@ -226,10 +226,10 @@ class AMapSearchAPI extends NSObject  {
   }
 }
 
-extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
+extension AMapSearchAPI_Batch on List<AMapSearchAPI?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

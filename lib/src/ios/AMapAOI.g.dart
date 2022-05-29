@@ -117,10 +117,10 @@ class AMapAOI extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapAOI_Batch on List<AMapAOI> {
+extension AMapAOI_Batch on List<AMapAOI?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

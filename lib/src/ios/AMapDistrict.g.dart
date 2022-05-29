@@ -139,10 +139,10 @@ class AMapDistrict extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapDistrict_Batch on List<AMapDistrict> {
+extension AMapDistrict_Batch on List<AMapDistrict?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

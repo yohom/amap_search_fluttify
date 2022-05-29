@@ -84,10 +84,10 @@ class AMapRidingRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCod
   }
 }
 
-extension AMapRidingRouteSearchRequest_Batch on List<AMapRidingRouteSearchRequest> {
+extension AMapRidingRouteSearchRequest_Batch on List<AMapRidingRouteSearchRequest?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

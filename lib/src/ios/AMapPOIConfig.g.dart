@@ -117,10 +117,10 @@ class AMapPOIConfig extends NSObject  {
   }
 }
 
-extension AMapPOIConfig_Batch on List<AMapPOIConfig> {
+extension AMapPOIConfig_Batch on List<AMapPOIConfig?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

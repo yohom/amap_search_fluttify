@@ -194,10 +194,10 @@ class AMapDrivingCalRouteSearchRequest extends AMapRouteSearchBaseRequest with N
   }
 }
 
-extension AMapDrivingCalRouteSearchRequest_Batch on List<AMapDrivingCalRouteSearchRequest> {
+extension AMapDrivingCalRouteSearchRequest_Batch on List<AMapDrivingCalRouteSearchRequest?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

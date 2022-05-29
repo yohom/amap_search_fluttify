@@ -97,10 +97,10 @@ class com_amap_api_services_route_RidePath extends com_amap_api_services_route_P
   }
 }
 
-extension com_amap_api_services_route_RidePath_Batch on List<com_amap_api_services_route_RidePath> {
+extension com_amap_api_services_route_RidePath_Batch on List<com_amap_api_services_route_RidePath?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

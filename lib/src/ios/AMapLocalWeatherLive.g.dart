@@ -161,10 +161,10 @@ class AMapLocalWeatherLive extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapLocalWeatherLive_Batch on List<AMapLocalWeatherLive> {
+extension AMapLocalWeatherLive_Batch on List<AMapLocalWeatherLive?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

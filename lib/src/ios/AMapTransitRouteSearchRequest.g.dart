@@ -117,10 +117,10 @@ class AMapTransitRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCo
   }
 }
 
-extension AMapTransitRouteSearchRequest_Batch on List<AMapTransitRouteSearchRequest> {
+extension AMapTransitRouteSearchRequest_Batch on List<AMapTransitRouteSearchRequest?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

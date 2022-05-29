@@ -267,10 +267,10 @@ class com_amap_api_services_road_Crossroad extends com_amap_api_services_road_Ro
   }
 }
 
-extension com_amap_api_services_road_Crossroad_Batch on List<com_amap_api_services_road_Crossroad> {
+extension com_amap_api_services_road_Crossroad_Batch on List<com_amap_api_services_road_Crossroad?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

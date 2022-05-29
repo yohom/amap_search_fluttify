@@ -84,10 +84,10 @@ class AMapBusinessArea extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapBusinessArea_Batch on List<AMapBusinessArea> {
+extension AMapBusinessArea_Batch on List<AMapBusinessArea?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

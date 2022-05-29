@@ -381,10 +381,10 @@ class AMapPOI extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapPOI_Batch on List<AMapPOI> {
+extension AMapPOI_Batch on List<AMapPOI?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

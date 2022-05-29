@@ -139,10 +139,10 @@ class AMapTip extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapTip_Batch on List<AMapTip> {
+extension AMapTip_Batch on List<AMapTip?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

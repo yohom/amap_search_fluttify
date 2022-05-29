@@ -352,10 +352,10 @@ class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
   }
 }
 
-extension com_amap_api_services_cloud_CloudSearch_Query_Batch on List<com_amap_api_services_cloud_CloudSearch_Query> {
+extension com_amap_api_services_cloud_CloudSearch_Query_Batch on List<com_amap_api_services_cloud_CloudSearch_Query?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

@@ -95,10 +95,10 @@ class AMapIndoorData extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapIndoorData_Batch on List<AMapIndoorData> {
+extension AMapIndoorData_Batch on List<AMapIndoorData?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

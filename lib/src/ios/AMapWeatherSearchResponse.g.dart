@@ -84,10 +84,10 @@ class AMapWeatherSearchResponse extends AMapSearchObject with NSCoding, NSCopyin
   }
 }
 
-extension AMapWeatherSearchResponse_Batch on List<AMapWeatherSearchResponse> {
+extension AMapWeatherSearchResponse_Batch on List<AMapWeatherSearchResponse?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

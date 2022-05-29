@@ -139,10 +139,10 @@ class AMapRouteConfig extends NSObject  {
   }
 }
 
-extension AMapRouteConfig_Batch on List<AMapRouteConfig> {
+extension AMapRouteConfig_Batch on List<AMapRouteConfig?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

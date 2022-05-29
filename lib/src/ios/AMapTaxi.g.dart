@@ -128,10 +128,10 @@ class AMapTaxi extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapTaxi_Batch on List<AMapTaxi> {
+extension AMapTaxi_Batch on List<AMapTaxi?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

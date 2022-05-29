@@ -84,10 +84,10 @@ class AMapFutureRouteSearchResponse extends AMapSearchObject with NSCoding, NSCo
   }
 }
 
-extension AMapFutureRouteSearchResponse_Batch on List<AMapFutureRouteSearchResponse> {
+extension AMapFutureRouteSearchResponse_Batch on List<AMapFutureRouteSearchResponse?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

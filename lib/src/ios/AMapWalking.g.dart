@@ -117,10 +117,10 @@ class AMapWalking extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapWalking_Batch on List<AMapWalking> {
+extension AMapWalking_Batch on List<AMapWalking?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

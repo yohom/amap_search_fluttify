@@ -95,10 +95,10 @@ class AMapNearbyUploadInfo extends NSObject with NSCopying {
   }
 }
 
-extension AMapNearbyUploadInfo_Batch on List<AMapNearbyUploadInfo> {
+extension AMapNearbyUploadInfo_Batch on List<AMapNearbyUploadInfo?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

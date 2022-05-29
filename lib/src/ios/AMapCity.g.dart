@@ -117,10 +117,10 @@ class AMapCity extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapCity_Batch on List<AMapCity> {
+extension AMapCity_Batch on List<AMapCity?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

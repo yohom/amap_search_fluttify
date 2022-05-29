@@ -227,10 +227,10 @@ class AMapTruckRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCodi
   }
 }
 
-extension AMapTruckRouteSearchRequest_Batch on List<AMapTruckRouteSearchRequest> {
+extension AMapTruckRouteSearchRequest_Batch on List<AMapTruckRouteSearchRequest?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

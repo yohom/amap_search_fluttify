@@ -95,10 +95,10 @@ class AMapBusLineSearchResponse extends AMapSearchObject with NSCoding, NSCopyin
   }
 }
 
-extension AMapBusLineSearchResponse_Batch on List<AMapBusLineSearchResponse> {
+extension AMapBusLineSearchResponse_Batch on List<AMapBusLineSearchResponse?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

@@ -73,10 +73,10 @@ class AMapNearbySearchManager extends NSObject  {
   }
 }
 
-extension AMapNearbySearchManager_Batch on List<AMapNearbySearchManager> {
+extension AMapNearbySearchManager_Batch on List<AMapNearbySearchManager?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

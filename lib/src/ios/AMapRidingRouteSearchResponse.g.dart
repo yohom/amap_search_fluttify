@@ -64,10 +64,10 @@ class AMapRidingRouteSearchResponse extends AMapRouteSearchResponse with NSCodin
   }
 }
 
-extension AMapRidingRouteSearchResponse_Batch on List<AMapRidingRouteSearchResponse> {
+extension AMapRidingRouteSearchResponse_Batch on List<AMapRidingRouteSearchResponse?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

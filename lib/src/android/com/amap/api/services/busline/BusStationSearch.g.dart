@@ -148,10 +148,10 @@ class com_amap_api_services_busline_BusStationSearch extends java_lang_Object  {
   }
 }
 
-extension com_amap_api_services_busline_BusStationSearch_Batch on List<com_amap_api_services_busline_BusStationSearch> {
+extension com_amap_api_services_busline_BusStationSearch_Batch on List<com_amap_api_services_busline_BusStationSearch?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

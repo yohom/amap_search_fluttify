@@ -282,10 +282,10 @@ class AMapBusLine extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapBusLine_Batch on List<AMapBusLine> {
+extension AMapBusLine_Batch on List<AMapBusLine?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

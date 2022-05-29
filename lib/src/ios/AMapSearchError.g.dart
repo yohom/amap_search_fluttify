@@ -80,10 +80,10 @@ class AMapSearchError extends NSObject  {
   }
 }
 
-extension AMapSearchError_Batch on List<AMapSearchError> {
+extension AMapSearchError_Batch on List<AMapSearchError?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

@@ -117,10 +117,10 @@ class AMapStreetNumber extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapStreetNumber_Batch on List<AMapStreetNumber> {
+extension AMapStreetNumber_Batch on List<AMapStreetNumber?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

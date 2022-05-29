@@ -106,10 +106,10 @@ class AMapPOIKeywordsSearchRequest extends AMapPOISearchBaseRequest with NSCodin
   }
 }
 
-extension AMapPOIKeywordsSearchRequest_Batch on List<AMapPOIKeywordsSearchRequest> {
+extension AMapPOIKeywordsSearchRequest_Batch on List<AMapPOIKeywordsSearchRequest?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

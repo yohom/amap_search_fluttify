@@ -139,10 +139,10 @@ class AMapSubPOI extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapSubPOI_Batch on List<AMapSubPOI> {
+extension AMapSubPOI_Batch on List<AMapSubPOI?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

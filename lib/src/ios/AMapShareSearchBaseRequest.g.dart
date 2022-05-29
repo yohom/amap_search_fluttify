@@ -64,10 +64,10 @@ class AMapShareSearchBaseRequest extends AMapSearchObject with NSCoding, NSCopyi
   }
 }
 
-extension AMapShareSearchBaseRequest_Batch on List<AMapShareSearchBaseRequest> {
+extension AMapShareSearchBaseRequest_Batch on List<AMapShareSearchBaseRequest?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

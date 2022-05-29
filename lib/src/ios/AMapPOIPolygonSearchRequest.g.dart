@@ -84,10 +84,10 @@ class AMapPOIPolygonSearchRequest extends AMapPOISearchBaseRequest with NSCoding
   }
 }
 
-extension AMapPOIPolygonSearchRequest_Batch on List<AMapPOIPolygonSearchRequest> {
+extension AMapPOIPolygonSearchRequest_Batch on List<AMapPOIPolygonSearchRequest?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

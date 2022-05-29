@@ -3,6 +3,7 @@ import 'dart:async';
 
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 import 'package:flutter/cupertino.dart';
 
 part 'delegates.dart';
@@ -77,7 +78,9 @@ mixin _Community on _Holder {
         await _androidPoiSearch.searchPOIAsyn();
 
         // 局部变量从HEAP中解除引用
-        pool..add(query)..add(context);
+        pool
+          ..add(query)
+          ..add(context);
       },
       ios: (pool) async {
         _iosSearch = await AMapSearchAPI.create__();
@@ -160,7 +163,10 @@ mixin _Community on _Holder {
         await _androidPoiSearch.searchPOIAsyn();
 
         // 局部变量从HEAP中解除引用
-        pool..add(query)..add(centerLatLng)..add(bound);
+        pool
+          ..add(query)
+          ..add(centerLatLng)
+          ..add(bound);
       },
       ios: (pool) async {
         _iosSearch = await AMapSearchAPI.create__();
@@ -192,7 +198,9 @@ mixin _Community on _Holder {
         await _iosSearch.AMapPOIAroundSearch(request);
 
         // 局部变量从HEAP中解除引用
-        pool..add(request)..add(location);
+        pool
+          ..add(request)
+          ..add(location);
       },
     );
     return _controller.future;
@@ -394,7 +402,9 @@ mixin _Community on _Holder {
         await _androidGeocodeSearch.getFromLocationAsyn(query);
 
         // 局部变量从HEAP中解除引用
-        pool..add(latLngPoint)..add(query);
+        pool
+          ..add(latLngPoint)
+          ..add(query);
       },
       ios: (pool) async {
         _iosSearch = await AMapSearchAPI.create__();
@@ -421,7 +431,9 @@ mixin _Community on _Holder {
         await _iosSearch.AMapReGoecodeSearch(request);
 
         // 局部变量从HEAP中解除引用
-        pool..add(amapLocation)..add(request);
+        pool
+          ..add(amapLocation)
+          ..add(request);
       },
     );
     return _controller.future;
@@ -614,7 +626,11 @@ mixin _Community on _Holder {
         await _androidRouteSearch.calculateBusRouteAsyn(query);
 
         // 局部变量从HEAP中解除引用
-        pool..add(fromLatLng)..add(toLatLng)..add(fromAndTo)..add(query);
+        pool
+          ..add(fromLatLng)
+          ..add(toLatLng)
+          ..add(fromAndTo)
+          ..add(query);
       },
       ios: (pool) async {
         _iosSearch = await AMapSearchAPI.create__();
@@ -643,7 +659,10 @@ mixin _Community on _Holder {
         await _iosSearch.AMapWalkingRouteSearch(request);
 
         // 局部变量从HEAP中解除引用
-        pool..add(fromLatLng)..add(toLatLng)..add(request);
+        pool
+          ..add(fromLatLng)
+          ..add(toLatLng)
+          ..add(request);
       },
     );
     return _controller.future;
@@ -704,7 +723,11 @@ mixin _Community on _Holder {
         await _androidRouteSearch.calculateWalkRouteAsyn(query);
 
         // 局部变量从HEAP中解除引用
-        pool..add(fromLatLng)..add(toLatLng)..add(fromAndTo)..add(query);
+        pool
+          ..add(fromLatLng)
+          ..add(toLatLng)
+          ..add(fromAndTo)
+          ..add(query);
       },
       ios: (pool) async {
         _iosSearch = await AMapSearchAPI.create__();
@@ -732,7 +755,10 @@ mixin _Community on _Holder {
         await _iosSearch.AMapWalkingRouteSearch(request);
 
         // 局部变量从HEAP中解除引用
-        pool..add(fromLatLng)..add(toLatLng)..add(request);
+        pool
+          ..add(fromLatLng)
+          ..add(toLatLng)
+          ..add(request);
       },
     );
     return _controller.future;
@@ -791,7 +817,11 @@ mixin _Community on _Holder {
         await _androidRouteSearch.calculateRideRouteAsyn(query);
 
         // 局部变量从HEAP中解除引用
-        pool..add(fromLatLng)..add(toLatLng)..add(fromAndTo)..add(query);
+        pool
+          ..add(fromLatLng)
+          ..add(toLatLng)
+          ..add(fromAndTo)
+          ..add(query);
       },
       ios: (pool) async {
         _iosSearch = await AMapSearchAPI.create__();
@@ -821,7 +851,10 @@ mixin _Community on _Holder {
         await _iosSearch.AMapRidingRouteSearch(request);
 
         // 局部变量从HEAP中解除引用
-        pool..add(fromLatLng)..add(toLatLng)..add(request);
+        pool
+          ..add(fromLatLng)
+          ..add(toLatLng)
+          ..add(request);
       },
     );
     return _controller.future;
@@ -1051,7 +1084,11 @@ mixin _Community on _Holder {
         await _androidCloudSearch.searchCloudAsyn(query);
 
         // 局部变量从HEAP中解除引用
-        pool..add(query)..add(context)..add(centerPoint)..add(bound);
+        pool
+          ..add(query)
+          ..add(context)
+          ..add(centerPoint)
+          ..add(bound);
       },
       ios: (pool) async {
         _iosSearch = await AMapSearchAPI.create__();
@@ -1075,7 +1112,9 @@ mixin _Community on _Holder {
         await _iosSearch.AMapCloudPOIAroundSearch(request);
 
         // 局部变量从HEAP中解除引用
-        pool..add(request)..add(centerPoint);
+        pool
+          ..add(request)
+          ..add(centerPoint);
       },
     );
     return _controller.future;

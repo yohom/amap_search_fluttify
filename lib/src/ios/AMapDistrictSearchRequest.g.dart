@@ -73,10 +73,10 @@ class AMapDistrictSearchRequest extends AMapSearchObject with NSCoding, NSCopyin
   }
 }
 
-extension AMapDistrictSearchRequest_Batch on List<AMapDistrictSearchRequest> {
+extension AMapDistrictSearchRequest_Batch on List<AMapDistrictSearchRequest?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

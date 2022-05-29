@@ -128,10 +128,10 @@ class AMapTrafficEvaluation extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapTrafficEvaluation_Batch on List<AMapTrafficEvaluation> {
+extension AMapTrafficEvaluation_Batch on List<AMapTrafficEvaluation?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

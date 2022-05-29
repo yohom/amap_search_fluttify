@@ -84,10 +84,10 @@ class AMapLocationShareSearchRequest extends AMapShareSearchBaseRequest with NSC
   }
 }
 
-extension AMapLocationShareSearchRequest_Batch on List<AMapLocationShareSearchRequest> {
+extension AMapLocationShareSearchRequest_Batch on List<AMapLocationShareSearchRequest?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

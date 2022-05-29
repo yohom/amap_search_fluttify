@@ -139,10 +139,10 @@ class AMapBusStop extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapBusStop_Batch on List<AMapBusStop> {
+extension AMapBusStop_Batch on List<AMapBusStop?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

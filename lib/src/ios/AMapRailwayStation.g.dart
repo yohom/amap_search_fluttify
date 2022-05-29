@@ -150,10 +150,10 @@ class AMapRailwayStation extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapRailwayStation_Batch on List<AMapRailwayStation> {
+extension AMapRailwayStation_Batch on List<AMapRailwayStation?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

@@ -97,10 +97,10 @@ class com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery extends jav
   }
 }
 
-extension com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery_Batch on List<com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery> {
+extension com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery_Batch on List<com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

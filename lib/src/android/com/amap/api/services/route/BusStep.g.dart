@@ -301,10 +301,10 @@ class com_amap_api_services_route_BusStep extends java_lang_Object with android_
   }
 }
 
-extension com_amap_api_services_route_BusStep_Batch on List<com_amap_api_services_route_BusStep> {
+extension com_amap_api_services_route_BusStep_Batch on List<com_amap_api_services_route_BusStep?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

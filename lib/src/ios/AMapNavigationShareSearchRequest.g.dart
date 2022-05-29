@@ -95,10 +95,10 @@ class AMapNavigationShareSearchRequest extends AMapShareSearchBaseRequest with N
   }
 }
 
-extension AMapNavigationShareSearchRequest_Batch on List<AMapNavigationShareSearchRequest> {
+extension AMapNavigationShareSearchRequest_Batch on List<AMapNavigationShareSearchRequest?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

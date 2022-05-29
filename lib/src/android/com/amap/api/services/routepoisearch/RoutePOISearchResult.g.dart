@@ -97,10 +97,10 @@ class com_amap_api_services_routepoisearch_RoutePOISearchResult extends java_lan
   }
 }
 
-extension com_amap_api_services_routepoisearch_RoutePOISearchResult_Batch on List<com_amap_api_services_routepoisearch_RoutePOISearchResult> {
+extension com_amap_api_services_routepoisearch_RoutePOISearchResult_Batch on List<com_amap_api_services_routepoisearch_RoutePOISearchResult?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

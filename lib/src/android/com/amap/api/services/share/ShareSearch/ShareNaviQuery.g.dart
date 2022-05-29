@@ -97,10 +97,10 @@ class com_amap_api_services_share_ShareSearch_ShareNaviQuery extends java_lang_O
   }
 }
 
-extension com_amap_api_services_share_ShareSearch_ShareNaviQuery_Batch on List<com_amap_api_services_share_ShareSearch_ShareNaviQuery> {
+extension com_amap_api_services_share_ShareSearch_ShareNaviQuery_Batch on List<com_amap_api_services_share_ShareSearch_ShareNaviQuery?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

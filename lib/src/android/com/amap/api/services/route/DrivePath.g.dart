@@ -267,10 +267,10 @@ class com_amap_api_services_route_DrivePath extends com_amap_api_services_route_
   }
 }
 
-extension com_amap_api_services_route_DrivePath_Batch on List<com_amap_api_services_route_DrivePath> {
+extension com_amap_api_services_route_DrivePath_Batch on List<com_amap_api_services_route_DrivePath?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

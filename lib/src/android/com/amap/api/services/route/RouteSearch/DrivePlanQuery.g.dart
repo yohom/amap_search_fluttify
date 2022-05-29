@@ -271,10 +271,10 @@ class com_amap_api_services_route_RouteSearch_DrivePlanQuery extends java_lang_O
   }
 }
 
-extension com_amap_api_services_route_RouteSearch_DrivePlanQuery_Batch on List<com_amap_api_services_route_RouteSearch_DrivePlanQuery> {
+extension com_amap_api_services_route_RouteSearch_DrivePlanQuery_Batch on List<com_amap_api_services_route_RouteSearch_DrivePlanQuery?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

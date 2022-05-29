@@ -131,10 +131,10 @@ class com_amap_api_services_route_RouteBusWalkItem extends com_amap_api_services
   }
 }
 
-extension com_amap_api_services_route_RouteBusWalkItem_Batch on List<com_amap_api_services_route_RouteBusWalkItem> {
+extension com_amap_api_services_route_RouteBusWalkItem_Batch on List<com_amap_api_services_route_RouteBusWalkItem?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

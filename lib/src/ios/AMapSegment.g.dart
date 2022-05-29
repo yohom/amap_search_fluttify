@@ -150,10 +150,10 @@ class AMapSegment extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapSegment_Batch on List<AMapSegment> {
+extension AMapSegment_Batch on List<AMapSegment?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

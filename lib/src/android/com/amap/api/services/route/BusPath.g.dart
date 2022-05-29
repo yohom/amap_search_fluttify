@@ -233,10 +233,10 @@ class com_amap_api_services_route_BusPath extends com_amap_api_services_route_Pa
   }
 }
 
-extension com_amap_api_services_route_BusPath_Batch on List<com_amap_api_services_route_BusPath> {
+extension com_amap_api_services_route_BusPath_Batch on List<com_amap_api_services_route_BusPath?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

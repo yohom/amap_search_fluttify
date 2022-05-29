@@ -131,10 +131,10 @@ class AMapURLSearch extends NSObject  {
   }
 }
 
-extension AMapURLSearch_Batch on List<AMapURLSearch> {
+extension AMapURLSearch_Batch on List<AMapURLSearch?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

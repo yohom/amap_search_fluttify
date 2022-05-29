@@ -139,10 +139,10 @@ class AMapPOISearchBaseRequest extends AMapSearchObject with NSCoding, NSCopying
   }
 }
 
-extension AMapPOISearchBaseRequest_Batch on List<AMapPOISearchBaseRequest> {
+extension AMapPOISearchBaseRequest_Batch on List<AMapPOISearchBaseRequest?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

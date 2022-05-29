@@ -73,10 +73,10 @@ class AMapBusLineIDSearchRequest extends AMapBusLineBaseSearchRequest with NSCod
   }
 }
 
-extension AMapBusLineIDSearchRequest_Batch on List<AMapBusLineIDSearchRequest> {
+extension AMapBusLineIDSearchRequest_Batch on List<AMapBusLineIDSearchRequest?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

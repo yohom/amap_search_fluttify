@@ -73,10 +73,10 @@ class AMapBusLineNameSearchRequest extends AMapBusLineBaseSearchRequest with NSC
   }
 }
 
-extension AMapBusLineNameSearchRequest_Batch on List<AMapBusLineNameSearchRequest> {
+extension AMapBusLineNameSearchRequest_Batch on List<AMapBusLineNameSearchRequest?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

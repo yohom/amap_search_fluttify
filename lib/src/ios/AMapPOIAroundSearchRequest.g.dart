@@ -117,10 +117,10 @@ class AMapPOIAroundSearchRequest extends AMapPOISearchBaseRequest with NSCoding,
   }
 }
 
-extension AMapPOIAroundSearchRequest_Batch on List<AMapPOIAroundSearchRequest> {
+extension AMapPOIAroundSearchRequest_Batch on List<AMapPOIAroundSearchRequest?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

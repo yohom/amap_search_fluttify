@@ -106,10 +106,10 @@ class AMapPOIShareSearchRequest extends AMapShareSearchBaseRequest with NSCoding
   }
 }
 
-extension AMapPOIShareSearchRequest_Batch on List<AMapPOIShareSearchRequest> {
+extension AMapPOIShareSearchRequest_Batch on List<AMapPOIShareSearchRequest?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

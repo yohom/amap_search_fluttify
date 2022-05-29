@@ -216,10 +216,10 @@ class AMapStep extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapStep_Batch on List<AMapStep> {
+extension AMapStep_Batch on List<AMapStep?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

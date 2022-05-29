@@ -73,10 +73,10 @@ class AMapCloudPOIIDSearchRequest extends AMapCloudSearchBaseRequest with NSCodi
   }
 }
 
-extension AMapCloudPOIIDSearchRequest_Batch on List<AMapCloudPOIIDSearchRequest> {
+extension AMapCloudPOIIDSearchRequest_Batch on List<AMapCloudPOIIDSearchRequest?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

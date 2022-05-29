@@ -43,13 +43,12 @@ class _AndroidSearchListener extends java_lang_Object
     await super.onGeocodeSearched(var1, var2);
     final geocodeList = await (var1!.getGeocodeAddressList()
         as FutureOr<List<com_amap_api_services_geocoder_GeocodeAddress>>);
-    final coordinateBatch = await (geocodeList.getLatLonPoint_batch()
-        as FutureOr<List<com_amap_api_services_core_LatLonPoint?>>);
+    final coordinateBatch = await geocodeList.getLatLonPoint_batch();
     final latitudeBatch = await coordinateBatch.getLatitude_batch();
     final longitudeBatch = await coordinateBatch.getLongitude_batch();
     final geocode = [
       for (int i = 0; i < coordinateBatch.length; i++)
-        Geocode(LatLng(latitudeBatch![i]!, longitudeBatch![i]!))
+        Geocode(LatLng(latitudeBatch[i]!, longitudeBatch[i]!))
     ];
     _completer.complete(geocode);
   }
@@ -73,12 +72,9 @@ class _AndroidSearchListener extends java_lang_Object
       building: await result.getBuilding(),
       country: await result.getCountry(),
       formatAddress: await result.getFormatAddress(),
-      roads: await RoadListX.fromAndroid(await (result.getRoads()
-          as FutureOr<List<com_amap_api_services_geocoder_RegeocodeRoad>>)),
-      aoiList: await AoiListX.fromAndroid(await (result.getAois()
-          as FutureOr<List<com_amap_api_services_geocoder_AoiItem>>)),
-      poiList: await PoiListX.fromAndroid(await (result.getPois()
-          as FutureOr<List<com_amap_api_services_core_PoiItem>>)),
+      roads: await RoadListX.fromAndroid(await result.getRoads() ?? []),
+      aoiList: await AoiListX.fromAndroid(await result.getAois() ?? []),
+      poiList: await PoiListX.fromAndroid(await result.getPois() ?? []),
     ));
   }
 
@@ -201,15 +197,13 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
     AMapGeocodeSearchResponse? response,
   ) async {
     await super.onGeocodeSearchDone_response(request, response);
-    final geocodeList =
-        await (response!.get_geocodes() as FutureOr<List<AMapGeocode>>);
-    final coordinateBatch = await (geocodeList.get_location_batch()
-        as FutureOr<List<AMapGeoPoint?>>);
+    final geocodeList = await response!.get_geocodes() ?? [];
+    final coordinateBatch = await geocodeList.get_location_batch();
     final latitudeBatch = await coordinateBatch.get_latitude_batch();
     final longitudeBatch = await coordinateBatch.get_longitude_batch();
     final geocode = [
       for (int i = 0; i < coordinateBatch.length; i++)
-        Geocode(LatLng(latitudeBatch![i]!, longitudeBatch![i]!))
+        Geocode(LatLng(latitudeBatch[i]!, longitudeBatch[i]!))
     ];
     _completer.complete(geocode);
   }

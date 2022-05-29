@@ -318,10 +318,10 @@ class com_amap_api_services_route_RouteSearchV2_CustomCostMode extends java_lang
   }
 }
 
-extension com_amap_api_services_route_RouteSearchV2_CustomCostMode_Batch on List<com_amap_api_services_route_RouteSearchV2_CustomCostMode> {
+extension com_amap_api_services_route_RouteSearchV2_CustomCostMode_Batch on List<com_amap_api_services_route_RouteSearchV2_CustomCostMode?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

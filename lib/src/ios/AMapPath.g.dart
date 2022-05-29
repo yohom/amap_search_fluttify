@@ -161,10 +161,10 @@ class AMapPath extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapPath_Batch on List<AMapPath> {
+extension AMapPath_Batch on List<AMapPath?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

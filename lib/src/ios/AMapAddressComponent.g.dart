@@ -205,10 +205,10 @@ class AMapAddressComponent extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapAddressComponent_Batch on List<AMapAddressComponent> {
+extension AMapAddressComponent_Batch on List<AMapAddressComponent?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

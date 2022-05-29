@@ -106,10 +106,10 @@ class AMapNearbyUserInfo extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapNearbyUserInfo_Batch on List<AMapNearbyUserInfo> {
+extension AMapNearbyUserInfo_Batch on List<AMapNearbyUserInfo?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

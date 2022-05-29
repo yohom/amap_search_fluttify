@@ -131,10 +131,10 @@ class com_amap_api_services_route_District extends java_lang_Object with android
   }
 }
 
-extension com_amap_api_services_route_District_Batch on List<com_amap_api_services_route_District> {
+extension com_amap_api_services_route_District_Batch on List<com_amap_api_services_route_District?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

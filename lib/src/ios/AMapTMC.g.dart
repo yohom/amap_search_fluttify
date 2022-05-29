@@ -95,10 +95,10 @@ class AMapTMC extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapTMC_Batch on List<AMapTMC> {
+extension AMapTMC_Batch on List<AMapTMC?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

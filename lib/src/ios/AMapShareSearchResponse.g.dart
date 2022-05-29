@@ -73,10 +73,10 @@ class AMapShareSearchResponse extends AMapSearchObject with NSCoding, NSCopying 
   }
 }
 
-extension AMapShareSearchResponse_Batch on List<AMapShareSearchResponse> {
+extension AMapShareSearchResponse_Batch on List<AMapShareSearchResponse?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

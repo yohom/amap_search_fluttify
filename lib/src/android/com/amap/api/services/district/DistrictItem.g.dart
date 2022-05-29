@@ -322,10 +322,10 @@ class com_amap_api_services_district_DistrictItem extends java_lang_Object with 
   }
 }
 
-extension com_amap_api_services_district_DistrictItem_Batch on List<com_amap_api_services_district_DistrictItem> {
+extension com_amap_api_services_district_DistrictItem_Batch on List<com_amap_api_services_district_DistrictItem?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

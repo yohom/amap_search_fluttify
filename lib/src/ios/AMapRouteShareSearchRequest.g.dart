@@ -128,10 +128,10 @@ class AMapRouteShareSearchRequest extends AMapShareSearchBaseRequest with NSCodi
   }
 }
 
-extension AMapRouteShareSearchRequest_Batch on List<AMapRouteShareSearchRequest> {
+extension AMapRouteShareSearchRequest_Batch on List<AMapRouteShareSearchRequest?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

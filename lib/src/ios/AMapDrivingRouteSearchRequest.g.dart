@@ -216,10 +216,10 @@ class AMapDrivingRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCo
   }
 }
 
-extension AMapDrivingRouteSearchRequest_Batch on List<AMapDrivingRouteSearchRequest> {
+extension AMapDrivingRouteSearchRequest_Batch on List<AMapDrivingRouteSearchRequest?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

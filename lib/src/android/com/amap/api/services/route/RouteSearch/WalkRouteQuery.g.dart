@@ -190,10 +190,10 @@ class com_amap_api_services_route_RouteSearch_WalkRouteQuery extends java_lang_O
   }
 }
 
-extension com_amap_api_services_route_RouteSearch_WalkRouteQuery_Batch on List<com_amap_api_services_route_RouteSearch_WalkRouteQuery> {
+extension com_amap_api_services_route_RouteSearch_WalkRouteQuery_Batch on List<com_amap_api_services_route_RouteSearch_WalkRouteQuery?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

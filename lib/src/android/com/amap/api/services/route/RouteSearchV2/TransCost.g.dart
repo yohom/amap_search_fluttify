@@ -131,10 +131,10 @@ class com_amap_api_services_route_RouteSearchV2_TransCost extends java_lang_Obje
   }
 }
 
-extension com_amap_api_services_route_RouteSearchV2_TransCost_Batch on List<com_amap_api_services_route_RouteSearchV2_TransCost> {
+extension com_amap_api_services_route_RouteSearchV2_TransCost_Batch on List<com_amap_api_services_route_RouteSearchV2_TransCost?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

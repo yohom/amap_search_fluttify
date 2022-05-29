@@ -183,10 +183,10 @@ class AMapRailway extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapRailway_Batch on List<AMapRailway> {
+extension AMapRailway_Batch on List<AMapRailway?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

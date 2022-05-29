@@ -165,10 +165,10 @@ class com_amap_api_services_share_ShareSearch_ShareFromAndTo extends java_lang_O
   }
 }
 
-extension com_amap_api_services_share_ShareSearch_ShareFromAndTo_Batch on List<com_amap_api_services_share_ShareSearch_ShareFromAndTo> {
+extension com_amap_api_services_share_ShareSearch_ShareFromAndTo_Batch on List<com_amap_api_services_share_ShareSearch_ShareFromAndTo?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

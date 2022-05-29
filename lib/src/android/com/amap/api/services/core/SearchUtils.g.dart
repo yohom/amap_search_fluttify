@@ -114,10 +114,10 @@ class com_amap_api_services_core_SearchUtils extends java_lang_Object  {
   }
 }
 
-extension com_amap_api_services_core_SearchUtils_Batch on List<com_amap_api_services_core_SearchUtils> {
+extension com_amap_api_services_core_SearchUtils_Batch on List<com_amap_api_services_core_SearchUtils?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

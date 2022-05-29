@@ -84,10 +84,10 @@ class AMapInputTipsSearchResponse extends AMapSearchObject with NSCoding, NSCopy
   }
 }
 
-extension AMapInputTipsSearchResponse_Batch on List<AMapInputTipsSearchResponse> {
+extension AMapInputTipsSearchResponse_Batch on List<AMapInputTipsSearchResponse?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

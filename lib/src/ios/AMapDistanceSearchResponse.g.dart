@@ -73,10 +73,10 @@ class AMapDistanceSearchResponse extends AMapSearchObject with NSCoding, NSCopyi
   }
 }
 
-extension AMapDistanceSearchResponse_Batch on List<AMapDistanceSearchResponse> {
+extension AMapDistanceSearchResponse_Batch on List<AMapDistanceSearchResponse?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

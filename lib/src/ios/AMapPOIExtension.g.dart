@@ -95,10 +95,10 @@ class AMapPOIExtension extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapPOIExtension_Batch on List<AMapPOIExtension> {
+extension AMapPOIExtension_Batch on List<AMapPOIExtension?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

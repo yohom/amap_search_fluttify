@@ -106,10 +106,10 @@ class AMapNaviConfig extends NSObject  {
   }
 }
 
-extension AMapNaviConfig_Batch on List<AMapNaviConfig> {
+extension AMapNaviConfig_Batch on List<AMapNaviConfig?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

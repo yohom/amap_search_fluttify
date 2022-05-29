@@ -94,10 +94,10 @@ class com_amap_api_services_weather_LocalWeatherLiveResult extends java_lang_Obj
   }
 }
 
-extension com_amap_api_services_weather_LocalWeatherLiveResult_Batch on List<com_amap_api_services_weather_LocalWeatherLiveResult> {
+extension com_amap_api_services_weather_LocalWeatherLiveResult_Batch on List<com_amap_api_services_weather_LocalWeatherLiveResult?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

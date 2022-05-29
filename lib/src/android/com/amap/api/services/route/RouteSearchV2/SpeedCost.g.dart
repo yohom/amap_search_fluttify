@@ -131,10 +131,10 @@ class com_amap_api_services_route_RouteSearchV2_SpeedCost extends java_lang_Obje
   }
 }
 
-extension com_amap_api_services_route_RouteSearchV2_SpeedCost_Batch on List<com_amap_api_services_route_RouteSearchV2_SpeedCost> {
+extension com_amap_api_services_route_RouteSearchV2_SpeedCost_Batch on List<com_amap_api_services_route_RouteSearchV2_SpeedCost?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

@@ -95,10 +95,10 @@ class AMapTrafficInfo extends AMapSearchObject with NSCoding, NSCopying {
   }
 }
 
-extension AMapTrafficInfo_Batch on List<AMapTrafficInfo> {
+extension AMapTrafficInfo_Batch on List<AMapTrafficInfo?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

@@ -97,10 +97,10 @@ class com_amap_api_services_share_ShareSearch_ShareWalkRouteQuery extends java_l
   }
 }
 
-extension com_amap_api_services_share_ShareSearch_ShareWalkRouteQuery_Batch on List<com_amap_api_services_share_ShareSearch_ShareWalkRouteQuery> {
+extension com_amap_api_services_share_ShareSearch_ShareWalkRouteQuery_Batch on List<com_amap_api_services_share_ShareSearch_ShareWalkRouteQuery?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters

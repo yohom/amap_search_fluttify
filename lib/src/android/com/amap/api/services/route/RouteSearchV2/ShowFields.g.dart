@@ -71,10 +71,10 @@ class com_amap_api_services_route_RouteSearchV2_ShowFields extends java_lang_Obj
   }
 }
 
-extension com_amap_api_services_route_RouteSearchV2_ShowFields_Batch on List<com_amap_api_services_route_RouteSearchV2_ShowFields> {
+extension com_amap_api_services_route_RouteSearchV2_ShowFields_Batch on List<com_amap_api_services_route_RouteSearchV2_ShowFields?> {
   String? get refId {
     if (isEmpty) return null;
-    return first.refId;
+    return first?.refId;
   }
 
   //region getters
