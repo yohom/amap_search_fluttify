@@ -18,6 +18,8 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   await AmapSearch.instance.init('f583e0d5b70400167993615c3adc3ced');
+  await AmapSearch.instance.updatePrivacyShow(true);
+  await AmapSearch.instance.updatePrivacyAgree(true);
 
   runApp(MyApp());
 }

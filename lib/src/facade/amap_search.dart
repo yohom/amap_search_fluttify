@@ -38,6 +38,45 @@ class AmapSearch {
     );
   }
 
+  /// 隐私是否已经展示
+  Future<void> updatePrivacyShow(bool value) async {
+    return platform(
+      android: (pool) async {
+        final context = await android_app_Application.get();
+        await com_amap_api_services_core_ServiceSettings.updatePrivacyShow(
+            context, value, true);
+      },
+      ios: (pool) async {
+        AMapSearchAPI.updatePrivacyShow_privacyInfo(
+          value
+              ? AMapPrivacyShowStatus.AMapPrivacyShowStatusDidShow
+              : AMapPrivacyShowStatus.AMapPrivacyShowStatusNotShow,
+          AMapPrivacyInfoStatus.AMapPrivacyInfoStatusDidContain,
+        );
+      },
+    );
+  }
+
+  /// 隐私是否已经同意
+  Future<void> updatePrivacyAgree(bool value) async {
+    return platform(
+      android: (pool) async {
+        final context = await android_app_Application.get();
+        await com_amap_api_services_core_ServiceSettings.updatePrivacyAgree(
+          context,
+          value,
+        );
+      },
+      ios: (pool) async {
+        await AMapSearchAPI.updatePrivacyAgree(
+          value
+              ? AMapPrivacyAgreeStatus.AMapPrivacyAgreeStatusDidAgree
+              : AMapPrivacyAgreeStatus.AMapPrivacyAgreeStatusNotAgree,
+        );
+      },
+    );
+  }
+
   /// 关键字搜索poi
   ///
   /// 在城市[city]搜索关键字[keyword]的poi, 可以设置每页数量[pageSize](1-50)和第[page](1-100)页
