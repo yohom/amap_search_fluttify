@@ -63,7 +63,7 @@ class _KeywordPoiScreenState extends State<KeywordPoiScreen> {
             controller: _cityController,
             decoration: const InputDecoration(hintText: '输入城市'),
           ),
-          RaisedButton(
+          ElevatedButton(
             onPressed: () async {
               final poiList = await AmapSearch.instance.searchKeyword(
                 _keywordController.text,
@@ -76,7 +76,7 @@ class _KeywordPoiScreenState extends State<KeywordPoiScreen> {
             },
             child: const Text('搜索'),
           ),
-          RaisedButton(
+          ElevatedButton(
             onPressed: () async {
               final poiList = await AmapSearch.instance.searchKeyword(
                 _keywordController.text,

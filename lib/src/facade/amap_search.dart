@@ -107,9 +107,18 @@ class AmapSearch {
             .create__android_content_Context__com_amap_api_services_poisearch_PoiSearch_Query(
                 context, query);
 
+        final listener =
+            await com_amap_api_services_poisearch_PoiSearch_OnPoiSearchListener
+                .anonymous__(
+          onPoiSearched: (poiResult, rCode) async {
+            completer.complete(
+              await PoiListX.fromAndroid((await poiResult!.getPois()) ?? []),
+            );
+          },
+        );
+
         // 设置回调
-        await _androidPoiSearch
-            .setOnPoiSearchListener(_AndroidSearchListener(completer));
+        await _androidPoiSearch.setOnPoiSearchListener(listener);
 
         // 开始搜索
         await _androidPoiSearch.searchPOIAsyn();
