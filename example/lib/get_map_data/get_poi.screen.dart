@@ -1,6 +1,7 @@
 import 'package:amap_search_fluttify/amap_search_fluttify.dart';
 import 'package:amap_search_fluttify_example/widgets/function_item.widget.dart';
 import 'package:amap_search_fluttify_example/widgets/scrollable_text.widget.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 import 'package:decorated_flutter/decorated_flutter.dart';
 import 'package:flutter/material.dart';
 
@@ -9,7 +10,7 @@ class GetPoiScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: AppBar(title: Text('获取POI数据')),
+      appBar: AppBar(title: const Text('获取POI数据')),
       body: ListView(
         children: <Widget>[
           FunctionItem(
@@ -50,17 +51,17 @@ class _KeywordPoiScreenState extends State<KeywordPoiScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: AppBar(title: Text('关键字检索POI')),
+      appBar: AppBar(title: const Text('关键字检索POI')),
       body: DecoratedColumn(
-        padding: EdgeInsets.all(kSpace16),
+        padding: const EdgeInsets.all(kSpace16),
         children: <Widget>[
           TextFormField(
             controller: _keywordController,
-            decoration: InputDecoration(hintText: '输入关键字'),
+            decoration: const InputDecoration(hintText: '输入关键字'),
           ),
           TextFormField(
             controller: _cityController,
-            decoration: InputDecoration(hintText: '输入城市'),
+            decoration: const InputDecoration(hintText: '输入城市'),
           ),
           RaisedButton(
             onPressed: () async {
@@ -73,7 +74,7 @@ class _KeywordPoiScreenState extends State<KeywordPoiScreen> {
                 _poiTitleList = poiList.map((it) => it.toString()).toList();
               });
             },
-            child: Text('搜索'),
+            child: const Text('搜索'),
           ),
           RaisedButton(
             onPressed: () async {
@@ -87,7 +88,7 @@ class _KeywordPoiScreenState extends State<KeywordPoiScreen> {
                 _poiTitleList = poiList.map((it) => it.toString()).toList();
               });
             },
-            child: Text('下一页'),
+            child: const Text('下一页'),
           ),
           Expanded(child: ScrollableText(_poiTitleList.join("\n"))),
         ],
@@ -115,31 +116,31 @@ class _AroundPoiScreenState extends State<AroundPoiScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: AppBar(title: Text('周边检索POI')),
+      appBar: AppBar(title: const Text('周边检索POI')),
       body: DecoratedColumn(
-        padding: EdgeInsets.all(kSpace16),
+        padding: const EdgeInsets.all(kSpace16),
         children: <Widget>[
           TextFormField(
             controller: _keywordController,
-            decoration: InputDecoration(hintText: '输入关键字'),
+            decoration: const InputDecoration(hintText: '输入关键字'),
           ),
           TextFormField(
             controller: _typeController,
-            decoration: InputDecoration(hintText: '输入类别'),
+            decoration: const InputDecoration(hintText: '输入类别'),
           ),
           DecoratedRow(
             children: <Widget>[
               Flexible(
                 child: TextField(
                   controller: _latController,
-                  decoration: InputDecoration(hintText: '输入纬度'),
+                  decoration: const InputDecoration(hintText: '输入纬度'),
                 ),
               ),
               SPACE_4_HORIZONTAL,
               Flexible(
                 child: TextField(
                   controller: _lngController,
-                  decoration: InputDecoration(hintText: '输入经度'),
+                  decoration: const InputDecoration(hintText: '输入经度'),
                 ),
               ),
             ],
@@ -159,7 +160,7 @@ class _AroundPoiScreenState extends State<AroundPoiScreen> {
                 _poiTitleList = poiList.map((it) => it.toString()).toList();
               });
             },
-            child: Text('搜索'),
+            child: const Text('搜索'),
           ),
           RaisedButton(
             onPressed: () async {
@@ -177,7 +178,7 @@ class _AroundPoiScreenState extends State<AroundPoiScreen> {
                 _poiTitleList = poiList.map((it) => it.toString()).toList();
               });
             },
-            child: Text('下一页'),
+            child: const Text('下一页'),
           ),
           Expanded(child: ScrollableText(_poiTitleList.join("\n"))),
         ],
@@ -202,17 +203,17 @@ class _InputTipScreenState extends State<InputTipScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: AppBar(title: Text('输入内容自动提示')),
+      appBar: AppBar(title: const Text('输入内容自动提示')),
       body: DecoratedColumn(
-        padding: EdgeInsets.all(kSpace16),
+        padding: const EdgeInsets.all(kSpace16),
         children: <Widget>[
           TextFormField(
             controller: _keywordController,
-            decoration: InputDecoration(hintText: '输入关键字'),
+            decoration: const InputDecoration(hintText: '输入关键字'),
           ),
           TextFormField(
             controller: _cityController,
-            decoration: InputDecoration(hintText: '输入所在城市'),
+            decoration: const InputDecoration(hintText: '输入所在城市'),
           ),
           RaisedButton(
             onPressed: () async {
@@ -223,7 +224,7 @@ class _InputTipScreenState extends State<InputTipScreen> {
 
               setState(() => _inputTipList = inputTipList);
             },
-            child: Text('搜索'),
+            child: const Text('搜索'),
           ),
           Expanded(child: ScrollableText(_inputTipList.join("\n"))),
         ],

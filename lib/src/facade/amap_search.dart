@@ -4,30 +4,17 @@ import 'dart:async';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
-import 'package:flutter/cupertino.dart';
 
 part 'delegates.dart';
 part 'extensions.dart';
 part 'models.dart';
 
-/// 释放资源mixin
-@Deprecated('在合适的位置调用AmapSearch.instance.dispose()即可')
-mixin AmapSearchDisposeMixin<T extends StatefulWidget> on State<T> {
-  @override
-  void dispose() {
-    AmapSearch.instance.dispose();
-    super.dispose();
-  }
-}
-
 /// 高德地图 搜索组件主类
-class AmapSearch extends _Holder with _Community {
+class AmapSearch {
   static AmapSearch instance = AmapSearch._();
 
   AmapSearch._();
-}
 
-class _Holder {
   late AMapSearchAPI _iosSearch;
   late com_amap_api_services_poisearch_PoiSearch _androidPoiSearch;
   late com_amap_api_services_help_Inputtips _androidInputTip;
@@ -37,9 +24,20 @@ class _Holder {
   late com_amap_api_services_district_DistrictSearch _androidDistrictSearch;
   late com_amap_api_services_weather_WeatherSearch _androidWeatherSearch;
   late com_amap_api_services_cloud_CloudSearch _androidCloudSearch;
-}
 
-mixin _Community on _Holder {
+  Future<void> init(String iosKey) async {
+    return platform(
+      android: (pool) async {
+        // do nothing
+      },
+      ios: (pool) async {
+        final service = await AMapServices.sharedServices();
+        await service?.set_apiKey(iosKey);
+        await service?.set_enableHTTPS(true);
+      },
+    );
+  }
+
   /// 关键字搜索poi
   ///
   /// 在城市[city]搜索关键字[keyword]的poi, 可以设置每页数量[pageSize](1-50)和第[page](1-100)页
@@ -207,23 +205,27 @@ mixin _Community on _Holder {
   }
 
   /// id搜索poi
-  Future<Poi> searchPoiId(String id) {
+  Future<Poi?> searchPoiId(String id) {
     return platform(
       android: (pool) async {
         // 获取android上下文
         final context = await android_app_Activity.get();
 
         // 创建搜索对象
+        final query = await com_amap_api_services_poisearch_PoiSearch_Query
+            .create__String__String('', '');
         _androidPoiSearch = await com_amap_api_services_poisearch_PoiSearch
             .create__android_content_Context__com_amap_api_services_poisearch_PoiSearch_Query(
-                context, null);
+          context,
+          query,
+        );
 
         // 开始搜索
-        final result = await (_androidPoiSearch.searchPOIId(id)
-            as FutureOr<com_amap_api_services_core_PoiItem>);
+        final result = await _androidPoiSearch.searchPOIId(id);
 
         pool..add(context);
-        return await PoiX.fromAndroid(result);
+
+        return result == null ? null : await PoiX.fromAndroid(result);
       },
       ios: (pool) async {
         final completer = Completer<List<Poi>>.sync();

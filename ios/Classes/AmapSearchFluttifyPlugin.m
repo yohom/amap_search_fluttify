@@ -16,6 +16,7 @@
 #import "SubHandler/SubHandler9.h"
 #import "SubHandler/SubHandler10.h"
 #import "SubHandler/SubHandler11.h"
+#import "SubHandler/SubHandler12.h"
 #import "SubHandler/Custom/SubHandlerCustom.h"
 #import "FluttifyMessageCodec.h"
 #import <AMapSearchKit/AMapSearchKit.h>
@@ -52,6 +53,7 @@ extern BOOL enableLog;
     [_handlerMap addEntriesFromDictionary: [self getSubHandler9]];
     [_handlerMap addEntriesFromDictionary: [self getSubHandler10]];
     [_handlerMap addEntriesFromDictionary: [self getSubHandler11]];
+    [_handlerMap addEntriesFromDictionary: [self getSubHandler12]];
     [_handlerMap addEntriesFromDictionary: [self getSubHandlerCustom]];
   }
 

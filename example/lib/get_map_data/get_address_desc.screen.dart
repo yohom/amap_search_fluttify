@@ -1,5 +1,6 @@
 import 'package:amap_search_fluttify/amap_search_fluttify.dart';
 import 'package:amap_search_fluttify_example/widgets/function_item.widget.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 import 'package:decorated_flutter/decorated_flutter.dart';
 import 'package:flutter/material.dart';
 
@@ -8,10 +9,10 @@ class GetAddressDescScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: AppBar(title: Text('获取地址描述数据')),
+      appBar: AppBar(title: const Text('获取地址描述数据')),
       body: ListView(
         children: <Widget>[
-          FunctionItem(
+          const FunctionItem(
             label: '地理编码（地址转坐标）',
             sublabel: 'AddressEncodeScreen',
             target: AddressEncodeScreen(),
@@ -29,6 +30,8 @@ class GetAddressDescScreen extends StatelessWidget {
 
 /// 地理编码（地址转坐标）
 class AddressEncodeScreen extends StatefulWidget {
+  const AddressEncodeScreen({Key? key}) : super(key: key);
+
   @override
   _AddressEncodeScreenState createState() => _AddressEncodeScreenState();
 }
@@ -43,17 +46,17 @@ class _AddressEncodeScreenState extends State<AddressEncodeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: AppBar(title: Text('地理编码（地址转坐标）')),
+      appBar: AppBar(title: const Text('地理编码（地址转坐标）')),
       body: DecoratedColumn(
-        padding: EdgeInsets.all(kSpace16),
+        padding: const EdgeInsets.all(kSpace16),
         children: <Widget>[
           TextFormField(
             controller: _keywordController,
-            decoration: InputDecoration(hintText: '输入关键字'),
+            decoration: const InputDecoration(hintText: '输入关键字'),
           ),
           TextFormField(
             controller: _cityController,
-            decoration: InputDecoration(hintText: '输入城市'),
+            decoration: const InputDecoration(hintText: '输入城市'),
           ),
           RaisedButton(
             onPressed: () async {
@@ -65,7 +68,7 @@ class _AddressEncodeScreenState extends State<AddressEncodeScreen> {
                 _geocodeList = geocodeList;
               });
             },
-            child: Text('搜索'),
+            child: const Text('搜索'),
           ),
           if (_geocodeList.isNotEmpty) Text(_geocodeList.toString()),
         ],
@@ -91,29 +94,29 @@ class _AddressDecodeScreenState extends State<AddressDecodeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: AppBar(title: Text('逆地理编码（坐标转地址）')),
+      appBar: AppBar(title: const Text('逆地理编码（坐标转地址）')),
       body: DecoratedColumn(
-        padding: EdgeInsets.all(kSpace16),
+        padding: const EdgeInsets.all(kSpace16),
         children: <Widget>[
           DecoratedRow(
             children: <Widget>[
               Flexible(
                 child: TextFormField(
                   controller: _latController,
-                  decoration: InputDecoration(hintText: '输入纬度'),
+                  decoration: const InputDecoration(hintText: '输入纬度'),
                 ),
               ),
               Flexible(
                 child: TextFormField(
                   controller: _lngController,
-                  decoration: InputDecoration(hintText: '输入经度'),
+                  decoration: const InputDecoration(hintText: '输入经度'),
                 ),
               ),
             ],
           ),
           TextFormField(
             controller: _radiusController,
-            decoration: InputDecoration(hintText: '输入范围半径'),
+            decoration: const InputDecoration(hintText: '输入范围半径'),
           ),
           RaisedButton(
             onPressed: () async {
@@ -128,7 +131,7 @@ class _AddressDecodeScreenState extends State<AddressDecodeScreen> {
                 _reGeocode = reGeocodeList;
               });
             },
-            child: Text('搜索'),
+            child: const Text('搜索'),
           ),
           Expanded(
             child: SingleChildScrollView(

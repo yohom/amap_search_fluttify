@@ -17,13 +17,13 @@ class _GetDistrictInfoScreenState extends State<GetDistrictInfoScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: AppBar(title: Text('获取行政区划数据')),
+      appBar: AppBar(title: const Text('获取行政区划数据')),
       body: DecoratedColumn(
-        padding: EdgeInsets.all(kSpace16),
+        padding: const EdgeInsets.all(kSpace16),
         children: <Widget>[
           TextFormField(
             controller: _keywordController,
-            decoration: InputDecoration(hintText: '输入地区'),
+            decoration: const InputDecoration(hintText: '输入地区'),
           ),
           RaisedButton(
             onPressed: () async {
@@ -32,10 +32,10 @@ class _GetDistrictInfoScreenState extends State<GetDistrictInfoScreen> {
                 showBoundary: true,
                 showChild: true,
               );
-              _district = await district.toString();
+              _district = district.toString();
               setState(() {});
             },
-            child: Text('搜索'),
+            child: const Text('搜索'),
           ),
           Expanded(child: SingleChildScrollView(child: Text(_district))),
         ],

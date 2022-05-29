@@ -209,6 +209,990 @@ extern BOOL enableLog;
         
             methodResult(__result__);
         },
+        @"AMapNearbySearchManager::sharedInstance": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapNearbySearchManager::sharedInstance(%@)", args);
+            }
+        
+            // args
+        
+        
+            // ref
+        
+        
+            // invoke native method
+            AMapNearbySearchManager* result = [AMapNearbySearchManager sharedInstance];
+        
+            // result
+            // return a ref
+            NSObject* __result__ = result;
+        
+            methodResult(__result__);
+        },
+        @"AMapNearbySearchManager::init": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapNearbySearchManager::init(%@)", args);
+            }
+        
+            // args
+        
+        
+            // ref
+            AMapNearbySearchManager* ref = (AMapNearbySearchManager*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            AMapNearbySearchManager* result = [ref init];
+        
+            // result
+            // return a ref
+            NSObject* __result__ = result;
+        
+            methodResult(__result__);
+        },
+        @"AMapNearbySearchManager::startAutoUploadNearbyInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapNearbySearchManager::startAutoUploadNearbyInfo(%@)", args);
+            }
+        
+            // args
+        
+        
+            // ref
+            AMapNearbySearchManager* ref = (AMapNearbySearchManager*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            [ref startAutoUploadNearbyInfo ];
+        
+            // result
+            // 无返回值
+            NSString* __result__ = @"success";
+        
+            methodResult(__result__);
+        },
+        @"AMapNearbySearchManager::stopAutoUploadNearbyInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapNearbySearchManager::stopAutoUploadNearbyInfo(%@)", args);
+            }
+        
+            // args
+        
+        
+            // ref
+            AMapNearbySearchManager* ref = (AMapNearbySearchManager*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            [ref stopAutoUploadNearbyInfo ];
+        
+            // result
+            // 无返回值
+            NSString* __result__ = @"success";
+        
+            methodResult(__result__);
+        },
+        @"AMapNearbySearchManager::uploadNearbyInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapNearbySearchManager::uploadNearbyInfo(%@)", args);
+            }
+        
+            // args
+            // ref arg
+            AMapNearbyUploadInfo* info = (AMapNearbyUploadInfo*) (args[@"info"] == [NSNull null] ? nil : args[@"info"]);
+        
+            // ref
+            AMapNearbySearchManager* ref = (AMapNearbySearchManager*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            BOOL result = [ref uploadNearbyInfo: info];
+        
+            // result
+            // 返回值: Value
+            NSObject* __result__ = @(result);
+        
+            methodResult(__result__);
+        },
+        @"AMapNearbySearchManager::clearUserInfoWithID": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapNearbySearchManager::clearUserInfoWithID(%@)", args);
+            }
+        
+            // args
+            // jsonable arg
+            NSString* userID = (NSString*) args[@"userID"];
+        
+            // ref
+            AMapNearbySearchManager* ref = (AMapNearbySearchManager*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            BOOL result = [ref clearUserInfoWithID: userID];
+        
+            // result
+            // 返回值: Value
+            NSObject* __result__ = @(result);
+        
+            methodResult(__result__);
+        },
+        @"AMapSearchAPI::init": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::init(%@)", args);
+            }
+        
+            // args
+        
+        
+            // ref
+            AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            AMapSearchAPI* result = [ref init];
+        
+            // result
+            // return a ref
+            NSObject* __result__ = result;
+        
+            methodResult(__result__);
+        },
+        @"AMapSearchAPI::cancelAllRequests": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::cancelAllRequests(%@)", args);
+            }
+        
+            // args
+        
+        
+            // ref
+            AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            [ref cancelAllRequests ];
+        
+            // result
+            // 无返回值
+            NSString* __result__ = @"success";
+        
+            methodResult(__result__);
+        },
+        @"AMapSearchAPI::updatePrivacyShow_privacyInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::updatePrivacyShow_privacyInfo(%@)", args);
+            }
+        
+            // args
+            // enum arg
+            AMapPrivacyShowStatus showStatus = (AMapPrivacyShowStatus) [args[@"showStatus"] integerValue];
+            // enum arg
+            AMapPrivacyInfoStatus containStatus = (AMapPrivacyInfoStatus) [args[@"containStatus"] integerValue];
+        
+            // ref
+        
+        
+            // invoke native method
+            [AMapSearchAPI updatePrivacyShow: showStatus privacyInfo: containStatus];
+        
+            // result
+            // 无返回值
+            NSString* __result__ = @"success";
+        
+            methodResult(__result__);
+        },
+        @"AMapSearchAPI::updatePrivacyAgree": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::updatePrivacyAgree(%@)", args);
+            }
+        
+            // args
+            // enum arg
+            AMapPrivacyAgreeStatus agreeStatus = (AMapPrivacyAgreeStatus) [args[@"agreeStatus"] integerValue];
+        
+            // ref
+        
+        
+            // invoke native method
+            [AMapSearchAPI updatePrivacyAgree: agreeStatus];
+        
+            // result
+            // 无返回值
+            NSString* __result__ = @"success";
+        
+            methodResult(__result__);
+        },
+        @"AMapSearchAPI::AMapPOIIDSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::AMapPOIIDSearch(%@)", args);
+            }
+        
+            // args
+            // ref arg
+            AMapPOIIDSearchRequest* request = (AMapPOIIDSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
+        
+            // ref
+            AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            [ref AMapPOIIDSearch : request];
+        
+            // result
+            // 无返回值
+            NSString* __result__ = @"success";
+        
+            methodResult(__result__);
+        },
+        @"AMapSearchAPI::AMapPOIKeywordsSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::AMapPOIKeywordsSearch(%@)", args);
+            }
+        
+            // args
+            // ref arg
+            AMapPOIKeywordsSearchRequest* request = (AMapPOIKeywordsSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
+        
+            // ref
+            AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            [ref AMapPOIKeywordsSearch : request];
+        
+            // result
+            // 无返回值
+            NSString* __result__ = @"success";
+        
+            methodResult(__result__);
+        },
+        @"AMapSearchAPI::AMapPOIAroundSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::AMapPOIAroundSearch(%@)", args);
+            }
+        
+            // args
+            // ref arg
+            AMapPOIAroundSearchRequest* request = (AMapPOIAroundSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
+        
+            // ref
+            AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            [ref AMapPOIAroundSearch : request];
+        
+            // result
+            // 无返回值
+            NSString* __result__ = @"success";
+        
+            methodResult(__result__);
+        },
+        @"AMapSearchAPI::AMapPOIPolygonSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::AMapPOIPolygonSearch(%@)", args);
+            }
+        
+            // args
+            // ref arg
+            AMapPOIPolygonSearchRequest* request = (AMapPOIPolygonSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
+        
+            // ref
+            AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            [ref AMapPOIPolygonSearch : request];
+        
+            // result
+            // 无返回值
+            NSString* __result__ = @"success";
+        
+            methodResult(__result__);
+        },
+        @"AMapSearchAPI::AMapRoutePOISearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::AMapRoutePOISearch(%@)", args);
+            }
+        
+            // args
+            // ref arg
+            AMapRoutePOISearchRequest* request = (AMapRoutePOISearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
+        
+            // ref
+            AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            [ref AMapRoutePOISearch : request];
+        
+            // result
+            // 无返回值
+            NSString* __result__ = @"success";
+        
+            methodResult(__result__);
+        },
+        @"AMapSearchAPI::AMapGeocodeSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::AMapGeocodeSearch(%@)", args);
+            }
+        
+            // args
+            // ref arg
+            AMapGeocodeSearchRequest* request = (AMapGeocodeSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
+        
+            // ref
+            AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            [ref AMapGeocodeSearch : request];
+        
+            // result
+            // 无返回值
+            NSString* __result__ = @"success";
+        
+            methodResult(__result__);
+        },
+        @"AMapSearchAPI::AMapReGoecodeSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::AMapReGoecodeSearch(%@)", args);
+            }
+        
+            // args
+            // ref arg
+            AMapReGeocodeSearchRequest* request = (AMapReGeocodeSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
+        
+            // ref
+            AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            [ref AMapReGoecodeSearch : request];
+        
+            // result
+            // 无返回值
+            NSString* __result__ = @"success";
+        
+            methodResult(__result__);
+        },
+        @"AMapSearchAPI::AMapInputTipsSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::AMapInputTipsSearch(%@)", args);
+            }
+        
+            // args
+            // ref arg
+            AMapInputTipsSearchRequest* request = (AMapInputTipsSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
+        
+            // ref
+            AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            [ref AMapInputTipsSearch : request];
+        
+            // result
+            // 无返回值
+            NSString* __result__ = @"success";
+        
+            methodResult(__result__);
+        },
+        @"AMapSearchAPI::AMapBusStopSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::AMapBusStopSearch(%@)", args);
+            }
+        
+            // args
+            // ref arg
+            AMapBusStopSearchRequest* request = (AMapBusStopSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
+        
+            // ref
+            AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            [ref AMapBusStopSearch : request];
+        
+            // result
+            // 无返回值
+            NSString* __result__ = @"success";
+        
+            methodResult(__result__);
+        },
+        @"AMapSearchAPI::AMapBusLineIDSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::AMapBusLineIDSearch(%@)", args);
+            }
+        
+            // args
+            // ref arg
+            AMapBusLineIDSearchRequest* request = (AMapBusLineIDSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
+        
+            // ref
+            AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            [ref AMapBusLineIDSearch : request];
+        
+            // result
+            // 无返回值
+            NSString* __result__ = @"success";
+        
+            methodResult(__result__);
+        },
+        @"AMapSearchAPI::AMapBusLineNameSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::AMapBusLineNameSearch(%@)", args);
+            }
+        
+            // args
+            // ref arg
+            AMapBusLineNameSearchRequest* request = (AMapBusLineNameSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
+        
+            // ref
+            AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            [ref AMapBusLineNameSearch : request];
+        
+            // result
+            // 无返回值
+            NSString* __result__ = @"success";
+        
+            methodResult(__result__);
+        },
+        @"AMapSearchAPI::AMapDistrictSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::AMapDistrictSearch(%@)", args);
+            }
+        
+            // args
+            // ref arg
+            AMapDistrictSearchRequest* request = (AMapDistrictSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
+        
+            // ref
+            AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            [ref AMapDistrictSearch : request];
+        
+            // result
+            // 无返回值
+            NSString* __result__ = @"success";
+        
+            methodResult(__result__);
+        },
+        @"AMapSearchAPI::AMapDrivingRouteSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::AMapDrivingRouteSearch(%@)", args);
+            }
+        
+            // args
+            // ref arg
+            AMapDrivingRouteSearchRequest* request = (AMapDrivingRouteSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
+        
+            // ref
+            AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            [ref AMapDrivingRouteSearch : request];
+        
+            // result
+            // 无返回值
+            NSString* __result__ = @"success";
+        
+            methodResult(__result__);
+        },
+        @"AMapSearchAPI::AMapDrivingV2RouteSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::AMapDrivingV2RouteSearch(%@)", args);
+            }
+        
+            // args
+            // ref arg
+            AMapDrivingCalRouteSearchRequest* request = (AMapDrivingCalRouteSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
+        
+            // ref
+            AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            [ref AMapDrivingV2RouteSearch : request];
+        
+            // result
+            // 无返回值
+            NSString* __result__ = @"success";
+        
+            methodResult(__result__);
+        },
+        @"AMapSearchAPI::AMapWalkingRouteSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::AMapWalkingRouteSearch(%@)", args);
+            }
+        
+            // args
+            // ref arg
+            AMapWalkingRouteSearchRequest* request = (AMapWalkingRouteSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
+        
+            // ref
+            AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            [ref AMapWalkingRouteSearch : request];
+        
+            // result
+            // 无返回值
+            NSString* __result__ = @"success";
+        
+            methodResult(__result__);
+        },
+        @"AMapSearchAPI::AMapTransitRouteSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::AMapTransitRouteSearch(%@)", args);
+            }
+        
+            // args
+            // ref arg
+            AMapTransitRouteSearchRequest* request = (AMapTransitRouteSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
+        
+            // ref
+            AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            [ref AMapTransitRouteSearch : request];
+        
+            // result
+            // 无返回值
+            NSString* __result__ = @"success";
+        
+            methodResult(__result__);
+        },
+        @"AMapSearchAPI::AMapRidingRouteSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::AMapRidingRouteSearch(%@)", args);
+            }
+        
+            // args
+            // ref arg
+            AMapRidingRouteSearchRequest* request = (AMapRidingRouteSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
+        
+            // ref
+            AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            [ref AMapRidingRouteSearch : request];
+        
+            // result
+            // 无返回值
+            NSString* __result__ = @"success";
+        
+            methodResult(__result__);
+        },
+        @"AMapSearchAPI::AMapTruckRouteSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::AMapTruckRouteSearch(%@)", args);
+            }
+        
+            // args
+            // ref arg
+            AMapTruckRouteSearchRequest* request = (AMapTruckRouteSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
+        
+            // ref
+            AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            [ref AMapTruckRouteSearch : request];
+        
+            // result
+            // 无返回值
+            NSString* __result__ = @"success";
+        
+            methodResult(__result__);
+        },
+        @"AMapSearchAPI::AMapFutureRouteSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::AMapFutureRouteSearch(%@)", args);
+            }
+        
+            // args
+            // ref arg
+            AMapFutureRouteSearchRequest* request = (AMapFutureRouteSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
+        
+            // ref
+            AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            [ref AMapFutureRouteSearch : request];
+        
+            // result
+            // 无返回值
+            NSString* __result__ = @"success";
+        
+            methodResult(__result__);
+        },
+        @"AMapSearchAPI::AMapWeatherSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::AMapWeatherSearch(%@)", args);
+            }
+        
+            // args
+            // ref arg
+            AMapWeatherSearchRequest* request = (AMapWeatherSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
+        
+            // ref
+            AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            [ref AMapWeatherSearch : request];
+        
+            // result
+            // 无返回值
+            NSString* __result__ = @"success";
+        
+            methodResult(__result__);
+        },
+        @"AMapSearchAPI::AMapDistanceSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::AMapDistanceSearch(%@)", args);
+            }
+        
+            // args
+            // ref arg
+            AMapDistanceSearchRequest* request = (AMapDistanceSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
+        
+            // ref
+            AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            [ref AMapDistanceSearch : request];
+        
+            // result
+            // 无返回值
+            NSString* __result__ = @"success";
+        
+            methodResult(__result__);
+        },
+        @"AMapSearchAPI::AMapNearbySearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::AMapNearbySearch(%@)", args);
+            }
+        
+            // args
+            // ref arg
+            AMapNearbySearchRequest* request = (AMapNearbySearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
+        
+            // ref
+            AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            [ref AMapNearbySearch : request];
+        
+            // result
+            // 无返回值
+            NSString* __result__ = @"success";
+        
+            methodResult(__result__);
+        },
+        @"AMapSearchAPI::AMapCloudPOIAroundSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::AMapCloudPOIAroundSearch(%@)", args);
+            }
+        
+            // args
+            // ref arg
+            AMapCloudPOIAroundSearchRequest* request = (AMapCloudPOIAroundSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
+        
+            // ref
+            AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            [ref AMapCloudPOIAroundSearch : request];
+        
+            // result
+            // 无返回值
+            NSString* __result__ = @"success";
+        
+            methodResult(__result__);
+        },
+        @"AMapSearchAPI::AMapCloudPOIPolygonSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::AMapCloudPOIPolygonSearch(%@)", args);
+            }
+        
+            // args
+            // ref arg
+            AMapCloudPOIPolygonSearchRequest* request = (AMapCloudPOIPolygonSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
+        
+            // ref
+            AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            [ref AMapCloudPOIPolygonSearch : request];
+        
+            // result
+            // 无返回值
+            NSString* __result__ = @"success";
+        
+            methodResult(__result__);
+        },
+        @"AMapSearchAPI::AMapCloudPOIIDSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::AMapCloudPOIIDSearch(%@)", args);
+            }
+        
+            // args
+            // ref arg
+            AMapCloudPOIIDSearchRequest* request = (AMapCloudPOIIDSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
+        
+            // ref
+            AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            [ref AMapCloudPOIIDSearch : request];
+        
+            // result
+            // 无返回值
+            NSString* __result__ = @"success";
+        
+            methodResult(__result__);
+        },
+        @"AMapSearchAPI::AMapCloudPOILocalSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::AMapCloudPOILocalSearch(%@)", args);
+            }
+        
+            // args
+            // ref arg
+            AMapCloudPOILocalSearchRequest* request = (AMapCloudPOILocalSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
+        
+            // ref
+            AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            [ref AMapCloudPOILocalSearch : request];
+        
+            // result
+            // 无返回值
+            NSString* __result__ = @"success";
+        
+            methodResult(__result__);
+        },
+        @"AMapSearchAPI::AMapLocationShareSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::AMapLocationShareSearch(%@)", args);
+            }
+        
+            // args
+            // ref arg
+            AMapLocationShareSearchRequest* request = (AMapLocationShareSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
+        
+            // ref
+            AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            [ref AMapLocationShareSearch : request];
+        
+            // result
+            // 无返回值
+            NSString* __result__ = @"success";
+        
+            methodResult(__result__);
+        },
+        @"AMapSearchAPI::AMapPOIShareSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::AMapPOIShareSearch(%@)", args);
+            }
+        
+            // args
+            // ref arg
+            AMapPOIShareSearchRequest* request = (AMapPOIShareSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
+        
+            // ref
+            AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            [ref AMapPOIShareSearch : request];
+        
+            // result
+            // 无返回值
+            NSString* __result__ = @"success";
+        
+            methodResult(__result__);
+        },
+        @"AMapSearchAPI::AMapRouteShareSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::AMapRouteShareSearch(%@)", args);
+            }
+        
+            // args
+            // ref arg
+            AMapRouteShareSearchRequest* request = (AMapRouteShareSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
+        
+            // ref
+            AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            [ref AMapRouteShareSearch : request];
+        
+            // result
+            // 无返回值
+            NSString* __result__ = @"success";
+        
+            methodResult(__result__);
+        },
+        @"AMapSearchAPI::AMapNavigationShareSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::AMapNavigationShareSearch(%@)", args);
+            }
+        
+            // args
+            // ref arg
+            AMapNavigationShareSearchRequest* request = (AMapNavigationShareSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
+        
+            // ref
+            AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            [ref AMapNavigationShareSearch : request];
+        
+            // result
+            // 无返回值
+            NSString* __result__ = @"success";
+        
+            methodResult(__result__);
+        },
         @"AMapURLSearch::getLatestAMapApp_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             if (enableLog) {
                 NSLog(@"fluttify-objc: AMapURLSearch::getLatestAMapApp(%@)", argsBatch);
@@ -468,6 +1452,1347 @@ extern BOOL enableLog;
                 // result
                 // 返回值: jsonable
                 id __result__ = result;
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        @"AMapNearbySearchManager::sharedInstance_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapNearbySearchManager::sharedInstance(%@)", argsBatch);
+            }
+        
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+        
+        
+                // ref
+        
+        
+                // invoke native method
+                AMapNearbySearchManager* result = [AMapNearbySearchManager sharedInstance];
+        
+                // result
+                // return a ref
+                NSObject* __result__ = result;
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        @"AMapNearbySearchManager::init_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapNearbySearchManager::init(%@)", argsBatch);
+            }
+        
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+        
+        
+                // ref
+                AMapNearbySearchManager* ref = (AMapNearbySearchManager*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                // invoke native method
+                AMapNearbySearchManager* result = [ref init];
+        
+                // result
+                // return a ref
+                NSObject* __result__ = result;
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        @"AMapNearbySearchManager::startAutoUploadNearbyInfo_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapNearbySearchManager::startAutoUploadNearbyInfo(%@)", argsBatch);
+            }
+        
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+        
+        
+                // ref
+                AMapNearbySearchManager* ref = (AMapNearbySearchManager*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                // invoke native method
+                [ref startAutoUploadNearbyInfo ];
+        
+                // result
+                // 无返回值
+                NSString* __result__ = @"success";
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        @"AMapNearbySearchManager::stopAutoUploadNearbyInfo_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapNearbySearchManager::stopAutoUploadNearbyInfo(%@)", argsBatch);
+            }
+        
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+        
+        
+                // ref
+                AMapNearbySearchManager* ref = (AMapNearbySearchManager*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                // invoke native method
+                [ref stopAutoUploadNearbyInfo ];
+        
+                // result
+                // 无返回值
+                NSString* __result__ = @"success";
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        @"AMapNearbySearchManager::uploadNearbyInfo_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapNearbySearchManager::uploadNearbyInfo(%@)", argsBatch);
+            }
+        
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // ref arg
+                AMapNearbyUploadInfo* info = (AMapNearbyUploadInfo*) (args[@"info"] == [NSNull null] ? nil : args[@"info"]);
+        
+                // ref
+                AMapNearbySearchManager* ref = (AMapNearbySearchManager*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                // invoke native method
+                BOOL result = [ref uploadNearbyInfo: info];
+        
+                // result
+                // 返回值: Value
+                NSObject* __result__ = @(result);
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        @"AMapNearbySearchManager::clearUserInfoWithID_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapNearbySearchManager::clearUserInfoWithID(%@)", argsBatch);
+            }
+        
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // jsonable arg
+                NSString* userID = (NSString*) args[@"userID"];
+        
+                // ref
+                AMapNearbySearchManager* ref = (AMapNearbySearchManager*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                // invoke native method
+                BOOL result = [ref clearUserInfoWithID: userID];
+        
+                // result
+                // 返回值: Value
+                NSObject* __result__ = @(result);
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        @"AMapSearchAPI::init_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::init(%@)", argsBatch);
+            }
+        
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+        
+        
+                // ref
+                AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                // invoke native method
+                AMapSearchAPI* result = [ref init];
+        
+                // result
+                // return a ref
+                NSObject* __result__ = result;
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        @"AMapSearchAPI::cancelAllRequests_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::cancelAllRequests(%@)", argsBatch);
+            }
+        
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+        
+        
+                // ref
+                AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                // invoke native method
+                [ref cancelAllRequests ];
+        
+                // result
+                // 无返回值
+                NSString* __result__ = @"success";
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        @"AMapSearchAPI::updatePrivacyShow_privacyInfo_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::updatePrivacyShow_privacyInfo(%@)", argsBatch);
+            }
+        
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // enum arg
+                AMapPrivacyShowStatus showStatus = (AMapPrivacyShowStatus) [args[@"showStatus"] integerValue];
+                // enum arg
+                AMapPrivacyInfoStatus containStatus = (AMapPrivacyInfoStatus) [args[@"containStatus"] integerValue];
+        
+                // ref
+        
+        
+                // invoke native method
+                [AMapSearchAPI updatePrivacyShow: showStatus privacyInfo: containStatus];
+        
+                // result
+                // 无返回值
+                NSString* __result__ = @"success";
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        @"AMapSearchAPI::updatePrivacyAgree_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::updatePrivacyAgree(%@)", argsBatch);
+            }
+        
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // enum arg
+                AMapPrivacyAgreeStatus agreeStatus = (AMapPrivacyAgreeStatus) [args[@"agreeStatus"] integerValue];
+        
+                // ref
+        
+        
+                // invoke native method
+                [AMapSearchAPI updatePrivacyAgree: agreeStatus];
+        
+                // result
+                // 无返回值
+                NSString* __result__ = @"success";
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        @"AMapSearchAPI::AMapPOIIDSearch_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::AMapPOIIDSearch(%@)", argsBatch);
+            }
+        
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // ref arg
+                AMapPOIIDSearchRequest* request = (AMapPOIIDSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
+        
+                // ref
+                AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                // invoke native method
+                [ref AMapPOIIDSearch : request];
+        
+                // result
+                // 无返回值
+                NSString* __result__ = @"success";
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        @"AMapSearchAPI::AMapPOIKeywordsSearch_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::AMapPOIKeywordsSearch(%@)", argsBatch);
+            }
+        
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // ref arg
+                AMapPOIKeywordsSearchRequest* request = (AMapPOIKeywordsSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
+        
+                // ref
+                AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                // invoke native method
+                [ref AMapPOIKeywordsSearch : request];
+        
+                // result
+                // 无返回值
+                NSString* __result__ = @"success";
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        @"AMapSearchAPI::AMapPOIAroundSearch_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::AMapPOIAroundSearch(%@)", argsBatch);
+            }
+        
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // ref arg
+                AMapPOIAroundSearchRequest* request = (AMapPOIAroundSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
+        
+                // ref
+                AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                // invoke native method
+                [ref AMapPOIAroundSearch : request];
+        
+                // result
+                // 无返回值
+                NSString* __result__ = @"success";
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        @"AMapSearchAPI::AMapPOIPolygonSearch_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::AMapPOIPolygonSearch(%@)", argsBatch);
+            }
+        
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // ref arg
+                AMapPOIPolygonSearchRequest* request = (AMapPOIPolygonSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
+        
+                // ref
+                AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                // invoke native method
+                [ref AMapPOIPolygonSearch : request];
+        
+                // result
+                // 无返回值
+                NSString* __result__ = @"success";
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        @"AMapSearchAPI::AMapRoutePOISearch_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::AMapRoutePOISearch(%@)", argsBatch);
+            }
+        
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // ref arg
+                AMapRoutePOISearchRequest* request = (AMapRoutePOISearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
+        
+                // ref
+                AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                // invoke native method
+                [ref AMapRoutePOISearch : request];
+        
+                // result
+                // 无返回值
+                NSString* __result__ = @"success";
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        @"AMapSearchAPI::AMapGeocodeSearch_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::AMapGeocodeSearch(%@)", argsBatch);
+            }
+        
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // ref arg
+                AMapGeocodeSearchRequest* request = (AMapGeocodeSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
+        
+                // ref
+                AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                // invoke native method
+                [ref AMapGeocodeSearch : request];
+        
+                // result
+                // 无返回值
+                NSString* __result__ = @"success";
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        @"AMapSearchAPI::AMapReGoecodeSearch_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::AMapReGoecodeSearch(%@)", argsBatch);
+            }
+        
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // ref arg
+                AMapReGeocodeSearchRequest* request = (AMapReGeocodeSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
+        
+                // ref
+                AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                // invoke native method
+                [ref AMapReGoecodeSearch : request];
+        
+                // result
+                // 无返回值
+                NSString* __result__ = @"success";
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        @"AMapSearchAPI::AMapInputTipsSearch_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::AMapInputTipsSearch(%@)", argsBatch);
+            }
+        
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // ref arg
+                AMapInputTipsSearchRequest* request = (AMapInputTipsSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
+        
+                // ref
+                AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                // invoke native method
+                [ref AMapInputTipsSearch : request];
+        
+                // result
+                // 无返回值
+                NSString* __result__ = @"success";
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        @"AMapSearchAPI::AMapBusStopSearch_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::AMapBusStopSearch(%@)", argsBatch);
+            }
+        
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // ref arg
+                AMapBusStopSearchRequest* request = (AMapBusStopSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
+        
+                // ref
+                AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                // invoke native method
+                [ref AMapBusStopSearch : request];
+        
+                // result
+                // 无返回值
+                NSString* __result__ = @"success";
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        @"AMapSearchAPI::AMapBusLineIDSearch_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::AMapBusLineIDSearch(%@)", argsBatch);
+            }
+        
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // ref arg
+                AMapBusLineIDSearchRequest* request = (AMapBusLineIDSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
+        
+                // ref
+                AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                // invoke native method
+                [ref AMapBusLineIDSearch : request];
+        
+                // result
+                // 无返回值
+                NSString* __result__ = @"success";
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        @"AMapSearchAPI::AMapBusLineNameSearch_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::AMapBusLineNameSearch(%@)", argsBatch);
+            }
+        
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // ref arg
+                AMapBusLineNameSearchRequest* request = (AMapBusLineNameSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
+        
+                // ref
+                AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                // invoke native method
+                [ref AMapBusLineNameSearch : request];
+        
+                // result
+                // 无返回值
+                NSString* __result__ = @"success";
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        @"AMapSearchAPI::AMapDistrictSearch_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::AMapDistrictSearch(%@)", argsBatch);
+            }
+        
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // ref arg
+                AMapDistrictSearchRequest* request = (AMapDistrictSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
+        
+                // ref
+                AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                // invoke native method
+                [ref AMapDistrictSearch : request];
+        
+                // result
+                // 无返回值
+                NSString* __result__ = @"success";
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        @"AMapSearchAPI::AMapDrivingRouteSearch_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::AMapDrivingRouteSearch(%@)", argsBatch);
+            }
+        
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // ref arg
+                AMapDrivingRouteSearchRequest* request = (AMapDrivingRouteSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
+        
+                // ref
+                AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                // invoke native method
+                [ref AMapDrivingRouteSearch : request];
+        
+                // result
+                // 无返回值
+                NSString* __result__ = @"success";
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        @"AMapSearchAPI::AMapDrivingV2RouteSearch_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::AMapDrivingV2RouteSearch(%@)", argsBatch);
+            }
+        
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // ref arg
+                AMapDrivingCalRouteSearchRequest* request = (AMapDrivingCalRouteSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
+        
+                // ref
+                AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                // invoke native method
+                [ref AMapDrivingV2RouteSearch : request];
+        
+                // result
+                // 无返回值
+                NSString* __result__ = @"success";
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        @"AMapSearchAPI::AMapWalkingRouteSearch_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::AMapWalkingRouteSearch(%@)", argsBatch);
+            }
+        
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // ref arg
+                AMapWalkingRouteSearchRequest* request = (AMapWalkingRouteSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
+        
+                // ref
+                AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                // invoke native method
+                [ref AMapWalkingRouteSearch : request];
+        
+                // result
+                // 无返回值
+                NSString* __result__ = @"success";
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        @"AMapSearchAPI::AMapTransitRouteSearch_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::AMapTransitRouteSearch(%@)", argsBatch);
+            }
+        
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // ref arg
+                AMapTransitRouteSearchRequest* request = (AMapTransitRouteSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
+        
+                // ref
+                AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                // invoke native method
+                [ref AMapTransitRouteSearch : request];
+        
+                // result
+                // 无返回值
+                NSString* __result__ = @"success";
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        @"AMapSearchAPI::AMapRidingRouteSearch_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::AMapRidingRouteSearch(%@)", argsBatch);
+            }
+        
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // ref arg
+                AMapRidingRouteSearchRequest* request = (AMapRidingRouteSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
+        
+                // ref
+                AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                // invoke native method
+                [ref AMapRidingRouteSearch : request];
+        
+                // result
+                // 无返回值
+                NSString* __result__ = @"success";
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        @"AMapSearchAPI::AMapTruckRouteSearch_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::AMapTruckRouteSearch(%@)", argsBatch);
+            }
+        
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // ref arg
+                AMapTruckRouteSearchRequest* request = (AMapTruckRouteSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
+        
+                // ref
+                AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                // invoke native method
+                [ref AMapTruckRouteSearch : request];
+        
+                // result
+                // 无返回值
+                NSString* __result__ = @"success";
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        @"AMapSearchAPI::AMapFutureRouteSearch_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::AMapFutureRouteSearch(%@)", argsBatch);
+            }
+        
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // ref arg
+                AMapFutureRouteSearchRequest* request = (AMapFutureRouteSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
+        
+                // ref
+                AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                // invoke native method
+                [ref AMapFutureRouteSearch : request];
+        
+                // result
+                // 无返回值
+                NSString* __result__ = @"success";
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        @"AMapSearchAPI::AMapWeatherSearch_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::AMapWeatherSearch(%@)", argsBatch);
+            }
+        
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // ref arg
+                AMapWeatherSearchRequest* request = (AMapWeatherSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
+        
+                // ref
+                AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                // invoke native method
+                [ref AMapWeatherSearch : request];
+        
+                // result
+                // 无返回值
+                NSString* __result__ = @"success";
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        @"AMapSearchAPI::AMapDistanceSearch_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::AMapDistanceSearch(%@)", argsBatch);
+            }
+        
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // ref arg
+                AMapDistanceSearchRequest* request = (AMapDistanceSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
+        
+                // ref
+                AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                // invoke native method
+                [ref AMapDistanceSearch : request];
+        
+                // result
+                // 无返回值
+                NSString* __result__ = @"success";
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        @"AMapSearchAPI::AMapNearbySearch_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::AMapNearbySearch(%@)", argsBatch);
+            }
+        
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // ref arg
+                AMapNearbySearchRequest* request = (AMapNearbySearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
+        
+                // ref
+                AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                // invoke native method
+                [ref AMapNearbySearch : request];
+        
+                // result
+                // 无返回值
+                NSString* __result__ = @"success";
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        @"AMapSearchAPI::AMapCloudPOIAroundSearch_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::AMapCloudPOIAroundSearch(%@)", argsBatch);
+            }
+        
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // ref arg
+                AMapCloudPOIAroundSearchRequest* request = (AMapCloudPOIAroundSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
+        
+                // ref
+                AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                // invoke native method
+                [ref AMapCloudPOIAroundSearch : request];
+        
+                // result
+                // 无返回值
+                NSString* __result__ = @"success";
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        @"AMapSearchAPI::AMapCloudPOIPolygonSearch_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::AMapCloudPOIPolygonSearch(%@)", argsBatch);
+            }
+        
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // ref arg
+                AMapCloudPOIPolygonSearchRequest* request = (AMapCloudPOIPolygonSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
+        
+                // ref
+                AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                // invoke native method
+                [ref AMapCloudPOIPolygonSearch : request];
+        
+                // result
+                // 无返回值
+                NSString* __result__ = @"success";
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        @"AMapSearchAPI::AMapCloudPOIIDSearch_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::AMapCloudPOIIDSearch(%@)", argsBatch);
+            }
+        
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // ref arg
+                AMapCloudPOIIDSearchRequest* request = (AMapCloudPOIIDSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
+        
+                // ref
+                AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                // invoke native method
+                [ref AMapCloudPOIIDSearch : request];
+        
+                // result
+                // 无返回值
+                NSString* __result__ = @"success";
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        @"AMapSearchAPI::AMapCloudPOILocalSearch_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::AMapCloudPOILocalSearch(%@)", argsBatch);
+            }
+        
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // ref arg
+                AMapCloudPOILocalSearchRequest* request = (AMapCloudPOILocalSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
+        
+                // ref
+                AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                // invoke native method
+                [ref AMapCloudPOILocalSearch : request];
+        
+                // result
+                // 无返回值
+                NSString* __result__ = @"success";
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        @"AMapSearchAPI::AMapLocationShareSearch_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::AMapLocationShareSearch(%@)", argsBatch);
+            }
+        
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // ref arg
+                AMapLocationShareSearchRequest* request = (AMapLocationShareSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
+        
+                // ref
+                AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                // invoke native method
+                [ref AMapLocationShareSearch : request];
+        
+                // result
+                // 无返回值
+                NSString* __result__ = @"success";
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        @"AMapSearchAPI::AMapPOIShareSearch_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::AMapPOIShareSearch(%@)", argsBatch);
+            }
+        
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // ref arg
+                AMapPOIShareSearchRequest* request = (AMapPOIShareSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
+        
+                // ref
+                AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                // invoke native method
+                [ref AMapPOIShareSearch : request];
+        
+                // result
+                // 无返回值
+                NSString* __result__ = @"success";
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        @"AMapSearchAPI::AMapRouteShareSearch_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::AMapRouteShareSearch(%@)", argsBatch);
+            }
+        
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // ref arg
+                AMapRouteShareSearchRequest* request = (AMapRouteShareSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
+        
+                // ref
+                AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                // invoke native method
+                [ref AMapRouteShareSearch : request];
+        
+                // result
+                // 无返回值
+                NSString* __result__ = @"success";
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        @"AMapSearchAPI::AMapNavigationShareSearch_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            if (enableLog) {
+                NSLog(@"fluttify-objc: AMapSearchAPI::AMapNavigationShareSearch(%@)", argsBatch);
+            }
+        
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // args
+                // ref arg
+                AMapNavigationShareSearchRequest* request = (AMapNavigationShareSearchRequest*) (args[@"request"] == [NSNull null] ? nil : args[@"request"]);
+        
+                // ref
+                AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                // invoke native method
+                [ref AMapNavigationShareSearch : request];
+        
+                // result
+                // 无返回值
+                NSString* __result__ = @"success";
         
                 [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
             }
@@ -830,6 +3155,94 @@ extern BOOL enableLog;
         
             // 返回值: 结构体
             NSValue* __result__ = [NSValue value:&result withObjCType:@encode(CLLocationCoordinate2D)];
+        
+            methodResult(__result__);
+        },
+        
+        @"AMapServices::get_apiKey": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapServices::get_apiKey");
+            }
+        
+            // ref object
+            AMapServices* ref = (AMapServices*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            NSString* result = ref.apiKey;
+        
+            // 返回值: jsonable
+            id __result__ = result;
+        
+            methodResult(__result__);
+        },
+        
+        @"AMapServices::get_enableHTTPS": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapServices::get_enableHTTPS");
+            }
+        
+            // ref object
+            AMapServices* ref = (AMapServices*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            BOOL result = ref.enableHTTPS;
+        
+            // 返回值: Value
+            NSObject* __result__ = @(result);
+        
+            methodResult(__result__);
+        },
+        
+        @"AMapServices::get_crashReportEnabled": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapServices::get_crashReportEnabled");
+            }
+        
+            // ref object
+            AMapServices* ref = (AMapServices*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            BOOL result = ref.crashReportEnabled;
+        
+            // 返回值: Value
+            NSObject* __result__ = @(result);
+        
+            methodResult(__result__);
+        },
+        
+        @"AMapServices::get_identifier": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapServices::get_identifier");
+            }
+        
+            // ref object
+            AMapServices* ref = (AMapServices*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            NSString* result = ref.identifier;
+        
+            // 返回值: jsonable
+            id __result__ = result;
         
             methodResult(__result__);
         },
@@ -2286,6 +4699,50 @@ extern BOOL enableLog;
             methodResult(__result__);
         },
         
+        @"AMapDistrictSearchRequest::get_requireExtension": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapDistrictSearchRequest::get_requireExtension");
+            }
+        
+            // ref object
+            AMapDistrictSearchRequest* ref = (AMapDistrictSearchRequest*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            BOOL result = ref.requireExtension;
+        
+            // 返回值: Value
+            NSObject* __result__ = @(result);
+        
+            methodResult(__result__);
+        },
+        
+        @"AMapDistrictSearchRequest::get_showBusinessArea": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapDistrictSearchRequest::get_showBusinessArea");
+            }
+        
+            // ref object
+            AMapDistrictSearchRequest* ref = (AMapDistrictSearchRequest*) args[@"__this__"];
+            if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
+                return;
+            }
+        
+            // invoke native method
+            BOOL result = ref.showBusinessArea;
+        
+            // 返回值: Value
+            NSObject* __result__ = @(result);
+        
+            methodResult(__result__);
+        },
+        
         @"AMapDistrictSearchResponse::get_count": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // print log
             if (enableLog) {
@@ -2565,1898 +5022,6 @@ extern BOOL enableLog;
         
             // invoke native method
             NSString* result = ref.plate;
-        
-            // 返回值: jsonable
-            id __result__ = result;
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapDrivingCalRouteSearchRequest::get_ferry": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapDrivingCalRouteSearchRequest::get_ferry");
-            }
-        
-            // ref object
-            AMapDrivingCalRouteSearchRequest* ref = (AMapDrivingCalRouteSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSInteger result = ref.ferry;
-        
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapDrivingCalRouteSearchRequest::get_cartype": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapDrivingCalRouteSearchRequest::get_cartype");
-            }
-        
-            // ref object
-            AMapDrivingCalRouteSearchRequest* ref = (AMapDrivingCalRouteSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSInteger result = ref.cartype;
-        
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapDrivingCalRouteSearchRequest::get_showFieldType": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapDrivingCalRouteSearchRequest::get_showFieldType");
-            }
-        
-            // ref object
-            AMapDrivingCalRouteSearchRequest* ref = (AMapDrivingCalRouteSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            AMapDrivingRouteShowFieldType result = ref.showFieldType;
-        
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapDrivingRouteSearchRequest::get_strategy": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapDrivingRouteSearchRequest::get_strategy");
-            }
-        
-            // ref object
-            AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSInteger result = ref.strategy;
-        
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapDrivingRouteSearchRequest::get_waypoints": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapDrivingRouteSearchRequest::get_waypoints");
-            }
-        
-            // ref object
-            AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSArray<AMapGeoPoint*>* result = ref.waypoints;
-        
-            // return a ref
-            NSObject* __result__ = result;
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapDrivingRouteSearchRequest::get_avoidpolygons": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapDrivingRouteSearchRequest::get_avoidpolygons");
-            }
-        
-            // ref object
-            AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSArray<AMapGeoPolygon*>* result = ref.avoidpolygons;
-        
-            // return a ref
-            NSObject* __result__ = result;
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapDrivingRouteSearchRequest::get_avoidroad": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapDrivingRouteSearchRequest::get_avoidroad");
-            }
-        
-            // ref object
-            AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSString* result = ref.avoidroad;
-        
-            // 返回值: jsonable
-            id __result__ = result;
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapDrivingRouteSearchRequest::get_originId": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapDrivingRouteSearchRequest::get_originId");
-            }
-        
-            // ref object
-            AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSString* result = ref.originId;
-        
-            // 返回值: jsonable
-            id __result__ = result;
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapDrivingRouteSearchRequest::get_destinationId": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapDrivingRouteSearchRequest::get_destinationId");
-            }
-        
-            // ref object
-            AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSString* result = ref.destinationId;
-        
-            // 返回值: jsonable
-            id __result__ = result;
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapDrivingRouteSearchRequest::get_origintype": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapDrivingRouteSearchRequest::get_origintype");
-            }
-        
-            // ref object
-            AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSString* result = ref.origintype;
-        
-            // 返回值: jsonable
-            id __result__ = result;
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapDrivingRouteSearchRequest::get_destinationtype": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapDrivingRouteSearchRequest::get_destinationtype");
-            }
-        
-            // ref object
-            AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSString* result = ref.destinationtype;
-        
-            // 返回值: jsonable
-            id __result__ = result;
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapDrivingRouteSearchRequest::get_requireExtension": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapDrivingRouteSearchRequest::get_requireExtension");
-            }
-        
-            // ref object
-            AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            BOOL result = ref.requireExtension;
-        
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapDrivingRouteSearchRequest::get_plateProvince": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapDrivingRouteSearchRequest::get_plateProvince");
-            }
-        
-            // ref object
-            AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSString* result = ref.plateProvince;
-        
-            // 返回值: jsonable
-            id __result__ = result;
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapDrivingRouteSearchRequest::get_plateNumber": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapDrivingRouteSearchRequest::get_plateNumber");
-            }
-        
-            // ref object
-            AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSString* result = ref.plateNumber;
-        
-            // 返回值: jsonable
-            id __result__ = result;
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapDrivingRouteSearchRequest::get_ferry": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapDrivingRouteSearchRequest::get_ferry");
-            }
-        
-            // ref object
-            AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSInteger result = ref.ferry;
-        
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapDrivingRouteSearchRequest::get_cartype": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapDrivingRouteSearchRequest::get_cartype");
-            }
-        
-            // ref object
-            AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSInteger result = ref.cartype;
-        
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapDrivingRouteSearchRequest::get_exclude": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapDrivingRouteSearchRequest::get_exclude");
-            }
-        
-            // ref object
-            AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            AMapDrivingRouteExcludeType result = ref.exclude;
-        
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapWalkingRouteSearchRequest::get_multipath": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapWalkingRouteSearchRequest::get_multipath");
-            }
-        
-            // ref object
-            AMapWalkingRouteSearchRequest* ref = (AMapWalkingRouteSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSInteger result = ref.multipath;
-        
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapTransitRouteSearchRequest::get_strategy": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapTransitRouteSearchRequest::get_strategy");
-            }
-        
-            // ref object
-            AMapTransitRouteSearchRequest* ref = (AMapTransitRouteSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSInteger result = ref.strategy;
-        
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapTransitRouteSearchRequest::get_city": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapTransitRouteSearchRequest::get_city");
-            }
-        
-            // ref object
-            AMapTransitRouteSearchRequest* ref = (AMapTransitRouteSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSString* result = ref.city;
-        
-            // 返回值: jsonable
-            id __result__ = result;
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapTransitRouteSearchRequest::get_destinationCity": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapTransitRouteSearchRequest::get_destinationCity");
-            }
-        
-            // ref object
-            AMapTransitRouteSearchRequest* ref = (AMapTransitRouteSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSString* result = ref.destinationCity;
-        
-            // 返回值: jsonable
-            id __result__ = result;
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapTransitRouteSearchRequest::get_nightflag": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapTransitRouteSearchRequest::get_nightflag");
-            }
-        
-            // ref object
-            AMapTransitRouteSearchRequest* ref = (AMapTransitRouteSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            BOOL result = ref.nightflag;
-        
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapTransitRouteSearchRequest::get_requireExtension": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapTransitRouteSearchRequest::get_requireExtension");
-            }
-        
-            // ref object
-            AMapTransitRouteSearchRequest* ref = (AMapTransitRouteSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            BOOL result = ref.requireExtension;
-        
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapRidingRouteSearchRequest::get_type": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapRidingRouteSearchRequest::get_type");
-            }
-        
-            // ref object
-            AMapRidingRouteSearchRequest* ref = (AMapRidingRouteSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSInteger result = ref.type;
-        
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapRidingRouteSearchRequest::get_requireExtension": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapRidingRouteSearchRequest::get_requireExtension");
-            }
-        
-            // ref object
-            AMapRidingRouteSearchRequest* ref = (AMapRidingRouteSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            BOOL result = ref.requireExtension;
-        
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapRouteSearchResponse::get_count": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapRouteSearchResponse::get_count");
-            }
-        
-            // ref object
-            AMapRouteSearchResponse* ref = (AMapRouteSearchResponse*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSInteger result = ref.count;
-        
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapRouteSearchResponse::get_route": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapRouteSearchResponse::get_route");
-            }
-        
-            // ref object
-            AMapRouteSearchResponse* ref = (AMapRouteSearchResponse*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            AMapRoute* result = ref.route;
-        
-            // return a ref
-            NSObject* __result__ = result;
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapTruckRouteSearchRequest::get_strategy": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapTruckRouteSearchRequest::get_strategy");
-            }
-        
-            // ref object
-            AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSInteger result = ref.strategy;
-        
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapTruckRouteSearchRequest::get_waypoints": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapTruckRouteSearchRequest::get_waypoints");
-            }
-        
-            // ref object
-            AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSArray<AMapGeoPoint*>* result = ref.waypoints;
-        
-            // return a ref
-            NSObject* __result__ = result;
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapTruckRouteSearchRequest::get_originId": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapTruckRouteSearchRequest::get_originId");
-            }
-        
-            // ref object
-            AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSString* result = ref.originId;
-        
-            // 返回值: jsonable
-            id __result__ = result;
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapTruckRouteSearchRequest::get_destinationId": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapTruckRouteSearchRequest::get_destinationId");
-            }
-        
-            // ref object
-            AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSString* result = ref.destinationId;
-        
-            // 返回值: jsonable
-            id __result__ = result;
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapTruckRouteSearchRequest::get_origintype": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapTruckRouteSearchRequest::get_origintype");
-            }
-        
-            // ref object
-            AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSString* result = ref.origintype;
-        
-            // 返回值: jsonable
-            id __result__ = result;
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapTruckRouteSearchRequest::get_destinationtype": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapTruckRouteSearchRequest::get_destinationtype");
-            }
-        
-            // ref object
-            AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSString* result = ref.destinationtype;
-        
-            // 返回值: jsonable
-            id __result__ = result;
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapTruckRouteSearchRequest::get_plateProvince": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapTruckRouteSearchRequest::get_plateProvince");
-            }
-        
-            // ref object
-            AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSString* result = ref.plateProvince;
-        
-            // 返回值: jsonable
-            id __result__ = result;
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapTruckRouteSearchRequest::get_plateNumber": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapTruckRouteSearchRequest::get_plateNumber");
-            }
-        
-            // ref object
-            AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSString* result = ref.plateNumber;
-        
-            // 返回值: jsonable
-            id __result__ = result;
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapTruckRouteSearchRequest::get_size": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapTruckRouteSearchRequest::get_size");
-            }
-        
-            // ref object
-            AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            AMapTruckSizeType result = ref.size;
-        
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapTruckRouteSearchRequest::get_height": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapTruckRouteSearchRequest::get_height");
-            }
-        
-            // ref object
-            AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            CGFloat result = ref.height;
-        
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapTruckRouteSearchRequest::get_width": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapTruckRouteSearchRequest::get_width");
-            }
-        
-            // ref object
-            AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            CGFloat result = ref.width;
-        
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapTruckRouteSearchRequest::get_load": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapTruckRouteSearchRequest::get_load");
-            }
-        
-            // ref object
-            AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            CGFloat result = ref.load;
-        
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapTruckRouteSearchRequest::get_weight": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapTruckRouteSearchRequest::get_weight");
-            }
-        
-            // ref object
-            AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            CGFloat result = ref.weight;
-        
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapTruckRouteSearchRequest::get_axis": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapTruckRouteSearchRequest::get_axis");
-            }
-        
-            // ref object
-            AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSInteger result = ref.axis;
-        
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapTruckRouteSearchRequest::get_requireExtension": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapTruckRouteSearchRequest::get_requireExtension");
-            }
-        
-            // ref object
-            AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            BOOL result = ref.requireExtension;
-        
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapDistanceSearchRequest::get_origins": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapDistanceSearchRequest::get_origins");
-            }
-        
-            // ref object
-            AMapDistanceSearchRequest* ref = (AMapDistanceSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSArray<AMapGeoPoint*>* result = ref.origins;
-        
-            // return a ref
-            NSObject* __result__ = result;
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapDistanceSearchRequest::get_destination": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapDistanceSearchRequest::get_destination");
-            }
-        
-            // ref object
-            AMapDistanceSearchRequest* ref = (AMapDistanceSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            AMapGeoPoint* result = ref.destination;
-        
-            // return a ref
-            NSObject* __result__ = result;
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapDistanceSearchRequest::get_type": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapDistanceSearchRequest::get_type");
-            }
-        
-            // ref object
-            AMapDistanceSearchRequest* ref = (AMapDistanceSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            AMapDistanceSearchType result = ref.type;
-        
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapDistanceSearchRequest::get_strategy": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapDistanceSearchRequest::get_strategy");
-            }
-        
-            // ref object
-            AMapDistanceSearchRequest* ref = (AMapDistanceSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSInteger result = ref.strategy;
-        
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapDistanceSearchRequest::get_requireExtension": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapDistanceSearchRequest::get_requireExtension");
-            }
-        
-            // ref object
-            AMapDistanceSearchRequest* ref = (AMapDistanceSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            BOOL result = ref.requireExtension;
-        
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapDistanceSearchResponse::get_results": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapDistanceSearchResponse::get_results");
-            }
-        
-            // ref object
-            AMapDistanceSearchResponse* ref = (AMapDistanceSearchResponse*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSArray<AMapDistanceResult*>* result = ref.results;
-        
-            // return a ref
-            NSObject* __result__ = result;
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapWeatherSearchRequest::get_city": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapWeatherSearchRequest::get_city");
-            }
-        
-            // ref object
-            AMapWeatherSearchRequest* ref = (AMapWeatherSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSString* result = ref.city;
-        
-            // 返回值: jsonable
-            id __result__ = result;
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapWeatherSearchRequest::get_type": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapWeatherSearchRequest::get_type");
-            }
-        
-            // ref object
-            AMapWeatherSearchRequest* ref = (AMapWeatherSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            AMapWeatherType result = ref.type;
-        
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapWeatherSearchResponse::get_lives": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapWeatherSearchResponse::get_lives");
-            }
-        
-            // ref object
-            AMapWeatherSearchResponse* ref = (AMapWeatherSearchResponse*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSArray<AMapLocalWeatherLive*>* result = ref.lives;
-        
-            // return a ref
-            NSObject* __result__ = result;
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapWeatherSearchResponse::get_forecasts": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapWeatherSearchResponse::get_forecasts");
-            }
-        
-            // ref object
-            AMapWeatherSearchResponse* ref = (AMapWeatherSearchResponse*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSArray<AMapLocalWeatherForecast*>* result = ref.forecasts;
-        
-            // return a ref
-            NSObject* __result__ = result;
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapNearbySearchRequest::get_center": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapNearbySearchRequest::get_center");
-            }
-        
-            // ref object
-            AMapNearbySearchRequest* ref = (AMapNearbySearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            AMapGeoPoint* result = ref.center;
-        
-            // return a ref
-            NSObject* __result__ = result;
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapNearbySearchRequest::get_radius": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapNearbySearchRequest::get_radius");
-            }
-        
-            // ref object
-            AMapNearbySearchRequest* ref = (AMapNearbySearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSInteger result = ref.radius;
-        
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapNearbySearchRequest::get_searchType": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapNearbySearchRequest::get_searchType");
-            }
-        
-            // ref object
-            AMapNearbySearchRequest* ref = (AMapNearbySearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            AMapNearbySearchType result = ref.searchType;
-        
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapNearbySearchRequest::get_timeRange": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapNearbySearchRequest::get_timeRange");
-            }
-        
-            // ref object
-            AMapNearbySearchRequest* ref = (AMapNearbySearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSInteger result = ref.timeRange;
-        
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapNearbySearchRequest::get_limit": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapNearbySearchRequest::get_limit");
-            }
-        
-            // ref object
-            AMapNearbySearchRequest* ref = (AMapNearbySearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSInteger result = ref.limit;
-        
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapNearbySearchResponse::get_count": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapNearbySearchResponse::get_count");
-            }
-        
-            // ref object
-            AMapNearbySearchResponse* ref = (AMapNearbySearchResponse*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSInteger result = ref.count;
-        
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapNearbySearchResponse::get_infos": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapNearbySearchResponse::get_infos");
-            }
-        
-            // ref object
-            AMapNearbySearchResponse* ref = (AMapNearbySearchResponse*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSArray<AMapNearbyUserInfo*>* result = ref.infos;
-        
-            // return a ref
-            NSObject* __result__ = result;
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapCloudSearchBaseRequest::get_tableID": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapCloudSearchBaseRequest::get_tableID");
-            }
-        
-            // ref object
-            AMapCloudSearchBaseRequest* ref = (AMapCloudSearchBaseRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSString* result = ref.tableID;
-        
-            // 返回值: jsonable
-            id __result__ = result;
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapCloudSearchBaseRequest::get_filter": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapCloudSearchBaseRequest::get_filter");
-            }
-        
-            // ref object
-            AMapCloudSearchBaseRequest* ref = (AMapCloudSearchBaseRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSArray<NSString*>* result = ref.filter;
-        
-            // 返回值: jsonable
-            id __result__ = result;
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapCloudSearchBaseRequest::get_sortFields": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapCloudSearchBaseRequest::get_sortFields");
-            }
-        
-            // ref object
-            AMapCloudSearchBaseRequest* ref = (AMapCloudSearchBaseRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSString* result = ref.sortFields;
-        
-            // 返回值: jsonable
-            id __result__ = result;
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapCloudSearchBaseRequest::get_sortType": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapCloudSearchBaseRequest::get_sortType");
-            }
-        
-            // ref object
-            AMapCloudSearchBaseRequest* ref = (AMapCloudSearchBaseRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            AMapCloudSortType result = ref.sortType;
-        
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapCloudSearchBaseRequest::get_offset": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapCloudSearchBaseRequest::get_offset");
-            }
-        
-            // ref object
-            AMapCloudSearchBaseRequest* ref = (AMapCloudSearchBaseRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSInteger result = ref.offset;
-        
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapCloudSearchBaseRequest::get_page": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapCloudSearchBaseRequest::get_page");
-            }
-        
-            // ref object
-            AMapCloudSearchBaseRequest* ref = (AMapCloudSearchBaseRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSInteger result = ref.page;
-        
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapCloudPOIAroundSearchRequest::get_center": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapCloudPOIAroundSearchRequest::get_center");
-            }
-        
-            // ref object
-            AMapCloudPOIAroundSearchRequest* ref = (AMapCloudPOIAroundSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            AMapGeoPoint* result = ref.center;
-        
-            // return a ref
-            NSObject* __result__ = result;
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapCloudPOIAroundSearchRequest::get_radius": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapCloudPOIAroundSearchRequest::get_radius");
-            }
-        
-            // ref object
-            AMapCloudPOIAroundSearchRequest* ref = (AMapCloudPOIAroundSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSInteger result = ref.radius;
-        
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapCloudPOIAroundSearchRequest::get_keywords": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapCloudPOIAroundSearchRequest::get_keywords");
-            }
-        
-            // ref object
-            AMapCloudPOIAroundSearchRequest* ref = (AMapCloudPOIAroundSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSString* result = ref.keywords;
-        
-            // 返回值: jsonable
-            id __result__ = result;
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapCloudPOIPolygonSearchRequest::get_polygon": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapCloudPOIPolygonSearchRequest::get_polygon");
-            }
-        
-            // ref object
-            AMapCloudPOIPolygonSearchRequest* ref = (AMapCloudPOIPolygonSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            AMapGeoPolygon* result = ref.polygon;
-        
-            // return a ref
-            NSObject* __result__ = result;
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapCloudPOIPolygonSearchRequest::get_keywords": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapCloudPOIPolygonSearchRequest::get_keywords");
-            }
-        
-            // ref object
-            AMapCloudPOIPolygonSearchRequest* ref = (AMapCloudPOIPolygonSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSString* result = ref.keywords;
-        
-            // 返回值: jsonable
-            id __result__ = result;
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapCloudPOIIDSearchRequest::get_uid": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapCloudPOIIDSearchRequest::get_uid");
-            }
-        
-            // ref object
-            AMapCloudPOIIDSearchRequest* ref = (AMapCloudPOIIDSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSInteger result = ref.uid;
-        
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapCloudPOILocalSearchRequest::get_keywords": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapCloudPOILocalSearchRequest::get_keywords");
-            }
-        
-            // ref object
-            AMapCloudPOILocalSearchRequest* ref = (AMapCloudPOILocalSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSString* result = ref.keywords;
-        
-            // 返回值: jsonable
-            id __result__ = result;
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapCloudPOILocalSearchRequest::get_city": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapCloudPOILocalSearchRequest::get_city");
-            }
-        
-            // ref object
-            AMapCloudPOILocalSearchRequest* ref = (AMapCloudPOILocalSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSString* result = ref.city;
-        
-            // 返回值: jsonable
-            id __result__ = result;
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapCloudPOISearchResponse::get_count": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapCloudPOISearchResponse::get_count");
-            }
-        
-            // ref object
-            AMapCloudPOISearchResponse* ref = (AMapCloudPOISearchResponse*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSInteger result = ref.count;
-        
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapCloudPOISearchResponse::get_POIs": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapCloudPOISearchResponse::get_POIs");
-            }
-        
-            // ref object
-            AMapCloudPOISearchResponse* ref = (AMapCloudPOISearchResponse*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSArray<AMapCloudPOI*>* result = ref.POIs;
-        
-            // return a ref
-            NSObject* __result__ = result;
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapLocationShareSearchRequest::get_location": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapLocationShareSearchRequest::get_location");
-            }
-        
-            // ref object
-            AMapLocationShareSearchRequest* ref = (AMapLocationShareSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            AMapGeoPoint* result = ref.location;
-        
-            // return a ref
-            NSObject* __result__ = result;
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapLocationShareSearchRequest::get_name": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapLocationShareSearchRequest::get_name");
-            }
-        
-            // ref object
-            AMapLocationShareSearchRequest* ref = (AMapLocationShareSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSString* result = ref.name;
-        
-            // 返回值: jsonable
-            id __result__ = result;
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapPOIShareSearchRequest::get_uid": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapPOIShareSearchRequest::get_uid");
-            }
-        
-            // ref object
-            AMapPOIShareSearchRequest* ref = (AMapPOIShareSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSString* result = ref.uid;
-        
-            // 返回值: jsonable
-            id __result__ = result;
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapPOIShareSearchRequest::get_location": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapPOIShareSearchRequest::get_location");
-            }
-        
-            // ref object
-            AMapPOIShareSearchRequest* ref = (AMapPOIShareSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            AMapGeoPoint* result = ref.location;
-        
-            // return a ref
-            NSObject* __result__ = result;
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapPOIShareSearchRequest::get_name": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapPOIShareSearchRequest::get_name");
-            }
-        
-            // ref object
-            AMapPOIShareSearchRequest* ref = (AMapPOIShareSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSString* result = ref.name;
-        
-            // 返回值: jsonable
-            id __result__ = result;
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapPOIShareSearchRequest::get_address": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapPOIShareSearchRequest::get_address");
-            }
-        
-            // ref object
-            AMapPOIShareSearchRequest* ref = (AMapPOIShareSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSString* result = ref.address;
-        
-            // 返回值: jsonable
-            id __result__ = result;
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapRouteShareSearchRequest::get_strategy": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapRouteShareSearchRequest::get_strategy");
-            }
-        
-            // ref object
-            AMapRouteShareSearchRequest* ref = (AMapRouteShareSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSInteger result = ref.strategy;
-        
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapRouteShareSearchRequest::get_type": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapRouteShareSearchRequest::get_type");
-            }
-        
-            // ref object
-            AMapRouteShareSearchRequest* ref = (AMapRouteShareSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSInteger result = ref.type;
-        
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapRouteShareSearchRequest::get_startCoordinate": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapRouteShareSearchRequest::get_startCoordinate");
-            }
-        
-            // ref object
-            AMapRouteShareSearchRequest* ref = (AMapRouteShareSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            AMapGeoPoint* result = ref.startCoordinate;
-        
-            // return a ref
-            NSObject* __result__ = result;
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapRouteShareSearchRequest::get_destinationCoordinate": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapRouteShareSearchRequest::get_destinationCoordinate");
-            }
-        
-            // ref object
-            AMapRouteShareSearchRequest* ref = (AMapRouteShareSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            AMapGeoPoint* result = ref.destinationCoordinate;
-        
-            // return a ref
-            NSObject* __result__ = result;
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapRouteShareSearchRequest::get_startName": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapRouteShareSearchRequest::get_startName");
-            }
-        
-            // ref object
-            AMapRouteShareSearchRequest* ref = (AMapRouteShareSearchRequest*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSString* result = ref.startName;
         
             // 返回值: jsonable
             id __result__ = result;
