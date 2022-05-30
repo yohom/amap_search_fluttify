@@ -82,38 +82,26 @@ class AMapCloudSearchBaseRequest extends AMapSearchObject with NSCoding, NSCopyi
   //region setters
   Future<void> set_tableID(String tableID) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapCloudSearchBaseRequest::set_tableID', <String, dynamic>{'__this__': this, "tableID": tableID});
-  
-  
   }
   
   Future<void> set_filter(List<String> filter) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapCloudSearchBaseRequest::set_filter', <String, dynamic>{'__this__': this, "filter": filter});
-  
-  
   }
   
   Future<void> set_sortFields(String sortFields) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapCloudSearchBaseRequest::set_sortFields', <String, dynamic>{'__this__': this, "sortFields": sortFields});
-  
-  
   }
   
   Future<void> set_sortType(AMapCloudSortType sortType) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapCloudSearchBaseRequest::set_sortType', <String, dynamic>{'__this__': this, "sortType": sortType.toValue()});
-  
-  
   }
   
   Future<void> set_offset(int offset) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapCloudSearchBaseRequest::set_offset', <String, dynamic>{'__this__': this, "offset": offset});
-  
-  
   }
   
   Future<void> set_page(int page) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapCloudSearchBaseRequest::set_page', <String, dynamic>{'__this__': this, "page": page});
-  
-  
   }
   
   //endregion

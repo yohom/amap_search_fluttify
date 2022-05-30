@@ -30,7 +30,7 @@ mixin com_amap_api_services_cloud_CloudSearch_OnCloudSearchListener on java_lang
           try {
             final args = methodCall.arguments as Map;
             switch (methodCall.method) {
-              case 'Callback::onCloudSearched::onCloudSearched':
+              case 'onCloudSearched:':
                 // print log
                 if (fluttifyLogEnabled) {
                   debugPrint('fluttify-dart-callback: onCloudSearched?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
@@ -39,7 +39,7 @@ mixin com_amap_api_services_cloud_CloudSearch_OnCloudSearchListener on java_lang
                 // handle the native call
                 onCloudSearched?.call(AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudResult>(args['var1']), args['var2']);
                 break;
-              case 'Callback::onCloudItemDetailSearched::onCloudItemDetailSearched':
+              case 'onCloudItemDetailSearched:':
                 // print log
                 if (fluttifyLogEnabled) {
                   debugPrint('fluttify-dart-callback: onCloudItemDetailSearched?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');

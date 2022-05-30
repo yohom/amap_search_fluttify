@@ -62,14 +62,10 @@ class AMapLocationShareSearchRequest extends AMapShareSearchBaseRequest with NSC
   //region setters
   Future<void> set_location(AMapGeoPoint location) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapLocationShareSearchRequest::set_location', <String, dynamic>{'__this__': this, "location": location});
-  
-  
   }
   
   Future<void> set_name(String name) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapLocationShareSearchRequest::set_name', <String, dynamic>{'__this__': this, "name": name});
-  
-  
   }
   
   //endregion

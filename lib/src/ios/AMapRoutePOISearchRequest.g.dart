@@ -87,44 +87,30 @@ class AMapRoutePOISearchRequest extends AMapSearchObject with NSCoding, NSCopyin
   //region setters
   Future<void> set_origin(AMapGeoPoint origin) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRoutePOISearchRequest::set_origin', <String, dynamic>{'__this__': this, "origin": origin});
-  
-  
   }
   
   Future<void> set_destination(AMapGeoPoint destination) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRoutePOISearchRequest::set_destination', <String, dynamic>{'__this__': this, "destination": destination});
-  
-  
   }
   
   Future<void> set_searchType(AMapRoutePOISearchType searchType) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRoutePOISearchRequest::set_searchType', <String, dynamic>{'__this__': this, "searchType": searchType.toValue()});
-  
-  
   }
   
   Future<void> set_strategy(int strategy) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRoutePOISearchRequest::set_strategy', <String, dynamic>{'__this__': this, "strategy": strategy});
-  
-  
   }
   
   Future<void> set_range(int range) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRoutePOISearchRequest::set_range', <String, dynamic>{'__this__': this, "range": range});
-  
-  
   }
   
   Future<void> set_polylineStr(String polylineStr) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRoutePOISearchRequest::set_polylineStr', <String, dynamic>{'__this__': this, "polylineStr": polylineStr});
-  
-  
   }
   
   Future<void> set_polyline(List<AMapGeoPoint> polyline) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRoutePOISearchRequest::set_polyline', <String, dynamic>{'__this__': this, "polyline": polyline});
-  
-  
   }
   
   //endregion

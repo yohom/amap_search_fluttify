@@ -107,68 +107,46 @@ class AMapRailway extends AMapSearchObject with NSCoding, NSCopying {
   //region setters
   Future<void> set_uid(String uid) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRailway::set_uid', <String, dynamic>{'__this__': this, "uid": uid});
-  
-  
   }
   
   Future<void> set_name(String name) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRailway::set_name', <String, dynamic>{'__this__': this, "name": name});
-  
-  
   }
   
   Future<void> set_trip(String trip) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRailway::set_trip', <String, dynamic>{'__this__': this, "trip": trip});
-  
-  
   }
   
   Future<void> set_type(String type) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRailway::set_type', <String, dynamic>{'__this__': this, "type": type});
-  
-  
   }
   
   Future<void> set_distance(int distance) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRailway::set_distance', <String, dynamic>{'__this__': this, "distance": distance});
-  
-  
   }
   
   Future<void> set_time(int time) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRailway::set_time', <String, dynamic>{'__this__': this, "time": time});
-  
-  
   }
   
   Future<void> set_departureStation(AMapRailwayStation departureStation) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRailway::set_departureStation', <String, dynamic>{'__this__': this, "departureStation": departureStation});
-  
-  
   }
   
   Future<void> set_arrivalStation(AMapRailwayStation arrivalStation) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRailway::set_arrivalStation', <String, dynamic>{'__this__': this, "arrivalStation": arrivalStation});
-  
-  
   }
   
   Future<void> set_spaces(List<AMapRailwaySpace> spaces) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRailway::set_spaces', <String, dynamic>{'__this__': this, "spaces": spaces});
-  
-  
   }
   
   Future<void> set_viaStops(List<AMapRailwayStation> viaStops) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRailway::set_viaStops', <String, dynamic>{'__this__': this, "viaStops": viaStops});
-  
-  
   }
   
   Future<void> set_alters(List<AMapRailway> alters) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRailway::set_alters', <String, dynamic>{'__this__': this, "alters": alters});
-  
-  
   }
   
   //endregion

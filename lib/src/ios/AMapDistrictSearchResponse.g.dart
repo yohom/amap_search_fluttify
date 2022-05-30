@@ -62,14 +62,10 @@ class AMapDistrictSearchResponse extends AMapSearchObject with NSCoding, NSCopyi
   //region setters
   Future<void> set_count(int count) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapDistrictSearchResponse::set_count', <String, dynamic>{'__this__': this, "count": count});
-  
-  
   }
   
   Future<void> set_districts(List<AMapDistrict> districts) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapDistrictSearchResponse::set_districts', <String, dynamic>{'__this__': this, "districts": districts});
-  
-  
   }
   
   //endregion

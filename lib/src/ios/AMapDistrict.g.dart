@@ -87,44 +87,30 @@ class AMapDistrict extends AMapSearchObject with NSCoding, NSCopying {
   //region setters
   Future<void> set_adcode(String adcode) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapDistrict::set_adcode', <String, dynamic>{'__this__': this, "adcode": adcode});
-  
-  
   }
   
   Future<void> set_citycode(String citycode) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapDistrict::set_citycode', <String, dynamic>{'__this__': this, "citycode": citycode});
-  
-  
   }
   
   Future<void> set_name(String name) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapDistrict::set_name', <String, dynamic>{'__this__': this, "name": name});
-  
-  
   }
   
   Future<void> set_level(String level) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapDistrict::set_level', <String, dynamic>{'__this__': this, "level": level});
-  
-  
   }
   
   Future<void> set_center(AMapGeoPoint center) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapDistrict::set_center', <String, dynamic>{'__this__': this, "center": center});
-  
-  
   }
   
   Future<void> set_districts(List<AMapDistrict> districts) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapDistrict::set_districts', <String, dynamic>{'__this__': this, "districts": districts});
-  
-  
   }
   
   Future<void> set_polylines(List<String> polylines) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapDistrict::set_polylines', <String, dynamic>{'__this__': this, "polylines": polylines});
-  
-  
   }
   
   //endregion

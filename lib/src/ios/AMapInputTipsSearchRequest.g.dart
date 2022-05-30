@@ -77,32 +77,22 @@ class AMapInputTipsSearchRequest extends AMapSearchObject with NSCoding, NSCopyi
   //region setters
   Future<void> set_keywords(String keywords) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapInputTipsSearchRequest::set_keywords', <String, dynamic>{'__this__': this, "keywords": keywords});
-  
-  
   }
   
   Future<void> set_city(String city) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapInputTipsSearchRequest::set_city', <String, dynamic>{'__this__': this, "city": city});
-  
-  
   }
   
   Future<void> set_types(String types) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapInputTipsSearchRequest::set_types', <String, dynamic>{'__this__': this, "types": types});
-  
-  
   }
   
   Future<void> set_cityLimit(bool cityLimit) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapInputTipsSearchRequest::set_cityLimit', <String, dynamic>{'__this__': this, "cityLimit": cityLimit});
-  
-  
   }
   
   Future<void> set_location(String location) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapInputTipsSearchRequest::set_location', <String, dynamic>{'__this__': this, "location": location});
-  
-  
   }
   
   //endregion

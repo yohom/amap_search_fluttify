@@ -72,26 +72,18 @@ class AMapNaviConfig extends NSObject  {
   //region setters
   Future<void> set_appScheme(String appScheme) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapNaviConfig::set_appScheme', <String, dynamic>{'__this__': this, "appScheme": appScheme});
-  
-  
   }
   
   Future<void> set_appName(String appName) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapNaviConfig::set_appName', <String, dynamic>{'__this__': this, "appName": appName});
-  
-  
   }
   
   Future<void> set_destination(CLLocationCoordinate2D destination) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapNaviConfig::set_destination', <String, dynamic>{'__this__': this, "destination": destination});
-  
-  
   }
   
   Future<void> set_strategy(AMapDrivingStrategy strategy) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapNaviConfig::set_strategy', <String, dynamic>{'__this__': this, "strategy": strategy.toValue()});
-  
-  
   }
   
   //endregion

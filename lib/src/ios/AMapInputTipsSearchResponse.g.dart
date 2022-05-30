@@ -62,14 +62,10 @@ class AMapInputTipsSearchResponse extends AMapSearchObject with NSCoding, NSCopy
   //region setters
   Future<void> set_count(int count) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapInputTipsSearchResponse::set_count', <String, dynamic>{'__this__': this, "count": count});
-  
-  
   }
   
   Future<void> set_tips(List<AMapTip> tips) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapInputTipsSearchResponse::set_tips', <String, dynamic>{'__this__': this, "tips": tips});
-  
-  
   }
   
   //endregion

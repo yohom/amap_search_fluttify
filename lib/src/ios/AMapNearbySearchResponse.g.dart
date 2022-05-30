@@ -62,14 +62,10 @@ class AMapNearbySearchResponse extends AMapSearchObject with NSCoding, NSCopying
   //region setters
   Future<void> set_count(int count) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapNearbySearchResponse::set_count', <String, dynamic>{'__this__': this, "count": count});
-  
-  
   }
   
   Future<void> set_infos(List<AMapNearbyUserInfo> infos) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapNearbySearchResponse::set_infos', <String, dynamic>{'__this__': this, "infos": infos});
-  
-  
   }
   
   //endregion

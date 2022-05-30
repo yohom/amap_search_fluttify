@@ -62,14 +62,10 @@ class AMapImage extends AMapSearchObject with NSCoding, NSCopying {
   //region setters
   Future<void> set_title(String title) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapImage::set_title', <String, dynamic>{'__this__': this, "title": title});
-  
-  
   }
   
   Future<void> set_url(String url) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapImage::set_url', <String, dynamic>{'__this__': this, "url": url});
-  
-  
   }
   
   //endregion

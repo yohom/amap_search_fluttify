@@ -62,14 +62,10 @@ class AMapWeatherSearchResponse extends AMapSearchObject with NSCoding, NSCopyin
   //region setters
   Future<void> set_lives(List<AMapLocalWeatherLive> lives) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapWeatherSearchResponse::set_lives', <String, dynamic>{'__this__': this, "lives": lives});
-  
-  
   }
   
   Future<void> set_forecasts(List<AMapLocalWeatherForecast> forecasts) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapWeatherSearchResponse::set_forecasts', <String, dynamic>{'__this__': this, "forecasts": forecasts});
-  
-  
   }
   
   //endregion

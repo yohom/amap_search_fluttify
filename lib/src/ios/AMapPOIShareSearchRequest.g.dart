@@ -72,26 +72,18 @@ class AMapPOIShareSearchRequest extends AMapShareSearchBaseRequest with NSCoding
   //region setters
   Future<void> set_uid(String uid) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapPOIShareSearchRequest::set_uid', <String, dynamic>{'__this__': this, "uid": uid});
-  
-  
   }
   
   Future<void> set_location(AMapGeoPoint location) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapPOIShareSearchRequest::set_location', <String, dynamic>{'__this__': this, "location": location});
-  
-  
   }
   
   Future<void> set_name(String name) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapPOIShareSearchRequest::set_name', <String, dynamic>{'__this__': this, "name": name});
-  
-  
   }
   
   Future<void> set_address(String address) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapPOIShareSearchRequest::set_address', <String, dynamic>{'__this__': this, "address": address});
-  
-  
   }
   
   //endregion

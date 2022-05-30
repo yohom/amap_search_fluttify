@@ -30,7 +30,7 @@ mixin com_amap_api_services_weather_WeatherSearch_OnWeatherSearchListener on jav
           try {
             final args = methodCall.arguments as Map;
             switch (methodCall.method) {
-              case 'Callback::onWeatherLiveSearched::onWeatherLiveSearched':
+              case 'onWeatherLiveSearched:':
                 // print log
                 if (fluttifyLogEnabled) {
                   debugPrint('fluttify-dart-callback: onWeatherLiveSearched?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
@@ -39,7 +39,7 @@ mixin com_amap_api_services_weather_WeatherSearch_OnWeatherSearchListener on jav
                 // handle the native call
                 onWeatherLiveSearched?.call(AmapSearchFluttifyAndroidAs<com_amap_api_services_weather_LocalWeatherLiveResult>(args['var1']), args['var2']);
                 break;
-              case 'Callback::onWeatherForecastSearched::onWeatherForecastSearched':
+              case 'onWeatherForecastSearched:':
                 // print log
                 if (fluttifyLogEnabled) {
                   debugPrint('fluttify-dart-callback: onWeatherForecastSearched?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');

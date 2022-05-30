@@ -87,44 +87,30 @@ class AMapTip extends AMapSearchObject with NSCoding, NSCopying {
   //region setters
   Future<void> set_uid(String uid) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapTip::set_uid', <String, dynamic>{'__this__': this, "uid": uid});
-  
-  
   }
   
   Future<void> set_name(String name) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapTip::set_name', <String, dynamic>{'__this__': this, "name": name});
-  
-  
   }
   
   Future<void> set_adcode(String adcode) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapTip::set_adcode', <String, dynamic>{'__this__': this, "adcode": adcode});
-  
-  
   }
   
   Future<void> set_district(String district) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapTip::set_district', <String, dynamic>{'__this__': this, "district": district});
-  
-  
   }
   
   Future<void> set_address(String address) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapTip::set_address', <String, dynamic>{'__this__': this, "address": address});
-  
-  
   }
   
   Future<void> set_location(AMapGeoPoint location) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapTip::set_location', <String, dynamic>{'__this__': this, "location": location});
-  
-  
   }
   
   Future<void> set_typecode(String typecode) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapTip::set_typecode', <String, dynamic>{'__this__': this, "typecode": typecode});
-  
-  
   }
   
   //endregion

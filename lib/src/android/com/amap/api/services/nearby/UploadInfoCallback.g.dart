@@ -30,7 +30,7 @@ mixin com_amap_api_services_nearby_UploadInfoCallback on java_lang_Object {
           try {
             final args = methodCall.arguments as Map;
             switch (methodCall.method) {
-              case 'Callback::OnUploadInfoCallback::OnUploadInfoCallback':
+              case 'OnUploadInfoCallback':
                 // print log
                 if (fluttifyLogEnabled) {
                   debugPrint('fluttify-dart-callback: OnUploadInfoCallback?.call([])');

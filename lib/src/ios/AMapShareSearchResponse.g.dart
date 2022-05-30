@@ -57,8 +57,6 @@ class AMapShareSearchResponse extends AMapSearchObject with NSCoding, NSCopying 
   //region setters
   Future<void> set_shareURL(String shareURL) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapShareSearchResponse::set_shareURL', <String, dynamic>{'__this__': this, "shareURL": shareURL});
-  
-  
   }
   
   //endregion

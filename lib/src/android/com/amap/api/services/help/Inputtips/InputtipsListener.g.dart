@@ -30,7 +30,7 @@ mixin com_amap_api_services_help_Inputtips_InputtipsListener on java_lang_Object
           try {
             final args = methodCall.arguments as Map;
             switch (methodCall.method) {
-              case 'Callback::onGetInputtips::onGetInputtips':
+              case 'onGetInputtips:':
                 // print log
                 if (fluttifyLogEnabled) {
                   debugPrint('fluttify-dart-callback: onGetInputtips?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');

@@ -67,20 +67,14 @@ class AMapDistrictSearchRequest extends AMapSearchObject with NSCoding, NSCopyin
   //region setters
   Future<void> set_keywords(String keywords) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapDistrictSearchRequest::set_keywords', <String, dynamic>{'__this__': this, "keywords": keywords});
-  
-  
   }
   
   Future<void> set_requireExtension(bool requireExtension) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapDistrictSearchRequest::set_requireExtension', <String, dynamic>{'__this__': this, "requireExtension": requireExtension});
-  
-  
   }
   
   Future<void> set_showBusinessArea(bool showBusinessArea) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapDistrictSearchRequest::set_showBusinessArea', <String, dynamic>{'__this__': this, "showBusinessArea": showBusinessArea});
-  
-  
   }
   
   //endregion

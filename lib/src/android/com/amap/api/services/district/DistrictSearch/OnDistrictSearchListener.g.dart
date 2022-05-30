@@ -30,7 +30,7 @@ mixin com_amap_api_services_district_DistrictSearch_OnDistrictSearchListener on 
           try {
             final args = methodCall.arguments as Map;
             switch (methodCall.method) {
-              case 'Callback::onDistrictSearched::onDistrictSearched':
+              case 'onDistrictSearched':
                 // print log
                 if (fluttifyLogEnabled) {
                   debugPrint('fluttify-dart-callback: onDistrictSearched?.call([\'var1\':${args['var1']}])');

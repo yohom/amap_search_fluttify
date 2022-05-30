@@ -62,54 +62,10 @@ class AMapNearbySearchManager extends NSObject  {
   //region setters
   Future<void> set_uploadTimeInterval(double uploadTimeInterval) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapNearbySearchManager::set_uploadTimeInterval', <String, dynamic>{'__this__': this, "uploadTimeInterval": uploadTimeInterval});
-  
-  
   }
   
   Future<void> set_delegate(AMapNearbySearchManagerDelegate delegate) async {
-    await kAmapSearchFluttifyChannel.invokeMethod('AMapNearbySearchManager::set_delegate', <String, dynamic>{'__this__': this, });
-  
-    MethodChannel('AMapNearbySearchManagerDelegate::Callback', kAmapSearchFluttifyMethodCodec)
-      .setMethodCallHandler((methodCall) async {
-        try {
-          final args = methodCall.arguments as Map;
-          switch (methodCall.method) {
-            case 'Callback::AMapNearbySearchManagerDelegate::nearbyInfoForUploading':
-              // print log
-              if (fluttifyLogEnabled) {
-                debugPrint('fluttify-dart-callback: nearbyInfoForUploading([\'manager\':${args['manager']}])');
-              }
-          
-              // handle the native call
-              delegate.nearbyInfoForUploading(AmapSearchFluttifyIOSAs<AMapNearbySearchManager>(args['manager']));
-              break;
-            case 'Callback::AMapNearbySearchManagerDelegate::onNearbyInfoUploadedWithError':
-              // print log
-              if (fluttifyLogEnabled) {
-                debugPrint('fluttify-dart-callback: onNearbyInfoUploadedWithError([\'error\':${args['error']}])');
-              }
-          
-              // handle the native call
-              delegate.onNearbyInfoUploadedWithError(AmapSearchFluttifyIOSAs<NSError>(args['error']));
-              break;
-            case 'Callback::AMapNearbySearchManagerDelegate::onUserInfoClearedWithError':
-              // print log
-              if (fluttifyLogEnabled) {
-                debugPrint('fluttify-dart-callback: onUserInfoClearedWithError([\'error\':${args['error']}])');
-              }
-          
-              // handle the native call
-              delegate.onUserInfoClearedWithError(AmapSearchFluttifyIOSAs<NSError>(args['error']));
-              break;
-            default:
-              throw MissingPluginException('方法${methodCall.method}未实现');
-              break;
-          }
-        } catch (e) {
-          debugPrint(e.toString());
-          rethrow;
-        }
-      });
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapNearbySearchManager::set_delegate', <String, dynamic>{'__this__': this, "delegate": delegate});
   }
   
   //endregion

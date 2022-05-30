@@ -57,8 +57,6 @@ class AMapCloudPOIIDSearchRequest extends AMapCloudSearchBaseRequest with NSCodi
   //region setters
   Future<void> set_uid(int uid) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapCloudPOIIDSearchRequest::set_uid', <String, dynamic>{'__this__': this, "uid": uid});
-  
-  
   }
   
   //endregion

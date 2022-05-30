@@ -77,32 +77,22 @@ class AMapRoute extends AMapSearchObject with NSCoding, NSCopying {
   //region setters
   Future<void> set_origin(AMapGeoPoint origin) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRoute::set_origin', <String, dynamic>{'__this__': this, "origin": origin});
-  
-  
   }
   
   Future<void> set_destination(AMapGeoPoint destination) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRoute::set_destination', <String, dynamic>{'__this__': this, "destination": destination});
-  
-  
   }
   
   Future<void> set_taxiCost(double taxiCost) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRoute::set_taxiCost', <String, dynamic>{'__this__': this, "taxiCost": taxiCost});
-  
-  
   }
   
   Future<void> set_paths(List<AMapPath> paths) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRoute::set_paths', <String, dynamic>{'__this__': this, "paths": paths});
-  
-  
   }
   
   Future<void> set_transits(List<AMapTransit> transits) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRoute::set_transits', <String, dynamic>{'__this__': this, "transits": transits});
-  
-  
   }
   
   //endregion

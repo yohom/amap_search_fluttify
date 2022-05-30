@@ -72,26 +72,18 @@ class AMapBusLineBaseSearchRequest extends AMapSearchObject with NSCoding, NSCop
   //region setters
   Future<void> set_city(String city) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapBusLineBaseSearchRequest::set_city', <String, dynamic>{'__this__': this, "city": city});
-  
-  
   }
   
   Future<void> set_requireExtension(bool requireExtension) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapBusLineBaseSearchRequest::set_requireExtension', <String, dynamic>{'__this__': this, "requireExtension": requireExtension});
-  
-  
   }
   
   Future<void> set_offset(int offset) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapBusLineBaseSearchRequest::set_offset', <String, dynamic>{'__this__': this, "offset": offset});
-  
-  
   }
   
   Future<void> set_page(int page) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapBusLineBaseSearchRequest::set_page', <String, dynamic>{'__this__': this, "page": page});
-  
-  
   }
   
   //endregion

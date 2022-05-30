@@ -30,7 +30,7 @@ mixin com_amap_api_services_route_RouteSearch_OnRoutePlanSearchListener on java_
           try {
             final args = methodCall.arguments as Map;
             switch (methodCall.method) {
-              case 'Callback::onDriveRoutePlanSearched::onDriveRoutePlanSearched':
+              case 'onDriveRoutePlanSearched:':
                 // print log
                 if (fluttifyLogEnabled) {
                   debugPrint('fluttify-dart-callback: onDriveRoutePlanSearched?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');

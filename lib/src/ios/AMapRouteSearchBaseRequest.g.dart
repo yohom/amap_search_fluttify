@@ -62,14 +62,10 @@ class AMapRouteSearchBaseRequest extends AMapSearchObject with NSCoding, NSCopyi
   //region setters
   Future<void> set_origin(AMapGeoPoint origin) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRouteSearchBaseRequest::set_origin', <String, dynamic>{'__this__': this, "origin": origin});
-  
-  
   }
   
   Future<void> set_destination(AMapGeoPoint destination) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRouteSearchBaseRequest::set_destination', <String, dynamic>{'__this__': this, "destination": destination});
-  
-  
   }
   
   //endregion

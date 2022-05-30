@@ -97,56 +97,38 @@ class AMapCloudPOI extends AMapSearchObject with NSCoding, NSCopying {
   //region setters
   Future<void> set_uid(int uid) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapCloudPOI::set_uid', <String, dynamic>{'__this__': this, "uid": uid});
-  
-  
   }
   
   Future<void> set_name(String name) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapCloudPOI::set_name', <String, dynamic>{'__this__': this, "name": name});
-  
-  
   }
   
   Future<void> set_location(AMapGeoPoint location) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapCloudPOI::set_location', <String, dynamic>{'__this__': this, "location": location});
-  
-  
   }
   
   Future<void> set_address(String address) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapCloudPOI::set_address', <String, dynamic>{'__this__': this, "address": address});
-  
-  
   }
   
   Future<void> set_customFields(Map customFields) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapCloudPOI::set_customFields', <String, dynamic>{'__this__': this, "customFields": customFields});
-  
-  
   }
   
   Future<void> set_createTime(String createTime) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapCloudPOI::set_createTime', <String, dynamic>{'__this__': this, "createTime": createTime});
-  
-  
   }
   
   Future<void> set_updateTime(String updateTime) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapCloudPOI::set_updateTime', <String, dynamic>{'__this__': this, "updateTime": updateTime});
-  
-  
   }
   
   Future<void> set_distance(int distance) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapCloudPOI::set_distance', <String, dynamic>{'__this__': this, "distance": distance});
-  
-  
   }
   
   Future<void> set_images(List<AMapCloudImage> images) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapCloudPOI::set_images', <String, dynamic>{'__this__': this, "images": images});
-  
-  
   }
   
   //endregion

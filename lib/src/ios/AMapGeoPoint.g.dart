@@ -62,14 +62,10 @@ class AMapGeoPoint extends AMapSearchObject with NSCoding, NSCopying {
   //region setters
   Future<void> set_latitude(double latitude) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapGeoPoint::set_latitude', <String, dynamic>{'__this__': this, "latitude": latitude});
-  
-  
   }
   
   Future<void> set_longitude(double longitude) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapGeoPoint::set_longitude', <String, dynamic>{'__this__': this, "longitude": longitude});
-  
-  
   }
   
   //endregion

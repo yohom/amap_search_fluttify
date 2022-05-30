@@ -62,14 +62,10 @@ class AMapSuggestion extends AMapSearchObject with NSCoding, NSCopying {
   //region setters
   Future<void> set_keywords(List<String> keywords) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapSuggestion::set_keywords', <String, dynamic>{'__this__': this, "keywords": keywords});
-  
-  
   }
   
   Future<void> set_cities(List<AMapCity> cities) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapSuggestion::set_cities', <String, dynamic>{'__this__': this, "cities": cities});
-  
-  
   }
   
   //endregion

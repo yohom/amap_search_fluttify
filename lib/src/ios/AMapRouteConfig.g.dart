@@ -87,44 +87,30 @@ class AMapRouteConfig extends NSObject  {
   //region setters
   Future<void> set_appScheme(String appScheme) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRouteConfig::set_appScheme', <String, dynamic>{'__this__': this, "appScheme": appScheme});
-  
-  
   }
   
   Future<void> set_appName(String appName) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRouteConfig::set_appName', <String, dynamic>{'__this__': this, "appName": appName});
-  
-  
   }
   
   Future<void> set_startCoordinate(CLLocationCoordinate2D startCoordinate) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRouteConfig::set_startCoordinate', <String, dynamic>{'__this__': this, "startCoordinate": startCoordinate});
-  
-  
   }
   
   Future<void> set_destinationCoordinate(CLLocationCoordinate2D destinationCoordinate) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRouteConfig::set_destinationCoordinate', <String, dynamic>{'__this__': this, "destinationCoordinate": destinationCoordinate});
-  
-  
   }
   
   Future<void> set_drivingStrategy(AMapDrivingStrategy drivingStrategy) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRouteConfig::set_drivingStrategy', <String, dynamic>{'__this__': this, "drivingStrategy": drivingStrategy.toValue()});
-  
-  
   }
   
   Future<void> set_transitStrategy(AMapTransitStrategy transitStrategy) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRouteConfig::set_transitStrategy', <String, dynamic>{'__this__': this, "transitStrategy": transitStrategy.toValue()});
-  
-  
   }
   
   Future<void> set_routeType(AMapRouteSearchType routeType) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRouteConfig::set_routeType', <String, dynamic>{'__this__': this, "routeType": routeType.toValue()});
-  
-  
   }
   
   //endregion

@@ -67,20 +67,14 @@ class AMapTrafficInfo extends AMapSearchObject with NSCoding, NSCopying {
   //region setters
   Future<void> set_statusDescription(String statusDescription) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapTrafficInfo::set_statusDescription', <String, dynamic>{'__this__': this, "statusDescription": statusDescription});
-  
-  
   }
   
   Future<void> set_evaluation(AMapTrafficEvaluation evaluation) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapTrafficInfo::set_evaluation', <String, dynamic>{'__this__': this, "evaluation": evaluation});
-  
-  
   }
   
   Future<void> set_roads(List<AMapTrafficRoad> roads) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapTrafficInfo::set_roads', <String, dynamic>{'__this__': this, "roads": roads});
-  
-  
   }
   
   //endregion

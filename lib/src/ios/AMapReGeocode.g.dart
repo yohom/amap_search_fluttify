@@ -82,38 +82,26 @@ class AMapReGeocode extends AMapSearchObject with NSCoding, NSCopying {
   //region setters
   Future<void> set_formattedAddress(String formattedAddress) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapReGeocode::set_formattedAddress', <String, dynamic>{'__this__': this, "formattedAddress": formattedAddress});
-  
-  
   }
   
   Future<void> set_addressComponent(AMapAddressComponent addressComponent) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapReGeocode::set_addressComponent', <String, dynamic>{'__this__': this, "addressComponent": addressComponent});
-  
-  
   }
   
   Future<void> set_roads(List<AMapRoad> roads) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapReGeocode::set_roads', <String, dynamic>{'__this__': this, "roads": roads});
-  
-  
   }
   
   Future<void> set_roadinters(List<AMapRoadInter> roadinters) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapReGeocode::set_roadinters', <String, dynamic>{'__this__': this, "roadinters": roadinters});
-  
-  
   }
   
   Future<void> set_pois(List<AMapPOI> pois) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapReGeocode::set_pois', <String, dynamic>{'__this__': this, "pois": pois});
-  
-  
   }
   
   Future<void> set_aois(List<AMapAOI> aois) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapReGeocode::set_aois', <String, dynamic>{'__this__': this, "aois": aois});
-  
-  
   }
   
   //endregion

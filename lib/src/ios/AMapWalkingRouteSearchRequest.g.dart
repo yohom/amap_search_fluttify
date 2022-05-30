@@ -57,8 +57,6 @@ class AMapWalkingRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCo
   //region setters
   Future<void> set_multipath(int multipath) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapWalkingRouteSearchRequest::set_multipath', <String, dynamic>{'__this__': this, "multipath": multipath});
-  
-  
   }
   
   //endregion

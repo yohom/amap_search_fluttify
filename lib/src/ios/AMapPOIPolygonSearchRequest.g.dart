@@ -62,14 +62,10 @@ class AMapPOIPolygonSearchRequest extends AMapPOISearchBaseRequest with NSCoding
   //region setters
   Future<void> set_keywords(String keywords) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapPOIPolygonSearchRequest::set_keywords', <String, dynamic>{'__this__': this, "keywords": keywords});
-  
-  
   }
   
   Future<void> set_polygon(AMapGeoPolygon polygon) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapPOIPolygonSearchRequest::set_polygon', <String, dynamic>{'__this__': this, "polygon": polygon});
-  
-  
   }
   
   //endregion

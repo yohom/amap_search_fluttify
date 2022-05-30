@@ -30,7 +30,7 @@ mixin com_amap_api_services_route_RouteSearch_OnRouteSearchListener on java_lang
           try {
             final args = methodCall.arguments as Map;
             switch (methodCall.method) {
-              case 'Callback::onBusRouteSearched::onBusRouteSearched':
+              case 'onBusRouteSearched:':
                 // print log
                 if (fluttifyLogEnabled) {
                   debugPrint('fluttify-dart-callback: onBusRouteSearched?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
@@ -39,7 +39,7 @@ mixin com_amap_api_services_route_RouteSearch_OnRouteSearchListener on java_lang
                 // handle the native call
                 onBusRouteSearched?.call(AmapSearchFluttifyAndroidAs<com_amap_api_services_route_BusRouteResult>(args['var1']), args['var2']);
                 break;
-              case 'Callback::onDriveRouteSearched::onDriveRouteSearched':
+              case 'onDriveRouteSearched:':
                 // print log
                 if (fluttifyLogEnabled) {
                   debugPrint('fluttify-dart-callback: onDriveRouteSearched?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
@@ -48,7 +48,7 @@ mixin com_amap_api_services_route_RouteSearch_OnRouteSearchListener on java_lang
                 // handle the native call
                 onDriveRouteSearched?.call(AmapSearchFluttifyAndroidAs<com_amap_api_services_route_DriveRouteResult>(args['var1']), args['var2']);
                 break;
-              case 'Callback::onWalkRouteSearched::onWalkRouteSearched':
+              case 'onWalkRouteSearched:':
                 // print log
                 if (fluttifyLogEnabled) {
                   debugPrint('fluttify-dart-callback: onWalkRouteSearched?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
@@ -57,7 +57,7 @@ mixin com_amap_api_services_route_RouteSearch_OnRouteSearchListener on java_lang
                 // handle the native call
                 onWalkRouteSearched?.call(AmapSearchFluttifyAndroidAs<com_amap_api_services_route_WalkRouteResult>(args['var1']), args['var2']);
                 break;
-              case 'Callback::onRideRouteSearched::onRideRouteSearched':
+              case 'onRideRouteSearched:':
                 // print log
                 if (fluttifyLogEnabled) {
                   debugPrint('fluttify-dart-callback: onRideRouteSearched?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');

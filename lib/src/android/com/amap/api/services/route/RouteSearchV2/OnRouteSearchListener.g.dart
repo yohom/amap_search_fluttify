@@ -30,7 +30,7 @@ mixin com_amap_api_services_route_RouteSearchV2_OnRouteSearchListener on java_la
           try {
             final args = methodCall.arguments as Map;
             switch (methodCall.method) {
-              case 'Callback::onDriveRouteSearched::onDriveRouteSearched':
+              case 'onDriveRouteSearched:':
                 // print log
                 if (fluttifyLogEnabled) {
                   debugPrint('fluttify-dart-callback: onDriveRouteSearched?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');

@@ -117,80 +117,54 @@ class AMapGeocode extends AMapSearchObject with NSCoding, NSCopying {
   //region setters
   Future<void> set_formattedAddress(String formattedAddress) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapGeocode::set_formattedAddress', <String, dynamic>{'__this__': this, "formattedAddress": formattedAddress});
-  
-  
   }
   
   Future<void> set_province(String province) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapGeocode::set_province', <String, dynamic>{'__this__': this, "province": province});
-  
-  
   }
   
   Future<void> set_city(String city) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapGeocode::set_city', <String, dynamic>{'__this__': this, "city": city});
-  
-  
   }
   
   Future<void> set_citycode(String citycode) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapGeocode::set_citycode', <String, dynamic>{'__this__': this, "citycode": citycode});
-  
-  
   }
   
   Future<void> set_district(String district) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapGeocode::set_district', <String, dynamic>{'__this__': this, "district": district});
-  
-  
   }
   
   Future<void> set_adcode(String adcode) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapGeocode::set_adcode', <String, dynamic>{'__this__': this, "adcode": adcode});
-  
-  
   }
   
   Future<void> set_township(String township) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapGeocode::set_township', <String, dynamic>{'__this__': this, "township": township});
-  
-  
   }
   
   Future<void> set_neighborhood(String neighborhood) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapGeocode::set_neighborhood', <String, dynamic>{'__this__': this, "neighborhood": neighborhood});
-  
-  
   }
   
   Future<void> set_building(String building) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapGeocode::set_building', <String, dynamic>{'__this__': this, "building": building});
-  
-  
   }
   
   Future<void> set_location(AMapGeoPoint location) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapGeocode::set_location', <String, dynamic>{'__this__': this, "location": location});
-  
-  
   }
   
   Future<void> set_level(String level) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapGeocode::set_level', <String, dynamic>{'__this__': this, "level": level});
-  
-  
   }
   
   Future<void> set_country(String country) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapGeocode::set_country', <String, dynamic>{'__this__': this, "country": country});
-  
-  
   }
   
   Future<void> set_postcode(String postcode) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapGeocode::set_postcode', <String, dynamic>{'__this__': this, "postcode": postcode});
-  
-  
   }
   
   //endregion

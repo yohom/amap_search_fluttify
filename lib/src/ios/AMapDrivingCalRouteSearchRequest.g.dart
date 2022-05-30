@@ -112,74 +112,50 @@ class AMapDrivingCalRouteSearchRequest extends AMapRouteSearchBaseRequest with N
   //region setters
   Future<void> set_strategy(int strategy) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapDrivingCalRouteSearchRequest::set_strategy', <String, dynamic>{'__this__': this, "strategy": strategy});
-  
-  
   }
   
   Future<void> set_waypoints(List<AMapGeoPoint> waypoints) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapDrivingCalRouteSearchRequest::set_waypoints', <String, dynamic>{'__this__': this, "waypoints": waypoints});
-  
-  
   }
   
   Future<void> set_avoidpolygons(List<AMapGeoPolygon> avoidpolygons) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapDrivingCalRouteSearchRequest::set_avoidpolygons', <String, dynamic>{'__this__': this, "avoidpolygons": avoidpolygons});
-  
-  
   }
   
   Future<void> set_avoidroad(String avoidroad) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapDrivingCalRouteSearchRequest::set_avoidroad', <String, dynamic>{'__this__': this, "avoidroad": avoidroad});
-  
-  
   }
   
   Future<void> set_originId(String originId) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapDrivingCalRouteSearchRequest::set_originId', <String, dynamic>{'__this__': this, "originId": originId});
-  
-  
   }
   
   Future<void> set_destinationId(String destinationId) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapDrivingCalRouteSearchRequest::set_destinationId', <String, dynamic>{'__this__': this, "destinationId": destinationId});
-  
-  
   }
   
   Future<void> set_origintype(String origintype) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapDrivingCalRouteSearchRequest::set_origintype', <String, dynamic>{'__this__': this, "origintype": origintype});
-  
-  
   }
   
   Future<void> set_destinationtype(String destinationtype) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapDrivingCalRouteSearchRequest::set_destinationtype', <String, dynamic>{'__this__': this, "destinationtype": destinationtype});
-  
-  
   }
   
   Future<void> set_plate(String plate) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapDrivingCalRouteSearchRequest::set_plate', <String, dynamic>{'__this__': this, "plate": plate});
-  
-  
   }
   
   Future<void> set_ferry(int ferry) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapDrivingCalRouteSearchRequest::set_ferry', <String, dynamic>{'__this__': this, "ferry": ferry});
-  
-  
   }
   
   Future<void> set_cartype(int cartype) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapDrivingCalRouteSearchRequest::set_cartype', <String, dynamic>{'__this__': this, "cartype": cartype});
-  
-  
   }
   
   Future<void> set_showFieldType(AMapDrivingRouteShowFieldType showFieldType) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapDrivingCalRouteSearchRequest::set_showFieldType', <String, dynamic>{'__this__': this, "showFieldType": showFieldType.toValue()});
-  
-  
   }
   
   //endregion

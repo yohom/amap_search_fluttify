@@ -92,50 +92,34 @@ class AMapSegment extends AMapSearchObject with NSCoding, NSCopying {
   //region setters
   Future<void> set_walking(AMapWalking walking) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapSegment::set_walking', <String, dynamic>{'__this__': this, "walking": walking});
-  
-  
   }
   
   Future<void> set_buslines(List<AMapBusLine> buslines) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapSegment::set_buslines', <String, dynamic>{'__this__': this, "buslines": buslines});
-  
-  
   }
   
   Future<void> set_taxi(AMapTaxi taxi) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapSegment::set_taxi', <String, dynamic>{'__this__': this, "taxi": taxi});
-  
-  
   }
   
   Future<void> set_railway(AMapRailway railway) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapSegment::set_railway', <String, dynamic>{'__this__': this, "railway": railway});
-  
-  
   }
   
   Future<void> set_enterName(String enterName) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapSegment::set_enterName', <String, dynamic>{'__this__': this, "enterName": enterName});
-  
-  
   }
   
   Future<void> set_enterLocation(AMapGeoPoint enterLocation) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapSegment::set_enterLocation', <String, dynamic>{'__this__': this, "enterLocation": enterLocation});
-  
-  
   }
   
   Future<void> set_exitName(String exitName) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapSegment::set_exitName', <String, dynamic>{'__this__': this, "exitName": exitName});
-  
-  
   }
   
   Future<void> set_exitLocation(AMapGeoPoint exitLocation) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapSegment::set_exitLocation', <String, dynamic>{'__this__': this, "exitLocation": exitLocation});
-  
-  
   }
   
   //endregion

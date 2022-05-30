@@ -92,50 +92,34 @@ class AMapRailwayStation extends AMapSearchObject with NSCoding, NSCopying {
   //region setters
   Future<void> set_uid(String uid) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRailwayStation::set_uid', <String, dynamic>{'__this__': this, "uid": uid});
-  
-  
   }
   
   Future<void> set_name(String name) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRailwayStation::set_name', <String, dynamic>{'__this__': this, "name": name});
-  
-  
   }
   
   Future<void> set_location(AMapGeoPoint location) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRailwayStation::set_location', <String, dynamic>{'__this__': this, "location": location});
-  
-  
   }
   
   Future<void> set_adcode(String adcode) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRailwayStation::set_adcode', <String, dynamic>{'__this__': this, "adcode": adcode});
-  
-  
   }
   
   Future<void> set_time(String time) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRailwayStation::set_time', <String, dynamic>{'__this__': this, "time": time});
-  
-  
   }
   
   Future<void> set_wait(int wait) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRailwayStation::set_wait', <String, dynamic>{'__this__': this, "wait": wait});
-  
-  
   }
   
   Future<void> set_isStart(bool isStart) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRailwayStation::set_isStart', <String, dynamic>{'__this__': this, "isStart": isStart});
-  
-  
   }
   
   Future<void> set_isEnd(bool isEnd) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRailwayStation::set_isEnd', <String, dynamic>{'__this__': this, "isEnd": isEnd});
-  
-  
   }
   
   //endregion

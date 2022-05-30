@@ -72,26 +72,18 @@ class AMapFutureTimeInfoElement extends AMapSearchObject with NSCoding, NSCopyin
   //region setters
   Future<void> set_duration(int duration) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapFutureTimeInfoElement::set_duration', <String, dynamic>{'__this__': this, "duration": duration});
-  
-  
   }
   
   Future<void> set_pathindex(int pathindex) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapFutureTimeInfoElement::set_pathindex', <String, dynamic>{'__this__': this, "pathindex": pathindex});
-  
-  
   }
   
   Future<void> set_restriction(int restriction) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapFutureTimeInfoElement::set_restriction', <String, dynamic>{'__this__': this, "restriction": restriction});
-  
-  
   }
   
   Future<void> set_tmcs(List<AMapTMC> tmcs) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapFutureTimeInfoElement::set_tmcs', <String, dynamic>{'__this__': this, "tmcs": tmcs});
-  
-  
   }
   
   //endregion

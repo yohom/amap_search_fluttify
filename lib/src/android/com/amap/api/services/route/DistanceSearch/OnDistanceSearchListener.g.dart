@@ -30,7 +30,7 @@ mixin com_amap_api_services_route_DistanceSearch_OnDistanceSearchListener on jav
           try {
             final args = methodCall.arguments as Map;
             switch (methodCall.method) {
-              case 'Callback::onDistanceSearched::onDistanceSearched':
+              case 'onDistanceSearched:':
                 // print log
                 if (fluttifyLogEnabled) {
                   debugPrint('fluttify-dart-callback: onDistanceSearched?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');

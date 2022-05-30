@@ -57,8 +57,6 @@ class AMapGeoPolygon extends AMapSearchObject with NSCoding, NSCopying {
   //region setters
   Future<void> set_points(List<AMapGeoPoint> points) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapGeoPolygon::set_points', <String, dynamic>{'__this__': this, "points": points});
-  
-  
   }
   
   //endregion

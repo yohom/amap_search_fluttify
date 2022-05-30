@@ -87,44 +87,30 @@ class AMapSubPOI extends AMapSearchObject with NSCoding, NSCopying {
   //region setters
   Future<void> set_uid(String uid) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapSubPOI::set_uid', <String, dynamic>{'__this__': this, "uid": uid});
-  
-  
   }
   
   Future<void> set_name(String name) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapSubPOI::set_name', <String, dynamic>{'__this__': this, "name": name});
-  
-  
   }
   
   Future<void> set_sname(String sname) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapSubPOI::set_sname', <String, dynamic>{'__this__': this, "sname": sname});
-  
-  
   }
   
   Future<void> set_location(AMapGeoPoint location) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapSubPOI::set_location', <String, dynamic>{'__this__': this, "location": location});
-  
-  
   }
   
   Future<void> set_address(String address) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapSubPOI::set_address', <String, dynamic>{'__this__': this, "address": address});
-  
-  
   }
   
   Future<void> set_distance(int distance) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapSubPOI::set_distance', <String, dynamic>{'__this__': this, "distance": distance});
-  
-  
   }
   
   Future<void> set_subtype(String subtype) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapSubPOI::set_subtype', <String, dynamic>{'__this__': this, "subtype": subtype});
-  
-  
   }
   
   //endregion

@@ -77,32 +77,22 @@ class AMapLocalWeatherForecast extends AMapSearchObject with NSCoding, NSCopying
   //region setters
   Future<void> set_adcode(String adcode) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapLocalWeatherForecast::set_adcode', <String, dynamic>{'__this__': this, "adcode": adcode});
-  
-  
   }
   
   Future<void> set_province(String province) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapLocalWeatherForecast::set_province', <String, dynamic>{'__this__': this, "province": province});
-  
-  
   }
   
   Future<void> set_city(String city) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapLocalWeatherForecast::set_city', <String, dynamic>{'__this__': this, "city": city});
-  
-  
   }
   
   Future<void> set_reportTime(String reportTime) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapLocalWeatherForecast::set_reportTime', <String, dynamic>{'__this__': this, "reportTime": reportTime});
-  
-  
   }
   
   Future<void> set_casts(List<AMapLocalDayWeatherForecast> casts) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapLocalWeatherForecast::set_casts', <String, dynamic>{'__this__': this, "casts": casts});
-  
-  
   }
   
   //endregion

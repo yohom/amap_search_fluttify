@@ -152,122 +152,82 @@ class AMapBusLine extends AMapSearchObject with NSCoding, NSCopying {
   //region setters
   Future<void> set_uid(String uid) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapBusLine::set_uid', <String, dynamic>{'__this__': this, "uid": uid});
-  
-  
   }
   
   Future<void> set_type(String type) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapBusLine::set_type', <String, dynamic>{'__this__': this, "type": type});
-  
-  
   }
   
   Future<void> set_name(String name) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapBusLine::set_name', <String, dynamic>{'__this__': this, "name": name});
-  
-  
   }
   
   Future<void> set_polyline(String polyline) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapBusLine::set_polyline', <String, dynamic>{'__this__': this, "polyline": polyline});
-  
-  
   }
   
   Future<void> set_citycode(String citycode) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapBusLine::set_citycode', <String, dynamic>{'__this__': this, "citycode": citycode});
-  
-  
   }
   
   Future<void> set_startStop(String startStop) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapBusLine::set_startStop', <String, dynamic>{'__this__': this, "startStop": startStop});
-  
-  
   }
   
   Future<void> set_endStop(String endStop) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapBusLine::set_endStop', <String, dynamic>{'__this__': this, "endStop": endStop});
-  
-  
   }
   
   Future<void> set_location(AMapGeoPoint location) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapBusLine::set_location', <String, dynamic>{'__this__': this, "location": location});
-  
-  
   }
   
   Future<void> set_startTime(String startTime) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapBusLine::set_startTime', <String, dynamic>{'__this__': this, "startTime": startTime});
-  
-  
   }
   
   Future<void> set_endTime(String endTime) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapBusLine::set_endTime', <String, dynamic>{'__this__': this, "endTime": endTime});
-  
-  
   }
   
   Future<void> set_company(String company) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapBusLine::set_company', <String, dynamic>{'__this__': this, "company": company});
-  
-  
   }
   
   Future<void> set_distance(double distance) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapBusLine::set_distance', <String, dynamic>{'__this__': this, "distance": distance});
-  
-  
   }
   
   Future<void> set_basicPrice(double basicPrice) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapBusLine::set_basicPrice', <String, dynamic>{'__this__': this, "basicPrice": basicPrice});
-  
-  
   }
   
   Future<void> set_totalPrice(double totalPrice) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapBusLine::set_totalPrice', <String, dynamic>{'__this__': this, "totalPrice": totalPrice});
-  
-  
   }
   
   Future<void> set_bounds(AMapGeoPolygon bounds) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapBusLine::set_bounds', <String, dynamic>{'__this__': this, "bounds": bounds});
-  
-  
   }
   
   Future<void> set_busStops(List<AMapBusStop> busStops) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapBusLine::set_busStops', <String, dynamic>{'__this__': this, "busStops": busStops});
-  
-  
   }
   
   Future<void> set_departureStop(AMapBusStop departureStop) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapBusLine::set_departureStop', <String, dynamic>{'__this__': this, "departureStop": departureStop});
-  
-  
   }
   
   Future<void> set_arrivalStop(AMapBusStop arrivalStop) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapBusLine::set_arrivalStop', <String, dynamic>{'__this__': this, "arrivalStop": arrivalStop});
-  
-  
   }
   
   Future<void> set_viaBusStops(List<AMapBusStop> viaBusStops) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapBusLine::set_viaBusStops', <String, dynamic>{'__this__': this, "viaBusStops": viaBusStops});
-  
-  
   }
   
   Future<void> set_duration(int duration) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapBusLine::set_duration', <String, dynamic>{'__this__': this, "duration": duration});
-  
-  
   }
   
   //endregion

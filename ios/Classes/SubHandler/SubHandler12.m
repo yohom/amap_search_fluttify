@@ -5,6 +5,8 @@
 #import "SubHandler12.h"
 #import "FluttifyMessageCodec.h"
 #import <AMapSearchKit/AMapSearchKit.h>
+#import "AMapNearbySearchManagerDelegate_Anonymous.h"
+#import "AMapSearchDelegate_Anonymous.h"
 
 // Dart端一次方法调用所存在的栈, 只有当MethodChannel传递参数受限时, 再启用这个容器
 extern NSMutableDictionary<NSString*, NSObject*>* STACK;
@@ -1357,6 +1359,14 @@ extern BOOL enableLog;
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
         
+        @"AMapNearbySearchManagerDelegate::createAnonymous__": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            id<AMapNearbySearchManagerDelegate> __result__ = [[AMapNearbySearchManagerDelegate_Anonymous alloc] initWithFlutterPluginRegistrar:registrar];
+            methodResult(__result__);
+        },
+        @"AMapSearchDelegate::createAnonymous__": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            id<AMapSearchDelegate> __result__ = [[AMapSearchDelegate_Anonymous alloc] initWithFlutterPluginRegistrar:registrar];
+            methodResult(__result__);
+        },
         @"AMapEmptyStringIfNil::AMapEmptyStringIfNil": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             if (enableLog) {
                 NSLog(@"fluttify-objc: AMapEmptyStringIfNil::AMapEmptyStringIfNil(%@)", args);

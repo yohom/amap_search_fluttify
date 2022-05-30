@@ -82,38 +82,26 @@ class AMapTaxi extends AMapSearchObject with NSCoding, NSCopying {
   //region setters
   Future<void> set_origin(AMapGeoPoint origin) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapTaxi::set_origin', <String, dynamic>{'__this__': this, "origin": origin});
-  
-  
   }
   
   Future<void> set_destination(AMapGeoPoint destination) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapTaxi::set_destination', <String, dynamic>{'__this__': this, "destination": destination});
-  
-  
   }
   
   Future<void> set_distance(int distance) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapTaxi::set_distance', <String, dynamic>{'__this__': this, "distance": distance});
-  
-  
   }
   
   Future<void> set_duration(int duration) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapTaxi::set_duration', <String, dynamic>{'__this__': this, "duration": duration});
-  
-  
   }
   
   Future<void> set_sname(String sname) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapTaxi::set_sname', <String, dynamic>{'__this__': this, "sname": sname});
-  
-  
   }
   
   Future<void> set_tname(String tname) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapTaxi::set_tname', <String, dynamic>{'__this__': this, "tname": tname});
-  
-  
   }
   
   //endregion

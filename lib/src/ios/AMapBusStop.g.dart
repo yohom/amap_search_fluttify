@@ -87,44 +87,30 @@ class AMapBusStop extends AMapSearchObject with NSCoding, NSCopying {
   //region setters
   Future<void> set_uid(String uid) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapBusStop::set_uid', <String, dynamic>{'__this__': this, "uid": uid});
-  
-  
   }
   
   Future<void> set_adcode(String adcode) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapBusStop::set_adcode', <String, dynamic>{'__this__': this, "adcode": adcode});
-  
-  
   }
   
   Future<void> set_name(String name) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapBusStop::set_name', <String, dynamic>{'__this__': this, "name": name});
-  
-  
   }
   
   Future<void> set_citycode(String citycode) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapBusStop::set_citycode', <String, dynamic>{'__this__': this, "citycode": citycode});
-  
-  
   }
   
   Future<void> set_location(AMapGeoPoint location) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapBusStop::set_location', <String, dynamic>{'__this__': this, "location": location});
-  
-  
   }
   
   Future<void> set_buslines(List<AMapBusLine> buslines) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapBusStop::set_buslines', <String, dynamic>{'__this__': this, "buslines": buslines});
-  
-  
   }
   
   Future<void> set_sequence(String sequence) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapBusStop::set_sequence', <String, dynamic>{'__this__': this, "sequence": sequence});
-  
-  
   }
   
   //endregion

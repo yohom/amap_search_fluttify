@@ -62,14 +62,10 @@ class AMapFutureRouteSearchResponse extends AMapSearchObject with NSCoding, NSCo
   //region setters
   Future<void> set_paths(List<AMapPath> paths) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapFutureRouteSearchResponse::set_paths', <String, dynamic>{'__this__': this, "paths": paths});
-  
-  
   }
   
   Future<void> set_timeInfos(List<AMapFutureTimeInfo> timeInfos) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapFutureRouteSearchResponse::set_timeInfos', <String, dynamic>{'__this__': this, "timeInfos": timeInfos});
-  
-  
   }
   
   //endregion

@@ -82,38 +82,26 @@ class AMapDistanceResult extends AMapSearchObject with NSCoding, NSCopying {
   //region setters
   Future<void> set_originID(int originID) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapDistanceResult::set_originID', <String, dynamic>{'__this__': this, "originID": originID});
-  
-  
   }
   
   Future<void> set_destID(int destID) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapDistanceResult::set_destID', <String, dynamic>{'__this__': this, "destID": destID});
-  
-  
   }
   
   Future<void> set_distance(int distance) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapDistanceResult::set_distance', <String, dynamic>{'__this__': this, "distance": distance});
-  
-  
   }
   
   Future<void> set_duration(int duration) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapDistanceResult::set_duration', <String, dynamic>{'__this__': this, "duration": duration});
-  
-  
   }
   
   Future<void> set_info(String info) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapDistanceResult::set_info', <String, dynamic>{'__this__': this, "info": info});
-  
-  
   }
   
   Future<void> set_code(int code) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapDistanceResult::set_code', <String, dynamic>{'__this__': this, "code": code});
-  
-  
   }
   
   //endregion

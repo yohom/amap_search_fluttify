@@ -77,32 +77,22 @@ class AMapPOIAroundSearchRequest extends AMapPOISearchBaseRequest with NSCoding,
   //region setters
   Future<void> set_keywords(String keywords) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapPOIAroundSearchRequest::set_keywords', <String, dynamic>{'__this__': this, "keywords": keywords});
-  
-  
   }
   
   Future<void> set_location(AMapGeoPoint location) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapPOIAroundSearchRequest::set_location', <String, dynamic>{'__this__': this, "location": location});
-  
-  
   }
   
   Future<void> set_radius(int radius) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapPOIAroundSearchRequest::set_radius', <String, dynamic>{'__this__': this, "radius": radius});
-  
-  
   }
   
   Future<void> set_city(String city) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapPOIAroundSearchRequest::set_city', <String, dynamic>{'__this__': this, "city": city});
-  
-  
   }
   
   Future<void> set_special(bool special) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapPOIAroundSearchRequest::set_special', <String, dynamic>{'__this__': this, "special": special});
-  
-  
   }
   
   //endregion

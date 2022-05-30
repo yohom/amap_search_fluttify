@@ -67,20 +67,14 @@ class AMapTMC extends AMapSearchObject with NSCoding, NSCopying {
   //region setters
   Future<void> set_distance(int distance) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapTMC::set_distance', <String, dynamic>{'__this__': this, "distance": distance});
-  
-  
   }
   
   Future<void> set_status(String status) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapTMC::set_status', <String, dynamic>{'__this__': this, "status": status});
-  
-  
   }
   
   Future<void> set_polyline(String polyline) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapTMC::set_polyline', <String, dynamic>{'__this__': this, "polyline": polyline});
-  
-  
   }
   
   //endregion

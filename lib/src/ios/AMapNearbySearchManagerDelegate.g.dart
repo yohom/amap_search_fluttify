@@ -19,6 +19,56 @@ mixin AMapNearbySearchManagerDelegate on NSObject {
 
   static AMapNearbySearchManagerDelegate subInstance() => _AMapNearbySearchManagerDelegate_SUB();
 
+  static Future<AMapNearbySearchManagerDelegate> anonymous__({AMapNearbyUploadInfo Function(AMapNearbySearchManager? manager)? nearbyInfoForUploading, void Function(NSError? error)? onNearbyInfoUploadedWithError, void Function(NSError? error)? onUserInfoClearedWithError}) async {
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('AMapNearbySearchManagerDelegate::createAnonymous__');
+  
+    final __object__ = AmapSearchFluttifyIOSAs<AMapNearbySearchManagerDelegate>(__result__)!;
+  
+    // handle callback
+    MethodChannel('AMapNearbySearchManagerDelegate::Callback@${__object__.refId}', kAmapSearchFluttifyMethodCodec)
+        .setMethodCallHandler((methodCall) async {
+          try {
+            final args = methodCall.arguments as Map;
+            switch (methodCall.method) {
+              case 'nearbyInfoForUploading':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: nearbyInfoForUploading?.call([\'manager\':${args['manager']}])');
+                }
+            
+                // handle the native call
+                nearbyInfoForUploading?.call(AmapSearchFluttifyIOSAs<AMapNearbySearchManager>(args['manager']));
+                break;
+              case 'onNearbyInfoUploadedWithError':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onNearbyInfoUploadedWithError?.call([\'error\':${args['error']}])');
+                }
+            
+                // handle the native call
+                onNearbyInfoUploadedWithError?.call(AmapSearchFluttifyIOSAs<NSError>(args['error']));
+                break;
+              case 'onUserInfoClearedWithError':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onUserInfoClearedWithError?.call([\'error\':${args['error']}])');
+                }
+            
+                // handle the native call
+                onUserInfoClearedWithError?.call(AmapSearchFluttifyIOSAs<NSError>(args['error']));
+                break;
+              default:
+                throw MissingPluginException('方法${methodCall.method}未实现');
+                break;
+            }
+          } catch (e) {
+            debugPrint(e.toString());
+            rethrow;
+          }
+        });
+  
+    return __object__;
+  }
   
 
   @override

@@ -77,32 +77,22 @@ class AMapStreetNumber extends AMapSearchObject with NSCoding, NSCopying {
   //region setters
   Future<void> set_street(String street) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapStreetNumber::set_street', <String, dynamic>{'__this__': this, "street": street});
-  
-  
   }
   
   Future<void> set_number(String number) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapStreetNumber::set_number', <String, dynamic>{'__this__': this, "number": number});
-  
-  
   }
   
   Future<void> set_location(AMapGeoPoint location) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapStreetNumber::set_location', <String, dynamic>{'__this__': this, "location": location});
-  
-  
   }
   
   Future<void> set_distance(int distance) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapStreetNumber::set_distance', <String, dynamic>{'__this__': this, "distance": distance});
-  
-  
   }
   
   Future<void> set_direction(String direction) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapStreetNumber::set_direction', <String, dynamic>{'__this__': this, "direction": direction});
-  
-  
   }
   
   //endregion

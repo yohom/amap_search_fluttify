@@ -62,14 +62,10 @@ class AMapRouteSearchResponse extends AMapSearchObject with NSCoding, NSCopying 
   //region setters
   Future<void> set_count(int count) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRouteSearchResponse::set_count', <String, dynamic>{'__this__': this, "count": count});
-  
-  
   }
   
   Future<void> set_route(AMapRoute route) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRouteSearchResponse::set_route', <String, dynamic>{'__this__': this, "route": route});
-  
-  
   }
   
   //endregion

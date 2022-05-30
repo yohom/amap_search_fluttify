@@ -77,32 +77,22 @@ class AMapTransitRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCo
   //region setters
   Future<void> set_strategy(int strategy) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapTransitRouteSearchRequest::set_strategy', <String, dynamic>{'__this__': this, "strategy": strategy});
-  
-  
   }
   
   Future<void> set_city(String city) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapTransitRouteSearchRequest::set_city', <String, dynamic>{'__this__': this, "city": city});
-  
-  
   }
   
   Future<void> set_destinationCity(String destinationCity) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapTransitRouteSearchRequest::set_destinationCity', <String, dynamic>{'__this__': this, "destinationCity": destinationCity});
-  
-  
   }
   
   Future<void> set_nightflag(bool nightflag) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapTransitRouteSearchRequest::set_nightflag', <String, dynamic>{'__this__': this, "nightflag": nightflag});
-  
-  
   }
   
   Future<void> set_requireExtension(bool requireExtension) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapTransitRouteSearchRequest::set_requireExtension', <String, dynamic>{'__this__': this, "requireExtension": requireExtension});
-  
-  
   }
   
   //endregion

@@ -62,14 +62,10 @@ class AMapRidingRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCod
   //region setters
   Future<void> set_type(int type) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRidingRouteSearchRequest::set_type', <String, dynamic>{'__this__': this, "type": type});
-  
-  
   }
   
   Future<void> set_requireExtension(bool requireExtension) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRidingRouteSearchRequest::set_requireExtension', <String, dynamic>{'__this__': this, "requireExtension": requireExtension});
-  
-  
   }
   
   //endregion

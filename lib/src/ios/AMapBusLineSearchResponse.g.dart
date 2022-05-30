@@ -67,20 +67,14 @@ class AMapBusLineSearchResponse extends AMapSearchObject with NSCoding, NSCopyin
   //region setters
   Future<void> set_count(int count) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapBusLineSearchResponse::set_count', <String, dynamic>{'__this__': this, "count": count});
-  
-  
   }
   
   Future<void> set_suggestion(AMapSuggestion suggestion) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapBusLineSearchResponse::set_suggestion', <String, dynamic>{'__this__': this, "suggestion": suggestion});
-  
-  
   }
   
   Future<void> set_buslines(List<AMapBusLine> buslines) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapBusLineSearchResponse::set_buslines', <String, dynamic>{'__this__': this, "buslines": buslines});
-  
-  
   }
   
   //endregion

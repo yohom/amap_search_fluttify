@@ -117,80 +117,54 @@ class AMapAddressComponent extends AMapSearchObject with NSCoding, NSCopying {
   //region setters
   Future<void> set_country(String country) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapAddressComponent::set_country', <String, dynamic>{'__this__': this, "country": country});
-  
-  
   }
   
   Future<void> set_countryCode(String countryCode) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapAddressComponent::set_countryCode', <String, dynamic>{'__this__': this, "countryCode": countryCode});
-  
-  
   }
   
   Future<void> set_province(String province) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapAddressComponent::set_province', <String, dynamic>{'__this__': this, "province": province});
-  
-  
   }
   
   Future<void> set_city(String city) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapAddressComponent::set_city', <String, dynamic>{'__this__': this, "city": city});
-  
-  
   }
   
   Future<void> set_citycode(String citycode) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapAddressComponent::set_citycode', <String, dynamic>{'__this__': this, "citycode": citycode});
-  
-  
   }
   
   Future<void> set_district(String district) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapAddressComponent::set_district', <String, dynamic>{'__this__': this, "district": district});
-  
-  
   }
   
   Future<void> set_adcode(String adcode) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapAddressComponent::set_adcode', <String, dynamic>{'__this__': this, "adcode": adcode});
-  
-  
   }
   
   Future<void> set_township(String township) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapAddressComponent::set_township', <String, dynamic>{'__this__': this, "township": township});
-  
-  
   }
   
   Future<void> set_towncode(String towncode) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapAddressComponent::set_towncode', <String, dynamic>{'__this__': this, "towncode": towncode});
-  
-  
   }
   
   Future<void> set_neighborhood(String neighborhood) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapAddressComponent::set_neighborhood', <String, dynamic>{'__this__': this, "neighborhood": neighborhood});
-  
-  
   }
   
   Future<void> set_building(String building) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapAddressComponent::set_building', <String, dynamic>{'__this__': this, "building": building});
-  
-  
   }
   
   Future<void> set_streetNumber(AMapStreetNumber streetNumber) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapAddressComponent::set_streetNumber', <String, dynamic>{'__this__': this, "streetNumber": streetNumber});
-  
-  
   }
   
   Future<void> set_businessAreas(List<AMapBusinessArea> businessAreas) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapAddressComponent::set_businessAreas', <String, dynamic>{'__this__': this, "businessAreas": businessAreas});
-  
-  
   }
   
   //endregion

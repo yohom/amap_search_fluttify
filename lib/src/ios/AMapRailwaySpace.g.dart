@@ -62,14 +62,10 @@ class AMapRailwaySpace extends AMapSearchObject with NSCoding, NSCopying {
   //region setters
   Future<void> set_code(String code) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRailwaySpace::set_code', <String, dynamic>{'__this__': this, "code": code});
-  
-  
   }
   
   Future<void> set_cost(double cost) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRailwaySpace::set_cost', <String, dynamic>{'__this__': this, "cost": cost});
-  
-  
   }
   
   //endregion

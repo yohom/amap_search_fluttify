@@ -30,7 +30,7 @@ mixin com_amap_api_services_busline_BusLineSearch_OnBusLineSearchListener on jav
           try {
             final args = methodCall.arguments as Map;
             switch (methodCall.method) {
-              case 'Callback::onBusLineSearched::onBusLineSearched':
+              case 'onBusLineSearched:':
                 // print log
                 if (fluttifyLogEnabled) {
                   debugPrint('fluttify-dart-callback: onBusLineSearched?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');

@@ -97,56 +97,38 @@ class AMapLocalWeatherLive extends AMapSearchObject with NSCoding, NSCopying {
   //region setters
   Future<void> set_adcode(String adcode) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapLocalWeatherLive::set_adcode', <String, dynamic>{'__this__': this, "adcode": adcode});
-  
-  
   }
   
   Future<void> set_province(String province) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapLocalWeatherLive::set_province', <String, dynamic>{'__this__': this, "province": province});
-  
-  
   }
   
   Future<void> set_city(String city) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapLocalWeatherLive::set_city', <String, dynamic>{'__this__': this, "city": city});
-  
-  
   }
   
   Future<void> set_weather(String weather) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapLocalWeatherLive::set_weather', <String, dynamic>{'__this__': this, "weather": weather});
-  
-  
   }
   
   Future<void> set_temperature(String temperature) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapLocalWeatherLive::set_temperature', <String, dynamic>{'__this__': this, "temperature": temperature});
-  
-  
   }
   
   Future<void> set_windDirection(String windDirection) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapLocalWeatherLive::set_windDirection', <String, dynamic>{'__this__': this, "windDirection": windDirection});
-  
-  
   }
   
   Future<void> set_windPower(String windPower) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapLocalWeatherLive::set_windPower', <String, dynamic>{'__this__': this, "windPower": windPower});
-  
-  
   }
   
   Future<void> set_humidity(String humidity) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapLocalWeatherLive::set_humidity', <String, dynamic>{'__this__': this, "humidity": humidity});
-  
-  
   }
   
   Future<void> set_reportTime(String reportTime) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapLocalWeatherLive::set_reportTime', <String, dynamic>{'__this__': this, "reportTime": reportTime});
-  
-  
   }
   
   //endregion

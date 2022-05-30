@@ -30,7 +30,7 @@ mixin com_amap_api_services_share_ShareSearch_OnShareSearchListener on java_lang
           try {
             final args = methodCall.arguments as Map;
             switch (methodCall.method) {
-              case 'Callback::onPoiShareUrlSearched::onPoiShareUrlSearched':
+              case 'onPoiShareUrlSearched:':
                 // print log
                 if (fluttifyLogEnabled) {
                   debugPrint('fluttify-dart-callback: onPoiShareUrlSearched?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
@@ -39,7 +39,7 @@ mixin com_amap_api_services_share_ShareSearch_OnShareSearchListener on java_lang
                 // handle the native call
                 onPoiShareUrlSearched?.call(args['var1'], args['var2']);
                 break;
-              case 'Callback::onLocationShareUrlSearched::onLocationShareUrlSearched':
+              case 'onLocationShareUrlSearched:':
                 // print log
                 if (fluttifyLogEnabled) {
                   debugPrint('fluttify-dart-callback: onLocationShareUrlSearched?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
@@ -48,7 +48,7 @@ mixin com_amap_api_services_share_ShareSearch_OnShareSearchListener on java_lang
                 // handle the native call
                 onLocationShareUrlSearched?.call(args['var1'], args['var2']);
                 break;
-              case 'Callback::onNaviShareUrlSearched::onNaviShareUrlSearched':
+              case 'onNaviShareUrlSearched:':
                 // print log
                 if (fluttifyLogEnabled) {
                   debugPrint('fluttify-dart-callback: onNaviShareUrlSearched?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
@@ -57,7 +57,7 @@ mixin com_amap_api_services_share_ShareSearch_OnShareSearchListener on java_lang
                 // handle the native call
                 onNaviShareUrlSearched?.call(args['var1'], args['var2']);
                 break;
-              case 'Callback::onBusRouteShareUrlSearched::onBusRouteShareUrlSearched':
+              case 'onBusRouteShareUrlSearched:':
                 // print log
                 if (fluttifyLogEnabled) {
                   debugPrint('fluttify-dart-callback: onBusRouteShareUrlSearched?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
@@ -66,7 +66,7 @@ mixin com_amap_api_services_share_ShareSearch_OnShareSearchListener on java_lang
                 // handle the native call
                 onBusRouteShareUrlSearched?.call(args['var1'], args['var2']);
                 break;
-              case 'Callback::onWalkRouteShareUrlSearched::onWalkRouteShareUrlSearched':
+              case 'onWalkRouteShareUrlSearched:':
                 // print log
                 if (fluttifyLogEnabled) {
                   debugPrint('fluttify-dart-callback: onWalkRouteShareUrlSearched?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
@@ -75,7 +75,7 @@ mixin com_amap_api_services_share_ShareSearch_OnShareSearchListener on java_lang
                 // handle the native call
                 onWalkRouteShareUrlSearched?.call(args['var1'], args['var2']);
                 break;
-              case 'Callback::onDrivingRouteShareUrlSearched::onDrivingRouteShareUrlSearched':
+              case 'onDrivingRouteShareUrlSearched:':
                 // print log
                 if (fluttifyLogEnabled) {
                   debugPrint('fluttify-dart-callback: onDrivingRouteShareUrlSearched?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');

@@ -72,26 +72,18 @@ class AMapNearbyUserInfo extends AMapSearchObject with NSCoding, NSCopying {
   //region setters
   Future<void> set_userID(String userID) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapNearbyUserInfo::set_userID', <String, dynamic>{'__this__': this, "userID": userID});
-  
-  
   }
   
   Future<void> set_location(AMapGeoPoint location) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapNearbyUserInfo::set_location', <String, dynamic>{'__this__': this, "location": location});
-  
-  
   }
   
   Future<void> set_distance(double distance) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapNearbyUserInfo::set_distance', <String, dynamic>{'__this__': this, "distance": distance});
-  
-  
   }
   
   Future<void> set_updatetime(double updatetime) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapNearbyUserInfo::set_updatetime', <String, dynamic>{'__this__': this, "updatetime": updatetime});
-  
-  
   }
   
   //endregion

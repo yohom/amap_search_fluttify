@@ -57,8 +57,6 @@ class AMapPOIIDSearchRequest extends AMapPOISearchBaseRequest with NSCoding, NSC
   //region setters
   Future<void> set_uid(String uid) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapPOIIDSearchRequest::set_uid', <String, dynamic>{'__this__': this, "uid": uid});
-  
-  
   }
   
   //endregion

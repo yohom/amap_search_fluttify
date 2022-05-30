@@ -62,14 +62,10 @@ class AMapCloudPOIPolygonSearchRequest extends AMapCloudSearchBaseRequest with N
   //region setters
   Future<void> set_polygon(AMapGeoPolygon polygon) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapCloudPOIPolygonSearchRequest::set_polygon', <String, dynamic>{'__this__': this, "polygon": polygon});
-  
-  
   }
   
   Future<void> set_keywords(String keywords) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapCloudPOIPolygonSearchRequest::set_keywords', <String, dynamic>{'__this__': this, "keywords": keywords});
-  
-  
   }
   
   //endregion

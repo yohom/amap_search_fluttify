@@ -122,86 +122,58 @@ class AMapStep extends AMapSearchObject with NSCoding, NSCopying {
   //region setters
   Future<void> set_instruction(String instruction) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapStep::set_instruction', <String, dynamic>{'__this__': this, "instruction": instruction});
-  
-  
   }
   
   Future<void> set_orientation(String orientation) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapStep::set_orientation', <String, dynamic>{'__this__': this, "orientation": orientation});
-  
-  
   }
   
   Future<void> set_road(String road) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapStep::set_road', <String, dynamic>{'__this__': this, "road": road});
-  
-  
   }
   
   Future<void> set_distance(int distance) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapStep::set_distance', <String, dynamic>{'__this__': this, "distance": distance});
-  
-  
   }
   
   Future<void> set_duration(int duration) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapStep::set_duration', <String, dynamic>{'__this__': this, "duration": duration});
-  
-  
   }
   
   Future<void> set_polyline(String polyline) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapStep::set_polyline', <String, dynamic>{'__this__': this, "polyline": polyline});
-  
-  
   }
   
   Future<void> set_action(String action) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapStep::set_action', <String, dynamic>{'__this__': this, "action": action});
-  
-  
   }
   
   Future<void> set_assistantAction(String assistantAction) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapStep::set_assistantAction', <String, dynamic>{'__this__': this, "assistantAction": assistantAction});
-  
-  
   }
   
   Future<void> set_tolls(double tolls) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapStep::set_tolls', <String, dynamic>{'__this__': this, "tolls": tolls});
-  
-  
   }
   
   Future<void> set_tollDistance(int tollDistance) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapStep::set_tollDistance', <String, dynamic>{'__this__': this, "tollDistance": tollDistance});
-  
-  
   }
   
   Future<void> set_tollRoad(String tollRoad) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapStep::set_tollRoad', <String, dynamic>{'__this__': this, "tollRoad": tollRoad});
-  
-  
   }
   
   Future<void> set_totalTrafficLights(int totalTrafficLights) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapStep::set_totalTrafficLights', <String, dynamic>{'__this__': this, "totalTrafficLights": totalTrafficLights});
-  
-  
   }
   
   Future<void> set_cities(List<AMapCity> cities) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapStep::set_cities', <String, dynamic>{'__this__': this, "cities": cities});
-  
-  
   }
   
   Future<void> set_tmcs(List<AMapTMC> tmcs) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapStep::set_tmcs', <String, dynamic>{'__this__': this, "tmcs": tmcs});
-  
-  
   }
   
   //endregion

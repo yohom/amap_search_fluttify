@@ -67,20 +67,14 @@ class AMapNavigationShareSearchRequest extends AMapShareSearchBaseRequest with N
   //region setters
   Future<void> set_strategy(int strategy) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapNavigationShareSearchRequest::set_strategy', <String, dynamic>{'__this__': this, "strategy": strategy});
-  
-  
   }
   
   Future<void> set_startCoordinate(AMapGeoPoint startCoordinate) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapNavigationShareSearchRequest::set_startCoordinate', <String, dynamic>{'__this__': this, "startCoordinate": startCoordinate});
-  
-  
   }
   
   Future<void> set_destinationCoordinate(AMapGeoPoint destinationCoordinate) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapNavigationShareSearchRequest::set_destinationCoordinate', <String, dynamic>{'__this__': this, "destinationCoordinate": destinationCoordinate});
-  
-  
   }
   
   //endregion

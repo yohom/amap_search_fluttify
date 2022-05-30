@@ -67,20 +67,14 @@ class AMapNearbyUploadInfo extends NSObject with NSCopying {
   //region setters
   Future<void> set_userID(String userID) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapNearbyUploadInfo::set_userID', <String, dynamic>{'__this__': this, "userID": userID});
-  
-  
   }
   
   Future<void> set_coordinateType(AMapSearchCoordinateType coordinateType) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapNearbyUploadInfo::set_coordinateType', <String, dynamic>{'__this__': this, "coordinateType": coordinateType.toValue()});
-  
-  
   }
   
   Future<void> set_coordinate(CLLocationCoordinate2D coordinate) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapNearbyUploadInfo::set_coordinate', <String, dynamic>{'__this__': this, "coordinate": coordinate});
-  
-  
   }
   
   //endregion

@@ -67,20 +67,14 @@ class AMapCloudPOIAroundSearchRequest extends AMapCloudSearchBaseRequest with NS
   //region setters
   Future<void> set_center(AMapGeoPoint center) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapCloudPOIAroundSearchRequest::set_center', <String, dynamic>{'__this__': this, "center": center});
-  
-  
   }
   
   Future<void> set_radius(int radius) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapCloudPOIAroundSearchRequest::set_radius', <String, dynamic>{'__this__': this, "radius": radius});
-  
-  
   }
   
   Future<void> set_keywords(String keywords) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapCloudPOIAroundSearchRequest::set_keywords', <String, dynamic>{'__this__': this, "keywords": keywords});
-  
-  
   }
   
   //endregion

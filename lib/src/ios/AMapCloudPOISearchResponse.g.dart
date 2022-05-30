@@ -62,14 +62,10 @@ class AMapCloudPOISearchResponse extends AMapSearchObject with NSCoding, NSCopyi
   //region setters
   Future<void> set_count(int count) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapCloudPOISearchResponse::set_count', <String, dynamic>{'__this__': this, "count": count});
-  
-  
   }
   
   Future<void> set_POIs(List<AMapCloudPOI> POIs) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapCloudPOISearchResponse::set_POIs', <String, dynamic>{'__this__': this, "POIs": POIs});
-  
-  
   }
   
   //endregion

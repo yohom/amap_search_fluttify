@@ -57,8 +57,6 @@ class AMapReGeocodeSearchResponse extends AMapSearchObject with NSCoding, NSCopy
   //region setters
   Future<void> set_regeocode(AMapReGeocode regeocode) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapReGeocodeSearchResponse::set_regeocode', <String, dynamic>{'__this__': this, "regeocode": regeocode});
-  
-  
   }
   
   //endregion

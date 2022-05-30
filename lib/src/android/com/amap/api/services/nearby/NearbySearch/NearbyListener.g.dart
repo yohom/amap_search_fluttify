@@ -30,7 +30,7 @@ mixin com_amap_api_services_nearby_NearbySearch_NearbyListener on java_lang_Obje
           try {
             final args = methodCall.arguments as Map;
             switch (methodCall.method) {
-              case 'Callback::onUserInfoCleared::onUserInfoCleared':
+              case 'onUserInfoCleared':
                 // print log
                 if (fluttifyLogEnabled) {
                   debugPrint('fluttify-dart-callback: onUserInfoCleared?.call([\'var1\':${args['var1']}])');
@@ -39,7 +39,7 @@ mixin com_amap_api_services_nearby_NearbySearch_NearbyListener on java_lang_Obje
                 // handle the native call
                 onUserInfoCleared?.call(args['var1']);
                 break;
-              case 'Callback::onNearbyInfoSearched::onNearbyInfoSearched':
+              case 'onNearbyInfoSearched:':
                 // print log
                 if (fluttifyLogEnabled) {
                   debugPrint('fluttify-dart-callback: onNearbyInfoSearched?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
@@ -48,7 +48,7 @@ mixin com_amap_api_services_nearby_NearbySearch_NearbyListener on java_lang_Obje
                 // handle the native call
                 onNearbyInfoSearched?.call(AmapSearchFluttifyAndroidAs<com_amap_api_services_nearby_NearbySearchResult>(args['var1']), args['var2']);
                 break;
-              case 'Callback::onNearbyInfoUploaded::onNearbyInfoUploaded':
+              case 'onNearbyInfoUploaded':
                 // print log
                 if (fluttifyLogEnabled) {
                   debugPrint('fluttify-dart-callback: onNearbyInfoUploaded?.call([\'var1\':${args['var1']}])');

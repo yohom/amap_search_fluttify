@@ -57,8 +57,6 @@ class AMapBusLineIDSearchRequest extends AMapBusLineBaseSearchRequest with NSCod
   //region setters
   Future<void> set_uid(String uid) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapBusLineIDSearchRequest::set_uid', <String, dynamic>{'__this__': this, "uid": uid});
-  
-  
   }
   
   //endregion

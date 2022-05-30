@@ -57,8 +57,6 @@ class AMapDistanceSearchResponse extends AMapSearchObject with NSCoding, NSCopyi
   //region setters
   Future<void> set_results(List<AMapDistanceResult> results) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapDistanceSearchResponse::set_results', <String, dynamic>{'__this__': this, "results": results});
-  
-  
   }
   
   //endregion

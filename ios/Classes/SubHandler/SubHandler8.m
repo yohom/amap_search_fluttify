@@ -5,6 +5,8 @@
 #import "SubHandler8.h"
 #import "FluttifyMessageCodec.h"
 #import <AMapSearchKit/AMapSearchKit.h>
+#import "AMapNearbySearchManagerDelegate_Anonymous.h"
+#import "AMapSearchDelegate_Anonymous.h"
 
 // Dart端一次方法调用所存在的栈, 只有当MethodChannel传递参数受限时, 再启用这个容器
 extern NSMutableDictionary<NSString*, NSObject*>* STACK;
@@ -748,7 +750,8 @@ extern BOOL enableLog;
             }
         
             // args
-        
+            // ref arg
+            id<AMapNearbySearchManagerDelegate> delegate = (id<AMapNearbySearchManagerDelegate>) (args[@"delegate"] == [NSNull null] ? nil : args[@"delegate"]);
         
             // ref
             AMapNearbySearchManager* ref = (AMapNearbySearchManager*) args[@"__this__"];
@@ -757,7 +760,7 @@ extern BOOL enableLog;
                 return;
             }
         
-            ref.delegate = weakSelf;
+            ref.delegate = delegate;
             methodResult(@"success");
         },
         
@@ -768,7 +771,8 @@ extern BOOL enableLog;
             }
         
             // args
-        
+            // ref arg
+            id<AMapSearchDelegate> delegate = (id<AMapSearchDelegate>) (args[@"delegate"] == [NSNull null] ? nil : args[@"delegate"]);
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
@@ -777,7 +781,7 @@ extern BOOL enableLog;
                 return;
             }
         
-            ref.delegate = weakSelf;
+            ref.delegate = delegate;
             methodResult(@"success");
         },
         

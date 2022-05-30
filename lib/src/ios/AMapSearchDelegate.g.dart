@@ -19,6 +19,173 @@ mixin AMapSearchDelegate on NSObject {
 
   static AMapSearchDelegate subInstance() => _AMapSearchDelegate_SUB();
 
+  static Future<AMapSearchDelegate> anonymous__({void Function(dynamic request, NSError? error)? AMapSearchRequest, void Function(AMapPOISearchBaseRequest? request, AMapPOISearchResponse? response)? onPOISearchDone, void Function(AMapRoutePOISearchRequest? request, AMapRoutePOISearchResponse? response)? onRoutePOISearchDone, void Function(AMapGeocodeSearchRequest? request, AMapGeocodeSearchResponse? response)? onGeocodeSearchDone, void Function(AMapReGeocodeSearchRequest? request, AMapReGeocodeSearchResponse? response)? onReGeocodeSearchDone, void Function(AMapInputTipsSearchRequest? request, AMapInputTipsSearchResponse? response)? onInputTipsSearchDone, void Function(AMapBusStopSearchRequest? request, AMapBusStopSearchResponse? response)? onBusStopSearchDone, void Function(AMapBusLineBaseSearchRequest? request, AMapBusLineSearchResponse? response)? onBusLineSearchDone, void Function(AMapDistrictSearchRequest? request, AMapDistrictSearchResponse? response)? onDistrictSearchDone, void Function(AMapRouteSearchBaseRequest? request, AMapRouteSearchResponse? response)? onRouteSearchDone, void Function(AMapRouteSearchBaseRequest? request, AMapFutureRouteSearchResponse? response)? onFutureRouteSearchDone, void Function(AMapDistanceSearchRequest? request, AMapDistanceSearchResponse? response)? onDistanceSearchDone, void Function(AMapWeatherSearchRequest? request, AMapWeatherSearchResponse? response)? onWeatherSearchDone, void Function(AMapNearbySearchRequest? request, AMapNearbySearchResponse? response)? onNearbySearchDone, void Function(AMapCloudSearchBaseRequest? request, AMapCloudPOISearchResponse? response)? onCloudSearchDone, void Function(AMapShareSearchBaseRequest? request, AMapShareSearchResponse? response)? onShareSearchDone}) async {
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('AMapSearchDelegate::createAnonymous__');
+  
+    final __object__ = AmapSearchFluttifyIOSAs<AMapSearchDelegate>(__result__)!;
+  
+    // handle callback
+    MethodChannel('AMapSearchDelegate::Callback@${__object__.refId}', kAmapSearchFluttifyMethodCodec)
+        .setMethodCallHandler((methodCall) async {
+          try {
+            final args = methodCall.arguments as Map;
+            switch (methodCall.method) {
+              case 'AMapSearchRequest:didFailWithError':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: AMapSearchRequest?.call([\'request\':${args['request']}, \'error\':${args['error']}])');
+                }
+            
+                // handle the native call
+                AMapSearchRequest?.call(AmapSearchFluttifyIOSAs<dynamic>(args['request']), AmapSearchFluttifyIOSAs<NSError>(args['error']));
+                break;
+              case 'onPOISearchDone:response':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onPOISearchDone?.call([\'request\':${args['request']}, \'response\':${args['response']}])');
+                }
+            
+                // handle the native call
+                onPOISearchDone?.call(AmapSearchFluttifyIOSAs<AMapPOISearchBaseRequest>(args['request']), AmapSearchFluttifyIOSAs<AMapPOISearchResponse>(args['response']));
+                break;
+              case 'onRoutePOISearchDone:response':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onRoutePOISearchDone?.call([\'request\':${args['request']}, \'response\':${args['response']}])');
+                }
+            
+                // handle the native call
+                onRoutePOISearchDone?.call(AmapSearchFluttifyIOSAs<AMapRoutePOISearchRequest>(args['request']), AmapSearchFluttifyIOSAs<AMapRoutePOISearchResponse>(args['response']));
+                break;
+              case 'onGeocodeSearchDone:response':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onGeocodeSearchDone?.call([\'request\':${args['request']}, \'response\':${args['response']}])');
+                }
+            
+                // handle the native call
+                onGeocodeSearchDone?.call(AmapSearchFluttifyIOSAs<AMapGeocodeSearchRequest>(args['request']), AmapSearchFluttifyIOSAs<AMapGeocodeSearchResponse>(args['response']));
+                break;
+              case 'onReGeocodeSearchDone:response':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onReGeocodeSearchDone?.call([\'request\':${args['request']}, \'response\':${args['response']}])');
+                }
+            
+                // handle the native call
+                onReGeocodeSearchDone?.call(AmapSearchFluttifyIOSAs<AMapReGeocodeSearchRequest>(args['request']), AmapSearchFluttifyIOSAs<AMapReGeocodeSearchResponse>(args['response']));
+                break;
+              case 'onInputTipsSearchDone:response':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onInputTipsSearchDone?.call([\'request\':${args['request']}, \'response\':${args['response']}])');
+                }
+            
+                // handle the native call
+                onInputTipsSearchDone?.call(AmapSearchFluttifyIOSAs<AMapInputTipsSearchRequest>(args['request']), AmapSearchFluttifyIOSAs<AMapInputTipsSearchResponse>(args['response']));
+                break;
+              case 'onBusStopSearchDone:response':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onBusStopSearchDone?.call([\'request\':${args['request']}, \'response\':${args['response']}])');
+                }
+            
+                // handle the native call
+                onBusStopSearchDone?.call(AmapSearchFluttifyIOSAs<AMapBusStopSearchRequest>(args['request']), AmapSearchFluttifyIOSAs<AMapBusStopSearchResponse>(args['response']));
+                break;
+              case 'onBusLineSearchDone:response':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onBusLineSearchDone?.call([\'request\':${args['request']}, \'response\':${args['response']}])');
+                }
+            
+                // handle the native call
+                onBusLineSearchDone?.call(AmapSearchFluttifyIOSAs<AMapBusLineBaseSearchRequest>(args['request']), AmapSearchFluttifyIOSAs<AMapBusLineSearchResponse>(args['response']));
+                break;
+              case 'onDistrictSearchDone:response':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onDistrictSearchDone?.call([\'request\':${args['request']}, \'response\':${args['response']}])');
+                }
+            
+                // handle the native call
+                onDistrictSearchDone?.call(AmapSearchFluttifyIOSAs<AMapDistrictSearchRequest>(args['request']), AmapSearchFluttifyIOSAs<AMapDistrictSearchResponse>(args['response']));
+                break;
+              case 'onRouteSearchDone:response':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onRouteSearchDone?.call([\'request\':${args['request']}, \'response\':${args['response']}])');
+                }
+            
+                // handle the native call
+                onRouteSearchDone?.call(AmapSearchFluttifyIOSAs<AMapRouteSearchBaseRequest>(args['request']), AmapSearchFluttifyIOSAs<AMapRouteSearchResponse>(args['response']));
+                break;
+              case 'onFutureRouteSearchDone:response':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onFutureRouteSearchDone?.call([\'request\':${args['request']}, \'response\':${args['response']}])');
+                }
+            
+                // handle the native call
+                onFutureRouteSearchDone?.call(AmapSearchFluttifyIOSAs<AMapRouteSearchBaseRequest>(args['request']), AmapSearchFluttifyIOSAs<AMapFutureRouteSearchResponse>(args['response']));
+                break;
+              case 'onDistanceSearchDone:response':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onDistanceSearchDone?.call([\'request\':${args['request']}, \'response\':${args['response']}])');
+                }
+            
+                // handle the native call
+                onDistanceSearchDone?.call(AmapSearchFluttifyIOSAs<AMapDistanceSearchRequest>(args['request']), AmapSearchFluttifyIOSAs<AMapDistanceSearchResponse>(args['response']));
+                break;
+              case 'onWeatherSearchDone:response':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onWeatherSearchDone?.call([\'request\':${args['request']}, \'response\':${args['response']}])');
+                }
+            
+                // handle the native call
+                onWeatherSearchDone?.call(AmapSearchFluttifyIOSAs<AMapWeatherSearchRequest>(args['request']), AmapSearchFluttifyIOSAs<AMapWeatherSearchResponse>(args['response']));
+                break;
+              case 'onNearbySearchDone:response':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onNearbySearchDone?.call([\'request\':${args['request']}, \'response\':${args['response']}])');
+                }
+            
+                // handle the native call
+                onNearbySearchDone?.call(AmapSearchFluttifyIOSAs<AMapNearbySearchRequest>(args['request']), AmapSearchFluttifyIOSAs<AMapNearbySearchResponse>(args['response']));
+                break;
+              case 'onCloudSearchDone:response':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onCloudSearchDone?.call([\'request\':${args['request']}, \'response\':${args['response']}])');
+                }
+            
+                // handle the native call
+                onCloudSearchDone?.call(AmapSearchFluttifyIOSAs<AMapCloudSearchBaseRequest>(args['request']), AmapSearchFluttifyIOSAs<AMapCloudPOISearchResponse>(args['response']));
+                break;
+              case 'onShareSearchDone:response':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: onShareSearchDone?.call([\'request\':${args['request']}, \'response\':${args['response']}])');
+                }
+            
+                // handle the native call
+                onShareSearchDone?.call(AmapSearchFluttifyIOSAs<AMapShareSearchBaseRequest>(args['request']), AmapSearchFluttifyIOSAs<AMapShareSearchResponse>(args['response']));
+                break;
+              default:
+                throw MissingPluginException('方法${methodCall.method}未实现');
+                break;
+            }
+          } catch (e) {
+            debugPrint(e.toString());
+            rethrow;
+          }
+        });
+  
+    return __object__;
+  }
   
 
   @override

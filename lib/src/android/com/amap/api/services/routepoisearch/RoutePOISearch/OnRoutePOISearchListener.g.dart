@@ -30,7 +30,7 @@ mixin com_amap_api_services_routepoisearch_RoutePOISearch_OnRoutePOISearchListen
           try {
             final args = methodCall.arguments as Map;
             switch (methodCall.method) {
-              case 'Callback::onRoutePoiSearched::onRoutePoiSearched':
+              case 'onRoutePoiSearched:':
                 // print log
                 if (fluttifyLogEnabled) {
                   debugPrint('fluttify-dart-callback: onRoutePoiSearched?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');

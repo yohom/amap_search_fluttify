@@ -72,26 +72,18 @@ class AMapBusStopSearchRequest extends AMapSearchObject with NSCoding, NSCopying
   //region setters
   Future<void> set_keywords(String keywords) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapBusStopSearchRequest::set_keywords', <String, dynamic>{'__this__': this, "keywords": keywords});
-  
-  
   }
   
   Future<void> set_city(String city) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapBusStopSearchRequest::set_city', <String, dynamic>{'__this__': this, "city": city});
-  
-  
   }
   
   Future<void> set_offset(int offset) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapBusStopSearchRequest::set_offset', <String, dynamic>{'__this__': this, "offset": offset});
-  
-  
   }
   
   Future<void> set_page(int page) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapBusStopSearchRequest::set_page', <String, dynamic>{'__this__': this, "page": page});
-  
-  
   }
   
   //endregion

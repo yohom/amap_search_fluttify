@@ -82,38 +82,26 @@ class AMapTrafficEvaluation extends AMapSearchObject with NSCoding, NSCopying {
   //region setters
   Future<void> set_evaluationDescription(String evaluationDescription) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapTrafficEvaluation::set_evaluationDescription', <String, dynamic>{'__this__': this, "evaluationDescription": evaluationDescription});
-  
-  
   }
   
   Future<void> set_status(int status) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapTrafficEvaluation::set_status', <String, dynamic>{'__this__': this, "status": status});
-  
-  
   }
   
   Future<void> set_expedite(String expedite) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapTrafficEvaluation::set_expedite', <String, dynamic>{'__this__': this, "expedite": expedite});
-  
-  
   }
   
   Future<void> set_congested(String congested) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapTrafficEvaluation::set_congested', <String, dynamic>{'__this__': this, "congested": congested});
-  
-  
   }
   
   Future<void> set_blocked(String blocked) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapTrafficEvaluation::set_blocked', <String, dynamic>{'__this__': this, "blocked": blocked});
-  
-  
   }
   
   Future<void> set_unknown(String unknown) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapTrafficEvaluation::set_unknown', <String, dynamic>{'__this__': this, "unknown": unknown});
-  
-  
   }
   
   //endregion

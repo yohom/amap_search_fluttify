@@ -333,11 +333,17 @@ Future<bool> AmapSearchFluttifyIOSIs<T>(dynamic __this__) async {
   } else if (T == AMapNearbyUploadInfo) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapNearbyUploadInfo', {'__this__': __this__});
     return result;
+  } else if (T == AMapNearbySearchManagerDelegate) {
+    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapNearbySearchManagerDelegate', {'__this__': __this__});
+    return result;
   } else if (T == AMapNearbySearchManager) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapNearbySearchManager', {'__this__': __this__});
     return result;
   } else if (T == AMapSearchAPI) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapSearchAPI', {'__this__': __this__});
+    return result;
+  } else if (T == AMapSearchDelegate) {
+    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapSearchDelegate', {'__this__': __this__});
     return result;
   } else if (T == CLLocation) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfCLLocation', {'__this__': __this__});
@@ -371,6 +377,9 @@ Future<bool> AmapSearchFluttifyIOSIs<T>(dynamic __this__) async {
     return result;
   } else if (T == NSCopying) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfNSCopying', {'__this__': __this__});
+    return result;
+  } else if (T == NSMutableCopying) {
+    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfNSMutableCopying', {'__this__': __this__});
     return result;
   } else if (T == UIView) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfUIView', {'__this__': __this__});
@@ -624,10 +633,14 @@ T? AmapSearchFluttifyIOSAs<T>(dynamic __this__) {
     return (AMapSearchError()..refId = (__this__ as Ref).refId) as T;
   } else if (T == AMapNearbyUploadInfo) {
     return (AMapNearbyUploadInfo()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == AMapNearbySearchManagerDelegate) {
+    return (AMapNearbySearchManagerDelegate.subInstance()..refId = (__this__ as Ref).refId) as T;
   } else if (T == AMapNearbySearchManager) {
     return (AMapNearbySearchManager()..refId = (__this__ as Ref).refId) as T;
   } else if (T == AMapSearchAPI) {
     return (AMapSearchAPI()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == AMapSearchDelegate) {
+    return (AMapSearchDelegate.subInstance()..refId = (__this__ as Ref).refId) as T;
   } else if (T == CLLocation) {
     return (CLLocation()..refId = (__this__ as Ref).refId) as T;
   } else if (T == CLHeading) {
@@ -650,6 +663,8 @@ T? AmapSearchFluttifyIOSAs<T>(dynamic __this__) {
     return (NSCoding.subInstance()..refId = (__this__ as Ref).refId) as T;
   } else if (T == NSCopying) {
     return (NSCopying.subInstance()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == NSMutableCopying) {
+    return (NSMutableCopying.subInstance()..refId = (__this__ as Ref).refId) as T;
   } else if (T == UIView) {
     return (UIView()..refId = (__this__ as Ref).refId) as T;
   } else if (T == UIViewController) {

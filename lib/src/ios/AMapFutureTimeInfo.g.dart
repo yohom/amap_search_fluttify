@@ -62,14 +62,10 @@ class AMapFutureTimeInfo extends AMapSearchObject with NSCoding, NSCopying {
   //region setters
   Future<void> set_startTime(String startTime) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapFutureTimeInfo::set_startTime', <String, dynamic>{'__this__': this, "startTime": startTime});
-  
-  
   }
   
   Future<void> set_elements(List<AMapFutureTimeInfoElement> elements) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapFutureTimeInfo::set_elements', <String, dynamic>{'__this__': this, "elements": elements});
-  
-  
   }
   
   //endregion

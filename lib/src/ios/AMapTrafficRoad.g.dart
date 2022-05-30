@@ -82,38 +82,26 @@ class AMapTrafficRoad extends AMapSearchObject with NSCoding, NSCopying {
   //region setters
   Future<void> set_name(String name) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapTrafficRoad::set_name', <String, dynamic>{'__this__': this, "name": name});
-  
-  
   }
   
   Future<void> set_status(int status) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapTrafficRoad::set_status', <String, dynamic>{'__this__': this, "status": status});
-  
-  
   }
   
   Future<void> set_direction(String direction) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapTrafficRoad::set_direction', <String, dynamic>{'__this__': this, "direction": direction});
-  
-  
   }
   
   Future<void> set_angle(double angle) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapTrafficRoad::set_angle', <String, dynamic>{'__this__': this, "angle": angle});
-  
-  
   }
   
   Future<void> set_speed(double speed) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapTrafficRoad::set_speed', <String, dynamic>{'__this__': this, "speed": speed});
-  
-  
   }
   
   Future<void> set_polyline(String polyline) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapTrafficRoad::set_polyline', <String, dynamic>{'__this__': this, "polyline": polyline});
-  
-  
   }
   
   //endregion

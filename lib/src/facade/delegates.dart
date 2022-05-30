@@ -2,6 +2,7 @@
 part of 'amap_search.dart';
 
 /// android: 搜索监听
+@Deprecated('全部改成匿名内部类的形式')
 class _AndroidSearchListener extends java_lang_Object
     with
         com_amap_api_services_poisearch_PoiSearch_OnPoiSearchListener,

@@ -30,7 +30,7 @@ mixin com_amap_api_services_geocoder_GeocodeSearch_OnGeocodeSearchListener on ja
           try {
             final args = methodCall.arguments as Map;
             switch (methodCall.method) {
-              case 'Callback::onRegeocodeSearched::onRegeocodeSearched':
+              case 'onRegeocodeSearched:':
                 // print log
                 if (fluttifyLogEnabled) {
                   debugPrint('fluttify-dart-callback: onRegeocodeSearched?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
@@ -39,7 +39,7 @@ mixin com_amap_api_services_geocoder_GeocodeSearch_OnGeocodeSearchListener on ja
                 // handle the native call
                 onRegeocodeSearched?.call(AmapSearchFluttifyAndroidAs<com_amap_api_services_geocoder_RegeocodeResult>(args['var1']), args['var2']);
                 break;
-              case 'Callback::onGeocodeSearched::onGeocodeSearched':
+              case 'onGeocodeSearched:':
                 // print log
                 if (fluttifyLogEnabled) {
                   debugPrint('fluttify-dart-callback: onGeocodeSearched?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');

@@ -82,38 +82,26 @@ class AMapTransit extends AMapSearchObject with NSCoding, NSCopying {
   //region setters
   Future<void> set_cost(double cost) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapTransit::set_cost', <String, dynamic>{'__this__': this, "cost": cost});
-  
-  
   }
   
   Future<void> set_duration(int duration) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapTransit::set_duration', <String, dynamic>{'__this__': this, "duration": duration});
-  
-  
   }
   
   Future<void> set_nightflag(bool nightflag) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapTransit::set_nightflag', <String, dynamic>{'__this__': this, "nightflag": nightflag});
-  
-  
   }
   
   Future<void> set_walkingDistance(int walkingDistance) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapTransit::set_walkingDistance', <String, dynamic>{'__this__': this, "walkingDistance": walkingDistance});
-  
-  
   }
   
   Future<void> set_segments(List<AMapSegment> segments) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapTransit::set_segments', <String, dynamic>{'__this__': this, "segments": segments});
-  
-  
   }
   
   Future<void> set_distance(int distance) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapTransit::set_distance', <String, dynamic>{'__this__': this, "distance": distance});
-  
-  
   }
   
   //endregion

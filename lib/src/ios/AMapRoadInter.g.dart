@@ -87,44 +87,30 @@ class AMapRoadInter extends AMapSearchObject with NSCoding, NSCopying {
   //region setters
   Future<void> set_distance(int distance) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRoadInter::set_distance', <String, dynamic>{'__this__': this, "distance": distance});
-  
-  
   }
   
   Future<void> set_direction(String direction) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRoadInter::set_direction', <String, dynamic>{'__this__': this, "direction": direction});
-  
-  
   }
   
   Future<void> set_location(AMapGeoPoint location) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRoadInter::set_location', <String, dynamic>{'__this__': this, "location": location});
-  
-  
   }
   
   Future<void> set_firstId(String firstId) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRoadInter::set_firstId', <String, dynamic>{'__this__': this, "firstId": firstId});
-  
-  
   }
   
   Future<void> set_firstName(String firstName) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRoadInter::set_firstName', <String, dynamic>{'__this__': this, "firstName": firstName});
-  
-  
   }
   
   Future<void> set_secondId(String secondId) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRoadInter::set_secondId', <String, dynamic>{'__this__': this, "secondId": secondId});
-  
-  
   }
   
   Future<void> set_secondName(String secondName) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRoadInter::set_secondName', <String, dynamic>{'__this__': this, "secondName": secondName});
-  
-  
   }
   
   //endregion

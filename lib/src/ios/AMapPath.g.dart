@@ -97,56 +97,38 @@ class AMapPath extends AMapSearchObject with NSCoding, NSCopying {
   //region setters
   Future<void> set_distance(int distance) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapPath::set_distance', <String, dynamic>{'__this__': this, "distance": distance});
-  
-  
   }
   
   Future<void> set_duration(int duration) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapPath::set_duration', <String, dynamic>{'__this__': this, "duration": duration});
-  
-  
   }
   
   Future<void> set_strategy(String strategy) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapPath::set_strategy', <String, dynamic>{'__this__': this, "strategy": strategy});
-  
-  
   }
   
   Future<void> set_steps(List<AMapStep> steps) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapPath::set_steps', <String, dynamic>{'__this__': this, "steps": steps});
-  
-  
   }
   
   Future<void> set_tolls(double tolls) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapPath::set_tolls', <String, dynamic>{'__this__': this, "tolls": tolls});
-  
-  
   }
   
   Future<void> set_tollDistance(int tollDistance) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapPath::set_tollDistance', <String, dynamic>{'__this__': this, "tollDistance": tollDistance});
-  
-  
   }
   
   Future<void> set_totalTrafficLights(int totalTrafficLights) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapPath::set_totalTrafficLights', <String, dynamic>{'__this__': this, "totalTrafficLights": totalTrafficLights});
-  
-  
   }
   
   Future<void> set_restriction(int restriction) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapPath::set_restriction', <String, dynamic>{'__this__': this, "restriction": restriction});
-  
-  
   }
   
   Future<void> set_polyline(String polyline) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapPath::set_polyline', <String, dynamic>{'__this__': this, "polyline": polyline});
-  
-  
   }
   
   //endregion

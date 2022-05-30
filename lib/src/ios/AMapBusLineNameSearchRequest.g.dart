@@ -57,8 +57,6 @@ class AMapBusLineNameSearchRequest extends AMapBusLineBaseSearchRequest with NSC
   //region setters
   Future<void> set_keywords(String keywords) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapBusLineNameSearchRequest::set_keywords', <String, dynamic>{'__this__': this, "keywords": keywords});
-  
-  
   }
   
   //endregion

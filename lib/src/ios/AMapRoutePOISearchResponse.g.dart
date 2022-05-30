@@ -62,14 +62,10 @@ class AMapRoutePOISearchResponse extends AMapSearchObject with NSCoding, NSCopyi
   //region setters
   Future<void> set_count(int count) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRoutePOISearchResponse::set_count', <String, dynamic>{'__this__': this, "count": count});
-  
-  
   }
   
   Future<void> set_pois(List<AMapRoutePOI> pois) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRoutePOISearchResponse::set_pois', <String, dynamic>{'__this__': this, "pois": pois});
-  
-  
   }
   
   //endregion

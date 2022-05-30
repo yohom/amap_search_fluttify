@@ -67,20 +67,14 @@ class AMapGeocodeSearchRequest extends AMapSearchObject with NSCoding, NSCopying
   //region setters
   Future<void> set_address(String address) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapGeocodeSearchRequest::set_address', <String, dynamic>{'__this__': this, "address": address});
-  
-  
   }
   
   Future<void> set_city(String city) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapGeocodeSearchRequest::set_city', <String, dynamic>{'__this__': this, "city": city});
-  
-  
   }
   
   Future<void> set_country(String country) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapGeocodeSearchRequest::set_country', <String, dynamic>{'__this__': this, "country": country});
-  
-  
   }
   
   //endregion

@@ -77,32 +77,22 @@ class AMapCity extends AMapSearchObject with NSCoding, NSCopying {
   //region setters
   Future<void> set_city(String city) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapCity::set_city', <String, dynamic>{'__this__': this, "city": city});
-  
-  
   }
   
   Future<void> set_citycode(String citycode) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapCity::set_citycode', <String, dynamic>{'__this__': this, "citycode": citycode});
-  
-  
   }
   
   Future<void> set_adcode(String adcode) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapCity::set_adcode', <String, dynamic>{'__this__': this, "adcode": adcode});
-  
-  
   }
   
   Future<void> set_num(int num) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapCity::set_num', <String, dynamic>{'__this__': this, "num": num});
-  
-  
   }
   
   Future<void> set_districts(List<AMapDistrict> districts) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapCity::set_districts', <String, dynamic>{'__this__': this, "districts": districts});
-  
-  
   }
   
   //endregion

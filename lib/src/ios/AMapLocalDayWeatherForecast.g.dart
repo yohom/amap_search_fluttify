@@ -102,62 +102,42 @@ class AMapLocalDayWeatherForecast extends AMapSearchObject with NSCoding, NSCopy
   //region setters
   Future<void> set_date(String date) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapLocalDayWeatherForecast::set_date', <String, dynamic>{'__this__': this, "date": date});
-  
-  
   }
   
   Future<void> set_week(String week) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapLocalDayWeatherForecast::set_week', <String, dynamic>{'__this__': this, "week": week});
-  
-  
   }
   
   Future<void> set_dayWeather(String dayWeather) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapLocalDayWeatherForecast::set_dayWeather', <String, dynamic>{'__this__': this, "dayWeather": dayWeather});
-  
-  
   }
   
   Future<void> set_nightWeather(String nightWeather) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapLocalDayWeatherForecast::set_nightWeather', <String, dynamic>{'__this__': this, "nightWeather": nightWeather});
-  
-  
   }
   
   Future<void> set_dayTemp(String dayTemp) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapLocalDayWeatherForecast::set_dayTemp', <String, dynamic>{'__this__': this, "dayTemp": dayTemp});
-  
-  
   }
   
   Future<void> set_nightTemp(String nightTemp) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapLocalDayWeatherForecast::set_nightTemp', <String, dynamic>{'__this__': this, "nightTemp": nightTemp});
-  
-  
   }
   
   Future<void> set_dayWind(String dayWind) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapLocalDayWeatherForecast::set_dayWind', <String, dynamic>{'__this__': this, "dayWind": dayWind});
-  
-  
   }
   
   Future<void> set_nightWind(String nightWind) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapLocalDayWeatherForecast::set_nightWind', <String, dynamic>{'__this__': this, "nightWind": nightWind});
-  
-  
   }
   
   Future<void> set_dayPower(String dayPower) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapLocalDayWeatherForecast::set_dayPower', <String, dynamic>{'__this__': this, "dayPower": dayPower});
-  
-  
   }
   
   Future<void> set_nightPower(String nightPower) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapLocalDayWeatherForecast::set_nightPower', <String, dynamic>{'__this__': this, "nightPower": nightPower});
-  
-  
   }
   
   //endregion

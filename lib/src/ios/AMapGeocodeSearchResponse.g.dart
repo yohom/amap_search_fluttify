@@ -62,14 +62,10 @@ class AMapGeocodeSearchResponse extends AMapSearchObject with NSCoding, NSCopyin
   //region setters
   Future<void> set_count(int count) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapGeocodeSearchResponse::set_count', <String, dynamic>{'__this__': this, "count": count});
-  
-  
   }
   
   Future<void> set_geocodes(List<AMapGeocode> geocodes) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapGeocodeSearchResponse::set_geocodes', <String, dynamic>{'__this__': this, "geocodes": geocodes});
-  
-  
   }
   
   //endregion

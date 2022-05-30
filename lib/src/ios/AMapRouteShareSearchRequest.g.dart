@@ -82,38 +82,26 @@ class AMapRouteShareSearchRequest extends AMapShareSearchBaseRequest with NSCodi
   //region setters
   Future<void> set_strategy(int strategy) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRouteShareSearchRequest::set_strategy', <String, dynamic>{'__this__': this, "strategy": strategy});
-  
-  
   }
   
   Future<void> set_type(int type) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRouteShareSearchRequest::set_type', <String, dynamic>{'__this__': this, "type": type});
-  
-  
   }
   
   Future<void> set_startCoordinate(AMapGeoPoint startCoordinate) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRouteShareSearchRequest::set_startCoordinate', <String, dynamic>{'__this__': this, "startCoordinate": startCoordinate});
-  
-  
   }
   
   Future<void> set_destinationCoordinate(AMapGeoPoint destinationCoordinate) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRouteShareSearchRequest::set_destinationCoordinate', <String, dynamic>{'__this__': this, "destinationCoordinate": destinationCoordinate});
-  
-  
   }
   
   Future<void> set_startName(String startName) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRouteShareSearchRequest::set_startName', <String, dynamic>{'__this__': this, "startName": startName});
-  
-  
   }
   
   Future<void> set_destinationName(String destinationName) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRouteShareSearchRequest::set_destinationName', <String, dynamic>{'__this__': this, "destinationName": destinationName});
-  
-  
   }
   
   //endregion

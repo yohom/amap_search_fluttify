@@ -77,32 +77,22 @@ class AMapDistanceSearchRequest extends AMapSearchObject with NSCoding, NSCopyin
   //region setters
   Future<void> set_origins(List<AMapGeoPoint> origins) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapDistanceSearchRequest::set_origins', <String, dynamic>{'__this__': this, "origins": origins});
-  
-  
   }
   
   Future<void> set_destination(AMapGeoPoint destination) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapDistanceSearchRequest::set_destination', <String, dynamic>{'__this__': this, "destination": destination});
-  
-  
   }
   
   Future<void> set_type(AMapDistanceSearchType type) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapDistanceSearchRequest::set_type', <String, dynamic>{'__this__': this, "type": type.toValue()});
-  
-  
   }
   
   Future<void> set_strategy(int strategy) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapDistanceSearchRequest::set_strategy', <String, dynamic>{'__this__': this, "strategy": strategy});
-  
-  
   }
   
   Future<void> set_requireExtension(bool requireExtension) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapDistanceSearchRequest::set_requireExtension', <String, dynamic>{'__this__': this, "requireExtension": requireExtension});
-  
-  
   }
   
   //endregion

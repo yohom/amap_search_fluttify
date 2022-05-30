@@ -77,32 +77,22 @@ class AMapReGeocodeSearchRequest extends AMapSearchObject with NSCoding, NSCopyi
   //region setters
   Future<void> set_requireExtension(bool requireExtension) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapReGeocodeSearchRequest::set_requireExtension', <String, dynamic>{'__this__': this, "requireExtension": requireExtension});
-  
-  
   }
   
   Future<void> set_location(AMapGeoPoint location) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapReGeocodeSearchRequest::set_location', <String, dynamic>{'__this__': this, "location": location});
-  
-  
   }
   
   Future<void> set_radius(int radius) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapReGeocodeSearchRequest::set_radius', <String, dynamic>{'__this__': this, "radius": radius});
-  
-  
   }
   
   Future<void> set_poitype(String poitype) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapReGeocodeSearchRequest::set_poitype', <String, dynamic>{'__this__': this, "poitype": poitype});
-  
-  
   }
   
   Future<void> set_mode(String mode) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapReGeocodeSearchRequest::set_mode', <String, dynamic>{'__this__': this, "mode": mode});
-  
-  
   }
   
   //endregion

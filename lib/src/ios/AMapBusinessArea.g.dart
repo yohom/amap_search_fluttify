@@ -62,14 +62,10 @@ class AMapBusinessArea extends AMapSearchObject with NSCoding, NSCopying {
   //region setters
   Future<void> set_name(String name) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapBusinessArea::set_name', <String, dynamic>{'__this__': this, "name": name});
-  
-  
   }
   
   Future<void> set_location(AMapGeoPoint location) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapBusinessArea::set_location', <String, dynamic>{'__this__': this, "location": location});
-  
-  
   }
   
   //endregion
