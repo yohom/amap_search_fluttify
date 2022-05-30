@@ -404,9 +404,7 @@ class AmapSearch {
     String keyword, {
     String city = '',
   }) async {
-    // 会在listener中关闭
-    // ignore: close_sinks
-    final _controller = Completer<List<Geocode>>.sync();
+    final completer = Completer<List<Geocode>>.sync();
 
     await platform(
       android: (pool) async {
@@ -423,8 +421,24 @@ class AmapSearch {
                 .create__android_content_Context(context);
 
         // 设置回调
-        await _androidGeocodeSearch
-            .setOnGeocodeSearchListener(_AndroidSearchListener(_controller));
+        final listener =
+            await com_amap_api_services_geocoder_GeocodeSearch_OnGeocodeSearchListener
+                .anonymous__(
+          onGeocodeSearched: (poiResult, rCode) async {
+            final geocodeList = await (poiResult!.getGeocodeAddressList()
+                as FutureOr<
+                    List<com_amap_api_services_geocoder_GeocodeAddress>>);
+            final coordinateBatch = await geocodeList.getLatLonPoint_batch();
+            final latitudeBatch = await coordinateBatch.getLatitude_batch();
+            final longitudeBatch = await coordinateBatch.getLongitude_batch();
+            final geocode = [
+              for (int i = 0; i < coordinateBatch.length; i++)
+                Geocode(LatLng(latitudeBatch[i]!, longitudeBatch[i]!))
+            ];
+            completer.complete(geocode);
+          },
+        );
+        await _androidGeocodeSearch.setOnGeocodeSearchListener(listener);
 
         // 开始搜索
         await _androidGeocodeSearch.getFromLocationNameAsyn(query);
@@ -436,7 +450,20 @@ class AmapSearch {
         _iosSearch = await AMapSearchAPI.create__();
 
         // 设置回调
-        await _iosSearch.set_delegate(_IOSSearchListener(_controller));
+        final delegate = await AMapSearchDelegate.anonymous__(
+          onGeocodeSearchDone: (request, response) async {
+            final geocodeList = await response!.get_geocodes() ?? [];
+            final coordinateBatch = await geocodeList.get_location_batch();
+            final latitudeBatch = await coordinateBatch.get_latitude_batch();
+            final longitudeBatch = await coordinateBatch.get_longitude_batch();
+            final geocode = [
+              for (int i = 0; i < coordinateBatch.length; i++)
+                Geocode(LatLng(latitudeBatch[i]!, longitudeBatch[i]!))
+            ];
+            completer.complete(geocode);
+          },
+        );
+        await _iosSearch.set_delegate(delegate);
 
         // 创建搜索请求
         final request = await AMapGeocodeSearchRequest.create__();
@@ -452,7 +479,7 @@ class AmapSearch {
         pool..add(request);
       },
     );
-    return _controller.future;
+    return completer.future;
   }
 
   /// 逆地理编码（坐标转地址）
@@ -462,9 +489,7 @@ class AmapSearch {
     LatLng latLng, {
     double radius = 200.0,
   }) async {
-    // 会在listener中关闭
-    // ignore: close_sinks
-    final _controller = Completer<ReGeocode>();
+    final completer = Completer<ReGeocode>();
 
     await platform(
       android: (pool) async {
@@ -486,8 +511,31 @@ class AmapSearch {
                 .create__android_content_Context(context);
 
         // 设置回调
-        await _androidGeocodeSearch
-            .setOnGeocodeSearchListener(_AndroidSearchListener(_controller));
+        final listener =
+            await com_amap_api_services_geocoder_GeocodeSearch_OnGeocodeSearchListener
+                .anonymous__(
+          onRegeocodeSearched: (poiResult, rCode) async {
+            final result = (await poiResult!.getRegeocodeAddress())!;
+
+            completer.complete(ReGeocode(
+              provinceName: await result.getProvince(),
+              cityName: await result.getCity(),
+              cityCode: await result.getCityCode(),
+              adCode: await result.getAdCode(),
+              districtName: await result.getDistrict(),
+              townCode: await result.getTowncode(),
+              township: await result.getTownship(),
+              neighborhood: await result.getNeighborhood(),
+              building: await result.getBuilding(),
+              country: await result.getCountry(),
+              formatAddress: await result.getFormatAddress(),
+              roads: await RoadListX.fromAndroid(await result.getRoads() ?? []),
+              aoiList: await AoiListX.fromAndroid(await result.getAois() ?? []),
+              poiList: await PoiListX.fromAndroid(await result.getPois() ?? []),
+            ));
+          },
+        );
+        await _androidGeocodeSearch.setOnGeocodeSearchListener(listener);
 
         // 开始搜索
         await _androidGeocodeSearch.getFromLocationAsyn(query);
@@ -506,7 +554,34 @@ class AmapSearch {
         await amapLocation.set_longitude(latLng.longitude);
 
         // 设置回调
-        await _iosSearch.set_delegate(_IOSSearchListener(_controller));
+        final delegate = await AMapSearchDelegate.anonymous__(
+          onReGeocodeSearchDone: (request, response) async {
+            final result =
+                await (response!.get_regeocode() as FutureOr<AMapReGeocode>);
+            final addressComponent = (await result.get_addressComponent())!;
+
+            completer.complete(ReGeocode(
+              provinceName: await addressComponent.get_province(),
+              cityName: await addressComponent.get_city(),
+              cityCode: await addressComponent.get_citycode(),
+              adCode: await addressComponent.get_adcode(),
+              districtName: await addressComponent.get_district(),
+              townCode: await addressComponent.get_towncode(),
+              township: await addressComponent.get_township(),
+              neighborhood: await addressComponent.get_neighborhood(),
+              building: await addressComponent.get_building(),
+              country: await addressComponent.get_country(),
+              formatAddress: await result.get_formattedAddress(),
+              roads: await RoadListX.fromIOS(
+                  await (result.get_roads() as FutureOr<List<AMapRoad>>)),
+              aoiList: await AoiListX.fromIOS(
+                  await (result.get_aois() as FutureOr<List<AMapAOI>>)),
+              poiList: await PoiListX.fromIOS(
+                  await (result.get_pois() as FutureOr<List<AMapPOI>>)),
+            ));
+          },
+        );
+        await _iosSearch.set_delegate(delegate);
 
         // 创建搜索请求
         final request = await AMapReGeocodeSearchRequest.create__();
@@ -527,7 +602,7 @@ class AmapSearch {
           ..add(request);
       },
     );
-    return _controller.future;
+    return completer.future;
   }
 
   /// 驾车出行路线规划
@@ -539,9 +614,7 @@ class AmapSearch {
     List<LatLng> passedByPoints = const [],
     String avoidRoad = '',
   }) async {
-    // 会在listener中关闭
-    // ignore: close_sinks
-    final _controller = Completer<DriveRouteResult>();
+    final completer = Completer<DriveRouteResult>();
 
     await platform(
       android: (pool) async {
@@ -591,8 +664,14 @@ class AmapSearch {
             .create__android_content_Context(context);
 
         // 设置回调
-        await _androidRouteSearch
-            .setRouteSearchListener(_AndroidSearchListener(_controller));
+        final listener =
+            await com_amap_api_services_route_RouteSearch_OnRouteSearchListener
+                .anonymous__(
+          onDriveRouteSearched: (route, rCode) async {
+            completer.complete(DriveRouteResult.android(route));
+          },
+        );
+        await _androidRouteSearch.setRouteSearchListener(listener);
 
         // 开始搜索
         await _androidRouteSearch.calculateDriveRouteAsyn(query);
@@ -618,7 +697,13 @@ class AmapSearch {
         await toLatLng.set_longitude(to.longitude);
 
         // 设置回调
-        await _iosSearch.set_delegate(_IOSSearchListener(_controller));
+        final delegate = await AMapSearchDelegate.anonymous__(
+          onRouteSearchDone: (request, response) async {
+            final route = DriveRouteResult.ios(await response!.get_route());
+            completer.complete(route);
+          },
+        );
+        await _iosSearch.set_delegate(delegate);
 
         // 创建搜索请求
         final request = await AMapDrivingRouteSearchRequest.create__();
@@ -655,7 +740,7 @@ class AmapSearch {
           ..add(request);
       },
     );
-    return _controller.future;
+    return completer.future;
   }
 
   /// 公交出行路线规划
