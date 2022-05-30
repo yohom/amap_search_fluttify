@@ -158,6 +158,7 @@ class _AndroidSearchListener extends java_lang_Object
 }
 
 /// ios: 搜索监听
+@Deprecated('全部改成匿名内部类的形式')
 class _IOSSearchListener extends NSObject with AMapSearchDelegate {
   _IOSSearchListener(this._completer);
 

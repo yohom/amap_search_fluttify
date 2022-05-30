@@ -132,7 +132,14 @@ class AmapSearch {
         _iosSearch = await AMapSearchAPI.create__();
 
         // 设置回调
-        await _iosSearch.set_delegate(_IOSSearchListener(completer));
+        final delegate = await AMapSearchDelegate.anonymous__(
+          onPOISearchDone: (request, response) async {
+            completer.complete(
+              await PoiListX.fromIOS((await response!.get_pois() ?? [])),
+            );
+          },
+        );
+        await _iosSearch.set_delegate(delegate);
 
         // 创建请求对象
         final request = await AMapPOIKeywordsSearchRequest.create__();
@@ -170,8 +177,7 @@ class AmapSearch {
     assert(page > 0 && page < 100, '页数范围为1-100');
     assert(pageSize > 0 && pageSize < 50, '每页大小范围为1-50');
     // 会在listener中关闭
-    // ignore: close_sinks
-    final _controller = Completer<List<Poi>>.sync();
+    final completer = Completer<List<Poi>>.sync();
 
     platform(
       android: (pool) async {
@@ -201,9 +207,17 @@ class AmapSearch {
         await _androidPoiSearch.setBound(bound);
         // 设置搜索类型
 
+        final listener =
+            await com_amap_api_services_poisearch_PoiSearch_OnPoiSearchListener
+                .anonymous__(
+          onPoiSearched: (poiResult, rCode) async {
+            completer.complete(
+              await PoiListX.fromAndroid((await poiResult!.getPois()) ?? []),
+            );
+          },
+        );
         // 设置回调
-        await _androidPoiSearch
-            .setOnPoiSearchListener(_AndroidSearchListener(_controller));
+        await _androidPoiSearch.setOnPoiSearchListener(listener);
 
         // 开始搜索
         await _androidPoiSearch.searchPOIAsyn();
@@ -218,7 +232,14 @@ class AmapSearch {
         _iosSearch = await AMapSearchAPI.create__();
 
         // 设置回调
-        await _iosSearch.set_delegate(_IOSSearchListener(_controller));
+        final delegate = await AMapSearchDelegate.anonymous__(
+          onPOISearchDone: (request, response) async {
+            completer.complete(
+              await PoiListX.fromIOS((await response!.get_pois() ?? [])),
+            );
+          },
+        );
+        await _iosSearch.set_delegate(delegate);
 
         // 创建周边搜索请求
         final request = await AMapPOIAroundSearchRequest.create__();
@@ -249,7 +270,7 @@ class AmapSearch {
           ..add(location);
       },
     );
-    return _controller.future;
+    return completer.future;
   }
 
   /// id搜索poi
@@ -281,7 +302,14 @@ class AmapSearch {
         _iosSearch = await AMapSearchAPI.create__();
 
         // 设置回调
-        await _iosSearch.set_delegate(_IOSSearchListener(completer));
+        final delegate = await AMapSearchDelegate.anonymous__(
+          onPOISearchDone: (request, response) async {
+            completer.complete(
+              await PoiListX.fromIOS((await response!.get_pois() ?? [])),
+            );
+          },
+        );
+        await _iosSearch.set_delegate(delegate);
 
         // 创建周边搜索请求
         final request = await AMapPOIIDSearchRequest.create__();
@@ -305,7 +333,7 @@ class AmapSearch {
     String keyword, {
     String city = '',
   }) async {
-    final _controller = Completer<List<InputTip>>.sync();
+    final completer = Completer<List<InputTip>>.sync();
 
     await platform(
       android: (pool) async {
@@ -324,8 +352,14 @@ class AmapSearch {
                 context, query);
 
         // 设置回调
-        await _androidInputTip
-            .setInputtipsListener(_AndroidSearchListener(_controller));
+        final listener =
+            await com_amap_api_services_help_Inputtips_InputtipsListener
+                .anonymous__(
+          onGetInputtips: (response, code) async {
+            completer.complete(await InputTipListX.fromAndroid(response ?? []));
+          },
+        );
+        await _androidInputTip.setInputtipsListener(listener);
 
         // 开始搜索
         await _androidInputTip.requestInputtipsAsyn();
@@ -337,7 +371,14 @@ class AmapSearch {
         _iosSearch = await AMapSearchAPI.create__();
 
         // 设置回调
-        await _iosSearch.set_delegate(_IOSSearchListener(_controller));
+        final delegate = await AMapSearchDelegate.anonymous__(
+          onInputTipsSearchDone: (request, response) async {
+            completer.complete(
+              await InputTipListX.fromIOS(await response!.get_tips() ?? []),
+            );
+          },
+        );
+        await _iosSearch.set_delegate(delegate);
 
         // 创建搜索请求
         final request = await AMapInputTipsSearchRequest.create__();
@@ -353,7 +394,7 @@ class AmapSearch {
         pool..add(request);
       },
     );
-    return _controller.future;
+    return completer.future;
   }
 
   /// 地理编码（地址转坐标）
