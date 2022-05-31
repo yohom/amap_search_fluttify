@@ -425,9 +425,8 @@ class AmapSearch {
             await com_amap_api_services_geocoder_GeocodeSearch_OnGeocodeSearchListener
                 .anonymous__(
           onGeocodeSearched: (poiResult, rCode) async {
-            final geocodeList = await (poiResult!.getGeocodeAddressList()
-                as FutureOr<
-                    List<com_amap_api_services_geocoder_GeocodeAddress>>);
+            final geocodeList =
+                (await poiResult!.getGeocodeAddressList()) ?? [];
             final coordinateBatch = await geocodeList.getLatLonPoint_batch();
             final latitudeBatch = await coordinateBatch.getLatitude_batch();
             final longitudeBatch = await coordinateBatch.getLongitude_batch();
@@ -754,9 +753,7 @@ class AmapSearch {
     int mode = 0,
     int nightflag = 0,
   }) async {
-    // 会在listener中关闭
-    // ignore: close_sinks
-    final _controller = Completer<BusRouteResult>();
+    final completer = Completer<BusRouteResult>();
 
     await platform(
       android: (pool) async {
@@ -795,8 +792,14 @@ class AmapSearch {
             .create__android_content_Context(context);
 
         // 设置回调
-        await _androidRouteSearch
-            .setRouteSearchListener(_AndroidSearchListener(_controller));
+        final listener =
+            await com_amap_api_services_route_RouteSearch_OnRouteSearchListener
+                .anonymous__(
+          onBusRouteSearched: (route, code) async {
+            completer.complete(BusRouteResult.android(route));
+          },
+        );
+        await _androidRouteSearch.setRouteSearchListener(listener);
 
         // 开始搜索
         await _androidRouteSearch.calculateBusRouteAsyn(query);
@@ -821,7 +824,12 @@ class AmapSearch {
         await toLatLng.set_longitude(to.longitude);
 
         // 设置回调
-        await _iosSearch.set_delegate(_IOSSearchListener(_controller));
+        final delegate = await AMapSearchDelegate.anonymous__(
+          onRouteSearchDone: (request, response) async {
+            completer.complete(BusRouteResult.ios(await response!.get_route()));
+          },
+        );
+        await _iosSearch.set_delegate(delegate);
 
         // FIXME ios端的公交路线没有经纬度参数, 无法和android端统一
         // 创建搜索请求
@@ -841,7 +849,7 @@ class AmapSearch {
           ..add(request);
       },
     );
-    return _controller.future;
+    return completer.future;
   }
 
   /// 步行路线规划
@@ -852,9 +860,7 @@ class AmapSearch {
     required LatLng to,
     int mode = 0,
   }) async {
-    // 会在listener中关闭
-    // ignore: close_sinks
-    final _controller = Completer<WalkRouteResult>();
+    final completer = Completer<WalkRouteResult>();
 
     await platform(
       android: (pool) async {
@@ -892,8 +898,14 @@ class AmapSearch {
             .create__android_content_Context(context);
 
         // 设置回调
-        await _androidRouteSearch
-            .setRouteSearchListener(_AndroidSearchListener(_controller));
+        final listener =
+            await com_amap_api_services_route_RouteSearch_OnRouteSearchListener
+                .anonymous__(
+          onWalkRouteSearched: (route, code) async {
+            completer.complete(WalkRouteResult.android(route));
+          },
+        );
+        await _androidRouteSearch.setRouteSearchListener(listener);
 
         // 开始搜索
         await _androidRouteSearch.calculateWalkRouteAsyn(query);
@@ -918,7 +930,13 @@ class AmapSearch {
         await toLatLng.set_longitude(to.longitude);
 
         // 设置回调
-        await _iosSearch.set_delegate(_IOSSearchListener(_controller));
+        final delegate = await AMapSearchDelegate.anonymous__(
+          onRouteSearchDone: (request, response) async {
+            completer
+                .complete(WalkRouteResult.ios(await response!.get_route()));
+          },
+        );
+        await _iosSearch.set_delegate(delegate);
 
         // 创建搜索请求
         final request = await AMapWalkingRouteSearchRequest.create__();
@@ -937,7 +955,7 @@ class AmapSearch {
           ..add(request);
       },
     );
-    return _controller.future;
+    return completer.future;
   }
 
   /// 骑行路径规划
@@ -946,9 +964,7 @@ class AmapSearch {
     required LatLng to,
     int mode = 0,
   }) async {
-    // 会在listener中关闭
-    // ignore: close_sinks
-    final _controller = Completer<RideRouteResult>();
+    final completer = Completer<RideRouteResult>();
 
     await platform(
       android: (pool) async {
@@ -986,8 +1002,14 @@ class AmapSearch {
             .create__android_content_Context(context);
 
         // 设置回调
-        await _androidRouteSearch
-            .setRouteSearchListener(_AndroidSearchListener(_controller));
+        final listener =
+            await com_amap_api_services_route_RouteSearch_OnRouteSearchListener
+                .anonymous__(
+          onRideRouteSearched: (route, code) async {
+            completer.complete(RideRouteResult.android(route));
+          },
+        );
+        await _androidRouteSearch.setRouteSearchListener(listener);
 
         // 开始搜索
         await _androidRouteSearch.calculateRideRouteAsyn(query);
@@ -1012,7 +1034,13 @@ class AmapSearch {
         await toLatLng.set_longitude(to.longitude);
 
         // 设置回调
-        await _iosSearch.set_delegate(_IOSSearchListener(_controller));
+        final delegate = await AMapSearchDelegate.anonymous__(
+          onRouteSearchDone: (request, response) async {
+            completer
+                .complete(RideRouteResult.ios(await response!.get_route()));
+          },
+        );
+        await _iosSearch.set_delegate(delegate);
 
         // 创建搜索请求
         final request = await AMapRidingRouteSearchRequest.create__();
@@ -1033,7 +1061,7 @@ class AmapSearch {
           ..add(request);
       },
     );
-    return _controller.future;
+    return completer.future;
   }
 
   /// 获取公交信息
@@ -1041,9 +1069,7 @@ class AmapSearch {
     required String stationName,
     required String city,
   }) async {
-    // 会在listener中关闭
-    // ignore: close_sinks
-    final _controller = Completer<BusStation>();
+    final completer = Completer<BusStation>();
 
     await platform(
       android: (pool) async {
@@ -1066,8 +1092,14 @@ class AmapSearch {
         );
 
         // 设置回调
-        await _androidBusStationSearch
-            .setOnBusStationSearchListener(_AndroidSearchListener(_controller));
+        final listener =
+            await com_amap_api_services_busline_BusStationSearch_OnBusStationSearchListener
+                .anonymous__(
+          onBusStationSearched: (result, code) async {
+            completer.complete(BusStation.android(result));
+          },
+        );
+        await _androidBusStationSearch.setOnBusStationSearchListener(listener);
 
         // 开始搜索
         await _androidBusStationSearch.searchBusStationAsyn();
@@ -1079,7 +1111,12 @@ class AmapSearch {
         _iosSearch = await AMapSearchAPI.create__();
 
         // 设置回调
-        await _iosSearch.set_delegate(_IOSSearchListener(_controller));
+        final delegate = await AMapSearchDelegate.anonymous__(
+          onBusStopSearchDone: (request, response) async {
+            completer.complete(BusStation.ios(response));
+          },
+        );
+        await _iosSearch.set_delegate(delegate);
 
         // 创建搜索请求
         final request = await AMapBusStopSearchRequest.create__();
@@ -1095,7 +1132,7 @@ class AmapSearch {
         pool..add(request);
       },
     );
-    return _controller.future;
+    return completer.future;
   }
 
   /// 获取行政区划数据
@@ -1106,9 +1143,7 @@ class AmapSearch {
     bool showBoundary = false,
     bool showChild = false,
   }) async {
-    // 会在listener中关闭
-    // ignore: close_sinks
-    final _controller = Completer<District>();
+    final completer = Completer<District>();
 
     await platform(
       android: (pool) async {
@@ -1134,8 +1169,14 @@ class AmapSearch {
         await _androidDistrictSearch.setQuery(query);
 
         // 设置回调
-        await _androidDistrictSearch
-            .setOnDistrictSearchListener(_AndroidSearchListener(_controller));
+        final listener =
+            await com_amap_api_services_district_DistrictSearch_OnDistrictSearchListener
+                .anonymous__(
+          onDistrictSearched: (result) async {
+            completer.complete(await District.android(result!));
+          },
+        );
+        await _androidDistrictSearch.setOnDistrictSearchListener(listener);
 
         // 开始搜索
         await _androidDistrictSearch.searchDistrictAsyn();
@@ -1147,7 +1188,12 @@ class AmapSearch {
         _iosSearch = await AMapSearchAPI.create__();
 
         // 设置回调
-        await _iosSearch.set_delegate(_IOSSearchListener(_controller));
+        final delegate = await AMapSearchDelegate.anonymous__(
+          onDistrictSearchDone: (request, response) async {
+            completer.complete(await District.ios(response!));
+          },
+        );
+        await _iosSearch.set_delegate(delegate);
 
         // 创建搜索请求
         final request = await AMapDistrictSearchRequest.create__();
@@ -1163,14 +1209,12 @@ class AmapSearch {
         pool..add(request);
       },
     );
-    return _controller.future;
+    return completer.future;
   }
 
   /// todo 获取天气数据
   Future<Weather> searchWeather(String city, {int mode = 0}) async {
-    // 会在listener中关闭
-    // ignore: close_sinks
-    final _controller = Completer<Weather>();
+    final completer = Completer<Weather>();
 
     await platform(
       android: (pool) async {
@@ -1193,8 +1237,15 @@ class AmapSearch {
         await _androidWeatherSearch.setQuery(query);
 
         // 设置回调
+        // final listener =
+        // await com_amap_api_services_weather_WeatherSearch_OnWeatherSearchListener
+        //     .anonymous__(
+        //   onWeatherForecastSearched: (route, code) async {
+        //     completer.complete(BusRouteResult.android(route));
+        //   },
+        // );
         await _androidWeatherSearch
-            .setOnWeatherSearchListener(_AndroidSearchListener(_controller));
+            .setOnWeatherSearchListener(_AndroidSearchListener(completer));
 
         // 开始搜索
         await _androidDistrictSearch.searchDistrictAsyn();
@@ -1206,7 +1257,7 @@ class AmapSearch {
         _iosSearch = await AMapSearchAPI.create__();
 
         // 设置回调
-        await _iosSearch.set_delegate(_IOSSearchListener(_controller));
+        await _iosSearch.set_delegate(_IOSSearchListener(completer));
 
         // 创建搜索请求
         final request = await AMapWeatherSearchRequest.create__();
@@ -1221,7 +1272,7 @@ class AmapSearch {
         pool..add(request);
       },
     );
-    return _controller.future;
+    return completer.future;
   }
 
   /// 搜索云图
@@ -1231,7 +1282,7 @@ class AmapSearch {
     LatLng center,
     int radius,
   ) async {
-    final _controller = Completer<Cloud>();
+    final completer = Completer<Cloud>();
 
     await platform(
       android: (pool) async {
@@ -1253,8 +1304,14 @@ class AmapSearch {
             .create__android_content_Context(context);
 
         // 设置回调
-        await _androidCloudSearch
-            .setOnCloudSearchListener(_AndroidSearchListener(_controller));
+        final listener =
+            await com_amap_api_services_cloud_CloudSearch_OnCloudSearchListener
+                .anonymous__(
+          onCloudSearched: (result, code) async {
+            completer.complete(Cloud.android(result));
+          },
+        );
+        await _androidCloudSearch.setOnCloudSearchListener(listener);
 
         // 设置请求
         await _androidCloudSearch.searchCloudAsyn(query);
@@ -1270,7 +1327,12 @@ class AmapSearch {
         _iosSearch = await AMapSearchAPI.create__();
 
         // 设置回调
-        await _iosSearch.set_delegate(_IOSSearchListener(_controller));
+        final delegate = await AMapSearchDelegate.anonymous__(
+          onCloudSearchDone: (request, response) async {
+            completer.complete(Cloud.ios(response));
+          },
+        );
+        await _iosSearch.set_delegate(delegate);
 
         // 创建搜索请求
         final request = await AMapCloudPOIAroundSearchRequest.create__();
@@ -1293,7 +1355,7 @@ class AmapSearch {
           ..add(centerPoint);
       },
     );
-    return _controller.future;
+    return completer.future;
   }
 
   /// 释放原生端对应的资源, 除了[AMapServices]

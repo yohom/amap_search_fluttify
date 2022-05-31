@@ -253,7 +253,7 @@ class InputTipListX {
     final idBatch = await inputTipList.getPoiID_batch();
     final addressBatch = await inputTipList.getAddress_batch();
     final districtBatch = await inputTipList.getDistrict_batch();
-    final coordinateBatch = await (inputTipList.getPoint_batch());
+    final coordinateBatch = await inputTipList.getPoint_batch();
     final latitudeBatch = await coordinateBatch.getLatitude_batch();
     final longitudeBatch = await coordinateBatch.getLongitude_batch();
 

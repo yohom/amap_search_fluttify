@@ -554,8 +554,7 @@ class DriveStep with _ToFutureString {
   Future<List<LatLng>> get polyline {
     return platform(
       android: (pool) async {
-        final polyline = await (_androidModel!.getPolyline()
-            as FutureOr<List<com_amap_api_services_core_LatLonPoint>>);
+        final polyline = await _androidModel!.getPolyline() ?? [];
         final latitudeBatch = await polyline.getLatitude_batch();
         final longitudeBatch = await polyline.getLongitude_batch();
         return [
@@ -564,8 +563,7 @@ class DriveStep with _ToFutureString {
         ];
       },
       ios: (pool) async {
-        final latLngString =
-            await (_iosModel!.get_polyline() as FutureOr<String>);
+        final latLngString = await _iosModel!.get_polyline() ?? '';
         return latLngString
             .split(';')
             .map((latLngPair) => latLngPair.split(','))
@@ -661,8 +659,7 @@ class WalkStep with _ToFutureString {
   Future<List<LatLng>> get polyline {
     return platform(
       android: (pool) async {
-        final polyline = await (_androidModel!.getPolyline()
-            as FutureOr<List<com_amap_api_services_core_LatLonPoint>>);
+        final polyline = await _androidModel!.getPolyline() ?? [];
         final latitudeBatch = await polyline.getLatitude_batch();
         final longitudeBatch = await polyline.getLongitude_batch();
         return [
@@ -671,8 +668,7 @@ class WalkStep with _ToFutureString {
         ];
       },
       ios: (pool) async {
-        final latLngString =
-            await (_iosModel!.get_polyline() as FutureOr<String>);
+        final latLngString = await _iosModel!.get_polyline() ?? '';
         return latLngString
             .split(';')
             .map((latLngPair) => latLngPair.split(','))
@@ -757,8 +753,7 @@ class RideStep with _ToFutureString {
   Future<List<LatLng>> get polyline {
     return platform(
       android: (pool) async {
-        final polyline = await (_androidModel!.getPolyline()
-            as FutureOr<List<com_amap_api_services_core_LatLonPoint>>);
+        final polyline = await _androidModel!.getPolyline() ?? [];
         final latitudeBatch = await polyline.getLatitude_batch();
         final longitudeBatch = await polyline.getLongitude_batch();
         return [
@@ -767,8 +762,7 @@ class RideStep with _ToFutureString {
         ];
       },
       ios: (pool) async {
-        final latLngString =
-            await (_iosModel!.get_polyline() as FutureOr<String>);
+        final latLngString = await _iosModel!.get_polyline() ?? '';
         return latLngString
             .split(';')
             .map((latLngPair) => latLngPair.split(','))
@@ -821,13 +815,11 @@ class BusStep with _ToFutureString {
   Future<List<BusLine>> get lines {
     return platform(
       android: (pool) async {
-        final busLines = await (_androidModel!.getBusLines()
-            as FutureOr<List<com_amap_api_services_route_RouteBusLineItem>>);
+        final busLines = await _androidModel!.getBusLines() ?? [];
         return [for (final item in busLines) BusLine.android(item)];
       },
       ios: (pool) async {
-        final busLines =
-            await (_iosModel!.get_buslines() as FutureOr<List<AMapBusLine>>);
+        final busLines = await _iosModel!.get_buslines() ?? [];
         return [for (final item in busLines) BusLine.ios(item)];
       },
     );
@@ -897,8 +889,8 @@ class BusWalk with _ToFutureString {
           return null;
         } else {
           return LatLng(
-            await (origin.getLatitude() as FutureOr<double>),
-            await (origin.getLongitude() as FutureOr<double>),
+            await origin.getLatitude() ?? 0,
+            await origin.getLongitude() ?? 0,
           );
         }
       },
@@ -908,8 +900,8 @@ class BusWalk with _ToFutureString {
           return null;
         } else {
           return LatLng(
-            await (origin.get_latitude() as FutureOr<double>),
-            await (origin.get_longitude() as FutureOr<double>),
+            await origin.get_latitude() ?? 0,
+            await origin.get_longitude() ?? 0,
           );
         }
       },
@@ -925,8 +917,8 @@ class BusWalk with _ToFutureString {
           return null;
         } else {
           return LatLng(
-            await (origin.getLatitude() as FutureOr<double>),
-            await (origin.getLongitude() as FutureOr<double>),
+            await origin.getLatitude() ?? 0,
+            await origin.getLongitude() ?? 0,
           );
         }
       },
@@ -936,8 +928,8 @@ class BusWalk with _ToFutureString {
           return null;
         } else {
           return LatLng(
-            await (origin.get_latitude() as FutureOr<double>),
-            await (origin.get_longitude() as FutureOr<double>),
+            await origin.get_latitude() ?? 0,
+            await origin.get_longitude() ?? 0,
           );
         }
       },
@@ -1077,7 +1069,7 @@ class BusExit with _ToFutureString {
   /// 名称
   Future<String?> get name {
     return platform(
-      android: (pool) => _androidModel!.getName(),
+      android: (pool) async => _androidModel?.getName(),
       ios: (pool) async => _iosModelName,
     );
   }
@@ -1214,13 +1206,11 @@ class BusStation with _ToFutureString {
   Future<List<BusStationItem>> get busStationList {
     return platform(
       android: (pool) async {
-        final busStations = await (_androidModel!.getBusStations()
-            as FutureOr<List<com_amap_api_services_busline_BusStationItem>>);
+        final busStations = await _androidModel!.getBusStations() ?? [];
         return [for (final item in busStations) BusStationItem.android(item)];
       },
       ios: (pool) async {
-        final busStations =
-            await (_iosModel!.get_busstops() as FutureOr<List<AMapBusStop>>);
+        final busStations = await _iosModel!.get_busstops() ?? [];
         return [for (final item in busStations) BusStationItem.ios(item)];
       },
     );
@@ -1261,19 +1251,17 @@ class BusStationItem with _ToFutureString {
   Future<LatLng> get location {
     return platform(
       android: (pool) async {
-        final latLng = await (_androidModel!.getLatLonPoint()
-            as FutureOr<com_amap_api_services_core_LatLonPoint>);
+        final latLng = await _androidModel!.getLatLonPoint();
         return LatLng(
-          await (latLng.getLatitude() as FutureOr<double>),
-          await (latLng.getLongitude() as FutureOr<double>),
+          await latLng!.getLatitude() ?? 0,
+          await latLng.getLongitude() ?? 0,
         );
       },
       ios: (pool) async {
-        final location =
-            await (_iosModel!.get_location() as FutureOr<AMapGeoPoint>);
+        final location = await _iosModel!.get_location();
         return LatLng(
-          await (location.get_latitude() as FutureOr<double>),
-          await (location.get_longitude() as FutureOr<double>),
+          await location!.get_latitude() ?? 0,
+          await location.get_longitude() ?? 0,
         );
       },
     );
@@ -1331,20 +1319,17 @@ class DistrictItem {
   ) async {
     final result = DistrictItem();
 
-    final center = await (model.getCenter()
-        as FutureOr<com_amap_api_services_core_LatLonPoint>);
-    final rawBoundary =
-        await (model.districtBoundary() as FutureOr<List<String>>);
-    final subDistrictList = await (model.getSubDistrict()
-        as FutureOr<List<com_amap_api_services_district_DistrictItem>>);
+    final center = await model.getCenter();
+    final rawBoundary = await model.districtBoundary() ?? [];
+    final subDistrictList = await model.getSubDistrict() ?? [];
 
     result
       .._name = await model.getName()
       .._cityCode = await model.getCitycode()
       .._adCode = await model.getAdcode()
       .._center = LatLng(
-        await (center.getLatitude() as FutureOr<double>),
-        await (center.getLongitude() as FutureOr<double>),
+        await center!.getLatitude() ?? 0,
+        await center.getLongitude() ?? 0,
       )
       .._boundary = [
         for (final rawDistrict in rawBoundary)
@@ -1370,16 +1355,15 @@ class DistrictItem {
 
     final center = await (model.get_center() as FutureOr<AMapGeoPoint>);
     final rawDistrictList = await model.get_polylines() ?? [];
-    final subDistrictList =
-        await (model.get_districts() as FutureOr<List<AMapDistrict>>);
+    final subDistrictList = await model.get_districts() ?? [];
 
     result
       .._name = await model.get_name()
       .._cityCode = await model.get_citycode()
       .._adCode = await model.get_adcode()
       .._center = LatLng(
-        await (center.get_latitude() as FutureOr<double>),
-        await (center.get_longitude() as FutureOr<double>),
+        await center.get_latitude() ?? 0,
+        await center.get_longitude() ?? 0,
       )
       .._boundary = [
         for (final rawDistrict in rawDistrictList)
