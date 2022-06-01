@@ -19,7 +19,7 @@ class FunctionItem extends StatelessWidget {
         ListTile(
           title: Text(label),
           subtitle: Text(sublabel),
-          trailing: Icon(Icons.keyboard_arrow_right),
+          trailing: const Icon(Icons.keyboard_arrow_right),
           onTap: () {
             Navigator.push(
               context,
@@ -27,7 +27,7 @@ class FunctionItem extends StatelessWidget {
             );
           },
         ),
-        Divider(height: 1, indent: 16),
+        const Divider(height: 1, indent: 16),
       ],
     );
   }

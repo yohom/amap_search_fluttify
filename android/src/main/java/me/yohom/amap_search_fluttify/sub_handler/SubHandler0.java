@@ -1065,7 +1065,8 @@ public class SubHandler0 {
             // method
             put("com.amap.api.services.busline.BusStationSearch::setOnBusStationSearchListener", (__args__, __methodResult__) -> {
                 // args
-            
+                // ref arg
+                com.amap.api.services.busline.BusStationSearch.OnBusStationSearchListener var1 = (com.amap.api.services.busline.BusStationSearch.OnBusStationSearchListener) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.busline.BusStationSearch __this__ = (com.amap.api.services.busline.BusStationSearch) ((Map<String, Object>) __args__).get("__this__");
@@ -1078,38 +1079,7 @@ public class SubHandler0 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setOnBusStationSearchListener(new com.amap.api.services.busline.BusStationSearch.OnBusStationSearchListener() {
-                        // method channel
-                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.busline.BusStationSearch::setOnBusStationSearchListener::Callback@" + __this__.getClass().getName() + ":" + System.identityHashCode(__this__), new StandardMethodCodec(new FluttifyMessageCodec()));
-                        android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
-            
-                        // call dart method
-                        @Override
-                        public void onBusStationSearched(com.amap.api.services.busline.BusStationResult var1, int var2) {
-                            // print log
-                            if (getEnableLog()) {
-                                Log.d("java-callback", "fluttify-java-callback: onBusStationSearched(" + var1 + var2 + ")");
-                            }
-            
-                            // call dart method
-                            handler.post(new Runnable() {
-                                @Override
-                                public void run() {
-                                    callbackChannel.invokeMethod(
-                                        "Callback::com.amap.api.services.busline.BusStationSearch.OnBusStationSearchListener::onBusStationSearched",
-                                        new HashMap<String, Object>() {{
-                                            put("var1", var1);
-                                            put("var2", var2);
-                                        }}
-                                    );
-                                }
-                            });
-            
-                            // method result
-            
-                        }
-            
-                });
+                    __this__.setOnBusStationSearchListener(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -1237,7 +1207,8 @@ public class SubHandler0 {
             // method
             put("com.amap.api.services.busline.BusLineSearch::setOnBusLineSearchListener", (__args__, __methodResult__) -> {
                 // args
-            
+                // ref arg
+                com.amap.api.services.busline.BusLineSearch.OnBusLineSearchListener var1 = (com.amap.api.services.busline.BusLineSearch.OnBusLineSearchListener) ((Map<String, Object>) __args__).get("var1");
             
                 // ref
                 com.amap.api.services.busline.BusLineSearch __this__ = (com.amap.api.services.busline.BusLineSearch) ((Map<String, Object>) __args__).get("__this__");
@@ -1250,38 +1221,7 @@ public class SubHandler0 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    __this__.setOnBusLineSearchListener(new com.amap.api.services.busline.BusLineSearch.OnBusLineSearchListener() {
-                        // method channel
-                        MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.busline.BusLineSearch::setOnBusLineSearchListener::Callback@" + __this__.getClass().getName() + ":" + System.identityHashCode(__this__), new StandardMethodCodec(new FluttifyMessageCodec()));
-                        android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
-            
-                        // call dart method
-                        @Override
-                        public void onBusLineSearched(com.amap.api.services.busline.BusLineResult var1, int var2) {
-                            // print log
-                            if (getEnableLog()) {
-                                Log.d("java-callback", "fluttify-java-callback: onBusLineSearched(" + var1 + var2 + ")");
-                            }
-            
-                            // call dart method
-                            handler.post(new Runnable() {
-                                @Override
-                                public void run() {
-                                    callbackChannel.invokeMethod(
-                                        "Callback::com.amap.api.services.busline.BusLineSearch.OnBusLineSearchListener::onBusLineSearched",
-                                        new HashMap<String, Object>() {{
-                                            put("var1", var1);
-                                            put("var2", var2);
-                                        }}
-                                    );
-                                }
-                            });
-            
-                            // method result
-            
-                        }
-            
-                });
+                    __this__.setOnBusLineSearchListener(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -2995,6 +2935,70 @@ public class SubHandler0 {
                 Void __result__ = null;
                 try {
                     __this__.destroyInnerAsynThreadPool();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.amap.api.services.core.ServiceSettings::updatePrivacyShow", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+                // ref arg
+                boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                boolean var2 = (boolean) ((Map<String, Object>) __args__).get("var2");
+            
+                // ref
+            
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.ServiceSettings::updatePrivacyShow(" + var0 + var1 + var2 + ")");
+                }
+            
+                // invoke native method
+                Void __result__ = null;
+                try {
+                    com.amap.api.services.core.ServiceSettings.updatePrivacyShow(var0, var1, var2);
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    __methodResult__.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                __methodResult__.success(__result__);
+            });
+            // method
+            put("com.amap.api.services.core.ServiceSettings::updatePrivacyAgree", (__args__, __methodResult__) -> {
+                // args
+                // ref arg
+                android.content.Context var0 = (android.content.Context) ((Map<String, Object>) __args__).get("var0");
+                // ref arg
+                boolean var1 = (boolean) ((Map<String, Object>) __args__).get("var1");
+            
+                // ref
+            
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.ServiceSettings::updatePrivacyAgree(" + var0 + var1 + ")");
+                }
+            
+                // invoke native method
+                Void __result__ = null;
+                try {
+                    com.amap.api.services.core.ServiceSettings.updatePrivacyAgree(var0, var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
@@ -5641,62 +5645,6 @@ public class SubHandler0 {
                 com.amap.api.services.core.LatLonPoint __result__ = null;
                 try {
                     __result__ = __this__.getCenter();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.amap.api.services.poisearch.PoiSearch.SearchBound::getRange", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.amap.api.services.poisearch.PoiSearch.SearchBound __this__ = (com.amap.api.services.poisearch.PoiSearch.SearchBound) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.PoiSearch.SearchBound@" + __this__ + "::getRange(" + "" + ")");
-                }
-            
-                // invoke native method
-                Integer __result__ = null;
-                try {
-                    __result__ = __this__.getRange();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    __methodResult__.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                __methodResult__.success(__result__);
-            });
-            // method
-            put("com.amap.api.services.poisearch.PoiSearch.SearchBound::getShape", (__args__, __methodResult__) -> {
-                // args
-            
-            
-                // ref
-                com.amap.api.services.poisearch.PoiSearch.SearchBound __this__ = (com.amap.api.services.poisearch.PoiSearch.SearchBound) ((Map<String, Object>) __args__).get("__this__");
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.PoiSearch.SearchBound@" + __this__ + "::getShape(" + "" + ")");
-                }
-            
-                // invoke native method
-                String __result__ = null;
-                try {
-                    __result__ = __this__.getShape();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {

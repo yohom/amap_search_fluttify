@@ -11,6 +11,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
+import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 
 class AMapFutureRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCoding, NSCopying {
   //region constants
@@ -37,9 +38,11 @@ class AMapFutureRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCod
       'ObjectFactory::create_batchAMapFutureRouteSearchRequest',
       {'length': length, 'init': init}
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyIOSAs<AMapFutureRouteSearchRequest>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyIOSAs<AMapFutureRouteSearchRequest>(it))
+        .where((element) => element !=null)
+        .cast<AMapFutureRouteSearchRequest>()
+        .toList() ?? <AMapFutureRouteSearchRequest>[];
   }
   
   //endregion
@@ -110,74 +113,50 @@ class AMapFutureRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCod
   //region setters
   Future<void> set_beginTime(String beginTime) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapFutureRouteSearchRequest::set_beginTime', <String, dynamic>{'__this__': this, "beginTime": beginTime});
-  
-  
   }
   
   Future<void> set_interval(int interval) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapFutureRouteSearchRequest::set_interval', <String, dynamic>{'__this__': this, "interval": interval});
-  
-  
   }
   
   Future<void> set_timeCount(int timeCount) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapFutureRouteSearchRequest::set_timeCount', <String, dynamic>{'__this__': this, "timeCount": timeCount});
-  
-  
   }
   
   Future<void> set_strategy(int strategy) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapFutureRouteSearchRequest::set_strategy', <String, dynamic>{'__this__': this, "strategy": strategy});
-  
-  
   }
   
   Future<void> set_originId(String originId) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapFutureRouteSearchRequest::set_originId', <String, dynamic>{'__this__': this, "originId": originId});
-  
-  
   }
   
   Future<void> set_destinationId(String destinationId) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapFutureRouteSearchRequest::set_destinationId', <String, dynamic>{'__this__': this, "destinationId": destinationId});
-  
-  
   }
   
   Future<void> set_origintype(String origintype) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapFutureRouteSearchRequest::set_origintype', <String, dynamic>{'__this__': this, "origintype": origintype});
-  
-  
   }
   
   Future<void> set_destinationtype(String destinationtype) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapFutureRouteSearchRequest::set_destinationtype', <String, dynamic>{'__this__': this, "destinationtype": destinationtype});
-  
-  
   }
   
   Future<void> set_parentId(String parentId) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapFutureRouteSearchRequest::set_parentId', <String, dynamic>{'__this__': this, "parentId": parentId});
-  
-  
   }
   
   Future<void> set_plateProvince(String plateProvince) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapFutureRouteSearchRequest::set_plateProvince', <String, dynamic>{'__this__': this, "plateProvince": plateProvince});
-  
-  
   }
   
   Future<void> set_plateNumber(String plateNumber) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapFutureRouteSearchRequest::set_plateNumber', <String, dynamic>{'__this__': this, "plateNumber": plateNumber});
-  
-  
   }
   
   Future<void> set_cartype(int cartype) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapFutureRouteSearchRequest::set_cartype', <String, dynamic>{'__this__': this, "cartype": cartype});
-  
-  
   }
   
   //endregion
@@ -193,65 +172,70 @@ class AMapFutureRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCod
 }
 
 extension AMapFutureRouteSearchRequest_Batch on List<AMapFutureRouteSearchRequest?> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first?.refId;
+  }
+
   //region getters
-  Future<List<String?>?> get_beginTime_batch() async {
+  Future<List<String?>> get_beginTime_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapFutureRouteSearchRequest::get_beginTime_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<int?>?> get_interval_batch() async {
+  Future<List<int?>> get_interval_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapFutureRouteSearchRequest::get_interval_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<int?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
   }
   
-  Future<List<int?>?> get_timeCount_batch() async {
+  Future<List<int?>> get_timeCount_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapFutureRouteSearchRequest::get_timeCount_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<int?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
   }
   
-  Future<List<int?>?> get_strategy_batch() async {
+  Future<List<int?>> get_strategy_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapFutureRouteSearchRequest::get_strategy_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<int?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
   }
   
-  Future<List<String?>?> get_originId_batch() async {
+  Future<List<String?>> get_originId_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapFutureRouteSearchRequest::get_originId_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<String?>?> get_destinationId_batch() async {
+  Future<List<String?>> get_destinationId_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapFutureRouteSearchRequest::get_destinationId_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<String?>?> get_origintype_batch() async {
+  Future<List<String?>> get_origintype_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapFutureRouteSearchRequest::get_origintype_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<String?>?> get_destinationtype_batch() async {
+  Future<List<String?>> get_destinationtype_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapFutureRouteSearchRequest::get_destinationtype_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<String?>?> get_parentId_batch() async {
+  Future<List<String?>> get_parentId_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapFutureRouteSearchRequest::get_parentId_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<String?>?> get_plateProvince_batch() async {
+  Future<List<String?>> get_plateProvince_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapFutureRouteSearchRequest::get_plateProvince_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<String?>?> get_plateNumber_batch() async {
+  Future<List<String?>> get_plateNumber_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapFutureRouteSearchRequest::get_plateNumber_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<int?>?> get_cartype_batch() async {
+  Future<List<int?>> get_cartype_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapFutureRouteSearchRequest::get_cartype_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<int?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
   }
   
   //endregion

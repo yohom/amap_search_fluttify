@@ -11,6 +11,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
+import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 
 class com_amap_api_services_cloud_CloudItemDetail extends com_amap_api_services_cloud_CloudItem with android_os_Parcelable {
   //region constants
@@ -23,7 +24,7 @@ class com_amap_api_services_cloud_CloudItemDetail extends com_amap_api_services_
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_cloud_CloudItemDetail> create__String__com_amap_api_services_core_LatLonPoint__String__String(String? var1, com_amap_api_services_core_LatLonPoint? var2, String? var3, String? var4) async {
+  static Future<com_amap_api_services_cloud_CloudItemDetail> create__String__com_amap_api_services_core_LatLonPoint__String__String(String var1, com_amap_api_services_core_LatLonPoint var2, String var3, String var4) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_cloud_CloudItemDetail__String__com_amap_api_services_core_LatLonPoint__String__String',
       {"var1": var1, "var2": var2, "var3": var3, "var4": var4}
@@ -37,9 +38,11 @@ class com_amap_api_services_cloud_CloudItemDetail extends com_amap_api_services_
       'ObjectFactory::create_batchcom_amap_api_services_cloud_CloudItemDetail__String__com_amap_api_services_core_LatLonPoint__String__String',
       [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "var4": var4[__i__]}]
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudItemDetail>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudItemDetail>(it))
+        .where((element) => element !=null)
+        .cast<com_amap_api_services_cloud_CloudItemDetail>()
+        .toList() ?? <com_amap_api_services_cloud_CloudItemDetail>[];
   }
   
   //endregion
@@ -63,6 +66,11 @@ class com_amap_api_services_cloud_CloudItemDetail extends com_amap_api_services_
 }
 
 extension com_amap_api_services_cloud_CloudItemDetail_Batch on List<com_amap_api_services_cloud_CloudItemDetail?> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first?.refId;
+  }
+
   //region getters
   
   //endregion

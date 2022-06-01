@@ -11,6 +11,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
+import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 
 class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
   //region constants
@@ -73,7 +74,7 @@ class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
   }
   
   
-  Future<void> setConnectionTimeOut(int? var1) async {
+  Future<void> setConnectionTimeOut(int var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.ServiceSettings@$refId::setConnectionTimeOut([\'var1\':$var1])');
@@ -90,7 +91,7 @@ class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
   }
   
   
-  Future<void> setSoTimeOut(int? var1) async {
+  Future<void> setSoTimeOut(int var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.ServiceSettings@$refId::setSoTimeOut([\'var1\':$var1])');
@@ -124,7 +125,7 @@ class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
   }
   
   
-  Future<void> setLanguage(String? var1) async {
+  Future<void> setLanguage(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.ServiceSettings@$refId::setLanguage([\'var1\':$var1])');
@@ -141,7 +142,7 @@ class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
   }
   
   
-  Future<void> setProtocol(int? var1) async {
+  Future<void> setProtocol(int var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.ServiceSettings@$refId::setProtocol([\'var1\':$var1])');
@@ -192,7 +193,7 @@ class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
   }
   
   
-  Future<void> setApiKey(String? var1) async {
+  Future<void> setApiKey(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.ServiceSettings@$refId::setApiKey([\'var1\':$var1])');
@@ -225,6 +226,40 @@ class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
     return __result__;
   }
   
+  
+  static Future<void> updatePrivacyShow(android_content_Context var0, bool var1, bool var2) async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: com.amap.api.services.core.ServiceSettings::updatePrivacyShow([\'var1\':$var1, \'var2\':$var2])');
+    }
+  
+    // invoke native method
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.ServiceSettings::updatePrivacyShow', {"var0": var0, "var1": var1, "var2": var2});
+  
+  
+    // handle native call
+  
+  
+    return __result__;
+  }
+  
+  
+  static Future<void> updatePrivacyAgree(android_content_Context var0, bool var1) async {
+    // print log
+    if (fluttifyLogEnabled) {
+      debugPrint('fluttify-dart: com.amap.api.services.core.ServiceSettings::updatePrivacyAgree([\'var1\':$var1])');
+    }
+  
+    // invoke native method
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.ServiceSettings::updatePrivacyAgree', {"var0": var0, "var1": var1});
+  
+  
+    // handle native call
+  
+  
+    return __result__;
+  }
+  
   //endregion
 
   @override
@@ -234,6 +269,11 @@ class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
 }
 
 extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_services_core_ServiceSettings?> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first?.refId;
+  }
+
   //region getters
   
   //endregion
@@ -244,29 +284,29 @@ extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_
 
   //region methods
   
-  Future<List<int?>?> getConnectionTimeOut_batch() async {
+  Future<List<int?>> getConnectionTimeOut_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.ServiceSettings::getConnectionTimeOut_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<int>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
   }
   
   
-  Future<List<int?>?> getSoTimeOut_batch() async {
+  Future<List<int?>> getSoTimeOut_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.ServiceSettings::getSoTimeOut_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<int>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
   }
   
   
-  Future<List<void>?> setConnectionTimeOut_batch(List<int> var1) async {
+  Future<List<void>> setConnectionTimeOut_batch(List<int> var1) async {
     assert(true);
   
     // invoke native method
@@ -277,7 +317,7 @@ extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_
   }
   
   
-  Future<List<void>?> setSoTimeOut_batch(List<int> var1) async {
+  Future<List<void>> setSoTimeOut_batch(List<int> var1) async {
     assert(true);
   
     // invoke native method
@@ -288,18 +328,18 @@ extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_
   }
   
   
-  static Future<List<com_amap_api_services_core_ServiceSettings?>?> getInstance_batch() async {
+  static Future<List<com_amap_api_services_core_ServiceSettings?>> getInstance_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.ServiceSettings::getInstance_batch', );
   
   
-    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_ServiceSettings>(__result__)).cast<com_amap_api_services_core_ServiceSettings>().toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_ServiceSettings>(__result__)).cast<com_amap_api_services_core_ServiceSettings?>().toList();
   }
   
   
-  Future<List<void>?> setLanguage_batch(List<String> var1) async {
+  Future<List<void>> setLanguage_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -310,7 +350,7 @@ extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_
   }
   
   
-  Future<List<void>?> setProtocol_batch(List<int> var1) async {
+  Future<List<void>> setProtocol_batch(List<int> var1) async {
     assert(true);
   
     // invoke native method
@@ -321,29 +361,29 @@ extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_
   }
   
   
-  Future<List<String?>?> getLanguage_batch() async {
+  Future<List<String?>> getLanguage_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.ServiceSettings::getLanguage_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   
-  Future<List<int?>?> getProtocol_batch() async {
+  Future<List<int?>> getProtocol_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.ServiceSettings::getProtocol_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<int>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
   }
   
   
-  Future<List<void>?> setApiKey_batch(List<String> var1) async {
+  Future<List<void>> setApiKey_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -354,11 +394,33 @@ extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_
   }
   
   
-  Future<List<void>?> destroyInnerAsynThreadPool_batch() async {
+  Future<List<void>> destroyInnerAsynThreadPool_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.ServiceSettings::destroyInnerAsynThreadPool_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
+  
+  
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
+  }
+  
+  
+  static Future<List<void>> updatePrivacyShow_batch(List<android_content_Context> var0, List<bool> var1, List<bool> var2) async {
+    assert(var0.length == var1.length && var1.length == var2.length);
+  
+    // invoke native method
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.ServiceSettings::updatePrivacyShow_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__], "var2": var2[__i__]}]);
+  
+  
+    return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
+  }
+  
+  
+  static Future<List<void>> updatePrivacyAgree_batch(List<android_content_Context> var0, List<bool> var1) async {
+    assert(var0.length == var1.length);
+  
+    // invoke native method
+    final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.ServiceSettings::updatePrivacyAgree_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__], "var1": var1[__i__]}]);
   
   
     return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();

@@ -11,6 +11,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
+import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 
 class AMapNearbySearchManager extends NSObject  {
   //region constants
@@ -42,54 +43,10 @@ class AMapNearbySearchManager extends NSObject  {
   //region setters
   Future<void> set_uploadTimeInterval(double uploadTimeInterval) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapNearbySearchManager::set_uploadTimeInterval', <String, dynamic>{'__this__': this, "uploadTimeInterval": uploadTimeInterval});
-  
-  
   }
   
   Future<void> set_delegate(AMapNearbySearchManagerDelegate delegate) async {
-    await kAmapSearchFluttifyChannel.invokeMethod('AMapNearbySearchManager::set_delegate', <String, dynamic>{'__this__': this, });
-  
-    MethodChannel('AMapNearbySearchManagerDelegate::Callback', kAmapSearchFluttifyMethodCodec)
-      .setMethodCallHandler((methodCall) async {
-        try {
-          final args = methodCall.arguments as Map;
-          switch (methodCall.method) {
-            case 'Callback::AMapNearbySearchManagerDelegate::nearbyInfoForUploading':
-              // print log
-              if (fluttifyLogEnabled) {
-                debugPrint('fluttify-dart-callback: nearbyInfoForUploading([\'manager\':${args['manager']}])');
-              }
-          
-              // handle the native call
-              await delegate?.nearbyInfoForUploading(AmapSearchFluttifyIOSAs(args['manager']));
-              break;
-            case 'Callback::AMapNearbySearchManagerDelegate::onNearbyInfoUploadedWithError':
-              // print log
-              if (fluttifyLogEnabled) {
-                debugPrint('fluttify-dart-callback: onNearbyInfoUploadedWithError([\'error\':${args['error']}])');
-              }
-          
-              // handle the native call
-              await delegate?.onNearbyInfoUploadedWithError(AmapSearchFluttifyIOSAs(args['error']));
-              break;
-            case 'Callback::AMapNearbySearchManagerDelegate::onUserInfoClearedWithError':
-              // print log
-              if (fluttifyLogEnabled) {
-                debugPrint('fluttify-dart-callback: onUserInfoClearedWithError([\'error\':${args['error']}])');
-              }
-          
-              // handle the native call
-              await delegate?.onUserInfoClearedWithError(AmapSearchFluttifyIOSAs(args['error']));
-              break;
-            default:
-              throw MissingPluginException('方法${methodCall.method}未实现');
-              break;
-          }
-        } catch (e) {
-          debugPrint(e.toString());
-          rethrow;
-        }
-      });
+    await kAmapSearchFluttifyChannel.invokeMethod('AMapNearbySearchManager::set_delegate', <String, dynamic>{'__this__': this, "delegate": delegate});
   }
   
   //endregion
@@ -146,8 +103,8 @@ class AMapNearbySearchManager extends NSObject  {
     return __result__;
   }
   
-  @deprecated
-  Future<bool?> uploadNearbyInfo(AMapNearbyUploadInfo? info) async {
+  
+  Future<bool?> uploadNearbyInfo(AMapNearbyUploadInfo info) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: AMapNearbySearchManager@$refId::uploadNearbyInfo([])');
@@ -163,8 +120,8 @@ class AMapNearbySearchManager extends NSObject  {
     return __result__;
   }
   
-  @deprecated
-  Future<bool?> clearUserInfoWithID(String? userID) async {
+  
+  Future<bool?> clearUserInfoWithID(String userID) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: AMapNearbySearchManager@$refId::clearUserInfoWithID([\'userID\':$userID])');
@@ -189,15 +146,20 @@ class AMapNearbySearchManager extends NSObject  {
 }
 
 extension AMapNearbySearchManager_Batch on List<AMapNearbySearchManager?> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first?.refId;
+  }
+
   //region getters
-  Future<List<double?>?> get_uploadTimeInterval_batch() async {
+  Future<List<double?>> get_uploadTimeInterval_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapNearbySearchManager::get_uploadTimeInterval_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<double?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<double?>().toList();
   }
   
-  Future<List<bool?>?> get_isAutoUploading_batch() async {
+  Future<List<bool?>> get_isAutoUploading_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapNearbySearchManager::get_isAutoUploading_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<bool?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<bool?>().toList();
   }
   
   //endregion
@@ -213,18 +175,18 @@ extension AMapNearbySearchManager_Batch on List<AMapNearbySearchManager?> {
 
   //region methods
   
-  static Future<List<AMapNearbySearchManager?>?> sharedInstance_batch() async {
+  static Future<List<AMapNearbySearchManager?>> sharedInstance_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapNearbySearchManager::sharedInstance_batch', );
   
   
-    return (resultBatch as List).map((__result__) => AmapSearchFluttifyIOSAs<AMapNearbySearchManager>(__result__)).cast<AMapNearbySearchManager>().toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyIOSAs<AMapNearbySearchManager>(__result__)).cast<AMapNearbySearchManager?>().toList();
   }
   
   
-  Future<List<void>?> startAutoUploadNearbyInfo_batch() async {
+  Future<List<void>> startAutoUploadNearbyInfo_batch() async {
     assert(true);
   
     // invoke native method
@@ -235,7 +197,7 @@ extension AMapNearbySearchManager_Batch on List<AMapNearbySearchManager?> {
   }
   
   
-  Future<List<void>?> stopAutoUploadNearbyInfo_batch() async {
+  Future<List<void>> stopAutoUploadNearbyInfo_batch() async {
     assert(true);
   
     // invoke native method
@@ -245,26 +207,26 @@ extension AMapNearbySearchManager_Batch on List<AMapNearbySearchManager?> {
     return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
-  @deprecated
-  Future<List<bool?>?> uploadNearbyInfo_batch(List<AMapNearbyUploadInfo> info) async {
+  
+  Future<List<bool?>> uploadNearbyInfo_batch(List<AMapNearbyUploadInfo> info) async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapNearbySearchManager::uploadNearbyInfo_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"info": info[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<bool>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<bool?>().toList();
   }
   
-  @deprecated
-  Future<List<bool?>?> clearUserInfoWithID_batch(List<String> userID) async {
+  
+  Future<List<bool?>> clearUserInfoWithID_batch(List<String> userID) async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapNearbySearchManager::clearUserInfoWithID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"userID": userID[__i__], "__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<bool>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<bool?>().toList();
   }
   
   //endregion

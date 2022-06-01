@@ -11,6 +11,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
+import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 
 class AMapRidingRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCoding, NSCopying {
   //region constants
@@ -37,9 +38,11 @@ class AMapRidingRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCod
       'ObjectFactory::create_batchAMapRidingRouteSearchRequest',
       {'length': length, 'init': init}
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyIOSAs<AMapRidingRouteSearchRequest>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyIOSAs<AMapRidingRouteSearchRequest>(it))
+        .where((element) => element !=null)
+        .cast<AMapRidingRouteSearchRequest>()
+        .toList() ?? <AMapRidingRouteSearchRequest>[];
   }
   
   //endregion
@@ -60,14 +63,10 @@ class AMapRidingRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCod
   //region setters
   Future<void> set_type(int type) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRidingRouteSearchRequest::set_type', <String, dynamic>{'__this__': this, "type": type});
-  
-  
   }
   
   Future<void> set_requireExtension(bool requireExtension) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRidingRouteSearchRequest::set_requireExtension', <String, dynamic>{'__this__': this, "requireExtension": requireExtension});
-  
-  
   }
   
   //endregion
@@ -83,15 +82,20 @@ class AMapRidingRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCod
 }
 
 extension AMapRidingRouteSearchRequest_Batch on List<AMapRidingRouteSearchRequest?> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first?.refId;
+  }
+
   //region getters
-  Future<List<int?>?> get_type_batch() async {
+  Future<List<int?>> get_type_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRidingRouteSearchRequest::get_type_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<int?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
   }
   
-  Future<List<bool?>?> get_requireExtension_batch() async {
+  Future<List<bool?>> get_requireExtension_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRidingRouteSearchRequest::get_requireExtension_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<bool?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<bool?>().toList();
   }
   
   //endregion

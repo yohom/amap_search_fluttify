@@ -11,6 +11,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
+import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 
 class com_amap_api_services_cloud_CloudImage extends java_lang_Object with android_os_Parcelable {
   //region constants
@@ -23,7 +24,7 @@ class com_amap_api_services_cloud_CloudImage extends java_lang_Object with andro
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_cloud_CloudImage> create__String__String__String(String? var1, String? var2, String? var3) async {
+  static Future<com_amap_api_services_cloud_CloudImage> create__String__String__String(String var1, String var2, String var3) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_cloud_CloudImage__String__String__String',
       {"var1": var1, "var2": var2, "var3": var3}
@@ -37,9 +38,11 @@ class com_amap_api_services_cloud_CloudImage extends java_lang_Object with andro
       'ObjectFactory::create_batchcom_amap_api_services_cloud_CloudImage__String__String__String',
       [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__]}]
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudImage>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudImage>(it))
+        .where((element) => element !=null)
+        .cast<com_amap_api_services_cloud_CloudImage>()
+        .toList() ?? <com_amap_api_services_cloud_CloudImage>[];
   }
   
   //endregion
@@ -71,7 +74,7 @@ class com_amap_api_services_cloud_CloudImage extends java_lang_Object with andro
   }
   
   
-  Future<void> setId(String? var1) async {
+  Future<void> setId(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudImage@$refId::setId([\'var1\':$var1])');
@@ -105,7 +108,7 @@ class com_amap_api_services_cloud_CloudImage extends java_lang_Object with andro
   }
   
   
-  Future<void> setPreurl(String? var1) async {
+  Future<void> setPreurl(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudImage@$refId::setPreurl([\'var1\':$var1])');
@@ -139,7 +142,7 @@ class com_amap_api_services_cloud_CloudImage extends java_lang_Object with andro
   }
   
   
-  Future<void> setUrl(String? var1) async {
+  Future<void> setUrl(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.cloud.CloudImage@$refId::setUrl([\'var1\':$var1])');
@@ -164,6 +167,11 @@ class com_amap_api_services_cloud_CloudImage extends java_lang_Object with andro
 }
 
 extension com_amap_api_services_cloud_CloudImage_Batch on List<com_amap_api_services_cloud_CloudImage?> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first?.refId;
+  }
+
   //region getters
   
   //endregion
@@ -174,18 +182,18 @@ extension com_amap_api_services_cloud_CloudImage_Batch on List<com_amap_api_serv
 
   //region methods
   
-  Future<List<String?>?> getId_batch() async {
+  Future<List<String?>> getId_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.cloud.CloudImage::getId_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   
-  Future<List<void>?> setId_batch(List<String> var1) async {
+  Future<List<void>> setId_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -196,18 +204,18 @@ extension com_amap_api_services_cloud_CloudImage_Batch on List<com_amap_api_serv
   }
   
   
-  Future<List<String?>?> getPreurl_batch() async {
+  Future<List<String?>> getPreurl_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.cloud.CloudImage::getPreurl_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   
-  Future<List<void>?> setPreurl_batch(List<String> var1) async {
+  Future<List<void>> setPreurl_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -218,18 +226,18 @@ extension com_amap_api_services_cloud_CloudImage_Batch on List<com_amap_api_serv
   }
   
   
-  Future<List<String?>?> getUrl_batch() async {
+  Future<List<String?>> getUrl_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.cloud.CloudImage::getUrl_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   
-  Future<List<void>?> setUrl_batch(List<String> var1) async {
+  Future<List<void>> setUrl_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method

@@ -32,468 +32,1959 @@ import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getHEAP;
 public class SubHandler13 {
     public static Map<String, Handler> getSubHandler(BinaryMessenger messenger) {
         return new HashMap<String, Handler>() {{
-            // factory
-            put("ObjectFactory::create_batchcom_amap_api_services_district_DistrictResult__com_amap_api_services_district_DistrictSearchQuery__java_util_ArrayList_com_amap_api_services_district_DistrictItem_", (__argsBatch__, __methodResult__) -> {
-                List<com.amap.api.services.district.DistrictResult> __resultList__ = new ArrayList<>();
+            put("RefClass::isKindOfcom_amap_api_services_poisearch_Photo", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (__argsBatch__ instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
-                }
-                // or directly put the arg batch
-                else if (__argsBatch__ instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
-                }
+                __methodResult__.success(__this__ instanceof com.amap.api.services.poisearch.Photo);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_poisearch_SubPoiItem", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> __args__ = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (__argsBatch__ instanceof List) {
-                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-                    }
+                __methodResult__.success(__this__ instanceof com.amap.api.services.poisearch.SubPoiItem);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_poisearch_PoiItemExtension", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                    // args
-                    // ref arg
-                    com.amap.api.services.district.DistrictSearchQuery var1 = (com.amap.api.services.district.DistrictSearchQuery) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    java.util.ArrayList<com.amap.api.services.district.DistrictItem> var2 = (java.util.ArrayList<com.amap.api.services.district.DistrictItem>) ((Map<String, Object>) __args__).get("var2");
+                __methodResult__.success(__this__ instanceof com.amap.api.services.poisearch.PoiItemExtension);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_poisearch_PoiSearch_SearchBound", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                    // create target object
-                    com.amap.api.services.district.DistrictResult __obj__ = new com.amap.api.services.district.DistrictResult(var1, var2);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.poisearch.PoiSearch.SearchBound);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_poisearch_PoiResult", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                    __resultList__.add(__obj__);
-                }
+                __methodResult__.success(__this__ instanceof com.amap.api.services.poisearch.PoiResult);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_poisearch_PoiSearch", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(__resultList__);
+                __methodResult__.success(__this__ instanceof com.amap.api.services.poisearch.PoiSearch);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_poisearch_PoiSearch_Query", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.poisearch.PoiSearch.Query);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_poisearch_IndoorData", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.poisearch.IndoorData);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_Railway", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.Railway);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_BusPath", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.BusPath);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_DriveRoutePlanResult", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.DriveRoutePlanResult);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_RouteSearch_TruckRouteQuery", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RouteSearch.TruckRouteQuery);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_TMC", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.TMC);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_RouteBusWalkItem", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RouteBusWalkItem);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_RouteResult", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RouteResult);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_RouteSearch", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RouteSearch);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_BusStep", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.BusStep);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_TaxiItem", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.TaxiItem);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_BusRouteResult", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.BusRouteResult);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_RoutePlanResult", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RoutePlanResult);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_RailwaySpace", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RailwaySpace);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_TruckRouteRestult", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.TruckRouteRestult);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_RouteSearch_RideRouteQuery", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RouteSearch.RideRouteQuery);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_RouteSearch_DriveRouteQuery", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RouteSearch.DriveRouteQuery);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_RouteSearchV2_NewEnergy", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RouteSearchV2.NewEnergy);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_RouteSearchV2_TransCost", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RouteSearchV2.TransCost);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_RouteRailwayItem", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RouteRailwayItem);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_RouteSearchV2", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RouteSearchV2);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_RouteSearchV2_SpeedCost", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RouteSearchV2.SpeedCost);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_WalkStep", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.WalkStep);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_RouteSearchV2_CurveCost", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RouteSearchV2.CurveCost);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_RouteSearchV2_SlopeCost", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RouteSearchV2.SlopeCost);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_RailwayStationItem", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RailwayStationItem);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_RideRouteResult", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RideRouteResult);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_ChargeStationInfo", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.ChargeStationInfo);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_RouteSearch_FromAndTo", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RouteSearch.FromAndTo);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_RidePath", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RidePath);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_RouteSearch_BusRouteQuery", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RouteSearch.BusRouteQuery);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_RideStep", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RideStep);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_RouteSearchV2_DriveRouteQuery", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RouteSearchV2.DriveRouteQuery);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_RouteSearchV2_PowerTrainLoss", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RouteSearchV2.PowerTrainLoss);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_RouteSearchCity", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RouteSearchCity);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_Navi", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.Navi);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_Cost", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.Cost);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_DistanceResult", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.DistanceResult);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_RouteSearch_WalkRouteQuery", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RouteSearch.WalkRouteQuery);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_District", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.District);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_DriveRouteResultV2", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.DriveRouteResultV2);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_WalkRouteResult", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.WalkRouteResult);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_DistanceSearch_DistanceQuery", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.DistanceSearch.DistanceQuery);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_SearchCity", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.SearchCity);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_DistanceSearch", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.DistanceSearch);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_WalkPath", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.WalkPath);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_ElecConsumeInfo", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.ElecConsumeInfo);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_DriveStepV2", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.DriveStepV2);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_RouteBusLineItem", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RouteBusLineItem);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_RouteSearch_DrivePlanQuery", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RouteSearch.DrivePlanQuery);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_RouteSearchV2_CustomCostMode", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RouteSearchV2.CustomCostMode);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_DrivePlanStep", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.DrivePlanStep);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_RouteSearchV2_ShowFields", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RouteSearchV2.ShowFields);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_TimeInfo", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.TimeInfo);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_RouteSearchV2_FromAndTo", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RouteSearchV2.FromAndTo);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_DriveStep", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.DriveStep);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_TruckStep", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.TruckStep);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_DriveRouteResult", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.DriveRouteResult);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_DrivePath", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.DrivePath);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_TruckPath", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.TruckPath);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_Doorway", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.Doorway);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_DrivePlanPath", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.DrivePlanPath);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_TimeInfosElement", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.TimeInfosElement);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_DrivePathV2", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.DrivePathV2);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_DistanceItem", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.DistanceItem);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_route_Path", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.route.Path);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_road_Road", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.road.Road);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_road_Crossroad", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.road.Crossroad);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_nearby_NearbyInfo", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.nearby.NearbyInfo);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_nearby_UploadInfo", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.nearby.UploadInfo);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_nearby_NearbySearch", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.nearby.NearbySearch);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_nearby_NearbySearchResult", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.nearby.NearbySearchResult);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_nearby_NearbySearch_NearbyQuery", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.nearby.NearbySearch.NearbyQuery);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_routepoisearch_RoutePOIItem", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.routepoisearch.RoutePOIItem);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_routepoisearch_RoutePOISearch", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.routepoisearch.RoutePOISearch);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_routepoisearch_RoutePOISearchResult", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.routepoisearch.RoutePOISearchResult);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_routepoisearch_RoutePOISearchQuery", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.routepoisearch.RoutePOISearchQuery);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_cloud_CloudItem", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.cloud.CloudItem);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_cloud_CloudSearch_Query", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.cloud.CloudSearch.Query);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_cloud_CloudResult", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.cloud.CloudResult);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_cloud_CloudSearch", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.cloud.CloudSearch);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_cloud_CloudSearch_SearchBound", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.cloud.CloudSearch.SearchBound);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_cloud_CloudImage", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.cloud.CloudImage);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_cloud_CloudSearch_Sortingrules", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.cloud.CloudSearch.Sortingrules);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_cloud_CloudItemDetail", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.cloud.CloudItemDetail);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_weather_LocalDayWeatherForecast", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.weather.LocalDayWeatherForecast);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_weather_WeatherSearchQuery", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.weather.WeatherSearchQuery);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_weather_LocalWeatherForecastResult", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.weather.LocalWeatherForecastResult);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_weather_LocalWeatherForecast", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.weather.LocalWeatherForecast);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_weather_WeatherSearch", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.weather.WeatherSearch);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_weather_LocalWeatherLive", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.weather.LocalWeatherLive);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_weather_LocalWeatherLiveResult", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.weather.LocalWeatherLiveResult);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_geocoder_BusinessArea", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.geocoder.BusinessArea);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_geocoder_GeocodeQuery", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.geocoder.GeocodeQuery);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_geocoder_GeocodeSearch", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.geocoder.GeocodeSearch);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_geocoder_RegeocodeResult", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.geocoder.RegeocodeResult);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_geocoder_GeocodeResult", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.geocoder.GeocodeResult);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_geocoder_AoiItem", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.geocoder.AoiItem);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_geocoder_RegeocodeRoad", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.geocoder.RegeocodeRoad);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_geocoder_GeocodeAddress", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.geocoder.GeocodeAddress);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_geocoder_RegeocodeQuery", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.geocoder.RegeocodeQuery);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_geocoder_StreetNumber", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.geocoder.StreetNumber);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_geocoder_RegeocodeAddress", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.geocoder.RegeocodeAddress);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_district_DistrictSearchQuery", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.district.DistrictSearchQuery);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_district_DistrictSearch", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.district.DistrictSearch);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_district_DistrictResult", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.district.DistrictResult);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_district_DistrictItem", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.district.DistrictItem);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_help_Tip", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.help.Tip);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_help_InputtipsQuery", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.help.InputtipsQuery);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_help_Inputtips", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.help.Inputtips);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_share_ShareSearch_ShareNaviQuery", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.share.ShareSearch.ShareNaviQuery);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_share_ShareSearch_ShareBusRouteQuery", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.share.ShareSearch.ShareBusRouteQuery);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_share_ShareSearch", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.share.ShareSearch);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_share_ShareSearch_ShareFromAndTo", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.share.ShareSearch.ShareFromAndTo);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_share_ShareSearch_ShareWalkRouteQuery", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery);
+            });
+            put("RefClass::isKindOfcom_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery", (__args__, __methodResult__) -> {
+                // 引用对象
+                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            
+                __methodResult__.success(__this__ instanceof com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery);
             });
             // factory
-            put("ObjectFactory::create_batchcom_amap_api_services_district_DistrictResult__", (__argsBatch__, __methodResult__) -> {
-                List<com.amap.api.services.district.DistrictResult> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (__argsBatch__ instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
-                }
-                // or directly put the arg batch
-                else if (__argsBatch__ instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+            put("ObjectFactory::createcom_amap_api_services_busline_BusLineItem__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_busline_BusLineItem__");
                 }
             
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> __args__ = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (__argsBatch__ instanceof List) {
-                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-                    }
-            
-                    // args
+                // args
             
             
-                    // create target object
-                    com.amap.api.services.district.DistrictResult __obj__ = new com.amap.api.services.district.DistrictResult();
+                // create target object
+                com.amap.api.services.busline.BusLineItem __obj__ = new com.amap.api.services.busline.BusLineItem();
             
-                    __resultList__.add(__obj__);
-                }
-            
-                __methodResult__.success(__resultList__);
+                __methodResult__.success(__obj__);
             });
             // factory
-            put("ObjectFactory::create_batchcom_amap_api_services_district_DistrictItem__", (__argsBatch__, __methodResult__) -> {
-                List<com.amap.api.services.district.DistrictItem> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (__argsBatch__ instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
-                }
-                // or directly put the arg batch
-                else if (__argsBatch__ instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+            put("ObjectFactory::createcom_amap_api_services_busline_BusStationSearch__android_content_Context__com_amap_api_services_busline_BusStationQuery", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_busline_BusStationSearch__android_content_Context__com_amap_api_services_busline_BusStationQuery");
                 }
             
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> __args__ = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (__argsBatch__ instanceof List) {
-                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-                    }
+                // args
+                // ref arg
+                android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                com.amap.api.services.busline.BusStationQuery var2 = (com.amap.api.services.busline.BusStationQuery) ((Map<String, Object>) __args__).get("var2");
             
-                    // args
+                // create target object
+                com.amap.api.services.busline.BusStationSearch __obj__ = new com.amap.api.services.busline.BusStationSearch(var1, var2);
             
-            
-                    // create target object
-                    com.amap.api.services.district.DistrictItem __obj__ = new com.amap.api.services.district.DistrictItem();
-            
-                    __resultList__.add(__obj__);
-                }
-            
-                __methodResult__.success(__resultList__);
+                __methodResult__.success(__obj__);
             });
             // factory
-            put("ObjectFactory::create_batchcom_amap_api_services_district_DistrictItem__String__String__String__com_amap_api_services_core_LatLonPoint__String", (__argsBatch__, __methodResult__) -> {
-                List<com.amap.api.services.district.DistrictItem> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (__argsBatch__ instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
-                }
-                // or directly put the arg batch
-                else if (__argsBatch__ instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+            put("ObjectFactory::createcom_amap_api_services_busline_BusLineSearch__android_content_Context__com_amap_api_services_busline_BusLineQuery", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_busline_BusLineSearch__android_content_Context__com_amap_api_services_busline_BusLineQuery");
                 }
             
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> __args__ = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (__argsBatch__ instanceof List) {
-                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-                    }
+                // args
+                // ref arg
+                android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                com.amap.api.services.busline.BusLineQuery var2 = (com.amap.api.services.busline.BusLineQuery) ((Map<String, Object>) __args__).get("var2");
             
-                    // args
-                    // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-                    // ref arg
-                    String var3 = (String) ((Map<String, Object>) __args__).get("var3");
-                    // ref arg
-                    com.amap.api.services.core.LatLonPoint var4 = (com.amap.api.services.core.LatLonPoint) ((Map<String, Object>) __args__).get("var4");
-                    // ref arg
-                    String var5 = (String) ((Map<String, Object>) __args__).get("var5");
+                // create target object
+                com.amap.api.services.busline.BusLineSearch __obj__ = new com.amap.api.services.busline.BusLineSearch(var1, var2);
             
-                    // create target object
-                    com.amap.api.services.district.DistrictItem __obj__ = new com.amap.api.services.district.DistrictItem(var1, var2, var3, var4, var5);
-            
-                    __resultList__.add(__obj__);
-                }
-            
-                __methodResult__.success(__resultList__);
+                __methodResult__.success(__obj__);
             });
             // factory
-            put("ObjectFactory::create_batchcom_amap_api_services_help_Tip__", (__argsBatch__, __methodResult__) -> {
-                List<com.amap.api.services.help.Tip> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (__argsBatch__ instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
-                }
-                // or directly put the arg batch
-                else if (__argsBatch__ instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+            put("ObjectFactory::createcom_amap_api_services_busline_BusLineQuery__String__com_amap_api_services_busline_BusLineQuery_SearchType__String", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_busline_BusLineQuery__String__com_amap_api_services_busline_BusLineQuery_SearchType__String");
                 }
             
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> __args__ = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (__argsBatch__ instanceof List) {
-                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-                    }
+                // args
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                // enum arg
+                com.amap.api.services.busline.BusLineQuery.SearchType var2 = com.amap.api.services.busline.BusLineQuery.SearchType.values()[(int) ((Map<String, Object>) __args__).get("var2")];
+                // ref arg
+                String var3 = (String) ((Map<String, Object>) __args__).get("var3");
             
-                    // args
+                // create target object
+                com.amap.api.services.busline.BusLineQuery __obj__ = new com.amap.api.services.busline.BusLineQuery(var1, var2, var3);
             
-            
-                    // create target object
-                    com.amap.api.services.help.Tip __obj__ = new com.amap.api.services.help.Tip();
-            
-                    __resultList__.add(__obj__);
-                }
-            
-                __methodResult__.success(__resultList__);
+                __methodResult__.success(__obj__);
             });
             // factory
-            put("ObjectFactory::create_batchcom_amap_api_services_help_InputtipsQuery__String__String", (__argsBatch__, __methodResult__) -> {
-                List<com.amap.api.services.help.InputtipsQuery> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (__argsBatch__ instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
-                }
-                // or directly put the arg batch
-                else if (__argsBatch__ instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+            put("ObjectFactory::createcom_amap_api_services_busline_BusStationItem__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_busline_BusStationItem__");
                 }
             
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> __args__ = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (__argsBatch__ instanceof List) {
-                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-                    }
+                // args
             
-                    // args
-                    // ref arg
-                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
             
-                    // create target object
-                    com.amap.api.services.help.InputtipsQuery __obj__ = new com.amap.api.services.help.InputtipsQuery(var1, var2);
+                // create target object
+                com.amap.api.services.busline.BusStationItem __obj__ = new com.amap.api.services.busline.BusStationItem();
             
-                    __resultList__.add(__obj__);
-                }
-            
-                __methodResult__.success(__resultList__);
+                __methodResult__.success(__obj__);
             });
             // factory
-            put("ObjectFactory::create_batchcom_amap_api_services_help_Inputtips__android_content_Context__com_amap_api_services_help_InputtipsQuery", (__argsBatch__, __methodResult__) -> {
-                List<com.amap.api.services.help.Inputtips> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (__argsBatch__ instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
-                }
-                // or directly put the arg batch
-                else if (__argsBatch__ instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+            put("ObjectFactory::createcom_amap_api_services_busline_BusStationQuery__String__String", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_busline_BusStationQuery__String__String");
                 }
             
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> __args__ = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (__argsBatch__ instanceof List) {
-                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-                    }
+                // args
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                String var2 = (String) ((Map<String, Object>) __args__).get("var2");
             
-                    // args
-                    // ref arg
-                    android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    com.amap.api.services.help.InputtipsQuery var2 = (com.amap.api.services.help.InputtipsQuery) ((Map<String, Object>) __args__).get("var2");
+                // create target object
+                com.amap.api.services.busline.BusStationQuery __obj__ = new com.amap.api.services.busline.BusStationQuery(var1, var2);
             
-                    // create target object
-                    com.amap.api.services.help.Inputtips __obj__ = new com.amap.api.services.help.Inputtips(var1, var2);
-            
-                    __resultList__.add(__obj__);
-                }
-            
-                __methodResult__.success(__resultList__);
+                __methodResult__.success(__obj__);
             });
             // factory
-            put("ObjectFactory::create_batchcom_amap_api_services_share_ShareSearch_ShareNaviQuery__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int", (__argsBatch__, __methodResult__) -> {
-                List<com.amap.api.services.share.ShareSearch.ShareNaviQuery> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (__argsBatch__ instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
-                }
-                // or directly put the arg batch
-                else if (__argsBatch__ instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+            put("ObjectFactory::createcom_amap_api_services_core_AMapException__String", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_core_AMapException__String");
                 }
             
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> __args__ = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (__argsBatch__ instanceof List) {
-                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-                    }
+                // args
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
-                    // args
-                    // ref arg
-                    com.amap.api.services.share.ShareSearch.ShareFromAndTo var1 = (com.amap.api.services.share.ShareSearch.ShareFromAndTo) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
+                // create target object
+                com.amap.api.services.core.AMapException __obj__ = new com.amap.api.services.core.AMapException(var1);
             
-                    // create target object
-                    com.amap.api.services.share.ShareSearch.ShareNaviQuery __obj__ = new com.amap.api.services.share.ShareSearch.ShareNaviQuery(var1, var2.intValue());
-            
-                    __resultList__.add(__obj__);
-                }
-            
-                __methodResult__.success(__resultList__);
+                __methodResult__.success(__obj__);
             });
             // factory
-            put("ObjectFactory::create_batchcom_amap_api_services_share_ShareSearch_ShareBusRouteQuery__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int", (__argsBatch__, __methodResult__) -> {
-                List<com.amap.api.services.share.ShareSearch.ShareBusRouteQuery> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (__argsBatch__ instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
-                }
-                // or directly put the arg batch
-                else if (__argsBatch__ instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+            put("ObjectFactory::createcom_amap_api_services_core_AMapException__String__int__String", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_core_AMapException__String__int__String");
                 }
             
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> __args__ = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (__argsBatch__ instanceof List) {
-                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-                    }
+                // args
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
+                // ref arg
+                String var3 = (String) ((Map<String, Object>) __args__).get("var3");
             
-                    // args
-                    // ref arg
-                    com.amap.api.services.share.ShareSearch.ShareFromAndTo var1 = (com.amap.api.services.share.ShareSearch.ShareFromAndTo) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
+                // create target object
+                com.amap.api.services.core.AMapException __obj__ = new com.amap.api.services.core.AMapException(var1, var2.intValue(), var3);
             
-                    // create target object
-                    com.amap.api.services.share.ShareSearch.ShareBusRouteQuery __obj__ = new com.amap.api.services.share.ShareSearch.ShareBusRouteQuery(var1, var2.intValue());
-            
-                    __resultList__.add(__obj__);
-                }
-            
-                __methodResult__.success(__resultList__);
+                __methodResult__.success(__obj__);
             });
             // factory
-            put("ObjectFactory::create_batchcom_amap_api_services_share_ShareSearch__android_content_Context", (__argsBatch__, __methodResult__) -> {
-                List<com.amap.api.services.share.ShareSearch> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (__argsBatch__ instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
-                }
-                // or directly put the arg batch
-                else if (__argsBatch__ instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+            put("ObjectFactory::createcom_amap_api_services_core_AMapException__String__int__String__int", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_core_AMapException__String__int__String__int");
                 }
             
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> __args__ = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (__argsBatch__ instanceof List) {
-                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-                    }
+                // args
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
+                // ref arg
+                String var3 = (String) ((Map<String, Object>) __args__).get("var3");
+                // ref arg
+                Number var4 = (Number) ((Map<String, Object>) __args__).get("var4");
             
-                    // args
-                    // ref arg
-                    android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
+                // create target object
+                com.amap.api.services.core.AMapException __obj__ = new com.amap.api.services.core.AMapException(var1, var2.intValue(), var3, var4.intValue());
             
-                    // create target object
-                    com.amap.api.services.share.ShareSearch __obj__ = new com.amap.api.services.share.ShareSearch(var1);
-            
-                    __resultList__.add(__obj__);
-                }
-            
-                __methodResult__.success(__resultList__);
+                __methodResult__.success(__obj__);
             });
             // factory
-            put("ObjectFactory::create_batchcom_amap_api_services_share_ShareSearch_ShareFromAndTo__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint", (__argsBatch__, __methodResult__) -> {
-                List<com.amap.api.services.share.ShareSearch.ShareFromAndTo> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (__argsBatch__ instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
-                }
-                // or directly put the arg batch
-                else if (__argsBatch__ instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+            put("ObjectFactory::createcom_amap_api_services_core_AMapException__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_core_AMapException__");
                 }
             
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> __args__ = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (__argsBatch__ instanceof List) {
-                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-                    }
+                // args
             
-                    // args
-                    // ref arg
-                    com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    com.amap.api.services.core.LatLonPoint var2 = (com.amap.api.services.core.LatLonPoint) ((Map<String, Object>) __args__).get("var2");
             
-                    // create target object
-                    com.amap.api.services.share.ShareSearch.ShareFromAndTo __obj__ = new com.amap.api.services.share.ShareSearch.ShareFromAndTo(var1, var2);
+                // create target object
+                com.amap.api.services.core.AMapException __obj__ = new com.amap.api.services.core.AMapException();
             
-                    __resultList__.add(__obj__);
-                }
-            
-                __methodResult__.success(__resultList__);
+                __methodResult__.success(__obj__);
             });
             // factory
-            put("ObjectFactory::create_batchcom_amap_api_services_share_ShareSearch_ShareWalkRouteQuery__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int", (__argsBatch__, __methodResult__) -> {
-                List<com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (__argsBatch__ instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
-                }
-                // or directly put the arg batch
-                else if (__argsBatch__ instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+            put("ObjectFactory::createcom_amap_api_services_core_SearchUtils__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_core_SearchUtils__");
                 }
             
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> __args__ = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (__argsBatch__ instanceof List) {
-                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-                    }
+                // args
             
-                    // args
-                    // ref arg
-                    com.amap.api.services.share.ShareSearch.ShareFromAndTo var1 = (com.amap.api.services.share.ShareSearch.ShareFromAndTo) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
             
-                    // create target object
-                    com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery __obj__ = new com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery(var1, var2.intValue());
+                // create target object
+                com.amap.api.services.core.SearchUtils __obj__ = new com.amap.api.services.core.SearchUtils();
             
-                    __resultList__.add(__obj__);
-                }
-            
-                __methodResult__.success(__resultList__);
+                __methodResult__.success(__obj__);
             });
             // factory
-            put("ObjectFactory::create_batchcom_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int", (__argsBatch__, __methodResult__) -> {
-                List<com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery> __resultList__ = new ArrayList<>();
-            
-                int __length__ = 0;
-                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
-                // of this batch
-                if (__argsBatch__ instanceof Map) {
-                    __length__ = (Integer) ((Map<String, Object>) __argsBatch__).get("length");
-                }
-                // or directly put the arg batch
-                else if (__argsBatch__ instanceof List) {
-                    __length__ = ((List<Map<String, Object>>) __argsBatch__).size();
+            put("ObjectFactory::createcom_amap_api_services_core_LatLonSharePoint__double__double__String", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_core_LatLonSharePoint__double__double__String");
                 }
             
-                for (int __i__ = 0; __i__ < __length__; __i__++) {
-                    Map<String, Object> __args__ = new HashMap<>();
-                    // only when arg batch is not empty, java side needs to parse args;
-                    if (__argsBatch__ instanceof List) {
-                        __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-                    }
+                // args
+                // ref arg
+                Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
+                // ref arg
+                String var5 = (String) ((Map<String, Object>) __args__).get("var5");
             
-                    // args
-                    // ref arg
-                    com.amap.api.services.share.ShareSearch.ShareFromAndTo var1 = (com.amap.api.services.share.ShareSearch.ShareFromAndTo) ((Map<String, Object>) __args__).get("var1");
-                    // ref arg
-                    Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
+                // create target object
+                com.amap.api.services.core.LatLonSharePoint __obj__ = new com.amap.api.services.core.LatLonSharePoint(var1.doubleValue(), var3.doubleValue(), var5);
             
-                    // create target object
-                    com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery __obj__ = new com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery(var1, var2.intValue());
-            
-                    __resultList__.add(__obj__);
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_core_LatLonPoint__double__double", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_core_LatLonPoint__double__double");
                 }
             
-                __methodResult__.success(__resultList__);
+                // args
+                // ref arg
+                Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
+            
+                // create target object
+                com.amap.api.services.core.LatLonPoint __obj__ = new com.amap.api.services.core.LatLonPoint(var1.doubleValue(), var3.doubleValue());
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_core_PoiItem__String__com_amap_api_services_core_LatLonPoint__String__String", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_core_PoiItem__String__com_amap_api_services_core_LatLonPoint__String__String");
+                }
+            
+                // args
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                com.amap.api.services.core.LatLonPoint var2 = (com.amap.api.services.core.LatLonPoint) ((Map<String, Object>) __args__).get("var2");
+                // ref arg
+                String var3 = (String) ((Map<String, Object>) __args__).get("var3");
+                // ref arg
+                String var4 = (String) ((Map<String, Object>) __args__).get("var4");
+            
+                // create target object
+                com.amap.api.services.core.PoiItem __obj__ = new com.amap.api.services.core.PoiItem(var1, var2, var3, var4);
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_core_SuggestionCity__String__String__String__int", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_core_SuggestionCity__String__String__String__int");
+                }
+            
+                // args
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                String var2 = (String) ((Map<String, Object>) __args__).get("var2");
+                // ref arg
+                String var3 = (String) ((Map<String, Object>) __args__).get("var3");
+                // ref arg
+                Number var4 = (Number) ((Map<String, Object>) __args__).get("var4");
+            
+                // create target object
+                com.amap.api.services.core.SuggestionCity __obj__ = new com.amap.api.services.core.SuggestionCity(var1, var2, var3, var4.intValue());
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_poisearch_Photo__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_Photo__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.poisearch.Photo __obj__ = new com.amap.api.services.poisearch.Photo();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_poisearch_Photo__String__String", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_Photo__String__String");
+                }
+            
+                // args
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                String var2 = (String) ((Map<String, Object>) __args__).get("var2");
+            
+                // create target object
+                com.amap.api.services.poisearch.Photo __obj__ = new com.amap.api.services.poisearch.Photo(var1, var2);
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_poisearch_SubPoiItem__String__com_amap_api_services_core_LatLonPoint__String__String", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_SubPoiItem__String__com_amap_api_services_core_LatLonPoint__String__String");
+                }
+            
+                // args
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                com.amap.api.services.core.LatLonPoint var2 = (com.amap.api.services.core.LatLonPoint) ((Map<String, Object>) __args__).get("var2");
+                // ref arg
+                String var3 = (String) ((Map<String, Object>) __args__).get("var3");
+                // ref arg
+                String var4 = (String) ((Map<String, Object>) __args__).get("var4");
+            
+                // create target object
+                com.amap.api.services.poisearch.SubPoiItem __obj__ = new com.amap.api.services.poisearch.SubPoiItem(var1, var2, var3, var4);
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_poisearch_PoiItemExtension__String__String", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_PoiItemExtension__String__String");
+                }
+            
+                // args
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                String var2 = (String) ((Map<String, Object>) __args__).get("var2");
+            
+                // create target object
+                com.amap.api.services.poisearch.PoiItemExtension __obj__ = new com.amap.api.services.poisearch.PoiItemExtension(var1, var2);
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint__int", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint__int");
+                }
+            
+                // args
+                // ref arg
+                com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
+            
+                // create target object
+                com.amap.api.services.poisearch.PoiSearch.SearchBound __obj__ = new com.amap.api.services.poisearch.PoiSearch.SearchBound(var1, var2.intValue());
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint__int__boolean", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint__int__boolean");
+                }
+            
+                // args
+                // ref arg
+                com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
+                // ref arg
+                boolean var3 = (boolean) ((Map<String, Object>) __args__).get("var3");
+            
+                // create target object
+                com.amap.api.services.poisearch.PoiSearch.SearchBound __obj__ = new com.amap.api.services.poisearch.PoiSearch.SearchBound(var1, var2.intValue(), var3);
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint");
+                }
+            
+                // args
+                // ref arg
+                com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                com.amap.api.services.core.LatLonPoint var2 = (com.amap.api.services.core.LatLonPoint) ((Map<String, Object>) __args__).get("var2");
+            
+                // create target object
+                com.amap.api.services.poisearch.PoiSearch.SearchBound __obj__ = new com.amap.api.services.poisearch.PoiSearch.SearchBound(var1, var2);
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch_SearchBound__java_util_List_com_amap_api_services_core_LatLonPoint_", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_PoiSearch_SearchBound__java_util_List_com_amap_api_services_core_LatLonPoint_");
+                }
+            
+                // args
+                // ref arg
+                java.util.List<com.amap.api.services.core.LatLonPoint> var1 = (java.util.List<com.amap.api.services.core.LatLonPoint>) ((Map<String, Object>) __args__).get("var1");
+            
+                // create target object
+                com.amap.api.services.poisearch.PoiSearch.SearchBound __obj__ = new com.amap.api.services.poisearch.PoiSearch.SearchBound(var1);
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch__android_content_Context__com_amap_api_services_poisearch_PoiSearch_Query", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_PoiSearch__android_content_Context__com_amap_api_services_poisearch_PoiSearch_Query");
+                }
+            
+                // args
+                // ref arg
+                android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                com.amap.api.services.poisearch.PoiSearch.Query var2 = (com.amap.api.services.poisearch.PoiSearch.Query) ((Map<String, Object>) __args__).get("var2");
+            
+                // create target object
+                com.amap.api.services.poisearch.PoiSearch __obj__ = new com.amap.api.services.poisearch.PoiSearch(var1, var2);
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch_Query__String__String", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_PoiSearch_Query__String__String");
+                }
+            
+                // args
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                String var2 = (String) ((Map<String, Object>) __args__).get("var2");
+            
+                // create target object
+                com.amap.api.services.poisearch.PoiSearch.Query __obj__ = new com.amap.api.services.poisearch.PoiSearch.Query(var1, var2);
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch_Query__String__String__String", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_PoiSearch_Query__String__String__String");
+                }
+            
+                // args
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                String var2 = (String) ((Map<String, Object>) __args__).get("var2");
+                // ref arg
+                String var3 = (String) ((Map<String, Object>) __args__).get("var3");
+            
+                // create target object
+                com.amap.api.services.poisearch.PoiSearch.Query __obj__ = new com.amap.api.services.poisearch.PoiSearch.Query(var1, var2, var3);
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_poisearch_IndoorData__String__int__String", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_IndoorData__String__int__String");
+                }
+            
+                // args
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
+                // ref arg
+                String var3 = (String) ((Map<String, Object>) __args__).get("var3");
+            
+                // create target object
+                com.amap.api.services.poisearch.IndoorData __obj__ = new com.amap.api.services.poisearch.IndoorData(var1, var2.intValue(), var3);
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_Railway__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_Railway__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.Railway __obj__ = new com.amap.api.services.route.Railway();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_BusPath__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_BusPath__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.BusPath __obj__ = new com.amap.api.services.route.BusPath();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_DriveRoutePlanResult__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_DriveRoutePlanResult__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.DriveRoutePlanResult __obj__ = new com.amap.api.services.route.DriveRoutePlanResult();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_TruckRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__java_util_List_com_amap_api_services_core_LatLonPoint___int", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_TruckRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__java_util_List_com_amap_api_services_core_LatLonPoint___int");
+                }
+            
+                // args
+                // ref arg
+                com.amap.api.services.route.RouteSearch.FromAndTo var1 = (com.amap.api.services.route.RouteSearch.FromAndTo) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
+                // ref arg
+                java.util.List<com.amap.api.services.core.LatLonPoint> var3 = (java.util.List<com.amap.api.services.core.LatLonPoint>) ((Map<String, Object>) __args__).get("var3");
+                // ref arg
+                Number var4 = (Number) ((Map<String, Object>) __args__).get("var4");
+            
+                // create target object
+                com.amap.api.services.route.RouteSearch.TruckRouteQuery __obj__ = new com.amap.api.services.route.RouteSearch.TruckRouteQuery(var1, var2.intValue(), var3, var4.intValue());
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_TMC__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_TMC__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.TMC __obj__ = new com.amap.api.services.route.TMC();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_RouteBusWalkItem__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteBusWalkItem__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.RouteBusWalkItem __obj__ = new com.amap.api.services.route.RouteBusWalkItem();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_RouteResult__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteResult__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.RouteResult __obj__ = new com.amap.api.services.route.RouteResult();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_RouteSearch__android_content_Context", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch__android_content_Context");
+                }
+            
+                // args
+                // ref arg
+                android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
+            
+                // create target object
+                com.amap.api.services.route.RouteSearch __obj__ = new com.amap.api.services.route.RouteSearch(var1);
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_BusStep__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_BusStep__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.BusStep __obj__ = new com.amap.api.services.route.BusStep();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_TaxiItem__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_TaxiItem__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.TaxiItem __obj__ = new com.amap.api.services.route.TaxiItem();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_BusRouteResult__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_BusRouteResult__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.BusRouteResult __obj__ = new com.amap.api.services.route.BusRouteResult();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_RoutePlanResult__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RoutePlanResult__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.RoutePlanResult __obj__ = new com.amap.api.services.route.RoutePlanResult();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_RailwaySpace__String__float", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RailwaySpace__String__float");
+                }
+            
+                // args
+                // ref arg
+                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
+            
+                // create target object
+                com.amap.api.services.route.RailwaySpace __obj__ = new com.amap.api.services.route.RailwaySpace(var1, var2.floatValue());
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_TruckRouteRestult__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_TruckRouteRestult__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.TruckRouteRestult __obj__ = new com.amap.api.services.route.TruckRouteRestult();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_RideRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_RideRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int");
+                }
+            
+                // args
+                // ref arg
+                com.amap.api.services.route.RouteSearch.FromAndTo var1 = (com.amap.api.services.route.RouteSearch.FromAndTo) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
+            
+                // create target object
+                com.amap.api.services.route.RouteSearch.RideRouteQuery __obj__ = new com.amap.api.services.route.RouteSearch.RideRouteQuery(var1, var2.intValue());
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_RideRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_RideRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo");
+                }
+            
+                // args
+                // ref arg
+                com.amap.api.services.route.RouteSearch.FromAndTo var1 = (com.amap.api.services.route.RouteSearch.FromAndTo) ((Map<String, Object>) __args__).get("var1");
+            
+                // create target object
+                com.amap.api.services.route.RouteSearch.RideRouteQuery __obj__ = new com.amap.api.services.route.RouteSearch.RideRouteQuery(var1);
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_RideRouteQuery__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_RideRouteQuery__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.RouteSearch.RideRouteQuery __obj__ = new com.amap.api.services.route.RouteSearch.RideRouteQuery();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_DriveRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__java_util_List_com_amap_api_services_core_LatLonPoint___java_util_List_java_util_List_com_amap_api_services_core_LatLonPoint____String", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_DriveRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__java_util_List_com_amap_api_services_core_LatLonPoint___java_util_List_java_util_List_com_amap_api_services_core_LatLonPoint____String");
+                }
+            
+                // args
+                // ref arg
+                com.amap.api.services.route.RouteSearch.FromAndTo var1 = (com.amap.api.services.route.RouteSearch.FromAndTo) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
+                // ref arg
+                java.util.List<com.amap.api.services.core.LatLonPoint> var3 = (java.util.List<com.amap.api.services.core.LatLonPoint>) ((Map<String, Object>) __args__).get("var3");
+                // ref arg
+                java.util.List<java.util.List<com.amap.api.services.core.LatLonPoint>> var4 = (java.util.List<java.util.List<com.amap.api.services.core.LatLonPoint>>) ((Map<String, Object>) __args__).get("var4");
+                // ref arg
+                String var5 = (String) ((Map<String, Object>) __args__).get("var5");
+            
+                // create target object
+                com.amap.api.services.route.RouteSearch.DriveRouteQuery __obj__ = new com.amap.api.services.route.RouteSearch.DriveRouteQuery(var1, var2.intValue(), var3, var4, var5);
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_DriveRouteQuery__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_DriveRouteQuery__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.RouteSearch.DriveRouteQuery __obj__ = new com.amap.api.services.route.RouteSearch.DriveRouteQuery();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_RouteSearchV2_NewEnergy__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearchV2_NewEnergy__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.RouteSearchV2.NewEnergy __obj__ = new com.amap.api.services.route.RouteSearchV2.NewEnergy();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_RouteSearchV2_TransCost__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearchV2_TransCost__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.RouteSearchV2.TransCost __obj__ = new com.amap.api.services.route.RouteSearchV2.TransCost();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_RouteRailwayItem__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteRailwayItem__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.RouteRailwayItem __obj__ = new com.amap.api.services.route.RouteRailwayItem();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_RouteSearchV2__android_content_Context", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearchV2__android_content_Context");
+                }
+            
+                // args
+                // ref arg
+                android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
+            
+                // create target object
+                com.amap.api.services.route.RouteSearchV2 __obj__ = new com.amap.api.services.route.RouteSearchV2(var1);
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_RouteSearchV2_SpeedCost__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearchV2_SpeedCost__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.RouteSearchV2.SpeedCost __obj__ = new com.amap.api.services.route.RouteSearchV2.SpeedCost();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_WalkStep__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_WalkStep__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.WalkStep __obj__ = new com.amap.api.services.route.WalkStep();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_RouteSearchV2_CurveCost__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearchV2_CurveCost__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.RouteSearchV2.CurveCost __obj__ = new com.amap.api.services.route.RouteSearchV2.CurveCost();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_RouteSearchV2_SlopeCost__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearchV2_SlopeCost__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.RouteSearchV2.SlopeCost __obj__ = new com.amap.api.services.route.RouteSearchV2.SlopeCost();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_RailwayStationItem__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RailwayStationItem__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.RailwayStationItem __obj__ = new com.amap.api.services.route.RailwayStationItem();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_RideRouteResult__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RideRouteResult__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.RideRouteResult __obj__ = new com.amap.api.services.route.RideRouteResult();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_ChargeStationInfo__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_ChargeStationInfo__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.ChargeStationInfo __obj__ = new com.amap.api.services.route.ChargeStationInfo();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_FromAndTo__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_FromAndTo__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint");
+                }
+            
+                // args
+                // ref arg
+                com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                com.amap.api.services.core.LatLonPoint var2 = (com.amap.api.services.core.LatLonPoint) ((Map<String, Object>) __args__).get("var2");
+            
+                // create target object
+                com.amap.api.services.route.RouteSearch.FromAndTo __obj__ = new com.amap.api.services.route.RouteSearch.FromAndTo(var1, var2);
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_FromAndTo__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_FromAndTo__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.RouteSearch.FromAndTo __obj__ = new com.amap.api.services.route.RouteSearch.FromAndTo();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_RidePath__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RidePath__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.RidePath __obj__ = new com.amap.api.services.route.RidePath();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_BusRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__String__int", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_BusRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__String__int");
+                }
+            
+                // args
+                // ref arg
+                com.amap.api.services.route.RouteSearch.FromAndTo var1 = (com.amap.api.services.route.RouteSearch.FromAndTo) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
+                // ref arg
+                String var3 = (String) ((Map<String, Object>) __args__).get("var3");
+                // ref arg
+                Number var4 = (Number) ((Map<String, Object>) __args__).get("var4");
+            
+                // create target object
+                com.amap.api.services.route.RouteSearch.BusRouteQuery __obj__ = new com.amap.api.services.route.RouteSearch.BusRouteQuery(var1, var2.intValue(), var3, var4.intValue());
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_BusRouteQuery__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_BusRouteQuery__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.RouteSearch.BusRouteQuery __obj__ = new com.amap.api.services.route.RouteSearch.BusRouteQuery();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_RideStep__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RideStep__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.RideStep __obj__ = new com.amap.api.services.route.RideStep();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_RouteSearchV2_DriveRouteQuery__com_amap_api_services_route_RouteSearchV2_FromAndTo__com_amap_api_services_route_RouteSearchV2_DrivingStrategy__java_util_List_com_amap_api_services_core_LatLonPoint___java_util_List_java_util_List_com_amap_api_services_core_LatLonPoint____String", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearchV2_DriveRouteQuery__com_amap_api_services_route_RouteSearchV2_FromAndTo__com_amap_api_services_route_RouteSearchV2_DrivingStrategy__java_util_List_com_amap_api_services_core_LatLonPoint___java_util_List_java_util_List_com_amap_api_services_core_LatLonPoint____String");
+                }
+            
+                // args
+                // ref arg
+                com.amap.api.services.route.RouteSearchV2.FromAndTo var1 = (com.amap.api.services.route.RouteSearchV2.FromAndTo) ((Map<String, Object>) __args__).get("var1");
+                // enum arg
+                com.amap.api.services.route.RouteSearchV2.DrivingStrategy var2 = com.amap.api.services.route.RouteSearchV2.DrivingStrategy.values()[(int) ((Map<String, Object>) __args__).get("var2")];
+                // ref arg
+                java.util.List<com.amap.api.services.core.LatLonPoint> var3 = (java.util.List<com.amap.api.services.core.LatLonPoint>) ((Map<String, Object>) __args__).get("var3");
+                // ref arg
+                java.util.List<java.util.List<com.amap.api.services.core.LatLonPoint>> var4 = (java.util.List<java.util.List<com.amap.api.services.core.LatLonPoint>>) ((Map<String, Object>) __args__).get("var4");
+                // ref arg
+                String var5 = (String) ((Map<String, Object>) __args__).get("var5");
+            
+                // create target object
+                com.amap.api.services.route.RouteSearchV2.DriveRouteQuery __obj__ = new com.amap.api.services.route.RouteSearchV2.DriveRouteQuery(var1, var2, var3, var4, var5);
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_RouteSearchV2_DriveRouteQuery__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearchV2_DriveRouteQuery__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.RouteSearchV2.DriveRouteQuery __obj__ = new com.amap.api.services.route.RouteSearchV2.DriveRouteQuery();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_RouteSearchV2_PowerTrainLoss__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearchV2_PowerTrainLoss__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.RouteSearchV2.PowerTrainLoss __obj__ = new com.amap.api.services.route.RouteSearchV2.PowerTrainLoss();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_RouteSearchCity__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearchCity__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.RouteSearchCity __obj__ = new com.amap.api.services.route.RouteSearchCity();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_Navi__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_Navi__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.Navi __obj__ = new com.amap.api.services.route.Navi();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_Cost__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_Cost__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.Cost __obj__ = new com.amap.api.services.route.Cost();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_DistanceResult__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_DistanceResult__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.DistanceResult __obj__ = new com.amap.api.services.route.DistanceResult();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_WalkRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_WalkRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int");
+                }
+            
+                // args
+                // ref arg
+                com.amap.api.services.route.RouteSearch.FromAndTo var1 = (com.amap.api.services.route.RouteSearch.FromAndTo) ((Map<String, Object>) __args__).get("var1");
+                // ref arg
+                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
+            
+                // create target object
+                com.amap.api.services.route.RouteSearch.WalkRouteQuery __obj__ = new com.amap.api.services.route.RouteSearch.WalkRouteQuery(var1, var2.intValue());
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_WalkRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_WalkRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo");
+                }
+            
+                // args
+                // ref arg
+                com.amap.api.services.route.RouteSearch.FromAndTo var1 = (com.amap.api.services.route.RouteSearch.FromAndTo) ((Map<String, Object>) __args__).get("var1");
+            
+                // create target object
+                com.amap.api.services.route.RouteSearch.WalkRouteQuery __obj__ = new com.amap.api.services.route.RouteSearch.WalkRouteQuery(var1);
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_WalkRouteQuery__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_WalkRouteQuery__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.RouteSearch.WalkRouteQuery __obj__ = new com.amap.api.services.route.RouteSearch.WalkRouteQuery();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_District__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_District__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.District __obj__ = new com.amap.api.services.route.District();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_DriveRouteResultV2__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_DriveRouteResultV2__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.DriveRouteResultV2 __obj__ = new com.amap.api.services.route.DriveRouteResultV2();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_WalkRouteResult__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_WalkRouteResult__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.WalkRouteResult __obj__ = new com.amap.api.services.route.WalkRouteResult();
+            
+                __methodResult__.success(__obj__);
+            });
+            // factory
+            put("ObjectFactory::createcom_amap_api_services_route_DistanceSearch_DistanceQuery__", (__args__, __methodResult__) -> {
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_DistanceSearch_DistanceQuery__");
+                }
+            
+                // args
+            
+            
+                // create target object
+                com.amap.api.services.route.DistanceSearch.DistanceQuery __obj__ = new com.amap.api.services.route.DistanceSearch.DistanceQuery();
+            
+                __methodResult__.success(__obj__);
             });
         }};
     }

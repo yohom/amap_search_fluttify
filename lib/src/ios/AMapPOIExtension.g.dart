@@ -11,6 +11,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
+import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 
 class AMapPOIExtension extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
@@ -37,9 +38,11 @@ class AMapPOIExtension extends AMapSearchObject with NSCoding, NSCopying {
       'ObjectFactory::create_batchAMapPOIExtension',
       {'length': length, 'init': init}
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyIOSAs<AMapPOIExtension>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyIOSAs<AMapPOIExtension>(it))
+        .where((element) => element !=null)
+        .cast<AMapPOIExtension>()
+        .toList() ?? <AMapPOIExtension>[];
   }
   
   //endregion
@@ -65,20 +68,14 @@ class AMapPOIExtension extends AMapSearchObject with NSCoding, NSCopying {
   //region setters
   Future<void> set_rating(double rating) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapPOIExtension::set_rating', <String, dynamic>{'__this__': this, "rating": rating});
-  
-  
   }
   
   Future<void> set_cost(double cost) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapPOIExtension::set_cost', <String, dynamic>{'__this__': this, "cost": cost});
-  
-  
   }
   
   Future<void> set_openTime(String openTime) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapPOIExtension::set_openTime', <String, dynamic>{'__this__': this, "openTime": openTime});
-  
-  
   }
   
   //endregion
@@ -94,20 +91,25 @@ class AMapPOIExtension extends AMapSearchObject with NSCoding, NSCopying {
 }
 
 extension AMapPOIExtension_Batch on List<AMapPOIExtension?> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first?.refId;
+  }
+
   //region getters
-  Future<List<double?>?> get_rating_batch() async {
+  Future<List<double?>> get_rating_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOIExtension::get_rating_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<double?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<double?>().toList();
   }
   
-  Future<List<double?>?> get_cost_batch() async {
+  Future<List<double?>> get_cost_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOIExtension::get_cost_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<double?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<double?>().toList();
   }
   
-  Future<List<String?>?> get_openTime_batch() async {
+  Future<List<String?>> get_openTime_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOIExtension::get_openTime_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   //endregion

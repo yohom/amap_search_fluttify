@@ -11,6 +11,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
+import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 
 class com_amap_api_services_route_RouteSearch_RideRouteQuery extends java_lang_Object with android_os_Parcelable {
   //region constants
@@ -23,7 +24,7 @@ class com_amap_api_services_route_RouteSearch_RideRouteQuery extends java_lang_O
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_route_RouteSearch_RideRouteQuery> create__com_amap_api_services_route_RouteSearch_FromAndTo__int(com_amap_api_services_route_RouteSearch_FromAndTo? var1, int? var2) async {
+  static Future<com_amap_api_services_route_RouteSearch_RideRouteQuery> create__com_amap_api_services_route_RouteSearch_FromAndTo__int(com_amap_api_services_route_RouteSearch_FromAndTo var1, int var2) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_route_RouteSearch_RideRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int',
       {"var1": var1, "var2": var2}
@@ -31,7 +32,7 @@ class com_amap_api_services_route_RouteSearch_RideRouteQuery extends java_lang_O
     return AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RouteSearch_RideRouteQuery>(__result__)!;
   }
   
-  static Future<com_amap_api_services_route_RouteSearch_RideRouteQuery> create__com_amap_api_services_route_RouteSearch_FromAndTo(com_amap_api_services_route_RouteSearch_FromAndTo? var1) async {
+  static Future<com_amap_api_services_route_RouteSearch_RideRouteQuery> create__com_amap_api_services_route_RouteSearch_FromAndTo(com_amap_api_services_route_RouteSearch_FromAndTo var1) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_route_RouteSearch_RideRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo',
       {"var1": var1}
@@ -53,9 +54,11 @@ class com_amap_api_services_route_RouteSearch_RideRouteQuery extends java_lang_O
       'ObjectFactory::create_batchcom_amap_api_services_route_RouteSearch_RideRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int',
       [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RouteSearch_RideRouteQuery>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RouteSearch_RideRouteQuery>(it))
+        .where((element) => element !=null)
+        .cast<com_amap_api_services_route_RouteSearch_RideRouteQuery>()
+        .toList() ?? <com_amap_api_services_route_RouteSearch_RideRouteQuery>[];
   }
   
   static Future<List<com_amap_api_services_route_RouteSearch_RideRouteQuery>> create_batch__com_amap_api_services_route_RouteSearch_FromAndTo(List<com_amap_api_services_route_RouteSearch_FromAndTo> var1) async {
@@ -64,9 +67,11 @@ class com_amap_api_services_route_RouteSearch_RideRouteQuery extends java_lang_O
       'ObjectFactory::create_batchcom_amap_api_services_route_RouteSearch_RideRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo',
       [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RouteSearch_RideRouteQuery>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RouteSearch_RideRouteQuery>(it))
+        .where((element) => element !=null)
+        .cast<com_amap_api_services_route_RouteSearch_RideRouteQuery>()
+        .toList() ?? <com_amap_api_services_route_RouteSearch_RideRouteQuery>[];
   }
   
   static Future<List<com_amap_api_services_route_RouteSearch_RideRouteQuery>> create_batch__(int length) async {
@@ -75,9 +80,11 @@ class com_amap_api_services_route_RouteSearch_RideRouteQuery extends java_lang_O
       'ObjectFactory::create_batchcom_amap_api_services_route_RouteSearch_RideRouteQuery__',
       {'length': length}
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RouteSearch_RideRouteQuery>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RouteSearch_RideRouteQuery>(it))
+        .where((element) => element !=null)
+        .cast<com_amap_api_services_route_RouteSearch_RideRouteQuery>()
+        .toList() ?? <com_amap_api_services_route_RouteSearch_RideRouteQuery>[];
   }
   
   //endregion
@@ -143,7 +150,7 @@ class com_amap_api_services_route_RouteSearch_RideRouteQuery extends java_lang_O
   }
   
   
-  Future<void> setExtensions(String? var1) async {
+  Future<void> setExtensions(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.RideRouteQuery@$refId::setExtensions([\'var1\':$var1])');
@@ -185,6 +192,11 @@ class com_amap_api_services_route_RouteSearch_RideRouteQuery extends java_lang_O
 }
 
 extension com_amap_api_services_route_RouteSearch_RideRouteQuery_Batch on List<com_amap_api_services_route_RouteSearch_RideRouteQuery?> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first?.refId;
+  }
+
   //region getters
   
   //endregion
@@ -195,40 +207,40 @@ extension com_amap_api_services_route_RouteSearch_RideRouteQuery_Batch on List<c
 
   //region methods
   
-  Future<List<com_amap_api_services_route_RouteSearch_FromAndTo?>?> getFromAndTo_batch() async {
+  Future<List<com_amap_api_services_route_RouteSearch_FromAndTo?>> getFromAndTo_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteSearch.RideRouteQuery::getFromAndTo_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RouteSearch_FromAndTo>(__result__)).cast<com_amap_api_services_route_RouteSearch_FromAndTo>().toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RouteSearch_FromAndTo>(__result__)).cast<com_amap_api_services_route_RouteSearch_FromAndTo?>().toList();
   }
   
   
-  Future<List<int?>?> getMode_batch() async {
+  Future<List<int?>> getMode_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteSearch.RideRouteQuery::getMode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<int>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
   }
   
   
-  Future<List<String?>?> getExtensions_batch() async {
+  Future<List<String?>> getExtensions_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteSearch.RideRouteQuery::getExtensions_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   
-  Future<List<void>?> setExtensions_batch(List<String> var1) async {
+  Future<List<void>> setExtensions_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -239,14 +251,14 @@ extension com_amap_api_services_route_RouteSearch_RideRouteQuery_Batch on List<c
   }
   
   
-  Future<List<com_amap_api_services_route_RouteSearch_RideRouteQuery?>?> clone_batch() async {
+  Future<List<com_amap_api_services_route_RouteSearch_RideRouteQuery?>> clone_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteSearch.RideRouteQuery::clone_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RouteSearch_RideRouteQuery>(__result__)).cast<com_amap_api_services_route_RouteSearch_RideRouteQuery>().toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RouteSearch_RideRouteQuery>(__result__)).cast<com_amap_api_services_route_RouteSearch_RideRouteQuery?>().toList();
   }
   
   //endregion

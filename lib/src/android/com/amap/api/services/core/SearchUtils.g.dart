@@ -11,6 +11,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
+import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 
 class com_amap_api_services_core_SearchUtils extends java_lang_Object  {
   //region constants
@@ -37,9 +38,11 @@ class com_amap_api_services_core_SearchUtils extends java_lang_Object  {
       'ObjectFactory::create_batchcom_amap_api_services_core_SearchUtils__',
       {'length': length}
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_SearchUtils>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_SearchUtils>(it))
+        .where((element) => element !=null)
+        .cast<com_amap_api_services_core_SearchUtils>()
+        .toList() ?? <com_amap_api_services_core_SearchUtils>[];
   }
   
   //endregion
@@ -54,7 +57,7 @@ class com_amap_api_services_core_SearchUtils extends java_lang_Object  {
 
   //region methods
   
-  static Future<String?> getSHA1(android_content_Context? var0) async {
+  static Future<String?> getSHA1(android_content_Context var0) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.SearchUtils::getSHA1([])');
@@ -71,7 +74,7 @@ class com_amap_api_services_core_SearchUtils extends java_lang_Object  {
   }
   
   
-  static Future<String?> getPkgName(android_content_Context? var0) async {
+  static Future<String?> getPkgName(android_content_Context var0) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.core.SearchUtils::getPkgName([])');
@@ -113,6 +116,11 @@ class com_amap_api_services_core_SearchUtils extends java_lang_Object  {
 }
 
 extension com_amap_api_services_core_SearchUtils_Batch on List<com_amap_api_services_core_SearchUtils?> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first?.refId;
+  }
+
   //region getters
   
   //endregion
@@ -123,36 +131,36 @@ extension com_amap_api_services_core_SearchUtils_Batch on List<com_amap_api_serv
 
   //region methods
   
-  static Future<List<String?>?> getSHA1_batch(List<android_content_Context> var0) async {
+  static Future<List<String?>> getSHA1_batch(List<android_content_Context> var0) async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.SearchUtils::getSHA1_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   
-  static Future<List<String?>?> getPkgName_batch(List<android_content_Context> var0) async {
+  static Future<List<String?>> getPkgName_batch(List<android_content_Context> var0) async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.SearchUtils::getPkgName_batch', [for (int __i__ = 0; __i__ < var0.length; __i__++) {"var0": var0[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   
-  static Future<List<String?>?> getVersion_batch() async {
+  static Future<List<String?>> getVersion_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.core.SearchUtils::getVersion_batch', );
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   //endregion

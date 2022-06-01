@@ -11,6 +11,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
+import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 
 class AMapWeatherSearchResponse extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
@@ -37,9 +38,11 @@ class AMapWeatherSearchResponse extends AMapSearchObject with NSCoding, NSCopyin
       'ObjectFactory::create_batchAMapWeatherSearchResponse',
       {'length': length, 'init': init}
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyIOSAs<AMapWeatherSearchResponse>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyIOSAs<AMapWeatherSearchResponse>(it))
+        .where((element) => element !=null)
+        .cast<AMapWeatherSearchResponse>()
+        .toList() ?? <AMapWeatherSearchResponse>[];
   }
   
   //endregion
@@ -47,12 +50,12 @@ class AMapWeatherSearchResponse extends AMapSearchObject with NSCoding, NSCopyin
   //region getters
   Future<List<AMapLocalWeatherLive>?> get_lives() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapWeatherSearchResponse::get_lives", {'__this__': this});
-    return (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapLocalWeatherLive>(it)!).toList();
+    return (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapLocalWeatherLive>(it)).where((e) => e != null).cast<AMapLocalWeatherLive>().toList();
   }
   
   Future<List<AMapLocalWeatherForecast>?> get_forecasts() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapWeatherSearchResponse::get_forecasts", {'__this__': this});
-    return (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapLocalWeatherForecast>(it)!).toList();
+    return (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapLocalWeatherForecast>(it)).where((e) => e != null).cast<AMapLocalWeatherForecast>().toList();
   }
   
   //endregion
@@ -60,14 +63,10 @@ class AMapWeatherSearchResponse extends AMapSearchObject with NSCoding, NSCopyin
   //region setters
   Future<void> set_lives(List<AMapLocalWeatherLive> lives) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapWeatherSearchResponse::set_lives', <String, dynamic>{'__this__': this, "lives": lives});
-  
-  
   }
   
   Future<void> set_forecasts(List<AMapLocalWeatherForecast> forecasts) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapWeatherSearchResponse::set_forecasts', <String, dynamic>{'__this__': this, "forecasts": forecasts});
-  
-  
   }
   
   //endregion
@@ -83,15 +82,20 @@ class AMapWeatherSearchResponse extends AMapSearchObject with NSCoding, NSCopyin
 }
 
 extension AMapWeatherSearchResponse_Batch on List<AMapWeatherSearchResponse?> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first?.refId;
+  }
+
   //region getters
-  Future<List<List<AMapLocalWeatherLive>?>?> get_lives_batch() async {
+  Future<List<List<AMapLocalWeatherLive>?>> get_lives_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapWeatherSearchResponse::get_lives_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapLocalWeatherLive>(it)!).toList()).cast<List<AMapLocalWeatherLive>?>().toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapLocalWeatherLive>(it)).where((e) => e != null).cast<AMapLocalWeatherLive>().toList()).cast<List<AMapLocalWeatherLive>?>().toList();
   }
   
-  Future<List<List<AMapLocalWeatherForecast>?>?> get_forecasts_batch() async {
+  Future<List<List<AMapLocalWeatherForecast>?>> get_forecasts_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapWeatherSearchResponse::get_forecasts_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapLocalWeatherForecast>(it)!).toList()).cast<List<AMapLocalWeatherForecast>?>().toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapLocalWeatherForecast>(it)).where((e) => e != null).cast<AMapLocalWeatherForecast>().toList()).cast<List<AMapLocalWeatherForecast>?>().toList();
   }
   
   //endregion

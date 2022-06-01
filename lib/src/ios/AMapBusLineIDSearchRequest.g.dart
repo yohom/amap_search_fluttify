@@ -11,6 +11,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
+import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 
 class AMapBusLineIDSearchRequest extends AMapBusLineBaseSearchRequest with NSCoding, NSCopying {
   //region constants
@@ -37,9 +38,11 @@ class AMapBusLineIDSearchRequest extends AMapBusLineBaseSearchRequest with NSCod
       'ObjectFactory::create_batchAMapBusLineIDSearchRequest',
       {'length': length, 'init': init}
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyIOSAs<AMapBusLineIDSearchRequest>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyIOSAs<AMapBusLineIDSearchRequest>(it))
+        .where((element) => element !=null)
+        .cast<AMapBusLineIDSearchRequest>()
+        .toList() ?? <AMapBusLineIDSearchRequest>[];
   }
   
   //endregion
@@ -55,8 +58,6 @@ class AMapBusLineIDSearchRequest extends AMapBusLineBaseSearchRequest with NSCod
   //region setters
   Future<void> set_uid(String uid) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapBusLineIDSearchRequest::set_uid', <String, dynamic>{'__this__': this, "uid": uid});
-  
-  
   }
   
   //endregion
@@ -72,10 +73,15 @@ class AMapBusLineIDSearchRequest extends AMapBusLineBaseSearchRequest with NSCod
 }
 
 extension AMapBusLineIDSearchRequest_Batch on List<AMapBusLineIDSearchRequest?> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first?.refId;
+  }
+
   //region getters
-  Future<List<String?>?> get_uid_batch() async {
+  Future<List<String?>> get_uid_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapBusLineIDSearchRequest::get_uid_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   //endregion

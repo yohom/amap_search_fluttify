@@ -5,12 +5,7 @@ buildscript {
     repositories {
         google()
         mavenCentral()
-        maven { url 'https://download.flutter.io' }
-        maven { url "https://oss.sonatype.org/content/groups/public" }
-        maven { url "https://maven.aliyun.com/nexus/content/groups/public/" }
-        maven { url "https://dl.bintray.com/aweme-open-sdk-team/public" }
-        maven { url 'https://developer.huawei.com/repo/' }
-        maven { url "https://repo.baichuan-android.taobao.com/content/groups/BaichuanRepositories/" }
+        
     }
 
     dependencies {
@@ -22,12 +17,7 @@ rootProject.allprojects {
     repositories {
         google()
         mavenCentral()
-        maven { url 'https://download.flutter.io' }
-        maven { url "https://oss.sonatype.org/content/groups/public" }
-        maven { url "https://maven.aliyun.com/nexus/content/groups/public/" }
-        maven { url "https://dl.bintray.com/aweme-open-sdk-team/public" }
-        maven { url 'https://developer.huawei.com/repo/' }
-        maven { url "https://repo.baichuan-android.taobao.com/content/groups/BaichuanRepositories/" }
+        
     }
 }
 
@@ -71,7 +61,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.1.0'
     compileOnly rootProject.findProject(":foundation_fluttify")
     // flutter plugin dependency
-    compileOnly rootProject.findProject(":amap_core_fluttify")
+    
     // sdk dependency
-    api 'com.amap.api:search:7.7.0'
+    api 'com.amap.api:search:9.2.0'
 }

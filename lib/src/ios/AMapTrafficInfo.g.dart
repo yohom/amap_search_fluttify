@@ -11,6 +11,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
+import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 
 class AMapTrafficInfo extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
@@ -37,9 +38,11 @@ class AMapTrafficInfo extends AMapSearchObject with NSCoding, NSCopying {
       'ObjectFactory::create_batchAMapTrafficInfo',
       {'length': length, 'init': init}
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyIOSAs<AMapTrafficInfo>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyIOSAs<AMapTrafficInfo>(it))
+        .where((element) => element !=null)
+        .cast<AMapTrafficInfo>()
+        .toList() ?? <AMapTrafficInfo>[];
   }
   
   //endregion
@@ -57,7 +60,7 @@ class AMapTrafficInfo extends AMapSearchObject with NSCoding, NSCopying {
   
   Future<List<AMapTrafficRoad>?> get_roads() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapTrafficInfo::get_roads", {'__this__': this});
-    return (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapTrafficRoad>(it)!).toList();
+    return (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapTrafficRoad>(it)).where((e) => e != null).cast<AMapTrafficRoad>().toList();
   }
   
   //endregion
@@ -65,20 +68,14 @@ class AMapTrafficInfo extends AMapSearchObject with NSCoding, NSCopying {
   //region setters
   Future<void> set_statusDescription(String statusDescription) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapTrafficInfo::set_statusDescription', <String, dynamic>{'__this__': this, "statusDescription": statusDescription});
-  
-  
   }
   
   Future<void> set_evaluation(AMapTrafficEvaluation evaluation) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapTrafficInfo::set_evaluation', <String, dynamic>{'__this__': this, "evaluation": evaluation});
-  
-  
   }
   
   Future<void> set_roads(List<AMapTrafficRoad> roads) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapTrafficInfo::set_roads', <String, dynamic>{'__this__': this, "roads": roads});
-  
-  
   }
   
   //endregion
@@ -94,20 +91,25 @@ class AMapTrafficInfo extends AMapSearchObject with NSCoding, NSCopying {
 }
 
 extension AMapTrafficInfo_Batch on List<AMapTrafficInfo?> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first?.refId;
+  }
+
   //region getters
-  Future<List<String?>?> get_statusDescription_batch() async {
+  Future<List<String?>> get_statusDescription_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTrafficInfo::get_statusDescription_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<AMapTrafficEvaluation?>?> get_evaluation_batch() async {
+  Future<List<AMapTrafficEvaluation?>> get_evaluation_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTrafficInfo::get_evaluation_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => AmapSearchFluttifyIOSAs<AMapTrafficEvaluation>(__result__)).cast<AMapTrafficEvaluation?>().toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyIOSAs<AMapTrafficEvaluation>(__result__)).cast<AMapTrafficEvaluation?>().toList();
   }
   
-  Future<List<List<AMapTrafficRoad>?>?> get_roads_batch() async {
+  Future<List<List<AMapTrafficRoad>?>> get_roads_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTrafficInfo::get_roads_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapTrafficRoad>(it)!).toList()).cast<List<AMapTrafficRoad>?>().toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapTrafficRoad>(it)).where((e) => e != null).cast<AMapTrafficRoad>().toList()).cast<List<AMapTrafficRoad>?>().toList();
   }
   
   //endregion

@@ -11,6 +11,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
+import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 
 class AMapReGeocode extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
@@ -37,9 +38,11 @@ class AMapReGeocode extends AMapSearchObject with NSCoding, NSCopying {
       'ObjectFactory::create_batchAMapReGeocode',
       {'length': length, 'init': init}
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyIOSAs<AMapReGeocode>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyIOSAs<AMapReGeocode>(it))
+        .where((element) => element !=null)
+        .cast<AMapReGeocode>()
+        .toList() ?? <AMapReGeocode>[];
   }
   
   //endregion
@@ -57,22 +60,22 @@ class AMapReGeocode extends AMapSearchObject with NSCoding, NSCopying {
   
   Future<List<AMapRoad>?> get_roads() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapReGeocode::get_roads", {'__this__': this});
-    return (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapRoad>(it)!).toList();
+    return (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapRoad>(it)).where((e) => e != null).cast<AMapRoad>().toList();
   }
   
   Future<List<AMapRoadInter>?> get_roadinters() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapReGeocode::get_roadinters", {'__this__': this});
-    return (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapRoadInter>(it)!).toList();
+    return (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapRoadInter>(it)).where((e) => e != null).cast<AMapRoadInter>().toList();
   }
   
   Future<List<AMapPOI>?> get_pois() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapReGeocode::get_pois", {'__this__': this});
-    return (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapPOI>(it)!).toList();
+    return (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapPOI>(it)).where((e) => e != null).cast<AMapPOI>().toList();
   }
   
   Future<List<AMapAOI>?> get_aois() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapReGeocode::get_aois", {'__this__': this});
-    return (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapAOI>(it)!).toList();
+    return (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapAOI>(it)).where((e) => e != null).cast<AMapAOI>().toList();
   }
   
   //endregion
@@ -80,38 +83,26 @@ class AMapReGeocode extends AMapSearchObject with NSCoding, NSCopying {
   //region setters
   Future<void> set_formattedAddress(String formattedAddress) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapReGeocode::set_formattedAddress', <String, dynamic>{'__this__': this, "formattedAddress": formattedAddress});
-  
-  
   }
   
   Future<void> set_addressComponent(AMapAddressComponent addressComponent) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapReGeocode::set_addressComponent', <String, dynamic>{'__this__': this, "addressComponent": addressComponent});
-  
-  
   }
   
   Future<void> set_roads(List<AMapRoad> roads) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapReGeocode::set_roads', <String, dynamic>{'__this__': this, "roads": roads});
-  
-  
   }
   
   Future<void> set_roadinters(List<AMapRoadInter> roadinters) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapReGeocode::set_roadinters', <String, dynamic>{'__this__': this, "roadinters": roadinters});
-  
-  
   }
   
   Future<void> set_pois(List<AMapPOI> pois) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapReGeocode::set_pois', <String, dynamic>{'__this__': this, "pois": pois});
-  
-  
   }
   
   Future<void> set_aois(List<AMapAOI> aois) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapReGeocode::set_aois', <String, dynamic>{'__this__': this, "aois": aois});
-  
-  
   }
   
   //endregion
@@ -127,35 +118,40 @@ class AMapReGeocode extends AMapSearchObject with NSCoding, NSCopying {
 }
 
 extension AMapReGeocode_Batch on List<AMapReGeocode?> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first?.refId;
+  }
+
   //region getters
-  Future<List<String?>?> get_formattedAddress_batch() async {
+  Future<List<String?>> get_formattedAddress_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapReGeocode::get_formattedAddress_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<AMapAddressComponent?>?> get_addressComponent_batch() async {
+  Future<List<AMapAddressComponent?>> get_addressComponent_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapReGeocode::get_addressComponent_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => AmapSearchFluttifyIOSAs<AMapAddressComponent>(__result__)).cast<AMapAddressComponent?>().toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyIOSAs<AMapAddressComponent>(__result__)).cast<AMapAddressComponent?>().toList();
   }
   
-  Future<List<List<AMapRoad>?>?> get_roads_batch() async {
+  Future<List<List<AMapRoad>?>> get_roads_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapReGeocode::get_roads_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapRoad>(it)!).toList()).cast<List<AMapRoad>?>().toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapRoad>(it)).where((e) => e != null).cast<AMapRoad>().toList()).cast<List<AMapRoad>?>().toList();
   }
   
-  Future<List<List<AMapRoadInter>?>?> get_roadinters_batch() async {
+  Future<List<List<AMapRoadInter>?>> get_roadinters_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapReGeocode::get_roadinters_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapRoadInter>(it)!).toList()).cast<List<AMapRoadInter>?>().toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapRoadInter>(it)).where((e) => e != null).cast<AMapRoadInter>().toList()).cast<List<AMapRoadInter>?>().toList();
   }
   
-  Future<List<List<AMapPOI>?>?> get_pois_batch() async {
+  Future<List<List<AMapPOI>?>> get_pois_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapReGeocode::get_pois_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapPOI>(it)!).toList()).cast<List<AMapPOI>?>().toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapPOI>(it)).where((e) => e != null).cast<AMapPOI>().toList()).cast<List<AMapPOI>?>().toList();
   }
   
-  Future<List<List<AMapAOI>?>?> get_aois_batch() async {
+  Future<List<List<AMapAOI>?>> get_aois_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapReGeocode::get_aois_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapAOI>(it)!).toList()).cast<List<AMapAOI>?>().toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapAOI>(it)).where((e) => e != null).cast<AMapAOI>().toList()).cast<List<AMapAOI>?>().toList();
   }
   
   //endregion

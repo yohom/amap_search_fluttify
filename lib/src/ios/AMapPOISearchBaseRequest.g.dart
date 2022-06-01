@@ -11,6 +11,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
+import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 
 class AMapPOISearchBaseRequest extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
@@ -37,9 +38,11 @@ class AMapPOISearchBaseRequest extends AMapSearchObject with NSCoding, NSCopying
       'ObjectFactory::create_batchAMapPOISearchBaseRequest',
       {'length': length, 'init': init}
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyIOSAs<AMapPOISearchBaseRequest>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyIOSAs<AMapPOISearchBaseRequest>(it))
+        .where((element) => element !=null)
+        .cast<AMapPOISearchBaseRequest>()
+        .toList() ?? <AMapPOISearchBaseRequest>[];
   }
   
   //endregion
@@ -85,44 +88,30 @@ class AMapPOISearchBaseRequest extends AMapSearchObject with NSCoding, NSCopying
   //region setters
   Future<void> set_types(String types) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapPOISearchBaseRequest::set_types', <String, dynamic>{'__this__': this, "types": types});
-  
-  
   }
   
   Future<void> set_sortrule(int sortrule) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapPOISearchBaseRequest::set_sortrule', <String, dynamic>{'__this__': this, "sortrule": sortrule});
-  
-  
   }
   
   Future<void> set_offset(int offset) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapPOISearchBaseRequest::set_offset', <String, dynamic>{'__this__': this, "offset": offset});
-  
-  
   }
   
   Future<void> set_page(int page) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapPOISearchBaseRequest::set_page', <String, dynamic>{'__this__': this, "page": page});
-  
-  
   }
   
   Future<void> set_building(String building) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapPOISearchBaseRequest::set_building', <String, dynamic>{'__this__': this, "building": building});
-  
-  
   }
   
   Future<void> set_requireExtension(bool requireExtension) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapPOISearchBaseRequest::set_requireExtension', <String, dynamic>{'__this__': this, "requireExtension": requireExtension});
-  
-  
   }
   
   Future<void> set_requireSubPOIs(bool requireSubPOIs) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapPOISearchBaseRequest::set_requireSubPOIs', <String, dynamic>{'__this__': this, "requireSubPOIs": requireSubPOIs});
-  
-  
   }
   
   //endregion
@@ -138,40 +127,45 @@ class AMapPOISearchBaseRequest extends AMapSearchObject with NSCoding, NSCopying
 }
 
 extension AMapPOISearchBaseRequest_Batch on List<AMapPOISearchBaseRequest?> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first?.refId;
+  }
+
   //region getters
-  Future<List<String?>?> get_types_batch() async {
+  Future<List<String?>> get_types_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOISearchBaseRequest::get_types_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<int?>?> get_sortrule_batch() async {
+  Future<List<int?>> get_sortrule_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOISearchBaseRequest::get_sortrule_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<int?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
   }
   
-  Future<List<int?>?> get_offset_batch() async {
+  Future<List<int?>> get_offset_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOISearchBaseRequest::get_offset_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<int?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
   }
   
-  Future<List<int?>?> get_page_batch() async {
+  Future<List<int?>> get_page_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOISearchBaseRequest::get_page_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<int?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
   }
   
-  Future<List<String?>?> get_building_batch() async {
+  Future<List<String?>> get_building_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOISearchBaseRequest::get_building_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<bool?>?> get_requireExtension_batch() async {
+  Future<List<bool?>> get_requireExtension_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOISearchBaseRequest::get_requireExtension_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<bool?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<bool?>().toList();
   }
   
-  Future<List<bool?>?> get_requireSubPOIs_batch() async {
+  Future<List<bool?>> get_requireSubPOIs_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapPOISearchBaseRequest::get_requireSubPOIs_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<bool?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<bool?>().toList();
   }
   
   //endregion

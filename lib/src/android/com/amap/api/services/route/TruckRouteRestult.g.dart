@@ -11,6 +11,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
+import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 
 class com_amap_api_services_route_TruckRouteRestult extends java_lang_Object with android_os_Parcelable {
   //region constants
@@ -37,9 +38,11 @@ class com_amap_api_services_route_TruckRouteRestult extends java_lang_Object wit
       'ObjectFactory::create_batchcom_amap_api_services_route_TruckRouteRestult__',
       {'length': length}
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_TruckRouteRestult>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_TruckRouteRestult>(it))
+        .where((element) => element !=null)
+        .cast<com_amap_api_services_route_TruckRouteRestult>()
+        .toList() ?? <com_amap_api_services_route_TruckRouteRestult>[];
   }
   
   //endregion
@@ -54,7 +57,7 @@ class com_amap_api_services_route_TruckRouteRestult extends java_lang_Object wit
 
   //region methods
   
-  Future<void> setTruckQuery(com_amap_api_services_route_RouteSearch_TruckRouteQuery? var1) async {
+  Future<void> setTruckQuery(com_amap_api_services_route_RouteSearch_TruckRouteQuery var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.TruckRouteRestult@$refId::setTruckQuery([])');
@@ -71,7 +74,7 @@ class com_amap_api_services_route_TruckRouteRestult extends java_lang_Object wit
   }
   
   
-  Future<void> setPaths(List<com_amap_api_services_route_TruckPath>? var1) async {
+  Future<void> setPaths(List<com_amap_api_services_route_TruckPath> var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.TruckRouteRestult@$refId::setPaths([])');
@@ -88,7 +91,7 @@ class com_amap_api_services_route_TruckRouteRestult extends java_lang_Object wit
   }
   
   
-  Future<void> setStartPos(com_amap_api_services_core_LatLonPoint? var1) async {
+  Future<void> setStartPos(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.TruckRouteRestult@$refId::setStartPos([])');
@@ -105,7 +108,7 @@ class com_amap_api_services_route_TruckRouteRestult extends java_lang_Object wit
   }
   
   
-  Future<void> setTargetPos(com_amap_api_services_core_LatLonPoint? var1) async {
+  Future<void> setTargetPos(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.TruckRouteRestult@$refId::setTargetPos([])');
@@ -152,7 +155,7 @@ class com_amap_api_services_route_TruckRouteRestult extends java_lang_Object wit
     // handle native call
   
   
-    return (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_TruckPath>(it)!).toList();
+    return (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_TruckPath>(it)).where((e) => e != null).cast<com_amap_api_services_route_TruckPath>().toList();
   }
   
   
@@ -198,6 +201,11 @@ class com_amap_api_services_route_TruckRouteRestult extends java_lang_Object wit
 }
 
 extension com_amap_api_services_route_TruckRouteRestult_Batch on List<com_amap_api_services_route_TruckRouteRestult?> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first?.refId;
+  }
+
   //region getters
   
   //endregion
@@ -208,7 +216,7 @@ extension com_amap_api_services_route_TruckRouteRestult_Batch on List<com_amap_a
 
   //region methods
   
-  Future<List<void>?> setTruckQuery_batch(List<com_amap_api_services_route_RouteSearch_TruckRouteQuery> var1) async {
+  Future<List<void>> setTruckQuery_batch(List<com_amap_api_services_route_RouteSearch_TruckRouteQuery> var1) async {
     assert(true);
   
     // invoke native method
@@ -219,7 +227,7 @@ extension com_amap_api_services_route_TruckRouteRestult_Batch on List<com_amap_a
   }
   
   
-  Future<List<void>?> setPaths_batch(List<List<com_amap_api_services_route_TruckPath>> var1) async {
+  Future<List<void>> setPaths_batch(List<List<com_amap_api_services_route_TruckPath>> var1) async {
     assert(true);
   
     // invoke native method
@@ -230,7 +238,7 @@ extension com_amap_api_services_route_TruckRouteRestult_Batch on List<com_amap_a
   }
   
   
-  Future<List<void>?> setStartPos_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
+  Future<List<void>> setStartPos_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
     assert(true);
   
     // invoke native method
@@ -241,7 +249,7 @@ extension com_amap_api_services_route_TruckRouteRestult_Batch on List<com_amap_a
   }
   
   
-  Future<List<void>?> setTargetPos_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
+  Future<List<void>> setTargetPos_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
     assert(true);
   
     // invoke native method
@@ -252,47 +260,47 @@ extension com_amap_api_services_route_TruckRouteRestult_Batch on List<com_amap_a
   }
   
   
-  Future<List<com_amap_api_services_route_RouteSearch_TruckRouteQuery?>?> getTruckQuery_batch() async {
+  Future<List<com_amap_api_services_route_RouteSearch_TruckRouteQuery?>> getTruckQuery_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TruckRouteRestult::getTruckQuery_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RouteSearch_TruckRouteQuery>(__result__)).cast<com_amap_api_services_route_RouteSearch_TruckRouteQuery>().toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RouteSearch_TruckRouteQuery>(__result__)).cast<com_amap_api_services_route_RouteSearch_TruckRouteQuery?>().toList();
   }
   
   
-  Future<List<List<com_amap_api_services_route_TruckPath>?>?> getPaths_batch() async {
+  Future<List<List<com_amap_api_services_route_TruckPath>?>> getPaths_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TruckRouteRestult::getPaths_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_TruckPath>(it)!).toList()).cast<List<com_amap_api_services_route_TruckPath>>().toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_TruckPath>(it)).where((e) => e != null).cast<com_amap_api_services_route_TruckPath>().toList()).cast<List<com_amap_api_services_route_TruckPath>?>().toList();
   }
   
   
-  Future<List<com_amap_api_services_core_LatLonPoint?>?> getStartPos_batch() async {
+  Future<List<com_amap_api_services_core_LatLonPoint?>> getStartPos_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TruckRouteRestult::getStartPos_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(__result__)).cast<com_amap_api_services_core_LatLonPoint>().toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(__result__)).cast<com_amap_api_services_core_LatLonPoint?>().toList();
   }
   
   
-  Future<List<com_amap_api_services_core_LatLonPoint?>?> getTargetPos_batch() async {
+  Future<List<com_amap_api_services_core_LatLonPoint?>> getTargetPos_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TruckRouteRestult::getTargetPos_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(__result__)).cast<com_amap_api_services_core_LatLonPoint>().toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(__result__)).cast<com_amap_api_services_core_LatLonPoint?>().toList();
   }
   
   //endregion

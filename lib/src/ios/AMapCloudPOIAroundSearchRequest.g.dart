@@ -11,6 +11,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
+import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 
 class AMapCloudPOIAroundSearchRequest extends AMapCloudSearchBaseRequest with NSCoding, NSCopying {
   //region constants
@@ -37,9 +38,11 @@ class AMapCloudPOIAroundSearchRequest extends AMapCloudSearchBaseRequest with NS
       'ObjectFactory::create_batchAMapCloudPOIAroundSearchRequest',
       {'length': length, 'init': init}
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyIOSAs<AMapCloudPOIAroundSearchRequest>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyIOSAs<AMapCloudPOIAroundSearchRequest>(it))
+        .where((element) => element !=null)
+        .cast<AMapCloudPOIAroundSearchRequest>()
+        .toList() ?? <AMapCloudPOIAroundSearchRequest>[];
   }
   
   //endregion
@@ -65,20 +68,14 @@ class AMapCloudPOIAroundSearchRequest extends AMapCloudSearchBaseRequest with NS
   //region setters
   Future<void> set_center(AMapGeoPoint center) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapCloudPOIAroundSearchRequest::set_center', <String, dynamic>{'__this__': this, "center": center});
-  
-  
   }
   
   Future<void> set_radius(int radius) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapCloudPOIAroundSearchRequest::set_radius', <String, dynamic>{'__this__': this, "radius": radius});
-  
-  
   }
   
   Future<void> set_keywords(String keywords) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapCloudPOIAroundSearchRequest::set_keywords', <String, dynamic>{'__this__': this, "keywords": keywords});
-  
-  
   }
   
   //endregion
@@ -94,20 +91,25 @@ class AMapCloudPOIAroundSearchRequest extends AMapCloudSearchBaseRequest with NS
 }
 
 extension AMapCloudPOIAroundSearchRequest_Batch on List<AMapCloudPOIAroundSearchRequest?> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first?.refId;
+  }
+
   //region getters
-  Future<List<AMapGeoPoint?>?> get_center_batch() async {
+  Future<List<AMapGeoPoint?>> get_center_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudPOIAroundSearchRequest::get_center_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => AmapSearchFluttifyIOSAs<AMapGeoPoint>(__result__)).cast<AMapGeoPoint?>().toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyIOSAs<AMapGeoPoint>(__result__)).cast<AMapGeoPoint?>().toList();
   }
   
-  Future<List<int?>?> get_radius_batch() async {
+  Future<List<int?>> get_radius_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudPOIAroundSearchRequest::get_radius_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<int?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
   }
   
-  Future<List<String?>?> get_keywords_batch() async {
+  Future<List<String?>> get_keywords_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapCloudPOIAroundSearchRequest::get_keywords_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   //endregion

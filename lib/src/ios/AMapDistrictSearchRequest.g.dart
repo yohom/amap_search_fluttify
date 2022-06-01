@@ -11,6 +11,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
+import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 
 class AMapDistrictSearchRequest extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
@@ -37,9 +38,11 @@ class AMapDistrictSearchRequest extends AMapSearchObject with NSCoding, NSCopyin
       'ObjectFactory::create_batchAMapDistrictSearchRequest',
       {'length': length, 'init': init}
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyIOSAs<AMapDistrictSearchRequest>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyIOSAs<AMapDistrictSearchRequest>(it))
+        .where((element) => element !=null)
+        .cast<AMapDistrictSearchRequest>()
+        .toList() ?? <AMapDistrictSearchRequest>[];
   }
   
   //endregion
@@ -65,20 +68,14 @@ class AMapDistrictSearchRequest extends AMapSearchObject with NSCoding, NSCopyin
   //region setters
   Future<void> set_keywords(String keywords) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapDistrictSearchRequest::set_keywords', <String, dynamic>{'__this__': this, "keywords": keywords});
-  
-  
   }
   
   Future<void> set_requireExtension(bool requireExtension) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapDistrictSearchRequest::set_requireExtension', <String, dynamic>{'__this__': this, "requireExtension": requireExtension});
-  
-  
   }
   
   Future<void> set_showBusinessArea(bool showBusinessArea) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapDistrictSearchRequest::set_showBusinessArea', <String, dynamic>{'__this__': this, "showBusinessArea": showBusinessArea});
-  
-  
   }
   
   //endregion
@@ -94,20 +91,25 @@ class AMapDistrictSearchRequest extends AMapSearchObject with NSCoding, NSCopyin
 }
 
 extension AMapDistrictSearchRequest_Batch on List<AMapDistrictSearchRequest?> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first?.refId;
+  }
+
   //region getters
-  Future<List<String?>?> get_keywords_batch() async {
+  Future<List<String?>> get_keywords_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapDistrictSearchRequest::get_keywords_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<bool?>?> get_requireExtension_batch() async {
+  Future<List<bool?>> get_requireExtension_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapDistrictSearchRequest::get_requireExtension_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<bool?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<bool?>().toList();
   }
   
-  Future<List<bool?>?> get_showBusinessArea_batch() async {
+  Future<List<bool?>> get_showBusinessArea_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapDistrictSearchRequest::get_showBusinessArea_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<bool?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<bool?>().toList();
   }
   
   //endregion

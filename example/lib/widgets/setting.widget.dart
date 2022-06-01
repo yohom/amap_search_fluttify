@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-const SPACE_NORMAL = const SizedBox(width: 8, height: 8);
-const kDividerTiny = const Divider(height: 1);
+const SPACE_NORMAL = SizedBox(width: 8, height: 8);
+const kDividerTiny = Divider(height: 1);
 
 /// 连续设置
 class ContinuousSetting extends StatefulWidget {
@@ -19,7 +19,7 @@ class ContinuousSetting extends StatefulWidget {
   final double max;
 
   @override
-  _ContinuousSettingState createState() => new _ContinuousSettingState();
+  _ContinuousSettingState createState() => _ContinuousSettingState();
 }
 
 class _ContinuousSettingState extends State<ContinuousSetting> {
@@ -89,8 +89,8 @@ class DiscreteSetting extends StatelessWidget {
           itemBuilder: (context) {
             return options
                 .map((value) => PopupMenuItem<String>(
-                      child: Text(value),
                       value: value,
+                      child: Text(value),
                     ))
                 .toList();
           },
@@ -116,7 +116,7 @@ class ColorSetting extends StatelessWidget {
   Widget build(BuildContext context) {
     return DiscreteSetting(
       head: head,
-      options: ['绿色', '红色', '黄色'],
+      options: const ['绿色', '红色', '黄色'],
       onSelected: (value) {
         Color? color;
         switch (value) {

@@ -11,6 +11,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
+import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 
 class AMapRoadInter extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
@@ -37,9 +38,11 @@ class AMapRoadInter extends AMapSearchObject with NSCoding, NSCopying {
       'ObjectFactory::create_batchAMapRoadInter',
       {'length': length, 'init': init}
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyIOSAs<AMapRoadInter>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyIOSAs<AMapRoadInter>(it))
+        .where((element) => element !=null)
+        .cast<AMapRoadInter>()
+        .toList() ?? <AMapRoadInter>[];
   }
   
   //endregion
@@ -85,44 +88,30 @@ class AMapRoadInter extends AMapSearchObject with NSCoding, NSCopying {
   //region setters
   Future<void> set_distance(int distance) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRoadInter::set_distance', <String, dynamic>{'__this__': this, "distance": distance});
-  
-  
   }
   
   Future<void> set_direction(String direction) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRoadInter::set_direction', <String, dynamic>{'__this__': this, "direction": direction});
-  
-  
   }
   
   Future<void> set_location(AMapGeoPoint location) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRoadInter::set_location', <String, dynamic>{'__this__': this, "location": location});
-  
-  
   }
   
   Future<void> set_firstId(String firstId) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRoadInter::set_firstId', <String, dynamic>{'__this__': this, "firstId": firstId});
-  
-  
   }
   
   Future<void> set_firstName(String firstName) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRoadInter::set_firstName', <String, dynamic>{'__this__': this, "firstName": firstName});
-  
-  
   }
   
   Future<void> set_secondId(String secondId) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRoadInter::set_secondId', <String, dynamic>{'__this__': this, "secondId": secondId});
-  
-  
   }
   
   Future<void> set_secondName(String secondName) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRoadInter::set_secondName', <String, dynamic>{'__this__': this, "secondName": secondName});
-  
-  
   }
   
   //endregion
@@ -138,40 +127,45 @@ class AMapRoadInter extends AMapSearchObject with NSCoding, NSCopying {
 }
 
 extension AMapRoadInter_Batch on List<AMapRoadInter?> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first?.refId;
+  }
+
   //region getters
-  Future<List<int?>?> get_distance_batch() async {
+  Future<List<int?>> get_distance_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoadInter::get_distance_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<int?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
   }
   
-  Future<List<String?>?> get_direction_batch() async {
+  Future<List<String?>> get_direction_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoadInter::get_direction_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<AMapGeoPoint?>?> get_location_batch() async {
+  Future<List<AMapGeoPoint?>> get_location_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoadInter::get_location_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => AmapSearchFluttifyIOSAs<AMapGeoPoint>(__result__)).cast<AMapGeoPoint?>().toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyIOSAs<AMapGeoPoint>(__result__)).cast<AMapGeoPoint?>().toList();
   }
   
-  Future<List<String?>?> get_firstId_batch() async {
+  Future<List<String?>> get_firstId_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoadInter::get_firstId_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<String?>?> get_firstName_batch() async {
+  Future<List<String?>> get_firstName_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoadInter::get_firstName_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<String?>?> get_secondId_batch() async {
+  Future<List<String?>> get_secondId_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoadInter::get_secondId_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<String?>?> get_secondName_batch() async {
+  Future<List<String?>> get_secondName_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRoadInter::get_secondName_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   //endregion

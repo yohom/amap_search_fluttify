@@ -11,12 +11,56 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
+import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 
-
+class _com_amap_api_services_weather_WeatherSearch_OnWeatherSearchListener_SUB extends java_lang_Object with com_amap_api_services_weather_WeatherSearch_OnWeatherSearchListener {}
 
 mixin com_amap_api_services_weather_WeatherSearch_OnWeatherSearchListener on java_lang_Object {
   
 
+  static com_amap_api_services_weather_WeatherSearch_OnWeatherSearchListener subInstance() => _com_amap_api_services_weather_WeatherSearch_OnWeatherSearchListener_SUB();
+
+  static Future<com_amap_api_services_weather_WeatherSearch_OnWeatherSearchListener> anonymous__() async {
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.weather.WeatherSearch.OnWeatherSearchListener::createAnonymous__');
+  
+    final __object__ = AmapSearchFluttifyAndroidAs<com_amap_api_services_weather_WeatherSearch_OnWeatherSearchListener>(__result__)!;
+  
+    // handle callback
+    MethodChannel('com.amap.api.services.weather.WeatherSearch.OnWeatherSearchListener::Callback@${__object__.refId}', kAmapSearchFluttifyMethodCodec)
+        .setMethodCallHandler((methodCall) async {
+          try {
+            final args = methodCall.arguments as Map;
+            switch (methodCall.method) {
+              case 'onWeatherLiveSearched_':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: __object__.onWeatherLiveSearched?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
+                }
+            
+                // handle the native call
+                __object__.onWeatherLiveSearched?.call(AmapSearchFluttifyAndroidAs<com_amap_api_services_weather_LocalWeatherLiveResult>(args['var1']), args['var2']);
+                break;
+              case 'onWeatherForecastSearched_':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: __object__.onWeatherForecastSearched?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
+                }
+            
+                // handle the native call
+                __object__.onWeatherForecastSearched?.call(AmapSearchFluttifyAndroidAs<com_amap_api_services_weather_LocalWeatherForecastResult>(args['var1']), args['var2']);
+                break;
+              default:
+                throw MissingPluginException('方法${methodCall.method}未实现');
+                break;
+            }
+          } catch (e) {
+            debugPrint(e.toString());
+            rethrow;
+          }
+        });
+  
+    return __object__;
+  }
   
 
   @override
@@ -26,9 +70,9 @@ mixin com_amap_api_services_weather_WeatherSearch_OnWeatherSearchListener on jav
 
   
 
-  Future<void> onWeatherLiveSearched(com_amap_api_services_weather_LocalWeatherLiveResult? var1, int? var2) async {}
+  Future<void> Function(com_amap_api_services_weather_LocalWeatherLiveResult? var1, int? var2)? onWeatherLiveSearched;
   
-  Future<void> onWeatherForecastSearched(com_amap_api_services_weather_LocalWeatherForecastResult? var1, int? var2) async {}
+  Future<void> Function(com_amap_api_services_weather_LocalWeatherForecastResult? var1, int? var2)? onWeatherForecastSearched;
   
 }
 

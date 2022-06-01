@@ -11,6 +11,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
+import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 
 class AMapNearbySearchResponse extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
@@ -37,9 +38,11 @@ class AMapNearbySearchResponse extends AMapSearchObject with NSCoding, NSCopying
       'ObjectFactory::create_batchAMapNearbySearchResponse',
       {'length': length, 'init': init}
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyIOSAs<AMapNearbySearchResponse>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyIOSAs<AMapNearbySearchResponse>(it))
+        .where((element) => element !=null)
+        .cast<AMapNearbySearchResponse>()
+        .toList() ?? <AMapNearbySearchResponse>[];
   }
   
   //endregion
@@ -52,7 +55,7 @@ class AMapNearbySearchResponse extends AMapSearchObject with NSCoding, NSCopying
   
   Future<List<AMapNearbyUserInfo>?> get_infos() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapNearbySearchResponse::get_infos", {'__this__': this});
-    return (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapNearbyUserInfo>(it)!).toList();
+    return (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapNearbyUserInfo>(it)).where((e) => e != null).cast<AMapNearbyUserInfo>().toList();
   }
   
   //endregion
@@ -60,14 +63,10 @@ class AMapNearbySearchResponse extends AMapSearchObject with NSCoding, NSCopying
   //region setters
   Future<void> set_count(int count) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapNearbySearchResponse::set_count', <String, dynamic>{'__this__': this, "count": count});
-  
-  
   }
   
   Future<void> set_infos(List<AMapNearbyUserInfo> infos) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapNearbySearchResponse::set_infos', <String, dynamic>{'__this__': this, "infos": infos});
-  
-  
   }
   
   //endregion
@@ -83,15 +82,20 @@ class AMapNearbySearchResponse extends AMapSearchObject with NSCoding, NSCopying
 }
 
 extension AMapNearbySearchResponse_Batch on List<AMapNearbySearchResponse?> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first?.refId;
+  }
+
   //region getters
-  Future<List<int?>?> get_count_batch() async {
+  Future<List<int?>> get_count_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapNearbySearchResponse::get_count_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<int?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
   }
   
-  Future<List<List<AMapNearbyUserInfo>?>?> get_infos_batch() async {
+  Future<List<List<AMapNearbyUserInfo>?>> get_infos_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapNearbySearchResponse::get_infos_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapNearbyUserInfo>(it)!).toList()).cast<List<AMapNearbyUserInfo>?>().toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapNearbyUserInfo>(it)).where((e) => e != null).cast<AMapNearbyUserInfo>().toList()).cast<List<AMapNearbyUserInfo>?>().toList();
   }
   
   //endregion

@@ -11,6 +11,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
+import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 
 class AMapDistrictSearchResponse extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
@@ -37,9 +38,11 @@ class AMapDistrictSearchResponse extends AMapSearchObject with NSCoding, NSCopyi
       'ObjectFactory::create_batchAMapDistrictSearchResponse',
       {'length': length, 'init': init}
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyIOSAs<AMapDistrictSearchResponse>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyIOSAs<AMapDistrictSearchResponse>(it))
+        .where((element) => element !=null)
+        .cast<AMapDistrictSearchResponse>()
+        .toList() ?? <AMapDistrictSearchResponse>[];
   }
   
   //endregion
@@ -52,7 +55,7 @@ class AMapDistrictSearchResponse extends AMapSearchObject with NSCoding, NSCopyi
   
   Future<List<AMapDistrict>?> get_districts() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapDistrictSearchResponse::get_districts", {'__this__': this});
-    return (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapDistrict>(it)!).toList();
+    return (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapDistrict>(it)).where((e) => e != null).cast<AMapDistrict>().toList();
   }
   
   //endregion
@@ -60,14 +63,10 @@ class AMapDistrictSearchResponse extends AMapSearchObject with NSCoding, NSCopyi
   //region setters
   Future<void> set_count(int count) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapDistrictSearchResponse::set_count', <String, dynamic>{'__this__': this, "count": count});
-  
-  
   }
   
   Future<void> set_districts(List<AMapDistrict> districts) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapDistrictSearchResponse::set_districts', <String, dynamic>{'__this__': this, "districts": districts});
-  
-  
   }
   
   //endregion
@@ -83,15 +82,20 @@ class AMapDistrictSearchResponse extends AMapSearchObject with NSCoding, NSCopyi
 }
 
 extension AMapDistrictSearchResponse_Batch on List<AMapDistrictSearchResponse?> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first?.refId;
+  }
+
   //region getters
-  Future<List<int?>?> get_count_batch() async {
+  Future<List<int?>> get_count_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapDistrictSearchResponse::get_count_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<int?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
   }
   
-  Future<List<List<AMapDistrict>?>?> get_districts_batch() async {
+  Future<List<List<AMapDistrict>?>> get_districts_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapDistrictSearchResponse::get_districts_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapDistrict>(it)!).toList()).cast<List<AMapDistrict>?>().toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapDistrict>(it)).where((e) => e != null).cast<AMapDistrict>().toList()).cast<List<AMapDistrict>?>().toList();
   }
   
   //endregion

@@ -11,6 +11,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
+import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 
 class AMapTip extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
@@ -37,9 +38,11 @@ class AMapTip extends AMapSearchObject with NSCoding, NSCopying {
       'ObjectFactory::create_batchAMapTip',
       {'length': length, 'init': init}
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyIOSAs<AMapTip>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyIOSAs<AMapTip>(it))
+        .where((element) => element !=null)
+        .cast<AMapTip>()
+        .toList() ?? <AMapTip>[];
   }
   
   //endregion
@@ -85,44 +88,30 @@ class AMapTip extends AMapSearchObject with NSCoding, NSCopying {
   //region setters
   Future<void> set_uid(String uid) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapTip::set_uid', <String, dynamic>{'__this__': this, "uid": uid});
-  
-  
   }
   
   Future<void> set_name(String name) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapTip::set_name', <String, dynamic>{'__this__': this, "name": name});
-  
-  
   }
   
   Future<void> set_adcode(String adcode) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapTip::set_adcode', <String, dynamic>{'__this__': this, "adcode": adcode});
-  
-  
   }
   
   Future<void> set_district(String district) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapTip::set_district', <String, dynamic>{'__this__': this, "district": district});
-  
-  
   }
   
   Future<void> set_address(String address) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapTip::set_address', <String, dynamic>{'__this__': this, "address": address});
-  
-  
   }
   
   Future<void> set_location(AMapGeoPoint location) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapTip::set_location', <String, dynamic>{'__this__': this, "location": location});
-  
-  
   }
   
   Future<void> set_typecode(String typecode) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapTip::set_typecode', <String, dynamic>{'__this__': this, "typecode": typecode});
-  
-  
   }
   
   //endregion
@@ -138,40 +127,45 @@ class AMapTip extends AMapSearchObject with NSCoding, NSCopying {
 }
 
 extension AMapTip_Batch on List<AMapTip?> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first?.refId;
+  }
+
   //region getters
-  Future<List<String?>?> get_uid_batch() async {
+  Future<List<String?>> get_uid_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTip::get_uid_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<String?>?> get_name_batch() async {
+  Future<List<String?>> get_name_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTip::get_name_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<String?>?> get_adcode_batch() async {
+  Future<List<String?>> get_adcode_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTip::get_adcode_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<String?>?> get_district_batch() async {
+  Future<List<String?>> get_district_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTip::get_district_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<String?>?> get_address_batch() async {
+  Future<List<String?>> get_address_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTip::get_address_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<AMapGeoPoint?>?> get_location_batch() async {
+  Future<List<AMapGeoPoint?>> get_location_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTip::get_location_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => AmapSearchFluttifyIOSAs<AMapGeoPoint>(__result__)).cast<AMapGeoPoint?>().toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyIOSAs<AMapGeoPoint>(__result__)).cast<AMapGeoPoint?>().toList();
   }
   
-  Future<List<String?>?> get_typecode_batch() async {
+  Future<List<String?>> get_typecode_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapTip::get_typecode_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   //endregion

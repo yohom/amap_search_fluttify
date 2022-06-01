@@ -11,6 +11,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
+import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 
 class com_amap_api_services_district_DistrictItem extends java_lang_Object with android_os_Parcelable {
   //region constants
@@ -31,7 +32,7 @@ class com_amap_api_services_district_DistrictItem extends java_lang_Object with 
     return AmapSearchFluttifyAndroidAs<com_amap_api_services_district_DistrictItem>(__result__)!;
   }
   
-  static Future<com_amap_api_services_district_DistrictItem> create__String__String__String__com_amap_api_services_core_LatLonPoint__String(String? var1, String? var2, String? var3, com_amap_api_services_core_LatLonPoint? var4, String? var5) async {
+  static Future<com_amap_api_services_district_DistrictItem> create__String__String__String__com_amap_api_services_core_LatLonPoint__String(String var1, String var2, String var3, com_amap_api_services_core_LatLonPoint var4, String var5) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_district_DistrictItem__String__String__String__com_amap_api_services_core_LatLonPoint__String',
       {"var1": var1, "var2": var2, "var3": var3, "var4": var4, "var5": var5}
@@ -45,9 +46,11 @@ class com_amap_api_services_district_DistrictItem extends java_lang_Object with 
       'ObjectFactory::create_batchcom_amap_api_services_district_DistrictItem__',
       {'length': length}
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_district_DistrictItem>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_district_DistrictItem>(it))
+        .where((element) => element !=null)
+        .cast<com_amap_api_services_district_DistrictItem>()
+        .toList() ?? <com_amap_api_services_district_DistrictItem>[];
   }
   
   static Future<List<com_amap_api_services_district_DistrictItem>> create_batch__String__String__String__com_amap_api_services_core_LatLonPoint__String(List<String> var1, List<String> var2, List<String> var3, List<com_amap_api_services_core_LatLonPoint> var4, List<String> var5) async {
@@ -56,9 +59,11 @@ class com_amap_api_services_district_DistrictItem extends java_lang_Object with 
       'ObjectFactory::create_batchcom_amap_api_services_district_DistrictItem__String__String__String__com_amap_api_services_core_LatLonPoint__String',
       [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "var3": var3[__i__], "var4": var4[__i__], "var5": var5[__i__]}]
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_district_DistrictItem>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_district_DistrictItem>(it))
+        .where((element) => element !=null)
+        .cast<com_amap_api_services_district_DistrictItem>()
+        .toList() ?? <com_amap_api_services_district_DistrictItem>[];
   }
   
   //endregion
@@ -73,14 +78,14 @@ class com_amap_api_services_district_DistrictItem extends java_lang_Object with 
 
   //region methods
   
-  Future<void> setDistrictBoundary(List<String>? var1) async {
+  Future<void> setDistrictBoundary(List<String> var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.district.DistrictItem@$refId::setDistrictBoundary([\'var1\':$var1])');
     }
   
     // invoke native method
-    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.district.DistrictItem::setDistrictBoundary', {"var1": Array.ofList(var1 ?? []), "__this__": this});
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.district.DistrictItem::setDistrictBoundary', {"var1": Array.ofList(var1), "__this__": this});
   
   
     // handle native call
@@ -124,7 +129,7 @@ class com_amap_api_services_district_DistrictItem extends java_lang_Object with 
   }
   
   
-  Future<void> setCitycode(String? var1) async {
+  Future<void> setCitycode(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.district.DistrictItem@$refId::setCitycode([\'var1\':$var1])');
@@ -158,7 +163,7 @@ class com_amap_api_services_district_DistrictItem extends java_lang_Object with 
   }
   
   
-  Future<void> setAdcode(String? var1) async {
+  Future<void> setAdcode(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.district.DistrictItem@$refId::setAdcode([\'var1\':$var1])');
@@ -192,7 +197,7 @@ class com_amap_api_services_district_DistrictItem extends java_lang_Object with 
   }
   
   
-  Future<void> setName(String? var1) async {
+  Future<void> setName(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.district.DistrictItem@$refId::setName([\'var1\':$var1])');
@@ -226,7 +231,7 @@ class com_amap_api_services_district_DistrictItem extends java_lang_Object with 
   }
   
   
-  Future<void> setCenter(com_amap_api_services_core_LatLonPoint? var1) async {
+  Future<void> setCenter(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.district.DistrictItem@$refId::setCenter([])');
@@ -260,7 +265,7 @@ class com_amap_api_services_district_DistrictItem extends java_lang_Object with 
   }
   
   
-  Future<void> setLevel(String? var1) async {
+  Future<void> setLevel(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.district.DistrictItem@$refId::setLevel([\'var1\':$var1])');
@@ -290,11 +295,11 @@ class com_amap_api_services_district_DistrictItem extends java_lang_Object with 
     // handle native call
   
   
-    return (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_district_DistrictItem>(it)!).toList();
+    return (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_district_DistrictItem>(it)).where((e) => e != null).cast<com_amap_api_services_district_DistrictItem>().toList();
   }
   
   
-  Future<void> setSubDistrict(List<com_amap_api_services_district_DistrictItem>? var1) async {
+  Future<void> setSubDistrict(List<com_amap_api_services_district_DistrictItem> var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.district.DistrictItem@$refId::setSubDistrict([])');
@@ -319,6 +324,11 @@ class com_amap_api_services_district_DistrictItem extends java_lang_Object with 
 }
 
 extension com_amap_api_services_district_DistrictItem_Batch on List<com_amap_api_services_district_DistrictItem?> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first?.refId;
+  }
+
   //region getters
   
   //endregion
@@ -329,7 +339,7 @@ extension com_amap_api_services_district_DistrictItem_Batch on List<com_amap_api
 
   //region methods
   
-  Future<List<void>?> setDistrictBoundary_batch(List<List<String>> var1) async {
+  Future<List<void>> setDistrictBoundary_batch(List<List<String>> var1) async {
     assert(true);
   
     // invoke native method
@@ -340,29 +350,29 @@ extension com_amap_api_services_district_DistrictItem_Batch on List<com_amap_api
   }
   
   
-  Future<List<List<String>?>?> districtBoundary_batch() async {
+  Future<List<List<String>?>> districtBoundary_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.district.DistrictItem::districtBoundary_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => (__result__ as List?)?.cast<String>()).cast<List<String>>().toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List?)?.cast<String>()).cast<List<String>?>().toList();
   }
   
   
-  Future<List<String?>?> getCitycode_batch() async {
+  Future<List<String?>> getCitycode_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.district.DistrictItem::getCitycode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   
-  Future<List<void>?> setCitycode_batch(List<String> var1) async {
+  Future<List<void>> setCitycode_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -373,18 +383,18 @@ extension com_amap_api_services_district_DistrictItem_Batch on List<com_amap_api
   }
   
   
-  Future<List<String?>?> getAdcode_batch() async {
+  Future<List<String?>> getAdcode_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.district.DistrictItem::getAdcode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   
-  Future<List<void>?> setAdcode_batch(List<String> var1) async {
+  Future<List<void>> setAdcode_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -395,18 +405,18 @@ extension com_amap_api_services_district_DistrictItem_Batch on List<com_amap_api
   }
   
   
-  Future<List<String?>?> getName_batch() async {
+  Future<List<String?>> getName_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.district.DistrictItem::getName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   
-  Future<List<void>?> setName_batch(List<String> var1) async {
+  Future<List<void>> setName_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -417,18 +427,18 @@ extension com_amap_api_services_district_DistrictItem_Batch on List<com_amap_api
   }
   
   
-  Future<List<com_amap_api_services_core_LatLonPoint?>?> getCenter_batch() async {
+  Future<List<com_amap_api_services_core_LatLonPoint?>> getCenter_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.district.DistrictItem::getCenter_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(__result__)).cast<com_amap_api_services_core_LatLonPoint>().toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(__result__)).cast<com_amap_api_services_core_LatLonPoint?>().toList();
   }
   
   
-  Future<List<void>?> setCenter_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
+  Future<List<void>> setCenter_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
     assert(true);
   
     // invoke native method
@@ -439,18 +449,18 @@ extension com_amap_api_services_district_DistrictItem_Batch on List<com_amap_api
   }
   
   
-  Future<List<String?>?> getLevel_batch() async {
+  Future<List<String?>> getLevel_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.district.DistrictItem::getLevel_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   
-  Future<List<void>?> setLevel_batch(List<String> var1) async {
+  Future<List<void>> setLevel_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -461,18 +471,18 @@ extension com_amap_api_services_district_DistrictItem_Batch on List<com_amap_api
   }
   
   
-  Future<List<List<com_amap_api_services_district_DistrictItem>?>?> getSubDistrict_batch() async {
+  Future<List<List<com_amap_api_services_district_DistrictItem>?>> getSubDistrict_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.district.DistrictItem::getSubDistrict_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_district_DistrictItem>(it)!).toList()).cast<List<com_amap_api_services_district_DistrictItem>>().toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_district_DistrictItem>(it)).where((e) => e != null).cast<com_amap_api_services_district_DistrictItem>().toList()).cast<List<com_amap_api_services_district_DistrictItem>?>().toList();
   }
   
   
-  Future<List<void>?> setSubDistrict_batch(List<List<com_amap_api_services_district_DistrictItem>> var1) async {
+  Future<List<void>> setSubDistrict_batch(List<List<com_amap_api_services_district_DistrictItem>> var1) async {
     assert(true);
   
     // invoke native method

@@ -11,6 +11,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
+import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 
 class AMapRouteSearchBaseRequest extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
@@ -37,9 +38,11 @@ class AMapRouteSearchBaseRequest extends AMapSearchObject with NSCoding, NSCopyi
       'ObjectFactory::create_batchAMapRouteSearchBaseRequest',
       {'length': length, 'init': init}
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyIOSAs<AMapRouteSearchBaseRequest>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyIOSAs<AMapRouteSearchBaseRequest>(it))
+        .where((element) => element !=null)
+        .cast<AMapRouteSearchBaseRequest>()
+        .toList() ?? <AMapRouteSearchBaseRequest>[];
   }
   
   //endregion
@@ -60,14 +63,10 @@ class AMapRouteSearchBaseRequest extends AMapSearchObject with NSCoding, NSCopyi
   //region setters
   Future<void> set_origin(AMapGeoPoint origin) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRouteSearchBaseRequest::set_origin', <String, dynamic>{'__this__': this, "origin": origin});
-  
-  
   }
   
   Future<void> set_destination(AMapGeoPoint destination) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRouteSearchBaseRequest::set_destination', <String, dynamic>{'__this__': this, "destination": destination});
-  
-  
   }
   
   //endregion
@@ -83,15 +82,20 @@ class AMapRouteSearchBaseRequest extends AMapSearchObject with NSCoding, NSCopyi
 }
 
 extension AMapRouteSearchBaseRequest_Batch on List<AMapRouteSearchBaseRequest?> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first?.refId;
+  }
+
   //region getters
-  Future<List<AMapGeoPoint?>?> get_origin_batch() async {
+  Future<List<AMapGeoPoint?>> get_origin_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRouteSearchBaseRequest::get_origin_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => AmapSearchFluttifyIOSAs<AMapGeoPoint>(__result__)).cast<AMapGeoPoint?>().toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyIOSAs<AMapGeoPoint>(__result__)).cast<AMapGeoPoint?>().toList();
   }
   
-  Future<List<AMapGeoPoint?>?> get_destination_batch() async {
+  Future<List<AMapGeoPoint?>> get_destination_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRouteSearchBaseRequest::get_destination_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => AmapSearchFluttifyIOSAs<AMapGeoPoint>(__result__)).cast<AMapGeoPoint?>().toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyIOSAs<AMapGeoPoint>(__result__)).cast<AMapGeoPoint?>().toList();
   }
   
   //endregion

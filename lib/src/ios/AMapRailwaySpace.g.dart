@@ -11,6 +11,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
+import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 
 class AMapRailwaySpace extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
@@ -37,9 +38,11 @@ class AMapRailwaySpace extends AMapSearchObject with NSCoding, NSCopying {
       'ObjectFactory::create_batchAMapRailwaySpace',
       {'length': length, 'init': init}
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyIOSAs<AMapRailwaySpace>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyIOSAs<AMapRailwaySpace>(it))
+        .where((element) => element !=null)
+        .cast<AMapRailwaySpace>()
+        .toList() ?? <AMapRailwaySpace>[];
   }
   
   //endregion
@@ -60,14 +63,10 @@ class AMapRailwaySpace extends AMapSearchObject with NSCoding, NSCopying {
   //region setters
   Future<void> set_code(String code) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRailwaySpace::set_code', <String, dynamic>{'__this__': this, "code": code});
-  
-  
   }
   
   Future<void> set_cost(double cost) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapRailwaySpace::set_cost', <String, dynamic>{'__this__': this, "cost": cost});
-  
-  
   }
   
   //endregion
@@ -83,15 +82,20 @@ class AMapRailwaySpace extends AMapSearchObject with NSCoding, NSCopying {
 }
 
 extension AMapRailwaySpace_Batch on List<AMapRailwaySpace?> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first?.refId;
+  }
+
   //region getters
-  Future<List<String?>?> get_code_batch() async {
+  Future<List<String?>> get_code_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRailwaySpace::get_code_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<double?>?> get_cost_batch() async {
+  Future<List<double?>> get_cost_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapRailwaySpace::get_cost_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<double?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<double?>().toList();
   }
   
   //endregion

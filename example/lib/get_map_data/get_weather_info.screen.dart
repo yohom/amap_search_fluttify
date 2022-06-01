@@ -17,22 +17,22 @@ class _GetWeatherInfoScreenState extends State<GetWeatherInfoScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: AppBar(title: Text('获取天气数据')),
+      appBar: AppBar(title: const Text('获取天气数据')),
       body: DecoratedColumn(
-        padding: EdgeInsets.all(kSpace16),
+        padding: const EdgeInsets.all(kSpace16),
         children: <Widget>[
           TextFormField(
             controller: _keywordController,
-            decoration: InputDecoration(hintText: '输入地区'),
+            decoration: const InputDecoration(hintText: '输入地区'),
           ),
           RaisedButton(
             onPressed: () async {
               final district = await AmapSearch.instance
                   .searchDistrict(_keywordController.text);
-              _district = await district.toString();
+              _district = district.toString();
               setState(() {});
             },
-            child: Text('搜索'),
+            child: const Text('搜索'),
           ),
           Expanded(child: SingleChildScrollView(child: Text(_district))),
         ],

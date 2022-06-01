@@ -11,6 +11,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
+import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 
 class AMapAOI extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
@@ -37,9 +38,11 @@ class AMapAOI extends AMapSearchObject with NSCoding, NSCopying {
       'ObjectFactory::create_batchAMapAOI',
       {'length': length, 'init': init}
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyIOSAs<AMapAOI>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyIOSAs<AMapAOI>(it))
+        .where((element) => element !=null)
+        .cast<AMapAOI>()
+        .toList() ?? <AMapAOI>[];
   }
   
   //endregion
@@ -75,32 +78,22 @@ class AMapAOI extends AMapSearchObject with NSCoding, NSCopying {
   //region setters
   Future<void> set_uid(String uid) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapAOI::set_uid', <String, dynamic>{'__this__': this, "uid": uid});
-  
-  
   }
   
   Future<void> set_name(String name) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapAOI::set_name', <String, dynamic>{'__this__': this, "name": name});
-  
-  
   }
   
   Future<void> set_adcode(String adcode) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapAOI::set_adcode', <String, dynamic>{'__this__': this, "adcode": adcode});
-  
-  
   }
   
   Future<void> set_location(AMapGeoPoint location) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapAOI::set_location', <String, dynamic>{'__this__': this, "location": location});
-  
-  
   }
   
   Future<void> set_area(double area) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapAOI::set_area', <String, dynamic>{'__this__': this, "area": area});
-  
-  
   }
   
   //endregion
@@ -116,30 +109,35 @@ class AMapAOI extends AMapSearchObject with NSCoding, NSCopying {
 }
 
 extension AMapAOI_Batch on List<AMapAOI?> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first?.refId;
+  }
+
   //region getters
-  Future<List<String?>?> get_uid_batch() async {
+  Future<List<String?>> get_uid_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapAOI::get_uid_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<String?>?> get_name_batch() async {
+  Future<List<String?>> get_name_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapAOI::get_name_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<String?>?> get_adcode_batch() async {
+  Future<List<String?>> get_adcode_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapAOI::get_adcode_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<AMapGeoPoint?>?> get_location_batch() async {
+  Future<List<AMapGeoPoint?>> get_location_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapAOI::get_location_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => AmapSearchFluttifyIOSAs<AMapGeoPoint>(__result__)).cast<AMapGeoPoint?>().toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyIOSAs<AMapGeoPoint>(__result__)).cast<AMapGeoPoint?>().toList();
   }
   
-  Future<List<double?>?> get_area_batch() async {
+  Future<List<double?>> get_area_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapAOI::get_area_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<double?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<double?>().toList();
   }
   
   //endregion

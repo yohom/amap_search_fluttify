@@ -11,12 +11,74 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
+import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 
-
+class _com_amap_api_services_route_RouteSearch_OnRouteSearchListener_SUB extends java_lang_Object with com_amap_api_services_route_RouteSearch_OnRouteSearchListener {}
 
 mixin com_amap_api_services_route_RouteSearch_OnRouteSearchListener on java_lang_Object {
   
 
+  static com_amap_api_services_route_RouteSearch_OnRouteSearchListener subInstance() => _com_amap_api_services_route_RouteSearch_OnRouteSearchListener_SUB();
+
+  static Future<com_amap_api_services_route_RouteSearch_OnRouteSearchListener> anonymous__() async {
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteSearch.OnRouteSearchListener::createAnonymous__');
+  
+    final __object__ = AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RouteSearch_OnRouteSearchListener>(__result__)!;
+  
+    // handle callback
+    MethodChannel('com.amap.api.services.route.RouteSearch.OnRouteSearchListener::Callback@${__object__.refId}', kAmapSearchFluttifyMethodCodec)
+        .setMethodCallHandler((methodCall) async {
+          try {
+            final args = methodCall.arguments as Map;
+            switch (methodCall.method) {
+              case 'onBusRouteSearched_':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: __object__.onBusRouteSearched?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
+                }
+            
+                // handle the native call
+                __object__.onBusRouteSearched?.call(AmapSearchFluttifyAndroidAs<com_amap_api_services_route_BusRouteResult>(args['var1']), args['var2']);
+                break;
+              case 'onDriveRouteSearched_':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: __object__.onDriveRouteSearched?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
+                }
+            
+                // handle the native call
+                __object__.onDriveRouteSearched?.call(AmapSearchFluttifyAndroidAs<com_amap_api_services_route_DriveRouteResult>(args['var1']), args['var2']);
+                break;
+              case 'onWalkRouteSearched_':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: __object__.onWalkRouteSearched?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
+                }
+            
+                // handle the native call
+                __object__.onWalkRouteSearched?.call(AmapSearchFluttifyAndroidAs<com_amap_api_services_route_WalkRouteResult>(args['var1']), args['var2']);
+                break;
+              case 'onRideRouteSearched_':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: __object__.onRideRouteSearched?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
+                }
+            
+                // handle the native call
+                __object__.onRideRouteSearched?.call(AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RideRouteResult>(args['var1']), args['var2']);
+                break;
+              default:
+                throw MissingPluginException('方法${methodCall.method}未实现');
+                break;
+            }
+          } catch (e) {
+            debugPrint(e.toString());
+            rethrow;
+          }
+        });
+  
+    return __object__;
+  }
   
 
   @override
@@ -26,13 +88,13 @@ mixin com_amap_api_services_route_RouteSearch_OnRouteSearchListener on java_lang
 
   
 
-  Future<void> onBusRouteSearched(com_amap_api_services_route_BusRouteResult? var1, int? var2) async {}
+  Future<void> Function(com_amap_api_services_route_BusRouteResult? var1, int? var2)? onBusRouteSearched;
   
-  Future<void> onDriveRouteSearched(com_amap_api_services_route_DriveRouteResult? var1, int? var2) async {}
+  Future<void> Function(com_amap_api_services_route_DriveRouteResult? var1, int? var2)? onDriveRouteSearched;
   
-  Future<void> onWalkRouteSearched(com_amap_api_services_route_WalkRouteResult? var1, int? var2) async {}
+  Future<void> Function(com_amap_api_services_route_WalkRouteResult? var1, int? var2)? onWalkRouteSearched;
   
-  Future<void> onRideRouteSearched(com_amap_api_services_route_RideRouteResult? var1, int? var2) async {}
+  Future<void> Function(com_amap_api_services_route_RideRouteResult? var1, int? var2)? onRideRouteSearched;
   
 }
 

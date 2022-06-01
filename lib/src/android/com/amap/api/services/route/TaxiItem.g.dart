@@ -11,6 +11,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
+import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 
 class com_amap_api_services_route_TaxiItem extends java_lang_Object with android_os_Parcelable {
   //region constants
@@ -37,9 +38,11 @@ class com_amap_api_services_route_TaxiItem extends java_lang_Object with android
       'ObjectFactory::create_batchcom_amap_api_services_route_TaxiItem__',
       {'length': length}
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_TaxiItem>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_TaxiItem>(it))
+        .where((element) => element !=null)
+        .cast<com_amap_api_services_route_TaxiItem>()
+        .toList() ?? <com_amap_api_services_route_TaxiItem>[];
   }
   
   //endregion
@@ -156,7 +159,7 @@ class com_amap_api_services_route_TaxiItem extends java_lang_Object with android
   }
   
   
-  Future<void> setOrigin(com_amap_api_services_core_LatLonPoint? var1) async {
+  Future<void> setOrigin(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.TaxiItem@$refId::setOrigin([])');
@@ -173,7 +176,7 @@ class com_amap_api_services_route_TaxiItem extends java_lang_Object with android
   }
   
   
-  Future<void> setDestination(com_amap_api_services_core_LatLonPoint? var1) async {
+  Future<void> setDestination(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.TaxiItem@$refId::setDestination([])');
@@ -190,7 +193,7 @@ class com_amap_api_services_route_TaxiItem extends java_lang_Object with android
   }
   
   
-  Future<void> setDistance(double? var1) async {
+  Future<void> setDistance(double var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.TaxiItem@$refId::setDistance([\'var1\':$var1])');
@@ -207,7 +210,7 @@ class com_amap_api_services_route_TaxiItem extends java_lang_Object with android
   }
   
   
-  Future<void> setDuration(double? var1) async {
+  Future<void> setDuration(double var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.TaxiItem@$refId::setDuration([\'var1\':$var1])');
@@ -224,7 +227,7 @@ class com_amap_api_services_route_TaxiItem extends java_lang_Object with android
   }
   
   
-  Future<void> setSname(String? var1) async {
+  Future<void> setSname(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.TaxiItem@$refId::setSname([\'var1\':$var1])');
@@ -241,7 +244,7 @@ class com_amap_api_services_route_TaxiItem extends java_lang_Object with android
   }
   
   
-  Future<void> setTname(String? var1) async {
+  Future<void> setTname(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.TaxiItem@$refId::setTname([\'var1\':$var1])');
@@ -266,6 +269,11 @@ class com_amap_api_services_route_TaxiItem extends java_lang_Object with android
 }
 
 extension com_amap_api_services_route_TaxiItem_Batch on List<com_amap_api_services_route_TaxiItem?> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first?.refId;
+  }
+
   //region getters
   
   //endregion
@@ -276,73 +284,73 @@ extension com_amap_api_services_route_TaxiItem_Batch on List<com_amap_api_servic
 
   //region methods
   
-  Future<List<com_amap_api_services_core_LatLonPoint?>?> getOrigin_batch() async {
+  Future<List<com_amap_api_services_core_LatLonPoint?>> getOrigin_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TaxiItem::getOrigin_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(__result__)).cast<com_amap_api_services_core_LatLonPoint>().toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(__result__)).cast<com_amap_api_services_core_LatLonPoint?>().toList();
   }
   
   
-  Future<List<com_amap_api_services_core_LatLonPoint?>?> getDestination_batch() async {
+  Future<List<com_amap_api_services_core_LatLonPoint?>> getDestination_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TaxiItem::getDestination_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(__result__)).cast<com_amap_api_services_core_LatLonPoint>().toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(__result__)).cast<com_amap_api_services_core_LatLonPoint?>().toList();
   }
   
   
-  Future<List<double?>?> getDistance_batch() async {
+  Future<List<double?>> getDistance_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TaxiItem::getDistance_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<double>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<double?>().toList();
   }
   
   
-  Future<List<double?>?> getDuration_batch() async {
+  Future<List<double?>> getDuration_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TaxiItem::getDuration_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<double>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<double?>().toList();
   }
   
   
-  Future<List<String?>?> getmSname_batch() async {
+  Future<List<String?>> getmSname_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TaxiItem::getmSname_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   
-  Future<List<String?>?> getmTname_batch() async {
+  Future<List<String?>> getmTname_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.TaxiItem::getmTname_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   
-  Future<List<void>?> setOrigin_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
+  Future<List<void>> setOrigin_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
     assert(true);
   
     // invoke native method
@@ -353,7 +361,7 @@ extension com_amap_api_services_route_TaxiItem_Batch on List<com_amap_api_servic
   }
   
   
-  Future<List<void>?> setDestination_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
+  Future<List<void>> setDestination_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
     assert(true);
   
     // invoke native method
@@ -364,7 +372,7 @@ extension com_amap_api_services_route_TaxiItem_Batch on List<com_amap_api_servic
   }
   
   
-  Future<List<void>?> setDistance_batch(List<double> var1) async {
+  Future<List<void>> setDistance_batch(List<double> var1) async {
     assert(true);
   
     // invoke native method
@@ -375,7 +383,7 @@ extension com_amap_api_services_route_TaxiItem_Batch on List<com_amap_api_servic
   }
   
   
-  Future<List<void>?> setDuration_batch(List<double> var1) async {
+  Future<List<void>> setDuration_batch(List<double> var1) async {
     assert(true);
   
     // invoke native method
@@ -386,7 +394,7 @@ extension com_amap_api_services_route_TaxiItem_Batch on List<com_amap_api_servic
   }
   
   
-  Future<List<void>?> setSname_batch(List<String> var1) async {
+  Future<List<void>> setSname_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -397,7 +405,7 @@ extension com_amap_api_services_route_TaxiItem_Batch on List<com_amap_api_servic
   }
   
   
-  Future<List<void>?> setTname_batch(List<String> var1) async {
+  Future<List<void>> setTname_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method

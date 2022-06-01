@@ -11,6 +11,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
+import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 
 class AMapIndoorData extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
@@ -37,9 +38,11 @@ class AMapIndoorData extends AMapSearchObject with NSCoding, NSCopying {
       'ObjectFactory::create_batchAMapIndoorData',
       {'length': length, 'init': init}
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyIOSAs<AMapIndoorData>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyIOSAs<AMapIndoorData>(it))
+        .where((element) => element !=null)
+        .cast<AMapIndoorData>()
+        .toList() ?? <AMapIndoorData>[];
   }
   
   //endregion
@@ -65,20 +68,14 @@ class AMapIndoorData extends AMapSearchObject with NSCoding, NSCopying {
   //region setters
   Future<void> set_floor(int floor) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapIndoorData::set_floor', <String, dynamic>{'__this__': this, "floor": floor});
-  
-  
   }
   
   Future<void> set_floorName(String floorName) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapIndoorData::set_floorName', <String, dynamic>{'__this__': this, "floorName": floorName});
-  
-  
   }
   
   Future<void> set_pid(String pid) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapIndoorData::set_pid', <String, dynamic>{'__this__': this, "pid": pid});
-  
-  
   }
   
   //endregion
@@ -94,20 +91,25 @@ class AMapIndoorData extends AMapSearchObject with NSCoding, NSCopying {
 }
 
 extension AMapIndoorData_Batch on List<AMapIndoorData?> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first?.refId;
+  }
+
   //region getters
-  Future<List<int?>?> get_floor_batch() async {
+  Future<List<int?>> get_floor_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapIndoorData::get_floor_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<int?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
   }
   
-  Future<List<String?>?> get_floorName_batch() async {
+  Future<List<String?>> get_floorName_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapIndoorData::get_floorName_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<String?>?> get_pid_batch() async {
+  Future<List<String?>> get_pid_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapIndoorData::get_pid_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   //endregion

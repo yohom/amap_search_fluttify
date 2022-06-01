@@ -11,6 +11,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
+import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 
 class com_amap_api_services_cloud_CloudSearch_Sortingrules extends java_lang_Object  {
   //region constants
@@ -24,7 +25,7 @@ class com_amap_api_services_cloud_CloudSearch_Sortingrules extends java_lang_Obj
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_cloud_CloudSearch_Sortingrules> create__String__boolean(String? var1, bool? var2) async {
+  static Future<com_amap_api_services_cloud_CloudSearch_Sortingrules> create__String__boolean(String var1, bool var2) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_Sortingrules__String__boolean',
       {"var1": var1, "var2": var2}
@@ -32,7 +33,7 @@ class com_amap_api_services_cloud_CloudSearch_Sortingrules extends java_lang_Obj
     return AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudSearch_Sortingrules>(__result__)!;
   }
   
-  static Future<com_amap_api_services_cloud_CloudSearch_Sortingrules> create__int(int? var1) async {
+  static Future<com_amap_api_services_cloud_CloudSearch_Sortingrules> create__int(int var1) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_Sortingrules__int',
       {"var1": var1}
@@ -46,9 +47,11 @@ class com_amap_api_services_cloud_CloudSearch_Sortingrules extends java_lang_Obj
       'ObjectFactory::create_batchcom_amap_api_services_cloud_CloudSearch_Sortingrules__String__boolean',
       [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudSearch_Sortingrules>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudSearch_Sortingrules>(it))
+        .where((element) => element !=null)
+        .cast<com_amap_api_services_cloud_CloudSearch_Sortingrules>()
+        .toList() ?? <com_amap_api_services_cloud_CloudSearch_Sortingrules>[];
   }
   
   static Future<List<com_amap_api_services_cloud_CloudSearch_Sortingrules>> create_batch__int(List<int> var1) async {
@@ -57,9 +60,11 @@ class com_amap_api_services_cloud_CloudSearch_Sortingrules extends java_lang_Obj
       'ObjectFactory::create_batchcom_amap_api_services_cloud_CloudSearch_Sortingrules__int',
       [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudSearch_Sortingrules>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudSearch_Sortingrules>(it))
+        .where((element) => element !=null)
+        .cast<com_amap_api_services_cloud_CloudSearch_Sortingrules>()
+        .toList() ?? <com_amap_api_services_cloud_CloudSearch_Sortingrules>[];
   }
   
   //endregion
@@ -83,6 +88,11 @@ class com_amap_api_services_cloud_CloudSearch_Sortingrules extends java_lang_Obj
 }
 
 extension com_amap_api_services_cloud_CloudSearch_Sortingrules_Batch on List<com_amap_api_services_cloud_CloudSearch_Sortingrules?> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first?.refId;
+  }
+
   //region getters
   
   //endregion

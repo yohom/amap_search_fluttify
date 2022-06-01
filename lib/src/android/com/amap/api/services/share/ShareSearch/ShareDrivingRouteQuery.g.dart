@@ -11,6 +11,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
+import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 
 class com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery extends java_lang_Object  {
   //region constants
@@ -23,7 +24,7 @@ class com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery extends jav
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery> create__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int(com_amap_api_services_share_ShareSearch_ShareFromAndTo? var1, int? var2) async {
+  static Future<com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery> create__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int(com_amap_api_services_share_ShareSearch_ShareFromAndTo var1, int var2) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int',
       {"var1": var1, "var2": var2}
@@ -37,9 +38,11 @@ class com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery extends jav
       'ObjectFactory::create_batchcom_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int',
       [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery>(it))
+        .where((element) => element !=null)
+        .cast<com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery>()
+        .toList() ?? <com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery>[];
   }
   
   //endregion
@@ -96,6 +99,11 @@ class com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery extends jav
 }
 
 extension com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery_Batch on List<com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery?> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first?.refId;
+  }
+
   //region getters
   
   //endregion
@@ -106,25 +114,25 @@ extension com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery_Batch o
 
   //region methods
   
-  Future<List<int?>?> getDrivingMode_batch() async {
+  Future<List<int?>> getDrivingMode_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery::getDrivingMode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<int>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
   }
   
   
-  Future<List<com_amap_api_services_share_ShareSearch_ShareFromAndTo?>?> getShareFromAndTo_batch() async {
+  Future<List<com_amap_api_services_share_ShareSearch_ShareFromAndTo?>> getShareFromAndTo_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery::getShareFromAndTo_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_share_ShareSearch_ShareFromAndTo>(__result__)).cast<com_amap_api_services_share_ShareSearch_ShareFromAndTo>().toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_share_ShareSearch_ShareFromAndTo>(__result__)).cast<com_amap_api_services_share_ShareSearch_ShareFromAndTo?>().toList();
   }
   
   //endregion

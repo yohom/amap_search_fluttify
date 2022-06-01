@@ -11,6 +11,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
+import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 
 class AMapDistanceSearchResponse extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
@@ -37,9 +38,11 @@ class AMapDistanceSearchResponse extends AMapSearchObject with NSCoding, NSCopyi
       'ObjectFactory::create_batchAMapDistanceSearchResponse',
       {'length': length, 'init': init}
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyIOSAs<AMapDistanceSearchResponse>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyIOSAs<AMapDistanceSearchResponse>(it))
+        .where((element) => element !=null)
+        .cast<AMapDistanceSearchResponse>()
+        .toList() ?? <AMapDistanceSearchResponse>[];
   }
   
   //endregion
@@ -47,7 +50,7 @@ class AMapDistanceSearchResponse extends AMapSearchObject with NSCoding, NSCopyi
   //region getters
   Future<List<AMapDistanceResult>?> get_results() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapDistanceSearchResponse::get_results", {'__this__': this});
-    return (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapDistanceResult>(it)!).toList();
+    return (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapDistanceResult>(it)).where((e) => e != null).cast<AMapDistanceResult>().toList();
   }
   
   //endregion
@@ -55,8 +58,6 @@ class AMapDistanceSearchResponse extends AMapSearchObject with NSCoding, NSCopyi
   //region setters
   Future<void> set_results(List<AMapDistanceResult> results) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapDistanceSearchResponse::set_results', <String, dynamic>{'__this__': this, "results": results});
-  
-  
   }
   
   //endregion
@@ -72,10 +73,15 @@ class AMapDistanceSearchResponse extends AMapSearchObject with NSCoding, NSCopyi
 }
 
 extension AMapDistanceSearchResponse_Batch on List<AMapDistanceSearchResponse?> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first?.refId;
+  }
+
   //region getters
-  Future<List<List<AMapDistanceResult>?>?> get_results_batch() async {
+  Future<List<List<AMapDistanceResult>?>> get_results_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapDistanceSearchResponse::get_results_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapDistanceResult>(it)!).toList()).cast<List<AMapDistanceResult>?>().toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapDistanceResult>(it)).where((e) => e != null).cast<AMapDistanceResult>().toList()).cast<List<AMapDistanceResult>?>().toList();
   }
   
   //endregion

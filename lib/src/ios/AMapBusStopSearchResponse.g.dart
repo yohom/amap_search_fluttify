@@ -11,6 +11,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
+import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 
 class AMapBusStopSearchResponse extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
@@ -37,9 +38,11 @@ class AMapBusStopSearchResponse extends AMapSearchObject with NSCoding, NSCopyin
       'ObjectFactory::create_batchAMapBusStopSearchResponse',
       {'length': length, 'init': init}
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyIOSAs<AMapBusStopSearchResponse>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyIOSAs<AMapBusStopSearchResponse>(it))
+        .where((element) => element !=null)
+        .cast<AMapBusStopSearchResponse>()
+        .toList() ?? <AMapBusStopSearchResponse>[];
   }
   
   //endregion
@@ -57,7 +60,7 @@ class AMapBusStopSearchResponse extends AMapSearchObject with NSCoding, NSCopyin
   
   Future<List<AMapBusStop>?> get_busstops() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapBusStopSearchResponse::get_busstops", {'__this__': this});
-    return (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapBusStop>(it)!).toList();
+    return (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapBusStop>(it)).where((e) => e != null).cast<AMapBusStop>().toList();
   }
   
   //endregion
@@ -65,20 +68,14 @@ class AMapBusStopSearchResponse extends AMapSearchObject with NSCoding, NSCopyin
   //region setters
   Future<void> set_count(int count) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapBusStopSearchResponse::set_count', <String, dynamic>{'__this__': this, "count": count});
-  
-  
   }
   
   Future<void> set_suggestion(AMapSuggestion suggestion) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapBusStopSearchResponse::set_suggestion', <String, dynamic>{'__this__': this, "suggestion": suggestion});
-  
-  
   }
   
   Future<void> set_busstops(List<AMapBusStop> busstops) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapBusStopSearchResponse::set_busstops', <String, dynamic>{'__this__': this, "busstops": busstops});
-  
-  
   }
   
   //endregion
@@ -94,20 +91,25 @@ class AMapBusStopSearchResponse extends AMapSearchObject with NSCoding, NSCopyin
 }
 
 extension AMapBusStopSearchResponse_Batch on List<AMapBusStopSearchResponse?> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first?.refId;
+  }
+
   //region getters
-  Future<List<int?>?> get_count_batch() async {
+  Future<List<int?>> get_count_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapBusStopSearchResponse::get_count_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<int?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
   }
   
-  Future<List<AMapSuggestion?>?> get_suggestion_batch() async {
+  Future<List<AMapSuggestion?>> get_suggestion_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapBusStopSearchResponse::get_suggestion_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => AmapSearchFluttifyIOSAs<AMapSuggestion>(__result__)).cast<AMapSuggestion?>().toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyIOSAs<AMapSuggestion>(__result__)).cast<AMapSuggestion?>().toList();
   }
   
-  Future<List<List<AMapBusStop>?>?> get_busstops_batch() async {
+  Future<List<List<AMapBusStop>?>> get_busstops_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapBusStopSearchResponse::get_busstops_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapBusStop>(it)!).toList()).cast<List<AMapBusStop>?>().toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapBusStop>(it)).where((e) => e != null).cast<AMapBusStop>().toList()).cast<List<AMapBusStop>?>().toList();
   }
   
   //endregion

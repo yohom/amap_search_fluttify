@@ -13,6 +13,8 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
 import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 
+
+// ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
 // type check
 @optionalTypeArgs
 Future<bool> AmapSearchFluttifyIOSIs<T>(dynamic __this__) async {
@@ -88,6 +90,9 @@ Future<bool> AmapSearchFluttifyIOSIs<T>(dynamic __this__) async {
     return result;
   } else if (T == AMapRouteSearchBaseRequest) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapRouteSearchBaseRequest', {'__this__': __this__});
+    return result;
+  } else if (T == AMapDrivingCalRouteSearchRequest) {
+    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapDrivingCalRouteSearchRequest', {'__this__': __this__});
     return result;
   } else if (T == AMapDrivingRouteSearchRequest) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapDrivingRouteSearchRequest', {'__this__': __this__});
@@ -308,14 +313,23 @@ Future<bool> AmapSearchFluttifyIOSIs<T>(dynamic __this__) async {
   } else if (T == AMapCloudPOI) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapCloudPOI', {'__this__': __this__});
     return result;
+  } else if (T == AMapSearchError) {
+    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapSearchError', {'__this__': __this__});
+    return result;
   } else if (T == AMapNearbyUploadInfo) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapNearbyUploadInfo', {'__this__': __this__});
+    return result;
+  } else if (T == AMapNearbySearchManagerDelegate) {
+    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapNearbySearchManagerDelegate', {'__this__': __this__});
     return result;
   } else if (T == AMapNearbySearchManager) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapNearbySearchManager', {'__this__': __this__});
     return result;
   } else if (T == AMapSearchAPI) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapSearchAPI', {'__this__': __this__});
+    return result;
+  } else if (T == AMapSearchDelegate) {
+    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapSearchDelegate', {'__this__': __this__});
     return result;
   } else if (T == CLLocation) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfCLLocation', {'__this__': __this__});
@@ -349,6 +363,9 @@ Future<bool> AmapSearchFluttifyIOSIs<T>(dynamic __this__) async {
     return result;
   } else if (T == NSCopying) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfNSCopying', {'__this__': __this__});
+    return result;
+  } else if (T == NSMutableCopying) {
+    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfNSMutableCopying', {'__this__': __this__});
     return result;
   } else if (T == UIView) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfUIView', {'__this__': __this__});
@@ -440,6 +457,8 @@ T? AmapSearchFluttifyIOSAs<T>(dynamic __this__) {
     return (AMapDistrictSearchResponse()..refId = (__this__ as Ref).refId) as T;
   } else if (T == AMapRouteSearchBaseRequest) {
     return (AMapRouteSearchBaseRequest()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == AMapDrivingCalRouteSearchRequest) {
+    return (AMapDrivingCalRouteSearchRequest()..refId = (__this__ as Ref).refId) as T;
   } else if (T == AMapDrivingRouteSearchRequest) {
     return (AMapDrivingRouteSearchRequest()..refId = (__this__ as Ref).refId) as T;
   } else if (T == AMapWalkingRouteSearchRequest) {
@@ -586,12 +605,18 @@ T? AmapSearchFluttifyIOSAs<T>(dynamic __this__) {
     return (AMapCloudImage()..refId = (__this__ as Ref).refId) as T;
   } else if (T == AMapCloudPOI) {
     return (AMapCloudPOI()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == AMapSearchError) {
+    return (AMapSearchError()..refId = (__this__ as Ref).refId) as T;
   } else if (T == AMapNearbyUploadInfo) {
     return (AMapNearbyUploadInfo()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == AMapNearbySearchManagerDelegate) {
+    return (AMapNearbySearchManagerDelegate.subInstance()..refId = (__this__ as Ref).refId) as T;
   } else if (T == AMapNearbySearchManager) {
     return (AMapNearbySearchManager()..refId = (__this__ as Ref).refId) as T;
   } else if (T == AMapSearchAPI) {
     return (AMapSearchAPI()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == AMapSearchDelegate) {
+    return (AMapSearchDelegate.subInstance()..refId = (__this__ as Ref).refId) as T;
   } else if (T == CLLocation) {
     return (CLLocation()..refId = (__this__ as Ref).refId) as T;
   } else if (T == CLHeading) {
@@ -614,6 +639,8 @@ T? AmapSearchFluttifyIOSAs<T>(dynamic __this__) {
     return (NSCoding.subInstance()..refId = (__this__ as Ref).refId) as T;
   } else if (T == NSCopying) {
     return (NSCopying.subInstance()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == NSMutableCopying) {
+    return (NSMutableCopying.subInstance()..refId = (__this__ as Ref).refId) as T;
   } else if (T == UIView) {
     return (UIView()..refId = (__this__ as Ref).refId) as T;
   } else if (T == UIViewController) {
@@ -633,9 +660,7 @@ T? AmapSearchFluttifyIOSAs<T>(dynamic __this__) {
   } else if (T == NSOperation) {
     return (NSOperation()..refId = (__this__ as Ref).refId) as T;
   }
-  else if (AmapCoreFluttifyIOSAs<T>(__this__) != null) {
-    return AmapCoreFluttifyIOSAs<T>(__this__);
-  }
+  
   else {
     return __this__;
   }

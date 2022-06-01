@@ -5,6 +5,8 @@
 #import "SubHandler11.h"
 #import "FluttifyMessageCodec.h"
 #import <AMapSearchKit/AMapSearchKit.h>
+#import "AMapNearbySearchManagerDelegate_Anonymous.h"
+#import "AMapSearchDelegate_Anonymous.h"
 
 // Dart端一次方法调用所存在的栈, 只有当MethodChannel传递参数受限时, 再启用这个容器
 extern NSMutableDictionary<NSString*, NSObject*>* STACK;
@@ -17,6 +19,1166 @@ extern BOOL enableLog;
 - (NSDictionary<NSString*, Handler>*) getSubHandler11 {
     __weak __typeof(self)weakSelf = self;
     return @{
+        @"ObjectFactory::createAMapCloudPOIIDSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapCloudPOIIDSearchRequest");
+            }
+        
+            AMapCloudPOIIDSearchRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapCloudPOIIDSearchRequest alloc] init];
+            } else {
+                __this__ = [AMapCloudPOIIDSearchRequest alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapCloudPOILocalSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapCloudPOILocalSearchRequest");
+            }
+        
+            AMapCloudPOILocalSearchRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapCloudPOILocalSearchRequest alloc] init];
+            } else {
+                __this__ = [AMapCloudPOILocalSearchRequest alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapCloudPOISearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapCloudPOISearchResponse");
+            }
+        
+            AMapCloudPOISearchResponse* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapCloudPOISearchResponse alloc] init];
+            } else {
+                __this__ = [AMapCloudPOISearchResponse alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapShareSearchBaseRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapShareSearchBaseRequest");
+            }
+        
+            AMapShareSearchBaseRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapShareSearchBaseRequest alloc] init];
+            } else {
+                __this__ = [AMapShareSearchBaseRequest alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapLocationShareSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapLocationShareSearchRequest");
+            }
+        
+            AMapLocationShareSearchRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapLocationShareSearchRequest alloc] init];
+            } else {
+                __this__ = [AMapLocationShareSearchRequest alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapPOIShareSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapPOIShareSearchRequest");
+            }
+        
+            AMapPOIShareSearchRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapPOIShareSearchRequest alloc] init];
+            } else {
+                __this__ = [AMapPOIShareSearchRequest alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapRouteShareSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapRouteShareSearchRequest");
+            }
+        
+            AMapRouteShareSearchRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapRouteShareSearchRequest alloc] init];
+            } else {
+                __this__ = [AMapRouteShareSearchRequest alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapNavigationShareSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapNavigationShareSearchRequest");
+            }
+        
+            AMapNavigationShareSearchRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapNavigationShareSearchRequest alloc] init];
+            } else {
+                __this__ = [AMapNavigationShareSearchRequest alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapShareSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapShareSearchResponse");
+            }
+        
+            AMapShareSearchResponse* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapShareSearchResponse alloc] init];
+            } else {
+                __this__ = [AMapShareSearchResponse alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapFutureRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapFutureRouteSearchRequest");
+            }
+        
+            AMapFutureRouteSearchRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapFutureRouteSearchRequest alloc] init];
+            } else {
+                __this__ = [AMapFutureRouteSearchRequest alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapFutureRouteSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapFutureRouteSearchResponse");
+            }
+        
+            AMapFutureRouteSearchResponse* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapFutureRouteSearchResponse alloc] init];
+            } else {
+                __this__ = [AMapFutureRouteSearchResponse alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapSearchObject": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapSearchObject");
+            }
+        
+            AMapSearchObject* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapSearchObject alloc] init];
+            } else {
+                __this__ = [AMapSearchObject alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapGeoPoint": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapGeoPoint");
+            }
+        
+            AMapGeoPoint* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapGeoPoint alloc] init];
+            } else {
+                __this__ = [AMapGeoPoint alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapGeoPolygon": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapGeoPolygon");
+            }
+        
+            AMapGeoPolygon* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapGeoPolygon alloc] init];
+            } else {
+                __this__ = [AMapGeoPolygon alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapCity": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapCity");
+            }
+        
+            AMapCity* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapCity alloc] init];
+            } else {
+                __this__ = [AMapCity alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapSuggestion": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapSuggestion");
+            }
+        
+            AMapSuggestion* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapSuggestion alloc] init];
+            } else {
+                __this__ = [AMapSuggestion alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapTip": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapTip");
+            }
+        
+            AMapTip* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapTip alloc] init];
+            } else {
+                __this__ = [AMapTip alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapImage": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapImage");
+            }
+        
+            AMapImage* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapImage alloc] init];
+            } else {
+                __this__ = [AMapImage alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapPOIExtension": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapPOIExtension");
+            }
+        
+            AMapPOIExtension* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapPOIExtension alloc] init];
+            } else {
+                __this__ = [AMapPOIExtension alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapIndoorData": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapIndoorData");
+            }
+        
+            AMapIndoorData* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapIndoorData alloc] init];
+            } else {
+                __this__ = [AMapIndoorData alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapSubPOI": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapSubPOI");
+            }
+        
+            AMapSubPOI* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapSubPOI alloc] init];
+            } else {
+                __this__ = [AMapSubPOI alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapRoutePOI": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapRoutePOI");
+            }
+        
+            AMapRoutePOI* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapRoutePOI alloc] init];
+            } else {
+                __this__ = [AMapRoutePOI alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapPOI": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapPOI");
+            }
+        
+            AMapPOI* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapPOI alloc] init];
+            } else {
+                __this__ = [AMapPOI alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapAOI": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapAOI");
+            }
+        
+            AMapAOI* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapAOI alloc] init];
+            } else {
+                __this__ = [AMapAOI alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapRoad": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapRoad");
+            }
+        
+            AMapRoad* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapRoad alloc] init];
+            } else {
+                __this__ = [AMapRoad alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapRoadInter": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapRoadInter");
+            }
+        
+            AMapRoadInter* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapRoadInter alloc] init];
+            } else {
+                __this__ = [AMapRoadInter alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapStreetNumber": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapStreetNumber");
+            }
+        
+            AMapStreetNumber* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapStreetNumber alloc] init];
+            } else {
+                __this__ = [AMapStreetNumber alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapBusinessArea": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapBusinessArea");
+            }
+        
+            AMapBusinessArea* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapBusinessArea alloc] init];
+            } else {
+                __this__ = [AMapBusinessArea alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapAddressComponent": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapAddressComponent");
+            }
+        
+            AMapAddressComponent* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapAddressComponent alloc] init];
+            } else {
+                __this__ = [AMapAddressComponent alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapReGeocode": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapReGeocode");
+            }
+        
+            AMapReGeocode* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapReGeocode alloc] init];
+            } else {
+                __this__ = [AMapReGeocode alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapGeocode": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapGeocode");
+            }
+        
+            AMapGeocode* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapGeocode alloc] init];
+            } else {
+                __this__ = [AMapGeocode alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapBusStop": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapBusStop");
+            }
+        
+            AMapBusStop* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapBusStop alloc] init];
+            } else {
+                __this__ = [AMapBusStop alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapBusLine": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapBusLine");
+            }
+        
+            AMapBusLine* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapBusLine alloc] init];
+            } else {
+                __this__ = [AMapBusLine alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapDistrict": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapDistrict");
+            }
+        
+            AMapDistrict* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapDistrict alloc] init];
+            } else {
+                __this__ = [AMapDistrict alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapTMC": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapTMC");
+            }
+        
+            AMapTMC* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapTMC alloc] init];
+            } else {
+                __this__ = [AMapTMC alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapStep": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapStep");
+            }
+        
+            AMapStep* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapStep alloc] init];
+            } else {
+                __this__ = [AMapStep alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapPath": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapPath");
+            }
+        
+            AMapPath* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapPath alloc] init];
+            } else {
+                __this__ = [AMapPath alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapFutureTimeInfoElement": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapFutureTimeInfoElement");
+            }
+        
+            AMapFutureTimeInfoElement* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapFutureTimeInfoElement alloc] init];
+            } else {
+                __this__ = [AMapFutureTimeInfoElement alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapFutureTimeInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapFutureTimeInfo");
+            }
+        
+            AMapFutureTimeInfo* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapFutureTimeInfo alloc] init];
+            } else {
+                __this__ = [AMapFutureTimeInfo alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapWalking": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapWalking");
+            }
+        
+            AMapWalking* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapWalking alloc] init];
+            } else {
+                __this__ = [AMapWalking alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapTaxi": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapTaxi");
+            }
+        
+            AMapTaxi* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapTaxi alloc] init];
+            } else {
+                __this__ = [AMapTaxi alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapRailwayStation": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapRailwayStation");
+            }
+        
+            AMapRailwayStation* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapRailwayStation alloc] init];
+            } else {
+                __this__ = [AMapRailwayStation alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapRailwaySpace": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapRailwaySpace");
+            }
+        
+            AMapRailwaySpace* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapRailwaySpace alloc] init];
+            } else {
+                __this__ = [AMapRailwaySpace alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapRailway": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapRailway");
+            }
+        
+            AMapRailway* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapRailway alloc] init];
+            } else {
+                __this__ = [AMapRailway alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapSegment": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapSegment");
+            }
+        
+            AMapSegment* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapSegment alloc] init];
+            } else {
+                __this__ = [AMapSegment alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapTransit": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapTransit");
+            }
+        
+            AMapTransit* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapTransit alloc] init];
+            } else {
+                __this__ = [AMapTransit alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapRoute": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapRoute");
+            }
+        
+            AMapRoute* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapRoute alloc] init];
+            } else {
+                __this__ = [AMapRoute alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapDistanceResult": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapDistanceResult");
+            }
+        
+            AMapDistanceResult* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapDistanceResult alloc] init];
+            } else {
+                __this__ = [AMapDistanceResult alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapLocalWeatherLive": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapLocalWeatherLive");
+            }
+        
+            AMapLocalWeatherLive* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapLocalWeatherLive alloc] init];
+            } else {
+                __this__ = [AMapLocalWeatherLive alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapLocalDayWeatherForecast": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapLocalDayWeatherForecast");
+            }
+        
+            AMapLocalDayWeatherForecast* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapLocalDayWeatherForecast alloc] init];
+            } else {
+                __this__ = [AMapLocalDayWeatherForecast alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapLocalWeatherForecast": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapLocalWeatherForecast");
+            }
+        
+            AMapLocalWeatherForecast* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapLocalWeatherForecast alloc] init];
+            } else {
+                __this__ = [AMapLocalWeatherForecast alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapNearbyUserInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapNearbyUserInfo");
+            }
+        
+            AMapNearbyUserInfo* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapNearbyUserInfo alloc] init];
+            } else {
+                __this__ = [AMapNearbyUserInfo alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapTrafficEvaluation": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapTrafficEvaluation");
+            }
+        
+            AMapTrafficEvaluation* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapTrafficEvaluation alloc] init];
+            } else {
+                __this__ = [AMapTrafficEvaluation alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapTrafficRoad": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapTrafficRoad");
+            }
+        
+            AMapTrafficRoad* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapTrafficRoad alloc] init];
+            } else {
+                __this__ = [AMapTrafficRoad alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapTrafficInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapTrafficInfo");
+            }
+        
+            AMapTrafficInfo* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapTrafficInfo alloc] init];
+            } else {
+                __this__ = [AMapTrafficInfo alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapCloudImage": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapCloudImage");
+            }
+        
+            AMapCloudImage* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapCloudImage alloc] init];
+            } else {
+                __this__ = [AMapCloudImage alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapCloudPOI": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapCloudPOI");
+            }
+        
+            AMapCloudPOI* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapCloudPOI alloc] init];
+            } else {
+                __this__ = [AMapCloudPOI alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapSearchError": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapSearchError");
+            }
+        
+            AMapSearchError* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapSearchError alloc] init];
+            } else {
+                __this__ = [AMapSearchError alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapNearbyUploadInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapNearbyUploadInfo");
+            }
+        
+            AMapNearbyUploadInfo* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapNearbyUploadInfo alloc] init];
+            } else {
+                __this__ = [AMapNearbyUploadInfo alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapSearchAPI": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapSearchAPI");
+            }
+        
+            AMapSearchAPI* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapSearchAPI alloc] init];
+            } else {
+                __this__ = [AMapSearchAPI alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::create_batchAMapPOISearchBaseRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
+        
+            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
+            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
+            for (NSUInteger __i__ = 0; __i__ < [length integerValue]; __i__++) {
+                AMapPOISearchBaseRequest* __this__;
+                if ([init boolValue]) {
+                    __this__ = [[AMapPOISearchBaseRequest alloc] init];
+                } else {
+                    __this__ = [AMapPOISearchBaseRequest alloc];
+                }
+                [resultList addObject:__this__];
+            }
+        
+            methodResult(resultList);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::create_batchAMapPOIIDSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
+        
+            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
+            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
+            for (NSUInteger __i__ = 0; __i__ < [length integerValue]; __i__++) {
+                AMapPOIIDSearchRequest* __this__;
+                if ([init boolValue]) {
+                    __this__ = [[AMapPOIIDSearchRequest alloc] init];
+                } else {
+                    __this__ = [AMapPOIIDSearchRequest alloc];
+                }
+                [resultList addObject:__this__];
+            }
+        
+            methodResult(resultList);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::create_batchAMapPOIKeywordsSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
+        
+            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
+            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
+            for (NSUInteger __i__ = 0; __i__ < [length integerValue]; __i__++) {
+                AMapPOIKeywordsSearchRequest* __this__;
+                if ([init boolValue]) {
+                    __this__ = [[AMapPOIKeywordsSearchRequest alloc] init];
+                } else {
+                    __this__ = [AMapPOIKeywordsSearchRequest alloc];
+                }
+                [resultList addObject:__this__];
+            }
+        
+            methodResult(resultList);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::create_batchAMapPOIAroundSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
+        
+            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
+            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
+            for (NSUInteger __i__ = 0; __i__ < [length integerValue]; __i__++) {
+                AMapPOIAroundSearchRequest* __this__;
+                if ([init boolValue]) {
+                    __this__ = [[AMapPOIAroundSearchRequest alloc] init];
+                } else {
+                    __this__ = [AMapPOIAroundSearchRequest alloc];
+                }
+                [resultList addObject:__this__];
+            }
+        
+            methodResult(resultList);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
         @"ObjectFactory::create_batchAMapPOIPolygonSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
@@ -388,6 +1550,26 @@ extern BOOL enableLog;
                     __this__ = [[AMapRouteSearchBaseRequest alloc] init];
                 } else {
                     __this__ = [AMapRouteSearchBaseRequest alloc];
+                }
+                [resultList addObject:__this__];
+            }
+        
+            methodResult(resultList);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::create_batchAMapDrivingCalRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
+        
+            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
+            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
+            for (NSUInteger __i__ = 0; __i__ < [length integerValue]; __i__++) {
+                AMapDrivingCalRouteSearchRequest* __this__;
+                if ([init boolValue]) {
+                    __this__ = [[AMapDrivingCalRouteSearchRequest alloc] init];
+                } else {
+                    __this__ = [AMapDrivingCalRouteSearchRequest alloc];
                 }
                 [resultList addObject:__this__];
             }
@@ -1857,6 +3039,26 @@ extern BOOL enableLog;
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
         
+        @"ObjectFactory::create_batchAMapSearchError": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
+        
+            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
+            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
+            for (NSUInteger __i__ = 0; __i__ < [length integerValue]; __i__++) {
+                AMapSearchError* __this__;
+                if ([init boolValue]) {
+                    __this__ = [[AMapSearchError alloc] init];
+                } else {
+                    __this__ = [AMapSearchError alloc];
+                }
+                [resultList addObject:__this__];
+            }
+        
+            methodResult(resultList);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
         @"ObjectFactory::create_batchAMapNearbyUploadInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
         
@@ -1897,6 +3099,14 @@ extern BOOL enableLog;
             if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
         
+        @"AMapNearbySearchManagerDelegate::createAnonymous__": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            id<AMapNearbySearchManagerDelegate> __result__ = [[AMapNearbySearchManagerDelegate_Anonymous alloc] initWithFlutterPluginRegistrar:registrar];
+            methodResult(__result__);
+        },
+        @"AMapSearchDelegate::createAnonymous__": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            id<AMapSearchDelegate> __result__ = [[AMapSearchDelegate_Anonymous alloc] initWithFlutterPluginRegistrar:registrar];
+            methodResult(__result__);
+        },
     };
 }
 

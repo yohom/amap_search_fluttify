@@ -11,6 +11,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
+import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 
 class com_amap_api_services_road_Road extends java_lang_Object with android_os_Parcelable {
   //region constants
@@ -31,7 +32,7 @@ class com_amap_api_services_road_Road extends java_lang_Object with android_os_P
     return AmapSearchFluttifyAndroidAs<com_amap_api_services_road_Road>(__result__)!;
   }
   
-  static Future<com_amap_api_services_road_Road> create__String__String(String? var1, String? var2) async {
+  static Future<com_amap_api_services_road_Road> create__String__String(String var1, String var2) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_road_Road__String__String',
       {"var1": var1, "var2": var2}
@@ -45,9 +46,11 @@ class com_amap_api_services_road_Road extends java_lang_Object with android_os_P
       'ObjectFactory::create_batchcom_amap_api_services_road_Road__',
       {'length': length}
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_road_Road>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_road_Road>(it))
+        .where((element) => element !=null)
+        .cast<com_amap_api_services_road_Road>()
+        .toList() ?? <com_amap_api_services_road_Road>[];
   }
   
   static Future<List<com_amap_api_services_road_Road>> create_batch__String__String(List<String> var1, List<String> var2) async {
@@ -56,9 +59,11 @@ class com_amap_api_services_road_Road extends java_lang_Object with android_os_P
       'ObjectFactory::create_batchcom_amap_api_services_road_Road__String__String',
       [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_road_Road>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_road_Road>(it))
+        .where((element) => element !=null)
+        .cast<com_amap_api_services_road_Road>()
+        .toList() ?? <com_amap_api_services_road_Road>[];
   }
   
   //endregion
@@ -73,7 +78,7 @@ class com_amap_api_services_road_Road extends java_lang_Object with android_os_P
 
   //region methods
   
-  Future<void> setId(String? var1) async {
+  Future<void> setId(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.road.Road@$refId::setId([\'var1\':$var1])');
@@ -90,7 +95,7 @@ class com_amap_api_services_road_Road extends java_lang_Object with android_os_P
   }
   
   
-  Future<void> setName(String? var1) async {
+  Future<void> setName(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.road.Road@$refId::setName([\'var1\':$var1])');
@@ -124,7 +129,7 @@ class com_amap_api_services_road_Road extends java_lang_Object with android_os_P
   }
   
   
-  Future<void> setCityCode(String? var1) async {
+  Future<void> setCityCode(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.road.Road@$refId::setCityCode([\'var1\':$var1])');
@@ -158,7 +163,7 @@ class com_amap_api_services_road_Road extends java_lang_Object with android_os_P
   }
   
   
-  Future<void> setRoadWidth(double? var1) async {
+  Future<void> setRoadWidth(double var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.road.Road@$refId::setRoadWidth([\'var1\':$var1])');
@@ -192,7 +197,7 @@ class com_amap_api_services_road_Road extends java_lang_Object with android_os_P
   }
   
   
-  Future<void> setType(String? var1) async {
+  Future<void> setType(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.road.Road@$refId::setType([\'var1\':$var1])');
@@ -226,7 +231,7 @@ class com_amap_api_services_road_Road extends java_lang_Object with android_os_P
   }
   
   
-  Future<void> setCenterPoint(com_amap_api_services_core_LatLonPoint? var1) async {
+  Future<void> setCenterPoint(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.road.Road@$refId::setCenterPoint([])');
@@ -285,6 +290,11 @@ class com_amap_api_services_road_Road extends java_lang_Object with android_os_P
 }
 
 extension com_amap_api_services_road_Road_Batch on List<com_amap_api_services_road_Road?> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first?.refId;
+  }
+
   //region getters
   
   //endregion
@@ -295,7 +305,7 @@ extension com_amap_api_services_road_Road_Batch on List<com_amap_api_services_ro
 
   //region methods
   
-  Future<List<void>?> setId_batch(List<String> var1) async {
+  Future<List<void>> setId_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -306,7 +316,7 @@ extension com_amap_api_services_road_Road_Batch on List<com_amap_api_services_ro
   }
   
   
-  Future<List<void>?> setName_batch(List<String> var1) async {
+  Future<List<void>> setName_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -317,18 +327,18 @@ extension com_amap_api_services_road_Road_Batch on List<com_amap_api_services_ro
   }
   
   
-  Future<List<String?>?> getCityCode_batch() async {
+  Future<List<String?>> getCityCode_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.road.Road::getCityCode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   
-  Future<List<void>?> setCityCode_batch(List<String> var1) async {
+  Future<List<void>> setCityCode_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -339,18 +349,18 @@ extension com_amap_api_services_road_Road_Batch on List<com_amap_api_services_ro
   }
   
   
-  Future<List<double?>?> getRoadWidth_batch() async {
+  Future<List<double?>> getRoadWidth_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.road.Road::getRoadWidth_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<double>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<double?>().toList();
   }
   
   
-  Future<List<void>?> setRoadWidth_batch(List<double> var1) async {
+  Future<List<void>> setRoadWidth_batch(List<double> var1) async {
     assert(true);
   
     // invoke native method
@@ -361,18 +371,18 @@ extension com_amap_api_services_road_Road_Batch on List<com_amap_api_services_ro
   }
   
   
-  Future<List<String?>?> getType_batch() async {
+  Future<List<String?>> getType_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.road.Road::getType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   
-  Future<List<void>?> setType_batch(List<String> var1) async {
+  Future<List<void>> setType_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -383,18 +393,18 @@ extension com_amap_api_services_road_Road_Batch on List<com_amap_api_services_ro
   }
   
   
-  Future<List<com_amap_api_services_core_LatLonPoint?>?> getCenterPoint_batch() async {
+  Future<List<com_amap_api_services_core_LatLonPoint?>> getCenterPoint_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.road.Road::getCenterPoint_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(__result__)).cast<com_amap_api_services_core_LatLonPoint>().toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(__result__)).cast<com_amap_api_services_core_LatLonPoint?>().toList();
   }
   
   
-  Future<List<void>?> setCenterPoint_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
+  Future<List<void>> setCenterPoint_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
     assert(true);
   
     // invoke native method
@@ -405,25 +415,25 @@ extension com_amap_api_services_road_Road_Batch on List<com_amap_api_services_ro
   }
   
   
-  Future<List<String?>?> getId_batch() async {
+  Future<List<String?>> getId_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.road.Road::getId_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   
-  Future<List<String?>?> getName_batch() async {
+  Future<List<String?>> getName_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.road.Road::getName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   //endregion

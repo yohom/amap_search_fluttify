@@ -11,6 +11,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
+import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 
 class AMapInputTipsSearchResponse extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
@@ -37,9 +38,11 @@ class AMapInputTipsSearchResponse extends AMapSearchObject with NSCoding, NSCopy
       'ObjectFactory::create_batchAMapInputTipsSearchResponse',
       {'length': length, 'init': init}
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyIOSAs<AMapInputTipsSearchResponse>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyIOSAs<AMapInputTipsSearchResponse>(it))
+        .where((element) => element !=null)
+        .cast<AMapInputTipsSearchResponse>()
+        .toList() ?? <AMapInputTipsSearchResponse>[];
   }
   
   //endregion
@@ -52,7 +55,7 @@ class AMapInputTipsSearchResponse extends AMapSearchObject with NSCoding, NSCopy
   
   Future<List<AMapTip>?> get_tips() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod("AMapInputTipsSearchResponse::get_tips", {'__this__': this});
-    return (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapTip>(it)!).toList();
+    return (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapTip>(it)).where((e) => e != null).cast<AMapTip>().toList();
   }
   
   //endregion
@@ -60,14 +63,10 @@ class AMapInputTipsSearchResponse extends AMapSearchObject with NSCoding, NSCopy
   //region setters
   Future<void> set_count(int count) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapInputTipsSearchResponse::set_count', <String, dynamic>{'__this__': this, "count": count});
-  
-  
   }
   
   Future<void> set_tips(List<AMapTip> tips) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapInputTipsSearchResponse::set_tips', <String, dynamic>{'__this__': this, "tips": tips});
-  
-  
   }
   
   //endregion
@@ -83,15 +82,20 @@ class AMapInputTipsSearchResponse extends AMapSearchObject with NSCoding, NSCopy
 }
 
 extension AMapInputTipsSearchResponse_Batch on List<AMapInputTipsSearchResponse?> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first?.refId;
+  }
+
   //region getters
-  Future<List<int?>?> get_count_batch() async {
+  Future<List<int?>> get_count_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapInputTipsSearchResponse::get_count_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<int?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
   }
   
-  Future<List<List<AMapTip>?>?> get_tips_batch() async {
+  Future<List<List<AMapTip>?>> get_tips_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapInputTipsSearchResponse::get_tips_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapTip>(it)!).toList()).cast<List<AMapTip>?>().toList();
+    return (resultBatch as List).map((__result__) => (__result__ as List?)?.map((it) => AmapSearchFluttifyIOSAs<AMapTip>(it)).where((e) => e != null).cast<AMapTip>().toList()).cast<List<AMapTip>?>().toList();
   }
   
   //endregion

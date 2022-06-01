@@ -11,6 +11,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
+import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 
 class AMapWalkingRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCoding, NSCopying {
   //region constants
@@ -37,9 +38,11 @@ class AMapWalkingRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCo
       'ObjectFactory::create_batchAMapWalkingRouteSearchRequest',
       {'length': length, 'init': init}
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyIOSAs<AMapWalkingRouteSearchRequest>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyIOSAs<AMapWalkingRouteSearchRequest>(it))
+        .where((element) => element !=null)
+        .cast<AMapWalkingRouteSearchRequest>()
+        .toList() ?? <AMapWalkingRouteSearchRequest>[];
   }
   
   //endregion
@@ -55,8 +58,6 @@ class AMapWalkingRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCo
   //region setters
   Future<void> set_multipath(int multipath) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapWalkingRouteSearchRequest::set_multipath', <String, dynamic>{'__this__': this, "multipath": multipath});
-  
-  
   }
   
   //endregion
@@ -72,10 +73,15 @@ class AMapWalkingRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCo
 }
 
 extension AMapWalkingRouteSearchRequest_Batch on List<AMapWalkingRouteSearchRequest?> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first?.refId;
+  }
+
   //region getters
-  Future<List<int?>?> get_multipath_batch() async {
+  Future<List<int?>> get_multipath_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapWalkingRouteSearchRequest::get_multipath_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<int?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
   }
   
   //endregion

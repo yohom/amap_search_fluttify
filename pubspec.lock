@@ -7,7 +7,7 @@ packages:
       name: amap_core_fluttify
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "0.16.0-dev.0"
+    version: "0.17.0-dev.6"
   async:
     dependency: transitive
     description:
@@ -56,7 +56,7 @@ packages:
       name: core_location_fluttify
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "0.7.0-dev.2"
+    version: "0.7.0-dev.3"
   fake_async:
     dependency: transitive
     description:
@@ -69,6 +69,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_lints:
+    dependency: "direct dev"
+    description:
+      name: flutter_lints
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "2.0.1"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -80,7 +87,14 @@ packages:
       name: foundation_fluttify
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "0.13.0-dev.0"
+    version: "0.13.0-dev.6"
+  lints:
+    dependency: transitive
+    description:
+      name: lints
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "2.0.0"
   matcher:
     dependency: transitive
     description:
@@ -109,13 +123,6 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "1.8.1"
-  pedantic:
-    dependency: "direct dev"
-    description:
-      name: pedantic
-      url: "https://pub.flutter-io.cn"
-    source: hosted
-    version: "1.9.2"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -171,5 +178,5 @@ packages:
     source: hosted
     version: "2.1.2"
 sdks:
-  dart: ">=2.17.0-0 <3.0.0"
+  dart: ">=2.17.0-206.0.dev <3.0.0"
   flutter: ">=2.0.0"

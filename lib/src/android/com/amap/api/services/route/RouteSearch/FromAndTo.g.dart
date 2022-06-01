@@ -11,6 +11,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
+import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 
 class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object with android_os_Parcelable {
   //region constants
@@ -23,7 +24,7 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_route_RouteSearch_FromAndTo> create__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint(com_amap_api_services_core_LatLonPoint? var1, com_amap_api_services_core_LatLonPoint? var2) async {
+  static Future<com_amap_api_services_route_RouteSearch_FromAndTo> create__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint(com_amap_api_services_core_LatLonPoint var1, com_amap_api_services_core_LatLonPoint var2) async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod(
       'ObjectFactory::createcom_amap_api_services_route_RouteSearch_FromAndTo__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint',
       {"var1": var1, "var2": var2}
@@ -45,9 +46,11 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
       'ObjectFactory::create_batchcom_amap_api_services_route_RouteSearch_FromAndTo__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint',
       [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RouteSearch_FromAndTo>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RouteSearch_FromAndTo>(it))
+        .where((element) => element !=null)
+        .cast<com_amap_api_services_route_RouteSearch_FromAndTo>()
+        .toList() ?? <com_amap_api_services_route_RouteSearch_FromAndTo>[];
   }
   
   static Future<List<com_amap_api_services_route_RouteSearch_FromAndTo>> create_batch__(int length) async {
@@ -56,9 +59,11 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
       'ObjectFactory::create_batchcom_amap_api_services_route_RouteSearch_FromAndTo__',
       {'length': length}
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RouteSearch_FromAndTo>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RouteSearch_FromAndTo>(it))
+        .where((element) => element !=null)
+        .cast<com_amap_api_services_route_RouteSearch_FromAndTo>()
+        .toList() ?? <com_amap_api_services_route_RouteSearch_FromAndTo>[];
   }
   
   //endregion
@@ -124,7 +129,7 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
   }
   
   
-  Future<void> setStartPoiID(String? var1) async {
+  Future<void> setStartPoiID(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::setStartPoiID([\'var1\':$var1])');
@@ -158,7 +163,7 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
   }
   
   
-  Future<void> setDestinationPoiID(String? var1) async {
+  Future<void> setDestinationPoiID(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::setDestinationPoiID([\'var1\':$var1])');
@@ -192,7 +197,7 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
   }
   
   
-  Future<void> setOriginType(String? var1) async {
+  Future<void> setOriginType(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::setOriginType([\'var1\':$var1])');
@@ -226,7 +231,7 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
   }
   
   
-  Future<void> setDestinationType(String? var1) async {
+  Future<void> setDestinationType(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::setDestinationType([\'var1\':$var1])');
@@ -260,7 +265,7 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
   }
   
   
-  Future<void> setPlateProvince(String? var1) async {
+  Future<void> setPlateProvince(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::setPlateProvince([\'var1\':$var1])');
@@ -294,7 +299,7 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
   }
   
   
-  Future<void> setPlateNumber(String? var1) async {
+  Future<void> setPlateNumber(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::setPlateNumber([\'var1\':$var1])');
@@ -336,6 +341,11 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends java_lang_Object
 }
 
 extension com_amap_api_services_route_RouteSearch_FromAndTo_Batch on List<com_amap_api_services_route_RouteSearch_FromAndTo?> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first?.refId;
+  }
+
   //region getters
   
   //endregion
@@ -346,40 +356,40 @@ extension com_amap_api_services_route_RouteSearch_FromAndTo_Batch on List<com_am
 
   //region methods
   
-  Future<List<com_amap_api_services_core_LatLonPoint?>?> getFrom_batch() async {
+  Future<List<com_amap_api_services_core_LatLonPoint?>> getFrom_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::getFrom_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(__result__)).cast<com_amap_api_services_core_LatLonPoint>().toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(__result__)).cast<com_amap_api_services_core_LatLonPoint?>().toList();
   }
   
   
-  Future<List<com_amap_api_services_core_LatLonPoint?>?> getTo_batch() async {
+  Future<List<com_amap_api_services_core_LatLonPoint?>> getTo_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::getTo_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(__result__)).cast<com_amap_api_services_core_LatLonPoint>().toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(__result__)).cast<com_amap_api_services_core_LatLonPoint?>().toList();
   }
   
   
-  Future<List<String?>?> getStartPoiID_batch() async {
+  Future<List<String?>> getStartPoiID_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::getStartPoiID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   
-  Future<List<void>?> setStartPoiID_batch(List<String> var1) async {
+  Future<List<void>> setStartPoiID_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -390,18 +400,18 @@ extension com_amap_api_services_route_RouteSearch_FromAndTo_Batch on List<com_am
   }
   
   
-  Future<List<String?>?> getDestinationPoiID_batch() async {
+  Future<List<String?>> getDestinationPoiID_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::getDestinationPoiID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   
-  Future<List<void>?> setDestinationPoiID_batch(List<String> var1) async {
+  Future<List<void>> setDestinationPoiID_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -412,18 +422,18 @@ extension com_amap_api_services_route_RouteSearch_FromAndTo_Batch on List<com_am
   }
   
   
-  Future<List<String?>?> getOriginType_batch() async {
+  Future<List<String?>> getOriginType_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::getOriginType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   
-  Future<List<void>?> setOriginType_batch(List<String> var1) async {
+  Future<List<void>> setOriginType_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -434,18 +444,18 @@ extension com_amap_api_services_route_RouteSearch_FromAndTo_Batch on List<com_am
   }
   
   
-  Future<List<String?>?> getDestinationType_batch() async {
+  Future<List<String?>> getDestinationType_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::getDestinationType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   
-  Future<List<void>?> setDestinationType_batch(List<String> var1) async {
+  Future<List<void>> setDestinationType_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -456,18 +466,18 @@ extension com_amap_api_services_route_RouteSearch_FromAndTo_Batch on List<com_am
   }
   
   
-  Future<List<String?>?> getPlateProvince_batch() async {
+  Future<List<String?>> getPlateProvince_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::getPlateProvince_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   
-  Future<List<void>?> setPlateProvince_batch(List<String> var1) async {
+  Future<List<void>> setPlateProvince_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -478,18 +488,18 @@ extension com_amap_api_services_route_RouteSearch_FromAndTo_Batch on List<com_am
   }
   
   
-  Future<List<String?>?> getPlateNumber_batch() async {
+  Future<List<String?>> getPlateNumber_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::getPlateNumber_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   
-  Future<List<void>?> setPlateNumber_batch(List<String> var1) async {
+  Future<List<void>> setPlateNumber_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -500,14 +510,14 @@ extension com_amap_api_services_route_RouteSearch_FromAndTo_Batch on List<com_am
   }
   
   
-  Future<List<com_amap_api_services_route_RouteSearch_FromAndTo?>?> clone_batch() async {
+  Future<List<com_amap_api_services_route_RouteSearch_FromAndTo?>> clone_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.RouteSearch.FromAndTo::clone_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RouteSearch_FromAndTo>(__result__)).cast<com_amap_api_services_route_RouteSearch_FromAndTo>().toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_route_RouteSearch_FromAndTo>(__result__)).cast<com_amap_api_services_route_RouteSearch_FromAndTo?>().toList();
   }
   
   //endregion

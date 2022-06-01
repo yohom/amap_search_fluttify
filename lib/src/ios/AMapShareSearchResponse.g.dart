@@ -11,6 +11,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
+import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 
 class AMapShareSearchResponse extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
@@ -37,9 +38,11 @@ class AMapShareSearchResponse extends AMapSearchObject with NSCoding, NSCopying 
       'ObjectFactory::create_batchAMapShareSearchResponse',
       {'length': length, 'init': init}
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyIOSAs<AMapShareSearchResponse>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyIOSAs<AMapShareSearchResponse>(it))
+        .where((element) => element !=null)
+        .cast<AMapShareSearchResponse>()
+        .toList() ?? <AMapShareSearchResponse>[];
   }
   
   //endregion
@@ -55,8 +58,6 @@ class AMapShareSearchResponse extends AMapSearchObject with NSCoding, NSCopying 
   //region setters
   Future<void> set_shareURL(String shareURL) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapShareSearchResponse::set_shareURL', <String, dynamic>{'__this__': this, "shareURL": shareURL});
-  
-  
   }
   
   //endregion
@@ -72,10 +73,15 @@ class AMapShareSearchResponse extends AMapSearchObject with NSCoding, NSCopying 
 }
 
 extension AMapShareSearchResponse_Batch on List<AMapShareSearchResponse?> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first?.refId;
+  }
+
   //region getters
-  Future<List<String?>?> get_shareURL_batch() async {
+  Future<List<String?>> get_shareURL_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapShareSearchResponse::get_shareURL_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   //endregion

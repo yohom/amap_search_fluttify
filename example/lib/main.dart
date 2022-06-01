@@ -17,7 +17,9 @@ import 'widgets/todo.screen.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  await AmapCore.init('f583e0d5b70400167993615c3adc3ced');
+  await AmapSearch.instance.init('f583e0d5b70400167993615c3adc3ced');
+  await AmapSearch.instance.updatePrivacyShow(true);
+  await AmapSearch.instance.updatePrivacyAgree(true);
 
   runApp(MyApp());
 }
@@ -30,10 +32,7 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return ScopedReleasePool(
-      tag: 'amap_search_demo',
-      child: MaterialApp(home: Home()),
-    );
+    return const MaterialApp(home: Home());
   }
 }
 

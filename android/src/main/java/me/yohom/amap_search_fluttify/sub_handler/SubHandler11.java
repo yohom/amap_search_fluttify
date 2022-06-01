@@ -33,23 +33,23 @@ public class SubHandler11 {
     public static Map<String, Handler> getSubHandler(BinaryMessenger messenger) {
         return new HashMap<String, Handler>() {{
             // method
-            put("com.amap.api.services.share.ShareSearch::searchNaviShareUrl_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+            put("com.amap.api.services.nearby.NearbySearch.NearbyQuery::setType_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // ref arg
-                    com.amap.api.services.share.ShareSearch.ShareNaviQuery var1 = (com.amap.api.services.share.ShareSearch.ShareNaviQuery) ((Map<String, Object>) __args__).get("var1");
+                    // enum arg
+                    com.amap.api.services.nearby.NearbySearchFunctionType var1 = com.amap.api.services.nearby.NearbySearchFunctionType.values()[(int) ((Map<String, Object>) __args__).get("var1")];
             
                     // ref
-                    com.amap.api.services.share.ShareSearch __this__ = (com.amap.api.services.share.ShareSearch) ((Map<String, Object>) __args__).get("__this__");
+                    com.amap.api.services.nearby.NearbySearch.NearbyQuery __this__ = (com.amap.api.services.nearby.NearbySearch.NearbyQuery) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    String __result__ = null;
+                    Void __result__ = null;
                     try {
-                        __result__ = __this__.searchNaviShareUrl(var1);
+                        __this__.setType(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -65,23 +65,22 @@ public class SubHandler11 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("com.amap.api.services.share.ShareSearch::searchLocationShareUrl_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+            put("com.amap.api.services.nearby.NearbySearch.NearbyQuery::getType_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // ref arg
-                    com.amap.api.services.core.LatLonSharePoint var1 = (com.amap.api.services.core.LatLonSharePoint) ((Map<String, Object>) __args__).get("var1");
+            
             
                     // ref
-                    com.amap.api.services.share.ShareSearch __this__ = (com.amap.api.services.share.ShareSearch) ((Map<String, Object>) __args__).get("__this__");
+                    com.amap.api.services.nearby.NearbySearch.NearbyQuery __this__ = (com.amap.api.services.nearby.NearbySearch.NearbyQuery) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    String __result__ = null;
+                    Integer __result__ = null;
                     try {
-                        __result__ = __this__.searchLocationShareUrl(var1);
+                        __result__ = __this__.getType();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -97,23 +96,23 @@ public class SubHandler11 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("com.amap.api.services.share.ShareSearch::searchBusRouteShareUrl_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+            put("com.amap.api.services.nearby.NearbySearch.NearbyQuery::setCoordType_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
                     // ref arg
-                    com.amap.api.services.share.ShareSearch.ShareBusRouteQuery var1 = (com.amap.api.services.share.ShareSearch.ShareBusRouteQuery) ((Map<String, Object>) __args__).get("var1");
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    com.amap.api.services.share.ShareSearch __this__ = (com.amap.api.services.share.ShareSearch) ((Map<String, Object>) __args__).get("__this__");
+                    com.amap.api.services.nearby.NearbySearch.NearbyQuery __this__ = (com.amap.api.services.nearby.NearbySearch.NearbyQuery) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    String __result__ = null;
+                    Void __result__ = null;
                     try {
-                        __result__ = __this__.searchBusRouteShareUrl(var1);
+                        __this__.setCoordType(var1.intValue());
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -129,23 +128,22 @@ public class SubHandler11 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("com.amap.api.services.share.ShareSearch::searchDrivingRouteShareUrl_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+            put("com.amap.api.services.nearby.NearbySearch.NearbyQuery::getCoordType_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
-                    // ref arg
-                    com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery var1 = (com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery) ((Map<String, Object>) __args__).get("var1");
+            
             
                     // ref
-                    com.amap.api.services.share.ShareSearch __this__ = (com.amap.api.services.share.ShareSearch) ((Map<String, Object>) __args__).get("__this__");
+                    com.amap.api.services.nearby.NearbySearch.NearbyQuery __this__ = (com.amap.api.services.nearby.NearbySearch.NearbyQuery) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    String __result__ = null;
+                    Integer __result__ = null;
                     try {
-                        __result__ = __this__.searchDrivingRouteShareUrl(var1);
+                        __result__ = __this__.getCoordType();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -161,23 +159,23 @@ public class SubHandler11 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("com.amap.api.services.share.ShareSearch::searchWalkRouteShareUrl_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
+            put("com.amap.api.services.nearby.NearbySearch.NearbyQuery::setTimeRange_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
                     // args
                     // ref arg
-                    com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery var1 = (com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery) ((Map<String, Object>) __args__).get("var1");
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    com.amap.api.services.share.ShareSearch __this__ = (com.amap.api.services.share.ShareSearch) ((Map<String, Object>) __args__).get("__this__");
+                    com.amap.api.services.nearby.NearbySearch.NearbyQuery __this__ = (com.amap.api.services.nearby.NearbySearch.NearbyQuery) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    String __result__ = null;
+                    Void __result__ = null;
                     try {
-                        __result__ = __this__.searchWalkRouteShareUrl(var1);
+                        __this__.setTimeRange(var1.intValue());
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -193,7 +191,69 @@ public class SubHandler11 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("com.amap.api.services.share.ShareSearch.ShareFromAndTo::setFromName_batch", (__argsBatch__, __methodResult__) -> {
+            put("com.amap.api.services.nearby.NearbySearch.NearbyQuery::getTimeRange_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.nearby.NearbySearch.NearbyQuery __this__ = (com.amap.api.services.nearby.NearbySearch.NearbyQuery) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = __this__.getTimeRange();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.routepoisearch.RoutePOIItem::getID_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.routepoisearch.RoutePOIItem __this__ = (com.amap.api.services.routepoisearch.RoutePOIItem) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getID();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.routepoisearch.RoutePOIItem::setID_batch", (__argsBatch__, __methodResult__) -> {
                 List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
@@ -204,12 +264,12 @@ public class SubHandler11 {
                     String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    com.amap.api.services.share.ShareSearch.ShareFromAndTo __this__ = (com.amap.api.services.share.ShareSearch.ShareFromAndTo) ((Map<String, Object>) __args__).get("__this__");
+                    com.amap.api.services.routepoisearch.RoutePOIItem __this__ = (com.amap.api.services.routepoisearch.RoutePOIItem) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setFromName(var1);
+                        __this__.setID(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -225,7 +285,38 @@ public class SubHandler11 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("com.amap.api.services.share.ShareSearch.ShareFromAndTo::setToName_batch", (__argsBatch__, __methodResult__) -> {
+            put("com.amap.api.services.routepoisearch.RoutePOIItem::getTitle_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.routepoisearch.RoutePOIItem __this__ = (com.amap.api.services.routepoisearch.RoutePOIItem) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getTitle();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.routepoisearch.RoutePOIItem::setTitle_batch", (__argsBatch__, __methodResult__) -> {
                 List<Void> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
@@ -236,12 +327,12 @@ public class SubHandler11 {
                     String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
                     // ref
-                    com.amap.api.services.share.ShareSearch.ShareFromAndTo __this__ = (com.amap.api.services.share.ShareSearch.ShareFromAndTo) ((Map<String, Object>) __args__).get("__this__");
+                    com.amap.api.services.routepoisearch.RoutePOIItem __this__ = (com.amap.api.services.routepoisearch.RoutePOIItem) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        __this__.setToName(var1);
+                        __this__.setTitle(var1);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -257,7 +348,7 @@ public class SubHandler11 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("com.amap.api.services.share.ShareSearch.ShareFromAndTo::getFrom_batch", (__argsBatch__, __methodResult__) -> {
+            put("com.amap.api.services.routepoisearch.RoutePOIItem::getPoint_batch", (__argsBatch__, __methodResult__) -> {
                 List<com.amap.api.services.core.LatLonPoint> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
@@ -267,7 +358,352 @@ public class SubHandler11 {
             
             
                     // ref
-                    com.amap.api.services.share.ShareSearch.ShareFromAndTo __this__ = (com.amap.api.services.share.ShareSearch.ShareFromAndTo) ((Map<String, Object>) __args__).get("__this__");
+                    com.amap.api.services.routepoisearch.RoutePOIItem __this__ = (com.amap.api.services.routepoisearch.RoutePOIItem) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    com.amap.api.services.core.LatLonPoint __result__ = null;
+                    try {
+                        __result__ = __this__.getPoint();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.routepoisearch.RoutePOIItem::setPoint_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.routepoisearch.RoutePOIItem __this__ = (com.amap.api.services.routepoisearch.RoutePOIItem) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setPoint(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.routepoisearch.RoutePOIItem::getDistance_batch", (__argsBatch__, __methodResult__) -> {
+                List<Float> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.routepoisearch.RoutePOIItem __this__ = (com.amap.api.services.routepoisearch.RoutePOIItem) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Float __result__ = null;
+                    try {
+                        __result__ = __this__.getDistance();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.routepoisearch.RoutePOIItem::setDistance_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.routepoisearch.RoutePOIItem __this__ = (com.amap.api.services.routepoisearch.RoutePOIItem) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setDistance(var1.floatValue());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.routepoisearch.RoutePOIItem::getDuration_batch", (__argsBatch__, __methodResult__) -> {
+                List<Float> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.routepoisearch.RoutePOIItem __this__ = (com.amap.api.services.routepoisearch.RoutePOIItem) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Float __result__ = null;
+                    try {
+                        __result__ = __this__.getDuration();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.routepoisearch.RoutePOIItem::setDuration_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.routepoisearch.RoutePOIItem __this__ = (com.amap.api.services.routepoisearch.RoutePOIItem) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setDuration(var1.floatValue());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.routepoisearch.RoutePOISearch::setQuery_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    com.amap.api.services.routepoisearch.RoutePOISearchQuery var1 = (com.amap.api.services.routepoisearch.RoutePOISearchQuery) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.routepoisearch.RoutePOISearch __this__ = (com.amap.api.services.routepoisearch.RoutePOISearch) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setQuery(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.routepoisearch.RoutePOISearch::searchRoutePOIAsyn_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.routepoisearch.RoutePOISearch __this__ = (com.amap.api.services.routepoisearch.RoutePOISearch) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.searchRoutePOIAsyn();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.routepoisearch.RoutePOISearch::searchRoutePOI_batch", (__argsBatch__, __methodResult__) -> {
+                List<com.amap.api.services.routepoisearch.RoutePOISearchResult> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.routepoisearch.RoutePOISearch __this__ = (com.amap.api.services.routepoisearch.RoutePOISearch) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    com.amap.api.services.routepoisearch.RoutePOISearchResult __result__ = null;
+                    try {
+                        __result__ = __this__.searchRoutePOI();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.routepoisearch.RoutePOISearchResult::getRoutePois_batch", (__argsBatch__, __methodResult__) -> {
+                List<java.util.List<com.amap.api.services.routepoisearch.RoutePOIItem>> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.routepoisearch.RoutePOISearchResult __this__ = (com.amap.api.services.routepoisearch.RoutePOISearchResult) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    java.util.List<com.amap.api.services.routepoisearch.RoutePOIItem> __result__ = null;
+                    try {
+                        __result__ = __this__.getRoutePois();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.routepoisearch.RoutePOISearchResult::getQuery_batch", (__argsBatch__, __methodResult__) -> {
+                List<com.amap.api.services.routepoisearch.RoutePOISearchQuery> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.routepoisearch.RoutePOISearchResult __this__ = (com.amap.api.services.routepoisearch.RoutePOISearchResult) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    com.amap.api.services.routepoisearch.RoutePOISearchQuery __result__ = null;
+                    try {
+                        __result__ = __this__.getQuery();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.routepoisearch.RoutePOISearchQuery::getFrom_batch", (__argsBatch__, __methodResult__) -> {
+                List<com.amap.api.services.core.LatLonPoint> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.routepoisearch.RoutePOISearchQuery __this__ = (com.amap.api.services.routepoisearch.RoutePOISearchQuery) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
                     com.amap.api.services.core.LatLonPoint __result__ = null;
@@ -288,7 +724,7 @@ public class SubHandler11 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("com.amap.api.services.share.ShareSearch.ShareFromAndTo::getTo_batch", (__argsBatch__, __methodResult__) -> {
+            put("com.amap.api.services.routepoisearch.RoutePOISearchQuery::getTo_batch", (__argsBatch__, __methodResult__) -> {
                 List<com.amap.api.services.core.LatLonPoint> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
@@ -298,7 +734,7 @@ public class SubHandler11 {
             
             
                     // ref
-                    com.amap.api.services.share.ShareSearch.ShareFromAndTo __this__ = (com.amap.api.services.share.ShareSearch.ShareFromAndTo) ((Map<String, Object>) __args__).get("__this__");
+                    com.amap.api.services.routepoisearch.RoutePOISearchQuery __this__ = (com.amap.api.services.routepoisearch.RoutePOISearchQuery) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
                     com.amap.api.services.core.LatLonPoint __result__ = null;
@@ -319,69 +755,7 @@ public class SubHandler11 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("com.amap.api.services.share.ShareSearch.ShareFromAndTo::getFromName_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    com.amap.api.services.share.ShareSearch.ShareFromAndTo __this__ = (com.amap.api.services.share.ShareSearch.ShareFromAndTo) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    String __result__ = null;
-                    try {
-                        __result__ = __this__.getFromName();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.amap.api.services.share.ShareSearch.ShareFromAndTo::getToName_batch", (__argsBatch__, __methodResult__) -> {
-                List<String> __resultList__ = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
-                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    com.amap.api.services.share.ShareSearch.ShareFromAndTo __this__ = (com.amap.api.services.share.ShareSearch.ShareFromAndTo) ((Map<String, Object>) __args__).get("__this__");
-            
-                    // invoke native method
-                    String __result__ = null;
-                    try {
-                        __result__ = __this__.getToName();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        __methodResult__.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    __resultList__.add(__result__);
-                }
-            
-                __methodResult__.success(__resultList__);
-            });
-            // method
-            put("com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery::getWalkMode_batch", (__argsBatch__, __methodResult__) -> {
+            put("com.amap.api.services.routepoisearch.RoutePOISearchQuery::getMode_batch", (__argsBatch__, __methodResult__) -> {
                 List<Integer> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
@@ -391,12 +765,12 @@ public class SubHandler11 {
             
             
                     // ref
-                    com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery __this__ = (com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery) ((Map<String, Object>) __args__).get("__this__");
+                    com.amap.api.services.routepoisearch.RoutePOISearchQuery __this__ = (com.amap.api.services.routepoisearch.RoutePOISearchQuery) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
                     Integer __result__ = null;
                     try {
-                        __result__ = __this__.getWalkMode();
+                        __result__ = __this__.getMode();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -412,8 +786,8 @@ public class SubHandler11 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery::getShareFromAndTo_batch", (__argsBatch__, __methodResult__) -> {
-                List<com.amap.api.services.share.ShareSearch.ShareFromAndTo> __resultList__ = new ArrayList<>();
+            put("com.amap.api.services.routepoisearch.RoutePOISearchQuery::getSearchType_batch", (__argsBatch__, __methodResult__) -> {
+                List<com.amap.api.services.routepoisearch.RoutePOISearch.RoutePOISearchType> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
@@ -422,12 +796,12 @@ public class SubHandler11 {
             
             
                     // ref
-                    com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery __this__ = (com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery) ((Map<String, Object>) __args__).get("__this__");
+                    com.amap.api.services.routepoisearch.RoutePOISearchQuery __this__ = (com.amap.api.services.routepoisearch.RoutePOISearchQuery) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    com.amap.api.services.share.ShareSearch.ShareFromAndTo __result__ = null;
+                    com.amap.api.services.routepoisearch.RoutePOISearch.RoutePOISearchType __result__ = null;
                     try {
-                        __result__ = __this__.getShareFromAndTo();
+                        __result__ = __this__.getSearchType();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -443,7 +817,7 @@ public class SubHandler11 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery::getDrivingMode_batch", (__argsBatch__, __methodResult__) -> {
+            put("com.amap.api.services.routepoisearch.RoutePOISearchQuery::getRange_batch", (__argsBatch__, __methodResult__) -> {
                 List<Integer> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
@@ -453,12 +827,12 @@ public class SubHandler11 {
             
             
                     // ref
-                    com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery __this__ = (com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery) ((Map<String, Object>) __args__).get("__this__");
+                    com.amap.api.services.routepoisearch.RoutePOISearchQuery __this__ = (com.amap.api.services.routepoisearch.RoutePOISearchQuery) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
                     Integer __result__ = null;
                     try {
-                        __result__ = __this__.getDrivingMode();
+                        __result__ = __this__.getRange();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -474,8 +848,8 @@ public class SubHandler11 {
                 __methodResult__.success(__resultList__);
             });
             // method
-            put("com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery::getShareFromAndTo_batch", (__argsBatch__, __methodResult__) -> {
-                List<com.amap.api.services.share.ShareSearch.ShareFromAndTo> __resultList__ = new ArrayList<>();
+            put("com.amap.api.services.routepoisearch.RoutePOISearchQuery::getPolylines_batch", (__argsBatch__, __methodResult__) -> {
+                List<java.util.List<com.amap.api.services.core.LatLonPoint>> __resultList__ = new ArrayList<>();
             
                 for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
                     Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
@@ -484,12 +858,12 @@ public class SubHandler11 {
             
             
                     // ref
-                    com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery __this__ = (com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery) ((Map<String, Object>) __args__).get("__this__");
+                    com.amap.api.services.routepoisearch.RoutePOISearchQuery __this__ = (com.amap.api.services.routepoisearch.RoutePOISearchQuery) ((Map<String, Object>) __args__).get("__this__");
             
                     // invoke native method
-                    com.amap.api.services.share.ShareSearch.ShareFromAndTo __result__ = null;
+                    java.util.List<com.amap.api.services.core.LatLonPoint> __result__ = null;
                     try {
-                        __result__ = __this__.getShareFromAndTo();
+                        __result__ = __this__.getPolylines();
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {
@@ -504,1763 +878,5465 @@ public class SubHandler11 {
             
                 __methodResult__.success(__resultList__);
             });
-            put("RefClass::isKindOfcom_amap_api_services_busline_BusLineItem", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            // method
+            put("com.amap.api.services.routepoisearch.RoutePOISearchQuery::clone_batch", (__argsBatch__, __methodResult__) -> {
+                List<com.amap.api.services.routepoisearch.RoutePOISearchQuery> __resultList__ = new ArrayList<>();
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.busline.BusLineItem);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.routepoisearch.RoutePOISearchQuery __this__ = (com.amap.api.services.routepoisearch.RoutePOISearchQuery) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    com.amap.api.services.routepoisearch.RoutePOISearchQuery __result__ = null;
+                    try {
+                        __result__ = __this__.clone();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.cloud.CloudItem::getID_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.cloud.CloudItem __this__ = (com.amap.api.services.cloud.CloudItem) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getID();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.cloud.CloudItem::getDistance_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.cloud.CloudItem __this__ = (com.amap.api.services.cloud.CloudItem) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = __this__.getDistance();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.cloud.CloudItem::setDistance_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.cloud.CloudItem __this__ = (com.amap.api.services.cloud.CloudItem) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setDistance(var1.intValue());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.cloud.CloudItem::getTitle_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.cloud.CloudItem __this__ = (com.amap.api.services.cloud.CloudItem) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getTitle();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.cloud.CloudItem::getSnippet_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.cloud.CloudItem __this__ = (com.amap.api.services.cloud.CloudItem) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getSnippet();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.cloud.CloudItem::getLatLonPoint_batch", (__argsBatch__, __methodResult__) -> {
+                List<com.amap.api.services.core.LatLonPoint> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.cloud.CloudItem __this__ = (com.amap.api.services.cloud.CloudItem) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    com.amap.api.services.core.LatLonPoint __result__ = null;
+                    try {
+                        __result__ = __this__.getLatLonPoint();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.cloud.CloudItem::getCreatetime_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.cloud.CloudItem __this__ = (com.amap.api.services.cloud.CloudItem) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getCreatetime();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.cloud.CloudItem::setCreatetime_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.cloud.CloudItem __this__ = (com.amap.api.services.cloud.CloudItem) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setCreatetime(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.cloud.CloudItem::getUpdatetime_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.cloud.CloudItem __this__ = (com.amap.api.services.cloud.CloudItem) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getUpdatetime();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.cloud.CloudItem::setUpdatetime_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.cloud.CloudItem __this__ = (com.amap.api.services.cloud.CloudItem) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setUpdatetime(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.cloud.CloudItem::getCustomfield_batch", (__argsBatch__, __methodResult__) -> {
+                List<java.util.HashMap<String,String>> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.cloud.CloudItem __this__ = (com.amap.api.services.cloud.CloudItem) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    java.util.HashMap<String,String> __result__ = null;
+                    try {
+                        __result__ = __this__.getCustomfield();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.cloud.CloudItem::setCustomfield_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    java.util.HashMap<String,String> var1 = (java.util.HashMap<String,String>) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.cloud.CloudItem __this__ = (com.amap.api.services.cloud.CloudItem) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setCustomfield(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.cloud.CloudItem::getCloudImage_batch", (__argsBatch__, __methodResult__) -> {
+                List<java.util.List<com.amap.api.services.cloud.CloudImage>> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.cloud.CloudItem __this__ = (com.amap.api.services.cloud.CloudItem) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    java.util.List<com.amap.api.services.cloud.CloudImage> __result__ = null;
+                    try {
+                        __result__ = __this__.getCloudImage();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.cloud.CloudItem::setmCloudImage_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    java.util.List<com.amap.api.services.cloud.CloudImage> var1 = (java.util.List<com.amap.api.services.cloud.CloudImage>) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.cloud.CloudItem __this__ = (com.amap.api.services.cloud.CloudItem) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setmCloudImage(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.cloud.CloudSearch.Query::getQueryString_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.cloud.CloudSearch.Query __this__ = (com.amap.api.services.cloud.CloudSearch.Query) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getQueryString();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.cloud.CloudSearch.Query::setTableID_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.cloud.CloudSearch.Query __this__ = (com.amap.api.services.cloud.CloudSearch.Query) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setTableID(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.cloud.CloudSearch.Query::getTableID_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.cloud.CloudSearch.Query __this__ = (com.amap.api.services.cloud.CloudSearch.Query) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getTableID();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.cloud.CloudSearch.Query::getPageNum_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.cloud.CloudSearch.Query __this__ = (com.amap.api.services.cloud.CloudSearch.Query) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = __this__.getPageNum();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.cloud.CloudSearch.Query::setPageNum_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.cloud.CloudSearch.Query __this__ = (com.amap.api.services.cloud.CloudSearch.Query) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setPageNum(var1.intValue());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.cloud.CloudSearch.Query::setPageSize_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.cloud.CloudSearch.Query __this__ = (com.amap.api.services.cloud.CloudSearch.Query) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setPageSize(var1.intValue());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.cloud.CloudSearch.Query::getPageSize_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.cloud.CloudSearch.Query __this__ = (com.amap.api.services.cloud.CloudSearch.Query) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = __this__.getPageSize();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.cloud.CloudSearch.Query::setBound_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    com.amap.api.services.cloud.CloudSearch.SearchBound var1 = (com.amap.api.services.cloud.CloudSearch.SearchBound) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.cloud.CloudSearch.Query __this__ = (com.amap.api.services.cloud.CloudSearch.Query) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setBound(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.cloud.CloudSearch.Query::getBound_batch", (__argsBatch__, __methodResult__) -> {
+                List<com.amap.api.services.cloud.CloudSearch.SearchBound> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.cloud.CloudSearch.Query __this__ = (com.amap.api.services.cloud.CloudSearch.Query) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    com.amap.api.services.cloud.CloudSearch.SearchBound __result__ = null;
+                    try {
+                        __result__ = __this__.getBound();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.cloud.CloudSearch.Query::addFilterString_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                    // ref arg
+                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
+            
+                    // ref
+                    com.amap.api.services.cloud.CloudSearch.Query __this__ = (com.amap.api.services.cloud.CloudSearch.Query) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.addFilterString(var1, var2);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.cloud.CloudSearch.Query::getFilterString_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.cloud.CloudSearch.Query __this__ = (com.amap.api.services.cloud.CloudSearch.Query) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getFilterString();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.cloud.CloudSearch.Query::addFilterNum_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                    // ref arg
+                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
+                    // ref arg
+                    String var3 = (String) ((Map<String, Object>) __args__).get("var3");
+            
+                    // ref
+                    com.amap.api.services.cloud.CloudSearch.Query __this__ = (com.amap.api.services.cloud.CloudSearch.Query) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.addFilterNum(var1, var2, var3);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.cloud.CloudSearch.Query::getFilterNumString_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.cloud.CloudSearch.Query __this__ = (com.amap.api.services.cloud.CloudSearch.Query) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getFilterNumString();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.cloud.CloudSearch.Query::setSortingrules_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    com.amap.api.services.cloud.CloudSearch.Sortingrules var1 = (com.amap.api.services.cloud.CloudSearch.Sortingrules) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.cloud.CloudSearch.Query __this__ = (com.amap.api.services.cloud.CloudSearch.Query) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setSortingrules(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.cloud.CloudSearch.Query::getSortingrules_batch", (__argsBatch__, __methodResult__) -> {
+                List<com.amap.api.services.cloud.CloudSearch.Sortingrules> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.cloud.CloudSearch.Query __this__ = (com.amap.api.services.cloud.CloudSearch.Query) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    com.amap.api.services.cloud.CloudSearch.Sortingrules __result__ = null;
+                    try {
+                        __result__ = __this__.getSortingrules();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.cloud.CloudSearch.Query::queryEquals_batch", (__argsBatch__, __methodResult__) -> {
+                List<Boolean> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    com.amap.api.services.cloud.CloudSearch.Query var1 = (com.amap.api.services.cloud.CloudSearch.Query) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.cloud.CloudSearch.Query __this__ = (com.amap.api.services.cloud.CloudSearch.Query) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Boolean __result__ = null;
+                    try {
+                        __result__ = __this__.queryEquals(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.cloud.CloudSearch.Query::clone_batch", (__argsBatch__, __methodResult__) -> {
+                List<com.amap.api.services.cloud.CloudSearch.Query> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.cloud.CloudSearch.Query __this__ = (com.amap.api.services.cloud.CloudSearch.Query) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    com.amap.api.services.cloud.CloudSearch.Query __result__ = null;
+                    try {
+                        __result__ = __this__.clone();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.cloud.CloudResult::createPagedResult_batch", (__argsBatch__, __methodResult__) -> {
+                List<com.amap.api.services.cloud.CloudResult> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    com.amap.api.services.cloud.CloudSearch.Query var0 = (com.amap.api.services.cloud.CloudSearch.Query) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
+                    // ref arg
+                    com.amap.api.services.cloud.CloudSearch.SearchBound var2 = (com.amap.api.services.cloud.CloudSearch.SearchBound) ((Map<String, Object>) __args__).get("var2");
+                    // ref arg
+                    Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
+                    // ref arg
+                    java.util.ArrayList<com.amap.api.services.cloud.CloudItem> var4 = (java.util.ArrayList<com.amap.api.services.cloud.CloudItem>) ((Map<String, Object>) __args__).get("var4");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    com.amap.api.services.cloud.CloudResult __result__ = null;
+                    try {
+                        __result__ = com.amap.api.services.cloud.CloudResult.createPagedResult(var0, var1.intValue(), var2, var3.intValue(), var4);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.cloud.CloudResult::getPageCount_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.cloud.CloudResult __this__ = (com.amap.api.services.cloud.CloudResult) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = __this__.getPageCount();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.cloud.CloudResult::getQuery_batch", (__argsBatch__, __methodResult__) -> {
+                List<com.amap.api.services.cloud.CloudSearch.Query> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.cloud.CloudResult __this__ = (com.amap.api.services.cloud.CloudResult) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    com.amap.api.services.cloud.CloudSearch.Query __result__ = null;
+                    try {
+                        __result__ = __this__.getQuery();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.cloud.CloudResult::getBound_batch", (__argsBatch__, __methodResult__) -> {
+                List<com.amap.api.services.cloud.CloudSearch.SearchBound> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.cloud.CloudResult __this__ = (com.amap.api.services.cloud.CloudResult) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    com.amap.api.services.cloud.CloudSearch.SearchBound __result__ = null;
+                    try {
+                        __result__ = __this__.getBound();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.cloud.CloudResult::getClouds_batch", (__argsBatch__, __methodResult__) -> {
+                List<java.util.ArrayList<com.amap.api.services.cloud.CloudItem>> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.cloud.CloudResult __this__ = (com.amap.api.services.cloud.CloudResult) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    java.util.ArrayList<com.amap.api.services.cloud.CloudItem> __result__ = null;
+                    try {
+                        __result__ = __this__.getClouds();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.cloud.CloudResult::getTotalCount_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.cloud.CloudResult __this__ = (com.amap.api.services.cloud.CloudResult) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = __this__.getTotalCount();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.cloud.CloudSearch::searchCloudAsyn_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    com.amap.api.services.cloud.CloudSearch.Query var1 = (com.amap.api.services.cloud.CloudSearch.Query) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.cloud.CloudSearch __this__ = (com.amap.api.services.cloud.CloudSearch) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.searchCloudAsyn(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.cloud.CloudSearch::searchCloudDetailAsyn_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                    // ref arg
+                    String var2 = (String) ((Map<String, Object>) __args__).get("var2");
+            
+                    // ref
+                    com.amap.api.services.cloud.CloudSearch __this__ = (com.amap.api.services.cloud.CloudSearch) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.searchCloudDetailAsyn(var1, var2);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.cloud.CloudSearch.SearchBound::getLowerLeft_batch", (__argsBatch__, __methodResult__) -> {
+                List<com.amap.api.services.core.LatLonPoint> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.cloud.CloudSearch.SearchBound __this__ = (com.amap.api.services.cloud.CloudSearch.SearchBound) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    com.amap.api.services.core.LatLonPoint __result__ = null;
+                    try {
+                        __result__ = __this__.getLowerLeft();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.cloud.CloudSearch.SearchBound::getUpperRight_batch", (__argsBatch__, __methodResult__) -> {
+                List<com.amap.api.services.core.LatLonPoint> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.cloud.CloudSearch.SearchBound __this__ = (com.amap.api.services.cloud.CloudSearch.SearchBound) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    com.amap.api.services.core.LatLonPoint __result__ = null;
+                    try {
+                        __result__ = __this__.getUpperRight();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.cloud.CloudSearch.SearchBound::getCenter_batch", (__argsBatch__, __methodResult__) -> {
+                List<com.amap.api.services.core.LatLonPoint> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.cloud.CloudSearch.SearchBound __this__ = (com.amap.api.services.cloud.CloudSearch.SearchBound) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    com.amap.api.services.core.LatLonPoint __result__ = null;
+                    try {
+                        __result__ = __this__.getCenter();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.cloud.CloudSearch.SearchBound::getRange_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.cloud.CloudSearch.SearchBound __this__ = (com.amap.api.services.cloud.CloudSearch.SearchBound) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = __this__.getRange();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.cloud.CloudSearch.SearchBound::getShape_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.cloud.CloudSearch.SearchBound __this__ = (com.amap.api.services.cloud.CloudSearch.SearchBound) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getShape();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.cloud.CloudSearch.SearchBound::getCity_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.cloud.CloudSearch.SearchBound __this__ = (com.amap.api.services.cloud.CloudSearch.SearchBound) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getCity();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.cloud.CloudSearch.SearchBound::getPolyGonList_batch", (__argsBatch__, __methodResult__) -> {
+                List<java.util.List<com.amap.api.services.core.LatLonPoint>> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.cloud.CloudSearch.SearchBound __this__ = (com.amap.api.services.cloud.CloudSearch.SearchBound) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    java.util.List<com.amap.api.services.core.LatLonPoint> __result__ = null;
+                    try {
+                        __result__ = __this__.getPolyGonList();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.cloud.CloudSearch.SearchBound::clone_batch", (__argsBatch__, __methodResult__) -> {
+                List<com.amap.api.services.cloud.CloudSearch.SearchBound> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.cloud.CloudSearch.SearchBound __this__ = (com.amap.api.services.cloud.CloudSearch.SearchBound) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    com.amap.api.services.cloud.CloudSearch.SearchBound __result__ = null;
+                    try {
+                        __result__ = __this__.clone();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.cloud.CloudImage::getId_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.cloud.CloudImage __this__ = (com.amap.api.services.cloud.CloudImage) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getId();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.cloud.CloudImage::setId_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.cloud.CloudImage __this__ = (com.amap.api.services.cloud.CloudImage) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setId(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.cloud.CloudImage::getPreurl_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.cloud.CloudImage __this__ = (com.amap.api.services.cloud.CloudImage) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getPreurl();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.cloud.CloudImage::setPreurl_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.cloud.CloudImage __this__ = (com.amap.api.services.cloud.CloudImage) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setPreurl(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.cloud.CloudImage::getUrl_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.cloud.CloudImage __this__ = (com.amap.api.services.cloud.CloudImage) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getUrl();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.cloud.CloudImage::setUrl_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.cloud.CloudImage __this__ = (com.amap.api.services.cloud.CloudImage) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setUrl(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.LocalDayWeatherForecast::getDate_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.weather.LocalDayWeatherForecast __this__ = (com.amap.api.services.weather.LocalDayWeatherForecast) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getDate();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.LocalDayWeatherForecast::setDate_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.weather.LocalDayWeatherForecast __this__ = (com.amap.api.services.weather.LocalDayWeatherForecast) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setDate(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.LocalDayWeatherForecast::getWeek_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.weather.LocalDayWeatherForecast __this__ = (com.amap.api.services.weather.LocalDayWeatherForecast) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getWeek();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.LocalDayWeatherForecast::setWeek_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.weather.LocalDayWeatherForecast __this__ = (com.amap.api.services.weather.LocalDayWeatherForecast) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setWeek(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.LocalDayWeatherForecast::getDayWeather_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.weather.LocalDayWeatherForecast __this__ = (com.amap.api.services.weather.LocalDayWeatherForecast) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getDayWeather();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.LocalDayWeatherForecast::setDayWeather_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.weather.LocalDayWeatherForecast __this__ = (com.amap.api.services.weather.LocalDayWeatherForecast) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setDayWeather(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.LocalDayWeatherForecast::getNightWeather_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.weather.LocalDayWeatherForecast __this__ = (com.amap.api.services.weather.LocalDayWeatherForecast) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getNightWeather();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.LocalDayWeatherForecast::setNightWeather_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.weather.LocalDayWeatherForecast __this__ = (com.amap.api.services.weather.LocalDayWeatherForecast) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setNightWeather(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.LocalDayWeatherForecast::getDayTemp_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.weather.LocalDayWeatherForecast __this__ = (com.amap.api.services.weather.LocalDayWeatherForecast) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getDayTemp();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.LocalDayWeatherForecast::setDayTemp_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.weather.LocalDayWeatherForecast __this__ = (com.amap.api.services.weather.LocalDayWeatherForecast) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setDayTemp(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.LocalDayWeatherForecast::getNightTemp_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.weather.LocalDayWeatherForecast __this__ = (com.amap.api.services.weather.LocalDayWeatherForecast) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getNightTemp();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.LocalDayWeatherForecast::setNightTemp_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.weather.LocalDayWeatherForecast __this__ = (com.amap.api.services.weather.LocalDayWeatherForecast) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setNightTemp(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.LocalDayWeatherForecast::getDayWindDirection_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.weather.LocalDayWeatherForecast __this__ = (com.amap.api.services.weather.LocalDayWeatherForecast) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getDayWindDirection();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.LocalDayWeatherForecast::setDayWindDirection_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.weather.LocalDayWeatherForecast __this__ = (com.amap.api.services.weather.LocalDayWeatherForecast) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setDayWindDirection(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.LocalDayWeatherForecast::getNightWindDirection_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.weather.LocalDayWeatherForecast __this__ = (com.amap.api.services.weather.LocalDayWeatherForecast) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getNightWindDirection();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.LocalDayWeatherForecast::setNightWindDirection_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.weather.LocalDayWeatherForecast __this__ = (com.amap.api.services.weather.LocalDayWeatherForecast) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setNightWindDirection(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.LocalDayWeatherForecast::getDayWindPower_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.weather.LocalDayWeatherForecast __this__ = (com.amap.api.services.weather.LocalDayWeatherForecast) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getDayWindPower();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.LocalDayWeatherForecast::setDayWindPower_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.weather.LocalDayWeatherForecast __this__ = (com.amap.api.services.weather.LocalDayWeatherForecast) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setDayWindPower(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.LocalDayWeatherForecast::getNightWindPower_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.weather.LocalDayWeatherForecast __this__ = (com.amap.api.services.weather.LocalDayWeatherForecast) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getNightWindPower();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.LocalDayWeatherForecast::setNightWindPower_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.weather.LocalDayWeatherForecast __this__ = (com.amap.api.services.weather.LocalDayWeatherForecast) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setNightWindPower(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.WeatherSearchQuery::getCity_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.weather.WeatherSearchQuery __this__ = (com.amap.api.services.weather.WeatherSearchQuery) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getCity();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.WeatherSearchQuery::getType_batch", (__argsBatch__, __methodResult__) -> {
+                List<Integer> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.weather.WeatherSearchQuery __this__ = (com.amap.api.services.weather.WeatherSearchQuery) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Integer __result__ = null;
+                    try {
+                        __result__ = __this__.getType();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.WeatherSearchQuery::clone_batch", (__argsBatch__, __methodResult__) -> {
+                List<com.amap.api.services.weather.WeatherSearchQuery> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.weather.WeatherSearchQuery __this__ = (com.amap.api.services.weather.WeatherSearchQuery) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    com.amap.api.services.weather.WeatherSearchQuery __result__ = null;
+                    try {
+                        __result__ = __this__.clone();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.LocalWeatherForecastResult::createPagedResult_batch", (__argsBatch__, __methodResult__) -> {
+                List<com.amap.api.services.weather.LocalWeatherForecastResult> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    com.amap.api.services.weather.WeatherSearchQuery var0 = (com.amap.api.services.weather.WeatherSearchQuery) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
+                    com.amap.api.services.weather.LocalWeatherForecast var1 = (com.amap.api.services.weather.LocalWeatherForecast) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    com.amap.api.services.weather.LocalWeatherForecastResult __result__ = null;
+                    try {
+                        __result__ = com.amap.api.services.weather.LocalWeatherForecastResult.createPagedResult(var0, var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.LocalWeatherForecastResult::getWeatherForecastQuery_batch", (__argsBatch__, __methodResult__) -> {
+                List<com.amap.api.services.weather.WeatherSearchQuery> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.weather.LocalWeatherForecastResult __this__ = (com.amap.api.services.weather.LocalWeatherForecastResult) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    com.amap.api.services.weather.WeatherSearchQuery __result__ = null;
+                    try {
+                        __result__ = __this__.getWeatherForecastQuery();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.LocalWeatherForecastResult::getForecastResult_batch", (__argsBatch__, __methodResult__) -> {
+                List<com.amap.api.services.weather.LocalWeatherForecast> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.weather.LocalWeatherForecastResult __this__ = (com.amap.api.services.weather.LocalWeatherForecastResult) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    com.amap.api.services.weather.LocalWeatherForecast __result__ = null;
+                    try {
+                        __result__ = __this__.getForecastResult();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.LocalWeatherForecast::getProvince_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.weather.LocalWeatherForecast __this__ = (com.amap.api.services.weather.LocalWeatherForecast) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getProvince();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.LocalWeatherForecast::setProvince_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.weather.LocalWeatherForecast __this__ = (com.amap.api.services.weather.LocalWeatherForecast) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setProvince(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.LocalWeatherForecast::getCity_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.weather.LocalWeatherForecast __this__ = (com.amap.api.services.weather.LocalWeatherForecast) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getCity();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.LocalWeatherForecast::setCity_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.weather.LocalWeatherForecast __this__ = (com.amap.api.services.weather.LocalWeatherForecast) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setCity(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.LocalWeatherForecast::getAdCode_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.weather.LocalWeatherForecast __this__ = (com.amap.api.services.weather.LocalWeatherForecast) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getAdCode();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.LocalWeatherForecast::setAdCode_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.weather.LocalWeatherForecast __this__ = (com.amap.api.services.weather.LocalWeatherForecast) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setAdCode(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.LocalWeatherForecast::getReportTime_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.weather.LocalWeatherForecast __this__ = (com.amap.api.services.weather.LocalWeatherForecast) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getReportTime();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.LocalWeatherForecast::setReportTime_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.weather.LocalWeatherForecast __this__ = (com.amap.api.services.weather.LocalWeatherForecast) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setReportTime(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.LocalWeatherForecast::getWeatherForecast_batch", (__argsBatch__, __methodResult__) -> {
+                List<java.util.List<com.amap.api.services.weather.LocalDayWeatherForecast>> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.weather.LocalWeatherForecast __this__ = (com.amap.api.services.weather.LocalWeatherForecast) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    java.util.List<com.amap.api.services.weather.LocalDayWeatherForecast> __result__ = null;
+                    try {
+                        __result__ = __this__.getWeatherForecast();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.LocalWeatherForecast::setWeatherForecast_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    java.util.List<com.amap.api.services.weather.LocalDayWeatherForecast> var1 = (java.util.List<com.amap.api.services.weather.LocalDayWeatherForecast>) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.weather.LocalWeatherForecast __this__ = (com.amap.api.services.weather.LocalWeatherForecast) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setWeatherForecast(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.WeatherSearch::getQuery_batch", (__argsBatch__, __methodResult__) -> {
+                List<com.amap.api.services.weather.WeatherSearchQuery> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.weather.WeatherSearch __this__ = (com.amap.api.services.weather.WeatherSearch) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    com.amap.api.services.weather.WeatherSearchQuery __result__ = null;
+                    try {
+                        __result__ = __this__.getQuery();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.WeatherSearch::setQuery_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    com.amap.api.services.weather.WeatherSearchQuery var1 = (com.amap.api.services.weather.WeatherSearchQuery) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.weather.WeatherSearch __this__ = (com.amap.api.services.weather.WeatherSearch) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setQuery(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.WeatherSearch::searchWeatherAsyn_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.weather.WeatherSearch __this__ = (com.amap.api.services.weather.WeatherSearch) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.searchWeatherAsyn();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.LocalWeatherLive::getProvince_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.weather.LocalWeatherLive __this__ = (com.amap.api.services.weather.LocalWeatherLive) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getProvince();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.LocalWeatherLive::getCity_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.weather.LocalWeatherLive __this__ = (com.amap.api.services.weather.LocalWeatherLive) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getCity();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.LocalWeatherLive::getAdCode_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.weather.LocalWeatherLive __this__ = (com.amap.api.services.weather.LocalWeatherLive) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getAdCode();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.LocalWeatherLive::getWeather_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.weather.LocalWeatherLive __this__ = (com.amap.api.services.weather.LocalWeatherLive) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getWeather();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.LocalWeatherLive::getTemperature_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.weather.LocalWeatherLive __this__ = (com.amap.api.services.weather.LocalWeatherLive) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getTemperature();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.LocalWeatherLive::getWindDirection_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.weather.LocalWeatherLive __this__ = (com.amap.api.services.weather.LocalWeatherLive) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getWindDirection();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.LocalWeatherLive::getWindPower_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.weather.LocalWeatherLive __this__ = (com.amap.api.services.weather.LocalWeatherLive) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getWindPower();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.LocalWeatherLive::getHumidity_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.weather.LocalWeatherLive __this__ = (com.amap.api.services.weather.LocalWeatherLive) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getHumidity();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.LocalWeatherLive::getReportTime_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.weather.LocalWeatherLive __this__ = (com.amap.api.services.weather.LocalWeatherLive) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getReportTime();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.LocalWeatherLive::setProvince_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.weather.LocalWeatherLive __this__ = (com.amap.api.services.weather.LocalWeatherLive) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setProvince(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.LocalWeatherLive::setCity_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.weather.LocalWeatherLive __this__ = (com.amap.api.services.weather.LocalWeatherLive) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setCity(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.LocalWeatherLive::setAdCode_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.weather.LocalWeatherLive __this__ = (com.amap.api.services.weather.LocalWeatherLive) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setAdCode(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.LocalWeatherLive::setWeather_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.weather.LocalWeatherLive __this__ = (com.amap.api.services.weather.LocalWeatherLive) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setWeather(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.LocalWeatherLive::setTemperature_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.weather.LocalWeatherLive __this__ = (com.amap.api.services.weather.LocalWeatherLive) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setTemperature(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.LocalWeatherLive::setWindDirection_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.weather.LocalWeatherLive __this__ = (com.amap.api.services.weather.LocalWeatherLive) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setWindDirection(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.LocalWeatherLive::setWindPower_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.weather.LocalWeatherLive __this__ = (com.amap.api.services.weather.LocalWeatherLive) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setWindPower(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.LocalWeatherLive::setHumidity_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.weather.LocalWeatherLive __this__ = (com.amap.api.services.weather.LocalWeatherLive) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setHumidity(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.weather.LocalWeatherLive::setReportTime_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.weather.LocalWeatherLive __this__ = (com.amap.api.services.weather.LocalWeatherLive) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setReportTime(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
             });
-            put("RefClass::isKindOfcom_amap_api_services_busline_BusStationResult", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            // method
+            put("com.amap.api.services.weather.LocalWeatherLiveResult::createPagedResult_batch", (__argsBatch__, __methodResult__) -> {
+                List<com.amap.api.services.weather.LocalWeatherLiveResult> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    com.amap.api.services.weather.WeatherSearchQuery var0 = (com.amap.api.services.weather.WeatherSearchQuery) ((Map<String, Object>) __args__).get("var0");
+                    // ref arg
+                    com.amap.api.services.weather.LocalWeatherLive var1 = (com.amap.api.services.weather.LocalWeatherLive) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+            
+            
+                    // invoke native method
+                    com.amap.api.services.weather.LocalWeatherLiveResult __result__ = null;
+                    try {
+                        __result__ = com.amap.api.services.weather.LocalWeatherLiveResult.createPagedResult(var0, var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.busline.BusStationResult);
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
             });
-            put("RefClass::isKindOfcom_amap_api_services_busline_BusStationSearch", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            // method
+            put("com.amap.api.services.weather.LocalWeatherLiveResult::getWeatherLiveQuery_batch", (__argsBatch__, __methodResult__) -> {
+                List<com.amap.api.services.weather.WeatherSearchQuery> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.weather.LocalWeatherLiveResult __this__ = (com.amap.api.services.weather.LocalWeatherLiveResult) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    com.amap.api.services.weather.WeatherSearchQuery __result__ = null;
+                    try {
+                        __result__ = __this__.getWeatherLiveQuery();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.busline.BusStationSearch);
+                __methodResult__.success(__resultList__);
             });
-            put("RefClass::isKindOfcom_amap_api_services_busline_BusLineSearch", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            // method
+            put("com.amap.api.services.weather.LocalWeatherLiveResult::getLiveResult_batch", (__argsBatch__, __methodResult__) -> {
+                List<com.amap.api.services.weather.LocalWeatherLive> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.weather.LocalWeatherLiveResult __this__ = (com.amap.api.services.weather.LocalWeatherLiveResult) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    com.amap.api.services.weather.LocalWeatherLive __result__ = null;
+                    try {
+                        __result__ = __this__.getLiveResult();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.busline.BusLineSearch);
+                __methodResult__.success(__resultList__);
             });
-            put("RefClass::isKindOfcom_amap_api_services_busline_BusLineQuery", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            // method
+            put("com.amap.api.services.geocoder.BusinessArea::getCenterPoint_batch", (__argsBatch__, __methodResult__) -> {
+                List<com.amap.api.services.core.LatLonPoint> __resultList__ = new ArrayList<>();
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.busline.BusLineQuery);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.geocoder.BusinessArea __this__ = (com.amap.api.services.geocoder.BusinessArea) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    com.amap.api.services.core.LatLonPoint __result__ = null;
+                    try {
+                        __result__ = __this__.getCenterPoint();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
             });
-            put("RefClass::isKindOfcom_amap_api_services_busline_BusLineResult", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            // method
+            put("com.amap.api.services.geocoder.BusinessArea::setCenterPoint_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.busline.BusLineResult);
+                    // args
+                    // ref arg
+                    com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.geocoder.BusinessArea __this__ = (com.amap.api.services.geocoder.BusinessArea) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setCenterPoint(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
             });
-            put("RefClass::isKindOfcom_amap_api_services_busline_BusStationItem", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            // method
+            put("com.amap.api.services.geocoder.BusinessArea::getName_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.busline.BusStationItem);
+                    // ref
+                    com.amap.api.services.geocoder.BusinessArea __this__ = (com.amap.api.services.geocoder.BusinessArea) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getName();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
             });
-            put("RefClass::isKindOfcom_amap_api_services_busline_BusStationQuery", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            // method
+            put("com.amap.api.services.geocoder.BusinessArea::setName_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+            
+                    // ref
+                    com.amap.api.services.geocoder.BusinessArea __this__ = (com.amap.api.services.geocoder.BusinessArea) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setName(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.busline.BusStationQuery);
+                    __resultList__.add(__result__);
+                }
+            
+                __methodResult__.success(__resultList__);
             });
-            put("RefClass::isKindOfcom_amap_api_services_core_AMapException", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            // method
+            put("com.amap.api.services.geocoder.GeocodeQuery::getLocationName_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    com.amap.api.services.geocoder.GeocodeQuery __this__ = (com.amap.api.services.geocoder.GeocodeQuery) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getLocationName();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
+                }
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.core.AMapException);
+                __methodResult__.success(__resultList__);
             });
-            put("RefClass::isKindOfcom_amap_api_services_core_ServiceSettings", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            // method
+            put("com.amap.api.services.geocoder.GeocodeQuery::setLocationName_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.core.ServiceSettings);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_core_SearchUtils", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.core.SearchUtils);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_core_LatLonSharePoint", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.core.LatLonSharePoint);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_core_LatLonPoint", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    // ref
+                    com.amap.api.services.geocoder.GeocodeQuery __this__ = (com.amap.api.services.geocoder.GeocodeQuery) ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.core.LatLonPoint);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_core_PoiItem", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setLocationName(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.core.PoiItem);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_core_SuggestionCity", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    __resultList__.add(__result__);
+                }
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.core.SuggestionCity);
+                __methodResult__.success(__resultList__);
             });
-            put("RefClass::isKindOfcom_amap_api_services_poisearch_Photo", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            // method
+            put("com.amap.api.services.geocoder.GeocodeQuery::getCity_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.poisearch.Photo);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_poisearch_SubPoiItem", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.poisearch.SubPoiItem);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_poisearch_PoiItemExtension", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    // args
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.poisearch.PoiItemExtension);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_poisearch_PoiSearch_SearchBound", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.poisearch.PoiSearch.SearchBound);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_poisearch_PoiResult", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    // ref
+                    com.amap.api.services.geocoder.GeocodeQuery __this__ = (com.amap.api.services.geocoder.GeocodeQuery) ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.poisearch.PoiResult);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_poisearch_PoiSearch", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getCity();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.poisearch.PoiSearch);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_poisearch_PoiSearch_Query", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    __resultList__.add(__result__);
+                }
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.poisearch.PoiSearch.Query);
+                __methodResult__.success(__resultList__);
             });
-            put("RefClass::isKindOfcom_amap_api_services_poisearch_IndoorData", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            // method
+            put("com.amap.api.services.geocoder.GeocodeQuery::setCity_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.poisearch.IndoorData);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_route_Railway", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.route.Railway);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_route_BusPath", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.route.BusPath);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_route_DriveRoutePlanResult", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    // ref
+                    com.amap.api.services.geocoder.GeocodeQuery __this__ = (com.amap.api.services.geocoder.GeocodeQuery) ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.route.DriveRoutePlanResult);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_route_RouteSearch_TruckRouteQuery", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setCity(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RouteSearch.TruckRouteQuery);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_route_TMC", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    __resultList__.add(__result__);
+                }
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.route.TMC);
+                __methodResult__.success(__resultList__);
             });
-            put("RefClass::isKindOfcom_amap_api_services_route_RouteBusWalkItem", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            // method
+            put("com.amap.api.services.geocoder.GeocodeQuery::getCountry_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RouteBusWalkItem);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_route_RouteResult", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RouteResult);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_route_RouteSearch", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    // args
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RouteSearch);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_route_BusStep", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.route.BusStep);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_route_TaxiItem", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    // ref
+                    com.amap.api.services.geocoder.GeocodeQuery __this__ = (com.amap.api.services.geocoder.GeocodeQuery) ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.route.TaxiItem);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_route_BusRouteResult", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getCountry();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.route.BusRouteResult);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_route_RoutePlanResult", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    __resultList__.add(__result__);
+                }
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RoutePlanResult);
+                __methodResult__.success(__resultList__);
             });
-            put("RefClass::isKindOfcom_amap_api_services_route_RailwaySpace", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            // method
+            put("com.amap.api.services.geocoder.GeocodeQuery::setCountry_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RailwaySpace);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_route_TruckRouteRestult", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.route.TruckRouteRestult);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_route_RouteSearch_RideRouteQuery", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RouteSearch.RideRouteQuery);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_route_RouteSearch_DriveRouteQuery", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    // ref
+                    com.amap.api.services.geocoder.GeocodeQuery __this__ = (com.amap.api.services.geocoder.GeocodeQuery) ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RouteSearch.DriveRouteQuery);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_route_RouteRailwayItem", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setCountry(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RouteRailwayItem);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_route_WalkStep", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    __resultList__.add(__result__);
+                }
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.route.WalkStep);
+                __methodResult__.success(__resultList__);
             });
-            put("RefClass::isKindOfcom_amap_api_services_route_RailwayStationItem", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            // method
+            put("com.amap.api.services.geocoder.GeocodeSearch::getFromLocation_batch", (__argsBatch__, __methodResult__) -> {
+                List<com.amap.api.services.geocoder.RegeocodeAddress> __resultList__ = new ArrayList<>();
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RailwayStationItem);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_route_RideRouteResult", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RideRouteResult);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_route_RouteSearch_FromAndTo", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    // args
+                    // ref arg
+                    com.amap.api.services.geocoder.RegeocodeQuery var1 = (com.amap.api.services.geocoder.RegeocodeQuery) ((Map<String, Object>) __args__).get("var1");
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RouteSearch.FromAndTo);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_route_RidePath", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    // ref
+                    com.amap.api.services.geocoder.GeocodeSearch __this__ = (com.amap.api.services.geocoder.GeocodeSearch) ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RidePath);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_route_RouteSearch_BusRouteQuery", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    // invoke native method
+                    com.amap.api.services.geocoder.RegeocodeAddress __result__ = null;
+                    try {
+                        __result__ = __this__.getFromLocation(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RouteSearch.BusRouteQuery);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_route_RideStep", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    __resultList__.add(__result__);
+                }
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RideStep);
+                __methodResult__.success(__resultList__);
             });
-            put("RefClass::isKindOfcom_amap_api_services_route_RouteSearchCity", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            // method
+            put("com.amap.api.services.geocoder.GeocodeSearch::getFromLocationName_batch", (__argsBatch__, __methodResult__) -> {
+                List<java.util.List<com.amap.api.services.geocoder.GeocodeAddress>> __resultList__ = new ArrayList<>();
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RouteSearchCity);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_route_DistanceResult", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.route.DistanceResult);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_route_RouteSearch_WalkRouteQuery", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    // args
+                    // ref arg
+                    com.amap.api.services.geocoder.GeocodeQuery var1 = (com.amap.api.services.geocoder.GeocodeQuery) ((Map<String, Object>) __args__).get("var1");
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RouteSearch.WalkRouteQuery);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_route_District", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    // ref
+                    com.amap.api.services.geocoder.GeocodeSearch __this__ = (com.amap.api.services.geocoder.GeocodeSearch) ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.route.District);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_route_WalkRouteResult", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    // invoke native method
+                    java.util.List<com.amap.api.services.geocoder.GeocodeAddress> __result__ = null;
+                    try {
+                        __result__ = __this__.getFromLocationName(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.route.WalkRouteResult);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_route_DistanceSearch_DistanceQuery", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    __resultList__.add(__result__);
+                }
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.route.DistanceSearch.DistanceQuery);
+                __methodResult__.success(__resultList__);
             });
-            put("RefClass::isKindOfcom_amap_api_services_route_SearchCity", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            // method
+            put("com.amap.api.services.geocoder.GeocodeSearch::getFromLocationAsyn_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.route.SearchCity);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_route_DistanceSearch", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.route.DistanceSearch);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_route_WalkPath", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    // args
+                    // ref arg
+                    com.amap.api.services.geocoder.RegeocodeQuery var1 = (com.amap.api.services.geocoder.RegeocodeQuery) ((Map<String, Object>) __args__).get("var1");
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.route.WalkPath);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_route_RouteBusLineItem", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    // ref
+                    com.amap.api.services.geocoder.GeocodeSearch __this__ = (com.amap.api.services.geocoder.GeocodeSearch) ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RouteBusLineItem);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_route_RouteSearch_DrivePlanQuery", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.getFromLocationAsyn(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.route.RouteSearch.DrivePlanQuery);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_route_DrivePlanStep", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    __resultList__.add(__result__);
+                }
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.route.DrivePlanStep);
+                __methodResult__.success(__resultList__);
             });
-            put("RefClass::isKindOfcom_amap_api_services_route_TimeInfo", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            // method
+            put("com.amap.api.services.geocoder.GeocodeSearch::getFromLocationNameAsyn_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.route.TimeInfo);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_route_DriveStep", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.route.DriveStep);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_route_TruckStep", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    // args
+                    // ref arg
+                    com.amap.api.services.geocoder.GeocodeQuery var1 = (com.amap.api.services.geocoder.GeocodeQuery) ((Map<String, Object>) __args__).get("var1");
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.route.TruckStep);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_route_DriveRouteResult", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    // ref
+                    com.amap.api.services.geocoder.GeocodeSearch __this__ = (com.amap.api.services.geocoder.GeocodeSearch) ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.route.DriveRouteResult);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_route_DrivePath", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.getFromLocationNameAsyn(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.route.DrivePath);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_route_TruckPath", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    __resultList__.add(__result__);
+                }
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.route.TruckPath);
+                __methodResult__.success(__resultList__);
             });
-            put("RefClass::isKindOfcom_amap_api_services_route_Doorway", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            // method
+            put("com.amap.api.services.geocoder.RegeocodeResult::getRegeocodeQuery_batch", (__argsBatch__, __methodResult__) -> {
+                List<com.amap.api.services.geocoder.RegeocodeQuery> __resultList__ = new ArrayList<>();
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.route.Doorway);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_route_DrivePlanPath", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.route.DrivePlanPath);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_route_TimeInfosElement", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    // args
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.route.TimeInfosElement);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_route_DistanceItem", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.route.DistanceItem);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_route_Path", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    // ref
+                    com.amap.api.services.geocoder.RegeocodeResult __this__ = (com.amap.api.services.geocoder.RegeocodeResult) ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.route.Path);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_road_Road", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    // invoke native method
+                    com.amap.api.services.geocoder.RegeocodeQuery __result__ = null;
+                    try {
+                        __result__ = __this__.getRegeocodeQuery();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.road.Road);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_road_Crossroad", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    __resultList__.add(__result__);
+                }
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.road.Crossroad);
+                __methodResult__.success(__resultList__);
             });
-            put("RefClass::isKindOfcom_amap_api_services_nearby_NearbyInfo", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            // method
+            put("com.amap.api.services.geocoder.RegeocodeResult::setRegeocodeQuery_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.nearby.NearbyInfo);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_nearby_UploadInfo", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.nearby.UploadInfo);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_nearby_NearbySearch", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    // args
+                    // ref arg
+                    com.amap.api.services.geocoder.RegeocodeQuery var1 = (com.amap.api.services.geocoder.RegeocodeQuery) ((Map<String, Object>) __args__).get("var1");
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.nearby.NearbySearch);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_nearby_NearbySearchResult", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    // ref
+                    com.amap.api.services.geocoder.RegeocodeResult __this__ = (com.amap.api.services.geocoder.RegeocodeResult) ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.nearby.NearbySearchResult);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_nearby_NearbySearch_NearbyQuery", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setRegeocodeQuery(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.nearby.NearbySearch.NearbyQuery);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_routepoisearch_RoutePOIItem", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    __resultList__.add(__result__);
+                }
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.routepoisearch.RoutePOIItem);
+                __methodResult__.success(__resultList__);
             });
-            put("RefClass::isKindOfcom_amap_api_services_routepoisearch_RoutePOISearch", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            // method
+            put("com.amap.api.services.geocoder.RegeocodeResult::getRegeocodeAddress_batch", (__argsBatch__, __methodResult__) -> {
+                List<com.amap.api.services.geocoder.RegeocodeAddress> __resultList__ = new ArrayList<>();
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.routepoisearch.RoutePOISearch);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_routepoisearch_RoutePOISearchResult", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.routepoisearch.RoutePOISearchResult);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_routepoisearch_RoutePOISearchQuery", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    // args
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.routepoisearch.RoutePOISearchQuery);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_cloud_CloudItem", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.cloud.CloudItem);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_cloud_CloudSearch_Query", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    // ref
+                    com.amap.api.services.geocoder.RegeocodeResult __this__ = (com.amap.api.services.geocoder.RegeocodeResult) ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.cloud.CloudSearch.Query);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_cloud_CloudResult", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    // invoke native method
+                    com.amap.api.services.geocoder.RegeocodeAddress __result__ = null;
+                    try {
+                        __result__ = __this__.getRegeocodeAddress();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.cloud.CloudResult);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_cloud_CloudSearch", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    __resultList__.add(__result__);
+                }
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.cloud.CloudSearch);
+                __methodResult__.success(__resultList__);
             });
-            put("RefClass::isKindOfcom_amap_api_services_cloud_CloudSearch_SearchBound", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            // method
+            put("com.amap.api.services.geocoder.RegeocodeResult::setRegeocodeAddress_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.cloud.CloudSearch.SearchBound);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_cloud_CloudImage", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.cloud.CloudImage);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_cloud_CloudSearch_Sortingrules", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    // args
+                    // ref arg
+                    com.amap.api.services.geocoder.RegeocodeAddress var1 = (com.amap.api.services.geocoder.RegeocodeAddress) ((Map<String, Object>) __args__).get("var1");
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.cloud.CloudSearch.Sortingrules);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_cloud_CloudItemDetail", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    // ref
+                    com.amap.api.services.geocoder.RegeocodeResult __this__ = (com.amap.api.services.geocoder.RegeocodeResult) ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.cloud.CloudItemDetail);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_weather_LocalDayWeatherForecast", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setRegeocodeAddress(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.weather.LocalDayWeatherForecast);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_weather_WeatherSearchQuery", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    __resultList__.add(__result__);
+                }
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.weather.WeatherSearchQuery);
+                __methodResult__.success(__resultList__);
             });
-            put("RefClass::isKindOfcom_amap_api_services_weather_LocalWeatherForecastResult", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            // method
+            put("com.amap.api.services.geocoder.GeocodeResult::getGeocodeQuery_batch", (__argsBatch__, __methodResult__) -> {
+                List<com.amap.api.services.geocoder.GeocodeQuery> __resultList__ = new ArrayList<>();
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.weather.LocalWeatherForecastResult);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_weather_LocalWeatherForecast", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.weather.LocalWeatherForecast);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_weather_WeatherSearch", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    // args
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.weather.WeatherSearch);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_weather_LocalWeatherLive", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.weather.LocalWeatherLive);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_weather_LocalWeatherLiveResult", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    // ref
+                    com.amap.api.services.geocoder.GeocodeResult __this__ = (com.amap.api.services.geocoder.GeocodeResult) ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.weather.LocalWeatherLiveResult);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_geocoder_BusinessArea", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    // invoke native method
+                    com.amap.api.services.geocoder.GeocodeQuery __result__ = null;
+                    try {
+                        __result__ = __this__.getGeocodeQuery();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.geocoder.BusinessArea);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_geocoder_GeocodeQuery", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    __resultList__.add(__result__);
+                }
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.geocoder.GeocodeQuery);
+                __methodResult__.success(__resultList__);
             });
-            put("RefClass::isKindOfcom_amap_api_services_geocoder_GeocodeSearch", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            // method
+            put("com.amap.api.services.geocoder.GeocodeResult::setGeocodeQuery_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.geocoder.GeocodeSearch);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_geocoder_RegeocodeResult", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.geocoder.RegeocodeResult);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_geocoder_GeocodeResult", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    // args
+                    // ref arg
+                    com.amap.api.services.geocoder.GeocodeQuery var1 = (com.amap.api.services.geocoder.GeocodeQuery) ((Map<String, Object>) __args__).get("var1");
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.geocoder.GeocodeResult);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_geocoder_AoiItem", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    // ref
+                    com.amap.api.services.geocoder.GeocodeResult __this__ = (com.amap.api.services.geocoder.GeocodeResult) ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.geocoder.AoiItem);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_geocoder_RegeocodeRoad", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setGeocodeQuery(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.geocoder.RegeocodeRoad);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_geocoder_GeocodeAddress", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    __resultList__.add(__result__);
+                }
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.geocoder.GeocodeAddress);
+                __methodResult__.success(__resultList__);
             });
-            put("RefClass::isKindOfcom_amap_api_services_geocoder_RegeocodeQuery", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            // method
+            put("com.amap.api.services.geocoder.GeocodeResult::getGeocodeAddressList_batch", (__argsBatch__, __methodResult__) -> {
+                List<java.util.List<com.amap.api.services.geocoder.GeocodeAddress>> __resultList__ = new ArrayList<>();
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.geocoder.RegeocodeQuery);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_geocoder_StreetNumber", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.geocoder.StreetNumber);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_geocoder_RegeocodeAddress", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    // args
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.geocoder.RegeocodeAddress);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_district_DistrictSearchQuery", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.district.DistrictSearchQuery);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_district_DistrictSearch", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    // ref
+                    com.amap.api.services.geocoder.GeocodeResult __this__ = (com.amap.api.services.geocoder.GeocodeResult) ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.district.DistrictSearch);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_district_DistrictResult", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    // invoke native method
+                    java.util.List<com.amap.api.services.geocoder.GeocodeAddress> __result__ = null;
+                    try {
+                        __result__ = __this__.getGeocodeAddressList();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.district.DistrictResult);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_district_DistrictItem", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    __resultList__.add(__result__);
+                }
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.district.DistrictItem);
+                __methodResult__.success(__resultList__);
             });
-            put("RefClass::isKindOfcom_amap_api_services_help_Tip", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            // method
+            put("com.amap.api.services.geocoder.GeocodeResult::setGeocodeAddressList_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.help.Tip);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_help_InputtipsQuery", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.help.InputtipsQuery);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_help_Inputtips", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    // args
+                    // ref arg
+                    java.util.List<com.amap.api.services.geocoder.GeocodeAddress> var1 = (java.util.List<com.amap.api.services.geocoder.GeocodeAddress>) ((Map<String, Object>) __args__).get("var1");
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.help.Inputtips);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_share_ShareSearch_ShareNaviQuery", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    // ref
+                    com.amap.api.services.geocoder.GeocodeResult __this__ = (com.amap.api.services.geocoder.GeocodeResult) ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.share.ShareSearch.ShareNaviQuery);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_share_ShareSearch_ShareBusRouteQuery", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setGeocodeAddressList(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.share.ShareSearch.ShareBusRouteQuery);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_share_ShareSearch", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    __resultList__.add(__result__);
+                }
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.share.ShareSearch);
+                __methodResult__.success(__resultList__);
             });
-            put("RefClass::isKindOfcom_amap_api_services_share_ShareSearch_ShareFromAndTo", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+            // method
+            put("com.amap.api.services.geocoder.AoiItem::getAoiId_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.share.ShareSearch.ShareFromAndTo);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_share_ShareSearch_ShareWalkRouteQuery", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery);
-            });
-            put("RefClass::isKindOfcom_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery", (__args__, __methodResult__) -> {
-                // 引用对象
-                Object __this__ = ((Map<String, Object>) __args__).get("__this__");
+                    // args
             
-                __methodResult__.success(__this__ instanceof com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_busline_BusLineItem__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_busline_BusLineItem__");
-                }
             
-                // args
+                    // ref
+                    com.amap.api.services.geocoder.AoiItem __this__ = (com.amap.api.services.geocoder.AoiItem) ((Map<String, Object>) __args__).get("__this__");
             
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getAoiId();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
             
-                // create target object
-                com.amap.api.services.busline.BusLineItem __obj__ = new com.amap.api.services.busline.BusLineItem();
+                    __resultList__.add(__result__);
+                }
             
-                __methodResult__.success(__obj__);
+                __methodResult__.success(__resultList__);
             });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_busline_BusStationSearch__android_content_Context__com_amap_api_services_busline_BusStationQuery", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_busline_BusStationSearch__android_content_Context__com_amap_api_services_busline_BusStationQuery");
-                }
+            // method
+            put("com.amap.api.services.geocoder.AoiItem::getAoiName_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
             
-                // args
-                // ref arg
-                android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
-                // ref arg
-                com.amap.api.services.busline.BusStationQuery var2 = (com.amap.api.services.busline.BusStationQuery) ((Map<String, Object>) __args__).get("var2");
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
-                // create target object
-                com.amap.api.services.busline.BusStationSearch __obj__ = new com.amap.api.services.busline.BusStationSearch(var1, var2);
+                    // args
             
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_busline_BusLineSearch__android_content_Context__com_amap_api_services_busline_BusLineQuery", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_busline_BusLineSearch__android_content_Context__com_amap_api_services_busline_BusLineQuery");
-                }
             
-                // args
-                // ref arg
-                android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
-                // ref arg
-                com.amap.api.services.busline.BusLineQuery var2 = (com.amap.api.services.busline.BusLineQuery) ((Map<String, Object>) __args__).get("var2");
+                    // ref
+                    com.amap.api.services.geocoder.AoiItem __this__ = (com.amap.api.services.geocoder.AoiItem) ((Map<String, Object>) __args__).get("__this__");
             
-                // create target object
-                com.amap.api.services.busline.BusLineSearch __obj__ = new com.amap.api.services.busline.BusLineSearch(var1, var2);
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getAoiName();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
             
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_busline_BusLineQuery__String__com_amap_api_services_busline_BusLineQuery_SearchType__String", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_busline_BusLineQuery__String__com_amap_api_services_busline_BusLineQuery_SearchType__String");
+                    __resultList__.add(__result__);
                 }
-            
-                // args
-                // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // enum arg
-                com.amap.api.services.busline.BusLineQuery.SearchType var2 = com.amap.api.services.busline.BusLineQuery.SearchType.values()[(int) ((Map<String, Object>) __args__).get("var2")];
-                // ref arg
-                String var3 = (String) ((Map<String, Object>) __args__).get("var3");
             
-                // create target object
-                com.amap.api.services.busline.BusLineQuery __obj__ = new com.amap.api.services.busline.BusLineQuery(var1, var2, var3);
-            
-                __methodResult__.success(__obj__);
+                __methodResult__.success(__resultList__);
             });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_busline_BusStationItem__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_busline_BusStationItem__");
-                }
+            // method
+            put("com.amap.api.services.geocoder.AoiItem::getAdCode_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
             
-                // args
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
+                    // args
             
-                // create target object
-                com.amap.api.services.busline.BusStationItem __obj__ = new com.amap.api.services.busline.BusStationItem();
             
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_busline_BusStationQuery__String__String", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_busline_BusStationQuery__String__String");
-                }
+                    // ref
+                    com.amap.api.services.geocoder.AoiItem __this__ = (com.amap.api.services.geocoder.AoiItem) ((Map<String, Object>) __args__).get("__this__");
             
-                // args
-                // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // ref arg
-                String var2 = (String) ((Map<String, Object>) __args__).get("var2");
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getAdCode();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
             
-                // create target object
-                com.amap.api.services.busline.BusStationQuery __obj__ = new com.amap.api.services.busline.BusStationQuery(var1, var2);
+                    __resultList__.add(__result__);
+                }
             
-                __methodResult__.success(__obj__);
+                __methodResult__.success(__resultList__);
             });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_core_AMapException__String", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_core_AMapException__String");
-                }
+            // method
+            put("com.amap.api.services.geocoder.AoiItem::getAoiCenterPoint_batch", (__argsBatch__, __methodResult__) -> {
+                List<com.amap.api.services.core.LatLonPoint> __resultList__ = new ArrayList<>();
             
-                // args
-                // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
-                // create target object
-                com.amap.api.services.core.AMapException __obj__ = new com.amap.api.services.core.AMapException(var1);
+                    // args
             
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_core_AMapException__String__int__String", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_core_AMapException__String__int__String");
-                }
             
-                // args
-                // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // ref arg
-                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
-                // ref arg
-                String var3 = (String) ((Map<String, Object>) __args__).get("var3");
+                    // ref
+                    com.amap.api.services.geocoder.AoiItem __this__ = (com.amap.api.services.geocoder.AoiItem) ((Map<String, Object>) __args__).get("__this__");
             
-                // create target object
-                com.amap.api.services.core.AMapException __obj__ = new com.amap.api.services.core.AMapException(var1, var2.intValue(), var3);
+                    // invoke native method
+                    com.amap.api.services.core.LatLonPoint __result__ = null;
+                    try {
+                        __result__ = __this__.getAoiCenterPoint();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
             
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_core_AMapException__String__int__String__int", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_core_AMapException__String__int__String__int");
+                    __resultList__.add(__result__);
                 }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.geocoder.AoiItem::getAoiArea_batch", (__argsBatch__, __methodResult__) -> {
+                List<Float> __resultList__ = new ArrayList<>();
             
-                // args
-                // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // ref arg
-                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
-                // ref arg
-                String var3 = (String) ((Map<String, Object>) __args__).get("var3");
-                // ref arg
-                Number var4 = (Number) ((Map<String, Object>) __args__).get("var4");
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
-                // create target object
-                com.amap.api.services.core.AMapException __obj__ = new com.amap.api.services.core.AMapException(var1, var2.intValue(), var3, var4.intValue());
+                    // args
             
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_core_AMapException__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_core_AMapException__");
-                }
             
-                // args
+                    // ref
+                    com.amap.api.services.geocoder.AoiItem __this__ = (com.amap.api.services.geocoder.AoiItem) ((Map<String, Object>) __args__).get("__this__");
             
+                    // invoke native method
+                    Float __result__ = null;
+                    try {
+                        __result__ = __this__.getAoiArea();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
             
-                // create target object
-                com.amap.api.services.core.AMapException __obj__ = new com.amap.api.services.core.AMapException();
+                    __resultList__.add(__result__);
+                }
             
-                __methodResult__.success(__obj__);
+                __methodResult__.success(__resultList__);
             });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_core_SearchUtils__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_core_SearchUtils__");
-                }
+            // method
+            put("com.amap.api.services.geocoder.AoiItem::setId_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
             
-                // args
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
-                // create target object
-                com.amap.api.services.core.SearchUtils __obj__ = new com.amap.api.services.core.SearchUtils();
+                    // ref
+                    com.amap.api.services.geocoder.AoiItem __this__ = (com.amap.api.services.geocoder.AoiItem) ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_core_LatLonSharePoint__double__double__String", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_core_LatLonSharePoint__double__double__String");
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setId(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
                 }
             
-                // args
-                // ref arg
-                Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
-                // ref arg
-                Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
-                // ref arg
-                String var5 = (String) ((Map<String, Object>) __args__).get("var5");
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.geocoder.AoiItem::setName_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
             
-                // create target object
-                com.amap.api.services.core.LatLonSharePoint __obj__ = new com.amap.api.services.core.LatLonSharePoint(var1.doubleValue(), var3.doubleValue(), var5);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_core_LatLonPoint__double__double", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_core_LatLonPoint__double__double");
-                }
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
-                // args
-                // ref arg
-                Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
-                // ref arg
-                Number var3 = (Number) ((Map<String, Object>) __args__).get("var3");
+                    // ref
+                    com.amap.api.services.geocoder.AoiItem __this__ = (com.amap.api.services.geocoder.AoiItem) ((Map<String, Object>) __args__).get("__this__");
             
-                // create target object
-                com.amap.api.services.core.LatLonPoint __obj__ = new com.amap.api.services.core.LatLonPoint(var1.doubleValue(), var3.doubleValue());
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setName(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
             
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_core_PoiItem__String__com_amap_api_services_core_LatLonPoint__String__String", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_core_PoiItem__String__com_amap_api_services_core_LatLonPoint__String__String");
+                    __resultList__.add(__result__);
                 }
             
-                // args
-                // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // ref arg
-                com.amap.api.services.core.LatLonPoint var2 = (com.amap.api.services.core.LatLonPoint) ((Map<String, Object>) __args__).get("var2");
-                // ref arg
-                String var3 = (String) ((Map<String, Object>) __args__).get("var3");
-                // ref arg
-                String var4 = (String) ((Map<String, Object>) __args__).get("var4");
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.geocoder.AoiItem::setAdcode_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
             
-                // create target object
-                com.amap.api.services.core.PoiItem __obj__ = new com.amap.api.services.core.PoiItem(var1, var2, var3, var4);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_core_SuggestionCity__String__String__String__int", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_core_SuggestionCity__String__String__String__int");
-                }
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
-                // args
-                // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // ref arg
-                String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-                // ref arg
-                String var3 = (String) ((Map<String, Object>) __args__).get("var3");
-                // ref arg
-                Number var4 = (Number) ((Map<String, Object>) __args__).get("var4");
+                    // ref
+                    com.amap.api.services.geocoder.AoiItem __this__ = (com.amap.api.services.geocoder.AoiItem) ((Map<String, Object>) __args__).get("__this__");
             
-                // create target object
-                com.amap.api.services.core.SuggestionCity __obj__ = new com.amap.api.services.core.SuggestionCity(var1, var2, var3, var4.intValue());
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setAdcode(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
             
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_poisearch_Photo__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_Photo__");
+                    __resultList__.add(__result__);
                 }
             
-                // args
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.geocoder.AoiItem::setLocation_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
             
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
-                // create target object
-                com.amap.api.services.poisearch.Photo __obj__ = new com.amap.api.services.poisearch.Photo();
+                    // args
+                    // ref arg
+                    com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) ((Map<String, Object>) __args__).get("var1");
             
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_poisearch_Photo__String__String", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_Photo__String__String");
-                }
+                    // ref
+                    com.amap.api.services.geocoder.AoiItem __this__ = (com.amap.api.services.geocoder.AoiItem) ((Map<String, Object>) __args__).get("__this__");
             
-                // args
-                // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // ref arg
-                String var2 = (String) ((Map<String, Object>) __args__).get("var2");
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setLocation(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
             
-                // create target object
-                com.amap.api.services.poisearch.Photo __obj__ = new com.amap.api.services.poisearch.Photo(var1, var2);
+                    __resultList__.add(__result__);
+                }
             
-                __methodResult__.success(__obj__);
+                __methodResult__.success(__resultList__);
             });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_poisearch_SubPoiItem__String__com_amap_api_services_core_LatLonPoint__String__String", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_SubPoiItem__String__com_amap_api_services_core_LatLonPoint__String__String");
-                }
+            // method
+            put("com.amap.api.services.geocoder.AoiItem::setArea_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
             
-                // args
-                // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // ref arg
-                com.amap.api.services.core.LatLonPoint var2 = (com.amap.api.services.core.LatLonPoint) ((Map<String, Object>) __args__).get("var2");
-                // ref arg
-                String var3 = (String) ((Map<String, Object>) __args__).get("var3");
-                // ref arg
-                String var4 = (String) ((Map<String, Object>) __args__).get("var4");
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
-                // create target object
-                com.amap.api.services.poisearch.SubPoiItem __obj__ = new com.amap.api.services.poisearch.SubPoiItem(var1, var2, var3, var4);
+                    // args
+                    // ref arg
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
             
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_poisearch_PoiItemExtension__String__String", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_PoiItemExtension__String__String");
-                }
+                    // ref
+                    com.amap.api.services.geocoder.AoiItem __this__ = (com.amap.api.services.geocoder.AoiItem) ((Map<String, Object>) __args__).get("__this__");
             
-                // args
-                // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // ref arg
-                String var2 = (String) ((Map<String, Object>) __args__).get("var2");
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setArea(var1.floatValue());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
             
-                // create target object
-                com.amap.api.services.poisearch.PoiItemExtension __obj__ = new com.amap.api.services.poisearch.PoiItemExtension(var1, var2);
+                    __resultList__.add(__result__);
+                }
             
-                __methodResult__.success(__obj__);
+                __methodResult__.success(__resultList__);
             });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint__int", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint__int");
-                }
+            // method
+            put("com.amap.api.services.geocoder.RegeocodeRoad::getId_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
             
-                // args
-                // ref arg
-                com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) ((Map<String, Object>) __args__).get("var1");
-                // ref arg
-                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
-                // create target object
-                com.amap.api.services.poisearch.PoiSearch.SearchBound __obj__ = new com.amap.api.services.poisearch.PoiSearch.SearchBound(var1, var2.intValue());
+                    // args
             
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint__int__boolean", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint__int__boolean");
-                }
             
-                // args
-                // ref arg
-                com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) ((Map<String, Object>) __args__).get("var1");
-                // ref arg
-                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
-                // ref arg
-                boolean var3 = (boolean) ((Map<String, Object>) __args__).get("var3");
+                    // ref
+                    com.amap.api.services.geocoder.RegeocodeRoad __this__ = (com.amap.api.services.geocoder.RegeocodeRoad) ((Map<String, Object>) __args__).get("__this__");
             
-                // create target object
-                com.amap.api.services.poisearch.PoiSearch.SearchBound __obj__ = new com.amap.api.services.poisearch.PoiSearch.SearchBound(var1, var2.intValue(), var3);
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getId();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
             
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint");
+                    __resultList__.add(__result__);
                 }
             
-                // args
-                // ref arg
-                com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) ((Map<String, Object>) __args__).get("var1");
-                // ref arg
-                com.amap.api.services.core.LatLonPoint var2 = (com.amap.api.services.core.LatLonPoint) ((Map<String, Object>) __args__).get("var2");
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.geocoder.RegeocodeRoad::setId_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
             
-                // create target object
-                com.amap.api.services.poisearch.PoiSearch.SearchBound __obj__ = new com.amap.api.services.poisearch.PoiSearch.SearchBound(var1, var2);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch_SearchBound__java_util_List_com_amap_api_services_core_LatLonPoint_", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_PoiSearch_SearchBound__java_util_List_com_amap_api_services_core_LatLonPoint_");
-                }
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
-                // args
-                // ref arg
-                java.util.List<com.amap.api.services.core.LatLonPoint> var1 = (java.util.List<com.amap.api.services.core.LatLonPoint>) ((Map<String, Object>) __args__).get("var1");
+                    // ref
+                    com.amap.api.services.geocoder.RegeocodeRoad __this__ = (com.amap.api.services.geocoder.RegeocodeRoad) ((Map<String, Object>) __args__).get("__this__");
             
-                // create target object
-                com.amap.api.services.poisearch.PoiSearch.SearchBound __obj__ = new com.amap.api.services.poisearch.PoiSearch.SearchBound(var1);
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setId(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
             
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch__android_content_Context__com_amap_api_services_poisearch_PoiSearch_Query", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_PoiSearch__android_content_Context__com_amap_api_services_poisearch_PoiSearch_Query");
+                    __resultList__.add(__result__);
                 }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.geocoder.RegeocodeRoad::getName_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
             
-                // args
-                // ref arg
-                android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
-                // ref arg
-                com.amap.api.services.poisearch.PoiSearch.Query var2 = (com.amap.api.services.poisearch.PoiSearch.Query) ((Map<String, Object>) __args__).get("var2");
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
-                // create target object
-                com.amap.api.services.poisearch.PoiSearch __obj__ = new com.amap.api.services.poisearch.PoiSearch(var1, var2);
+                    // args
             
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch_Query__String__String", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_PoiSearch_Query__String__String");
-                }
             
-                // args
-                // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // ref arg
-                String var2 = (String) ((Map<String, Object>) __args__).get("var2");
+                    // ref
+                    com.amap.api.services.geocoder.RegeocodeRoad __this__ = (com.amap.api.services.geocoder.RegeocodeRoad) ((Map<String, Object>) __args__).get("__this__");
             
-                // create target object
-                com.amap.api.services.poisearch.PoiSearch.Query __obj__ = new com.amap.api.services.poisearch.PoiSearch.Query(var1, var2);
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getName();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
             
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch_Query__String__String__String", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_PoiSearch_Query__String__String__String");
+                    __resultList__.add(__result__);
                 }
             
-                // args
-                // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // ref arg
-                String var2 = (String) ((Map<String, Object>) __args__).get("var2");
-                // ref arg
-                String var3 = (String) ((Map<String, Object>) __args__).get("var3");
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.geocoder.RegeocodeRoad::setName_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
             
-                // create target object
-                com.amap.api.services.poisearch.PoiSearch.Query __obj__ = new com.amap.api.services.poisearch.PoiSearch.Query(var1, var2, var3);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_poisearch_IndoorData__String__int__String", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_IndoorData__String__int__String");
-                }
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
-                // args
-                // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // ref arg
-                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
-                // ref arg
-                String var3 = (String) ((Map<String, Object>) __args__).get("var3");
+                    // ref
+                    com.amap.api.services.geocoder.RegeocodeRoad __this__ = (com.amap.api.services.geocoder.RegeocodeRoad) ((Map<String, Object>) __args__).get("__this__");
             
-                // create target object
-                com.amap.api.services.poisearch.IndoorData __obj__ = new com.amap.api.services.poisearch.IndoorData(var1, var2.intValue(), var3);
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setName(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
             
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_route_Railway__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_Railway__");
+                    __resultList__.add(__result__);
                 }
             
-                // args
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.geocoder.RegeocodeRoad::getDistance_batch", (__argsBatch__, __methodResult__) -> {
+                List<Float> __resultList__ = new ArrayList<>();
             
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
-                // create target object
-                com.amap.api.services.route.Railway __obj__ = new com.amap.api.services.route.Railway();
+                    // args
             
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_route_BusPath__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_BusPath__");
-                }
             
-                // args
+                    // ref
+                    com.amap.api.services.geocoder.RegeocodeRoad __this__ = (com.amap.api.services.geocoder.RegeocodeRoad) ((Map<String, Object>) __args__).get("__this__");
             
+                    // invoke native method
+                    Float __result__ = null;
+                    try {
+                        __result__ = __this__.getDistance();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
             
-                // create target object
-                com.amap.api.services.route.BusPath __obj__ = new com.amap.api.services.route.BusPath();
+                    __resultList__.add(__result__);
+                }
             
-                __methodResult__.success(__obj__);
+                __methodResult__.success(__resultList__);
             });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_route_DriveRoutePlanResult__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_DriveRoutePlanResult__");
-                }
+            // method
+            put("com.amap.api.services.geocoder.RegeocodeRoad::setDistance_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
             
-                // args
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
+                    // args
+                    // ref arg
+                    Number var1 = (Number) ((Map<String, Object>) __args__).get("var1");
             
-                // create target object
-                com.amap.api.services.route.DriveRoutePlanResult __obj__ = new com.amap.api.services.route.DriveRoutePlanResult();
+                    // ref
+                    com.amap.api.services.geocoder.RegeocodeRoad __this__ = (com.amap.api.services.geocoder.RegeocodeRoad) ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_TruckRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__java_util_List_com_amap_api_services_core_LatLonPoint___int", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_TruckRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__java_util_List_com_amap_api_services_core_LatLonPoint___int");
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setDistance(var1.floatValue());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
                 }
             
-                // args
-                // ref arg
-                com.amap.api.services.route.RouteSearch.FromAndTo var1 = (com.amap.api.services.route.RouteSearch.FromAndTo) ((Map<String, Object>) __args__).get("var1");
-                // ref arg
-                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
-                // ref arg
-                java.util.List<com.amap.api.services.core.LatLonPoint> var3 = (java.util.List<com.amap.api.services.core.LatLonPoint>) ((Map<String, Object>) __args__).get("var3");
-                // ref arg
-                Number var4 = (Number) ((Map<String, Object>) __args__).get("var4");
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.geocoder.RegeocodeRoad::getDirection_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
             
-                // create target object
-                com.amap.api.services.route.RouteSearch.TruckRouteQuery __obj__ = new com.amap.api.services.route.RouteSearch.TruckRouteQuery(var1, var2.intValue(), var3, var4.intValue());
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_route_TMC__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_TMC__");
-                }
+                    // args
             
-                // args
             
+                    // ref
+                    com.amap.api.services.geocoder.RegeocodeRoad __this__ = (com.amap.api.services.geocoder.RegeocodeRoad) ((Map<String, Object>) __args__).get("__this__");
             
-                // create target object
-                com.amap.api.services.route.TMC __obj__ = new com.amap.api.services.route.TMC();
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getDirection();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
             
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_route_RouteBusWalkItem__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteBusWalkItem__");
+                    __resultList__.add(__result__);
                 }
-            
-                // args
             
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.geocoder.RegeocodeRoad::setDirection_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
             
-                // create target object
-                com.amap.api.services.route.RouteBusWalkItem __obj__ = new com.amap.api.services.route.RouteBusWalkItem();
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_route_RouteResult__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteResult__");
-                }
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
-                // args
+                    // ref
+                    com.amap.api.services.geocoder.RegeocodeRoad __this__ = (com.amap.api.services.geocoder.RegeocodeRoad) ((Map<String, Object>) __args__).get("__this__");
             
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setDirection(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
             
-                // create target object
-                com.amap.api.services.route.RouteResult __obj__ = new com.amap.api.services.route.RouteResult();
+                    __resultList__.add(__result__);
+                }
             
-                __methodResult__.success(__obj__);
+                __methodResult__.success(__resultList__);
             });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_route_RouteSearch__android_content_Context", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch__android_content_Context");
-                }
+            // method
+            put("com.amap.api.services.geocoder.RegeocodeRoad::getLatLngPoint_batch", (__argsBatch__, __methodResult__) -> {
+                List<com.amap.api.services.core.LatLonPoint> __resultList__ = new ArrayList<>();
             
-                // args
-                // ref arg
-                android.content.Context var1 = (android.content.Context) ((Map<String, Object>) __args__).get("var1");
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
-                // create target object
-                com.amap.api.services.route.RouteSearch __obj__ = new com.amap.api.services.route.RouteSearch(var1);
+                    // args
             
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_route_BusStep__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_BusStep__");
-                }
             
-                // args
+                    // ref
+                    com.amap.api.services.geocoder.RegeocodeRoad __this__ = (com.amap.api.services.geocoder.RegeocodeRoad) ((Map<String, Object>) __args__).get("__this__");
             
+                    // invoke native method
+                    com.amap.api.services.core.LatLonPoint __result__ = null;
+                    try {
+                        __result__ = __this__.getLatLngPoint();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
             
-                // create target object
-                com.amap.api.services.route.BusStep __obj__ = new com.amap.api.services.route.BusStep();
+                    __resultList__.add(__result__);
+                }
             
-                __methodResult__.success(__obj__);
+                __methodResult__.success(__resultList__);
             });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_route_TaxiItem__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_TaxiItem__");
-                }
+            // method
+            put("com.amap.api.services.geocoder.RegeocodeRoad::setLatLngPoint_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
             
-                // args
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
+                    // args
+                    // ref arg
+                    com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) ((Map<String, Object>) __args__).get("var1");
             
-                // create target object
-                com.amap.api.services.route.TaxiItem __obj__ = new com.amap.api.services.route.TaxiItem();
+                    // ref
+                    com.amap.api.services.geocoder.RegeocodeRoad __this__ = (com.amap.api.services.geocoder.RegeocodeRoad) ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_route_BusRouteResult__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_BusRouteResult__");
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setLatLngPoint(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
                 }
             
-                // args
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.geocoder.GeocodeAddress::getFormatAddress_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
             
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
-                // create target object
-                com.amap.api.services.route.BusRouteResult __obj__ = new com.amap.api.services.route.BusRouteResult();
+                    // args
             
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_route_RoutePlanResult__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RoutePlanResult__");
-                }
             
-                // args
+                    // ref
+                    com.amap.api.services.geocoder.GeocodeAddress __this__ = (com.amap.api.services.geocoder.GeocodeAddress) ((Map<String, Object>) __args__).get("__this__");
             
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getFormatAddress();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
             
-                // create target object
-                com.amap.api.services.route.RoutePlanResult __obj__ = new com.amap.api.services.route.RoutePlanResult();
+                    __resultList__.add(__result__);
+                }
             
-                __methodResult__.success(__obj__);
+                __methodResult__.success(__resultList__);
             });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_route_RailwaySpace__String__float", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RailwaySpace__String__float");
-                }
+            // method
+            put("com.amap.api.services.geocoder.GeocodeAddress::setFormatAddress_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
             
-                // args
-                // ref arg
-                String var1 = (String) ((Map<String, Object>) __args__).get("var1");
-                // ref arg
-                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
-                // create target object
-                com.amap.api.services.route.RailwaySpace __obj__ = new com.amap.api.services.route.RailwaySpace(var1, var2.floatValue());
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_route_TruckRouteRestult__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_TruckRouteRestult__");
+                    // ref
+                    com.amap.api.services.geocoder.GeocodeAddress __this__ = (com.amap.api.services.geocoder.GeocodeAddress) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setFormatAddress(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
                 }
             
-                // args
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.geocoder.GeocodeAddress::getProvince_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
             
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
-                // create target object
-                com.amap.api.services.route.TruckRouteRestult __obj__ = new com.amap.api.services.route.TruckRouteRestult();
+                    // args
             
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_RideRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_RideRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int");
-                }
             
-                // args
-                // ref arg
-                com.amap.api.services.route.RouteSearch.FromAndTo var1 = (com.amap.api.services.route.RouteSearch.FromAndTo) ((Map<String, Object>) __args__).get("var1");
-                // ref arg
-                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
+                    // ref
+                    com.amap.api.services.geocoder.GeocodeAddress __this__ = (com.amap.api.services.geocoder.GeocodeAddress) ((Map<String, Object>) __args__).get("__this__");
             
-                // create target object
-                com.amap.api.services.route.RouteSearch.RideRouteQuery __obj__ = new com.amap.api.services.route.RouteSearch.RideRouteQuery(var1, var2.intValue());
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getProvince();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
             
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_RideRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_RideRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo");
+                    __resultList__.add(__result__);
                 }
             
-                // args
-                // ref arg
-                com.amap.api.services.route.RouteSearch.FromAndTo var1 = (com.amap.api.services.route.RouteSearch.FromAndTo) ((Map<String, Object>) __args__).get("var1");
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.geocoder.GeocodeAddress::setProvince_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
             
-                // create target object
-                com.amap.api.services.route.RouteSearch.RideRouteQuery __obj__ = new com.amap.api.services.route.RouteSearch.RideRouteQuery(var1);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_RideRouteQuery__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_RideRouteQuery__");
-                }
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
-                // args
+                    // ref
+                    com.amap.api.services.geocoder.GeocodeAddress __this__ = (com.amap.api.services.geocoder.GeocodeAddress) ((Map<String, Object>) __args__).get("__this__");
             
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setProvince(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
             
-                // create target object
-                com.amap.api.services.route.RouteSearch.RideRouteQuery __obj__ = new com.amap.api.services.route.RouteSearch.RideRouteQuery();
+                    __resultList__.add(__result__);
+                }
             
-                __methodResult__.success(__obj__);
+                __methodResult__.success(__resultList__);
             });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_DriveRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__java_util_List_com_amap_api_services_core_LatLonPoint___java_util_List_java_util_List_com_amap_api_services_core_LatLonPoint____String", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_DriveRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__java_util_List_com_amap_api_services_core_LatLonPoint___java_util_List_java_util_List_com_amap_api_services_core_LatLonPoint____String");
-                }
+            // method
+            put("com.amap.api.services.geocoder.GeocodeAddress::getCity_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
             
-                // args
-                // ref arg
-                com.amap.api.services.route.RouteSearch.FromAndTo var1 = (com.amap.api.services.route.RouteSearch.FromAndTo) ((Map<String, Object>) __args__).get("var1");
-                // ref arg
-                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
-                // ref arg
-                java.util.List<com.amap.api.services.core.LatLonPoint> var3 = (java.util.List<com.amap.api.services.core.LatLonPoint>) ((Map<String, Object>) __args__).get("var3");
-                // ref arg
-                java.util.List<java.util.List<com.amap.api.services.core.LatLonPoint>> var4 = (java.util.List<java.util.List<com.amap.api.services.core.LatLonPoint>>) ((Map<String, Object>) __args__).get("var4");
-                // ref arg
-                String var5 = (String) ((Map<String, Object>) __args__).get("var5");
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
-                // create target object
-                com.amap.api.services.route.RouteSearch.DriveRouteQuery __obj__ = new com.amap.api.services.route.RouteSearch.DriveRouteQuery(var1, var2.intValue(), var3, var4, var5);
+                    // args
             
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_DriveRouteQuery__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_DriveRouteQuery__");
-                }
             
-                // args
+                    // ref
+                    com.amap.api.services.geocoder.GeocodeAddress __this__ = (com.amap.api.services.geocoder.GeocodeAddress) ((Map<String, Object>) __args__).get("__this__");
             
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getCity();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
             
-                // create target object
-                com.amap.api.services.route.RouteSearch.DriveRouteQuery __obj__ = new com.amap.api.services.route.RouteSearch.DriveRouteQuery();
+                    __resultList__.add(__result__);
+                }
             
-                __methodResult__.success(__obj__);
+                __methodResult__.success(__resultList__);
             });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_route_RouteRailwayItem__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteRailwayItem__");
-                }
+            // method
+            put("com.amap.api.services.geocoder.GeocodeAddress::setCity_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
             
-                // args
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
-                // create target object
-                com.amap.api.services.route.RouteRailwayItem __obj__ = new com.amap.api.services.route.RouteRailwayItem();
+                    // ref
+                    com.amap.api.services.geocoder.GeocodeAddress __this__ = (com.amap.api.services.geocoder.GeocodeAddress) ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_route_WalkStep__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_WalkStep__");
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setCity(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
                 }
             
-                // args
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.geocoder.GeocodeAddress::getDistrict_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
             
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
-                // create target object
-                com.amap.api.services.route.WalkStep __obj__ = new com.amap.api.services.route.WalkStep();
+                    // args
             
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_route_RailwayStationItem__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RailwayStationItem__");
-                }
             
-                // args
+                    // ref
+                    com.amap.api.services.geocoder.GeocodeAddress __this__ = (com.amap.api.services.geocoder.GeocodeAddress) ((Map<String, Object>) __args__).get("__this__");
             
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getDistrict();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
             
-                // create target object
-                com.amap.api.services.route.RailwayStationItem __obj__ = new com.amap.api.services.route.RailwayStationItem();
+                    __resultList__.add(__result__);
+                }
             
-                __methodResult__.success(__obj__);
+                __methodResult__.success(__resultList__);
             });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_route_RideRouteResult__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RideRouteResult__");
-                }
+            // method
+            put("com.amap.api.services.geocoder.GeocodeAddress::setDistrict_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
             
-                // args
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
-                // create target object
-                com.amap.api.services.route.RideRouteResult __obj__ = new com.amap.api.services.route.RideRouteResult();
+                    // ref
+                    com.amap.api.services.geocoder.GeocodeAddress __this__ = (com.amap.api.services.geocoder.GeocodeAddress) ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_FromAndTo__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_FromAndTo__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint");
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setDistrict(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
                 }
             
-                // args
-                // ref arg
-                com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) ((Map<String, Object>) __args__).get("var1");
-                // ref arg
-                com.amap.api.services.core.LatLonPoint var2 = (com.amap.api.services.core.LatLonPoint) ((Map<String, Object>) __args__).get("var2");
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.geocoder.GeocodeAddress::getTownship_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
             
-                // create target object
-                com.amap.api.services.route.RouteSearch.FromAndTo __obj__ = new com.amap.api.services.route.RouteSearch.FromAndTo(var1, var2);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_FromAndTo__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_FromAndTo__");
-                }
+                    // args
             
-                // args
             
+                    // ref
+                    com.amap.api.services.geocoder.GeocodeAddress __this__ = (com.amap.api.services.geocoder.GeocodeAddress) ((Map<String, Object>) __args__).get("__this__");
             
-                // create target object
-                com.amap.api.services.route.RouteSearch.FromAndTo __obj__ = new com.amap.api.services.route.RouteSearch.FromAndTo();
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getTownship();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
             
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_route_RidePath__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RidePath__");
+                    __resultList__.add(__result__);
                 }
-            
-                // args
             
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.geocoder.GeocodeAddress::setTownship_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
             
-                // create target object
-                com.amap.api.services.route.RidePath __obj__ = new com.amap.api.services.route.RidePath();
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_BusRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__String__int", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_BusRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__String__int");
-                }
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
-                // args
-                // ref arg
-                com.amap.api.services.route.RouteSearch.FromAndTo var1 = (com.amap.api.services.route.RouteSearch.FromAndTo) ((Map<String, Object>) __args__).get("var1");
-                // ref arg
-                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
-                // ref arg
-                String var3 = (String) ((Map<String, Object>) __args__).get("var3");
-                // ref arg
-                Number var4 = (Number) ((Map<String, Object>) __args__).get("var4");
+                    // ref
+                    com.amap.api.services.geocoder.GeocodeAddress __this__ = (com.amap.api.services.geocoder.GeocodeAddress) ((Map<String, Object>) __args__).get("__this__");
             
-                // create target object
-                com.amap.api.services.route.RouteSearch.BusRouteQuery __obj__ = new com.amap.api.services.route.RouteSearch.BusRouteQuery(var1, var2.intValue(), var3, var4.intValue());
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setTownship(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
             
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_BusRouteQuery__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_BusRouteQuery__");
+                    __resultList__.add(__result__);
                 }
             
-                // args
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.geocoder.GeocodeAddress::getNeighborhood_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
             
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
-                // create target object
-                com.amap.api.services.route.RouteSearch.BusRouteQuery __obj__ = new com.amap.api.services.route.RouteSearch.BusRouteQuery();
+                    // args
             
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_route_RideStep__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RideStep__");
-                }
             
-                // args
+                    // ref
+                    com.amap.api.services.geocoder.GeocodeAddress __this__ = (com.amap.api.services.geocoder.GeocodeAddress) ((Map<String, Object>) __args__).get("__this__");
             
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getNeighborhood();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
             
-                // create target object
-                com.amap.api.services.route.RideStep __obj__ = new com.amap.api.services.route.RideStep();
+                    __resultList__.add(__result__);
+                }
             
-                __methodResult__.success(__obj__);
+                __methodResult__.success(__resultList__);
             });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_route_RouteSearchCity__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearchCity__");
-                }
+            // method
+            put("com.amap.api.services.geocoder.GeocodeAddress::setNeighborhood_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
             
-                // args
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
-                // create target object
-                com.amap.api.services.route.RouteSearchCity __obj__ = new com.amap.api.services.route.RouteSearchCity();
+                    // ref
+                    com.amap.api.services.geocoder.GeocodeAddress __this__ = (com.amap.api.services.geocoder.GeocodeAddress) ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_route_DistanceResult__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_DistanceResult__");
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setNeighborhood(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
                 }
             
-                // args
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.geocoder.GeocodeAddress::getBuilding_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
             
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
-                // create target object
-                com.amap.api.services.route.DistanceResult __obj__ = new com.amap.api.services.route.DistanceResult();
+                    // args
             
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_WalkRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_WalkRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int");
-                }
             
-                // args
-                // ref arg
-                com.amap.api.services.route.RouteSearch.FromAndTo var1 = (com.amap.api.services.route.RouteSearch.FromAndTo) ((Map<String, Object>) __args__).get("var1");
-                // ref arg
-                Number var2 = (Number) ((Map<String, Object>) __args__).get("var2");
+                    // ref
+                    com.amap.api.services.geocoder.GeocodeAddress __this__ = (com.amap.api.services.geocoder.GeocodeAddress) ((Map<String, Object>) __args__).get("__this__");
             
-                // create target object
-                com.amap.api.services.route.RouteSearch.WalkRouteQuery __obj__ = new com.amap.api.services.route.RouteSearch.WalkRouteQuery(var1, var2.intValue());
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getBuilding();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
             
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_WalkRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_WalkRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo");
+                    __resultList__.add(__result__);
                 }
             
-                // args
-                // ref arg
-                com.amap.api.services.route.RouteSearch.FromAndTo var1 = (com.amap.api.services.route.RouteSearch.FromAndTo) ((Map<String, Object>) __args__).get("var1");
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.geocoder.GeocodeAddress::setBuilding_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
             
-                // create target object
-                com.amap.api.services.route.RouteSearch.WalkRouteQuery __obj__ = new com.amap.api.services.route.RouteSearch.WalkRouteQuery(var1);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_WalkRouteQuery__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_WalkRouteQuery__");
-                }
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
-                // args
+                    // ref
+                    com.amap.api.services.geocoder.GeocodeAddress __this__ = (com.amap.api.services.geocoder.GeocodeAddress) ((Map<String, Object>) __args__).get("__this__");
             
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setBuilding(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
             
-                // create target object
-                com.amap.api.services.route.RouteSearch.WalkRouteQuery __obj__ = new com.amap.api.services.route.RouteSearch.WalkRouteQuery();
+                    __resultList__.add(__result__);
+                }
             
-                __methodResult__.success(__obj__);
+                __methodResult__.success(__resultList__);
             });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_route_District__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_District__");
-                }
+            // method
+            put("com.amap.api.services.geocoder.GeocodeAddress::getAdcode_batch", (__argsBatch__, __methodResult__) -> {
+                List<String> __resultList__ = new ArrayList<>();
             
-                // args
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
+                    // args
             
-                // create target object
-                com.amap.api.services.route.District __obj__ = new com.amap.api.services.route.District();
             
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_route_WalkRouteResult__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_WalkRouteResult__");
+                    // ref
+                    com.amap.api.services.geocoder.GeocodeAddress __this__ = (com.amap.api.services.geocoder.GeocodeAddress) ((Map<String, Object>) __args__).get("__this__");
+            
+                    // invoke native method
+                    String __result__ = null;
+                    try {
+                        __result__ = __this__.getAdcode();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
                 }
+            
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.geocoder.GeocodeAddress::setAdcode_batch", (__argsBatch__, __methodResult__) -> {
+                List<Void> __resultList__ = new ArrayList<>();
             
-                // args
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
+                    // args
+                    // ref arg
+                    String var1 = (String) ((Map<String, Object>) __args__).get("var1");
             
-                // create target object
-                com.amap.api.services.route.WalkRouteResult __obj__ = new com.amap.api.services.route.WalkRouteResult();
+                    // ref
+                    com.amap.api.services.geocoder.GeocodeAddress __this__ = (com.amap.api.services.geocoder.GeocodeAddress) ((Map<String, Object>) __args__).get("__this__");
             
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_route_DistanceSearch_DistanceQuery__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_DistanceSearch_DistanceQuery__");
+                    // invoke native method
+                    Void __result__ = null;
+                    try {
+                        __this__.setAdcode(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    __resultList__.add(__result__);
                 }
             
-                // args
+                __methodResult__.success(__resultList__);
+            });
+            // method
+            put("com.amap.api.services.geocoder.GeocodeAddress::getLatLonPoint_batch", (__argsBatch__, __methodResult__) -> {
+                List<com.amap.api.services.core.LatLonPoint> __resultList__ = new ArrayList<>();
             
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) __argsBatch__).size(); __i__++) {
+                    Map<String, Object> __args__ = ((List<Map<String, Object>>) __argsBatch__).get(__i__);
             
-                // create target object
-                com.amap.api.services.route.DistanceSearch.DistanceQuery __obj__ = new com.amap.api.services.route.DistanceSearch.DistanceQuery();
+                    // args
             
-                __methodResult__.success(__obj__);
-            });
-            // factory
-            put("ObjectFactory::createcom_amap_api_services_route_SearchCity__", (__args__, __methodResult__) -> {
-                if (getEnableLog()) {
-                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_SearchCity__");
-                }
             
-                // args
+                    // ref
+                    com.amap.api.services.geocoder.GeocodeAddress __this__ = (com.amap.api.services.geocoder.GeocodeAddress) ((Map<String, Object>) __args__).get("__this__");
             
+                    // invoke native method
+                    com.amap.api.services.core.LatLonPoint __result__ = null;
+                    try {
+                        __result__ = __this__.getLatLonPoint();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        __methodResult__.error(throwable.getMessage(), null, null);
+                        return;
+                    }
             
-                // create target object
-                com.amap.api.services.route.SearchCity __obj__ = new com.amap.api.services.route.SearchCity();
+                    __resultList__.add(__result__);
+                }
             
-                __methodResult__.success(__obj__);
+                __methodResult__.success(__resultList__);
             });
         }};
     }

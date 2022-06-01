@@ -19,17 +19,17 @@ class _GetBusInfoScreenState extends State<GetBusInfoScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: AppBar(title: Text('获取公交数据')),
+      appBar: AppBar(title: const Text('获取公交数据')),
       body: DecoratedColumn(
-        padding: EdgeInsets.all(kSpace16),
+        padding: const EdgeInsets.all(kSpace16),
         children: <Widget>[
           TextFormField(
             controller: _keywordController,
-            decoration: InputDecoration(hintText: '输入公交站点名称'),
+            decoration: const InputDecoration(hintText: '输入公交站点名称'),
           ),
           TextFormField(
             controller: _cityController,
-            decoration: InputDecoration(hintText: '输入城市'),
+            decoration: const InputDecoration(hintText: '输入城市'),
           ),
           RaisedButton(
             onPressed: () async {
@@ -40,7 +40,7 @@ class _GetBusInfoScreenState extends State<GetBusInfoScreen> {
               _busStation = await busStation.toFutureString();
               setState(() {});
             },
-            child: Text('搜索'),
+            child: const Text('搜索'),
           ),
           Expanded(child: ScrollableText(_busStation)),
         ],

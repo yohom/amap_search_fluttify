@@ -11,6 +11,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
+import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 
 class AMapRidingRouteSearchResponse extends AMapRouteSearchResponse with NSCoding, NSCopying {
   //region constants
@@ -37,9 +38,11 @@ class AMapRidingRouteSearchResponse extends AMapRouteSearchResponse with NSCodin
       'ObjectFactory::create_batchAMapRidingRouteSearchResponse',
       {'length': length, 'init': init}
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyIOSAs<AMapRidingRouteSearchResponse>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyIOSAs<AMapRidingRouteSearchResponse>(it))
+        .where((element) => element !=null)
+        .cast<AMapRidingRouteSearchResponse>()
+        .toList() ?? <AMapRidingRouteSearchResponse>[];
   }
   
   //endregion
@@ -63,6 +66,11 @@ class AMapRidingRouteSearchResponse extends AMapRouteSearchResponse with NSCodin
 }
 
 extension AMapRidingRouteSearchResponse_Batch on List<AMapRidingRouteSearchResponse?> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first?.refId;
+  }
+
   //region getters
   
   //endregion

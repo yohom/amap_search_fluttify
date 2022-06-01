@@ -11,6 +11,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
+import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 
 class AMapBusLineBaseSearchRequest extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
@@ -37,9 +38,11 @@ class AMapBusLineBaseSearchRequest extends AMapSearchObject with NSCoding, NSCop
       'ObjectFactory::create_batchAMapBusLineBaseSearchRequest',
       {'length': length, 'init': init}
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyIOSAs<AMapBusLineBaseSearchRequest>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyIOSAs<AMapBusLineBaseSearchRequest>(it))
+        .where((element) => element !=null)
+        .cast<AMapBusLineBaseSearchRequest>()
+        .toList() ?? <AMapBusLineBaseSearchRequest>[];
   }
   
   //endregion
@@ -70,26 +73,18 @@ class AMapBusLineBaseSearchRequest extends AMapSearchObject with NSCoding, NSCop
   //region setters
   Future<void> set_city(String city) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapBusLineBaseSearchRequest::set_city', <String, dynamic>{'__this__': this, "city": city});
-  
-  
   }
   
   Future<void> set_requireExtension(bool requireExtension) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapBusLineBaseSearchRequest::set_requireExtension', <String, dynamic>{'__this__': this, "requireExtension": requireExtension});
-  
-  
   }
   
   Future<void> set_offset(int offset) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapBusLineBaseSearchRequest::set_offset', <String, dynamic>{'__this__': this, "offset": offset});
-  
-  
   }
   
   Future<void> set_page(int page) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapBusLineBaseSearchRequest::set_page', <String, dynamic>{'__this__': this, "page": page});
-  
-  
   }
   
   //endregion
@@ -105,25 +100,30 @@ class AMapBusLineBaseSearchRequest extends AMapSearchObject with NSCoding, NSCop
 }
 
 extension AMapBusLineBaseSearchRequest_Batch on List<AMapBusLineBaseSearchRequest?> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first?.refId;
+  }
+
   //region getters
-  Future<List<String?>?> get_city_batch() async {
+  Future<List<String?>> get_city_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapBusLineBaseSearchRequest::get_city_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<String?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
-  Future<List<bool?>?> get_requireExtension_batch() async {
+  Future<List<bool?>> get_requireExtension_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapBusLineBaseSearchRequest::get_requireExtension_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<bool?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<bool?>().toList();
   }
   
-  Future<List<int?>?> get_offset_batch() async {
+  Future<List<int?>> get_offset_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapBusLineBaseSearchRequest::get_offset_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<int?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
   }
   
-  Future<List<int?>?> get_page_batch() async {
+  Future<List<int?>> get_page_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapBusLineBaseSearchRequest::get_page_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<int?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<int?>().toList();
   }
   
   //endregion

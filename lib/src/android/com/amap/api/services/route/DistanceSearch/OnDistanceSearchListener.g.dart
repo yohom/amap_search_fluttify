@@ -11,12 +11,47 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
+import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 
-
+class _com_amap_api_services_route_DistanceSearch_OnDistanceSearchListener_SUB extends java_lang_Object with com_amap_api_services_route_DistanceSearch_OnDistanceSearchListener {}
 
 mixin com_amap_api_services_route_DistanceSearch_OnDistanceSearchListener on java_lang_Object {
   
 
+  static com_amap_api_services_route_DistanceSearch_OnDistanceSearchListener subInstance() => _com_amap_api_services_route_DistanceSearch_OnDistanceSearchListener_SUB();
+
+  static Future<com_amap_api_services_route_DistanceSearch_OnDistanceSearchListener> anonymous__() async {
+    final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.DistanceSearch.OnDistanceSearchListener::createAnonymous__');
+  
+    final __object__ = AmapSearchFluttifyAndroidAs<com_amap_api_services_route_DistanceSearch_OnDistanceSearchListener>(__result__)!;
+  
+    // handle callback
+    MethodChannel('com.amap.api.services.route.DistanceSearch.OnDistanceSearchListener::Callback@${__object__.refId}', kAmapSearchFluttifyMethodCodec)
+        .setMethodCallHandler((methodCall) async {
+          try {
+            final args = methodCall.arguments as Map;
+            switch (methodCall.method) {
+              case 'onDistanceSearched_':
+                // print log
+                if (fluttifyLogEnabled) {
+                  debugPrint('fluttify-dart-callback: __object__.onDistanceSearched?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
+                }
+            
+                // handle the native call
+                __object__.onDistanceSearched?.call(AmapSearchFluttifyAndroidAs<com_amap_api_services_route_DistanceResult>(args['var1']), args['var2']);
+                break;
+              default:
+                throw MissingPluginException('方法${methodCall.method}未实现');
+                break;
+            }
+          } catch (e) {
+            debugPrint(e.toString());
+            rethrow;
+          }
+        });
+  
+    return __object__;
+  }
   
 
   @override
@@ -26,7 +61,7 @@ mixin com_amap_api_services_route_DistanceSearch_OnDistanceSearchListener on jav
 
   
 
-  Future<void> onDistanceSearched(com_amap_api_services_route_DistanceResult? var1, int? var2) async {}
+  Future<void> Function(com_amap_api_services_route_DistanceResult? var1, int? var2)? onDistanceSearched;
   
 }
 

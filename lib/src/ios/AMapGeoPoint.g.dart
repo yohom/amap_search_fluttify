@@ -11,6 +11,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
+import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 
 class AMapGeoPoint extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
@@ -37,9 +38,11 @@ class AMapGeoPoint extends AMapSearchObject with NSCoding, NSCopying {
       'ObjectFactory::create_batchAMapGeoPoint',
       {'length': length, 'init': init}
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyIOSAs<AMapGeoPoint>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyIOSAs<AMapGeoPoint>(it))
+        .where((element) => element !=null)
+        .cast<AMapGeoPoint>()
+        .toList() ?? <AMapGeoPoint>[];
   }
   
   //endregion
@@ -60,21 +63,17 @@ class AMapGeoPoint extends AMapSearchObject with NSCoding, NSCopying {
   //region setters
   Future<void> set_latitude(double latitude) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapGeoPoint::set_latitude', <String, dynamic>{'__this__': this, "latitude": latitude});
-  
-  
   }
   
   Future<void> set_longitude(double longitude) async {
     await kAmapSearchFluttifyChannel.invokeMethod('AMapGeoPoint::set_longitude', <String, dynamic>{'__this__': this, "longitude": longitude});
-  
-  
   }
   
   //endregion
 
   //region methods
   
-  static Future<AMapGeoPoint?> locationWithLatitude_longitude(double? lat, double? lon) async {
+  static Future<AMapGeoPoint?> locationWithLatitude_longitude(double lat, double lon) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: AMapGeoPoint::locationWithLatitude([\'lat\':$lat, \'lon\':$lon])');
@@ -99,15 +98,20 @@ class AMapGeoPoint extends AMapSearchObject with NSCoding, NSCopying {
 }
 
 extension AMapGeoPoint_Batch on List<AMapGeoPoint?> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first?.refId;
+  }
+
   //region getters
-  Future<List<double?>?> get_latitude_batch() async {
+  Future<List<double?>> get_latitude_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapGeoPoint::get_latitude_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<double?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<double?>().toList();
   }
   
-  Future<List<double?>?> get_longitude_batch() async {
+  Future<List<double?>> get_longitude_batch() async {
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod("AMapGeoPoint::get_longitude_batch", [for (final __item__ in this) {'__this__': __item__}]);
-    return (resultBatch as List?)?.map((__result__) => __result__).cast<double?>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<double?>().toList();
   }
   
   //endregion
@@ -129,14 +133,14 @@ extension AMapGeoPoint_Batch on List<AMapGeoPoint?> {
 
   //region methods
   
-  static Future<List<AMapGeoPoint?>?> locationWithLatitude_longitude_batch(List<double> lat, List<double> lon) async {
+  static Future<List<AMapGeoPoint?>> locationWithLatitude_longitude_batch(List<double> lat, List<double> lon) async {
     assert(lat.length == lon.length);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('AMapGeoPoint::locationWithLatitude_longitude_batch', [for (int __i__ = 0; __i__ < lat.length; __i__++) {"lat": lat[__i__], "lon": lon[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => AmapSearchFluttifyIOSAs<AMapGeoPoint>(__result__)).cast<AMapGeoPoint>().toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyIOSAs<AMapGeoPoint>(__result__)).cast<AMapGeoPoint?>().toList();
   }
   
   //endregion

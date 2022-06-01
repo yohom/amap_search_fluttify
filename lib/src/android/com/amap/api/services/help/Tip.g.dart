@@ -11,6 +11,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
+import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 
 class com_amap_api_services_help_Tip extends java_lang_Object with android_os_Parcelable {
   //region constants
@@ -37,9 +38,11 @@ class com_amap_api_services_help_Tip extends java_lang_Object with android_os_Pa
       'ObjectFactory::create_batchcom_amap_api_services_help_Tip__',
       {'length': length}
     );
-    return __result_batch__!
-        .map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_help_Tip>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_help_Tip>(it))
+        .where((element) => element !=null)
+        .cast<com_amap_api_services_help_Tip>()
+        .toList() ?? <com_amap_api_services_help_Tip>[];
   }
   
   //endregion
@@ -71,7 +74,7 @@ class com_amap_api_services_help_Tip extends java_lang_Object with android_os_Pa
   }
   
   
-  Future<void> setID(String? var1) async {
+  Future<void> setID(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.help.Tip@$refId::setID([\'var1\':$var1])');
@@ -105,7 +108,7 @@ class com_amap_api_services_help_Tip extends java_lang_Object with android_os_Pa
   }
   
   
-  Future<void> setPostion(com_amap_api_services_core_LatLonPoint? var1) async {
+  Future<void> setPostion(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.help.Tip@$refId::setPostion([])');
@@ -139,7 +142,7 @@ class com_amap_api_services_help_Tip extends java_lang_Object with android_os_Pa
   }
   
   
-  Future<void> setName(String? var1) async {
+  Future<void> setName(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.help.Tip@$refId::setName([\'var1\':$var1])');
@@ -173,7 +176,7 @@ class com_amap_api_services_help_Tip extends java_lang_Object with android_os_Pa
   }
   
   
-  Future<void> setDistrict(String? var1) async {
+  Future<void> setDistrict(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.help.Tip@$refId::setDistrict([\'var1\':$var1])');
@@ -207,7 +210,7 @@ class com_amap_api_services_help_Tip extends java_lang_Object with android_os_Pa
   }
   
   
-  Future<void> setAdcode(String? var1) async {
+  Future<void> setAdcode(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.help.Tip@$refId::setAdcode([\'var1\':$var1])');
@@ -241,7 +244,7 @@ class com_amap_api_services_help_Tip extends java_lang_Object with android_os_Pa
   }
   
   
-  Future<void> setAddress(String? var1) async {
+  Future<void> setAddress(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.help.Tip@$refId::setAddress([\'var1\':$var1])');
@@ -258,7 +261,7 @@ class com_amap_api_services_help_Tip extends java_lang_Object with android_os_Pa
   }
   
   
-  Future<void> setTypeCode(String? var1) async {
+  Future<void> setTypeCode(String var1) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: com.amap.api.services.help.Tip@$refId::setTypeCode([\'var1\':$var1])');
@@ -300,6 +303,11 @@ class com_amap_api_services_help_Tip extends java_lang_Object with android_os_Pa
 }
 
 extension com_amap_api_services_help_Tip_Batch on List<com_amap_api_services_help_Tip?> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first?.refId;
+  }
+
   //region getters
   
   //endregion
@@ -310,18 +318,18 @@ extension com_amap_api_services_help_Tip_Batch on List<com_amap_api_services_hel
 
   //region methods
   
-  Future<List<String?>?> getPoiID_batch() async {
+  Future<List<String?>> getPoiID_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.help.Tip::getPoiID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   
-  Future<List<void>?> setID_batch(List<String> var1) async {
+  Future<List<void>> setID_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -332,18 +340,18 @@ extension com_amap_api_services_help_Tip_Batch on List<com_amap_api_services_hel
   }
   
   
-  Future<List<com_amap_api_services_core_LatLonPoint?>?> getPoint_batch() async {
+  Future<List<com_amap_api_services_core_LatLonPoint?>> getPoint_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.help.Tip::getPoint_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(__result__)).cast<com_amap_api_services_core_LatLonPoint>().toList();
+    return (resultBatch as List).map((__result__) => AmapSearchFluttifyAndroidAs<com_amap_api_services_core_LatLonPoint>(__result__)).cast<com_amap_api_services_core_LatLonPoint?>().toList();
   }
   
   
-  Future<List<void>?> setPostion_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
+  Future<List<void>> setPostion_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
     assert(true);
   
     // invoke native method
@@ -354,18 +362,18 @@ extension com_amap_api_services_help_Tip_Batch on List<com_amap_api_services_hel
   }
   
   
-  Future<List<String?>?> getName_batch() async {
+  Future<List<String?>> getName_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.help.Tip::getName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   
-  Future<List<void>?> setName_batch(List<String> var1) async {
+  Future<List<void>> setName_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -376,18 +384,18 @@ extension com_amap_api_services_help_Tip_Batch on List<com_amap_api_services_hel
   }
   
   
-  Future<List<String?>?> getDistrict_batch() async {
+  Future<List<String?>> getDistrict_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.help.Tip::getDistrict_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   
-  Future<List<void>?> setDistrict_batch(List<String> var1) async {
+  Future<List<void>> setDistrict_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -398,18 +406,18 @@ extension com_amap_api_services_help_Tip_Batch on List<com_amap_api_services_hel
   }
   
   
-  Future<List<String?>?> getAdcode_batch() async {
+  Future<List<String?>> getAdcode_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.help.Tip::getAdcode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   
-  Future<List<void>?> setAdcode_batch(List<String> var1) async {
+  Future<List<void>> setAdcode_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -420,18 +428,18 @@ extension com_amap_api_services_help_Tip_Batch on List<com_amap_api_services_hel
   }
   
   
-  Future<List<String?>?> getAddress_batch() async {
+  Future<List<String?>> getAddress_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.help.Tip::getAddress_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   
-  Future<List<void>?> setAddress_batch(List<String> var1) async {
+  Future<List<void>> setAddress_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -442,7 +450,7 @@ extension com_amap_api_services_help_Tip_Batch on List<com_amap_api_services_hel
   }
   
   
-  Future<List<void>?> setTypeCode_batch(List<String> var1) async {
+  Future<List<void>> setTypeCode_batch(List<String> var1) async {
     assert(true);
   
     // invoke native method
@@ -453,14 +461,14 @@ extension com_amap_api_services_help_Tip_Batch on List<com_amap_api_services_hel
   }
   
   
-  Future<List<String?>?> getTypeCode_batch() async {
+  Future<List<String?>> getTypeCode_batch() async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.help.Tip::getTypeCode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"__this__": this[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<String>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<String?>().toList();
   }
   
   //endregion

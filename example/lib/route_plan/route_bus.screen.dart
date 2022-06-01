@@ -1,4 +1,5 @@
 import 'package:amap_search_fluttify/amap_search_fluttify.dart';
+import 'package:core_location_fluttify/core_location_fluttify.dart';
 import 'package:decorated_flutter/decorated_flutter.dart';
 import 'package:flutter/material.dart';
 
@@ -21,26 +22,26 @@ class _RouteBusScreenState extends State<RouteBusScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: AppBar(title: Text('公交路线规划')),
+      appBar: AppBar(title: const Text('公交路线规划')),
       body: DecoratedColumn(
-        padding: EdgeInsets.all(kSpace16),
+        padding: const EdgeInsets.all(kSpace16),
         children: <Widget>[
           DecoratedRow(
             itemSpacing: kSpace8,
             children: <Widget>[
-              Text('起点:'),
+              const Text('起点:'),
               Flexible(
                 child: TextFormField(
                   controller: _fromLatController,
                   keyboardType: TextInputType.number,
-                  decoration: InputDecoration(hintText: '输入出发点纬度'),
+                  decoration: const InputDecoration(hintText: '输入出发点纬度'),
                 ),
               ),
               Flexible(
                 child: TextFormField(
                   controller: _fromLngController,
                   keyboardType: TextInputType.number,
-                  decoration: InputDecoration(hintText: '输入出发点经度'),
+                  decoration: const InputDecoration(hintText: '输入出发点经度'),
                 ),
               ),
             ],
@@ -48,19 +49,19 @@ class _RouteBusScreenState extends State<RouteBusScreen> {
           DecoratedRow(
             itemSpacing: kSpace8,
             children: <Widget>[
-              Text('终点:'),
+              const Text('终点:'),
               Flexible(
                 child: TextFormField(
                   controller: _toLatController,
                   keyboardType: TextInputType.number,
-                  decoration: InputDecoration(hintText: '输入终点纬度'),
+                  decoration: const InputDecoration(hintText: '输入终点纬度'),
                 ),
               ),
               Flexible(
                 child: TextFormField(
                   controller: _toLngController,
                   keyboardType: TextInputType.number,
-                  decoration: InputDecoration(hintText: '输入终点经度'),
+                  decoration: const InputDecoration(hintText: '输入终点经度'),
                 ),
               ),
             ],
@@ -82,7 +83,7 @@ class _RouteBusScreenState extends State<RouteBusScreen> {
                   .toFutureString()
                   .then((it) => setState(() => _routeResult = it));
             },
-            child: Text('搜索'),
+            child: const Text('搜索'),
           ),
           Expanded(
             child: SingleChildScrollView(
