@@ -542,8 +542,7 @@ class AmapSearch {
         // 设置回调
         final delegate = await AMapSearchDelegate.anonymous__();
         delegate.onReGeocodeSearchDone_response = (request, response) async {
-          final result =
-              await (response!.get_regeocode() as FutureOr<AMapReGeocode>);
+          final result = (await response!.get_regeocode())!;
           final addressComponent = (await result.get_addressComponent())!;
 
           completer.complete(ReGeocode(
@@ -558,12 +557,9 @@ class AmapSearch {
             building: await addressComponent.get_building(),
             country: await addressComponent.get_country(),
             formatAddress: await result.get_formattedAddress(),
-            roads: await RoadListX.fromIOS(
-                await (result.get_roads() as FutureOr<List<AMapRoad>>)),
-            aoiList: await AoiListX.fromIOS(
-                await (result.get_aois() as FutureOr<List<AMapAOI>>)),
-            poiList: await PoiListX.fromIOS(
-                await (result.get_pois() as FutureOr<List<AMapPOI>>)),
+            roads: await RoadListX.fromIOS(await result.get_roads() ?? []),
+            aoiList: await AoiListX.fromIOS(await result.get_aois() ?? []),
+            poiList: await PoiListX.fromIOS(await result.get_pois() ?? []),
           ));
         };
         await _iosSearch.set_delegate(delegate);

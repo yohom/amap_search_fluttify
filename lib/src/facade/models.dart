@@ -344,14 +344,16 @@ class BusRouteResult with _ToFutureString {
   Future<List<BusPath>> get busPathList {
     return platform(
       android: (pool) async {
-        return (await _androidModel!.getPaths())!
-            .map((it) => BusPath.android(it))
-            .toList();
+        return (await _androidModel!.getPaths())
+                ?.map((it) => BusPath.android(it))
+                .toList() ??
+            [];
       },
       ios: (pool) async {
-        return (await _iosModel!.get_transits())!
-            .map((it) => BusPath.ios(it))
-            .toList();
+        return (await _iosModel!.get_transits())
+                ?.map((it) => BusPath.ios(it))
+                .toList() ??
+            [];
       },
     );
   }
@@ -1166,8 +1168,7 @@ class TMC with _ToFutureString {
   Future<List<LatLng>> get polyline {
     return platform(
       android: (pool) async {
-        final polyline = await (_androidModel!.getPolyline()
-            as FutureOr<List<com_amap_api_services_core_LatLonPoint>>);
+        final polyline = await _androidModel?.getPolyline() ?? [];
         final latitudeBatch = await polyline.getLatitude_batch();
         final longitudeBatch = await polyline.getLongitude_batch();
         return [
@@ -1176,8 +1177,7 @@ class TMC with _ToFutureString {
         ];
       },
       ios: (pool) async {
-        final latLngString =
-            await (_iosModel!.get_polyline() as FutureOr<String>);
+        final latLngString = await _iosModel!.get_polyline() ?? '';
         return latLngString
             .split(';')
             .map((latLngPair) => latLngPair.split(','))
