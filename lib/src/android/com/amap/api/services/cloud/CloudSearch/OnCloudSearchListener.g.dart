@@ -11,6 +11,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
+import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 
 class _com_amap_api_services_cloud_CloudSearch_OnCloudSearchListener_SUB extends java_lang_Object with com_amap_api_services_cloud_CloudSearch_OnCloudSearchListener {}
 
@@ -19,7 +20,7 @@ mixin com_amap_api_services_cloud_CloudSearch_OnCloudSearchListener on java_lang
 
   static com_amap_api_services_cloud_CloudSearch_OnCloudSearchListener subInstance() => _com_amap_api_services_cloud_CloudSearch_OnCloudSearchListener_SUB();
 
-  static Future<com_amap_api_services_cloud_CloudSearch_OnCloudSearchListener> anonymous__({void Function(com_amap_api_services_cloud_CloudResult? var1, int? var2)? onCloudSearched, void Function(com_amap_api_services_cloud_CloudItemDetail? var1, int? var2)? onCloudItemDetailSearched}) async {
+  static Future<com_amap_api_services_cloud_CloudSearch_OnCloudSearchListener> anonymous__() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.cloud.CloudSearch.OnCloudSearchListener::createAnonymous__');
   
     final __object__ = AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudSearch_OnCloudSearchListener>(__result__)!;
@@ -30,23 +31,23 @@ mixin com_amap_api_services_cloud_CloudSearch_OnCloudSearchListener on java_lang
           try {
             final args = methodCall.arguments as Map;
             switch (methodCall.method) {
-              case 'onCloudSearched:':
+              case 'onCloudSearched_':
                 // print log
                 if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onCloudSearched?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
+                  debugPrint('fluttify-dart-callback: __object__.onCloudSearched?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
                 }
             
                 // handle the native call
-                onCloudSearched?.call(AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudResult>(args['var1']), args['var2']);
+                __object__.onCloudSearched?.call(AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudResult>(args['var1']), args['var2']);
                 break;
-              case 'onCloudItemDetailSearched:':
+              case 'onCloudItemDetailSearched_':
                 // print log
                 if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onCloudItemDetailSearched?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
+                  debugPrint('fluttify-dart-callback: __object__.onCloudItemDetailSearched?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
                 }
             
                 // handle the native call
-                onCloudItemDetailSearched?.call(AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudItemDetail>(args['var1']), args['var2']);
+                __object__.onCloudItemDetailSearched?.call(AmapSearchFluttifyAndroidAs<com_amap_api_services_cloud_CloudItemDetail>(args['var1']), args['var2']);
                 break;
               default:
                 throw MissingPluginException('方法${methodCall.method}未实现');
@@ -69,9 +70,9 @@ mixin com_amap_api_services_cloud_CloudSearch_OnCloudSearchListener on java_lang
 
   
 
-  Future<void> onCloudSearched(com_amap_api_services_cloud_CloudResult? var1, int? var2) async {}
+  Future<void> Function(com_amap_api_services_cloud_CloudResult? var1, int? var2)? onCloudSearched;
   
-  Future<void> onCloudItemDetailSearched(com_amap_api_services_cloud_CloudItemDetail? var1, int? var2) async {}
+  Future<void> Function(com_amap_api_services_cloud_CloudItemDetail? var1, int? var2)? onCloudItemDetailSearched;
   
 }
 

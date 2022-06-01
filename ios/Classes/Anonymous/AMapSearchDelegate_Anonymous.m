@@ -42,7 +42,7 @@ extern BOOL enableLog;
   NSError* argerror = error;
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    [channel invokeMethod:@"AMapSearchRequest:didFailWithError" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"error": argerror == nil ? [NSNull null] : argerror}];
+    [channel invokeMethod:@"AMapSearchRequest_didFailWithError" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"error": argerror == nil ? [NSNull null] : argerror}];
   });
   
 }
@@ -65,7 +65,7 @@ extern BOOL enableLog;
   AMapPOISearchResponse* argresponse = response;
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    [channel invokeMethod:@"onPOISearchDone:response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
+    [channel invokeMethod:@"onPOISearchDone_response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
   });
   
 }
@@ -88,7 +88,7 @@ extern BOOL enableLog;
   AMapRoutePOISearchResponse* argresponse = response;
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    [channel invokeMethod:@"onRoutePOISearchDone:response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
+    [channel invokeMethod:@"onRoutePOISearchDone_response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
   });
   
 }
@@ -111,7 +111,7 @@ extern BOOL enableLog;
   AMapGeocodeSearchResponse* argresponse = response;
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    [channel invokeMethod:@"onGeocodeSearchDone:response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
+    [channel invokeMethod:@"onGeocodeSearchDone_response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
   });
   
 }
@@ -134,7 +134,7 @@ extern BOOL enableLog;
   AMapReGeocodeSearchResponse* argresponse = response;
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    [channel invokeMethod:@"onReGeocodeSearchDone:response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
+    [channel invokeMethod:@"onReGeocodeSearchDone_response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
   });
   
 }
@@ -157,7 +157,7 @@ extern BOOL enableLog;
   AMapInputTipsSearchResponse* argresponse = response;
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    [channel invokeMethod:@"onInputTipsSearchDone:response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
+    [channel invokeMethod:@"onInputTipsSearchDone_response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
   });
   
 }
@@ -180,7 +180,7 @@ extern BOOL enableLog;
   AMapBusStopSearchResponse* argresponse = response;
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    [channel invokeMethod:@"onBusStopSearchDone:response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
+    [channel invokeMethod:@"onBusStopSearchDone_response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
   });
   
 }
@@ -203,7 +203,7 @@ extern BOOL enableLog;
   AMapBusLineSearchResponse* argresponse = response;
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    [channel invokeMethod:@"onBusLineSearchDone:response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
+    [channel invokeMethod:@"onBusLineSearchDone_response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
   });
   
 }
@@ -226,7 +226,7 @@ extern BOOL enableLog;
   AMapDistrictSearchResponse* argresponse = response;
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    [channel invokeMethod:@"onDistrictSearchDone:response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
+    [channel invokeMethod:@"onDistrictSearchDone_response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
   });
   
 }
@@ -249,7 +249,7 @@ extern BOOL enableLog;
   AMapRouteSearchResponse* argresponse = response;
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    [channel invokeMethod:@"onRouteSearchDone:response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
+    [channel invokeMethod:@"onRouteSearchDone_response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
   });
   
 }
@@ -272,7 +272,7 @@ extern BOOL enableLog;
   AMapFutureRouteSearchResponse* argresponse = response;
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    [channel invokeMethod:@"onFutureRouteSearchDone:response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
+    [channel invokeMethod:@"onFutureRouteSearchDone_response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
   });
   
 }
@@ -295,7 +295,7 @@ extern BOOL enableLog;
   AMapDistanceSearchResponse* argresponse = response;
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    [channel invokeMethod:@"onDistanceSearchDone:response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
+    [channel invokeMethod:@"onDistanceSearchDone_response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
   });
   
 }
@@ -318,7 +318,7 @@ extern BOOL enableLog;
   AMapWeatherSearchResponse* argresponse = response;
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    [channel invokeMethod:@"onWeatherSearchDone:response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
+    [channel invokeMethod:@"onWeatherSearchDone_response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
   });
   
 }
@@ -341,7 +341,7 @@ extern BOOL enableLog;
   AMapNearbySearchResponse* argresponse = response;
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    [channel invokeMethod:@"onNearbySearchDone:response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
+    [channel invokeMethod:@"onNearbySearchDone_response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
   });
   
 }
@@ -364,7 +364,7 @@ extern BOOL enableLog;
   AMapCloudPOISearchResponse* argresponse = response;
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    [channel invokeMethod:@"onCloudSearchDone:response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
+    [channel invokeMethod:@"onCloudSearchDone_response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
   });
   
 }
@@ -387,7 +387,7 @@ extern BOOL enableLog;
   AMapShareSearchResponse* argresponse = response;
 
   dispatch_async(dispatch_get_main_queue(), ^{
-    [channel invokeMethod:@"onShareSearchDone:response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
+    [channel invokeMethod:@"onShareSearchDone_response" arguments:@{@"request": argrequest == nil ? [NSNull null] : argrequest, @"response": argresponse == nil ? [NSNull null] : argresponse}];
   });
   
 }

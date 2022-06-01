@@ -11,6 +11,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
+import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 
 class _com_amap_api_services_help_Inputtips_InputtipsListener_SUB extends java_lang_Object with com_amap_api_services_help_Inputtips_InputtipsListener {}
 
@@ -19,7 +20,7 @@ mixin com_amap_api_services_help_Inputtips_InputtipsListener on java_lang_Object
 
   static com_amap_api_services_help_Inputtips_InputtipsListener subInstance() => _com_amap_api_services_help_Inputtips_InputtipsListener_SUB();
 
-  static Future<com_amap_api_services_help_Inputtips_InputtipsListener> anonymous__({void Function(List<com_amap_api_services_help_Tip>? var1, int? var2)? onGetInputtips}) async {
+  static Future<com_amap_api_services_help_Inputtips_InputtipsListener> anonymous__() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.help.Inputtips.InputtipsListener::createAnonymous__');
   
     final __object__ = AmapSearchFluttifyAndroidAs<com_amap_api_services_help_Inputtips_InputtipsListener>(__result__)!;
@@ -30,14 +31,14 @@ mixin com_amap_api_services_help_Inputtips_InputtipsListener on java_lang_Object
           try {
             final args = methodCall.arguments as Map;
             switch (methodCall.method) {
-              case 'onGetInputtips:':
+              case 'onGetInputtips_':
                 // print log
                 if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onGetInputtips?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
+                  debugPrint('fluttify-dart-callback: __object__.onGetInputtips?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
                 }
             
                 // handle the native call
-                onGetInputtips?.call((args['var1'] as List? ?? []).map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_help_Tip>(it)).where((e) => e != null).cast<com_amap_api_services_help_Tip>().toList(), args['var2']);
+                __object__.onGetInputtips?.call((args['var1'] as List? ?? []).map((it) => AmapSearchFluttifyAndroidAs<com_amap_api_services_help_Tip>(it)).where((e) => e != null).cast<com_amap_api_services_help_Tip>().toList(), args['var2']);
                 break;
               default:
                 throw MissingPluginException('方法${methodCall.method}未实现');
@@ -60,7 +61,7 @@ mixin com_amap_api_services_help_Inputtips_InputtipsListener on java_lang_Object
 
   
 
-  Future<void> onGetInputtips(List<com_amap_api_services_help_Tip>? var1, int? var2) async {}
+  Future<void> Function(List<com_amap_api_services_help_Tip>? var1, int? var2)? onGetInputtips;
   
 }
 

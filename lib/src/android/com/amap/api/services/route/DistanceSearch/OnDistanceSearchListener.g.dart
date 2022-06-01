@@ -11,6 +11,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
+import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 
 class _com_amap_api_services_route_DistanceSearch_OnDistanceSearchListener_SUB extends java_lang_Object with com_amap_api_services_route_DistanceSearch_OnDistanceSearchListener {}
 
@@ -19,7 +20,7 @@ mixin com_amap_api_services_route_DistanceSearch_OnDistanceSearchListener on jav
 
   static com_amap_api_services_route_DistanceSearch_OnDistanceSearchListener subInstance() => _com_amap_api_services_route_DistanceSearch_OnDistanceSearchListener_SUB();
 
-  static Future<com_amap_api_services_route_DistanceSearch_OnDistanceSearchListener> anonymous__({void Function(com_amap_api_services_route_DistanceResult? var1, int? var2)? onDistanceSearched}) async {
+  static Future<com_amap_api_services_route_DistanceSearch_OnDistanceSearchListener> anonymous__() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.route.DistanceSearch.OnDistanceSearchListener::createAnonymous__');
   
     final __object__ = AmapSearchFluttifyAndroidAs<com_amap_api_services_route_DistanceSearch_OnDistanceSearchListener>(__result__)!;
@@ -30,14 +31,14 @@ mixin com_amap_api_services_route_DistanceSearch_OnDistanceSearchListener on jav
           try {
             final args = methodCall.arguments as Map;
             switch (methodCall.method) {
-              case 'onDistanceSearched:':
+              case 'onDistanceSearched_':
                 // print log
                 if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onDistanceSearched?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
+                  debugPrint('fluttify-dart-callback: __object__.onDistanceSearched?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
                 }
             
                 // handle the native call
-                onDistanceSearched?.call(AmapSearchFluttifyAndroidAs<com_amap_api_services_route_DistanceResult>(args['var1']), args['var2']);
+                __object__.onDistanceSearched?.call(AmapSearchFluttifyAndroidAs<com_amap_api_services_route_DistanceResult>(args['var1']), args['var2']);
                 break;
               default:
                 throw MissingPluginException('方法${methodCall.method}未实现');
@@ -60,7 +61,7 @@ mixin com_amap_api_services_route_DistanceSearch_OnDistanceSearchListener on jav
 
   
 
-  Future<void> onDistanceSearched(com_amap_api_services_route_DistanceResult? var1, int? var2) async {}
+  Future<void> Function(com_amap_api_services_route_DistanceResult? var1, int? var2)? onDistanceSearched;
   
 }
 

@@ -11,6 +11,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
+import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 
 class _com_amap_api_services_routepoisearch_RoutePOISearch_OnRoutePOISearchListener_SUB extends java_lang_Object with com_amap_api_services_routepoisearch_RoutePOISearch_OnRoutePOISearchListener {}
 
@@ -19,7 +20,7 @@ mixin com_amap_api_services_routepoisearch_RoutePOISearch_OnRoutePOISearchListen
 
   static com_amap_api_services_routepoisearch_RoutePOISearch_OnRoutePOISearchListener subInstance() => _com_amap_api_services_routepoisearch_RoutePOISearch_OnRoutePOISearchListener_SUB();
 
-  static Future<com_amap_api_services_routepoisearch_RoutePOISearch_OnRoutePOISearchListener> anonymous__({void Function(com_amap_api_services_routepoisearch_RoutePOISearchResult? var1, int? var2)? onRoutePoiSearched}) async {
+  static Future<com_amap_api_services_routepoisearch_RoutePOISearch_OnRoutePOISearchListener> anonymous__() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.routepoisearch.RoutePOISearch.OnRoutePOISearchListener::createAnonymous__');
   
     final __object__ = AmapSearchFluttifyAndroidAs<com_amap_api_services_routepoisearch_RoutePOISearch_OnRoutePOISearchListener>(__result__)!;
@@ -30,14 +31,14 @@ mixin com_amap_api_services_routepoisearch_RoutePOISearch_OnRoutePOISearchListen
           try {
             final args = methodCall.arguments as Map;
             switch (methodCall.method) {
-              case 'onRoutePoiSearched:':
+              case 'onRoutePoiSearched_':
                 // print log
                 if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onRoutePoiSearched?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
+                  debugPrint('fluttify-dart-callback: __object__.onRoutePoiSearched?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
                 }
             
                 // handle the native call
-                onRoutePoiSearched?.call(AmapSearchFluttifyAndroidAs<com_amap_api_services_routepoisearch_RoutePOISearchResult>(args['var1']), args['var2']);
+                __object__.onRoutePoiSearched?.call(AmapSearchFluttifyAndroidAs<com_amap_api_services_routepoisearch_RoutePOISearchResult>(args['var1']), args['var2']);
                 break;
               default:
                 throw MissingPluginException('方法${methodCall.method}未实现');
@@ -60,7 +61,7 @@ mixin com_amap_api_services_routepoisearch_RoutePOISearch_OnRoutePOISearchListen
 
   
 
-  Future<void> onRoutePoiSearched(com_amap_api_services_routepoisearch_RoutePOISearchResult? var1, int? var2) async {}
+  Future<void> Function(com_amap_api_services_routepoisearch_RoutePOISearchResult? var1, int? var2)? onRoutePoiSearched;
   
 }
 

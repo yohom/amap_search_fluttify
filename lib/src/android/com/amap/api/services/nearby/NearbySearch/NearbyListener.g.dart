@@ -11,6 +11,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
+import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 
 class _com_amap_api_services_nearby_NearbySearch_NearbyListener_SUB extends java_lang_Object with com_amap_api_services_nearby_NearbySearch_NearbyListener {}
 
@@ -19,7 +20,7 @@ mixin com_amap_api_services_nearby_NearbySearch_NearbyListener on java_lang_Obje
 
   static com_amap_api_services_nearby_NearbySearch_NearbyListener subInstance() => _com_amap_api_services_nearby_NearbySearch_NearbyListener_SUB();
 
-  static Future<com_amap_api_services_nearby_NearbySearch_NearbyListener> anonymous__({void Function(int? var1)? onUserInfoCleared, void Function(com_amap_api_services_nearby_NearbySearchResult? var1, int? var2)? onNearbyInfoSearched, void Function(int? var1)? onNearbyInfoUploaded}) async {
+  static Future<com_amap_api_services_nearby_NearbySearch_NearbyListener> anonymous__() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.NearbySearch.NearbyListener::createAnonymous__');
   
     final __object__ = AmapSearchFluttifyAndroidAs<com_amap_api_services_nearby_NearbySearch_NearbyListener>(__result__)!;
@@ -33,29 +34,29 @@ mixin com_amap_api_services_nearby_NearbySearch_NearbyListener on java_lang_Obje
               case 'onUserInfoCleared':
                 // print log
                 if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onUserInfoCleared?.call([\'var1\':${args['var1']}])');
+                  debugPrint('fluttify-dart-callback: __object__.onUserInfoCleared?.call([\'var1\':${args['var1']}])');
                 }
             
                 // handle the native call
-                onUserInfoCleared?.call(args['var1']);
+                __object__.onUserInfoCleared?.call(args['var1']);
                 break;
-              case 'onNearbyInfoSearched:':
+              case 'onNearbyInfoSearched_':
                 // print log
                 if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onNearbyInfoSearched?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
+                  debugPrint('fluttify-dart-callback: __object__.onNearbyInfoSearched?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
                 }
             
                 // handle the native call
-                onNearbyInfoSearched?.call(AmapSearchFluttifyAndroidAs<com_amap_api_services_nearby_NearbySearchResult>(args['var1']), args['var2']);
+                __object__.onNearbyInfoSearched?.call(AmapSearchFluttifyAndroidAs<com_amap_api_services_nearby_NearbySearchResult>(args['var1']), args['var2']);
                 break;
               case 'onNearbyInfoUploaded':
                 // print log
                 if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onNearbyInfoUploaded?.call([\'var1\':${args['var1']}])');
+                  debugPrint('fluttify-dart-callback: __object__.onNearbyInfoUploaded?.call([\'var1\':${args['var1']}])');
                 }
             
                 // handle the native call
-                onNearbyInfoUploaded?.call(args['var1']);
+                __object__.onNearbyInfoUploaded?.call(args['var1']);
                 break;
               default:
                 throw MissingPluginException('方法${methodCall.method}未实现');
@@ -78,11 +79,11 @@ mixin com_amap_api_services_nearby_NearbySearch_NearbyListener on java_lang_Obje
 
   
 
-  Future<void> onUserInfoCleared(int? var1) async {}
+  Future<void> Function(int? var1)? onUserInfoCleared;
   
-  Future<void> onNearbyInfoSearched(com_amap_api_services_nearby_NearbySearchResult? var1, int? var2) async {}
+  Future<void> Function(com_amap_api_services_nearby_NearbySearchResult? var1, int? var2)? onNearbyInfoSearched;
   
-  Future<void> onNearbyInfoUploaded(int? var1) async {}
+  Future<void> Function(int? var1)? onNearbyInfoUploaded;
   
 }
 

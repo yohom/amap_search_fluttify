@@ -11,6 +11,7 @@ import 'package:amap_search_fluttify/src/android/android.export.g.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
+import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import

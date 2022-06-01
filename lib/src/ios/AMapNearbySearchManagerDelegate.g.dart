@@ -11,6 +11,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
+import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 
 class _AMapNearbySearchManagerDelegate_SUB extends NSObject with AMapNearbySearchManagerDelegate {}
 
@@ -19,7 +20,7 @@ mixin AMapNearbySearchManagerDelegate on NSObject {
 
   static AMapNearbySearchManagerDelegate subInstance() => _AMapNearbySearchManagerDelegate_SUB();
 
-  static Future<AMapNearbySearchManagerDelegate> anonymous__({AMapNearbyUploadInfo Function(AMapNearbySearchManager? manager)? nearbyInfoForUploading, void Function(NSError? error)? onNearbyInfoUploadedWithError, void Function(NSError? error)? onUserInfoClearedWithError}) async {
+  static Future<AMapNearbySearchManagerDelegate> anonymous__() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('AMapNearbySearchManagerDelegate::createAnonymous__');
   
     final __object__ = AmapSearchFluttifyIOSAs<AMapNearbySearchManagerDelegate>(__result__)!;
@@ -33,29 +34,29 @@ mixin AMapNearbySearchManagerDelegate on NSObject {
               case 'nearbyInfoForUploading':
                 // print log
                 if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: nearbyInfoForUploading?.call([\'manager\':${args['manager']}])');
+                  debugPrint('fluttify-dart-callback: __object__.nearbyInfoForUploading?.call([\'manager\':${args['manager']}])');
                 }
             
                 // handle the native call
-                nearbyInfoForUploading?.call(AmapSearchFluttifyIOSAs<AMapNearbySearchManager>(args['manager']));
+                __object__.nearbyInfoForUploading?.call(AmapSearchFluttifyIOSAs<AMapNearbySearchManager>(args['manager']));
                 break;
               case 'onNearbyInfoUploadedWithError':
                 // print log
                 if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onNearbyInfoUploadedWithError?.call([\'error\':${args['error']}])');
+                  debugPrint('fluttify-dart-callback: __object__.onNearbyInfoUploadedWithError?.call([\'error\':${args['error']}])');
                 }
             
                 // handle the native call
-                onNearbyInfoUploadedWithError?.call(AmapSearchFluttifyIOSAs<NSError>(args['error']));
+                __object__.onNearbyInfoUploadedWithError?.call(AmapSearchFluttifyIOSAs<NSError>(args['error']));
                 break;
               case 'onUserInfoClearedWithError':
                 // print log
                 if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onUserInfoClearedWithError?.call([\'error\':${args['error']}])');
+                  debugPrint('fluttify-dart-callback: __object__.onUserInfoClearedWithError?.call([\'error\':${args['error']}])');
                 }
             
                 // handle the native call
-                onUserInfoClearedWithError?.call(AmapSearchFluttifyIOSAs<NSError>(args['error']));
+                __object__.onUserInfoClearedWithError?.call(AmapSearchFluttifyIOSAs<NSError>(args['error']));
                 break;
               default:
                 throw MissingPluginException('方法${methodCall.method}未实现');
@@ -78,11 +79,11 @@ mixin AMapNearbySearchManagerDelegate on NSObject {
 
   
 
-  Future<AMapNearbyUploadInfo?> nearbyInfoForUploading(AMapNearbySearchManager? manager) async {}
+  Future<AMapNearbyUploadInfo?> Function(AMapNearbySearchManager? manager)? nearbyInfoForUploading;
   
-  Future<void> onNearbyInfoUploadedWithError(NSError? error) async {}
+  Future<void> Function(NSError? error)? onNearbyInfoUploadedWithError;
   
-  Future<void> onUserInfoClearedWithError(NSError? error) async {}
+  Future<void> Function(NSError? error)? onUserInfoClearedWithError;
   
 }
 

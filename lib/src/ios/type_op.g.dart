@@ -11,6 +11,7 @@ import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
+import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
@@ -21,22 +22,7 @@ Future<bool> AmapSearchFluttifyIOSIs<T>(dynamic __this__) async {
   if (RegExp(r'^(List<)?(String|int|double)(>)?|(Map<String,(String|int|double)>)$').hasMatch(typeName)) {
     return __this__ is T;
   }
-  else if (T == AMapURLSearch) {
-    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapURLSearch', {'__this__': __this__});
-    return result;
-  } else if (T == AMapNaviConfig) {
-    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapNaviConfig', {'__this__': __this__});
-    return result;
-  } else if (T == AMapRouteConfig) {
-    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapRouteConfig', {'__this__': __this__});
-    return result;
-  } else if (T == AMapPOIConfig) {
-    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapPOIConfig', {'__this__': __this__});
-    return result;
-  } else if (T == AMapServices) {
-    final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapServices', {'__this__': __this__});
-    return result;
-  } else if (T == AMapPOISearchBaseRequest) {
+  else if (T == AMapPOISearchBaseRequest) {
     final result = await kAmapSearchFluttifyChannel.invokeMethod('RefClass::isKindOfAMapPOISearchBaseRequest', {'__this__': __this__});
     return result;
   } else if (T == AMapPOIIDSearchRequest) {
@@ -425,17 +411,7 @@ T? AmapSearchFluttifyIOSAs<T>(dynamic __this__) {
   } else if (RegExp(r'^(List<)?(String|int|double)(>)?|(Map<String,(String|int|double)>)$').hasMatch(typeName)) {
     return __this__ as T;
   }
-  else if (T == AMapURLSearch) {
-    return (AMapURLSearch()..refId = (__this__ as Ref).refId) as T;
-  } else if (T == AMapNaviConfig) {
-    return (AMapNaviConfig()..refId = (__this__ as Ref).refId) as T;
-  } else if (T == AMapRouteConfig) {
-    return (AMapRouteConfig()..refId = (__this__ as Ref).refId) as T;
-  } else if (T == AMapPOIConfig) {
-    return (AMapPOIConfig()..refId = (__this__ as Ref).refId) as T;
-  } else if (T == AMapServices) {
-    return (AMapServices()..refId = (__this__ as Ref).refId) as T;
-  } else if (T == AMapPOISearchBaseRequest) {
+  else if (T == AMapPOISearchBaseRequest) {
     return (AMapPOISearchBaseRequest()..refId = (__this__ as Ref).refId) as T;
   } else if (T == AMapPOIIDSearchRequest) {
     return (AMapPOIIDSearchRequest()..refId = (__this__ as Ref).refId) as T;

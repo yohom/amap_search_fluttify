@@ -11,6 +11,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
+import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 
 class _com_amap_api_services_busline_BusLineSearch_OnBusLineSearchListener_SUB extends java_lang_Object with com_amap_api_services_busline_BusLineSearch_OnBusLineSearchListener {}
 
@@ -19,7 +20,7 @@ mixin com_amap_api_services_busline_BusLineSearch_OnBusLineSearchListener on jav
 
   static com_amap_api_services_busline_BusLineSearch_OnBusLineSearchListener subInstance() => _com_amap_api_services_busline_BusLineSearch_OnBusLineSearchListener_SUB();
 
-  static Future<com_amap_api_services_busline_BusLineSearch_OnBusLineSearchListener> anonymous__({void Function(com_amap_api_services_busline_BusLineResult? var1, int? var2)? onBusLineSearched}) async {
+  static Future<com_amap_api_services_busline_BusLineSearch_OnBusLineSearchListener> anonymous__() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.busline.BusLineSearch.OnBusLineSearchListener::createAnonymous__');
   
     final __object__ = AmapSearchFluttifyAndroidAs<com_amap_api_services_busline_BusLineSearch_OnBusLineSearchListener>(__result__)!;
@@ -30,14 +31,14 @@ mixin com_amap_api_services_busline_BusLineSearch_OnBusLineSearchListener on jav
           try {
             final args = methodCall.arguments as Map;
             switch (methodCall.method) {
-              case 'onBusLineSearched:':
+              case 'onBusLineSearched_':
                 // print log
                 if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onBusLineSearched?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
+                  debugPrint('fluttify-dart-callback: __object__.onBusLineSearched?.call([\'var1\':${args['var1']}, \'var2\':${args['var2']}])');
                 }
             
                 // handle the native call
-                onBusLineSearched?.call(AmapSearchFluttifyAndroidAs<com_amap_api_services_busline_BusLineResult>(args['var1']), args['var2']);
+                __object__.onBusLineSearched?.call(AmapSearchFluttifyAndroidAs<com_amap_api_services_busline_BusLineResult>(args['var1']), args['var2']);
                 break;
               default:
                 throw MissingPluginException('方法${methodCall.method}未实现');
@@ -60,7 +61,7 @@ mixin com_amap_api_services_busline_BusLineSearch_OnBusLineSearchListener on jav
 
   
 
-  Future<void> onBusLineSearched(com_amap_api_services_busline_BusLineResult? var1, int? var2) async {}
+  Future<void> Function(com_amap_api_services_busline_BusLineResult? var1, int? var2)? onBusLineSearched;
   
 }
 

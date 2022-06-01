@@ -11,6 +11,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
+import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 
 class _com_amap_api_services_district_DistrictSearch_OnDistrictSearchListener_SUB extends java_lang_Object with com_amap_api_services_district_DistrictSearch_OnDistrictSearchListener {}
 
@@ -19,7 +20,7 @@ mixin com_amap_api_services_district_DistrictSearch_OnDistrictSearchListener on 
 
   static com_amap_api_services_district_DistrictSearch_OnDistrictSearchListener subInstance() => _com_amap_api_services_district_DistrictSearch_OnDistrictSearchListener_SUB();
 
-  static Future<com_amap_api_services_district_DistrictSearch_OnDistrictSearchListener> anonymous__({void Function(com_amap_api_services_district_DistrictResult? var1)? onDistrictSearched}) async {
+  static Future<com_amap_api_services_district_DistrictSearch_OnDistrictSearchListener> anonymous__() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.district.DistrictSearch.OnDistrictSearchListener::createAnonymous__');
   
     final __object__ = AmapSearchFluttifyAndroidAs<com_amap_api_services_district_DistrictSearch_OnDistrictSearchListener>(__result__)!;
@@ -33,11 +34,11 @@ mixin com_amap_api_services_district_DistrictSearch_OnDistrictSearchListener on 
               case 'onDistrictSearched':
                 // print log
                 if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: onDistrictSearched?.call([\'var1\':${args['var1']}])');
+                  debugPrint('fluttify-dart-callback: __object__.onDistrictSearched?.call([\'var1\':${args['var1']}])');
                 }
             
                 // handle the native call
-                onDistrictSearched?.call(AmapSearchFluttifyAndroidAs<com_amap_api_services_district_DistrictResult>(args['var1']));
+                __object__.onDistrictSearched?.call(AmapSearchFluttifyAndroidAs<com_amap_api_services_district_DistrictResult>(args['var1']));
                 break;
               default:
                 throw MissingPluginException('方法${methodCall.method}未实现');
@@ -60,7 +61,7 @@ mixin com_amap_api_services_district_DistrictSearch_OnDistrictSearchListener on 
 
   
 
-  Future<void> onDistrictSearched(com_amap_api_services_district_DistrictResult? var1) async {}
+  Future<void> Function(com_amap_api_services_district_DistrictResult? var1)? onDistrictSearched;
   
 }
 

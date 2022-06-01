@@ -19,1942 +19,6 @@ extern BOOL enableLog;
 - (NSDictionary<NSString*, Handler>*) getSubHandler10 {
     __weak __typeof(self)weakSelf = self;
     return @{
-        @"AMapTMC::set_status_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSString* status = (NSString*) args[@"status"];
-        
-                // ref
-                AMapTMC* ref = (AMapTMC*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.status = status;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapTMC::set_polyline_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSString* polyline = (NSString*) args[@"polyline"];
-        
-                // ref
-                AMapTMC* ref = (AMapTMC*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.polyline = polyline;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapStep::set_instruction_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSString* instruction = (NSString*) args[@"instruction"];
-        
-                // ref
-                AMapStep* ref = (AMapStep*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.instruction = instruction;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapStep::set_orientation_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSString* orientation = (NSString*) args[@"orientation"];
-        
-                // ref
-                AMapStep* ref = (AMapStep*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.orientation = orientation;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapStep::set_road_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSString* road = (NSString*) args[@"road"];
-        
-                // ref
-                AMapStep* ref = (AMapStep*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.road = road;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapStep::set_distance_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSInteger distance = [args[@"distance"] longValue];
-        
-                // ref
-                AMapStep* ref = (AMapStep*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.distance = distance;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapStep::set_duration_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSInteger duration = [args[@"duration"] longValue];
-        
-                // ref
-                AMapStep* ref = (AMapStep*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.duration = duration;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapStep::set_polyline_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSString* polyline = (NSString*) args[@"polyline"];
-        
-                // ref
-                AMapStep* ref = (AMapStep*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.polyline = polyline;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapStep::set_action_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSString* action = (NSString*) args[@"action"];
-        
-                // ref
-                AMapStep* ref = (AMapStep*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.action = action;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapStep::set_assistantAction_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSString* assistantAction = (NSString*) args[@"assistantAction"];
-        
-                // ref
-                AMapStep* ref = (AMapStep*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.assistantAction = assistantAction;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapStep::set_tolls_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                CGFloat tolls = [args[@"tolls"] floatValue];
-        
-                // ref
-                AMapStep* ref = (AMapStep*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.tolls = tolls;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapStep::set_tollDistance_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSInteger tollDistance = [args[@"tollDistance"] longValue];
-        
-                // ref
-                AMapStep* ref = (AMapStep*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.tollDistance = tollDistance;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapStep::set_tollRoad_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSString* tollRoad = (NSString*) args[@"tollRoad"];
-        
-                // ref
-                AMapStep* ref = (AMapStep*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.tollRoad = tollRoad;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapStep::set_totalTrafficLights_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSInteger totalTrafficLights = [args[@"totalTrafficLights"] longValue];
-        
-                // ref
-                AMapStep* ref = (AMapStep*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.totalTrafficLights = totalTrafficLights;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapStep::set_cities_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // list arg
-                NSArray<AMapCity*>* cities = (NSArray<AMapCity*>*) args[@"cities"];
-        
-                // ref
-                AMapStep* ref = (AMapStep*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.cities = cities;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapStep::set_tmcs_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // list arg
-                NSArray<AMapTMC*>* tmcs = (NSArray<AMapTMC*>*) args[@"tmcs"];
-        
-                // ref
-                AMapStep* ref = (AMapStep*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.tmcs = tmcs;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapPath::set_distance_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSInteger distance = [args[@"distance"] longValue];
-        
-                // ref
-                AMapPath* ref = (AMapPath*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.distance = distance;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapPath::set_duration_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSInteger duration = [args[@"duration"] longValue];
-        
-                // ref
-                AMapPath* ref = (AMapPath*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.duration = duration;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapPath::set_strategy_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSString* strategy = (NSString*) args[@"strategy"];
-        
-                // ref
-                AMapPath* ref = (AMapPath*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.strategy = strategy;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapPath::set_steps_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // list arg
-                NSArray<AMapStep*>* steps = (NSArray<AMapStep*>*) args[@"steps"];
-        
-                // ref
-                AMapPath* ref = (AMapPath*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.steps = steps;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapPath::set_tolls_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                CGFloat tolls = [args[@"tolls"] floatValue];
-        
-                // ref
-                AMapPath* ref = (AMapPath*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.tolls = tolls;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapPath::set_tollDistance_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSInteger tollDistance = [args[@"tollDistance"] longValue];
-        
-                // ref
-                AMapPath* ref = (AMapPath*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.tollDistance = tollDistance;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapPath::set_totalTrafficLights_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSInteger totalTrafficLights = [args[@"totalTrafficLights"] longValue];
-        
-                // ref
-                AMapPath* ref = (AMapPath*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.totalTrafficLights = totalTrafficLights;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapPath::set_restriction_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSInteger restriction = [args[@"restriction"] longValue];
-        
-                // ref
-                AMapPath* ref = (AMapPath*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.restriction = restriction;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapPath::set_polyline_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSString* polyline = (NSString*) args[@"polyline"];
-        
-                // ref
-                AMapPath* ref = (AMapPath*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.polyline = polyline;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapFutureTimeInfoElement::set_duration_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSInteger duration = [args[@"duration"] longValue];
-        
-                // ref
-                AMapFutureTimeInfoElement* ref = (AMapFutureTimeInfoElement*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.duration = duration;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapFutureTimeInfoElement::set_pathindex_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSInteger pathindex = [args[@"pathindex"] longValue];
-        
-                // ref
-                AMapFutureTimeInfoElement* ref = (AMapFutureTimeInfoElement*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.pathindex = pathindex;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapFutureTimeInfoElement::set_restriction_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSInteger restriction = [args[@"restriction"] longValue];
-        
-                // ref
-                AMapFutureTimeInfoElement* ref = (AMapFutureTimeInfoElement*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.restriction = restriction;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapFutureTimeInfoElement::set_tmcs_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // list arg
-                NSArray<AMapTMC*>* tmcs = (NSArray<AMapTMC*>*) args[@"tmcs"];
-        
-                // ref
-                AMapFutureTimeInfoElement* ref = (AMapFutureTimeInfoElement*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.tmcs = tmcs;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapFutureTimeInfo::set_startTime_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSString* startTime = (NSString*) args[@"startTime"];
-        
-                // ref
-                AMapFutureTimeInfo* ref = (AMapFutureTimeInfo*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.startTime = startTime;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapFutureTimeInfo::set_elements_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // list arg
-                NSArray<AMapFutureTimeInfoElement*>* elements = (NSArray<AMapFutureTimeInfoElement*>*) args[@"elements"];
-        
-                // ref
-                AMapFutureTimeInfo* ref = (AMapFutureTimeInfo*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.elements = elements;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapWalking::set_origin_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // ref arg
-                AMapGeoPoint* origin = (AMapGeoPoint*) (args[@"origin"] == [NSNull null] ? nil : args[@"origin"]);
-        
-                // ref
-                AMapWalking* ref = (AMapWalking*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.origin = origin;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapWalking::set_destination_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // ref arg
-                AMapGeoPoint* destination = (AMapGeoPoint*) (args[@"destination"] == [NSNull null] ? nil : args[@"destination"]);
-        
-                // ref
-                AMapWalking* ref = (AMapWalking*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.destination = destination;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapWalking::set_distance_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSInteger distance = [args[@"distance"] longValue];
-        
-                // ref
-                AMapWalking* ref = (AMapWalking*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.distance = distance;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapWalking::set_duration_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSInteger duration = [args[@"duration"] longValue];
-        
-                // ref
-                AMapWalking* ref = (AMapWalking*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.duration = duration;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapWalking::set_steps_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // list arg
-                NSArray<AMapStep*>* steps = (NSArray<AMapStep*>*) args[@"steps"];
-        
-                // ref
-                AMapWalking* ref = (AMapWalking*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.steps = steps;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapTaxi::set_origin_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // ref arg
-                AMapGeoPoint* origin = (AMapGeoPoint*) (args[@"origin"] == [NSNull null] ? nil : args[@"origin"]);
-        
-                // ref
-                AMapTaxi* ref = (AMapTaxi*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.origin = origin;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapTaxi::set_destination_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // ref arg
-                AMapGeoPoint* destination = (AMapGeoPoint*) (args[@"destination"] == [NSNull null] ? nil : args[@"destination"]);
-        
-                // ref
-                AMapTaxi* ref = (AMapTaxi*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.destination = destination;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapTaxi::set_distance_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSInteger distance = [args[@"distance"] longValue];
-        
-                // ref
-                AMapTaxi* ref = (AMapTaxi*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.distance = distance;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapTaxi::set_duration_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSInteger duration = [args[@"duration"] longValue];
-        
-                // ref
-                AMapTaxi* ref = (AMapTaxi*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.duration = duration;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapTaxi::set_sname_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSString* sname = (NSString*) args[@"sname"];
-        
-                // ref
-                AMapTaxi* ref = (AMapTaxi*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.sname = sname;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapTaxi::set_tname_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSString* tname = (NSString*) args[@"tname"];
-        
-                // ref
-                AMapTaxi* ref = (AMapTaxi*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.tname = tname;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapRailwayStation::set_uid_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSString* uid = (NSString*) args[@"uid"];
-        
-                // ref
-                AMapRailwayStation* ref = (AMapRailwayStation*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.uid = uid;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapRailwayStation::set_name_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSString* name = (NSString*) args[@"name"];
-        
-                // ref
-                AMapRailwayStation* ref = (AMapRailwayStation*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.name = name;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapRailwayStation::set_location_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // ref arg
-                AMapGeoPoint* location = (AMapGeoPoint*) (args[@"location"] == [NSNull null] ? nil : args[@"location"]);
-        
-                // ref
-                AMapRailwayStation* ref = (AMapRailwayStation*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.location = location;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapRailwayStation::set_adcode_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSString* adcode = (NSString*) args[@"adcode"];
-        
-                // ref
-                AMapRailwayStation* ref = (AMapRailwayStation*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.adcode = adcode;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapRailwayStation::set_time_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSString* time = (NSString*) args[@"time"];
-        
-                // ref
-                AMapRailwayStation* ref = (AMapRailwayStation*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.time = time;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapRailwayStation::set_wait_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSInteger wait = [args[@"wait"] longValue];
-        
-                // ref
-                AMapRailwayStation* ref = (AMapRailwayStation*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.wait = wait;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapRailwayStation::set_isStart_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                BOOL isStart = [args[@"isStart"] boolValue];
-        
-                // ref
-                AMapRailwayStation* ref = (AMapRailwayStation*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.isStart = isStart;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapRailwayStation::set_isEnd_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                BOOL isEnd = [args[@"isEnd"] boolValue];
-        
-                // ref
-                AMapRailwayStation* ref = (AMapRailwayStation*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.isEnd = isEnd;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapRailwaySpace::set_code_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSString* code = (NSString*) args[@"code"];
-        
-                // ref
-                AMapRailwaySpace* ref = (AMapRailwaySpace*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.code = code;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapRailwaySpace::set_cost_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                CGFloat cost = [args[@"cost"] floatValue];
-        
-                // ref
-                AMapRailwaySpace* ref = (AMapRailwaySpace*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.cost = cost;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapRailway::set_uid_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSString* uid = (NSString*) args[@"uid"];
-        
-                // ref
-                AMapRailway* ref = (AMapRailway*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.uid = uid;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapRailway::set_name_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSString* name = (NSString*) args[@"name"];
-        
-                // ref
-                AMapRailway* ref = (AMapRailway*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.name = name;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapRailway::set_trip_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSString* trip = (NSString*) args[@"trip"];
-        
-                // ref
-                AMapRailway* ref = (AMapRailway*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.trip = trip;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapRailway::set_type_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSString* type = (NSString*) args[@"type"];
-        
-                // ref
-                AMapRailway* ref = (AMapRailway*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.type = type;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapRailway::set_distance_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSInteger distance = [args[@"distance"] longValue];
-        
-                // ref
-                AMapRailway* ref = (AMapRailway*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.distance = distance;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapRailway::set_time_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSInteger time = [args[@"time"] longValue];
-        
-                // ref
-                AMapRailway* ref = (AMapRailway*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.time = time;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapRailway::set_departureStation_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // ref arg
-                AMapRailwayStation* departureStation = (AMapRailwayStation*) (args[@"departureStation"] == [NSNull null] ? nil : args[@"departureStation"]);
-        
-                // ref
-                AMapRailway* ref = (AMapRailway*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.departureStation = departureStation;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapRailway::set_arrivalStation_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // ref arg
-                AMapRailwayStation* arrivalStation = (AMapRailwayStation*) (args[@"arrivalStation"] == [NSNull null] ? nil : args[@"arrivalStation"]);
-        
-                // ref
-                AMapRailway* ref = (AMapRailway*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.arrivalStation = arrivalStation;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapRailway::set_spaces_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // list arg
-                NSArray<AMapRailwaySpace*>* spaces = (NSArray<AMapRailwaySpace*>*) args[@"spaces"];
-        
-                // ref
-                AMapRailway* ref = (AMapRailway*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.spaces = spaces;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapRailway::set_viaStops_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // list arg
-                NSArray<AMapRailwayStation*>* viaStops = (NSArray<AMapRailwayStation*>*) args[@"viaStops"];
-        
-                // ref
-                AMapRailway* ref = (AMapRailway*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.viaStops = viaStops;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapRailway::set_alters_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // list arg
-                NSArray<AMapRailway*>* alters = (NSArray<AMapRailway*>*) args[@"alters"];
-        
-                // ref
-                AMapRailway* ref = (AMapRailway*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.alters = alters;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapSegment::set_walking_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // ref arg
-                AMapWalking* walking = (AMapWalking*) (args[@"walking"] == [NSNull null] ? nil : args[@"walking"]);
-        
-                // ref
-                AMapSegment* ref = (AMapSegment*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.walking = walking;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapSegment::set_buslines_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // list arg
-                NSArray<AMapBusLine*>* buslines = (NSArray<AMapBusLine*>*) args[@"buslines"];
-        
-                // ref
-                AMapSegment* ref = (AMapSegment*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.buslines = buslines;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapSegment::set_taxi_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // ref arg
-                AMapTaxi* taxi = (AMapTaxi*) (args[@"taxi"] == [NSNull null] ? nil : args[@"taxi"]);
-        
-                // ref
-                AMapSegment* ref = (AMapSegment*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.taxi = taxi;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapSegment::set_railway_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // ref arg
-                AMapRailway* railway = (AMapRailway*) (args[@"railway"] == [NSNull null] ? nil : args[@"railway"]);
-        
-                // ref
-                AMapSegment* ref = (AMapSegment*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.railway = railway;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapSegment::set_enterName_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSString* enterName = (NSString*) args[@"enterName"];
-        
-                // ref
-                AMapSegment* ref = (AMapSegment*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.enterName = enterName;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapSegment::set_enterLocation_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // ref arg
-                AMapGeoPoint* enterLocation = (AMapGeoPoint*) (args[@"enterLocation"] == [NSNull null] ? nil : args[@"enterLocation"]);
-        
-                // ref
-                AMapSegment* ref = (AMapSegment*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.enterLocation = enterLocation;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapSegment::set_exitName_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSString* exitName = (NSString*) args[@"exitName"];
-        
-                // ref
-                AMapSegment* ref = (AMapSegment*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.exitName = exitName;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapSegment::set_exitLocation_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // ref arg
-                AMapGeoPoint* exitLocation = (AMapGeoPoint*) (args[@"exitLocation"] == [NSNull null] ? nil : args[@"exitLocation"]);
-        
-                // ref
-                AMapSegment* ref = (AMapSegment*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.exitLocation = exitLocation;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapTransit::set_cost_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                CGFloat cost = [args[@"cost"] floatValue];
-        
-                // ref
-                AMapTransit* ref = (AMapTransit*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.cost = cost;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapTransit::set_duration_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSInteger duration = [args[@"duration"] longValue];
-        
-                // ref
-                AMapTransit* ref = (AMapTransit*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.duration = duration;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapTransit::set_nightflag_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                BOOL nightflag = [args[@"nightflag"] boolValue];
-        
-                // ref
-                AMapTransit* ref = (AMapTransit*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.nightflag = nightflag;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapTransit::set_walkingDistance_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSInteger walkingDistance = [args[@"walkingDistance"] longValue];
-        
-                // ref
-                AMapTransit* ref = (AMapTransit*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.walkingDistance = walkingDistance;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapTransit::set_segments_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // list arg
-                NSArray<AMapSegment*>* segments = (NSArray<AMapSegment*>*) args[@"segments"];
-        
-                // ref
-                AMapTransit* ref = (AMapTransit*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.segments = segments;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapTransit::set_distance_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSInteger distance = [args[@"distance"] longValue];
-        
-                // ref
-                AMapTransit* ref = (AMapTransit*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.distance = distance;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapRoute::set_origin_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // ref arg
-                AMapGeoPoint* origin = (AMapGeoPoint*) (args[@"origin"] == [NSNull null] ? nil : args[@"origin"]);
-        
-                // ref
-                AMapRoute* ref = (AMapRoute*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.origin = origin;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapRoute::set_destination_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // ref arg
-                AMapGeoPoint* destination = (AMapGeoPoint*) (args[@"destination"] == [NSNull null] ? nil : args[@"destination"]);
-        
-                // ref
-                AMapRoute* ref = (AMapRoute*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.destination = destination;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapRoute::set_taxiCost_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                CGFloat taxiCost = [args[@"taxiCost"] floatValue];
-        
-                // ref
-                AMapRoute* ref = (AMapRoute*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.taxiCost = taxiCost;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapRoute::set_paths_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // list arg
-                NSArray<AMapPath*>* paths = (NSArray<AMapPath*>*) args[@"paths"];
-        
-                // ref
-                AMapRoute* ref = (AMapRoute*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.paths = paths;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapRoute::set_transits_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // list arg
-                NSArray<AMapTransit*>* transits = (NSArray<AMapTransit*>*) args[@"transits"];
-        
-                // ref
-                AMapRoute* ref = (AMapRoute*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.transits = transits;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapDistanceResult::set_originID_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSInteger originID = [args[@"originID"] longValue];
-        
-                // ref
-                AMapDistanceResult* ref = (AMapDistanceResult*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.originID = originID;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapDistanceResult::set_destID_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSInteger destID = [args[@"destID"] longValue];
-        
-                // ref
-                AMapDistanceResult* ref = (AMapDistanceResult*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.destID = destID;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapDistanceResult::set_distance_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSInteger distance = [args[@"distance"] longValue];
-        
-                // ref
-                AMapDistanceResult* ref = (AMapDistanceResult*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.distance = distance;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapDistanceResult::set_duration_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSInteger duration = [args[@"duration"] longValue];
-        
-                // ref
-                AMapDistanceResult* ref = (AMapDistanceResult*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.duration = duration;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapDistanceResult::set_info_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSString* info = (NSString*) args[@"info"];
-        
-                // ref
-                AMapDistanceResult* ref = (AMapDistanceResult*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.info = info;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapDistanceResult::set_code_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSInteger code = [args[@"code"] longValue];
-        
-                // ref
-                AMapDistanceResult* ref = (AMapDistanceResult*) args[@"__this__"];
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                    return;
-                }
-        
-                ref.code = code;;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
         @"AMapLocalWeatherLive::set_adcode_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
                 NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
@@ -3307,46 +1371,6 @@ extern BOOL enableLog;
             methodResult(@"success");
         },
         
-        @"RefClass::isKindOfAMapURLSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // 引用对象
-            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
-        
-            BOOL isTargetType = [__this__ isKindOfClass:[AMapURLSearch class]];
-            methodResult(@(isTargetType));
-        },
-        
-        @"RefClass::isKindOfAMapNaviConfig": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // 引用对象
-            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
-        
-            BOOL isTargetType = [__this__ isKindOfClass:[AMapNaviConfig class]];
-            methodResult(@(isTargetType));
-        },
-        
-        @"RefClass::isKindOfAMapRouteConfig": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // 引用对象
-            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
-        
-            BOOL isTargetType = [__this__ isKindOfClass:[AMapRouteConfig class]];
-            methodResult(@(isTargetType));
-        },
-        
-        @"RefClass::isKindOfAMapPOIConfig": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // 引用对象
-            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
-        
-            BOOL isTargetType = [__this__ isKindOfClass:[AMapPOIConfig class]];
-            methodResult(@(isTargetType));
-        },
-        
-        @"RefClass::isKindOfAMapServices": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // 引用对象
-            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
-        
-            BOOL isTargetType = [__this__ isKindOfClass:[AMapServices class]];
-            methodResult(@(isTargetType));
-        },
-        
         @"RefClass::isKindOfAMapPOISearchBaseRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // 引用对象
             NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
@@ -3713,6 +1737,1130 @@ extern BOOL enableLog;
         
             BOOL isTargetType = [__this__ isKindOfClass:[AMapPOIShareSearchRequest class]];
             methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapRouteShareSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapRouteShareSearchRequest class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapNavigationShareSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapNavigationShareSearchRequest class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapShareSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapShareSearchResponse class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapFutureRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapFutureRouteSearchRequest class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapFutureRouteSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapFutureRouteSearchResponse class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapSearchObject": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapSearchObject class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapGeoPoint": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapGeoPoint class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapGeoPolygon": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapGeoPolygon class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapCity": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapCity class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapSuggestion": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapSuggestion class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapTip": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapTip class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapImage": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapImage class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapPOIExtension": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapPOIExtension class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapIndoorData": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapIndoorData class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapSubPOI": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapSubPOI class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapRoutePOI": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapRoutePOI class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapPOI": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapPOI class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapAOI": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapAOI class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapRoad": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapRoad class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapRoadInter": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapRoadInter class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapStreetNumber": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapStreetNumber class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapBusinessArea": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapBusinessArea class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapAddressComponent": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapAddressComponent class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapReGeocode": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapReGeocode class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapGeocode": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapGeocode class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapBusStop": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapBusStop class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapBusLine": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapBusLine class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapDistrict": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapDistrict class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapTMC": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapTMC class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapStep": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapStep class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapPath": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapPath class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapFutureTimeInfoElement": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapFutureTimeInfoElement class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapFutureTimeInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapFutureTimeInfo class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapWalking": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapWalking class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapTaxi": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapTaxi class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapRailwayStation": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapRailwayStation class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapRailwaySpace": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapRailwaySpace class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapRailway": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapRailway class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapSegment": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapSegment class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapTransit": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapTransit class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapRoute": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapRoute class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapDistanceResult": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapDistanceResult class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapLocalWeatherLive": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapLocalWeatherLive class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapLocalDayWeatherForecast": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapLocalDayWeatherForecast class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapLocalWeatherForecast": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapLocalWeatherForecast class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapNearbyUserInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapNearbyUserInfo class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapTrafficEvaluation": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapTrafficEvaluation class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapTrafficRoad": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapTrafficRoad class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapTrafficInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapTrafficInfo class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapCloudImage": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapCloudImage class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapCloudPOI": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapCloudPOI class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapSearchError": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapSearchError class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapNearbyUploadInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapNearbyUploadInfo class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapNearbySearchManager": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapNearbySearchManager class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"RefClass::isKindOfAMapSearchAPI": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // 引用对象
+            NSObject* __this__ = ((NSDictionary<NSString*, NSObject*>*) args)[@"__this__"];
+        
+            BOOL isTargetType = [__this__ isKindOfClass:[AMapSearchAPI class]];
+            methodResult(@(isTargetType));
+        },
+        
+        @"ObjectFactory::createAMapPOISearchBaseRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapPOISearchBaseRequest");
+            }
+        
+            AMapPOISearchBaseRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapPOISearchBaseRequest alloc] init];
+            } else {
+                __this__ = [AMapPOISearchBaseRequest alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapPOIIDSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapPOIIDSearchRequest");
+            }
+        
+            AMapPOIIDSearchRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapPOIIDSearchRequest alloc] init];
+            } else {
+                __this__ = [AMapPOIIDSearchRequest alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapPOIKeywordsSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapPOIKeywordsSearchRequest");
+            }
+        
+            AMapPOIKeywordsSearchRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapPOIKeywordsSearchRequest alloc] init];
+            } else {
+                __this__ = [AMapPOIKeywordsSearchRequest alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapPOIAroundSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapPOIAroundSearchRequest");
+            }
+        
+            AMapPOIAroundSearchRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapPOIAroundSearchRequest alloc] init];
+            } else {
+                __this__ = [AMapPOIAroundSearchRequest alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapPOIPolygonSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapPOIPolygonSearchRequest");
+            }
+        
+            AMapPOIPolygonSearchRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapPOIPolygonSearchRequest alloc] init];
+            } else {
+                __this__ = [AMapPOIPolygonSearchRequest alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapPOISearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapPOISearchResponse");
+            }
+        
+            AMapPOISearchResponse* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapPOISearchResponse alloc] init];
+            } else {
+                __this__ = [AMapPOISearchResponse alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapRoutePOISearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapRoutePOISearchRequest");
+            }
+        
+            AMapRoutePOISearchRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapRoutePOISearchRequest alloc] init];
+            } else {
+                __this__ = [AMapRoutePOISearchRequest alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapRoutePOISearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapRoutePOISearchResponse");
+            }
+        
+            AMapRoutePOISearchResponse* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapRoutePOISearchResponse alloc] init];
+            } else {
+                __this__ = [AMapRoutePOISearchResponse alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapInputTipsSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapInputTipsSearchRequest");
+            }
+        
+            AMapInputTipsSearchRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapInputTipsSearchRequest alloc] init];
+            } else {
+                __this__ = [AMapInputTipsSearchRequest alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapInputTipsSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapInputTipsSearchResponse");
+            }
+        
+            AMapInputTipsSearchResponse* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapInputTipsSearchResponse alloc] init];
+            } else {
+                __this__ = [AMapInputTipsSearchResponse alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapGeocodeSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapGeocodeSearchRequest");
+            }
+        
+            AMapGeocodeSearchRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapGeocodeSearchRequest alloc] init];
+            } else {
+                __this__ = [AMapGeocodeSearchRequest alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapGeocodeSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapGeocodeSearchResponse");
+            }
+        
+            AMapGeocodeSearchResponse* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapGeocodeSearchResponse alloc] init];
+            } else {
+                __this__ = [AMapGeocodeSearchResponse alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapReGeocodeSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapReGeocodeSearchRequest");
+            }
+        
+            AMapReGeocodeSearchRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapReGeocodeSearchRequest alloc] init];
+            } else {
+                __this__ = [AMapReGeocodeSearchRequest alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapReGeocodeSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapReGeocodeSearchResponse");
+            }
+        
+            AMapReGeocodeSearchResponse* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapReGeocodeSearchResponse alloc] init];
+            } else {
+                __this__ = [AMapReGeocodeSearchResponse alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapBusStopSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapBusStopSearchRequest");
+            }
+        
+            AMapBusStopSearchRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapBusStopSearchRequest alloc] init];
+            } else {
+                __this__ = [AMapBusStopSearchRequest alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapBusStopSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapBusStopSearchResponse");
+            }
+        
+            AMapBusStopSearchResponse* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapBusStopSearchResponse alloc] init];
+            } else {
+                __this__ = [AMapBusStopSearchResponse alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapBusLineBaseSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapBusLineBaseSearchRequest");
+            }
+        
+            AMapBusLineBaseSearchRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapBusLineBaseSearchRequest alloc] init];
+            } else {
+                __this__ = [AMapBusLineBaseSearchRequest alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapBusLineNameSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapBusLineNameSearchRequest");
+            }
+        
+            AMapBusLineNameSearchRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapBusLineNameSearchRequest alloc] init];
+            } else {
+                __this__ = [AMapBusLineNameSearchRequest alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapBusLineIDSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapBusLineIDSearchRequest");
+            }
+        
+            AMapBusLineIDSearchRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapBusLineIDSearchRequest alloc] init];
+            } else {
+                __this__ = [AMapBusLineIDSearchRequest alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapBusLineSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapBusLineSearchResponse");
+            }
+        
+            AMapBusLineSearchResponse* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapBusLineSearchResponse alloc] init];
+            } else {
+                __this__ = [AMapBusLineSearchResponse alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapDistrictSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapDistrictSearchRequest");
+            }
+        
+            AMapDistrictSearchRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapDistrictSearchRequest alloc] init];
+            } else {
+                __this__ = [AMapDistrictSearchRequest alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapDistrictSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapDistrictSearchResponse");
+            }
+        
+            AMapDistrictSearchResponse* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapDistrictSearchResponse alloc] init];
+            } else {
+                __this__ = [AMapDistrictSearchResponse alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapRouteSearchBaseRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapRouteSearchBaseRequest");
+            }
+        
+            AMapRouteSearchBaseRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapRouteSearchBaseRequest alloc] init];
+            } else {
+                __this__ = [AMapRouteSearchBaseRequest alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapDrivingCalRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapDrivingCalRouteSearchRequest");
+            }
+        
+            AMapDrivingCalRouteSearchRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapDrivingCalRouteSearchRequest alloc] init];
+            } else {
+                __this__ = [AMapDrivingCalRouteSearchRequest alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapDrivingRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapDrivingRouteSearchRequest");
+            }
+        
+            AMapDrivingRouteSearchRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapDrivingRouteSearchRequest alloc] init];
+            } else {
+                __this__ = [AMapDrivingRouteSearchRequest alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapWalkingRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapWalkingRouteSearchRequest");
+            }
+        
+            AMapWalkingRouteSearchRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapWalkingRouteSearchRequest alloc] init];
+            } else {
+                __this__ = [AMapWalkingRouteSearchRequest alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapTransitRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapTransitRouteSearchRequest");
+            }
+        
+            AMapTransitRouteSearchRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapTransitRouteSearchRequest alloc] init];
+            } else {
+                __this__ = [AMapTransitRouteSearchRequest alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapRidingRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapRidingRouteSearchRequest");
+            }
+        
+            AMapRidingRouteSearchRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapRidingRouteSearchRequest alloc] init];
+            } else {
+                __this__ = [AMapRidingRouteSearchRequest alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapRouteSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapRouteSearchResponse");
+            }
+        
+            AMapRouteSearchResponse* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapRouteSearchResponse alloc] init];
+            } else {
+                __this__ = [AMapRouteSearchResponse alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapRidingRouteSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapRidingRouteSearchResponse");
+            }
+        
+            AMapRidingRouteSearchResponse* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapRidingRouteSearchResponse alloc] init];
+            } else {
+                __this__ = [AMapRidingRouteSearchResponse alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapTruckRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapTruckRouteSearchRequest");
+            }
+        
+            AMapTruckRouteSearchRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapTruckRouteSearchRequest alloc] init];
+            } else {
+                __this__ = [AMapTruckRouteSearchRequest alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapDistanceSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapDistanceSearchRequest");
+            }
+        
+            AMapDistanceSearchRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapDistanceSearchRequest alloc] init];
+            } else {
+                __this__ = [AMapDistanceSearchRequest alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapDistanceSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapDistanceSearchResponse");
+            }
+        
+            AMapDistanceSearchResponse* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapDistanceSearchResponse alloc] init];
+            } else {
+                __this__ = [AMapDistanceSearchResponse alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapWeatherSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapWeatherSearchRequest");
+            }
+        
+            AMapWeatherSearchRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapWeatherSearchRequest alloc] init];
+            } else {
+                __this__ = [AMapWeatherSearchRequest alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapWeatherSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapWeatherSearchResponse");
+            }
+        
+            AMapWeatherSearchResponse* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapWeatherSearchResponse alloc] init];
+            } else {
+                __this__ = [AMapWeatherSearchResponse alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapNearbySearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapNearbySearchRequest");
+            }
+        
+            AMapNearbySearchRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapNearbySearchRequest alloc] init];
+            } else {
+                __this__ = [AMapNearbySearchRequest alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapNearbySearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapNearbySearchResponse");
+            }
+        
+            AMapNearbySearchResponse* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapNearbySearchResponse alloc] init];
+            } else {
+                __this__ = [AMapNearbySearchResponse alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
+        },
+        
+        @"ObjectFactory::createAMapCloudSearchBaseRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"ObjectFactory::createAMapCloudSearchBaseRequest");
+            }
+        
+            AMapCloudSearchBaseRequest* __this__;
+            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
+                __this__ = [[AMapCloudSearchBaseRequest alloc] init];
+            } else {
+                __this__ = [AMapCloudSearchBaseRequest alloc];
+            }
+        
+            methodResult(__this__);
+        
+            if (enableLog) NSLog(@"HEAP: %@", HEAP);
         },
         
     };

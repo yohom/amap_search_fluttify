@@ -5286,7 +5286,7 @@ public class SubHandler12 {
                             @Override
                             public void run() {
                                 callbackChannel.invokeMethod(
-                                    "onBusLineSearched:",
+                                    "onBusLineSearched_",
                                     new HashMap<String, Object>() {{
                                         put("var1", var1);
                                         put("var2", var2);
@@ -5324,7 +5324,7 @@ public class SubHandler12 {
                             @Override
                             public void run() {
                                 callbackChannel.invokeMethod(
-                                    "onBusStationSearched:",
+                                    "onBusStationSearched_",
                                     new HashMap<String, Object>() {{
                                         put("var1", var1);
                                         put("var2", var2);
@@ -5362,7 +5362,7 @@ public class SubHandler12 {
                             @Override
                             public void run() {
                                 callbackChannel.invokeMethod(
-                                    "onPoiSearched:",
+                                    "onPoiSearched_",
                                     new HashMap<String, Object>() {{
                                         put("var1", var1);
                                         put("var2", var2);
@@ -5387,7 +5387,7 @@ public class SubHandler12 {
                             @Override
                             public void run() {
                                 callbackChannel.invokeMethod(
-                                    "onPoiItemSearched:",
+                                    "onPoiItemSearched_",
                                     new HashMap<String, Object>() {{
                                         put("var1", var1);
                                         put("var2", var2);
@@ -5425,7 +5425,7 @@ public class SubHandler12 {
                             @Override
                             public void run() {
                                 callbackChannel.invokeMethod(
-                                    "onDriveRoutePlanSearched:",
+                                    "onDriveRoutePlanSearched_",
                                     new HashMap<String, Object>() {{
                                         put("var1", var1);
                                         put("var2", var2);
@@ -5463,7 +5463,7 @@ public class SubHandler12 {
                             @Override
                             public void run() {
                                 callbackChannel.invokeMethod(
-                                    "onDistanceSearched:",
+                                    "onDistanceSearched_",
                                     new HashMap<String, Object>() {{
                                         put("var1", var1);
                                         put("var2", var2);
@@ -5501,7 +5501,7 @@ public class SubHandler12 {
                             @Override
                             public void run() {
                                 callbackChannel.invokeMethod(
-                                    "onBusRouteSearched:",
+                                    "onBusRouteSearched_",
                                     new HashMap<String, Object>() {{
                                         put("var1", var1);
                                         put("var2", var2);
@@ -5526,7 +5526,7 @@ public class SubHandler12 {
                             @Override
                             public void run() {
                                 callbackChannel.invokeMethod(
-                                    "onDriveRouteSearched:",
+                                    "onDriveRouteSearched_",
                                     new HashMap<String, Object>() {{
                                         put("var1", var1);
                                         put("var2", var2);
@@ -5551,7 +5551,7 @@ public class SubHandler12 {
                             @Override
                             public void run() {
                                 callbackChannel.invokeMethod(
-                                    "onWalkRouteSearched:",
+                                    "onWalkRouteSearched_",
                                     new HashMap<String, Object>() {{
                                         put("var1", var1);
                                         put("var2", var2);
@@ -5576,7 +5576,7 @@ public class SubHandler12 {
                             @Override
                             public void run() {
                                 callbackChannel.invokeMethod(
-                                    "onRideRouteSearched:",
+                                    "onRideRouteSearched_",
                                     new HashMap<String, Object>() {{
                                         put("var1", var1);
                                         put("var2", var2);
@@ -5614,7 +5614,7 @@ public class SubHandler12 {
                             @Override
                             public void run() {
                                 callbackChannel.invokeMethod(
-                                    "onTruckRouteSearched:",
+                                    "onTruckRouteSearched_",
                                     new HashMap<String, Object>() {{
                                         put("var1", var1);
                                         put("var2", var2);
@@ -5652,7 +5652,7 @@ public class SubHandler12 {
                             @Override
                             public void run() {
                                 callbackChannel.invokeMethod(
-                                    "onDriveRoutePlanSearched:",
+                                    "onDriveRoutePlanSearched_",
                                     new HashMap<String, Object>() {{
                                         put("var1", var1);
                                         put("var2", var2);
@@ -5690,7 +5690,7 @@ public class SubHandler12 {
                             @Override
                             public void run() {
                                 callbackChannel.invokeMethod(
-                                    "onDriveRouteSearched:",
+                                    "onDriveRouteSearched_",
                                     new HashMap<String, Object>() {{
                                         put("var1", var1);
                                         put("var2", var2);
@@ -5728,7 +5728,7 @@ public class SubHandler12 {
                             @Override
                             public void run() {
                                 callbackChannel.invokeMethod(
-                                    "onTruckRouteSearched:",
+                                    "onTruckRouteSearched_",
                                     new HashMap<String, Object>() {{
                                         put("var1", var1);
                                         put("var2", var2);
@@ -5790,7 +5790,7 @@ public class SubHandler12 {
                             @Override
                             public void run() {
                                 callbackChannel.invokeMethod(
-                                    "onNearbyInfoSearched:",
+                                    "onNearbyInfoSearched_",
                                     new HashMap<String, Object>() {{
                                         put("var1", var1);
                                         put("var2", var2);
@@ -5889,7 +5889,7 @@ public class SubHandler12 {
                             @Override
                             public void run() {
                                 callbackChannel.invokeMethod(
-                                    "onRoutePoiSearched:",
+                                    "onRoutePoiSearched_",
                                     new HashMap<String, Object>() {{
                                         put("var1", var1);
                                         put("var2", var2);
@@ -5927,7 +5927,7 @@ public class SubHandler12 {
                             @Override
                             public void run() {
                                 callbackChannel.invokeMethod(
-                                    "onCloudSearched:",
+                                    "onCloudSearched_",
                                     new HashMap<String, Object>() {{
                                         put("var1", var1);
                                         put("var2", var2);
@@ -5952,7 +5952,7 @@ public class SubHandler12 {
                             @Override
                             public void run() {
                                 callbackChannel.invokeMethod(
-                                    "onCloudItemDetailSearched:",
+                                    "onCloudItemDetailSearched_",
                                     new HashMap<String, Object>() {{
                                         put("var1", var1);
                                         put("var2", var2);
@@ -5990,7 +5990,7 @@ public class SubHandler12 {
                             @Override
                             public void run() {
                                 callbackChannel.invokeMethod(
-                                    "onWeatherLiveSearched:",
+                                    "onWeatherLiveSearched_",
                                     new HashMap<String, Object>() {{
                                         put("var1", var1);
                                         put("var2", var2);
@@ -6015,7 +6015,7 @@ public class SubHandler12 {
                             @Override
                             public void run() {
                                 callbackChannel.invokeMethod(
-                                    "onWeatherForecastSearched:",
+                                    "onWeatherForecastSearched_",
                                     new HashMap<String, Object>() {{
                                         put("var1", var1);
                                         put("var2", var2);
@@ -6053,7 +6053,7 @@ public class SubHandler12 {
                             @Override
                             public void run() {
                                 callbackChannel.invokeMethod(
-                                    "onRegeocodeSearched:",
+                                    "onRegeocodeSearched_",
                                     new HashMap<String, Object>() {{
                                         put("var1", var1);
                                         put("var2", var2);
@@ -6078,7 +6078,7 @@ public class SubHandler12 {
                             @Override
                             public void run() {
                                 callbackChannel.invokeMethod(
-                                    "onGeocodeSearched:",
+                                    "onGeocodeSearched_",
                                     new HashMap<String, Object>() {{
                                         put("var1", var1);
                                         put("var2", var2);
@@ -6153,7 +6153,7 @@ public class SubHandler12 {
                             @Override
                             public void run() {
                                 callbackChannel.invokeMethod(
-                                    "onGetInputtips:",
+                                    "onGetInputtips_",
                                     new HashMap<String, Object>() {{
                                         put("var1", var1);
                                         put("var2", var2);
@@ -6191,7 +6191,7 @@ public class SubHandler12 {
                             @Override
                             public void run() {
                                 callbackChannel.invokeMethod(
-                                    "onPoiShareUrlSearched:",
+                                    "onPoiShareUrlSearched_",
                                     new HashMap<String, Object>() {{
                                         put("var1", var1);
                                         put("var2", var2);
@@ -6216,7 +6216,7 @@ public class SubHandler12 {
                             @Override
                             public void run() {
                                 callbackChannel.invokeMethod(
-                                    "onLocationShareUrlSearched:",
+                                    "onLocationShareUrlSearched_",
                                     new HashMap<String, Object>() {{
                                         put("var1", var1);
                                         put("var2", var2);
@@ -6241,7 +6241,7 @@ public class SubHandler12 {
                             @Override
                             public void run() {
                                 callbackChannel.invokeMethod(
-                                    "onNaviShareUrlSearched:",
+                                    "onNaviShareUrlSearched_",
                                     new HashMap<String, Object>() {{
                                         put("var1", var1);
                                         put("var2", var2);
@@ -6266,7 +6266,7 @@ public class SubHandler12 {
                             @Override
                             public void run() {
                                 callbackChannel.invokeMethod(
-                                    "onBusRouteShareUrlSearched:",
+                                    "onBusRouteShareUrlSearched_",
                                     new HashMap<String, Object>() {{
                                         put("var1", var1);
                                         put("var2", var2);
@@ -6291,7 +6291,7 @@ public class SubHandler12 {
                             @Override
                             public void run() {
                                 callbackChannel.invokeMethod(
-                                    "onWalkRouteShareUrlSearched:",
+                                    "onWalkRouteShareUrlSearched_",
                                     new HashMap<String, Object>() {{
                                         put("var1", var1);
                                         put("var2", var2);
@@ -6316,7 +6316,7 @@ public class SubHandler12 {
                             @Override
                             public void run() {
                                 callbackChannel.invokeMethod(
-                                    "onDrivingRouteShareUrlSearched:",
+                                    "onDrivingRouteShareUrlSearched_",
                                     new HashMap<String, Object>() {{
                                         put("var1", var1);
                                         put("var2", var2);

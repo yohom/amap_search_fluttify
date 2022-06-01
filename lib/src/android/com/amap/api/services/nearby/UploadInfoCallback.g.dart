@@ -11,6 +11,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
+import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 
 class _com_amap_api_services_nearby_UploadInfoCallback_SUB extends java_lang_Object with com_amap_api_services_nearby_UploadInfoCallback {}
 
@@ -19,7 +20,7 @@ mixin com_amap_api_services_nearby_UploadInfoCallback on java_lang_Object {
 
   static com_amap_api_services_nearby_UploadInfoCallback subInstance() => _com_amap_api_services_nearby_UploadInfoCallback_SUB();
 
-  static Future<com_amap_api_services_nearby_UploadInfoCallback> anonymous__({com_amap_api_services_nearby_UploadInfo Function()? OnUploadInfoCallback}) async {
+  static Future<com_amap_api_services_nearby_UploadInfoCallback> anonymous__() async {
     final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('com.amap.api.services.nearby.UploadInfoCallback::createAnonymous__');
   
     final __object__ = AmapSearchFluttifyAndroidAs<com_amap_api_services_nearby_UploadInfoCallback>(__result__)!;
@@ -33,11 +34,11 @@ mixin com_amap_api_services_nearby_UploadInfoCallback on java_lang_Object {
               case 'OnUploadInfoCallback':
                 // print log
                 if (fluttifyLogEnabled) {
-                  debugPrint('fluttify-dart-callback: OnUploadInfoCallback?.call([])');
+                  debugPrint('fluttify-dart-callback: __object__.OnUploadInfoCallback?.call([])');
                 }
             
                 // handle the native call
-                OnUploadInfoCallback?.call();
+                __object__.OnUploadInfoCallback?.call();
                 break;
               default:
                 throw MissingPluginException('方法${methodCall.method}未实现');
@@ -60,7 +61,7 @@ mixin com_amap_api_services_nearby_UploadInfoCallback on java_lang_Object {
 
   
 
-  Future<com_amap_api_services_nearby_UploadInfo?> OnUploadInfoCallback() async {}
+  Future<com_amap_api_services_nearby_UploadInfo?> Function()? OnUploadInfoCallback;
   
 }
 

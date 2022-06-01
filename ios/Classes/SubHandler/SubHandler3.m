@@ -19,1220 +19,6 @@ extern BOOL enableLog;
 - (NSDictionary<NSString*, Handler>*) getSubHandler3 {
     __weak __typeof(self)weakSelf = self;
     return @{
-        @"AMapCloudPOI::get_customFields": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapCloudPOI::get_customFields");
-            }
-        
-            // ref object
-            AMapCloudPOI* ref = (AMapCloudPOI*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSDictionary* result = ref.customFields;
-        
-            // 返回值: jsonable
-            id __result__ = result;
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapCloudPOI::get_createTime": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapCloudPOI::get_createTime");
-            }
-        
-            // ref object
-            AMapCloudPOI* ref = (AMapCloudPOI*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSString* result = ref.createTime;
-        
-            // 返回值: jsonable
-            id __result__ = result;
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapCloudPOI::get_updateTime": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapCloudPOI::get_updateTime");
-            }
-        
-            // ref object
-            AMapCloudPOI* ref = (AMapCloudPOI*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSString* result = ref.updateTime;
-        
-            // 返回值: jsonable
-            id __result__ = result;
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapCloudPOI::get_distance": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapCloudPOI::get_distance");
-            }
-        
-            // ref object
-            AMapCloudPOI* ref = (AMapCloudPOI*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSInteger result = ref.distance;
-        
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapCloudPOI::get_images": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapCloudPOI::get_images");
-            }
-        
-            // ref object
-            AMapCloudPOI* ref = (AMapCloudPOI*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSArray<AMapCloudImage*>* result = ref.images;
-        
-            // return a ref
-            NSObject* __result__ = result;
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapNearbyUploadInfo::get_userID": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapNearbyUploadInfo::get_userID");
-            }
-        
-            // ref object
-            AMapNearbyUploadInfo* ref = (AMapNearbyUploadInfo*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSString* result = ref.userID;
-        
-            // 返回值: jsonable
-            id __result__ = result;
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapNearbyUploadInfo::get_coordinateType": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapNearbyUploadInfo::get_coordinateType");
-            }
-        
-            // ref object
-            AMapNearbyUploadInfo* ref = (AMapNearbyUploadInfo*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            AMapSearchCoordinateType result = ref.coordinateType;
-        
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapNearbyUploadInfo::get_coordinate": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapNearbyUploadInfo::get_coordinate");
-            }
-        
-            // ref object
-            AMapNearbyUploadInfo* ref = (AMapNearbyUploadInfo*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            CLLocationCoordinate2D result = ref.coordinate;
-        
-            // 返回值: 结构体
-            NSValue* __result__ = [NSValue value:&result withObjCType:@encode(CLLocationCoordinate2D)];
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapNearbySearchManager::get_uploadTimeInterval": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapNearbySearchManager::get_uploadTimeInterval");
-            }
-        
-            // ref object
-            AMapNearbySearchManager* ref = (AMapNearbySearchManager*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSTimeInterval result = ref.uploadTimeInterval;
-        
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapNearbySearchManager::get_isAutoUploading": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapNearbySearchManager::get_isAutoUploading");
-            }
-        
-            // ref object
-            AMapNearbySearchManager* ref = (AMapNearbySearchManager*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            BOOL result = ref.isAutoUploading;
-        
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapSearchAPI::get_timeout": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapSearchAPI::get_timeout");
-            }
-        
-            // ref object
-            AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSInteger result = ref.timeout;
-        
-            // 返回值: Value
-            NSObject* __result__ = @(result);
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapSearchAPI::get_language": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"AMapSearchAPI::get_language");
-            }
-        
-            // ref object
-            AMapSearchAPI* ref = (AMapSearchAPI*) args[@"__this__"];
-            if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                methodResult([FlutterError errorWithCode:@"目标对象为nil" message:@"目标对象为nil" details:@"目标对象为nil"]);
-                return;
-            }
-        
-            // invoke native method
-            NSString* result = ref.language;
-        
-            // 返回值: jsonable
-            id __result__ = result;
-        
-            methodResult(__result__);
-        },
-        
-        @"AMapNaviConfig::get_appScheme_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // ref object
-                AMapNaviConfig* ref = (AMapNaviConfig*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                NSString* result = ref.appScheme;
-        
-                // 返回值: jsonable
-                id __result__ = result;
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        
-        @"AMapNaviConfig::get_appName_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // ref object
-                AMapNaviConfig* ref = (AMapNaviConfig*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                NSString* result = ref.appName;
-        
-                // 返回值: jsonable
-                id __result__ = result;
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        
-        @"AMapNaviConfig::get_destination_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // ref object
-                AMapNaviConfig* ref = (AMapNaviConfig*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                CLLocationCoordinate2D result = ref.destination;
-        
-                // 返回值: 结构体
-                NSValue* __result__ = [NSValue value:&result withObjCType:@encode(CLLocationCoordinate2D)];
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        
-        @"AMapNaviConfig::get_strategy_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // ref object
-                AMapNaviConfig* ref = (AMapNaviConfig*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                AMapDrivingStrategy result = ref.strategy;
-        
-                // 返回值: Value
-                NSObject* __result__ = @(result);
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        
-        @"AMapRouteConfig::get_appScheme_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // ref object
-                AMapRouteConfig* ref = (AMapRouteConfig*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                NSString* result = ref.appScheme;
-        
-                // 返回值: jsonable
-                id __result__ = result;
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        
-        @"AMapRouteConfig::get_appName_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // ref object
-                AMapRouteConfig* ref = (AMapRouteConfig*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                NSString* result = ref.appName;
-        
-                // 返回值: jsonable
-                id __result__ = result;
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        
-        @"AMapRouteConfig::get_startCoordinate_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // ref object
-                AMapRouteConfig* ref = (AMapRouteConfig*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                CLLocationCoordinate2D result = ref.startCoordinate;
-        
-                // 返回值: 结构体
-                NSValue* __result__ = [NSValue value:&result withObjCType:@encode(CLLocationCoordinate2D)];
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        
-        @"AMapRouteConfig::get_destinationCoordinate_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // ref object
-                AMapRouteConfig* ref = (AMapRouteConfig*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                CLLocationCoordinate2D result = ref.destinationCoordinate;
-        
-                // 返回值: 结构体
-                NSValue* __result__ = [NSValue value:&result withObjCType:@encode(CLLocationCoordinate2D)];
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        
-        @"AMapRouteConfig::get_drivingStrategy_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // ref object
-                AMapRouteConfig* ref = (AMapRouteConfig*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                AMapDrivingStrategy result = ref.drivingStrategy;
-        
-                // 返回值: Value
-                NSObject* __result__ = @(result);
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        
-        @"AMapRouteConfig::get_transitStrategy_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // ref object
-                AMapRouteConfig* ref = (AMapRouteConfig*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                AMapTransitStrategy result = ref.transitStrategy;
-        
-                // 返回值: Value
-                NSObject* __result__ = @(result);
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        
-        @"AMapRouteConfig::get_routeType_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // ref object
-                AMapRouteConfig* ref = (AMapRouteConfig*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                AMapRouteSearchType result = ref.routeType;
-        
-                // 返回值: Value
-                NSObject* __result__ = @(result);
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        
-        @"AMapPOIConfig::get_appScheme_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // ref object
-                AMapPOIConfig* ref = (AMapPOIConfig*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                NSString* result = ref.appScheme;
-        
-                // 返回值: jsonable
-                id __result__ = result;
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        
-        @"AMapPOIConfig::get_appName_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // ref object
-                AMapPOIConfig* ref = (AMapPOIConfig*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                NSString* result = ref.appName;
-        
-                // 返回值: jsonable
-                id __result__ = result;
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        
-        @"AMapPOIConfig::get_keywords_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // ref object
-                AMapPOIConfig* ref = (AMapPOIConfig*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                NSString* result = ref.keywords;
-        
-                // 返回值: jsonable
-                id __result__ = result;
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        
-        @"AMapPOIConfig::get_leftTopCoordinate_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // ref object
-                AMapPOIConfig* ref = (AMapPOIConfig*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                CLLocationCoordinate2D result = ref.leftTopCoordinate;
-        
-                // 返回值: 结构体
-                NSValue* __result__ = [NSValue value:&result withObjCType:@encode(CLLocationCoordinate2D)];
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        
-        @"AMapPOIConfig::get_rightBottomCoordinate_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // ref object
-                AMapPOIConfig* ref = (AMapPOIConfig*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                CLLocationCoordinate2D result = ref.rightBottomCoordinate;
-        
-                // 返回值: 结构体
-                NSValue* __result__ = [NSValue value:&result withObjCType:@encode(CLLocationCoordinate2D)];
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        
-        @"AMapServices::get_apiKey_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // ref object
-                AMapServices* ref = (AMapServices*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                NSString* result = ref.apiKey;
-        
-                // 返回值: jsonable
-                id __result__ = result;
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        
-        @"AMapServices::get_enableHTTPS_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // ref object
-                AMapServices* ref = (AMapServices*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                BOOL result = ref.enableHTTPS;
-        
-                // 返回值: Value
-                NSObject* __result__ = @(result);
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        
-        @"AMapServices::get_crashReportEnabled_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // ref object
-                AMapServices* ref = (AMapServices*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                BOOL result = ref.crashReportEnabled;
-        
-                // 返回值: Value
-                NSObject* __result__ = @(result);
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        
-        @"AMapServices::get_identifier_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // ref object
-                AMapServices* ref = (AMapServices*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                NSString* result = ref.identifier;
-        
-                // 返回值: jsonable
-                id __result__ = result;
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        
-        @"AMapPOISearchBaseRequest::get_types_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // ref object
-                AMapPOISearchBaseRequest* ref = (AMapPOISearchBaseRequest*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                NSString* result = ref.types;
-        
-                // 返回值: jsonable
-                id __result__ = result;
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        
-        @"AMapPOISearchBaseRequest::get_sortrule_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // ref object
-                AMapPOISearchBaseRequest* ref = (AMapPOISearchBaseRequest*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                NSInteger result = ref.sortrule;
-        
-                // 返回值: Value
-                NSObject* __result__ = @(result);
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        
-        @"AMapPOISearchBaseRequest::get_offset_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // ref object
-                AMapPOISearchBaseRequest* ref = (AMapPOISearchBaseRequest*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                NSInteger result = ref.offset;
-        
-                // 返回值: Value
-                NSObject* __result__ = @(result);
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        
-        @"AMapPOISearchBaseRequest::get_page_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // ref object
-                AMapPOISearchBaseRequest* ref = (AMapPOISearchBaseRequest*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                NSInteger result = ref.page;
-        
-                // 返回值: Value
-                NSObject* __result__ = @(result);
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        
-        @"AMapPOISearchBaseRequest::get_building_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // ref object
-                AMapPOISearchBaseRequest* ref = (AMapPOISearchBaseRequest*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                NSString* result = ref.building;
-        
-                // 返回值: jsonable
-                id __result__ = result;
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        
-        @"AMapPOISearchBaseRequest::get_requireExtension_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // ref object
-                AMapPOISearchBaseRequest* ref = (AMapPOISearchBaseRequest*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                BOOL result = ref.requireExtension;
-        
-                // 返回值: Value
-                NSObject* __result__ = @(result);
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        
-        @"AMapPOISearchBaseRequest::get_requireSubPOIs_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // ref object
-                AMapPOISearchBaseRequest* ref = (AMapPOISearchBaseRequest*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                BOOL result = ref.requireSubPOIs;
-        
-                // 返回值: Value
-                NSObject* __result__ = @(result);
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        
-        @"AMapPOIIDSearchRequest::get_uid_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // ref object
-                AMapPOIIDSearchRequest* ref = (AMapPOIIDSearchRequest*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                NSString* result = ref.uid;
-        
-                // 返回值: jsonable
-                id __result__ = result;
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        
-        @"AMapPOIKeywordsSearchRequest::get_keywords_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // ref object
-                AMapPOIKeywordsSearchRequest* ref = (AMapPOIKeywordsSearchRequest*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                NSString* result = ref.keywords;
-        
-                // 返回值: jsonable
-                id __result__ = result;
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        
-        @"AMapPOIKeywordsSearchRequest::get_city_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // ref object
-                AMapPOIKeywordsSearchRequest* ref = (AMapPOIKeywordsSearchRequest*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                NSString* result = ref.city;
-        
-                // 返回值: jsonable
-                id __result__ = result;
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        
-        @"AMapPOIKeywordsSearchRequest::get_cityLimit_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // ref object
-                AMapPOIKeywordsSearchRequest* ref = (AMapPOIKeywordsSearchRequest*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                BOOL result = ref.cityLimit;
-        
-                // 返回值: Value
-                NSObject* __result__ = @(result);
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        
-        @"AMapPOIKeywordsSearchRequest::get_location_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // ref object
-                AMapPOIKeywordsSearchRequest* ref = (AMapPOIKeywordsSearchRequest*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                AMapGeoPoint* result = ref.location;
-        
-                // return a ref
-                NSObject* __result__ = result;
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        
-        @"AMapPOIAroundSearchRequest::get_keywords_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // ref object
-                AMapPOIAroundSearchRequest* ref = (AMapPOIAroundSearchRequest*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                NSString* result = ref.keywords;
-        
-                // 返回值: jsonable
-                id __result__ = result;
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        
-        @"AMapPOIAroundSearchRequest::get_location_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // ref object
-                AMapPOIAroundSearchRequest* ref = (AMapPOIAroundSearchRequest*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                AMapGeoPoint* result = ref.location;
-        
-                // return a ref
-                NSObject* __result__ = result;
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        
-        @"AMapPOIAroundSearchRequest::get_radius_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // ref object
-                AMapPOIAroundSearchRequest* ref = (AMapPOIAroundSearchRequest*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                NSInteger result = ref.radius;
-        
-                // 返回值: Value
-                NSObject* __result__ = @(result);
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        
-        @"AMapPOIAroundSearchRequest::get_city_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // ref object
-                AMapPOIAroundSearchRequest* ref = (AMapPOIAroundSearchRequest*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                NSString* result = ref.city;
-        
-                // 返回值: jsonable
-                id __result__ = result;
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        
-        @"AMapPOIAroundSearchRequest::get_special_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // ref object
-                AMapPOIAroundSearchRequest* ref = (AMapPOIAroundSearchRequest*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                BOOL result = ref.special;
-        
-                // 返回值: Value
-                NSObject* __result__ = @(result);
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        
-        @"AMapPOIPolygonSearchRequest::get_keywords_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray* resultList = [NSMutableArray array];
-        
-            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // ref object
-                AMapPOIPolygonSearchRequest* ref = (AMapPOIPolygonSearchRequest*) args[@"__this__"];
-                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
-                if ((NSNull *) ref == [NSNull null] || ref == nil) {
-                    [resultList addObject: [NSNull null]];
-                    continue;
-                }
-        
-                NSString* result = ref.keywords;
-        
-                // 返回值: jsonable
-                id __result__ = result;
-        
-                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
-            }
-        
-            methodResult(resultList);
-        },
-        
         @"AMapPOIPolygonSearchRequest::get_polygon_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray* resultList = [NSMutableArray array];
         
@@ -4973,6 +3759,1256 @@ extern BOOL enableLog;
                 }
         
                 NSString* result = ref.destinationName;
+        
+                // 返回值: jsonable
+                id __result__ = result;
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"AMapNavigationShareSearchRequest::get_strategy_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                AMapNavigationShareSearchRequest* ref = (AMapNavigationShareSearchRequest*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                NSInteger result = ref.strategy;
+        
+                // 返回值: Value
+                NSObject* __result__ = @(result);
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"AMapNavigationShareSearchRequest::get_startCoordinate_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                AMapNavigationShareSearchRequest* ref = (AMapNavigationShareSearchRequest*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                AMapGeoPoint* result = ref.startCoordinate;
+        
+                // return a ref
+                NSObject* __result__ = result;
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"AMapNavigationShareSearchRequest::get_destinationCoordinate_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                AMapNavigationShareSearchRequest* ref = (AMapNavigationShareSearchRequest*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                AMapGeoPoint* result = ref.destinationCoordinate;
+        
+                // return a ref
+                NSObject* __result__ = result;
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"AMapShareSearchResponse::get_shareURL_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                AMapShareSearchResponse* ref = (AMapShareSearchResponse*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                NSString* result = ref.shareURL;
+        
+                // 返回值: jsonable
+                id __result__ = result;
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"AMapFutureRouteSearchRequest::get_beginTime_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                NSString* result = ref.beginTime;
+        
+                // 返回值: jsonable
+                id __result__ = result;
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"AMapFutureRouteSearchRequest::get_interval_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                NSInteger result = ref.interval;
+        
+                // 返回值: Value
+                NSObject* __result__ = @(result);
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"AMapFutureRouteSearchRequest::get_timeCount_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                NSInteger result = ref.timeCount;
+        
+                // 返回值: Value
+                NSObject* __result__ = @(result);
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"AMapFutureRouteSearchRequest::get_strategy_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                NSInteger result = ref.strategy;
+        
+                // 返回值: Value
+                NSObject* __result__ = @(result);
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"AMapFutureRouteSearchRequest::get_originId_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                NSString* result = ref.originId;
+        
+                // 返回值: jsonable
+                id __result__ = result;
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"AMapFutureRouteSearchRequest::get_destinationId_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                NSString* result = ref.destinationId;
+        
+                // 返回值: jsonable
+                id __result__ = result;
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"AMapFutureRouteSearchRequest::get_origintype_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                NSString* result = ref.origintype;
+        
+                // 返回值: jsonable
+                id __result__ = result;
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"AMapFutureRouteSearchRequest::get_destinationtype_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                NSString* result = ref.destinationtype;
+        
+                // 返回值: jsonable
+                id __result__ = result;
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"AMapFutureRouteSearchRequest::get_parentId_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                NSString* result = ref.parentId;
+        
+                // 返回值: jsonable
+                id __result__ = result;
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"AMapFutureRouteSearchRequest::get_plateProvince_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                NSString* result = ref.plateProvince;
+        
+                // 返回值: jsonable
+                id __result__ = result;
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"AMapFutureRouteSearchRequest::get_plateNumber_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                NSString* result = ref.plateNumber;
+        
+                // 返回值: jsonable
+                id __result__ = result;
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"AMapFutureRouteSearchRequest::get_cartype_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                NSInteger result = ref.cartype;
+        
+                // 返回值: Value
+                NSObject* __result__ = @(result);
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"AMapFutureRouteSearchResponse::get_paths_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                AMapFutureRouteSearchResponse* ref = (AMapFutureRouteSearchResponse*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                NSArray<AMapPath*>* result = ref.paths;
+        
+                // return a ref
+                NSObject* __result__ = result;
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"AMapFutureRouteSearchResponse::get_timeInfos_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                AMapFutureRouteSearchResponse* ref = (AMapFutureRouteSearchResponse*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                NSArray<AMapFutureTimeInfo*>* result = ref.timeInfos;
+        
+                // return a ref
+                NSObject* __result__ = result;
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"AMapGeoPoint::get_latitude_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                AMapGeoPoint* ref = (AMapGeoPoint*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                CGFloat result = ref.latitude;
+        
+                // 返回值: Value
+                NSObject* __result__ = @(result);
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"AMapGeoPoint::get_longitude_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                AMapGeoPoint* ref = (AMapGeoPoint*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                CGFloat result = ref.longitude;
+        
+                // 返回值: Value
+                NSObject* __result__ = @(result);
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"AMapGeoPolygon::get_points_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                AMapGeoPolygon* ref = (AMapGeoPolygon*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                NSArray<AMapGeoPoint*>* result = ref.points;
+        
+                // return a ref
+                NSObject* __result__ = result;
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"AMapCity::get_city_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                AMapCity* ref = (AMapCity*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                NSString* result = ref.city;
+        
+                // 返回值: jsonable
+                id __result__ = result;
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"AMapCity::get_citycode_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                AMapCity* ref = (AMapCity*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                NSString* result = ref.citycode;
+        
+                // 返回值: jsonable
+                id __result__ = result;
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"AMapCity::get_adcode_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                AMapCity* ref = (AMapCity*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                NSString* result = ref.adcode;
+        
+                // 返回值: jsonable
+                id __result__ = result;
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"AMapCity::get_num_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                AMapCity* ref = (AMapCity*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                NSInteger result = ref.num;
+        
+                // 返回值: Value
+                NSObject* __result__ = @(result);
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"AMapCity::get_districts_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                AMapCity* ref = (AMapCity*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                NSArray<AMapDistrict*>* result = ref.districts;
+        
+                // return a ref
+                NSObject* __result__ = result;
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"AMapSuggestion::get_keywords_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                AMapSuggestion* ref = (AMapSuggestion*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                NSArray<NSString*>* result = ref.keywords;
+        
+                // 返回值: jsonable
+                id __result__ = result;
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"AMapSuggestion::get_cities_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                AMapSuggestion* ref = (AMapSuggestion*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                NSArray<AMapCity*>* result = ref.cities;
+        
+                // return a ref
+                NSObject* __result__ = result;
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"AMapTip::get_uid_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                AMapTip* ref = (AMapTip*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                NSString* result = ref.uid;
+        
+                // 返回值: jsonable
+                id __result__ = result;
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"AMapTip::get_name_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                AMapTip* ref = (AMapTip*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                NSString* result = ref.name;
+        
+                // 返回值: jsonable
+                id __result__ = result;
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"AMapTip::get_adcode_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                AMapTip* ref = (AMapTip*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                NSString* result = ref.adcode;
+        
+                // 返回值: jsonable
+                id __result__ = result;
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"AMapTip::get_district_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                AMapTip* ref = (AMapTip*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                NSString* result = ref.district;
+        
+                // 返回值: jsonable
+                id __result__ = result;
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"AMapTip::get_address_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                AMapTip* ref = (AMapTip*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                NSString* result = ref.address;
+        
+                // 返回值: jsonable
+                id __result__ = result;
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"AMapTip::get_location_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                AMapTip* ref = (AMapTip*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                AMapGeoPoint* result = ref.location;
+        
+                // return a ref
+                NSObject* __result__ = result;
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"AMapTip::get_typecode_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                AMapTip* ref = (AMapTip*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                NSString* result = ref.typecode;
+        
+                // 返回值: jsonable
+                id __result__ = result;
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"AMapImage::get_title_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                AMapImage* ref = (AMapImage*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                NSString* result = ref.title;
+        
+                // 返回值: jsonable
+                id __result__ = result;
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"AMapImage::get_url_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                AMapImage* ref = (AMapImage*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                NSString* result = ref.url;
+        
+                // 返回值: jsonable
+                id __result__ = result;
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"AMapPOIExtension::get_rating_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                AMapPOIExtension* ref = (AMapPOIExtension*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                CGFloat result = ref.rating;
+        
+                // 返回值: Value
+                NSObject* __result__ = @(result);
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"AMapPOIExtension::get_cost_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                AMapPOIExtension* ref = (AMapPOIExtension*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                CGFloat result = ref.cost;
+        
+                // 返回值: Value
+                NSObject* __result__ = @(result);
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"AMapPOIExtension::get_openTime_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                AMapPOIExtension* ref = (AMapPOIExtension*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                NSString* result = ref.openTime;
+        
+                // 返回值: jsonable
+                id __result__ = result;
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"AMapIndoorData::get_floor_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                AMapIndoorData* ref = (AMapIndoorData*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                NSInteger result = ref.floor;
+        
+                // 返回值: Value
+                NSObject* __result__ = @(result);
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"AMapIndoorData::get_floorName_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                AMapIndoorData* ref = (AMapIndoorData*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                NSString* result = ref.floorName;
+        
+                // 返回值: jsonable
+                id __result__ = result;
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"AMapIndoorData::get_pid_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                AMapIndoorData* ref = (AMapIndoorData*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                NSString* result = ref.pid;
+        
+                // 返回值: jsonable
+                id __result__ = result;
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"AMapSubPOI::get_uid_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                AMapSubPOI* ref = (AMapSubPOI*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                NSString* result = ref.uid;
+        
+                // 返回值: jsonable
+                id __result__ = result;
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"AMapSubPOI::get_name_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                AMapSubPOI* ref = (AMapSubPOI*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                NSString* result = ref.name;
+        
+                // 返回值: jsonable
+                id __result__ = result;
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"AMapSubPOI::get_sname_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                AMapSubPOI* ref = (AMapSubPOI*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                NSString* result = ref.sname;
+        
+                // 返回值: jsonable
+                id __result__ = result;
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"AMapSubPOI::get_location_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                AMapSubPOI* ref = (AMapSubPOI*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                AMapGeoPoint* result = ref.location;
+        
+                // return a ref
+                NSObject* __result__ = result;
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"AMapSubPOI::get_address_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                AMapSubPOI* ref = (AMapSubPOI*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                NSString* result = ref.address;
+        
+                // 返回值: jsonable
+                id __result__ = result;
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"AMapSubPOI::get_distance_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                AMapSubPOI* ref = (AMapSubPOI*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                NSInteger result = ref.distance;
+        
+                // 返回值: Value
+                NSObject* __result__ = @(result);
+        
+                [resultList addObject:__result__ == nil ? [NSNull null] : __result__];
+            }
+        
+            methodResult(resultList);
+        },
+        
+        @"AMapSubPOI::get_subtype_batch": ^(NSObject <FlutterPluginRegistrar>* registrar, id argsBatch, FlutterResult methodResult) {
+            NSMutableArray* resultList = [NSMutableArray array];
+        
+            for (NSUInteger __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
+        
+                // ref object
+                AMapSubPOI* ref = (AMapSubPOI*) args[@"__this__"];
+                // 批处理过程中出现nil引用则直接添加nil进结果列表, 然后进行下一次循环
+                if ((NSNull *) ref == [NSNull null] || ref == nil) {
+                    [resultList addObject: [NSNull null]];
+                    continue;
+                }
+        
+                NSString* result = ref.subtype;
         
                 // 返回值: jsonable
                 id __result__ = result;

@@ -12,51 +12,5 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 import 'package:core_location_fluttify/core_location_fluttify.dart';
+import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 
-Future<String?> AMapEmptyStringIfNil(String s) async {
-  // print log
-  if (fluttifyLogEnabled) {
-    debugPrint('fluttify-dart: AMapEmptyStringIfNil::AMapEmptyStringIfNil([\'s\':$s])');
-  }
-
-  // invoke native method
-  final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('AMapEmptyStringIfNil::AMapEmptyStringIfNil', {"s": s});
-  
-
-  // handle native call
-  
-
-  return __result__;
-}
-
-Future<CLLocationCoordinate2D?> AMapCoordinateConvert(CLLocationCoordinate2D coordinate, AMapCoordinateType type) async {
-  // print log
-  if (fluttifyLogEnabled) {
-    debugPrint('fluttify-dart: AMapCoordinateConvert::AMapCoordinateConvert([])');
-  }
-
-  // invoke native method
-  final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('AMapCoordinateConvert::AMapCoordinateConvert', {"coordinate": coordinate, "type": type.toValue()});
-  
-
-  // handle native call
-  
-
-  return AmapSearchFluttifyIOSAs<CLLocationCoordinate2D>(__result__);
-}
-
-Future<bool?> AMapDataAvailableForCoordinate(CLLocationCoordinate2D coordinate) async {
-  // print log
-  if (fluttifyLogEnabled) {
-    debugPrint('fluttify-dart: AMapDataAvailableForCoordinate::AMapDataAvailableForCoordinate([])');
-  }
-
-  // invoke native method
-  final __result__ = await kAmapSearchFluttifyChannel.invokeMethod('AMapDataAvailableForCoordinate::AMapDataAvailableForCoordinate', {"coordinate": coordinate});
-  
-
-  // handle native call
-  
-
-  return __result__;
-}

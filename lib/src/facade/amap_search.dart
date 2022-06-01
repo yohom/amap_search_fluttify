@@ -1,9 +1,9 @@
 // ignore_for_file: non_constant_identifier_names
 import 'dart:async';
 
+import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
-import 'package:core_location_fluttify/core_location_fluttify.dart';
 
 part 'delegates.dart';
 part 'extensions.dart';
@@ -31,9 +31,7 @@ class AmapSearch {
         // do nothing
       },
       ios: (pool) async {
-        final service = await AMapServices.sharedServices();
-        await service?.set_apiKey(iosKey);
-        await service?.set_enableHTTPS(true);
+        await AmapCore.init(iosKey);
       },
     );
   }
@@ -109,13 +107,12 @@ class AmapSearch {
 
         final listener =
             await com_amap_api_services_poisearch_PoiSearch_OnPoiSearchListener
-                .anonymous__(
-          onPoiSearched: (poiResult, rCode) async {
-            completer.complete(
-              await PoiListX.fromAndroid((await poiResult!.getPois()) ?? []),
-            );
-          },
-        );
+                .anonymous__();
+        listener.onPoiSearched = (poiResult, rCode) async {
+          completer.complete(
+            await PoiListX.fromAndroid((await poiResult!.getPois()) ?? []),
+          );
+        };
 
         // 设置回调
         await _androidPoiSearch.setOnPoiSearchListener(listener);
@@ -132,13 +129,12 @@ class AmapSearch {
         _iosSearch = await AMapSearchAPI.create__();
 
         // 设置回调
-        final delegate = await AMapSearchDelegate.anonymous__(
-          onPOISearchDone: (request, response) async {
-            completer.complete(
-              await PoiListX.fromIOS((await response!.get_pois() ?? [])),
-            );
-          },
-        );
+        final delegate = await AMapSearchDelegate.anonymous__();
+        delegate.onPOISearchDone_response = (request, response) async {
+          completer.complete(
+            await PoiListX.fromIOS((await response!.get_pois() ?? [])),
+          );
+        };
         await _iosSearch.set_delegate(delegate);
 
         // 创建请求对象
@@ -209,13 +205,12 @@ class AmapSearch {
 
         final listener =
             await com_amap_api_services_poisearch_PoiSearch_OnPoiSearchListener
-                .anonymous__(
-          onPoiSearched: (poiResult, rCode) async {
-            completer.complete(
-              await PoiListX.fromAndroid((await poiResult!.getPois()) ?? []),
-            );
-          },
-        );
+                .anonymous__();
+        listener.onPoiSearched = (poiResult, rCode) async {
+          completer.complete(
+            await PoiListX.fromAndroid((await poiResult!.getPois()) ?? []),
+          );
+        };
         // 设置回调
         await _androidPoiSearch.setOnPoiSearchListener(listener);
 
@@ -232,13 +227,12 @@ class AmapSearch {
         _iosSearch = await AMapSearchAPI.create__();
 
         // 设置回调
-        final delegate = await AMapSearchDelegate.anonymous__(
-          onPOISearchDone: (request, response) async {
-            completer.complete(
-              await PoiListX.fromIOS((await response!.get_pois() ?? [])),
-            );
-          },
-        );
+        final delegate = await AMapSearchDelegate.anonymous__();
+        delegate.onPOISearchDone_response = (request, response) async {
+          completer.complete(
+            await PoiListX.fromIOS((await response!.get_pois() ?? [])),
+          );
+        };
         await _iosSearch.set_delegate(delegate);
 
         // 创建周边搜索请求
@@ -302,13 +296,12 @@ class AmapSearch {
         _iosSearch = await AMapSearchAPI.create__();
 
         // 设置回调
-        final delegate = await AMapSearchDelegate.anonymous__(
-          onPOISearchDone: (request, response) async {
-            completer.complete(
-              await PoiListX.fromIOS((await response!.get_pois() ?? [])),
-            );
-          },
-        );
+        final delegate = await AMapSearchDelegate.anonymous__();
+        delegate.onPOISearchDone_response = (request, response) async {
+          completer.complete(
+            await PoiListX.fromIOS((await response!.get_pois() ?? [])),
+          );
+        };
         await _iosSearch.set_delegate(delegate);
 
         // 创建周边搜索请求
@@ -354,11 +347,10 @@ class AmapSearch {
         // 设置回调
         final listener =
             await com_amap_api_services_help_Inputtips_InputtipsListener
-                .anonymous__(
-          onGetInputtips: (response, code) async {
-            completer.complete(await InputTipListX.fromAndroid(response ?? []));
-          },
-        );
+                .anonymous__();
+        listener.onGetInputtips = (response, code) async {
+          completer.complete(await InputTipListX.fromAndroid(response ?? []));
+        };
         await _androidInputTip.setInputtipsListener(listener);
 
         // 开始搜索
@@ -371,13 +363,12 @@ class AmapSearch {
         _iosSearch = await AMapSearchAPI.create__();
 
         // 设置回调
-        final delegate = await AMapSearchDelegate.anonymous__(
-          onInputTipsSearchDone: (request, response) async {
-            completer.complete(
-              await InputTipListX.fromIOS(await response!.get_tips() ?? []),
-            );
-          },
-        );
+        final delegate = await AMapSearchDelegate.anonymous__();
+        delegate.onInputTipsSearchDone_response = (request, response) async {
+          completer.complete(
+            await InputTipListX.fromIOS(await response!.get_tips() ?? []),
+          );
+        };
         await _iosSearch.set_delegate(delegate);
 
         // 创建搜索请求
@@ -423,20 +414,18 @@ class AmapSearch {
         // 设置回调
         final listener =
             await com_amap_api_services_geocoder_GeocodeSearch_OnGeocodeSearchListener
-                .anonymous__(
-          onGeocodeSearched: (poiResult, rCode) async {
-            final geocodeList =
-                (await poiResult!.getGeocodeAddressList()) ?? [];
-            final coordinateBatch = await geocodeList.getLatLonPoint_batch();
-            final latitudeBatch = await coordinateBatch.getLatitude_batch();
-            final longitudeBatch = await coordinateBatch.getLongitude_batch();
-            final geocode = [
-              for (int i = 0; i < coordinateBatch.length; i++)
-                Geocode(LatLng(latitudeBatch[i]!, longitudeBatch[i]!))
-            ];
-            completer.complete(geocode);
-          },
-        );
+                .anonymous__();
+        listener.onGeocodeSearched = (poiResult, rCode) async {
+          final geocodeList = (await poiResult!.getGeocodeAddressList()) ?? [];
+          final coordinateBatch = await geocodeList.getLatLonPoint_batch();
+          final latitudeBatch = await coordinateBatch.getLatitude_batch();
+          final longitudeBatch = await coordinateBatch.getLongitude_batch();
+          final geocode = [
+            for (int i = 0; i < coordinateBatch.length; i++)
+              Geocode(LatLng(latitudeBatch[i]!, longitudeBatch[i]!))
+          ];
+          completer.complete(geocode);
+        };
         await _androidGeocodeSearch.setOnGeocodeSearchListener(listener);
 
         // 开始搜索
@@ -449,19 +438,18 @@ class AmapSearch {
         _iosSearch = await AMapSearchAPI.create__();
 
         // 设置回调
-        final delegate = await AMapSearchDelegate.anonymous__(
-          onGeocodeSearchDone: (request, response) async {
-            final geocodeList = await response!.get_geocodes() ?? [];
-            final coordinateBatch = await geocodeList.get_location_batch();
-            final latitudeBatch = await coordinateBatch.get_latitude_batch();
-            final longitudeBatch = await coordinateBatch.get_longitude_batch();
-            final geocode = [
-              for (int i = 0; i < coordinateBatch.length; i++)
-                Geocode(LatLng(latitudeBatch[i]!, longitudeBatch[i]!))
-            ];
-            completer.complete(geocode);
-          },
-        );
+        final delegate = await AMapSearchDelegate.anonymous__();
+        delegate.onGeocodeSearchDone_response = (request, response) async {
+          final geocodeList = await response!.get_geocodes() ?? [];
+          final coordinateBatch = await geocodeList.get_location_batch();
+          final latitudeBatch = await coordinateBatch.get_latitude_batch();
+          final longitudeBatch = await coordinateBatch.get_longitude_batch();
+          final geocode = [
+            for (int i = 0; i < coordinateBatch.length; i++)
+              Geocode(LatLng(latitudeBatch[i]!, longitudeBatch[i]!))
+          ];
+          completer.complete(geocode);
+        };
         await _iosSearch.set_delegate(delegate);
 
         // 创建搜索请求
@@ -512,28 +500,27 @@ class AmapSearch {
         // 设置回调
         final listener =
             await com_amap_api_services_geocoder_GeocodeSearch_OnGeocodeSearchListener
-                .anonymous__(
-          onRegeocodeSearched: (poiResult, rCode) async {
-            final result = (await poiResult!.getRegeocodeAddress())!;
+                .anonymous__();
+        listener.onRegeocodeSearched = (poiResult, rCode) async {
+          final result = (await poiResult!.getRegeocodeAddress())!;
 
-            completer.complete(ReGeocode(
-              provinceName: await result.getProvince(),
-              cityName: await result.getCity(),
-              cityCode: await result.getCityCode(),
-              adCode: await result.getAdCode(),
-              districtName: await result.getDistrict(),
-              townCode: await result.getTowncode(),
-              township: await result.getTownship(),
-              neighborhood: await result.getNeighborhood(),
-              building: await result.getBuilding(),
-              country: await result.getCountry(),
-              formatAddress: await result.getFormatAddress(),
-              roads: await RoadListX.fromAndroid(await result.getRoads() ?? []),
-              aoiList: await AoiListX.fromAndroid(await result.getAois() ?? []),
-              poiList: await PoiListX.fromAndroid(await result.getPois() ?? []),
-            ));
-          },
-        );
+          completer.complete(ReGeocode(
+            provinceName: await result.getProvince(),
+            cityName: await result.getCity(),
+            cityCode: await result.getCityCode(),
+            adCode: await result.getAdCode(),
+            districtName: await result.getDistrict(),
+            townCode: await result.getTowncode(),
+            township: await result.getTownship(),
+            neighborhood: await result.getNeighborhood(),
+            building: await result.getBuilding(),
+            country: await result.getCountry(),
+            formatAddress: await result.getFormatAddress(),
+            roads: await RoadListX.fromAndroid(await result.getRoads() ?? []),
+            aoiList: await AoiListX.fromAndroid(await result.getAois() ?? []),
+            poiList: await PoiListX.fromAndroid(await result.getPois() ?? []),
+          ));
+        };
         await _androidGeocodeSearch.setOnGeocodeSearchListener(listener);
 
         // 开始搜索
@@ -553,33 +540,32 @@ class AmapSearch {
         await amapLocation.set_longitude(latLng.longitude);
 
         // 设置回调
-        final delegate = await AMapSearchDelegate.anonymous__(
-          onReGeocodeSearchDone: (request, response) async {
-            final result =
-                await (response!.get_regeocode() as FutureOr<AMapReGeocode>);
-            final addressComponent = (await result.get_addressComponent())!;
+        final delegate = await AMapSearchDelegate.anonymous__();
+        delegate.onReGeocodeSearchDone_response = (request, response) async {
+          final result =
+              await (response!.get_regeocode() as FutureOr<AMapReGeocode>);
+          final addressComponent = (await result.get_addressComponent())!;
 
-            completer.complete(ReGeocode(
-              provinceName: await addressComponent.get_province(),
-              cityName: await addressComponent.get_city(),
-              cityCode: await addressComponent.get_citycode(),
-              adCode: await addressComponent.get_adcode(),
-              districtName: await addressComponent.get_district(),
-              townCode: await addressComponent.get_towncode(),
-              township: await addressComponent.get_township(),
-              neighborhood: await addressComponent.get_neighborhood(),
-              building: await addressComponent.get_building(),
-              country: await addressComponent.get_country(),
-              formatAddress: await result.get_formattedAddress(),
-              roads: await RoadListX.fromIOS(
-                  await (result.get_roads() as FutureOr<List<AMapRoad>>)),
-              aoiList: await AoiListX.fromIOS(
-                  await (result.get_aois() as FutureOr<List<AMapAOI>>)),
-              poiList: await PoiListX.fromIOS(
-                  await (result.get_pois() as FutureOr<List<AMapPOI>>)),
-            ));
-          },
-        );
+          completer.complete(ReGeocode(
+            provinceName: await addressComponent.get_province(),
+            cityName: await addressComponent.get_city(),
+            cityCode: await addressComponent.get_citycode(),
+            adCode: await addressComponent.get_adcode(),
+            districtName: await addressComponent.get_district(),
+            townCode: await addressComponent.get_towncode(),
+            township: await addressComponent.get_township(),
+            neighborhood: await addressComponent.get_neighborhood(),
+            building: await addressComponent.get_building(),
+            country: await addressComponent.get_country(),
+            formatAddress: await result.get_formattedAddress(),
+            roads: await RoadListX.fromIOS(
+                await (result.get_roads() as FutureOr<List<AMapRoad>>)),
+            aoiList: await AoiListX.fromIOS(
+                await (result.get_aois() as FutureOr<List<AMapAOI>>)),
+            poiList: await PoiListX.fromIOS(
+                await (result.get_pois() as FutureOr<List<AMapPOI>>)),
+          ));
+        };
         await _iosSearch.set_delegate(delegate);
 
         // 创建搜索请求
@@ -665,11 +651,10 @@ class AmapSearch {
         // 设置回调
         final listener =
             await com_amap_api_services_route_RouteSearch_OnRouteSearchListener
-                .anonymous__(
-          onDriveRouteSearched: (route, rCode) async {
-            completer.complete(DriveRouteResult.android(route));
-          },
-        );
+                .anonymous__();
+        listener.onDriveRouteSearched = (route, rCode) async {
+          completer.complete(DriveRouteResult.android(route));
+        };
         await _androidRouteSearch.setRouteSearchListener(listener);
 
         // 开始搜索
@@ -696,12 +681,11 @@ class AmapSearch {
         await toLatLng.set_longitude(to.longitude);
 
         // 设置回调
-        final delegate = await AMapSearchDelegate.anonymous__(
-          onRouteSearchDone: (request, response) async {
-            final route = DriveRouteResult.ios(await response!.get_route());
-            completer.complete(route);
-          },
-        );
+        final delegate = await AMapSearchDelegate.anonymous__();
+        delegate.onRouteSearchDone_response = (request, response) async {
+          final route = DriveRouteResult.ios(await response!.get_route());
+          completer.complete(route);
+        };
         await _iosSearch.set_delegate(delegate);
 
         // 创建搜索请求
@@ -794,11 +778,10 @@ class AmapSearch {
         // 设置回调
         final listener =
             await com_amap_api_services_route_RouteSearch_OnRouteSearchListener
-                .anonymous__(
-          onBusRouteSearched: (route, code) async {
-            completer.complete(BusRouteResult.android(route));
-          },
-        );
+                .anonymous__();
+        listener.onBusRouteSearched = (route, code) async {
+          completer.complete(BusRouteResult.android(route));
+        };
         await _androidRouteSearch.setRouteSearchListener(listener);
 
         // 开始搜索
@@ -824,11 +807,10 @@ class AmapSearch {
         await toLatLng.set_longitude(to.longitude);
 
         // 设置回调
-        final delegate = await AMapSearchDelegate.anonymous__(
-          onRouteSearchDone: (request, response) async {
-            completer.complete(BusRouteResult.ios(await response!.get_route()));
-          },
-        );
+        final delegate = await AMapSearchDelegate.anonymous__();
+        delegate.onRouteSearchDone_response = (request, response) async {
+          completer.complete(BusRouteResult.ios(await response!.get_route()));
+        };
         await _iosSearch.set_delegate(delegate);
 
         // FIXME ios端的公交路线没有经纬度参数, 无法和android端统一
@@ -900,11 +882,10 @@ class AmapSearch {
         // 设置回调
         final listener =
             await com_amap_api_services_route_RouteSearch_OnRouteSearchListener
-                .anonymous__(
-          onWalkRouteSearched: (route, code) async {
-            completer.complete(WalkRouteResult.android(route));
-          },
-        );
+                .anonymous__();
+        listener.onWalkRouteSearched = (route, code) async {
+          completer.complete(WalkRouteResult.android(route));
+        };
         await _androidRouteSearch.setRouteSearchListener(listener);
 
         // 开始搜索
@@ -930,12 +911,10 @@ class AmapSearch {
         await toLatLng.set_longitude(to.longitude);
 
         // 设置回调
-        final delegate = await AMapSearchDelegate.anonymous__(
-          onRouteSearchDone: (request, response) async {
-            completer
-                .complete(WalkRouteResult.ios(await response!.get_route()));
-          },
-        );
+        final delegate = await AMapSearchDelegate.anonymous__();
+        delegate.onRouteSearchDone_response = (request, response) async {
+          completer.complete(WalkRouteResult.ios(await response!.get_route()));
+        };
         await _iosSearch.set_delegate(delegate);
 
         // 创建搜索请求
@@ -1004,11 +983,10 @@ class AmapSearch {
         // 设置回调
         final listener =
             await com_amap_api_services_route_RouteSearch_OnRouteSearchListener
-                .anonymous__(
-          onRideRouteSearched: (route, code) async {
-            completer.complete(RideRouteResult.android(route));
-          },
-        );
+                .anonymous__();
+        listener.onRideRouteSearched = (route, code) async {
+          completer.complete(RideRouteResult.android(route));
+        };
         await _androidRouteSearch.setRouteSearchListener(listener);
 
         // 开始搜索
@@ -1034,12 +1012,10 @@ class AmapSearch {
         await toLatLng.set_longitude(to.longitude);
 
         // 设置回调
-        final delegate = await AMapSearchDelegate.anonymous__(
-          onRouteSearchDone: (request, response) async {
-            completer
-                .complete(RideRouteResult.ios(await response!.get_route()));
-          },
-        );
+        final delegate = await AMapSearchDelegate.anonymous__();
+        delegate.onRouteSearchDone_response = (request, response) async {
+          completer.complete(RideRouteResult.ios(await response!.get_route()));
+        };
         await _iosSearch.set_delegate(delegate);
 
         // 创建搜索请求
@@ -1094,11 +1070,10 @@ class AmapSearch {
         // 设置回调
         final listener =
             await com_amap_api_services_busline_BusStationSearch_OnBusStationSearchListener
-                .anonymous__(
-          onBusStationSearched: (result, code) async {
-            completer.complete(BusStation.android(result));
-          },
-        );
+                .anonymous__();
+        listener.onBusStationSearched = (result, code) async {
+          completer.complete(BusStation.android(result));
+        };
         await _androidBusStationSearch.setOnBusStationSearchListener(listener);
 
         // 开始搜索
@@ -1111,11 +1086,10 @@ class AmapSearch {
         _iosSearch = await AMapSearchAPI.create__();
 
         // 设置回调
-        final delegate = await AMapSearchDelegate.anonymous__(
-          onBusStopSearchDone: (request, response) async {
-            completer.complete(BusStation.ios(response));
-          },
-        );
+        final delegate = await AMapSearchDelegate.anonymous__();
+        delegate.onBusStopSearchDone_response = (request, response) async {
+          completer.complete(BusStation.ios(response));
+        };
         await _iosSearch.set_delegate(delegate);
 
         // 创建搜索请求
@@ -1171,11 +1145,10 @@ class AmapSearch {
         // 设置回调
         final listener =
             await com_amap_api_services_district_DistrictSearch_OnDistrictSearchListener
-                .anonymous__(
-          onDistrictSearched: (result) async {
-            completer.complete(await District.android(result!));
-          },
-        );
+                .anonymous__();
+        listener.onDistrictSearched = (result) async {
+          completer.complete(await District.android(result!));
+        };
         await _androidDistrictSearch.setOnDistrictSearchListener(listener);
 
         // 开始搜索
@@ -1188,11 +1161,10 @@ class AmapSearch {
         _iosSearch = await AMapSearchAPI.create__();
 
         // 设置回调
-        final delegate = await AMapSearchDelegate.anonymous__(
-          onDistrictSearchDone: (request, response) async {
-            completer.complete(await District.ios(response!));
-          },
-        );
+        final delegate = await AMapSearchDelegate.anonymous__();
+        delegate.onDistrictSearchDone_response = (request, response) async {
+          completer.complete(await District.ios(response!));
+        };
         await _iosSearch.set_delegate(delegate);
 
         // 创建搜索请求
@@ -1257,6 +1229,10 @@ class AmapSearch {
         _iosSearch = await AMapSearchAPI.create__();
 
         // 设置回调
+        // final delegate = await AMapSearchDelegate.anonymous__();
+        // delegate.onWeatherSearchDone_response = (request, response) async {
+        //   // completer.complete(await Weather.ios(response!.get));
+        // };
         await _iosSearch.set_delegate(_IOSSearchListener(completer));
 
         // 创建搜索请求
@@ -1306,11 +1282,10 @@ class AmapSearch {
         // 设置回调
         final listener =
             await com_amap_api_services_cloud_CloudSearch_OnCloudSearchListener
-                .anonymous__(
-          onCloudSearched: (result, code) async {
-            completer.complete(Cloud.android(result));
-          },
-        );
+                .anonymous__();
+        listener.onCloudSearched = (result, code) async {
+          completer.complete(Cloud.android(result));
+        };
         await _androidCloudSearch.setOnCloudSearchListener(listener);
 
         // 设置请求
@@ -1327,11 +1302,10 @@ class AmapSearch {
         _iosSearch = await AMapSearchAPI.create__();
 
         // 设置回调
-        final delegate = await AMapSearchDelegate.anonymous__(
-          onCloudSearchDone: (request, response) async {
-            completer.complete(Cloud.ios(response));
-          },
-        );
+        final delegate = await AMapSearchDelegate.anonymous__();
+        delegate.onCloudSearchDone_response = (request, response) async {
+          completer.complete(Cloud.ios(response));
+        };
         await _iosSearch.set_delegate(delegate);
 
         // 创建搜索请求
