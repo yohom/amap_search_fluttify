@@ -19,7 +19,7 @@ A new flutter plugin project.
   # flutter plugin dependency
   
   # sdk dependency
-  s.dependency 'AMapSearch', '9.2.0'
+  s.dependency 'AMapSearch-NO-IDFA', '9.2.0'
 
   s.static_framework = true
   s.ios.deployment_target = '8.0'

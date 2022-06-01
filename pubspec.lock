@@ -7,7 +7,7 @@ packages:
       name: amap_core_fluttify
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "0.17.0-dev.4"
+    version: "0.17.0-dev.6"
   async:
     dependency: transitive
     description:

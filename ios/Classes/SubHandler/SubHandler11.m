@@ -19,42 +19,6 @@ extern BOOL enableLog;
 - (NSDictionary<NSString*, Handler>*) getSubHandler11 {
     __weak __typeof(self)weakSelf = self;
     return @{
-        @"ObjectFactory::createAMapCloudPOIAroundSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapCloudPOIAroundSearchRequest");
-            }
-        
-            AMapCloudPOIAroundSearchRequest* __this__;
-            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
-                __this__ = [[AMapCloudPOIAroundSearchRequest alloc] init];
-            } else {
-                __this__ = [AMapCloudPOIAroundSearchRequest alloc];
-            }
-        
-            methodResult(__this__);
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapCloudPOIPolygonSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapCloudPOIPolygonSearchRequest");
-            }
-        
-            AMapCloudPOIPolygonSearchRequest* __this__;
-            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
-                __this__ = [[AMapCloudPOIPolygonSearchRequest alloc] init];
-            } else {
-                __this__ = [AMapCloudPOIPolygonSearchRequest alloc];
-            }
-        
-            methodResult(__this__);
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
         @"ObjectFactory::createAMapCloudPOIIDSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // print log
             if (enableLog) {
@@ -1110,24 +1074,6 @@ extern BOOL enableLog;
                 __this__ = [[AMapNearbyUploadInfo alloc] init];
             } else {
                 __this__ = [AMapNearbyUploadInfo alloc];
-            }
-        
-            methodResult(__this__);
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::createAMapNearbySearchManager": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
-            // print log
-            if (enableLog) {
-                NSLog(@"ObjectFactory::createAMapNearbySearchManager");
-            }
-        
-            AMapNearbySearchManager* __this__;
-            if ([((NSDictionary<NSString*, id>*) args)[@"init"] boolValue]) {
-                __this__ = [[AMapNearbySearchManager alloc] init];
-            } else {
-                __this__ = [AMapNearbySearchManager alloc];
             }
         
             methodResult(__this__);
@@ -3124,26 +3070,6 @@ extern BOOL enableLog;
                     __this__ = [[AMapNearbyUploadInfo alloc] init];
                 } else {
                     __this__ = [AMapNearbyUploadInfo alloc];
-                }
-                [resultList addObject:__this__];
-            }
-        
-            methodResult(resultList);
-        
-            if (enableLog) NSLog(@"HEAP: %@", HEAP);
-        },
-        
-        @"ObjectFactory::create_batchAMapNearbySearchManager": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            NSMutableArray<NSObject*>* resultList = [NSMutableArray array];
-        
-            NSNumber* length = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"];
-            NSNumber* init = (NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"init"];
-            for (NSUInteger __i__ = 0; __i__ < [length integerValue]; __i__++) {
-                AMapNearbySearchManager* __this__;
-                if ([init boolValue]) {
-                    __this__ = [[AMapNearbySearchManager alloc] init];
-                } else {
-                    __this__ = [AMapNearbySearchManager alloc];
                 }
                 [resultList addObject:__this__];
             }

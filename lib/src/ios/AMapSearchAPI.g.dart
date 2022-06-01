@@ -348,7 +348,7 @@ class AMapSearchAPI extends NSObject  {
     return __result__;
   }
   
-  
+  @deprecated
   Future<void> AMapDrivingRouteSearch(AMapDrivingRouteSearchRequest request) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -501,7 +501,7 @@ class AMapSearchAPI extends NSObject  {
     return __result__;
   }
   
-  
+  @deprecated
   Future<void> AMapNearbySearch(AMapNearbySearchRequest request) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -873,7 +873,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI?> {
     return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
-  
+  @deprecated
   Future<List<void>> AMapDrivingRouteSearch_batch(List<AMapDrivingRouteSearchRequest> request) async {
     assert(true);
   
@@ -972,7 +972,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI?> {
     return (resultBatch as List).map((__result__) => __result__).cast<void>().toList();
   }
   
-  
+  @deprecated
   Future<List<void>> AMapNearbySearch_batch(List<AMapNearbySearchRequest> request) async {
     assert(true);
   
