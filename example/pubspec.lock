@@ -7,14 +7,14 @@ packages:
       name: amap_core_fluttify
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "0.17.0-dev.6"
+    version: "0.17.0-rc.0"
   amap_search_fluttify:
     dependency: "direct main"
     description:
       path: ".."
       relative: true
     source: path
-    version: "0.0.1"
+    version: "0.18.0-dev.1"
   android_intent_plus:
     dependency: transitive
     description:
@@ -91,7 +91,7 @@ packages:
       name: core_location_fluttify
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "0.7.0-dev.3"
+    version: "0.7.0-rc.0"
   crypto:
     dependency: transitive
     description:
@@ -183,7 +183,7 @@ packages:
       name: foundation_fluttify
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "0.13.0-dev.6"
+    version: "0.13.0-rc.0"
   hive:
     dependency: transitive
     description:
