@@ -5,6 +5,7 @@
 #import "AMapSearchDelegate_Anonymous.h"
 #import <Flutter/Flutter.h>
 #import "FluttifyMessageCodec.h"
+#import <objc/runtime.h>
 
 // Dart端一次方法调用所存在的栈, 只有当MethodChannel传递参数受限时, 再启用这个容器
 extern NSMutableDictionary<NSString*, NSObject*>* STACK;
