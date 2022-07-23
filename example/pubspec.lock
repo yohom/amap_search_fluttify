@@ -14,7 +14,7 @@ packages:
       path: ".."
       relative: true
     source: path
-    version: "0.18.0-dev.1"
+    version: "0.18.0-rc.0"
   android_intent_plus:
     dependency: transitive
     description:

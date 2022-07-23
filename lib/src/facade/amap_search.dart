@@ -109,7 +109,7 @@ class AmapSearch {
             await com_amap_api_services_poisearch_PoiSearch_OnPoiSearchListener
                 .anonymous__();
         listener.onPoiSearched = (poiResult, rCode) async {
-          completer.complete(
+          completer.completeSafely(
             await PoiListX.fromAndroid((await poiResult!.getPois()) ?? []),
           );
         };
@@ -131,7 +131,7 @@ class AmapSearch {
         // 设置回调
         final delegate = await AMapSearchDelegate.anonymous__();
         delegate.onPOISearchDone_response = (request, response) async {
-          completer.complete(
+          completer.completeSafely(
             await PoiListX.fromIOS((await response!.get_pois() ?? [])),
           );
         };
@@ -172,10 +172,8 @@ class AmapSearch {
   }) {
     assert(page > 0 && page < 100, '页数范围为1-100');
     assert(pageSize > 0 && pageSize < 50, '每页大小范围为1-50');
-    // 会在listener中关闭
-    final completer = Completer<List<Poi>>.sync();
 
-    platform(
+    return platform(
       android: (pool) async {
         // 创建查询对象
         final query = await com_amap_api_services_poisearch_PoiSearch_Query
@@ -206,8 +204,10 @@ class AmapSearch {
         final listener =
             await com_amap_api_services_poisearch_PoiSearch_OnPoiSearchListener
                 .anonymous__();
+
+        final completer = Completer<List<Poi>>();
         listener.onPoiSearched = (poiResult, rCode) async {
-          completer.complete(
+          completer.completeSafely(
             await PoiListX.fromAndroid((await poiResult!.getPois()) ?? []),
           );
         };
@@ -222,14 +222,17 @@ class AmapSearch {
           ..add(query)
           ..add(centerLatLng)
           ..add(bound);
+
+        return completer.future;
       },
       ios: (pool) async {
         _iosSearch = await AMapSearchAPI.create__();
 
         // 设置回调
         final delegate = await AMapSearchDelegate.anonymous__();
+        final completer = Completer<List<Poi>>();
         delegate.onPOISearchDone_response = (request, response) async {
-          completer.complete(
+          completer.completeSafely(
             await PoiListX.fromIOS((await response!.get_pois() ?? [])),
           );
         };
@@ -262,9 +265,10 @@ class AmapSearch {
         pool
           ..add(request)
           ..add(location);
+
+        return completer.future;
       },
     );
-    return completer.future;
   }
 
   /// id搜索poi
@@ -298,7 +302,7 @@ class AmapSearch {
         // 设置回调
         final delegate = await AMapSearchDelegate.anonymous__();
         delegate.onPOISearchDone_response = (request, response) async {
-          completer.complete(
+          completer.completeSafely(
             await PoiListX.fromIOS((await response!.get_pois() ?? [])),
           );
         };
@@ -349,7 +353,8 @@ class AmapSearch {
             await com_amap_api_services_help_Inputtips_InputtipsListener
                 .anonymous__();
         listener.onGetInputtips = (response, code) async {
-          completer.complete(await InputTipListX.fromAndroid(response ?? []));
+          completer
+              .completeSafely(await InputTipListX.fromAndroid(response ?? []));
         };
         await _androidInputTip.setInputtipsListener(listener);
 
@@ -365,7 +370,7 @@ class AmapSearch {
         // 设置回调
         final delegate = await AMapSearchDelegate.anonymous__();
         delegate.onInputTipsSearchDone_response = (request, response) async {
-          completer.complete(
+          completer.completeSafely(
             await InputTipListX.fromIOS(await response!.get_tips() ?? []),
           );
         };
@@ -424,7 +429,7 @@ class AmapSearch {
             for (int i = 0; i < coordinateBatch.length; i++)
               Geocode(LatLng(latitudeBatch[i]!, longitudeBatch[i]!))
           ];
-          completer.complete(geocode);
+          completer.completeSafely(geocode);
         };
         await _androidGeocodeSearch.setOnGeocodeSearchListener(listener);
 
@@ -448,7 +453,7 @@ class AmapSearch {
             for (int i = 0; i < coordinateBatch.length; i++)
               Geocode(LatLng(latitudeBatch[i]!, longitudeBatch[i]!))
           ];
-          completer.complete(geocode);
+          completer.completeSafely(geocode);
         };
         await _iosSearch.set_delegate(delegate);
 
@@ -504,7 +509,7 @@ class AmapSearch {
         listener.onRegeocodeSearched = (poiResult, rCode) async {
           final result = (await poiResult!.getRegeocodeAddress())!;
 
-          completer.complete(ReGeocode(
+          completer.completeSafely(ReGeocode(
             provinceName: await result.getProvince(),
             cityName: await result.getCity(),
             cityCode: await result.getCityCode(),
@@ -545,7 +550,7 @@ class AmapSearch {
           final result = (await response!.get_regeocode())!;
           final addressComponent = (await result.get_addressComponent())!;
 
-          completer.complete(ReGeocode(
+          completer.completeSafely(ReGeocode(
             provinceName: await addressComponent.get_province(),
             cityName: await addressComponent.get_city(),
             cityCode: await addressComponent.get_citycode(),
@@ -649,7 +654,7 @@ class AmapSearch {
             await com_amap_api_services_route_RouteSearch_OnRouteSearchListener
                 .anonymous__();
         listener.onDriveRouteSearched = (route, rCode) async {
-          completer.complete(DriveRouteResult.android(route));
+          completer.completeSafely(DriveRouteResult.android(route));
         };
         await _androidRouteSearch.setRouteSearchListener(listener);
 
@@ -680,7 +685,7 @@ class AmapSearch {
         final delegate = await AMapSearchDelegate.anonymous__();
         delegate.onRouteSearchDone_response = (request, response) async {
           final route = DriveRouteResult.ios(await response!.get_route());
-          completer.complete(route);
+          completer.completeSafely(route);
         };
         await _iosSearch.set_delegate(delegate);
 
@@ -776,7 +781,7 @@ class AmapSearch {
             await com_amap_api_services_route_RouteSearch_OnRouteSearchListener
                 .anonymous__();
         listener.onBusRouteSearched = (route, code) async {
-          completer.complete(BusRouteResult.android(route));
+          completer.completeSafely(BusRouteResult.android(route));
         };
         await _androidRouteSearch.setRouteSearchListener(listener);
 
@@ -805,7 +810,8 @@ class AmapSearch {
         // 设置回调
         final delegate = await AMapSearchDelegate.anonymous__();
         delegate.onRouteSearchDone_response = (request, response) async {
-          completer.complete(BusRouteResult.ios(await response!.get_route()));
+          completer
+              .completeSafely(BusRouteResult.ios(await response!.get_route()));
         };
         await _iosSearch.set_delegate(delegate);
 
@@ -880,7 +886,7 @@ class AmapSearch {
             await com_amap_api_services_route_RouteSearch_OnRouteSearchListener
                 .anonymous__();
         listener.onWalkRouteSearched = (route, code) async {
-          completer.complete(WalkRouteResult.android(route));
+          completer.completeSafely(WalkRouteResult.android(route));
         };
         await _androidRouteSearch.setRouteSearchListener(listener);
 
@@ -909,7 +915,8 @@ class AmapSearch {
         // 设置回调
         final delegate = await AMapSearchDelegate.anonymous__();
         delegate.onRouteSearchDone_response = (request, response) async {
-          completer.complete(WalkRouteResult.ios(await response!.get_route()));
+          completer
+              .completeSafely(WalkRouteResult.ios(await response!.get_route()));
         };
         await _iosSearch.set_delegate(delegate);
 
@@ -981,7 +988,7 @@ class AmapSearch {
             await com_amap_api_services_route_RouteSearch_OnRouteSearchListener
                 .anonymous__();
         listener.onRideRouteSearched = (route, code) async {
-          completer.complete(RideRouteResult.android(route));
+          completer.completeSafely(RideRouteResult.android(route));
         };
         await _androidRouteSearch.setRouteSearchListener(listener);
 
@@ -1010,7 +1017,8 @@ class AmapSearch {
         // 设置回调
         final delegate = await AMapSearchDelegate.anonymous__();
         delegate.onRouteSearchDone_response = (request, response) async {
-          completer.complete(RideRouteResult.ios(await response!.get_route()));
+          completer
+              .completeSafely(RideRouteResult.ios(await response!.get_route()));
         };
         await _iosSearch.set_delegate(delegate);
 
@@ -1068,7 +1076,7 @@ class AmapSearch {
             await com_amap_api_services_busline_BusStationSearch_OnBusStationSearchListener
                 .anonymous__();
         listener.onBusStationSearched = (result, code) async {
-          completer.complete(BusStation.android(result));
+          completer.completeSafely(BusStation.android(result));
         };
         await _androidBusStationSearch.setOnBusStationSearchListener(listener);
 
@@ -1084,7 +1092,7 @@ class AmapSearch {
         // 设置回调
         final delegate = await AMapSearchDelegate.anonymous__();
         delegate.onBusStopSearchDone_response = (request, response) async {
-          completer.complete(BusStation.ios(response));
+          completer.completeSafely(BusStation.ios(response));
         };
         await _iosSearch.set_delegate(delegate);
 
@@ -1143,7 +1151,7 @@ class AmapSearch {
             await com_amap_api_services_district_DistrictSearch_OnDistrictSearchListener
                 .anonymous__();
         listener.onDistrictSearched = (result) async {
-          completer.complete(await District.android(result!));
+          completer.completeSafely(await District.android(result!));
         };
         await _androidDistrictSearch.setOnDistrictSearchListener(listener);
 
@@ -1159,7 +1167,7 @@ class AmapSearch {
         // 设置回调
         final delegate = await AMapSearchDelegate.anonymous__();
         delegate.onDistrictSearchDone_response = (request, response) async {
-          completer.complete(await District.ios(response!));
+          completer.completeSafely(await District.ios(response!));
         };
         await _iosSearch.set_delegate(delegate);
 
@@ -1209,7 +1217,7 @@ class AmapSearch {
         // await com_amap_api_services_weather_WeatherSearch_OnWeatherSearchListener
         //     .anonymous__(
         //   onWeatherForecastSearched: (route, code) async {
-        //     completer.complete(BusRouteResult.android(route));
+        //     completer.completeSafely(BusRouteResult.android(route));
         //   },
         // );
         await _androidWeatherSearch
@@ -1227,7 +1235,7 @@ class AmapSearch {
         // 设置回调
         // final delegate = await AMapSearchDelegate.anonymous__();
         // delegate.onWeatherSearchDone_response = (request, response) async {
-        //   // completer.complete(await Weather.ios(response!.get));
+        //   // completer.completeSafely(await Weather.ios(response!.get));
         // };
         await _iosSearch.set_delegate(_IOSSearchListener(completer));
 
@@ -1280,7 +1288,7 @@ class AmapSearch {
             await com_amap_api_services_cloud_CloudSearch_OnCloudSearchListener
                 .anonymous__();
         listener.onCloudSearched = (result, code) async {
-          completer.complete(Cloud.android(result));
+          completer.completeSafely(Cloud.android(result));
         };
         await _androidCloudSearch.setOnCloudSearchListener(listener);
 
@@ -1300,7 +1308,7 @@ class AmapSearch {
         // 设置回调
         final delegate = await AMapSearchDelegate.anonymous__();
         delegate.onCloudSearchDone_response = (request, response) async {
-          completer.complete(Cloud.ios(response));
+          completer.completeSafely(Cloud.ios(response));
         };
         await _iosSearch.set_delegate(delegate);
 
@@ -1342,5 +1350,13 @@ class AmapSearch {
     await _androidBusStationSearch.release__();
     await _androidDistrictSearch.release__();
     await _androidWeatherSearch.release__();
+  }
+}
+
+extension<T> on Completer<T> {
+  void completeSafely([FutureOr<T>? value]) {
+    if (!isCompleted) {
+      complete(value);
+    }
   }
 }
