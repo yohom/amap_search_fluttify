@@ -1,6 +1,6 @@
 name: amap_search_fluttify
 description: An `Amap Search` Map Component, Powered By `Fluttify`, A Compiler Generating Dart Bindings For Native SDK.
-version: 0.18.0-rc.1
+version: 0.18.0
 homepage: https://github.com/fluttify-project
 
 environment:
